@@ -1,25 +1,20 @@
 ---
-title: "Réplicas de base de données de point de gestion"
+title: Réplicas de base de données de point de gestion
 titleSuffix: Configuration Manager
-description: "Utilisez un réplica de base de données pour réduire la charge processeur placée sur le serveur de base de données de site par les points de gestion."
-ms.custom: na
+description: Utilisez un réplica de base de données pour réduire la charge processeur placée sur le serveur de base de données de site par les points de gestion.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: b06f781b-ab25-4d9a-b128-02cbd7cbcffe
-caps.latest.revision: "9"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: f322d5dcd2f505f52e363e07801497ffa3bfdc7e
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 0893df43f7979fa3c36ba90ab400e399f96e6228
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-replicas-for-management-points-for-system-center-configuration-manager"></a>Réplicas de base de données pour les points de gestion de System Center Configuration Manager
 
@@ -405,7 +400,7 @@ Outre la configuration du point de gestion pour utiliser le serveur de réplica 
 
     1.  Répétez les étapes précédentes de 1.a à 1.e pour configurer le composant logiciel enfichable MMC **Certificat** sur l’ordinateur du point de gestion.  
 
-    2.  Dans la console, développez **Certificats (ordinateur local)**et **Personnes autorisées**, cliquez avec le bouton droit sur **Certificats**, sélectionnez **Toutes les tâches**, puis sélectionnez **Importer** pour lancer l' **Assistant Importation de certificat**.  
+    2.  Dans la console, développez **Certificats (ordinateur local)** et **Personnes autorisées**, cliquez avec le bouton droit sur **Certificats**, sélectionnez **Toutes les tâches**, puis sélectionnez **Importer** pour lancer l' **Assistant Importation de certificat**.  
 
     3.  Sur la page **Fichier à importer** , cliquez sur le certificat sauvegardé à l'étape 1.h, puis cliquez sur **Suivant**.  
 

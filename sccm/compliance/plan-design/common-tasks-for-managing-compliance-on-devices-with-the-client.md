@@ -1,25 +1,20 @@
 ---
-title: "Tâches courantes de gestion de la compatibilité pour les appareils gérés par le client "
+title: 'Tâches courantes de gestion de la compatibilité pour les appareils gérés par le client '
 titleSuffix: Configuration Manager
-description: "Découvrez les paramètres de compatibilité de System Center Configuration Manager en examinant certains scénarios courants."
-ms.custom: na
+description: Découvrez les paramètres de compatibilité de System Center Configuration Manager en examinant certains scénarios courants.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 4e345791-74db-41ad-b472-024ce6521daf
-caps.latest.revision: "8"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 0e70e565f7e1000aa452487cdd71ae165dd0c67b
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: ed9be26417aceef3fb73f48c2a4a2f15f0ba1b52
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="common-tasks-for-managing-compliance-on-devices-with-the-system-center-configuration-manager-client"></a>Tâches courantes de gestion de la compatibilité des appareils avec le client System Center Configuration Manager
 

@@ -1,26 +1,20 @@
 ---
-title: "Prérequis pour le contrôle à distance"
+title: Prérequis pour le contrôle à distance
 titleSuffix: Configuration Manager
-description: "Prenez connaissance des prérequis pour le contrôle à distance dans System Center Configuration Manager."
-ms.custom: na
+description: Prenez connaissance des prérequis pour le contrôle à distance dans System Center Configuration Manager.
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: c1b2057e-b74f-43fa-a293-763a8f866d3d
-caps.latest.revision: "6"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: e7287ae7df68ebbcb8f251b8d001233a647596ee
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 117ad9a087151db51c4cf33112ab662f53b9134e
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prerequisites-for-remote-control-in-system-center-configuration-manager"></a>Configuration requise pour le contrôle à distance dans System Center Configuration Manager
 
@@ -39,7 +33,7 @@ Le contrôle à distance dans System Center Configuration Manager comporte des d
  Le contrôle à distance de Configuration Manager ne permet pas d’administrer à distance les ordinateurs clients qui exécutent Systems Management Server 2003 ou Configuration Manager 2007.  
 
 > [!NOTE]  
->  Aucun service Windows n’est nécessaire comme dépendance externe pour le contrôle à distance.  
+>  Aucun service Windows n'est nécessaires en tant que dépendance externe pour le contrôle à distance.  
 
 ### <a name="supported-operating-systems-for-the-remote-control-viewer"></a>Systèmes d’exploitation pris en charge pour l’observateur de contrôle à distance  
 La visionneuse de contrôle à distance est gérée sur tous les systèmes d’exploitation pris en charge pour la console Configuration Manager. Pour plus d’informations, consultez l’article [Configurations prises en charge pour les consoles System Center Configuration Manager](../../../../core/plan-design/configs/supported-operating-systems-consoles.md).   

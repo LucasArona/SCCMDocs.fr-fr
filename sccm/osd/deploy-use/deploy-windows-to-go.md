@@ -1,26 +1,20 @@
 ---
-title: "Déployer Windows To Go"
+title: Déployer Windows To Go
 titleSuffix: Configuration Manager
-description: "Découvrez comment mettre en service Windows To Go dans System Center Configuration Manager pour créer un espace de travail Windows To Go qui démarre à partir d’un lecteur externe."
-ms.custom: na
+description: Découvrez comment mettre en service Windows To Go dans System Center Configuration Manager pour créer un espace de travail Windows To Go qui démarre à partir d’un lecteur externe.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8eed50f5-80a4-422e-8aa6-a7ccb2171475
-caps.latest.revision: "8"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 9d902f75911b484d22d38b07cea40e1c00ea0d93
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: 12b7a28ff5ea0e2e1870c0c37edd8e056930b09f
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deploy-windows-to-go-with-system-center-configuration-manager"></a>Déployer Windows To Go avec System Center Configuration Manager
 

@@ -2,26 +2,19 @@
 title: Configurer votre laboratoire
 titleSuffix: Configuration Manager
 description: Configurez un laboratoire pour évaluer Configuration Manager avec des activités réelles simulées.
-ms.custom: na
 ms.date: 09/21/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: b1970688-0cd2-404f-a17f-9e2aa4a78758
-caps.latest.revision: 11
-caps.handback.revision: 0
-author: erikje
-ms.author: erikje
-manager: angrobe
-ms.openlocfilehash: 3441cb417a0b8fc7979b71018f6cfa345c47a02d
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: a1799dcffa55de80c0c700a56301d7d71f3b4a48
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-up-your-system-center-configuration-manager-lab"></a>Configurer votre laboratoire de System Center Configuration Manager
 

@@ -1,26 +1,20 @@
 ---
-title: "Tâches de maintenance"
+title: Tâches de maintenance
 titleSuffix: Configuration Manager
-description: "Comprenez quelles tâches de maintenance effectuer pour les sites et les hiérarchies Configuration Manager, et à quel moment les effectuer."
-ms.custom: na
+description: Comprenez quelles tâches de maintenance effectuer pour les sites et les hiérarchies Configuration Manager, et à quel moment les effectuer.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 625bb787-6d16-47a0-8b0f-b129cd909ca3
-caps.latest.revision: "7"
-caps.handback.revision: "0"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 001d1a4781f98ac376cc7500c7ccbef17018f35e
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 1491f12768e6ca523c3cd4a6ae80fb75f4a9ab6a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="maintenance-tasks-for-system-center-configuration-manager"></a>Tâches de maintenance pour System Center Configuration Manager
 

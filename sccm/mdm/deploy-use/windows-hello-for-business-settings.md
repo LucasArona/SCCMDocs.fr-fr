@@ -1,26 +1,20 @@
 ---
-title: "Paramètres Windows Hello Entreprise"
+title: Paramètres Windows Hello Entreprise
 titleSuffix: Configuration Manager
-description: "Découvrez comment intégrer Windows Hello Entreprise dans System Center Configuration Manager."
-ms.custom: na
+description: Découvrez comment intégrer Windows Hello Entreprise dans System Center Configuration Manager.
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: c0593c07-5dd7-4d23-a0d8-d30165f49ef7
-caps.latest.revision: 
-author: lleonard-msft
-ms.author: alleonar
-manager: angrobe
-ms.openlocfilehash: 285fb9e9a9d4538c0ff3b0f9e8b19bec99e9a8c5
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 7471b408fbc8ce55e443873e4662c2ed87410c3a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="windows-hello-for-business-settings-in-system-center-configuration-manager-hybrid"></a>Paramètres Windows Hello Entreprise dans System Center Configuration Manager (hybride)
 
@@ -86,7 +80,7 @@ Pour en savoir plus sur la configuration des paramètres de Windows Hello Entr
 
          Les caractères spéciaux sont les suivants : **! " # $ % & ' ( ) \* + , - . / : ; < = > ? @ [ \ ] ^ _ ` { &#124; } ~**.  
 
-    -   **Exiger un délai d’expiration du code confidentiel (en jours)** : spécifie le nombre de jours avant de devoir modifier le code confidentiel de l’appareil. La valeur par défaut est 41 jours.  
+    -   **Exiger un délai d’expiration du code confidentiel (en jours)**  : spécifie le nombre de jours avant de devoir modifier le code confidentiel de l’appareil. La valeur par défaut est 41 jours.  
 
     -   **Empêcher la réutilisation de codes confidentiels précédents** : utilisez ce paramètre pour limiter la réutilisation des codes confidentiels précédemment utilisés. Par défaut, les 5 derniers codes confidentiels utilisés ne peuvent pas être réutilisés.  
 

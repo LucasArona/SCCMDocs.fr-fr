@@ -1,30 +1,26 @@
 ---
-title: "Capacités de la version Technical Preview 1704"
+title: Capacités de la version Technical Preview 1704
 titleSuffix: Configuration Manager
-description: "Découvrez les fonctionnalités disponibles dans la version d’évaluation technique 1704 de System Center Configuration Manager."
-ms.custom: na
+description: Découvrez les fonctionnalités disponibles dans la version d’évaluation technique 1704 de System Center Configuration Manager.
 ms.date: 4/21/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e318e705-20f2-417d-8cde-7dfe661b2fa7
-author: erikje
-ms.author: erikje
-manager: angrobe
-ms.openlocfilehash: 9151d2e60bbdc3ac4c34bde17f02fc956cb005b1
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: b86b1a4b8400be29f9b4c468c280fdd0a47385c3
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1704-for-system-center-configuration-manager"></a>Fonctionnalités de la version d’évaluation technique 1704 de System Center Configuration Manager
 
 *S’applique à : System Center Configuration Manager (version d’évaluation technique)*
 
-Cet article présente les fonctionnalités disponibles dans la version d’évaluation technique 1704 de System Center Configuration Manager. Vous pouvez installer cette version pour mettre à jour et ajouter de nouvelles fonctionnalités à votre site de version d’évaluation technique Configuration Manager. Avant d’installer cette version d’évaluation technique, passez en revue la rubrique de présentation, [Technical Preview pour System Center Configuration Manager](../../core/get-started/technical-preview.md), pour vous familiariser avec les conditions générales et les limitations d’utilisation d’une version d’évaluation technique, la mise à jour entre les versions et l’envoi de commentaires sur les fonctionnalités dans une version d’évaluation technique.    
+Cet article présente les fonctionnalités disponibles dans la version d’évaluation technique 1704 de System Center Configuration Manager. Vous pouvez installer cette version pour mettre à jour et ajouter de nouvelles fonctionnalités à votre site de version d’évaluation technique Configuration Manager. Avant d’installer cette version de la version d’évaluation technique, passez en revue la rubrique de présentation, [Version d’évaluation technique pour System Center Configuration Manager](../../core/get-started/technical-preview.md), pour vous familiariser avec les conditions générales et limitations d’utilisation d’une version d’évaluation technique, la mise à jour entre les versions et l’envoi de commentaires sur les fonctionnalités dans une version d’évaluation technique.    
 
 
 **Vous trouverez ci-dessous les nouvelles fonctionnalités propres à cette version.**  
@@ -32,7 +28,7 @@ Cet article présente les fonctionnalités disponibles dans la version d’éval
 ## <a name="configure-android-apps-with-app-configuration-policies"></a>Configurer des applications Android avec des stratégies de configuration des applications
 Vous pouvez utiliser des stratégies de configuration des applications disponibles dans System Center Configuration Manager (Configuration Manager) pour distribuer les paramètres pouvant être nécessaires quand un utilisateur exécute une application sur des appareils Android for Work. Les stratégies de configuration des applications Android sont disponibles uniquement sur les appareils Android for Work et s’appliquent aux applications approuvées du magasin Play for Work.
 
-### <a name="try-it-out"></a>Essayer                 
+### <a name="try-it-out"></a>Faîtes un essai                 
 
 Dans la console Configuration Manager, choisissez **Bibliothèque de logiciels** > **Gestion des applications** > **Stratégies de configuration des applications** puis **Créer une stratégie de configuration d'application**. Sur la page **Général** de l’Assistant, vous pouvez à présent **sélectionner un type de stratégie de configuration**. Spécifiez la plateforme ciblée par la stratégie de configuration des applications : **stratégie de configuration pour les applications Android for Work**. Vous pouvez ensuite **spécifier des paires nom/valeur** ou **accéder à un fichier JSON de liste de propriétés**. La nouvelle stratégie de configuration des applications s’affiche dans le nœud **Stratégies de configuration des applications** de l’espace de travail **Bibliothèque de logiciels**. Pour associer une stratégie de configuration des applications au déploiement d’une application Android for Work, déployez l’application comme vous le faites habituellement, en suivant la procédure décrite dans la rubrique [Déployer des applications](/sccm/apps/deploy-use/deploy-applications).
 

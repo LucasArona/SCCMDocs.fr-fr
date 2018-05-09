@@ -2,32 +2,26 @@
 title: Serveurs de système de site pris en charge
 titleSuffix: Configuration Manager
 description: Déterminez les versions de Windows que vous pouvez utiliser pour héberger un site ou un rôle de système de site System Center Configuration Manager.
-ms.custom: na
-ms.date: 03/22/2018
+ms.date: 04/17/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 17905b4c-3895-4ad4-a69c-5e0d0fc5a8c3
-caps.latest.revision: 44
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5bcaddb38ea6ecf1c3b5e0543c676c6a99e06101
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: de7f340080111daf3f1b19e26aa838dc6db2e263
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="supported-operating-systems-for-system-center-configuration-manager-site-system-servers"></a>Systèmes d’exploitation pris en charge pour les serveurs de système de site System Center Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
 
-Cet article explique en détail les versions de Windows que vous pouvez utiliser pour héberger un site ou un rôle de système de site System Center Configuration Manager.
+Cet article explique en détail les versions de Windows que vous pouvez utiliser pour héberger un site ou un rôle de système de site Configuration Manager.
 
 
 Utilisez les informations de cet article ainsi que celles des articles suivants :
@@ -88,6 +82,14 @@ Avec le correctif cumulatif proposé dans l’article KB3186654, ce système d�
 
 
 
+## <a name="windows-storage-server-2016"></a>Windows Storage Server 2016
+
+**Serveur de système de site :**  
+
+-   Point de distribution  
+
+
+
 ## <a name="windows-server-2012-r2-x64-standard-and-datacenter"></a>Windows Server 2012 R2 (x64) : Standard et Datacenter  
 **Serveurs de site :**  
 
@@ -135,7 +137,7 @@ Avec le correctif cumulatif proposé dans l’article KB3186654, ce système d�
 
 -   Point de migration d’état  
 
-## <a name="windows-server-2012-x64-standard-and-datacenter"></a>Windows Server 2012 (x64) : Standard et Datacenter  
+## <a name="windows-server-2012-x64-standard-and-datacenter"></a>Windows Server 2012 R2 (x64) : Standard et Datacenter  
 **Serveurs de site :**  
 
 -   Site d'administration centrale  
@@ -253,11 +255,14 @@ Ce système d’exploitation n’est pas pris en charge pour les serveurs de sit
 
     -   Les points de distribution prennent en charge plusieurs configurations différentes ayant chacune des exigences différentes. Dans certains cas, ces configurations prennent en charge l’installation sur des serveurs, mais aussi sur des systèmes d’exploitation clients. Pour plus d’informations sur les options disponibles pour les points de distribution, consultez [Gérer le contenu et l’infrastructure de contenu](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
-
+## <a name="the-server-core-installation-of-windows-server-version-1709"></a>Installation minimale de Windows Server, version 1709
+À compter de Configuration Manager 1710, [Windows Server, version 1709](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709) est pris en charge pour une utilisation en tant que point de distribution avec les restrictions suivantes :  
+  -   Seule la version 64 bits est prise en charge.
+  -   Les points de distribution sur ce système d’exploitation ne prennent pas en charge PXE ou la multidiffusion.  
 
 ## <a name="the-server-core-installation-of-windows-server-2016"></a>Installation minimale de Windows Server 2016
 Avec le correctif cumulatif proposé dans l’article KB3186654, ce système d’exploitation est pris en charge pour être utilisé comme point de distribution avec les limitations suivantes :  
-  -   Seule la version x64 bits est prise en charge.
+  -   Seule la version 64 bits est prise en charge.
   -   Les points de distribution sur ce système d’exploitation ne prennent pas en charge PXE ou la multidiffusion.  
 
 
@@ -265,7 +270,7 @@ Avec le correctif cumulatif proposé dans l’article KB3186654, ce système d�
 ## <a name="the-server-core-installation-of-windows-server-2012-r2"></a>Installation minimale de Windows Server 2012 R2  
  L’installation minimale de Windows Server 2012 R2 est prise en charge pour une utilisation comme point de distribution avec les limitations suivantes :  
 
--   Seule la version x64 bits est prise en charge.
+-   Seule la version 64 bits est prise en charge.
 
 -   Les points de distribution sur ce système d’exploitation ne prennent pas en charge PXE ou la multidiffusion.  
 

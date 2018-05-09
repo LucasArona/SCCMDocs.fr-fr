@@ -1,27 +1,20 @@
 ---
-title: "Préparer des serveurs Windows"
+title: Préparer des serveurs Windows
 titleSuffix: Configuration Manager
-description: "Vérifiez qu’un ordinateur remplit les conditions préalables pour l’utiliser comme serveur de site ou serveur de système de site pour System Center Configuration Manager."
-ms.custom: na
+description: Vérifiez qu’un ordinateur remplit les conditions préalables pour l’utiliser comme serveur de site ou serveur de système de site pour System Center Configuration Manager.
 ms.date: 2/14/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 2aca914f-641e-4bc8-98d4-bbf0a2a5276f
-caps.latest.revision: 
-caps.handback.revision: 
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: a55322868d45cf1d2b3004e21d641ca5299aa957
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 64b24d04769da7488eb7fefaa293444fbc851cfb
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prepare-windows-servers-to-support-system-center-configuration-manager"></a>Préparer des serveurs Windows pour prendre en charge System Center Configuration Manager
 
@@ -51,13 +44,13 @@ Les informations contenues dans cet article offrent une vue d’ensemble des dif
 
     Comme Microsoft .NET Framework 4.0 et les versions ultérieures n’offrent pas de compatibilité descendante pour remplacer les versions 3.5 et antérieures, si différentes versions sont requises, vous devez prévoir d’activer chaque version sur le même ordinateur.  
 
--   **Service de transfert intelligent en arrière-plan (BITS)** : les points de gestion ont besoin du service BITS (et des options sélectionnées automatiquement) pour prendre en charge la communication avec les appareils gérés.  
+-   **Service de transfert intelligent en arrière-plan (BITS)**  : les points de gestion ont besoin du service BITS (et des options sélectionnées automatiquement) pour prendre en charge la communication avec les appareils gérés.  
 
 -   **BranchCache** : vous pouvez configurer les points de distribution avec BranchCache pour prendre en charge les clients qui utilisent cette fonctionnalité.  
 
 -   **Déduplication des données** : vous pouvez configurer les points de distribution avec la déduplication des données pour tirer parti de cette fonctionnalité.  
 
--   **Compression différentielle à distance (RDC)** : chaque ordinateur qui héberge un serveur de site ou un point de distribution a besoin de la compression différentielle à distance.   
+-   **Compression différentielle à distance (RDC)**  : chaque ordinateur qui héberge un serveur de site ou un point de distribution a besoin de la compression différentielle à distance.   
     Celle-ci est utilisée pour générer des signatures de package et effectuer des comparaisons de signatures.  
 
 ### <a name="roles"></a>Rôles  
@@ -82,7 +75,7 @@ Les informations contenues dans cet article offrent une vue d’ensemble des dif
         -   Authentification Windows  
 
  Les rôles de système de site suivants utilisent une ou plusieurs des configurations IIS répertoriées :  
-    -   Point de service Web du catalogue des applications  
+    -   Point de service web du catalogue des applications  
     -   Point du site web du catalogue des applications  
     -   Point de distribution  
     -   Point d'inscription  

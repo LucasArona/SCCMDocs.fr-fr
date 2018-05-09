@@ -2,26 +2,19 @@
 title: Déployer des clients sur Windows
 titleSuffix: Configuration Manager
 description: Apprenez à déployer le client Configuration Manager sur des ordinateurs Windows.
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 341f0d0b-f907-44cf-9e10-e1b41fc15f82
-caps.latest.revision: 13
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3d7c3e9c9f2af8d612ef158897c281d422692268
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 5efca393afe2fc6441d074f987549228e7d0418f
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-deploy-clients-to-windows-computers-in-system-center-configuration-manager"></a>Comment déployer des clients sur des ordinateurs Windows dans System Center Configuration Manager
 
@@ -44,7 +37,7 @@ Pour vous aider à suivre le processus d’installation du client, installez un 
 Les fichiers journaux du client fournissent des informations plus détaillées pour le dépannage. Les fichiers journaux ne nécessitent pas de point d’état de secours. Par exemple, le fichier **CCM.log** du serveur de site enregistre tous les problèmes de ce dernier au moment de se connecter à l’ordinateur. Le fichier **CCMSetup.log** du client enregistre le processus d’installation.  
 
 > [!IMPORTANT]  
->  Pour que l’installation Push du client réussisse, assurez-vous que tous les prérequis sont respectés. Pour plus d'informations, consultez [Dépendances liées aux méthodes d’installation](/sccm/core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers#installation-method-dependencies).  
+>  Afin que l'installation poussée du client réussisse, assurez-vous que toutes les conditions préalables sont respectées. Pour plus d'informations, consultez [Dépendances liées aux méthodes d’installation](/sccm/core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers#installation-method-dependencies).  
 
 ### <a name="configure-the-site-to-automatically-use-client-push-for-discovered-computers"></a>Configurer le site en vue de l’utilisation automatique de l’installation Push du client pour les ordinateurs découverts
 
@@ -165,7 +158,7 @@ La mise à jour logicielle du client Configuration Manager n’est pas mise à j
 
 
 
-##  <a name="BKMK_ClientGP"></a> Comment installer des clients avec une stratégie de groupe  
+##  <a name="BKMK_ClientGP"></a> Guide pratique pour installer des clients à l’aide d’une stratégie de groupe  
  Vous pouvez utiliser la stratégie de groupe dans Active Directory Domain Services pour publier ou attribuer le client Configuration Manager en vue de l’installer sur des ordinateurs de votre entreprise. Le client s’installe au démarrage de l’ordinateur. Quand vous utilisez la stratégie de groupe, le client s’affiche dans **Ajout/Suppression de programmes** dans le Panneau de configuration pour permettre à l’utilisateur de procéder à l’installation.  
 
  Utilisez le package Windows Installer (CCMSetup.msi) pour les installations basées sur la stratégie de groupe. Ce fichier se trouve dans le dossier **&lt;répertoire d’installation de ConfigMgr\>\bin\i386** sur le serveur de site Configuration Manager. Vous ne pouvez pas ajouter des propriétés à ce fichier pour modifier le comportement à l’installation.  
@@ -184,7 +177,7 @@ Pour plus d’informations sur l’utilisation de la stratégie de groupe dans A
 ##  <a name="BKMK_Manual"></a> Guide pratique pour installer des clients manuellement  
  Vous pouvez installer manuellement le logiciel client sur les ordinateurs dans votre entreprise à l’aide du programme CCMSetup.exe. Ce programme et ses fichiers de prise en charge se trouvent dans le dossier **Client** du dossier d’installation de Configuration Manager sur le serveur de site et sur les points de gestion dans votre site. Ce dossier est partagé sur le réseau sous  
 
- \\\\*&lt;nom du serveur de site\>*\SMS_*&lt;code de site\>*\Client\  
+ \\\\*&lt;nom du serveur de site\>* \SMS_*&lt;code de site\>* \Client\  
 
  où *&lt;nom du serveur de site\>* est le nom d’un des serveurs hébergeant un point de gestion et *&lt;code de site\>* est le code du site principal auquel le client est attribué. Pour exécuter CCMSetup.exe à partir de la ligne de commande sur le client, vous devez mapper un lecteur réseau à cet emplacement, puis exécuter la commande.  
 
@@ -249,7 +242,7 @@ Cet exemple ignore la configuration automatique fournie par Active Directory Dom
 
 
 
-##  <a name="BKMK_ClientLogonScript"></a> Comment installer des clients à l’aide de scripts d’ouverture de session  
+##  <a name="BKMK_ClientLogonScript"></a> Guide pratique pour installer des clients à l’aide de scripts d’ouverture de session  
  Configuration Manager prend en charge les scripts d’ouverture de session pour installer le logiciel client Configuration Manager. Vous pouvez utiliser le fichier programme **CCMSetup.exe** dans un script de connexion pour déclencher l'installation du client.  
 
  L'installation via un script d'ouverture de session utilise les mêmes méthodes que l'installation manuelle du client. Vous pouvez spécifier la propriété d’installation **/logon** pour CCMSsetup.exe. S’il existe déjà une version du client sur l’ordinateur, cette propriété empêche l’installation du client. Ce comportement empêche la réinstallation du client à chaque exécution du script d’ouverture de session.  
@@ -398,7 +391,7 @@ Si le site Configuration Manager prend en charge la [gestion des clients basée 
 
 -   Prévoyez un mécanisme permettant à ces clients de se connecter temporairement à l’intranet via un réseau privé virtuel (VPN). Installez ensuite le client en employant une méthode d’installation du client appropriée.  
 
--   Utilisez une méthode d’installation indépendante de Configuration Manager. Par exemple, empaquetez les fichiers sources d’installation du client sur un média amovible que vous pouvez envoyer aux utilisateurs avec des instructions d’installation. Les fichiers sources d’installation du client se trouvent dans le dossier *&lt;chemin_installation\>*\Client sur le serveur de site et les points de gestion Configuration Manager. Incorporez au support un script à copier manuellement vers le dossier du client et depuis ce dossier, installez le client à l'aide de CCMSetup.exe et de toutes les propriétés de ligne commande CCMSetup appropriées.  
+-   Utilisez une méthode d’installation indépendante de Configuration Manager. Par exemple, empaquetez les fichiers sources d’installation du client sur un média amovible que vous pouvez envoyer aux utilisateurs avec des instructions d’installation. Les fichiers sources d’installation du client se trouvent dans le dossier *&lt;chemin_installation\>* \Client sur le serveur de site et les points de gestion Configuration Manager. Incorporez au support un script à copier manuellement vers le dossier du client et depuis ce dossier, installez le client à l'aide de CCMSetup.exe et de toutes les propriétés de ligne commande CCMSetup appropriées.  
 
 > [!NOTE]  
 >  Configuration Manager ne prend pas en charge l’installation directe d’un client à partir du point de gestion Internet ou du point de mise à jour logicielle Internet.  
@@ -430,7 +423,7 @@ Si le site Configuration Manager prend en charge la [gestion des clients basée 
 
 5.  Vérifiez si vous devez spécifier des propriétés de ligne de commande CCMSetup supplémentaires. Par exemple, vous pouvez avoir besoin de spécifier un critère de sélection de certificat si le client possède plusieurs certificats d’infrastructure à clé publique (PKI) valides. Pour obtenir la liste des propriétés d’installation disponibles, consultez [À propos des propriétés d’installation du client](../../../core/clients/deploy/about-client-installation-properties.md).  
 
-   Exemple :  
+   Exemple :  
    `CCMSetup.exe /source: D:\Clients /UsePKICert CCMHOSTNAME=server1.contoso.com SMSSIGNCERT=siteserver.cer SMSSITECODE=ABC FSP=server2.contoso.com CCMALWAYSINF=1 CCMFIRSTCERT=1`    
 
    Cet exemple installe le client avec les comportements suivants :
@@ -498,7 +491,7 @@ Si le site Configuration Manager prend en charge la [gestion des clients basée 
 
 
 
-##  <a name="BKMK_Provision"></a> Comment fournir des propriétés d’installation du client (installation basée sur une stratégie de groupe et sur les mises à jour logicielles)  
+##  <a name="BKMK_Provision"></a> Guide pratique pour fournir les propriétés d’installation du client (installation basée sur une stratégie de groupe et sur les mises à jour logicielles)  
  Vous pouvez utiliser la stratégie de groupe Windows pour fournir les propriétés d’installation du client Configuration Manager aux ordinateurs. Ces propriétés sont stockées dans le Registre de l’ordinateur et lues quand le logiciel client est installé. Cette procédure n’est généralement pas obligatoire, mais peut s’avérer nécessaire dans certains scénarios d’installation du client, par exemple :  
 
 -   Vous utilisez les paramètres de stratégie de groupe ou des méthodes d’installation du logiciel basée sur des mises à jour logicielles. Vous n’avez pas étendu le schéma Active Directory pour Configuration Manager.  

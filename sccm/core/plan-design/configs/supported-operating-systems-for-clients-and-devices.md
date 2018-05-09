@@ -1,33 +1,27 @@
 ---
 title: Clients et appareils pris en charge
 titleSuffix: Configuration Manager
-description: "Découvrez les systèmes d’exploitation que System Center Configuration Manager prend en charge pour les clients et les appareils."
-ms.custom: na
-ms.date: 8/30/2017
+description: Découvrez les systèmes d’exploitation que System Center Configuration Manager prend en charge pour les clients et les appareils.
+ms.date: 04/17/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
-caps.latest.revision: 
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 614226e60f9bcd7b8e3c1330f52a4847e89e0880
-ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: d04f727ffeb3e5859103828ebb058e2532c6aacb
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="supported-operating-systems-for-clients-and-devices-for-system-center-configuration-manager"></a>Systèmes d’exploitation pris en charge pour les clients et les appareils pour System Center Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
 
- System Center Configuration Manager prend en charge l’installation de logiciels clients sur différents ordinateurs Windows, Mac, Linux et UNIX.  
+ Configuration Manager prend en charge l’installation de logiciels clients sur différents ordinateurs Windows, Mac, Linux et UNIX.  
 
  **Conditions requises et limitations pour tous les clients :**  
 
@@ -43,6 +37,8 @@ ms.lasthandoff: 02/01/2018
 
 -  **Windows Server 2016** : Standard, Datacenter <sup>1</sup>
   - Ce système d’exploitation est pris en charge à compter de Configuration Manager version 1606, avec le correctif cumulatif KB3186654 (ou la version de base de référence 1606 publiée en octobre 2016).  
+
+-   **Windows Storage Server 2016**  
 
 -   **Windows Server 2012 R2** (x64) : Standard, Datacenter <sup>1</sup>    
 
@@ -65,6 +61,9 @@ ms.lasthandoff: 02/01/2018
 <!---   **Windows 8** (x86, x64): Professional, Enterprise  -removed Jan 12,2018 sms505863-->
 
 -   **Windows 7 avec SP1** (x86, x64) : Professionnel, Entreprise et Édition Intégrale    
+
+-   **Installation minimale de Windows Server, version 1709** (x64) <sup>2</sup>
+  - Ce système d’exploitation est pris en charge depuis la version 1710.
 
 -   **Installation minimale de Windows Server 2016** (x64) <sup>2</sup>
   - Ce système d’exploitation est pris en charge à compter de la version 1606, avec le correctif cumulatif KB3186654 (ou la version de base de référence 1606 publiée en octobre 2016).
@@ -348,4 +347,4 @@ Configuration Manager prend en charge une gestion limitée des appareils qui se 
 
 -   **Exchange Server 2013**  
 
--   **Exchange Online (Office 365)** : Inclut Business Productivity Online Standard Suite  
+-   **Exchange Online (Office 365)**  : Inclut Business Productivity Online Standard Suite  

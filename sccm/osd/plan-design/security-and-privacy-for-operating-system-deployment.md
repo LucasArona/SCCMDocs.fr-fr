@@ -1,26 +1,20 @@
 ---
-title: "Sécurité et confidentialité du déploiement de systèmes d’exploitation"
+title: Sécurité et confidentialité du déploiement de systèmes d’exploitation
 titleSuffix: Configuration Manager
-description: "Découvrez les bonnes pratiques en matière de sécurité et de confidentialité pour le déploiement de systèmes d’exploitation dans System Center Configuration Manager."
-ms.custom: na
+description: Découvrez les bonnes pratiques en matière de sécurité et de confidentialité pour le déploiement de systèmes d’exploitation dans System Center Configuration Manager.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5ee5928f-3d72-4b00-8156-1e0d1030a96c
-caps.latest.revision: "6"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 0cf0213b83f6bbaf0aabff24b16162dbe215bcf1
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: 4ec1457fafabe2e40106ec76310d9ff64b2aa267
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-and-privacy-for-operating-system-deployment-in-system-center-configuration-manager"></a>Sécurité et confidentialité du déploiement de systèmes d’exploitation dans System Center Configuration Manager
 

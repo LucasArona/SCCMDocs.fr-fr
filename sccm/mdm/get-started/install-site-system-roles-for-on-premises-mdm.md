@@ -1,25 +1,20 @@
 ---
-title: "Installer des rôles pour la gestion des appareils mobiles locale "
+title: 'Installer des rôles pour la gestion des appareils mobiles locale '
 titleSuffix: Configuration Manager
-description: "Installez des rôles système de site pour la gestion des appareils mobiles locale dans System Center Configuration Manager."
-ms.custom: na
+description: Installez des rôles système de site pour la gestion des appareils mobiles locale dans System Center Configuration Manager.
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: c3cf9f64-c2b9-4ace-9527-2aba6d4eef04
-caps.latest.revision: "9"
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: d8d107f1ba3720e7974cda5bbbcd7bfefe9301cc
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: dc3efe5438d583bc5d850261a1bb80253a608c6c
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-site-system-roles-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>Installer des rôles de système de site pour la gestion des appareils mobiles locale dans System Center Configuration Manager
 
@@ -35,7 +30,7 @@ La gestion des appareils mobiles locale de System Center Configuration Manager n
 
 -   Point de gestion d’appareil  
 
--   Point de connexion de service  
+-   point de connexion de service  
 
  Si vous ajoutez la gestion des appareils mobiles locale à votre organisation et que la plupart des ordinateurs et appareils de celle-ci sont gérés à l’aide du logiciel client Configuration Manager, la plupart des rôles système de site sont peut-être déjà installés dans le cadre de votre infrastructure existante. Dans le cas contraire, consultez [Ajouter des rôles système de site pour System Center Configuration Manager](../../core/servers/deploy/configure/add-site-system-roles.md) pour plus d’informations sur la façon de les ajouter à votre site.  
 

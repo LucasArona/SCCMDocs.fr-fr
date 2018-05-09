@@ -1,25 +1,20 @@
 ---
 title: Package Transfer Manager
 titleSuffix: Configuration Manager
-description: "Découvrez comment le composant Package Transfer Manager de System Center Configuration Manager transfère le contenu d’un serveur de site vers des points de distribution distants."
-ms.custom: na
+description: Découvrez comment le composant Package Transfer Manager de System Center Configuration Manager transfère le contenu d’un serveur de site vers des points de distribution distants.
 ms.date: 2/8/2017
-ms.reviewer: na
-ms.suite: na
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3359f254-dd48-42b7-9eab-c92a3417e3fb
-caps.latest.revision: "3"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: eef88b25119558c78c57e2df665507be6d70698f
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: 44041fd0eb2a71cc72d809eea0a0b8d15ba6c53e
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="package-transfer-manager-in-system-center-configuration-manager"></a>Package Transfer Manager dans System Center Configuration Manager
 

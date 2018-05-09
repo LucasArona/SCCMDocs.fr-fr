@@ -2,24 +2,19 @@
 title: Scénario - Endpoint Protection protège les ordinateurs contre les programmes malveillants
 titleSuffix: Configuration Manager
 description: Découvrez comment implémenter Endpoint Protection dans Configuration Manager pour protéger les ordinateurs contre les attaques de programmes malveillants.
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 539c7a89-3c03-4571-9cb4-02d455064eeb
-caps.latest.revision: 8
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: doubeby
-ms.openlocfilehash: 36f63a585fdcdc00d6ace9ea1ac6941aead5fce2
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 40fe2c9e16c2828b2c575e8401a80f3cf2eac969
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="example-scenario-using-system-center-endpoint-protection-to-protect-computers-from-malware-in-system-center-configuration-manager"></a>Exemple de scénario : utilisation de System Center Endpoint Protection pour protéger des ordinateurs contre les programmes malveillants dans System Center Configuration Manager
 

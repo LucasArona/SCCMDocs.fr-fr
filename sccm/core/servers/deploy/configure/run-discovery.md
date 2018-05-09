@@ -1,26 +1,20 @@
 ---
-title: "Découvrir les ressources d’appareils et d’utilisateurs"
+title: Découvrir les ressources d’appareils et d’utilisateurs
 titleSuffix: Configuration Manager
-description: "Lire une vue d’ensemble du processus de découverte et des enregistrements de données de découverte."
-ms.custom: na
+description: Lire une vue d’ensemble du processus de découverte et des enregistrements de données de découverte.
 ms.date: 2/8/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 30844519-ce14-456f-bfb8-4318b578e9f6
-caps.latest.revision: "20"
-caps.handback.revision: "0"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: b380df38c4e08a04691a0bca9d46580fedf7b78a
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 7d43415ce9517843490c815f7c9f2f3490e87674
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="run-discovery-for-system-center-configuration-manager"></a>Exécuter la découverte pour System Center Configuration Manager
 
@@ -56,7 +50,7 @@ Vous utilisez une ou plusieurs méthodes de découverte dans System Center Confi
 
  Une fois les informations de découverte ajoutées à la base de données du site, elles sont répliquées sur chaque site dans la hiérarchie, indépendamment du site sur lequel les informations ont été découvertes ou traitées. Par conséquent, si vous pouvez configurer des planifications et des paramètres différents pour les méthodes de découverte sur différents sites, vous ne pouvez exécuter une méthode de découverte spécifique que sur un seul site. Cela permet de réduire l’utilisation de la bande passante réseau par le biais d’actions de détection de doublons, et de réduire le traitement de données de découverte redondantes sur plusieurs sites.  
 
- Vous pouvez utiliser les données de découverte pour créer des regroupements et des requêtes personnalisés qui regroupent logiquement des ressources pour les tâches de gestion suivantes. Exemple :  
+ Vous pouvez utiliser les données de découverte pour créer des regroupements et des requêtes personnalisés qui regroupent logiquement des ressources pour les tâches de gestion suivantes. Par exemple :  
 
 -   Effectuer une installation Push du client ou une mise à niveau.  
 

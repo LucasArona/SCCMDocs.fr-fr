@@ -1,26 +1,20 @@
 ---
-title: "Hiérarchies sources de migration"
+title: Hiérarchies sources de migration
 titleSuffix: Configuration Manager
-description: "Configurez une hiérarchie source et des sites sources pour permettre la migration de données vers votre environnement System Center Configuration Manager."
-ms.custom: na
+description: Configurez une hiérarchie source et des sites sources pour permettre la migration de données vers votre environnement System Center Configuration Manager.
 ms.date: 12/29/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ccce7cb5-e18f-4337-8adf-2018edca3c00
-caps.latest.revision: "5"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 7977f66c71da300c59c7781f09975ca08ddea0b9
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: d9ef1ca2dd2763cf5b96fd82031a2ef38ef64927
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-source-hierarchies-and-source-sites-for-migration-to-system-center-configuration-manager"></a>Configurer des hiérarchies sources et des sites sources pour la migration vers System Center Configuration Manager
 

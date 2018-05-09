@@ -1,25 +1,20 @@
 ---
 title: Configurer les rapports
 titleSuffix: Configuration Manager
-description: "Découvrez comment configurer la génération de rapports dans votre hiérarchie Configuration Manager, y compris des informations sur SQL Server Reporting Services."
-ms.custom: na
+description: Découvrez comment configurer la génération de rapports dans votre hiérarchie Configuration Manager, y compris des informations sur SQL Server Reporting Services.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 55ae86a7-f0ab-4c09-b4da-89cd0e7fa0e0
-caps.latest.revision: "6"
-author: Dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: be8c36c73478e232254185681546f5f52c7d701f
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 17b0147e82e2eb9a756bdab69eed7ab86f98a1e0
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configuring-reporting-in-system-center-configuration-manager"></a>Configuration des rapports dans System Center Configuration Manager
 
@@ -129,7 +124,7 @@ Avant de créer, modifier et exécuter des rapports dans la console System Cente
 
     -   **Compte du point de Reporting Services** : cliquez sur **Définir**, puis sélectionnez le compte à utiliser quand SQL Server Reporting Services sur le point de Reporting Services se connecte à la base de données de site Configuration Manager pour récupérer les données qui s’affichent dans un rapport. Sélectionnez **Compte existant** pour spécifier un compte d’utilisateur Windows déjà configuré en tant que compte Configuration Manager ou sélectionnez **Nouveau compte** pour spécifier un compte d’utilisateur Windows qui n’est pas actuellement configuré en tant que compte Configuration Manager. Configuration Manager accorde automatiquement l’accès à la base de données du site pour l’utilisateur spécifié. L'utilisateur est affiché dans le sous-dossier **Comptes** du nœud **Sécurité** dans l'espace de travail **Administration** avec le nom de compte **Point Reporting Services ConfigMgr** .  
 
-         Le compte qui exécute Reporting Services doit appartenir au groupe de sécurité de domaine local **Groupe d'accès d'autorisation Windows**et l'autorisation **Read tokenGroupsGlobalAndUniversal** doit être définie sur **Autoriser**. Il doit y avoir une relation d’approbation bidirectionnelle pour les utilisateurs d’un domaine différent de celui du compte du Point de Reporting Servicies pour pouvoir exécuter des rapports.
+         Le compte qui exécute Reporting Services doit appartenir au groupe de sécurité de domaine local **Groupe d'accès d'autorisation Windows**et l'autorisation **Read tokenGroupsGlobalAndUniversal** doit être définie sur **Autoriser**. Il doit y avoir une relation d’approbation bidirectionnelle pour les utilisateurs d’un domaine différent de celui du compte du point de Reporting Services pour pouvoir exécuter des rapports.
 
          Le compte d'utilisateur Windows et le mot de passe spécifiés sont chiffrés et stockés dans la base de données Reporting Services. Reporting Services récupère les données de rapports à partir de la base de données de site à l'aide de ce compte et de ce mot de passe.  
 
@@ -238,7 +233,7 @@ Avant de créer, modifier et exécuter des rapports dans la console System Cente
 
     1.  Répétez les étapes précédentes de 1.a à 1.e pour configurer le composant logiciel enfichable MMC **Certificat** sur l’ordinateur du point de gestion.  
 
-    2.  Dans la console, développez **Certificats (ordinateur local)**et **Personnes autorisées**, cliquez avec le bouton droit sur **Certificats**, sélectionnez **Toutes les tâches**, puis sélectionnez **Importer** pour lancer l' **Assistant Importation de certificat**.  
+    2.  Dans la console, développez **Certificats (ordinateur local)** et **Personnes autorisées**, cliquez avec le bouton droit sur **Certificats**, sélectionnez **Toutes les tâches**, puis sélectionnez **Importer** pour lancer l' **Assistant Importation de certificat**.  
 
     3.  Sur la page **Fichier à importer** , cliquez sur le certificat sauvegardé à l'étape 1.h, puis cliquez sur **Suivant**.  
 

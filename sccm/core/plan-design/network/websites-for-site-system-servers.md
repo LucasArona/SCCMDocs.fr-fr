@@ -1,27 +1,20 @@
 ---
-title: "Sites web pour les systèmes de site"
+title: Sites web pour les systèmes de site
 titleSuffix: Configuration Manager
-description: "Découvrez les sites web personnalisés et par défaut pour les serveurs de système de site dans System Center Configuration Manager."
-ms.custom: na
+description: Découvrez les sites web personnalisés et par défaut pour les serveurs de système de site dans System Center Configuration Manager.
 ms.date: 2/8/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 681f0893-e83b-476e-9ec0-a5dc7c9deeb6
-caps.latest.revision: 
-caps.handback.revision: 
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 7d91bc91ec1992ecf06244adf48b76332fc25a1b
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 5614317639c12813acf61f17de844c8304bed70f
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="websites-for-site-system-servers-in-system-center-configuration-manager"></a>Sites web pour les serveurs de système de site dans System Center Configuration Manager
 
@@ -58,7 +51,7 @@ Plusieurs rôles de système de site Configuration Manager nécessitent l’util
 **À propos de la configuration requise pour IIS :**
 **Les rôles de système de site suivants nécessitent IIS et un site web pour héberger les services de système de site :**  
 
--   Point de service Web du catalogue des applications  
+-   Point de service web du catalogue des applications  
 
 -   Point du site web du catalogue des applications  
 
@@ -74,7 +67,7 @@ Plusieurs rôles de système de site Configuration Manager nécessitent l’util
 
 -   Point de mise à jour logicielle  
 
--   Point de migration d'état  
+-   Point de migration d’état  
 
 Autres éléments à prendre en considération  
 
@@ -101,11 +94,11 @@ Les rôles suivants sont **réinstallés automatiquement**:
 
 -   Point d'état de secours  
 
--   Point de migration d'état  
+-   Point de migration d’état  
 
 Les rôles suivants doivent être **réinstallés manuellement**:  
 
--   Point de service Web du catalogue des applications  
+-   Point de service web du catalogue des applications  
 
 -   Point du site web du catalogue des applications  
 

@@ -1,25 +1,20 @@
 ---
-title: "Organigramme - Réplication des mises à jour"
+title: Organigramme - Réplication des mises à jour
 titleSuffix: Configuration Manager
-description: "Observez le processus par lequel une mise à jour dans la console que vous choisissez d’installer se réplique sur d’autres sites."
-ms.custom: na
+description: Observez le processus par lequel une mise à jour dans la console que vous choisissez d’installer se réplique sur d’autres sites.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d38ea401-4695-4b4c-bd8d-95bdc2c67f5a
-caps.latest.revision: "5"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 5db0dd3feba0552b7ccc694ee4ff45d6b37ebe81
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: b9c10805c3cac89293b4cb8550b0f3c76fef8422
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="flowchart---update-replication-for-system-center-configuration-manager"></a>Organigramme - Réplication des mises à jour pour System Center Configuration Manager
 

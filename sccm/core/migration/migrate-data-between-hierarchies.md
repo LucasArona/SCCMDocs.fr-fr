@@ -1,26 +1,20 @@
 ---
-title: "Migrer des données"
+title: Migrer des données
 titleSuffix: Configuration Manager
-description: "Découvrez comment transférer des données d’une hiérarchie source vers une hiérarchie de destination System Center Configuration Manager."
-ms.custom: na
+description: Découvrez comment transférer des données d’une hiérarchie source vers une hiérarchie de destination System Center Configuration Manager.
 ms.date: 12/29/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cf014eb0-f8c2-4d37-b8d7-368d63a10b89
-caps.latest.revision: "11"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 8b2e55a2be2572a380ae994389a8a1c9c402aed7
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: 17b0a13040ec589ee8987685d30d9a3d232afde8
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="migrate-data-between-hierarchies-in-system-center-configuration-manager"></a>Migrer des données entre hiérarchies dans System Center Configuration Manager
 
@@ -84,7 +78,7 @@ Après avoir migré les données d’une hiérarchie source Configuration Manage
 ### <a name="migration-from-configuration-manager-2007-hierarchies"></a>Migration à partir de hiérarchies Configuration Manager 2007  
  Quand vous migrez des données à partir de Configuration Manager 2007, vous pouvez pérenniser les investissements liés à votre infrastructure de site existante et profiter des avantages suivants :  
 
-|Avantage|Informations complémentaires|  
+|Avantage|Plus d'informations|  
 |-------------|----------------------|  
 |Améliorations de la base de données du site|La base de données System Center Configuration Manager assure une prise en charge complète d’Unicode.|  
 |Réplication de la base de données entre sites|La réplication dans System Center Configuration Manager s’appuie sur Microsoft SQL Server. Les performances des transferts de données de site à site sont ainsi améliorées.|  

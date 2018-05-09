@@ -1,25 +1,20 @@
 ---
 title: Planifier et configurer la gestion des applications
 titleSuffix: Configuration Manager
-description: "Implémentez et configurez les dépendances nécessaires au déploiement d’applications dans System Center Configuration Manager."
-ms.custom: na
+description: Implémentez et configurez les dépendances nécessaires au déploiement d’applications dans System Center Configuration Manager.
 ms.date: 11/07/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 2be84a1d-ebb9-47ae-8982-c66d5b92a52a
-caps.latest.revision: "13"
-author: mattbriggs
-ms.author: mabrigg
-manager: angrobe
-ms.openlocfilehash: cd06d3ee2ea14c9ff1b9cf09980c2b25a5263db9
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 18d9fe80a1c5525457579dadbfeaeafa3425202d
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="plan-for-and-configure-application-management-in-system-center-configuration-manager"></a>Planifier et configurer la gestion des applications dans System Center Configuration Manager
 
@@ -40,11 +35,11 @@ Utilisez les informations de cette article pour savoir comment implémenter les 
 |Dépendance|Plus d'informations|  
 |------------------|----------------------|  
 |Point de gestion|Les clients contactent un point de gestion pour télécharger la stratégie client, localiser du contenu et se connecter au catalogue des applications.<br /><br /> Si les clients ne peuvent pas accéder à un point de gestion, ils ne peuvent pas utiliser le catalogue d'applications.|  
-|Point de distribution|Pour que les applications puissent être déployées sur les clients, la hiérarchie doit contenir au moins un point de distribution. Par défaut, le serveur de site possède un rôle de système de site du point de distribution activé au cours d'une installation standard. Le nombre et l'emplacement des points de distribution dépendent des exigences propres à votre entreprise.<br /><br /> Pour plus d’informations sur l’installation des points de distribution et sur la gestion de contenu, consultez [Gérer le contenu et l’infrastructure de contenu](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).|  
+|Point de distribution|Pour que les applications puissent être déployées sur les clients, la hiérarchie doit contenir au moins un point de distribution. Par défaut, le serveur de site possède un rôle de système de site du point de distribution activé au cours d'une installation standard. Le nombre et l'emplacement des points de distribution dépendent des exigences propres à votre entreprise.<br /><br /> Pour plus d’informations sur l’installation de points de distribution et sur la gestion de contenu, consultez [Gérer le contenu et l’infrastructure de contenu](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).|  
 |Paramètres du client|De nombreux paramètres client contrôlent la manière dont les applications sont installées sur le client, ainsi que l’expérience utilisateur offerte par ce dernier. En voici quelques-uns :<br /><br /><ul><li>Agent ordinateur</li><li>Redémarrage de l’ordinateur</li><li>Déploiement logiciel</li><li>Affinité entre utilisateur et appareil</li></ul> Pour plus d’informations sur ces paramètres client, consultez [À propos des paramètres client](../../core/clients/deploy/about-client-settings.md).<br /><br /> Pour plus d’informations sur la configuration des paramètres client, consultez [Guide pratique pour configurer les paramètres client dans Configuration Manager](../../core/clients/deploy/configure-client-settings.md).|  
 |Comptes d’utilisateur découverts pour le catalogue d’applications |Configuration Manager doit d’abord détecter les comptes d’utilisateur avant que les utilisateurs puissent afficher et demander des applications du catalogue des applications. Pour plus d’informations, consultez [Exécuter la découverte](/sccm/core/servers/deploy/configure/run-discovery).|  
 |Client App-V 4.6 SP1 ou version supérieure, pour l'exécution des applications virtuelles|Pour créer des applications virtuelles dans Configuration Manager, les ordinateurs clients doivent disposer du client App-V 4.6 SP1 ou ultérieur.<br /><br /> Vous devez également mettre à jour le client App-V avec le correctif décrit dans l’[article 2645225 de la Base de connaissances](http://go.microsoft.com/fwlink/p/?LinkId=237322) avant de pouvoir déployer des applications virtuelles.|  
-|Point de service Web du catalogue des applications|Le point de service web du catalogue des applications est un rôle de système de site qui fournit au site web du catalogue des applications des informations sur les logiciels disponibles auprès de la bibliothèque de logiciels.<br /><br /> Pour plus d’informations sur la configuration de ce rôle de système de site, consultez [Configurer le Centre logiciel et le catalogue des applications (PC Windows uniquement)](/sccm/apps/plan-design/plan-for-and-configure-application-management#configure-software-center-and-the-application-catalog-windows-pcs-only) dans cet article.|  
+|Point de service web du catalogue des applications|Le point de service web du catalogue des applications est un rôle de système de site qui fournit au site web du catalogue des applications des informations sur les logiciels disponibles auprès de la bibliothèque de logiciels.<br /><br /> Pour plus d’informations sur la configuration de ce rôle de système de site, consultez [Configurer le Centre logiciel et le catalogue des applications (PC Windows uniquement)](/sccm/apps/plan-design/plan-for-and-configure-application-management#configure-software-center-and-the-application-catalog-windows-pcs-only) dans cet article.|  
 |Point du site web du catalogue des applications|Le point du site web du catalogue des applications est un rôle de système de site fournissant aux utilisateurs une liste des logiciels disponibles.<br /><br /> Pour plus d’informations sur la configuration de ce rôle de système de site, consultez [Configurer le Centre logiciel et le catalogue des applications (PC Windows uniquement)](/sccm/apps/plan-design/plan-for-and-configure-application-management#configure-software-center-and-the-application-catalog-windows-pcs-only) dans cet article.|  
 |Point de Reporting Services|Pour utiliser les rapports dans Configuration Manager pour la gestion d’applications, vous devez d’abord installer et configurer un point de Reporting Services.<br /><br /> Pour plus d’informations, consultez [Génération de rapports dans System Center Configuration Manager](../../core/servers/manage/reporting.md).|  
 |Autorisations de sécurité pour la gestion d'applications|Vous devez disposer des autorisations de sécurité suivantes pour pouvoir gérer des applications :<br /><br /> Le rôle de sécurité **Auteur d’application** inclut les autorisations mentionnées ci-dessus, qui sont nécessaires pour créer, modifier et mettre hors service des applications dans Configuration Manager.<br /><br /> **Pour déployer des applications :**<br /><br /> Le rôle de sécurité **Gestionnaire de déploiement d’application** intègre les autorisations mentionnées ci-dessus, qui sont nécessaires au déploiement d’applications dans Configuration Manager.<br /><br /> Le rôle de sécurité **Administrateur d’application** a toutes les autorisations des rôles de sécurité **Auteur d’application** et **Gestionnaire de déploiement d’application**.<br /><br /> Pour plus d’informations, consultez [Configurer l’administration basée sur des rôles](../../core/servers/deploy/configure/configure-role-based-administration.md).|  
@@ -140,7 +135,7 @@ Utilisez les informations de cette article pour savoir comment implémenter les 
 
 3.  Sous l’onglet **Accueil**, dans le groupe **Propriétés**, choisissez **Propriétés**.  
 
-4.  Consultez et configurez les paramètres relatifs aux notifications utilisateur, au catalogue d'applications et au Centre logiciel. Exemple :  
+4.  Consultez et configurez les paramètres relatifs aux notifications utilisateur, au catalogue d'applications et au Centre logiciel. Par exemple :  
 
     1.  Groupe**Agent ordinateur** :  
 
@@ -176,7 +171,7 @@ Utilisez les informations de cette article pour savoir comment implémenter les 
 
 5.  Choisissez **OK** pour fermer la boîte de dialogue **Paramètres client par défaut**.  
 
-Les ordinateurs client sont configurés avec ces paramètres lorsqu'ils téléchargent la stratégie client. Pour lancer la récupération de stratégie pour un seul client, consultez [Guide pratique pour gérer les clients](../../core/clients/manage/manage-clients.md).
+Les ordinateurs clients sont configurés avec ces paramètres lorsqu'ils téléchargent la stratégie client. Pour lancer la récupération de stratégie pour un seul client, consultez [Guide pratique pour gérer les clients](../../core/clients/manage/manage-clients.md).
 
 #### <a name="to-customize-software-center-branding"></a>Personnaliser la marque du Centre logiciel
 

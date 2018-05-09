@@ -1,24 +1,20 @@
 ---
 title: Technical Preview 1712 | Microsoft Docs
 titleSuffix: Configuration Manager
-description: "Découvrez les fonctionnalités disponibles dans la version Technical Preview 1712 de System Center Configuration Manager."
-ms.custom: na
+description: Découvrez les fonctionnalités disponibles dans la version Technical Preview 1712 de System Center Configuration Manager.
 ms.date: 12/15/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3ce372d6-bd93-4d4d-b612-5303f89c36f0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 85f0b22b3dc067f6f07816ad36d23a090885f355
-ms.sourcegitcommit: ed8b2438ef85c9160741ef61f9171be41dd1ae0a
+manager: dougeby
+ms.openlocfilehash: 5ecaa025a9a9f0d85b7a2ef857e70c4d762fd1f5
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/17/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1712-for-system-center-configuration-manager"></a>Fonctionnalités de la version Technical Preview 1712 de System Center Configuration Manager
 
@@ -151,7 +147,7 @@ Nous apprécions tellement vos commentaires que vous pouvez désormais nous les 
  - Déploiement de système d’exploitation Configuration Manager
  - Serveur Configuration Manager
 
-Continuez à utiliser notre [page User Voice](http://configurationmanager.uservoice.com/) afin de voter pour de nouvelles idées de fonctionnalités dans Configuration Manager.
+Continuez à utiliser notre [page User Voice](http://configurationmanager.uservoice.com/) afin de voter sur de nouvelles idées de fonctionnalités dans Configuration Manager.
 
 
 <!-- When we have another H2 in this topic, Add this Next Steps section back in.  -->

@@ -1,30 +1,25 @@
 ---
-title: "Capacités de la version Technical Preview 1511"
+title: Capacités de la version Technical Preview 1511
 titleSuffix: Configuration Manager
-description: "Découvrez les fonctionnalités disponibles dans la version d’évaluation technique 1511 pour System Center Configuration Manager."
-ms.custom: na
+description: Découvrez les fonctionnalités disponibles dans la version d’évaluation technique 1511 pour System Center Configuration Manager.
 ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 69473706-21b3-498b-a67e-670fdc988f0d
-caps.latest.revision: "5"
-author: erikje
-ms.author: erikje
-manager: angrobe
+author: aczechowski
 robots: noindex,nofollow
-ms.openlocfilehash: e12e67a3b0d182a8e3abd045c89e6b2bf3183054
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 8a805d6b7075d61b0e7669200670ac8434eccdf5
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1511-for-system-center-configuration-manager"></a>Fonctionnalités de la version d’évaluation technique 1511 pour System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (version d’évaluation technique)*
+*S’applique à : System Center Configuration Manager (Technical Preview)*
 
 Cet article présente les fonctionnalités qui sont disponibles dans la version d’évaluation technique 1511 pour System Center Configuration Manager. Cette version est une installation de base de référence pour la version d’évaluation technique que vous pouvez utiliser pour installer un nouveau site de version d’évaluation technique ou pour effectuer la mise à niveau à partir d’une version antérieure de la version d’évaluation technique.   Avant d’installer cette version de la version d’évaluation technique, passez en revue la rubrique de présentation, [Version d’évaluation technique pour System Center Configuration Manager](/sccm/core/get-started/technical-preview), pour vous familiariser avec les conditions générales et limitations d’utilisation d’une version d’évaluation technique, la mise à jour entre les versions et l’envoi de commentaires sur les fonctionnalités dans une version d’évaluation technique.  
 

@@ -1,25 +1,20 @@
 ---
-title: "Gérer l’accès à Skype Entreprise Online"
+title: Gérer l’accès à Skype Entreprise Online
 titleSuffix: Configuration Manager
-description: "Apprenez à utiliser la stratégie d’accès conditionnel pour gérer l’accès à Skype Entreprise Online."
-ms.custom: na
+description: Apprenez à utiliser la stratégie d’accès conditionnel pour gérer l’accès à Skype Entreprise Online.
 ms.date: 12/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 71c44250-626e-482c-8794-434c6aeb2fb1
-caps.latest.revision: "6"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 3c1d0c84dc28fb886048cf8d7ea310c2b4dfc4aa
-ms.sourcegitcommit: 92c3f916e6bbd35b6208463ff406e0247664543a
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 4a88706233e85be6960585963c26bd740e9ff6ed
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-skype-for-business-online-access"></a>Gérer l’accès à Skype Entreprise Online
 

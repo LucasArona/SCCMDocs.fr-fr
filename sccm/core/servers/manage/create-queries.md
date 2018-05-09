@@ -1,26 +1,20 @@
 ---
-title: "Créer des requêtes"
+title: Créer des requêtes
 titleSuffix: Configuration Manager
-description: "Découvrez comment créer et importer des requêtes dans System Center Configuration Manager. Inclut des conseils et des exemples de requêtes."
-ms.custom: na
+description: Découvrez comment créer et importer des requêtes dans System Center Configuration Manager. Inclut des conseils et des exemples de requêtes.
 ms.date: 12/11/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 868049d3-3209-47ec-b34a-9cc26941893a
-caps.latest.revision: "5"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 32400ebcd834e3b98bf0f1ff6a1f6b41d8e12076
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: 6ba7adf52ce084d640bf53aef32678576d5828f5
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-queries-in-system-center-configuration-manager"></a>Comment créer des requêtes dans System Center Configuration Manager
 
@@ -160,7 +154,7 @@ Les types d’appareils sont stockés dans la base de données Configuration Man
 Select SMS_R_System.ClientEdition from SMS_R_System where SMS_R_System.ClientEdition = <Device ID>  
 ```  
 
-Utilisez l’une des valeurs suivantes pour *&lt;ID d’appareil\>* :  
+Utilisez l’une des valeurs suivantes pour *&lt;ID d’appareil\>*  :  
 
 |Type d'appareil|Valeur de AgentEdition|  
 |-----------------|---------------------------|  

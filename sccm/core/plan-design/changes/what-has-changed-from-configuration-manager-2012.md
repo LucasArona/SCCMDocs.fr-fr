@@ -1,25 +1,19 @@
 ---
 title: 'Changements de Configuration Manager 2012 '
 description: Identifiez les changements et les nouvelles fonctionnalités de System Center Configuration Manager par rapport à System Center 2012 Configuration Manager.
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 3ae68fa6-8b30-45dd-9d12-50bb67cb4a9d
-caps.latest.revision: 51
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 70f6604e6f1b6731d6d2685e20262552f2b80590
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: a58e5924fc34bad514ca6f01bb23aa84443705c6
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="what39s-changed-in-system-center-configuration-manager-from-system-center-2012-configuration-manager"></a>Changements dans System Center Configuration Manager par rapport à System Center 2012 Configuration Manager
 
@@ -48,7 +42,7 @@ ms.lasthandoff: 03/23/2018
  Certaines versions disponibles uniquement comme mises à jour pour des sites existants (à partir de la console Configuration Manager) ne peuvent pas être utilisées pour installer de nouveaux sites Configuration Manager.   
 Par exemple, la mise à jour 1710 est disponible uniquement à partir de la console Configuration Manager. Elle est utilisée pour mettre à jour un site qui exécute déjà une version de System Center Configuration Manager.
 
-Une version de mise à jour est également publiée régulièrement sous la forme d’une nouvelle version de base (par exemple, la mise à jour 1802). Ce type de mise à jour peut être utilisé pour installer une nouvelle hiérarchie sans avoir à démarrer avec une ancienne version de base de référence (comme 1511) et à effectuer une mise à niveau vers la version la plus récente.
+Une version de mise à jour est également publiée régulièrement sous la forme d’une nouvelle version de base (par exemple, la mise à jour 1802). Ce type de mise à jour peut être utilisée pour installer une nouvelle hiérarchie sans avoir à démarrer avec une ancienne version de base de référence (comme 1511) et à effectuer une mise à niveau vers la version la plus récente.
 
 
 Pour plus d’informations sur l’utilisation des mises à jour, consultez [Mises à jour pour System Center Configuration Manager](../../../core/servers/manage/updates.md).  

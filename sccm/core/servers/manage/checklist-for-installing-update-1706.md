@@ -1,25 +1,20 @@
 ---
-title: "Liste de contrôle pour 1706"
+title: Liste de contrôle pour 1706
 titleSuffix: Configuration Manager
-description: "Découvrez les actions à entreprendre avant d’effectuer la mise à jour vers System Center Configuration Manager version 1706."
-ms.custom: na
+description: Découvrez les actions à entreprendre avant d’effectuer la mise à jour vers System Center Configuration Manager version 1706.
 ms.date: 12/19/2017
-ms.reviewer: na
-ms.suite: na
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7def067e-845c-4db3-9d56-fa1dcf2fd7c7
-caps.latest.revision: 
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: b9acbf4a80bed52f0c720f70ee62042d1e90dd62
-ms.sourcegitcommit: 2867fd119256ec670fc5ae65cdc8a80d39f9b4d4
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: e3a5f04367057510c257b211c302cd5576929a71
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="checklist-for-installing-update-1706-for-system-center-configuration-manager"></a>Liste de contrôle de l’installation de la mise à jour 1706 pour System Center Configuration Manager
 

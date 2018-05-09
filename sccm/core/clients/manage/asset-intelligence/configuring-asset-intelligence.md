@@ -2,25 +2,19 @@
 title: Configurer Asset Intelligence
 titleSuffix: Configuration Manager
 description: Configurez Asset Intelligence dans System Center Configuration Manager.
-ms.custom: na
 ms.date: 2/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 08e0382d-de05-4a76-ba5c-7223173f7066
-caps.latest.revision: "7"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: d6137426c4960d0e9a9117fc78d3f26803b4f001
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 182006f0e4fcaf2304570ef4110527a61180c290
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-asset-intelligence-in-system-center-configuration-manager"></a>Configurer Asset Intelligence dans System Center Configuration Manager
 
@@ -200,13 +194,13 @@ Asset Intelligence fait correspondre les produits que vous spécifiez dans la d�
 |Nom|Jusqu'à 255 caractères|Oui|Nom du logiciel|  
 |Éditeur|Jusqu'à 255 caractères|Oui|Éditeur du logiciel|  
 |Version|Jusqu'à 255 caractères|Oui|Version du logiciel|  
-|Langage|Jusqu'à 255 caractères|Oui|Langue du logiciel|  
+|Langage|Jusqu'à 255 caractères|Oui|Langue du logiciel|  
 |Quantité effective|Valeur entière|Oui|Nombre de licences achetées|  
 |Numéro BC|Jusqu'à 255 caractères|Non|Informations sur les BC|  
 |Nom du revendeur|Jusqu'à 255 caractères|Non|Informations sur le revendeur|  
 |Date d'achat|Date au format suivant : MM/JJ/AAAA|Non|Date d'achat de la licence|  
 |Achat de la prise en charge|Valeur en bits|Non|0 ou 1 (0 pour Oui, 1 pour Non)|  
-|Date d'expiration de la prise en charge|Date au format suivant : MM/JJ/AAAA|Non|Date de fin de la prise en charge achetée|  
+|Date d'expiration de la prise en charge|Date au format suivant : MM/JJ/AAAA|Non|Date de fin de la prise en charge achetée|  
 |Commentaires|Jusqu'à 255 caractères|Non|Commentaires facultatifs|  
 
 ###  <a name="BKMK_ConfigureMaintenanceTasks"></a> Configurer les tâches de maintenance Asset Intelligence  

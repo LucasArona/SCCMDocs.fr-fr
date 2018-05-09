@@ -1,28 +1,22 @@
 ---
-title: Prise en main des paramètres de conformité
+title: Prendre en main les paramètres de compatibilité
 titleSuffix: Configuration Manager
 description: En savoir plus sur les concepts de base et sur le fonctionnement des paramètres de conformité
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: a2742d52-851e-4abc-b623-d12d91684c0b
-caps.latest.revision: 11
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a8f672d4d92db8f1bd6e19c4a483b5b3107ad703
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: ec350bdb6b3b421d95bf13eafc562919bccc3c38
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="get-started-with-compliance-settings-in-system-center-configuration-manager"></a>Prise en main des paramètres de conformité dans System Center Configuration Manager
+# <a name="get-started-with-compliance-settings-in-system-center-configuration-manager"></a>Prise en main des paramètres de compatibilité dans System Center Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
@@ -73,12 +67,12 @@ Avant de créer des paramètres de conformité Configuration Manager, commencez 
 
  Après avoir défini une base de référence de configuration, déployez-la dans des regroupements d’utilisateurs et d’appareils. Le client évalue ensuite la conformité des paramètres de référence selon une planification. Vous pouvez déployer plusieurs bases de référence de configuration sur les appareils. Cette granularité offre un meilleur contrôle de la conformité. 
 
- Les appareils clients évaluent leur conformité par rapport à chaque ligne de base de configuration déployée et signalent immédiatement les résultats au site à l'aide de messages d'état. Si la base de référence de configuration a été téléchargée sur un appareil qui est actuellement déconnecté du réseau, il continue d’évaluer la conformité des éléments de configuration. Il envoie les informations de conformité une fois reconnecté.  
+ Les périphériques client évaluent leur conformité par rapport à chaque ligne de base de configuration déployée et signalent immédiatement les résultats au site à l'aide de messages d'état. Si la base de référence de configuration a été téléchargée sur un appareil qui est actuellement déconnecté du réseau, il continue d’évaluer la conformité des éléments de configuration. Il envoie les informations de conformité une fois reconnecté.  
 
 ### <a name="monitoring-configuration-baselines"></a>Analyse des bases de référence de configuration
 - Analysez les résultats de l’évaluation de conformité dans la console Configuration Manager, dans l’espace de travail **Analyse**, dans le nœud **Déploiements**. Par exemple :
     - Causes courantes de non-conformité
-    - Erreurs
+    - Errors
     - Nombre d’utilisateurs et d’appareils concernés
 - Exécutez des rapports sur les paramètres de conformité avec des détails supplémentaires. Par exemple :
     - Identification des appareils conformes ou non conformes

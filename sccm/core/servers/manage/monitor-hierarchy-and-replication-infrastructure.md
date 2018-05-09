@@ -1,26 +1,20 @@
 ---
-title: "Surveiller la réplication"
+title: Surveiller la réplication
 titleSuffix: Configuration Manager
-description: "Apprenez à surveiller l’infrastructure et les opérations dans Configuration Manager à l’aide de l’espace de travail Surveillance dans la console."
-ms.custom: na
+description: Apprenez à surveiller l’infrastructure et les opérations dans Configuration Manager à l’aide de l’espace de travail Surveillance dans la console.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3fab4d67-8d2a-45ce-8b06-471280102cf6
-caps.latest.revision: "11"
-caps.handback.revision: "0"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 459a619d08a5d38c51301e2f6cff23a5d46a9464
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 04faf92545f84fdf53c522ad9aa0c74bbd5c4aa1
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="monitor-hierarchy-and-replication-infrastructure-in-system-center-configuration-manager"></a>Surveiller l’infrastructure de la hiérarchie et de la réplication dans System Center Configuration Manager
 
@@ -33,7 +27,7 @@ Pour surveiller l’infrastructure et les opérations dans System Center Configu
 
  En plus d’utiliser la console Configuration Manager pour la surveillance, vous pouvez utiliser les rapports Configuration Manager ou consulter les fichiers journaux Configuration Manager des composants Configuration Manager. Pour plus d’informations sur les rapports, consultez [Génération de rapports dans System Center Configuration Manager](../../../core/servers/manage/reporting.md). Pour plus d’informations sur les fichiers journaux, consultez [Fichiers journaux dans System Center Configuration Manager](../../../core/plan-design/hierarchy/log-files.md).  
 
- Lorsque vous surveillez des sites, recherchez des signes indiquant des problèmes qui vous obligent à prendre des mesures. Exemple :  
+ Lorsque vous surveillez des sites, recherchez des signes indiquant des problèmes qui vous obligent à prendre des mesures. Par exemple :  
 
 -   File d'attente de fichiers sur les serveurs de site et les systèmes de site.  
 
@@ -209,7 +203,7 @@ Lorsque vous exécutez l'analyseur de lien de réplication, celui-ci détecte le
 
 -   ReplicationLinkAnalysis.log  
 
-Lorsque l'analyseur de lien de réplication s'exécute, il arrête les services suivants pendant la correction des problèmes, puis il redémarre ces services une fois la correction terminée :  
+Lorsque l'analyseur de lien de réplication s'exécute, il arrête les services suivants pendant la correction des problèmes, puis il redémarre ces services une fois la correction terminée :  
 
 -   SMS_SITE_COMPONENT_MANAGER  
 

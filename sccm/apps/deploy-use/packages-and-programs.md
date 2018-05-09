@@ -1,26 +1,20 @@
 ---
 title: Packages et programmes
 titleSuffix: Configuration Manager
-description: "Prend en charge les déploiements qui utilisent des packages et des programmes ou des applications avec System Center Configuration Manager."
-ms.custom: na
+description: Prend en charge les déploiements qui utilisent des packages et des programmes ou des applications avec System Center Configuration Manager.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: caad0507-9913-415a-b13d-d36f8f0a1b80
-caps.latest.revision: "8"
-caps.handback.revision: "0"
-author: mattbriggs
-ms.author: mabrigg
-manager: angrobe
-ms.openlocfilehash: 7712721167edad5808c46827f68fc32a2b890bfd
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 6f34fd322e5f94550602d7883a0303d10059b702
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="packages-and-programs-in-system-center-configuration-manager"></a>Packages et programmes dans System Center Configuration Manager
 
@@ -230,7 +224,7 @@ Les packages peuvent utiliser certaines nouvelles fonctionnalités de Configurat
 
 7.  Si l’objet du déploiement a la valeur **Obligatoire**, configurez le comportement de réexécution du programme à partir du menu déroulant **Comportement de réexécution**. Choisissez parmi les options suivantes :  
 
-    |comportement de réexécution|Informations complémentaires|  
+    |comportement de réexécution|Plus d'informations|  
     |--------------------|----------------------|  
     |Ne jamais exécuter à nouveau un programme déployé|Le programme ne sera pas réexécuté sur le client, même si le programme a échoué initialement ou que les fichiers programmes sont modifiés.|  
     |Toujours exécuter à nouveau le programme|Le programme est systématiquement réexécuté sur le client quand le déploiement est planifié, même si le programme a déjà été correctement exécuté. Cela peut être utile lorsque vous utilisez des déploiements périodiques dans lequel le programme est mis à jour, par exemple avec un logiciel antivirus.|  
@@ -243,7 +237,7 @@ Les packages peuvent utiliser certaines nouvelles fonctionnalités de Configurat
 
     -   **Installation du logiciel**: permet au logiciel d’être installé en dehors de toute fenêtre de maintenance configurée.  
 
-    -   **Redémarrage du système (si nécessaire pour terminer l’installation)** : si l’installation du logiciel nécessite un redémarrage de l’appareil pour se terminer, autorisez cette option en dehors des fenêtres de maintenance configurées.  
+    -   **Redémarrage du système (si nécessaire pour terminer l’installation)**  : si l’installation du logiciel nécessite un redémarrage de l’appareil pour se terminer, autorisez cette option en dehors des fenêtres de maintenance configurées.  
 
     -   **Appareils Windows Embedded** : quand vous déployez des packages et des programmes sur des appareils Windows Embedded dont le filtre d’écriture est activé, vous pouvez choisir d’installer les packages et les programmes sur un segment de recouvrement temporaire, puis de valider les modifications ultérieurement. Vous pouvez également valider les modifications à l’échéance de l’installation ou au cours d’une fenêtre de maintenance. Quand vous validez des modifications à l’échéance de l’installation ou au cours d’une fenêtre de maintenance, un redémarrage est requis et les modifications sont conservées sur l’appareil.  
 
@@ -283,7 +277,7 @@ Les packages peuvent utiliser certaines nouvelles fonctionnalités de Configurat
 |----------|----------------------|  
 |**Créer un fichier de contenu préparé**|Ouvre l’**Assistant Création du fichier de contenu préparé** qui vous permet de créer un fichier qui contient le contenu du package qui peut être importé manuellement vers un autre site. Ceci est utile dans les cas où vous disposez d'une faible bande passante du réseau entre le serveur de site et le point de distribution.|  
 |**Créer un programme**|Ouvre l’**Assistant Création d’un programme** qui vous permet de créer un programme pour ce package.|  
-|**Exporter**|Ouvre l’**Assistant Exportation de package** qui vous permet d’exporter le package sélectionné et son contenu vers un fichier.<br /><br /> Pour plus d’informations sur l’importation des packages et des programmes, consultez [Créer des packages et des programmes](/sccm/apps/deploy-use/packages-and-programs#create-packages-and-programs) dans cette rubrique.|  
+|**Exporterer**|Ouvre l’**Assistant Exportation de package** qui vous permet d’exporter le package sélectionné et son contenu vers un fichier.<br /><br /> Pour plus d’informations sur l’importation des packages et des programmes, consultez [Créer des packages et des programmes](/sccm/apps/deploy-use/packages-and-programs#create-packages-and-programs) dans cette rubrique.|  
 |**Déployer**|Ouvre l’**Assistant Déploiement logiciel** qui vous permet de déployer le package et le programme sélectionnés sur un regroupement. Pour plus d’informations, consultez [Déployer des packages et des programmes](/sccm/apps/deploy-use/packages-and-programs#deploy-packages-and-programs) dans cette rubrique.|  
 |**Distribuer du contenu**|Ouvre l’**Assistant Distribuer du contenu** qui vous permet d’envoyer le contenu qui est associé au package et au programme vers les points de distribution ou groupes de points de distribution sélectionnés.|  
 |**Mise à jour des points de distribution**|Met les points de distributions à jour avec le contenu le plus récent pour le package et le programme sélectionnés.|  

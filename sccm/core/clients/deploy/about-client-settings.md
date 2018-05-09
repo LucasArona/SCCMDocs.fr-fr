@@ -2,26 +2,19 @@
 title: Paramètres du client
 titleSuffix: Configuration Manager
 description: Découvrir les paramètres par défaut et personnalisés pour contrôler les comportements du client
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
-caps.latest.revision: 15
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bd03457abdd5cc4464c10227626ba72637c96f90
-ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
+ms.openlocfilehash: a60e54ffac3ae029f07c2df555e905b55ca7b0b5
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="about-client-settings-in-system-center-configuration-manager"></a>À propos des paramètres client dans System Center Configuration Manager
 
@@ -196,7 +189,7 @@ En règle générale, les utilisateurs sont invités à entrer leurs information
 > [!NOTE]  
 >  Voici comment fonctionne la détection automatique :  
 >   
->  le client effectue une demande d'emplacement de service à un point de gestion. S'il existe un point de site Web du catalogue d'applications dans le même site que le client, ce serveur est donné au client en tant que le serveur du catalogue d'applications à utiliser. Si plusieurs points du site web du catalogue des applications sont disponibles dans le site, un serveur HTTPS est prioritaire sur un serveur qui n’est pas activé pour le protocole HTTPS. Après ce filtrage, tous les clients reçoivent l'un des serveurs à utiliser comme le catalogue d'applications. Configuration Manager n’équilibre pas la charge entre plusieurs serveurs. Quand le site du client ne contient pas de point du site web du catalogue des applications, le point de gestion retourne de manière non déterministique un point du site web du catalogue des applications à partir de la hiérarchie.  
+>  le client effectue une demande d'emplacement de service à un point de gestion. S'il existe un point de site Web du catalogue d'applications dans le même site que le client, ce serveur est donné au client en tant que le serveur du catalogue d'applications à utiliser. Si plusieurs point du site web du catalogue des applications sont disponibles dans le site, un serveur HTTPS est prioritaire sur un serveur qui n’est pas activé pour le protocole HTTPS. Après ce filtrage, tous les clients reçoivent l'un des serveurs à utiliser comme le catalogue d'applications. Configuration Manager n’équilibre pas la charge entre plusieurs serveurs. Quand le site du client ne contient pas de point du site web du catalogue des applications, le point de gestion retourne de manière non déterministique un point du site web du catalogue des applications à partir de la hiérarchie.  
 >   
 >  Pour les clients basés sur intranet, si vous configurez le point du site web du catalogue d’applications avec un nom NetBIOS pour l’URL du catalogue d’applications, le point de gestion donne aux clients ce nom NetBIOS, plutôt que le nom de domaine complet de l’intranet. Pour les clients basés sur Internet, le point de gestion donne uniquement le nom de domaine complet Internet au client.  
 >   
@@ -328,7 +321,7 @@ Pour plus d’informations sur les fenêtres de maintenance, consultez [Comment 
 ## <a name="delivery-optimization"></a>Optimisation de la distribution
 
 <!-- 1324696 -->
-Les groupes de limites Configuration Manager permettent de définir et de réguler la distribution de contenu sur le réseau de l’entreprise et dans les agences. [L’Optimisation de la distribution de Windows](/windows/deployment/update/waas-delivery-optimization) est une technologie cloud pair à pair de partage de contenu entre appareils Windows 10. À compter de la version 1802, configurez-la de façon à ce qu’elle utilise vos groupes de limites pour partager du contenu entre pairs.
+Les groupes de limites Configuration Manager permettent de définir et de réguler la distribution de contenu sur le réseau de l’entreprise et dans les agences. [L’Optimisation de la distribution de Windows](/windows/deployment/update/waas-delivery-optimization) est une technologie cloud pair à pair de partage de contenu entre appareils Windows 10. À compter de la version 1802, configurez-la de façon à ce qu’elle utilise vos groupes de limites pour partager du contenu entre homologues.
 
  > [!Note]
  > L’Optimisation de la distribution n’est disponible que sur les clients Windows 10
@@ -551,7 +544,7 @@ Donnez à vos utilisateurs la possibilité d’accepter ou de refuser des transf
 
 ### <a name="grant-remote-control-permission-to-local-administrators-group"></a>Accorder l'autorisation de contrôle à distance au groupe Administrateurs local
 
-Indiquez si les administrateurs locaux sur le serveur qui lance la connexion de contrôle à distance peuvent établir des sessions de contrôle à distance vers des ordinateurs clients.  
+Indiquez si les administrateurs locaux sur le serveur qui lance la connexion de contrôle à distance peuvent établir des sessions de contrôle à distance vers des ordinateurs client.  
 
 ### <a name="access-level-allowed"></a>Niveau d'accès autorisé
 
@@ -714,7 +707,7 @@ Si vous souhaitez collecter des fichiers stockés à partir d’ordinateurs clie
     -   **Arrêter le regroupement de fichiers lorsque la taille totale dépasse (Ko)** : spécifiez la taille de fichier, en Ko, au-delà de laquelle le client arrête la collecte des fichiers spécifiés.  
 
     > [!NOTE]  
-    >  Le serveur de site collecte les cinq dernières versions modifiées des fichiers collectés et les enregistre dans le *&lt;répertoire d’installation ConfigMgr\>*\Inboxes\Sinv.box\Filecol. Si un fichier n’a pas changé depuis le dernier cycle d’inventaire logiciel, le fichier n’est pas recollecté.  
+    >  Le serveur de site collecte les cinq dernières versions modifiées des fichiers collectés et les enregistre dans le *&lt;répertoire d’installation ConfigMgr\>* \Inboxes\Sinv.box\Filecol. Si un fichier n’a pas changé depuis le dernier cycle d’inventaire logiciel, le fichier n’est pas recollecté.  
     >   
     >  L’inventaire logiciel ne collecte pas les fichiers de plus de 20 Mo.  
     >   

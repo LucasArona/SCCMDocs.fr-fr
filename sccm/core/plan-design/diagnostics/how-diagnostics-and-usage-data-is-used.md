@@ -1,31 +1,26 @@
 ---
-title: "Utiliser les données de diagnostic"
+title: Utiliser les données de diagnostic
 titleSuffix: Configuration Manager
-description: "Découvrez comment Microsoft utilise les données de diagnostic et d’utilisation collectées par System Center Configuration Manager."
-ms.custom: na
+description: Découvrez comment Microsoft utilise les données de diagnostic et d’utilisation collectées par System Center Configuration Manager.
 ms.date: 12/29/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a8021bc8-2799-41f4-83c2-e27d1242028c
-caps.latest.revision: "5"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: d34305ddb158a01c0d79189705af597344a56f8d
-ms.sourcegitcommit: da27d37cc4e4e06cf23758846cdd7acb617f744b
+manager: dougeby
+ms.openlocfilehash: fac92818a56b9ef7c7e8e6b923fb0d833f9053c2
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-diagnostics-and-usage-data-is-used-for-system-center-configuration-manager"></a>Utilisation des données d’utilisation et de diagnostic pour System Center Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
-Les données de diagnostic et d’utilisation que System Center Configuration Manager collecte fournissent à Microsoft un retour d’expérience quasi immédiat sur la manière dont le produit fonctionne, et permettent d’améliorer les mises à jour ultérieures. Nous pouvons également voir des données de configuration qui nous aident à concevoir et tester les configurations qui sont en production. Exemple :  
+Les données de diagnostic et d’utilisation que System Center Configuration Manager collecte fournissent à Microsoft un retour d’expérience quasi immédiat sur la manière dont le produit fonctionne, et permettent d’améliorer les mises à jour ultérieures. Nous pouvons également voir des données de configuration qui nous aident à concevoir et tester les configurations qui sont en production. Par exemple :  
 
 -   Versions de Windows Server utilisées par les serveurs de site  
 

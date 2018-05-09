@@ -1,26 +1,20 @@
 ---
-title: "Créer des éléments de configuration pour Windows 10 géré par le client "
+title: 'Créer des éléments de configuration pour Windows 10 géré par le client '
 titleSuffix: Configuration Manager
-description: "Utilisez l’élément de configuration System Center Configuration Manager Windows 10 pour gérer les paramètres des ordinateurs Windows 10 gérés par le client Configuration Manager."
-ms.custom: na
+description: Utilisez l’élément de configuration System Center Configuration Manager Windows 10 pour gérer les paramètres des ordinateurs Windows 10 gérés par le client Configuration Manager.
 ms.date: 03/28/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 14226fbe-dd07-4432-910b-130790624a4e
-caps.latest.revision: "17"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 4f22ab22ec666c55962231bf92a42b25c4a7c127
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: bdb48689efba4c6f884d4c36c1a4dee0bbcc6b65
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-configuration-items-for-windows-10-devices-managed-with-the-system-center-configuration-manager-client"></a>Comment créer des éléments de configuration pour des périphériques Windows 10 gérés avec le client System Center Configuration Manager
 Utilisez l’élément de configuration System Center Configuration Manager **Windows 10** pour gérer les paramètres des ordinateurs Windows 10 gérés par le client Configuration Manager.  
@@ -72,7 +66,7 @@ Utilisez l’élément de configuration System Center Configuration Manager **Wi
   
 12. Effectuez toutes les étapes de l'Assistant.  
   
- Vous pouvez afficher le nouvel élément de configuration dans le nœud **Éléments de configuration** de l’espace de travail **Ressources et conformité** .  
+ Vous pouvez afficher le nouvel élément de configuration dans le nœud **Éléments de configuration** de l’espace de travail **Ressources et Conformité**.  
   
 ##  <a name="windows-10-configuration-item-settings-reference"></a>Informations de référence sur les paramètres d’élément de configuration Windows 10  
   

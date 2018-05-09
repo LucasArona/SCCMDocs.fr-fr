@@ -1,25 +1,20 @@
 ---
-title: "Inventaire matériel pour Linux et UNIX"
+title: Inventaire matériel pour Linux et UNIX
 titleSuffix: Configuration Manager
-description: "Découvrez comment utiliser l’inventaire matériel pour Linux et UNIX dans System Center Configuration Manager."
-ms.custom: na
+description: Découvrez comment utiliser l’inventaire matériel pour Linux et UNIX dans System Center Configuration Manager.
 ms.date: 02/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 1026d616-2a20-4fb2-8604-d331763937f8
-caps.latest.revision: "6"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 6f71478f6a2a8e5a2a41068624debfe3ac3e915d
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 68e60611356cbaea3dc14a42776e89ecdc951008
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hardware-inventory-for-linux-and-unix-in-system-center-configuration-manager"></a>Inventaire matériel pour Linux et UNIX dans System Center Configuration Manager
 
@@ -118,7 +113,7 @@ Le client System Center Configuration Manager pour Linux et UNIX prend en charge
      Pour plus d’informations sur **omicli** et sur la façon de tester les fournisseurs personnalisés, consultez le Guide de prise en main OMI.  
 
 > [!TIP]  
->  Utilisez la distribution de logiciels pour déployer les fournisseurs personnalisés et pour les inscrire sur chaque ordinateur client Linux et UNIX.  
+>  Utilisez la distribution de logiciels pour déployer des fournisseurs personnalisés et pour inscrire des fournisseurs personnalisés sur chaque ordinateur client Linux et UNIX.  
 
 ###  <a name="BKMK_AddLinuxProvidertoCM"></a> Activer la nouvelle classe d’inventaire dans Configuration Manager :  
  Pour que Configuration Manager puisse créer un rapport d’inventaire avec les données fournies par le nouveau fournisseur sur les ordinateurs Linux et UNIX, vous devez importer le fichier MOF qui définit le schéma de votre fournisseur personnalisé.  

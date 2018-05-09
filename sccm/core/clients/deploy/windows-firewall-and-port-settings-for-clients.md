@@ -1,26 +1,20 @@
 ---
-title: "Paramètres de pare-feu et de port du client Windows"
+title: Paramètres de pare-feu et de port du client Windows
 titleSuffix: Configuration Manager
-description: "Sélectionnez les paramètres de port et de pare-feu Windows pour les clients dans System Center Configuration Manager."
-ms.custom: na
+description: Sélectionnez les paramètres de port et de pare-feu Windows pour les clients dans System Center Configuration Manager.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dce4b640-c92f-401a-9873-ce9aa9262014
-caps.latest.revision: "8"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: fe9f98ad6567b4f691dcfe6f70868fc63d61a63d
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 193ee803fd0a6bacf043dbabc6550ef68a4a629a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="windows-firewall-and-port-settings-for-clients-in-system-center-configuration-manager"></a>Paramètres de port et de pare-feu Windows pour les clients dans System Center Configuration Manager
 
@@ -150,7 +144,7 @@ Dans System Center Configuration Manager, les ordinateurs clients qui exécutent
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
-|SMB (Server Message Block) entre l'ordinateur client et un partage réseau à partir duquel vous exécutez CCMSetup.exe.<br /><br /> Quand vous installez Configuration Manager, les fichiers sources d’installation du client sont copiés et partagés automatiquement à partir du dossier *&lt;Chemin_Installation\>*\Client sur les points de gestion. Toutefois, vous pouvez copier ces fichiers et créer un nouveau partage sur n'importe quel ordinateur du réseau. Vous pouvez également éliminer ce trafic réseau en exécutant CCMSetup.exe localement, par exemple, à l'aide d'un support amovible.|--|445|  
+|SMB (Server Message Block) entre l'ordinateur client et un partage réseau à partir duquel vous exécutez CCMSetup.exe.<br /><br /> Quand vous installez Configuration Manager, les fichiers sources d’installation du client sont copiés et partagés automatiquement à partir du dossier *&lt;Chemin_Installation\>* \Client sur les points de gestion. Toutefois, vous pouvez copier ces fichiers et créer un nouveau partage sur n'importe quel ordinateur du réseau. Vous pouvez également éliminer ce trafic réseau en exécutant CCMSetup.exe localement, par exemple, à l'aide d'un support amovible.|--|445|  
 |Protocole HTTP de l’ordinateur client vers un point de gestion quand la connexion est effectuée via HTTP et que vous ne spécifiez pas la propriété de ligne de commande CCMSetup **/source:&lt;Chemin\>**.|--|80 (Voir remarque 1, **Port alternatif disponible**)|  
 |Protocole HTTPS de l’ordinateur client vers un point de gestion quand la connexion est effectuée via HTTPS et que vous ne spécifiez pas la propriété de ligne de commande CCMSetup **/source:&lt;Chemin\>**.|--|443 (Voir remarque 1, **Port alternatif disponible**)|  
 |SMB (Server Message Block) entre le serveur source et l’ordinateur client quand vous spécifiez la propriété de ligne de commande CCMSetup **/source:&lt;Chemin\>**.|--|445|  

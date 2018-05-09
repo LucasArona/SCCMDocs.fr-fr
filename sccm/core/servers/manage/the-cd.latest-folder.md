@@ -2,25 +2,19 @@
 title: Dossier CD.Latest
 titleSuffix: Configuration Manager
 description: Découvrez le nouveau processus de mise à jour qui permet de remettre les mises à jour du produit à partir de la console Configuration Manager.
-ms.custom: na
 ms.date: 03/28/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 8db92d67-5d9c-4e9c-80d0-ae6fa0dd4817
-caps.latest.revision: 6
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 86b6393a6719895357d34fe8e562f3d0c967ad06
-ms.sourcegitcommit: 27da4be015f1496b7b89ebddb517a2685f1ecf74
+ms.openlocfilehash: 35a8e1356306815503f2c153a12139e06dd27be2
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="the-cdlatest-folder-for-system-center-configuration-manager"></a>Dossier CD.Latest pour System Center Configuration Manager
 

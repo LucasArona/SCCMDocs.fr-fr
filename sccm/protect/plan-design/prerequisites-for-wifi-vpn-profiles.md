@@ -1,26 +1,20 @@
 ---
-title: "Prérequis des profils Wi-Fi et VPN"
+title: Prérequis des profils Wi-Fi et VPN
 titleSuffix: Configuration Manager
-description: "Découvrez les autorisations de sécurité nécessaires pour gérer des profils de certificat, des profils Wi-Fi et des profils VPN dans System Center Configuration Manager."
-ms.custom: na
+description: Découvrez les autorisations de sécurité nécessaires pour gérer des profils de certificat, des profils Wi-Fi et des profils VPN dans System Center Configuration Manager.
 ms.date: 11/23/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: d2dacb2d-ab3b-42a2-8dc8-94da31f993c2
-caps.latest.revision: "5"
-caps.handback.revision: "0"
-author: Nbigman
-ms.author: nbigman
-manager: angrobe
-ms.openlocfilehash: 9f459ad76768443c218bbc86d75b3f5ae34596b3
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 894717df4b5acb7142aa7d171a8b8b63a28f8dc0
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prerequisites-for-wi-fi-and-vpn-profiles-in-system-center-configuration-manager"></a>Prérequis des profils Wi-Fi et VPN dans System Center Configuration Manager
 

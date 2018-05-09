@@ -1,31 +1,26 @@
 ---
 title: Version Technical Preview 1709
 titleSuffix: Configuration Manager
-description: "Découvrez les fonctionnalités disponibles dans la version 1709 de Technical Preview pour System Center Configuration Manager."
-ms.custom: na
+description: Découvrez les fonctionnalités disponibles dans la version 1709 de Technical Preview pour System Center Configuration Manager.
 ms.date: 09/28/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: a3ef6bdc-a204-4c4c-a02f-2bd03f35183e
-author: erikje
-ms.author: erikje
-manager: angrobe
-ms.openlocfilehash: f0acc5ae0d8207dce92c56a4c80e8321faf51393
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 74ffd06f8b9786d627dc7fd9cecb15215228313d
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1709-for-system-center-configuration-manager"></a>Fonctionnalités de Technical Preview 1709 pour System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (version d’évaluation technique)*
+*S’applique à : System Center Configuration Manager (Technical Preview)*
 
-Cet article présente les fonctionnalités qui sont disponibles dans la version 1709 de Technical Preview pour System Center Configuration Manager. Vous pouvez installer cette version pour mettre à jour et ajouter de nouvelles fonctionnalités à votre site de version d’évaluation technique Configuration Manager. Avant d’installer cette version Technical Preview, passez en revue [Technical Preview pour System Center Configuration Manager](../../core/get-started/technical-preview.md) pour vous familiariser avec les conditions générales et les limitations d’utilisation d’une version Technical Preview, la mise à jour entre les versions et l’envoi de commentaires sur les fonctionnalités d’une version Technical Preview.     
+Cet article présente les fonctionnalités qui sont disponibles dans la version 1709 de Technical Preview pour System Center Configuration Manager. Vous pouvez installer cette version pour mettre à jour et ajouter de nouvelles fonctionnalités à votre site Configuration Manager Technical Preview. Avant d’installer cette version Technical Preview, passez en revue [Technical Preview pour System Center Configuration Manager](../../core/get-started/technical-preview.md) pour vous familiariser avec les conditions générales et les limitations d’utilisation d’une version Technical Preview, la mise à jour entre les versions et l’envoi de commentaires sur les fonctionnalités d’une version Technical Preview.     
 
 
 <!--  Known Issues Template   
@@ -69,8 +64,8 @@ Créez un profil VPN en suivant la procédure habituelle. Remarquez que les opti
 2.  Entrez un nom dans la page **Général** et choisissez une des options suivantes sous **Spécifiez le type de profil VPN à créer** :
 
     - Windows 10  
-    - Windows 8.1  
-    - Windows Phone 8.1  
+    - Windows 8.1  
+    - Windows Phone 8.1  
     - iOS et macOS X  
     - Android  
     - Android for Work  
@@ -84,7 +79,7 @@ Lorsque vous sélectionnez différentes plateformes, notez que seuls les paramè
 <!-- 1350871 -->
 Nombreux sont les clients qui souhaitent gérer les appareils Windows 10 comme les appareils mobiles, en recourant à une solution cloud plus simple et moins chère. Toutefois, le passage de la gestion classique à la gestion moderne peut s’avérer difficile. À partir de Windows 10 version 1607 (également appelée Mise à jour anniversaire), vous pouvez joindre à la fois un appareil Windows 10 à Active Directory (AD) localement et à Azure AD basé sur le cloud (Azure AD hybride). La cogestion tire parti de cette amélioration et vous permet de gérer simultanément plusieurs appareils Windows 10 à l’aide de Configuration Manager et d’Intune. C’est une solution qui établit une passerelle entre la gestion classique et la gestion moderne tout en vous donnant la possibilité d’opérer cette transition selon une approche en plusieurs phases. 
 
-### <a name="prerequisites"></a>Conditions préalables
+### <a name="prerequisites"></a>Prérequis
 Les prérequis suivants doivent être mis en place avant de pouvoir activer la cogestion. Il existe des prérequis généraux et des prérequis distincts pour les clients Configuration Manager existants et les appareils qui ne sont pas clients.
 
 ### <a name="known-issues"></a>Problèmes connus

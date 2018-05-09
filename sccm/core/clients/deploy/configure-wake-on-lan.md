@@ -1,25 +1,20 @@
 ---
-title: "Configurer l'éveil par appel réseau"
+title: Configurer l'éveil par appel réseau
 titleSuffix: Configuration Manager
-description: "Sélectionnez les paramètres Wake On LAN dans System Center Configuration Manager."
-ms.custom: na
+description: Sélectionnez les paramètres Wake On LAN dans System Center Configuration Manager.
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b475a0c8-85d6-4cc4-b11f-32c0cc98239e
-caps.latest.revision: "7"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: b2250b64609bc4c39a81312e1b41586a55f576df
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 32753e44d188aed8d47c22030fba82f86e605efc
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-configure-wake-on-lan-in-system-center-configuration-manager"></a>Guide pratique pour configurer Wake on LAN dans System Center Configuration Manager
 

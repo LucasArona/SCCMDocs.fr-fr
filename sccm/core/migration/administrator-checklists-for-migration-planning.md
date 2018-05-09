@@ -1,26 +1,20 @@
 ---
-title: "Listes de contrôle pour la migration"
+title: Listes de contrôle pour la migration
 titleSuffix: Configuration Manager
-description: "Utilisez les listes de contrôle de l’administrateur pour vous aider à planifier une stratégie de migration vers System Center Configuration Manager."
-ms.custom: na
+description: Utilisez les listes de contrôle de l’administrateur pour vous aider à planifier une stratégie de migration vers System Center Configuration Manager.
 ms.date: 12/29/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 295fdf07-93cc-490c-acdd-ce3ee88cb36f
-caps.latest.revision: "7"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 2bf39fbf27020ed1f518e44cddd8e236c8ca762f
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: 06e85a0b372aea34a041f050d311178967dc18b5
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="administrator-checklists-for-migration-planning-in-system-center-configuration-manager"></a>Listes de vérifications de l’administrateur pour la planification de la migration dans System Center Configuration Manager
 

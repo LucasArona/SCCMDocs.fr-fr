@@ -2,25 +2,19 @@
 title: Configurer la gestion hybride des appareils iOS et Mac avec Microsoft Intune
 titleSuffix: Configuration Manager
 description: Configurez la gestion des appareils iOS avec System Center Configuration Manager et Microsoft Intune.
-ms.custom: na
 ms.date: 08/11/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 5eae4400-58ca-4c71-804c-6a585cd3df5d
-caps.latest.revision: "10"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: f15b82a0e04979f49fb8e2ab6bec6535783ac6e0
-ms.sourcegitcommit: 1132886e07d0c0a87dcc7eeef4577dd8d8840023
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 9407180df12902c17f4de8e52be13229ce35c60b
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-up-ios-hybrid-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>Configurer la gestion des appareils iOS hybride avec System Center Configuration Manager et Microsoft Intune
 

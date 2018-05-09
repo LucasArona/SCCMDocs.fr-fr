@@ -1,28 +1,21 @@
 ---
 title: À propos des Extensions SCAP (Security Content Automation Protocol)
-titleSuffix: System Center Configuration Manager
+titleSuffix: Configuraton Manager
 description: Découvrir les Extensions SCAP (Security Content Automation Protocol)
-ms.custom: na
 ms.date: 03/27/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: a315489d-5e12-46d6-903e-3a35235b72c5
-caps.latest.revision: 1
-caps.handback.revision: 0
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 robots: noindex,nofollow
-ms.openlocfilehash: fc986e2175583124377ccb7c080df4b219ea8df0
-ms.sourcegitcommit: 27da4be015f1496b7b89ebddb517a2685f1ecf74
+ms.openlocfilehash: 18463e4f87c60135bdc29d0f7ce4cb2f80a0eea7
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="about-the-security-content-automation-protocol-scap-extensions"></a>À propos des Extensions SCAP (Security Content Automation Protocol)
 
@@ -35,7 +28,7 @@ Les Extensions SCAP pour Microsoft System Center Configuration Manager vous perm
 
 Les Extensions SCAP pour Microsoft System Center Configuration Manager utilisent la fonctionnalité Paramètres de conformité de Microsoft System Center Configuration Manager pour analyser les ordinateurs de votre environnement, puis documenter leur niveau de compatibilité avec la norme USGCB (United States Government Configuration Baseline).
 
-Les extensions permettent à Configuration Manager de consommer des flux de données SCAP, d'évaluer la compatibilité des systèmes et de générer des résultats de rapports au format SCAP. Votre organisation utiliser son infrastructure Configuration Manager existante pour garantir que les ordinateurs qu’elle gère satisfont à ces exigences de conformité fédérales et génèrent les rapports USGCB nécessaires pour le NIST et l’OMB (Office of Management and Budget) des États-Unis.
+Les extensions permettent à Configuration Manager de consommer des flux de données SCAP, d'évaluer la compatibilité des systèmes et de générer des résultats de rapports au format SCAP. Votre organisation utiliser son infrastructure Configuration Manager existante pour garantir que les ordinateurs qu’elle gère satisfont à ces exigences de conformité fédérales et génèrent les rapports USGCB nécessaires pour le NIST et l'OMB (Office of Management and Budget).
 
 Ce guide fournit des informations pour vous aider à installer, configurer et exécuter les Extensions SCAP dans votre infrastructure System Center Configuration Manager.
 

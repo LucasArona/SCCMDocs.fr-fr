@@ -1,26 +1,20 @@
 ---
 title: Prise en charge du serveur proxy
 titleSuffix: Configuration Manager
-description: "En savoir plus sur la prise en charge de System Center Configuration Manager pour les serveurs proxy utilisés par les clients et les serveurs de système de site."
-ms.custom: na
+description: En savoir plus sur la prise en charge de System Center Configuration Manager pour les serveurs proxy utilisés par les clients et les serveurs de système de site.
 ms.date: 2/7/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9123a87a-0b6f-43c7-b5c2-fac5d09686b1
-caps.latest.revision: "6"
-caps.handback.revision: "0"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: fe42d5ca64b5a969e1a6def4266466875c4a3183
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 480ab29bbd97f2cdc173019b1b3cccd90403d011
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="proxy-server-support-in-system-center-configuration-manager"></a>Prise en charge du serveur proxy dans System Center Configuration Manager
 

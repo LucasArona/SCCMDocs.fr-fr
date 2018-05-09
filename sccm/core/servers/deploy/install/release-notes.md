@@ -2,26 +2,19 @@
 title: Notes de publication
 titleSuffix: Configuration Manager
 description: Découvrez plus en détail les problèmes urgents qui ne sont pas encore résolus dans le produit ni traités dans un article de la Base de connaissances Microsoft.
-ms.custom: na
-ms.date: 03/22/2018
+ms.date: 04/18/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
-caps.latest.revision: 41
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e22bc4818f10a1f60fdb2135eb705e46dbaa10a4
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 4aeacdbc73e21c3bae18111e22c8407eba865a87
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="release-notes-for-system-center-configuration-manager"></a>Notes de publication de System Center Configuration Manager
 
@@ -101,6 +94,21 @@ Par défaut, l’Assistant Créer un plan de maintenance s’exécute actuelleme
 
 #### <a name="workaround"></a>Solution de contournement
  après avoir créé un plan de maintenance, ouvrez les propriétés de celui-ci, accédez à l’onglet **Calendrier d’évaluation**, sélectionnez **Exécuter la règle dans un calendrier**, cliquez sur **Personnaliser**, puis créez un calendrier personnalisé. Par exemple, vous pouvez faire en sorte que le plan de maintenance s’exécute tous les 60 jours.  
+
+
+### <a name="changing-office-365-client-setting-doesnt-apply"></a>Le changement du paramètre client Office 365 ne s’applique pas 
+<!--511551-->
+*S’applique à : Configuration Manager version 1802*  
+
+Déployez un [paramètre client](/sccm/core/clients/deploy/about-client-settings#enable-management-of-the-office-365-client-agent) avec **Activer la gestion de l’agent Office 365 Client** configuré sur `Yes`. Changez ensuite ce paramètre en `No` ou `Not Configured`. Après la mise à jour de la stratégie sur les clients ciblés, les mises à jour Office 365 continuent d’être gérées par Configuration Manager. 
+
+#### <a name="workaround"></a>Solution de contournement
+Changez la valeur de Registre suivante en `0` et redémarrez le **service Microsoft Office « Démarrer en un clic »** (ClickToRunSvc) :
+
+```
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\office\16.0\Common\officeupdate]
+"OfficeMgmtCOM"=dword:00000000
+```
 
 
 

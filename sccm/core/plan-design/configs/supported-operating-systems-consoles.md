@@ -1,25 +1,20 @@
 ---
 title: Prise en charge des consoles
 titleSuffix: Configuration Manager
-description: "Découvrez quels systèmes d’exploitation sont pris en charge par les consoles System Center Configuration Manager."
-ms.custom: na
+description: Découvrez quels systèmes d’exploitation sont pris en charge par les consoles System Center Configuration Manager.
 ms.date: 1/3/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 21a80050-6452-4b7d-8424-99bddf9fa1f4
-caps.latest.revision: "3"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 39a14ad732a4f932b05a66365fb52add2889efc8
-ms.sourcegitcommit: 645cd5a324bdd299906efa27eaca5885eafc9e9c
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 8fc17e5a58735f232152639981d9c02c12752cf1
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="supported-operating-systems-for-system-center-configuration-manager-consoles"></a>Systèmes d’exploitation pris en charge pour les consoles System Center Configuration Manager
 

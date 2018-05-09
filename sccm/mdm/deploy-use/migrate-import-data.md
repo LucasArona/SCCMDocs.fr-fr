@@ -1,21 +1,19 @@
 ---
-title: "Importer des données dans Microsoft Intune"
+title: Importer des données dans Microsoft Intune
 titleSuffix: Configuration Manager
-description: 
-keywords: 
-author: dougeby
+description: Importer des données Configuration Manager dans Microsoft Intune
+author: aczechowski
 manager: dougeby
 ms.date: 12/05/2017
-ms.topic: article
-ms.prod: configmgr-hybrid
-ms.service: 
-ms.technology: 
+ms.topic: conceptual
+ms.prod: configuration-manager
+ms.technology: configmgr-hybrid
 ms.assetid: b552391d-abc0-48a2-a429-93605a13a66a
-ms.openlocfilehash: d42a5fd64b5baead8ef87d8c08a99ec659f94633
-ms.sourcegitcommit: 8c6e9355846ff6a73c534c079e3cdae09cf13c45
+ms.openlocfilehash: dcd84e484f55cb799953bea83be917055ca1292a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="import-configuration-manager-data-to-microsoft-intune"></a>Importer des données Configuration Manager dans Microsoft Intune 
 
@@ -56,7 +54,7 @@ L’outil d’importation peut collecter des informations sur les types d’obje
 - Il existe des profils qui dépendent d’autres objets. Si vous souhaitez importer un profil qui dépend d’un autre objet, comme un profil d’e-mail qui dépend d’un certificat, vous devez importer les deux objets en même temps, sauf si vous avez précédemment importé l’autre objet à partir du même ordinateur avec le même utilisateur.  
 - Après avoir exécuté l’outil, vous pouvez avoir besoin d’effectuer des étapes manuelles supplémentaires. Par exemple, cibler des applications et des stratégies sur des groupes AAD. 
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Prérequis
 - Configuration Manager version 1610 ou ultérieure. Nous vous recommandons de spécifier le site de niveau supérieur et d’exécuter l’outil avec un utilisateur qui a accès à tous les objets dans la hiérarchie du site. L’outil découvre uniquement les objets accessibles par l’utilisateur qui exécute l’outil. 
 - Un administrateur général doit exécuter l’outil d’importation de données la première fois à l’aide du paramètre ***intunedataimporter.exe - GlobalConsent*** suivant. Ensuite, un administrateur général ou un administrateur Intune peut exécuter l’outil.  
 
@@ -113,7 +111,7 @@ Le fichier de mappage de collection est un fichier CSV (valeurs séparées par d
 ![Exemple de fichier CSV de mappage de collection](..\media\migrate-collectionmapping.png)
 
 #### <a name="start-the-data-importer-tool-using-collection-mapping"></a>Démarrer l’outil Data Importer à l’aide du mappage de collection
-Pour utiliser un fichier de mappage de collection, vous devez démarrer l’outil Data Importer à l’aide du paramètre de ligne de commande *-CollectionMappingFile* et du chemin d’accès complet au fichier .csv de mappage de collection que vous créez. Exemple :
+Pour utiliser un fichier de mappage de collection, vous devez démarrer l’outil Data Importer à l’aide du paramètre de ligne de commande *-CollectionMappingFile* et du chemin d’accès complet au fichier .csv de mappage de collection que vous créez. Par exemple :
 
 ```IntuneDataImporter.exe -CollectionMappingFile c:\Users\myuser\Documents\collectionmapping.csv```
 

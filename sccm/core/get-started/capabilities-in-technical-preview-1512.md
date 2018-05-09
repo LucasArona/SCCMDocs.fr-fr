@@ -1,32 +1,27 @@
 ---
-title: "Capacités de la version Technical Preview 1512"
+title: Capacités de la version Technical Preview 1512
 titleSuffix: Configuration Manager
-description: "Découvrez les fonctionnalités disponibles dans la version d’évaluation technique de System Center Configuration Manager, version 1512."
-ms.custom: na
+description: Découvrez les fonctionnalités disponibles dans la version d’évaluation technique de System Center Configuration Manager, version 1512.
 ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e4d9e414-1346-4ed4-85d0-64d602b68731
-caps.latest.revision: "6"
-author: erikje
-ms.author: erikje
-manager: angrobe
+author: aczechowski
 robots: noindex,nofollow
-ms.openlocfilehash: e107b24a821ebbd575db9c00a817938d50931344
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 939a767820983c1fe2d575d7a745d6dabb45f25c
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1512-for-system-center-configuration-manager"></a>Fonctionnalités dans la version d’évaluation technique 1512 de System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (version d’évaluation technique)*
+*S’applique à : System Center Configuration Manager (Technical Preview)*
 
-Cet article présente les fonctionnalités qui sont disponibles dans la version d’évaluation technique de System Center Configuration Manager, version 1512. Vous pouvez installer cette version pour mettre à jour et ajouter de nouvelles fonctionnalités à votre site de version d’évaluation technique de Configuration Manager. Avant d’installer cette version d’évaluation technique, passez en revue la rubrique de présentation, [Technical Preview pour System Center Configuration Manager](technical-preview.md), pour vous familiariser avec les conditions générales et les limitations d’utilisation d’une version d’évaluation technique, la mise à jour entre les versions et l’envoi de commentaires sur les fonctionnalités dans une version d’évaluation technique.  
+Cet article présente les fonctionnalités qui sont disponibles dans la version d’évaluation technique de System Center Configuration Manager, version 1512. Vous pouvez installer cette version pour mettre à jour et ajouter de nouvelles fonctionnalités à votre site Configuration Manager Technical Preview. Avant d’installer cette version de la version d’évaluation technique, passez en revue la rubrique de présentation, [Version d’évaluation technique pour System Center Configuration Manager](technical-preview.md), pour vous familiariser avec les conditions générales et limitations d’utilisation d’une version d’évaluation technique, la mise à jour entre les versions et l’envoi de commentaires sur les fonctionnalités dans une version d’évaluation technique.  
 
  Vous trouverez ci-dessous les nouvelles fonctionnalités propres à cette version.  
 

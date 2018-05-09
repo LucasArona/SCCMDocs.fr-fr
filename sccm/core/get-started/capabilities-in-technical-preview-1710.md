@@ -1,30 +1,26 @@
 ---
 title: Version Technical Preview 1710 | Microsoft Docs
 titleSuffix: Configuration Manager
-description: "Découvrez les fonctionnalités disponibles dans la version Technical Preview 1710 de System Center Configuration Manager."
-ms.custom: na
+description: Découvrez les fonctionnalités disponibles dans la version Technical Preview 1710 de System Center Configuration Manager.
 ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f4706a58-1f11-4eab-b1eb-3d1a0da02d0f
-author: erikje
-ms.author: erikje
-manager: angrobe
-ms.openlocfilehash: ed5f977df79114e1209cd3cc82d2e56e8e728c3d
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 730d14c5985c088d964761bb83043f3a34924486
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1710-for-system-center-configuration-manager"></a>Fonctionnalités de Technical Preview 1710 pour System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (version d’évaluation technique)*
+*S’applique à : System Center Configuration Manager (Technical Preview)*
 
-Cet article présente les fonctionnalités qui sont disponibles dans la version 1710 de Technical Preview pour System Center Configuration Manager. Vous pouvez installer cette version pour mettre à jour et ajouter de nouvelles fonctionnalités à votre site de version d’évaluation technique Configuration Manager. Avant d’installer cette version Technical Preview, passez en revue [Technical Preview pour System Center Configuration Manager](../../core/get-started/technical-preview.md) pour vous familiariser avec les conditions générales et les limitations d’utilisation d’une version Technical Preview, la mise à jour entre les versions et l’envoi de commentaires sur les fonctionnalités d’une version Technical Preview.     
+Cet article présente les fonctionnalités qui sont disponibles dans la version 1710 de Technical Preview pour System Center Configuration Manager. Vous pouvez installer cette version pour mettre à jour et ajouter de nouvelles fonctionnalités à votre site Configuration Manager Technical Preview. Avant d’installer cette version Technical Preview, passez en revue [Technical Preview pour System Center Configuration Manager](../../core/get-started/technical-preview.md) pour vous familiariser avec les conditions générales et les limitations d’utilisation d’une version Technical Preview, la mise à jour entre les versions et l’envoi de commentaires sur les fonctionnalités d’une version Technical Preview.     
 
 
 <!--  Known Issues Template   
@@ -104,14 +100,14 @@ Les données de conformité pour le déploiement de stratégie Exploit Guard son
 
 Pour plus d’informations sur Exploit Guard ainsi que sur ses règles et composants spécifiques, consultez [Windows Defender Exploit Guard](https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard) dans la bibliothèque de documentation de Windows.
 
-### <a name="prerequisites"></a>Conditions préalables
+### <a name="prerequisites"></a>Prérequis
 Les appareils gérés doivent exécuter Windows 10 Fall Creators Update version 1709 ou ultérieure et respecter les conditions suivantes, selon les composants et les règles configurés :
 
 |Composant Exploit Guard |Configuration requise supplémentaire|
 |------------------------|------------------------|
 | Règles de réduction de la surface d’attaque  | La[protection en temps réel de Windows Defender AV]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) doit être activée sur les appareils.  |
 | Accès contrôlé aux dossiers  | La[protection en temps réel de Windows Defender AV]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) doit être activée sur les appareils.   |
-| Exploit Protection  | aucune.  |
+| Exploit Protection  | Aucun  |
 | Protection du réseau  |  La[protection en temps réel de Windows Defender AV]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) doit être activée sur les appareils.  |
 
 ### <a name="create-an-exploit-guard-policy----1355468---"></a>Créer une stratégie Exploit Guard  <!--1355468 -->

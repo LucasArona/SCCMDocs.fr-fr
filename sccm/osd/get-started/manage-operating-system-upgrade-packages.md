@@ -1,26 +1,20 @@
 ---
-title: "Gérer les packages de mise à niveau de système d’exploitation"
+title: Gérer les packages de mise à niveau de système d’exploitation
 titleSuffix: Configuration Manager
-description: "Découvrez comment gérer des packages de mise à niveau de système d’exploitation dans System Center Configuration Manager."
-ms.custom: na
+description: Découvrez comment gérer des packages de mise à niveau de système d’exploitation dans System Center Configuration Manager.
 ms.date: 12/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b9b22655-b8c1-461f-8047-3a7e906f647a
-caps.latest.revision: "12"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: b70e8ecd32957f19b9738d14c94c7e54b0312ea5
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: e323fa8df7d8ae88d6526a5d1777ceb8fa27c2de
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-operating-system-upgrade-packages-with-system-center-configuration-manager"></a>Gérer des packages de mise à niveau de système d’exploitation avec System Center Configuration Manager
 

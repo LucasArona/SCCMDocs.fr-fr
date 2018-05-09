@@ -1,26 +1,20 @@
 ---
 title: Configurations prises en charge
 titleSuffix: Configuration Manager
-description: "Identifiez les principales configurations et exigences liées à la planification, au déploiement et à la maintenance d’un déploiement de System Center Configuration Manager fonctionnel."
-ms.custom: na
+description: Identifiez les principales configurations et exigences liées à la planification, au déploiement et à la maintenance d’un déploiement de System Center Configuration Manager fonctionnel.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 45a10878-ff48-4318-9c6d-c014b38a4039
-caps.latest.revision: "9"
-caps.handback.revision: "0"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 097a4e5b6a44aec52027f075ad002a2393ae3fb3
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: de769a24b44c5ab5e28035e96fef341aecd78006
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="supported-configurations-for-system-center-configuration-manager"></a>Configurations prises en charge pour System Center Configuration Manager
 

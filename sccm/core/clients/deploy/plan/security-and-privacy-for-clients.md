@@ -1,26 +1,20 @@
 ---
-title: "Sécurité et confidentialité des clients"
+title: Sécurité et confidentialité des clients
 titleSuffix: Configuration Manager
-description: "En savoir plus sur la sécurité et la confidentialité pour les clients dans System Center Configuration Manager."
-ms.custom: na
+description: En savoir plus sur la sécurité et la confidentialité pour les clients dans System Center Configuration Manager.
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: c1d71899-308f-49d5-adfa-3a3ec0163ed8
-caps.latest.revision: "10"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: b28a461894bcd1cffd3c98bfce9fcfe22cc7a8f0
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 89b7664067747c9afb04c3a5dd059e81cfb2716e
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-and-privacy-for-clients-in-system-center-configuration-manager"></a>Sécurité et confidentialité pour les clients dans System Center Configuration Manager
 

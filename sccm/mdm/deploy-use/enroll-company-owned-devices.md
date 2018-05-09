@@ -1,25 +1,20 @@
 ---
-title: "Inscrire des appareils d’entreprise "
+title: 'Inscrire des appareils d’entreprise '
 titleSuffix: Configuration Manager
-description: "Découvrez les différentes méthodes d’inscription des appareils d’entreprise pour les déploiements hybrides avec Configuration Manager."
-ms.custom: na
+description: Découvrez les différentes méthodes d’inscription des appareils d’entreprise pour les déploiements hybrides avec Configuration Manager.
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e2754ce6-1460-4ddd-9050-2cc87e7964f4
-caps.latest.revision: "13"
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 5b1e05e45ec6193eeef5e48cfa8d8476a92dde56
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 36b4169f3bed1957f8ea14159902f408ba642944
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="enroll-company-owned-devices-for-hybrid-deployments-with-configuration-manager"></a>Inscrire des appareils d’entreprise pour les déploiements hybrides avec Configuration Manager
 
@@ -44,4 +39,4 @@ Les appareils d’entreprise ou d’organisation peuvent être gérés de diffé
 
  ## <a name="predeclare-devices-with-imei-or-ios-serial-numbers"></a>Prédéclarer des appareils avec des numéros IMEI ou numéros de série iOS
 
-Vous pouvez identifier des appareils d’entreprise en important leur numéro IMEI (International Mobile Equipment Identity) ou leur numéro de série iOS. Vous pouvez charger un fichier de valeurs séparées par des virgules (.csv) qui contient les numéros IMEI des appareils, ou saisir vous-même les informations sur les appareils.  Pour plus d’informations, consultez [Prédéclarer des appareils avec des numéros IMEI ou numéros de série iOS](../../mdm/deploy-use/predeclare-devices-with-hardware-id.md).
+Vous pouvez identifier des appareils d’entreprise en important leur numéro IMEI (International Mobile Equipment Identity) ou leur numéro de série iOS. Vous pouvez charger un fichier de valeurs séparées par des virgules (.csv) contenant les numéros IMEI des appareils ou saisir manuellement les informations sur les appareils.  Pour plus d’informations, consultez [Prédéclarer des appareils avec des numéros IMEI ou numéros de série iOS](../../mdm/deploy-use/predeclare-devices-with-hardware-id.md).

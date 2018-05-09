@@ -2,26 +2,19 @@
 title: Prise en charge des fonctionnalités de Windows
 titleSuffix: Configuration Manager
 description: Découvrez les fonctionnalités de Windows et des réseaux que System Center Configuration Manager prend en charge.
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 0cf4bacb-6b6d-4d4f-8640-b13fe15873de
-caps.latest.revision: 8
-caps.handback.revision: 0
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4a41efa9b4c33a77d6aa2fa9e806e24ae33cc330
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: c1b4dbb6986b5e617ae7a8eb2a0264ce799e87ca
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="support-for-windows-features-and-networks-in-system-center-configuration-manager"></a>Prise en charge des fonctionnalités de Windows et des réseaux dans System Center Configuration Manager
 
@@ -147,7 +140,7 @@ Les rôles de serveur de site exigent NTFS afin que Configuration Manager puisse
 
 -   **Réseau de zone de stockage**: l’utilisation d’un réseau de zone de stockage (SAN) est prise en charge quand un serveur Windows pris en charge est directement associé au volume hébergé par le SAN.  
 
--   **Stockage d’instance simple (SIS)** : Configuration Manager ne prend pas en charge la configuration de dossiers de packages de points de distribution et de signatures sur un volume SIS.  
+-   **Stockage d’instance simple (SIS)**  : Configuration Manager ne prend pas en charge la configuration de dossiers de packages de points de distribution et de signatures sur un volume SIS.  
 
      En outre, le cache d’un client Configuration Manager n’est pas pris en charge sur un volume SIS.  
 

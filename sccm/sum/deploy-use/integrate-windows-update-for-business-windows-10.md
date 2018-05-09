@@ -2,22 +2,19 @@
 title: Intégration avec Windows Update for Business dans Windows 10
 titleSuffix: Configuration Manager
 description: Utilisez Windows Update for Business pour tenir à jour les appareils Windows 10 de votre organisation connectés au service Windows Update.
-keywords: ''
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ms.date: 03/22/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service: ''
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
-ms.openlocfilehash: e27e5f043af28b74369f21d19e5b20e19572213a
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 3dd5a7f9717843244ab8477a09b109261618f9aa
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="integration-with-windows-update-for-business-in-windows-10"></a>Intégration avec Windows Update for Business dans Windows 10
 

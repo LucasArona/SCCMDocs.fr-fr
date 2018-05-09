@@ -5,16 +5,15 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.date: 03/22/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-client
 ms.assetid: 4c1a128d-22fb-49f1-8e0b-36513a8dc117
-ms.openlocfilehash: 8615b28735165650a0ec25e3d3114263835803d6
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 3b178ce27b91701d52d5ea350de85216e1250442
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="frequently-asked-questions-about-the-cloud-management-gateway"></a>Questions fréquentes (FAQ) sur la passerelle de gestion cloud
 
@@ -53,4 +52,4 @@ Si vous avez déjà déployé la [gestion du client basée sur Internet ](/sccm/
 - [Configurer la passerelle de gestion cloud](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway)
 - [Certificats pour la passerelle de gestion cloud](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway)
 - [Sécurité et confidentialité de la passerelle de gestion cloud](/sccm/core/clients/manage/cmg/security-and-privacy-for-cloud-management-gateway)
-- [Taille et évolutivité de la passerelle de gestion cloud en chiffres](/sccm/core/plan-design/configs/size-and-scale-numbers#bkmk_cmg)
+- [Taille et scalabilité de la passerelle de gestion cloud en chiffres](/sccm/core/plan-design/configs/size-and-scale-numbers#bkmk_cmg)

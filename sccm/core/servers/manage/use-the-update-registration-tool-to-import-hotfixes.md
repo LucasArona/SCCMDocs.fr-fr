@@ -1,25 +1,20 @@
 ---
-title: "Outil Inscription de la mise à jour"
+title: Outil Inscription de la mise à jour
 titleSuffix: Configuration Manager
-description: "Découvrez quand et comment utiliser l’outil Inscription de la mise à jour pour importer manuellement une mise à jour dans la console Configuration Manager."
-ms.custom: na
+description: Découvrez quand et comment utiliser l’outil Inscription de la mise à jour pour importer manuellement une mise à jour dans la console Configuration Manager.
 ms.date: 3/27/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8cc13635-85d6-4b07-a3ec-c42188bc5c74
-caps.latest.revision: "8"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 2e62d3d1df75bd7edd7ef12e7cefd7613cf794bd
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: d82ae79ae3466eff753e92c232b2cdd40fbcb2cb
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-the-update-registration-tool-to-import-hotfixes-to-system-center-configuration-manager"></a>Importer des correctifs pour System Center Configuration Manager avec l’outil Inscription de la mise à jour
 

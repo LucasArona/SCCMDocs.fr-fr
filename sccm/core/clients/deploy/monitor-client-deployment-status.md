@@ -1,26 +1,20 @@
 ---
-title: "Surveiller l’état du déploiement des clients"
+title: Surveiller l’état du déploiement des clients
 titleSuffix: Configuration Manager
-description: "Surveillez l’état de déploiement des clients dans System Center Configuration Manager."
-ms.custom: na
+description: Surveillez l’état de déploiement des clients dans System Center Configuration Manager.
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 20a573b3-53cb-4ed5-bae1-7542f533ed20
-caps.latest.revision: "11"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: f5ea535b47b7b9061282a1aadcaa6ed7492f08b4
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 9454183b390a6ff0267ac853f514ce87530c1519
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-monitor-client-deployment-status-in-system-center-configuration-manager"></a>Guide pratique pour surveiller l’état de déploiement des clients dans System Center Configuration Manager
 

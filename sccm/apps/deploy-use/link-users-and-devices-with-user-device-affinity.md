@@ -1,26 +1,20 @@
 ---
-title: "Lier des utilisateurs et des périphériques avec l’affinité entre utilisateur et périphérique"
+title: Lier des utilisateurs et des périphériques avec l’affinité entre utilisateur et périphérique
 titleSuffix: Configuration Manager
-description: "Lier des utilisateurs et des appareils avec l’affinité entre utilisateur et appareil et déployez automatiquement des applications sur tous les appareils associés à un utilisateur."
-ms.custom: na
+description: Lier des utilisateurs et des appareils avec l’affinité entre utilisateur et appareil et déployez automatiquement des applications sur tous les appareils associés à un utilisateur.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5b30b0d5-722d-4d4b-9ed7-5a43de315461
-caps.latest.revision: "7"
-caps.handback.revision: "0"
-author: mattbriggs
-ms.author: mabrigg
-manager: angrobe
-ms.openlocfilehash: 1066028d0cd20521d78780ae2fdfbce91a0860b2
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 40bab1725b074bc549eeb9e9764ab8a1dd8b83e7
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="link-users-and-devices-with-user-device-affinity-in-system-center-configuration-manager"></a>Lier des utilisateurs et des appareils avec l’affinité entre utilisateur et appareil dans System Center Configuration Manager
 
@@ -69,7 +63,7 @@ L’affinité entre utilisateur et appareil dans System Center Configuration Man
 
 ### <a name="set-up-the-site-to-automatically-create-user-device-affinities"></a>Configurer le site pour créer automatiquement des affinités entre utilisateur et appareil  
 
-1.  Dans la console Configuration Manager, choisissez **Administration** > **Paramètres du client**.  
+1.  Dans la console Configuration Manager, cliquez sur **Administration** > **Paramètres client**.  
 
 2.  Pour modifier les paramètres du client par défaut, sélectionnez **Paramètres client par défaut** puis, sous l’onglet **Accueil**, dans le groupe **Propriétés**, choisissez **Propriétés**. Pour créer des paramètres de l’agent du client personnalisés, sélectionnez le nœud **Paramètres du client** puis, sous l’onglet **Accueil**, dans le groupe **Créer**, choisissez **Créer des paramètres de périphérique client personnalisés**.  
 

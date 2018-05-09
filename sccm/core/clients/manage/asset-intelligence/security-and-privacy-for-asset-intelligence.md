@@ -1,26 +1,20 @@
 ---
-title: "Sécurité et confidentialité d’Asset Intelligence"
+title: Sécurité et confidentialité d’Asset Intelligence
 titleSuffix: Configuration Manager
-description: "Obtenez des informations sur la sécurité et la confidentialité pour Asset Intelligence dans System Center Configuration Manager."
-ms.custom: na
+description: Obtenez des informations sur la sécurité et la confidentialité pour Asset Intelligence dans System Center Configuration Manager.
 ms.date: 2/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d0c6f7a0-dcae-4e6d-aa28-35d464d97ff7
-caps.latest.revision: "5"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 6d33053f360d05a4efdb6da5e405d12fd3f0d89b
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 51bfe17980a7660ecdccfd13a11d6c7bcfd93e5f
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-and-privacy-for-asset-intelligence-in-system-center-configuration-manager"></a>Sécurité et confidentialité pour Asset Intelligence dans System Center Configuration Manager
 
@@ -31,7 +25,7 @@ Cette rubrique contient des informations sur la sécurité et la confidentialit�
 ##  <a name="BKMK_Security_AI"></a> Meilleures pratiques de sécurité pour Asset Intelligence  
  Utilisez les meilleures pratiques de sécurité suivantes dans l'optique d'utiliser Asset Intelligence.  
 
-|Meilleure pratique de sécurité|Plus d'informations|  
+|Bonnes pratiques de sécurité|Plus d'informations|  
 |----------------------------|----------------------|  
 |Lorsque vous importez un fichier de licence (fichier de licence en volume Microsoft ou fichier de déclaration générale de licence), sécurisez le fichier et le canal de communication.|Utilisez les autorisations du système de fichier pour vous assurer que seuls les utilisateurs autorisés peuvent accéder aux fichiers de licence et utilisez la signature SMB pour garantir l'intégrité des données lors de leur transfert au serveur de site pendant le processus d'importation.|  
 |Utilisez le principe des autorisations minimales pour importer les fichiers de licence.|Utilisez l'administration basée sur les rôles pour accorder l'autorisation Gérer Asset Intelligence à l'utilisateur administratif qui importe des fichiers de licence. Le rôle intégré d'Asset Manager inclut cette autorisation.|  

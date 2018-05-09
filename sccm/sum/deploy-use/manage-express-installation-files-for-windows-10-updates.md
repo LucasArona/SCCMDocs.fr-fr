@@ -2,22 +2,19 @@
 title: Gérer les fichiers d’installation rapide pour les mises à jour de Windows 10
 titleSuffix: Configuration Manager
 description: Configuration Manager prend en charge les fichiers d’installation rapide pour Windows 10, permettant des téléchargements plus petits et des durées d’installation plus courtes sur les clients.
-keywords: ''
-author: dougeby
-ms.author: dougeby
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ms.date: 03/24/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service: ''
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: b8d8af88-e8ac-4deb-921b-975e2d2afd80
-ms.openlocfilehash: 80ff608ca0e8270fc004995f861a0ccb312a6f34
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+ms.openlocfilehash: 4ca7a6c37137e266d719b76532b4131a6c43d4de
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-express-installation-files-for-windows-10-updates"></a>Gérer les fichiers d’installation rapide pour les mises à jour de Windows 10
 Depuis Configuration Manager version 1702, Configuration Manager prend en charge les fichiers d’installation rapide pour les mises à jour de Windows 10. Quand vous utilisez une version prise en charge de Windows 10, vous pouvez configurer les paramètres du client Configuration Manager de sorte qu’il télécharge uniquement les modifications apportées entre la mise à jour cumulative de Windows 10 du mois en cours et celle du mois précédent. Sans les fichiers d’installation rapide, les clients Configuration Manager téléchargent l’intégralité de la mise à jour cumulative de Windows 10 (y compris les mises à jour des mois précédents) chaque mois. L’utilisation de fichiers d’installation rapide permet des téléchargements plus petits et des durées d’installation plus courtes sur les clients.

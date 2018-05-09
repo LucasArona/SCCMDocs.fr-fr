@@ -1,26 +1,20 @@
 ---
-title: "Personnaliser les images de système d’exploitation "
+title: 'Personnaliser les images de système d’exploitation '
 titleSuffix: Configuration Manager
-description: "Pour personnaliser une image de système d’exploitation, utilisez des séquences de tâches de capture et de génération, une configuration manuelle ou une combinaison des deux."
-ms.custom: na
+description: Pour personnaliser une image de système d’exploitation, utilisez des séquences de tâches de capture et de génération, une configuration manuelle ou une combinaison des deux.
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 95033a9b-ff13-4b70-b1de-bcb25bcb6024
-caps.latest.revision: "12"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: ae70c30b4dba85ae2f0693d70f27dcceb7700fcc
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: b9a3f4583944f0818f74930753bad99e3408a928
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="customize-operating-system-images-with-system-center-configuration-manager"></a>Personnaliser les images de système d’exploitation avec System Center Configuration Manager
 

@@ -1,53 +1,30 @@
 ---
-title: "Données de diagnostic pour 1511"
+title: Données de diagnostic pour 1511
 titleSuffix: Configuration Manager
-description: "En savoir plus sur les niveaux de données de diagnostic et d’utilisation collectés par System Center Configuration Manager version 1511."
-ms.custom: na
+description: En savoir plus sur les niveaux de données de diagnostic et d’utilisation collectés par System Center Configuration Manager version 1511.
 ms.date: 12/29/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9e614ae1-47d2-4a93-ba0a-89dc50d1e266
-caps.latest.revision: "4"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 robots: noindex,nofollow
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- hu-hu
-- it-it
-- ja-jp
-- ko-kr
-- nl-nl
-- pl-pl
-- pt-br
-- pt-pt
-- ru-ru
-- sv-se
-- tr-tr
-- zh-cn
-- zh-tw
-ms.openlocfilehash: da758cf1222f23c5864bebb1e31daeb8f41552ae
-ms.sourcegitcommit: da27d37cc4e4e06cf23758846cdd7acb617f744b
+ms.openlocfilehash: fbd3a84a81fae4ec9197368ff3eca0c027ae9d90
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1511-of-system-center-configuration-manager"></a>Niveaux de collecte des données de diagnostic et d’utilisation pour la version 1511 de System Center Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager version 1511 collecte trois niveaux de données d’utilisation et de diagnostic : **De base**, **Étendu** et **Complet**. Par défaut, cette fonctionnalité est définie sur le niveau Étendu. Les sections suivantes fournissent des détails supplémentaires sur les données collectées à chaque niveau.  
+System Center Configuration Manager version 1511 collecte trois niveaux de données d’utilisation et de diagnostic : **De base**, **Étendu** et **Complet**. Par défaut, cette fonctionnalité est définie sur le niveau Étendu. Les sections suivantes fournissent des détails supplémentaires sur les données collectées par chaque niveau.  
 
 > [!IMPORTANT]  
->  Configuration Manager ne collecte pas les codes de sites, noms de sites, adresses IP, noms d’utilisateur ou d’ordinateur, adresses physiques ni adresses e-mail aux niveaux De base et Étendu. Toute collecte de ces informations au niveau Complet n’est pas intentionnelle : elles peuvent être incluses dans des informations de diagnostic avancées comme des fichiers journaux ou des instantanés de la mémoire. Microsoft n’utilisera pas ces informations pour vous identifier ou vous contacter, ni à des fins publicitaires.  
+>  Configuration Manager ne collecte pas les codes des sites, les noms des sites, les adresses IP, les noms d’utilisateur ou d’ordinateur, les adresses physiques ni les adresses e-mail aux niveaux De base et Étendu. Toute collecte de ces informations au niveau Complet n’est pas intentionnelle : elles peuvent être incluses dans des informations de diagnostic avancées comme des fichiers journaux ou des instantanés de la mémoire. Microsoft n’utilisera pas ces informations pour vous identifier ou vous contacter, ni à des fins publicitaires.  
 
 ##  <a name="bkmk_change"></a> Modification du niveau  
  Les administrateurs qui disposent d’une étendue administrative basée sur des rôles incluant les autorisations **Modification** sur la classe d’objets **Site** peuvent modifier le niveau des données collectées dans les paramètres des données de diagnostic et d’utilisation de la console Configuration Manager.
@@ -119,7 +96,7 @@ Ce niveau est recommandé, car il fournit à Microsoft les données minimales re
 
     -   Nombre d’environnements App-V et propriétés de déploiement  
 
-    -   Nombre de licences d’application Windows 10 concédées  
+    -   Nombre de licences d’application Windows 10 concédées  
 
     -   Nombre minimal/maximal/moyen de déploiements d’application par utilisateur/appareil  
 

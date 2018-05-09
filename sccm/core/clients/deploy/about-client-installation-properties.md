@@ -2,25 +2,19 @@
 title: Propriétés d’installation du client
 titleSuffix: Configuration Manager
 description: Découvrez les propriétés de la ligne de commande ccmsetup pour l’installation du client Configuration Manager.
-ms.custom: na
 ms.date: 03/28/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
-caps.latest.revision: 15
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 40e844fbb15a101574d9628648dde0db59c855c4
-ms.sourcegitcommit: aed99ba3c5e9482199cb3fc5c92f6f3a160cb181
+ms.openlocfilehash: 27479bf3db9ab0ed5d842f5cbf9db4e399a4168d
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="about-client-installation-properties-in-system-center-configuration-manager"></a>À propos des propriétés d’installation du client dans System Center Configuration Manager
 
@@ -349,9 +343,9 @@ Exemple : **CCMSetup.exe  CCMALLOWSILENTREBOOT**
 
  Spécifie les critères de sélection des certificats si le client a plusieurs certificats pour la communication HTTPS. Ce certificat est un certificat valide incluant les fonctionnalités d’authentification du client.  
 
- Vous pouvez rechercher une correspondance exacte (utilisez **Subject:**) ou une correspondance partielle (utilisez **SubjectStr:)**dans le nom d’objet ou l’autre nom de l’objet. Exemples :  
+ Vous pouvez rechercher une correspondance exacte (utilisez **Subject:**) ou une correspondance partielle (utilisez **SubjectStr:)** dans le nom d’objet ou l’autre nom de l’objet. Exemples :  
 
- `CCMCERTSEL="Subject:computer1.contoso.com"` recherche un certificat avec une correspondance exacte au nom d’ordinateur « computer1.contoso.com » dans le nom d’objet ou l’autre nom de l’objet.  
+ `CCMCERTSEL="Subject:computer1.contoso.com"` recherche un certificat avec une correspondance exacte au nom d’ordinateur « computer1,contoso.com » dans le nom d’objet ou l’autre nom de l’objet.  
 
  `CCMCERTSEL="SubjectStr:contoso.com"` recherche un certificat contenant « contoso.com » dans le nom d’objet ou l’autre nom de l’objet.  
 
@@ -364,7 +358,7 @@ Exemple : **CCMSetup.exe  CCMALLOWSILENTREBOOT**
 > [!IMPORTANT]  
 >  Si vous utilisez la zone Nom d’objet, **Subject:** respecte la casse, mais **SubjectStr:** ne la respecte pas.  
 >   
->  Si vous utilisez la zone Autre nom de l’objet, **Subject:**et **SubjectStr:** respectent la casse tous les deux.  
+>  Si vous utilisez la zone Autre nom de l’objet, **Subject:** et **SubjectStr:** respectent la casse tous les deux.  
 
  La liste complète des attributs que vous pouvez utiliser pour la sélection de certificat figure dans [Valeurs d’attribut prises en charge pour les critères de sélection de certificat PKI](#BKMK_attributevalues).  
 
@@ -438,7 +432,7 @@ Exemple : `CCMSetup.exe /UsePKICert CCMHTTPSPORT=443`
 
 ### <a name="ccminstalldir"></a>CCMINSTALLDIR
 
- Indique le dossier dans lequel les fichiers du client Configuration Manager sont installés, *%Windir%*\CCM par défaut. Quel que soit l’emplacement d’installation de ces fichiers, le fichier Ccmcore.dll est toujours installé dans le dossier *%Windir%\System32*. En outre, sur un système d’exploitation 64 bits, une copie du fichier Ccmcore.dll est toujours installée dans le dossier *%Windir%*\SysWOW64. Ce fichier prend en charge les applications 32 bits qui utilisent la version 32 bits des API client du SDK Configuration Manager.  
+ Indique le dossier dans lequel les fichiers du client Configuration Manager sont installés, *%Windir%* \CCM par défaut. Quel que soit l’emplacement d’installation de ces fichiers, le fichier Ccmcore.dll est toujours installé dans le dossier *%Windir%\System32*. En outre, sur un système d’exploitation 64 bits, une copie du fichier Ccmcore.dll est toujours installée dans le dossier *%Windir%* \SysWOW64. Ce fichier prend en charge les applications 32 bits qui utilisent la version 32 bits des API client du SDK Configuration Manager.  
 
  Exemple : `CCMSetup.exe CCMINSTALLDIR="C:\ConfigMgr"`  
 

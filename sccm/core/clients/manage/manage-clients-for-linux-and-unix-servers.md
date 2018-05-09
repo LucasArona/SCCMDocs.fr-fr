@@ -1,26 +1,20 @@
 ---
-title: "Gérer les clients Linux et UNIX"
+title: Gérer les clients Linux et UNIX
 titleSuffix: Configuration Manager
-description: "Découvrez comment gérer les clients sur des serveurs Linux et UNIX dans System Center Configuration Manager."
-ms.custom: na
+description: Découvrez comment gérer les clients sur des serveurs Linux et UNIX dans System Center Configuration Manager.
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 948664f2-239d-47a8-92fc-f8efeebd5796
-caps.latest.revision: "7"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: c061573727d93e7599164b759259754db97f5b24
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 1bafded91dcdcddacd45134ce6b52f4da9d916ac
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-manage-clients-for-linux-and-unix-servers-in-system-center-configuration-manager"></a>Guide pratique pour gérer les clients pour des serveurs Linux et UNIX dans System Center Configuration Manager
 

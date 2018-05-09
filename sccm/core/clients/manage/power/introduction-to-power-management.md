@@ -1,26 +1,20 @@
 ---
-title: "Présentation de la gestion de l’alimentation"
+title: Présentation de la gestion de l’alimentation
 titleSuffix: Configuration Manager
-description: "Obtenez une présentation de la gestion de l’alimentation dans System Center Configuration Manager."
-ms.custom: na
+description: Obtenez une présentation de la gestion de l’alimentation dans System Center Configuration Manager.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 3ddff2a7-99eb-4ef8-b969-f3f7f24053db
-caps.latest.revision: "4"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 5b22b13fa904f26e25555c3095a2db2455594d1e
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: adf410b2cfdb45b3f01ac48c53d324b678689cda
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="introduction-to-power-management-in-system-center-configuration-manager"></a>Présentation de la gestion de l’alimentation dans System Center Configuration Manager
 

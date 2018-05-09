@@ -2,26 +2,19 @@
 title: Créer des profils de messagerie Exchange ActiveSync
 titleSuffix: Configuration Manager
 description: Découvrez comment créer et configurer des profils de messagerie dans System Center Configuration Manager qui fonctionnent avec Microsoft Intune.
-ms.custom: na
 ms.date: 07/28/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 120442be-179e-450c-a0c4-284046895da3
-caps.latest.revision: 4
-caps.handback.revision: 0
-author: lleonard-msft
-ms.author: alleonar
-manager: angrobe
-ms.openlocfilehash: ab429e2702ab1595b035c8e2895dad584be4061a
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 5ee29053f69eaf624079f42a33efa5cdba9d1de9
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exchange-activesync-email-profiles-in-system-center-configuration-manager"></a>Profils de messagerie Exchange ActiveSync dans System Center Configuration Manager
 

@@ -1,25 +1,20 @@
 ---
-title: "Planifier et configurer les paramètres de compatibilité"
+title: Planifier et configurer les paramètres de compatibilité
 titleSuffix: Configuration Manager
-description: "Découvrez les prérequis et les tâches de configuration pour l’utilisation des paramètres de compatibilité dans System Center Configuration Manager."
-ms.custom: na
+description: Découvrez les prérequis et les tâches de configuration pour l’utilisation des paramètres de compatibilité dans System Center Configuration Manager.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 9ea20b01-676a-4cc2-b328-0098a41b202e
-caps.latest.revision: "8"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 970ebabc8a275f46cf005c6f3571c62d64889ea8
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 84643f38b5dd0c42a611ca50aaae6ab6d9f52405
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="plan-for-and-configure-compliance-settings-in-system-center-configuration-manager"></a>Planifier et configurer les paramètres de compatibilité dans System Center Configuration Manager
 
@@ -29,7 +24,7 @@ Avant de commencer à utiliser les paramètres de compatibilité System Center C
 
 ## <a name="prerequisites-for-compliance-settings"></a>Conditions préalables pour les paramètres de compatibilité  
 
-|Configuration requise|Plus d'informations|  
+|Condition préalable|Plus d'informations|  
 |------------------|----------------------|  
 |Les clients Windows Configuration Manager doivent être activés et configurés pour l’évaluation de la compatibilité.|Voir ci-dessous|  
 |Si vous souhaitez exécuter des rapports, vous devez configurer la création de rapports pour votre site.|[Rapports dans System Center Configuration Manager](../../core/servers/manage/reporting.md)|  

@@ -1,31 +1,26 @@
 ---
-title: "Capacités de la version Technical Preview 1605"
+title: Capacités de la version Technical Preview 1605
 titleSuffix: Configuration Manager
-description: "Découvrez les fonctionnalités disponibles dans la version d’évaluation technique 1605 pour System Center Configuration Manager."
-ms.custom: na
+description: Découvrez les fonctionnalités disponibles dans la version d’évaluation technique 1605 pour System Center Configuration Manager.
 ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2bafd028-1923-4463-9e3e-ee41bc0c437b
-caps.latest.revision: "36"
-author: erikje
-ms.author: erikje
-manager: angrobe
-ms.openlocfilehash: 795b7658f5da8f863f208f01896ae2d7823ff2a6
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 05d87b253f2387dd8428f4b9fadea3fe5f3a48e8
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1605-for-system-center-configuration-manager"></a>Fonctionnalités de la version d’évaluation technique 1605 pour System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (version d’évaluation technique)*
+*S’applique à : System Center Configuration Manager (Technical Preview)*
 
-Cet article présente les fonctionnalités qui sont disponibles dans la version d’évaluation technique 1605 pour System Center Configuration Manager. Vous pouvez installer cette version pour mettre à jour et ajouter de nouvelles fonctionnalités à votre site de version d’évaluation technique de Configuration Manager.      Avant d’installer cette version d’évaluation technique, passez en revue la rubrique de présentation, [Technical Preview pour System Center Configuration Manager](../../core/get-started/technical-preview.md), pour vous familiariser avec les conditions générales et les limitations d’utilisation d’une version d’évaluation technique, la mise à jour entre les versions et l’envoi de commentaires sur les fonctionnalités dans une version d’évaluation technique.  
+Cet article présente les fonctionnalités qui sont disponibles dans la version d’évaluation technique 1605 pour System Center Configuration Manager. Vous pouvez installer cette version pour mettre à jour et ajouter de nouvelles fonctionnalités à votre site Configuration Manager Technical Preview.      Avant d’installer cette version de la version d’évaluation technique, passez en revue la rubrique de présentation, [Version d’évaluation technique pour System Center Configuration Manager](../../core/get-started/technical-preview.md), pour vous familiariser avec les conditions générales et limitations d’utilisation d’une version d’évaluation technique, la mise à jour entre les versions et l’envoi de commentaires sur les fonctionnalités dans une version d’évaluation technique.  
 
  **Problèmes connus dans cette version d’évaluation technique :**  
 
@@ -72,7 +67,7 @@ Cet article présente les fonctionnalités qui sont disponibles dans la version 
  Des options similaires ont été ajoutées dans l’Assistant de déploiement de mises à jour logicielles, dans l’Assistant des règles de déploiement automatique et dans les pages de propriétés. Toutefois, celles-ci ne sont pas actuellement implémentées dans cette version d’évaluation technique.  
 
 ##  <a name="BKMK_Remote"></a> Nouvelle expérience pour les actions des appareils à distance  
- L’expérience relative à l’exécution des actions des appareils à distance à partir de la console Configuration Manager a été améliorée.  
+ L’exécution des actions des appareils à distance à partir de la console Configuration Manager a été améliorée.  
 Des actions courantes telles que **Mettre hors service/réinitialiser**, **Réinitialisation du code secret**, **Verrouillage à distance** et **Contourner le verrou d’activation** figurent désormais dans le menu **Actions de l’appareil à distance**, accessible à partir de l’espace de travail **Ressources et Conformité**.  
 
  ![Capture d’écran du nouveau menu Actions de l’appareil à distance](media/New-Remote-Device-Actions.png)  
@@ -102,7 +97,7 @@ Des actions courantes telles que **Mettre hors service/réinitialiser**, **Réin
 
 1.  Dans Azure Active Directory, inscrivez Configuration Manager en tant qu’outil de gestion « Application web et/ou API web ». Vous obtenez ainsi un ID de client dont vous aurez besoin ultérieurement.  
 
-    1.  Dans le nœud Active Directory de [https://manage.windowsazure.com](https://manage.windowsazure.com), sélectionnez votre Azure Active Directory, puis cliquez sur **Applications** > **Ajouter**.  
+    1.  Dans le nœud Active Directory de [https://manage.windowsazure.com](https://manage.windowsazure.com), sélectionnez votre annuaire Azure Active Directory, puis cliquez sur **Applications** > **Ajouter**.  
 
     2.  Cliquez sur **Ajouter une application développée par mon organisation**.  
 
@@ -120,7 +115,7 @@ Des actions courantes telles que **Mettre hors service/réinitialiser**, **Réin
 
 3.  Dans le Windows Store pour Entreprises, configurez Configuration Manager en tant qu’outil de gestion du Windows Store.  
 
-    1.  Ouvrez [https://businessstore.microsoft.com/fr-fr/managementtools](https://businessstore.microsoft.com/managementtools) et connectez-vous si vous y êtes invité.  
+    1.  Ouvrez [https://businessstore.microsoft.com/en-us/managementtools](https://businessstore.microsoft.com/managementtools) et connectez-vous si vous y êtes invité.  
 
     2.  Acceptez les conditions d’utilisation si nécessaire.  
 
@@ -340,19 +335,20 @@ Dans cette version d’évaluation technique, si le portail d’entreprise reste
 
 2.  Sous l’onglet **Accueil**, dans le groupe **Déploiement**, cliquez sur **Supprimer les verrous de déploiement du groupe de serveurs**. Quand des clients ne parviennent pas à installer les mises à jour logicielles et empêchent les autres clients d’installer leurs mises à jour logicielles, les verrous de déploiement peuvent être désactivés manuellement.  
 
-##  <a name="BKMK_ATP"></a> Prise en charge du service Windows Defender Advanced Threat Protection  
- Protection avancée contre les menaces Windows Defender est un nouveau service qui aide les entreprises à détecter, analyser et contrer les attaques avancées ciblant leurs réseaux. En savoir plus sur [Protection avancée contre les menaces Windows Defender](https://blogs.windows.com/windowsexperience/2016/03/01/announcing-windows-defender-advanced-threat-protection). Configuration Manager peut vous aider à intégrer et surveiller des appareils clients Windows 10 Édition anniversaire gérés.  
+##  <a name="BKMK_ATP">
+            </a> Prise en charge du service Windows Defender - Protection avancée contre les menaces  
+ Windows Defender - Protection avancée contre les menaces est un nouveau service qui aide les entreprises à détecter, analyser et contrer les attaques avancées ciblant leurs réseaux. En savoir plus sur [Protection avancée contre les menaces Windows Defender](https://blogs.windows.com/windowsexperience/2016/03/01/announcing-windows-defender-advanced-threat-protection). Configuration Manager peut vous aider à intégrer et surveiller des appareils clients Windows 10 Édition anniversaire gérés.  
 
 ### <a name="try-it-now"></a>Essayez maintenant !  
  Essayez d’exécuter les tâches suivantes, puis indiquez-nous comment cela s’est passé en utilisant notre formulaire de commentaires à la page [Configuration Manager feedback program](https://connect.microsoft.com/ConfigurationManagervnext/ConfigMgr%20Customer%20Feedback) du site Microsoft Connect :  
 
--   Intégrer des appareils au service en ligne Protection avancée contre les menaces Windows Defender  
+-   Intégrer des appareils au service en ligne Windows Defender - Protection avancée contre les menaces  
 
 -   Surveiller le déploiement du service Protection avancée contre les menaces Windows Defender sur les appareils gérés  
 
  **Conditions préalables**  
 
--   Abonnement au service en ligne Protection avancée contre les menaces Windows Defender  
+-   Abonnement au service en ligne Windows Defender - Protection avancée contre les menaces  
 
 -   Clients exécutant Windows 10 Édition anniversaire (build 14328 et supérieure)  
 
@@ -393,7 +389,7 @@ Dans cette version d’évaluation technique, si le portail d’entreprise reste
 
 1.  Dans la console Configuration Manager, accédez à **Surveillance** > **Vue d’ensemble** > **Sécurité**, puis cliquez sur **Windows Defender ATP**.  
 
-2.  Examinez le tableau de bord Protection avancée contre les menaces Windows Defender.  
+2.  Examinez le tableau de bord Windows Defender - Protection avancée contre les menaces.  
 
     -   **État du déploiement de l’agent Windows Defender** : nombre et pourcentage d’ordinateurs clients gérés éligibles avec la stratégie Windows Defender ATP intégrée active.  
 
@@ -421,7 +417,7 @@ Dans cette version d’évaluation technique, si le portail d’entreprise reste
  Quand une mise à jour logicielle nécessitant un redémarrage est déployée à l’aide de Configuration Manager et installée sur un ordinateur, un redémarrage en attente est planifié et une boîte de dialogue de redémarrage s’affiche. Actuellement, pour Windows 8 et versions ultérieures, si vous arrêtez ou redémarrez l’ordinateur à l’aide des options d’alimentation de Windows (et non pas à partir de la boîte de dialogue de redémarrage), la boîte de dialogue de redémarrage reste affichée après le redémarrage de l’ordinateur et celui-ci devra redémarrer à l’échéance configurée. Dans cette version d’évaluation technique, les options **Mettre à jour et redémarrer** et **Mettre à jour et arrêter** sont disponibles sur les ordinateurs Windows 10 dans les options d’alimentation de Windows chaque fois qu’un redémarrage est en attente pour une mise à jour logicielle Configuration Manager. Après l’utilisation de l’une de ces options, la boîte de dialogue de redémarrage ne s’affiche pas quand l’ordinateur redémarre.  
 
 ##  <a name="BKMK_IMEI"></a> Prédéclarer des appareils d’entreprise avec leur numéro IMEI ou leur numéro de série iOS  
- Vous pouvez désormais identifier des appareils d’entreprise en important leurs numéros IMEI (International Mobile Equipment Identity). Vous pouvez charger un fichier de valeurs séparées par des virgules (.csv) contenant les numéros IMEI des appareils ou saisir manuellement les informations sur les appareils.  Vous pouvez également importer les numéros de série des appareils iOS.  Les informations importées définissent l’appartenance des appareils inscrits sur « Entreprise ».  Une licence Intune reste nécessaire pour chaque utilisateur qui accède au service.  
+ Vous pouvez désormais identifier des appareils d’entreprise en important leur numéro IMEI (International Mobile Equipment Identity). Vous pouvez charger un fichier de valeurs séparées par des virgules (.csv) contenant les numéros IMEI des appareils ou saisir manuellement les informations sur les appareils.  Vous pouvez également importer les numéros de série des appareils iOS.  Les informations importées définissent l’appartenance des appareils inscrits sur « Entreprise ».  Une licence Intune reste nécessaire pour chaque utilisateur qui accède au service.  
 
 ### <a name="try-it-out"></a>Essayez !  
  Essayez d’exécuter les tâches suivantes, puis indiquez-nous comment cela s’est passé en utilisant notre formulaire de commentaires à la page [Configuration Manager feedback program](https://connect.microsoft.com/ConfigurationManagervnext/ConfigMgr%20Customer%20Feedback) du site Microsoft Connect :  

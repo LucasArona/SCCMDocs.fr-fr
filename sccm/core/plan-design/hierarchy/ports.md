@@ -1,27 +1,20 @@
 ---
-title: "Ports utilisés pour les connexions"
+title: Ports utilisés pour les connexions
 titleSuffix: Configuration Manager
-description: "Découvrez les ports requis et personnalisables qu’utilise System Center Configuration Manager pour les connexions."
-ms.custom: na
+description: Découvrez les ports requis et personnalisables qu’utilise System Center Configuration Manager pour les connexions.
 ms.date: 02/16/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: c6777fb0-0754-4abf-8a1b-7639d23e9391
-caps.latest.revision: 
-caps.handback.revision: 
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 8db098f69180aac3785087af6ee305b3651094e5
-ms.sourcegitcommit: 1378532fac2620ddcfd31061982f344a290c2e67
+manager: dougeby
+ms.openlocfilehash: dd9c3f9440f4215b82a0f9d63614f646772cc0fa
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ports-used-in-system-center-configuration-manager"></a>Ports utilisés dans System Center Configuration Manager
 
@@ -566,7 +559,7 @@ Pour plus d’informations, consultez la section [Conditions requises pour l’a
     > [!NOTE]  
     >  Quand vous configurez le point de mise à jour logicielle pour utiliser HTTPS, le port HTTP doit également être ouvert. Les données non chiffrées, telles que le CLUF pour les mises à jour spécifiques, utilisent le port HTTP.  
 
-4.  **Service Trivial FTP (TFTP)** : le service système Trivial FTP ne nécessite pas de nom d’utilisateur ni de mot de passe, et il fait partie intégrante des services de déploiement Windows (WDS). Le service Trivial FTP met en œuvre la prise en charge du protocole TFTP qui est défini par les normes RFC suivantes :  
+4.  **Service Trivial FTP (TFTP)**  : le service système Trivial FTP ne nécessite pas de nom d’utilisateur ni de mot de passe, et il fait partie intégrante des services de déploiement Windows (WDS). Le service Trivial FTP met en œuvre la prise en charge du protocole TFTP qui est défini par les normes RFC suivantes :  
 
     -   RFC 350  : TFTP  
 

@@ -5,16 +5,15 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.date: 03/22/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
-ms.openlocfilehash: 0e4d2add8ece7f548955064a479d9545a1fc64e1
-ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
+ms.openlocfilehash: e62b748596aba1404d6b097e5aa0bf74266f055b
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>Certificats pour la passerelle de gestion cloud
 
@@ -125,7 +124,7 @@ Après avoir émis un certificat d’authentification client pour un ordinateur,
 
 6.  Dans cette boîte de dialogue Nouveau certificat, passez à l’onglet **Détails**. Cliquez sur **Copier dans un fichier...**.
 
-7.  Effectuez l’Assistant Exportation de certificat en utilisant le format de certificat par défaut, **X.509 binaire encodé DER (.cer)**. Notez le nom et l’emplacement du certificat exporté.
+7.  Effectuez l’Assistant Exportation de certificat en utilisant le format de certificat par défaut, **X.509 binaire encodé DER (*.cer)**. Notez le nom et l’emplacement du certificat exporté.
 
 8. Exportez tous les certificats dans le chemin de certification du certificat d’authentification client d’origine. Notez quels certificats exportés sont des autorités de certification intermédiaires, et lesquels sont des autorités de certification racines de confiance.
 

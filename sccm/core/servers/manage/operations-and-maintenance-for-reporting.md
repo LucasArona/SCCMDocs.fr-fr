@@ -1,25 +1,20 @@
 ---
-title: "Opérations et maintenance pour les rapports "
+title: 'Opérations et maintenance pour les rapports '
 titleSuffix: Configuration Manager
-description: "Découvrez les détails de la gestion des rapports et des abonnements aux rapports dans System Center Configuration Manager."
-ms.custom: na
+description: Découvrez les détails de la gestion des rapports et des abonnements aux rapports dans System Center Configuration Manager.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b89bcfbf-f5b6-4fb1-bb5e-a5cc18ec0c78
-caps.latest.revision: "5"
-author: Dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 05a81cdfd46ba2bf0bea17b06bd72f79296b3930
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: fff4150d6b8b4529a6f63989447ee5acb725c92f
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="operations-and-maintenance-for-reporting-in-system-center-configuration-manager"></a>Opérations et maintenance pour les rapports dans System Center Configuration Manager
 
@@ -240,18 +235,18 @@ Une fois l’infrastructure en place pour la création de rapports dans System C
 
         -   **Fichier XML avec données de rapport**: Enregistre le rapport au format Extensible Markup Language.  
 
-        -   **CSV \(délimité par des virgules\)** : Enregistre le rapport au format de valeurs séparées par des virgules.  
+        -   **CSV \(délimité par des virgules\)**  : Enregistre le rapport au format de valeurs séparées par des virgules.  
 
         -   **Fichier TIFF**: Enregistre le rapport au format de fichier TIFF (Tagged Image File Format).  
 
-        -   **Fichier Acrobat \(PDF\)** : Enregistre le rapport au format Acrobat Portable Document Format.  
+        -   **Fichier Acrobat \(PDF\)**  : Enregistre le rapport au format Acrobat Portable Document Format.  
 
         -   **HTML 4.0**: Enregistre le rapport sous la forme d'une page Web affichable uniquement dans les navigateurs qui prennent en charge le langage HTML 4.0. Internet Explorer 5 et versions ultérieures prennent en charge le langage HTML 4.0.  
 
             > [!NOTE]  
             >  Si votre rapport contient des images, le format HTML 4.0 ne les inclut pas dans le fichier.  
 
-        -   **MHTML \(archive web\)** : Enregistre le rapport au format MIME HTML \(mhtml\) pouvant être consulté avec de nombreux navigateurs web.  
+        -   **MHTML \(archive web\)**  : Enregistre le rapport au format MIME HTML \(mhtml\) pouvant être consulté avec de nombreux navigateurs web.  
 
         -   **Convertisseur RPL** : Enregistre le rapport au format RPL \(Report Page Layout\).  
 
@@ -338,13 +333,13 @@ Une fois l’infrastructure en place pour la création de rapports dans System C
 
         -   **Fichier XML avec données de rapport**: Enregistre le rapport au format Extensible Markup Language.  
 
-        -   **CSV \(délimité par des virgules\)** : Enregistre le rapport au format de valeurs séparées par des virgules.  
+        -   **CSV \(délimité par des virgules\)**  : Enregistre le rapport au format de valeurs séparées par des virgules.  
 
         -   **Fichier TIFF**: Enregistre le rapport au format de fichier TIFF (Tagged Image File Format).  
 
-        -   **Fichier Acrobat \(PDF\)** : Enregistre le rapport au format Acrobat Portable Document Format.  
+        -   **Fichier Acrobat \(PDF\)**  : Enregistre le rapport au format Acrobat Portable Document Format.  
 
-        -   **MHTML \(archive web\)** : Enregistre le rapport au format MIME HTML \(mhtml\) pouvant être consulté avec de nombreux navigateurs web.  
+        -   **MHTML \(archive web\)**  : Enregistre le rapport au format MIME HTML \(mhtml\) pouvant être consulté avec de nombreux navigateurs web.  
 
         -   **Excel**: Enregistre le rapport sous forme de feuille de calcul Microsoft Excel.  
 

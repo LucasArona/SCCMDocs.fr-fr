@@ -1,26 +1,20 @@
 ---
-title: "Créer des éléments de configuration pour les appareils Mac gérés par le client "
+title: 'Créer des éléments de configuration pour les appareils Mac gérés par le client '
 titleSuffix: Configuration Manager
-description: "L’élément de configuration System Center Configuration Manager Mac OS X permet de gérer les paramètres des appareils Mac OS X."
-ms.custom: na
+description: L’élément de configuration System Center Configuration Manager Mac OS X permet de gérer les paramètres des appareils Mac OS X.
 ms.date: 03/28/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 722d5bf5-bedc-4dfc-b324-6eeb773874e9
-caps.latest.revision: "8"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 1947bc8907d00a2f6d78acee5f563fa9b7f6cf78
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: e6358c8e84d12c37418d7a1af459e775783efaa2
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-configuration-items-for-mac-os-x-devices-managed-with-the-system-center-configuration-manager-client"></a>Comment créer des éléments de configuration pour des appareils Mac OS X gérés avec le client System Center Configuration Manager
 Utilisez l’élément de configuration System Center Configuration Manager **Mac OS X (personnalisé)** pour gérer les paramètres des appareils Mac OS X gérés par le client Configuration Manager.  

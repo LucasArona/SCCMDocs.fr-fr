@@ -1,25 +1,20 @@
 ---
-title: "Principes de base de l’administration basée sur des rôles"
+title: Principes de base de l’administration basée sur des rôles
 titleSuffix: Configuration Manager
-description: "Utilisez l’administration basée sur les rôles pour contrôler l’accès administratif à Configuration Manager et les objets que vous gérez."
-ms.custom: na
+description: Utilisez l’administration basée sur les rôles pour contrôler l’accès administratif à Configuration Manager et les objets que vous gérez.
 ms.date: 1/3/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0a2d6c3f-a4e4-4c19-b087-3caada480de9
-caps.latest.revision: "10"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 1a81506afa49d0ae7af29f274f790d3fa5c7e61d
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: 6fa1ca03db8df7e2d02edfad3af99ca1749224ac
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fundamentals-of-role-based-administration-for-system-center-configuration-manager"></a>Principes de base de l’administration basée sur des rôles pour System Center Configuration Manager
 

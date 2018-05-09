@@ -2,22 +2,19 @@
 title: Gérer les mises à jour Office 365 ProPlus
 titleSuffix: Configuration Manager
 description: Configuration Manager synchronise les mises à jour du client Office 365 du catalogue WSUS vers le serveur de site de façon à rendre les mises à jour disponibles pour un déploiement sur les clients.
-keywords: ''
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ms.date: 03/26/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service: ''
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-ms.openlocfilehash: 4fbbe4b6792c51cd7adeeae3a96f81927153362c
-ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
+ms.openlocfilehash: a7c1786e9acce10d98da031d9d5df3b81f9a1a28
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-office-365-proplus-with-configuration-manager"></a>Gérer Office 365 ProPlus avec Configuration Manager
 
@@ -43,7 +40,7 @@ Le tableau de bord Gestion des clients Office 365 fournit des graphiques pour le
 - Versions du client Office 365
 - Langues du client Office 365
 - Canaux du client Office 365     
-  Pour plus d’informations, consultez [Présentation des canaux de mise à jour pour Office 365 ProPlus](https://technet.microsoft.com/library/mt455210.aspx).
+  Pour plus d’informations, consultez [Présentation des canaux de mise à jour pour Office 365 ProPlus](/DeployOffice/overview-of-update-channels-for-office-365-proplus).
 
 Pour afficher le tableau de bord Gestion des clients Office 365 dans la console Configuration Manager, accédez à **Bibliothèque de logiciels** > **Vue d’ensemble** > **Gestion des clients Office 365**. En haut du tableau de bord, utilisez le paramètre de liste déroulante **Regroupement** pour filtrer les données de tableau de bord selon les membres d’un regroupement spécifique. À compter de Configuration Manager version 1802, le tableau de bord Gestion des clients Office 365 affiche une liste des appareils concernés quand des sections de graphe sont sélectionnées.
 
@@ -83,7 +80,7 @@ Dans les versions antérieures de Configuration Manager, vous devez exécuter le
 
     Quand vous avez un fichier de configuration, entrez l’emplacement du fichier et passez à l’étape 7. Vous devez spécifier l’emplacement sous la forme &#92;&#92;*serveur*&#92;*partage*&#92;*nom_fichier*.XML.
     > [!IMPORTANT]    
-    > Le fichier de configuration XML doit contenir uniquement des [langues prises en charge par le client Office 365 ProPlus](https://technet.microsoft.com/library/cc179219&#40;v=office.16&#41;.aspx).
+    > Le fichier de configuration XML doit contenir uniquement des [langues prises en charge par le client Office 365 ProPlus](/DeployOffice/office2016/language-identifiers-and-optionstate-id-values-in-office-2016).
 
 5. Dans la page **Produits du client**, sélectionnez la suite Office 365 que vous utilisez. Sélectionnez les applications que vous souhaitez inclure. Sélectionnez tous les autres produits Office qui doivent être inclus, puis cliquez sur **Suivant**.
 6. Dans la page **Paramètres client**, choisissez les paramètres à inclure, puis cliquez sur **Suivant**.
@@ -103,7 +100,7 @@ Depuis la version 1706 de Configuration Manager, les mises à jour clients Offic
 
 Procédez comme suit pour déployer les mises à jour d’Office 365 avec le Gestionnaire de Configuration :
 
-1.  [Vérifiez la configuration requise](https://technet.microsoft.com/library/mt628083.aspx) pour utiliser Configuration Manager en vue de gérer les mises à jour du client Office 365 dans la section **Configuration requise pour utiliser Configuration Manager afin de gérer les mises à jour du client Office 365** de l’article.  
+1.  [Vérifiez la configuration requise](/DeployOffice/manage-updates-to-office-365-proplus-with-system-center-configuration-manager#requirements-for-using-configuration-manager-to-manage-office-365-client-updates) pour utiliser Configuration Manager en vue de gérer les mises à jour du client Office 365 dans la section **Configuration requise pour utiliser Configuration Manager afin de gérer les mises à jour du client Office 365** de l’article.  
 
 2.  [Configurez les points de mise à jour logicielle](../get-started/configure-classifications-and-products.md) pour synchroniser les mises à jour du client Office 365. Définissez **Mises à jour** en guise de classification et sélectionnez **Office 365 Client** en guise de produit. Synchronisez les mises à jour logicielles après avoir configuré les points de mise à jour logicielle pour utiliser la classification **Mises à jour**.
 3.  Habilitez les clients Office 365 à recevoir des mises à jour de Configuration Manager. Utilisez les paramètres du client Configuration Manager ou la stratégie de groupe pour activer le client.   
@@ -116,7 +113,7 @@ Procédez comme suit pour déployer les mises à jour d’Office 365 avec le Ge
 
       3.  Cliquez sur **Mises à jour logicielles** et sélectionnez **Oui** pour le paramètre **Activer la gestion de l’agent Office 365 Client**.  
 
-    **Méthode 2** : [Habilitez les clients Office 365 à recevoir les mises à jour](https://technet.microsoft.com/library/mt628083.aspx#BKMK_EnableClient) de Configuration Manager via l’outil de déploiement Office ou la stratégie de groupe.  
+    **Méthode 2** : [Habilitez les clients Office 365 à recevoir les mises à jour](/DeployOffice/manage-updates-to-office-365-proplus-with-system-center-configuration-manager#BKMK_EnableClient) de Configuration Manager via l’outil de déploiement Office ou la stratégie de groupe.  
 
 4. [Déployez les mises à jour d’Office 365](deploy-software-updates.md) sur les clients.   
 

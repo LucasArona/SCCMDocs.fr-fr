@@ -2,26 +2,19 @@
 title: Principes de base de la gestion de contenu
 titleSuffix: Configuration Manager
 description: Utilisez les outils et les options de Configuration Manager pour gérer le contenu que vous déployez.
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
-caps.latest.revision: 28
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0595e34d096b2d7f6450b3255bae03ae3aa57862
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 5dfe33e7182eae158c15afb848d3a9f1702678ba
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fundamental-concepts-for-content-management-in-system-center-configuration-manager"></a>Principes de base de la gestion de contenu dans System Center Configuration Manager
 
@@ -183,7 +176,7 @@ Par exemple, vous disposez d’un package ayant une priorité de package élevé
 La priorité élevée du package permet à Configuration Manager de distribuer ce contenu à des points de distribution avant d’envoyer les packages ayant une priorité inférieure.  
 
 > [!NOTE]  
->  Les points de distribution d’extraction utilisent également un concept de priorité pour ordonner la séquence de leurs points de distribution sources.  
+>  Les points de distribution d’extraction utilisent également un concept de priorité pour ordonner la séquence de leur points de distribution source.  
 >   
 >  -   La priorité des points de distribution pour les transferts de contenu vers le serveur est différente de la priorité qu’utilisent les points de distribution d’extraction. Les points de distribution d’extraction utilisent leur priorité quand ils recherchent du contenu à partir d’un point de distribution source.  
 >  -   Pour plus d’informations, consultez [Utiliser un point de distribution d’extraction](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point).  

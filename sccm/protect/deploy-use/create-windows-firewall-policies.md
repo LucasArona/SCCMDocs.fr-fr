@@ -1,25 +1,20 @@
 ---
-title: "Stratégies de pare-feu Windows pour Endpoint Protection"
+title: Stratégies de pare-feu Windows pour Endpoint Protection
 titleSuffix: Configuration Manager
-description: "Découvrez comment créer et déployer des stratégies de pare-feu pour Endpoint Protection dans System Center 2012 Configuration Manager."
-ms.custom: na
+description: Découvrez comment créer et déployer des stratégies de pare-feu pour Endpoint Protection dans System Center 2012 Configuration Manager.
 ms.date: 03/07/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: 6ecdfad1-6305-45a8-ae75-3f33b967cb8f
-caps.latest.revision: "5"
-author: NathBarn
-ms.author: nathbarn
-manager: angrobe
-ms.openlocfilehash: cce8eb704b88e551051e7a90b37f1ca3250c3da3
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: e3030b4390e38ca2dfce6805c04d5b0bb7916bba
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-and-deploy-windows-firewall-policies-for-endpoint-protection-in-system-center-configuration-manager"></a>Créer et déployer des stratégies de Pare-feu Windows pour Endpoint Protection dans System Center Configuration Manager
 

@@ -1,26 +1,20 @@
 ---
-title: "Stratégies de conformité des appareils"
+title: Stratégies de conformité des appareils
 titleSuffix: Configuration Manager
-description: "Découvrez comment gérer les stratégies de conformité dans System Center Configuration Manager pour rendre les appareils compatibles avec les stratégies d’accès conditionnel."
-ms.custom: na
+description: Découvrez comment gérer les stratégies de conformité dans System Center Configuration Manager pour rendre les appareils compatibles avec les stratégies d’accès conditionnel.
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ad8fa94d-45bb-4c94-8d86-31234c5cf21c
-caps.latest.revision: "18"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: d9811d81987e8531ee48a07a6855b337fdccb73b
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 776af7499c576f21d47dafec8a668f3c4051ad88
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="device-compliance-policies-in-system-center-configuration-manager"></a>Stratégies de conformité des appareils dans System Center Configuration Manager
 
@@ -38,7 +32,7 @@ Les **stratégies de conformité** dans System Center Configuration Manager déf
 
 -   Le chiffrement des données stockées sur l’appareil
 
--   Si l'appareil est jailbroken ou rooté  
+-   Si l'appareil est jailbreaké ou rooté  
 
 -   Si la messagerie sur l’appareil est gérée par une stratégie Intune, ou si le service Windows d’attestation d’intégrité de l’appareil signale celui-ci comme étant défectueux.
 -   Applications qui ne peuvent pas être installées sur l’appareil.
@@ -48,7 +42,7 @@ Les **stratégies de conformité** dans System Center Configuration Manager déf
 
  Le tableau suivant répertorie les appareils pris en charge par les stratégies de conformité et la façon dont les paramètres de non-conformité sont gérés quand la stratégie est utilisée avec une stratégie d'accès conditionnel.  
 
-|Règle|Windows 8.1 et versions ultérieures|Windows Phone 8.1 et versions ultérieures|iOS 6.0 et versions ultérieures|Android 4.0 et versions ultérieures, Samsung KNOX Standard 4.0 et versions ultérieures, Android for Work|  
+|Règle|Windows 8.1 et versions ultérieures|Windows Phone 8.1 et versions ultérieures|iOS 6.0 et versions ultérieures|Android 4.0 et versions ultérieures, Samsung KNOX Standard 4.0 et versions ultérieures, Android for Work|  
 |----------|---------------------------|---------------------------------|-----------------------|---------------------------|-----------------------------------------|  
 |**Configuration d’un code confidentiel ou mot de passe**|Corrigé|Corrigé|Corrigé|En quarantaine|  
 |**Chiffrement de l’appareil**|N/A|Corrigé|Corrigé (en définissant le code confidentiel)|En quarantaine<br>(Android for Work toujours chiffré)|  

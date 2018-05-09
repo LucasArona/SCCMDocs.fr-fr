@@ -1,25 +1,20 @@
 ---
-title: "Surveiller les applications à partir de la console"
+title: Surveiller les applications à partir de la console
 titleSuffix: Configuration Manager
-description: "Surveillez le déploiement de logiciels, notamment des mises à jour, des paramètres de compatibilité et des applications à l’aide de l’espace de travail Surveillance dans Configuration Manager."
-ms.custom: na
+description: Surveillez le déploiement de logiciels, notamment des mises à jour, des paramètres de compatibilité et des applications à l’aide de l’espace de travail Surveillance dans Configuration Manager.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 784c295c-b8b8-4202-ab9f-665908d49d6d
-caps.latest.revision: "5"
-author: mattbriggs
-ms.author: mabrigg
-manager: angrobe
-ms.openlocfilehash: 015f4410f576fac90d913abfa30064b2eecb2a5b
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 4aed4ecda35fded9314ae54b6601deb6f8e07197
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="monitor-applications-from-the-system-center-configuration-manager-console"></a>Surveiller des applications à partir de la console System Center Configuration Manager
 
@@ -51,7 +46,7 @@ Vous pouvez consulter des informations supplémentaires pour chaque état de com
 
 -   Erreurs d'installation  
 
- Lorsque plusieurs états de compatibilité s'appliquent à un déploiement d'application, vous pouvez consulter l'état de l'agrégat dont la compatibilité est la plus faible. Exemple :  
+ Lorsque plusieurs états de compatibilité s'appliquent à un déploiement d'application, vous pouvez consulter l'état de l'agrégat dont la compatibilité est la plus faible. Par exemple :  
 
     -   Si un utilisateur se connecte à deux appareils et que l’installation de l’application réussit sur un appareil, mais échoue sur le deuxième, l’état du déploiement de l’agrégat de l’application pour cet utilisateur a l’état **Erreur**.  
 

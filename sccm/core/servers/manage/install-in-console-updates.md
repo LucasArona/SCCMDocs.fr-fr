@@ -2,25 +2,19 @@
 title: Mises à jour dans la console
 titleSuffix: Configuration Manager
 description: Installer des mises à jour pour Configuration Manager à partir du cloud Microsoft
-ms.custom: na
 ms.date: 04/10/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
-caps.latest.revision: 36
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9924346ccbd862aa4462075a3307b4ec40b955bc
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+ms.openlocfilehash: 9edf02333ec4ce272e69a896ed22e97fa6de0955
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-in-console-updates-for-system-center-configuration-manager"></a>Installation de mises à jour dans la console pour System Center Configuration Manager
 

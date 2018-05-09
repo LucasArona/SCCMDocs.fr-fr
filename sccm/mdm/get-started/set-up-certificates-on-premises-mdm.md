@@ -1,26 +1,20 @@
 ---
 title: 'Configurer des certificats '
 titleSuffix: Configuration Manager
-description: "Configurez des certificats pour les communications approuvées pour la gestion des appareils mobiles locale dans System Center Configuration Manager."
-ms.custom: na
+description: Configurez des certificats pour les communications approuvées pour la gestion des appareils mobiles locale dans System Center Configuration Manager.
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 2a7d7170-1933-40e9-96d6-74a6eb7278e2
-caps.latest.revision: "27"
-caps.handback.revision: "0"
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 860f6e3f418a15ecfb79e9cbac5e6a09e17feb1a
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: c538c3b7668cc93069f0805b98f29586c3d7c86c
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-up-certificates-for-trusted-communications-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>Configurer des certificats pour les communications approuvées pour la gestion des appareils mobiles locale dans System Center Configuration Manager
 

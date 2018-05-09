@@ -2,25 +2,19 @@
 title: Gérer les séquences de tâches
 titleSuffix: Configuration Manager
 description: Créez, modifiez, déployez, importez et exportez des séquences de tâches pour les gérer et automatiser les tâches dans votre environnement.
-ms.custom: na
 ms.date: 04/10/2018
 ms.prod: configuration-manager
-ms.reviewer: nac
-ms.suite: na
-ms.technology:
-- configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: a1f099f1-e9b5-4189-88b3-f53e3b4e4add
-caps.latest.revision: 10
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9ed5a94d644aa0bdb7d63c3b976da7dd566dfedd
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+ms.openlocfilehash: 26d43b1ee065f3ae0b1221ca81e69f6cb1da6f6c
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-task-sequences-to-automate-tasks-in-system-center-configuration-manager"></a>Gérer les séquences de tâches pour automatiser des tâches dans System Center Configuration Manager
 
@@ -85,8 +79,8 @@ Appliquez la procédure suivante pour configurer les détails de la séquence de
 2. Sélectionnez la séquence de tâches à modifier, puis cliquez sur **Propriétés**.
 3. Sous l’onglet **Général**, les paramètres suivants du Centre logiciel sont disponibles :
   - **Redémarrage requis** : indique à l’utilisateur si un redémarrage est nécessaire lors de l’installation.
-  - **Taille du téléchargement (Mo)** : spécifie le nombre de mégaoctets affichés dans le Centre logiciel pour la séquence de tâches.  
-  - **Durée d’exécution estimée (minutes)** : spécifie la durée d’exécution estimée, en minutes, affichée dans le Centre logiciel pour la séquence de tâches.
+  - **Taille du téléchargement (Mo)**  : spécifie le nombre de mégaoctets affichés dans le Centre logiciel pour la séquence de tâches.  
+  - **Durée d’exécution estimée (minutes)**  : spécifie la durée d’exécution estimée, en minutes, affichée dans le Centre logiciel pour la séquence de tâches.
 
 ## <a name="configure-advanced-task-sequence-settings"></a>Configurer des paramètres de séquence de tâches avancés
 Appliquez la procédure suivante pour configurer les détails de la séquence de tâches affichés dans le Centre logiciel. Ces détails sont fournis uniquement à titre d’informations.  
@@ -250,7 +244,7 @@ Le message de notification suivant s’affiche quand l’utilisateur final ouvre
         >     - Si le regroupement dépasse la valeur de taille par défaut
         >     - Si le regroupement contient un serveur  
 
-    -   **Commentaires (facultatif) :**spécifiez des informations supplémentaires qui décrivent ce déploiement de la séquence de tâches.  
+    -   **Commentaires (facultatif) :** spécifiez des informations supplémentaires qui décrivent ce déploiement de la séquence de tâches.  
     - **Sélectionner un modèle de déploiement** : À partir de la version 1802 de Configuration Manager, <!--1357391--> vous pouvez enregistrer et spécifier un modèle de déploiement pour une séquence de tâches.     
 
          > [!IMPORTANT]

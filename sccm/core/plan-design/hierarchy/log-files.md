@@ -2,26 +2,19 @@
 title: Fichiers journaux pour la résolution des problèmes
 titleSuffix: Configuration Manager
 description: Utilisez des fichiers journaux pour résoudre des problèmes liés aux systèmes de site et aux clients Configuration Manager.
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
-caps.latest.revision: 9
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 471730e056ca512f300ead234b9a8a9e4f10a835
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: c068ea5a079d43148191e41dc9a2b4fb7a2e00c7
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="log-files-in-system-center-configuration-manager"></a>Fichiers journaux dans System Center Configuration Manager
 
@@ -122,7 +115,7 @@ Dans Configuration Manager, les composants des clients et des serveurs de site e
 ##  <a name="BKMK_AboutLogs"></a> À propos des fichiers journaux de Configuration Manager  
  La plupart des processus dans Configuration Manager consignent des informations sur les opérations dans un fichier journal dédié à ce processus. Ces fichiers journaux sont identifiés par des extensions de fichier **.log** ou **.lo_**. Configuration Manager écrit dans un fichier .log jusqu’à ce que ce journal atteigne sa taille maximale. Une fois le journal plein, le fichier .log est copié vers un fichier portant le même nom mais avec l’extension .lo_, et le processus ou le composant continue à écrire dans le fichier .log. Quand le fichier .log atteint à nouveau sa taille maximale, le fichier .lo_ est remplacé et le processus se répète. Certains composants établissent un historique du fichier journal en ajoutant une date et une heure au nom du fichier journal, et en conservant l’extension .log. Le client pour Linux et UNIX constitue une exception à la taille maximale et à l’utilisation du fichier .lo_. Pour plus d’informations sur la façon dont le client pour Linux et UNIX utilise les fichiers journaux, consultez [Gérer des fichiers journaux dans le client pour Linux et UNIX](#BKMK_ManageLinuxLogs) dans cet article.  
 
- Pour afficher les journaux, utilisez la visionneuse du journal Configuration Manager, CMTrace, qui se trouve dans le dossier \\SMSSetup\\Tools du média source de Configuration Manager. Il est ajouté à toutes les images de démarrage ajoutées à la Bibliothèque de logiciels.  
+ Pour afficher les journaux, utilisez la visionneuse du journal Configuration Manager, CMTrace, qui se trouve dans le dossier \\\SMSSetup\\Tools du média source de Configuration Manager. Il est ajouté à toutes les images de démarrage ajoutées à la Bibliothèque de logiciels.  
 
 ###  <a name="BKMK_LogOptions"></a> Configurer des options de journalisation à l’aide du Gestionnaire de service de Configuration Manager  
  Vous pouvez changer l’emplacement où Configuration Manager stocke les fichiers journaux, ainsi que leur taille.  
@@ -234,7 +227,7 @@ Le tableau suivant répertorie les fichiers journaux qui se trouvent sur le clie
 |Nom du fichier journal|Détails|  
 |--------------|-------------|  
 |Scxcm.log|Fichier journal pour le service principal du client Configuration Manager pour Linux et UNIX (ccmexec.bin). Ce fichier journal contient des informations liées à l'installation et aux opérations en cours de ccmexec.bin.<br /><br /> Par défaut, ce fichier journal se trouve dans **/var/opt/microsoft/scxcm.log**<br /><br /> Pour définir un autre emplacement pour le fichier journal, modifiez **/opt/microsoft/configmgr/etc/scxcm.conf** et changez le champ **PATH** . Il n'est pas nécessaire de redémarrer l'ordinateur ou le service client pour appliquer la modification.<br /><br /> Vous pouvez définir le niveau de journalisation sur quatre valeurs différentes.|  
-|Scxcmprovider.log|Fichier journal pour le service CIM du client Configuration Manager pour Linux et UNIX (omiserver.bin). Ce fichier journal contient les informations liées aux opérations en cours de nwserver.bin.<br /><br /> Ce fichier journal se trouve dans**/var/opt/microsoft/configmgr/scxcmprovider.log**<br /><br /> Pour définir un autre emplacement pour le fichier journal, modifiez **/opt/microsoft/omi/etc/scxcmprovider.conf** et changez le champ **PATH** . Il n'est pas nécessaire de redémarrer l'ordinateur ou le service client pour appliquer la modification.<br /><br /> Vous pouvez définir le niveau de journalisation sur trois valeurs différentes.|  
+|Scxcmprovider.log|Fichier journal pour le service CIM du client Configuration Manager pour Linux et UNIX (omiserver.bin). Ce fichier journal contient les informations liées aux opérations en cours de nwserver.bin.<br /><br /> Ce fichier journal se trouve dans **/var/opt/microsoft/configmgr/scxcmprovider.log**<br /><br /> Pour définir un autre emplacement pour le fichier journal, modifiez **/opt/microsoft/omi/etc/scxcmprovider.conf** et changez le champ **PATH** . Il n'est pas nécessaire de redémarrer l'ordinateur ou le service client pour appliquer la modification.<br /><br /> Vous pouvez définir le niveau de journalisation sur trois valeurs différentes.|  
 
  Les deux fichiers journaux prennent en charge plusieurs niveaux de journalisation :  
 

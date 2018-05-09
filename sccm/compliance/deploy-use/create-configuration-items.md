@@ -1,26 +1,20 @@
 ---
-title: "Comment créer des éléments de configuration"
+title: Comment créer des éléments de configuration
 titleSuffix: Configuration Manager
-description: "Créez et déployez des configurations sur des appareils qui sont à la fois gérés par System Center Configuration Manager et inscrits auprès de Microsoft Intune."
-ms.custom: na
+description: Créez et déployez des configurations sur des appareils qui sont à la fois gérés par System Center Configuration Manager et inscrits auprès de Microsoft Intune.
 ms.date: 03/28/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 6271259d-e0ea-432b-90ec-5a452fba4264
-caps.latest.revision: "6"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 5cccd8308b35d54914200c8665eb15a55f153127
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 12d3e9aefb25682133ed90e425188b20f3182a6d
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-configuration-items-in-system-center-configuration-manager"></a>Comment créer des éléments de configuration dans System Center Configuration Manager
 

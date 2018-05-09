@@ -1,25 +1,20 @@
 ---
-title: "Remplacer un ordinateur existant et transférer des paramètres"
+title: Remplacer un ordinateur existant et transférer des paramètres
 titleSuffix: Configuration Manager
-description: "Dans Configuration Manager, choisissez les méthodes de déploiement, telles que le média de démarrage, la multidiffusion ou le Centre logiciel, pour remplacer un ordinateur existant par un nouveau."
-ms.custom: na
+description: Dans Configuration Manager, choisissez les méthodes de déploiement, telles que le média de démarrage, la multidiffusion ou le Centre logiciel, pour remplacer un ordinateur existant par un nouveau.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d28f4363-9e8a-4c54-9cb7-0594fabfff26
-caps.latest.revision: "6"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 862b3b8da0c1f9be0a5883c3f07b2759606d0fc1
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: 2693196ab21474877b5eda4ecce4a93737d1ac59
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="replace-an-existing-computer-and-transfer-settings-with-system-center-configuration-manager"></a>Remplacer un ordinateur existant et transférer des paramètres avec System Center Configuration Manager
 
@@ -39,7 +34,7 @@ Cette rubrique indique les étapes générales à suivre dans System Center Conf
 
      Quand vous allez capturer les paramètres de l’ordinateur existant et restaurer les paramètres sur le nouveau système d’exploitation, vous devez installer un point de migration d’état. Pour plus d’informations, consultez [Point de migration d’état](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints).  
 
-##  <a name="BKMK_Configure"></a> Configurer  
+##  <a name="BKMK_Configure"></a> Configurerr  
 
 1.  **Préparer une image de démarrage**  
 

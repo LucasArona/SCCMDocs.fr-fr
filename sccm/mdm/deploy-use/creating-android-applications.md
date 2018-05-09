@@ -1,25 +1,20 @@
 ---
-title: "Créer des applications Android"
+title: Créer des applications Android
 titleSuffix: Configuration Manager
-description: "Examinez les éléments à prendre en compte quand vous créez et déployez des applications pour appareils Android."
-ms.custom: na
+description: Examinez les éléments à prendre en compte quand vous créez et déployez des applications pour appareils Android.
 ms.date: 07/31/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e025c48c-1514-4ab7-836c-e0635aaa993a
-caps.latest.revision: "6"
-author: mattbriggs
-ms.author: mabrigg
-manager: angrobe
-ms.openlocfilehash: c512cba550e405c866204af981aba75639665de2
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 4c09216744b33412bf1840c20aad659c59b0f52b
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-android-applications-with-system-center-configuration-manager"></a>Créer des applications Android avec System Center Configuration Manager
 
@@ -55,7 +50,7 @@ En tant qu’administrateur de Configuration Manager, vous pouvez également app
 
 Effectuez les étapes suivantes pour approuver des applications dans le magasin Play for Work, les synchroniser avec la console Configuration Manager et les déployer sur des appareils Android for Work gérés. Pour déployer des applications sur les profils professionnels des utilisateurs, vous devez approuver les applications dans Play for Work, puis les synchroniser avec la console Configuration Manager.
 
-1. Ouvrez un navigateur et accédez à https://play.google.com/work.
+1. Ouvrez un navigateur et accédez à : https://play.google.com/work.
 2. Connectez-vous à l’aide du compte d’administrateur Google que vous avez lié à votre client Intune.
 3. Recherchez les applications que vous souhaitez déployer dans votre environnement et choisissez **Approuver** pour chacune d’elles afin de les rendre disponibles pour Android for Work.
 4. Dans la console Configuration Manager, accédez à **Administrateur** > **Vue d’ensemble** > **Services Cloud** > **Android for Work** et choisissez **Synchroniser**.

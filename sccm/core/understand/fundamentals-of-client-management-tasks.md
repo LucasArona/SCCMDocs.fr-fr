@@ -1,25 +1,20 @@
 ---
 title: Principes de base de la gestion des clients
 titleSuffix: Configuration Manager
-description: "Découvrez les tâches que vous exécutez pour gérer les clients System Center Configuration Manager."
-ms.custom: na
+description: Découvrez les tâches que vous exécutez pour gérer les clients System Center Configuration Manager.
 ms.date: 12/30/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8d4e5641-354e-4439-8b4f-620a760e233d
-caps.latest.revision: "4"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 30605b999d4c873fc98e8376e820b30882c43858
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: e517b345340619055b03df22638ec0b491c13d40
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fundamentals-of-client-management-tasks-for-system-center-configuration-manager"></a>Principes de base des tâches de gestion des clients pour System Center Configuration Manager
 

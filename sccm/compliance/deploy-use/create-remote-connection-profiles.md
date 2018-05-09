@@ -1,26 +1,20 @@
 ---
-title: "Créer des profils de connexion à distance"
+title: Créer des profils de connexion à distance
 titleSuffix: Configuration Manager
-description: "Utilisez les profils de connexion à distance System Center Configuration Manager pour permettre aux utilisateurs de se connecter à distance aux ordinateurs de travail."
-ms.custom: na
+description: Utilisez les profils de connexion à distance System Center Configuration Manager pour permettre aux utilisateurs de se connecter à distance aux ordinateurs de travail.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 8c6eabc4-5dda-4682-b03e-3a450e6ef65a
-caps.latest.revision: "8"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 8ca0b961f075f41984d6dbba7321c375940a8622
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: c0e94fd8669556223044403fc72216fcaaaa5e54
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="remote-connection-profiles-in-system-center-configuration-manager"></a>Profils de connexion à distance dans System Center Configuration Manager
 
@@ -52,11 +46,11 @@ Microsoft Intune est nécessaire si vous voulez que les utilisateurs se connecte
 > [!IMPORTANT]  
 >  Si la relation d’affinité entre utilisateur et appareil change (par exemple, l’ordinateur auquel se connecte un utilisateur n’est plus un appareil principal de l’utilisateur), Configuration Manager désactive le profil de connexion à distance et les paramètres du Pare-feu Windows pour empêcher les connexions à l’ordinateur.  
 
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Prérequis  
 
 ### <a name="external-dependencies"></a>Dépendances externes  
 
-|Dépendance|Informations complémentaires|  
+|Dépendance|Plus d'informations|  
 |----------------|----------------------|  
 |Serveur de passerelle Bureau à distance.|Si vous souhaitez autoriser les utilisateurs à se connecter en dehors du domaine de la société, sur Internet, vous devez installer et configurer un serveur de passerelle Bureau à distance.<br /><br /> Si les paramètres Bureau à distance ou services Terminal Server sont gérés par une autre application ou les paramètres de stratégie de groupe, les profils de connexion à distance risquent de ne pas fonctionner correctement. Quand vous déployez des profils de connexion à distance à partir de la console Configuration Manager, ses paramètres sont stockés dans la stratégie locale de l’ordinateur client. Ces paramètres risquent donc de remplacer les paramètres du Bureau à distance configurés par une autre application. En outre, si vous utilisez les paramètres de stratégie de groupe pour configurer les paramètres du Bureau à distance, les paramètres spécifiés dans la stratégie de groupe remplacent ceux configurés par Configuration Manager.<br /><br /> Pour plus d'informations sur la procédure d'installation et de configuration d'un serveur de passerelle Bureau à distance, consultez la documentation Windows Server.|  
 |Si les ordinateurs clients exécutent un pare-feu basé sur l'hôte, il doit autoriser le programme Mstsc.exe.|Lorsque vous configurez un profil de connexion à distance, vous devez activer le paramètre **Autoriser l'exception de pare-feu Windows pour les connexions sur les domaines Windows et sur les réseaux privés** . Quand ce paramètre est activé, Configuration Manager configure automatiquement le Pare-feu Windows pour autoriser le programme Mstsc.exe. Toutefois, si les ordinateurs clients exécutent un autre pare-feu basé sur l'hôte, vous devez configurer manuellement cette dépendance de pare-feu.<br /><br /> Les paramètres de stratégie de groupe pour configurer le Pare-feu Windows peuvent remplacer la configuration définie dans Configuration Manager. Si vous utilisez stratégie de groupe pour configurer le pare-feu Windows, assurez-vous que les paramètres de stratégie de groupe ne bloquent pas le programme Mstsc.exe.|  
@@ -73,7 +67,7 @@ Microsoft Intune est nécessaire si vous voulez que les utilisateurs se connecte
 
 ### <a name="security-considerations"></a>Considérations relatives à la sécurité  
 
-|Meilleure pratique de sécurité|Informations complémentaires|  
+|Bonnes pratiques de sécurité|Plus d'informations|  
 |----------------------------|----------------------|  
 |Spécifiez manuellement l'affinité entre utilisateur et appareil au lieu de permettre aux utilisateurs d'identifier leur appareil principal. En outre, n'activez pas la configuration basée sur l'utilisation.|Étant donné que vous devez activer **Autoriser tous les utilisateurs principaux de l'ordinateur professionnel à se connecter à distance** avant de pouvoir déployer un profil de connexion à distance, spécifiez toujours manuellement l'affinité entre utilisateur et appareil. Ne considérez pas les informations collectées à partir d'utilisateurs ou de l'appareil comme faisant autorité. Si vous déployez des profils de connexion à distance alors que l'affinité entre utilisateur et appareil n'est pas spécifiée par un utilisateur administratif approuvé, des utilisateurs non autorisés peuvent recevoir des privilèges élevés et être en mesure de se connecter à distance aux ordinateurs.<br /><br /> Si vous autorisez la configuration basée sur l’utilisation, ces informations sont collectées à l’aide de messages d’état non sécurisés par Configuration Manager. Pour réduire l'étendue de cette menace, utilisez la signature SMB (Server Message Block) ou IPsec (Internet Protocol security) entre les ordinateurs clients et le point de gestion.|  
 |Limiter les droits d'administrateur local sur l'ordinateur du serveur de site.|Un utilisateur disposant de droits d’administrateur local sur le serveur de site peut ajouter manuellement des membres au groupe de sécurité Connexion de PC à distance, qui est créé et géré automatiquement par Configuration Manager. Cela peut provoquer une élévation des privilèges dans la mesure où les membres qui sont ajoutés à ce groupe bénéficient d'autorisations Bureau à distance.|  
@@ -135,7 +129,7 @@ Déployer un profil de connexion à distance
 
     -   **Résoudre les règles non compatibles lorsqu’elles sont prises en charge** : activez cette option pour résoudre automatiquement le profil de connexion à distance quand il n’est pas compatible sur un appareil (par exemple, s’il n’est pas présent).  
 
-    -   **Autoriser les corrections en dehors de la fenêtre de maintenance** : si une fenêtre de maintenance a été configurée pour le regroupement sur lequel vous déployez le profil de connexion à distance, activez cette option pour permettre à Configuration Manager de résoudre le profil de connexion à distance en dehors de la fenêtre de maintenance. Pour plus d’informations sur les fenêtres de maintenance, consultez [Comment utiliser les fenêtres de maintenance](/sccm/core/clients/manage/collections/use-maintenance-windows).  
+    -   **Autoriser les corrections en dehors de la fenêtre de maintenance** : si une fenêtre de maintenance a été configurée pour le regroupement sur lequel vous déployez le profil de connexion à distance, activez cette option pour permettre à Configuration Manager de résoudre le profil de connexion à distance en dehors de la fenêtre de maintenance. Pour plus d’informations sur les fenêtres de maintenance, consultez [Guide pratique pour utiliser les fenêtres de maintenance](/sccm/core/clients/manage/collections/use-maintenance-windows).  
 
     -   **Générer une alerte** : activez cette option pour configurer une alerte qui est générée si la compatibilité du profil de connexion à distance est inférieure à un pourcentage spécifié par une date et une heure spécifiques. Vous pouvez également spécifier si vous souhaitez qu'une alerte soit envoyée à System Center Operations Manager.  
 

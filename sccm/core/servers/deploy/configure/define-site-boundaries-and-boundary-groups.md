@@ -1,25 +1,20 @@
 ---
 title: Utiliser des limites et groupes de limites
 titleSuffix: Configuration Manager
-description: "Utilisez les limites et les groupes de limites pour définir les emplacements réseau et les systèmes de site accessibles pour les appareils que vous gérez."
-ms.custom: na
+description: Utilisez les limites et les groupes de limites pour définir les emplacements réseau et les systèmes de site accessibles pour les appareils que vous gérez.
 ms.date: 3/27/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 54aa20d5-791e-4416-9db4-5aaea472c0b7
-caps.latest.revision: "10"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: b95d9032a10db810ded2ad3f4171155455eccfb5
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: d1f8a8a270bcefb67885d6c0ca88e61a3d6ecd72
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="define-site-boundaries-and-boundary-groups-for-system-center-configuration-manager"></a>Définir des limites de site et les groupes de limites pour System Center Configuration Manager
 

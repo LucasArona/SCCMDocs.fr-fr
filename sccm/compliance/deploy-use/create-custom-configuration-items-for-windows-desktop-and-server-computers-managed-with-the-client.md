@@ -1,26 +1,20 @@
 ---
-title: "Créer des éléments de configuration pour les ordinateurs Windows gérés par le client "
+title: 'Créer des éléments de configuration pour les ordinateurs Windows gérés par le client '
 titleSuffix: Configuration Manager
-description: "Gérer les paramètres des ordinateurs et des serveurs Windows avec un élément de configuration Ordinateurs de bureau et serveurs Windows."
-ms.custom: na
+description: Gérer les paramètres des ordinateurs et des serveurs Windows avec un élément de configuration Ordinateurs de bureau et serveurs Windows.
 ms.date: 11/18/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 1eb2fcaf-acac-4388-9b31-6cccafacaabe
-caps.latest.revision: "9"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: ed3aa1ce9e21c7c486cc40deb804a8687a1cd4f2
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: b2b2af6c022d854a6c6d623e3901abac70d42c7a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-system-center-configuration-manager-client"></a>Comment créer des éléments de configuration personnalisés pour les ordinateurs et serveurs Windows gérés par le client System Center Configuration Manager
 
@@ -35,7 +29,7 @@ Utilisez l’élément de configuration **Ordinateurs de bureau et serveurs Wind
 
 3.  Dans l'onglet **Accueil** , dans le groupe **Créer** , cliquez sur **Créer un élément de configuration**.  
 
-4.  Dans la page **Général** page de l’ **Assistant Création d’élément de configuration**, spécifiez un nom et une éventuelle description pour l’élément de configuration.  
+4.  Dans la page **Général** de l’ **Assistant Création d’élément de configuration**, spécifiez un nom et une description éventuelle pour l’élément de configuration.  
 
 5.  Sous **Spécifier le type d’élément de configuration que vous voulez créer**, sélectionnez **Ordinateurs et serveurs Windows (personnalisés)**.  
 
@@ -235,7 +229,7 @@ Utilisez l’élément de configuration **Ordinateurs de bureau et serveurs Wind
 
             -   **Inclure les sous-dossiers** : activez cette option si vous voulez également rechercher dans tous les sous-dossiers sous le chemin spécifié.  
 
-            -   **Ce fichier est associé à une application 64 bits** : indiquez si la recherche doit porter également sur l’emplacement de fichier système 64 bits (*%windir%*\System32) en plus de l’emplacement de fichier système 32 bits (*%windir%*\Syswow64) sur les clients Configuration Manager qui exécutent une version 64 bits de Windows.  
+            -   **Ce fichier est associé à une application 64 bits** : indiquez si la recherche doit porter également sur l’emplacement de fichier système 64 bits (*%windir%* \System32) en plus de l’emplacement de fichier système 32 bits (*%windir%* \Syswow64) sur les clients Configuration Manager qui exécutent une version 64 bits de Windows.  
 
             -   **Requête XPath** -spécifier une valide complet requête XML path language (XPath) qui est utilisée pour évaluer la conformité sur les ordinateurs clients.  
 

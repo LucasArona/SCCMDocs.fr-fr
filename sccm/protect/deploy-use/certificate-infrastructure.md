@@ -2,26 +2,19 @@
 title: Configurer l’infrastructure de certificats
 titleSuffix: Configuration Manager
 description: Découvrez comment configurer l’inscription de certificats dans System Center Configuration Manager.
-ms.custom: na
 ms.date: 07/25/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
-caps.latest.revision: 7
-caps.handback.revision: 0
-author: lleonard-msft
-ms.author: alleonar
-manager: angrobe
-ms.openlocfilehash: 9ef62bbf6269a6090f2345b10c24cc4df16c1e3b
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: c27f92374470c7d87d49661b20996a3f0c47f8a4
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-certificate-infrastructure"></a>Configurer l’infrastructure de certificats
 
@@ -161,11 +154,11 @@ Vous devez installer et configurer au moins un point d’enregistrement de certi
 
     -   Dans l'espace de travail **Surveillance** , développez **État du système**, cliquez sur **État du composant**, puis recherchez des messages d'état provenant du composant **SMS_CERTIFICATE_REGISTRATION_POINT** .  
 
-    -   Sur le serveur de système de site, utilisez le fichier *<chemin_installation_ConfigMgr\>*\Logs\crpsetup.log et le fichier *<chemin_installation_ConfigMgr\>*\Logs\crpmsi.log. Une installation réussie renvoie un code de sortie 0.  
+    -   Sur le serveur de système de site, utilisez le fichier *<chemin_installation_ConfigMgr\>* \Logs\crpsetup.log et le fichier *<chemin_installation_ConfigMgr\>* \Logs\crpmsi.log. Une installation réussie renvoie un code de sortie 0.  
 
     -   Dans un navigateur, vérifiez que vous pouvez vous connecter à l’URL du point d’enregistrement de certificat, par exemple, https://server1.contoso.com/CMCertificateRegistration. Vous devez voir une page **Erreur de serveur** pour le nom de l'application, avec une description HTTP 404.  
 
-11. Recherchez le fichier de certificat exporté pour l’autorité de certification racine, créé automatiquement par le point d’enregistrement de certificat dans le dossier suivant sur l’ordinateur du serveur de site principal : *<chemin_installation_ConfigMgr\>*\inboxes\certmgr.box. Enregistrez ce fichier à un emplacement sécurisé auquel vous pouvez accéder en toute sécurité si vous installez plus tard le module de stratégie de System Center Configuration Manager sur le serveur exécutant le service d’inscription d’appareils réseau.  
+11. Recherchez le fichier de certificat exporté pour l’autorité de certification racine, créé automatiquement par le point d’enregistrement de certificat dans le dossier suivant sur l’ordinateur du serveur de site principal : *<chemin_installation_ConfigMgr\>* \inboxes\certmgr.box. Enregistrez ce fichier à un emplacement sécurisé auquel vous pouvez accéder en toute sécurité si vous installez plus tard le module de stratégie de System Center Configuration Manager sur le serveur exécutant le service d’inscription d’appareils réseau.  
 
     > [!TIP]  
     >  Ce certificat n'est pas immédiatement disponible dans ce dossier. Vous devrez peut-être attendre un certain temps (par exemple, une demi-heure) avant que System Center Configuration Manager ne copie le fichier à cet emplacement.  

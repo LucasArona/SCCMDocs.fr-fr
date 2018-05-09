@@ -1,25 +1,20 @@
 ---
-title: "Gérer l’accès à Dynamics CRM Online"
+title: Gérer l’accès à Dynamics CRM Online
 titleSuffix: Configuration Manager
-description: "Découvrez comment contrôler l’accès à Microsoft Dynamics CRM Online à partir des appareils iOS et Android en utilisant l’accès conditionnel Microsoft Intune."
-ms.custom: na
+description: Découvrez comment contrôler l’accès à Microsoft Dynamics CRM Online à partir des appareils iOS et Android en utilisant l’accès conditionnel Microsoft Intune.
 ms.date: 03/05/2017
-ms.reviewer: na
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2bfc4c51-b25c-4c70-b81e-8a3b6ddf02c8
-caps.latest.revision: "5"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 556bb29918327499cc9262a44b9810269d84822a
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: d77dbcf0b8b7853153a0b2ead4b2db3affd03733
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-dynamics-crm-online-access-in-system-center-configuration-manager"></a>Gérer l’accès à Dynamics CRM Online dans System Center Configuration Manager
 

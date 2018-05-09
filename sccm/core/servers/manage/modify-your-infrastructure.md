@@ -1,27 +1,20 @@
 ---
-title: "Modifier l’infrastructure"
+title: Modifier l’infrastructure
 titleSuffix: Configuration Manager
-description: "Découvrez comment apporter des modifications ou prendre des mesures qui affecteront l’infrastructure Configuration Manager que vous avez déployée."
-ms.custom: na
+description: Découvrez comment apporter des modifications ou prendre des mesures qui affecteront l’infrastructure Configuration Manager que vous avez déployée.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: a7975dc8-46ab-4dae-86b6-dc3e3cf3b2f0
-caps.latest.revision: 
-caps.handback.revision: 
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 93456b2708afbdaac0ff3c68dc6c2d9927def7ad
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 7f798fdb1183b852bded92711cc5f489666f4f2a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="modify-your-system-center-configuration-manager-infrastructure"></a>Modifier votre infrastructure System Center Configuration Manager
 

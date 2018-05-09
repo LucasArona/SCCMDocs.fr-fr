@@ -2,26 +2,19 @@
 title: Mettre à niveau les clients Linux et UNIX
 titleSuffix: Configuration Manager
 description: Mettez à niveau un client sur un serveur Linux ou UNIX dans System Center Configuration Manager.
-ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 7d2bb377-1005-4a55-bd1f-b80a6d0b22e1
-caps.latest.revision: 6
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 14934ceedaee3982703c1d5f637fb79edce5426b
-ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
+ms.openlocfilehash: 239cb81c975c51a98733a6f325d46c3da676784c
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-upgrade-clients-for-linux-and-unix-servers-in-system-center-configuration-manager"></a>Comment mettre à niveau les clients pour des serveurs Linux et UNIX dans System Center Configuration Manager
 

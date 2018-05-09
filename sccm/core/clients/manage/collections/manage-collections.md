@@ -1,26 +1,20 @@
 ---
-title: "Gérer des regroupements"
+title: Gérer des regroupements
 titleSuffix: Configuration Manager
-description: "Découvrez comment effectuer les principales tâches de gestion des regroupements dans System Center Configuration Manager."
-ms.custom: na
+description: Découvrez comment effectuer les principales tâches de gestion des regroupements dans System Center Configuration Manager.
 ms.date: 4/25/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: e102fd1a-76df-4d8e-b1b0-10ee18318f67
-caps.latest.revision: "8"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 0655a1dc566657cb27cdc7537603871dc36cc568
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: b00b62a90f496eb19a77dcc431ccf157b1227923
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-manage-collections-in-system-center-configuration-manager"></a>Guide pratique pour gérer des regroupements dans System Center Configuration Manager
 

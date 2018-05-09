@@ -2,26 +2,19 @@
 title: Créer des applications
 titleSuffix: Configuration Manager
 description: Créez des applications avec des types de déploiement, des méthodes de détection et des spécifications pour installer les logiciels.
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-app
+ms.topic: conceptual
 ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
-caps.latest.revision: 14
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2569625daaf9a3e10dea26d86b01e10cacae0181
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: c9b90dfcc0916f62905af777e45222ceebf8300f
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-applications-with-system-center-configuration-manager"></a>Créer des applications avec System Center Configuration Manager
 
@@ -120,7 +113,7 @@ La nouvelle application s’affiche dans le nœud **Applications** de la console
 
     -   **Description localisée**: entrez une description de l'application, dans la langue sélectionnée dans la liste déroulante **Langue sélectionnée** .  
 
-    -   **Mots clés** : entrez une liste de mots clés, dans la langue sélectionnée dans la liste déroulante **Langue sélectionnée** . Ces mots clés aident les utilisateurs du Centre logiciel à rechercher l’application.  
+    -   **Mots-clés**: entrez une liste de mots-clés, dans la langue sélectionnée dans la liste déroulante **Langue sélectionnée** . Ces mots clés aident les utilisateurs du Centre logiciel à rechercher l’application.  
 
     -   **Icône** : choisissez **Parcourir** pour sélectionner une icône pour cette application parmi les icônes disponibles. Si vous ne spécifiez pas d’icône, une icône par défaut est utilisée pour cette application. Désormais, vous pouvez définir une icône avec des dimensions maximales de 512 x 512 pixels.
 
@@ -345,7 +338,7 @@ Le tableau suivant contient des exemples de script Microsoft Visual Basic (VB) q
         > [!IMPORTANT]  
         >  Un conflit peut se produire si la **durée maximale d'exécution allouée** est plus longue que celle de la fenêtre de maintenance planifiée. Si la durée maximale d’exécution définie par l’utilisateur est supérieure à la longueur des fenêtres de maintenance disponibles, ce type de déploiement ne s’exécute pas.  
 
-    -   **Temps d’installation estimé (minutes)** : indique la durée d’installation estimée du type de déploiement. Les utilisateurs voient cette durée dans le Centre logiciel.  
+    -   **Temps d’installation estimé (minutes)**  : indique la durée d’installation estimée du type de déploiement. Les utilisateurs voient cette durée dans le Centre logiciel.  
 
     -   **Spécifier un comportement de redémarrage spécifique** : indique l’action post-installation. Les options ci-dessous sont disponibles :  
 
@@ -368,9 +361,9 @@ Le tableau suivant contient des exemples de script Microsoft Visual Basic (VB) q
     > [!IMPORTANT]  
     >  Si vous déployez l’application sur un regroupement d’appareils, le client ignore la spécification de la catégorie **Utilisateur** et la condition **Périphérique principal**.  
     >   
-    >  Si vous avez utilisé System Center 2012 R2 Configuration Manager SP1 pour créer un package Windows et un programme ou une séquence de tâches qui exige Windows 10, puis que vous effectuez une mise à niveau vers System Center Configuration Manager, l’exigence relative à Windows 10 peut être supprimée. Pour résoudre ce problème, spécifiez à nouveau l’exigence. Même si l’exigence a été supprimée de l’affichage des spécifications, elle est toujours traitée correctement sur les appareils.  
+    >  Si vous avez utilisé System Center 2012 R2 Configuration Manager SP1 pour créer un package Windows et un programme ou une séquence de tâches qui exige Windows 10, puis que vous effectuez une mise à niveau vers System Center Configuration Manager, l’exigence relative à Windows 10 peut être supprimée. Pour résoudre ce problème, spécifiez à nouveau la spécification. Même si l’exigence a été supprimée de l’affichage des spécifications, elle est toujours traitée correctement sur les appareils.  
 
-3.  Dans la liste déroulante **Condition**, sélectionnez la condition que vous souhaitez utiliser pour déterminer si l’utilisateur ou l’appareil répond aux spécifications de l’installation. Le contenu de cette liste varie en fonction de la catégorie sélectionnée.  
+3.  Dans la liste déroulante **Condition** , sélectionnez la condition que vous souhaitez utiliser pour déterminer si l'utilisateur ou l'appareil répond aux spécifications de l'installation. Le contenu de cette liste varie en fonction de la catégorie sélectionnée.  
 
 4.  Dans la liste déroulante **Opérateur**, sélectionnez l’opérateur à utiliser. Cet opérateur compare la condition sélectionnée à la valeur spécifiée. Il évalue si l’utilisateur ou l’appareil respecte les spécifications de l’installation. Les opérateurs disponibles varient en fonction de la condition sélectionnée.  
 

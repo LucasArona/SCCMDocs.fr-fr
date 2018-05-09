@@ -1,25 +1,20 @@
 ---
-title: "Planification de l’interopérabilité des déploiements de systèmes d’exploitation"
+title: Planification de l’interopérabilité des déploiements de systèmes d’exploitation
 titleSuffix: Configuration Manager
-description: "Découvrez les problèmes d’interopérabilité qui peuvent se poser quand différents sites System Center Configuration Manager d’une même hiérarchie utilisent des versions distinctes."
-ms.custom: na
+description: Découvrez les problèmes d’interopérabilité qui peuvent se poser quand différents sites System Center Configuration Manager d’une même hiérarchie utilisent des versions distinctes.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: e327ce38-6c07-4a27-b6eb-7e5bf74ed04b
-caps.latest.revision: "10"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 41c7c83602f965cd4a225d38a00b90501206de45
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: 4faaae2d261837043b8b6ec208dd8b53b2a97b15
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="planning-for-operating-system-deployment-interoperability-in-system-center-configuration-manager"></a>Planification de l’interopérabilité des déploiements de systèmes d’exploitation dans System Center Configuration Manager
 

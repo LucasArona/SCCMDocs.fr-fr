@@ -1,25 +1,20 @@
 ---
-title: "Inscrire des appareils appartenant aux utilisateurs pour les déploiements hybride"
+title: Inscrire des appareils appartenant aux utilisateurs pour les déploiements hybride
 titleSuffix: Configuration Manager
-description: "Découvrez les différentes méthodes d’inscription des appareils appartenant aux utilisateurs pour les déploiements hybrides avec Configuration Manager."
-ms.custom: na
+description: Découvrez les différentes méthodes d’inscription des appareils appartenant aux utilisateurs pour les déploiements hybrides avec Configuration Manager.
 ms.date: 09/08/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2bdaa8a7-6a64-4b0e-b617-309dcd912c45
-caps.latest.revision: "13"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 9bc0e23680ff2c7a5099938e546e50e03f998f5e
-ms.sourcegitcommit: 1132886e07d0c0a87dcc7eeef4577dd8d8840023
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 198e5b65b85e10a1aa64f06361f1ba425e156662
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="enroll-user-owned-devices-for-hybrid-deployments-with-configuration-manager"></a>Inscrire des appareils appartenant aux utilisateurs pour les déploiements hybrides avec Configuration Manager
 

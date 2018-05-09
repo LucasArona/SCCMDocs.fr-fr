@@ -1,25 +1,20 @@
 ---
 title: Sauvegarder des sites
 titleSuffix: Configuration Manager
-description: "Découvrez comment sauvegarder vos sites en cas défaillance ou de perte de données dans System Center Configuration Manager."
-ms.custom: na
+description: Découvrez comment sauvegarder vos sites en cas défaillance ou de perte de données dans System Center Configuration Manager.
 ms.date: 6/5/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: f7832d83-9ae2-4530-8a77-790e0845e12f
-caps.latest.revision: "22"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 6c7c1ebbe1fccfb641d39a3cb2e2b911b1dd5e02
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: b69789fe6e685e2fe42c260e50329f85f2eb421e
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="back-up-a-configuration-manager-site"></a>Sauvegarde d'un site Configuration Manager
 

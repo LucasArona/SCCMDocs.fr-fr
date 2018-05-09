@@ -2,25 +2,19 @@
 title: Options de ligne de commande du programme d’installation
 titleSuffix: Configuration Manager
 description: Créez des scripts d’automatisation pour installer System Center Configuration Manager à partir d’une ligne de commande.
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 0da167f1-52cf-4dfd-8f73-833ca3eb8478
-caps.latest.revision: 3
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fede359c884ef8b4027935b2e3fb48a5b7543d26
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: fa8e3bf572ced8a2394099bbb59532502ef3b019
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="command-line-options-for-setup-in-system-center-configuration-manager"></a>Options de ligne de commande pour le programme d’installation de System Center Configuration Manager
 
@@ -137,7 +131,7 @@ ms.lasthandoff: 03/23/2018
 
          1 = Déjà téléchargé  
 
-    -   **Détails :** spécifie si les fichiers nécessaires au programme d’installation ont déjà été téléchargés. Par exemple, si vous utilisez la valeur **0**, le programme d’installation télécharge les fichiers.  
+    -   **Détails :** spécifie si les fichiers d’installation prérequis ont déjà été téléchargés. Par exemple, si vous utilisez la valeur **0**, le programme d’installation télécharge les fichiers.  
 
 -   **Nom de clé :** PrerequisitePath  
 
@@ -223,7 +217,7 @@ ms.lasthandoff: 03/23/2018
 
          1 = Déjà téléchargé  
 
-    -   **Détails :** spécifie si les fichiers nécessaires au programme d’installation ont déjà été téléchargés. Par exemple, si vous utilisez la valeur **0**, le programme d’installation télécharge les fichiers.  
+    -   **Détails :** spécifie si les fichiers d’installation prérequis ont déjà été téléchargés. Par exemple, si vous utilisez la valeur **0**, le programme d’installation télécharge les fichiers.  
 
 -   **Nom de clé :** PrerequisitePath  
 
@@ -231,7 +225,7 @@ ms.lasthandoff: 03/23/2018
 
     -   **Valeurs :** <*Chemin des fichiers nécessaires au programme d’installation*>  
 
-    -   **Détails :** spécifie le chemin des fichiers nécessaires au programme d’installation. Selon la valeur **PrerequisiteComp**, le programme d’installation utilise ce chemin pour stocker les fichiers téléchargés ou pour localiser des fichiers précédemment téléchargés.  
+    -   **Détails :** spécifie le chemin des fichiers nécessaires au programme d’installation. Selon la valeur **PrerequisiteComp** , le programme d’installation utilise ce chemin pour stocker les fichiers téléchargés ou localiser des fichiers déjà téléchargés.  
 
 -   **Nom de clé :** AdminConsole  
 
@@ -247,7 +241,7 @@ ms.lasthandoff: 03/23/2018
 
 -   **Nom de clé :** JoinCEIP  
     > [!Note]  
-    > Depuis Configuration Manager version 1802, la fonctionnalité CEIP ne figure plus dans le produit.
+    > À compter de Configuration Manager version 1802, la fonctionnalité CEIP ne figure plus dans le produit.
 
     -   **Obligatoire :** oui  
 
@@ -471,7 +465,7 @@ Utilisez les détails suivants pour installer un site principal à l’aide d’
 
          1 = Déjà téléchargé  
 
-    -   **Détails :** spécifie si les fichiers nécessaires au programme d’installation ont déjà été téléchargés. Par exemple, si vous utilisez la valeur **0**, le programme d’installation télécharge les fichiers.  
+    -   **Détails :** spécifie si les fichiers d’installation prérequis ont déjà été téléchargés. Par exemple, si vous utilisez la valeur **0**, le programme d’installation télécharge les fichiers.  
 
 -   **Nom de clé :** PrerequisitePath  
 
@@ -479,7 +473,7 @@ Utilisez les détails suivants pour installer un site principal à l’aide d’
 
     -   **Valeurs :** <*Chemin des fichiers nécessaires au programme d’installation*>  
 
-    -   **Détails :** spécifie le chemin des fichiers nécessaires au programme d’installation. Selon la valeur **PrerequisiteComp**, le programme d’installation utilise ce chemin pour stocker les fichiers téléchargés ou pour localiser des fichiers précédemment téléchargés.  
+    -   **Détails :** spécifie le chemin des fichiers nécessaires au programme d’installation. Selon la valeur **PrerequisiteComp** , le programme d’installation utilise ce chemin pour stocker les fichiers téléchargés ou localiser des fichiers déjà téléchargés.  
 
 -   **Nom de clé :** AdminConsole  
 
@@ -495,7 +489,7 @@ Utilisez les détails suivants pour installer un site principal à l’aide d’
 
 -   **Nom de clé :** JoinCEIP  
     > [!Note]  
-    > Depuis Configuration Manager version 1802, la fonctionnalité CEIP ne figure plus dans le produit.
+    > À compter de Configuration Manager version 1802, la fonctionnalité CEIP ne figure plus dans le produit.
 
     -   **Obligatoire :** oui  
 
@@ -783,7 +777,7 @@ Utilisez les détails suivants pour installer un site principal à l’aide d’
 
          80 = Ignorer la récupération de base de données.  
 
-    -   **Détails :** spécifie comment le programme d’installation récupère la base de données du site dans SQL Server.  
+    -   **Détails :** spécifie comment le programme d’installation récupère la base de données du site dans SQL Server.  
 
 -   **Nom de clé :** ReferenceSite  
 
@@ -853,7 +847,7 @@ Utilisez les détails suivants pour installer un site principal à l’aide d’
 
     -   **Valeurs :** <*Nom de domaine complet du fournisseur SMS*>  
 
-    -   **Détails :** spécifie le nom de domaine complet du serveur qui héberge le fournisseur SMS. Indiquez le serveur qui hébergeait le fournisseur SMS avant la défaillance.  
+    -   **Détails :** spécifie le nom de domaine complet du serveur qui héberge le fournisseur SMS. Spécifiez le serveur qui hébergeait le fournisseur SMS avant la défaillance.  
 
          Vous pouvez configurer d'autres fournisseurs SMS pour le site après l'installation initiale. Pour plus d’informations sur le fournisseur SMS, consultez [Planifier le fournisseur SMS pour System Center Configuration Manager](../../../../core/plan-design/hierarchy/plan-for-the-sms-provider.md).  
 
@@ -867,7 +861,7 @@ Utilisez les détails suivants pour installer un site principal à l’aide d’
 
          1 = Déjà téléchargé  
 
-    -   **Détails :** spécifie si les fichiers nécessaires au programme d’installation ont déjà été téléchargés. Par exemple, si vous utilisez la valeur **0**, le programme d’installation télécharge les fichiers.  
+    -   **Détails :** spécifie si les fichiers d’installation prérequis ont déjà été téléchargés. Par exemple, si vous utilisez la valeur **0**, le programme d’installation télécharge les fichiers.  
 
 -   **Nom de clé :** PrerequisitePath  
 
@@ -875,7 +869,7 @@ Utilisez les détails suivants pour installer un site principal à l’aide d’
 
     -   **Valeurs :** <*Chemin des fichiers nécessaires au programme d’installation*>  
 
-    -   **Détails :** spécifie le chemin des fichiers nécessaires au programme d’installation. Selon la valeur **PrerequisiteComp**, le programme d’installation utilise ce chemin pour stocker les fichiers téléchargés ou pour localiser des fichiers précédemment téléchargés.  
+    -   **Détails :** spécifie le chemin des fichiers nécessaires au programme d’installation. Selon la valeur **PrerequisiteComp** , le programme d’installation utilise ce chemin pour stocker les fichiers téléchargés ou localiser des fichiers déjà téléchargés.  
 
 -   **Nom de clé :** AdminConsole  
 
@@ -891,7 +885,7 @@ Utilisez les détails suivants pour installer un site principal à l’aide d’
 
 -   **Nom de clé :** JoinCEIP  
     > [!Note]  
-    > Depuis Configuration Manager version 1802, la fonctionnalité CEIP ne figure plus dans le produit.
+    > À compter de Configuration Manager version 1802, la fonctionnalité CEIP ne figure plus dans le produit.
 
     -   **Obligatoire :** oui  
 
@@ -911,7 +905,7 @@ Utilisez les détails suivants pour installer un site principal à l’aide d’
 
     -   **Valeurs :** <*Nom du serveur SQL*>  
 
-    -   **Détails :** spécifie le nom du serveur ou de l’instance en cluster exécutant SQL Server et qui héberge la base de données du site. Indiquez le serveur qui a hébergé la base de données de site avant la défaillance.  
+    -   **Détails :** spécifie le nom du serveur ou de l’instance en cluster exécutant SQL Server et qui héberge la base de données du site. Spécifiez le serveur qui a hébergé la base de données de site avant la défaillance.  
 
 -   **Nom de clé :** DatabaseName  
 
@@ -919,7 +913,7 @@ Utilisez les détails suivants pour installer un site principal à l’aide d’
 
     -   **Valeurs :** <*Nom de la base de données du site*> ou <*Nom de l’instance*>\\<*Nom de la base de données du site*>  
 
-    -   **Détails :** Spécifie le nom de la base de données SQL Server à créer ou de la base de données SQL Server à utiliser pour installer la base de données du site d’administration centrale. Indiquez le nom de base de données qui était utilisé avant la défaillance.  
+    -   **Détails :** Spécifie le nom de la base de données SQL Server à créer ou de la base de données SQL Server à utiliser pour installer la base de données du site d’administration centrale. Spécifiez le nom de base de données qui était utilisé avant la défaillance.  
 
         > [!IMPORTANT]  
         >  Si vous n’utilisez pas l’instance par défaut, vous devez spécifier le nom d’instance et le nom de base de données de site.  
@@ -930,7 +924,7 @@ Utilisez les détails suivants pour installer un site principal à l’aide d’
 
     -   **Valeurs :** <*Numéro du port SSB*>  
 
-    -   **Détails :** Spécifie le port SSB que SQL Server utilise. Généralement, SSB est configuré pour utiliser le port TCP 4022. Indiquez le port SSB utilisé avant la défaillance.  
+    -   **Détails :** Spécifie le port SSB que SQL Server utilise. Généralement, SSB est configuré pour utiliser le port TCP 4022. Spécifiez le port SSB utilisé avant la défaillance.  
 
 -   **Nom de clé :** SQLDataFilePath  
 
@@ -1055,7 +1049,7 @@ Utilisez les détails suivants pour installer un site principal à l’aide d’
 
          80 = Ignorer la récupération de base de données.  
 
-    -   **Détails :** spécifie comment le programme d’installation récupère la base de données du site dans SQL Server.  
+    -   **Détails :** spécifie comment le programme d’installation récupère la base de données du site dans SQL Server.  
 
 -   **Nom de clé :** SiteServerBackupLocation  
 
@@ -1127,7 +1121,7 @@ Utilisez les détails suivants pour installer un site principal à l’aide d’
 
          1 = Déjà téléchargé  
 
-    -   **Détails :** spécifie si les fichiers nécessaires au programme d’installation ont déjà été téléchargés. Par exemple, si vous utilisez la valeur **0**, le programme d’installation télécharge les fichiers.  
+    -   **Détails :** spécifie si les fichiers d’installation prérequis ont déjà été téléchargés. Par exemple, si vous utilisez la valeur **0**, le programme d’installation télécharge les fichiers.  
 
 -   **Nom de clé :** PrerequisitePath  
 
@@ -1135,7 +1129,7 @@ Utilisez les détails suivants pour installer un site principal à l’aide d’
 
     -   **Valeurs :** <*Chemin des fichiers nécessaires au programme d’installation*>  
 
-    -   **Détails :** spécifie le chemin des fichiers nécessaires au programme d’installation. Selon la valeur **PrerequisiteComp**, le programme d’installation utilise ce chemin pour stocker les fichiers téléchargés ou pour localiser des fichiers précédemment téléchargés.  
+    -   **Détails :** spécifie le chemin des fichiers nécessaires au programme d’installation. Selon la valeur **PrerequisiteComp** , le programme d’installation utilise ce chemin pour stocker les fichiers téléchargés ou localiser des fichiers déjà téléchargés.  
 
 -   **Nom de clé :** AdminConsole  
 
@@ -1151,7 +1145,7 @@ Utilisez les détails suivants pour installer un site principal à l’aide d’
 
 -   **Nom de clé :** JoinCEIP  
     > [!Note]  
-    > Depuis Configuration Manager version 1802, la fonctionnalité CEIP ne figure plus dans le produit.
+    > À compter de Configuration Manager version 1802, la fonctionnalité CEIP ne figure plus dans le produit.
 
     -   **Obligatoire :** oui  
 
@@ -1171,7 +1165,7 @@ Utilisez les détails suivants pour installer un site principal à l’aide d’
 
     -   **Valeurs :** <*Nom du serveur SQL*>  
 
-    -   **Détails :** spécifie le nom du serveur ou de l’instance en cluster exécutant SQL Server et qui héberge la base de données du site. Indiquez le serveur qui a hébergé la base de données de site avant la défaillance.  
+    -   **Détails :** spécifie le nom du serveur ou de l’instance en cluster exécutant SQL Server et qui héberge la base de données du site. Spécifiez le serveur qui a hébergé la base de données de site avant la défaillance.  
 
 -   **Nom de clé :** DatabaseName  
 
@@ -1181,7 +1175,7 @@ Utilisez les détails suivants pour installer un site principal à l’aide d’
 
     -   **Détails :**  
 
-         Spécifie le nom de la base de données SQL Server à créer ou de la base de données SQL Server à utiliser pour installer la base de données du site d’administration centrale. Indiquez le nom de base de données qui était utilisé avant la défaillance.  
+         Spécifie le nom de la base de données SQL Server à créer ou de la base de données SQL Server à utiliser pour installer la base de données du site d’administration centrale. Spécifiez le nom de base de données qui était utilisé avant la défaillance.  
 
         > [!IMPORTANT]  
         >  Si vous n’utilisez pas l’instance par défaut, vous devez spécifier le nom d’instance et le nom de base de données de site.  
@@ -1192,7 +1186,7 @@ Utilisez les détails suivants pour installer un site principal à l’aide d’
 
     -   **Valeurs :** <*Numéro du port SSB*>  
 
-    -   **Détails :** Spécifie le port SSB que SQL Server utilise. Généralement, SSB est configuré pour utiliser le port TCP 4022. Indiquez le port SSB utilisé avant la défaillance.  
+    -   **Détails :** Spécifie le port SSB que SQL Server utilise. Généralement, SSB est configuré pour utiliser le port TCP 4022. Spécifiez le port SSB utilisé avant la défaillance.  
 
 -   **Nom de clé :** SQLDataFilePath  
 
@@ -1218,7 +1212,7 @@ Utilisez les détails suivants pour installer un site principal à l’aide d’
 
     -   **Valeurs :** <*Code du site d’administration centrale*>  
 
-    -   **Détails :** spécifie le site d’administration centrale auquel un site principal s’attache quand il rejoint la hiérarchie Configuration Manager. Ce paramètre est requis si le site principal était attaché à un site d'administration centrale avant la défaillance. Indiquez le code de site qui était utilisé pour le site d’administration centrale avant la défaillance.  
+    -   **Détails :** spécifie le site d’administration centrale auquel un site principal s’attache quand il rejoint la hiérarchie Configuration Manager. Ce paramètre est requis si le site principal était attaché à un site d'administration centrale avant la défaillance. Spécifiez le code de site qui était utilisé pour le site d’administration centrale avant la défaillance.  
 
 -   **Nom de clé :** CASRetryInterval  
 

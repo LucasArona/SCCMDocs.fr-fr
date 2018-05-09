@@ -1,22 +1,20 @@
 ---
-title: "Déployer manuellement des mises à jour logicielles"
+title: Déployer manuellement des mises à jour logicielles
 titleSuffix: Configuration Manager
-description: "Pour déployer manuellement des mises à jour logicielles, sélectionnez les mises à jour dans la console Configuration Manager et déployez-les manuellement, ou ajoutez les mises à jour à un groupe de mises à jour et déployez ce groupe."
-keywords: 
-author: dougeby
-ms.author: dougeby
-manager: angrobe
+description: Pour déployer manuellement des mises à jour logicielles, sélectionnez les mises à jour dans la console Configuration Manager et déployez-les manuellement, ou ajoutez les mises à jour à un groupe de mises à jour et déployez ce groupe.
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ms.date: 12/07/2016
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: 57184274-5fea-4d79-a2b4-22e08ed26daf
-ms.openlocfilehash: becab57c5f04bb67512d665175038f6c477b65b1
-ms.sourcegitcommit: e13bb2c86c40a88e5f4602beb1d31e4adc90e099
+ms.openlocfilehash: 3f79da78df10e97813b221ffca3df25396591fbc
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 #  <a name="BKMK_ManualDeploy"></a> Déployer manuellement des mises à jour logicielles  
 
@@ -175,7 +173,7 @@ ms.lasthandoff: 01/12/2018
 
     -   **Nom**: indiquez le nom du déploiement. Le déploiement doit porter un nom unique qui décrit son objectif et le différencie des autres déploiements dans le site Configuration Manager. Par défaut, Configuration Manager fournit automatiquement un nom pour le déploiement au format suivant : **Mises à jour logicielles Microsoft -** <*date*><*heure*>  
 
-    -   **Description :**spécifiez la description du déploiement. La description fournit une vue d’ensemble du déploiement et toute autre information pertinente permettant d’identifier et de différencier le déploiement des autres déploiements dans le site Configuration Manager. Le champ de description facultatif est limité à 256 caractères et est vierge par défaut.  
+    -   **Description :** spécifiez la description du déploiement. La description fournit une vue d’ensemble du déploiement et toute autre information pertinente permettant d’identifier et de différencier le déploiement des autres déploiements dans le site Configuration Manager. Le champ de description facultatif est limité à 256 caractères et est vierge par défaut.  
 
     -   **Mise à jour logicielle/Groupe de mises à jour logicielles**: vérifiez que le groupe de mises à jour logicielles ou la mise à jour logicielle qui s’affiche est correct.  
 

@@ -1,25 +1,20 @@
 ---
-title: "Affecter des clients à un site"
+title: Affecter des clients à un site
 titleSuffix: Configuration Manager
-description: "Affecter des clients à un site dans System Center Configuration Manager."
-ms.custom: na
+description: Affecter des clients à un site dans System Center Configuration Manager.
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: ba9b623f-6e86-4006-93f2-83d563de0cd0
-caps.latest.revision: "10"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: e11287659f6df5503cdabf203cdffa7655232acd
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 15467e83be28e884acb14309bdbb57768d7f19f0
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-assign-clients-to-a-site-in-system-center-configuration-manager"></a>Comment affecter des clients à un site dans System Center Configuration Manager
 

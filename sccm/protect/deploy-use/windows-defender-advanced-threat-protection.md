@@ -2,25 +2,19 @@
 title: Windows Defender - Protection avancée contre les menaces
 titleSuffix: Configuration Manager
 description: Découvrez comment gérer et surveiller le nouveau service Windows Defender - Protection avancée contre les menaces qui aide les entreprises à contrer les attaques avancées.
-ms.custom: na
 ms.date: 03/07/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: a5fc033e-828e-4e45-9097-bbbd0697ebdf
-caps.latest.revision: 5
-author: NathBarn
-ms.author: nathbarn
-manager: angrobe
-ms.openlocfilehash: 84786d741eda2be24a7deb39478e68c68adc38fe
-ms.sourcegitcommit: aed99ba3c5e9482199cb3fc5c92f6f3a160cb181
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 10d746f88d0e7b869e2b73d389944f3b382d687d
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="windows-defender-advanced-threat-protection"></a>Windows Defender - Protection avancée contre les menaces
 

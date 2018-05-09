@@ -1,25 +1,20 @@
 ---
 title: 'Configurations prises en charge pour la branche LTSB '
 titleSuffix: Configuration Manager
-description: "Découvrez quels systèmes d’exploitation et produits dépendants fonctionnent avec la branche Long-Term Servicing Branch de System Center Configuration Manager."
-ms.custom: na
+description: Découvrez quels systèmes d’exploitation et produits dépendants fonctionnent avec la branche Long-Term Servicing Branch de System Center Configuration Manager.
 ms.date: 5/10/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f0f818d4-7f45-402f-8758-dc88bc024953
-caps.latest.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: e634ade367375dd092cea0381fe976109c4936df
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: 2da1ff9f8a45ba33f6546dcab8df423d9064e650
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="supported-configurations-for-the-long-term-servicing-branch-of-system-center-configuration-manager"></a>Configurations prises en charge pour la branche Long-Term Servicing Branch de System Center Configuration Manager
 

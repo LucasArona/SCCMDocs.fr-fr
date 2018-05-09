@@ -1,25 +1,20 @@
 ---
-title: "Déployer des profils de certificat, de messagerie, VPN et Wi-Fi"
+title: Déployer des profils de certificat, de messagerie, VPN et Wi-Fi
 titleSuffix: Configuration Manager
-description: "Découvrez comment déployer des profils de certificat, de messagerie, VPN et Wi-Fi dans System Center Configuration Manager."
-ms.custom: na
+description: Découvrez comment déployer des profils de certificat, de messagerie, VPN et Wi-Fi dans System Center Configuration Manager.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: 3753608d-b539-44dc-8e3f-b631319e7687
-caps.latest.revision: "5"
-author: Nbigman
-ms.author: nbigman
-manager: angrobe
-ms.openlocfilehash: 7e6b0038b5164a43a3198274a863d53750828776
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: faf8d48614bc3e27381d57d86fc24da9356aa3f0
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deploy-profiles-in-system-center-configuration-manager"></a>Déployer des profils dans System Center Configuration Manager
 
@@ -59,9 +54,9 @@ Les profils doivent être déployés dans un ou plusieurs regroupements avant de
 
     -   **Générer une alerte** : activez cette option pour configurer une alerte qui est générée si la conformité du profil est inférieure à un pourcentage spécifié à une date et une heure spécifiques. Vous pouvez également spécifier si vous souhaitez qu'une alerte soit envoyée à System Center Operations Manager.  
 
-    -   -   **Délai aléatoire (heure)** : (uniquement pour les profils de certificat contenant des paramètres de protocole d’inscription de certificats simple) spécifie un délai pour éviter un traitement excessif sur le service d’inscription de périphérique réseau. La valeur par défaut est **64** heures.  
+    -   -   **Délai aléatoire (heure)**  : (uniquement pour les profils de certificat contenant des paramètres de protocole d’inscription de certificats simple) spécifie un délai pour éviter un traitement excessif sur le service d’inscription de périphérique réseau. La valeur par défaut est **64** heures.  
 
-    -   **Spécifier le calendrier d’évaluation de la compatibilité pour ce profil <type>** : spécifie le calendrier par rapport auquel le profil déployé est évalué sur les ordinateurs clients. Il peut s'agir d'un calendrier simple ou d'un calendrier personnalisé.  
+    -   **Spécifier le calendrier d’évaluation de la compatibilité pour ce profil <type>**  : spécifie le calendrier par rapport auquel le profil déployé est évalué sur les ordinateurs clients. Il peut s'agir d'un calendrier simple ou d'un calendrier personnalisé.  
 
         > [!NOTE]  
         >  Lorsque l'utilisateur ouvre une session, le profil est évalué par les ordinateurs clients.  

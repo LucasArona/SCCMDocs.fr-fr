@@ -1,24 +1,19 @@
 ---
 title: Planifier Endpoint Protection
 titleSuffix: Configuration Manager
-ms.custom: na
 ms.date: 03/07/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 7610bbd3-a67f-4a09-8115-e35d40d43b42
-caps.latest.revision: "16"
-author: NathBarn
-ms.author: nathbarn
-manager: angrobe
-ms.openlocfilehash: 3ffb112dc1aaf71162b0f706f5c07fb6d08e47f9
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 0e8cd4a409718645d06f17c8cea36e7b06ec61d2
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="planning-for-endpoint-protection-in-system-center-configuration-manager"></a>Planification de Endpoint Protection dans System Center Configuration Manager
 
@@ -32,7 +27,7 @@ Endpoint Protection dans System Center Configuration Manager vous permet de gér
 
 L’utilisation d’Endpoint Protection avec Configuration Manager présente les avantages suivants :  
 
--   Configuration des stratégies de logiciel anti-programme malveillant, des paramètres du Pare-feu Windows et gestion du service Protection avancée contre les menaces Windows Defender sur certains groupes d’ordinateurs  
+-   Configuration des stratégies de logiciel anti-programme malveillant, des paramètres du Pare-feu Windows et gestion du service Windows Defender - Protection avancée contre les menaces sur certains groupes d’ordinateurs  
 
 -   Utilisation des mises à jour logicielles Configuration Manager pour télécharger les derniers fichiers de définitions de logiciel anti-programme malveillant pour tenir à jour les ordinateurs clients  
 
@@ -83,9 +78,9 @@ Endpoint Protection dans Configuration Manager vous permet de créer des straté
 
   Pour plus d’informations sur la création et le déploiement de stratégies de Pare-feu Windows pour Endpoint Protection, consultez [Guide pratique pour créer et déployer des stratégies de Pare-feu Windows pour Endpoint Protection dans System Center Configuration Manager](../deploy-use/create-windows-firewall-policies.md).  
 
-## <a name="windows-defender-advanced-threat-protection"></a>Windows Defender Advanced Threat Protection
+## <a name="windows-defender-advanced-threat-protection"></a>Windows Defender - Protection avancée contre les menaces
 
-À compter de la version 1606 de Configuration Manager (Current Branch), Endpoint Protection facilite la gestion et la surveillance du service Windows Defender Advanced Threat Protection (ATP). Ce nouveau service aide les entreprises à détecter, analyser et contrer les attaques avancées ciblant leurs réseaux. Consultez [Protection avancée contre les menaces Windows Defender](../deploy-use/windows-defender-advanced-threat-protection.md).
+À compter de la version 1606 de Configuration Manager (Current Branch), Endpoint Protection facilite la gestion et la surveillance du service Windows Defender - Protection avancée contre les menaces. Ce nouveau service aide les entreprises à détecter, analyser et contrer les attaques avancées ciblant leurs réseaux. Consultez [Windows Defender - Protection avancée contre les menaces](../deploy-use/windows-defender-advanced-threat-protection.md).
 
 ## <a name="endpoint-protection-workflow"></a>Flux de travail Endpoint Protection  
  Utilisez le diagramme suivant pour comprendre le flux de travail qui permet d’implémenter Endpoint Protection dans votre hiérarchie Configuration Manager.  

@@ -1,26 +1,20 @@
 ---
-title: "Sécurité et confidentialité pour le contrôle à distance"
+title: Sécurité et confidentialité pour le contrôle à distance
 titleSuffix: Configuration Manager
-description: "Obtenez des informations de sécurité et de confidentialité pour le contrôle à distance dans System Center Configuration Manager."
-ms.custom: na
+description: Obtenez des informations de sécurité et de confidentialité pour le contrôle à distance dans System Center Configuration Manager.
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 272ee86b-d3d9-4fd9-b5c4-73e490e1a1e4
-caps.latest.revision: "6"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 4923aee0e55f42f679c6f17ea0fd760c1909f9ef
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: fc49a74fe4e257acceaea54d7c423709998a87bd
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-and-privacy-for-remote-control-in-system-center-configuration-manager"></a>Sécurité et confidentialité pour le contrôle à distance dans System Center Configuration Manager
 
@@ -31,7 +25,7 @@ Cette rubrique contient des informations de sécurité et de confidentialité po
 ##  <a name="BKMK_Security_HardwareInventory"></a> Meilleures pratiques de sécurité pour le contrôle à distance  
  Utilisez les meilleures pratiques de sécurité suivantes lorsque vous gérez des ordinateurs client à l'aide du contrôle à distance.  
 
-|Meilleure pratique de sécurité|Plus d'informations|  
+|Bonnes pratiques de sécurité|Plus d'informations|  
 |----------------------------|----------------------|  
 |Quand vous vous connectez à un ordinateur distant, ne continuez pas si l’authentification NTLM est utilisée au lieu de l’authentification Kerberos.|Quand Configuration Manager détecte que la session de contrôle à distance est authentifiée à l’aide de NTLM plutôt que Kerberos, une invite apparaît pour vous avertir que l’identité de l’ordinateur distant ne peut pas être vérifiée. Ne poursuivez pas la session de contrôle à distance. L'authentification NTLM est un protocole d'authentification plus faible que Kerberos et elle est vulnérable à la relecture et à l'emprunt d'identité.|  
 |N’activez pas le partage du Presse-papiers dans l’observateur de contrôle à distance.|Le Presse-papiers prend en charge des objets tels que des fichiers exécutables ou du texte et il peut être utilisé par l’utilisateur sur l’ordinateur hôte pendant la session de contrôle à distance pour exécuter un programme sur l’ordinateur d’origine.|  

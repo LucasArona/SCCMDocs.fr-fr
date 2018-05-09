@@ -1,25 +1,20 @@
 ---
 title: Actualiser un ordinateur existant avec une nouvelle version de Windows
 titleSuffix: Configuration Manager
-description: "Vous pouvez utiliser plusieurs méthodes dans Configuration Manager pour partitionner et formater (réinitialiser) un ordinateur existant afin d’y installer un nouveau système d’exploitation."
-ms.custom: na
+description: Vous pouvez utiliser plusieurs méthodes dans Configuration Manager pour partitionner et formater (réinitialiser) un ordinateur existant afin d’y installer un nouveau système d’exploitation.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b189a346-8c0d-4870-a876-0719fbb0ab04
-caps.latest.revision: "7"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 2a5489c35acc82c6fc11a0e83b7a5101b2e472fb
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: 622b49b9fb689db8238be8254a66b3a0264b4399
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="refresh-an-existing-computer-with-a-new-version-of-windows-using-system-center-configuration-manager"></a>Actualiser un ordinateur existant avec une nouvelle version de Windows à l’aide de System Center Configuration Manager
 
@@ -39,7 +34,7 @@ Cette rubrique indique les étapes générales à effectuer dans System Center C
 
      Quand vous allez capturer les paramètres de l’ordinateur existant et restaurer les paramètres sur le nouveau système d’exploitation, vous devez installer un point de migration d’état. Pour plus d’informations, consultez [Point de migration d’état](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints).  
 
-##  <a name="BKMK_Configure"></a> Configurer  
+##  <a name="BKMK_Configure"></a> Configurerr  
 
 1.  **Préparer une image de démarrage**  
 

@@ -2,25 +2,19 @@
 title: Installer la console
 titleSuffix: Configuration Manager
 description: Installez la console Configuration Manager pour vous connecter à un site d’administration centrale ou à un site principal.
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: d39c201f-d364-4e7b-bde4-faa76d747f33
-caps.latest.revision: 3
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 05d19258b9bfc2a033eb4d7974f17fc0eb3d4c72
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: f17e479ef6b285cdb70960471dced73e83af520c
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-the-system-center-configuration-manager-console"></a>Installer la console System Center Configuration Manager
 
@@ -65,7 +59,7 @@ Les administrateurs se servent de la console Configuration Manager pour gérer l
 
 7.  Dans la page **Programme d’amélioration des services**, indiquez si vous voulez participer à ce programme.  
     > [!Note]  
-    > Depuis Configuration Manager version 1802, la fonctionnalité CEIP ne figure plus dans le produit.
+    > À compter de Configuration Manager version 1802, la fonctionnalité CEIP ne figure plus dans le produit.
 
 8.  Dans la page **Prêt pour l’installation**, cliquez sur **Installer** pour installer la console Configuration Manager.  
 

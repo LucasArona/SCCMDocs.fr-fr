@@ -1,25 +1,20 @@
 ---
-title: "Gérer les clients"
+title: Gérer les clients
 titleSuffix: Configuration Manager
-description: "Découvrez comment gérer les clients dans System Center Configuration Manager."
-ms.custom: na
+description: Découvrez comment gérer les clients dans System Center Configuration Manager.
 ms.date: 12/21/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3986a992-c175-4b6f-922e-fc561e3d7cb7
-caps.latest.revision: "17"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 2065fd0910b1d89df3f8296c87ede15b89331568
-ms.sourcegitcommit: 528b1ce79803fecd34937a790e9b5cde282d4caa
+manager: dougeby
+ms.openlocfilehash: 623d7b6a048b7728e40adb3655dc1017408fb1d7
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-manage-clients-in-system-center-configuration-manager"></a>Guide pratique pour gérer les clients dans System Center Configuration Manager
 
@@ -38,7 +33,7 @@ Quand le client Configuration Manager est installé sur un appareil et correctem
 
 ##  <a name="BKMK_ManagingClients_DevicesNode"></a> Gérer les clients à partir du nœud Appareils  
 
-Selon le type d’appareil, certaines de ces options peuvent ne pas être disponibles.  
+Selon le type de périphérique, certaines de ces options peuvent ne pas être disponibles.  
 
 1.  Dans la console Configuration Manager, choisissez **Ressources et Conformité** >  **Appareils**.  
 
@@ -278,7 +273,7 @@ Pour plus d’informations sur la façon d’utiliser ces propriétés de ligne 
 
 1.  Sur l’ordinateur client, accédez à **Configuration Manager** dans le Panneau de configuration et double-cliquez pour ouvrir les propriétés.  
 
-2.  Sous l’onglet **Cache**, définissez les propriétés de l’espace et de l’emplacement. L'emplacement par défaut est *%windir%*\ccmcache.  
+2.  Sous l’onglet **Cache**, définissez les propriétés de l’espace et de l’emplacement. L'emplacement par défaut est *%windir%* \ccmcache.  
 
 3.  Pour supprimer les fichiers dans le dossier du cache, choisissez **Supprimer les fichiers**.  
 

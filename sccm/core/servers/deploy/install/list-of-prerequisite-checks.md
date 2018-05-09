@@ -1,25 +1,20 @@
 ---
-title: "Vérifications des prérequis"
+title: Vérifications des prérequis
 titleSuffix: Configuration Manager
-description: "Passez en revue les vérifications des prérequis pour System Center Configuration Manager. Inclut des vérifications des droits de sécurité."
-ms.custom: na
+description: Passez en revue les vérifications des prérequis pour System Center Configuration Manager. Inclut des vérifications des droits de sécurité.
 ms.date: 4/17/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
-caps.latest.revision: "12"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 9ae5abeb5fe175f2e01a05cbda1a21232b54dd70
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: f51f2d5f94a185f35a5d843d674a3dd8f1e8a275
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="list-of-prerequisite-checks-for-system-center-configuration-manager"></a>Liste des vérifications des prérequis pour System Center Configuration Manager
 
@@ -85,7 +80,7 @@ Le tableau ci-dessous répertorie les vérifications qu’effectue l’Outil de 
 |**Configurer le dossier source**|Vérifie que le compte d'ordinateur du site secondaire dispose d'autorisations de système de fichiers NFTS en **Lecture** et d'autorisations de partage en **Lecture** sur le dossier source d'installation et le partage.<br><br>**Remarque** : Le compte d’ordinateur de site secondaire doit être un **administrateur** sur l’ordinateur si vous utilisez des partages administratifs (par exemple, C$ et D$).|Erreur|Site secondaire|
 |**Version de la source d’installation**|Vérifie que la version de Configuration Manager dans le dossier source que vous avez spécifié pour l’installation du site secondaire correspond à la version de Configuration Manager du site principal.|Erreur|Site secondaire|
 |**Code de site en cours d’utilisation**|Vérifie que le code de site que vous avez spécifié n’est pas en cours d’utilisation dans la hiérarchie Configuration Manager. Vous devez spécifier un code de site unique pour ce site.|Erreur|Site principal|
-|**L’ordinateur du fournisseur SMS a le même domaine que le serveur de site**|Vérifie si un ordinateur qui exécute une instance du fournisseur SMS a le même domaine que le serveur de site.|Erreur|fournisseur SMS|
+|**L’ordinateur du fournisseur SMS a le même domaine que le serveur de site**|Vérifie si un ordinateur qui exécute une instance du fournisseur SMS a le même domaine que le serveur de site.|Erreur|Fournisseur SMS|
 |**Édition SQL Server**|Vérifie que l'édition de SQL Server sur le site n'est pas SQL Server Express.|Erreur|SQL Server|
 |**SQL Server Express sur un site secondaire**|Vérifie que SQL Server Express peut s'installer correctement sur l'ordinateur serveur de site pour un site secondaire.|Erreur|Site secondaire|
 |**SQL Server sur l’ordinateur du site secondaire**|Vérifie que SQL Server est installé sur l'ordinateur du site secondaire. Vous ne pouvez pas installer SQL Server sur un système de site distant.<br><br>**Avertissement** : Cette vérification s’applique uniquement lorsque vous indiquez au programme d’installation d’utiliser une instance existante de SQL Server.|Erreur|Site secondaire|

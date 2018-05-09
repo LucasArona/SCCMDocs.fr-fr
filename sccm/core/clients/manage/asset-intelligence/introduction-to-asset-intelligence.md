@@ -1,26 +1,20 @@
 ---
-title: "Présentation d’Asset Intelligence"
+title: Présentation d’Asset Intelligence
 titleSuffix: Configuration Manager
-description: "Obtenez une présentation d’Asset Intelligence dans System Center Configuration Manager."
-ms.custom: na
+description: Obtenez une présentation d’Asset Intelligence dans System Center Configuration Manager.
 ms.date: 2/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 0bdfdef5-390f-4099-8bde-de51d9a89175
-caps.latest.revision: "7"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 349f5998c0d5e96a626e901ae99fee76541d1b4e
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 0c09160e88d8a713caadfdd9a6973fd436b4cad1
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="introduction-to-asset-intelligence-in-system-center-configuration-manager"></a>Présentation d’Asset Intelligence dans System Center Configuration Manager
 
@@ -146,7 +140,7 @@ Asset Intelligence dans System Center Configuration Manager permet d’inventori
  Les rapports logiciels Asset Intelligence fournissent des informations sur les familles de logiciels, les catégories et les titres de logiciels qui sont installés sur les ordinateurs de l'organisation. Ils contiennent, entre autres, des informations sur les objets Application d'assistance du navigateur et les logiciels qui démarrent automatiquement. Ces rapports peuvent permettre d'identifier les logiciels de publicité, les logiciels espions et d'autres programmes malveillants, ainsi que les redondances logicielles afin de rationaliser l'achat et le support des logiciels.  
 
 ###  <a name="BKMK_SoftwareIdTagReports"></a> Rapports sur les balises d’identification logicielle Asset Intelligence  
- Ces rapports fournissent des informations sur les logiciels qui contiennent une balise d’identification logicielle conforme à la norme ISO/IEC 19770-2. Ces balises d’identification logicielle fournissent des informations faisant autorité servant à identifier les logiciels installés. Quand vous activez la classe de rapport d’inventaire matériel SMS_SoftwareTag, Configuration Manager collecte des informations sur les logiciels dotés de balises d’identification logicielle. Les rapports suivants fournissent des informations sur les logiciels :  
+ Rapports de balise d'identification de logiciels Asset Intelligence fournissent des informations sur les logiciels qui contient une balise d'identification logicielle conforme à ISO/IEC 19770-2. Ces balises d’identification logicielle fournissent des informations faisant autorité servant à identifier les logiciels installés. Quand vous activez la classe de rapport d’inventaire matériel SMS_SoftwareTag, Configuration Manager collecte des informations sur les logiciels dotés de balises d’identification logicielle. Les rapports suivants fournissent des informations sur les logiciels :  
 
 -   **Logiciels 14A - Recherche de logiciels dont la balise d’identification logicielle est activée** : ce rapport indique le nombre de logiciels installés qui ont une balise d’identification logicielle activée.  
 
@@ -158,7 +152,7 @@ Asset Intelligence dans System Center Configuration Manager permet d’inventori
  Les rapports Asset Intelligence peuvent fournir une grande quantité d'informations sur les titres de logiciels installés et les licences logicielles achetées en cours d'utilisation. Toutefois, n'utilisez pas ces informations comme seule source pour déterminer la conformité des licence logicielles achetées.  
 
 ####  <a name="BKMK_ExampleDependencies"></a> Exemples de dépendances  
- La précision de la quantité affichée dans les rapports Asset Intelligence sur les logiciels installés et les informations de licence peut varier par rapport aux quantités réelles actuellement utilisées. Cette variation est due aux dépendances complexes qu’implique l’inventaire des informations de licence des logiciels en cours d’utilisation dans les environnements d’entreprise. Les exemples suivants montrent les dépendances liées à l’inventaire des logiciels installés dans l’entreprise en utilisant Asset Intelligence, qui sont susceptibles d’affecter l’exactitude des rapports Asset Intelligence :  
+ La précision de la quantité affichée dans les rapports Asset Intelligence installé les logiciels et les informations de licence peuvent varier des quantités réelles actuellement utilisées. Cette variation est due aux dépendances complexes qu’implique l’inventaire des informations de licence des logiciels en cours d’utilisation dans les environnements d’entreprise. Les exemples suivants montrent les dépendances liées à l’inventaire des logiciels installés dans l’entreprise en utilisant Asset Intelligence, qui sont susceptibles d’affecter l’exactitude des rapports Asset Intelligence :  
 
  **Dépendances d'inventaire matériel sur les clients**  
  Les rapports Asset Intelligence des logiciels installés sont basés sur les données collectées sur les clients Configuration Manager en étendant l’inventaire matériel afin d’activer la création de rapports Asset Intelligence. En raison de ces dépendances par rapport à la création de rapports d’inventaire matériel, les rapports Asset Intelligence contiennent uniquement les données des clients Configuration Manager qui ont terminé le processus d’inventaire matériel avec les classes de rapport Asset Intelligence WMI requises activées. En outre, puisque les clients Configuration Manager exécutent les processus d’inventaire matériel selon un calendrier défini par l’utilisateur administratif, il peut exister un décalage au niveau des rapports de données, qui affecte l’exactitude des rapports Asset Intelligence. Par exemple, un logiciel sous licence inventorié peut être désinstallé après que le client a terminé un cycle d’inventaire matériel. Toutefois, le logiciel apparaît comme étant installé dans les rapports Asset Intelligence jusqu’au prochain cycle de rapports d’inventaire matériel du client.  

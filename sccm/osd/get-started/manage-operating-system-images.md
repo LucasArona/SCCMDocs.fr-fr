@@ -1,26 +1,20 @@
 ---
-title: "Gérer les images de système d’exploitation"
+title: Gérer les images de système d’exploitation
 titleSuffix: Configuration Manager
-description: "Découvrez les différentes méthodes disponibles dans Configuration Manager pour gérer les images de système d’exploitation stockées dans des fichiers WIM (Windows Imaging)."
-ms.custom: na
+description: Découvrez les différentes méthodes disponibles dans Configuration Manager pour gérer les images de système d’exploitation stockées dans des fichiers WIM (Windows Imaging).
 ms.date: 12/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fab13949-371c-4a4c-978e-471db1e54966
-caps.latest.revision: "17"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: e0ddf9801430984efb63ac593d1f60b8fbfe0f59
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: 3b0931671c05604a0115c14a5e7fc5d9c6767b7c
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-operating-system-images-with-system-center-configuration-manager"></a>Gérer les images de système d’exploitation avec System Center Configuration Manager
 
@@ -130,7 +124,7 @@ Pour en savoir plus sur les étapes de création d’une image de système d’e
 
 5.  Sélectionnez l'onglet **Paramètres de distribution** et configurez les options suivantes :  
 
-    -   **Autoriser ce package à être transféré par multidiffusion (WinPE uniquement)** : sélectionnez cette option pour permettre à Configuration Manager de déployer simultanément plusieurs images de système d’exploitation.  
+    -   **Autoriser ce package à être transféré par multidiffusion (WinPE uniquement)**  : sélectionnez cette option pour permettre à Configuration Manager de déployer simultanément plusieurs images de système d’exploitation.  
 
     -   **Chiffrer les packages de multidiffusion** : spécifiez si l’image est chiffrée avant d'être envoyée au point de distribution. Utiliser cette option si le package contient des informations sensibles. Si l'image n'est pas chiffrée, le contenu du package sera visible en texte clair sur le réseau et pourra être lu par un utilisateur non autorisé.  
 

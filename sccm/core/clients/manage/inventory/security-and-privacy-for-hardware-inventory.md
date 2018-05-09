@@ -1,25 +1,20 @@
 ---
-title: "Sécurité et confidentialité de l’inventaire matériel"
+title: Sécurité et confidentialité de l’inventaire matériel
 titleSuffix: Configuration Manager
-description: "Obtenez des informations de sécurité et de confidentialité pour l’inventaire matériel dans System Center Configuration Manager."
-ms.custom: na
+description: Obtenez des informations de sécurité et de confidentialité pour l’inventaire matériel dans System Center Configuration Manager.
 ms.date: 2/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 62e20d86-db6d-4a1f-b14a-905a9de31698
-caps.latest.revision: "6"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: d08bae2cceada5393e58bf8ad2e4a603277f5dfc
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 948aa0b261f9214dc08b76b25a70133141a1113f
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-and-privacy-for-hardware-inventory-in-system-center-configuration-manager"></a>Sécurité et confidentialité pour l’inventaire matériel dans System Center Configuration Manager
 
@@ -30,7 +25,7 @@ Cette rubrique contient des informations de sécurité et de confidentialité po
 ##  <a name="BKMK_Security_HardwareInventory"></a> Bonnes pratiques de sécurité pour l’inventaire matériel  
  Utilisez les meilleures pratiques de sécurité suivantes lorsque vous recueillez des données d'inventaire matériel à partir de clients :  
 
-|Meilleure pratique de sécurité|Plus d'informations|  
+|Bonnes pratiques de sécurité|Plus d'informations|  
 |----------------------------|----------------------|  
 |Signer et chiffrer les données d'inventaire|Lorsque les clients communiquent avec les points de gestion à l'aide du protocole HTTPS, toutes les données qu'ils envoient sont chiffrées à l'aide du protocole SSL. Toutefois, lorsque des ordinateurs clients utilisent le protocole HTTP pour communiquer avec des points de gestion sur l'intranet, les données d'inventaire client et les fichiers collectés peuvent être envoyés non signés et non chiffrés. Assurez-vous que le site est configuré pour exiger la signature et utiliser le chiffrement. En outre, si les clients peuvent prendre en charge l'algorithme SHA-256, sélectionnez l'option pour exiger SHA-256.|  
 |Ne pas recueillir de fichiers IDMIF et NOIDMIF dans des environnements haute sécurité|Vous pouvez utiliser le regroupement de fichiers IDMIF et NOIDMIF pour étendre l'inventaire matériel. Si nécessaire, Configuration Manager crée des tables ou modifie des tables existantes dans la base de données Configuration Manager pour prendre en compte les propriétés des fichiers IDMIF et NOIDMIF. En revanche, Configuration Manager ne valide pas les fichiers IDMIF et NOIDMIF. Ils peuvent donc être utilisés pour modifier des tables que vous ne souhaitez pas voir modifier. Les données valides peuvent être remplacées par des données non valides. En outre, de grandes quantités de données peuvent être ajoutées et le traitement de ces données peut entraîner des retards dans toutes les fonctions Configuration Manager. Pour atténuer ce risque, affectez la valeur **Aucun** au paramètre du client d’inventaire matériel **Collecter des fichiers MIF**.|  

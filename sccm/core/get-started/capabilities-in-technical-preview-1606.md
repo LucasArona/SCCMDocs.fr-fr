@@ -1,32 +1,26 @@
 ---
-title: "Capacités de la version Technical Preview 1606"
+title: Capacités de la version Technical Preview 1606
 titleSuffix: Configuration Manager
-description: "Découvrez les fonctionnalités disponibles dans la version d’évaluation technique 1606 pour System Center Configuration Manager."
-ms.custom: na
+description: Découvrez les fonctionnalités disponibles dans la version d’évaluation technique 1606 pour System Center Configuration Manager.
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 134a2f60-811e-4dc9-a8f5-1ce0018c5c12
-caps.latest.revision: 
-author: erikje
-ms.author: erikje
-manager: angrobe
-ms.openlocfilehash: 59a57e20a21aac7c650c25e13df0f3180c2110ea
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: f3ee48d60c46def5daef25a2f3654e8a79a0e9e1
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1606-for-system-center-configuration-manager"></a>Fonctionnalités de la version d’évaluation technique 1606 pour System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (version d’évaluation technique)*
+*S’applique à : System Center Configuration Manager (Technical Preview)*
 
-Cet article présente les fonctionnalités qui sont disponibles dans la version d’évaluation technique 1606 pour System Center Configuration Manager. Vous pouvez installer cette version pour mettre à jour et ajouter de nouvelles fonctionnalités à votre site de version d’évaluation technique de Configuration Manager.      Avant d’installer cette version d’évaluation technique, passez en revue la rubrique de présentation, [Technical Preview pour System Center Configuration Manager](../../core/get-started/technical-preview.md), pour vous familiariser avec les conditions générales et les limitations d’utilisation d’une version d’évaluation technique, la mise à jour entre les versions et l’envoi de commentaires sur les fonctionnalités dans une version d’évaluation technique.    
+Cet article présente les fonctionnalités qui sont disponibles dans la version d’évaluation technique 1606 pour System Center Configuration Manager. Vous pouvez installer cette version pour mettre à jour et ajouter de nouvelles fonctionnalités à votre site Configuration Manager Technical Preview.      Avant d’installer cette version de la version d’évaluation technique, passez en revue la rubrique de présentation, [Version d’évaluation technique pour System Center Configuration Manager](../../core/get-started/technical-preview.md), pour vous familiariser avec les conditions générales et limitations d’utilisation d’une version d’évaluation technique, la mise à jour entre les versions et l’envoi de commentaires sur les fonctionnalités dans une version d’évaluation technique.    
 
 **Problèmes connus dans cette version d’évaluation technique :**  
 *  Lorsque vous mettez à jour la version d’évaluation technique 1604 vers la version 1605, puis vers la version 1606, la mise à jour peut échouer et une erreur similaire à la suivante est enregistrée dans le fichier **cmupdate.log** :
@@ -39,7 +33,7 @@ Cet article présente les fonctionnalités qui sont disponibles dans la version 
 **Vous trouverez ci-dessous les nouvelles fonctionnalités propres à cette version.**  
 
 ## <a name="dmp_category"></a> Classer automatiquement des appareils dans des regroupements
-Vous pouvez créer des catégories d’appareils pour classer automatiquement les appareils dans des regroupements d’appareils quand vous utilisez Configuration Manager avec Microsoft Intune. Les utilisateurs sont alors invités à choisir une catégorie d’appareils quand ils inscrivent un appareil dans Intune. Vous pouvez en outre modifier la catégorie d’un appareil à partir de la console Configuration Manager.
+Vous pouvez créer des catégories d’appareils pour classer automatiquement les appareils dans des regroupements d’appareils quand vous utilisez Configuration Manager avec Microsoft Intune. Les utilisateurs sont alors invités à choisir une catégorie d’appareils quand ils inscrivent un appareil dans Intune. Vous pouvez aussi modifier la catégorie d’un appareil à partir de la console Configuration Manager.
 
 **Important :** Cette fonctionnalité est opérationnelle avec la version de **juin 2016** de Microsoft Intune. Vérifiez que vous avez effectué la mise à jour vers cette version avant d’essayer ces procédures.
 

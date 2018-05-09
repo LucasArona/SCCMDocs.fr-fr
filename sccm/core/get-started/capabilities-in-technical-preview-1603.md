@@ -1,32 +1,27 @@
 ---
-title: "Capacités de la version Technical Preview 1603"
+title: Capacités de la version Technical Preview 1603
 titleSuffix: Configuration Manager
-description: "Découvrez les fonctionnalités disponibles dans la version d’évaluation technique 1603 pour System Center Configuration Manager."
-ms.custom: na
+description: Découvrez les fonctionnalités disponibles dans la version d’évaluation technique 1603 pour System Center Configuration Manager.
 ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5f861b72-9f14-4d17-a512-4a79b660abe6
-caps.latest.revision: "8"
-author: erikje
-ms.author: erikje
-manager: angrobe
+author: aczechowski
 robots: noindex,nofollow
-ms.openlocfilehash: 9152016afe1d6333cb919f3b5eb155028dc6eae1
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 6d5ecf4e2d231a596012aa9f7d371f18ef0705a1
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1603-for-system-center-configuration-manager"></a>Fonctionnalités de la version d’évaluation technique 1603 pour System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (version d’évaluation technique)*
+*S’applique à : System Center Configuration Manager (Technical Preview)*
 
-Cet article présente les fonctionnalités qui sont disponibles dans la version d’évaluation technique 1603 pour System Center Configuration Manager. Vous pouvez installer cette version pour mettre à jour et ajouter de nouvelles fonctionnalités à votre site de version d’évaluation technique de Configuration Manager. Ou bien, lorsque vous utilisez System Center Technical Preview 5, cette version s’installe comme une version de référence de la version d’évaluation technique de System Center Configuration Manager. Avant d’installer cette version d’évaluation technique, passez en revue la rubrique de présentation, [Technical Preview pour System Center Configuration Manager](../../core/get-started/technical-preview.md), pour vous familiariser avec les conditions générales et les limitations d’utilisation d’une version d’évaluation technique, la mise à jour entre les versions et l’envoi de commentaires sur les fonctionnalités dans une version d’évaluation technique.  
+Cet article présente les fonctionnalités qui sont disponibles dans la version d’évaluation technique 1603 pour System Center Configuration Manager. Vous pouvez installer cette version pour mettre à jour et ajouter de nouvelles fonctionnalités à votre site de version d’évaluation technique de Configuration Manager. Ou bien, lorsque vous utilisez System Center Technical Preview 5, cette version s’installe comme une version de référence de la version d’évaluation technique de System Center Configuration Manager. Avant d’installer cette version de la version d’évaluation technique, passez en revue la rubrique de présentation, [Version d’évaluation technique pour System Center Configuration Manager](../../core/get-started/technical-preview.md), pour vous familiariser avec les conditions générales et limitations d’utilisation d’une version d’évaluation technique, la mise à jour entre les versions et l’envoi de commentaires sur les fonctionnalités dans une version d’évaluation technique.  
 
  **Problèmes connus relatifs à cette version d’évaluation technique :**  
 

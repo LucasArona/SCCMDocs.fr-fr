@@ -1,26 +1,20 @@
 ---
-title: "Préparer la mise en service de BitLocker dans Windows PE"
+title: Préparer la mise en service de BitLocker dans Windows PE
 titleSuffix: Configuration Manager
-description: "La tâche Préconfigurer BitLocker dans Configuration Manager permet d’activer BitLocker à partir de l’environnement de préinstallation Windows (WinPE) avant le déploiement du système d’exploitation."
-ms.custom: na
+description: La tâche Préconfigurer BitLocker dans Configuration Manager permet d’activer BitLocker à partir de l’environnement de préinstallation Windows (WinPE) avant le déploiement du système d’exploitation.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c7c94ba0-d709-4129-8077-075a8abaea1c
-caps.latest.revision: "4"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: f5fa0951ff07ad4d4722b521c5039078a7baaec4
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: ad4bfe99e841af5ccc4f6792fda664b8259a5369
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="preprovision-bitlocker-in-windows-pe-with-system-center-configuration-manager"></a>Préconfigurer BitLocker dans Windows PE avec System Center Configuration Manager
 

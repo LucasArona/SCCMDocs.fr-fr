@@ -1,25 +1,19 @@
 ---
 title: Mettre à niveau vers System Center Configuration Manager
 description: Découvrez les étapes d’exécution d’une mise à niveau sur place réussie à partir d’un site et d’une hiérarchie qui exécute System Center 2012 Configuration Manager.
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: c64e7483-b4bb-4738-95f4-ecdaeb6a2ba6
-caps.latest.revision: 21
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 72e11a04eb64d649749f2001ac4e3550c784132c
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 1cea0a54bc4c4c2d69f979bb09d83d7f5fac7706
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="upgrade-to-system-center-configuration-manager"></a>Mettre à niveau vers System Center Configuration Manager
 
@@ -35,7 +29,7 @@ Vous pouvez exécuter une mise à niveau sur place pour mettre à niveau System 
 ##  <a name="bkmk_path"></a> Chemins de mise à niveau sur place  
 
 **Mise à niveau vers la version 1802**   
-Si vous avez un support de base de référence 1702, vous pouvez mettre à niveau les produits suivants vers une version sous licence complète de System Center Configuration Manager version 1802 :   
+Si vous avez un support de base de référence de version 1802, vous pouvez mettre à niveau les produits suivants vers une version sous licence complète de System Center Configuration Manager version 1802 :   
 -     Une installation d’évaluation de System Center Configuration Manager version 1802
 -     System Center 2012 Configuration Manager avec Service Pack 1
 -     System Center 2012 Configuration Manager avec Service Pack 2

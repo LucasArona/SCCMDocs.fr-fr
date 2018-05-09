@@ -2,26 +2,19 @@
 title: Installer le client avec Azure AD
 titleSuffix: Configuration Manager
 description: Installer et affecter le client Configuration Manager sur les appareils Windows 10 en utilisant Azure Active Directory pour l’authentification
-ms.custom: na
 ms.date: 03/28/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: a44006eb-8650-49f6-94e1-18fa0ca959ee
-caps.latest.revision: 14
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 12fc1b394ae98c2b384630f4a00e4239e4e8d9d6
-ms.sourcegitcommit: aed99ba3c5e9482199cb3fc5c92f6f3a160cb181
+ms.openlocfilehash: 91ebb0c35687b231a6f08b7bc92cccb83cf0e602
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-and-assign-configuration-manager-windows-10-clients-using-azure-ad-for-authentication"></a>Installer et affecter des clients Windows 10 Configuration Manager à l’aide d’Azure AD à des fins d’authentification
 

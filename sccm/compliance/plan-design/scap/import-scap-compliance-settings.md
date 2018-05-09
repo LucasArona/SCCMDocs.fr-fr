@@ -1,28 +1,21 @@
 ---
 title: Importer les paramètres de conformité SCAP
-titleSuffix: System Center Configuration Manager
+titleSuffix: Configuraton Manager
 description: Importer les paramètres de conformité SCAP sous la forme de bases de référence de configuration et exporter les résultats
-ms.custom: na
 ms.date: 03/27/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 0bdcb018-bac2-4540-b786-6242bac73ff4
-caps.latest.revision: 1
-caps.handback.revision: 0
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 robots: noindex,nofollow
-ms.openlocfilehash: 5863f8b9a79e8e22e215e9feac7744b4a6ce279d
-ms.sourcegitcommit: 27da4be015f1496b7b89ebddb517a2685f1ecf74
+ms.openlocfilehash: 1f6b1fa0dd0775083eff9925a65509083b3f47d3
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="import-the-compliance-settings-compliant-cab-files-into-system-center-configuration-manager"></a>Importer les fichiers .cab conformes aux paramètres de conformité dans System Center Configuration Manager
 
@@ -74,7 +67,7 @@ Pour affecter une base de référence de configuration à un regroupement d’or
 
 1. Ouvrez la **console** **Configuration Manager**.
 
-2. Dans le volet de navigation de la **console Configuration Manager, accédez à **Ressources et Conformité** > **Paramètres de conformité** >**Bases de référence de configuration**.
+2. Dans le volet de navigation de la **console Configuration Manager, accédez à **Ressources et Conformité** > **Paramètres de conformité** >** Bases de référence de configuration**.
 3. Dans le volet de navigation, cliquez sur &lt; **base_référence\_configuration>, où &lt;_base_référence\_configuration&gt;_ est le nom de la base de référence de configuration que vous souhaitez affecter à un regroupement d’ordinateurs.
 
     La liste des éléments de configuration de la ligne de base de configuration apparaît dans le volet de détails de Configuration Manager.

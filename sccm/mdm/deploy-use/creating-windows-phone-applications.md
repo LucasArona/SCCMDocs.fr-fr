@@ -1,26 +1,20 @@
 ---
-title: "Créer des applications Windows Phone"
+title: Créer des applications Windows Phone
 titleSuffix: Configuration Manager
-description: "Examinez les éléments à prendre en compte quand vous créez et déployez des applications pour des appareils Windows Phone."
-ms.custom: na
+description: Examinez les éléments à prendre en compte quand vous créez et déployez des applications pour des appareils Windows Phone.
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 68fe11fa-5fb2-4b81-b0f5-b6f2392fb4ad
-caps.latest.revision: 
-author: mattbriggs
-ms.author: mabrigg
-manager: angrobe
-ms.openlocfilehash: 154cc1f6e8f16f2bfbb717cfd44fe596b9e31ac5
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: c755db47c9d3acb9c858ecb5bed14bb36055663b
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-windows-phone-applications-with-system-center-configuration-manager"></a>Créer des applications Windows Phone à l’aide de System Center Configuration Manager
 
@@ -38,14 +32,14 @@ Une application System Center Configuration Manager inclut un ou plusieurs ty
 
 Pour connaître les étapes requises pour créer des types de déploiement et applications Configuration Manager, voir [Démarrer l’Assistant Création d’une application](../../apps/deploy-use/create-applications.md#start-the-create-application-wizard). De plus, gardez à l’esprit les considérations suivantes lorsque vous créez et déployez des applications pour des appareils Windows Phone.  
 
-## <a name="general-considerations"></a>Éléments généraux à prendre en compte  
+## <a name="general-considerations"></a>Considérations générales  
  Configuration Manager prend en charge le déploiement des types de fichiers d’application suivants :  
 
 |Type d'appareil|Types de fichiers pris en charge|  
 |-----------------|---------------------|  
 |Windows Phone 8|.xap|  
 |Windows Phone 8.1|.xap, .appx, .appxbundle|
-|Windows 10 Mobile|.xap, .appx, .appxbundle|
+|Windows 10 Mobile|.xap, .appx, .appxbundle|
 
  Les actions de déploiement suivantes sont prises en charge :  
 

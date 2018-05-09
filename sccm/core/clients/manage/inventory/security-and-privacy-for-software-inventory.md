@@ -1,26 +1,20 @@
 ---
-title: "Sécurité et confidentialité de l’inventaire logiciel"
+title: Sécurité et confidentialité de l’inventaire logiciel
 titleSuffix: Configuration Manager
-description: "Obtenez des informations de sécurité et de confidentialité pour l’inventaire logiciel dans System Center Configuration Manager."
-ms.custom: na
+description: Obtenez des informations de sécurité et de confidentialité pour l’inventaire logiciel dans System Center Configuration Manager.
 ms.date: 2/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 8e68e1fb-a8ec-4543-bb8a-cbbaf184a418
-caps.latest.revision: "5"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 6e784bc131b9006ba441c1fc32d67469e01bacad
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 5fef3c1892c015fcec42197c9af373506d8e426a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-and-privacy-for-software-inventory-in-system-center-configuration-manager"></a>Sécurité et confidentialité pour l’inventaire logiciel dans System Center Configuration Manager
 
@@ -31,7 +25,7 @@ Cette rubrique contient des informations de sécurité et de confidentialité po
 ##  <a name="BKMK_Security_HardwareInventory"></a> Meilleures pratiques de sécurité pour l’inventaire logiciel  
  Utilisez les meilleures pratiques de sécurité suivantes lorsque vous recueillez des données d'inventaire logiciel à partir de clients :  
 
-|Meilleure pratique de sécurité|Plus d'informations|  
+|Bonnes pratiques de sécurité|Plus d'informations|  
 |----------------------------|----------------------|  
 |Signer et chiffrer les données d'inventaire|Lorsque les clients communiquent avec les points de gestion à l'aide du protocole HTTPS, toutes les données qu'ils envoient sont chiffrées à l'aide du protocole SSL. Toutefois, lorsque des ordinateurs clients utilisent le protocole HTTP pour communiquer avec des points de gestion sur l'intranet, les données d'inventaire client et les fichiers collectés peuvent être envoyés non signés et non chiffrés. Assurez-vous que le site est configuré pour exiger la signature et utiliser le chiffrement. En outre, si les clients peuvent prendre en charge l'algorithme SHA-256, sélectionnez l'option pour exiger SHA-256.|  
 |N'utilisez pas le regroupement de fichiers pour collecter des fichiers critiques ou des informations sensibles|L’inventaire logiciel Configuration Manager utilise tous les droits du compte LocalSystem, qui permet de recueillir des copies de fichiers système critiques, tels que le Registre ou la base de données du compte de sécurité. Lorsque ces fichiers sont disponibles sur le serveur de site, un individu disposant des droits Lire la ressource ou de droits NTFS sur l'emplacement de stockage du fichier pourrait en analyser le contenu et probablement découvrir des informations essentielles sur le client, ce qui permettrait de compromettre sa sécurité.|  

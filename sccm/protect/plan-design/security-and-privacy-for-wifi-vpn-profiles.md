@@ -1,26 +1,20 @@
 ---
-title: "Sécurité et confidentialité pour les profils Wi-Fi et VPN"
+title: Sécurité et confidentialité pour les profils Wi-Fi et VPN
 titleSuffix: Configuration Manager
-description: "Découvrez les bonnes pratiques en matière de sécurité pour la gestion des profils Wi-Fi et VPN des appareils dans System Center Configuration Manager."
-ms.custom: na
+description: Découvrez les bonnes pratiques en matière de sécurité pour la gestion des profils Wi-Fi et VPN des appareils dans System Center Configuration Manager.
 ms.date: 12/28/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: ef3ab519-9cf7-47fc-8831-d400e0e96df8
-caps.latest.revision: "4"
-caps.handback.revision: "0"
-author: Nbigman
-ms.author: nbigman
-manager: angrobe
-ms.openlocfilehash: 9c66945e498042ef013fb00f56cfb73598a9776f
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 6ba2cf8139cd1a5f416ff7877afc0a6b7b1ad081
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-and-privacy-for-wi-fi-and-vpn-profiles-in-system-center-configuration-manager"></a>Sécurité et confidentialité pour les profils Wi-Fi et VPN dans System Center Configuration Manager
 
@@ -34,7 +28,7 @@ ms.lasthandoff: 10/12/2017
 |Dans la mesure du possible, choisissez les options les plus sécurisées prises en charge par votre système d’exploitation client et votre infrastructure Wi-Fi et VPN.|Les profils Wi-Fi et VPN fournissent une méthode pratique pour distribuer et gérer de manière centralisée des paramètres Wi-Fi et VPN que vos appareils prennent déjà en charge. Configuration Manager n’ajoute pas de fonctionnalité Wi-Fi ou VPN.<br /><br /> Identifiez, implémentez et suivez les bonnes pratiques de sécurité recommandées pour vos appareils et votre infrastructure.|  
 
 ## <a name="privacy-information-for-wi-fi-profiles"></a>Informations de confidentialité pour les profils Wi-Fi  
- Vous pouvez utiliser des profils Wi-Fi et VPN pour configurer des appareils clients afin qu’ils se connectent à des serveurs Wi-Fi et VPN, puis pour évaluer si ces appareils deviennent compatibles après l’application des profils. Le point de gestion transmet les informations de compatibilité au serveur de site et les informations sont stockées dans la base de données de site. Les informations sont chiffrées lorsque les périphériques les envoient au point de gestion mais ne sont pas stockées au format chiffré dans la base de données de site. La base de données conserve les informations jusqu'à ce que la tâche de maintenance de site **Supprimer les données de gestion de configuration anciennes** les supprime. L'intervalle de suppression par défaut est de 90 jours, mais vous pouvez la modifier. Les informations de compatibilité ne sont pas transmises à Microsoft.  
+ Vous pouvez utiliser des profils Wi-Fi et VPN pour configurer des appareils clients afin qu’ils se connectent à des serveurs Wi-Fi et VPN, puis pour évaluer si ces appareils deviennent compatibles après l’application des profils. Le point de gestion transmet les informations de compatibilité au serveur de site et les informations sont stockées dans la base de données de site. Les informations sont chiffrées lorsque les appareils les envoient au point de gestion mais ne sont pas stockées au format chiffré dans la base de données de site. La base de données conserve les informations jusqu'à ce que la tâche de maintenance de site **Supprimer les données de gestion de configuration anciennes** les supprime. L'intervalle de suppression par défaut est de 90 jours, mais vous pouvez la modifier. Les informations de compatibilité ne sont pas transmises à Microsoft.  
 
  Par défaut, les appareils n’évaluent pas les profils Wi-Fi et VPN. En outre, vous devez configurer les profils, puis les déployer auprès des utilisateurs.  
 

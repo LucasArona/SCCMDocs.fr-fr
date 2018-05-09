@@ -2,25 +2,19 @@
 title: Point de distribution d'extraction
 titleSuffix: Configuration Manager
 description: Découvrez les configurations et les limites de l’utilisation d’un point de distribution d’extraction avec System Center Configuration Manager.
-ms.custom: na
 ms.date: 2/14/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 7d8f530b-1a39-4a9d-a2f0-675b516da7e4
-caps.latest.revision: 9
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 3ef93ae505c2af709a3bd1e6a0e7a278993a77ff
-ms.sourcegitcommit: 27da4be015f1496b7b89ebddb517a2685f1ecf74
+manager: dougeby
+ms.openlocfilehash: d6d6f68e913d261a5a23db85707ea0c9ac965cbd
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-a-pull-distribution-point-with-system-center-configuration-manager"></a>Utiliser un point de distribution d’extraction avec System Center Configuration Manager
 

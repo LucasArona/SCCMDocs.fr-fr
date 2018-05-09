@@ -2,25 +2,19 @@
 title: Configurer le client Endpoint Protection
 titleSuffix: Configuration Manager
 description: Découvrez comment configurer des paramètres client personnalisés pour Endpoint Protection, dans le but de les déployer ensuite dans certains regroupements d’ordinateurs de votre hiérarchie.
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: e63f2394-6eb1-4a33-bec5-8377fc62a34e
-caps.latest.revision: 21
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 22c56bac25cc6e3129f2e8478bbae9fa8782de9f
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 10572c367dcdc70bf9c708d3a6bb514c0afa2b24
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-custom-client-settings-for-endpoint-protection"></a>Configurer des paramètres client personnalisés pour Endpoint Protection
 

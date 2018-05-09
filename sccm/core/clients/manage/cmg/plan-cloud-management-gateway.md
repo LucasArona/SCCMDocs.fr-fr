@@ -4,17 +4,16 @@ titleSuffix: Configuration Manager
 description: Planifiez et concevez la passerelle de gestion cloud pour simplifier la gestion des clients Internet.
 ms.date: 04/10/2018
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2b207ffe95a078c955817d9251da3adbdf4de10d
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+ms.openlocfilehash: 6e5274398b1a53b5a8dce8b854bccbe0e0d92081
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Planifier la passerelle de gestion cloud dans Configuration Manager
 

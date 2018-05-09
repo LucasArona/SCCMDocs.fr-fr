@@ -2,25 +2,19 @@
 title: Capacités de la version Technical Preview 1612
 titleSuffix: Configuration Manager
 description: Découvrez les fonctionnalités disponibles dans la version d’évaluation technique 1612 pour System Center Configuration Manager.
-ms.custom: na
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: bceab2e8-2f05-4a17-9ac8-a7a558670fb7
-caps.latest.revision: 5
-author: erikje
-ms.author: erikje
-manager: angrobe
-ms.openlocfilehash: 80cace2bec8cb9c39d5f3f00ea244b697e1d75c9
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: a72f7979c38a0a8782aa41fef66b7aa00af9bc0f
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1612-for-system-center-configuration-manager"></a>Fonctionnalités de la version d’évaluation technique 1612 pour System Center Configuration Manager
 
@@ -100,7 +94,7 @@ Page **Paramètres de synchronisation** :
   - **Tables included to synchronize** (Tables incluses à synchroniser) : spécifiez le nom de chaque table supplémentaire que vous souhaitez synchroniser. Séparez plusieurs tables à l’aide d’une virgule. Ces tables seront synchronisées à partir de la base de données de site en plus des groupes de réplication que vous sélectionnez.
   - **Tables excluded to synchronize** (Tables exclues à synchroniser) : spécifiez le nom des tables individuelles à partir des groupes de réplication que vous synchronisez. Les tables que vous spécifiez seront exclues. Séparez plusieurs tables à l’aide d’une virgule.
 - **Paramètres de synchronisation :**
-  - **Intervalle de synchronisation (minutes)** : spécifiez une valeur en minutes. Une fois que l’intervalle est atteint, une nouvelle synchronisation démarre. La plage prise en charge est comprise entre 60 et 1 440 minutes (24 heures).
+  - **Intervalle de synchronisation (minutes)**  : spécifiez une valeur en minutes. Une fois que l’intervalle est atteint, une nouvelle synchronisation démarre. La plage prise en charge est comprise entre 60 et 1 440 minutes (24 heures).
   - **Planification** : spécifiez les jours où la synchronisation doit être exécutée.
 
 **Accès au point de rapport** :   
@@ -122,7 +116,7 @@ Après avoir installé un rôle de système de site de l’entrepôt de données
 | **Rapport sur l’inventaire logiciel général**  | Affiche tout l’inventaire logiciel pour un ordinateur spécifique.|
 | **Vue d’ensemble de l’intégrité de l’infrastructure**  |Affiche une vue d’ensemble de l’intégrité de votre infrastructure Configuration Manager.|
 | **Liste des programmes malveillants détectés**  |Affiche les programmes malveillants qui ont été détectés dans l’organisation.|
-|**Rapport de synthèse sur la distribution de logiciels** | Synthèse de la distribution de logiciels pour une publication et un ordinateur spécifiques.|
+| **Rapport de synthèse sur la distribution de logiciels** | Synthèse de la distribution de logiciels pour une publication et un ordinateur spécifiques.|
 
 ### <a name="move-the-data-warehouse-database"></a>Déplacer la base de données de l’entrepôt de données
 Procédez comme suit pour déplacer la base de données de l’entrepôt de données vers un nouveau serveur SQL Server :

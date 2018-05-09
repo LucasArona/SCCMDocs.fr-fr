@@ -1,26 +1,20 @@
 ---
-title: "Rôles de système de site pour les clients"
+title: Rôles de système de site pour les clients
 titleSuffix: Configuration Manager
-description: "Déterminez les rôles de système de site pour les clients dans System Center Configuration Manager."
-ms.custom: na
+description: Déterminez les rôles de système de site pour les clients dans System Center Configuration Manager.
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 984e8d92-7327-4b08-9228-0c955e6ac778
-caps.latest.revision: "9"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: f6c2b15f58fbd6e26ca1cb8a4fccbde36279571d
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: eac38757ed2147d664b3bdbf2f7e0eb11947dcac
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="determine-the-site-system-roles-for-system-center-configuration-manager-clients"></a>Déterminer les rôles de système de site pour les clients System Center Configuration Manager
 

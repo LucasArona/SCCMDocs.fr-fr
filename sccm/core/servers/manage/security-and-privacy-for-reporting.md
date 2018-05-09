@@ -1,26 +1,20 @@
 ---
-title: "Sécurité et confidentialité pour les rapports"
+title: Sécurité et confidentialité pour les rapports
 titleSuffix: Configuration Manager
-description: "Découvrez les bonnes pratiques de sécurité et de confidentialité lorsque vous utilisez les fonctionnalités de création de rapports dans Configuration Manager."
-ms.custom: na
+description: Découvrez les bonnes pratiques de sécurité et de confidentialité lorsque vous utilisez les fonctionnalités de création de rapports dans Configuration Manager.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7a555e06-e6d7-4ebb-8252-412b7c5ad1c1
-caps.latest.revision: "4"
-caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 745bcb631cc137eadeebd83fce7f2307a8bf916a
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: d9c5ec56032cd014e63dff7e22c83119bf2f5f4e
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-and-privacy-for-reporting-in-system-center-configuration-manager"></a>Sécurité et confidentialité pour les rapports dans System Center Configuration Manager
 

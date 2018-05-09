@@ -1,26 +1,20 @@
 ---
-title: "Comment créer des profils Wi-Fi"
+title: Comment créer des profils Wi-Fi
 titleSuffix: Configuration Manager
-description: "Découvrez comment utiliser des profils Wi-Fi dans System Center Configuration Manager pour déployer des paramètres de réseau sans fil pour les utilisateurs de votre organisation."
-ms.custom: na
+description: Découvrez comment utiliser des profils Wi-Fi dans System Center Configuration Manager pour déployer des paramètres de réseau sans fil pour les utilisateurs de votre organisation.
 ms.date: 12/11/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: 321b19b2-a093-4b8f-995f-41f74b886eb5
-caps.latest.revision: "13"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 24bc4ad8290bfa1a8b298374d5adf7ab1841398e
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: b665143f40973c20307b99c15f94d773d43b4914
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-wi-fi-profiles"></a>Créer des profils Wi-Fi
 

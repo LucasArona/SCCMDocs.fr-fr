@@ -1,25 +1,20 @@
 ---
-title: "Définitions de programmes malveillants Endpoint Protection à partir d’un partage réseau"
+title: Définitions de programmes malveillants Endpoint Protection à partir d’un partage réseau
 titleSuffix: Configuration Manager
-description: "Découvrez comment télécharger manuellement les dernières mises à jour de définitions de Microsoft et configurer ensuite les clients pour le téléchargement de ces définitions."
-ms.custom: na
+description: Découvrez comment télécharger manuellement les dernières mises à jour de définitions de Microsoft et configurer ensuite les clients pour le téléchargement de ces définitions.
 ms.date: 02/14/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: ddef4d2a-f481-4020-9ddd-9cca5f9795cb
-caps.latest.revision: "21"
-author: NathBarn
-ms.author: nathbarn
-manager: angrobe
-ms.openlocfilehash: 3487238d7fdcd6e152bd5f578b20fb3fb5690978
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 96fe34d713a1d9d3afb78dc59124865024e9eb77
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="enable-endpoint-protection-malware-definitions-to-download-from-a-network-share-for-configuration-manager"></a>Activer le téléchargement des définitions de programmes malveillants pour Endpoint Protection à partir d’un partage réseau dans Configuration Manager
 

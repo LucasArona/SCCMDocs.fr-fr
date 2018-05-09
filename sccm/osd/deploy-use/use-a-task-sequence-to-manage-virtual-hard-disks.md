@@ -1,25 +1,20 @@
 ---
-title: "Utiliser une séquence de tâches pour gérer des disques durs virtuels"
+title: Utiliser une séquence de tâches pour gérer des disques durs virtuels
 titleSuffix: Configuration Manager
-description: "Créez et modifiez un disque dur virtuel, ajoutez des applications et des mises à jour logicielles et publiez le disque dur virtuel dans System Center Virtual Machine Manager (VMM) à partir de Configuration Manager."
-ms.custom: na
+description: Créez et modifiez un disque dur virtuel, ajoutez des applications et des mises à jour logicielles et publiez le disque dur virtuel dans System Center Virtual Machine Manager (VMM) à partir de Configuration Manager.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0212b023-804a-4f84-b880-7a59cdb49c67
-caps.latest.revision: "5"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 89e30f81648aff16de2f7db55cbdda06cf69551d
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: d1963509bc4255e2a203e9ed562f5c51a3db0625
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-a-task-sequence-to-manage-virtual-hard-disks-in-system-center-configuration-manager"></a>Utiliser une séquence de tâches pour gérer des disques durs virtuels dans System Center Configuration Manager
 
@@ -91,13 +86,13 @@ Dans System Center Configuration Manager, vous pouvez gérer des disques durs vi
 
 6.  Sur la page **Installer Windows** , spécifiez les paramètres suivants et cliquez sur **Suivant**.  
 
-    -   **Package d’images :**spécifiez le package qui contient l’image du système d’exploitation à installer.  
+    -   **Package d’images :** spécifiez le package qui contient l’image du système d’exploitation à installer.  
 
     -   **Image**: si le package d’images du système d’exploitation comporte plusieurs images, spécifiez l’index de l’image du système d’exploitation à installer.  
 
     -   **Clé du produit**: spécifiez la clé de produit pour le système d’exploitation Windows à installer. Vous pouvez spécifier des clés de licence en volume codées et des clés de produit standard. Si vous utilisez une clé de produit non codée, chaque groupe de 5 caractères doit être séparé par un tiret (-). Par exemple : *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*  
 
-    -   **Mode de licence serveur :**spécifiez que la licence serveur est **Par siège**, **Par serveur**ou qu’aucune licence n’est spécifiée. Si la licence serveur est **Par serveur**, spécifiez également le nombre maximal de connexions au serveur.  
+    -   **Mode de licence serveur :** spécifiez que la licence serveur est **Par siège**, **Par serveur**ou qu’aucune licence n’est spécifiée. Si la licence serveur est **Par serveur**, spécifiez également le nombre maximal de connexions au serveur.  
 
     -   Spécifiez comment gérer le compte administrateur qui est utilisé lors du déploiement de l'image du système d'exploitation.  
 
@@ -154,7 +149,7 @@ Dans System Center Configuration Manager, vous pouvez gérer des disques durs vi
 
     -   **Commentaire**: spécifiez la description du disque dur virtuel.  
 
-    -   **Chemin d’accès :**spécifiez le chemin et le nom de fichier utilisés par l’Assistant lors de la création du fichier de disque dur virtuel.  
+    -   **Chemin d’accès :** spécifiez le chemin et le nom de fichier utilisés par l’Assistant lors de la création du fichier de disque dur virtuel.  
 
          Vous devez entrer un chemin d'accès réseau valide au format UNC. Par exemple : **\\\nom_serveur\\<nom_partage\>\\<nom_fichier\>.vhd**.  
 
@@ -321,7 +316,7 @@ Dans System Center Configuration Manager, vous pouvez gérer des disques durs vi
 
 4.  Sur la page **Général** , configurez les paramètres suivants, puis cliquez sur **Suivant**.  
 
-    -   **Nom du serveur VMM :**spécifiez le nom de domaine complet de l’ordinateur sur lequel est installé le serveur de gestion VMM. L'Assistant se connecte au serveur de gestion VMM pour télécharger les partages de bibliothèque pour le serveur.  
+    -   **Nom du serveur VMM :** spécifiez le nom de domaine complet de l’ordinateur sur lequel est installé le serveur de gestion VMM. L'Assistant se connecte au serveur de gestion VMM pour télécharger les partages de bibliothèque pour le serveur.  
 
     -   **Partage de bibliothèque VMM**: spécifiez le partage de bibliothèque VMM dans la liste déroulante.  
 

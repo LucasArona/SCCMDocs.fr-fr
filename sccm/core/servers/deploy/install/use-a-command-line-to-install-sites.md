@@ -1,25 +1,20 @@
 ---
 title: Installation via la ligne de commande
 titleSuffix: Configuration Manager
-description: "Découvrez comment exécuter le programme d’installation de System Center Configuration Manager à partir d’une invite de commandes pour diverses installations de site."
-ms.custom: na
+description: Découvrez comment exécuter le programme d’installation de System Center Configuration Manager à partir d’une invite de commandes pour diverses installations de site.
 ms.date: 3/27/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e7cdb1a9-140a-436e-ac71-72d083110223
-caps.latest.revision: "3"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 430fb636a3e40323d222376c6af210a4a17e470f
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 3df559dc151950834aab4d909811cb42ec4822d0
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-a-command-line-to-install-system-center-configuration-manager-sites"></a>Utiliser la ligne de commande pour installer des sites System Center Configuration Manager
 

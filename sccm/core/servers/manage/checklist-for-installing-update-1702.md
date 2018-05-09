@@ -1,25 +1,20 @@
 ---
-title: "Liste de contrôle pour 1702"
+title: Liste de contrôle pour 1702
 titleSuffix: Configuration Manager
-description: "Découvrez les actions à entreprendre avant d’effectuer la mise à jour vers System Center Configuration Manager version 1702."
-ms.custom: na
+description: Découvrez les actions à entreprendre avant d’effectuer la mise à jour vers System Center Configuration Manager version 1702.
 ms.date: 06/06/2017
-ms.reviewer: na
-ms.suite: na
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b587779e-1bd3-4ee3-8146-8e31f53499bd
-caps.latest.revision: "7"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: d7b3f6d058e17e12ca910f43f7a9cbe98d128bee
-ms.sourcegitcommit: 2867fd119256ec670fc5ae65cdc8a80d39f9b4d4
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: db5ca29f093e27c2c572714dc4c85a630c774b15
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="checklist-for-installing-update-1702-for-system-center-configuration-manager"></a>Liste de contrôle de l’installation de la mise à jour 1702 pour System Center Configuration Manager
 

@@ -2,25 +2,19 @@
 title: Nouveautés dans la version 1606
 titleSuffix: Configuraton Manager
 description: Obtenez des informations détaillées sur les modifications et les nouvelles fonctionnalités introduites dans la version 1606 de System Center Configuration Manager.
-ms.custom: na
 ms.date: 12/30/2016
-ms.reviewer: na
-ms.suite: na
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: df2e57b9-6445-4067-98e7-ace85d4e6aa6
-caps.latest.revision: 40
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 9c948e0ff84c4741d77b9096e52d3abd765aba7b
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 9aec81239dbfb816cdc6eb66cc17875c5d484e79
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="what39s-new-in-version-1606-of-system-center-configuration-manager"></a>Nouveautés dans la version 1606 de System Center Configuration Manager
 
@@ -96,7 +90,7 @@ La fonctionnalité Connecteur OMS est une préversion. Pour savoir comment l’
 
 ### <a name="support-for-cache-size-in-client-settings"></a>Configuration de la taille du cache dans les paramètres du client
 
-Vous pouvez désormais configurer la taille du dossier du cache sur les ordinateurs clients à l’aide des **Paramètres du client** dans la console Configuration Manager. Auparavant, vous pouviez définir la taille du cache du client seulement au moment de l’installation ou de la réinstallation du logiciel client. Vous pouvez désormais spécifier la taille du cache comme un paramètre du client (par défaut ou personnalisé), puis appliquer ce paramètre avec la prochaine mise à jour de la stratégie sur le client sans avoir besoin de réinstaller le client. Pour plus d'informations, voir [Configurer le cache du client pour les clients Configuration Manager](../../../core/clients/manage/manage-clients.md#BKMK_ClientCache).
+Vous pouvez désormais configurer la taille du dossier du cache sur les ordinateurs clients à l’aide des **Paramètres du client** dans la console Configuration Manager. Auparavant, vous pouviez définir la taille du cache du client seulement au moment de l’installation ou de la réinstallation du logiciel client. Vous pouvez désormais spécifier la taille du cache comme un paramètre du client (par défaut ou personnalisé), puis appliquer ce paramètre avec la prochaine mise à jour de la stratégie sur le client sans avoir besoin de réinstaller le client. Pour plus d'informations, voir [Configure the Client Cache for Configuration Manager Clients](../../../core/clients/manage/manage-clients.md#BKMK_ClientCache).
 
 ## <a name="on-premises-mobile-device-management"></a>Gestion locale des appareils mobiles
 

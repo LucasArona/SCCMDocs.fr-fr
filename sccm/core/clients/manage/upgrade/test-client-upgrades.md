@@ -1,26 +1,20 @@
 ---
-title: "Tester les mises à niveau du client dans un regroupement de préproduction"
+title: Tester les mises à niveau du client dans un regroupement de préproduction
 titleSuffix: Configuration Manager
-description: "Testez les mises à niveau du client dans un regroupement de préproduction dans System Center Configuration Manager."
-ms.custom: na
+description: Testez les mises à niveau du client dans un regroupement de préproduction dans System Center Configuration Manager.
 ms.date: 05/04/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 49ef2ed2-2e15-4637-8b63-1d5b7f9c17e1
-caps.latest.revision: "10"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: e301c3df57d3f625157015692374e512e00dfc60
-ms.sourcegitcommit: 1132886e07d0c0a87dcc7eeef4577dd8d8840023
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 019b275177e1f264a4bfc2926cfe45ebd0be8eae
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-test-client-upgrades-in-a-pre-production-collection-in-system-center-configuration-manager"></a>Comment tester les mises à niveau du client dans un regroupement de préproduction dans System Center Configuration Manager
 

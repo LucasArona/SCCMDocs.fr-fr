@@ -2,25 +2,19 @@
 title: Gestion des points de distribution
 titleSuffix: Configuration Manager
 description: Héberger le contenu que vous déployez sur des appareils et des utilisateurs à l’aide de points de distribution
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: aebafaf9-b3d5-4a0f-9ee5-685758c037a1
-caps.latest.revision: 5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1010e339c586922f818e1af1e193abba95dace7b
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 1c9e6dc50b47a1cfcf12f23eaf607eb55837a57d
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-and-configure-distribution-points-for-system-center-configuration-manager"></a>Installer et configurer des points de distribution pour System Center Configuration Manager
 
@@ -266,7 +260,7 @@ Les sections suivantes décrivent les configurations que vous pouvez sélectionn
 
 Spécifiez les paramètres du lecteur pour le point de distribution. Vous pouvez configurer jusqu’à deux lecteurs de disque pour la bibliothèque de contenu et deux lecteurs de disque pour le partage de package. Configuration Manager peut utiliser des lecteurs supplémentaires lorsque les deux premiers atteignent la réserve d’espace disque configurée. La page **Paramètres du lecteur** permet de configurer la priorité des lecteurs de disque et la quantité d'espace disque libre restant sur chaque lecteur de disque.  
 
--   **Réserve d’espace libre sur le lecteur (Mo)** : la valeur que vous configurez pour ce paramètre détermine la quantité d’espace libre sur un lecteur avant que Configuration Manager choisisse un autre lecteur et poursuive le processus de copie sur ce lecteur. Les fichiers de contenu peuvent s'étendre sur plusieurs lecteurs.  
+-   **Réserve d’espace libre sur le lecteur (Mo)**  : la valeur que vous configurez pour ce paramètre détermine la quantité d’espace libre sur un lecteur avant que Configuration Manager choisisse un autre lecteur et poursuive le processus de copie sur ce lecteur. Les fichiers de contenu peuvent s'étendre sur plusieurs lecteurs.  
 
 -   **Emplacements du contenu**: Spécifiez les emplacements de contenu pour le partage de bibliothèque et de package de contenu. Configuration Manager copie le contenu à l’emplacement de contenu principal jusqu’à ce que la quantité d’espace libre atteigne la valeur spécifiée dans **Réserve d’espace libre sur le lecteur (Mo)**. Par défaut, les emplacements du contenu sont définis sur **Automatique**. L’emplacement de contenu principal est défini sur le lecteur de disque disposant le plus d’espace lors de l’installation. L’emplacement secondaire, quant à lui, est attribué au deuxième lecteur de disque disposant le plus d’espace. Quand le lecteur principal et le lecteur secondaire atteignent la réserve d’espace libre sur le lecteur, Configuration Manager sélectionne un autre lecteur disponible ayant le plus d’espace disque libre et poursuit le processus de copie.  
 
@@ -343,9 +337,9 @@ Quand vous cochez la case **Activer la multidiffusion pour envoyer simultanémen
 
 -   **Activer la multidiffusion planifiée** : indiquez comment Configuration Manager contrôle le lancement du déploiement des systèmes d’exploitation sur les ordinateurs de destination. Configurez les options suivantes :  
 
-    -   **Délai de démarrage de session (en minutes)** : indiquez le nombre de minutes écoulé avant que Configuration Manager réponde à la première demande de déploiement.  
+    -   **Délai de démarrage de session (en minutes)**  : indiquez le nombre de minutes écoulé avant que Configuration Manager réponde à la première demande de déploiement.  
 
-    -   **Taille minimale de la session (clients)** : indiquez le nombre de demandes qui doivent être reçues avant que Configuration Manager commence à déployer le système d’exploitation.  
+    -   **Taille minimale de la session (clients)**  : indiquez le nombre de demandes qui doivent être reçues avant que Configuration Manager commence à déployer le système d’exploitation.  
 
 > [!NOTE]  
 >  Les déploiements de multidiffusion économisent la bande passante réseau en envoyant de manière simultanée des données à plusieurs clients Configuration Manager au lieu d’envoyer une copie des données à chaque client via une connexion distincte. Pour plus d’informations sur l’utilisation de la multidiffusion pour le déploiement de systèmes d’exploitation, consultez [Utiliser la multidiffusion pour Windows sur le réseau avec System Center Configuration Manager](../../../../osd/deploy-use/use-multicast-to-deploy-windows-over-the-network.md).  

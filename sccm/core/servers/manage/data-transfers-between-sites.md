@@ -1,25 +1,20 @@
 ---
-title: "Transfert de données"
+title: Transfert de données
 titleSuffix: Configuration Manager
-description: "Découvrez comment Configuration Manager déplace les données entre les sites et comment vous pouvez gérer le transfert des données sur votre réseau."
-ms.custom: na
+description: Découvrez comment Configuration Manager déplace les données entre les sites et comment vous pouvez gérer le transfert des données sur votre réseau.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dc526e8d-fac3-4bb5-b206-03ad29b0ae11
-caps.latest.revision: "12"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 185598e9f6b0678ca1fcbe9c19ed420f37805861
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 45fb1bc31a7e888ca4caa21a710e74ec0fde422c
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-transfers-between-sites-in-system-center-configuration-manager"></a>Transfert de données entre sites dans System Center Configuration Manager
 

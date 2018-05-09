@@ -1,23 +1,20 @@
 ---
 title: Basculer les charges de travail de Configuration Manager sur Intune
-titleSuffix: System Center Configuration Manager
+titleSuffix: Configuraton Manager
 description: Découvrez comment basculer les charges de travail actuellement gérées par Configuration Manager vers Microsoft Intune.
 ms.prod: configuration-manager
-ms.suite: na
-ms.technology:
-- configmgr-client
-author: mestew
-ms.author: mstewart
+ms.technology: configmgr-client
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ms.date: 03/22/2018
-ms.topic: article
-ms.service: ''
+ms.topic: conceptual
 ms.assetid: 60e2022f-a4f9-40dd-af01-9ecb37b43878
-ms.openlocfilehash: cdfe52768499b929db473ac08d42207059965ffd
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 439e4e26c08b5a2710da0978ed2407d715bc86bd
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="switch-configuration-manager-workloads-to-intune"></a>Basculer les charges de travail de Configuration Manager sur Intune
 Dans [Préparer les appareils Windows 10 pour la cogestion](co-management-prepare.md), vous avez préparé les appareils Windows 10 à la cogestion. Ces appareils sont joints à AD et à Azure AD, ils sont inscrits dans Intune et ils disposent du client Configuration Manager. Vous avez probablement encore des appareils Windows 10 joints à AD et qui ont le client Configuration Manager, mais qui ne sont pas joints à Azure AD ni inscrits à Intune. La procédure suivante présente les étapes permettant d’activer la cogestion et de préparer le reste de vos appareils Windows 10 (les clients Configuration Manager sans inscription à Intune) pour la cogestion ; elle vous sert également à lancer le basculement de charges de travail spécifiques de Configuration Manager vers Intune.
@@ -43,10 +40,13 @@ Sélectionnez l’objet de cogestion, cliquez sur l’onglet Accueil, puis sur *
 ## <a name="workloads-able-to-be-transitioned-to-intune"></a>Charges de travail pouvant être transférées à Intune
 Certaines charges de travail sont disponibles pour être basculées sur Intune. La liste suivante est mise à jour dès que des charges de travail sont disponibles pour être transférées :
 1. Stratégies de conformité des appareils
-2. Stratégies d’accès aux ressources
+2. Stratégies d’accès aux ressources : Les stratégies d’accès aux ressources configurent les paramètres VPN, Wi-Fi, d’e-mail et de certificat sur les appareils. Pour plus d’informations, consultez [Déployer des profils d’accès aux ressources](https://docs.microsoft.com/intune/device-profiles).
+      - Profil de messagerie
+      - Profil Wi-Fi
+      - Profil VPN
+      - Profil de certificat
 3. Stratégies Windows Update
 4. Endpoint Protection (à compter de Configuration Manager version 1802)
-      - Antivirus Windows Defender
       - Windows Defender Application Guard
       - Pare-feu Windows Defender
       - Windows Defender SmartScreen
@@ -60,6 +60,8 @@ Certaines charges de travail sont disponibles pour être basculées sur Intune. 
 
 ## <a name="monitor-co-management"></a>Surveiller la cogestion
 Après avoir activé la cogestion, vous pouvez surveiller les appareils de cogestion à l’aide des méthodes suivantes :
+
+- [Tableau de bord de cogestion](/sccm/core/clients/manage/co-management-dashboard)
 - **Vue SQL et classe WMI** : vous pouvez interroger la vue SQL **v&#95;ClientCoManagementState** dans la base de données du site Configuration Manager ou la classe WMI **SMS&#95;Client&#95;ComanagementState**. Avec les informations contenues dans la classe WMI, vous pouvez créer des regroupements personnalisés dans Configuration Manager pour vous aider à déterminer l’état du déploiement de la cogestion. Pour plus d’informations, consultez [Guide pratique pour créer des regroupements](/sccm/core/clients/manage/collections/create-collections). Les champs suivants sont disponibles dans la vue SQL et la classe WMI : 
     - **MachineID** : spécifie un ID d’appareil unique pour le client Configuration Manager.
     - **MDMEnrolled** : spécifie si l’appareil est inscrit à la gestion des appareils mobiles. 

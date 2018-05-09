@@ -2,26 +2,19 @@
 title: Protection d’applications à l’aide de stratégies de gestion des applications mobiles
 titleSuffix: Configuration Manager
 description: Modifiez les fonctionnalités des applications que vous déployez pour qu’elles respectent les stratégies de sécurité et de conformité de votre entreprise.
-ms.custom: na
 ms.date: 11/20/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 28115475-e563-4e16-bf30-f4c9fe704754
-caps.latest.revision: 18
-caps.handback.revision: 0
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 3365f46026178d30c9bffa5078d251186d0ffba3
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: e410e50d05a0f190e3dfdc87df066b5ebce92321
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="protect-apps-using-mobile-application-management-policies-in-system-center-configuration-manager"></a>Protéger des applications à l’aide de stratégies de gestion des applications mobiles dans System Center Configuration Manager
 

@@ -1,25 +1,20 @@
 ---
-title: "Planification de la création de rapports"
+title: Planification de la création de rapports
 titleSuffix: Configuration Manager
-description: "Qu’il s’agisse des détails de l’installation, de la sécurité ou de la bande passante réseau, il est important de planifier la création de rapports dans Configuration Manager."
-ms.custom: na
+description: Qu’il s’agisse des détails de l’installation, de la sécurité ou de la bande passante réseau, il est important de planifier la création de rapports dans Configuration Manager.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: ff920c84-d5c8-458c-b67f-bc7219b05690
-caps.latest.revision: "6"
-author: Dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 9d7c8de64c412b19fff4fa8c4193a020de680407
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 21b9e2b685890cde4c9cc2a0fa57bc9118dcc665
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="planning-for-reporting-in-system-center-configuration-manager"></a>Planification de la création de rapports dans System Center Configuration Manager
 

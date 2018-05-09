@@ -1,26 +1,20 @@
 ---
-title: "Surveiller les paramètres de compatibilité"
+title: Surveiller les paramètres de compatibilité
 titleSuffix: Configuration Manager
-description: "Utilisez une ou plusieurs des procédures de cette rubrique pour afficher l’état de compatibilité de la base de référence de configuration."
-ms.custom: na
+description: Utilisez une ou plusieurs des procédures de cette rubrique pour afficher l’état de compatibilité de la base de référence de configuration.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 92c1ccca-a748-44cd-a52e-e41d34bf981d
-caps.latest.revision: "6"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 1da8bf6ab83be7c72cc95ec5e07cb9b1a17526d5
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 9920bd48ad7b953469261602c21a6664580143a2
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="monitor-compliance-settings-in-system-center-configuration-manager"></a>Surveiller les paramètres de compatibilité dans System Center Configuration Manager
 
@@ -51,7 +45,7 @@ Une fois que vous avez déployé les bases de référence de configuration de Sy
 
     -   **Erreur**: affiche la liste de toutes les erreurs pour le déploiement de la ligne de base de configuration sélectionné en fonction du nombre de biens affectés. Vous pouvez cliquer sur une règle pour créer un nœud temporaire sous le nœud **Utilisateurs** ou **Périphériques** de l'espace de travail **Biens et conformité** , qui contient tous les utilisateurs ou appareils qui ont généré des erreurs avec cette règle. Lorsque vous sélectionnez un utilisateur ou un appareil, le volet **Détails du bien** affiche les utilisateurs ou les appareils qui sont affectés par le problème sélectionné. Double-cliquez sur un utilisateur ou un appareil de la liste pour afficher des informations supplémentaires sur le problème.  
 
-    -   **Non compatible**: affiche la liste de toutes les règles non compatibles au sein de la ligne de base de configuration en fonction du nombre de biens affectés. Vous pouvez cliquer sur une règle pour créer un nœud temporaire sous le nœud **Utilisateurs** ou **Périphériques** de l'espace de travail **Biens et conformité** , qui contient tous les utilisateurs ou appareils qui ne sont pas compatibles avec cette règle. Lorsque vous sélectionnez un utilisateur ou un appareil, le volet **Détails du bien** affiche les utilisateurs ou les appareils qui sont affectés par le problème sélectionné. Double-cliquez sur un utilisateur ou un appareil de la liste pour afficher d'autres informations sur le problème.  
+    -   **Non compatible**: affiche la liste de toutes les règles non compatibles au sein de la ligne de base de configuration en fonction du nombre de biens affectés. Vous pouvez cliquer sur une règle pour créer un nœud temporaire sous le nœud **Utilisateurs** ou **Périphériques** de l'espace de travail **Biens et conformité** , qui contient tous les utilisateurs ou périphériques qui ne sont pas compatibles avec cette règle. Lorsque vous sélectionnez un utilisateur ou un appareil, le volet **Détails du bien** affiche les utilisateurs ou les appareils qui sont affectés par le problème sélectionné. Double-cliquez sur un utilisateur ou un appareil de la liste pour afficher d'autres informations sur le problème.  
 
     -   **Inconnu**: affiche la liste de tous les utilisateurs et appareils qui n’ont pas signalé de compatibilité pour le déploiement de la ligne de base de configuration sélectionné avec l’état du client actuel des appareils.  
 

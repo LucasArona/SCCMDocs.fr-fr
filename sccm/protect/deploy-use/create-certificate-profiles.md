@@ -1,27 +1,20 @@
 ---
-title: "Créer des profils de certificat SCEP"
+title: Créer des profils de certificat SCEP
 titleSuffix: Configuration Manager
-description: "Découvrez comment utiliser des profils de certificat pour configurer les appareils gérés avec les certificats nécessaires dans System Center Configuration Manager."
-ms.custom: na
+description: Découvrez comment utiliser des profils de certificat pour configurer les appareils gérés avec les certificats nécessaires dans System Center Configuration Manager.
 ms.date: 03/28/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: 634d612c-92d7-4c03-873a-b2e730c9a72d
-caps.latest.revision: 
-caps.handback.revision: 
-author: Nbigman
-ms.author: nbigman
-manager: angrobe
-ms.openlocfilehash: 827565bd4dac074e8599075b19c9dac678a21948
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 615464e816fe697c05011723b3fbc512a4e9db0b
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-certificate-profiles"></a>Créer des profils de certificat
 

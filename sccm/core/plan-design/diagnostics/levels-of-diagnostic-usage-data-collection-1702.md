@@ -1,43 +1,20 @@
 ---
-title: "Données de diagnostic pour 1702"
+title: Données de diagnostic pour 1702
 titleSuffix: Configuration Manager
-description: "En savoir plus sur les niveaux de données de diagnostic et d’utilisation collectés par System Center Configuration Manager version 1702."
-ms.custom: na
+description: En savoir plus sur les niveaux de données de diagnostic et d’utilisation collectés par System Center Configuration Manager version 1702.
 ms.date: 3/27/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d43ab033-2902-4681-8716-b4b17a6df372
-caps.latest.revision: "4"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- hu-hu
-- it-it
-- ja-jp
-- ko-kr
-- nl-nl
-- pl-pl
-- pt-br
-- pt-pt
-- ru-ru
-- sv-se
-- tr-tr
-- zh-cn
-- zh-tw
-ms.openlocfilehash: 56e1bb899a52a3ca44e6faea3566231e830924e9
-ms.sourcegitcommit: da27d37cc4e4e06cf23758846cdd7acb617f744b
+manager: dougeby
+ms.openlocfilehash: b77f2d38cb24b681aec4123621ffbbf8ba1be579
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1702-of-system-center-configuration-manager"></a>Niveaux de collecte des données de diagnostic et d’utilisation pour la version 1702 de System Center Configuration Manager
 
@@ -54,7 +31,7 @@ Les modifications par rapport aux versions précédentes sont indiquées par ***
 
 
 ##  <a name="bkmk_change"></a> Modification du niveau
- Les administrateurs qui disposent d’une étendue administrative basée sur des rôles incluant les autorisations **Modification** sur la classe d’objets **Site** peuvent modifier le niveau des données collectées dans les paramètres des données de diagnostic et d’utilisation de la console Configuration Manager.
+ Les administrateurs qui ont une étendue d’administration basée sur des rôles incluant les autorisations **Modifier** sur la classe d’objets **Site** peuvent changer le niveau des données collectées dans les paramètres des données de diagnostic et d’utilisation de la console Configuration Manager.
 
 Vous pouvez changer le niveau de collecte des données à partir de la console en accédant à **Administration** > **Vue d’ensemble** > **Configuration du site** > **Sites**. Ouvrez **Paramètres de hiérarchie**, puis sélectionnez le niveau de données que vous voulez utiliser.  
 
@@ -271,7 +248,7 @@ Pour System Center Configuration Manager version 1702, ce niveau inclut les él
 
     - Informations sur la configuration des points de distribution (utilisation de BranchCache et surveillance des points de distribution)
 
-    - Informations sur les groupes de points de distribution (nombre de packages et de points de distribution qui sont attribués à chaque groupe de points de distribution)  
+    - Informations sur les groupes de points de distribution (nombre de packages et de points de distribution qui sont affectés à chaque groupe de points de distribution)  
 
 
 
@@ -285,7 +262,7 @@ Pour System Center Configuration Manager version 1702, ce niveau inclut les él
 
    - Erreurs de déploiement Endpoint Protection (nombre de codes d’erreur de déploiement de stratégie Endpoint Protection)  
 
-   - Utilisation des stratégies du Pare-feu Windows et de logiciel anti-programme malveillant Endpoint Protection (nombre de stratégies uniques attribuées au groupe)<br /><br /> Ceci ne comprend pas d’informations sur les paramètres inclus dans la stratégie.  
+   - Utilisation des stratégies du Pare-feu Windows et de logiciel anti-programme malveillant Endpoint Protection (nombre de stratégies uniques affectées au groupe)<br /><br /> Ceci ne comprend pas d’informations sur les paramètres inclus dans la stratégie.  
 
 
 
@@ -305,7 +282,7 @@ Pour System Center Configuration Manager version 1702, ce niveau inclut les él
 
     - Nombre d’utilisateurs qui ont plusieurs appareils mobiles inscrits  
 
-    - Statistiques et calendrier d’interrogation des appareils mobiles pour la vérification dans la durée des appareils mobiles  
+    - Statistiques et calendrier d’interrogation des appareils mobiles pour la durée d’inscription des appareils mobiles  
 
 
 
@@ -423,7 +400,7 @@ Pour System Center Configuration Manager version 1702, ce niveau inclut les él
 
 
 ##  <a name="bkmk_level3"></a> Niveau 3 – Complet
-Le niveau Complet inclut toutes les données des niveaux De base et Étendu. Il inclut également des informations supplémentaires sur Endpoint Protection, les pourcentages de compatibilité des mises à jour et les informations de mise à jour logicielle.  Ce niveau peut également inclure des informations de diagnostic avancées, comme des fichiers système et des instantanés de la mémoire, qui peuvent inclure des informations personnelles qui existaient dans la mémoire ou les fichiers journaux au moment de la capture.
+Le niveau Complet inclut toutes les données des niveaux De base et Étendu. Il inclut également des informations supplémentaires sur Endpoint Protection, les pourcentages de compatibilité des mises à jour et les informations de mise à jour logicielle.  Ce niveau peut également inclure des informations de diagnostic avancées telles que des fichiers système et des instantanés de la mémoire, qui peuvent inclure des informations personnelles qui existaient dans la mémoire ou les fichiers journaux au moment de la capture.
 
 Pour System Center Configuration Manager version 1702, ce niveau inclut les éléments suivants :
 

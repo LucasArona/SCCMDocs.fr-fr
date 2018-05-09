@@ -1,26 +1,20 @@
 ---
-title: "Concevoir une hiérarchie de site "
+title: 'Concevoir une hiérarchie de site '
 titleSuffix: Configuration Manager
-description: "Découvrez les topologies et les options de gestion disponibles pour System Center Configuration Manager afin de pouvoir planifier votre hiérarchie de site."
-ms.custom: na
+description: Découvrez les topologies et les options de gestion disponibles pour System Center Configuration Manager afin de pouvoir planifier votre hiérarchie de site.
 ms.date: 8/24/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 07ce872e-1558-42ad-b5ad-582c5b1bdbb4
-caps.latest.revision: "22"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 845ec5210b9055ff9c52039a32f008b1baa36413
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: 602d9455dcdd69209ef8ba157916b35db976b89f
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="design-a-hierarchy-of-sites-for-system-center-configuration-manager"></a>Concevoir une hiérarchie de sites pour System Center Configuration Manager
 

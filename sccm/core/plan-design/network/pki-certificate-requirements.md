@@ -2,25 +2,19 @@
 title: Configuration requise des certificats PKI
 titleSuffix: Configuration Manager
 description: Découvrez la configuration requise pour les certificats PKI dont vous pourriez avoir besoin pour System Center Configuration Manager.
-ms.custom: na
 ms.date: 11/20/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: d6a73e68-57d8-4786-842b-36669541d8ff
-caps.latest.revision: 17
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 1fcc05d1487f9b9809d3f476b3b80d67a0cc2698
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 9d76a37da1ca241f54e9bf440b2e30e2f59684e1
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pki-certificate-requirements-for-system-center-configuration-manager"></a>Configuration requise des certificats PKI pour System Center Configuration Manager
 

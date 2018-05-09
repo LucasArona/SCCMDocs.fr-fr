@@ -1,26 +1,20 @@
 ---
-title: "Utiliser les fenêtres de maintenance"
+title: Utiliser les fenêtres de maintenance
 titleSuffix: Configuration Manager
-description: "Utilisez les regroupements et les fenêtres de maintenance pour gérer efficacement les clients dans System Center Configuration Manager."
-ms.custom: na
+description: Utilisez les regroupements et les fenêtres de maintenance pour gérer efficacement les clients dans System Center Configuration Manager.
 ms.date: 02/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 4564ebcb-41a8-4eb0-afdb-2e1f0795cfa2
-caps.latest.revision: "6"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 960955af87cdae9c43b5b520c348e32e1f48ef32
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 18a870b111b141cb9b95664a2f66403ea37cb99e
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-use-maintenance-windows-in-system-center-configuration-manager"></a>Comment utiliser les fenêtres de maintenance dans System Center Configuration Manager
 
@@ -57,7 +51,7 @@ Les fenêtres de maintenance vous permettent de définir une période de temps p
 
 ### <a name="how-to-configure-maintenance-windows"></a>Comment configurer les fenêtres de maintenance  
 
-1.  Dans la console Configuration Manager, choisissez **Ressources et Conformité**>  **Regroupements d’appareils**.  
+1.  Dans la console Configuration Manager, choisissez **Ressources et Conformité**>  **Regroupements de périphériques**.  
 
 3.  Dans la liste **Regroupements d’appareils**, sélectionnez un regroupement. Vous ne pouvez pas créer de fenêtres de maintenance pour le regroupement **Tous les systèmes** .  
 

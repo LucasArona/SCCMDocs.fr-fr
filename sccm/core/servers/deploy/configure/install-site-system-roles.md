@@ -1,25 +1,20 @@
 ---
-title: "Installer des rôles de système de site"
+title: Installer des rôles de système de site
 titleSuffix: Configuration Manager
-description: "Les Assistants vous aident à ajouter des rôles système de site à un serveur de système de site existant ou nouveau dans le site."
-ms.custom: na
+description: Les Assistants vous aident à ajouter des rôles système de site à un serveur de système de site existant ou nouveau dans le site.
 ms.date: 2/7/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 61f5c774-7667-44ae-b8e4-a4951318b183
-caps.latest.revision: "4"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 82be333fcca636dfd68763cdfa7e97d0eaf14915
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 7edfc72195b289488242adcbd1903dbacf26bfe2
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-site-system-roles-for-system-center-configuration-manager"></a>Installer des rôles de système de site pour System Center Configuration Manager
 

@@ -1,25 +1,20 @@
 ---
-title: "Gérer le verrou d’activation iOS"
+title: Gérer le verrou d’activation iOS
 titleSuffix: Configuration Manager
-description: "Découvrez comment gérer le verrou d’activation iOS avec System Center Configuration Manager."
-ms.custom: na
+description: Découvrez comment gérer le verrou d’activation iOS avec System Center Configuration Manager.
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e2745bac-e1b4-4dac-8ac7-32f1c820bc9c
-caps.latest.revision: "9"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 3b372d9f766fa48b4b57fcd0658f66573ed02d12
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 4550116bd4635e7320e9cbdf18997e2e17ae0466
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-ios-activation-lock-with-system-center-configuration-manager"></a>Gérer le verrou d’activation iOS avec System Center Configuration Manager
 
@@ -30,7 +25,7 @@ System Center Configuration Manager peut vous aider à gérer le verrou d’acti
 
 - désactiver Rechercher mon iPhone ;
 - Effacer l'appareil
-- réactiver l'appareil.
+- Réactiver l'appareil
 
 Sur les appareils **non supervisés** , le verrou d’activation est activé automatiquement dès lors que l’application Rechercher mon iPhone est utilisée.
 
@@ -39,7 +34,7 @@ Sur les appareils **supervisés** , vous devez activer le verrou d’activation 
 > [!TIP]
 > Le mode supervisé pour les appareils iOS vous permet d'utiliser l'outil de configuration Apple pour verrouiller un appareil et limiter ainsi la fonctionnalité à des usages professionnels spécifiques. Le mode surveillé est généralement destiné uniquement aux appareils appartenant à l'entreprise.
 
-Bien que le verrou d’activation permette de sécuriser les appareils iOS et améliore les chances de récupération en cas de perte ou de vol, cette fonctionnalité peut présenter quelques défis pour les administrateurs informatiques. Exemple :
+Bien que le verrou d’activation permette de sécuriser les appareils iOS et améliore les chances de récupération en cas de perte ou de vol, cette fonctionnalité peut présenter quelques défis pour les administrateurs informatiques. Par exemple :
 
 - L'un de vos utilisateurs configure le verrou d'activation sur un appareil. L'utilisateur quitte ensuite l'entreprise et rend l'appareil. Sans l’ID et le mot de passe Apple de l’utilisateur, il n’existe aucun moyen de réactiver l’appareil, même si vous le réinitialisez.
 - Vous avez besoin d’un rapport répertoriant tous les appareils sur lesquels le verrou d’activation est activé.

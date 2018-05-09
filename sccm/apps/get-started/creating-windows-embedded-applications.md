@@ -1,25 +1,20 @@
 ---
-title: "Créer des applications Windows Embedded"
+title: Créer des applications Windows Embedded
 titleSuffix: Configuration Manager
-description: "Examinez les éléments à prendre en compte quand vous créez et déployez des applications pour appareils Windows Embedded."
-ms.custom: na
+description: Examinez les éléments à prendre en compte quand vous créez et déployez des applications pour appareils Windows Embedded.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 16acfd63-0c40-424c-82f4-8c63f7f1c30b
-caps.latest.revision: "7"
-author: mattbriggs
-ms.author: mabrigg
-manager: angrobe
-ms.openlocfilehash: e37dabb84cc6d56d9f08b2c0ee07115dd4bcb4fd
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 6374fa186ab13f3288e218e6670da3ea4ff10f4e
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-windows-embedded-applications-with-system-center-configuration-manager"></a>Créer des applications Windows Embedded avec System Center Configuration Manager
 
@@ -27,7 +22,7 @@ ms.lasthandoff: 10/12/2017
 
 En plus des autres exigences et procédures System Center Configuration Manager à observer pour créer une application, vous devez aussi prendre en compte les éléments suivants au moment de créer et déployer des applications pour des appareils Windows Embedded.  
 
-## <a name="general-considerations"></a>Éléments généraux à prendre en compte  
+## <a name="general-considerations"></a>Considérations générales  
 
 -   Quand vous déployez des applications sur des appareils Windows Embedded activés pour le filtrage d’écriture, vous pouvez spécifier s’il faut désactiver le filtre d’écriture sur l’appareil pendant le déploiement de l’application. Vous pouvez ensuite choisir de redémarrer le filtre d’écriture une fois l’application déployée. Si le filtre d’écriture n’est pas désactivé, le logiciel est déployé sur un segment de recouvrement temporaire. Cela signifie que, sauf si un autre déploiement force la conservation des modifications, le logiciel n’est plus installé lors du redémarrage de l’appareil.  
 

@@ -2,26 +2,19 @@
 title: Déployer des applications
 titleSuffix: Configuration Manager
 description: Créer ou simuler le déploiement d’une application sur un regroupement d’appareils ou d’utilisateurs
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-app
+ms.topic: conceptual
 ms.assetid: 2629c376-ec43-4f0e-a78b-4223cc9302bf
-caps.latest.revision: 10
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0101ba0eade5775577f52920f301a782afd7bbda
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 8a89c9d5a0fa4ea57a7824fe16b24120347ddaac
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deploy-applications-with-system-center-configuration-manager"></a>Déployer des applications avec System Center Configuration Manager
 
@@ -57,7 +50,7 @@ Dans la page **Général** de l’Assistant Déploiement logiciel, spécifiez le
     >[!IMPORTANT]
     > Si vous mettez à jour l’application dépendante après avoir déployé l’application principale, le site ne distribue pas automatiquement le nouveau contenu pour la dépendance.
 
-- **Commentaires (facultatif)** : si vous le souhaitez, entrez une description de ce déploiement.
+- **Commentaires (facultatif)**  : si vous le souhaitez, entrez une description de ce déploiement.
 
 ### <a name="specify-content-options-for-the-deployment"></a>Spécifier les options de contenu pour le déploiement
 
@@ -87,7 +80,7 @@ Dans la page **Paramètres de déploiement** de l’Assistant Déploiement logic
 - **Autoriser les clients avec une connexion Internet facturée à l’usage à télécharger le contenu une fois l’échéance d’installation atteinte, ce qui peut entraîner des frais supplémentaires** : cette option est disponible uniquement pour les déploiements dont l’objet est **Obligatoire**.
 - **Fermer automatiquement les fichiers exécutables en cours d’exécution que vous avez spécifiés sous l’onglet de comportement à l’installation de la boîte de dialogue des propriétés du type de déploiement** : pour plus d’informations, consultez [Procédure pour vérifier si des fichiers exécutables sont en cours d’exécution avant d’installer une application](#how-to-check-for-running-executable-files-before-installing-an-application).
 
-- **Exiger l’approbation de l’administrateur si des utilisateurs demandent cette application** : pour les versions 1710 et antérieures, l’utilisateur ne peut pas installer l’application demandée tant que l’administrateur ne lui a pas donné son approbation. Cette option est grisée quand l’objet du déploiement est **Obligatoire** ou quand l’application est déployée sur un regroupement d’appareils.  
+- **Exiger l’approbation de l’administrateur si des utilisateurs demandent cette application** : pour les versions 1710 et antérieures, l’utilisateur ne peut pas installer l’application demandée tant que l’administrateur ne lui a pas donné son approbation. Cette option est grisée quand l’objet du déploiement est **Obligatoire** ou que l’application est déployée sur un regroupement d’appareils.  
 
     > [!NOTE]
     >  Les demandes d'approbation d'application sont affichées dans le nœud **Demandes d'approbation** , sous **Gestion d'applications** dans l'espace de travail **Bibliothèque de logiciels** . Si une demande ne reçoit pas d’approbation dans les 45 jours, elle est supprimée. La réinstallation du client risque d’annuler des demandes d’approbation en attente.  

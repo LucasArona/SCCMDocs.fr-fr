@@ -2,25 +2,19 @@
 title: Sécurité et confidentialité pour la gestion des applications
 titleSuffix: Configuration Manager
 description: En savoir plus sur les conseils et les recommandations en matière de sécurité et de confidentialité pour la gestion des applications
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-app
+ms.topic: conceptual
 ms.assetid: 4d26deed-3b16-4116-b640-f618f2c20f5a
-caps.latest.revision: 8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c265833f248d2091f19c803bbfbd26b25d775787
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 80ae609bccd60e68cfee76878bd7a461b5f61716
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-and-privacy-for-application-management-in-system-center-configuration-manager"></a>Sécurité et confidentialité pour la gestion des applications dans System Center Configuration Manager
 
@@ -29,9 +23,9 @@ ms.lasthandoff: 03/23/2018
 
 ##  <a name="security-guidance-for-application-management"></a>Conseils en matière de sécurité pour la gestion des applications  
 
-|Conseils en matière de sécurité|Informations complémentaires|  
+|Conseils en matière de sécurité|Plus d'informations|  
 |----------------------------|----------------------|  
-|Configurez les points du catalogue des applications pour qu’ils utilisent des connexions HTTPS et sensibilisez les utilisateurs aux dangers des sites web malveillants.|Configurez le point du site web du catalogue des applications et le point de service web du catalogue des applications pour qu’ils acceptent les connexions HTTPS. Avec cette configuration, le serveur est authentifié auprès des utilisateurs et les données transmises sont protégées contre la falsification et la consultation. Limitez les chances de subir des attaques d’ingénierie sociale en invitant les utilisateurs à se connecter uniquement à des sites web approuvés.<br /><br /> Quand vous n’utilisez pas HTTPS, évitez d’utiliser les options de configuration de la personnalisation, qui affichent le nom de votre organisation dans le catalogue des applications comme preuve d’identité.|  
+|Configurer les points du catalogue d'applications pour utiliser des connexions HTTPS et informer les utilisateurs sur les dangers des sites Web malveillants.|Configurez le point du site web du catalogue des applications et le point de service web du catalogue des applications pour qu’ils acceptent les connexions HTTPS. Avec cette configuration, le serveur est authentifié auprès des utilisateurs et les données transmises sont protégées contre la falsification et la consultation. Limitez les chances de subir des attaques d’ingénierie sociale en invitant les utilisateurs à se connecter uniquement à des sites web approuvés.<br /><br /> Quand vous n’utilisez pas HTTPS, évitez d’utiliser les options de configuration de la personnalisation, qui affichent le nom de votre organisation dans le catalogue des applications comme preuve d’identité.|  
 |Utiliser la séparation des rôles et installer le point de site Web du catalogue des applications et le point de service du catalogue des applications sur des serveurs distincts.|Si le point de site web du catalogue des applications est compromis, installez-le sur un serveur distinct du point de service web du catalogue des applications. Cette conception contribue à protéger les clients et l’infrastructure Configuration Manager. Cette configuration est particulièrement importante si le point du site web du catalogue des applications accepte les connexions des clients en partir d’Internet. Le serveur se trouve moins exposé aux attaques.|  
 |Formez les utilisateurs à la fermeture de la fenêtre du navigateur lorsqu'ils ont terminé d'utiliser le catalogue des applications.|Si les utilisateurs naviguent jusqu'à un site Web externe dans la même fenêtre du navigateur que celle qu'ils ont utilisée pour le catalogue d'applications, le navigateur continue à utiliser les paramètres de sécurité adaptés aux sites approuvés dans l'intranet.|  
 |Spécifiez manuellement l’affinité entre utilisateur et appareil au lieu de laisser les utilisateurs identifier leur appareil principal. N’activez pas la configuration basée sur l’utilisation.|Ne considérez pas comme faisant autorité les informations collectées auprès des utilisateurs ou de l’appareil. Si vous déployez un logiciel en utilisant une affinité entre utilisateur et périphérique qu’un administrateur ne spécifie pas, le logiciel risque de s’installer sur des ordinateurs et pour des utilisateurs qui ne sont pas autorisés à recevoir ce logiciel.|  

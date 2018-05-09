@@ -1,25 +1,20 @@
 ---
-title: "Prérequis des profils de certificat"
+title: Prérequis des profils de certificat
 titleSuffix: Configuration Manager
-description: "Renseignez-vous sur les profils de certificat dans System Center Configuration Manager et leurs dépendances externes et dépendances dans le produit."
-ms.custom: na
+description: Renseignez-vous sur les profils de certificat dans System Center Configuration Manager et leurs dépendances externes et dépendances dans le produit.
 ms.date: 12/20/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: 0317fd02-3721-4634-b18b-7c976a4e92bf
-caps.latest.revision: "9"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: b12afbb731d2280fadaa43e94af0dc85d6a9e0ec
-ms.sourcegitcommit: 6c2aa79924c0e7fc64ef5e9003498fc00c349db9
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 1c5a4ddc906b6304f61f1476a125d98c18acab55
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prerequisites-for-certificate-profiles-in-system-center-configuration-manager"></a>Configuration requise pour les profils de certificat dans System Center Configuration Manager
 
@@ -30,7 +25,7 @@ Les profils de certificat dans System Center Configuration Manager ont des dépe
 
 ## <a name="dependencies-external-to-configuration-manager"></a>Dépendances externes à Configuration Manager  
 
-|Dépendance|Informations complémentaires|  
+|Dépendance|Plus d'informations|  
 |----------------|----------------------|  
 |Une autorité de certification d'entreprise émettrice qui exécute des services de certificats Active Directory (AD CS).<br /><br /> Pour révoquer des certificats, le compte d’ordinateur du serveur de site en haut de la hiérarchie doit avoir les droits *Émettre et gérer des certificats* pour chaque modèle de certificat utilisé par un profil de certificat dans Configuration Manager. Vous pouvez également accorder des autorisations de gestionnaire de certificats pour accorder des autorisations sur tous les modèles de certificats utilisés par cette autorité de certification.<br /><br /> Les demandes d'approbation du gestionnaire de certificat sont prises en charge. Cependant, les modèles de certificat utilisés pour émettre des certificats doivent être configurés avec **Fournir dans la demande** pour l’objet de certificat de façon à permettre à System Center Configuration Manager de fournir automatiquement cette valeur.|Pour plus d’informations sur les services de certificats Active Directory, voir votre documentation Windows Server :<br /><br /> Pour Windows Server 2012 : [Vue d’ensemble des services de certificats Active Directory](http://go.microsoft.com/fwlink/p/?LinkId=286744)<br /><br /> Pour Windows Server 2008 : [Services de certificats Active Directory dans Windows Server 2008](http://go.microsoft.com/fwlink/p/?LinkId=115018)|  
 |Utilisez le script PowerShell pour vérifier et, au besoin, installer les composants nécessaires pour le service de rôle NDES (service d’inscription d’appareils réseau) et le point d’enregistrement de certificat Configuration Manager. <br /><br />|Le fichier d’instructions, readme_crp.txt, se trouve dans ConfigMgrInstallDir\cd.latest\SMSSETUP\POLICYMODULE\X64.<br /><br />Le script PowerShell, Test-NDES-CRP-Prereqs.ps1, se trouve dans le même répertoire que les instructions. <br /><br /> Le script PowerShell doit être exécuté localement sur le serveur NDES.|
@@ -41,7 +36,7 @@ Les profils de certificat dans System Center Configuration Manager ont des dépe
 
 ## <a name="configuration-manager-dependencies"></a>Dépendances de Configuration Manager  
 
-|Dépendance|Informations complémentaires|  
+|Dépendance|Plus d'informations|  
 |----------------|----------------------|  
 |Rôle de système de site du point d'enregistrement de certificat|Pour pouvoir utiliser des profils de certificat, vous devez installer le rôle de système de site du point d'enregistrement de certificat. Ce rôle communique avec la base de données System Center Configuration Manager, le serveur de site System Center Configuration Manager et le module de stratégie System Center Configuration Manager.<br /><br /> Pour plus d’informations sur la configuration système requise pour ce rôle de système de site et sur son emplacement d’installation dans la hiérarchie, consultez la section **Configuration requise pour le système de site** de l’article [Configurations prises en charge pour System Center Configuration Manager](../../core/plan-design/configs/supported-configurations.md).<br /><br /> Le point d'enregistrement de certificat ne doit pas être installé sur le serveur qui exécute le service d'inscription de périphériques réseau.|  
 |Module de stratégie System Center Configuration Manager installé sur le serveur exécutant le service de rôle du service d’inscription de périphériques réseau pour les services de certificats Active Directory|Pour déployer des profils de certificat, vous devez installer le module de stratégie System Center Configuration Manager. Vous le trouverez sur le média d’installation System Center Configuration Manager.|  

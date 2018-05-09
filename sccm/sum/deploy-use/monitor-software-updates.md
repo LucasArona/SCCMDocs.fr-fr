@@ -1,22 +1,20 @@
 ---
-title: "Surveiller les mises à jour logicielles"
+title: Surveiller les mises à jour logicielles
 titleSuffix: Configuration Manager
-description: "La console System Center Configuration Manager fournit des alertes et des états pour surveiller les mises à jour et la compatibilité."
-keywords: 
-author: dougeby
-ms.author: dougeby
-manager: angrobe
+description: La console System Center Configuration Manager fournit des alertes et des états pour surveiller les mises à jour et la compatibilité.
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ms.date: 11/20/2016
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: 9afd7b0f-5c8e-48bc-9a65-1f7d74103688
-ms.openlocfilehash: 7eb9acf75ef3d1ba7fa5b89536986173461b1e13
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+ms.openlocfilehash: bc594fe6b870e1054033601a67209aa9ad72ccef
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="monitor-software-updates-in-system-center-configuration-manager"></a>Surveiller les mises à jour logicielles dans System Center Configuration Manager
 

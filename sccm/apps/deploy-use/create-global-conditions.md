@@ -1,26 +1,20 @@
 ---
-title: "Créer des conditions globales"
+title: Créer des conditions globales
 titleSuffix: Configuration Manager
-description: "Créez des conditions globales pour spécifier la manière dont une application est fournie et déployée sur les appareils clients."
-ms.custom: na
+description: Créez des conditions globales pour spécifier la manière dont une application est fournie et déployée sur les appareils clients.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2d5f871a-19dc-4bd3-a3ad-4230c7a69f1b
-caps.latest.revision: "7"
-caps.handback.revision: "0"
-author: mattbriggs
-ms.author: mabrigg
-manager: angrobe
-ms.openlocfilehash: 480e7a68308d458bc77ddb4956db2616eaaced97
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: dac47f55a1ad0d287e789d555d2f0a93b40f9376
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-global-conditions-in-system-center-configuration-manager"></a>Comment créer des conditions globales dans System Center Configuration Manager
 
@@ -102,7 +96,7 @@ Dans System Center Configuration Manager, les conditions globales sont des règl
 
         -   **Inclure les sous-dossiers** : activez cette option si vous voulez également effectuer la recherche dans les sous-dossiers dans le chemin spécifié.  
 
-        -   **Ce fichier ou dossier est associé à une application 64 bits** : indiquez si la recherche doit porter également sur l’emplacement de fichier système 64 bits (*%windir%*\system32) en plus de l’emplacement de fichier système 32 bits (*%windir%*\syswow64) sur les clients Configuration Manager qui exécutent une version 64 bits de Windows.  
+        -   **Ce fichier ou dossier est associé à une application 64 bits** : indiquez si la recherche doit porter également sur l’emplacement de fichier système 64 bits (*%windir%* \system32) en plus de l’emplacement de fichier système 32 bits (*%windir%* \syswow64) sur les clients Configuration Manager qui exécutent une version 64 bits de Windows.  
 
             > [!NOTE]  
             >  Si le même fichier ou dossier existe dans les emplacements de système de fichiers 64 bits et 32 bits sur un même ordinateur 64 bits, la condition globale détecte plusieurs fichiers.  
@@ -181,7 +175,7 @@ Dans System Center Configuration Manager, les conditions globales sont des règl
 
         -   **Inclure les sous-dossiers** : activez cette option si vous voulez également rechercher dans tous les sous-dossiers sous le chemin spécifié.  
 
-        -   **Ce fichier est associé à une application 64 bits** : indiquez si la recherche doit porter également sur l’emplacement de fichier système 64 bits (*%windir%*\system32) en plus de l’emplacement de fichier système 32 bits (*%windir%*\syswow64) sur les clients Configuration Manager qui exécutent une version 64 bits de Windows.  
+        -   **Ce fichier est associé à une application 64 bits** : indiquez si la recherche doit porter également sur l’emplacement de fichier système 64 bits (*%windir%* \system32) en plus de l’emplacement de fichier système 32 bits (*%windir%* \syswow64) sur les clients Configuration Manager qui exécutent une version 64 bits de Windows.  
 
         -   **Requête XPath** : spécifiez une requête XPath (XML path language) complète et valide à utiliser pour évaluer la compatibilité des ordinateurs clients.  
 

@@ -1,25 +1,20 @@
 ---
-title: "Utiliser la multidiffusion pour déployer Windows sur le réseau"
+title: Utiliser la multidiffusion pour déployer Windows sur le réseau
 titleSuffix: Configuration Manager
-description: "Utilisez la multidiffusion dans votre environnement System Center Configuration Manager afin que plusieurs ordinateurs puissent télécharger simultanément l’image du système d’exploitation."
-ms.custom: na
+description: Utilisez la multidiffusion dans votre environnement System Center Configuration Manager afin que plusieurs ordinateurs puissent télécharger simultanément l’image du système d’exploitation.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4cafb7fc-380b-41b1-b83e-045aebfb7131
-caps.latest.revision: "13"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: d254b7ff1f66d73996cda66c0fb2134033868cb1
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: 648146f11336489f30f03c35cb3d648f161b5e69
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-multicast-to-deploy-windows-over-the-network-with-system-center-configuration-manager"></a>Utiliser la multidiffusion pour déployer Windows sur le réseau avec System Center Configuration Manager
 

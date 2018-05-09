@@ -1,44 +1,21 @@
 ---
-title: "Données de diagnostic pour 1602"
+title: Données de diagnostic pour 1602
 titleSuffix: Configuration Manager
-description: "En savoir plus sur les niveaux de données de diagnostic et d’utilisation collectés par System Center Configuration Manager version 1602."
-ms.custom: na
+description: En savoir plus sur les niveaux de données de diagnostic et d’utilisation collectés par System Center Configuration Manager version 1602.
 ms.date: 12/29/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1210a1ca-78c7-4d17-81cf-ac1bc5c5cf3e
-caps.latest.revision: "4"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 robots: noindex,nofollow
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- hu-hu
-- it-it
-- ja-jp
-- ko-kr
-- nl-nl
-- pl-pl
-- pt-br
-- pt-pt
-- ru-ru
-- sv-se
-- tr-tr
-- zh-cn
-- zh-tw
-ms.openlocfilehash: 49606909dd10166ef1b94c87fd1e8cf8dcdbae38
-ms.sourcegitcommit: da27d37cc4e4e06cf23758846cdd7acb617f744b
+ms.openlocfilehash: 4014e9761529bd47c1fc3b3baccdb8764cf5575c
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1602-of-system-center-configuration-manager"></a>Niveaux de la collecte de données des données de diagnostic et d’utilisation pour la version 1602 de System Center Configuration Manager
 
@@ -112,7 +89,7 @@ Les modifications par rapport aux versions précédentes sont indiquées par ***
 ##  <a name="bkmk_level2"></a> Niveau 2 – Étendu
 Le niveau Étendu est configuré par défaut après l’installation. Ce niveau comprend les données collectées au niveau De base, ainsi que les données propres aux fonctionnalités (fréquence et durée d’utilisation), les paramètres du client Configuration Manager (nom du composant, état et paramètres tels que les intervalles d’interrogation) et les informations de base sur les mises à jour logicielles.
 
-Ce niveau est recommandé, car il fournit à Microsoft les données minimales requises pour apporter des améliorations utiles dans les futures versions des produits et services. Ce niveau ne collecte pas les noms des objets (sites, utilisateurs, ordinateur ou objets), les informations sur les objets relatifs à la sécurité ni les vulnérabilités telles que le nombre de systèmes qui nécessitent des mises à jour logicielles.
+Ce niveau est recommandé, car il fournit à Microsoft les données minimales nécessaires pour apporter des améliorations utiles dans les futures versions des produits et services. Ce niveau ne collecte pas les noms des objets (sites, utilisateurs, ordinateur ou objets), les informations sur les objets relatifs à la sécurité ni les vulnérabilités telles que le nombre de systèmes qui nécessitent des mises à jour logicielles.
 
 À compter de System Center Configuration Manager version 1602, ce niveau inclut les éléments suivants :
 

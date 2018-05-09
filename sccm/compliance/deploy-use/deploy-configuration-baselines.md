@@ -1,26 +1,20 @@
 ---
-title: "Déployer des bases de référence de configuration"
+title: Déployer des bases de référence de configuration
 titleSuffix: Configuration Manager
-description: "Déployez des bases de référence de configuration pour définir les déploiements de bases de référence de configuration et pour ajouter ou supprimer des bases de référence de configuration dans les déploiements."
-ms.custom: na
+description: Déployez des bases de référence de configuration pour définir les déploiements de bases de référence de configuration et pour ajouter ou supprimer des bases de référence de configuration dans les déploiements.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 9be8aaf3-075e-4acd-abd2-7459254e16e2
-caps.latest.revision: "7"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: e61314c5c10f4a4c9eda1f0a292cb5a9c72b32bb
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: c55382bf1fc377fd7e86f433a0cb92a5240eafa1
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-deploy-configuration-baselines-in-system-center-configuration-manager"></a>Comment déployer des lignes de base de configuration dans System Center Configuration Manager
 
@@ -45,7 +39,7 @@ Utilisez la boîte de dialogue **Déployer des lignes de base de configuration**
 
     -   **Résoudre les règles non compatibles lorsqu’elles sont prises en charge** : activez cette option pour résoudre automatiquement toutes les règles qui ne sont pas compatibles pour Windows Management Instrumentation (WMI), le Registre, les scripts et tous les paramètres des appareils mobiles inscrits par Configuration Manager.  
 
-    -   **Autoriser les corrections en dehors de la fenêtre de maintenance** : si une fenêtre de maintenance a été configurée pour le regroupement vers lequel vous déployez la ligne de base de configuration, activez cette option pour laisser les paramètres de compatibilité résoudre la valeur en dehors de la fenêtre de maintenance. Pour plus d’informations sur les fenêtres de maintenance, consultez [Comment utiliser les fenêtres de maintenance](/sccm/core/clients/manage/collections/use-maintenance-windows).  
+    -   **Autoriser les corrections en dehors de la fenêtre de maintenance** : si une fenêtre de maintenance a été configurée pour le regroupement vers lequel vous déployez la ligne de base de configuration, activez cette option pour laisser les paramètres de compatibilité résoudre la valeur en dehors de la fenêtre de maintenance. Pour plus d’informations sur les fenêtres de maintenance, consultez [Guide pratique pour utiliser les fenêtres de maintenance](/sccm/core/clients/manage/collections/use-maintenance-windows).  
 
 6.  **Générer une alerte** : configure une alerte qui est générée si la compatibilité de la base de référence de configuration est inférieure à un pourcentage spécifié par une date et une heure spécifiques. Vous pouvez également spécifier si vous souhaitez qu'une alerte soit envoyée à System Center Operations Manager.  
 

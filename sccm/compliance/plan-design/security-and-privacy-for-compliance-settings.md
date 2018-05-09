@@ -1,26 +1,20 @@
 ---
-title: "Sécurité et confidentialité des paramètres de compatibilité"
+title: Sécurité et confidentialité des paramètres de compatibilité
 titleSuffix: Configuration Manager
-description: "En savoir plus sur les bonnes pratiques en matière de sécurité pour les paramètres de compatibilité dans System Center Configuration Manager."
-ms.custom: na
+description: En savoir plus sur les bonnes pratiques en matière de sécurité pour les paramètres de compatibilité dans System Center Configuration Manager.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 1c409244-6778-4970-a99c-d2508c9cf62b
-caps.latest.revision: "5"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: cba7ceff6114e19c8bf86068c7390de8c9e505e8
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 3a8b7a98746649d430388804194e0b847788c86a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-and-privacy-for-compliance-settings-in-system-center-configuration-manager"></a>Sécurité et confidentialité des paramètres de compatibilité dans System Center Configuration Manager
 
@@ -29,7 +23,7 @@ ms.lasthandoff: 10/12/2017
 
 ## <a name="security-best-practices-for-compliance-settings"></a>Meilleures pratiques de sécurité pour les paramètres de compatibilité  
 
-|Meilleure pratique de sécurité|Plus d'informations|  
+|Bonnes pratiques de sécurité|Plus d'informations|  
 |----------------------------|----------------------|  
 |Ne surveillez pas les données sensibles.|Afin d'éviter la divulgation d'informations, ne configurez pas les éléments de configuration pour surveiller les informations potentiellement sensibles.|  
 |Ne configurez pas les règles de compatibilité qui utilisent des données pouvant être modifiées par les utilisateurs finaux.|Si vous créez une règle de compatibilité en fonction des données que les utilisateurs peuvent modifier, telles que les paramètres de Registre pour les choix de configuration, les résultats ne sont pas fiables.|  

@@ -1,27 +1,20 @@
 ---
-title: "Variables d’action de séquence de tâches"
+title: Variables d’action de séquence de tâches
 titleSuffix: Configuration Manager
-description: "Les variables d’action de séquence, telles que les variables de paramètres réseau, permettent de spécifier les paramètres de configuration d’une seule étape de séquence de tâches Configuration Manager."
-ms.custom: na
+description: Les variables d’action de séquence, telles que les variables de paramètres réseau, permettent de spécifier les paramètres de configuration d’une seule étape de séquence de tâches Configuration Manager.
 ms.date: 02/09/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: e2269031-0977-4f01-a274-420e00630575
-caps.latest.revision: 
-caps.handback.revision: 
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2928ecb254d08e4ed08c5e79b55e210ce25dcb61
-ms.sourcegitcommit: fbde417e3c3002898bd216a7e110e725ae269893
+ms.openlocfilehash: 7f66203e335524fa922ec1b6ab3dd4dc5fb917b0
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="task-sequence-action-variables-in-system-center-configuration-manager"></a>Variables d’action de séquence de tâches dans System Center Configuration Manager
 
@@ -64,8 +57,8 @@ Pour plus d’informations, consultez [Appliquer le package de pilotes](task-seq
 |OSDApplyDriverBootCriticalContentUniqueID<br /><br /> (entrée)|Spécifie l'ID de contenu du pilote de périphérique de stockage de masse à installer à partir du package de pilotes. Si vous ne spécifiez pas cette variable, aucun pilote de stockage de masse n’est installé.|  
 |OSDApplyDriverBootCriticalINFFile<br /><br /> (entrée)|Spécifie le fichier INF du pilote de stockage de masse à installer.<br /><br /> <br /><br /> Cette variable de séquence de tâches est requise si OSDApplyDriverBootCriticalContentUniqueID est défini.|  
 |OSDApplyDriverBootCriticalHardwareComponent<br /><br /> (entrée)|Spécifie si un pilote de dispositif de stockage de masse est installé. Cette variable doit être de type **scsi**.<br /><br /> Cette variable de séquence de tâches est requise si OSDApplyDriverBootCriticalContentUniqueID est défini.|  
-|OSDApplyDriverBootCriticalID<br /><br /> (entrée)|Spécifie l'ID critique de démarrage du pilote de dispositif de stockage de masse à installer. Cet ID apparaît dans la section **scsi** du fichier txtsetup.oem du pilote de dispositif.<br /><br /> Cette variable de séquence de tâches est requise si OSDApplyDriverBootCriticalContentUniqueID est défini.|  
-|OSDAllowUnsignedDriver<br /><br /> (entrée)|Spécifie s'il faut configurer Windows pour autoriser l'installation de pilotes de périphériques non signés. Cette variable de séquence de tâches n'est pas utilisée au cours du déploiement du système d'exploitation Windows Vista et version ultérieure.<br /><br /> Valeurs valides :<br /><br /> **true**<br /><br /> **false** (par défaut)|  
+|OSDApplyDriverBootCriticalID<br /><br /> (entrée)|Spécifie l'ID critique de démarrage du pilote de périphérique de stockage de masse à installer. Cet ID apparaît dans la section **scsi** du fichier txtsetup.oem du pilote de dispositif.<br /><br /> Cette variable de séquence de tâches est requise si OSDApplyDriverBootCriticalContentUniqueID est défini.|  
+|OSDAllowUnsignedDriver<br /><br /> (entrée)|Spécifie s'il faut configurer Windows pour autoriser l'installation de pilotes de périphérique non signés. Cette variable de séquence de tâches n'est pas utilisée au cours du déploiement du système d'exploitation Windows Vista et version ultérieure.<br /><br /> Valeurs valides :<br /><br /> **true**<br /><br /> **false** (par défaut)|  
 
 
 
@@ -131,7 +124,7 @@ Pour plus d’informations, consultez [Appliquer le package de pilotes](task-seq
 |Nom de la variable d'action|Description|  
 |--------------------------|-----------------|  
 |OSDAutoApplyDriverCategoryList<br /><br /> (entrée)|Liste délimitée par des virgules des ID de catégorie uniques du catalogue de pilotes. L’étape **Appliquer automatiquement les pilotes** tient uniquement compte des pilotes figurant dans au moins l’une des catégories spécifiées. Cette valeur est facultative et n'est pas définie par défaut. Obtient les ID de catégorie disponibles par énumération de la liste des objets **SMS_CategoryInstance** sur le site.|  
-|OSDAllowUnsignedDriver<br /><br /> (entrée)|Spécifie si Windows est configuré pour autoriser l'installation de pilotes de périphériques non signés. Cette variable de séquence de tâches n'est pas utilisée au cours du déploiement de Windows Vista et des systèmes d'exploitation ultérieurs.<br /><br /> Valeurs valides :<br /><br /> **true**<br /><br /> **false** (par défaut)|  
+|OSDAllowUnsignedDriver<br /><br /> (entrée)|Spécifie si Windows est configuré pour autoriser l'installation de pilotes de périphérique non signés. Cette variable de séquence de tâches n'est pas utilisée au cours du déploiement de Windows Vista et des systèmes d'exploitation ultérieurs.<br /><br /> Valeurs valides :<br /><br /> **true**<br /><br /> **false** (par défaut)|  
 |OSDAutoApplyDriverBestMatch<br /><br /> (entrée)|S’il existe dans le catalogue de pilotes plusieurs pilotes de périphériques compatibles avec un périphérique matériel, cette variable détermine l’action de l’étape. Si cette variable a la valeur **true**, l’étape installe uniquement le meilleur pilote de périphérique. Si cette variable a la valeur **false**, l’étape installe tous les pilotes de périphériques compatibles, et Windows choisit le meilleur pilote à utiliser.<br /><br /> Valeurs valides :<br /><br /> **true** (par défaut)<br /><br /> **false**|  
 |SMSTSDriverRequestConnectTimeOut|Lors de la demande du catalogue de pilotes, cette variable correspond au nombre de secondes pendant lesquelles la séquence de tâches attend la connexion au serveur HTTP. Si la connexion prend plus de temps que le paramètre de délai d’attente, la séquence de tâches annule la demande. Par défaut, le délai d’attente est de **60** secondes.|  
 |SMSTSDriverRequestReceiveTimeOut|Lors de la demande du catalogue de pilotes, cette variable correspond au nombre de secondes pendant lesquelles la séquence de tâches attend une réponse. Si la connexion prend plus de temps que le paramètre de délai d’attente, la séquence de tâches annule la demande. Par défaut, le délai d’attente est de **480** secondes.|

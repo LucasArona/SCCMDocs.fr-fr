@@ -1,28 +1,21 @@
 ---
 title: Installer et configurer les Extensions SCAP (Security Content Automation Protocol)
-titleSuffix: System Center Configuration Manager
+titleSuffix: Configuraton Manager
 description: Installer et configurer les Extensions SCAP (Security Content Automation Protocol)
-ms.custom: na
 ms.date: 03/27/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: f53b484b-5123-48f0-be2f-4e30318f3d39
-caps.latest.revision: 1
-caps.handback.revision: 0
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 robots: noindex,nofollow
-ms.openlocfilehash: 03fc9fa9f82aeae8ab22d6b4c3fa7858e93401cc
-ms.sourcegitcommit: 27da4be015f1496b7b89ebddb517a2685f1ecf74
+ms.openlocfilehash: 891d21b44ed6efca73413a46d0483519b76f9cae
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-and-configure-the-scap-extensions-for-microsoft-system-center-configuration-manager"></a>Installer et configurer les Extensions SCAP pour Microsoft System Center Configuration Manager
 
@@ -46,7 +39,7 @@ Terminez l’**Assistant Installation des Extensions SCAP pour Microsoft System 
 | --- | --- |
 | Bienvenue et contrat de licence utilisateur final |1. Consultez le contrat de licence.|
 | Bienvenue et contrat de licence utilisateur final|2. Cliquez sur **J’accepte les termes du contrat de licence**.|
-| Bienvenue et contrat de licence utilisateur final|3. Cliquez sur **Installer**.|
+| Bienvenue et contrat de licence utilisateur final|3. Cliquez sur **Suivant**.|
 | Fin de l'Assistant Installation des Extensions SCAP pour Microsoft System Center Configuration Manager |4. Cliquez sur **Terminer**.|
  
 
@@ -76,7 +69,7 @@ Les flux de données SCAP publiés par le NIST sont organisés en plusieurs bund
 
 ## <a name="convert-and-import-the-scap-data-stream-files-using-the-import-scap-content-wizard"></a>Convertir et importer les fichiers de flux de données SCAP à l’aide de l’Assistant Importation du contenu SCAP
 
-Une fois que vous avez obtenu les flux de données SCAP, vous êtes prêt à importer les flux de données et à les convertir en bases de référence de configuration. Les flux de données SCAP publiés par le NIST sont organisés en plusieurs bundles. Suivez les instructions du NIST pour identifier les bundles à utiliser dans votre environnement. Par exemple, il existe un bundle distinct pour chaque version de Windows, un autre bundle spécifique à la version pour la configuration du pare-feu et un bundle pour Internet Explorer 8.0. Appliquez les procédures suivantes pour accomplir cette tâche.
+Une fois que vous avez obtenu les flux de données SCAP, vous êtes prêt à importer les flux de données et à les convertir en bases de référence de configuration. Les flux de données SCAP publiés par le NIST sont organisés en plusieurs lots. Suivez les instructions du NIST pour identifier les bundles à utiliser dans votre environnement. Par exemple, il existe un bundle distinct pour chaque version de Windows, un autre bundle spécifique à la version pour la configuration du pare-feu et un bundle pour Internet Explorer 8.0. Appliquez les procédures suivantes pour accomplir cette tâche.
 
 ### <a name="to-import-the-scap-data-streams-into-configuration-manager"></a>Pour importer les flux de données SCAP dans Configuration Manager
 
@@ -108,7 +101,7 @@ Une fois que vous avez obtenu les flux de données SCAP, vous êtes prêt à imp
 
 Après avoir obtenu les flux de données SCAP, vous pouvez utiliser l’outil Microsoft.Sces.ScapToDcm.exe pour convertir les flux de données SCAP en fichiers .cab conformes aux paramètres de conformité. Importez ensuite les fichiers .cab dans Configuration Manager. L’outil Microsoft.Sces.ScapToDcm.exe convertit les flux de données SCAP en éléments de configuration et en bases de référence de configuration auxquels vous pouvez accéder à l’aide de la fonctionnalité Paramètres de conformité dans Configuration Manager. L’outil Microsoft.Sces.ScapToDcm.exe convertit les flux de données SCAP en manifestes XML. Il empaquète ensuite les manifestes XML dans un fichier .cab que vous pouvez importer dans Configuration Manager.
 
-Les flux de données SCAP publiés par le NIST sont organisés en plusieurs bundles. Suivez les instructions du NIST pour identifier les bundles à utiliser dans votre environnement. Par exemple, il existe un bundle distinct pour chaque version de Windows, un autre bundle spécifique à la version pour la configuration du pare-feu et un bundle pour Internet Explorer 8.0. Appliquez les procédures suivantes pour accomplir cette tâche.
+Les flux de données SCAP publiés par le NIST sont organisés en plusieurs lots. Suivez les instructions du NIST pour identifier les bundles à utiliser dans votre environnement. Par exemple, il existe un bundle distinct pour chaque version de Windows, un autre bundle spécifique à la version pour la configuration du pare-feu et un bundle pour Internet Explorer 8.0. Appliquez les procédures suivantes pour accomplir cette tâche.
 
 
 

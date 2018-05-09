@@ -1,26 +1,20 @@
 ---
-title: "Programme d’installation de correctif logiciel"
+title: Programme d’installation de correctif logiciel
 titleSuffix: Configuration Manager
-description: "Découvrez quand et comment installer des mises à jour via le programme d’installation de correctif logiciel pour Configuration Manager."
-ms.custom: na
+description: Découvrez quand et comment installer des mises à jour via le programme d’installation de correctif logiciel pour Configuration Manager.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: f3058277-c597-4dac-86d1-41b6f7e62b36
-caps.latest.revision: 
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 0ed8399c080994745f79f58818781e9d32be7e48
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 5c90889861db55a27da897e709b16b66edece08a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-the-hotfix-installer-to-install-updates-for-system-center-configuration-manager"></a>Utiliser le programme d’installation de correctif logiciel pour installer les mises à jour de System Center Configuration Manager
 
@@ -80,10 +74,10 @@ L’Assistant crée également des déploiements que vous pouvez utiliser pour i
 
 |Fichier|Détails|  
 |----------|-------------|  
-|&lt;Version_produit\>-QFE-KB&lt;ID_article_Base_connaissances\>-&lt;plateforme\>-&lt;langue\>.exe|Correspond au fichier de mise à jour. La ligne de commande pour ce fichier est gérée par Updatesetup.exe.<br /><br /> Exemple :<br />CM1511RTM-QFE-KB123456-X64-ENU.exe|  
+|&lt;Version_produit\>-QFE-KB&lt;ID_article_Base_connaissances\>-&lt;plateforme\>-&lt;langue\>.exe|Correspond au fichier de mise à jour. La ligne de commande pour ce fichier est gérée par Updatesetup.exe.<br /><br /> Par exemple :<br />CM1511RTM-QFE-KB123456-X64-ENU.exe|  
 |Updatesetup.exe|Ce wrapper .msi gère l'installation du groupe de mises à jour.<br /><br /> Lorsque vous exécutez la mise à jour, Updatesetup.exe détecte la langue d'affichage de l'ordinateur sur lequel elle s'exécute. Par défaut, l'interface utilisateur de la mise à jour est l'anglais. Toutefois, si la langue d'affichage est prise en charge, l'interface utilisateur s'affiche dans la langue locale de l'ordinateur.|  
 |Licence_&lt;langue\>.rtf|Le cas échéant, chaque mise à jour contient un ou plusieurs fichiers de licence en fonction des langues prises en charge.|  
-|&lt;Produit&type_MàJ>-&lt;version_produit\>-&lt;ID_article_Base_connaissances\>-&lt;plateforme\>.msp|Quand la mise à jour concerne la console ou les clients Configuration Manager, le groupe de mises à jour inclut des fichiers correctifs Windows Installer (.msp) distincts.<br /><br /> Exemple :<br /><br /> **Mise à jour de la console Configuration Manager :** ConfigMgr1511-AdminUI-KB1234567-i386.msp<br /><br /> **Mise à jour du client :** ConfigMgr1511-client-KB1234567-i386.msp<br />ConfigMgr1511-client-KB1234567-x64.msp|  
+|&lt;Produit&type_MàJ>-&lt;version_produit\>-&lt;ID_article_Base_connaissances\>-&lt;plateforme\>.msp|Quand la mise à jour concerne la console ou les clients Configuration Manager, le groupe de mises à jour inclut des fichiers correctifs Windows Installer (.msp) distincts.<br /><br /> Par exemple :<br /><br /> **Mise à jour de la console Configuration Manager :** ConfigMgr1511-AdminUI-KB1234567-i386.msp<br /><br /> **Mise à jour du client :** ConfigMgr1511-client-KB1234567-i386.msp<br />ConfigMgr1511-client-KB1234567-x64.msp|  
 
  Par défaut, le groupe de mises à jour enregistre ses actions dans un fichier .log sur le serveur de site. Le fichier journal possède le même nom que le groupe de mises à jour et est écrit dans le dossier **%SystemRoot%/Temp** .  
 
@@ -169,7 +163,7 @@ Après avoir installé le groupe de mises à jour sur un serveur de site, vous p
 5.  Pendant son installation, le groupe de mises à niveau extrait **update.sql** à l'emplacement suivant sur le serveur de site : **\\\\&lt;Nom_serveur\>\SMS_&lt;code_site\>\Hotfix\\&lt;Numéro_article_Base_connaissances\>\update.sql**  
 
 ####  <a name="bkmk_provider"></a> Mettre à jour un ordinateur exécutant le fournisseur SMS  
- Après avoir installé un groupe de mises à jour incluant des mises à jour pour le fournisseur SMS, vous devez déployer la mise à jour sur chaque ordinateur qui exécute le fournisseur SMS. La seule exception est l'instance du fournisseur SMS déjà installée sur le serveur de site sur lequel vous installez le groupe de mises à jour. L'instance locale du fournisseur SMS sur le serveur de site est mise à jour lorsque vous installez le groupe de mises à jour.  
+ Après avoir installé un groupe de mises à jour incluant des mises à jour pour le fournisseur SMS, vous devez déployer la mise à jour sur chaque ordinateur qui exécute le fournisseur SMS. La seule exception est l’instance du fournisseur SMS précédemment installée sur le serveur de site sur lequel vous installez le groupe de mises à jour. L'instance locale du fournisseur SMS sur le serveur de site est mise à jour lorsque vous installez le groupe de mises à jour.  
 
  Si vous supprimez puis réinstallez le fournisseur SMS sur un ordinateur, vous devez alors réinstaller la mise à jour pour le fournisseur SMS sur cet ordinateur.  
 
@@ -241,7 +235,7 @@ Par exemple, vous pouvez utiliser la ligne de commande suivante pour mettre à j
 >  Le package pour serveurs contient des mises à jour pour les composants suivants :  
 >   
 >  -   Serveur de site  
->  -   fournisseur SMS  
+>  -   Fournisseur SMS  
 >  -   Base de données de site  
 
  Ensuite, sur la page de **configuration de la méthode de déploiement de mises à jour logicielles** de l'Assistant, sélectionnez l'option **I will use software distribution**(Je vais utiliser la distribution de logiciels). Cette sélection indique à l'Assistant de créer les packages de déploiement de logiciels.  

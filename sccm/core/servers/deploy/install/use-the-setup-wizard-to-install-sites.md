@@ -1,24 +1,19 @@
 ---
 title: Assistant Installation
 titleSuffix: Configuration Manager
-ms.custom: na
 ms.date: 7/24/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1f703376-5f2c-4fd2-8209-7028c931ddc7
-caps.latest.revision: "3"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 266b6ef8664b98d0bf15e20f8bf968b609dd607b
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: c15f59ababae6908a08c28d3ec8ad46075068d52
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-the-setup-wizard-to-install-system-center-configuration-manager-sites"></a>Utilisez l’Assistant Installation pour installer des sites System Center Configuration Manager.
 
@@ -79,7 +74,7 @@ Si vous installez un site d’administration centrale dans le cadre d’un scén
       > [!NOTE]   
       > Microsoft ne valide pas la date d’expiration que vous entrez et ne l’utilise pas pour la validation de la licence. Vous pouvez ainsi l’utiliser en guise de rappel de votre date d’expiration. Ce rappel est pratique, car Configuration Manager vérifie régulièrement les nouvelles mises à jour logicielles proposées en ligne, et l’état de votre licence Software Assurance doit être actualisé pour que vous soyez autorisé à utiliser ces mises à jour supplémentaires.    
 
-      Pour plus d’informations, voir [Licences et branches pour System Center Configuration Manager](/sccm/core/understand/learn-more-editions).
+      Pour plus d’informations, consultez [Licences et branches pour System Center Configuration Manager](/sccm/core/understand/learn-more-editions).
 
 5.  Dans la page **Termes du contrat de licence logiciel Microsoft** , lisez et acceptez les termes du contrat de licence.  
 
@@ -357,7 +352,7 @@ Pour développer un site principal autonome, consultez tout d’abord la [config
 
      Vous pouvez configurer jusqu’à deux lecteurs de disque pour la bibliothèque de contenu et deux lecteurs de disque pour le partage de package. Toutefois, Configuration Manager peut utiliser des lecteurs supplémentaires quand les deux premiers atteignent la réserve d’espace disque configurée. La page **Paramètres du lecteur** permet de configurer la priorité des lecteurs de disque et la quantité d’espace disque libre restant sur chaque lecteur de disque.  
 
-    -   **Réserve d’espace libre sur le lecteur (Mo)** : la valeur que vous configurez pour ce paramètre détermine la quantité d’espace libre sur un lecteur avant que Configuration Manager choisisse un autre lecteur et poursuive le processus de copie sur ce lecteur. Les fichiers de contenu peuvent s'étendre sur plusieurs lecteurs.  
+    -   **Réserve d’espace libre sur le lecteur (Mo)**  : la valeur que vous configurez pour ce paramètre détermine la quantité d’espace libre sur un lecteur avant que Configuration Manager choisisse un autre lecteur et poursuive le processus de copie sur ce lecteur. Les fichiers de contenu peuvent s'étendre sur plusieurs lecteurs.  
 
     -   **Emplacements du contenu**: Spécifiez les emplacements de contenu pour le partage de bibliothèque et de package de contenu. Configuration Manager copie le contenu à l’emplacement de contenu principal jusqu’à ce que la quantité d’espace libre atteigne la valeur spécifiée dans **Réserve d’espace libre sur le lecteur (Mo)**.
 

@@ -2,25 +2,19 @@
 title: Capacités de la version Technical Preview 1702
 titleSuffix: Configuration Manager
 description: Découvrez les fonctionnalités disponibles dans la version Technical Preview 1702 pour System Center Configuration Manager.
-ms.custom: na
 ms.date: 02/24/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: aedd608d-6db3-4ea5-851d-70f2dcda6bb5
-caps.latest.revision: 5
-author: erikje
-ms.author: erikje
-manager: angrobe
-ms.openlocfilehash: 94c025a75cd0aef62ee00c11b8ee5a113fba2bb1
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: dc1fc6668c61f2eafe04f92fc6b9ea27520ddc43
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1702-for-system-center-configuration-manager"></a>Fonctionnalités de Technical Preview 1702 pour System Center Configuration Manager
 
@@ -205,8 +199,8 @@ Appliquez la procédure suivante pour configurer les détails de la séquence de
 2. Sélectionnez la séquence de tâches à modifier, puis cliquez sur **Propriétés**.
 3. Sous l’onglet **Général**, les paramètres suivants du Centre logiciel sont disponibles :
   - **Redémarrage requis** : indique à l’utilisateur si un redémarrage est nécessaire lors de l’installation.
-  - **Taille du téléchargement (Mo)** : spécifie le nombre de mégaoctets affichés dans le Centre logiciel pour la séquence de tâches.  
-  - **Durée d’exécution estimée (minutes)** : spécifie la durée d’exécution estimée, en minutes, affichée dans le Centre logiciel pour la séquence de tâches.
+  - **Taille du téléchargement (Mo)**  : spécifie le nombre de mégaoctets affichés dans le Centre logiciel pour la séquence de tâches.  
+  - **Durée d’exécution estimée (minutes)**  : spécifie la durée d’exécution estimée, en minutes, affichée dans le Centre logiciel pour la séquence de tâches.
 
 
 ## <a name="check-for-running-executable-files-before-installing-an-application"></a>Vérifier si des fichiers exécutables sont en cours d’exécution avant d’installer une application

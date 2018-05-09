@@ -2,22 +2,19 @@
 title: Déployer automatiquement des mises à jour logicielles
 titleSuffix: Configuration Manager
 description: Déployez automatiquement des mises à jour logicielles en ajoutant de nouvelles mises à jour logicielles à un groupe de mises à jour qui est associé à un déploiement actif ou en utilisant des règles ADR.
-keywords: ''
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ms.date: 03/22/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service: ''
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.openlocfilehash: afa0bd21d23dc0be50d90452ad5dd5d909542279
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 3b267e122370cc12ecec2f42dcb1dfc62c45fe63
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 #  <a name="BKMK_AutoDeploy"></a> Déployer automatiquement des mises à jour logicielles  
 
@@ -63,9 +60,9 @@ Vous pouvez approuver et déployer automatiquement des mises à jour logicielles
 
 3.  Sur la page **Général** , configurez les paramètres suivants :  
 
-    -   **Nom :**spécifiez le nom de la règle ADR. Le nom doit être unique, permettre de décrire l'objectif de la règle et être identifiable parmi d'autres dans le site Configuration Manager.  
+    -   **Nom :** spécifiez le nom de la règle ADR. Le nom doit être unique, permettre de décrire l'objectif de la règle et être identifiable parmi d'autres dans le site Configuration Manager.  
 
-    -   **Description :**spécifiez une description pour la règle ADR. La description doit fournir une présentation de la règle de déploiement et autres informations pertinentes permettant de la différencier des autres. Le champ de description facultatif est limité à 256 caractères et est vierge par défaut.  
+    -   **Description :** spécifiez une description pour la règle ADR. La description doit fournir une présentation de la règle de déploiement et autres informations pertinentes permettant de la différencier des autres. Le champ de description facultatif est limité à 256 caractères et est vierge par défaut.  
 
     -   **Sélectionner un modèle de déploiement**: indiquez si un modèle de déploiement enregistré précédemment doit être appliqué. Vous pouvez configurer un modèle de déploiement contenant plusieurs propriétés de déploiement de mise à jour communes, utilisables pour créer des règles ADR. Ces modèles permettent de garantir la cohérence entre des déploiements similaires et de gagner du temps.  
 
@@ -279,7 +276,7 @@ Vous pouvez approuver et déployer automatiquement des mises à jour logicielles
     > [!NOTE]  
     > Les clients demandent l'emplacement du contenu à partir d'un point de gestion pour les mises à jour logicielles dans un déploiement. Le comportement de téléchargement dépend de la manière dont vous avez configuré le point de distribution, le package de déploiement et les paramètres sur cette page. Pour plus d'informations, voir [Content source location scenarios](../../core/plan-design/hierarchy/content-source-location-scenarios.md).  
 
-Pour plus d’informations sur le processus de déploiement, consultez [Processus de déploiement des mises à jour logicielles](../../sum/understand/software-updates-introduction.md#BKMK_DeploymentProcess).
+Pour plus d’informations sur le processus de déploiement, consultez [Software update deployment process](../../sum/understand/software-updates-introduction.md#BKMK_DeploymentProcess).
 
 ## <a name="next-steps"></a>Étapes suivantes
 [Surveiller les mises à jour logicielles](monitor-software-updates.md)

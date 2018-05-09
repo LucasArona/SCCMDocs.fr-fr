@@ -2,26 +2,19 @@
 title: Surveiller les profils de certificat
 titleSuffix: Configuration Manager
 description: Découvrez comment surveiller l’état de compatibilité des profils de certificat System Center Configuration Manager.
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: 98feaa06-64b1-4e86-a122-93017c97cd4f
-caps.latest.revision: 7
-caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 6b0ae2042c1c463bce53c0c1a7438cc7102cd66e
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: a3a9c27eed58bce1b6d2371c545621b48f4b4f54
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-monitor-certificate-profiles-in-system-center-configuration-manager"></a>Comment surveiller des profils de certificat dans System Center Configuration Manager
 

@@ -1,22 +1,20 @@
 ---
-title: "Présentation des mises à jour logicielles"
+title: Présentation des mises à jour logicielles
 titleSuffix: Configuration Manager
-description: "Découvrez les principes de base des mises à jour logicielles dans System Center Configuration Manager."
-keywords: 
-author: dougeby
-ms.author: dougeby
-manager: angrobe
+description: Découvrez les principes de base des mises à jour logicielles dans System Center Configuration Manager.
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ms.date: 10/30/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: e9778b13-c8a3-40eb-8655-34ac8ce9cdaa
-ms.openlocfilehash: 66aa73e5c1aae68feeacb0eabe6233845289d104
-ms.sourcegitcommit: 986fc2d54f7c5fa965fd4df42f4db4ecce6b79cb
+ms.openlocfilehash: d5528fc3e035cd5bed8bc92c8b65f3025d97a2d1
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="introduction-to-software-updates-in-system-center-configuration-manager"></a>Présentation des mises à jour logicielles dans System Center Configuration Manager
 

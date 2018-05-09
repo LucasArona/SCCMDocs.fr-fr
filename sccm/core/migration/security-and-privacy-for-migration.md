@@ -1,26 +1,20 @@
 ---
-title: "Sécurité et confidentialité pour la migration"
+title: Sécurité et confidentialité pour la migration
 titleSuffix: Configuration Manager
-description: "Bonnes pratiques et informations de confidentialité pour la migration vers votre environnement System Center Configuration Manager."
-ms.custom: na
+description: Bonnes pratiques et informations de confidentialité pour la migration vers votre environnement System Center Configuration Manager.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6893fce1-7ad5-4151-9ba9-3096871e8e4a
-caps.latest.revision: "5"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 6c2fb0fe7ff3c126d1dcd70dd69103f9690f2938
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: 8cc6c1cee04e815c8a34f24236333fb927ed44fc
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-and-privacy-for-migration-to-system-center-configuration-manager"></a>Sécurité et confidentialité pour la migration vers System Center Configuration Manager
 

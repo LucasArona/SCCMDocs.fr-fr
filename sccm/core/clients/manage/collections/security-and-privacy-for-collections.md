@@ -1,26 +1,20 @@
 ---
-title: "Sécurité et confidentialité pour les regroupements"
+title: Sécurité et confidentialité pour les regroupements
 titleSuffix: Configuration Manager
-description: "Obtenir les bonnes pratiques de sécurité et de confidentialité des regroupements dans System Center Configuration Manager."
-ms.custom: na
+description: Obtenir les bonnes pratiques de sécurité et de confidentialité des regroupements dans System Center Configuration Manager.
 ms.date: 2/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 30bf2451-5415-4be2-ba8d-21759370cd83
-caps.latest.revision: "5"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 9990b4e31224f4f41e217108625c8b52a143c7c5
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: b9b19cfcddc2f477a5e70e8f3d25c3eb0c207814
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-and-privacy-for-collections-in-system-center-configuration-manager"></a>Sécurité et confidentialité pour les regroupements dans System Center Configuration Manager
 
@@ -35,7 +29,7 @@ Cette rubrique contient les bonnes pratiques en matière de sécurité et les in
 ## <a name="security-best-practices-for-collections"></a>Meilleures pratiques de sécurité pour les regroupements  
  Utilisez la meilleure pratique de sécurité suivante pour les regroupements.  
 
-|Meilleure pratique de sécurité|Plus d'informations|  
+|Bonnes pratiques de sécurité|Plus d'informations|  
 |----------------------------|----------------------|  
 |Lorsque vous exportez ou importez un regroupement à l'aide d'un fichier au format d'objet géré (MOF) qui est enregistré dans un emplacement réseau, sécurisez l'emplacement et le canal de réseau.|Veillez à restreindre l'accès au dossier réseau.<br /><br /> Utilisez la signature SMB ou IPsec entre l'emplacement réseau et le serveur de site pour empêcher un intrus de falsifier les données de regroupement exportées. Utilisez IPsec pour chiffrer les données sur le réseau afin d'éviter la divulgation d'informations.|  
 

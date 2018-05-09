@@ -1,25 +1,20 @@
 ---
-title: "Activer une règle de protection des appareils dans la stratégie de conformité"
+title: Activer une règle de protection des appareils dans la stratégie de conformité
 titleSuffix: Configuration Manager
-description: "Activez une règle de protection contre les menaces mobiles dans la stratégie de conformité des appareils."
-ms.custom: na
+description: Activez une règle de protection contre les menaces mobiles dans la stratégie de conformité des appareils.
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 99a5b715-f172-46e1-ac27-ad55bde66d0d
-caps.latest.revision: 
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: d74360ce800f030e85e2b87defc1de3376c6aee5
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: f6e102f65baad93bdbdf630649a4639d1092284c
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="enable-device-threat-protection-rule-in-the-compliance-policy"></a>Activer une règle de protection contre les menaces des appareils dans la stratégie de conformité
 
@@ -43,7 +38,7 @@ Dans le cadre de l’installation de Mobile Threat Protection de Lookout, dans l
 Dans la page **Règles** de l’Assistant Stratégie de conformité, définissez une nouvelle règle avec les informations suivantes :
   * Condition : niveau de risque maximal de protection contre les menaces sur les appareils.
   * Valeur : la valeur peut être une des suivantes :
-    * **Aucun (sécurisé)** : il s’agit de l’option la plus sécurisée. Cela signifie que l’appareil ne peut avoir aucune menace. Si un quelconque niveau de menace est détecté, l’appareil est évalué comme non conforme.
+    * **Aucun (sécurisé)**  : il s’agit de l’option la plus sécurisée. Cela signifie que l’appareil ne peut avoir aucune menace. Si un quelconque niveau de menace est détecté, l’appareil est évalué comme non conforme.
     * **Faible** : l’appareil est considéré comme conforme si seule des menaces de niveau Faible sont présentes. Toute menace d’un niveau supérieur place l’appareil dans un état de non-conformité.
     * **Moyen** : l’appareil est évalué comme conforme si les menaces trouvées sur l’appareil sont de niveau Faible ou Moyen. Si des menaces de niveau Élevé sont détectées, l’appareil est déterminé comme étant non conforme.
     * **Élevé** : cette option est la moins sécurisée. Cette option permet en fait tous les niveaux de menaces. Elle peut être utile si vous utilisez cette solution uniquement pour la génération de rapports.

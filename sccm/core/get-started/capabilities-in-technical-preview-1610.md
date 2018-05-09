@@ -1,33 +1,28 @@
 ---
-title: "Capacités de la version Technical Preview 1610"
+title: Capacités de la version Technical Preview 1610
 titleSuffix: Configuration Manager
-description: "Découvrez les fonctionnalités disponibles dans la version d’évaluation technique de System Center Configuration Manager, version 1610."
-ms.custom: na
+description: Découvrez les fonctionnalités disponibles dans la version d’évaluation technique de System Center Configuration Manager, version 1610.
 ms.date: 01/23/2017
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8b31fd3e-875a-4a31-9498-5b050aadce32
-caps.latest.revision: "2"
-author: erikje
-ms.author: erikje
-manager: angrobe
-ms.openlocfilehash: 1ab5ce458b4892422aa82ae99ed69ae2eb671583
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 0798deff2f4904cb1cecac79251e7bc0688e0d4e
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1610-for-system-center-configuration-manager"></a>Fonctionnalités dans la version d’évaluation technique 1610 de System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (version d’évaluation technique)*
+*S’applique à : System Center Configuration Manager (Technical Preview)*
 
 
 
-Cet article présente les fonctionnalités qui sont disponibles dans la version d’évaluation technique de System Center Configuration Manager, version 1610. Vous pouvez installer cette version pour mettre à jour et ajouter de nouvelles fonctionnalités à votre site de version d’évaluation technique de Configuration Manager.      Avant d’installer cette version d’évaluation technique, passez en revue la rubrique de présentation, [Technical Preview pour System Center Configuration Manager](../../core/get-started/technical-preview.md), pour vous familiariser avec les conditions générales et les limitations d’utilisation d’une version d’évaluation technique, la mise à jour entre les versions et l’envoi de commentaires sur les fonctionnalités dans une version d’évaluation technique.    
+Cet article présente les fonctionnalités qui sont disponibles dans la version d’évaluation technique de System Center Configuration Manager, version 1610. Vous pouvez installer cette version pour mettre à jour et ajouter de nouvelles fonctionnalités à votre site Configuration Manager Technical Preview.      Avant d’installer cette version de la version d’évaluation technique, passez en revue la rubrique de présentation, [Version d’évaluation technique pour System Center Configuration Manager](../../core/get-started/technical-preview.md), pour vous familiariser avec les conditions générales et limitations d’utilisation d’une version d’évaluation technique, la mise à jour entre les versions et l’envoi de commentaires sur les fonctionnalités dans une version d’évaluation technique.    
 
 
 **Vous trouverez ci-dessous les nouvelles fonctionnalités propres à cette version.**  

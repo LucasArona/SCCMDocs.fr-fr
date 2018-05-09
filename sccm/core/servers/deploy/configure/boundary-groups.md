@@ -2,25 +2,19 @@
 title: Configurer des groupes de limites
 titleSuffix: Configuration Manager
 description: Aider les clients à trouver des systèmes de site à l’aide de groupes de limites pour organiser de façon logique des emplacements réseau associés appelés limites
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 5db2926f-f03e-49c7-b44b-e89b1a5a6779
-caps.latest.revision: 10
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 297f4a5ecb7650a4ea643fff00dd67b6580256de
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 79c6796c116fbe4d182827e24f41ae4d1e5242fe
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-boundary-groups-for-system-center-configuration-manager"></a>Configurer les groupes de limites pour System Center Configuration Manager
 

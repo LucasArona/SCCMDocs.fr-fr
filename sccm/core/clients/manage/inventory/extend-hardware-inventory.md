@@ -2,26 +2,19 @@
 title: Étendre l’inventaire matériel
 titleSuffix: Configuration Manager
 description: Découvrez différentes façons d’étendre l’inventaire matériel dans System Center Configuration Manager.
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: d5bfab4f-c55e-4545-877c-5c8db8bc1891
-caps.latest.revision: 10
-caps.handback.revision: 0
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e72d1b866211aeab1aeabe34dfc765ed969cdcb6
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 317a143ba80607bef46a371c0e93ad9f4027abe4
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-extend-hardware-inventory-in-system-center-configuration-manager"></a>Comment étendre l’inventaire matériel dans System Center Configuration Manager
 
@@ -44,7 +37,7 @@ Le fichier Configuration.mof permet de définir les classes de données qui doiv
 
 |Méthode|Plus d'informations|  
 |------------|----------------------|  
-|Activer ou désactiver les|Activez ou désactivez les classes d’inventaire par défaut ou créez des paramètres client personnalisés qui vous permettent de collecter différentes classes d’inventaire matériel depuis les regroupements de clients définis. Consultez la procédure [Pour activer ou désactiver les classes existantes d’inventaire](#BKMK_Enable) de cet article.|  
+|Activer ou désactiver les classes d'inventaire existantes|Activez ou désactivez les classes d’inventaire par défaut ou créez des paramètres client personnalisés qui vous permettent de collecter différentes classes d’inventaire matériel depuis les regroupements de clients définis. Consultez la procédure [Pour activer ou désactiver les classes existantes d’inventaire](#BKMK_Enable) de cet article.|  
 |Ajouter une nouvelle classe d'inventaire|Ajoutez une nouvelle classe d’inventaire à partir de l’espace de noms WMI d’un autre appareil. Consultez la procédure [Pour ajouter une nouvelle classe d’inventaire](#BKMK_Add) de cet article.|  
 |Importer et exporter des classes d'inventaire matériel|Importez et exportez des fichiers MOF (Managed Object Format) qui contiennent des classes d’inventaire à partir de la console Configuration Manager. Consultez les procédures [Pour importer des classes d’inventaire matériel](#BKMK_Import) et [Pour exporter des classes d’inventaire matériel](#BKMK_Export) de cet article.|  
 |Créer des fichiers NOIDMIF|Utilisez des fichiers NOIDMIF pour collecter des informations sur les appareils clients qui ne peuvent pas être inventoriés par Configuration Manager. Par exemple, vous pouvez souhaiter recueillir des informations numéros de périphérique actif qui existe uniquement en tant qu'étiquette sur le périphérique. Inventaire NOIDMIF est automatiquement associé à l'appareil client collectées à partir de. Consultez [Pour créer des fichiers NOIDMIF](#BKMK_NOIDMIF) dans cet article.|  
@@ -135,7 +128,7 @@ Vous pouvez importer uniquement des classes d'inventaire lorsque vous modifiez l
 8.  Dans la boîte de dialogue **Exporter**, spécifiez le fichier MOF (Managed Object Format) vers lequel vous voulez exporter les classes, puis choisissez **Enregistrer**.  
 
 ### <a name="bkmk_GreaterThan255"></a> Configurer l’inventaire matériel pour collecter les chaînes comportant plus de 255 caractères
-À compter de Configuration Manager 1802, vous pouvez spécifier une longueur de chaînes supérieure à 255 caractères pour les propriétés de l’inventaire matériel. Ce changement s’applique seulement aux classes nouvellement ajoutées et pour les propriétés de l’inventaire matériel qui ne sont pas des clés. <!-- 1357389 -->
+À compter de Configuration Manager 1802, vous pouvez spécifier une longueur de chaînes supérieure à 255 caractères pour les propriétés de l’inventaire matériel. Cette modification s’applique seulement aux classes nouvellement ajoutées et aux propriétés de l’inventaire matériel qui ne sont pas des clés. <!-- 1357389 -->
 
 1. Dans l’espace de travail **Administration**, cliquez sur **Paramètres client**, mettez en surbrillance un appareil client à modifier, cliquez avec le bouton droit, puis sélectionnez **Propriétés**.
 

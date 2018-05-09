@@ -1,25 +1,20 @@
 ---
-title: "Créer une séquence de tâches pour installer un système d’exploitation"
+title: Créer une séquence de tâches pour installer un système d’exploitation
 titleSuffix: Configuration Manager
-description: "Dans System Center Configuration Manager, utilisez des séquences de tâches pour installer automatiquement une image de système d’exploitation et d’autres contenus sur un ordinateur de destination."
-ms.custom: na
+description: Dans System Center Configuration Manager, utilisez des séquences de tâches pour installer automatiquement une image de système d’exploitation et d’autres contenus sur un ordinateur de destination.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 217c8a0e-5112-420e-a325-2a6d75326290
-caps.latest.revision: "13"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 433a1778213b357c6c41eb20e4b975b2e682050d
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: 274a6c22b76c8def437e6159036ff3e82877e88f
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-task-sequence-to-install-an-operating-system-in-system-center-configuration-manager"></a>Créer une séquence de tâches pour installer un système d’exploitation dans System Center Configuration Manager
 
@@ -73,7 +68,7 @@ Dans System Center Configuration Manager, utilisez des séquences de tâches pou
 
     -   **Clé du produit**: spécifiez la clé de produit pour le système d'exploitation Windows à installer. Vous pouvez spécifier des clés de licence en volume codées et des clés de produit standard. Si vous utilisez une clé de produit non codée, chaque groupe de 5 caractères doit être séparé par un tiret (-). Par exemple : *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*  
 
-    -   **Mode de licence serveur :**spécifiez que la licence serveur est **Par siège**, **Par serveur**ou qu’aucune licence n’est spécifiée. Si la licence serveur est **Par serveur**, spécifiez également le nombre maximal de connexions au serveur.  
+    -   **Mode de licence serveur :** spécifiez que la licence serveur est **Par siège**, **Par serveur**ou qu’aucune licence n’est spécifiée. Si la licence serveur est **Par serveur**, spécifiez également le nombre maximal de connexions au serveur.  
 
     -   Spécifiez comment gérer le compte administrateur qui est utilisé lors du déploiement de l'image du système d'exploitation.  
 

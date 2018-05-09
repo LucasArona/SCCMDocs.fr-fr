@@ -1,26 +1,20 @@
 ---
-title: "Ressources d’installation de sites"
+title: Ressources d’installation de sites
 titleSuffix: Configuration Manager
-description: "Consultez une liste de rubriques d’aide sur l’installation de System Center Configuration Manager ou l’ajout de sites à votre hiérarchie."
-ms.custom: na
+description: Consultez une liste de rubriques d’aide sur l’installation de System Center Configuration Manager ou l’ajout de sites à votre hiérarchie.
 ms.date: 1/3/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: d0e4ddc3-d9c4-4f5c-8b1f-af098e54f5c8
-caps.latest.revision: "31"
-caps.handback.revision: "0"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 9812b529309e374db14fe92170016c1bbad6c46d
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 2ae77e7bf34e77ecadfad1e0e3c16722588599b0
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="resources-for-installing-system-center-configuration-manager-sites"></a>Ressources d’installation de sites System Center Configuration Manager
 

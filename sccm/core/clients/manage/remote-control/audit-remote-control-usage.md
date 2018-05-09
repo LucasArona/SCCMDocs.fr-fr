@@ -1,26 +1,20 @@
 ---
-title: "Auditer l’utilisation du contrôle à distance"
+title: Auditer l’utilisation du contrôle à distance
 titleSuffix: Configuration Manager
-description: "Auditer l’utilisation du contrôle à distance dans System Center Configuration Manager."
-ms.custom: na
+description: Auditer l’utilisation du contrôle à distance dans System Center Configuration Manager.
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 5c975e69-0cc0-4afd-b7fb-b7182162a933
-caps.latest.revision: "5"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 46d465464c1059c5ce81a89cdabe330cf06eb8e6
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: b216df726ed46c54bcb4778f0f93b2d19f0f9321
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-audit-remote-control-usage-in-system-center-configuration-manager"></a>Comment auditer l’utilisation du contrôle à distance dans System Center Configuration Manager
 

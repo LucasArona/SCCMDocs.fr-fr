@@ -1,20 +1,19 @@
 ---
-title: "Utiliser Intune comme autorité MDM"
+title: Utiliser Intune comme autorité MDM
 titleSuffix: Configuration Manager
-description: "Découvrez comment passer de l’autorité MDM Configuration Manager (hybride) à la version autonome d’Intune."
-keywords: 
-author: dougeby
-manager: angrobe
+description: Découvrez comment passer de l’autorité MDM Configuration Manager (hybride) à la version autonome d’Intune.
+author: aczechowski
+manager: dougeby
 ms.date: 12/05/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: be503ec9-5324-4f7c-bcf5-77204328e99c
-ms.openlocfilehash: 8884883c6e4e82cf38d83b9b7843002be3742bf1
-ms.sourcegitcommit: 8c6e9355846ff6a73c534c079e3cdae09cf13c45
+ms.openlocfilehash: b8bc778f4bcede45d3035b8b119fc3e4a4df4978
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="change-your-mdm-authority-to-intune-standalone"></a>Utiliser la version autonome d’Intune comme autorité MDM
 
@@ -38,7 +37,7 @@ Vous avez déjà migré de nombreux utilisateurs et testé les fonctionnalités 
 - Certains des paramètres de base (notamment les profils) de l’autorité MDM précédente (hybride) restent sur l’appareil pendant sept jours maximum. 
 - Les appareils qui n’ont pas d’utilisateurs associés (en général, lorsque vous utilisez le Programme d’inscription des appareils iOS ou des scénarios d’inscription en bloc) ne sont pas migrés vers la nouvelle autorité MDM. Pour ces appareils, vous devez contacter le support afin d’obtenir de l’aide pour déplacer ces appareils vers la nouvelle autorité MDM.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Prérequis
 Passez en revue les informations suivantes pour préparer le passage à l’autorité MDM :
 - Vous devez disposer de Configuration Manager 1610 ou version ultérieure pour pouvoir changer d’autorité MDM.
 - Assurez-vous que tous les utilisateurs actuellement gérés par la MDM hybride disposent d’une licence Intune/EMS, attribuée avant le changement d’autorité MDM. Cette licence garantit que l’utilisateur et ses appareils sont gérés par la version autonome d’Intune après le changement d’autorité MDM. Pour plus d’informations, consultez [Attribuer des licences Intune à vos comptes d’utilisateur](https://docs.microsoft.com/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-4).

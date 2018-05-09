@@ -1,26 +1,20 @@
 ---
-title: "Propriétés d’installation du client dans les services de domaine Active Directory"
+title: Propriétés d’installation du client dans les services de domaine Active Directory
 titleSuffix: Configuration Manager
-description: "Utilisez les propriétés d’installation du client publiées dans les services de domaine Active Directory dans System Center Configuration Manager."
-ms.custom: na
+description: Utilisez les propriétés d’installation du client publiées dans les services de domaine Active Directory dans System Center Configuration Manager.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 101d7d4d-92db-419d-b2ae-3c1c1dea68e9
-caps.latest.revision: "6"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: ece29d218140ffd28ac83a16e9999ba420f228a5
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 585aa6ea6874ac6d6a5264b0f75d8dbcf39ddd0a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="about-client-installation-properties-published-to-active-directory-domain-services"></a>À propos de la publication des propriétés d’installation du client sur les services de domaine Active Directory
 
@@ -110,7 +104,7 @@ L’installation du client (CCMSetup) utilise les propriétés publiées dans le
 -   Lorsque l'ordinateur n'a pas été configuré avec des propriétés d'installation à l'aide de la stratégie de groupe.  
 
 ## <a name="software-distribution-installation"></a>Installation via la distribution de logiciels  
- CCMSetup recherche des propriétés d'installation dans les services de domaine Active Directory dans les circonstances suivantes :  
+ CCMSetup recherche des propriétés d'installation dans les services de domaine Active Directory dans les circonstances suivantes :  
 
 -   Lorsqu'aucune propriété de ligne de commande n'est spécifiée à la suite de la commande CCMSetup.exe.  
 

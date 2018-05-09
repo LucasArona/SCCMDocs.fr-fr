@@ -2,25 +2,19 @@
 title: Questions fréquentes (FAQ) sur les données de diagnostic et d’utilisation
 titleSuffix: Configuration Manager
 description: Consultez les questions fréquemment posées sur les données de diagnostic et d’utilisation pour System Center Configuration Manager.
-ms.custom: na
 ms.date: 04/10/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 3fe32aa2-d594-4ad0-a291-b8f5395ac50b
-caps.latest.revision: 6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5a8a34e14d0e4f187e520faf9b2e520945087097
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+ms.openlocfilehash: b4174c68d5a6ccd31355d976b7830b6d09f39d91
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="frequently-asked-questions-about-diagnostics-and-usage-data-for-system-center-configuration-manager"></a>Questions fréquemment posées sur les données d’utilisation et de diagnostic pour System Center Configuration Manager
 

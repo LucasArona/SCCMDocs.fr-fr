@@ -1,26 +1,20 @@
 ---
-title: "Utiliser des services cloud pour compléter l’infrastructure locale"
+title: Utiliser des services cloud pour compléter l’infrastructure locale
 titleSuffix: Configuration Manager
-description: "Configurer des ressources cloud pour System Center Configuration Manager afin de compléter votre infrastructure locale."
-ms.custom: na
+description: Configurer des ressources cloud pour System Center Configuration Manager afin de compléter votre infrastructure locale.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 24fca61e-9cdb-447a-ad7a-f4d2e4fd6704
-caps.latest.revision: "10"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 81f111f0d0061901f5f3b471f02c8035bfcac481
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: 07eb6ec88a5f9b9f7985c317813b2ef7dd5534ff
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-cloud-services-with-system-center-configuration-manager"></a>Utiliser des services cloud avec System Center Configuration Manager
 

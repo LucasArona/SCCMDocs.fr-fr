@@ -1,25 +1,20 @@
 ---
 title: Configurer des sites
 titleSuffix: Configuration Manager
-description: "Consultez cette liste de vérification pour vous assurer que vous prenez en compte les configurations les plus courantes qui affectent les sites et les hiérarchies."
-ms.custom: na
+description: Consultez cette liste de vérification pour vous assurer que vous prenez en compte les configurations les plus courantes qui affectent les sites et les hiérarchies.
 ms.date: 2/7/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 9efb4061-f642-48bd-8332-3357ff5b3118
-caps.latest.revision: "15"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 55daf30e3386e53f3711c07fa971750d6aa33423
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 8a74f998c7bae22d94f2471724c2d51de918dfc4
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-sites-and-hierarchies-for-system-center-configuration-manager"></a>Configurer les sites et hiérarchies pour System Center Configuration Manager
 

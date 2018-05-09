@@ -1,25 +1,20 @@
 ---
 title: Nouvelle version 1610
 titleSuffix: Configuration Manager
-description: "Obtenez des détails sur les modifications et les nouvelles fonctionnalités introduites dans la version 1610 de System Center Configuration Manager."
-ms.custom: na
+description: Obtenez des détails sur les modifications et les nouvelles fonctionnalités introduites dans la version 1610 de System Center Configuration Manager.
 ms.date: 11/23/2016
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f7eb0803-3f8f-4ab6-825a-99ac11f5ba7d
-caps.latest.revision: "40"
-author: mestew
-ms.author: mstewart
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: e3dac4ceb08c15c1eaeef0a6006ebcc6eccff49c
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 9bb046cd08e4e9d8cff6e34ea88ce8e582e2c863
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="what39s-new-in-version-1610-of-system-center-configuration-manager"></a>Nouveautés dans la version 1610 de System Center Configuration Manager
 
@@ -42,7 +37,7 @@ Les sections suivantes fournissent des détails sur les modifications et les nou
 À partir de la version 1610, quand vous installez un pack de mises à jour et surveillez l’installation dans la console, une nouvelle phase est disponible : **Après l’installation**. Cette phase inclut l’état des tâches comme le redémarrage des services principaux et le lancement de la surveillance de la réplication. (Cette phase n’est pas disponible dans la console tant que votre site n’est pas mis à jour vers la version 1610.) Pour plus d’informations sur l’état d’installation des mises à jour, consultez [Installer des mises à jour dans la console](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkinstalla-install-in-console-updates).
 
 
-## <a name="exclude-clients-from-automatic-upgrade"></a>Exclure les clients de la mise à niveau automatique
+## <a name="exclude-clients-from-automatic-upgrade"></a>Exclure des clients de la mise à niveau automatique
 Vous pouvez empêcher la mise à niveau de clients Windows avec les nouvelles versions du logiciel client. Pour ce faire, vous incluez les ordinateurs clients dans un regroupement spécifié comme devant être exclu de la mise à niveau. Les clients du regroupement exclu ignorent les demandes de mise à jour du logiciel client.  Pour plus d’informations, consultez [Exclure les clients Windows des mises à niveau](../../clients/manage/upgrade/exclude-clients-windows.md).
 
 
@@ -171,7 +166,7 @@ Une fois que vous avez approuvé l’installation d’une application, vous pouv
 Cette action n’entraîne pas la désinstallation de l’application de tous les appareils. Toutefois, elle empêche les utilisateurs d’installer de nouvelles copies de l’application à partir du Centre logiciel.
 
 ## <a name="filter-by-content-size-in-automatic-deployment-rules"></a>Filtrer par taille de contenu dans les règles de déploiement automatique
-Vous pouvez désormais filtrer sur la taille du contenu des mises à jour logicielles dans les règles de déploiement automatique. Par exemple, pour télécharger uniquement les mises à jour logicielles inférieures à 2 Mo, vous pouvez définir le filtre **Taille du contenu (Ko)** sur **< 2048**. Ce filtre empêche le téléchargement automatique des mises à jour logicielles volumineuses, d’où une meilleure prise en charge de la maintenance de bas niveau Windows simplifiée quand la bande passante du réseau est limitée. Pour plus d’informations, consultez :
+Vous pouvez désormais filtrer sur la taille du contenu des mises à jour logicielles dans les règles de déploiement automatique. Par exemple, pour télécharger uniquement les mises à jour logicielles inférieures à 2 Mo, vous pouvez définir le filtre **Taille du contenu (Ko)** sur  **< 2048**. Ce filtre empêche le téléchargement automatique des mises à jour logicielles volumineuses, d’où une meilleure prise en charge de la maintenance de bas niveau Windows simplifiée quand la bande passante du réseau est limitée. Pour plus d’informations, consultez :
 - [Configuration Manager et maintenance Windows simplifiée sur des systèmes d’exploitation de bas niveau](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/)
 - [Déployer automatiquement des mises à jour logicielles](/sccm/sum/deploy-use/automatically-deploy-software-updates)
 

@@ -1,26 +1,20 @@
 ---
-title: "Gérer les requêtes"
+title: Gérer les requêtes
 titleSuffix: Configuration Manager
-description: "Découvrez comment gérer vos requêtes. Inclut un tableau contenant des informations de référence détaillées."
-ms.custom: na
+description: Découvrez comment gérer vos requêtes. Inclut un tableau contenant des informations de référence détaillées.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e562e2a0-8df8-4952-952f-e8c38461c612
-caps.latest.revision: "6"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 8535927281e1d84a09c7d053b5313fe7e4fcd97f
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 9d538106f2cc30a9eca5be51c4174af531bbbda9
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-manage-queries-in-system-center-configuration-manager"></a>Guide pratique pour gérer les requêtes dans System Center Configuration Manager
 
@@ -39,7 +33,7 @@ Aidez-vous des informations contenues dans cette rubrique pour gérer les requê
 |---------------------|-------------|----------------------|  
 |**Exécuter**|Exécute la requête sélectionnée et affiche les résultats dans la console Configuration Manager.|Aucune information supplémentaire.|  
 |**Installer le client**|Ouvre l’**Assistant Installation du client** qui permet d’installer le client Configuration Manager sur les ordinateurs retournés par la requête sélectionnée.<br /><br /> Cette option n'est pas disponible pour les requêtes qui retournent des appareils mobiles, des utilisateurs ou des groupes d'utilisateurs.|Pour plus d’informations sur la façon d’installer des clients Configuration Manager à l’aide de l’installation push du client, consultez [Guide pratique pour déployer des clients sur des ordinateurs Windows](/sccm/core/clients/deploy/deploy-clients-to-windows-computers).|  
-|**Exporter**|Ouvre l’ **Assistant Exportation d’objets** qui permet d’exporter la requête vers un fichier MOF (Managed Object Format) qui peut ensuite être importé sur un autre site.|Aucune information supplémentaire.|  
+|**Exporterer**|Ouvre l’ **Assistant Exportation d’objets** qui permet d’exporter la requête vers un fichier MOF (Managed Object Format) qui peut ensuite être importé sur un autre site.|Aucune information supplémentaire.|  
 |**Déplacer**|Ouvre la boîte de dialogue **Déplacer les éléments sélectionnés** où vous pouvez transférer la requête sélectionnée vers un dossier que vous avez créé précédemment sous le nœud **Requêtes** .|Aucune information supplémentaire.|  
 
 ## <a name="see-also"></a>Voir aussi  

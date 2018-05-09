@@ -1,25 +1,20 @@
 ---
-title: "Liste de contrôle pour 1710 | System Center Configuration Manager"
+title: Liste de contrôle pour 1710 | System Center Configuration Manager
 titleSuffix: Configuration Manager
-description: "Découvrez les actions à entreprendre avant d’effectuer la mise à jour vers System Center Configuration Manager version 1710."
-ms.custom: na
+description: Découvrez les actions à entreprendre avant d’effectuer la mise à jour vers System Center Configuration Manager version 1710.
 ms.date: 12/19/2017
-ms.reviewer: na
-ms.suite: na
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7e8ab8ca-41ef-467a-943b-a115d88cafe0
-caps.latest.revision: 
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: f1f80a630a607d6d914fc6e6106a2ce9df39dcc3
-ms.sourcegitcommit: 2867fd119256ec670fc5ae65cdc8a80d39f9b4d4
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 62426dc3acadc6043a31f9d4bd3dcc4843eaad76
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="checklist-for-installing-update-1710-for-system-center-configuration-manager"></a>Liste de contrôle pour l’installation de la mise à jour 1710 pour System Center Configuration Manager
 

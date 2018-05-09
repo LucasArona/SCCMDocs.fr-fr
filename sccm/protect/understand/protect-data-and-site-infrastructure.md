@@ -1,25 +1,20 @@
 ---
-title: "Protéger l’infrastructure de site et les données"
+title: Protéger l’infrastructure de site et les données
 titleSuffix: Configuration Manager
-description: "Découvrez comment protéger les ressources de votre organisation contre toute exposition ou attaque malveillante grâce à System Center Configuration Manager."
-ms.custom: na
+description: Découvrez comment protéger les ressources de votre organisation contre toute exposition ou attaque malveillante grâce à System Center Configuration Manager.
 ms.date: 11/27/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: 2117f786-d521-4790-9e8d-ec096c63c9d7
-caps.latest.revision: "8"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 925842a19f79e3674e988ea03661dfec36ba7145
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: e76a16fab84f5ccfcd71af4bc80913e31acdadd9
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="protect-data-and-site-infrastructure-with-system-center-configuration-manager"></a>Protéger les données et l’infrastructure des sites avec System Center Configuration Manager
 
