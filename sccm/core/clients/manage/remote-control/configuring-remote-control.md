@@ -36,7 +36,7 @@ Pour utiliser l’Assistance à distance ou le Bureau à distance, vous devez le
 
     Vous pouvez modifier le nom de l'entreprise qui apparaît dans la boîte de dialogue **Contrôle à distance ConfigMgr** en configurant une valeur pour **Nom d'organisation affiché dans le Centre logiciel** dans les paramètres client **Agent ordinateur** .  
 
- Les ordinateurs clients sont configurés avec ces paramètres la prochaine fois qu’ils téléchargent la stratégie du client. Pour lancer la récupération de stratégie pour un client unique, consultez [How to manage clients in System Center Configuration Manager](../../../../core/clients/manage/manage-clients.md).  
+ Les ordinateurs clients sont configurés avec ces paramètres la prochaine fois qu’ils téléchargent la stratégie du client. Pour lancer la récupération de stratégie pour un client unique, consultez [Comment gérer les clients dans System Center Configuration Manager](../../../../core/clients/manage/manage-clients.md).  
 
 #### <a name="enable-keyboard-translation"></a>Activer la traduction du clavier
 
