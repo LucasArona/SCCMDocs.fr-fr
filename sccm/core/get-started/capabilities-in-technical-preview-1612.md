@@ -147,7 +147,7 @@ Vous pouvez consulter les journaux de Configuration Manager suivants pour vérif
 
 Cet outil n’affecte que le contenu sur le point de distribution que vous spécifiez quand vous exécutez l’outil et que vous ne pouvez pas supprimer le contenu de la bibliothèque de contenu sur le serveur de site.
 
-Après avoir installé la version d’évaluation technique 1612, vous pouvez trouver **ContentLibraryCleanup.exe** dans le dossier *%CM_Installation_Path%\cd.latest\SMSSETUP\TOOLS\ContentLibraryCleanup\* sur le serveur de site de la version d’évaluation technique.
+Après avoir installé la version d’évaluation technique 1612, vous pouvez trouver **ContentLibraryCleanup.exe** dans le dossier \*%CM_Installation_Path%\cd.latest\SMSSETUP\TOOLS\ContentLibraryCleanup\* sur le serveur de site de la version d’évaluation technique.
 
 L’outil fourni avec cette version d’évaluation technique est destiné à remplacer les anciennes versions des outils similaires distribués pour les produits Configuration Manager précédents. Même si cette version de l’outil cessera de fonctionner après le 1er mars 2017, de nouvelles versions accompagneront les futures versions d’évaluation technique jusqu’à ce que cet outil soit publié dans le cadre de Current Branch ou d’une version hors bande prête pour la production.
 
