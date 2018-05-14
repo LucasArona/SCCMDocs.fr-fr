@@ -1,29 +1,28 @@
 ---
-title: "Changer l’autorité MDM pour des utilisateurs spécifiques (autorité MDM mixte)"
+title: Changer l’autorité MDM pour des utilisateurs spécifiques (autorité MDM mixte)
 titleSuffix: Configuration Manager
-description: "Découvrez comment changer l’autorité MDM en passant de MDM hybride à la version autonome d’Intune pour certains utilisateurs."
-keywords: 
-author: dougeby
+description: Découvrez comment changer l’autorité MDM en passant de MDM hybride à la version autonome d’Intune pour certains utilisateurs.
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-ms.date: 12/05/2017
-ms.topic: article
-ms.prod: configmgr-hybrid
-ms.service: 
-ms.technology: 
+ms.date: 04/30/2018
+ms.topic: conceptual
+ms.prod: configuration-manager
+ms.technology: configmgr-hybrid
 ms.assetid: 6f0201d7-5714-4ba0-b2bf-d1acd0203e9a
-ms.openlocfilehash: 59fb06d14002f781e0448a64bb0064b4add2f087
-ms.sourcegitcommit: ac9268e31440ffe91b133c2ba8405d885248d404
+ms.openlocfilehash: 46fb1333c58f3010acde4d064044a124050d211a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="change-the-mdm-authority-for-specific-users-mixed-mdm-authority"></a>Changer l’autorité MDM pour des utilisateurs spécifiques (autorité MDM mixte) 
 
 *S’applique à : System Center Configuration Manager (Current Branch)*    
 
 Vous pouvez configurer une autorité MDM mixte dans le même locataire en choisissant de gérer certains utilisateurs dans Intune et d’autres avec MDM hybride (Intune intégré à Configuration Manager). Cet article fournit des informations sur la façon de commencer à déplacer les utilisateurs vers la version autonome d’Intune autonome et part du principe que vous avez terminé les étapes suivantes :
-- Utiliser l’outil d’importation de données pour [importer des objets Configuration Manager dans Intune](migrate-import-data.md) (facultatif).
-- [Préparer Intune à la migration des utilisateurs](migrate-prepare-intune.md) pour que les utilisateurs et leurs appareils restent gérés après la migration.
+- Utilisation de l’outil d’importation de données pour [importer des objets Configuration Manager dans Intune](migrate-import-data.md) (facultatif).
+- [préparer Intune à la migration des utilisateurs](migrate-prepare-intune.md) pour que les utilisateurs et leurs appareils restent gérés après la migration ;
 
 > [!Note]    
 > Si vous décidez d’effectuer une réinitialisation complète de votre locataire, ce qui supprime toutes les stratégies, applications et inscriptions d’appareils, appelez le support pour obtenir de l’aide.
@@ -43,7 +42,7 @@ Les utilisateurs qui ont migré et leurs appareils sont gérés dans Intune tand
     - [Certificats de signature de code](/sccm/mdm/deploy-use/enroll-hybrid-windows)
     - [Catégories d’appareils](/sccm/core/clients/manage/collections/automatically-categorize-devices-into-collections)
     - [Gestionnaires d’inscription](/sccm/mdm/plan-design/device-enrollment-methods)
-    - Conditions générales
+    - Terms and conditions
     - SLK Windows
     - Personnalisation du portail d’entreprise    
       
@@ -90,60 +89,55 @@ Les appareils inscrits à l’aide d’un gestionnaire d’inscription d’appar
 
 -   Scénario 1 : utilisez la cmdlet *Switch-MdmDeviceAuthority* pour migrer les appareils sélectionnés et valider qu’ils peuvent être gérés à l’aide d’Intune dans Azure. Puis, lorsque vous êtes prêt, vous pouvez [utiliser Intune comme autorité MDM pour le locataire](migrate-change-mdm-authority.md) afin de terminer la migration des appareils. 
 -   Scénario 2 : lorsque vous êtes prêt à utiliser Intune comme autorité MDM pour le locataire, vous pouvez exécuter les actions suivantes pour migrer vos appareils sans affinité utilisateur :
-    - Utilisez l’applet de commande pour changer l’autorité MDM pour vos appareils sans affinité utilisateur avant [d’utiliser Intune comme autorité MDM pour le locataire](migrate-change-mdm-authority.md).    
+    - Utilisez la cmdlet pour changer l’autorité MDM pour vos appareils sans affinité utilisateur avant [d’utiliser Intune comme autorité MDM pour le locataire](migrate-change-mdm-authority.md).    
     - Contactez le support technique pour commuter les appareils sans affinité utilisateur après avoir choisi d’utiliser Intune comme autorité MDM pour le locataire.
 
-Pour changer l’autorité de gestion pour ces appareils MDM, vous pouvez utiliser l’applet de commande *Switch-MdmDeviceAuthority* pour basculer entre les autorités de gestion Intune et Configuration Manager. 
+Pour changer l’autorité de gestion pour ces appareils MDM, vous pouvez utiliser la cmdlet *Switch-MdmDeviceAuthority* pour basculer entre les autorités de gestion Intune et Configuration Manager. 
 
 ### <a name="cmdlet-switch-mdmdeviceauthority"></a>Cmdlet *Switch-MdmDeviceAuthority*
 
 #### <a name="synopsis"></a>SYNOPSIS
-L’applet de commande change l’autorité de gestion des appareils MDM sans affinité utilisateur (par exemple, appareils inscrits en bloc). L’applet de commande bascule entre les autorités de gestion Intune et Configuration Manager pour les appareils spécifiés en fonction des autorités de gestion spécifiées sur ces appareils lorsque vous exécutez l’applet de commande.
+La cmdlet change l’autorité de gestion des appareils MDM sans affinité utilisateur (par exemple, appareils inscrits en bloc). La cmdlet bascule entre les autorités de gestion Intune et Configuration Manager pour les appareils spécifiés en fonction des autorités de gestion spécifiées sur ces appareils lorsque vous exécutez la cmdlet.
 
 ### <a name="syntax"></a>SYNTAXE
 `Switch-MdmDeviceAuthority -DeviceIds <Guid[]> [-Credential <PSCredential>] [-Force] [-LogFilePath <string>] [-LoggingLevel {Off | Critical | Error | Warning | Information | Verbose | ActivityTracing | All}] [-Confirm] [-WhatIf] [<CommonParameters>]`
 
 
 ### <a name="parameters"></a>PARAMÈTRES
-``` powershell
--Credential <PSCredential>
-Credential for Intune Tenant Admin or Service Admin account to use when switching device management authorities. The user is prompted for credentials if the parameter is not specified.
+#### `-Credential <PSCredential>`
+Objet d’informations d’identification PowerShell pour le compte d’utilisateur Azure AD qui est utilisé lors du changement des autorités de gestion de l’appareil. Si le paramètre n’est pas spécifié, l’utilisateur est invité à fournir les informations d’identification. Le rôle d’annuaire de ce compte d’utilisateur doit être **Administrateur général** ou **Administrateur limité** avec le rôle d’administration **Administrateur Intune**.
 
--DeviceIds <Guid[]>
-The ids of the MDM devices that need to have their management authority switched. The device ids are unique identifiers for the devices displayed by the Configuration Manager console.
+#### `-DeviceIds <Guid[]>`
+Les ID des appareils MDM qui ont besoin de leur autorité de gestion ont changé. Les ID d’appareil sont des identificateurs uniques pour les appareils affichés par la console Configuration Manager.
 
--Force [<SwitchParameter>]
-Specify parameter to disable the Should Continue prompt.<br>
+#### `-Force [<SwitchParameter>]`
+Spécifiez le paramètre pour désactiver l’invite Doit continuer.<br>
  
--LogFilePath <string>
-Path to log file location.
+#### `-LogFilePath <string>`
+Chemin vers l’emplacement du fichier journal.
  
--LoggingLevel <SourceLevels>
-The log level used to determine the type of logs that need to be written to the log file.
+#### `-LoggingLevel <SourceLevels>`
+Niveau de journal utilisé pour déterminer le type de journaux qui doivent être écrits dans le fichier journal.
  
-The following are the possible values for LoggingLevel:
+Voici les valeurs possibles pour LoggingLevel :
 
   - ActivityTracing
-  - All
-  - Critical
-  - Error
-  - Information
-  - Off
+  - Tout
+  - Critique
+  - Erreur
+  - Informations
+  - Désactivé
   - Verbose
-  - Warning
+  - Avertissement
  
--Confirm [<SwitchParameter>]
-Prompts you for confirmation before executing the command.
+#### `-Confirm [<SwitchParameter>]`
+Vous demande confirmation avant d'exécuter la commande.
  
--WhatIf [<SwitchParameter>]
-Describes what would happen if you executed the command without actually executing the command.
+#### `-WhatIf [<SwitchParameter>]`
+Décrit ce qui se passerait si vous exécutiez la commande sans réellement l'exécuter.
  
-<CommonParameters>
-This cmdlet supports the common parameters: Verbose, Debug,
-ErrorAction, ErrorVariable, WarningAction, WarningVariable,
-OutBuffer, PipelineVariable, and OutVariable. For more information, see
-[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
-```
+#### `<CommonParameters>`
+Cette applet de commande prend en charge les paramètres courants : Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer, PipelineVariable et OutVariable. Pour plus d'informations, consultez [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ### <a name="example-1"></a>Exemple 1
 
@@ -162,13 +156,13 @@ Description
  
 Successfully switched the management authority of the device from Configuration Manager to Intune.
 ```
+
 ### <a name="remarks"></a>REMARQUES
-``` powershell
-To see the examples, type: "get-help Switch-MdmDeviceAuthority -examples".
-For more information, type: "get-help Switch-MdmDeviceAuthority -detailed".
-For technical information, type: "get-help Switch-MdmDeviceAuthority -full".
-For online help, type: "get-help Switch-MdmDeviceAuthority -online".
-```
+- Pour voir les exemples, tapez : `get-help Switch-MdmDeviceAuthority -examples`  
+- Pour plus d’informations, tapez : `get-help Switch-MdmDeviceAuthority -detailed`  
+- Pour des informations techniques, tapez : `get-help Switch-MdmDeviceAuthority -full`  
+- Pour de l’aide en ligne, tapez : `get-help Switch-MdmDeviceAuthority -online`   
+
 
 ## <a name="next-steps"></a>Étapes suivantes
 Après avoir fait migrer des utilisateurs et testé la fonctionnalité d’Intune, déterminez si vous êtes prêt à [faire passer l’autorité MDM](migrate-change-mdm-authority.md) de votre locataire Intune de Configuration Manager vers Intune. 

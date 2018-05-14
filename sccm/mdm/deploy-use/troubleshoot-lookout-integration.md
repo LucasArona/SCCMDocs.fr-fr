@@ -1,25 +1,20 @@
 ---
-title: "Résoudre les problèmes liés à l’intégration de Lookout"
+title: Résoudre les problèmes liés à l’intégration de Lookout
 titleSuffix: Configuration Manager
-description: "Cette rubrique décrit comment résoudre les problèmes qui se produisent couramment avec l’intégration de Lookout."
-ms.custom: na
+description: Cette rubrique décrit comment résoudre les problèmes qui se produisent couramment avec l’intégration de Lookout.
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e36b98c7-d0f4-4dd6-bac3-6a6c4b4bf841
-caps.latest.revision: 
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 244d32e98ad863f6c9ea1747b4f786c3a1279fc0
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: ee978543248e70182e12a3d6234cfd12be80dc98
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="troubleshoot-lookout-integration-with-intune"></a>Résoudre les problèmes liés à l’intégration de Lookout à Intune
 
@@ -27,7 +22,7 @@ ms.lasthandoff: 10/12/2017
 
 ## <a name="troubleshoot-login-errors"></a>Résoudre les erreurs de connexion
 ### <a name="403-errors"></a>Erreurs 403
-Une erreur 403 peut s’afficher quand vous vous connectez à la [console Lookout MTP](https://aad.lookout.com) :  **vous n’êtes pas autorisé à accéder au service** . Cela peut arriver si le nom d’utilisateur que vous avez spécifié n’est pas membre du groupe Azure Active Directory (Azure AD) configuré pour accéder à Lookout MTP.
+Une erreur 403 peut s’afficher quand vous vous connectez à la [console Lookout MTP](https://aad.lookout.com) : **vous n’êtes pas autorisé à accéder au service**. Cela peut arriver si le nom d’utilisateur que vous avez spécifié n’est pas membre du groupe Azure Active Directory (Azure AD) configuré pour accéder à Lookout MTP.
 
 Lookout MTP est configuré pour autoriser uniquement l’accès aux utilisateurs d’un groupe Azure AD configuré. Si vous ne savez pas quel groupe est configuré pour accéder à Lookout MTP, contactez le support de Lookout.
 
@@ -35,7 +30,7 @@ Pour contacter le support de Lookout, choisissez l’une des méthodes suivantes
 
 * Envoyez un e-mail à enterprisesupport@lookout.com.
 * Connectez-vous à la [Console MTP](http://aad.lookout.com)et accédez au module **Support**.
-* Accédez à : https://enterprise.support.lookout.com/hc/requests et créez une demande de support.
+* Accédez à https://enterprise.support.lookout.com/hc/requests et procédez à une demande de support.
 
 ### <a name="unable-to-sign-in"></a>Connexion impossible
 L’erreur suivante peut se produire si l’utilisateur administrateur général Azure AD n’accepte pas l’installation initiale de Lookout.

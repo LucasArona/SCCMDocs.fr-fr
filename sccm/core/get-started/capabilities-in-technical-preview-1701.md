@@ -1,33 +1,28 @@
 ---
-title: "Capacités de la version Technical Preview 1701"
+title: Capacités de la version Technical Preview 1701
 titleSuffix: Configuration Manager
-description: "Découvrez les fonctionnalités disponibles dans Technical Preview 1701 System Center Configuration Manager."
-ms.custom: na
+description: Découvrez les fonctionnalités disponibles dans Technical Preview 1701 System Center Configuration Manager.
 ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 18598eaa-1131-44ff-8f8b-6093e87ac7a1
-caps.latest.revision: "5"
-author: erikje
-ms.author: erikje
-manager: angrobe
-ms.openlocfilehash: 90e5aa799516bf2a7d6715e12bb8f3d1b72737f3
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 894d268151f9c9dfb05ded812eb642f8025dc459
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1701-for-system-center-configuration-manager"></a>Fonctionnalités de Technical Preview 1701 System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (version d’évaluation technique)*
+*S’applique à : System Center Configuration Manager (Technical Preview)*
 
 
 
-Cet article présente les fonctionnalités qui sont disponibles dans Technical Preview 1701 System Center Configuration Manager. Vous pouvez installer cette version pour mettre à jour et ajouter de nouvelles fonctionnalités à votre site de version d’évaluation technique Configuration Manager. Avant d’installer cette version d’évaluation technique, passez en revue la rubrique de présentation, [Technical Preview pour System Center Configuration Manager](../../core/get-started/technical-preview.md), pour vous familiariser avec les conditions générales et les limitations d’utilisation d’une version d’évaluation technique, la mise à jour entre les versions et l’envoi de commentaires sur les fonctionnalités dans une version d’évaluation technique.    
+Cet article présente les fonctionnalités qui sont disponibles dans Technical Preview 1701 System Center Configuration Manager. Vous pouvez installer cette version pour mettre à jour et ajouter de nouvelles fonctionnalités à votre site Configuration Manager Technical Preview. Avant d’installer cette version de la version d’évaluation technique, passez en revue la rubrique de présentation, [Version d’évaluation technique pour System Center Configuration Manager](../../core/get-started/technical-preview.md), pour vous familiariser avec les conditions générales et limitations d’utilisation d’une version d’évaluation technique, la mise à jour entre les versions et l’envoi de commentaires sur les fonctionnalités dans une version d’évaluation technique.    
 
 
 **Vous trouverez ci-dessous les nouvelles fonctionnalités propres à cette version.**  
@@ -99,7 +94,7 @@ Pour plus d’informations sur l’utilisation des points de distribution cloud,
 
 ### <a name="try-it-out"></a>Faites un essai
 
-- **Activer le service local d’attestation d’intégrité de l’appareil pour un point de gestion**<br>  Dans la console Configuration Manager, naviguez jusqu’au point de gestion, ouvrez **Propriétés du composant du point de gestion**, puis cliquez sur l’onglet **Options avancées**. Cliquez sur **Ajouter**, puis indiquez l’URL locale (par exemple, https://10.10.10.10) pour l’**URL du service local d’attestation d’intégrité de l’appareil**.
+- **Activer le service local d’attestation d’intégrité de l’appareil pour un point de gestion**<br>  Dans la console Configuration Manager, naviguez jusqu’au point de gestion, ouvrez **Propriétés du composant du point de gestion**, puis cliquez sur l’onglet **Options avancées**. Cliquez sur **Ajouter**, puis indiquez l’URL locale (par exemple, https://10.10.10.10)) pour les **URL du service local d’attestation d’intégrité de l’appareil**.
 - **Activer la création de rapports à partir du service local d’attestation d’intégrité des points de gestion pour l’agent client**<br>Dans la console Configuration Manager, choisissez **Administration** > **Paramètres client**, puis double-cliquez, ou créez de nouveaux **Paramètres de périphérique personnalisés**. Sélectionnez **Agent ordinateur**, puis définissez **Utiliser le service d’attestation d’intégrité local** sur **Oui**. Si l’option **Activer la communication avec le service d’attestation d’intégrité** est définie sur **Oui** et l’option **Utiliser le service d’attestation d’intégrité local** est définie sur **Non**, le point de gestion utilise le service cloud d’attestation d’intégrité de l’appareil.
 
 ## <a name="use-the-oms-connector-for-microsoft-azure-government-cloud"></a>Utiliser le connecteur OMS pour Microsoft Azure Government Cloud
@@ -112,17 +107,17 @@ Pour cela, vous modifiez un fichier de configuration pour qu’il pointe vers Az
 
   **Modifications :**
 
-    Modifiez la valeur du nom de paramètre *FairFaxArmResourceID* pour qu’elle corresponde à « https://management.usgovcloudapi.net/ »
+    Changez la valeur du nom de paramètre *FairFaxArmResourceID* pour qu’elle corresponde à « https://management.usgovcloudapi.net/ »
 
    - **Avant modification :** &lt;setting name="FairFaxArmResourceId" serializeAs="String">   
       &lt;value>&lt;/value>   
       &lt;/setting>
 
    - **Après modification :**     
-      &lt;nom du paramètre="FairFaxArmResourceId" serializeAs="String"> &lt;value>https://management.usgovcloudapi.net/&lt;/value>  
+      &lt;setting name="FairFaxArmResourceId" serializeAs="String"> &lt;value>https://management.usgovcloudapi.net/&lt;/value>  
       &lt;/setting>
 
-  Modifiez la valeur du nom de paramètre *FairFaxAuthorityResource* pour qu’elle corresponde à « https://login.microsoftonline.com/ »
+  Changez la valeur du nom de paramètre *FairFaxAuthorityResource* pour qu’elle corresponde à « https://login.microsoftonline.com/ »
 
   - **Avant modification :** &lt;nom de paramètre="FairFaxAuthorityResource" serializeAs="String">   
     &lt;value>&lt;/value>

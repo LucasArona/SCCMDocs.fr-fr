@@ -1,25 +1,20 @@
 ---
 title: Forum aux questions sur le client Endpoint Protection
 titleSuffix: Configuration Manager
-description: "Obtenez des réponses aux questions fréquemment posées sur Windows Defender et Endpoint Protection."
-ms.custom: na
+description: Obtenez des réponses aux questions fréquemment posées sur Windows Defender et Endpoint Protection.
 ms.date: 12/09/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: e3aaa9d2-a40e-42b1-ad75-5a115351729e
-caps.latest.revision: "15"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 2656a5c40dbd2916ef36268936a4e2163ebde14d
-ms.sourcegitcommit: 372171a5cd8d143d6d47b651018cda0c91cad67c
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 7e86c8196cf2ff2473b066fccf741c2df20cd8f9
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="endpoint-protection-client-frequently-asked-questions"></a>Forum aux questions sur le client Endpoint Protection
 

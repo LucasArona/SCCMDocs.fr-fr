@@ -1,27 +1,20 @@
 ---
-title: "Planifier la base de données du site"
+title: Planifier la base de données du site
 titleSuffix: Configuration Manager
-description: "Tenez compte de la base de données du site et son rôle serveur quand vous planifiez votre hiérarchie System Center Configuration Manager."
-ms.custom: na
-ms.date: 03/08/20168
+description: Tenez compte de la base de données du site et son rôle serveur quand vous planifiez votre hiérarchie System Center Configuration Manager.
+ms.date: 03/08/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 104fb4cc-6e83-40a3-8e6b-ac909fb9ec7d
-caps.latest.revision: 
-caps.handback.revision: 
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 908ca61bc99db3ca93f46120a806cd9ae54c81f7
-ms.sourcegitcommit: b653342fb5d69a16e71b3548a7e9a2e47e54bf88
+manager: dougeby
+ms.openlocfilehash: f2dbdb4702a1deac4ae130e89c501e3d122f1b49
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="plan-for-the-site-database-for-system-center-configuration-manager"></a>Planifier la base de données du site pour System Center Configuration Manager
 

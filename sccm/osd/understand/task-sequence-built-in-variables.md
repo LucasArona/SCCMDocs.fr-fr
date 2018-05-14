@@ -1,27 +1,20 @@
 ---
-title: "Variables intégrées de séquence de tâches"
+title: Variables intégrées de séquence de tâches
 titleSuffix: Configuration Manager
-description: "Les variables intégrées de séquence de tâches fournissent des informations sur l’environnement dans lequel la séquence de tâches s’exécute. Elles sont disponibles tout au long de la séquence de tâches."
-ms.custom: na
-ms.date: 02/09/2018
+description: Les variables intégrées de séquence de tâches fournissent des informations sur l’environnement dans lequel la séquence de tâches s’exécute. Elles sont disponibles tout au long de la séquence de tâches.
+ms.date: 04/18/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: 02bc6bd4-ca53-4e22-8b80-d8ee5fe72567
-caps.latest.revision: 
-caps.handback.revision: 
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 673f29189fe03df706d9f277afc7bde5fc8e72b0
-ms.sourcegitcommit: fbde417e3c3002898bd216a7e110e725ae269893
+ms.openlocfilehash: d3ea1b35c5f220155cecafddaf3a2ff1acf5ed53
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="task-sequence-built-in-variables-in-system-center-configuration-manager"></a>Variables intégrées de séquence de tâches dans System Center Configuration Manager
 
@@ -78,6 +71,7 @@ ms.lasthandoff: 02/12/2018
 |SMSTSDriverReceiveTimeOut|Nombre de secondes avant l’expiration de la connexion au serveur.|
 |SMSTSErrorDialogTimeout|Quand une erreur se produit dans une séquence de tâches, elle affiche une boîte de dialogue avec l’erreur. La séquence de tâches la fait disparaître automatiquement après le nombre de secondes spécifié par cette variable. La valeur par défaut est **900** secondes (15 minutes).|  
 | TSDisableProgressUI | <!-- 1354291 --> À compter de Configuration Manager version 1706, utilisez cette variable pour contrôler quand la séquence de tâches affiche la progression aux utilisateurs finaux. Pour masquer ou afficher la progression à des moments différents, définissez cette variable plusieurs fois dans une séquence de tâches. Pour masquer la progression de la séquence de tâches, définissez la valeur de cette variable sur **True**. Pour afficher la progression de la séquence de tâches, définissez la valeur de cette variable sur **False**. | 
+| SMSTSDisableStatusRetry | <!--512358--> Dans les scénarios déconnectés, le moteur de séquence de tâches tente à plusieurs reprises d’envoyer des messages d’état au point de gestion. Dans ce scénario, ce comportement entraîne des retards dans le traitement des séquences de tâches. À compter de Configuration Manager version 1802, définissez cette variable sur **True** pour que le moteur de séquence de tâches ne tente pas d’envoyer des messages d’état si l’envoi du premier message a échoué. Cette première tentative inclut plusieurs nouvelles tentatives.<br/><br/>Lorsque la séquence de tâches redémarre, la valeur de cette variable persiste. Toutefois, la séquence de tâches tente d’envoyer un premier message d’état. Cette première tentative inclut plusieurs nouvelles tentatives. En cas de réussite, la séquence de tâches continue à envoyer l’état indépendamment de la valeur de cette variable. Si l’envoi de l’état échoue, la séquence de tâches utilise la valeur de cette variable.<br/><br/>REMARQUE : [Le rapport d’état de la séquence de tâches](/sccm/core/servers/manage/list-of-reports#task-sequence---deployment-status) se base sur ces messages d’état pour montrer la progression, l’historique et les détails de chaque étape. | 
 |SMSTSLanguageFolder|utilisez cette variable pour modifier la langue d'affichage d'une image de démarrage indépendante de la langue.|  
 |SMSTSLocalDataDrive|Spécifie l'emplacement de stockage des fichiers temporaires sur l'ordinateur de destination lors de l'exécution de la séquence de tâches.<br /><br /> Cette variable doit être définie avant le démarrage de la séquence de tâches, notamment en définissant une variable de regroupement. Une fois que la séquence de tâches démarre, Configuration Manager définit la variable _SMSTSMDataPath.|  
 |SMSTSMP|Utilisez cette variable pour spécifier l’URL ou l’adresse IP du point de gestion Configuration Manager.|  

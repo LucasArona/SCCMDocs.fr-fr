@@ -1,26 +1,20 @@
 ---
-title: "Administrer à distance un ordinateur Windows"
+title: Administrer à distance un ordinateur Windows
 titleSuffix: Configuration Manager
-description: "Administrez un ordinateur client Windows distant à l’aide de System Center Configuration Manager."
-ms.custom: na
+description: Administrez un ordinateur client Windows distant à l’aide de System Center Configuration Manager.
 ms.date: 07/27/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 3c9648c4-645e-4e47-ae10-2da817b8c83b
-caps.latest.revision: "5"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 7cce5f2deab7ec6f5c16628dc53e4d1cb5507f37
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 4437ef8f88b18b7148eadbc3d125d8ac72fb240a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-remotely-administer-a-windows-client-computer-by-using-system-center-configuration-manager"></a>Comment administrer à distance un ordinateur client Windows à l’aide de System Center Configuration Manager
 
@@ -87,7 +81,7 @@ Vous pouvez démarrer l’observateur de contrôle à distance de trois manière
 
 ### <a name="to-start-the-remote-control-viewer-from-the-windows-command-line"></a>Pour démarrer l'observateur de contrôle à distance à partir de la ligne de commande Windows  
 
--   À l’invite de commandes Windows, tapez *<Dossier d’installation Configuration Manager>\>***\AdminConsole\Bin\x64\CmRcViewer.exe**  
+-   À l’invite de commandes Windows, tapez *<Dossier d’installation Configuration Manager\>***\AdminConsole\Bin\x64\CmRcViewer.exe**  
 
 CmRcViewer.exe prend en charge les options de ligne de commande suivantes :  
 

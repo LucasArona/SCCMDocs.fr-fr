@@ -2,25 +2,19 @@
 title: Configuration d’une découverte
 titleSuffix: Configuration Manager
 description: Configurez des méthodes de découverte pour trouver des ressources à gérer à partir de votre réseau, d’Active Directory et d’Azure Active Directory.
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 49505eb1-d44d-4121-8712-e0f3d8b15bf5
-caps.latest.revision: 5
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 825b9b250000e8353b1428cbee45f8fda9a30c35
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: e7ac10fdc08569e519468633f30548c5c76b5838
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-discovery-methods-for-system-center-configuration-manager"></a>Configurer les méthodes de découverte pour System Center Configuration Manager
 
@@ -183,6 +177,9 @@ Utilisez les procédures suivantes pour activer la découverte de forêts Active
 6.  Dans l'onglet **Calendrier d'interrogation** , configurez le calendrier d'interrogation de découverte complet et la découverte delta.  
 
 7.  Le cas échéant, dans l'onglet **Attributs Active Directory** , vous pouvez configurer des attributs Active Directory supplémentaires pour les ordinateurs à découvrir. Les attributs d'objets par défaut sont également répertoriés.  
+
+     > [!Tip]  
+     > Par exemple, votre organisation utilise l’attribut **Description** sur le compte d’ordinateur dans Active Directory. Cliquez sur **Personnalisé**et ajoutez `Description` comme attribut personnalisé. Une fois que cette méthode de découverte s’exécute, cet attribut s’affiche sous l’onglet Propriétés de l’appareil dans la console Configuration Manager.<!--513948-->
 
 8.  Le cas échéant, dans l’onglet **Option**, vous pouvez configurer des options pour filtrer ou exclure les enregistrements d’ordinateur obsolètes de la découverte.  
 

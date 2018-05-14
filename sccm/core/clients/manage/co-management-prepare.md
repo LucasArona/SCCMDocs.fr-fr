@@ -2,20 +2,19 @@
 title: Préparer Windows 10 pour la cogestion
 titleSuffix: Configuration Manager
 description: Découvrez comment préparer vos appareils Windows 10 pour la cogestion.
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ms.date: 03/28/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service: ''
-ms.technology: ''
+ms.technology: configmgr-client
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: a45ded0f3824c148f64f9578e51cc112c05d9f78
-ms.sourcegitcommit: aed99ba3c5e9482199cb3fc5c92f6f3a160cb181
+ms.openlocfilehash: 8c025d7c7a1dc452cb96f937801656bc4d0cadab
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prepare-windows-10-devices-for-co-management"></a>Préparer les appareils Windows 10 pour la cogestion
 Vous pouvez activer la cogestion sur les appareils Windows 10 qui sont joints à AD et à Azure AD, et inscrits auprès de Microsoft Intune et d’un client dans Configuration Manager. Pour les nouveaux appareils Windows 10 et pour ceux qui sont déjà inscrits à Intune, installez le client Configuration Manager avant de pouvoir les cogérer. Pour les appareils Windows 10 qui sont déjà des clients Configuration Manager, inscrivez-les à Intune et activez la cogestion dans la console Configuration Manager.
@@ -23,6 +22,32 @@ Vous pouvez activer la cogestion sur les appareils Windows 10 qui sont joints à
 > [!IMPORTANT]
 > Les appareils mobiles Windows 10 ne prennent pas en charge la cogestion.
 
+
+## <a name="prerequisites"></a>Prérequis
+Les prérequis suivants doivent être mis en place avant de pouvoir activer la cogestion. Il existe des prérequis généraux et des prérequis distincts pour les appareils dotés du client Configuration Manager et les appareils sur lesquels le client n’est pas installé.
+### <a name="general-prerequisites"></a>Conditions préalables
+Les prérequis généraux pour activer la cogestion sont les suivants :  
+
+- Configuration Manager version 1710 ou ultérieure
+- [Site intégré à Azure AD pour la gestion cloud](/sccm/core/servers/deploy/configure/azure-services-wizard)
+- Licence EMS ou Intune pour tous les utilisateurs
+- [Inscription automatique auprès d’Azure AD](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment) activée
+- Abonnement Intune &#40;autorité MDM dans Intune définie sur **Intune**&#41;
+
+
+   > [!Note]  
+   > Si vous avez un environnement MDM hybride (Intune intégré à Configuration Manager), vous ne pouvez pas activer la cogestion. Toutefois, vous pouvez commencer la migration d’utilisateurs vers Intune autonome, puis activer leurs appareils Windows 10 associés pour la cogestion. Pour plus d’informations sur la migration vers Intune autonome, consultez [Démarrer la migration de MDM hybride vers Intune autonome](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa).
+
+### <a name="additional-prerequisites-for-devices-with-the-configuration-manager-client"></a>Prérequis supplémentaires pour les appareils dotés du client Configuration Manager
+- Windows 10, version 1709 ou ultérieure
+- [Jonction à Azure AD hybride](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup) (jonction à AD et à Azure AD)
+
+### <a name="additional-prerequisites-for-devices-without-the-configuration-manager-client"></a>Prérequis supplémentaires pour les appareils non dotés du client Configuration Manager
+- Windows 10, version 1709 ou ultérieure
+- [Passerelle de gestion cloud](/sccm/core/clients/manage/manage-clients-internet#cloud-management-gateway) dans Configuration Manager (lorsque vous utilisez Intune pour installer le client Configuration Manager)
+
+> [!IMPORTANT]
+> Les appareils mobiles Windows 10 ne prennent pas en charge la cogestion.
 
 
 ## <a name="command-line-to-install-configuration-manager-client"></a>Ligne de commande pour installer un client Configuration Manager
@@ -39,8 +64,8 @@ Par exemple, si vous aviez les valeurs suivantes :
 
 - **Nom de domaine complet du point de gestion** : mp1.contoso.com    
 - **CodeSite** : PS1    
-- **ID du locataire Azure AD** : daf4a1c2-3a0c-401b-966f-0b855d3abd1a    
-- **ID d’application du client Azure AD** : 7506ee10-f7ec-415a-b415-cd3d58790d97     
+- **ID de locataire Azure AD** : 60a413f4-c606-4744-8adb-9476ae3XXXXX    
+- **ID d’application cliente Azure AD** : 9fb9315f-4c42-405f-8664-ae63283XXXXX     
 - **URI de l’ID de la ressource AAD** : ConfigMgrServer    
 
   > [!Note]    
@@ -48,7 +73,7 @@ Par exemple, si vous aviez les valeurs suivantes :
 
 Vous utiliseriez la ligne de commande suivante :
 
-`ccmsetup.msi CCMSETUPCMD="/mp:https://contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500    CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=PS1 SMSMP=https://mp1.contoso.com AADTENANTID=daf4a1c2-3a0c-401b-966f-0b855d3abd1a AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://ConfigMgrServer"`
+`ccmsetup.msi CCMSETUPCMD="/mp:https://contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500    CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=PS1 SMSMP=https://mp1.contoso.com AADTENANTID=60a413f4-c606-4744-8adb-9476ae3XXXXX AADCLIENTAPPID=9fb9315f-4c42-405f-8664-ae63283XXXXX AADRESOURCEURI=https://ConfigMgrServer"`
 
 > [!Tip]
 > Pour trouver les paramètres de ligne de commande pour votre site, effectuez les étapes suivantes :     

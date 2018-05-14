@@ -1,26 +1,20 @@
 ---
-title: "Créer et appliquer des modes de gestion de l’alimentation"
+title: Créer et appliquer des modes de gestion de l’alimentation
 titleSuffix: Configuration Manager
-description: "Créez et appliquez des modes de gestion de l’alimentation dans System Center Configuration Manager."
-ms.custom: na
+description: Créez et appliquez des modes de gestion de l’alimentation dans System Center Configuration Manager.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 738eddaa-52e2-467f-b453-821ef2884d47
-caps.latest.revision: "6"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: ec32a0b1591fffe77ace91f478e03302f429c957
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 4504f26f8f6288750d36028d8eb795ae0d839fbc
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-and-apply-power-plans-in-system-center-configuration-manager"></a>Comment créer et appliquer des modes de gestion de l’alimentation dans System Center Configuration Manager
 
@@ -48,11 +42,11 @@ La gestion de l’alimentation dans System Center Configuration Manager vous per
 
 1.  Dans la console Configuration Manager, cliquez sur **Ressources et Conformité**.  
 
-2.  Dans l'espace de travail **Ressources et Conformité** , cliquez sur **Regroupements d’appareils**.  
+2.  Dans l'espace de travail **Ressources et Conformité** , cliquez sur **Regroupements de périphériques**.  
 
 3.  Dans la liste **Regroupements de périphériques** , cliquez sur le regroupement auquel vous souhaitez appliquer les paramètres de gestion de l'alimentation, puis, dans l'onglet **Accueil** , dans le groupe **Propriétés** , cliquez sur **Propriétés**.  
 
-4.  Sous l’onglet **Gestion de l’alimentation** de la boîte de dialogue **Propriétés de** *<nom_regroupement\>*, sélectionnez **Spécifier les paramètres de gestion de l’alimentation de ce regroupement**.  
+4.  Sous l’onglet **Gestion de l’alimentation** de la boîte de dialogue *Propriétés de <nom_regroupement\>*, sélectionnez **Spécifier les paramètres de gestion de l’alimentation de ce regroupement**.  
 
     > [!NOTE]  
     >  Vous pouvez également cliquer sur **Parcourir** , puis copier les paramètres de gestion de l'alimentation à partir d'un regroupement sélectionné vers le regroupement sélectionné.  
@@ -74,7 +68,7 @@ La gestion de l’alimentation dans System Center Configuration Manager vous per
     > [!NOTE]  
     >  Vous ne pouvez pas modifier les modes d'alimentation intégrés.  
 
-8.  Dans la boîte de dialogue **Propriétés de** *<nom du mode de gestion de l’alimentation\>*, configurez les paramètres suivants :  
+8.  Dans la boîte de dialogue *Propriétés de <nom_mode_gestion_alimentation\>*, configurez les paramètres suivants :  
 
     -   **Nom** : spécifiez un nom pour ce mode de gestion de l’alimentation ou utilisez la valeur par défaut fournie.  
 
@@ -85,9 +79,9 @@ La gestion de l’alimentation dans System Center Configuration Manager vous per
         > [!IMPORTANT]  
         >  Les paramètres activés sont appliqués aux ordinateurs lorsque le mode d'alimentation est appliqué. Si vous désactivez une case à cocher du paramètre d'alimentation, la valeur sur l'ordinateur client n'est pas modifiée lorsque le mode d'alimentation est appliqué. Le fait de désactiver une case ne permet pas de restaurer la valeur du paramètre d'alimentation sélectionnée avant l'application d'un mode d'alimentation.  
 
-9. Cliquez sur **OK** pour fermer la boîte de dialogue **Propriétés de** *<nom du mode de gestion de l’alimentation\>*.  
+9. Cliquez sur **OK** pour fermer la boîte de dialogue *Propriétés de <nom_mode_gestion_alimentation\>*.  
 
-10. Cliquez sur **OK** pour fermer la boîte de dialogue **Paramètres de** *<Nom du regroupement\>* et pour appliquer le mode de gestion de l’alimentation.  
+10. Cliquez sur **OK** pour fermer la boîte de dialogue *Paramètres de <nom_regroupement\>* et pour appliquer le mode de gestion de l’alimentation.  
 
 ##  <a name="BKMK_Plans"></a> Available power management plan settings  
  Le tableau suivant répertorie les paramètres de gestion de l’alimentation disponibles dans Configuration Manager. Vous pouvez configurer d'autres paramètres pour les périodes où l'ordinateur est branché ou sur batterie. Selon la version de Windows que vous utilisez, il est possible que certains paramètres ne soient pas configurables.  

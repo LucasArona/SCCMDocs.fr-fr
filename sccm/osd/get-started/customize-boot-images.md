@@ -1,26 +1,20 @@
 ---
-title: "Personnaliser les images de démarrage "
+title: 'Personnaliser les images de démarrage '
 titleSuffix: Configuration Manager
-description: "Découvrez plusieurs façons d’utiliser Configuration Manager ou l’outil en ligne de commande de gestion et de maintenance des images de déploiement (DISM) pour personnaliser une image de démarrage."
-ms.custom: na
+description: Découvrez plusieurs façons d’utiliser Configuration Manager ou l’outil en ligne de commande de gestion et de maintenance des images de déploiement (DISM) pour personnaliser une image de démarrage.
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9cbfc406-d009-446d-8fee-4938de48c919
-caps.latest.revision: "15"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 184768e87406051508c8dcacfa63db5ff85c3732
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: 3532e6db7b4ece1676c9b9f41f9336274ac3d117
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="customize-boot-images-with-system-center-configuration-manager"></a>Personnaliser les images de démarrage avec System Center Configuration Manager
 
@@ -141,7 +135,7 @@ Chaque version de Configuration Manager prend en charge une version spécifique 
 
     4.  Sur la page **Source de données** , spécifiez les options suivantes et cliquez sur **Suivant**.  
 
-        -   Dans la zone **Chemin d'accès** , indiquez le chemin d'accès au fichier de l'image de démarrage mis à jour. Le chemin d'accès spécifié doit être un chemin d'accès réseau valide au format UNC. Par exemple : **\\\\<***nom_serveur***>\\<***partage WinPEWAIK***>\winpe.wim**.  
+        -   Dans la zone **Chemin d'accès** , indiquez le chemin d'accès au fichier de l'image de démarrage mis à jour. Le chemin d'accès spécifié doit être un chemin d'accès réseau valide au format UNC. Par exemple :  **\\\\<***nom_serveur***>\\<***partage WinPEWAIK***>\winpe.wim**.  
 
         -   Sélectionnez l'image de démarrage dans la liste déroulante **Image de démarrage** . Si le fichier WIM contient plusieurs images de démarrage, chaque image est répertoriée.  
 
@@ -165,7 +159,7 @@ Chaque version de Configuration Manager prend en charge une version spécifique 
 
     4.  À partir d'une invite de commande, tapez **wbemtest** pour ouvrir le testeur WMI.  
 
-    5.  Tapez **\\\\<***ordinateur_fournisseur_SMS***>\root\sms\site_<***code_site***>** dans **Espace de noms**, puis cliquez sur **Connexion**.  
+    5.  Tapez **\\\\<***ordinateur_fournisseur_SMS***>\root\sms\site_<***code_site***>** dans **Espaces de noms**, puis cliquez sur **Connexion**.  
 
     6.  Cliquez sur **Ouvrir une instance**, tapez **sms_bootimagepackage.packageID="<packageID\>"**, puis cliquez sur **OK**. Pour packageID, entrez la valeur que vous avez identifiée à l'étape 3.  
 
@@ -257,7 +251,7 @@ Chaque version de Configuration Manager prend en charge une version spécifique 
 
     4.  Sur la page **Source de données** , spécifiez les options suivantes et cliquez sur **Suivant**.  
 
-        -   Dans la zone **Chemin d'accès** , indiquez le chemin d'accès au fichier de l'image de démarrage mis à jour. Le chemin d'accès spécifié doit être un chemin d'accès réseau valide au format UNC. Par exemple : **\\\\<***nom_serveur***>\\<***partage WinPEWAIK***>\winpe.wim**.  
+        -   Dans la zone **Chemin d'accès** , indiquez le chemin d'accès au fichier de l'image de démarrage mis à jour. Le chemin d'accès spécifié doit être un chemin d'accès réseau valide au format UNC. Par exemple :  **\\\\<***nom_serveur***>\\<***partage WinPEWAIK***>\winpe.wim**.  
 
         -   Sélectionnez l'image de démarrage dans la liste déroulante **Image de démarrage** . Si le fichier WIM contient plusieurs images de démarrage, chaque image est répertoriée.  
 
@@ -281,7 +275,7 @@ Chaque version de Configuration Manager prend en charge une version spécifique 
 
     4.  À partir d'une invite de commande, tapez **wbemtest** pour ouvrir le testeur WMI.  
 
-    5.  Tapez **\\\\<***ordinateur_fournisseur_SMS***>\root\sms\site_<***code_site***>** dans **Espace de noms**, puis cliquez sur **Connexion**.  
+    5.  Tapez **\\\\<***ordinateur_fournisseur_SMS***>\root\sms\site_<***code_site***>** dans **Espaces de noms**, puis cliquez sur **Connexion**.  
 
     6.  Cliquez sur **Ouvrir une instance**, tapez **sms_bootimagepackage.packageID="<packageID\>"**, puis cliquez sur **OK**. Pour packageID, entrez la valeur que vous avez identifiée à l'étape 3.  
 

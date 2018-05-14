@@ -1,25 +1,20 @@
 ---
-title: "Informations de référence pour l’installation"
+title: Informations de référence pour l’installation
 titleSuffix: Configuration Manager
-description: "Prenez connaissance de ces informations de référence pour mieux préparer l’installation d’un site ou d’une hiérarchie Configuration Manager."
-ms.custom: na
+description: Prenez connaissance de ces informations de référence pour mieux préparer l’installation d’un site ou d’une hiérarchie Configuration Manager.
 ms.date: 4/18/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cdb9fb0c-0912-41e4-b427-f40620971763
-caps.latest.revision: "22"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: bc85d1140b19167b31d5ae2176ddbcb9320b21e1
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: f9f857a2045f67690579955236c082ff29721a5f
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reference-for-system-center-configuration-manager-setup"></a>Informations de référence sur le programme d’installation de System Center Configuration Manager
 
@@ -61,7 +56,7 @@ Quand vous installez votre premier site System Center Configuration Manager, Con
 Quand le rôle de système de site du point de connexion de service est en ligne, Microsoft peut collecter automatiquement des informations d’utilisation et de diagnostic sur Internet. Les informations collectées nous aident à effectuer les tâches suivantes :  
 
 -   Identifier et résoudre les problèmes  
--   Améliorer nos produits et services  
+-   améliorer nos produits et services ;  
 -   identifier les mises à jour pour Configuration Manager applicables à la version de Configuration Manager que vous utilisez.  
 
 ### <a name="levels-of-data-collection"></a>Niveaux de collecte de données  
@@ -75,4 +70,4 @@ La collecte de données comprend les trois niveaux suivants :
 
 Pour plus d’informations, notamment sur la divulgation des informations collectées par chaque niveau, consultez [Données d’utilisation et de diagnostic pour System Center Configuration Manager](../../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md).  
 
-Pour afficher la déclaration de confidentialité System Center Configuration Manager en ligne, accédez à [http://go.microsoft.com/fwlink/?LinkID=626527](http://go.microsoft.com/fwlink/?LinkID=626527).
+Pour voir la déclaration de confidentialité de System Center Configuration Manager en ligne, accédez à [http://go.microsoft.com/fwlink/?LinkID=626527](http://go.microsoft.com/fwlink/?LinkID=626527).

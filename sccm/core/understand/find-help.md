@@ -2,56 +2,45 @@
 title: Trouver de l’aide
 titleSuffix: Configuration Manager
 description: Recherchez des ressources pour plus d’informations sur System Center Configuration Manager.
-ms.custom: na
-ms.date: 12/22/2017
+ms.date: 04/30/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 86810629-cf2a-43e8-86a2-847444119fc1
-caps.latest.revision: 19
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: bcf53c11a30aa2fc3995697f36f00960035bbe57
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+manager: dougeby
+ms.openlocfilehash: 2c9e2f0b570360b730f7a8659791a7f054200d36
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="find-help-for-using-system-center-configuration-manager"></a>Trouver de l’aide pour l’utilisation de System Center Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
-Cet article fournit plusieurs ressources permettant de trouver de l’aide pour l’utilisation de Configuration Manager.  
+Cet article contient les sections suivantes avec plusieurs ressources permettant de trouver de l’aide pour utiliser Configuration Manager :  
 
-Pour obtenir de l’aide concernant l’accessibilité du produit, consultez [Fonctionnalités d’accessibilité dans System Center Configuration Manager](../../core/understand/accessibility-features.md).
+- [Documentation du produit](#bkmk_Info)  
+
+- [Partage de commentaires sur le produit](#product-feedback)  
+
+- [Suivre le blog de l’équipe Configuration Manager](#BKMK_ProductGroupBlog)  
+
+- [Options de support et ressources de la communauté](#BKMK_SupportOptions)  
+
+Pour obtenir de l’aide sur l’accessibilité du produit, consultez [Fonctionnalités d’accessibilité dans Configuration Manager](../../core/understand/accessibility-features.md).  
 
 
 ##  <a name="bkmk_Info"></a> Documentation du produit  
- Utilisez les ressources suivantes pour obtenir plus d’informations sur Configuration Manager.  
 
--   Pour accéder à la documentation la plus récente du produit, commencez à [l’index de la bibliothèque](https://docs.microsoft.com/sccm/).
+Pour accéder à la documentation la plus récente du produit, commencez à [l’index de la bibliothèque](https://docs.microsoft.com/sccm/).  
 
--   Pour faire part de vos commentaires sur la documentation, envoyez-les via [UserVoice](https://configurationmanager.uservoice.com/forums/300492-ideas/category/112371-documentation).  
+<a name="BKMK_SearchTips"></a>  
 
+Pour des conseils sur la recherche, l’ajout de commentaires et plus d’informations sur l’utilisation de la documentation du produit, consultez [Comment utiliser la documentation](/sccm/core/understand/use-docs).  
 
-###  <a name="BKMK_SearchTips"></a> Rechercher dans la bibliothèque de documentation  
- Utilisez les conseils de recherche suivants pour vous aider à trouver les informations dont vous avez besoin :  
-
--   Quand vous utilisez votre moteur de recherche préféré pour localiser du contenu pour Configuration Manager, limitez les résultats de recherche à la bibliothèque de contenu actuel en incluant les deux termes suivants : **SCCM** et **Docs**.
-
--   Utilisez des termes de recherche correspondant à la terminologie qui se trouve dans l’interface utilisateur et la documentation en ligne. Évitez les termes ou les abréviations non officiels que vous pouvez voir dans le contenu de la communauté. Par exemple, rechercher « point de gestion » plutôt que « MP », « type de déploiement » plutôt que « DT » et « mises à jour logicielles » plutôt que « SUM ».  
-
--   Pour effectuer une recherche dans un article que vous consultez sur docs.microsoft.com, sélectionnez Ctrl+F, puis entrez des termes de recherche dans la zone **Rechercher**. 
-
--   Chaque article sur docs.microsoft.com contient les champs suivants qui vous permettent d’effectuer des recherches dans le contenu :
-    - **Rechercher** en haut à droite. Pour effectuer une recherche dans tous les articles, entrez des termes dans ce champ. Les articles de la bibliothèque de Configuration Manager incluent automatiquement l’étendue « ConfigMgr ».
-    - **Filtre** au-dessus de la table des matières de gauche. Pour effectuer une recherche dans la table des matières, entrez des termes dans ce champ. Ce champ permet de rechercher uniquement les termes qui apparaissent dans le titre des articles. 
 
 
 ## <a name="product-feedback"></a>Commentaires sur le produit

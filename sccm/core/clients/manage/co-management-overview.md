@@ -2,21 +2,19 @@
 title: Cogestion pour les appareils Windows 10
 titleSuffix: Configuration Manager
 description: Découvrez comment gérer simultanément des appareils Windows 10 à l’aide de Configuration Manager et Microsoft Intune.
-keywords: ''
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ms.date: 03/28/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service: ''
-ms.technology: ''
+ms.technology: configmgr-client
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: 3d7ca4bb72f6f3f76855faac125385374347ba55
-ms.sourcegitcommit: d67c6246bb6027cd5501e772b0521f9272407c28
+ms.openlocfilehash: 3a667ae075ac688d4b49789ed88f858c2ff39397
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="co-management-for-windows-10-devices"></a>Cogestion pour les appareils Windows 10    
  Dans les mises à jour précédentes de Windows 10, vous pouviez déjà joindre un appareil Windows 10 à Active Directory (AD) en local et à Azure AD sur le cloud (Azure AD hybride). À compter de Configuration Manager version 1710, la cogestion tire parti de cette amélioration et vous permet de gérer simultanément plusieurs appareils Windows 10 version 1709 à l’aide de Configuration Manager et d’Intune. <!-- 1350871 -->
@@ -52,8 +50,11 @@ Il existe deux principaux parcours pour accéder à la cogestion. Le premier a t
 
 
 ### <a name="intune"></a>**Intune**
- - [Comment configurer un abonnement Intune.](/sccm/mdm/deploy-use/configure-intune-subscription) ou https://docs.microsoft.com/en-us/intune/setup-steps
- - [Démarrez la migration de MDM hybride vers Intune autonome.](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa)
+ - [Comment configurer un abonnement Intune](/sccm/mdm/deploy-use/configure-intune-subscription) ou [Configurer Intune](/intune/setup-steps)  
+ - [Démarrer la migration de MDM hybride vers Intune autonome](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa)  
+
+> [!Note]  
+> Si vous avez un environnement MDM hybride (Intune intégré à Configuration Manager), vous ne pouvez pas activer la cogestion. Toutefois, vous pouvez commencer la migration d’utilisateurs vers Intune autonome, puis activer leurs appareils Windows 10 associés pour la cogestion. Pour plus d’informations sur la migration vers Intune autonome, consultez [Démarrer la migration de MDM hybride vers Intune autonome](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa).  
 
 
 ### <a name="enable-co-management"></a>Activer la cogestion 

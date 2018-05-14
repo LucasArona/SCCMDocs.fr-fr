@@ -1,27 +1,20 @@
 ---
-title: "Créer des éléments de configuration pour les appareils Windows 8.1 et Windows 10 gérés via Microsoft Intune"
+title: Créer des éléments de configuration pour les appareils Windows 8.1 et Windows 10 gérés via Microsoft Intune
 titleSuffix: Configuration Manager
-description: "Utilisez l’élément de configuration System Center Configuration Manager Windows 10 pour gérer les paramètres des ordinateurs Windows 10."
-ms.custom: na
+description: Utilisez l’élément de configuration System Center Configuration Manager Windows 10 pour gérer les paramètres des ordinateurs Windows 10.
 ms.date: 07/31/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 23e1e4dc-623a-4521-ad04-ae9482927097
-caps.latest.revision: 
-caps.handback.revision: 
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 7f5a50ae6ea05af7e864cf94df3063d70bd737b4
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 639fabbe1e2f51194669fc1f196d88140193a727
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-configuration-items-for-windows-81-and-windows-10-devices-managed-without-the-system-center-configuration-manager-client"></a>Comment créer des éléments de configuration pour des appareils Windows 8.1 et Windows 10 gérés sans le client System Center Configuration Manager
 
@@ -172,7 +165,7 @@ ms.lasthandoff: 10/12/2017
 ###  <a name="cloud"></a>Cloud  
  Ces paramètres concernent les appareils exécutant Windows 8.1 et Windows 10.  
   
-|Nom du paramètre|Détails|Windows 8.1|Windows 10|  
+|Nom du paramètre|Détails|Windows 8.1|Windows 10|  
 |------------------|-------------|-----------------|----------------|  
 |**Synchronisation des paramètres**|Permet la synchronisation des paramètres entre les appareils.|Oui|Oui|  
 |**Synchronisation des informations d'identification**|Permet la synchronisation des informations d'identification entre les appareils.|Oui|Oui|  
@@ -330,7 +323,7 @@ Dans la page **Liste des applications autorisées et bloquées**, spécifiez les
     |-------------|----------------------|  
     |**Liste des applications bloquées**|Sélectionnez cette option si vous souhaitez spécifier une liste d’applications que les utilisateurs ne sont pas autorisés à installer.|  
     |**Liste des applications autorisées**|Sélectionnez cette option si vous souhaitez spécifier une liste d'applications que les utilisateurs sont autorisés à installer. L’installation de toutes les autres applications est bloquée.|  
-    |**Ajouter**|Ajoute une application à la liste sélectionnée. Spécifiez un nom de votre choix, éventuellement l'éditeur de l'application, et l'URL de l'application dans le magasin d'applications.<br /><br /> Pour spécifier l’URL, dans le Windows Store, recherchez l’application à utiliser.<br /><br /> Ouvrez la page de l'application, puis copiez l'URL dans le Presse-papiers. Vous pouvez maintenant utiliser cette URL dans la liste des applications autorisées ou bloquées.<br /><br /> **Exemple :** recherchez l’application **Skype** dans le Store. L’URL que vous utilisez est **http://www.windowsphone.com/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51**.|  
+    |**Ajouter**|Ajoute une application à la liste sélectionnée. Spécifiez le nom de votre choix, éventuellement l’éditeur de l’application, ainsi que l’URL de l’application dans la boutique d’applications.<br /><br /> Pour spécifier l’URL, dans le Windows Store, recherchez l’application à utiliser.<br /><br /> Ouvrez la page de l'application, puis copiez l'URL dans le Presse-papiers. Vous pouvez maintenant utiliser cette URL dans la liste des applications autorisées ou bloquées.<br /><br /> **Exemple :** recherchez l’application **Skype** dans le Store. L’URL que vous utilisez est **http://www.windowsphone.com/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51**.|  
     |**Éditer**|Vous permet de modifier le nom, l'éditeur et l'URL de l'application sélectionnée.|  
     |**Supprimer**|Supprime l'application sélectionnée dans la liste.|  
     |**Importerer**|Importe une liste d'applications que vous avez spécifiée dans un fichier de valeurs séparées par des virgules. Utilisez le format Nom de l'application, Éditeur, URL de l'application dans le fichier.|  
@@ -371,7 +364,7 @@ Ces paramètres concernent les appareils exécutant Windows 10 et versions ult�
 |**Activer SmartScreen**|Utilisez SmartScreen pour vérifier que les fichiers que vos utilisateurs téléchargent ne contiennent pas de code malveillant.|  
 |**Autoriser les fenêtres contextuelles**|Autoriser ou désactiver les Fenêtres contextuelles du navigateur.|  
 |**Autoriser les cookies**|Autoriser ou désactiver les cookies.|  
-|**Autoriser le remplissage automatique**|Autoriser l’utilisation de la fonctionnalité de remplissage automatique du navigateur Microsoft Edge.|  
+|**Autoriser le remplissage automatique**|Autoriser l’utilisation de la fonctionnalité de remplissage automatique du navigateur Edge.|  
 |**Autoriser le gestionnaire de mots de passe**|Autoriser l’utilisation de la fonctionnalité de gestionnaire des mots de passe du navigateur Microsoft Edge.|  
 |**Emplacement de la liste des sites en mode entreprise**|Indique où trouver la liste des sites web qui s’ouvrent en Mode entreprise. Les utilisateurs ne peuvent pas modifier cette liste.|
 |**Bloquer l’accès à about:flags**|Empêcher l’utilisateur final d’accéder à la page about:flags dans Edge qui contient les paramètres de développeur et expérimentaux.|

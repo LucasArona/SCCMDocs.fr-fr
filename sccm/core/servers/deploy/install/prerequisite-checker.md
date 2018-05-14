@@ -1,26 +1,20 @@
 ---
-title: "Outil de vérification de la configuration requise"
+title: Outil de vérification de la configuration requise
 titleSuffix: Configuration Manager
-description: "Découvrez comment utiliser l’Outil de vérification des prérequis pour identifier et résoudre les problèmes susceptibles de bloquer l’installation d’un site ou d’un rôle de système de site."
-ms.custom: na
+description: Découvrez comment utiliser l’Outil de vérification des prérequis pour identifier et résoudre les problèmes susceptibles de bloquer l’installation d’un site ou d’un rôle de système de site.
 ms.date: 3/1/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: aaf13bb8-4ba2-4bd7-9fac-d36a9d88a1b6
-caps.latest.revision: 
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 45e356b153a95a49f09f2d2931b8b306d0fd2b4c
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 296ed6590c10adeab22fb274d5e6f44bc578a784
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prerequisite-checker-for-system-center-configuration-manager"></a>Outil de vérification des prérequis pour System Center Configuration Manager
 
@@ -103,11 +97,11 @@ Pour plus d’informations sur les vérifications effectuées par l’Outil de v
 
          Obligatoire. Vérifie que l'ordinateur local répond à la configuration requise pour le site d'administration centrale.  
 
-    -   **/SQL &lt;*Nom de domaine complet de SQL Server*>**  
+    -   **/SQL &lt;*FQDN de SQL Server*>**  
 
          Obligatoire. À l’aide du nom de domaine complet, vérifie que l’ordinateur spécifié présente la configuration requise pour que SQL Server puisse héberger la base de données du site Configuration Manager.  
 
-    -   **/SDK &lt;*Nom de domaine complet du fournisseur SMS*>**  
+    -   **/SDK &lt;*FQDN du fournisseur SMS*>**  
 
          Obligatoire. Vérifie que l'ordinateur spécifié répond à la configuration requise pour le fournisseur SMS.  
 
@@ -129,23 +123,23 @@ Pour plus d’informations sur les vérifications effectuées par l’Outil de v
 
          Obligatoire. Vérifie que l'ordinateur local répond à la configuration requise pour le site principal.  
 
-    -   **/SQL &lt;*Nom de domaine complet de SQL Server*>**  
+    -   **/SQL &lt;*FQDN de SQL Server*>**  
 
          Obligatoire. Vérifie que l’ordinateur spécifié présente la configuration requise pour que SQL Server puisse héberger la base de données du site Configuration Manager.  
 
-    -   **/SDK &lt;*Nom de domaine complet du fournisseur SMS*>**  
+    -   **/SDK &lt;*FQDN du fournisseur SMS*>**  
 
          Obligatoire. Vérifie que l'ordinateur spécifié répond à la configuration requise pour le fournisseur SMS.  
 
-    -   **/JOIN &lt;*Nom de domaine complet du site d’administration centrale*>**  
+    -   **/JOIN &lt;*FQDN du site d’administration centrale*>**  
 
          Non obligatoire. Vérifie que l'ordinateur local est conforme à la configuration requise pour se connecter au serveur de site d'administration centrale.  
 
-    -   **/MP &lt;*Nom de domaine complet du point de gestion*>**  
+    -   **/MP &lt;*FQDN du point de gestion*>**  
 
          Non obligatoire. Vérifie que l'ordinateur spécifié répond à la configuration requise pour le rôle de système de site du point de gestion. Cette option est prise en charge uniquement avec l’option **/PRI** .  
 
-    -   **/DP &lt;*Nom de domaine complet du point de distribution*>**  
+    -   **/DP &lt;*FQDN du point de distribution*>**  
 
          Non obligatoire. Vérifie que l'ordinateur spécifié répond à la configuration requise pour le rôle de système de site du point de distribution. Cette option est prise en charge uniquement avec l’option **/PRI** .  
 
@@ -163,7 +157,7 @@ Pour plus d’informations sur les vérifications effectuées par l’Outil de v
 
          Non obligatoire. Démarre l’Outil de vérification des prérequis sans afficher l’interface utilisateur. Vous devez spécifier cette option avant toute autre option dans la ligne de commande.  
 
-    -   **/SEC &lt;*Nom de domaine complet du serveur de site secondaire*>**  
+    -   **/SEC &lt;*FQDN du serveur de site secondaire*>**  
 
          Obligatoire. Vérifie que l'ordinateur spécifié répond aux exigences pour le site secondaire.  
 

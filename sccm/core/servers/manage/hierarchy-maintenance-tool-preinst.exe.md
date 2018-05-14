@@ -1,26 +1,20 @@
 ---
-title: "Outil de maintenance de la hiérarchie"
+title: Outil de maintenance de la hiérarchie
 titleSuffix: Configuration Manager
-description: "Découvrez comment utiliser l’outil de maintenance hiérarchique, et en quoi il est utile. Inclut des informations techniques de référence sur les options de ligne de commande."
-ms.custom: na
+description: Découvrez comment utiliser l’outil de maintenance hiérarchique, et en quoi il est utile. Inclut des informations techniques de référence sur les options de ligne de commande.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cead6825-6113-4ba5-a381-ac3598dfee86
-caps.latest.revision: "7"
-caps.handback.revision: "0"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 02bd5bfe0fc4ccc976d95b944bd51e9f0a276db0
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 4dd1bf9b4085b6e1591d5841bfc307398505f5d1
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hierarchy-maintenance-tool-preinstexe-for-system-center-configuration-manager"></a>Outil de maintenance hiérarchique (Preinst.exe) pour System Center Configuration Manager
 
@@ -47,14 +41,14 @@ Lorsque vous utilisez l'outil de maintenance hiérarchique, vous devez l'exécut
 
 Pour exécuter l’outil de maintenance hiérarchique, utilisez la syntaxe suivante : preinst.exe /&lt;option\>. Les options de ligne de commande sont les suivantes.  
 
- **/DELJOB &lt;*code_site*>** : utilisez cette option sur un site pour supprimer l’ensemble des travaux ou commandes entre le site actuel et le site de destination spécifié.  
+ **/DELJOB &lt;*Code_site*>**  : utilisez cette option sur un site pour supprimer l’ensemble des travaux ou commandes entre le site actuel et le site de destination spécifié.  
 
- **/DELSITE &lt;*code_site_enfant_à_supprimer*>** : utilisez cette option sur un site parent pour supprimer les données des sites enfants dans la base de données de site du site parent. En règle générale, cette option est utilisée si un ordinateur du serveur de site est désactivé avant de désinstaller le site à partir de celui-ci.  
+ **/DELSITE &lt;*code_site_enfant_à_supprimer*>**  : utilisez cette option sur un site parent pour supprimer les données des sites enfants dans la base de données de site du site parent. En règle générale, cette option est utilisée si un ordinateur du serveur de site est désactivé avant de désinstaller le site à partir de celui-ci.  
 
 > [!NOTE]  
 >  L'option /DELSITE ne désinstalle pas le site sur l'ordinateur spécifié par le paramètre ChildSiteCodeToRemove. Cette option supprime uniquement les informations du site dans la base de données de site Configuration Manager.  
 
-**/DUMP &lt;*code_site*>** : utilisez cette option sur le serveur de site local pour écrire des images de contrôle de site dans le dossier racine du lecteur sur lequel le site est installé. Vous pouvez écrire une image de contrôle de site spécifique dans le dossier ou écrire tous les fichiers de contrôle de site de la hiérarchie.  
+**/DUMP &lt;*code_site*>**  : utilisez cette option sur le serveur de site local pour écrire des images de contrôle de site dans le dossier racine du lecteur sur lequel le site est installé. Vous pouvez écrire une image de contrôle de site spécifique dans le dossier ou écrire tous les fichiers de contrôle de site de la hiérarchie.  
 
 -   /DUMP &lt;*code_site*> écrit l’image de contrôle de site uniquement pour le site spécifié.  
 

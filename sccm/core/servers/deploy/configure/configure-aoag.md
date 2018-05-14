@@ -1,26 +1,20 @@
 ---
-title: "Configurer des groupes de disponibilité"
+title: Configurer des groupes de disponibilité
 titleSuffix: Configuration Manager
-description: "Configurez et gérez des groupes de disponibilité SQL Server Always On avec SCCM."
-ms.custom: na
+description: Configurez et gérez des groupes de disponibilité SQL Server Always On avec SCCM.
 ms.date: 7/31/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 7e4ec207-bb49-401f-af1b-dd705ecb465d
-caps.latest.revision: 
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: d6b208da49e27775548ac6f544b7a7278b96d980
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 2baafa04c315ebc7512504f042c89615b7217b4c
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-sql-server-always-on-availability-groups-for-configuration-manager"></a>Configurer des groupes de disponibilité SQL Server Always On pour Configuration Manager
 
@@ -63,7 +57,7 @@ Consultez [Afficher ou modifier le mode de récupération d’une base de donné
       -    Dans la page **Spécifier les réplicas** , configurez ce qui suit :
           -    **Réplicas :** spécifiez les serveurs qui hébergeront les réplicas secondaires.
 
-          -    **Écouteur :** spécifiez le **nom d’écouteur DNS** en tant que nom DNS complet, par exemple **&lt;Serveur_écouteur>.fabrikam.com**. Ce nom est utilisé quand vous configurez Configuration Manager pour utiliser la base de données située dans le groupe de disponibilité.
+          -    **Écouteur :**  spécifiez le **nom d’écouteur DNS** en tant que nom DNS complet, par exemple **&lt;Serveur_écouteur>.fabrikam.com**. Ce nom est utilisé quand vous configurez Configuration Manager pour utiliser la base de données située dans le groupe de disponibilité.
 
       -    Dans la page **Sélectionner la synchronisation de données initiale** , sélectionnez **Complète**. Après avoir créé le groupe de disponibilité, l’Assistant sauvegarde la base de données primaire et le journal des transactions. Ensuite, il les restaure sur chaque serveur hébergeant un réplica secondaire. (Si vous ne suivez pas cette étape, vous devez restaurer une copie de la base de données du site sur chaque serveur hébergeant un réplica secondaire, et joindre manuellement cette base de données au groupe.)   
 
@@ -89,14 +83,14 @@ Pour effectuer cette procédure, le compte que vous utilisez pour exécuter le p
 > Lorsque vous utilisez Microsoft Intune avec Configuration Manager dans une configuration hybride, le déplacement de la base de données de site vers ou depuis un groupe de disponibilité déclenche une resynchronisation des données avec le cloud. Cette resynchronisation est inévitable.
 
 ### <a name="to-configure-a-site-to-use-the-availability-group"></a>Pour configurer un site afin d’utiliser le groupe de disponibilité
-1.  Exécutez le **programme d’installation de Configuration Manager** à partir du **&lt;*dossier d’installation du site Configuration Manager*>\BIN\X64\setup.exe**.
+1.  Exécutez **Installation de Configuration Manager** à partir de **&lt;*Dossier_installation_site_Configuration_Manager*>\BIN\X64\setup.exe**.
 
 2.  Sur la page **Mise en route** , sélectionnez **Effectuer une maintenance de site ou réinitialiser ce site**, puis cliquez sur **Suivant**.
 
 3.  Sélectionnez l’option **Modifier la configuration de SQL Server** , puis cliquez sur **Suivant**.
 
 4.  Reconfigurez ce qui suit pour la base de données du site :
-    -   **Nom du serveur SQL Server :** entrez le nom virtuel de l’**écouteur** de groupe de disponibilité que vous avez configuré lors de la création du groupe de disponibilité. Le nom virtuel doit être un nom DNS complet, par exemple **&lt;*endpointServer*>.fabrikam.com**.  
+    -   **Nom du serveur SQL Server :** entrez le nom virtuel de l’**écouteur** de groupe de disponibilité que vous avez configuré lors de la création du groupe de disponibilité. Le nom virtuel doit être un nom DNS complet, comme **&lt;*serveur_point_de_terminaison*>.fabrikam.com**.  
 
     -   **Instance :** cette valeur doit être vide pour spécifier l’instance par défaut pour l’*écouteur* du groupe de disponibilité. Si la base de données du site actuel s’exécute sur une instance nommée, celle-ci est répertoriée et doit être désactivée.
 
@@ -158,7 +152,7 @@ Pour effectuer cette procédure, le compte que vous utilisez doit être :
 
 4.  Sur le serveur qui hébergera la base de données de site (le réplica principal ou le serveur sur lequel vous avez restauré la base de données de site), remplacez le modèle de sauvegarde **Complète** de la base de données par **SIMPLE**. Consultez [Afficher ou modifier le mode de récupération d’une base de données (SQL Server)](/sql/relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server) dans la documentation de SQL Server.  
 
-5.  Exécutez le **programme d’installation de Configuration Manager** à partir du **&lt;*dossier d’installation du site Configuration Manager>*\BIN\X64\setup.exe**.
+5.  Exécutez le **programme d’installation de Configuration Manager** à partir de **&lt;*dossier_d’installation_du_site_Configuration_Manager>* \BIN\X64\setup.exe**.
 
 6.  Sur la page **Mise en route** , sélectionnez **Effectuer une maintenance de site ou réinitialiser ce site**, puis cliquez sur **Suivant**.  
 

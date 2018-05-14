@@ -2,26 +2,19 @@
 title: Créer des rapports personnalisés
 titleSuffix: Configuration Manager
 description: Définissez des modèles de rapport pour répondre aux besoins de votre activité, puis déployez-les sur Configuration Manager.
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: f2df88b4-c348-4dcf-854a-54fd6eedf485
-caps.latest.revision: 5
-caps.handback.revision: 0
-author: Dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 56274cbec336219a7734d23bf1bade8a7892de30
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: fd606ff7068b7c14047e445d16ea78d20a5c12ea
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-custom-report-models-for-system-center-configuration-manager-in-sql-server-reporting-services"></a>Création de modèles de rapport personnalisés pour System Center Configuration Manager dans SQL Server Reporting Services
 
@@ -40,7 +33,7 @@ Des exemples de modèles de rapport sont inclus dans System Center Configuration
 |Définition d'une vue de source de données pour un modèle de rapport|Après avoir défini les sources de données utilisées dans le projet de modèle de rapport, la prochaine étape consiste à définir une vue de source de données pour le projet. Une vue de source de données est un modèle de données logique basé sur une ou plusieurs sources de données. Les vues de source de données incluent l'accès aux objets physiques (tableaux et vues) contenus dans les sources de données sous-jacentes. SQL Server Reporting Services génère le modèle de rapport à partir de la vue de source de données.<br /><br /> Les vues de la source de données simplifient le processus de conception du modèle en mettant à votre disposition une représentation efficace des données spécifiées. Sans modifier la source de données sous-jacente, vous pouvez renommer les tables et les champs et ajouter l'ensemble des champs et des tables dérivées à une vue de source de données. Pour obtenir un modèle efficace, ajoutez ces tables uniquement à la vue de source de données à utiliser.|Pour plus d'informations, voir la section [Pour définir la vue de la source de données du modèle de rapport](#BKMK_DefineReportModelDataSourceView) de cette rubrique.|  
 |Créer un modèle de rapport|Un modèle de rapport correspond à une couche située en haut de la base de données et qui permet d'identifier les entités, les champs, ainsi que les rôles. Une fois publiés à l'aide de ces modèles, les utilisateurs du générateur de rapports peuvent développer des rapports sans avoir à connaître les structures de la base de données et sans devoir comprendre ou composer des requêtes. Les modèles contiennent des ensembles d'éléments de rapport associés et regroupés sous un nom convivial. Ils contiennent également des liens prédéfinis entre les éléments d'entreprise et des calculs prédéfinis. Vous pouvez définir des modèles à l'aide d'un langage XML appelé Semantic Model Definition Language (SMDL). L'extension de fichier du modèle de rapport est .smdl.|Pour plus d'informations, voir la section [Pour créer le modèle de rapport](#BKMK_CreateReportModel) de cette rubrique.|  
 |Publication d'un modèle de rapport|Pour générer un rapport via le modèle créé, vous devez publier ce dernier dans un serveur de rapport. La source de données ainsi que la vue de source de données sont incluses dans le modèle lors de sa publication.|Pour plus d'informations, voir la section [Pour publier le modèle de rapport en vue de son utilisation dans SQL Server Reporting Services](#BKMK_PublishReportModel) de cette rubrique.|  
-|Déployer le modèle de rapport sur Configuration Manager|Avant de pouvoir utiliser un modèle de rapport personnalisé dans l’**Assistant Création de rapport** pour créer un rapport basé sur un modèle, vous devez déployer le modèle de rapport sur Configuration Manager.|Pour plus d'informations, voir la section [Pour déployer le modèle de rapport personnalisé vers Configuration Manager](#BKMK_DeployReportModel) de cette rubrique.|  
+|Déployer le modèle de rapport sur Configuration Manager|Avant de pouvoir utiliser un modèle de rapport personnalisé dans l’**Assistant Création de rapport** pour créer un rapport basé sur un modèle, vous devez déployer le modèle de rapport sur Configuration Manager.|Pour plus d'informations, voir la section [To deploy the custom report model to Configuration Manager](#BKMK_DeployReportModel) de cette rubrique.|  
 
 ## <a name="steps-for-creating-a-basic-report-model-in-sql-server-reporting-services"></a>Étapes de création d’un modèle de rapport basique dans SQL Server Reporting Services  
  Vous pouvez utiliser les procédures suivantes pour créer un modèle de rapport basique dont les utilisateurs de votre site peuvent se servir pour générer des rapports spécifiques basés sur des modèles et sur des données d’une seule vue de la base de données Configuration Manager. Créez un modèle de rapport destiné à l'auteur du rapport et présentant les informations relatives aux ordinateurs clients de votre site. Ces informations sont extraites de la vue **v_R_System** de la base de données Configuration Manager.  
@@ -140,7 +133,7 @@ Des exemples de modèles de rapport sont inclus dans System Center Configuration
 
 3.  Cliquez sur **Fichier**, cliquez sur **Enregistrer tout**, puis fermez **SQL Server Business Intelligence Development Studio**.  
 
-###  <a name="BKMK_DeployReportModel"></a> Pour déployer le modèle de rapport personnalisé vers Configuration Manager  
+###  <a name="BKMK_DeployReportModel"></a> To deploy the custom report model to Configuration Manager  
 
 1.  Localisez le dossier dans lequel vous avez créé le projet du modèle de rapport. Par exemple, %*PROFIL_UTILISATEUR*%\Documents\Visual Studio 2008\Projects\\*&lt;nom_projet\>.*  
 
@@ -176,7 +169,7 @@ Des exemples de modèles de rapport sont inclus dans System Center Configuration
 
 9. Enregistrez et fermez le fichier *&lt;nom_modèle\>***.smdl**.  
 
-10. Copiez le fichier *&lt;nom_modèle\>***.smdl** dans le dossier *%programfiles%* \Microsoft Configuration Manager \AdminConsole\XmlStorage\Other du serveur de site Configuration Manager.  
+10. Copiez le fichier *&lt;nom_modèle\>***.smdl** dans le dossier *%programfiles%* \Microsoft Configuration Manager\AdminConsole\XmlStorage\Other du serveur de site Configuration Manager.  
 
     > [!IMPORTANT]  
     >  Après avoir copié le fichier du modèle de rapport sur le serveur de site Configuration Manager, vous devez quitter et redémarrer la console Configuration Manager avant de pouvoir utiliser le modèle de rapport à partir de l’**Assistant Création de rapport**.  
@@ -383,7 +376,7 @@ Des exemples de modèles de rapport sont inclus dans System Center Configuration
 
 3.  Cliquez sur **Fichier**, cliquez sur **Enregistrer tout**, puis fermez **SQL Server Business Intelligence Development Studio**.  
 
-#### <a name="to-deploy-the-custom-report-model-to-configuration-manager"></a>Pour déployer le modèle de rapport personnalisé vers Configuration Manager  
+#### <a name="to-deploy-the-custom-report-model-to-configuration-manager"></a>To deploy the custom report model to Configuration Manager  
 
 1.  Localisez le dossier dans lequel vous avez créé le projet du modèle de rapport. Par exemple, %*PROFIL_UTILISATEUR*%\Documents\Visual Studio 2008\Projects\\*&lt;nom_projet\>.*  
 

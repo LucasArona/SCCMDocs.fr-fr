@@ -1,26 +1,20 @@
 ---
-title: "Planifier la sécurité"
+title: Planifier la sécurité
 titleSuffix: Configuration Manager
-description: "Découvrez les bonnes pratiques et d’autres informations relatives à la sécurité dans System Center Configuration Manager."
-ms.custom: na
+description: Découvrez les bonnes pratiques et d’autres informations relatives à la sécurité dans System Center Configuration Manager.
 ms.date: 01/04/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2a216814-ca8c-4d2e-bcef-dc00966a3c9f
-caps.latest.revision: "6"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 8f63d1b762b296cb6b6aa56480a5cddf7a3249dc
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 02ab0884b49a8b4ac6998b9994cec23f02f076ec
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="plan-for-security-in-system-center-configuration-manager"></a>Planifier la sécurité dans System Center Configuration Manager
 
@@ -292,7 +286,7 @@ Vous pouvez supprimer la clé racine approuvée d’un client en utilisant la pr
 
 8.  Dans la nouvelle fenêtre **Résultat de la requête**, qui affiche les instances de **TrustedRootKey**, double-cliquez sur **TrustedRootKey=@**.  
 
-9. Dans la boîte de dialogue **Éditeur d'objets pour TrustedRootKey=@** , dans la section **Propriétés** , accédez à **TrustedRootKey CIM_STRING**. La chaîne dans la colonne droite correspond à la clé racine approuvée. Vérifiez qu’elle correspond à la valeur **SMSPublicRootKey** dans le fichier, *&lt;répertoire_Configuration_Manager\>***\bin\mobileclient.tcf**.  
+9. Dans la boîte de dialogue **Éditeur d'objets pour TrustedRootKey=@** , dans la section **Propriétés** , accédez à **TrustedRootKey CIM_STRING**. La chaîne dans la colonne droite correspond à la clé racine approuvée. Vérifiez qu’elle correspond à la valeur **SMSPublicRootKey** dans le fichier *&lt;répertoire_Configuration_Manager\>***\bin\mobileclient.tcf**.  
 
 ##  <a name="BKMK_PlanningForSigningEncryption"></a> Planifier la signature et le chiffrement  
  Lorsque vous utilisez des certificats PKI pour toutes les communications client, vous n'avez pas à planifier la signature et le chiffrement pour contribuer à sécuriser les communications de données client. Toutefois, si vous installez des systèmes de site qui exécutent IIS pour autoriser les connexions client HTTP, vous devez décider comment sécuriser la communication client pour le site.  

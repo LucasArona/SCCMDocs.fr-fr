@@ -1,25 +1,20 @@
 ---
-title: "Surveiller l’état d’Endpoint Protection"
+title: Surveiller l’état d’Endpoint Protection
 titleSuffix: Configuration Manager
-description: "Découvrez comment surveiller Endpoint Protection dans votre hiérarchie System Center Configuration Manager."
-ms.custom: na
+description: Découvrez comment surveiller Endpoint Protection dans votre hiérarchie System Center Configuration Manager.
 ms.date: 03/13/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: f4a1335c-bb3d-493e-a124-83a32a107dc8
-caps.latest.revision: "8"
-author: NathBarn
-ms.author: nathbarn
-manager: angrobe
-ms.openlocfilehash: 9e6356f8b3814ac49c26bfa4d319c3c9926a4382
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: f4e1ea4cb097381467774af9c3161079419d6840
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-monitor-endpoint-protection-status"></a>Guide pratique pour surveiller l’état d’Endpoint Protection
 
@@ -38,7 +33,7 @@ Vous pouvez surveiller Endpoint Protection dans votre hiérarchie Microsoft Syst
     > [!IMPORTANT]  
     >  Les regroupements peuvent être sélectionnés dans les cas suivants :  
     >   
-    >  -   Quand vous sélectionnez **Afficher ce regroupement dans le tableau de bord Endpoint Protection** sous l’onglet **Alertes** de la boîte de dialogue *Propriétés de***<nom_regroupement\>**.  
+    >  -   Quand vous sélectionnez **Afficher ce regroupement dans le tableau de bord Endpoint Protection** sous l’onglet **Alertes** de la boîte de dialogue *Propriétés de <nom_regroupement\>*****.  
     > -   Quand vous déployez une stratégie de logiciel anti-programme malveillant Endpoint Protection sur le regroupement.  
     > -   Quand vous activez et déployez les paramètres client Endpoint Protection sur le regroupement.  
 

@@ -1,26 +1,20 @@
 ---
-title: "Téléchargeur d’installation"
+title: Téléchargeur d’installation
 titleSuffix: Configuration Manager
-description: "Découvrez les fonctions de cette application autonome, qui a été conçue pour vérifier que votre installation de site utilise les dernières actuelles des fichiers d’installation clés."
-ms.custom: na
+description: Découvrez les fonctions de cette application autonome, qui a été conçue pour vérifier que votre installation de site utilise les dernières actuelles des fichiers d’installation clés.
 ms.date: 3/1/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: bda87fc5-2e4c-4992-98a4-01770365038c
-caps.latest.revision: 
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: dec591ac845b6c54421197099e56d7a4a86783ae
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: f8948556ebee069e4ea1c8bf16302ef92fe7b3c1
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setup-downloader-for-system-center-configuration-manager"></a>Téléchargeur d’installation pour System Center Configuration Manager
 
@@ -56,7 +50,7 @@ Vous avez deux options pour exécuter le téléchargeur d’installation :
 
 ## <a name="run-setup-downloader-from-a-command-prompt"></a>Exécuter le téléchargeur d’installation à partir d’une invite de commandes  
 
-1.  Dans une fenêtre d’invite de commandes, accédez à **&lt;*support d’installation de Configuration Manager*\>\SMSSETUP\BIN\X64**.   
+1.  Dans une fenêtre d’invite de commandes, accédez à **&lt;*Support d’installation de Configuration Manager*\>\SMSSETUP\BIN\X64**.   
 
 2.  Exécutez **Setupdl.exe** pour ouvrir le téléchargeur d’installation.
 

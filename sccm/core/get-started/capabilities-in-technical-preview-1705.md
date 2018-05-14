@@ -1,24 +1,20 @@
 ---
 title: Technical Preview 1705
 titleSuffix: Configuration Manager
-description: "Découvrez les fonctionnalités disponibles dans la version Technical Preview 1705 pour System Center Configuration Manager."
-ms.custom: na
+description: Découvrez les fonctionnalités disponibles dans la version Technical Preview 1705 pour System Center Configuration Manager.
 ms.date: 06/02/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 00684289-d21a-45f8-b1e3-c5c787d73096
-author: erikje
-ms.author: erikje
-manager: angrobe
-ms.openlocfilehash: 60415539a645e40f1b097897d4b255924d61f389
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 49205ac1d1fc2dd20cbd4a0844632c5f3d181e45
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1705-for-system-center-configuration-manager"></a>Fonctionnalités de la version Technical Preview 1705 de System Center Configuration Manager
 
@@ -59,7 +55,7 @@ Vous pouvez utiliser cet outil lorsqu’une mise à jour dans la console n’a p
 
 Lorsque vous exécutez l’outil, il s’exécute sur la mise à jour que vous spécifiez. Par défaut, l’outil ne supprime pas les mises à jour installées ou téléchargées avec succès.  
 
-### <a name="prerequisites"></a>Conditions préalables
+### <a name="prerequisites"></a>Prérequis
 Le compte que vous utilisez pour exécuter l’outil nécessite les autorisations suivantes :
 -   Les autorisations en **Lecture** et **Écriture** pour la base de données de site du site d’administration centrale et chaque site principal de votre hiérarchie. Pour définir ces autorisations, vous pouvez ajouter le compte d’utilisateur en tant que membre des [rôles de base de données fixes](/sql/relational-databases/security/authentication-access/database-level-roles#fixed-database-roles) **db_datawriter** et **db_datareader** sur la base de données Configuration Manager de chaque site. L’outil n’interagit pas avec les sites secondaires.
 -   **Administrateur local** sur le site de niveau supérieur de votre hiérarchie.
@@ -143,7 +139,7 @@ L’arrêt du site est équivalent à l’arrêt du service Gestionnaire de comp
 ## <a name="improved-user-notifications-for-office-365-updates"></a>Amélioration des notifications à l’utilisateur pour les mises à jour d’Office 365
 Des améliorations ont été apportées pour tirer parti de l’expérience utilisateur « Cliquer pour exécuter » d’Office lorsqu’un client installe une mise à jour d’Office 365. Cela inclut des fenêtres contextuelles et des notifications dans l’application, ainsi qu’une expérience de compte à rebours. Avant cette version, lorsqu’une mise à jour Office 365 a été envoyée à un client, les applications Office qui étaient ouvertes ont été fermées automatiquement sans avertissement. Après cette mise à jour, les applications Office ne seront plus fermées inopinément.
 
-### <a name="prerequisites"></a>Conditions préalables
+### <a name="prerequisites"></a>Prérequis
 Cette mise à jour s’applique aux clients Office 365 ProPlus.
 
 ### <a name="known-issues"></a>Problèmes connus

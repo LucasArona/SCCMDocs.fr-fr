@@ -1,26 +1,20 @@
 ---
 title: Rechercher un nom de famille de packages (NFP) pour un VPN par application
 titleSuffix: Configuration Manager
-description: "Découvrez deux façons de rechercher un nom de famille de packages en vue de configurer un VPN par application."
-ms.custom: na
+description: Découvrez deux façons de rechercher un nom de famille de packages en vue de configurer un VPN par application.
 ms.date: 10/06/2016
-ms.reviewer: na
-ms.suite: na
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: 47118499-3d26-4c25-bfde-b129de7eaa59
-caps.latest.revision: 
-author: Nbigman
-ms.author: nbigman
-manager: angrobe
-ms.openlocfilehash: 640f44985ad45442b05f2bbf4ee1ec9c2590cba4
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 1228133baca139fb17975f91139a8dedaee9ebe9
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="find-a-package-family-name-pfn-for-per-app-vpn"></a>Rechercher un nom de famille de packages (NFP) pour un VPN par application
 
@@ -74,12 +68,12 @@ Voici les informations récupérées pour OneNote :
 
 ## <a name="find-a-pfn-if-the-app-is-not-installed-on-a-computer"></a>Rechercher un NFP si l’application n’est pas installée sur un ordinateur
 
-1.  Accédez à https://www.microsoft.com/en-us/store/apps
+1.  Accéder à https://www.microsoft.com/en-us/store/apps
 2.  Entrez le nom de l’application dans la barre de recherche. Pour notre exemple, recherchez OneNote.
 3.  Cliquez sur le lien vers l’application. Notez que l’URL à laquelle vous accédez se termine par une série de lettres. Dans notre exemple, l’URL se présente comme suit : `https://www.microsoft.com/en-us/store/apps/onenote/9wzdncrfhvjl`
-4.  Sous un autre onglet, collez l’URL `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/<app id>/applockerdata` en remplaçant `<app id>` par l’ID d’application que vous avez obtenu à l’étape 3 à l’adresse https://www.microsoft.com/en-us/store/apps (la série de lettres située à la fin de l’URL). Pour notre exemple OneNote, nous collerions ceci : `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/9wzdncrfhvjl/applockerdata`.
+4.  Sous un autre onglet, collez l’URL `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/<app id>/applockerdata` en remplaçant `<app id>` par l’ID d’application que vous avez obtenu à l’étape 3 sur https://www.microsoft.com/en-us/store/apps (la série de lettres située à la fin de l’URL). Pour notre exemple OneNote, nous collerions ceci : `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/9wzdncrfhvjl/applockerdata`.
 
-Dans Microsoft Edge, les informations souhaitées s’affichent d’elles-mêmes ; dans Internet Explorer, cliquez sur **Ouvrir** pour afficher les informations. La valeur de NFP figure dans la première ligne. Voici à quoi ressemblent les résultats pour notre exemple :
+Dans Edge, les informations souhaitées s’affichent d’elles-mêmes ; dans Internet Explorer, cliquez sur **Ouvrir** pour afficher les informations. La valeur de NFP figure dans la première ligne. Voici à quoi ressemblent les résultats pour notre exemple :
 
 
 `{`

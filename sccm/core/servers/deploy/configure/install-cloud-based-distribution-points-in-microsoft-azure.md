@@ -1,25 +1,20 @@
 ---
 title: Installer des points de distribution cloud
 titleSuffix: Configuration Manager
-description: "Découvrez ce que vous devez faire pour commencer à utiliser des points de distribution cloud dans Microsoft Azure."
-ms.custom: na
+description: Découvrez ce que vous devez faire pour commencer à utiliser des points de distribution cloud dans Microsoft Azure.
 ms.date: 2/8/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bb83ac87-9914-4a35-b633-ad070031aa6e
-caps.latest.revision: "7"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 6471ac81718666403127c0ebcfaa19c41d3af47b
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 2c9c79c5e635a50fecf02c46e2a134df87c2d784
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-cloud-based-distribution-points-in-microsoft-azure-for-system-center-configuration-manager"></a>Installer des points de distribution cloud dans Microsoft Azure pour System Center Configuration Manager
 
@@ -46,7 +41,7 @@ Vous pouvez installer des points de distribution cloud System Center Configurati
 
 ### <a name="to-set-up-a-cloud-service-in-azure-for-a-distribution-point"></a>Pour configurer un service cloud dans Azure pour un point de distribution  
 
-1.  Dans un navigateur web, accédez au portail Azure à l’adresse https://manage.windowsazure.com, puis accédez à votre compte.  
+1.  Dans un navigateur web, accédez au portail Azure sur https://manage.windowsazure.com, puis accédez à votre compte.  
 
 2.  Cliquez sur **Services hébergés, Comptes de stockage et CDN**, puis sélectionnez **Certificats de gestion**.  
 
@@ -104,7 +99,7 @@ L'Assistant crée un service hébergé pour le point de distribution cloud. Apr�
 ##  <a name="BKMK_ConfigDNSforCloudDPs"></a> Configurer la résolution de noms pour les points de distribution cloud  
  Pour pouvoir accéder au point de distribution cloud, les clients doivent être en mesure de résoudre le nom du point de distribution cloud de manière à fournir une adresse IP gérée par Azure. Pour ce faire, les clients procèdent en deux étapes :  
 
-1.  Ils mappent le nom de service que vous avez fourni avec le certificat du service de point de distribution cloud Configuration Manager au nom de domaine complet de votre service Azure. Ce nom de domaine complet contient un GUID et le suffixe DNS de **cloudapp.net**. Le GUID est généré automatiquement après l'installation du point de distribution cloud. Vous pouvez afficher le nom de domaine complet dans le portail Azure, en référençant l’**URL du site** dans le tableau de bord du service cloud. Voici un exemple d'URL de site : **http://d1594d4527614a09b934d470.cloudapp.net**.  
+1.  Ils mappent le nom de service que vous avez fourni avec le certificat du service de point de distribution cloud Configuration Manager au nom de domaine complet de votre service Azure. Ce nom de domaine complet contient un GUID et le suffixe DNS de **cloudapp.net**. Le GUID est généré automatiquement après l'installation du point de distribution cloud. Vous pouvez afficher le nom de domaine complet dans le portail Azure, en référençant l’**URL du site** dans le tableau de bord du service cloud. Exemple d’URL de site : **http://d1594d4527614a09b934d470.cloudapp.net**.  
 
 2.  Ils résolvent le nom de domaine complet du service Azure pour fournir l’adresse IP allouée par Azure. Cette adresse IP peut également être identifiée dans le tableau de bord pour le service cloud du portail Azure, et elle est nommée **ADRESSE IP VIRTUELLE PUBLIQUE (VIP)**.  
 

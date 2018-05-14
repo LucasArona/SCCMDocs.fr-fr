@@ -1,26 +1,20 @@
 ---
 title: En savoir plus sur les licences et les branches
 titleSuffix: Configuration Manager
-description: "Utilisez cette rubrique pour en savoir plus sur les licences requises pour les options d’installation disponibles avec la version d’octobre 2016 de System Center Configuration Manager, qui incluent Current Branch version 1606, Long-Term Servicing Branch (LTSB) et l’installation d’évaluation de Current Branch."
-ms.custom: na
+description: Utilisez cette rubrique pour en savoir plus sur les licences requises pour les options d’installation disponibles avec la version d’octobre 2016 de System Center Configuration Manager, qui incluent Current Branch version 1606, Long-Term Servicing Branch (LTSB) et l’installation d’évaluation de Current Branch.
 ms.date: 12/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 495b87ae-41a4-49ba-abe2-d4f7d22ac0d4
-caps.latest.revision: "0"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 8c5fcb718cf03a1e779212207d696cfa5fe9f0e2
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: 8eb561d9867c6bde778ffd5fb6ef404395c359da
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="licensing-and-branches-for-system-center-configuration-manager"></a>Licences et branches pour System Center Configuration Manager
 
@@ -100,16 +94,16 @@ Pour plus d’informations sur la licence Software Assurance et la branche Curre
 Utilisez les liens suivants pour en savoir plus sur les licences de produit.
 
 **Liens du Centre de gestion des licences en volume Microsoft (VLSC) :**
-- Vue d’ensemble du VLSC : [https://www.microsoft.com/fr-fr/Licensing/existing-customer/vlsc-training-and-resources.aspx](https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx).
+- Vue d’ensemble de VLSC : [ https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx ](https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx).
 
-- Conditions générales des produits de licence en volume Microsoft : [http://go.microsoft.com/fwlink/?LinkId=800052](http://go.microsoft.com/fwlink/?LinkId=800052).
+- Termes des contrats de licence en volume Microsoft : [http://go.microsoft.com/fwlink/?LinkId=800052](http://go.microsoft.com/fwlink/?LinkId=800052).
 
-- Les clients disposant de licences en volume peuvent obtenir un résumé de leurs licences ici :  [https://www.microsoft.com/Licensing/servicecenter/default.aspx](https://www.microsoft.com/Licensing/servicecenter/default.aspx).  
+- Les clients de licence en volume peuvent obtenir un résumé de leurs licences ici : [ https://www.microsoft.com/Licensing/servicecenter/default.aspx ](https://www.microsoft.com/Licensing/servicecenter/default.aspx).  
   Accédez au menu **Licences**, puis cliquez sur **Résumé des licences** pour obtenir une vue d’ensemble des licences.
 
 **Vidéos VLSC :**
 - Vidéos de formation sur le fonctionnement de VLSC : [https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx#tab=2](https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx#tab=2).
 
-- Où trouver votre contrat Software Assurance actif (démarrage dans 43 secondes environ) : [https://www.microsoft.com/showcase/video.aspx?uuid=fe1846cb-1d26-49fc-b064-57b25dcc31a0](https://www.microsoft.com/showcase/video.aspx?uuid=fe1846cb-1d26-49fc-b064-57b25dcc31a0).
+- Où rechercher votre contrat Software Assurance actif (à 43 secondes du début) : [https://www.microsoft.com/showcase/video.aspx?uuid=fe1846cb-1d26-49fc-b064-57b25dcc31a0](https://www.microsoft.com/showcase/video.aspx?uuid=fe1846cb-1d26-49fc-b064-57b25dcc31a0).
 
-- Guide pratique pour obtenir des autorisations pour VLSC : [https://www.microsoft.com/showcase/video.aspx?uuid=ac4ed1ca-d0a9-43cd-89fa-74ccb555dec4](https://www.microsoft.com/showcase/video.aspx?uuid=ac4ed1ca-d0a9-43cd-89fa-74ccb555dec4).  Vous pouvez déléguer des autorisations de lecture et d’écriture VLSC à d’autres personnes de votre organisation.
+- Comment obtenir des autorisations pour VLSC : [https://www.microsoft.com/showcase/video.aspx?uuid=ac4ed1ca-d0a9-43cd-89fa-74ccb555dec4](https://www.microsoft.com/showcase/video.aspx?uuid=ac4ed1ca-d0a9-43cd-89fa-74ccb555dec4).  Vous pouvez déléguer des autorisations de lecture et d’écriture VLSC à d’autres personnes de votre organisation.

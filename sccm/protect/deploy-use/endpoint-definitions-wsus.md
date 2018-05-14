@@ -1,25 +1,20 @@
 ---
-title: "Définitions de programmes malveillants Endpoint Protection à partir de WSUS"
+title: Définitions de programmes malveillants Endpoint Protection à partir de WSUS
 titleSuffix: Configuration Manager
-definition: Learn how to configure Windows Server Updates Services to auto-approve definition updates.
-ms.custom: na
 ms.date: 02/14/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: a34d9401-83e4-471d-8e23-b8042fc11c90
-caps.latest.revision: "21"
-author: NathBarn
-ms.author: nathbarn
-manager: angrobe
-ms.openlocfilehash: fcc0e1909705fb1954c58c438438792a4866d3bf
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+description: Découvrez comment configurer Windows Server Update Services pour approuver automatiquement les mises à jour de définition.
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: b1c79a839ad1c83c96d7fe4583b46f6a3edbffba
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="enable-endpoint-protection-malware-definitions-to-download-from-windows-server-update-services-wsus-for-configuration-manager"></a>Activer le téléchargement des définitions de programmes malveillants pour Endpoint Protection à partir de Windows Server Update Services (WSUS) pour Configuration Manager
 

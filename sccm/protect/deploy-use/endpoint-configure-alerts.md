@@ -1,25 +1,20 @@
 ---
 title: Configurer des alertes Endpoint Protection
 titleSuffix: Configuration Manager
-description: "Découvrez comment configurer les alertes Endpoint Protection dans System Center Configuration Manager."
-ms.custom: na
+description: Découvrez comment configurer les alertes Endpoint Protection dans System Center Configuration Manager.
 ms.date: 03/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: f504de3e-4caf-455c-80d7-a63f13f4c5d9
-caps.latest.revision: "21"
-author: NathBarn
-ms.author: nathbarn
-manager: angrobe
-ms.openlocfilehash: 91df245565cfe99f79a18618d62c00f0cea579d2
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 275ce06520174adf10100b77a8034620b072c93f
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 #  <a name="configure-alerts-for-endpoint-protection-in-configuration-manager"></a>Configurer des alertes pour Endpoint Protection dans Configuration Manager
 
@@ -36,19 +31,19 @@ ms.lasthandoff: 10/12/2017
 
 1.  Dans la console Configuration Manager, cliquez sur **Ressources et Conformité**.
 
-2.  Dans l'espace de travail **Ressources et Conformité** , cliquez sur **Regroupements d’appareils**.
+2.  Dans l'espace de travail **Ressources et Conformité** , cliquez sur **Regroupements de périphériques**.
 
 3.  Dans la liste **Regroupements d’appareils** , sélectionnez le regroupement pour lequel vous voulez configurer des alertes, puis cliquez sur **Propriétés** dans le groupe **Propriétés** sous l’onglet **Accueil**.
 
     > [!NOTE]
     >  Vous ne pouvez pas configurer d'alertes pour les regroupements d'utilisateurs.
 
-4.  Sous l’onglet **Alertes** de la boîte de dialogue *Propriétés de***<Nom du regroupement\>**, sélectionnez **Afficher ce regroupement dans le tableau de bord Endpoint Protection** si vous voulez afficher des détails sur les opérations anti-programme malveillant pour ce regroupement dans l’espace de travail **Surveillance** de la console Configuration Manager.
+4.  Sous l’onglet **Alertes** de la boîte de dialogue *Propriétés de <nom_regroupement***\>**, sélectionnez **Afficher ce regroupement dans le tableau de bord Endpoint Protection** si vous voulez voir les détails des opérations anti-programme malveillant de ce regroupement dans l’espace de travail **Surveillance** de la console Configuration Manager.
 
     > [!NOTE]
     >  Cette option n'est pas disponible pour le regroupement **Tous les systèmes** .
 
-5.  Sous l’onglet **Alertes** de la boîte de dialogue *Propriétés de***<Nom du regroupement\>**, cliquez sur **Ajouter**.
+5.  Sous l’onglet **Alertes** de la boîte de dialogue *Propriétés de <nom_regroupement***\>**, cliquez sur **Ajouter**.
 
 6.  Dans la section **Générer une alerte lorsque ces conditions s’appliquent** de la boîte de dialogue **Ajouter de nouvelles alertes de regroupement**, sélectionnez les alertes que doit générer Configuration Manager lorsque les événements Endpoint Protection spécifiés se produisent, puis cliquez sur **OK**.
 
@@ -87,7 +82,7 @@ ms.lasthandoff: 10/12/2017
 
         -   **Intervalle de détection (heures) :** spécifiez l’intervalle de détection, en heures, au cours duquel le nombre de détections de programme malveillant doit être exécuté. Spécifiez un nombre compris entre **1** et **168**.
 
-9. Cliquez sur **OK** pour fermer la boîte de dialogue *Propriétés de***<Nom du regroupement\>**.  
+9. Cliquez sur **OK** pour fermer la boîte de dialogue *Propriétés de <nom_regroupement\>**.  
 
 ## <a name="alert-for-outdated-malware-client"></a>Alerte pour les clients contre les programmes malveillants obsolètes
 

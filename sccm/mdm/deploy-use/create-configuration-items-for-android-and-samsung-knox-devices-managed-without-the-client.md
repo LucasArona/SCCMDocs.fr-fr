@@ -1,26 +1,20 @@
 ---
-title: "Créer des éléments de configuration pour les appareils Android et Samsung KNOX Standard gérés via Microsoft Intune"
+title: Créer des éléments de configuration pour les appareils Android et Samsung KNOX Standard gérés via Microsoft Intune
 titleSuffix: Configuration Manager
-description: "Utilisez l’élément de configuration Android et Samsung KNOX Standard de System Center Configuration Manager pour gérer les paramètres des appareils."
-ms.custom: na
+description: Utilisez l’élément de configuration Android et Samsung KNOX Standard de System Center Configuration Manager pour gérer les paramètres des appareils.
 ms.date: 03/27/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7b66f3c4-e3bb-4f6a-abd5-55be649ff90d
-caps.latest.revision: "17"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 3fa824c94b02ed7141c7051bab86fa64a4a9ee49
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: fbfcc2189e2ce06e6348936caad6c68de51f5bdb
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-system-center-configuration-manager-client"></a>Comment créer des éléments de configuration pour des appareils Android et Samsung KNOX gérés sans le client System Center Configuration Manager
 
@@ -68,7 +62,7 @@ Utilisez l’élément de configuration **Android et Samsung KNOX** de System Ce
 
 12. Fermez l'Assistant.  
 
- Vous pouvez afficher le nouvel élément de configuration dans le nœud **Éléments de configuration** de l’espace de travail **Ressources et conformité** .  
+ Vous pouvez afficher le nouvel élément de configuration dans le nœud **Éléments de configuration** de l’espace de travail **Ressources et Conformité**.  
 
 ## <a name="android-and-samsung-knox-configuration-item-settings-reference"></a>Informations de référence sur les paramètres d’élément de configuration Android et Samsung KNOX  
 
@@ -172,10 +166,10 @@ Dans la page **Applications conformes et non conformes (Android)** , spécifiez 
 |-------------|----------------------|  
 |**Liste des applications non conformes**|Spécifie une liste d’applications qui sont signalées comme non conformes si elles sont installées par les utilisateurs.|  
 |**Liste des applications conformes**|Spécifie la liste des applications que les utilisateurs sont autorisés à installer. Toutes les autres applications installées sont signalées comme non conformes.|  
-|**Ajouter**|Ajoute une application à la liste sélectionnée. Spécifiez le nom de votre choix, éventuellement l’éditeur de l’application, ainsi que l’URL de l’application dans la boutique d’applications.<br /><br /> Pour spécifier l’URL, dans la [section Applications de Google Play](https://play.google.com/store/apps), recherchez l’application à utiliser.<br /><br /> Ouvrez la page de l'application, puis copiez l'URL dans le Presse-papiers. Vous pouvez maintenant utiliser cette URL dans la liste des applications conformes ou non conformes.<br /><br /> **Exemple :** recherchez Google Play pour **Microsoft Office Mobile**. L’URL utilisée est **https://play.google.com/store/apps/details?id=com.microsoft.office.officehub**.|  
+|**Ajouter**|Ajoute une application à la liste sélectionnée. Spécifiez le nom de votre choix, éventuellement l’éditeur de l’application, ainsi que l’URL de l’application dans la boutique d’applications.<br /><br /> Pour spécifier l’URL, dans la [section Applications de Google Play](https://play.google.com/store/apps), recherchez l’application à utiliser.<br /><br /> Ouvrez la page de l'application, puis copiez l'URL dans le Presse-papiers. Vous pouvez maintenant utiliser cette URL dans la liste des applications conformes ou non conformes.<br /><br /> **Exemple :** recherchez Google Play pour **Microsoft Office Mobile**. L’URL que vous utilisez est **https://play.google.com/store/apps/details?id=com.microsoft.office.officehub**.|  
 |**Éditer**|Vous permet de modifier le nom, l’éditeur et l’URL de l’application sélectionnée.|  
 |**Supprimer**|Supprime l'application sélectionnée dans la liste.|  
-|**Importerer**|Importe une liste d’applications que vous avez spécifiée dans un fichier de valeurs séparées par des virgules. Utilisez le format Nom de l’application, Éditeur, URL de l’application dans le fichier.|  
+|**Importer**|Importe une liste d’applications que vous avez spécifiée dans un fichier de valeurs séparées par des virgules. Utilisez le format Nom de l’application, Éditeur, URL de l’application dans le fichier.|  
 
 ## <a name="android-for-work-configuration-items"></a>Éléments de configuration Android for Work
 Android for Work a deux groupes de paramètres pour les éléments de configuration :

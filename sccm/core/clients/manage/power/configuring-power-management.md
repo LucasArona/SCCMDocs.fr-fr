@@ -1,26 +1,20 @@
 ---
-title: "Configuration de la gestion de l’alimentation"
+title: Configuration de la gestion de l’alimentation
 titleSuffix: Configuration Manager
-description: "Configurez la gestion de l’alimentation dans System Center Configuration Manager."
-ms.custom: na
+description: Configurez la gestion de l’alimentation dans System Center Configuration Manager.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 435c923c-ea30-4dce-8afd-48962ed85502
-caps.latest.revision: "5"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: ed6aa0ce35d93837ac133cccedb44dedaa4a9602
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: ceb8c07c111818136db7c3815eee58cc87ae75c8
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configuring-power-management-in-system-center-configuration-manager"></a>Configuration de la gestion de l’alimentation dans System Center Configuration Manager
 
@@ -29,7 +23,7 @@ ms.lasthandoff: 10/12/2017
 Avant de pouvoir utiliser la gestion de l’alimentation dans System Center Configuration Manager, vous devez effectuer les étapes de configuration suivantes.  
 
 ## <a name="enable-and-configure-power-management-client-settings"></a>Activer et configurer les paramètres client de gestion de l’alimentation  
- Cette procédure configure les paramètres client par défaut pour la gestion de l'alimentation et s'appliquera à tous les ordinateurs de votre hiérarchie. Si vous souhaitez que ces paramètres s'appliquent uniquement à certains ordinateurs, créez un paramètre client de périphérique personnalisé et affectez-le à un regroupement contenant les ordinateurs pour lesquels vous souhaitez utiliser la gestion de l'alimentation. Pour plus d’informations sur la création de paramètres de d’appareil personnalisés, consultez [Guide pratique pour configurer les paramètres client dans System Center Configuration Manager](../../../../core/clients/deploy/configure-client-settings.md).  
+ Cette procédure configure les paramètres client par défaut pour la gestion de l'alimentation et s'appliquera à tous les ordinateurs de votre hiérarchie. Si vous souhaitez que ces paramètres s'appliquent uniquement à certains ordinateurs, créez un paramètre client de périphérique personnalisé et affectez-le à un regroupement contenant les ordinateurs pour lesquels vous souhaitez utiliser la gestion de l'alimentation. Pour plus d’informations sur la création de paramètres d’appareil personnalisés, consultez [Guide pratique pour configurer les paramètres client dans System Center Configuration Manager](../../../../core/clients/deploy/configure-client-settings.md).  
 
 #### <a name="to-enable-power-management-and-configure-client-settings"></a>Pour activer la gestion de l'alimentation et configurer les paramètres client  
 
@@ -51,7 +45,7 @@ Avant de pouvoir utiliser la gestion de l’alimentation dans System Center Conf
 
 8.  Cliquez sur **OK** pour fermer la boîte de dialogue **Paramètres client par défaut** .  
 
- Les ordinateurs client sont configurés avec ces paramètres lorsqu'ils téléchargent la stratégie client. Pour lancer la récupération de stratégie pour un client unique, consultez [How to manage clients in System Center Configuration Manager](../../../../core/clients/manage/manage-clients.md).  
+ Les ordinateurs clients sont configurés avec ces paramètres lorsqu'ils téléchargent la stratégie client. Pour lancer la récupération de stratégie pour un client unique, consultez [Comment gérer les clients dans System Center Configuration Manager](../../../../core/clients/manage/manage-clients.md).  
 
 ## <a name="exclude-computers-from-power-management"></a>Exclure des ordinateurs de la gestion de l’alimentation  
  Vous pouvez empêcher les regroupements d'ordinateurs de recevoir les paramètres de gestion de l'alimentation. Si un ordinateur est membre d'un regroupement qui est exclu des paramètres de gestion de l'alimentation, cet ordinateur n'applique pas les paramètres de gestion de l'alimentation, même s'il est membre d'un autre regroupement qui applique les paramètres de gestion de l'alimentation.  
@@ -78,10 +72,10 @@ Avant de pouvoir utiliser la gestion de l’alimentation dans System Center Conf
 
 1.  Dans la console Configuration Manager, cliquez sur **Ressources et Conformité**.  
 
-2.  Dans l'espace de travail **Ressources et Conformité** , cliquez sur **Regroupements d’appareils**.  
+2.  Dans l'espace de travail **Ressources et Conformité** , cliquez sur **Regroupements de périphériques**.  
 
 3.  Dans la liste **Regroupements de périphériques** , sélectionnez le regroupement que vous souhaitez exclure de la gestion de l'alimentation, puis, dans l'onglet **Accueil** , dans le groupe **Propriétés** , cliquez sur **Propriétés**.  
 
-4.  Sous l’onglet **Gestion de l’alimentation** de la boîte de dialogue **Propriétés de** *<Nom du regroupement\>*, sélectionnez **Ne jamais appliquer les paramètres de gestion de l’alimentation aux ordinateurs de ce regroupement**.  
+4.  Sous l’onglet **Gestion de l’alimentation** de la boîte de dialogue *Propriétés de <nom_regroupement\>*, sélectionnez **Ne jamais appliquer les paramètres de gestion de l’alimentation aux ordinateurs de ce regroupement**.  
 
-5.  Cliquez sur **OK** pour fermer la boîte de dialogue **Propriétés de** *<Nom du regroupement\>* et pour enregistrer vos paramètres.  
+5.  Cliquez sur **OK** pour fermer la boîte de dialogue *Propriétés de <nom_regroupement\>* et pour enregistrer vos paramètres.  

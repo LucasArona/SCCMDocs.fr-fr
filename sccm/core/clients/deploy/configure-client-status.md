@@ -1,27 +1,20 @@
 ---
-title: "Configurer l’état du client"
+title: Configurer l’état du client
 titleSuffix: Configuration Manager
-description: "Sélectionnez les paramètres d’état du client dans System Center Configuration Manager."
-ms.custom: na
+description: Sélectionnez les paramètres d’état du client dans System Center Configuration Manager.
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: a2275ba2-c83d-43e7-90ed-418963a707fe
-caps.latest.revision: 
-caps.handback.revision: 
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 5db52925515e65797a43ed35775460369f742f49
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 8f919e647ae252731d60a98e01485a01aae10698
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-configure-client-status-in-system-center-configuration-manager"></a>Comment configurer l’état du client dans System Center Configuration Manager
 
@@ -78,7 +71,7 @@ Afin de surveiller l’état du client System Center Configuration Manager et de
     > [!NOTE]  
     >  Vous ne pouvez pas configurer d'alertes pour les regroupements d'utilisateurs.  
 
-4.  Sous l’onglet **Alertes** de la boîte de dialogue **Propriétés de***&lt;Nom du regroupement\>*, cliquez sur **Ajouter**.  
+4.  Sous l’onglet **Alertes** de la boîte de dialogue *Propriétés de &lt;Nom du regroupement\>*, cliquez sur **Ajouter**.  
 
     > [!NOTE]  
     >  L'onglet **Alertes** n'est visible que si le rôle de sécurité auquel vous êtes associé dispose d'autorisations pour les alertes.  
@@ -93,7 +86,7 @@ Afin de surveiller l’état du client System Center Configuration Manager et de
 
     -   **Déclencher l’alerte** – Spécifiez le pourcentage seuil pour l’alerte.  
 
-7.  Cliquez sur **OK** pour fermer la boîte de dialogue **Propriétés de***&lt;Nom du regroupement\>*.  
+7.  Cliquez sur **OK** pour fermer la boîte de dialogue *Propriétés de &lt;nom_regroupement\>*.  
 
 ##  <a name="BKMK_3"></a> Pour exclure des ordinateurs de la résolution automatique  
 

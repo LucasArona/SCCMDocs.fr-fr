@@ -1,27 +1,21 @@
 ---
-title: "Certificats et sécurité"
+title: Certificats et sécurité
 titleSuffix: Configuration Manager
-description: "Gérer les certificats et la sécurité pour l’éditeur de mise à jour System Center"
-ms.custom: na
+description: Gérer les certificats et la sécurité pour l’éditeur de mise à jour System Center
 ms.date: 4/29/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-sum
+ms.topic: conceptual
 ms.assetid: a7f91e63-4750-402e-9970-dd14be7f76a3
-caps.latest.revision: 
-author: mestew
-ms.author: mstewart
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 9d8812da3588b60f388288cef6f9a093731d873f
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: b3ce22747cddc1371fb38718cc97b70cda8afcb1
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-certificates-and-security-for-updates-publisher"></a>Gérer les certificats et la sécurité pour l’éditeur de mise à jour
 
@@ -41,7 +35,7 @@ La procédure suivante est une des méthodes possibles pour ajouter le certifica
 
 3.  Sélectionnez **Un autre ordinateur**, saisissez le nom du serveur de mise à jour ou cliquez sur **Parcourir** pour rechercher l’ordinateur du serveur de mise à jour, cliquez sur **Terminer**, sur **Fermer** puis sur **OK**.
 
-4.  Développez **Certificats (*nom du serveur de mise à jour*)**, **WSUS**, puis cliquez sur **Certificats**.
+4.  Développez ***Certificats (* nom du serveur de mise à jour**), **WSUS**, puis cliquez sur **Certificats**.
 
 5.  Dans le volet des résultats, cliquez avec le bouton droit sur le certificat souhaité, sélectionnez **Toutes les tâches**, puis cliquez sur **Exporter**.
 
@@ -51,7 +45,7 @@ La procédure suivante est une des méthodes possibles pour ajouter le certifica
 
 8.  Si vous utilisez un certificat auto-signé, par exemple des **éditeurs WSUS auto-signés**, cliquez avec le bouton droit sur **Autorités de certification racines de confiance**, sélectionnez **Toutes les tâches**, puis cliquez sur **Importer**. Terminez l’Assistant Importation de certificat en utilisant le fichier exporté à l’étape 6.
 
-9.  Cliquez avec le bouton droit sur **Certificats (*nom du serveur de mise à jour*)**, sélectionnez **Se connecter à un autre ordinateur**, entrez le nom d’ordinateur de l’éditeur de mise à jour, puis cliquez sur **OK**.
+9.  Cliquez avec le bouton droit sur ***Certificats (* nom du serveur de mise à jour**), sélectionnez **Se connecter à un autre ordinateur**, entrez le nom d’ordinateur de l’éditeur de mise à jour, puis cliquez sur **OK**.
 
 10. Si l’éditeur de mise à jour est éloigné du serveur de mise à jour, répétez les étapes 7 à 9 pour importer le certificat dans le magasin de certificats sur l’ordinateur de l’éditeur de mise à jour.
 
@@ -71,7 +65,7 @@ Voici un exemple montrant comment configurer le certificat de signature sur les 
 
 3.  Sélectionnez **Un autre ordinateur**, saisissez le nom du serveur de mise à jour ou cliquez sur **Parcourir** pour rechercher l’ordinateur du serveur de mise à jour, cliquez sur **Terminer**, sur **Fermer** puis sur **OK**.
 
-4.  Développez **Certificats (*nom du serveur de mise à jour*)**, **WSUS**, puis cliquez sur **Certificats**.
+4.  Développez ***Certificats (* nom du serveur de mise à jour**), **WSUS**, puis cliquez sur **Certificats**.
 
 5.  Cliquez avec le bouton droit sur le certificat dans le volet des résultats, sélectionnez **Toutes les tâches**, puis cliquez sur **Exporter**. Terminez l**’Assistant Exportation de certificat**, utilisez les paramètres par défaut pour créer un fichier de certificat d’exportation avec le nom et l’emplacement spécifiés dans l’Assistant.
 
