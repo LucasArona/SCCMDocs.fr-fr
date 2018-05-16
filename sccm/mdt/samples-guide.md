@@ -11,11 +11,11 @@ ms.assetid: 2ff0100c-b7ef-4e09-8c96-fc1898390b6d
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: fe61cecea2b2a4f4083933b937af90dfb61ea5bf
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 6b36da9f98749858829ab591571496532b26f290
+ms.sourcegitcommit: 7198ec49d9ce68c6d55bfb9e2d537b5442a132cb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="microsoft-deployment-toolkit-samples-guide"></a>Guide d’exemples Microsoft Deployment Toolkit  
  Ce guide fait partie de Microsoft® Deployment Toolkit (MDT) 2013 et aide une équipe de spécialistes à déployer des systèmes d’exploitation Windows et Microsoft Office. Plus précisément, ce guide est conçu pour fournir des exemples de paramètres de configuration pour des scénarios de déploiement spécifiques.  
@@ -1730,7 +1730,7 @@ IF ((Computer Model IS “Contoso 1950”) AND (operating system=2003 OR operati
 
     4.  Cliquez sur **Ajouter**.  
 
-    5.  Dans la boîte de dialogue **Add Folder to Replicate** (Ajouter un dossier à répliquer), cliquez sur **Browse** (Parcourir) pour accéder au dossier *X:*\RemoteInstall\Boot.  
+    5.  Dans la boîte de dialogue **Add Folder to Replicate** (Ajouter un dossier à répliquer), cliquez sur **Browse** (Parcourir) pour accéder au dossier *X:* \RemoteInstall\Boot.  
 
     6.  Cliquez sur **Use name based on path** (Utiliser le nom basé sur le chemin).  
 
@@ -1960,7 +1960,7 @@ IF ((Computer Model IS “Contoso 1950”) AND (operating system=2003 OR operati
 
     -   Pour chaque section SQL Server ajoutée, configurez **SQLServer** pour utiliser le nom du serveur **%WDSServer%**, par exemple **SQLServer=%WDSServer%**.  
 
-    -   Si vous configurez **DeployRoot**, configurez-la pour utiliser la variable**%WDSServer%**, par exemple **DeployRoot=\\\\%WDSServer%\Deployment$**.  
+    -   Si vous configurez **DeployRoot**, configurez-la pour utiliser la variable **%WDSServer%**, par exemple **DeployRoot=\\\\%WDSServer%\Deployment$**.  
 
 5.  Cliquez sur **Edit Bootstrap.ini** (Modifier Bootstrap.ini).  
 
@@ -3670,9 +3670,11 @@ Remove-item -path "DS002:\Task Sequences\Windows Vista Business Production Build
 -   ```  
     New-PSDrive -Name "DS002" -PSProvider MDTProvider -Root "D:\Production Deployment Share"  
     ```  
-
--   Update\-MDTDeploymentShare \-path "DS002:" \-Verbose  
-
+    
+-   ```
+    Update\-MDTDeploymentShare \-path "DS002:" \-Verbose  
+    ```
+    
 ###  <a name="CreateLinkedDeployShare"></a> Création d’un partage de déploiement lié  
  Les commandes Windows PowerShell suivantes créent un partage de déploiement qui est lié au partage de déploiement Production et se trouve sous le partage \\\\*nom\_serveur\_distant*\\Deployment$. Le profil de sélection Everything est utilisé pour déterminer le contenu qui est répliqué dans le partage de déploiement lié. Le contenu du partage de déploiement Production est fusionné avec le contenu qui existe déjà dans le partage \\\\*nom\_serveur\_distant*\\Deployment$.  
 
