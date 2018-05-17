@@ -112,10 +112,10 @@
 
 <!-- Only show the current plus three; four total) -->
 ##   [Préversion technique](get-started/technical-preview.md)
+###  [Fonctionnalités dans 1805](get-started/capabilities-in-technical-preview-1805.md)
 ###  [Fonctionnalités dans 1804](get-started/capabilities-in-technical-preview-1804.md)
 ###  [Fonctionnalités dans 1803](get-started/capabilities-in-technical-preview-1803.md)
 ###  [Fonctionnalités dans 1802](get-started/capabilities-in-technical-preview-1802.md)
-###  [Fonctionnalités dans 1801](get-started/capabilities-in-technical-preview-1801.md)
 
 ##   [Faire migrer des données entre des hiérarchies](migration/migrate-data-between-hierarchies.md)
 ###  [Planification de la migration](migration/planning-for-migration.md)
