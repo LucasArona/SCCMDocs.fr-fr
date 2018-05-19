@@ -10,11 +10,11 @@ ms.assetid: 3417ff88-7177-4a0d-8967-ab21fe7eba17
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0b34163bfb5aea716062882d4c2ebb1360bba2c9
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 376d75a2aed5fe0b14b3af309e48a75d8f392c11
+ms.sourcegitcommit: defdaf493c1dc5a7a380541bc028fbd2b21c1047
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="step-by-step-example-deployment-of-the-pki-certificates-for-system-center-configuration-manager-windows-server-2008-certification-authority"></a>Exemple de déploiement pas à pas des certificats PKI pour System Center Configuration Manager : autorité de certification Windows Server 2008
 
@@ -239,6 +239,9 @@ Les procédures de ce déploiement de certificat sont les suivantes :
 8.  Choisissez **Ajouter**, entrez **Serveurs de site ConfigMgr** dans la zone de texte, puis choisissez **OK**.  
 
 9. Sélectionnez l'autorisation **Inscription** pour ce groupe et ne désactivez pas l'autorisation **Lecture** .  
+
+    > [!NOTE]
+    > Vérifiez que l’option **Taille de clé minimale** sous l’onglet **Chiffrement** a été définie sur **2048**
 
 10. Choisissez **OK**, puis fermez la **console Modèles de certificats**.  
 

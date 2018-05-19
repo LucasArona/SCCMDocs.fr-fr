@@ -2,7 +2,7 @@
 title: Nouveautés de la gestion MDM hybride
 titleSuffix: Configuration Manager
 description: Découvrez les nouvelles fonctionnalités de gestion des appareils mobiles disponibles pour les déploiements hybrides avec Configuration Manager et Intune.
-ms.date: 05/01/2018
+ms.date: 05/09/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,11 +10,11 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3105f9597d1f3971d6ef1092a33b0077118a1a22
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 72aeff7874456c3866ccb658395b8706057bdfaf
+ms.sourcegitcommit: 7bec1331c4f3096e6a278ff9ea0e929cff0a9cb9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Nouveautés de la gestion hybride des appareils mobiles avec Configuration Manager et Microsoft Intune
 
@@ -41,6 +41,13 @@ Chaque section de cet article répertorie les fonctionnalités hybrides sous tro
 
 ## <a name="may-2018"></a>Mai 2018
 
+### <a name="new-in-microsoft-intune"></a>Nouveautés de Microsoft Intune
+
+#### <a name="requesting-help-in-the-company-portal-for-windows-10"></a>Demande d’aide sur l’application Portail d’entreprise pour Windows 10 
+<!--1874137-->
+Le portail d’entreprise pour Windows 10 envoie maintenant les journaux d’application directement à Microsoft lorsque l’utilisateur démarre le flux de travail permettant d’obtenir de l’aide. Ce comportement facilite la résolution des problèmes qui sont signalés à Microsoft.  
+
+
 ### <a name="new-in-configuration-manager-current-branch"></a>Nouveautés de Configuration Manager (Current Branch)
 
 #### <a name="support-for-new-versions-of-cisco-anyconnect-client-for-ios"></a>Prise en charge de nouvelles versions du client Cisco AnyConnect pour iOS
@@ -58,6 +65,9 @@ Pour plus d’informations sur l’activation de cette fonctionnalité, consulte
 
 ### <a name="new-in-microsoft-intune"></a>Nouveautés de Microsoft Intune
 
+#### <a name="intune-adapts-to-fluent-design-system-in-the-company-portal-app-for-windows-10"></a>Intune s’adapte au système Fluent Design dans l’application Portail d’entreprise pour Windows 10 
+<!--1195010-->
+La [vue de navigation du système Fluent Design](/windows/uwp/design/basics/navigation-basics) a été ajoutée à l’application Portail d’entreprise pour Windows 10 d’Intune. Sur le côté de l’application, vous voyez la liste statique et verticale de toutes les pages de niveau supérieur. Cliquez sur un lien pour passer rapidement d’une page à l’autre. Cette mise à jour est la première d’une série, destinée à rendre Intune plus souple et plus intuitif. Pour voir à quoi ressemble la mise à jour, consultez [Nouveautés de l’interface utilisateur de l’application](/intune/whats-new-app-ui).
 
 #### <a name="improved-device-tiles-in-the-windows-10-company-portal"></a>Amélioration des vignettes d’appareil dans le portail d’entreprise Windows 10
 <!--2213364-->
@@ -112,6 +122,35 @@ Pour voir à quoi ressemble la mise à jour, consultez [Nouveautés de l’inter
 ## <a name="march-2018"></a>Mars 2018
 
 ### <a name="new-in-microsoft-intune"></a>Nouveautés de Microsoft Intune
+
+#### <a name="windows-company-portal-send-feedback-option-may-no-longer-work"></a>L’option Envoyer des commentaires du portail d’entreprise Windows risque de ne plus fonctionner
+<!--2070166-->
+L’application Portail d’entreprise Windows dispose d’une option « Envoyer des commentaires » permettant aux utilisateurs d’envoyer des commentaires sur l’application à Microsoft. À compter du 30 avril 2018, cette option continue d’être prise en charge uniquement sur l’application Portail d’entreprise Windows 10 s’exécutant sur Windows 10 versions 1607 et ultérieures.   
+
+**Comment cela m’affecte-t-il ?**
+
+Si l’application Portail d’entreprise Windows n’est pas installée pour les utilisateurs finaux, ignorez ce message.
+
+Si certains de vos utilisateurs finaux disposent de l’application Portail d’entreprise, notez qu’à compter du 30 avril, le bouton « Envoyer des commentaires » ne fonctionnera plus pour l’application dans les cas suivants :  
+
+ - Application Portail d’entreprise Windows 10 sur Windows 10 version 1507 et version 1511  
+
+ - Application Portail d’entreprise Windows Phone 8.1  
+
+Pour les appareils concernés, l’option « Envoyer des commentaires » échoue, même lors des nouvelles tentatives. Pour envoyer des commentaires à Microsoft concernant les expériences sur ces plateformes, il existe d’autres canaux de retour répertoriés ci-dessous.
+
+**Que faire pour se préparer à ce changement ?**
+
+Informez vos utilisateurs finaux de ce changement et mettez à jour toutes les instructions destinées aux utilisateurs, si nécessaire. 
+
+Informez les utilisateurs finaux qui se servent du portail d’entreprise sur Windows Phone 8.1, Windows 10 version 1507 et Windows 10 version 1511 que deux autres canaux de retour sont disponibles. Ils peuvent :  
+
+- Utiliser l’application Hub de commentaire sur Windows 10  
+- Envoyer un e-mail à WinCPfeedback@microsoft.com  
+
+Demandez aux utilisateurs finaux sur Windows 10 versions 1607 ou ultérieures d’effectuer une mise à jour vers la dernière version du portail d’entreprise Windows disponible dans le Microsoft Store.
+
+
 
 #### <a name="azure-active-directory-web-sites-can-require-the-intune-managed-browser-app-and-support-single-sign-on-for-the-managed-browser-public-preview"></a>Les sites web Azure Active Directory peuvent nécessiter l’application Intune Managed Browser et prendre en charge l’authentification unique pour Managed Browser (Préversion publique)
 <!-- 710595 --> 
@@ -531,35 +570,6 @@ Les fonctionnalités hybrides supplémentaires suivantes sont également incluse
 
 
 ## <a name="notices"></a>Remarques
-
-### <a name="windows-company-portal-send-feedback-option-may-no-longer-work"></a>L’option Envoyer des commentaires du portail d’entreprise Windows risque de ne plus fonctionner
-
-L’application Portail d’entreprise Windows dispose d’une option « Envoyer des commentaires » permettant aux utilisateurs d’envoyer des commentaires sur l’application à Microsoft. À compter du 30 avril 2018, cette option continue d’être prise en charge uniquement sur l’application Portail d’entreprise Windows 10 s’exécutant sur Windows 10 versions 1607 et ultérieures.   
-
-#### <a name="how-does-this-affect-me"></a>Dans quelle mesure suis-je affecté ?
-
-Si l’application Portail d’entreprise Windows n’est pas installée pour les utilisateurs finaux, ignorez ce message.
-
-Si certains de vos utilisateurs finaux disposent de l’application Portail d’entreprise, notez qu’à compter du 30 avril, le bouton « Envoyer des commentaires » ne fonctionnera plus pour l’application dans les cas suivants :  
-
- - Application Portail d’entreprise Windows 10 sur Windows 10 version 1507 et version 1511  
-
- - Application Portail d’entreprise Windows Phone 8.1  
-
-Pour les appareils concernés, l’option « Envoyer des commentaires » échoue, même lors des nouvelles tentatives. Pour envoyer des commentaires à Microsoft concernant les expériences sur ces plateformes, il existe d’autres canaux de retour répertoriés ci-dessous.
-
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Que faire pour se préparer à ce changement ?
-
-Informez vos utilisateurs finaux de ce changement et mettez à jour toutes les instructions destinées aux utilisateurs, si nécessaire. 
-
-Informez les utilisateurs finaux qui se servent du portail d’entreprise sur Windows Phone 8.1, Windows 10 version 1507 et Windows 10 version 1511 que deux autres canaux de retour sont disponibles. Ils peuvent :  
-
-- Utiliser l’application Hub de commentaire sur Windows 10  
-- Envoyer un e-mail à WinCPfeedback@microsoft.com  
-
-Demandez aux utilisateurs finaux sur Windows 10 versions 1607 ou ultérieures d’effectuer une mise à jour vers la dernière version du portail d’entreprise Windows disponible dans le Microsoft Store.
-
-
 
 ### <a name="company-portal-for-windows-81-and-windows-phone-81-moving-to-sustaining-mode"></a>Portail d’entreprise pour Windows 8.1 et Windows Phone 8.1 désormais simplement maintenu 
 <!--1428681-->
