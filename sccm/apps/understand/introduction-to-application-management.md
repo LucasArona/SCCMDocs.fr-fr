@@ -2,25 +2,19 @@
 title: Introduction à la gestion des applications
 titleSuffix: Configuration Manager
 description: Découvrez les informations de base dont vous aurez besoin pour gérer et déployer des applications System Center Configuration Manager.
-ms.custom: na
 ms.date: 12/23/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-app
+ms.topic: conceptual
 ms.assetid: 08f711ba-83bf-4b5f-9520-a0778c6ae7eb
-caps.latest.revision: ''
-author: mattbriggs
-ms.author: mabrigg
-manager: angrobe
-ms.openlocfilehash: a8a66169f3c187f8fa0319548ddde23b399811f3
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: bcdc5800a1c280c99289528c40e0efee8acf5ad5
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="introduction-to-application-management-in-system-center-configuration-manager"></a>Présentation de la gestion d’applications dans System Center Configuration Manager
 
@@ -55,7 +49,7 @@ Dans cette rubrique, vous allez découvrir les principes de base à connaître a
  Configuration Manager vous permet de déployer les types d’application suivants :  
 
 - Windows Installer (fichier *.msi)
-- Package d’application Windows (*.appx, *.appxbundle)
+- Package d’application Windows (\*.appx, \*.appxbundle)
 - Package d'application Windows (dans le Windows Store)
 - Microsoft Application Virtualization 4
 - Microsoft Application Virtualization 5
