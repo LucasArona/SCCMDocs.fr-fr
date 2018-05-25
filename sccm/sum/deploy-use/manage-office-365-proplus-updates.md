@@ -10,11 +10,11 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-ms.openlocfilehash: a7c1786e9acce10d98da031d9d5df3b81f9a1a28
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: a94ac00b8fce6098cbd829947f4e2fbdcb761b9e
+ms.sourcegitcommit: c5e078b8eee87f527e5b5a0c2eb687bb9d6896c5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="manage-office-365-proplus-with-configuration-manager"></a>Gérer Office 365 ProPlus avec Configuration Manager
 
@@ -96,7 +96,7 @@ Après avoir créé et déployé des applications Office 365 à l’aide du prog
 
 
 ## <a name="deploy-office-365-updates"></a>Déploiement des mises à jour Office 365
-Depuis la version 1706 de Configuration Manager, les mises à jour clients Office 365 ont été déplacées vers le nœud **Gestion des clients Office 365** >**Mises à jour Office 365**.  Ce déplacement n’impacte pas la configuration des règles de déploiement automatique (ADR). 
+Depuis la version 1706 de Configuration Manager, les mises à jour clients Office 365 ont été déplacées vers le nœud **Gestion des clients Office 365** >**Mises à jour Office 365**. Ce déplacement est sans effet sur la configuration actuelle des règles de déploiement automatique (ADR). 
 
 Procédez comme suit pour déployer les mises à jour d’Office 365 avec le Gestionnaire de Configuration :
 
