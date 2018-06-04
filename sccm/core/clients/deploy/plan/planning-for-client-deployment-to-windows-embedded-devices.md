@@ -1,20 +1,27 @@
 ---
-title: Planification du déploiement de clients sur des appareils Windows Embedded
-titleSuffix: Configuration Manager
+title: Planification du déploiement de clients sur des appareils Windows Embedded | Microsoft Docs
 description: Planifiez le déploiement de clients sur des appareils Windows Embedded dans System Center Configuration Manager.
+ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-client
-ms.topic: conceptual
+ms.reviewer: na
+ms.suite: na
+ms.technology:
+- configmgr-client
+ms.tgt_pltfrm: na
+ms.topic: get-started-article
 ms.assetid: 038e61f9-f49d-41d1-9a9f-87bec9e00d5d
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-ms.openlocfilehash: 6ca987411775ec3a6fbe626d4b34f83313673f5b
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+caps.latest.revision: 7
+caps.handback.revision: 0
+author: arob98
+ms.author: angrobe
+manager: angrobe
+ms.openlocfilehash: 513dcb2a224a6e60553fdc602813e9fe47116235
+ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/15/2017
+ms.locfileid: "22103602"
 ---
 # <a name="planning-for-client-deployment-to-windows-embedded-devices-in-system-center-configuration-manager"></a>Planification du déploiement de clients sur des appareils Windows Embedded dans System Center Configuration Manager
 
@@ -24,7 +31,7 @@ ms.lasthandoff: 05/03/2018
 
  Notez que quand vous désactivez les filtres, vous ne devez pas désactiver les pilotes de filtre. En général, ces pilotes démarrent automatiquement au démarrage de l'ordinateur. La désactivation de ces pilotes empêche l'installation du client ou interfère avec l'orchestration des filtres d'écriture, ce qui entraîne l'échec des opérations du client. Voici les services associés à chaque type de filtre d'écriture devant rester en cours d'exécution :  
 
-|Type de filtre d'écriture|Pilote|Tapez|Description|  
+|Type de filtre d'écriture|Pilote|Type|Description|  
 |-----------------------|------------|----------|-----------------|  
 |EWF|EWF|Noyau|Met en œuvre la redirection des E/S au niveau du secteur sur les volumes protégés.|  
 |FBWF|FBWF|Système de fichiers|Met en œuvre la redirection des E/S au niveau du fichier sur les volumes protégés.|  
@@ -58,7 +65,7 @@ ms.lasthandoff: 05/03/2018
 >
 > **Pour les appareils qui utilisent des filtres d’écriture basés sur des fichiers uniquement :** configurez les exceptions suivantes pour rendre permanents l’état du client et les données d’inventaire entre les redémarrages de l’appareil :  
 >   
->  -   CCMINSTALLDIR\\\*.sdf  
+>  -   CCMINSTALLDIR\\*.sdf  
 > -   CCMINSTALLDIR\ServiceData  
 > -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\StateSystem  
 >   
@@ -89,7 +96,7 @@ ms.lasthandoff: 05/03/2018
 >   
 >  -   L'option**Systèmes d'exploitation intégrés basés sur Windows XP (32 bits)** inclut les éléments suivants :  
 >   
->      -   Windows XP Embedded  
+>      -   Windows XP Embedded  
 >     -   Windows Embedded for Point of Service  
 >     -   Windows Embedded Standard 2009  
 >     -   Windows Embedded POSReady 2009  
