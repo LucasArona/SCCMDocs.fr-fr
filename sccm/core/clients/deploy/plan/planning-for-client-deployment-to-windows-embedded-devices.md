@@ -1,5 +1,6 @@
 ---
-title: Planification du déploiement de clients sur des appareils Windows Embedded | Microsoft Docs
+title: Planification du déploiement de clients sur des appareils Windows Embedded
+titleSuffix: Configuration Manager
 description: Planifiez le déploiement de clients sur des appareils Windows Embedded dans System Center Configuration Manager.
 ms.custom: na
 ms.date: 04/23/2017
@@ -16,12 +17,12 @@ caps.handback.revision: 0
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 513dcb2a224a6e60553fdc602813e9fe47116235
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: c4f3d8a9b043707340e56d3ae483ad66ca17dc10
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/15/2017
-ms.locfileid: "22103602"
+ms.lasthandoff: 03/27/2018
+ms.locfileid: "23134495"
 ---
 # <a name="planning-for-client-deployment-to-windows-embedded-devices-in-system-center-configuration-manager"></a>Planification du déploiement de clients sur des appareils Windows Embedded dans System Center Configuration Manager
 
@@ -31,7 +32,7 @@ ms.locfileid: "22103602"
 
  Notez que quand vous désactivez les filtres, vous ne devez pas désactiver les pilotes de filtre. En général, ces pilotes démarrent automatiquement au démarrage de l'ordinateur. La désactivation de ces pilotes empêche l'installation du client ou interfère avec l'orchestration des filtres d'écriture, ce qui entraîne l'échec des opérations du client. Voici les services associés à chaque type de filtre d'écriture devant rester en cours d'exécution :  
 
-|Type de filtre d'écriture|Pilote|Type|Description|  
+|Type de filtre d'écriture|Pilote|Tapez|Description|  
 |-----------------------|------------|----------|-----------------|  
 |EWF|EWF|Noyau|Met en œuvre la redirection des E/S au niveau du secteur sur les volumes protégés.|  
 |FBWF|FBWF|Système de fichiers|Met en œuvre la redirection des E/S au niveau du fichier sur les volumes protégés.|  
@@ -96,7 +97,7 @@ ms.locfileid: "22103602"
 >   
 >  -   L'option**Systèmes d'exploitation intégrés basés sur Windows XP (32 bits)** inclut les éléments suivants :  
 >   
->      -   Windows XP Embedded  
+>      -   Windows XP Embedded  
 >     -   Windows Embedded for Point of Service  
 >     -   Windows Embedded Standard 2009  
 >     -   Windows Embedded POSReady 2009  

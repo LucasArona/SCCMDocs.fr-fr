@@ -1,26 +1,21 @@
 ---
-title: Introduction à la gestion des applications | Documents Microsoft
+title: Introduction à la gestion des applications
+titleSuffix: Configuration Manager
 description: Découvrez les informations de base dont vous aurez besoin pour gérer et déployer des applications System Center Configuration Manager.
-ms.custom: na
 ms.date: 12/23/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-app
+ms.topic: conceptual
 ms.assetid: 08f711ba-83bf-4b5f-9520-a0778c6ae7eb
-caps.latest.revision: 18
-author: robstackmsft
-ms.author: robstack
-manager: angrobe
-ms.openlocfilehash: 959a36413d06bb225f260bd44c1d3d59efd44e69
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: bcdc5800a1c280c99289528c40e0efee8acf5ad5
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2017
-ms.locfileid: "20784589"
+ms.lasthandoff: 05/03/2018
+ms.locfileid: "32336168"
 ---
 # <a name="introduction-to-application-management-in-system-center-configuration-manager"></a>Présentation de la gestion d’applications dans System Center Configuration Manager
 
@@ -55,7 +50,7 @@ Dans cette rubrique, vous allez découvrir les principes de base à connaître a
  Configuration Manager vous permet de déployer les types d’application suivants :  
 
 - Windows Installer (fichier *.msi)
-- Package d’application Windows (*.appx, *.appxbundle)
+- Package d’application Windows (\*.appx, \*.appxbundle)
 - Package d'application Windows (dans le Windows Store)
 - Microsoft Application Virtualization 4
 - Microsoft Application Virtualization 5
@@ -78,7 +73,7 @@ De plus, quand vous gérez des appareils par le biais de la gestion des appareil
 ## <a name="state-based-applications"></a>Applications basées sur l’état  
  Les applications Configuration Manager utilisent la surveillance basée sur l’état, ce qui vous permet de suivre le dernier état du déploiement d’application pour les utilisateurs et les appareils. Les messages d'état affichent des informations concernant des appareils individuels. Par exemple, si une application est déployée sur un regroupement d’utilisateurs, vous pouvez voir l’état de compatibilité du déploiement ainsi que son objet dans la console Configuration Manager. Vous pouvez surveiller le déploiement de tous vos logiciels à l’aide de l’espace de travail **Surveillance** dans la console Configuration Manager. Les déploiements de logiciels incluent des mises à jour logicielles, des paramètres de compatibilité, des applications, des séquences de tâches, des packages et des programmes. Pour plus d’informations, consultez [Surveiller des applications](/sccm/apps/deploy-use/monitor-applications-from-the-console).  
 
- Les déploiements d’applications sont régulièrement réévalués par Configuration Manager. Exemple :  
+ Les déploiements d’applications sont régulièrement réévalués par Configuration Manager. Par exemple :  
 
 -   Une application déployée est désinstallée par l'utilisateur final. Au cycle d’évaluation suivant, Configuration Manager détecte que l’application n’est pas présente et la réinstalle.  
 
