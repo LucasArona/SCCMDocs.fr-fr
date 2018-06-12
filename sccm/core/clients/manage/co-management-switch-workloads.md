@@ -10,16 +10,18 @@ manager: dougeby
 ms.date: 03/22/2018
 ms.topic: conceptual
 ms.assetid: 60e2022f-a4f9-40dd-af01-9ecb37b43878
-ms.openlocfilehash: 439e4e26c08b5a2710da0978ed2407d715bc86bd
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: ceb4004c7f4cc24ff17f0e9648cddb29cb26d898
+ms.sourcegitcommit: 493cc42f05b9388ef872e466e5a75d569642b9fc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569644"
 ---
 # <a name="switch-configuration-manager-workloads-to-intune"></a>Basculer les charges de travail de Configuration Manager sur Intune
 Dans [Préparer les appareils Windows 10 pour la cogestion](co-management-prepare.md), vous avez préparé les appareils Windows 10 à la cogestion. Ces appareils sont joints à AD et à Azure AD, ils sont inscrits dans Intune et ils disposent du client Configuration Manager. Vous avez probablement encore des appareils Windows 10 joints à AD et qui ont le client Configuration Manager, mais qui ne sont pas joints à Azure AD ni inscrits à Intune. La procédure suivante présente les étapes permettant d’activer la cogestion et de préparer le reste de vos appareils Windows 10 (les clients Configuration Manager sans inscription à Intune) pour la cogestion ; elle vous sert également à lancer le basculement de charges de travail spécifiques de Configuration Manager vers Intune.
 
 1. Dans la console Configuration Manager, accédez à **Administration** > **Vue d’ensemble** > **Services cloud** > **Cogestion**.    
+
 2. Sous l’onglet Accueil, dans le groupe Gérer, choisissez  **Configurer la cogestion** pour ouvrir l’Assistant Configuration de la cogestion.    
 3. Dans la page Abonnement, cliquez sur **Se connecter** et connectez-vous à votre locataire Intune, puis cliquez sur **Suivant**.   
 4. Dans la page Activation, choisissez **Pilote** ou **Tout** pour activer l’inscription automatique dans Intune, puis cliquez sur **Suivant**. Lorsque vous choisissez **Pilote**, seuls les clients Configuration Manager membres du groupe pilote sont automatiquement inscrits à Intune. Cette option vous permet d’activer la cogestion sur un sous-ensemble de clients pour tester initialement la cogestion et la déployer au moyen d’une approche progressive. Vous pouvez utiliser la ligne de commande pour déployer le client Configuration Manager en tant qu’application dans Intune pour les appareils déjà inscrits à Intune. Pour plus d’informations, consultez [Appareils Windows 10 inscrits à Intune](co-management-prepare.md#windows-10-devices-enrolled-in-intune).
@@ -55,8 +57,8 @@ Certaines charges de travail sont disponibles pour être basculées sur Intune. 
       - Windows Defender Application Control
       - Centre de sécurité Windows Defender
       - Windows Defender - Protection avancée contre les menaces
-
-
+      - Protection des informations Windows
+      
 
 ## <a name="monitor-co-management"></a>Surveiller la cogestion
 Après avoir activé la cogestion, vous pouvez surveiller les appareils de cogestion à l’aide des méthodes suivantes :

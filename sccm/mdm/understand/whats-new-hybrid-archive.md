@@ -2,7 +2,7 @@
 title: Archive des nouveautés de la gestion hybride des appareils mobiles
 titleSuffix: Configuration Manager
 description: Archive des précédentes fonctionnalités de gestion des appareils mobiles disponibles pour les déploiements hybrides avec System Center Configuration Manager et Intune.
-ms.date: 02/21/2018
+ms.date: 05/31/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -11,11 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 88b005ad90625592a4fccfa1d98abfcb8b930a75
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 19044a9fb7f53ca540bccd324f711b60e0ad91c4
+ms.sourcegitcommit: 9cff0702c2cc0f214173b47ec241f7e5a40f84e6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34747797"
 ---
 # <a name="past-hybrid-features-with-system-center-configuration-manager-and-microsoft-intune"></a>Précédentes fonctionnalités hybrides avec System Center Configuration Manager et Microsoft Intune
 
@@ -30,6 +31,121 @@ Cet article fournit des informations sur les précédentes fonctionnalités de g
 |Catégories de fonctionnalités|
 |-|  
 |**Nouveautés de Microsoft Intune** : en général, toutes les fonctionnalités répertoriées dans cette catégorie doivent fonctionner avec toutes les versions de Configuration Manager, notamment les versions de System Center 2012 R2 Configuration Manager, dans la mesure où ces fonctionnalités nécessitent uniquement le service Intune et pas de fonctionnalités supplémentaires dans Configuration Manager.<br /><br /> **Nouveautés de Configuration Manager Technical Preview** : toutes les fonctionnalités répertoriées dans cette catégorie fonctionnent uniquement avec la version d’évaluation technique spécifiée. Pour tester ces fonctionnalités, vous devez installer la version d’évaluation technique spécifiée dans la description de la fonctionnalité. Pour plus d’informations, consultez [Technical Preview pour System Center Configuration Manager](../../core/get-started/technical-preview.md).<br /><br /> **Nouveautés de Configuration Manager (Current Branch)**  : toutes les fonctionnalités répertoriées dans cette catégorie fonctionnent uniquement avec la version spécifiée de Configuration Manager (Current Branch), telle que la version 1511 ou 1602. Si vous utilisez une version antérieure de Configuration Manager pour votre déploiement hybride, vous devez effectuer la mise à niveau vers la version de Configuration Manager (Current Branch) spécifiée dans la description de la fonctionnalité. Pour plus d’informations, consultez [Mettre à niveau vers System Center Configuration Manager](../../core/servers/deploy/install/upgrade-to-configuration-manager.md).|  
+
+
+
+## <a name="april-2017"></a>Avril 2017
+
+### <a name="new-in-microsoft-intune"></a>Nouveautés de Microsoft Intune
+
+- **Mes apps disponible pour Managed Browser**  
+  Mes apps Microsoft bénéficie à présent d’une meilleure prise en charge dans Managed Browser. Les utilisateurs Managed Browser qui ne sont pas ciblés pour la gestion sont directement redirigés vers le service Mes apps, où ils peuvent accéder à leurs applications SaaS configurées par l’administrateur. Les utilisateurs ciblés pour la gestion Intune peuvent toujours accéder à Mes apps à partir du signet Managed Browser intégré.
+
+- **Nouvelles icônes pour Managed Browser et le portail d’entreprise**  
+  Managed Browser reçoit des icônes mises à jour pour les versions iOS et Android de l’application. La nouvelle icône contient le badge Intune mis à jour qui devient plus cohérent avec les autres applications dans Enterprise Mobility + Security (EM+S). Vous pouvez voir la nouvelle icône Managed Browser dans la page sur les [nouveautés de l’interface utilisateur pour les applications Intune](https://docs.microsoft.com/intune/whats-new-app-ui).
+
+  Le portail d’entreprise reçoit également des icônes mises à jour pour les versions Android, iOS et Windows de l’application pour améliorer la cohérence avec les autres applications EM+S. Ces icônes seront disponibles progressivement sur les différentes plateformes, sur une période allant d’avril à fin mai.
+
+- **Indicateur de progression de la connexion dans le portail d’entreprise Android**  
+  Une mise à jour de l’application Portail d’entreprise Android affiche un indicateur de progression de la connexion lorsque l’utilisateur lance ou rouvre l’application. L’indicateur passe par différents états (en commençant par « Connexion en cours... », « Connexion en cours... », puis « Vérification des exigences de sécurité... ») avant d’autoriser l’utilisateur à accéder à l’application. Vous pouvez voir les nouveaux écrans de l’application Portail d’entreprise pour Android dans la page sur les [nouveautés de l’interface utilisateur pour les applications Intune](https://docs.microsoft.com/intune/whats-new-app-ui).
+
+- **Bloquer l’accès des applications à SharePoint Online**  
+  Vous pouvez maintenant créer une stratégie d’accès conditionnel basée sur l’application pour empêcher les applications auxquelles aucune stratégie de protection d’application n’a été appliquée d’accéder à [SharePoint Online](https://docs.microsoft.com/intune-classic/deploy-use/mam-ca-for-sharepoint-online). Dans le cadre d’un scénario faisant appel à l’accès conditionnel basé sur l’application, vous pouvez spécifier les applications que vous souhaitez autoriser à accéder à SharePoint Online à l’aide du portail Azure.
+
+### <a name="new-in-configuration-manager-technical-preview-1704"></a>Nouveautés de Configuration Manager Technical Preview 1704
+
+- **Configurer des applications Android avec des stratégies de configuration des applications**  
+  Vous pouvez utiliser des stratégies de configuration des applications disponibles dans Configuration Manager pour distribuer les paramètres préconfigurés quand un utilisateur exécute une application sur des appareils Android for Work. Les stratégies de configuration des applications Android sont disponibles uniquement sur les appareils Android for Work. Ces stratégies s’appliquent aux applications approuvées du magasin Play for Work. Pour plus d’informations, consultez [Configurer des applications Android avec des stratégies de configuration des applications](/sccm/core/get-started/capabilities-in-technical-preview-1704#configure-android-apps-with-app-configuration-policies).
+
+
+
+## <a name="march-2017"></a>Mars 2017
+
+### <a name="new-in-microsoft-intune"></a>Nouveautés de Microsoft Intune
+
+- **Nouvelle expérience utilisateur pour l’application Portail d’entreprise pour Android**  
+  L’application Portail d’entreprise pour Android a une interface utilisateur d’apparence plus moderne. Les mises à jour importantes sont :
+
+  - Couleurs : les en-têtes des onglets du portail d’entreprise sont de la couleur définie dans la personnalisation.
+  - Applications : dans l’onglet **Applications**, les boutons **Applications à la une** et **Toutes les applications** ont été mis à jour.
+  - Rechercher : Dans l’onglet **Applications**, le bouton **Rechercher** est un bouton d’action flottant.
+  - Navigation dans les applications : la vue **Toutes les applications** montre une vue à onglets avec **À la une**, **Toutes** et **Catégories** pour faciliter la navigation.
+  - Prise en charge : les onglets **Mes appareils** et **Contacter le service informatique** ont été mis à jour de façon à améliorer la lisibilité.
+
+  Pour plus d’informations sur ces modifications, consultez [Mises à jour de l’interface utilisateur pour les applications Intune de l’utilisateur final](https://docs.microsoft.com/intune/whats-new-app-ui).
+
+- **Script de signature pour le portail d’entreprise Windows 10**  
+  Si vous avez besoin de télécharger et charger de façon indépendante l’application Portail d’entreprise Windows 10, vous pouvez désormais utiliser un script pour simplifier et fluidifier le processus de signature des applications pour votre organisation. Pour télécharger le script et les instructions pour son utilisation, consultez [Script de signature Microsoft Intune pour le portail d’entreprise Windows 10](https://aka.ms/win10cpscript) sur la Galerie TechNet. Pour plus d’informations sur cette annonce, consultez [Mise à jour de votre application Portail d’entreprise Windows 10](https://blogs.technet.microsoft.com/intunesupport/2017/03/13/updating-your-windows-10-company-portal-app/) sur le Blog de l’équipe de support technique Intune.
+
+- **Prise en charge améliorée pour les utilisateurs Android basés en Chine**  
+  En raison de l’absence du Google Play Store en Chine, les appareils Android doivent obtenir des applications des places de marché chinoises. Le Portail d’entreprise prend en charge ce flux de travail. Il redirige les utilisateurs Android en Chine pour télécharger les applications Portail d’entreprise et Outlook à partir de Stores d’applications locaux. Ce comportement améliore l’expérience utilisateur quand les stratégies d’accès conditionnel sont activées, à la fois pour la gestion des appareils mobiles et pour la gestion des applications mobiles. Les applications Portail d’entreprise et Outlook pour Android sont disponibles sur les magasins d’applications chinois suivants :
+
+  - [Baidu](https://go.microsoft.com/fwlink/?linkid=836946)
+  - [Xiaomi](https://go.microsoft.com/fwlink/?linkid=836947)
+  - [Tencent](https://go.microsoft.com/fwlink/?linkid=836949)
+  - [Huawei](https://go.microsoft.com/fwlink/?linkid=836948)
+  - [Wandoujia](https://go.microsoft.com/fwlink/?linkid=836950)
+
+- **Vérifiez que vos applications de portail d’entreprise sont à jour**  
+  En décembre 2016, nous avons publié une mise à jour qui permettait d’appliquer l’authentification multifacteur (MFA) sur un groupe d’utilisateurs lors de l’inscription d’un appareil iOS, Android, Windows 8.1+ ou Windows Phone 8.1+. Cette fonctionnalité ne peut pas être utilisée sans certaines versions de référence de l’application Portail d’entreprise pour Android (v5.0.3419.0+) et iOS (v2.1.17+).
+
+  Les fonctionnalités de gestion d’Intune sont en constante évolution. De nombreuses améliorations ont nécessité des mises à jour des applications Portail d’entreprise sur toutes les plateformes prises en charge. Nous vous recommandons de conserver les dernières versions des applications Portail d’entreprise installées sur les appareils. Cette pratique tire parti des améliorations dans Intune et offre une expérience utilisateur optimale.
+
+  >[!Tip]
+  > Demandez à vos utilisateurs de configurer la mise à jour automatique des applications sur leurs appareils à partir de l’App Store approprié. Si vous avez rendu l’application Portail d’entreprise Android disponible sur un partage réseau, vous pouvez télécharger la dernière version à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=49140).
+
+- **Microsoft Teams est maintenant activé pour la gestion des applications mobiles sur iOS et Android**  
+  Les applications Microsoft Teams pour iOS et Android sont désormais activées avec les fonctionnalités de gestion des applications mobiles d’Intune. Permettez à vos équipes de travailler librement sur différents appareils, tout en garantissant que les conversations et les données d’entreprise sont protégées. Pour plus d’informations, consultez [l’annonce de Microsoft Teams](https://blogs.technet.microsoft.com/enterprisemobility/2017/03/14/microsoft-teams-is-now-generally-available-and-mam-enabled-on-ios-and-android/) sur le blog Enterprise Mobility and Security.
+
+### <a name="new-in-configuration-manager-technical-preview-1703"></a>Nouveautés de Configuration Manager Technical Preview 1703
+
+- **Prise en charge supplémentaire des scénarios du Programme d’achat en volume (VPP) Apple**  
+   À compter de la version Technical Preview 1703, vous disposez de la prise en charge des scénarios VPP suivants :
+
+   - Licences d’appareil : les applications prenant en charge les licences d’appareil et qui sont déployées sur des regroupements d’appareils ne nécessitent désormais qu’une seule licence par appareil. Auparavant, vous deviez utiliser une licence pour chaque utilisateur sur un appareil. Pour plus d’informations, consultez [Déployer des applications iOS achetées en volume sur des regroupements d’appareils](/sccm/core/get-started/capabilities-in-technical-preview-1703#deploy-volume-purchased-ios-apps-to-device-collections).
+   - Utilisation de plusieurs jetons VPP pour un locataire hybride unique avec les deux jetons utilisés pour gérer les applications VPP.
+   - Utilisation de jetons scolaires VPP avec la possibilité de faire la distinction entre les jetons d’entreprise et scolaires.
+
+### <a name="new-in-configuration-manager-current-branch"></a>Nouveautés de Configuration Manager (Current Branch)
+
+Les fonctionnalités suivantes étaient précédemment disponibles dans les versions Configuration Manager Technical Preview. Ces fonctionnalités sont désormais disponibles dans les déploiements hybrides avec Intune et Configuration Manager (Current Branch) version 1702.
+
+- [Prise en charge d’Android for Work](/sccm/core/plan-design/changes/whats-new-in-version-1702##android-for-work-support)
+- [Paramètres de conformité des applications non conformes](/sccm/core/plan-design/changes/whats-new-in-version-1702#conditional-access-device-compliance-policy-improvements)
+- [Création et distribution de certificats PFX et prise en charge de S/MIME](/sccm/core/plan-design/changes/whats-new-in-version-1702#improvements-to-certificate-profiles)
+- [es versions Android et iOS ne peuvent plus être ciblées dans les Assistants de création pour la gestion MDM hybride](/sccm/core/plan-design/changes/whats-new-in-version-1702#android-and-ios-versions-are-no-longer-targetable-in-creation-wizards-for-hybrid-mdm)
+
+Les fonctionnalités hybrides supplémentaires suivantes sont également incluses dans la version 1702 de Configuration Manager (Current Branch) :
+
+- **Prise en charge améliorée du Programme d’achat en volume Apple (VPP)**  
+  - Vous pouvez désormais déployer des applications sous licence sur des appareils ainsi que des utilisateurs. En fonction de la capacité des applications à prendre en charge les licences d’appareils, une licence appropriée est réclamée lors du déploiement, comme suit :
+
+    | Version de Configuration Manager | L’application prend-elle en charge les licences d’appareil ? | Type de regroupement de déploiement | Licence demandée |
+    |-|-|-|-|
+    |Antérieure à 1702|Oui|utilisateur|Licence utilisateur|
+    |Antérieure à 1702|Non|utilisateur|Licence utilisateur|
+    |Antérieure à 1702|Oui|Appareil|Licence utilisateur|
+    |Antérieure à 1702|Non|Appareil|Licence utilisateur|
+    |1702 et versions ultérieures|Oui|utilisateur|Licence utilisateur|
+    |1702 et versions ultérieures|Non|utilisateur|Licence utilisateur|
+    |1702 et versions ultérieures|Oui|Appareil|Licence d’appareil|
+    |1702 et versions ultérieures|Non|Appareil|Licence utilisateur|
+
+  - Désormais, vous pouvez également déployer et suivre les applications que vous avez achetées via le Programme d’achat en volume iOS pour l’éducation.
+
+  - Vous pouvez maintenant associer plusieurs jetons de programme d’achat en volume Apple à Configuration Manager.
+
+  Pour plus d’informations sur les applications achetées en volume, consultez [Gérer des applications iOS achetées en volume](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps).
+
+- **Prise en charge des applications métier dans le Microsoft Store pour Entreprises**  
+  Vous pouvez désormais synchroniser des applications métier personnalisées à partir du Microsoft Store pour Entreprises.
+
+- **Nouveaux outils de surveillance de protection contre les menaces mobiles**  
+    Vous disposez maintenant de nouveaux moyens pour surveiller l’état de conformité avec votre fournisseur de services de protection contre les menaces mobiles.
+
+    Pour plus d’informations, consultez [Comment surveiller la conformité de la protection contre les menaces mobiles](/sccm/mdm/deploy-use/monitor-mobile-threat-defense-compliance).
+
+
 
 
 
