@@ -10,11 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
-ms.openlocfilehash: 3dd5a7f9717843244ab8477a09b109261618f9aa
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 07616a1c03c0383e9001418043dc6cd7ec117c1d
+ms.sourcegitcommit: 493cc42f05b9388ef872e466e5a75d569642b9fc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34703483"
 ---
 # <a name="integration-with-windows-update-for-business-in-windows-10"></a>Intégration avec Windows Update for Business dans Windows 10
 
@@ -72,7 +73,8 @@ Windows Update for Business (WUfB) vous permet de garantir la mise à jour des a
 >À compter de Configuration Manager version 1802, vous pouvez définir des stratégies de report pour Windows Insider. <!--507201-->Pour plus d’informations sur le programme Windows Insider, consultez [Programme Windows Insider pour les entreprises](https://docs.microsoft.com/windows/deployment/update/waas-windows-insider-for-business).
 
 ### <a name="prerequisites"></a>Prérequis
-Les appareils Windows 10 gérés par Windows Update for Business doivent avoir une connectivité Internet.
+-   Windows 10 version 1703 ou ultérieure
+-   Les appareils Windows 10 gérés par Windows Update pour Entreprise doivent avoir une connectivité Internet.
 
 #### <a name="to-create-a-windows-update-for-business-deferral-policy"></a>Pour créer une stratégie de report Windows Update for Business
 1. Dans **Bibliothèque de logiciels** > **Maintenance de Windows 10** > **Mises à jour de Windows pour les stratégies d’entreprise**

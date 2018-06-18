@@ -9,11 +9,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
-ms.openlocfilehash: e62b748596aba1404d6b097e5aa0bf74266f055b
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: fbae44d1344dd36d3c0a6faf2e50727dfa830ba0
+ms.sourcegitcommit: 8060ea520fb08629e1d5f249daffe825536673a5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35232368"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>Certificats pour la passerelle de gestion cloud
 
@@ -41,7 +42,7 @@ La passerelle de gestion cloud crée un service HTTPS auquel les clients Interne
 ### <a name="cmg-trusted-root-certificate-to-clients"></a>Certificat racine approuvé de passerelle de gestion cloud pour les clients
 
 Les clients doivent approuver le certificat d’authentification serveur de la passerelle de gestion cloud. Deux méthodes existent pour effectuer cette approbation :
-- Utiliser un certificat provenant d’un fournisseur de certificats public et approuvés globalement. Par exemple, VeriSign ou Thawte (liste non limitative). Les clients Windows incluent des autorités de certification racine approuvées provenant de ces fournisseurs. Si vous utilisez un certificat d’authentification serveur émis par un de ces fournisseurs, vos clients l’approuvent automatiquement. 
+- Utiliser un certificat provenant d’un fournisseur de certificats public et approuvés globalement. Par exemple, DigiCert, Thawte ou VeriSign (liste non limitative). Les clients Windows incluent des autorités de certification racine approuvées provenant de ces fournisseurs. Si vous utilisez un certificat d’authentification serveur émis par un de ces fournisseurs, vos clients l’approuvent automatiquement. 
 - Utiliser un certificat émis par une autorité de certification d’entreprise depuis votre infrastructure à clé publique. La plupart des implémentations d’infrastructure à clé publique d’entreprise ajoutent les autorités de certification racine de confiance aux clients Windows. Par exemple, dans le cas d’une utilisation des services de certificats Active Directory avec la stratégie de groupe. Si vous émettez le certificat d’authentification serveur de passerelle de gestion cloud depuis une autorité de certification que vos clients n’approuvent pas automatiquement, vous devez ajouter le certificat racine approuvé de l’autorité de certification aux clients Internet.
     - Vous pouvez également utiliser des profils de certificat Configuration Manager pour provisionner des certificats sur les clients. Pour plus d’informations, consultez [Présentation des profils de certificat](/sccm/protect/deploy-use/introduction-to-certificate-profiles).
 

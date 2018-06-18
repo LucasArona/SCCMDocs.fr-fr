@@ -1,8 +1,8 @@
 ---
-title: Liste de contrôle pour 1802 | System Center Configuration Manager
+title: Liste de contrôle pour 1802
 titleSuffix: Configuration Manager
 description: Découvrez les actions à entreprendre avant d’effectuer la mise à jour vers System Center Configuration Manager version 1802.
-ms.date: 03/22/2018
+ms.date: 06/08/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,11 +10,12 @@ ms.assetid: 6af92de2-b2c7-4d5c-affd-6cce81979fb5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5f16f69e7b359112a03bb26c964ac0a6990c0b24
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 74fa4e9240cf4a3d369d6b20bcb9233fb6319a8d
+ms.sourcegitcommit: 690f64bd02139f893bd0b45e2e0f00ed6bb4e1c1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35259296"
 ---
 # <a name="checklist-for-installing-update-1802-for-system-center-configuration-manager"></a>Liste de contrôle pour l’installation de la mise à jour 1802 pour System Center Configuration Manager
 
@@ -22,7 +23,7 @@ ms.lasthandoff: 05/03/2018
 
 Quand vous utilisez Current Branch de System Center Configuration Manager, vous pouvez installer la mise à jour dans la console de la version 1802 pour mettre à jour votre hiérarchie à partir d’une version antérieure. <!-- baseline only statement: -->(Comme la version 1802 est également disponible en tant que [support de base de référence](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions), vous pouvez utiliser le support d’installation pour installer le premier site d’une nouvelle hiérarchie.)
 
-Pour obtenir la mise à jour de la version 1802, vous devez utiliser un rôle de système de site de point de connexion de service sur le site de niveau supérieur de votre hiérarchie. Cela peut être en mode en ligne ou hors connexion. Une fois que votre hiérarchie a téléchargé le package de mises à jour de Microsoft, celui-se trouve dans la console sous **Administration &gt; Vue d’ensemble &gt; Services cloud &gt; Mises à jour et maintenance**.
+Pour obtenir la mise à jour de la version 1802, vous devez utiliser un point de connexion de service sur le site de niveau supérieur de votre hiérarchie. Ce rôle de système de site peut être en mode en ligne ou hors connexion. Une fois que votre hiérarchie a téléchargé la mise à jour Microsoft, celle-ci est accessible dans la console de l’espace de travail **Administration**, sous le nœud **Mises à jour et maintenance**.
 
 -   Quand la mise à jour est répertoriée comme **disponible**, elle est prête à être installée. Avant d’installer la version 1802, passez en revue les informations suivantes [sur l’installation de la mise à jour 1802](#about-installing-update-1802) et la [liste de contrôle](#checklist) pour connaître les configurations à effectuer avant de commencer la mise à jour.
 
@@ -141,10 +142,14 @@ Utilisez les fenêtres de service pour définir une période au cours de laquell
 
 Cela peut vous aider à contrôler le moment où les sites au sein de votre hiérarchie installent la mise à jour. Pour plus d’informations, consultez [Fenêtres de maintenance pour les serveurs de site](/sccm/core/servers/manage/service-windows).
 
+**Passez en revue les extensions prises en charge :**   
+<!--SCCMdocs#587-->   
+Si vous étendez Configuration Manager avec d’autres produits Microsoft ou partenaires, vérifiez que ces produits prennent en charge la version 1802. Demandez cette information au fournisseur du produit. Par exemple, consultez les [notes de publication](/sccm/mdt/release-notes) de Microsoft Deployment Toolkit.
+
 **Exécutez l’outil de vérification des prérequis du programme d’installation :**   
 Quand la mise à jour est répertoriée dans la console comme **Disponible**, vous pouvez exécuter indépendamment l’outil de vérification des prérequis avant d’installer la mise à jour. (Quand vous installez la mise à jour sur le site, l’outil de vérification des prérequis s’exécute à nouveau.)
 
-Pour exécuter une vérification des prérequis à partir de la console, accédez à **Administration > Vue d’ensemble > Services cloud > Mises à jour et maintenance**. Ensuite, cliquez avec le bouton droit sur **Package de mise à jour 1802 de Configuration Manager**, puis choisissez **Exécuter la vérification des prérequis**.
+Pour exécuter une vérification des prérequis à partir de la console, accédez à l’espace de travail **Administration**, puis sélectionnez **Mises à jour et maintenance**. Sélectionnez la mise à jour **Configuration Manager 1802**, puis cliquez sur **Exécuter la vérification des prérequis** dans le ruban.
 
 Pour plus d’informations sur le démarrage et la surveillance de la vérification des prérequis, consultez **Étape 3 : exécuter l’outil de vérification des prérequis avant d’installer une mise à jour** dans la rubrique [Installer des mises à jour dans la console pour System Center Configuration Manager](/sccm/core/servers/manage/install-in-console-updates).
 
@@ -167,3 +172,4 @@ Vérifiez et effectuez les actions suivantes après la fin de l’installation d
 3.  Reconfigurez les réplicas de base de données des points de gestion au niveau des sites principaux que vous avez désactivés avant de commencer la mise à jour.
 4.  Reconfigurez les tâches de maintenance de la base de données que vous avez désactivées avant de commencer la mise à jour.
 5.  Si vous avez configuré le pilotage des clients avant d’installer la mise à jour, mettez à niveau les clients selon le plan que vous avez créé.
+6.  Si vous utilisez des extensions Configuration Manager, mettez-les à jour vers la version la plus récente pour qu’elles prennent en charge cette mise à jour Configuration Manager. 

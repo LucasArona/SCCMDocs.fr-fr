@@ -10,11 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.assetid: 9e68de6e-2b33-442b-b674-a382728d9529
-ms.openlocfilehash: 4c45da7b5a4b7f8945b23d03d0fd551276205ee2
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: ff40af9dd40921b63f8b8bd13ba5c287c3bf9972
+ms.sourcegitcommit: e35d07870656eadd29faacc378ecd091ff3bdcfb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34848660"
 ---
 # <a name="software-center-user-guide"></a>Guide de l’utilisateur du Centre logiciel
 
@@ -45,7 +46,7 @@ Cliquez sur l’onglet **Applications** pour rechercher et installer les applica
 - **Filtres** : Votre administrateur informatique peut créer des catégories d’applications. Si elle est disponible, cliquez sur la liste déroulante pour filtrer l’affichage sur ces applications uniquement dans une catégorie spécifique. Sélectionnez **Tout** pour afficher toutes les applications.
 - **Trier par** : Réorganisez la liste d’applications. Par défaut cette liste est triée selon **Le plus récent**.
 - **Rechercher** : Vous ne trouvez toujours pas ce que vous cherchez ? Entrez des mots clés dans la zone de recherche pour le trouver.
--  Basculer la vue :Cliquez sur les icônes pour basculer entre le mode Liste et le mode Mosaïque. Par défaut, la liste d’applications s’affiche sous forme de vignettes de graphique. 
+-  **Basculer la vue** : cliquez sur les icônes pour basculer entre le mode Liste et le mode Mosaïque. Par défaut, la liste d’applications s’affiche sous forme de vignettes de graphique. 
     - Mode Mosaïque : Votre administrateur informatique peut personnaliser les icônes. Sous chaque vignette s’affiche le nom de l’application, l’éditeur et la version. 
     - Mode Liste : Cette vue affiche l’icône, le nom, l’éditeur, la version et l’état de l’application. 
 

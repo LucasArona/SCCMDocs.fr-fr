@@ -10,11 +10,12 @@ ms.assetid: 0ea3edaa-27c6-4391-9896-cd97d9c5d06d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7587fa6d96d6f8737921c9e5edae992cdd0ea614
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: e5b0ee5cb677cff5e57f24a20122fb017aea056c
+ms.sourcegitcommit: 493cc42f05b9388ef872e466e5a75d569642b9fc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569661"
 ---
 # <a name="uninstall-applications-with-system-center-configuration-manager"></a>Désinstaller des applications avec System Center Configuration Manager
 
@@ -41,7 +42,7 @@ Effectuez les actions suivantes pour désinstaller une application que vous avez
 -   Un déploiement dont l'objet est **Désinstaller** ne vérifie pas les règles de spécification. Si l'application est installée sur l'ordinateur sur lequel s'exécute le déploiement, elle sera désinstallée.  
 
 > [!IMPORTANT]  
-> Pour pouvoir déployer l'application en utilisant l'action de déploiement **Désinstaller**, vous devez au préalable supprimer les déploiements existants ou les déploiements simulés d'applications sur un regroupement.  
+> Pour déployer l’application avec l’action Désinstaller, vous devez d’abord supprimer tous les déploiements d’applications existants, les déploiements simulés, ainsi que les déploiements de séquences de tâches qui incluent cette application. 
 
  Pour plus d’informations sur la manière de créer un type de déploiement, consultez [Créer des applications](../../apps/deploy-use/create-applications.md).  
 

@@ -1,54 +1,55 @@
 ### YamlMime:YamlDocument
 documentType: LandingData
-title: "Documentation relative à Microsoft Deployment Toolkit"
+title: Documentation relative à Microsoft Deployment Toolkit
 metadata:
   document_id: bfb05467-f6ec-4cb2-b108-254972de2d06
-  title: "Documentation relative à Microsoft Deployment Toolkit"
-  description: "Microsoft Deployment Toolkit fournit une collection unifiée d’outils, de processus et de conseils pour l’automatisation des déploiements bureau et serveur."
-  keywords: "logiciels gratuits, outil, processus, flux de travail, automatisation, déploiement, automatisé, distribution"
-  author: arob98
-  ms.author: angrobe
-  manager: angrobe
-  ms.date: 12/27/2017
+  title: Documentation relative à Microsoft Deployment Toolkit
+  description: Microsoft Deployment Toolkit fournit une collection unifiée d’outils, de processus et de conseils pour l’automatisation des déploiements bureau et serveur.
+  keywords: logiciels gratuits, outil, processus, flux de travail, automatisation, déploiement, automatisé, distribution
+  author: aczechowski
+  ms.author: aaroncz
+  manager: dougeby
+  ms.date: 06/04/2018
   ms.topic: landing-page
   ms.devlang: na
   ms.prod: configuration-manager
-  ms.openlocfilehash: 56462ae538a2336f94a1883d099ad7b45c714633
-  ms.sourcegitcommit: 32bbc006a41868a6d9a708db5f7b372d9c71d985
+  ms.openlocfilehash: e02afe511d0c9f240bba68161551857d13d33de0
+  ms.sourcegitcommit: 10b3a571e2a822bbd7b58a25840ee1e6f703a7a2
   ms.translationtype: HT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 03/08/2018
+  ms.lasthandoff: 06/06/2018
+  ms.locfileid: "34814220"
 sections:
 - items:
   - type: markdown
-    text: "Microsoft Deployment Toolkit fournit une collection unifiée d’outils, de processus et de conseils pour l’automatisation des déploiements bureau et serveur."
+    text: Microsoft Deployment Toolkit fournit une collection unifiée d’outils, de processus et de conseils pour l’automatisation des déploiements bureau et serveur.
 - items:
   - type: list
     style: cards
     className: cardsM
     columns: 2
     items:
-    - href: whats-new-in-mdt.md
-      html: "<p>Découvrez les nouveautés.</p>"
+    - href: https://aka.ms/mdtdownload
+      html: <p>Téléchargez la dernière version de MDT.</p>
       image:
-        src: https://docs.microsoft.com/media/common/i_whats-new.svg
-      title: "Nouveautés"
+        src: https://docs.microsoft.com/media/common/i_download-generic.svg
+      title: Télécharger MDT
     - href: release-notes.md
-      html: "<p>Détails sur les correctifs et les bogues inclus dans cette version.</p>"
+      html: <p>Détails sur les correctifs et les bogues inclus dans cette version.</p>
       image:
         src: https://docs.microsoft.com/media/common/i_whats-new.svg
       title: Notes de publication
     - href: samples-guide.md
-      html: "<p>Exemples de paramètres de configuration pour des scénarios de déploiement spécifiques.</p>"
+      html: <p>Exemples de paramètres de configuration pour des scénarios de déploiement spécifiques.</p>
       image:
         src: https://docs.microsoft.com/media/common/i_code-samples.svg
-      title: "Guide d’exemples"
-    - href: user-driven-installation-developers-guide.md
-      html: "<p>Personnalisez l’installation pilotée par l’utilisateur pour votre organisation.</p>"
+      title: Guide d’exemples
+    - href: use-the-mdt.md
+      html: <p>Effectuez des déploiements de Windows à l’aide d’une installation LTI (Light Touch), ZTI (Zero Touch) ou UDI (User Driven).</p>
       image:
-        src: https://docs.microsoft.com/media/common/i_architecture.svg
-      title: "Guide du développeur"
-- title: "Démarrages rapides"
+        src: https://docs.microsoft.com/media/common/i_api-reference.svg
+      title: Utilisation de Microsoft Deployment Toolkit
+- title: Démarrages rapides
   items:
   - type: list
     style: cards
@@ -56,33 +57,33 @@ sections:
     columns: 3
     items:
     - href: lite-touch-installation-guide.md
-      title: "Installer à l’aide d’un média de démarrage"
+      title: Installer à l’aide d’un média de démarrage
       image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
     - href: user-driven-installation-guide.md
-      title: "Déployer avec l’installation pilotée par l’utilisateur"
+      title: Déployer avec l’installation pilotée par l’utilisateur
       image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
     - href: sccm-guide.md
-      title: "Déployer sur un nouvel ordinateur"
+      title: Déployer sur un nouvel ordinateur
       image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
-- title: "Ressources supplémentaires"
+- title: Ressources supplémentaires
   items:
   - type: list
     style: cards
     className: cardsM
     columns: 3
     items:
-    - href: use-the-mdt.md
-      title: "Effectuer des déploiements à l’aide d’une installation avec intervention limitée (Lite-Touch), sans intervention (Zero-Touch) et pilotée par l’utilisateur (User-Driven)."
-      image:
-        src: https://docs.microsoft.com/media/common/i_api-reference.svg
     - href: toolkit-reference.md
-      title: "Paramètres de configuration utiles aux déploiements."
+      title: Paramètres de configuration utiles aux déploiements.
       image:
         src: https://docs.microsoft.com/media/common/i_download-install.svg
     - href: troubleshooting-reference.md
-      title: "Fichiers journaux, codes d’erreur et autres informations de dépannage."
+      title: Fichiers journaux, codes d’erreur et autres informations de dépannage.
       image:
         src: https://docs.microsoft.com/media/common/i_support.svg
+    - href: user-driven-installation-developers-guide.md
+      title: Personnalisez l’installation pilotée par l’utilisateur pour votre organisation.
+      image:
+        src: https://docs.microsoft.com/media/common/i_architecture.svg

@@ -10,11 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: 3a667ae075ac688d4b49789ed88f858c2ff39397
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 9324126014245b586ba8fed87c670ac829f6cb81
+ms.sourcegitcommit: 493cc42f05b9388ef872e466e5a75d569642b9fc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34703466"
 ---
 # <a name="co-management-for-windows-10-devices"></a>Cogestion pour les appareils Windows 10    
  Dans les mises à jour précédentes de Windows 10, vous pouviez déjà joindre un appareil Windows 10 à Active Directory (AD) en local et à Azure AD sur le cloud (Azure AD hybride). À compter de Configuration Manager version 1710, la cogestion tire parti de cette amélioration et vous permet de gérer simultanément plusieurs appareils Windows 10 version 1709 à l’aide de Configuration Manager et d’Intune. <!-- 1350871 -->
@@ -60,7 +61,7 @@ Il existe deux principaux parcours pour accéder à la cogestion. Le premier a t
 ### <a name="enable-co-management"></a>Activer la cogestion 
  Dans la console Configuration Manager, accédez à **Administration** > **Vue d’ensemble** > **Services cloud** > **Cogestion**. Choisissez  **Configurer la cogestion** à partir du ruban pour ouvrir l’**Assistant Intégration de la cogestion** 
    
-1. Dans la page **Abonnement**, cliquez sur **Se connecter** et connectez-vous à votre locataire Intune, puis cliquez sur **Suivant**.    
+1. Dans la page **Abonnement**, cliquez sur **Se connecter** et connectez-vous à votre locataire Intune, puis cliquez sur **Suivant**. Vérifiez que le compte utilisé pour se connecter à votre locataire dispose d’une licence Intune. Si ce n’est pas le cas, la connexion échoue avec le message d’erreur suivant : « Utilisateur non reconnu ».   
 2. Dans la page **Activation**, choisissez votre paramètre **Inscription automatique dans Intune**. Copiez la ligne de commande pour les appareils déjà inscrits dans Intune, si nécessaire. 
 3. Dans la page **Charges de travail**, de chaque charge de travail, choisissez le groupe d’appareils concerné par la gestion avec Intune.
 4. Dans la page **Mise en lots**, sélectionnez un regroupement d’appareils en tant que **regroupement pilote**. Vérifiez les informations de **résumé** et terminez l’Assistant. 

@@ -9,11 +9,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: be503ec9-5324-4f7c-bcf5-77204328e99c
-ms.openlocfilehash: b8bc778f4bcede45d3035b8b119fc3e4a4df4978
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: b295dad503b801ff9d04767f75c1688107016d0b
+ms.sourcegitcommit: 493cc42f05b9388ef872e466e5a75d569642b9fc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569678"
 ---
 # <a name="change-your-mdm-authority-to-intune-standalone"></a>Utiliser la version autonome d’Intune comme autorité MDM
 
@@ -53,7 +54,9 @@ Utilisez la procédure suivante pour choisir Intune comme autorité MDM côté c
 3.  Ouvrez une session dans le locataire Intune que vous avez utilisé lorsque vous avez défini pour la première fois l’autorité MDM dans Configuration Manager.
 4.  Cliquez sur **Suivant** pour terminer l'Assistant.
 5.  L’autorité MDM est maintenant réinitialisée. L’abonnement Intune n’apparaît plus dans le nœud des abonnements Microsoft Intune de la console Configuration Manager.
-6.  Connectez-vous à [Intune sur le Portail Azure](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview) avec le client Intune utilisé précédemment.    
+6.  Connectez-vous au [portail Intune](https://aka.ms/IntunePortal).
+7.  Dans le panneau Microsoft Intune, cliquez sur **Inscription de l’appareil**.
+8.  Dans la vue d’ensemble de l’inscription d’appareil, regardez la propriété **Autorité MDM**.
 
   > [!Important]    
   > N’utilisez pas la console Intune classique. Vous devez vous connecter à Intune sur le Portail Azure.
