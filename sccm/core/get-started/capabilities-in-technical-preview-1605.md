@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32342526"
 ---
 # <a name="capabilities-in-technical-preview-1605-for-system-center-configuration-manager"></a>Fonctionnalités de la version d’évaluation technique 1605 pour System Center Configuration Manager
 
@@ -335,8 +336,7 @@ Dans cette version d’évaluation technique, si le portail d’entreprise reste
 
 2.  Sous l’onglet **Accueil**, dans le groupe **Déploiement**, cliquez sur **Supprimer les verrous de déploiement du groupe de serveurs**. Quand des clients ne parviennent pas à installer les mises à jour logicielles et empêchent les autres clients d’installer leurs mises à jour logicielles, les verrous de déploiement peuvent être désactivés manuellement.  
 
-##  <a name="BKMK_ATP">
-            </a> Prise en charge du service Windows Defender - Protection avancée contre les menaces  
+##  <a name="BKMK_ATP"></a> Prise en charge du service Windows Defender - Protection avancée contre les menaces  
  Windows Defender - Protection avancée contre les menaces est un nouveau service qui aide les entreprises à détecter, analyser et contrer les attaques avancées ciblant leurs réseaux. En savoir plus sur [Protection avancée contre les menaces Windows Defender](https://blogs.windows.com/windowsexperience/2016/03/01/announcing-windows-defender-advanced-threat-protection). Configuration Manager peut vous aider à intégrer et surveiller des appareils clients Windows 10 Édition anniversaire gérés.  
 
 ### <a name="try-it-now"></a>Essayez maintenant !  
