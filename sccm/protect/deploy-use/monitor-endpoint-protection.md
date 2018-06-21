@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32348767"
 ---
 # <a name="how-to-monitor-endpoint-protection-status"></a>Guide pratique pour surveiller l’état d’Endpoint Protection
 
@@ -33,7 +34,7 @@ Vous pouvez surveiller Endpoint Protection dans votre hiérarchie Microsoft Syst
     > [!IMPORTANT]  
     >  Les regroupements peuvent être sélectionnés dans les cas suivants :  
     >   
-    >  -   Quand vous sélectionnez **Afficher ce regroupement dans le tableau de bord Endpoint Protection** sous l’onglet **Alertes** de la boîte de dialogue *Propriétés de <nom_regroupement\>*****.  
+    >  -   Quand vous sélectionnez **Afficher ce regroupement dans le tableau de bord Endpoint Protection** sous l’onglet **Alertes** de la boîte de dialogue *Propriétés de <nom_regroupement\>****.  
     > -   Quand vous déployez une stratégie de logiciel anti-programme malveillant Endpoint Protection sur le regroupement.  
     > -   Quand vous activez et déployez les paramètres client Endpoint Protection sur le regroupement.  
 
