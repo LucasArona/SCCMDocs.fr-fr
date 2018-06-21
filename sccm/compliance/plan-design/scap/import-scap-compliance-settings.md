@@ -16,6 +16,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32336610"
 ---
 # <a name="import-the-compliance-settings-compliant-cab-files-into-system-center-configuration-manager"></a>Importer les fichiers .cab conformes aux paramètres de conformité dans System Center Configuration Manager
 
@@ -29,7 +30,7 @@ L'étape suivante du processus consiste à utiliser la console Configuration Man
 ## <a name="to-import-the-compliance-settings-compliant-cab-files-into-configuration-manager"></a>Pour importer les fichiers .cab conformes aux Paramètres de compatibilité dans Configuration Manager
 
 1. Ouvrez la **console Configuration Manager**.
-2. Dans le volet de navigation de la **console Configuration Manager, accédez à **Ressources et Conformité**> **Paramètres de conformité** > **Bases de référence de configuration**.
+2. Dans le volet de navigation de la  **console Configuration Manager, accédez à \*\* Ressources et Conformité**> **Paramètres de conformité** > **Bases de référence de configuration**.
 
 3. Dans le volet Actions, cliquez sur **Importer des données de configuration** pour démarrer l’Assistant Importer des données de configuration.
 
