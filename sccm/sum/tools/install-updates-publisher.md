@@ -62,7 +62,7 @@ Par exemple, vous créez une mise à jour logicielle avec un titre en anglais et
 Lorsque vous publiez des mises à jour logicielles, vous pouvez spécifier la langue du fichier binaire de la mise à jour logicielle. Vous pouvez également spécifier que le fichier binaire est indépendant de la langue. Les langues suivantes sont prises en charge :
 
 -   Arabe
--   Chinois (Hong Kong)
+-   Hong Kong (R.A.S.)
 -   Chinois (traditionnel)
 -   Chinois (simplifié)
 -   Tchèque
