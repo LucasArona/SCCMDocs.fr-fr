@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32351732"
 ---
 # <a name="security-and-privacy-for-operating-system-deployment-in-system-center-configuration-manager"></a>Sécurité et confidentialité du déploiement de systèmes d’exploitation dans System Center Configuration Manager
 

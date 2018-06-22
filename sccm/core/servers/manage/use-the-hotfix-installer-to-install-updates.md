@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32342424"
 ---
 # <a name="use-the-hotfix-installer-to-install-updates-for-system-center-configuration-manager"></a>Utiliser le programme d’installation de correctif logiciel pour installer les mises à jour de System Center Configuration Manager
 

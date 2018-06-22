@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32350423"
 ---
 # <a name="synchronize-software-updates-from-a-disconnected-software-update-point"></a>Synchroniser les mises à jour logicielles à partir d’un point de mise à jour logicielle déconnecté  
 

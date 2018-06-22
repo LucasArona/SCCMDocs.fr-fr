@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 03/27/2018
+ms.locfileid: "27821083"
 ---
 # <a name="user-driven-installation---developers-guide"></a>User Driven Installation - Guide du développeur
 User Driven Installation (UDI) aide à simplifier le déploiement des systèmes d’exploitation clients Windows®, tels que Windows 8.1, sur les ordinateurs utilisant la fonctionnalité Déploiement de système d’exploitation (OSD) dans Microsoft® System Center 2012 R2 Configuration Manager. UDI fait partie de Microsoft Deployment Toolkit (MDT).  
@@ -3982,7 +3983,7 @@ Le tableau 84 fournit des informations sur l’élément [DLLs](#DLLs).
 |-|-|  
 |**État**|Spécifie l’état de retour d’une tâche ayant rencontré une erreur. En règle générale, la valeur de cet attribut est Error. Cette valeur est affichée dans la colonne **State** sur la page d’Assistant dans UDI Wizard (Assistant UDI).|  
 |**Text**|Spécifie le texte descriptif de la condition d’erreur rencontrée par la tâche.|  
-|**Type**|Spécifie si cet élément représente une erreur, un avertissement ou une opération réussie. La valeur spécifiée dans **Type** doit être unique au sein d’un élément [ExitCodes](#ExitCodes). Voici les valeurs valides pour cet élément :<br /><br /> -   **0.**L’élément représente une opération réussie.<br />-   **1.** L’élément représente un avertissement.<br />-   **-1.** L’élément représente une erreur.|  
+|**Type**|Spécifie si cet élément représente une erreur, un avertissement ou une opération réussie. La valeur spécifiée dans **Type** doit être unique au sein d’un élément [ExitCodes](#ExitCodes). Voici les valeurs valides pour cet élément :<br /><br /> -   **0.** L’élément représente une opération réussie.<br />-   **1.** L’élément représente un avertissement.<br />-   **-1.** L’élément représente une erreur.|  
 |**Valeur**|Spécifie la valeur du code retourné par la tâche en tant que valeur numérique. La spécification d’un astérisque (*) indique l’élément par défaut pour les codes de retour qui ne sont pas listés dans les autres éléments [Error](#Error).|  
 
 ##### <a name="remarks"></a>Remarques  

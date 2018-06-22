@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32352048"
 ---
 # <a name="plan-for-software-updates-in-system-center-configuration-manager"></a>Planifier les mises à jour logicielles dans System Center Configuration Manager
 

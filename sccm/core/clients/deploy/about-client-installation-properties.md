@@ -15,6 +15,7 @@ ms.sourcegitcommit: db6074317d5c68ebb5fc478be5bceeb441aa0737
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34220426"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-system-center-configuration-manager"></a>À propos des propriétés et des paramètres d’installation du client dans System Center Configuration Manager
 

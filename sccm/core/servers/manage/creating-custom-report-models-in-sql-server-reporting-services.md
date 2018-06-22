@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32342645"
 ---
 # <a name="creating-custom-report-models-for-system-center-configuration-manager-in-sql-server-reporting-services"></a>Création de modèles de rapport personnalisés pour System Center Configuration Manager dans SQL Server Reporting Services
 

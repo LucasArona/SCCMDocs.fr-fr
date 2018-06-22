@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32334281"
 ---
 # <a name="about-client-installation-properties-published-to-active-directory-domain-services"></a>À propos de la publication des propriétés d’installation du client sur les services de domaine Active Directory
 

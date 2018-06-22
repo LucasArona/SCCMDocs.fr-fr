@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32336899"
 ---
 # <a name="find-help-for-using-system-center-configuration-manager"></a>Trouver de l’aide pour l’utilisation de System Center Configuration Manager
 

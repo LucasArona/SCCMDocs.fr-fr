@@ -16,6 +16,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32347329"
 ---
 # <a name="system-center-updates-publisher"></a>Éditeur de mise à jour Systems Center
 
@@ -36,7 +37,7 @@ Une fois que vous publiez des mises à jour sur un serveur de mise à jour, vous
 > La version précédente, [System Center Updates Publisher 2011](http://go.microsoft.com/fwlink/?LinkId=848111), reste prise en charge. Cette version mise à jour conserve les mêmes fonctionnalités, mais elle prend en charge d’autres systèmes d’exploitation, de nouvelles fonctionnalités pour simplifier certaines tâches, et propose une nouvelle interface utilisateur.
 
 ## <a name="workspaces"></a>Espaces de travail
-Lorsque vous ouvrez l’éditeur de mise à jour, il affiche par défaut le nœud Vue d’ensemble de l*’espace de travail Mises à jour.*
+Lorsque vous ouvrez l’éditeur de mise à jour, il affiche par défaut le nœud Vue d’ensemble de l *’espace de travail Mises à jour.*
 
 ![Console de l’éditeur de mise à jour](media/console1.png)   
 

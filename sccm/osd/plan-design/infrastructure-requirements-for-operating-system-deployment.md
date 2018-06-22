@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32352133"
 ---
 # <a name="infrastructure-requirements-for-os-deployment-in-system-center-configuration-manager"></a>Conditions requises de l’infrastructure pour un déploiement de système d’exploitation dans System Center Configuration Manager
 

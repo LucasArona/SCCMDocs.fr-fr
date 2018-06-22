@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32339799"
 ---
 # <a name="use-a-sql-server-cluster-for-the-system-center-configuration-manager-site-database"></a>Utiliser un cluster SQL Server pour la base de données du site System Center Configuration Manager
 

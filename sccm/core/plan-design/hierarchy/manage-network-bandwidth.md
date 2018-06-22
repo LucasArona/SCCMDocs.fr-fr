@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32337239"
 ---
 # <a name="manage-network-bandwidth-for-content"></a>Gérer la bande passante réseau pour le contenu
 Pour mieux gérer la bande passante réseau utilisée pour le processus de gestion du contenu de System Center Configuration Manager, vous pouvez utiliser les commandes Configuration Manager intégrées de planification et de limitation de bande passante. Vous pouvez également utiliser le contenu préparé. Les sections suivantes décrivent ces options plus en détail.

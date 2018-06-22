@@ -16,6 +16,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32353601"
 ---
 # <a name="manage-certificates-and-security-for-updates-publisher"></a>Gérer les certificats et la sécurité pour l’éditeur de mise à jour
 
@@ -54,7 +55,7 @@ La procédure suivante est une des méthodes possibles pour ajouter le certifica
 ## <a name="configure-a-self-signing-certificate-on-client-computers"></a>Configurer un certificat d’auto-signature sur les ordinateurs clients
 Sur les ordinateurs clients, l’Agent Windows Update (WUA) recherchera les mises à jour à partir du catalogue. Ce processus ne pourra pas installer les mises à jour si l’agent est incapable de localiser ce certificat numérique dans le magasin des éditeurs approuvés sur l’ordinateur local. Si un certificat auto-signé a été utilisé pour la publication du catalogue de mises à jour, comme des **éditeurs WSUS auto-signés**, le certificat doit également se trouver dans le magasin de certificats des autorités de certification racine approuvées, sur l'ordinateur local, afin que l’agent puisse vérifier la validité du certificat.
 
-Vous pouvez utiliser une des méthodes disponibles pour configurer des certificats sur les ordinateurs clients, notamment la stratégie de groupe et l**’Assistant Importation de certificat**, ou à l’aide de l’outil Certutil et de la distribution de logiciels.
+Vous pouvez utiliser une des méthodes disponibles pour configurer des certificats sur les ordinateurs clients, notamment la stratégie de groupe et l **’Assistant Importation de certificat**, ou à l’aide de l’outil Certutil et de la distribution de logiciels.
 
 Voici un exemple montrant comment configurer le certificat de signature sur les ordinateurs clients.
 
@@ -67,7 +68,7 @@ Voici un exemple montrant comment configurer le certificat de signature sur les 
 
 4.  Développez ***Certificats (* nom du serveur de mise à jour**), **WSUS**, puis cliquez sur **Certificats**.
 
-5.  Cliquez avec le bouton droit sur le certificat dans le volet des résultats, sélectionnez **Toutes les tâches**, puis cliquez sur **Exporter**. Terminez l**’Assistant Exportation de certificat**, utilisez les paramètres par défaut pour créer un fichier de certificat d’exportation avec le nom et l’emplacement spécifiés dans l’Assistant.
+5.  Cliquez avec le bouton droit sur le certificat dans le volet des résultats, sélectionnez **Toutes les tâches**, puis cliquez sur **Exporter**. Terminez l **’Assistant Exportation de certificat**, utilisez les paramètres par défaut pour créer un fichier de certificat d’exportation avec le nom et l’emplacement spécifiés dans l’Assistant.
 
 6.  À l’aide de l’une des méthodes suivantes, ajoutez le certificat utilisé pour signer le catalogue de mises à jour sur chaque ordinateur client qui utilisera WUA pour rechercher les mises à jour dans le catalogue. Ajoutez le certificat sur l’ordinateur client comme suit :
 

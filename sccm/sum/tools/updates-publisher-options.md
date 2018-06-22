@@ -16,6 +16,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32349964"
 ---
 # <a name="configure-options-for-updates-publisher"></a>Configurer les options pour l’éditeur de mise à jour
 
@@ -104,7 +105,7 @@ Les options avancées incluent ce qui suit :
 
 -   **Horodateur :** si cette option est activée, un horodatage est ajouté aux mises à jour que vous signez, indiquant la date de leur signature. Une mise à jour signée alors que le certificat était valide peut être utilisée après expiration de ce certificat de signature. Par défaut, les mises à jour logicielles ne peuvent pas être déployées après expiration de leur certificat de signature.
 
--   **Rechercher les mises à jour des catalogues auxquels vous êtes abonné :** chaque fois que l’éditeur de mise à jour démarre, il peut vérifier automatiquement les mises à jour des catalogues auxquels vous êtes abonné. Lorsqu’une mise à jour du catalogue est trouvée, les détails sont fournis en tant qu**’alertes récentes** dans la fenêtre **Vue d’ensemble** de l**’espace de travail Mises à jour**.
+-   **Rechercher les mises à jour des catalogues auxquels vous êtes abonné :** chaque fois que l’éditeur de mise à jour démarre, il peut vérifier automatiquement les mises à jour des catalogues auxquels vous êtes abonné. Lorsqu’une mise à jour du catalogue est trouvée, les détails sont fournis en tant qu **’alertes récentes** dans la fenêtre **Vue d’ensemble** de l **’espace de travail Mises à jour**.
 
 -   **Révocation de certificat :** choisissez cette option pour activer des vérifications de révocation de certificat.
 
@@ -132,7 +133,7 @@ Lorsque vous activez la journalisation de la base de données, les informations 
 Pour afficher le fichier journal, cliquez dans la console sur ![Propriétés](media/properties2.png) pour ouvrir les **propriétés de l’éditeur de mise à jour**, puis choisissez **Afficher le fichier journal**.
 
 ## <a name="expire-unreferenced-software-updates"></a>Faire expirer les mises à jour logicielles non référencées
-Vous pouvez exécuter l**’Assistant Nettoyage des mises à jour logicielles** pour faire expirer les mises à jour situées sur votre serveur de mise à jour mais pas dans le référentiel de l’éditeur de mise à jour. Cette procédure avertit Configuration Manager, qui supprime alors ces mises à jour de tous les futurs déploiements.
+Vous pouvez exécuter l **’Assistant Nettoyage des mises à jour logicielles** pour faire expirer les mises à jour situées sur votre serveur de mise à jour mais pas dans le référentiel de l’éditeur de mise à jour. Cette procédure avertit Configuration Manager, qui supprime alors ces mises à jour de tous les futurs déploiements.
 
 L’opération consistant à faire expirer une mise à jour ne peut pas être annulée. Effectuez uniquement cette tâche si vous êtes sûr que les mises à jour logicielles que vous sélectionnez ne sont plus requises par votre organisation.
 

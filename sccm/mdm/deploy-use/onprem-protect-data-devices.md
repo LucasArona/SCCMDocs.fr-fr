@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32353492"
 ---
 # <a name="protect-data-and-devices-in-on-premises-mobile-device-management"></a>Protéger des données et des appareils dans le cadre de la gestion des appareils mobiles locale
 

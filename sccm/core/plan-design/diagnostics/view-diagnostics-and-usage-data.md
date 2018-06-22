@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32333458"
 ---
 # <a name="how-to-view-diagnostics-and-usage-data-for-system-center-configuration-manager"></a>Comment afficher les données d’utilisation et de diagnostic pour System Center Configuration Manager
 

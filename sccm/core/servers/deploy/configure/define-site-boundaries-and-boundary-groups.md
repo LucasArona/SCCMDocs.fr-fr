@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32334842"
 ---
 # <a name="define-site-boundaries-and-boundary-groups-for-system-center-configuration-manager"></a>Définir des limites de site et les groupes de limites pour System Center Configuration Manager
 

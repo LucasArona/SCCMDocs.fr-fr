@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32352999"
 ---
 # <a name="protect-data-with-remote-wipe-lock-or-passcode-reset-by-using-system-center-configuration-manager"></a>Protéger les données à l’aide de la réinitialisation à distance, du verrouillage ou de la réinitialisation du code d’accès en utilisant System Center Configuration Manager
 

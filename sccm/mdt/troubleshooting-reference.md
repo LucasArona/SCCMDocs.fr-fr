@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 03/27/2018
+ms.locfileid: "27821013"
 ---
 # <a name="troubleshooting-reference-for-the-microsoft-deployment-toolkit"></a>Guide de référence pour le dépannage de MDT (Microsoft Deployment Toolkit)
  Le déploiement de systèmes d’exploitation et d’applications ainsi que la migration de l’état utilisateur peuvent être relativement compliqués, même en vous aidant d’outils et de ressources d’assistance appropriés. Ce guide de référence, qui accompagne Microsoft® Deployment Toolkit (MDT) 2013, fournit des informations sur les problèmes connus actuels, des solutions possibles à ces problèmes et divers conseils de dépannage.  

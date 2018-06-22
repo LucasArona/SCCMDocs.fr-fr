@@ -16,6 +16,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32351800"
 ---
 # <a name="create--software-updates-and-update-bundles-with-updates-publisher"></a>Créer des mises à jour logicielles et des offres groupées de mises à jour avec l’éditeur de mise à jour
 
@@ -26,7 +27,7 @@ L’éditeur de mise à jour vous permet d’utiliser l’Assistant **Création 
 Ces deux Assistants ayant un flux de travail similaire, la procédure de création d’une offre groupée de mises à jour fait référence à la procédure de création de mises à jour et seules les différences pertinentes sont détaillées.
 
 ## <a name="use-the-create-update-wizard"></a>Utiliser l’Assistant Création d’une mise à jour
-1.  Dans la console, accédez à l**’espace de travail Mises à jour** puis, dans le volet **Mise en route**, choisissez **Mise à jour** dans l’onglet **Accueil** du ruban. Cette opération ouvre l’Assistant **Création d’une mise à jour**.
+1.  Dans la console, accédez à l **’espace de travail Mises à jour** puis, dans le volet **Mise en route**, choisissez **Mise à jour** dans l’onglet **Accueil** du ruban. Cette opération ouvre l’Assistant **Création d’une mise à jour**.
 
 2.  Sur la page **Package**, utilisez les informations suivantes pour vous aider à configurer la mise à jour :
 
@@ -78,7 +79,7 @@ Ces deux Assistants ayant un flux de travail similaire, la procédure de créati
 
      -   **Pilote** : mise à jour du logiciel d’un pilote.
 
-    **Fournisseur :** spécifie un fournisseur pour la mise à jour. Vous pouvez utiliser la liste déroulante pour choisir les valeurs des mises à jour figurant dans le référentiel. Lorsque vous spécifiez un fournisseur, l’Assistant crée un dossier portant le nom de ce fournisseur sous **Toutes les mises à jour logicielles** dans l**’espace de travail Mises à jour** si ce dossier n’existe pas déjà. Voici une liste des noms Windows Server Update Services (WSUS) réservés qui ne peuvent pas être entrés pour les mises à jour que vous créez :
+    **Fournisseur :** spécifie un fournisseur pour la mise à jour. Vous pouvez utiliser la liste déroulante pour choisir les valeurs des mises à jour figurant dans le référentiel. Lorsque vous spécifiez un fournisseur, l’Assistant crée un dossier portant le nom de ce fournisseur sous **Toutes les mises à jour logicielles** dans l **’espace de travail Mises à jour** si ce dossier n’existe pas déjà. Voici une liste des noms Windows Server Update Services (WSUS) réservés qui ne peuvent pas être entrés pour les mises à jour que vous créez :
  >*   Microsoft Corporation
  >*   Microsoft
  >*   Mise à jour
@@ -138,7 +139,7 @@ Ces deux Assistants ayant un flux de travail similaire, la procédure de créati
 
 6.  Sur la page **Remplacement**, spécifiez les mises à jour remplacées par cette mise à jour. Lorsque cette mise à jour est publiée, Configuration Manager marque chaque mise à jour remplacée comme ayant **expiré**. Les clients installeront ensuite cette mise à jour au lieu des mises à jour remplacées.
 
-7.  Sur la page **Mise en application**, utilisez l**’éditeur de règles** pour définir un ensemble de règles déterminant si un appareil a besoin de cette mise à jour. (Cette page est similaire à la page **Installé** qui la suit.)
+7.  Sur la page **Mise en application**, utilisez l **’éditeur de règles** pour définir un ensemble de règles déterminant si un appareil a besoin de cette mise à jour. (Cette page est similaire à la page **Installé** qui la suit.)
 
     Pour ajouter une nouvelle règle, cliquez sur ![Nouvelle règle](media/newrule.png). Cette opération ouvre la page Règle de mise en application dans laquelle vous pouvez configurer des règles.
 
@@ -161,18 +162,18 @@ Ces deux Assistants ayant un flux de travail similaire, la procédure de créati
 
     Lorsque vous avez fini de créer et d’ajouter des règles, cliquez sur **OK** dans la boîte de dialogue **Créer un ensemble de règles** pour enregistrer cet ensemble. Vous pouvez ensuite créer une **nouvelle** règle et l’ajouter également à l’ensemble.
 
-    Si vous avez plusieurs règles ou ensembles de règles à ajouter à une mise à jour, vous pouvez utiliser les opérateurs logiques de l**’éditeur de règles** pour déterminer les conditions entre les règles et l’ordre dans lequel elles sont traitées.
+    Si vous avez plusieurs règles ou ensembles de règles à ajouter à une mise à jour, vous pouvez utiliser les opérateurs logiques de l **’éditeur de règles** pour déterminer les conditions entre les règles et l’ordre dans lequel elles sont traitées.
 
-8.  Sur la page **Installé**, utilisez l**’éditeur de règles pour** définir un ensemble de règles déterminant si un appareil a déjà installé la mise à jour que vous configurez. (Cette page est similaire à la page **Mise en application** qui la suit.)
+8.  Sur la page **Installé**, utilisez l **’éditeur de règles pour** définir un ensemble de règles déterminant si un appareil a déjà installé la mise à jour que vous configurez. (Cette page est similaire à la page **Mise en application** qui la suit.)
 
     Cette page de l’Assistant permet de configurer des règles avec les mêmes options et critères que la page **Mise en application**.
 
-    À la fin de l’Assistant, la nouvelle mise à jour est ajoutée à un nœud dans l**’espace de travail Mises à jour** qui est identifié par le nom du **fournisseur** et du **produit** de cette mise à jour.
+    À la fin de l’Assistant, la nouvelle mise à jour est ajoutée à un nœud dans l **’espace de travail Mises à jour** qui est identifié par le nom du **fournisseur** et du **produit** de cette mise à jour.
 
 ## <a name="use-the-create-bundle-wizard"></a>Utiliser l’Assistant Création d’une offre groupée
 Comme cet Assistant utilise le même flux de travail que l’[Assistant Création d’une mise à jour](#use-the-create-update-wizard), utilisez ce flux de travail en tenant compte de la différence suivante concernant les offres groupées :
 
-1.  Pour démarrer l’Assistant, dans la console, accédez à l**’espace de travail Mises à jour** puis choisissez **Offre groupée** dans l’onglet **Accueil** du ruban.
+1.  Pour démarrer l’Assistant, dans la console, accédez à l **’espace de travail Mises à jour** puis choisissez **Offre groupée** dans l’onglet **Accueil** du ruban.
 
 2.  Contrairement à l’Assistant Création d’une mise à jour, il n’existe aucune page Package lors de la création d’une offre groupée.
 
@@ -186,4 +187,4 @@ Comme cet Assistant utilise le même flux de travail que l’[Assistant Créatio
 
 7.  Sur la page **Membres**, sélectionnez les mises à jour à ajouter à l’offre groupée. Seules les mises à jour que vous avez créées ou importées vers l’éditeur de mise à jour sont disponibles.
 
-À la fin de l’Assistant, la nouvelle offre groupée de mises à jour est ajoutée à un nœud dans l**’espace de travail Mises à jour** qui est identifié par le nom du **fournisseur** de cette offre groupée.
+À la fin de l’Assistant, la nouvelle offre groupée de mises à jour est ajoutée à un nœud dans l **’espace de travail Mises à jour** qui est identifié par le nom du **fournisseur** de cette offre groupée.

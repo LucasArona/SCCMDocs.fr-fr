@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32336117"
 ---
 # <a name="manage-apps-from-the-microsoft-store-for-business-with-system-center-configuration-manager"></a>Gérer les applications à partir du Microsoft Store pour Entreprises avec System Center Configuration Manager
 Le [Microsoft Store pour Entreprises](https://www.microsoft.com/business-store) vous donne accès à des applications Windows pour votre organisation que vous pouvez acheter individuellement ou en volume. En connectant le Store à Configuration Manager, vous pouvez synchroniser la liste des applications que vous avez achetées avec Configuration Manager. Vous pouvez ensuite voir ces applications dans la console Configuration Manager et les déployer comme toute autre application.

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32342203"
 ---
 # <a name="site-and-site-system-prerequisites-for-system-center-configuration-manager"></a>Prérequis des sites et systèmes de site pour System Center Configuration Manager
 

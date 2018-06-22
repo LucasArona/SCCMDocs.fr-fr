@@ -16,6 +16,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32352191"
 ---
 # <a name="manage-software-update-catalogs-in-updates-publisher"></a>Gérer des catalogues de mises à jour logicielles dans l’éditeur de mise à jour
 
@@ -28,7 +29,7 @@ Les catalogues de mises à jour logicielles contiennent des informations sur les
 ## <a name="add-software-update-catalogs"></a>Ajouter des catalogues de mises à jour logicielles
 Vous devez ajouter un catalogue de mises à jour à l’éditeur de mise à jour avant de pouvoir gérer les mises à jour qu’il contient. Lorsque vous ajoutez un catalogue, l’éditeur de mise à jour :
 -   Crée un abonnement à ce catalogue afin de pouvoir vérifier les mises à jour de ce catalogue.
--   Ajoute le catalogue à une liste dans la fenêtre **Mes catalogues de mises à jour logiciels** de l**’espace de travail Catalogues**.  
+-   Ajoute le catalogue à une liste dans la fenêtre **Mes catalogues de mises à jour logiciels** de l **’espace de travail Catalogues**.  
 
 Vous trouverez dans la console des informations sur chaque catalogue auquel vous êtes abonné. Ces Informations incluent l’URL ou l’emplacement de téléchargement, le nom de la société ou de l’organisation qui a créé le catalogue, et la date de la dernière importation ou modification.
 
@@ -45,15 +46,15 @@ Outre l’ajout de catalogues et l’affichage des informations sur les catalogu
 > La suppression d’un catalogue de l’éditeur de mise en jour entraîne la suppression des mises à jour de ce catalogue de votre référentiel. Cela n’affecte pas les mises à jour que vous avez publiées sur votre serveur de mise à jour. Pour supprimer de votre serveur de mise à jour des mises à jour qui ne figurent plus dans votre référentiel, consultez la rubrique [Faire expirer des mises à jour logicielles non référencées](/sccm/sum/tools/updates-publisher-options#expire-unreferenced-software-updates).
 
 ## <a name="manage-update-catalogs"></a>Gérer des catalogues de mises à jour
-Vous pouvez afficher la liste des catalogues que vous avez importés dans la fenêtre **Mes catalogues de mises à jour logiciels** de l**’espace de travail Catalogues**. À partir de cet espace de travail, vous pouvez :
+Vous pouvez afficher la liste des catalogues que vous avez importés dans la fenêtre **Mes catalogues de mises à jour logiciels** de l **’espace de travail Catalogues**. À partir de cet espace de travail, vous pouvez :
 
 -   **Ajouter un catalogue partenaire :** utilisez l’une des opérations suivantes pour rechercher des catalogues partenaires :
 
-    -   Dans la console, accédez à l**’espace de travail Mises à jour** > **Vue d’ensemble**. Dans la fenêtre **Prise en main**, choisissez **Ajouter des catalogues de mises à jour logicielles partenaires**.
+    -   Dans la console, accédez à l **’espace de travail Mises à jour** > **Vue d’ensemble**. Dans la fenêtre **Prise en main**, choisissez **Ajouter des catalogues de mises à jour logicielles partenaires**.
 
-    -   Dans la console, accédez à l**’espace de travail Catalogues** > **Mes catalogues**. Puis, dans le ruban, choisissez **Ajouter des catalogues**.
+    -   Dans la console, accédez à l **’espace de travail Catalogues** > **Mes catalogues**. Puis, dans le ruban, choisissez **Ajouter des catalogues**.
 
--   **Ajouter un catalogue utilisateur :** dans la console, accédez à l**’espace de travail Catalogues** > **Mes catalogues**. Puis, dans le ruban, choisissez **Ajouter des catalogues**. Outre l’emplacement du fichier .cab, vous devez spécifier un éditeur, un nom et une description pour identifier le catalogue.
+-   **Ajouter un catalogue utilisateur :** dans la console, accédez à l **’espace de travail Catalogues** > **Mes catalogues**. Puis, dans le ruban, choisissez **Ajouter des catalogues**. Outre l’emplacement du fichier .cab, vous devez spécifier un éditeur, un nom et une description pour identifier le catalogue.
 
 
 -   **Rechercher les mises à jour des catalogues :** sélectionnez un ou plusieurs catalogues, puis choisissez **Actualiser** dans le ruban.

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32333108"
 ---
 # <a name="security-and-privacy-for-software-inventory-in-system-center-configuration-manager"></a>Sécurité et confidentialité pour l’inventaire logiciel dans System Center Configuration Manager
 

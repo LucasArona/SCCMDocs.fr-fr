@@ -2,26 +2,20 @@
 title: Gérer l'accès à Internet à l'aide de stratégies Managed Browser
 titleSuffix: Configuration Manager
 description: Déployez Intune Managed Browser pour gérer et limiter l’accès à Internet.
-ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 8e25e00c-c9a8-473f-bcb7-ea989f6ca3c5
-caps.latest.revision: ''
-caps.handback.revision: ''
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 3aea2a65733a52ab532d451b21ae98fbc0f122c6
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 8754219f36e30f2442178dc5521e05246948d3de
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2018
+ms.lasthandoff: 05/03/2018
+ms.locfileid: "32350144"
 ---
 # <a name="manage-internet-access-using-managed-browser-policies-with-system-center-configuration-manager"></a>Gérer l’accès à Internet à l’aide de stratégies Managed Browser avec System Center Configuration Manager
 
@@ -55,9 +49,9 @@ Dans System Center Configuration Manager, vous pouvez déployer Intune Managed B
 
      Dans la page **Managed Browser** , sélectionnez l'une des options suivantes :  
 
-    -   **Autoriser Managed Browser à ouvrir uniquement les URL ci-dessous (liste autorisée)** : spécifiez une liste d’URL pouvant être ouvertes par Managed Browser.  
+    -   **Autoriser Managed Browser à ouvrir uniquement les URL ci-dessous (liste autorisée)**  : spécifiez une liste d’URL pouvant être ouvertes par Managed Browser.  
 
-    -   **Empêcher Managed Browser d’ouvrir les URL ci-dessous (liste bloquée)** : spécifiez une liste d’URL ne pouvant pas être ouvertes par Managed Browser.  
+    -   **Empêcher Managed Browser d’ouvrir les URL ci-dessous (liste bloquée)**  : spécifiez une liste d’URL ne pouvant pas être ouvertes par Managed Browser.  
 
     > [!NOTE]  
     >  Vous ne pouvez pas inclure des URL autorisées et bloquées dans la même stratégie Managed Browser.  
@@ -92,7 +86,7 @@ La nouvelle stratégie s'affiche dans le nœud **Stratégies de gestion d'applic
 
 Utilisez les informations suivantes pour en savoir plus sur les formats et les caractères génériques que vous pouvez utiliser pour spécifier des URL dans les listes autorisées et les listes bloquées.  
 
--   Vous pouvez utiliser le caractère générique «**\\***» selon les règles de la liste de modèles autorisés ci-dessous.  
+-   Vous pouvez utiliser le caractère générique «**\***» selon les règles de la liste de modèles autorisés ci-dessous.  
 
 -   Veillez à faire précéder toutes les URL du préfixe **http** ou **https** quand vous les entrez dans la liste.  
 
@@ -111,7 +105,7 @@ Utilisez les informations suivantes pour en savoir plus sur les formats et les c
     |http://www.contoso.com<br /><br /> Correspond à une page unique|www.contoso.com|host.contoso.com<br /><br /> www.contoso.com/images<br /><br /> contoso.com/|  
     |http://contoso.com<br /><br /> Correspond à une page unique|contoso.com/|host.contoso.com<br /><br /> www.contoso.com/images<br /><br /> www.contoso.com|  
     |http://www.contoso.com/*<br /><br /> Correspond à toutes les URL commençant par www.contoso.com|www.contoso.com<br /><br /> www.contoso.com/images<br /><br /> www.contoso.com/videos/tvshows|host.contoso.com<br /><br /> host.contoso.com/images|  
-    |http://\*.contoso.com/\*<br /><br /> Correspond à tous les sous-domaines sous contoso.com|developer.contoso.com/resources<br /><br /> news.contoso.com/images<br /><br /> news.contoso.com/videos|contoso.host.com|  
+    |http://*.contoso.com/\*<br /><br /> Correspond à tous les sous-domaines sous contoso.com|developer.contoso.com/resources<br /><br /> news.contoso.com/images<br /><br /> news.contoso.com/videos|contoso.host.com|  
     |http://www.contoso.com/images<br /><br /> Correspond à un dossier unique|www.contoso.com/images|www.contoso.com/images/dogs|  
     |http://www.contoso.com:80<br /><br /> Correspond à une page unique avec un numéro de port|http://www.contoso.com:80||  
     |https://www.contoso.com<br /><br /> Correspond à une page unique sécurisée|https://www.contoso.com|http://www.contoso.com|  
@@ -121,11 +115,11 @@ Utilisez les informations suivantes pour en savoir plus sur les formats et les c
 
     -   *.com  
 
-    -   \*.contoso/\*  
+    -   *.contoso/\*  
 
     -   www.contoso.com/*images  
 
-    -   www.contoso.com/\*images\*pigs  
+    -   www.contoso.com/*images\*pigs  
 
     -   www.contoso.com/page*  
 

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32352581"
 ---
 # <a name="task-sequence-action-variables-in-system-center-configuration-manager"></a>Variables d’action de séquence de tâches dans System Center Configuration Manager
 
