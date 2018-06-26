@@ -1,8 +1,8 @@
 ---
 title: Sortie de veille des clients
 titleSuffix: Configuration Manager
-description: Planifiez la sortie de veille des clients dans System Center Configuration Manager.
-ms.date: 04/23/2017
+description: Planifier la sortie de veille des clients dans System Center Configuration Manager à l’aide de Wake On LAN (WOL).
+ms.date: 05/23/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,31 +10,32 @@ ms.assetid: 52ee82b2-0b91-4829-89df-80a6abc0e63a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: aa5a0b30526f66add7dfb87fa988ed502cca1ee1
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 2f36ff6c28bd8a3fa23599652aff82ef0c721cad
+ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "34474138"
 ---
 # <a name="plan-how-to-wake-up-clients-in-system-center-configuration-manager"></a>Planifier la sortie de veille des clients dans System Center Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
- Configuration Manager prend en charge deux technologies Wake On Lan (sortie de veille sur réseau local) pour réveiller les ordinateurs qui sont en mode veille lorsque vous souhaitez installer des logiciels obligatoires, comme des mises à jour logicielles et des applications : paquets de mise en éveil traditionnels et commandes de mise sous tension AMT.  
+ Configuration Manager prend en charge les paquets de mise en éveil traditionnels permettant de réveiller les ordinateurs en mode veille lorsque vous souhaitez installer le logiciel requis, par exemple des mises à jour logicielles et des applications.  
 
 Vous pouvez compléter la méthode traditionnelle des paquets de mise en éveil par des paramètres de client de proxy de mise en éveil. Le proxy de mise en éveil utilise un protocole entre homologues et des ordinateurs sélectionnés pour vérifier si les autres ordinateurs du sous-réseau sont éveillés et les sortir de veille si nécessaire. Lorsque le site est configuré pour l'éveil par appel réseau (Wake On LAN) et les clients configurés pour le proxy de mise en éveil, le processus fonctionne comme suit :  
 
-1.  Les ordinateurs dotés du client Configuration Manager qui ne sont pas en veille sur le sous-réseau vérifient si les autres ordinateurs du sous-réseau sont éveillés. Pour cela, ils s'envoient une commande ping TCP/IP toutes les 5 secondes.  
+1.  Les ordinateurs dotés du client Configuration Manager qui ne sont pas en veille sur le sous-réseau vérifient si les autres ordinateurs du sous-réseau sont éveillés. Pour effectuer cette vérification, ils s'envoient une commande ping TCP/IP toutes les cinq secondes.  
 
 2.  Si les autres ordinateurs ne répondent pas, ils sont considérés comme étant en veille. Les ordinateurs qui ne sont pas en veille deviennent *ordinateurs gestionnaires* du sous-réseau.  
 
      Étant donné qu’un ordinateur risque ne pas répondre pour une raison autre que la veille (par exemple, s’il est éteint, supprimé du réseau ou si le paramètre client de mise en éveil du proxy n’est plus appliqué), les ordinateurs reçoivent un paquet de mise en éveil tous les jours à 14h00, heure locale. Les ordinateurs qui ne répondent pas ne sont plus considérés comme étant en veille et ne sont pas mis en éveil par le proxy de mise en éveil.  
 
-     Pour prendre en charge un proxy de mise en éveil, au moins trois ordinateurs doivent être sortis de veille pour chaque sous-réseau. Pour ce faire, trois ordinateurs sont choisis sans déterminisme en tant que *gardiens* du sous-réseau. Cela signifie qu'ils restent éveillés, malgré toute stratégie d'alimentation configurée pour la mise en veille ou la mise en veille prolongée à l'issue d'une période d'inactivité. Les gardiens respectent les commandes d'arrêt ou de redémarrage, par exemple, consécutivement à des tâches de maintenance. Le cas échéant, les gardiens restants mettent en éveil un autre ordinateur du sous-réseau afin que le sous-réseau continue à disposer de trois gardiens.  
+     Pour prendre en charge un proxy de mise en éveil, au moins trois ordinateurs doivent être sortis de veille pour chaque sous-réseau. Pour remplir cette condition, trois ordinateurs sont choisis sans déterminisme en tant que *gardiens* du sous-réseau. Cet état signifie qu'ils restent éveillés, malgré toute stratégie d'alimentation configurée pour la mise en veille ou la mise en veille prolongée à l'issue d'une période d'inactivité. Les gardiens respectent les commandes d'arrêt ou de redémarrage, par exemple, consécutivement à des tâches de maintenance. Dans ce cas, les gardiens restants mettent en éveil un autre ordinateur du sous-réseau afin que le sous-réseau continue à disposer de trois gardiens.  
 
 3.  Les ordinateurs gestionnaires demandent au commutateur réseau de rediriger le trafic réseau des ordinateurs en veille vers eux-mêmes.  
 
-     La redirection est accomplie par l'ordinateur gestionnaire qui émet une trame Ethernet qui utilise l'adresse MAC de l'ordinateur en veille comme adresse source. Cela permet au commutateur réseau de se comporter comme si l'ordinateur en veille avait été déplacé vers le même port que celui sur lequel se trouve l'ordinateur gestionnaire. L'ordinateur gestionnaire envoie également des paquets ARP pour que les ordinateurs en veille conservent l'entrée actualisée dans le cache ARP. L'ordinateur gestionnaire répondra également aux requêtes ARP au nom de l'ordinateur en veille en utilisant l'adresse MAC de cet ordinateur en veille.  
+     La redirection est accomplie par l'ordinateur gestionnaire qui émet une trame Ethernet qui utilise l'adresse MAC de l'ordinateur en veille comme adresse source. Ce comportement permet au commutateur réseau de se comporter comme si l'ordinateur en veille avait été déplacé vers le même port que celui sur lequel se trouve l'ordinateur gestionnaire. L'ordinateur gestionnaire envoie également des paquets ARP pour que les ordinateurs en veille conservent l'entrée actualisée dans le cache ARP. L'ordinateur gestionnaire répond également aux requêtes ARP au nom de l'ordinateur en veille en utilisant l'adresse MAC de cet ordinateur en veille.  
 
     > [!WARNING]  
     >  Pendant ce processus, le mappage IP vers MAC de l'ordinateur en veille reste le même. Le proxy de mise en éveil fonctionne en informant le commutateur réseau qu'une autre carte réseau utilise le port qui a été enregistré par une autre carte réseau. Toutefois, ce comportement est connu sous le nom de bagottement MAC et il est inhabituel dans le cadre d'un fonctionnement normal du réseau. Certains outils d'analyse réseau recherchent ce comportement et peuvent supposer que quelque chose ne va pas. Par conséquent, ces outils d'analyse peuvent générer des alertes ou arrêter des ports lorsque vous utilisez le proxy de mise en éveil.  
@@ -50,7 +51,7 @@ Vous pouvez compléter la méthode traditionnelle des paquets de mise en éveil 
 > [!IMPORTANT]  
 >  Si vous disposez d'une équipe distincte responsable de l'infrastructure réseau et des services réseau, avertissez-la et intégrez-la lors de votre évaluation et votre période de test. Par exemple, sur un réseau qui utilise le contrôle d'accès réseau 802.1X, le proxy de mise en éveil ne fonctionne pas et peut perturber le service réseau. En outre, le proxy de mise en éveil peut amener certains outils d'analyse réseau à générer des alertes en cas de détection de trafic destiné à mettre en éveil d'autres ordinateurs.  
 
--   Les clients pris en charge sont Windows 7, Windows 8, Windows Server 2008 R2 et Windows Server 2012.  
+-   Tous les systèmes d’exploitation Windows répertoriés comme clients pris en charge dans [Systèmes d’exploitation pris en charge pour les clients et appareils](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices) sont pris en charge pour l'éveil par appel réseau (Wake On LAN).  
 
 -   Les systèmes d'exploitation invités qui s'exécutent sur une machine virtuelle ne sont pas pris en charge.  
 
@@ -60,7 +61,7 @@ Vous pouvez compléter la méthode traditionnelle des paquets de mise en éveil 
 
 -   Si un ordinateur possède plusieurs cartes réseau, vous ne pouvez pas configurer la carte à utiliser pour le proxy de mise en éveil ; ce choix s'effectue sans déterminisme. Cependant, la carte choisie est enregistrée dans le fichier SleepAgent_<DOMAINE\>@SYSTEM_0.log.  
 
--   Le réseau doit autoriser les requêtes d'écho ICMP (au moins au sein du sous-réseau). Vous ne pouvez pas configurer l'intervalle de 5 secondes qui est utilisé pour envoyer les commandes ping ICMP.  
+-   Le réseau doit autoriser les requêtes d'écho ICMP (au moins au sein du sous-réseau). Vous ne pouvez pas configurer l'intervalle de cinq secondes qui est utilisé pour envoyer les commandes ping ICMP.  
 
 -   La communication est décryptée et non authentifiée, et le protocole IPsec n'est pas pris en charge.  
 
@@ -80,7 +81,7 @@ Si vous voulez sortir de veille des ordinateurs pour l’installation planifiée
 
  Pour utiliser le proxy de mise en éveil, vous devez déployer les paramètres client correspondants de gestion de l’alimentation en plus de configurer le site principal.  
 
-Vous devez également décider d’utiliser ou non des paquets de diffusions dirigées vers le sous-réseau, ou des paquets monodiffusion, ainsi que le numéro de port UDP à utiliser. Par défaut, les paquets de mise en éveil traditionnels sont transmis via le port UDP 9, mais pour une plus grande sécurité, vous pouvez sélectionner un autre port pour le site si cet autre port est pris en charge par les routeurs et pare-feu qui interviennent.  
+Décidez d’utiliser ou non des paquets de diffusions dirigées vers le sous-réseau, ou des paquets monodiffusion, ainsi que le numéro de port UDP à utiliser. Par défaut, les paquets de mise en éveil traditionnels sont transmis via le port UDP 9, mais pour une plus grande sécurité, vous pouvez sélectionner un autre port pour le site si cet autre port est pris en charge par les routeurs et pare-feu qui interviennent.  
 
 ### <a name="choose-between-unicast-and-subnet-directed-broadcast-for-wake-on-lan"></a>Choisir entre une diffusion monodiffusion et une diffusion dirigée vers le sous-réseau pour Wake on LAN  
  Si vous avez choisi de réveiller des ordinateurs en envoyant des paquets de mise en éveil traditionnels, vous devez décider de transmettre les paquets monodiffusion ou les paquets de diffusion dirigée vers le sous-réseau. Si vous utilisez le proxy de mise en éveil, vous devez utiliser des paquets monodiffusion. Sinon, utilisez le tableau suivant pour déterminer la méthode de transmission à choisir.  

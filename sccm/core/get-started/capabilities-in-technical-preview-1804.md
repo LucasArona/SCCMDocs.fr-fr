@@ -2,7 +2,7 @@
 title: Technical Preview 1804
 titleSuffix: Configuration Manager
 description: Découvrez les nouvelles fonctionnalités disponibles dans Configuration Manager Technical Preview version 1804.
-ms.date: 04/25/2018
+ms.date: 05/21/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,11 +10,12 @@ ms.assetid: 8af43618-ec60-4c3e-a007-12399d1335b9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0fcdcc984e267e6c54ad7c6194e8494854f0a1ee
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: a796c8cc23ab15e3fbeb09fca6ffa6f1dbd45bc3
+ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "34474341"
 ---
 # <a name="capabilities-in-technical-preview-1804-for-system-center-configuration-manager"></a>Fonctionnalités de Technical Preview 1804 pour System Center Configuration Manager
 
@@ -28,9 +29,15 @@ Consultez l’article [Technical Preview](/sccm/core/get-started/technical-previ
 <!--  Known Issues Template   -->
 ## <a name="known-issues-in-this-technical-preview"></a>Problèmes connus dans cette préversion technique
 
+### <a name="bkmk_ki-prereqs"></a> Le lien pour télécharger les mises à jour ne fonctionne pas
+<!--514334--> Si vous exécutez le programme d’installation à partir du support, la page initiale inclut un lien intitulé **Get the latest Configuration Manager updates** (Obtenir les dernières mises à jour de Configuration Manager), qui ne fonctionne pas dans cette version. Ce lien permet de télécharger les fichiers requis pour le programme d’installation.
+
+#### <a name="workaround"></a>Solution de contournement
+Pour télécharger les fichiers requis pour le programme d’installation, exécutez l’Assistant Installation. Dans la page Téléchargements requis, utilisez l’option pour **télécharger les fichiers requis**. 
+
+
 ### <a name="bkmk_appcathttps"></a> HTTPS ne peut pas être activé sur le point de service web du catalogue des applications
-<!--512637-->
-Si HTTPS est activé sur le point de service web du catalogue des applications :
+<!--512637--> Si HTTPS est activé sur le point de service web du catalogue des applications :
 
 - Les applications déployées comme étant disponibles pour les utilisateurs ne s’affichent pas dans le Centre logiciel  
 
@@ -50,8 +57,7 @@ Reconfigurez le point de service web du catalogue des applications pour qu’il 
 
 
 ## <a name="configure-a-remote-content-library-for-the-site-server"></a>Configurer une bibliothèque de contenu à distance pour le serveur de site  
-<!--1357525-->
-Pour libérer de l’espace disque sur votre serveur de site principal, vous devez déplacer sa [bibliothèque de contenu](/sccm/core/plan-design/hierarchy/the-content-library) vers un autre emplacement de stockage. Vous pouvez déplacer la bibliothèque de contenu sur un autre disque du serveur de site, sur un serveur distinct ou sur des disques à tolérance de panne dans un réseau de zone de stockage (SAN). Nous recommandons l’utilisation d’un réseau SAN qui fournit un stockage élastique capable de croître ou de se réduire au fil du temps pour répondre à vos besoins en termes de contenu. 
+<!--1357525--> Pour libérer de l’espace disque sur votre serveur de site principal, vous devez déplacer sa [bibliothèque de contenu](/sccm/core/plan-design/hierarchy/the-content-library) vers un autre emplacement de stockage. Vous pouvez déplacer la bibliothèque de contenu sur un autre disque du serveur de site, sur un serveur distinct ou sur des disques à tolérance de panne dans un réseau de zone de stockage (SAN). Nous recommandons l’utilisation d’un réseau SAN qui fournit un stockage élastique capable de croître ou de se réduire au fil du temps pour répondre à vos besoins en termes de contenu. 
 
 Cette bibliothèque de contenu à distance est un nouveau prérequis pour la [haute disponibilité au niveau du rôle serveur de site](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability). 
 
@@ -210,8 +216,7 @@ Le comportement a changé lorsque vous révoquez une approbation pour une applic
 
 
 ## <a name="exclude-active-directory-containers-from-discovery"></a>Exclure les conteneurs Active Directory de la détection
-<!--1358143-->
-Pour réduire le nombre d’objets détectés, vous pouvez désormais exclure des conteneurs spécifiques de la détection de systèmes Active Directory. Cette fonctionnalité est le résultat de vos [commentaires sur UserVoice](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8414520-exclude-virtual-cluster-and-ou-from-discovery).
+<!--1358143--> Pour réduire le nombre d’objets détectés, vous pouvez désormais exclure des conteneurs spécifiques de la détection de systèmes Active Directory. Cette fonctionnalité est le résultat de vos [commentaires sur UserVoice](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8414520-exclude-virtual-cluster-and-ou-from-discovery).
 
 ### <a name="try-it-out"></a>Essayez !
  Essayez d’effectuer les tâches. Envoyez-nous ensuite des [commentaires](#bkmk_feedback) pour nous indiquer comment cela a fonctionné.
@@ -257,8 +262,7 @@ Pour plus d’informations sur les paramètres client, consultez [Configurer les
 
 
 ## <a name="filter-automatic-deployment-rules-by-software-update-architecture"></a>Filtrer les règles de déploiement automatique par architecture de mise à jour logicielle
- <!--1322266-->
-Vous pouvez désormais filtrer les règles de déploiement automatique pour exclure les architectures comme Itanium et ARM64.
+ <!--1322266--> Vous pouvez désormais filtrer les règles de déploiement automatique pour exclure les architectures comme Itanium et ARM64.
 
 ### <a name="try-it-out"></a>Essayez !
 Essayez d’effectuer les tâches. Envoyez-nous ensuite des [commentaires](#bkmk_feedback) pour nous indiquer comment cela a fonctionné.

@@ -2,7 +2,7 @@
 title: Matériel recommandé
 titleSuffix: Configuration Manager
 description: Consultez les recommandations de matériel pour mieux assurer la scalabilité de votre environnement System Center Configuration Manager après son déploiement de base.
-ms.date: 03/22/2018
+ms.date: 05/23/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,11 +10,12 @@ ms.assetid: 5267f0af-34d3-47a0-9ab8-986c41276e6c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ae2ba43c8e5c97dd0b8b9ba43c3e3fde1eb259f4
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 51d3a537fd7aa874fb2662bb6ec15fcfaa2124e5
+ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "34474324"
 ---
 # <a name="recommended-hardware-for-system-center-configuration-manager"></a>Matériel recommandé pour System Center Configuration Manager
 
@@ -23,6 +24,7 @@ ms.lasthandoff: 05/03/2018
 Les recommandations suivantes sont des indications destinées à vous aider à adapter votre environnement System Center Configuration Manager pour qu’il prenne en charge un déploiement plus complexe de sites, de systèmes de site et de clients. Elles ne sont pas prévues pour couvrir toutes les configurations possibles de site et de hiérarchie.  
 
  Aidez-vous des informations des sections suivantes pour prévoir le matériel capable de répondre aux charges de traitement des clients et des sites qui utilisent les fonctionnalités de Configuration Manager disponibles avec les configurations par défaut.  
+
 
 
 ##  <a name="bkmk_ScaleSieSystems"></a> Systèmes de site  
@@ -113,11 +115,11 @@ Pour des performances optimales, utilisez des configurations RAID 10 pour tous 
 
 -   **Espace disque :** 500 Mo d’espace disque disponible, avec 5 Go recommandés pour le cache du client Configuration Manager. L’espace disque requis est moindre si vous utilisez des paramètres personnalisés pour installer le client Configuration Manager :  
 
-    -   Utilisez la propriété /skipprereq de la ligne de commande de CCMSetup pour éviter d’installer des fichiers dont le client n’a pas besoin. Par exemple, exécutez **CCMSetup.exe /skipprereq:silverlight.exe** si le client n’utilise pas le catalogue d’applications. À compter de Configuration Manager 1802, Silverlight n’est plus installé automatiquement.  
+    -   Utilisez la propriété /skipprereq de la ligne de commande de CCMSetup pour éviter d’installer des fichiers dont le client n’a pas besoin. Par exemple, exécutez `CCMSetup.exe /skipprereq:silverlight.exe` si le client n’utilise pas le catalogue d’applications. À compter de Configuration Manager 1802, Silverlight n’est plus installé automatiquement.  
 
-    -   Utilisez la propriété SMSCACHESIZE de Client.msi pour définir un fichier de cache d'une taille inférieure à la taille par défaut de 5 120 Mo. La taille minimale est de 1 Mo. Par exemple, **CCMSetup.exe SMSCachesize=2** crée un cache d’une taille de 2 Mo.  
+    -   Utilisez la propriété SMSCACHESIZE de Client.msi pour définir un fichier de cache d'une taille inférieure à la taille par défaut de 5 120 Mo. La taille minimale est de 1 Mo. Par exemple, `CCMSetup.exe SMSCachesize=2` crée un cache d’une taille de 2 Mo.  
 
-    Pour plus d’informations sur les paramètres d’installation du client, consultez [À propos des propriétés d’installation du client dans System Center Configuration Manager](../../../core/clients/deploy/about-client-installation-properties.md).  
+    Pour plus d'informations sur ces paramètres d'installation du client, consultez [À propos des propriétés d'installation du client](../../../core/clients/deploy/about-client-installation-properties.md).  
 
     > [!TIP]  
     >  L'installation du client avec un minimum d'espace disque est utile pour les appareils Windows Embedded qui ont généralement des tailles de disque plus petites que les ordinateurs Windows standard.  
@@ -173,6 +175,6 @@ En plus de PowerShell, WMF (Windows Management Framework) version 3.0 ou ultér
 
 |Rôle|Cœurs de processeur|Mémoire (Go)|Espace disque (Go)|  
 |----------|---------------|-------------------|-----------------------|  
-|Serveur de site et de bases de données|2 - 4|7 - 12|100|  
+|Serveur de site et de bases de données|2 - 4|8 - 12|100|  
 |Serveur de système de site|1 - 4|2 - 4|50|  
 |Client|1 - 2|1 - 3|30|  

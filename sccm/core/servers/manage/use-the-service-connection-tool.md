@@ -10,11 +10,12 @@ ms.assetid: 6e4964c5-43cb-4372-9a89-b62ae6a4775c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 906b39f01b05600d86a045e07d3e28184e9360e8
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 1faabd64d11eeef8e825f22f7f661112813f5459
+ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "34474307"
 ---
 # <a name="use-the-service-connection-tool-for-system-center-configuration-manager"></a>Utiliser l’outil de connexion de service pour System Center Configuration Manager
 
@@ -101,7 +102,13 @@ Vous pouvez utiliser les paramètres facultatifs suivants pour spécifier un ser
 À compter de la version 1706, le comportement par défaut du téléchargement des outils a changé, et l’outil prend en charge des options pour contrôler quels fichiers vous téléchargez.
 -   Par défaut, l’outil télécharge seulement la dernière mise à jour disponible qui s’applique à la version de votre site. Il ne télécharge pas les correctifs.
 
-Pour changer ce comportement, utilisez un des paramètres suivants pour spécifier quels fichiers sont téléchargés. La version de votre site est déterminée à partir des données du fichier .cab qui est chargé quand l’outil s’exécute.
+Pour changer ce comportement, utilisez un des paramètres suivants pour spécifier quels fichiers sont téléchargés. 
+
+> [!NOTE]
+> La version de votre site est déterminée à partir des données du fichier .cab qui est chargé quand l’outil s’exécute.
+>
+> Vous pouvez vérifier la version en recherchant le fichier *SiteVersion*.txt dans le fichier .cab.
+
 -   **-downloadall** : cette option télécharge tout, notamment les mises à jour et les correctifs, quelle que soit la version de votre site.
 -   **-downloadhotfix** : cette option télécharge tous les correctifs, quelle que soit la version de votre site.
 -   **-downloadsiteversion** : cette option télécharge les mises à jour et les correctifs dont la version est supérieure à celle de votre site.
@@ -160,8 +167,19 @@ Exemple de ligne de commande utilisant *- downloadsiteversion* :
 
  Pour plus d’informations, consultez [Installer des mises à jour dans la console pour System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md).  
 
+## <a name="bkmk_cmd"></a> Fichiers journaux
+
+**ServiceConnectionTool.log**
+
+Chaque fois que vous exécutez l’outil de connexion de service, un fichier journal nommé **ServiceConnectionTool.log** est généré dans le même emplacement que l’outil.  Ce fichier journal fournira de simples détails sur l’exécution de l’outil en fonction des commandes utilisées.  Un fichier journal existant est remplacé chaque fois que vous exécutez l’outil.
+
+**ConfigMgrSetup.log**
+
+Lorsque vous utilisez l’outil pour vous connecter et télécharger les mises à jour, un fichier journal appelé **ConfigMgrSetup.log** est créé à la racine du lecteur système.  Ce fichier journal fournira des informations plus détaillées, notamment la liste des fichiers téléchargés, extraits, et si les vérifications de hachage ont réussi.
+
 ## <a name="bkmk_cmd"></a> Options de ligne de commande  
  Pour afficher de l’aide sur l’outil de point de connexion de service, ouvrez une invite de commandes dans le dossier contenant l’outil, puis exécutez la commande suivante :  **serviceconnectiontool.exe**.  
+
 
 |Options de ligne de commande|Détails|  
 |---------------------------|-------------|  

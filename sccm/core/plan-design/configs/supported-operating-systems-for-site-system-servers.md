@@ -2,7 +2,7 @@
 title: Serveurs de système de site pris en charge
 titleSuffix: Configuration Manager
 description: Déterminez les versions de Windows que vous pouvez utiliser pour héberger un site ou un rôle de système de site System Center Configuration Manager.
-ms.date: 04/17/2018
+ms.date: 05/23/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,11 +10,12 @@ ms.assetid: 17905b4c-3895-4ad4-a69c-5e0d0fc5a8c3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: de7f340080111daf3f1b19e26aa838dc6db2e263
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: aa933186e95f084bd4e3e518e167a1cd301a4484
+ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "34474290"
 ---
 # <a name="supported-operating-systems-for-system-center-configuration-manager-site-system-servers"></a>Systèmes d’exploitation pris en charge pour les serveurs de système de site System Center Configuration Manager
 
@@ -254,6 +255,11 @@ Ce système d’exploitation n’est pas pris en charge pour les serveurs de sit
     -   Les points de distribution sur cette version du système d’exploitation ne prennent pas en charge la multidiffusion.  
 
     -   Les points de distribution prennent en charge plusieurs configurations différentes ayant chacune des exigences différentes. Dans certains cas, ces configurations prennent en charge l’installation sur des serveurs, mais aussi sur des systèmes d’exploitation clients. Pour plus d’informations sur les options disponibles pour les points de distribution, consultez [Gérer le contenu et l’infrastructure de contenu](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+
+## <a name="the-server-core-installation-of-windows-server-version-1803"></a>Installation minimale de Windows Server, version 1803
+<!--503702--> À compter de Configuration Manager 1802, [Windows Server, version 1803](https://docs.microsoft.com/windows-server/get-started/get-started-with-1803) est pris en charge pour une utilisation en tant que point de distribution avec les restrictions suivantes :  
+  -   Seule la version 64 bits est prise en charge.
+  -   Les points de distribution sur ce système d’exploitation ne prennent pas en charge PXE ou la multidiffusion.  
 
 ## <a name="the-server-core-installation-of-windows-server-version-1709"></a>Installation minimale de Windows Server, version 1709
 À compter de Configuration Manager 1710, [Windows Server, version 1709](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709) est pris en charge pour une utilisation en tant que point de distribution avec les restrictions suivantes :  
