@@ -10,12 +10,12 @@ ms.assetid: b57acf0b-05b7-46af-ad4c-f3e707bd3861
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f346c47188bf71512ec2cbc46f6c9cb352cd642e
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 28b7819b915eb2dea8a34d1474141067ac7751b5
+ms.sourcegitcommit: 0305e710f634529793ae73e5aac24168ee4fe02f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32333176"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042777"
 ---
 # <a name="whats-new-in-system-center-configuration-manager-incremental-versions"></a>Nouveautés des versions incrémentielles de System Center Configuration Manager
 
@@ -34,7 +34,7 @@ ms.locfileid: "32333176"
   - [Nouveautés dans la version 1706](../../../core/plan-design/changes/whats-new-in-version-1706.md)  
 
 
- Chaque version de mise à jour est prise en charge pour un an après sa publication. Pour rester à jour, utilisez la version la plus récente de la mise à jour. Pour plus d’informations, consultez [Prise en charge des versions Current Branch de Configuration Manager](../../../core/servers/manage/current-branch-versions-supported.md).  
+Pour les versions de Configuration Manager publiées avant la version 1710, la prise en charge dure 12 mois. À compter de la version 1710, chaque version de mise à jour reste prise en charge pendant 18 mois suivant sa date de disponibilité générale (GA).  Pour rester à jour, utilisez la version la plus récente de la mise à jour. Pour plus d’informations, consultez [Prise en charge des versions Current Branch de Configuration Manager](../../../core/servers/manage/current-branch-versions-supported.md).  
 
 
 ## <a name="see-also"></a>Voir aussi
