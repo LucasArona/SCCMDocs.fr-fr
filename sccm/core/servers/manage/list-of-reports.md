@@ -10,12 +10,12 @@ ms.assetid: b7332ed3-8003-454b-bb12-1fdf8721425c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d486907a7819758b27c9a644214ed4d5ec873762
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 705247080fc99a6a9dd7dfcb773b2220283cd7a6
+ms.sourcegitcommit: e3f7bb8cec4b37a311bc86098297534cab947de8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342543"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36759030"
 ---
 # <a name="list-of-reports-in-system-center-configuration-manager"></a>Liste des rapports dans System Center Configuration Manager
 
@@ -28,7 +28,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="administrative-security"></a>Sécurité administrative  
- Les rapports suivants sont répertoriés sous la catégorie **Sécurité administrative** .  
+ Les six rapports suivants sont répertoriés sous la catégorie **Sécurité administrative**.  
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -42,7 +42,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="alerts"></a>Alertes  
-
+Les deux rapports suivants sont répertoriés sous la catégorie **Alertes**.  
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
 |**Tableau de bord des alertes**|Affiche la synthèse de toutes les alertes différées qui ont été générées entre les dates de début et de fin spécifiées.|  
@@ -51,6 +51,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="asset-intelligence"></a>Asset Intelligence  
+Les 62 rapports suivants sont répertoriés sous la catégorie **Asset Intelligence**.  
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -120,6 +121,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="client-push"></a>Installation Push du client  
+Les quatre rapports suivants sont répertoriés sous la catégorie **Push client**.  
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -131,6 +133,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="client-status"></a>État du client  
+Les sept rapports suivants sont répertoriés sous la catégorie **État du client**.  
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -145,6 +148,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="company-resource-access"></a>Accès aux ressources d'entreprise  
+Les trois rapports suivants sont répertoriés sous la catégorie **Accès aux ressources de l'entreprise**. 
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -155,6 +159,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="compliance-and-settings-management"></a>Gestion de la conformité et des paramètres  
+Les 22 rapports suivants sont répertoriés sous la catégorie **Gestion de la conformité et des paramètres**. 
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -184,6 +189,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="device-management"></a>Gestion des appareils  
+Les 37 rapports suivants sont répertoriés sous la catégorie **Gestion des périphériques**. 
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -228,6 +234,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="driver-management"></a>Gestion des pilotes  
+Les 13 rapports suivants sont répertoriés sous la catégorie **Gestion des pilotes**. 
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -248,7 +255,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="endpoint-protection"></a>Endpoint Protection  
-
+Les six rapports suivants sont répertoriés sous la catégorie **Endpoint Protection**. 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
 |**Rapport d'activité des logiciels anti-programme malveillant**|Affiche une vue d'ensemble de l'activité des logiciels anti-programme malveillant.|  
@@ -261,7 +268,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="hardware---cd-rom"></a>Matériel - CD-ROM  
-
+Les quatre rapports suivants sont répertoriés sous la catégorie **Matériel - CD-ROM**. 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
 |**Informations de CD-ROM pour un ordinateur spécifique**|Affiche des informations sur les lecteurs de CD-ROM d'un ordinateur spécifié.|  
@@ -272,6 +279,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="hardware---disk"></a>Matériel - Disque  
+Les huit rapports suivants sont répertoriés sous la catégorie **Matériel - disque**. 
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -287,6 +295,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="hardware---general"></a>Matériel – Général  
+Les cinq rapports suivants sont répertoriés sous la catégorie **Matériel - Général**.
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -299,6 +308,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="hardware---memory"></a>Matériel - Mémoire  
+Les cinq rapports suivants sont répertoriés sous la catégorie **Matériel - Mémoire**.
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -311,6 +321,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="hardware---modem"></a>Matériel - Modem  
+Les trois rapports suivants sont répertoriés sous la catégorie **Matériel - Modem**.
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -321,6 +332,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="hardware---network-adapter"></a>Matériel - Carte réseau  
+Les rapports suivants sont répertoriés sous la catégorie **Matériel - Carte réseau**.
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -331,6 +343,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="hardware---processor"></a>Matériel - Processeur  
+Les cinq rapports suivants sont répertoriés sous la catégorie **Matériel - Processeur**.
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -343,6 +356,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="hardware---scsi"></a>Matériel - SCSI  
+Les cinq rapports suivants sont répertoriés sous la catégorie **Matériel - SCSI**.
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -353,6 +367,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="hardware---security"></a>Matériel - Sécurité
+Le rapport suivant est répertoriés sous la catégorie **Matériel - Sécurité**.
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -361,6 +376,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="hardware---sound-card"></a>Matériel - Carte audio  
+Les trois rapports suivants sont répertoriés sous la catégorie **Matériel - SCSI**.
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -371,6 +387,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="hardware---video-card"></a>Matériel – Carte vidéo  
+Les trois rapports suivants sont répertoriés sous la catégorie **Matériel - Carte vidéo**.
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -381,6 +398,8 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="migration"></a>Migration  
+
+Les cinq rapports suivants sont répertoriés sous la catégorie **Migration**.
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -394,6 +413,8 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 ## <a name="network"></a>Réseau  
 
+Les six rapports suivants sont répertoriés sous la catégorie **Réseau**.
+
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
 |**Compter les adresses IP par sous-réseau**|Affiche le nombre d'adresses IP inventoriées pour chaque sous-réseau IP.|  
@@ -406,6 +427,9 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="operating-system"></a>Système d'exploitation  
+
+Les 10 rapports suivants sont répertoriés sous la catégorie **Système d'exploitation**.
+
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -423,6 +447,8 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="power-management"></a>Gestion de l'alimentation  
+
+Les 18 rapports suivants sont répertoriés sous la catégorie **Gestion de l'alimentation**.
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -448,6 +474,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="replication-traffic"></a>Trafic de réplication  
+Les 10 rapports suivants sont répertoriés sous la catégorie **Trafic de réplication**.
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -465,6 +492,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="site---client-information"></a>Site - Informations client  
+Les 19 rapports suivants sont répertoriés sous la catégorie **Site - Informations client**.
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -491,6 +519,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="site---discovery-and-inventory-information"></a>Site - Informations de découverte et d'inventaire  
+Les 10 rapports suivants sont répertoriés sous la catégorie **Site - Informations de découverte et d'inventaire**.
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -508,6 +537,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="site---general"></a>Site - Général  
+Les trois rapports suivants sont répertoriés sous la catégorie **Site - Général**.
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -518,6 +548,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="site---server-information"></a>Site - Informations sur le serveur  
+Le rapport suivant est répertorié sous la catégorie **Site - Informations sur le serveur**.
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -526,6 +557,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="software---companies-and-products"></a>Logiciel - Sociétés et produits  
+Les 15 rapports suivants sont répertoriés sous la catégorie **Logiciel - Sociétés et produits**.
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -548,6 +580,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="software---files"></a>Fichiers logiciels  
+Les rapports suivants sont répertoriés sous la catégorie **Fichiers logiciels**.
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -560,6 +593,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="software-distribution---application-monitoring"></a>Distribution de logiciels - Surveillance des applications  
+Les 10 rapports suivants sont répertoriés sous la catégorie **Distribution de logiciels - Surveillance des applications**.
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -577,6 +611,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="software-distribution---collections"></a>Distribution de logiciels - Regroupements  
+Les trois rapports suivants sont répertoriés sous la catégorie **Distribution de logiciels - Regroupements**.
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -587,6 +622,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="software-distribution---content"></a>Distribution de logiciels - Contenu  
+Les 16 rapports suivants sont répertoriés sous la catégorie **Distribution de logiciels - Contenu**.
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -609,7 +645,8 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 
-## <a name="software-distribution---package-and-program-deployment"></a>Distribution de logiciels - Déploiement du package et du programme  
+## <a name="software-distribution---package-and-program-deployment"></a>Distribution de logiciels - Déploiement du package et du programme 
+Les cinq rapports suivants sont répertoriés sous la catégorie **Distribution de logiciels - Déploiement du package et du programme**.
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -622,6 +659,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="software-distribution---package-and-program-deployment-status"></a>Distribution de logiciels - État du déploiement du package et du programme  
+Les cinq rapports suivants sont répertoriés sous la catégorie **Distribution de logiciels - État du déploiement du package et du programme**.
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -634,6 +672,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="software-metering"></a>Contrôle de logiciel  
+Les 13 rapports suivants sont répertoriés sous la catégorie **Contrôle de logiciel**.
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -654,6 +693,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="software-updates---a-compliance"></a>Mises à jour logicielles - Compatibilité A  
+Les huit rapports suivants sont répertoriés sous la catégorie **Mises à jour logicielles - Compatibilité A**.
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -669,6 +709,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="software-updates---b-deployment-management"></a>Mises à jour logicielles - Gestion du déploiement B  
+Les huit rapports suivants sont répertoriés sous la catégorie **Mises à jour logicielles - Gestion du déploiement B**.
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -684,6 +725,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="software-updates---c-deployment-states"></a>Mises à jour logicielles - États du déploiement C  
+Les six rapports suivants sont répertoriés sous la catégorie **Mises à jour logicielles - États du déploiement C**.
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -697,6 +739,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="software-updates---d-scan"></a>Mises à jour logicielles - Analyse D  
+Les quatre rapports suivants sont répertoriés sous la catégorie **Mises à jour logicielles - Analyse D**.
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -709,6 +752,8 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 ## <a name="software-updates---e-troubleshooting"></a>Mises à jour logicielles - Dépannage E  
 
+Les quatre rapports suivants sont répertoriés sous la catégorie **Mises à jour logicielles - Dépannage E**.
+
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
 |**Dépannage 1 - Erreurs d'analyse**|Affiche les erreurs d'analyse au niveau du site et le nombre d'ordinateurs qui rencontrent chaque erreur.|  
@@ -719,6 +764,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="state-migration"></a>Migration de l'état  
+Les trois rapports suivants sont répertoriés sous la catégorie **Migration de l'état**.
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -729,6 +775,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="status-messages"></a>Messages d'état  
+Les 12 rapports suivants sont répertoriés sous la catégorie **Messages d'état**.
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -749,6 +796,8 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 ## <a name="status-messages---audit"></a>Messages d'état - Audit  
 
+Les trois rapports suivants sont répertoriés sous la catégorie **Messages d'état - Audit**.
+
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
 |**Tous les messages d'audit pour un utilisateur spécifique**|Affiche le résumé de tous les messages d'état d'audit pour un utilisateur spécifié. Les messages d’audit décrivent les opérations effectuées dans la console Configuration Manager pour ajouter, modifier ou supprimer des objets dans Configuration Manager.|  
@@ -758,6 +807,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="task-sequence---deployment-status"></a>État du déploiement de séquence de tâches  
+Les 11 rapports suivants sont répertoriés sous la catégorie **Séquence de tâches - État du déploiement**.
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -776,6 +826,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="task-sequence---deployments"></a>Séquence de tâches - Déploiements  
+Les 11 rapports suivants sont répertoriés sous la catégorie **Séquence de tâches - Déploiements**.
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -794,6 +845,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="task-sequence---progress"></a>Séquence de tâches - Progression  
+Les cinq rapports suivants sont répertoriés sous la catégorie **Séquence de tâches - Progression**.
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -806,6 +858,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="task-sequences---references"></a>Séquences de tâches - Références  
+Le rapport suivant est répertoriés sous la catégorie **Séquence de tâches - Références**.
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -815,6 +868,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 <!--
 ## Upgrade Assessment  
+The following 11 reports are listed under the **Upgrade Assessment** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -835,6 +889,8 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 ## <a name="user---device-affinity"></a>Affinité entre appareil et utilisateur  
 
+Les deux rapports suivants sont répertoriés sous la catégorie **Utilisateur - Affinité des périphériques**.
+
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
 |**Associations d'affinités entre périphérique et utilisateur par regroupement en attente**|Ce rapport affiche toutes les attributions d'affinités entre utilisateur et périphérique en attente, selon les données d'utilisation, pour les membres d'un regroupement.|  
@@ -843,6 +899,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="user-data-and-profiles-health"></a>Intégrité du profil et des données utilisateur  
+Les quatre rapports suivants sont répertoriés sous la catégorie **Intégrité du profil et des données utilisateur**.
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -854,6 +911,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="users"></a>Utilisateurs  
+Les trois rapports suivants sont répertoriés sous la catégorie **Utilisateurs**.
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -864,6 +922,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="virtual-applications"></a>Applications virtuelles  
+Les sept rapports suivants sont répertoriés sous la catégorie **Applications virtuelles**.
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -878,6 +937,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="volume-purchase-programs---apple"></a>Programmes d’achat en volume (VPP) - Apple
+Le rapport suivant est répertorié sous la catégorie **Programmes d’achat en volume - Apple**.
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -886,6 +946,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="vulnerability-assessment"></a>Évaluation de la vulnérabilité
+Le rapport suivant est répertorié sous la catégorie **Évaluation de la vulnérabilité**.
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -894,6 +955,7 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="wake-on-lan"></a>Éveil par appel réseau  
+Les sept rapports suivants sont répertoriés sous la catégorie **Wake On LAN**.
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  

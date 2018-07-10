@@ -10,11 +10,12 @@ ms.assetid: b06f781b-ab25-4d9a-b128-02cbd7cbcffe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0893df43f7979fa3c36ba90ab400e399f96e6228
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 5ab632367e6cc30210db00a61ee4d3b9c414fdbd
+ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36260810"
 ---
 # <a name="database-replicas-for-management-points-for-system-center-configuration-manager"></a>Réplicas de base de données pour les points de gestion de System Center Configuration Manager
 
@@ -78,7 +79,7 @@ Les sites principaux System Center Configuration Manager peuvent utiliser un ré
 
     -   [Déplacement d’une base de données d’un serveur de site qui publie un réplica de base de données](#BKMK_DBReplicaOps_Move)  
 
--   **Mises à niveau vers System Center Configuration Manager** : avant d’effectuer la mise à niveau d’un site System Center 2012 Configuration Manager vers System Center Configuration Manager, vous devez désactiver les réplicas de base de données pour les points de gestion.  Après avoir mis à niveau votre site, reconfigurez les réplicas de base de données pour les points de gestion.  
+-   **Mises à niveau vers System Center Configuration Manager** : avant d’effectuer la mise à niveau d’un site System Center 2012 Configuration Manager vers System Center Configuration Manager Current Branch ou la mise à jour de Configuration Manager Current Branch vers la dernière version, vous devez désactiver les réplicas de base de données pour les points de gestion.  Après avoir mis à niveau votre site, reconfigurez les réplicas de base de données pour les points de gestion.  
 
 -   **Plusieurs réplicas sur un même serveur SQL Server :** si vous configurez un serveur réplica de base de données pour héberger plusieurs réplicas de base de données pour des points de gestion (chaque réplica devant être sur une instance distincte), vous devez utiliser un script de configuration modifié (voir l’étape 4 de la section suivante) afin que le certificat auto-signé utilisé par les réplicas de base de données précédemment configurés sur ce serveur ne soit pas remplacé.  
 
