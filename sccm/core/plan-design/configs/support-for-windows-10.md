@@ -10,11 +10,12 @@ ms.assetid: a1626a65-da22-49e0-9564-d2f752ea3f4b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 947392d4c11b419e0e373fbe83db42522d3c5f25
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: bea7d3d0e2c4482a08473f49fbdc3916065627b7
+ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36260715"
 ---
 # <a name="support-for-windows-10-in-system-center-configuration-manager"></a>Prise en charge de Windows 10 dans System Center Configuration Manager  
 
@@ -78,7 +79,7 @@ Le tableau suivant répertorie les versions du Windows 10 ADK que vous pouvez ut
 
 |Clé|
 |--|
-| ![Prise en charge](media/green_check.png) = **Prise en charge** <br/> Windows recommande d’utiliser le Windows ADK qui correspond à la version de Windows que vous déployez. Par exemple, utilisez le Windows ADK pour Windows 10 version 1703 quand vous déployez Windows 10 version 1703. Pour plus d’informations sur la prise en charge du composant Windows ADK, consultez [Plateformes prises en charge par DISM](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-supported-platforms) et [Exigences de l’outil USMT](https://docs.microsoft.com/windows/deployment/usmt/usmt-requirements#bkmk-1). |
+| ![Prise en charge](media/green_check.png) = **Prise en charge** <br/> Microsoft recommande d’utiliser le Windows ADK qui correspond à la version de Windows que vous déployez. Par exemple, utilisez le Windows ADK pour Windows 10 version 1703 quand vous déployez Windows 10 version 1703. Pour plus d’informations sur la prise en charge du composant Windows ADK, consultez [Plateformes prises en charge par DISM](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-supported-platforms) et [Exigences de l’outil USMT](https://docs.microsoft.com/windows/deployment/usmt/usmt-requirements#bkmk-1). |
 | ![Rétrocompatible](media/blue_compat.png)  = **Rétrocompatible** <br/> Cette combinaison n’est pas testée mais devrait fonctionner. Nous documentons tous problèmes connus ou mises en garde. |
 | ![Non pris en charge](media/Red_X.png) = **Non pris en charge** |
 

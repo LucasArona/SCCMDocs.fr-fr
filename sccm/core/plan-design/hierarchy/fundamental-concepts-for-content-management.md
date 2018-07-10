@@ -2,7 +2,7 @@
 title: Principes de base de la gestion de contenu
 titleSuffix: Configuration Manager
 description: Utilisez les outils et les options de Configuration Manager pour gérer le contenu que vous déployez.
-ms.date: 03/22/2018
+ms.date: 06/15/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,13 +10,14 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5dfe33e7182eae158c15afb848d3a9f1702678ba
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 4419a563a65ab9d98a76dcf58b48ae00e0763dab
+ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36260732"
 ---
-# <a name="fundamental-concepts-for-content-management-in-system-center-configuration-manager"></a>Principes de base de la gestion de contenu dans System Center Configuration Manager
+# <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Principes de base de la gestion de contenu dans Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
@@ -69,7 +70,7 @@ Les applications utilisent toujours la réplication différentielle binaire. La 
 
 
 ## <a name="branchcache"></a>BranchCache  
- [BranchCache](/windows-server/networking/branchcache/branchcache) est une technologie Windows. Les clients prenant en charge BranchCache et ayant téléchargé un déploiement que vous configurez pour BranchCache font alors office de source de contenu pour d’autres clients BranchCache.  
+ [BranchCache](https://docs.microsoft.com/windows-server/networking/branchcache/branchcache) est une technologie Windows. Les clients prenant en charge BranchCache et ayant téléchargé un déploiement que vous configurez pour BranchCache font alors office de source de contenu pour d’autres clients BranchCache.  
 
  Par exemple, vous disposez d’un point de distribution qui exécute Windows Server 2012 ou une version ultérieure et qui est configuré comme serveur BranchCache. Quand le premier client prenant en charge BranchCache demande du contenu à partir de ce serveur, le client télécharge ce contenu et le met en cache.  
 
@@ -77,11 +78,14 @@ Les applications utilisent toujours la réplication différentielle binaire. La 
 - Les autres clients du même sous-réseau n’ont pas à télécharger le contenu à partir du point de distribution.  
 - Le contenu est distribué sur plusieurs clients, en vue de transferts futurs.  
 
+Pour plus d’informations, consultez [Prise en charge de Windows BranchCache](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#bkmk_branchcache).
+
 
 
 ## <a name="delivery-optimization"></a>Optimisation de la distribution
-<!-- 1324696 -->
-Les groupes de limites Configuration Manager permettent de définir et de réguler la distribution de contenu sur le réseau de l’entreprise et dans les agences. [L’Optimisation de la distribution de Windows](/windows/deployment/update/waas-delivery-optimization) est une technologie cloud pair à pair de partage de contenu entre appareils Windows 10. À compter de la version 1802, configurez-la de façon à ce qu’elle utilise vos groupes de limites pour partager du contenu entre homologues. Les paramètres client appliquent l’identificateur de groupe de limites comme identificateur du groupe Optimisation de la distribution sur le client. Lorsque le client communique avec le service de cloud d’Optimisation de la distribution, il utilise cet identificateur pour localiser les pairs possédant le contenu souhaité. Pour plus d’informations, consultez les paramètres client de l’[optimisation de la distribution](/sccm/core/clients/deploy/about-client-settings#delivery-optimization).
+<!-- 1324696 --> Les groupes de limites Configuration Manager permettent de définir et de réguler la distribution de contenu sur le réseau de l’entreprise et dans les agences. [L’Optimisation de la distribution de Windows](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) est une technologie cloud pair à pair de partage de contenu entre appareils Windows 10. À compter de la version 1802, configurez-la de façon à ce qu’elle utilise vos groupes de limites pour partager du contenu entre homologues. Les paramètres client appliquent l’identificateur de groupe de limites comme identificateur du groupe Optimisation de la distribution sur le client. Lorsque le client communique avec le service de cloud d’Optimisation de la distribution, il utilise cet identificateur pour localiser les pairs possédant le contenu souhaité. Pour plus d’informations, consultez les paramètres client de l’[optimisation de la distribution](/sccm/core/clients/deploy/about-client-settings#delivery-optimization).
+
+L’optimisation de la distribution est la technologie recommandée pour [optimiser la distribution de la mise à jour Windows 10](/sccm/sum/deploy-use/optimize-windows-10-update-delivery) des fichiers d’installation rapide pour les mises à jour de qualité de Windows 10.
 
 
 
@@ -90,7 +94,7 @@ Le cache d’homologue client vous permet de gérer le déploiement de contenu s
 
 Une fois que vous avez déployé des paramètres client qui activent le cache d’homologue sur un regroupement, les membres de ce regroupement peuvent agir comme source de contenu homologue pour d’autres clients du même groupe de limites.
 
-Pour plus d’informations, voir [Cache d’homologue pour les clients Configuration Manager](/sccm/core/plan-design/hierarchy/client-peer-cache).
+Pour plus d’informations, consultez [Cache d’homologue pour les clients Configuration Manager](/sccm/core/plan-design/hierarchy/client-peer-cache).
 
 
 

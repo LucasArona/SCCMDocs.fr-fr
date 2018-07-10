@@ -10,12 +10,12 @@ ms.assetid: 74c60941-5eae-4905-9e58-252bdb39df96
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 667c8c3ea986e39627f3ed96e53719d6de74d3b2
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: fb0ef52bc3359e1b31b2e2237a87e58bf671bcb7
+ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334156"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36260834"
 ---
 # <a name="how-to-upgrade-clients-on-mac-computers-in-system-center-configuration-manager"></a>Comment mettre à niveau les clients sur les ordinateurs Mac dans System Center Configuration Manager
 
@@ -56,7 +56,7 @@ Suivez les étapes générales décrites ci-dessous pour mettre à niveau le cli
 ## <a name="step-6-users-install-the-latest-client"></a>Step 6 : Les utilisateurs installent la dernière version du client  
  Les utilisateurs de clients Mac seront informés qu’une mise à jour du client Configuration Manager est disponible et qu’elle doit être installée. Une fois que les utilisateurs installent le client, ils doivent redémarrer leur ordinateur Mac.  
 
- Après le redémarrage de l'ordinateur, l'Assistant Inscription d'ordinateur s'exécute automatiquement pour demander un nouveau certificat d'utilisateur.  
+ Après le redémarrage de l'ordinateur, l'Assistant Inscription d'ordinateur s'exécute automatiquement pour demander un nouveau certificat d'utilisateur. L’Assistant Inscription d’ordinateur sera automatiquement exécuté uniquement lors de la première installation du client SCCM. Et il ne sera pas réexécuté si vous essayez de mettre à jour le client avec un nouveau programme d’installation ultérieurement dans la mesure où il a déjà un certificat utilisateur valide. 
 
  Si vous n’utilisez pas l’inscription Configuration Manager, mais que vous installez le certificat client indépendamment de Configuration Manager, consultez [Configurer le client mis à niveau pour qu’il utilise un certificat existant](#BKMK_UpgradingClient_MachineEnrollment).  
 

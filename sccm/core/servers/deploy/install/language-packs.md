@@ -1,8 +1,8 @@
 ---
 title: Modules linguistiques
 titleSuffix: Configuration Manager
-description: Découvrez la prise en charge linguistique disponible dans System Center Configuration Manager.
-ms.date: 1/3/2017
+description: Découvrez la prise en charge linguistique disponible dans Configuration Manager.
+ms.date: 06/29/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,27 +10,39 @@ ms.assetid: cd74e5f5-33f6-4566-8c9d-d6a93bfe71ed
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a198e15a1ef389d792acc73f2253aa4a704ac35a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 54034ec94ad2a0ea2b7ce095d9da669aea02f0b3
+ms.sourcegitcommit: 702e6017b6dee4629b67bb9f3bd5d9b5a889ebee
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340303"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37340224"
 ---
-# <a name="language-packs-in-system-center-configuration-manager"></a>Modules linguistiques dans System Center Configuration Manager
+# <a name="language-packs-in-configuration-manager"></a>Modules linguistiques dans Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
-Cette rubrique fournit des détails techniques sur la prise en charge linguistique dans System Center Configuration Manager.  
+Cet article fournit des détails techniques sur la prise en charge linguistique dans Configuration Manager. Les clients et serveurs du site Configuration Manager sont considérés comme étant indépendants de la langue. Ajoutez la prise en charge des langues d’affichage en installant les **modules linguistiques du serveur** ou les **modules linguistiques du client** sur le site d’administration centrale et sur les sites principaux. Vous sélectionnez les langues de serveur et de client à prendre en charge sur ce site parmi les fichiers de modules linguistiques disponibles au cours du processus d’installation.
+ 
+Installez plusieurs langues sur chaque site. Il vous suffit d’installer les langues que vous utilisez.  
 
-## <a name="BKMK_SupLanguagePacks"></a> Langues du système d’exploitation prises en charge  
- Vous pouvez installer la prise en charge des langues d’affichage des tableaux suivants en installant les **modules linguistiques du serveur** ou les **modules linguistiques du client** sur le site d’administration centrale et sur les sites principaux. Vous sélectionnez les langues de serveur et de client à prendre en charge sur ce site parmi les fichiers de modules linguistiques disponibles au cours du processus d’installation.
+- Chaque site prend en charge plusieurs langues pour les consoles Configuration Manager.  
 
- Les fichiers de modules linguistiques sont téléchargés quand vous exécutez le programme d’installation dans le cadre du téléchargement des fichiers prérequis et redistribuables. Vous pouvez également utiliser le [Téléchargeur d’installation](setup-downloader.md) pour télécharger ces fichiers avant d’exécuter le programme d’installation.   
+- Sur chaque site, vous pouvez installer des modules linguistiques client individuels et ajouter ainsi une prise en charge uniquement des langues client souhaitées.  
 
- Aidez-vous du tableau suivant pour mapper un ID de paramètres régionaux à la langue que vous voulez prendre en charge sur des serveurs ou des ordinateurs clients. Pour plus d’informations sur les ID de paramètres régionaux, consultez [ID de paramètres régionaux attribués par Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=252609).  
+Lorsque vous installez la prise en charge pour une langue qui correspond aux composants suivants :  
 
-### <a name="server-languages"></a>Langues du serveur  
+- Langue d’affichage d’un ordinateur : les consoles Configuration Manager et l’interface utilisateur client qui s’exécutent sur cet ordinateur affichent les informations dans cette langue.  
+
+- Langue qui correspond aux préférences linguistiques en vigueur sur le navigateur Web d’un ordinateur : les connexions aux informations Web, notamment le catalogue d’applications et SQL Server Reporting Services, s’affichent dans cette langue.  
+
+
+Lorsque vous exécutez le programme d’installation de Configuration Manager, les fichiers de modules linguistiques sont téléchargés dans le cadre des fichiers prérequis et redistribuables. Vous pouvez également utiliser le [Téléchargeur d’installation](setup-downloader.md) pour télécharger ces fichiers avant d’exécuter le programme d’installation.   
+
+
+
+## <a name="server-languages"></a>Langues du serveur  
+
+Aidez-vous du tableau suivant pour mapper un ID de paramètres régionaux à la langue que vous souhaitez prendre en charge sur des serveurs. Pour plus d’informations sur les ID de paramètres régionaux, consultez [ID de paramètres régionaux attribués par Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=252609).  
 
 |Langue du serveur|ID de paramètres régionaux (LCID)|Code en trois lettres|  
 |---------------------|------------------------|-----------------------|  
@@ -54,7 +66,11 @@ Cette rubrique fournit des détails techniques sur la prise en charge linguistiq
 |Suédois|041d|SVE|  
 |Turc|041f|TRK|  
 
-### <a name="client-languages"></a>Langues du client  
+
+
+## <a name="client-languages"></a>Langues du client  
+
+Aidez-vous du tableau suivant pour mapper un ID de paramètres régionaux à la langue que vous voulez prendre en charge sur des ordinateurs clients. Pour plus d’informations sur les ID de paramètres régionaux, consultez [ID de paramètres régionaux attribués par Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=252609).  
 
 |Langue du client|ID de paramètres régionaux (LCID)|Code en trois lettres|  
 |---------------------|------------------------|-----------------------|  
@@ -82,12 +98,15 @@ Cette rubrique fournit des détails techniques sur la prise en charge linguistiq
 |Suédois|041d|SVE|  
 |Turc|041f|TRK|  
 
+
 ### <a name="mobile-device-client-languages"></a>Langues du client d’appareil mobile  
- Quand vous ajoutez des prises en charge linguistiques pour des appareils mobiles, toutes les langues du client d’appareil mobile prises en charge sont incluses. Vous ne pouvez pas sélectionner individuellement les modules linguistiques pour la prise en charge linguistique sur les appareils mobiles.  
+Quand vous ajoutez des prises en charge linguistiques pour des appareils mobiles, toutes les langues du client d’appareil mobile prises en charge sont incluses. Vous ne pouvez pas sélectionner individuellement les modules linguistiques pour la prise en charge linguistique sur les appareils mobiles.  
 
-### <a name="identify-installed-language-packs"></a>Identifier les modules linguistiques installés  
-Pour savoir quels modules linguistiques sont installés sur un ordinateur qui exécute le client Configuration Manager, recherchez l’ID de paramètres régionaux (LCID) des modules linguistiques installés dans le Registre de l’ordinateur. Ces informations sont disponibles à l’emplacement suivant :
 
- **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCMSetup\InstalledLangs**  
 
-Vous pouvez utiliser un inventaire matériel pour collecter ces informations, puis créer un rapport personnalisé contenant des informations détaillées sur les langues. Pour plus d’informations sur la collecte d’un inventaire matériel personnalisé, consultez [Guide pratique pour configurer l’inventaire matériel dans System Center Configuration Manager](../../../../core/clients/manage/inventory/configure-hardware-inventory.md). Pour plus d’informations sur la création de rapports, consultez la section [Gérer des rapports de Configuration Manager](../../../../core/servers/manage/operations-and-maintenance-for-reporting.md#BKMK_ManageReports) dans la rubrique [Opérations et maintenance pour les rapports dans System Center Configuration Manager](../../../../core/servers/manage/operations-and-maintenance-for-reporting.md).  
+## <a name="identify-installed-language-packs"></a>Identifier les modules linguistiques installés  
+Pour savoir quels modules linguistiques sont installés sur un ordinateur qui exécute le client Configuration Manager, recherchez l’ID de paramètres régionaux (LCID) des modules linguistiques installés dans le Registre de l’ordinateur. Ces informations sont disponibles dans le chemin de registre suivant :  
+
+`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCMSetup\InstalledLangs`  
+
+Personnalisez l’inventaire matériel pour rassembler ces informations. Puis, générez un rapport personnalisé pour afficher les détails linguistiques. Pour plus d’informations sur l’inventaire matériel personnalisé, consultez [Guide pratique pour configurer l’inventaire matériel](/sccm/core/clients/manage/inventory/configure-hardware-inventory). Pour plus d'informations sur la création de rapports, consultez [Gérer les rapports Configuration Manager](/sccm/core/servers/manage/operations-and-maintenance-for-reporting#BKMK_ManageReports).  
