@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: db97ae9e-34f4-4e10-a282-cd211f612bb4
-ms.openlocfilehash: a2636713f8c121eecd826eeba060f8e3f8e865f3
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 0d71abbe33def6e12e75c2042e48f3d7ddcfe5c6
+ms.sourcegitcommit: 06d490d526070e17d77e86bc6c200899ded911cb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353162"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38967145"
 ---
 # <a name="prepare-intune-for-user-migration"></a>Préparer Intune à la migration des utilisateurs 
 
@@ -66,7 +66,7 @@ Pour que l’accès conditionnel fonctionne correctement après la migration des
 - Supprimez les utilisateurs du ciblage de l’accès conditionnel dans Configuration Manager une fois qu’ils ont migré vers la version autonome d’Intune.
 
 ## <a name="configure-the-microsoft-intune-certificate-connector"></a>Configurer Microsoft Intune Certificate Connector
-Si vous utilisez NDES pour émettre des certificats à l’aide de SCEP, vous devez configurer Microsoft Intune Certificate Connector. L’ordinateur qui héberge le connecteur NDES dans Intune ne peut pas être le même que celui qui héberge le connecteur NDES dans Configuration Manager. Pour plus d’informations, consultez [Configurer et gérer des certificats SCEP avec Intune](https://docs.microsoft.com/en-us/intune/certificates-scep-configure). 
+Si vous utilisez NDES pour émettre des certificats à l’aide de SCEP, vous devez configurer Microsoft Intune Certificate Connector. L’ordinateur qui héberge le connecteur NDES dans Intune ne peut pas être le même que celui qui héberge le connecteur NDES dans Configuration Manager. Pour plus d’informations, consultez [Configurer et gérer des certificats SCEP avec Intune](https://docs.microsoft.com/intune/certificates-scep-configure). 
 
 > [!Important]    
 > Après avoir configuré le connecteur, vous devez modifier les profils SCEP importés pour faire référence à la nouvelle URL du serveur.

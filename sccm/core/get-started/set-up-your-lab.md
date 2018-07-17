@@ -10,12 +10,12 @@ ms.assetid: b1970688-0cd2-404f-a17f-9e2aa4a78758
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: a1799dcffa55de80c0c700a56301d7d71f3b4a48
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 14251bb062423a31bcf74d2079b2e1b667f61ba9
+ms.sourcegitcommit: 06d490d526070e17d77e86bc6c200899ded911cb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32341965"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38967162"
 ---
 # <a name="set-up-your-system-center-configuration-manager-lab"></a>Configurer votre laboratoire de System Center Configuration Manager
 
@@ -30,7 +30,7 @@ En suivant les recommandations de cette rubrique, vous pourrez mettre en place u
 
      Vous pouvez télécharger une version d’évaluation de Windows Server 2012 R2 à partir du [Centre d’évaluation TechNet](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012).  
 
-     Envisagez de modifier ou de désactiver la configuration de sécurité renforcée d’Internet Explorer pour accéder plus facilement à certains téléchargements référencés tout au long de ces exercices. Consultez [Internet Explorer : Configuration de sécurité renforcée](https://technet.microsoft.com/en-us/library/dd883248\(v=ws.10\).aspx) .  
+     Envisagez de modifier ou de désactiver la configuration de sécurité renforcée d’Internet Explorer pour accéder plus facilement à certains téléchargements référencés tout au long de ces exercices. Consultez [Internet Explorer : Configuration de sécurité renforcée](https://technet.microsoft.com/library/dd883248\(v=ws.10\).aspx) .  
 
 -   **L’environnement lab utilise SQL Server 2012 SP2** pour la base de données de site.  
 
@@ -58,11 +58,11 @@ En suivant les recommandations de cette rubrique, vous pourrez mettre en place u
 
 -   **Le contrôleur de domaine utilise Windows Server 2008 R2** avec Active Directory Domain Services. Le contrôleur de domaine fonctionne également en tant qu’hôte pour les serveurs DNS et DHCP à utiliser avec un nom de domaine complet.  
 
-     Pour plus d’informations, consultez cette [vue d’ensemble des services de domaine Active Directory](https://technet.microsoft.com/en-us/library/hh831484).  
+     Pour plus d’informations, consultez cette [vue d’ensemble des services de domaine Active Directory](https://technet.microsoft.com/library/hh831484).  
 
 -   **Hyper-V est utilisé avec quelques machines virtuelles** pour vérifier que les opérations de gestion entreprises dans ces exercices fonctionnent comme prévu. Un minimum de trois machines virtuelles est recommandé quand Windows 7 (ou version ultérieure) est installé.  
 
-     Pour plus d’informations, consultez cette [vue d’ensemble d’Hyper-V](https://technet.microsoft.com/en-us/library/hh831531.aspx).  
+     Pour plus d’informations, consultez cette [vue d’ensemble d’Hyper-V](https://technet.microsoft.com/library/hh831531.aspx).  
 
 -   **Les droits d’administrateur** sont obligatoires  pour tous ces composants.  
 
@@ -92,7 +92,7 @@ Une fois que vous avez installé tous ces composants, des étapes supplémentair
 Les étapes suivantes requises pour permettre aux clients Configuration Manager d’interroger les services de domaine Active Directory pour localiser les ressources de site sont répertoriées dans les procédures suivantes.  
 
 ##  <a name="BKMK_CreateSysMgmtLab"></a> Créer le conteneur System Management  
- Configuration Manager ne crée pas automatiquement le conteneur System Management requis dans les services de domaine Active Directory quand le schéma est étendu. Par conséquent, vous allez le créer pour votre laboratoire. Dans cette étape, vous devez [installer l’Éditeur ADSI.](https://technet.microsoft.com/en-us/library/cc773354\(WS.10\).aspx#BKMK_InstallingADSIEdit)  
+ Configuration Manager ne crée pas automatiquement le conteneur System Management requis dans les services de domaine Active Directory quand le schéma est étendu. Par conséquent, vous allez le créer pour votre laboratoire. Dans cette étape, vous devez [installer l’Éditeur ADSI.](https://technet.microsoft.com/library/cc773354\(WS.10\).aspx#BKMK_InstallingADSIEdit)  
 
  Veillez à être connecté sous un compte possédant l’autorisation **Créer tous les objets enfants** sur le conteneur **System** dans les services de domaine Active Directory.  
 
@@ -136,7 +136,7 @@ Les étapes suivantes requises pour permettre aux clients Configuration Manager 
 
 #### <a name="to-extend-the-active-directory-schema-using-extadschexe"></a>Pour étendre le schéma Active Directory avec extadsch.exe :  
 
-1.  Créez une sauvegarde de l’état système du contrôleur de domaine principal du schéma. Pour plus d’informations sur la sauvegarde d’un contrôleur de domaine principal, consultez [Sauvegarde de Windows Server](https://technet.microsoft.com/en-us/library/cc770757.aspx).  
+1.  Créez une sauvegarde de l’état système du contrôleur de domaine principal du schéma. Pour plus d’informations sur la sauvegarde d’un contrôleur de domaine principal, consultez [Sauvegarde de Windows Server](https://technet.microsoft.com/library/cc770757.aspx).  
 
 2.  Accédez à **\SMSSETUP\BIN\X64** sur le support d’installation.  
 
@@ -155,7 +155,7 @@ Les étapes suivantes requises pour permettre aux clients Configuration Manager 
 
  **Installer .NET et activer Windows Communication Foundation**  
 
- Vous devez installer deux infrastructures .NET : .NET 3.5.1 puis .NET 4.5.2+. Vous devez également activer Windows Communication Foundation (WCF). WCF est conçu pour offrir une approche gérable de l’informatique distribuée, une grande interopérabilité et une prise en charge directe de l’orientation service. Il simplifie le développement d’applications connectées via un modèle de programmation orienté service. Consultez [Qu’est-ce que Windows Communication Foundation ?](https://technet.microsoft.com/en-us/subscriptions/ms731082\(v=vs.90\).aspx) pour obtenir des informations supplémentaires sur WCF.  
+ Vous devez installer deux infrastructures .NET : .NET 3.5.1 puis .NET 4.5.2+. Vous devez également activer Windows Communication Foundation (WCF). WCF est conçu pour offrir une approche gérable de l’informatique distribuée, une grande interopérabilité et une prise en charge directe de l’orientation service. Il simplifie le développement d’applications connectées via un modèle de programmation orienté service. Consultez [Qu’est-ce que Windows Communication Foundation ?](https://technet.microsoft.com/subscriptions/ms731082\(v=vs.90\).aspx) pour obtenir des informations supplémentaires sur WCF.  
 
 #### <a name="to-install-net-and-activate-windows-communication-foundation"></a>Pour installer .NET et activer Windows Communication Foundation :  
 
@@ -197,25 +197,25 @@ Les étapes suivantes requises pour permettre aux clients Configuration Manager 
 
 Pour plus d’informations, consultez les articles suivants qui expliquent pourquoi ces composants .NET Framework sont nécessaires :  
 
--   [Versions et dépendances du .NET Framework](https://technet.microsoft.com/en-us/library/bb822049.aspx)  
+-   [Versions et dépendances du .NET Framework](https://technet.microsoft.com/library/bb822049.aspx)  
 
--   [Procédure pas à pas de vérification de la compatibilité des applications avec .NET Framework 4 RTM](https://technet.microsoft.com/en-us/library/dd889541.aspx)  
+-   [Procédure pas à pas de vérification de la compatibilité des applications avec .NET Framework 4 RTM](https://technet.microsoft.com/library/dd889541.aspx)  
 
--   [Comment : mettre à niveau une application web ASP.NET vers ASP.NET 4](https://technet.microsoft.com/en-us/library/dd483478\(VS.100\).aspx)  
+-   [Comment : mettre à niveau une application web ASP.NET vers ASP.NET 4](https://technet.microsoft.com/library/dd483478\(VS.100\).aspx)  
 
 -   [Forum Aux Questions sur la politique de support - Microsoft .NET Framework](https://support.microsoft.com/en-us/gp/framework_faq?WT.mc_id=azurebg_email_Trans_943_NET452_Update)  
 
--   [Les coulisses du CLR – L’approche « In-Process Side-by-Side »](https://msdn.microsoft.com/en-us/magazine/ee819091.aspx)  
+-   [Les coulisses du CLR – L’approche « In-Process Side-by-Side »](https://msdn.microsoft.com/magazine/ee819091.aspx)  
 
 **Activer BITS, IIS et RDC**  
 
-Le [service de transfert intelligent en arrière-plan (BITS)](https://technet.microsoft.com/en-us/library/dn282296.aspx) est utilisé pour les applications qui ont besoin de transférer de façon asynchrone des fichiers entre un client et un serveur. En contrôlant le flux des transferts au premier plan et en arrière-plan, le service BITS préserve la réactivité des autres applications réseau. Il reprend également automatiquement les transferts de fichiers en cas d’interruption d’une session de transfert.  
+Le [service de transfert intelligent en arrière-plan (BITS)](https://technet.microsoft.com/library/dn282296.aspx) est utilisé pour les applications qui ont besoin de transférer de façon asynchrone des fichiers entre un client et un serveur. En contrôlant le flux des transferts au premier plan et en arrière-plan, le service BITS préserve la réactivité des autres applications réseau. Il reprend également automatiquement les transferts de fichiers en cas d’interruption d’une session de transfert.  
 
 Vous devez installer le service BITS pour ce laboratoire, car ce serveur de site fera également office de point de gestion.  
 
 Internet Information Services (IIS) est un serveur web flexible et évolutif, qui peut servir à héberger ce que vous voulez sur le web. Il est utilisé par Configuration Manager pour plusieurs rôles de système de site. Pour plus d’informations sur IIS, consultez [Sites web pour les serveurs de système de site dans System Center Configuration Manager](../../core/plan-design/network/websites-for-site-system-servers.md).  
 
-La[compression différentielle à distance (RDC)](https://technet.microsoft.com/en-us/library/cc754372.aspx) est un ensemble d’API que les applications peuvent utiliser pour déterminer si des modifications ont été apportées à un ensemble de fichiers. La fonctionnalité RDC permet à l’application de répliquer uniquement les parties modifiées d’un fichier, limitant ainsi au maximum le trafic réseau.  
+La[compression différentielle à distance (RDC)](https://technet.microsoft.com/library/cc754372.aspx) est un ensemble d’API que les applications peuvent utiliser pour déterminer si des modifications ont été apportées à un ensemble de fichiers. La fonctionnalité RDC permet à l’application de répliquer uniquement les parties modifiées d’un fichier, limitant ainsi au maximum le trafic réseau.  
 
 #### <a name="to-enable-bits-iis-and-rdc-site-server-roles"></a>Pour activer les rôles de serveur de site BITS, IIS et RDC :  
 

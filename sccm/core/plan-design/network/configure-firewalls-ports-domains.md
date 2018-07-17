@@ -10,12 +10,12 @@ ms.assetid: d6993bba-f6bd-4639-adbf-efc1c638b2f3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ee7494b582828014114d41eb6bb721a7e1fd5c16
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 43c63ff85b86dd95a5eda2998a21b9b52f12b126
+ms.sourcegitcommit: 06d490d526070e17d77e86bc6c200899ded911cb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32333142"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38967121"
 ---
 # <a name="set-up-firewalls-ports-and-domains-for-system-center-configuration-manager"></a>Configurer les pare-feu, les ports et les domaines pour System Center Configuration Manager
 
@@ -26,6 +26,6 @@ Pour préparer votre réseau à prendre en charge System Center Configuration Ma
 |Considération|Détails|  
 |-------------------|-------------|  
 |**Ports et protocoles** utilisés par les différentes fonctionnalités de Configuration Manager. Certains ports sont exigés, tandis que d’autres **domaines et services** sont personnalisables.|La plupart des communications Configuration Manager utilisent des ports courants, comme le port 80 pour HTTP ou le port 443 pour HTTPS. Toutefois, [certains rôles de système de site prennent en charge l’utilisation de sites web personnalisés](/sccm/core/plan-design/network/websites-for-site-system-servers) et de ports personnalisés.<br /><br /> **Avant de déployer Configuration Manager**, identifiez les ports que vous souhaitez utiliser et configurez les pare-feu de manière appropriée.<br /><br /> **Si vous avez besoin de modifier un port** après avoir installé Configuration Manager, n’oubliez pas de mettre à jour les pare-feu sur les appareils et sur le réseau, et également de modifier la configuration du port dans Configuration Manager.<br /><br /> Pour plus d’informations, consultez : </br>- [Guide pratique pour configurer les ports de communication des clients](../../../core/clients/deploy/configure-client-communication-ports.md) </br>- [Ports utilisés dans Configuration Manager](../../../core/plan-design/hierarchy/ports.md) </br>- [Conditions requises pour l’accès Internet pour le point de connexion de service](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_urls)|  
-|**Domaines et services** que les serveurs et clients de site sont susceptibles d’utiliser.|Certaines fonctionnalités de Configuration Manager peuvent nécessiter que les clients et les serveurs de site accèdent à des services et domaines spécifiques sur Internet, comme Windowsudpate.microsoft.com ou le service Microsoft Intune.<br /><br /> Si vous souhaitez utiliser Microsoft Intune pour gérer des appareils mobiles, vous devez également configurer l’accès aux [ports et domaines exigés par Intune](https://docs.microsoft.com/en-us/intune/get-started/network-infrastructure-requirements-for-microsoft-intune).|  
+|**Domaines et services** que les serveurs et clients de site sont susceptibles d’utiliser.|Certaines fonctionnalités de Configuration Manager peuvent nécessiter que les clients et les serveurs de site accèdent à des services et domaines spécifiques sur Internet, comme Windowsudpate.microsoft.com ou le service Microsoft Intune.<br /><br /> Si vous souhaitez utiliser Microsoft Intune pour gérer des appareils mobiles, vous devez également configurer l’accès aux [ports et domaines exigés par Intune](https://docs.microsoft.com/intune/get-started/network-infrastructure-requirements-for-microsoft-intune).|  
 |**Serveurs proxy** pour les serveurs de système de site et les communications client. Vous pouvez spécifier des serveurs proxy distincts pour les différents clients et serveurs du système de site.|Étant donné que ces configurations sont effectuées lors de l’installation d’un rôle de système de site ou d’un client, il vous suffit de connaître les configurations de serveur proxy pour référence ultérieure lorsque vous configurerez des rôles de système de site et des clients.<br /><br /> Si vous ne savez pas si votre déploiement nécessite l’utilisation de serveurs proxy, consultez [Prise en charge des serveurs proxy dans System Center Configuration Manager](../../../core/plan-design/network/proxy-server-support.md) pour en savoir plus sur les rôles de système de site et les actions de client susceptibles d’utiliser un serveur proxy.|   
 |  
