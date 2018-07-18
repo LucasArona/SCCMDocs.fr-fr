@@ -2,7 +2,7 @@
 title: Nouveautés de la gestion MDM hybride
 titleSuffix: Configuration Manager
 description: Découvrez les nouvelles fonctionnalités de gestion des appareils mobiles disponibles pour les déploiements hybrides avec Configuration Manager et Intune.
-ms.date: 07/05/2018
+ms.date: 07/12/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5d527d2fc4fdc52e132b6f603d9b83851e1693f3
-ms.sourcegitcommit: c9d0a4c24ce90825cb2d05e4fe37c5b41fa48a50
+ms.openlocfilehash: d2a705ed8b09e4c2de92baa22164cbe97f180462
+ms.sourcegitcommit: e54e9d4a735e72b84095e0017c5bec50af480207
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2018
-ms.locfileid: "37923537"
+ms.lasthandoff: 07/14/2018
+ms.locfileid: "39039622"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Nouveautés de la gestion hybride des appareils mobiles avec Configuration Manager et Microsoft Intune
 
@@ -43,6 +43,17 @@ Chaque section de cet article répertorie les fonctionnalités hybrides sous tro
 ## <a name="july-2018"></a>Juillet 2018
 
 ### <a name="new-in-microsoft-intune"></a>Nouveautés de Microsoft Intune
+
+#### <a name="support-for-security-enhancement-in-intune-service"></a>Prise en charge de l’amélioration de la sécurité dans le service Intune
+<!--2520152--> Vous pouvez désormais spécifier que les appareils auxquels aucune stratégie de conformité n’est affectée ne sont pas conformes en mode hybride. Configurez ce paramètre dans Intune sur le portail Azure. Nous vous recommandons vivement d’activer cette fonctionnalité pour sécuriser vos ressources internes.
+
+Cette fonctionnalité est désactivée par défaut dans les locataires hybrides. Quand vous activez cette fonctionnalité, les appareils auxquels aucune stratégie de conformité n’est affectée sont considérés comme non conformes. Si vous activez également l’accès conditionnel, ces appareils n’ont plus accès aux ressources internes. Ces ressources peuvent être Outlook ou SharePoint, selon les stratégies d’accès conditionnel dans votre environnement. Si vous laissez ce paramètre désactivé, ces appareils conservent le même niveau d’accès que celui dont ils disposent actuellement.
+
+Pour vous aider à déterminer l’impact de l’activation de cette fonctionnalité, nous mettons à votre disposition un [script dans la galerie TechNet](https://gallery.technet.microsoft.com/SQL-Query-for-Hybrid-MDM-5bcb8695). Quand vous exécutez ce script sur votre base de données de Configuration Manager, il répertorie les appareils qui ne sont pas ciblés par des stratégies de conformité.
+
+Pour plus d’informations, consultez les articles suivants :
+- [Security Enhancements in the Intune Service](https://aka.ms/compliance_policies) (billet de blog) 
+- [Stratégies de conformité d’appareils dans Configuration Manager](/sccm/mdm/deploy-use/device-compliance-policies)
 
 #### <a name="updates-to-out-of-compliance-messages-in-company-portal-app"></a>Mises à jour des messages hors de conformité dans l’application Portail d’entreprise 
 <!--1832222--> Nous avons modifié les messages que les utilisateurs voient quand un appareil est hors de conformité. Les messages conservent leurs significations d’origine, mais ils ont été mis à jour avec un langage plus convivial et moins de jargon technique. Nous avons également actualisé des liens vers la documentation et des étapes de correction afin de les tenir à jour.  

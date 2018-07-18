@@ -1,8 +1,8 @@
 ---
 title: Stratégies de conformité des appareils
 titleSuffix: Configuration Manager
-description: Découvrez comment gérer les stratégies de conformité dans System Center Configuration Manager pour rendre les appareils compatibles avec les stratégies d’accès conditionnel.
-ms.date: 03/05/2017
+description: Découvrez comment gérer les stratégies de conformité dans Configuration Manager pour rendre les appareils compatibles avec les stratégies d’accès conditionnel.
+ms.date: 07/12/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,38 +10,43 @@ ms.assetid: ad8fa94d-45bb-4c94-8d86-31234c5cf21c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 776af7499c576f21d47dafec8a668f3c4051ad88
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 8c27c945b384a9769d008667f124d414275a3c11
+ms.sourcegitcommit: e54e9d4a735e72b84095e0017c5bec50af480207
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32347261"
+ms.lasthandoff: 07/14/2018
+ms.locfileid: "39039588"
 ---
 # <a name="device-compliance-policies-in-system-center-configuration-manager"></a>Stratégies de conformité des appareils dans System Center Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
-Les **stratégies de conformité** dans System Center Configuration Manager définissent les règles et les paramètres auxquels un appareil doit se conformer pour être considéré comme conforme au vu des stratégies d’accès conditionnel. Vous pouvez également utiliser des stratégies de conformité pour surveiller et corriger les problèmes de conformité avec les appareils indépendamment de l'accès conditionnel.  
+Les stratégies de conformité dans Configuration Manager définissent les règles et les paramètres auxquels un appareil doit se conformer pour être considéré comme conforme au vu des stratégies d’accès conditionnel. Vous pouvez également utiliser des stratégies de conformité pour surveiller et corriger les problèmes de conformité avec les appareils indépendamment de l'accès conditionnel.  
 
 
 > [!IMPORTANT]  
->  Cet article décrit les stratégies de conformité applicables aux appareils gérés par Microsoft Intune.    Les stratégies de conformité applicables aux PC gérés par System Center Configuration Manager sont décrites dans [Gérer l’accès aux services O365 pour les PC gérés par System Center Configuration Manager](../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md).  
+>  Cet article décrit les stratégies de conformité applicables aux appareils gérés par Microsoft Intune. Les stratégies de conformité applicables aux appareils gérés par le client Configuration Manager sont décrites dans [Gérer l’accès aux services O365 pour les appareils gérés par Configuration Manager](/sccm/protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm).  
 
  Ces règles incluent des exigences telles que :  
 
--   Un code confidentiel et des mots de passe pour accéder à un appareil
+-   Un code confidentiel et des mots de passe pour accéder à un appareil  
 
--   Le chiffrement des données stockées sur l’appareil
+-   Le chiffrement des données stockées sur l’appareil  
 
 -   Si l'appareil est jailbreaké ou rooté  
 
--   Si la messagerie sur l’appareil est gérée par une stratégie Intune, ou si le service Windows d’attestation d’intégrité de l’appareil signale celui-ci comme étant défectueux.
--   Applications qui ne peuvent pas être installées sur l’appareil.
+-   Si la messagerie sur l’appareil est gérée par une stratégie Intune, ou si le service Windows d’attestation d’intégrité de l’appareil signale celui-ci comme étant défectueux.  
+
+-   Les applications qui ne peuvent pas être installées sur l’appareil.  
 
 
  Vous déployez des stratégies de conformité sur des regroupements d'utilisateurs. Quand une stratégie de conformité est déployée sur un utilisateur, tous ses appareils dont l'objet d'une vérification de la conformité.  
 
- Le tableau suivant répertorie les appareils pris en charge par les stratégies de conformité et la façon dont les paramètres de non-conformité sont gérés quand la stratégie est utilisée avec une stratégie d'accès conditionnel.  
+
+
+## <a name="supported-device-types"></a>Types d’appareils pris en charge
+
+ Le tableau suivant répertorie les appareils pris en charge par les stratégies de conformité et la façon dont les paramètres de non-conformité sont gérés quand la stratégie est utilisée avec une stratégie d’accès conditionnel.  
 
 |Règle|Windows 8.1 et versions ultérieures|Windows Phone 8.1 et versions ultérieures|iOS 6.0 et versions ultérieures|Android 4.0 et versions ultérieures, Samsung KNOX Standard 4.0 et versions ultérieures, Android for Work|  
 |----------|---------------------------|---------------------------------|-----------------------|---------------------------|-----------------------------------------|  
@@ -54,16 +59,37 @@ Les **stratégies de conformité** dans System Center Configuration Manager déf
 |**Attestation d’intégrité de l’appareil (mise à jour 1602)**|Le paramètre n’est pas applicable à Windows 8.1<br /><br /> Windows 10 et Windows 10 Mobile sont mis en quarantaine.|N/A|N/A|N/A|  
 |**Applications qui ne peuvent pas être installées**|N/A|N/A|En quarantaine|En quarantaine|
 
- **Corrigé** = La conformité est appliquée par le système d'exploitation de l'appareil (par exemple, l'utilisateur est obligé de définir un code confidentiel).  Ce n'est jamais la cas quand le paramètre n'est pas conforme.  
+ **Corrigé** = La conformité est appliquée par le système d’exploitation de l’appareil. Par exemple, l’utilisateur est obligé de définir un code PIN. En aucun cas le paramètre n’est pas conforme.  
 
- **En quarantaine** = Le système d’exploitation de l’appareil n’applique pas la conformité (par exemple, les appareils Android ne forcent pas l’utilisateur à chiffrer l’appareil).  Dans ce cas :  
+ **Mis en quarantaine** = Le système d’exploitation de l’appareil ne fait pas respecter la conformité. Par exemple, les appareils Android ne forcent pas l’utilisateur à chiffrer l’appareil. Dans ce cas :  
 
--   L'appareil est bloqué si l'utilisateur est ciblé par une stratégie d'accès conditionnel.  
+-   Si l’utilisateur est ciblé par une stratégie d’accès conditionnel, l’appareil est bloqué.  
 
--   Le portail d'entreprise ou portail web informe l'utilisateur des problèmes de conformité.  
+-   Le portail d’entreprise ou portail web informe l’utilisateur d’éventuels problèmes de conformité.  
 
 
-### <a name="next-steps"></a>Étapes suivantes  
-[Créer et déployer une stratégie de conformité d’appareil](create-compliance-policy.md)
+
+## <a name="devices-without-any-assigned-compliance-policy"></a>Appareils sans aucune stratégie de conformité affectée
+<!--2520152--> À compter de juillet 2018, indiquez si tous les appareils auxquels aucune stratégie de conformité n’est affectée sont considérés comme conformes ou non. Par défaut, les appareils sans aucune stratégie de conformité affectée sont considérés comme conformes. Utilisez les étapes suivantes pour changer ce paramètre dans le portail Azure :
+
+1. Connectez-vous à [Intune sur le portail Azure](https://aka.ms/intuneportal).  
+
+2. Sélectionnez **Conformité de l’appareil**, puis **Paramètres de stratégie de conformité** dans le groupe Installation.  
+
+3. Pour le paramètre **Marquer les appareils sans stratégie de conformité comme étant**, sélectionnez l’une des options suivantes :  
+
+     - **Conforme** (valeur par défaut) : les appareils sans aucune stratégie de conformité affectée sont considérés comme conformes à la stratégie. Si l’accès conditionnel est activé, ces appareils ont accès aux ressources internes.  
+
+     - **Non conforme** : les appareils sans aucune stratégie de conformité affectée sont considérés comme non conformes à la stratégie. Si l’accès conditionnel est activé, ces appareils sont bloqués des ressources internes selon les conditions dans la stratégie d’accès conditionnel.  
+
+4. Cliquez sur Enregistrer.  
+
+Nous vous recommandons de déployer au moins une stratégie de conformité pour chaque plateforme à tous les utilisateurs de votre environnement. Affectez ensuite à ce paramètre la valeur **Non conforme** pour garantir la sécurité de vos ressources internes. Pour plus d’informations, consultez le billet de blog [Security Enhancements in the Intune Service](https://aka.ms/compliance_policies).
+
+
+
+## <a name="next-steps"></a>Étapes suivantes  
+[Créer et déployer une stratégie de conformité d’appareil](/sccm/mdm/deploy-use/create-compliance-policy)
+
 ### <a name="see-also"></a>Voir aussi  
- [Gérer l’accès aux services dans System Center Configuration Manager](../../protect/deploy-use/manage-access-to-services.md)
+ [Gérer l’accès aux services dans Configuration Manager](/sccm/protect/deploy-use/manage-access-to-services)
