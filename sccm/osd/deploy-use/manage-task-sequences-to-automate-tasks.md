@@ -10,12 +10,12 @@ ms.assetid: a1f099f1-e9b5-4189-88b3-f53e3b4e4add
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 26d43b1ee065f3ae0b1221ca81e69f6cb1da6f6c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 983b6b73c79c51792bf015c74d40466231fbaf3d
+ms.sourcegitcommit: 7c26485b600544a64a5cf2edca6f2f8f29fecde9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32351854"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39130668"
 ---
 # <a name="manage-task-sequences-to-automate-tasks-in-system-center-configuration-manager"></a>Gérer les séquences de tâches pour automatiser des tâches dans System Center Configuration Manager
 
@@ -28,7 +28,7 @@ Utilisez des séquences de tâches pour automatiser des étapes dans votre envir
 ##  <a name="BKMK_CreateTaskSequence"></a> Créer des séquences de tâches  
  Créez des séquences de tâches à l'aide de l'Assistant Création d'une séquence de tâches. Cet Assistant peut créer les types de séquences de tâches suivants :  
 
-|Type de séquence de tâches|Plus d'informations|  
+|Type de séquence de tâches|Informations complémentaires|  
 |------------------------|----------------------|  
 |[Séquence de tâches pour installer un système d’exploitation](create-a-task-sequence-to-install-an-operating-system.md)|Ce type de séquence de tâches crée les étapes nécessaires pour installer un système d’exploitation, ainsi que l’option pour migrer des données utilisateur, inclure des mises à jour logicielles et installer des applications.|  
 |[Séquence de tâches pour mettre à niveau un système d’exploitation](create-a-task-sequence-to-upgrade-an-operating-system.md)|Ce type de séquence de tâches crée les étapes nécessaires pour mettre à niveau un système d’exploitation, ainsi que l’option pour inclure des mises à jour logicielles et installer des applications.|  
@@ -262,6 +262,9 @@ Le message de notification suivant s’affiche quand l’utilisateur final ouvre
 
         -   **Obligatoire**: la séquence de tâches est déployée automatiquement, d’après le calendrier configuré. Si la séquence de tâches n’est pas masquée, un utilisateur peut toujours suivre son état de déploiement. L’utilisateur peut aussi installer la séquence de tâches avant l’échéance à l’aide du Centre logiciel.  
 
+        >  [!NOTE]  
+        >  Si plusieurs utilisateurs sont connectés à l’appareil, les déploiements de package et de séquences de tâches peuvent ne pas s’afficher dans le centre logiciel.
+
     -   **Déployer automatiquement selon le calendrier avec ou sans connexion de l’utilisateur**: cette option n’est pas disponible quand vous déployez une séquence de tâches.  
 
     -   **Envoyer des paquets de mise en éveil** : si l’objet du déploiement est défini sur **Obligatoire** et que cette option est sélectionnée, le site envoie un paquet de mise en éveil aux ordinateurs avant d’effectuer le déploiement. Ce paquet réveille les ordinateurs à l’échéance de l’installation. Pour que vous puissiez utiliser cette option, les ordinateurs et les réseaux doivent être configurés pour utiliser l'éveil par appel réseau.  
@@ -478,8 +481,7 @@ Vous pouvez gérer les variables par ordinateur sur un site principal ou sur un 
 6.  Après avoir ajouté toutes les variables au regroupement, cliquez sur **OK**.  
 
 ## <a name="add-child-task-sequences-to-a-task-sequence"></a>Ajouter des séquences de tâches enfants à une séquence de tâches
-<!--1261338-->
-À partir de Configuration Manager version 1710, vous pouvez ajouter une nouvelle étape de séquence de tâches qui exécute une autre séquence de tâches. Cette étape crée une relation parent-enfant entre les séquences de tâches. Effectuez cette étape pour créer des séquences de tâches plus modulaires réutilisables.  
+<!--1261338--> À partir de Configuration Manager version 1710, vous pouvez ajouter une nouvelle étape de séquence de tâches qui exécute une autre séquence de tâches. Cette étape crée une relation parent-enfant entre les séquences de tâches. Effectuez cette étape pour créer des séquences de tâches plus modulaires réutilisables.  
 
 > [!Note]  
 > Par défaut, Configuration Manager n’active pas cette fonctionnalité facultative. Vous devez activer cette fonctionnalité avant de l’utiliser. Pour plus d’informations, consultez [Activer les fonctionnalités facultatives des mises à jour](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  

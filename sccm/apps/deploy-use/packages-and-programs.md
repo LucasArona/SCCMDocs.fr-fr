@@ -10,12 +10,12 @@ ms.assetid: caad0507-9913-415a-b13d-d36f8f0a1b80
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 6f34fd322e5f94550602d7883a0303d10059b702
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 4815695ad67ac86491da9ea3274fd7db660c8190
+ms.sourcegitcommit: 7c26485b600544a64a5cf2edca6f2f8f29fecde9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32341948"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39130644"
 ---
 # <a name="packages-and-programs-in-system-center-configuration-manager"></a>Packages et programmes dans System Center Configuration Manager
 
@@ -212,6 +212,9 @@ Les packages peuvent utiliser certaines nouvelles fonctionnalités de Configurat
 
         -   **Obligatoire** : le package et le programme sont déployés automatiquement, selon le calendrier configuré. Toutefois, un utilisateur peut suivre l'état de déploiement du package et du programme et peut les installer avant l'échéance depuis le Centre logiciel.  
 
+        >  [!NOTE]  
+        >  Si plusieurs utilisateurs sont connectés à l’appareil, les déploiements de package et de séquences de tâches peuvent ne pas s’afficher dans le centre logiciel.
+        
     -   **Envoyer des paquets de mise en éveil** : si l’objet du déploiement a la valeur **Obligatoire** et que cette option est sélectionnée, un paquet de mise en éveil est envoyé aux ordinateurs avant l’installation du déploiement, afin de sortir les ordinateurs de la veille à l’échéance de l’installation. Afin d'utiliser cette option, les ordinateurs doivent être configurés pour Wake On LAN.  
 
     -  Si nécessaire, sélectionnez **Autoriser les clients avec une connexion Internet facturée à l’usage à télécharger le contenu une fois l’échéance d’installation atteinte, ce qui peut entraîner des frais supplémentaires**.  
@@ -225,7 +228,7 @@ Les packages peuvent utiliser certaines nouvelles fonctionnalités de Configurat
 
 7.  Si l’objet du déploiement a la valeur **Obligatoire**, configurez le comportement de réexécution du programme à partir du menu déroulant **Comportement de réexécution**. Choisissez parmi les options suivantes :  
 
-    |comportement de réexécution|Plus d'informations|  
+    |comportement de réexécution|Informations complémentaires|  
     |--------------------|----------------------|  
     |Ne jamais exécuter à nouveau un programme déployé|Le programme ne sera pas réexécuté sur le client, même si le programme a échoué initialement ou que les fichiers programmes sont modifiés.|  
     |Toujours exécuter à nouveau le programme|Le programme est systématiquement réexécuté sur le client quand le déploiement est planifié, même si le programme a déjà été correctement exécuté. Cela peut être utile lorsque vous utilisez des déploiements périodiques dans lequel le programme est mis à jour, par exemple avec un logiciel antivirus.|  
@@ -274,7 +277,7 @@ Les packages peuvent utiliser certaines nouvelles fonctionnalités de Configurat
 ##  <a name="manage-packages-and-programs"></a>Gérer les packages et les programmes  
  Dans l’espace de travail **Bibliothèque de logiciels**, développez **Gestion d’applications**, choisissez **Packages**, le package à gérer, puis une tâche de gestion dans le tableau suivant :  
 
-|Tâche|Plus d'informations|  
+|Tâche|Informations complémentaires|  
 |----------|----------------------|  
 |**Créer un fichier de contenu préparé**|Ouvre l’**Assistant Création du fichier de contenu préparé** qui vous permet de créer un fichier qui contient le contenu du package qui peut être importé manuellement vers un autre site. Ceci est utile dans les cas où vous disposez d'une faible bande passante du réseau entre le serveur de site et le point de distribution.|  
 |**Créer un programme**|Ouvre l’**Assistant Création d’un programme** qui vous permet de créer un programme pour ce package.|  
