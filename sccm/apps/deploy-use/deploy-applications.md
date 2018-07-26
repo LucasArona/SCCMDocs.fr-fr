@@ -10,12 +10,12 @@ ms.assetid: 2629c376-ec43-4f0e-a78b-4223cc9302bf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8a89c9d5a0fa4ea57a7824fe16b24120347ddaac
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: ed6174bcb3c99461b00ec5fc57d4508b9390747d
+ms.sourcegitcommit: acad0674b2743193f87990fb50194c4f17823a8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32338031"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39146926"
 ---
 # <a name="deploy-applications-with-system-center-configuration-manager"></a>Déployer des applications avec System Center Configuration Manager
 
@@ -102,7 +102,7 @@ Dans la page **Paramètres de déploiement** de l’Assistant Déploiement logic
 - **Mettre automatiquement à niveau toutes les versions remplacées de cette application** : le client met à niveau toute version remplacée de l’application avec l’application de remplacement.    
 
     > [!NOTE]  
-    > Depuis la version 1802, vous pouvez activer ou désactiver cette option pour l’objet d’installation **Disponible** ou **Obligatoire**. <!--1351266--> 
+    > Depuis la version 1802, vous pouvez activer ou désactiver cette option pour l’objet d’installation **Disponible**. <!--1351266--> 
 
 
 ### <a name="specify-scheduling-settings-for-the-deployment"></a>Spécifier les paramètres de planification pour le déploiement
@@ -195,8 +195,7 @@ Une fois que les clients ont reçu le déploiement, voici le comportement qui pr
 
 
 ## <a name="deploy-user-available-applications-on-azure-ad-joined-devices"></a>Déployer des applications accessibles à l’utilisateur sur des appareils joints à Azure AD
-<!-- 1322613 -->
-Si vous avez déployé des applications comme étant accessibles aux utilisateurs, depuis la version 1802, ils peuvent les parcourir et les installer via le Centre logiciel sur des appareils Azure Active Directory (Azure AD).  
+<!-- 1322613 --> Si vous avez déployé des applications comme étant accessibles aux utilisateurs, depuis la version 1802, ils peuvent les parcourir et les installer via le Centre logiciel sur des appareils Azure Active Directory (Azure AD).  
 
 #### <a name="prerequisites"></a>Prérequis
 
