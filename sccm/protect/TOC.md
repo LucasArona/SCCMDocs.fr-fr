@@ -1,10 +1,5 @@
 # Comprendre et explorer
 ## [Vue d’ensemble](understand\protect-data-and-site-infrastructure.md)
-## [Sauvegarder des sites](understand/backup-and-recovery.md)
-## [Récupérer des sites](understand/recover-sites.md)
-## [Récupération de sites en mode sans assistance](understand/unattended-recovery.md)
-## [Options de haute disponibilité](understand/high-availability-options.md)
-## [Gérer les déploiements à haut risque](understand/settings-to-manage-high-risk-deployments.md)
 
 # Planifier et concevoir
 ## [Prérequis des profils de certificat](plan-design/prerequisites-for-certificate-profiles.md)
@@ -51,7 +46,7 @@
 #### [Configurer le client](deploy-use/endpoint-protection-configure-client.md)
 
 ### [Stratégies de Pare-feu Windows](deploy-use/create-windows-firewall-policies.md)
-### [Protection avancée contre les menaces Windows Defender](deploy-use/windows-defender-advanced-threat-protection.md)
+### [Windows Defender - Protection avancée contre les menaces](deploy-use/windows-defender-advanced-threat-protection.md)
 ### [Créer et déployer une stratégie Exploit Guard](deploy-use/create-deploy-exploit-guard-policy.md)
 ### [Créer et déployer une stratégie Application Guard](deploy-use/create-deploy-application-guard-policy.md)
 ### [Tâches de pare-feu et anti-programme malveillant](deploy-use/endpoint-antimalware-firewall.md)
