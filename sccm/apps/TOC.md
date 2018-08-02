@@ -20,12 +20,14 @@
 
 ## Déployer des applications
 ### [Déployer des applications](deploy-use/deploy-applications.md)
+### [Créer un déploiement par phases](../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)
 ### [Partager une application](deploy-use/share-applications.md)
 ### [Simuler des déploiements d’applications](deploy-use/simulate-application-deployments.md)
 ### [Déployer des applications virtuelles App-V](get-started/deploying-app-v-virtual-applications.md)
 
 ## Surveiller les applications
 ### [Surveiller les applications à partir de la console](deploy-use/monitor-applications-from-the-console.md)
+### [Gérer et effectuer le monitoring des déploiements par phases](../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)
 ### [Surveiller l’utilisation des applications avec le contrôle de logiciel](deploy-use/monitor-app-usage-with-software-metering.md)
 
 ## Gérer des applications

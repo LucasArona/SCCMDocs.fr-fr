@@ -11,10 +11,10 @@
 ### [Créer et déployer des bases de référence de configuration](plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md)
 ## [Sécurité et confidentialité](plan-design/security-and-privacy-for-compliance-settings.md)
 
-## [Extensions SCAP (protocole d’automatisation du contenu de sécurité)](plan-design/scap/about-scap.md)
-### [Installer et configurer les extensions SCAP](plan-design/scap/install-configure-scap.md)
-### [Importer les paramètres de conformité SCAP](plan-design/scap/import-scap-compliance-settings.md)
-### [Dépannage des extensions SCAP](plan-design/scap/troubleshooting-scap.md)
+## [Extensions SCAP (Security Content Automation Protocol )](plan-design/scap/about-scap.md)
+### [Installer et configurer des extensions SCAP](plan-design/scap/install-configure-scap.md)
+### [Déployer et effectuer le monitoring de la conformité SCAP](plan-design/scap/deploy-monitor-export.md)
+### [Dépanner les extensions SCAP](plan-design/scap/troubleshooting-scap.md)
 
 # Déployer et utiliser
 

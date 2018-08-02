@@ -45,8 +45,9 @@
 ### [Déployer Windows To Go](deploy-use/deploy-windows-to-go.md)
 
 ## [Gérer Windows en tant que service](deploy-use/manage-windows-as-a-service.md)
+## [Créer un déploiement par phases](deploy-use/create-phased-deployment-for-task-sequence.md)
+## [Gérer et effectuer le monitoring des déploiements par phases](deploy-use/manage-monitor-phased-deployments.md)
 ## [Surveiller les déploiements de système d’exploitation](deploy-use/monitor-operating-system-deployments.md)
-## [Créer un déploiement par phases pour une séquence de tâches](deploy-use/create-phased-deployment-for-task-sequence.md)
 
 ## [Gérer les séquences de tâches pour automatiser des tâches](deploy-use/manage-task-sequences-to-automate-tasks.md)
 ### [Créer une séquence de tâches pour installer un système d’exploitation](deploy-use/create-a-task-sequence-to-install-an-operating-system.md)
