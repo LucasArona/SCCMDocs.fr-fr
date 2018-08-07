@@ -1,5 +1,5 @@
 ---
-title: Préversion technique 1806.2
+title: Technical Preview 1806.2
 titleSuffix: Configuration Manager
 description: Découvrez les nouvelles fonctionnalités disponibles dans la version 1806.2 de Configuration Manager Technical Preview.
 ms.date: 06/27/2018
@@ -10,18 +10,18 @@ ms.assetid: 3af2a69d-30e7-4dce-832d-82b7a1c082f8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 13742fcbeefacd2183b26c5083d6f8b3ee0ef60f
-ms.sourcegitcommit: d1bf26bcf0d78b37ac7598fab36eb58ca69b1dc5
+ms.openlocfilehash: 5183b30d9184f7119d1423b5773da2b692026ab7
+ms.sourcegitcommit: 64b343906afdd442189559119eea8e933642cbf8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37067611"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39342812"
 ---
-# <a name="capabilities-in-technical-preview-18062-for-system-center-configuration-manager"></a>Fonctionnalités de la préversion technique 1806.2 de System Center Configuration Manager
+# <a name="capabilities-in-technical-preview-18062-for-system-center-configuration-manager"></a>Fonctionnalités de la version Technical Preview 1806.2 de System Center Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Technical Preview)*
 
-Cet article présente les fonctionnalités disponibles dans la version 1806.2 de Configuration Manager Technical Preview. Vous pouvez installer cette version pour mettre à jour et ajouter de nouvelles fonctionnalités au site de votre préversion technique. 
+Cet article présente les fonctionnalités disponibles dans la version 1806.2 de Configuration Manager Technical Preview. Vous pouvez installer cette version pour mettre à jour et ajouter de nouvelles fonctionnalités au site de votre version Technical Preview. 
 
 Consultez l’article [Technical Preview](/sccm/core/get-started/technical-preview) avant d’installer cette mise à jour. Cet article vous permet de vous familiariser avec les limitations et les conditions générales liées à l’utilisation d’une version Technical Preview, et explique comment effectuer une mise à jour d’une version vers une autre et comment envoyer des commentaires.     
 
@@ -37,7 +37,7 @@ Issue description and cause.
 Steps to workaround, if any.  
 -->
 
-## <a name="known-issues-in-this-technical-preview"></a>Problèmes connus dans cette préversion technique
+## <a name="known-issues-in-this-technical-preview"></a>Problèmes connus dans cette version Technical Preview
 
 ### <a name="ki_sqlncli"></a> Les clients ne se mettent pas à jour automatiquement
 <!--518760--> Lors de la mise à jour vers la version 1806.2, le site met également à jour SQL Native Client, ce qui peut occasionner un redémarrage en attente sur le serveur de site. En raison de ce délai, certains fichiers ne sont pas mis à jour, ce qui se répercute sur la mise à niveau automatique du client.
@@ -45,7 +45,7 @@ Steps to workaround, if any.
 #### <a name="workarounds"></a>Solutions de contournement
 Évitez ce problème en passant manuellement à SQL Native Client *avant de mettre à jour* Configuration Manager vers la version 1806.2. Pour plus d’informations, consultez la [dernière mise à jour de maintenance pour SQL Server 2012 Native Client](https://www.microsoft.com/download/details.aspx?id=50402).
 
-Si vous déjà mis à jour votre site, la mise à niveau automatique du client et l’installation Push du client ne fonctionneront pas. Vous devrez mettre à jour les clients pour pouvoir tester intégralement la plupart des nouvelles fonctionnalités. Mettez à jour manuellement vos clients de la préversion technique en suivant la procédure ci-dessous :  
+Si vous déjà mis à jour votre site, la mise à niveau automatique du client et l’installation Push du client ne fonctionneront pas. Vous devrez mettre à jour les clients pour pouvoir tester intégralement la plupart des nouvelles fonctionnalités. Mettez à jour manuellement vos clients Technical Preview en suivant la procédure ci-dessous :  
 
 1. Localisez les fichiers sources du client dans le dossier **CMUClient** du répertoire d’installation de Configuration Manager sur le serveur de site. Par exemple, `C:\Program Files\Configuration Manager\CMUClient`  
 
@@ -152,7 +152,7 @@ Pour savoir comment créer une application MSIX, voir [Prise en charge de MSIX i
 Essayez d’effectuer les tâches. Envoyez-nous ensuite des [commentaires](capabilities-in-technical-preview-1804.md#bkmk_feedback) pour nous indiquer comment cela a fonctionné.
 
 1. Dans la console de Configuration Manager, [créez une application](/sccm/apps/deploy-use/create-applications). 
-2. Sélectionnez le **Type** de fichier d’installation de l’application **Package d’application Windows (*.appx, *.appxbundle, *.msix, *.msixbundle)**.
+2. Sélectionnez le fichier d’installation d’application de **type** **Package d’application Windows (\*.appx, \*.appxbundle, \*.msix, \*.msixbundle)**.
 3. [Déployez l’application](/sccm/apps/deploy-use/deploy-applications) sur le client qui a la dernière version de Windows Insider Preview.
 
 

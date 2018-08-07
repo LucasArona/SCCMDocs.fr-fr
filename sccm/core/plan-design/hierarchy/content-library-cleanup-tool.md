@@ -10,12 +10,12 @@ ms.assetid: 226cbbb2-9afa-4e2e-a472-be989c0f0e11
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5d83b23673d8eea6e98f21ea30b6b802eb7e5595
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: a3a091a526a385fadf0353073048d33ae704cd76
+ms.sourcegitcommit: f9b11bb0942cd3d03d90005b1681e9a14dc052a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32338378"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39229369"
 ---
 # <a name="the-content-library-cleanup-tool-for-system-center-configuration-manager"></a>Outil de nettoyage de la bibliothèque de contenu pour System Center Configuration Manager
 
@@ -60,7 +60,7 @@ Pour exécuter l’outil :
 **Problème connu** : lorsque l’outil s’exécute, une erreur de ce type peut être renvoyée si un package ou un déploiement, quel qu’il soit, a échoué ou est en cours :
 -  *System.InvalidOperationException: This content library cannot be cleaned up right now because package <packageID> is not fully installed.*
 
-**Solution de contournement :** aucune. L’outil ne peut pas identifier de façon fiable les fichiers orphelins lorsque du contenu est en cours de déploiement ou n’a pas pu être déployé. Par conséquent, l’outil ne vous autorisera pas à nettoyer le contenu tant que ce problème ne sera pas résolu.
+**Solution de contournement :** aucune. L’outil ne peut pas identifier de façon fiable les fichiers orphelins quand du contenu est en cours de déploiement ou n’a pas pu être déployé. Par conséquent, l’outil ne vous autorisera pas à nettoyer le contenu tant que ce problème ne sera pas résolu.
 
 ### <a name="command-line-switches"></a>Commutateurs de ligne de commande  
 Les commutateurs de ligne de commande suivants peuvent être utilisés dans n’importe quel ordre.   
