@@ -10,12 +10,12 @@ ms.assetid: 495b87ae-41a4-49ba-abe2-d4f7d22ac0d4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a8ce492aa34fa130a11bde0d5823252a9d782960
-ms.sourcegitcommit: e35d07870656eadd29faacc378ecd091ff3bdcfb
+ms.openlocfilehash: 33cd99fd51bd7fabc1ae7f8379bcf2a69a5c4898
+ms.sourcegitcommit: f195190347a98b6c5be957564d33b6c4dfb610d7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848626"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39309372"
 ---
 # <a name="licensing-and-branches-for-system-center-configuration-manager"></a>Licences et branches pour System Center Configuration Manager
 
@@ -28,7 +28,7 @@ Les clients dotés d’un contrat Software Assurance (SA) sur les licences de Sy
 
 
 **Spécificités des licences :**  
-[Les conditions générales des produits que vous achetez par le biais des programmes de licence en volume Microsoft se trouvent ici](http://go.microsoft.com/fwlink/?LinkId=800052).
+[Les conditions générales des produits que vous achetez par le biais des programmes de licence en volume Microsoft se trouvent ici](https://go.microsoft.com/fwlink/?LinkId=800052).
 
 
 ## <a name="system-center-configuration-manager-licensed-branches"></a>Branches sous licence de System Center Configuration Manager  
@@ -41,7 +41,7 @@ Cette rubrique fait référence au contrat Software Assurance (ou à des droits 
 |Long-Term Servicing Branch (LTSB)| Requiert un contrat Software Assurance actif avec Microsoft au moment de la publication (1er octobre 2016). </br></br> Consultez [Software Assurance et LTSB](#software-assurance-and-the-ltsb) dans cette rubrique. | Prise en charge dans les environnements de production. Utilisation prévue pour les clients qui ont laissé leur contrat Software Assurance (SA) ou leurs droits d’abonnement équivalents pour Configuration Manager expirer après le 1er octobre 2016. </br></br> Cette branche est limitée par rapport à Current Branch. </br></br> Les mises à jour de sécurité critiques pour Configuration Manager sont disponibles pour cette branche, mais aucune nouvelle fonctionnalité n’est disponible. |
 |Installation d’évaluation de Current Branch| Ne requiert pas de contrat Software Assurance avec Microsoft. | Une [installation d’évaluation](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection) correspond toujours à Current Branch et est utilisable pendant 180 jours. </br></br> L’installation d’évaluation peut être mise à niveau vers une installation complète de Current Branch. Vous ne pouvez pas mettre à niveau une installation d’évaluation vers Long-Term Servicing Branch.|
 
-En plus de Current Branch, LTSB et l’installation d’évaluation de Current Branch, une [préversion technique de System Center Configuration Manager](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview) est également disponible. Il s’agit d’une build limitée de Configuration Manager qui vous permet d’essayer de nouvelles fonctionnalités susceptibles d’être ajoutées à Current Branch dans une prochaine mise à jour. Vous installez la préversion technique à l’aide d’un autre support que celui des versions sous licence. Pour plus d’informations, consultez la documentation de la [préversion technique](/sccm/core/get-started/technical-preview).
+En plus de Current Branch, LTSB et l’installation d’évaluation de Current Branch, une [version Technical Preview de System Center Configuration Manager](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview) est également disponible. Il s’agit d’une build limitée de Configuration Manager qui vous permet d’essayer de nouvelles fonctionnalités susceptibles d’être ajoutées à Current Branch dans une prochaine mise à jour. Vous installez la version Technical Preview à l’aide d’un autre support que celui des versions sous licence. Pour plus d’informations, consultez la documentation de la version [](/sccm/core/get-started/technical-preview).
 
 
 ## <a name="licensed-branches"></a>Branches sous licence
@@ -95,16 +95,15 @@ Pour plus d’informations sur la licence Software Assurance et la branche Curre
 Utilisez les liens suivants pour en savoir plus sur les licences de produit.
 
 **Liens du Centre de gestion des licences en volume Microsoft (VLSC) :**
-- Vue d’ensemble de VLSC : [ https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx ](https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx).
+- [Vue d’ensemble de VLSC](https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx)
 
-- Termes des contrats de licence en volume Microsoft : [http://go.microsoft.com/fwlink/?LinkId=800052](http://go.microsoft.com/fwlink/?LinkId=800052).
+- [Termes des contrats de licence en volume Microsoft](https://go.microsoft.com/fwlink/?LinkId=800052)
 
-- Les clients de licence en volume peuvent obtenir un résumé de leurs licences ici : [ https://www.microsoft.com/Licensing/servicecenter/default.aspx ](https://www.microsoft.com/Licensing/servicecenter/default.aspx).  
-  Accédez au menu **Licences**, puis cliquez sur **Résumé des licences** pour obtenir une vue d’ensemble des licences.
+- Les clients de licences en volume peuvent obtenir un récapitulatif de leurs licences à partir du [Centre de gestion des licences en volume](https://www.microsoft.com/Licensing/servicecenter/default.aspx). Accédez au menu **Licences**, puis cliquez sur **Résumé des licences** pour obtenir une vue d’ensemble des licences.
 
 **Vidéos VLSC :**
-- Vidéos de formation sur le fonctionnement de VLSC : [https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx#tab=2](https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx#tab=2).
+- [Vidéos de formation sur le fonctionnement de VLSC](https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx#tab=2)  
 
-- Où rechercher votre contrat Software Assurance actif (à 43 secondes du début) : [https://www.microsoft.com/showcase/video.aspx?uuid=fe1846cb-1d26-49fc-b064-57b25dcc31a0](https://www.microsoft.com/showcase/video.aspx?uuid=fe1846cb-1d26-49fc-b064-57b25dcc31a0).
+- [Où rechercher votre contrat Software Assurance actif](https://www.microsoft.com/showcase/video.aspx?uuid=fe1846cb-1d26-49fc-b064-57b25dcc31a0) (à 43 secondes du début)  
 
-- Comment obtenir des autorisations pour VLSC : [https://www.microsoft.com/showcase/video.aspx?uuid=ac4ed1ca-d0a9-43cd-89fa-74ccb555dec4](https://www.microsoft.com/showcase/video.aspx?uuid=ac4ed1ca-d0a9-43cd-89fa-74ccb555dec4).  Vous pouvez déléguer des autorisations de lecture et d’écriture VLSC à d’autres personnes de votre organisation.
+- [Comment obtenir des autorisations pour VLSC](https://www.microsoft.com/showcase/video.aspx?uuid=ac4ed1ca-d0a9-43cd-89fa-74ccb555dec4). Vous pouvez déléguer des autorisations de lecture et d’écriture VLSC à d’autres personnes de votre organisation.

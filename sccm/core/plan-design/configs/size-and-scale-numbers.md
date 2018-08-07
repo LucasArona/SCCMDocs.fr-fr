@@ -10,12 +10,12 @@ ms.assetid: c5a42100-2f60-4952-b495-918025ea6559
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b995687e330fe4beca26da83ee29ddc504c38e3a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: de8116e1fec500750e429edfb48303b8c24822f4
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32343930"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39384835"
 ---
 # <a name="size-and-scale-numbers-for-system-center-configuration-manager"></a>Taille et échelle de System Center Configuration Manager en chiffres
 
@@ -150,8 +150,6 @@ Pour plus d’informations, consultez [Performances et échelle](/sccm/core/clie
 -   Un point de mise à jour logicielle installé sur le serveur de site peut prendre en charge jusqu'à 25 000 clients.   
 
 -   Un point de mise à jour logicielle distant du serveur de site peut prendre en charge jusqu’à 150 000 clients quand l’ordinateur distant répond à la configuration requise de WSUS (Windows Server Update Services) consistant à prendre en charge ce nombre de clients.  
-
--   Par défaut, Configuration Manager ne prend pas en charge la configuration de points de mise à jour logicielle comme clusters d’équilibrage de la charge réseau (NLB). Toutefois, vous pouvez utiliser le kit SDK Configuration Manager pour configurer jusqu’à quatre points de mise à jour logicielle sur un cluster NLB.  
 
 
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b8d8af88-e8ac-4deb-921b-975e2d2afd80
-ms.openlocfilehash: 5f29b7a5d82b58358bdecd5508391db219b2cedc
-ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
+ms.openlocfilehash: 54e91c729739d7bf1f0417a80a0143cc4969ed74
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36260922"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39383132"
 ---
 # <a name="manage-express-installation-files-for-windows-10-updates"></a>Gérer les fichiers d’installation rapide pour les mises à jour de Windows 10
 
@@ -58,4 +58,4 @@ Quand vous déployez les paramètres du client pour activer cette fonctionnalit�
 
 3. Sélectionnez les paramètres du client appropriés et cliquez sur **Propriétés** sur le ruban.  
 
-4. Sélectionnez le groupe **Mises à jour logicielles**. Configurez sur **Oui** le paramètre **Activer l’installation des mises à jour rapides sur les clients**. Configurer **le Port utilisé pour télécharger du contenu pour les mises à jour rapides** avec le port utilisé par l’écouteur HTTP sur le client.  
+4. Sélectionnez le groupe **Mises à jour logicielles**. Configurez sur **Oui** le paramètre **Activer l’installation des mises à jour rapides sur les clients**. Configurer **le Port utilisé pour télécharger du contenu pour les mises à jour rapides** avec le port utilisé par l’écouteur HTTP sur le client.
