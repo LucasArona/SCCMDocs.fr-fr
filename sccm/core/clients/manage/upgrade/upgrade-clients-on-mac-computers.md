@@ -60,7 +60,7 @@ Suivez les étapes générales décrites ci-dessous pour mettre à niveau le cli
 
  Si vous n’utilisez pas l’inscription Configuration Manager, mais que vous installez le certificat client indépendamment de Configuration Manager, consultez [Configurer le client mis à niveau pour qu’il utilise un certificat existant](#BKMK_UpgradingClient_MachineEnrollment).  
 
-##  <a name="BKMK_UpgradingClient_MachineEnrollment"></a> Configure the upgraded client to use an existing certificate  
+##  <a name="BKMK_UpgradingClient_MachineEnrollment"></a> Configurer le client mis à niveau pour qu’il utilise un certificat existant  
  Exécutez la procédure suivante pour empêcher l’exécution de l’Assistant Inscription ordinateur et pour configurer le client mis à niveau afin qu’il utilise un certificat client existant.  
 
 -   Dans la console Configuration Manager, créez un élément de configuration du type **Mac OS X**.  

@@ -136,7 +136,7 @@ Outre le téléchargement des nouvelles informations du catalogue Asset Intellig
 
 2.  Sous l’onglet **Accueil**, dans le groupe **Asset Intelligence**, choisissez **Importer des licences logicielles**.   
 
-4.  Sur la page **Importer** , spécifiez si vous importez un fichier MVLS (Microsoft Volume Licensing) (.xml ou .csv) ou un fichier de déclaration de licence générale (.csv). Pour plus d'informations sur la création d'un fichier de déclaration de licence générale, voir [Create a general license statement information file for import](#BKMK_CreateGeneralLicenseStatement) plus loin dans cette rubrique.  
+4.  Sur la page **Importer** , spécifiez si vous importez un fichier MVLS (Microsoft Volume Licensing) (.xml ou .csv) ou un fichier de déclaration de licence générale (.csv). Pour plus d'informations sur la création d'un fichier de déclaration de licence générale, voir [Créer un fichier d’informations de déclaration de licence générale à importer](#BKMK_CreateGeneralLicenseStatement) plus loin dans cette rubrique.  
 
     > [!WARNING]  
     >  Pour télécharger un fichier MVLS de format .csv que vous pouvez importer vers le catalogue Asset Intelligence, consultez [Centre de gestion des licences en volume Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=226547). Pour accéder à ces informations, vous devez disposer d'un compte enregistré sur le site Web. Vous devez contacter votre responsable de compte Microsoft pour plus d'informations sur la façon d'obtenir votre fichier MVLS de format .xml.  
@@ -148,7 +148,7 @@ Outre le téléchargement des nouvelles informations du catalogue Asset Intellig
 
 6. Effectuez toutes les étapes de l'Assistant.  
 
-###  <a name="BKMK_CreateGeneralLicenseStatement"></a> Create a general license statement information file for import  
+###  <a name="BKMK_CreateGeneralLicenseStatement"></a> Créer un fichier d’informations de déclaration de licence générale à importer  
  Une déclaration de licence générale peut également être importée vers le catalogue Asset Intelligence en utilisant un fichier d'importation de licence de format .csv (délimité par des virgules) créé manuellement.  
 
 > [!NOTE]  
