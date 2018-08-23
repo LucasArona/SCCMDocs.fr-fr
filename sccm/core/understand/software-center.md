@@ -5,17 +5,17 @@ description: En savoir plus sur les fonctionnalités du Centre logiciel
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 03/22/2018
+ms.date: 07/30/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.assetid: 9e68de6e-2b33-442b-b674-a382728d9529
-ms.openlocfilehash: ff40af9dd40921b63f8b8bd13ba5c287c3bf9972
-ms.sourcegitcommit: e35d07870656eadd29faacc378ecd091ff3bdcfb
+ms.openlocfilehash: bcdc6298a7b1c429888acf2b7257cec072e9b878
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848660"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39383418"
 ---
 # <a name="software-center-user-guide"></a>Guide de l’utilisateur du Centre logiciel
 
@@ -52,8 +52,7 @@ Cliquez sur l’onglet **Applications** pour rechercher et installer les applica
 
 
 ### <a name="install-multiple-applications"></a>Installer plusieurs applications 
-<!-- 1357126 -->
-Installez plusieurs applications à la fois au lieu d’attendre la fin de l’une pour lancer la suivante. Les applications ne répondent pas toutes aux critères suivants :
+<!-- 1357126 --> Installez plusieurs applications à la fois au lieu d’attendre la fin de l’une pour lancer la suivante. Les applications ne répondent pas toutes aux critères suivants :
 - L’application est visible par vous
 - L’application n’est pas encore en cours de téléchargement ou installée
 - Votre administrateur informatique ne demande pas d’approbation pour installer l’application
@@ -96,8 +95,11 @@ Cliquez sur l’onglet **État d’installation** pour afficher l’état des ap
 - **Installé**: Le Centre logiciel a déjà installé cette application sur cet ordinateur.
 - **Téléchargement** : Le Centre logiciel télécharge le logiciel à installer sur cet ordinateur.
 - **Échec** : Le Centre logiciel a rencontré une erreur en essayant d’installer le logiciel.
+- **Installation planifiée après** : affiche la date et l’heure de la prochaine fenêtre de maintenance de l’appareil qui installera les logiciels à venir. Les fenêtres de maintenance sont définies par votre administrateur informatique.<!--1358131-->
+    - L’état peut être consulté sous l’onglet **Tous** et **À venir**. 
+    - Vous pouvez effectuer l’installation avant l’heure de la fenêtre de maintenance en cliquant sur le bouton **Installer maintenant**. 
 
-
+Votre administrateur informatique peut vous permettre de voir les applications à partir du site web du catalogue d’applications. Pour voir le site web, cliquez sur **Ouvrir le site web du catalogue d’applications** en haut à droite. <!--1358214-->
 
 ## <a name="device-compliance"></a>Conformité de l’appareil
 
@@ -134,3 +136,5 @@ Spécifier la façon dont le Centre logiciel applique les modifications de logic
 - **Suspendre les activités du Centre logiciel quand mon ordinateur est en mode présentation** : Ce paramètre est activé par défaut.
 - **Stratégie de synchronisation** : Cliquez sur ce bouton quand votre administrateur informatique vous l’indique. Cet ordinateur recherche sur les serveurs toutes les nouveautés en termes d’applications, de mises à jour logicielles ou de systèmes d’exploitation.
 
+## <a name="custom-tab-in-software-center"></a>Onglet Personnalisé dans le Centre logiciel
+Votre administrateur informatique peut avoir ajouté un onglet supplémentaire dans le Centre logiciel. Cet onglet est nommé par votre administrateur et dirige vers un site web qu’il spécifie. Par exemple, vous pouvez avoir un onglet appelé « Support technique » qui conduit au site web du support technique de votre organisation. <!--1358132-->

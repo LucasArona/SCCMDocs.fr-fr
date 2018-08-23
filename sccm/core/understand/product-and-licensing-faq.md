@@ -2,7 +2,7 @@
 title: Forum aux questions sur le produit et les licences
 titleSuffix: Configuration Manager
 description: Trouvez des réponses aux questions courantes sur le produit et les licences pour System Center Configuration Manager.
-ms.date: 04/30/2018
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,21 +10,21 @@ ms.assetid: ee8d611f-aa0c-4efd-b0ad-dbd14d0a0623
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 781ffffac4367fb899c37c50492390a65244e17d
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 9e58e11bec9441f73bff021c8a6a24d150777cbe
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340305"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39385539"
 ---
 # <a name="frequently-asked-questions-for-configuration-manager-branches-and-licensing"></a>Foire aux questions sur les branches et la gestion des licences de Configuration Manager
 
  *S’applique à : System Center Configuration Manager (Current Branch), System Center Configuration Manager (Long-Term Servicing Branch)*
 
 ## <a name="summary"></a>Résumé
-Cette FAQ répond à des questions courantes sur la gestion des licences des versions System Center Configuration Manager Current Branch et Long Term Servicing Branch (LTSB), disponibles par le biais des programmes de gestion des licences en volume Microsoft. Cet article n’a qu’une fonction informative. Il ne remplace ni n’annule aucune documentation sur la gestion des licences de System Center Configuration Manager. Pour plus d’informations, consultez la gestion des licences des produits [System Center 2016](https://www.microsoft.com/en-us/licensing/product-licensing/system-center-2016.aspx)<!-- this link doesn't work without some language code --> et les [Conditions des produits](http://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53). Les Conditions des Produits décrivent les conditions d’utilisation de tous les produits Microsoft dans la gestion des licences en volume.
+Cette FAQ répond à des questions courantes sur la gestion des licences des versions System Center Configuration Manager Current Branch et Long Term Servicing Branch (LTSB), disponibles par le biais des programmes de gestion des licences en volume Microsoft. Cet article n’a qu’une fonction informative. Il ne remplace ni n’annule aucune documentation sur la gestion des licences de System Center Configuration Manager. Pour plus d’informations, consultez la gestion des licences des produits [System Center 2016](https://www.microsoft.com/en-us/licensing/product-licensing/system-center-2016.aspx)<!-- this link doesn't work without some language code --> et les [Conditions des produits](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53). Les Conditions des Produits décrivent les conditions d’utilisation de tous les produits Microsoft dans la gestion des licences en volume.
 
-Pour plus d’informations sur les fonctionnalités de System Center Configuration Manager, consultez la [page produit](https://www.microsoft.com/cloud-platform/system-center-configuration-manager).
+Pour plus d’informations sur les fonctionnalités de Configuration Manager, consultez la [page produit](https://www.microsoft.com/cloud-platform/system-center-configuration-manager).
 
 
 
@@ -66,6 +66,8 @@ EMS accorde les droits d’utilisation de System Center Configuration Manager (C
 Si votre SA a expiré après le 1er octobre 2016, selon le programme dans le cadre duquel vous avez acquis la L&SA, vous pouvez conserver une licence perpétuelle pour utiliser LTSB (Long Term Servicing Branch). Si vous utilisez la version Current Branch, vous devez la désinstaller, puis installer LTSB. Il n’existe aucune prise en charge de la migration ni de la conversion vers LTSB à partir de Current Branch.
 
 Si votre SA a expiré avant le 1er octobre 2016 et que vous avez conservé une licence perpétuelle pour System Center Configuration Manager, votre seule option pour continuer à l’utiliser consiste à installer et utiliser System Center 2012 R2 Configuration Manager et ses Service Packs disponibles. Vous deviez désinstaller Current Branch lors de l’expiration de votre SA et réinstaller cette version antérieure du produit. Il n’existe aucune prise en charge de la migration ni du passage à une version antérieure depuis System Center Configuration Manager Current Branch vers des versions précédentes de Configuration Manager.   
+
+Si vous utilisez System Center Endpoint Protection, vous devez le désinstaller si votre SA expire. System Center Endpoint Protection n’offre aucun droit *L (licence)* ni aucun droit perpétuel.<!--506238--> 
 
 
 ### <a name="bkmk_owncb"></a> Suis-je « propriétaire » de Current Branch ?   

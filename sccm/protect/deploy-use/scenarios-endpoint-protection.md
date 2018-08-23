@@ -1,8 +1,8 @@
 ---
-title: Scénario - Endpoint Protection protège les ordinateurs contre les programmes malveillants
+title: Protéger les ordinateurs contre les programmes malveillants
 titleSuffix: Configuration Manager
 description: Découvrez comment implémenter Endpoint Protection dans Configuration Manager pour protéger les ordinateurs contre les attaques de programmes malveillants.
-ms.date: 03/22/2018
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,22 +10,31 @@ ms.assetid: 539c7a89-3c03-4571-9cb4-02d455064eeb
 author: aczechowski
 ms.author: aaroncz
 manager: doubeby
-ms.openlocfilehash: 40fe2c9e16c2828b2c575e8401a80f3cf2eac969
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 7d4d5d9479029af180120edc3daba3ff13a7e4d0
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32352564"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39383865"
 ---
-# <a name="example-scenario-using-system-center-endpoint-protection-to-protect-computers-from-malware-in-system-center-configuration-manager"></a>Exemple de scénario : utilisation de System Center Endpoint Protection pour protéger des ordinateurs contre les programmes malveillants dans System Center Configuration Manager
+# <a name="example-scenario-use-endpoint-protection-to-protect-computers-from-malware"></a>Exemple de scénario : utiliser Endpoint Protection pour protéger les ordinateurs contre les programmes malveillants
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
 Cet article fournit un exemple de scénario sur la manière d’implémenter Endpoint Protection dans Configuration Manager pour protéger les ordinateurs d’une organisation contre les attaques de programmes malveillants.  
 
- John est l’administrateur de Configuration Manager à la Woodgrove Bank. La banque utilise actuellement System Center Endpoint Protection pour protéger les ordinateurs contre les attaques de programmes malveillants. Elle utilise également la stratégie de groupe Windows pour s’assurer que le Pare-feu Windows est activé sur tous les ordinateurs de l’entreprise et que les utilisateurs sont avertis quand il bloque un nouveau programme.  
 
- John est chargé de mettre à niveau le logiciel anti-programme malveillant de Woodgrove Bank vers System Center Endpoint Protection pour que la banque puisse tirer parti des fonctionnalités les plus récentes contre les programmes malveillants et qu’elle puisse gérer de manière centralisée la solution anti-programme malveillant à partir de la console Configuration Manager. Les impératifs de cette implémentation sont les suivants :  
+
+## <a name="scenario-overview"></a>Vue d’ensemble du scénario
+
+John est l’administrateur de Configuration Manager à la Woodgrove Bank. La banque utilise actuellement System Center Endpoint Protection pour protéger les ordinateurs contre les attaques de programmes malveillants. Elle utilise également la stratégie de groupe Windows pour s’assurer que le Pare-feu Windows est activé sur tous les ordinateurs de l’entreprise et que les utilisateurs sont avertis quand il bloque un nouveau programme.  
+
+John est chargé de mettre à niveau le logiciel anti-programme malveillant de Woodgrove Bank vers System Center Endpoint Protection pour que la banque puisse tirer parti des fonctionnalités les plus récentes contre les programmes malveillants et qu’elle puisse gérer de manière centralisée la solution anti-programme malveillant à partir de la console Configuration Manager. 
+
+
+## <a name="business-requirements"></a>Besoins de l'entreprise
+
+Les impératifs de cette implémentation sont les suivants :  
 
 -   Utiliser Configuration Manager pour gérer les paramètres du Pare-feu Windows qui sont gérés actuellement par la stratégie de groupe.  
 
@@ -43,9 +52,9 @@ Cet article fournit un exemple de scénario sur la manière d’implémenter End
 
     -   Plus de 3 différents types de programmes malveillants sont détectés durant une période de 24 heures.  
 
--   Désinstaller la solution anti-programme malveillant existante.  
-
  John effectue ensuite les étapes suivantes pour implémenter Endpoint Protection :  
+
+
 
 ##  <a name="steps-to-implement-endpoint-protection"></a>Étapes pour implémenter Endpoint Protection  
 
@@ -63,7 +72,7 @@ Cet article fournit un exemple de scénario sur la manière d’implémenter End
 |John crée une stratégie de logiciel anti-programme malveillant personnalisée nommée **Stratégie de serveur Woodgrove Bank**. Il ajoute uniquement les paramètres pour **Analyses planifiées** et apporte les modifications suivantes :<br /><br /> **Type d’analyse**:  **Complète**<br /><br /> **Jour d’analyse**:  **Samedi**<br /><br /> **Heure de l’analyse**: **01h00**<br /><br /> **Exécuter une analyse rapide quotidienne sur les ordinateurs clients**:  **Non**.|Voir [Comment créer et déployer des stratégies anti-programme malveillant pour Endpoint Protection dans System Center Configuration Manager](endpoint-antimalware-policies.md).|  
 |John déploie la stratégie de logiciel anti-programme malveillant personnalisée **Stratégie de serveur Woodgrove Bank** dans le regroupement **Serveurs Woodgrove Bank** .|Consultez « Pour déployer une stratégie de logiciel anti-programme malveillant sur les ordinateurs clients » dans l’article [Comment créer et déployer des stratégies anti-programme malveillant pour Endpoint Protection](endpoint-antimalware-policies.md).|  
 |John crée un ensemble de paramètres d’appareils clients personnalisé pour Endpoint Protection et le nomme **Paramètres Endpoint Protection Woodgrove Bank**.<br /><br /> **Remarque :** si vous ne souhaitez pas installer et activer Endpoint Protection sur tous les clients de votre hiérarchie, assurez-vous que les options **Gérer le client Endpoint Protection sur les ordinateurs clients** et **Installer le client Endpoint Protection sur les ordinateurs clients** ont toutes les deux la valeur **Non** dans les paramètres client par défaut.|Pour plus d’informations, voir [Configurer des paramètres client personnalisés pour Endpoint Protection](endpoint-protection-configure-client.md).|  
-|Il configure les paramètres suivants pour Endpoint Protection :<br /><br /> **Gérer le client Endpoint Protection sur les ordinateurs clients**:  **Oui**<br /><br /> Ce paramètre et cette valeur garantissent que tout client Endpoint Protection existant qui est installé est géré par Configuration Manager.<br /><br /> **Installer le client Endpoint Protection sur les ordinateurs clients**:  **Oui**.</br></br>**Remarque** À compter de Configuration Manager 1802, l’agent Endpoint Protection n’a pas besoin d’être installé sur les appareils Windows 10. S’il est déjà installé sur les appareils Windows 10, Configuration Manager ne le supprime pas. Les administrateurs peuvent supprimer l’agent Endpoint Protection sur les appareils Windows 10 qui exécutent au moins la version client 1802.<br /><br /> **Supprimer automatiquement le logiciel anti-programmes malveillants installé avant Endpoint Protection**:  **Oui**.<br /><br /> Ce paramètre et cette valeur sont conformes à l’exigence d’entreprise selon laquelle le logiciel anti-programme malveillant doit être supprimé avant qu’Endpoint Protection soit installé et activé.|Pour plus d’informations, voir [Configurer des paramètres client personnalisés pour Endpoint Protection](endpoint-protection-configure-client.md).|  
+|Il configure les paramètres suivants pour Endpoint Protection :<br /><br /> **Gérer le client Endpoint Protection sur les ordinateurs clients**:  **Oui**<br /><br /> Ce paramètre et cette valeur garantissent que tout client Endpoint Protection existant qui est installé est géré par Configuration Manager.<br /><br /> **Installer le client Endpoint Protection sur les ordinateurs clients**:  **Oui**.</br></br>**Remarque** À compter de Configuration Manager 1802, l’agent Endpoint Protection n’a pas besoin d’être installé sur les appareils Windows 10. S’il est déjà installé sur les appareils Windows 10, Configuration Manager ne le supprime pas. Les administrateurs peuvent supprimer l’agent Endpoint Protection sur les appareils Windows 10 qui exécutent au moins la version client 1802.|Pour plus d’informations, voir [Configurer des paramètres client personnalisés pour Endpoint Protection](endpoint-protection-configure-client.md).|  
 |John déploie les paramètres client **Paramètres Endpoint Protection Woodgrove Bank** dans le regroupement **Tous les ordinateurs protégés par Endpoint Protection**.|Voir « Configurer des paramètres client personnalisés pour Endpoint Protection » dans [Configuration de Endpoint Protection dans Configuration Manager](endpoint-antimalware-policies.md).|  
 |John utilise l’Assistant Création d’une stratégie de Pare-feu Windows pour créer une stratégie en configurant les paramètres suivants pour le profil de domaine :<br /><br /> 1) **Activer le pare-feu Windows** : **Oui**<br /><br /> 2)<br />                    **Informer l’utilisateur lorsque le Pare-feu Windows bloque un nouveau programme**: **Oui**|Voir [Guide pratique pour créer et déployer des stratégies de pare-feu Windows pour Endpoint Protection dans System Center Configuration Manager](../../protect/deploy-use/create-windows-firewall-policies.md).|  
 |John déploie la nouvelle stratégie de pare-feu dans le regroupement **Tous les ordinateurs protégés par Endpoint Protection** qu’il a créé précédemment.|Pour plus d'informations, voir « Pour déployer une stratégie de pare-feu Windows » dans [Comment créer et déployer des stratégies de pare-feu Windows pour Endpoint Protection dans System Center Configuration Manager](create-windows-firewall-policies.md).|  

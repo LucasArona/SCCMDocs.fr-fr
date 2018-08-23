@@ -1,81 +1,103 @@
 ---
 title: Déployer des mises à jour logicielles
 titleSuffix: Configuration Manager
-description: Choisissez les mises à jour logicielles dans la console Configuration Manager pour démarrer manuellement le processus de déploiement ou déployer automatiquement des mises à jour.
+description: Découvrez comment déployer manuellement ou automatiquement des mises à jour logicielles dans la console Configuration Manager.
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 02/16/2018
+ms.date: 07/30/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 04536d51-3bf7-45e5-b4af-36ceed10583d
-ms.openlocfilehash: e6a825f0d4333dc551405e38db70f8417ee2b5ce
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 3a99c2b1310d5e78699b0b9c97a5074c329bac46
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350355"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39383743"
 ---
-#  <a name="BKMK_SUMDeploy"></a> Déployer des mises à jour logicielles  
+# <a name="deploy-software-updates"></a>Déployer des mises à jour logicielles  
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
-La phase de déploiement de mises à jour logicielles consiste à déployer les mises à jour logicielles. Quelle que soit le mode de déploiement utilisé, les mises à jour de logiciels sont généralement :
-- ajoutées à un groupe de mises à jour de logiciels ;
-- téléchargées sur des points de distribution.
-- Le groupe de mises à jour est déployé auprès des clients. Une fois le déploiement créé, une stratégie associée de mise à jour de logiciel est envoyée aux ordinateurs clients. Les fichiers de contenu des mises à jour de logiciels sont téléchargés dans le cache local des ordinateurs clients, à partir d’un point de distribution. Les mises à jour de logiciels sont alors accessibles aux clients, qui peuvent les installer. Les clients sur Internet téléchargent le contenu auprès de Microsoft Update.  
+La phase de déploiement de mises à jour logicielles consiste à déployer les mises à jour logicielles. Quelle que soit la façon dont vous déployez des mises à jour logicielles, le site :
+- Ajoute les mises à jour à un groupe de mises à jour logicielles.
+- Distribue le contenu de la mise à jour aux points de distribution.
+- Déploie le groupe de mise à jour sur les clients.  
+
+Une fois que vous avez créé le déploiement, le site envoie une stratégie de mise à jour logicielle associée aux clients ciblés. Les clients téléchargent les fichiers de contenu de mise à jour logicielle à partir d’une source de contenu dans leur cache local. Les clients sur Internet téléchargent toujours le contenu à partir du service cloud de Microsoft Update. Les mises à jour de logiciels sont alors accessibles aux clients, qui peuvent les installer.   
+
+> [!Tip]  
+>  Si aucun point de distribution n’est disponible, les client sur l’intranet peuvent aussi télécharger les mises à jour logicielles à partir de Microsoft Update.  
 
 > [!NOTE]  
->  Si aucun point de distribution n’est disponible, vous pouvez configurer un client sur l’intranet pour télécharger les mises à jour de logiciels à partir de Microsoft Update.  
+>  Contrairement à d’autres types de déploiements, les mises à jour de logiciels sont téléchargées dans le cache du client, indépendamment de son paramètre de taille maximale. Pour plus d’informations sur le paramètre de cache du client, consultez [Configurer le cache du client pour les clients Configuration Manager](/sccm/core/clients/manage/manage-clients#BKMK_ClientCache).  
 
-> [!NOTE]  
->  Contrairement à d’autres types de déploiements, les mises à jour de logiciels sont téléchargées dans le cache du client, indépendamment de son paramètre de taille maximale. Pour plus d’informations sur le paramètre de cache du client, consultez [Configure the Client Cache for Configuration Manager Clients](../../core/clients/manage/manage-clients.md#BKMK_ClientCache).  
+Si vous configurez un déploiement de mises à jour logicielles requises, celles-ci sont automatiquement installées à l'échéance prévue. L'utilisateur sur l'ordinateur client peut également planifier ou lancer l'installation des mises à jour logicielles avant l'échéance. Après la tentative d'installation, les ordinateurs clients renvoient des messages d'état au serveur de site pour indiquer si l'installation des mises à jour logicielles a réussi. Pour plus d’informations sur les déploiements de mises à jour logicielles, consultez [Software update deployment workflows](/sccm/sum/understand/software-updates-introduction#BKMK_DeploymentWorkflows).  
 
-Si vous configurez un déploiement de mises à jour logicielles requises, celles-ci sont automatiquement installées à l'échéance prévue. L'utilisateur sur l'ordinateur client peut également planifier ou lancer l'installation des mises à jour logicielles avant l'échéance. Après la tentative d'installation, les ordinateurs clients renvoient des messages d'état au serveur de site pour indiquer si l'installation des mises à jour logicielles a réussi. Pour plus d’informations sur les déploiements de mises à jour logicielles, consultez [Software update deployment workflows](../understand/software-updates-introduction.md#BKMK_DeploymentWorkflows).  
+Il existe deux principaux scénarios de déploiement des mises à jour logicielles : le déploiement manuel et le déploiement automatique. On commence en général par déployer manuellement les mises à jour logicielles afin de créer une référence pour les clients, avant de gérer les mises à jour logicielles sur les clients à l’aide d’un déploiement automatique.  
 
-Il existe deux principaux scénarios de déploiement des mises à jour logicielles : le déploiement manuel et le déploiement automatique. On commence en général par déployer manuellement les mises à jour de logiciels afin de créer une référence pour les ordinateurs clients, avant de gérer les mises à jour de logiciels sur les clients à l’aide d’un déploiement automatique.  
+
 
 ## <a name="BKMK_ManualDeployment"></a> Déployer manuellement des mises à jour logicielles
-Vous pouvez sélectionner les mises à jour logicielles dans la console Configuration Manager et démarrer manuellement le processus de déploiement. Généralement, vous utilisez cette méthode de déploiement pour mettre à jour les ordinateurs clients avec les mises à jour logicielles requises avant de créer des règles de déploiement automatique qui gèrent les déploiements de mises à jour logicielles mensuelles en continu ; vous pouvez également déployer des mises à jour logicielles requises hors bande. La liste suivante fournit le flux de travail général pour le déploiement manuel de mises à jour logicielles :  
+Sélectionnez les mises à jour logicielles dans la console Configuration Manager et démarrez manuellement le processus de déploiement. Vous utilisez généralement cette méthode de déploiement pour :  
 
-1. filtre pour les mises à jour logicielles qui utilisent des configurations spécifiques. Par exemple, vous pouvez fournir des critères qui récupèrent toutes les mises à jour logicielles critiques ou de sécurité qui sont requises sur plus de 50 ordinateurs clients.  
+- Faire en sorte que les clients soient à jour avec les mises à jour logicielles requises avant de créer des règles de déploiement automatique qui gèrent les déploiements mensuels.  
+
+- Déployer des mises à jour logicielles hors-bande.  
+
+
+La liste suivante fournit le flux de travail général pour le déploiement manuel de mises à jour logicielles :  
+
+1. filtre pour les mises à jour logicielles qui utilisent des configurations spécifiques. Par exemple, spécifiez des critères qui récupèrent toutes les mises à jour logicielles critiques ou de sécurité qui sont requises sur plus de 50 clients.  
+
 2. Créez un groupe de mises à jour logicielles contenant les mises à jour logicielles.  
+
 3. Téléchargez le contenu pour les mises à jour logicielles dans le groupe de mises à jour logicielles.  
-4. Déployez manuellement le groupe de mises à jour logicielles.
 
-Pour obtenir des instructions détaillées, consultez [Déployer manuellement des mises à jour logicielles](manually-deploy-software-updates.md).
+4. Déployez manuellement le groupe de mises à jour logicielles.  
 
->[!NOTE]
->Depuis la version 1706 de Configuration Manager, les mises à jour clients Office 365 ont été déplacées vers le nœud **Gestion des clients Office 365** >**Mises à jour Office 365**. Cela n’aura pas d’impact sur la configuration des règles de déploiement automatique ; le déploiement manuel des mises à jour Office 365, lui, en sera affecté. 
+Pour plus d’informations et pour obtenir des instructions détaillées, consultez [Déployer manuellement des mises à jour logicielles](manually-deploy-software-updates.md).
+
+> [!Tip]  
+> Quand vous déployez manuellement des mises à jour du client Office 365, elles sont disponibles dans le nœud **Mises à jour Office 365** sous **Gestion des clients Office 365** dans l’espace de travail **Bibliothèque de logiciels**.  
+
+
 
 ## <a name="automatically-deploy-software-updates"></a>Déployer automatiquement des mises à jour logicielles
-La configuration du déploiement automatique de mises à jour logicielles s’effectue à l'aide d’une règle de déploiement automatique. Il s’agit d’une méthode courante pour le déploiement des mises à jour logicielles mensuelles (généralement appelées « Patch Tuesday ») et pour la gestion des mises à jour de définitions. Quand la règle s’exécute, les mises à jour logicielles sont supprimées du groupe de mises à jour logicielles (le cas échéant), celles qui répondent aux critères spécifiés (par exemple, toutes les mises à jour logicielles publiées au cours du dernier mois) sont ajoutées à un groupe de mises à jour logicielles, les fichiers de contenu des mises à jour logicielles sont téléchargés et copiés aux points de distribution, et les mises à jour logicielles sont déployées sur les clients du regroupement cible. La liste suivante fournit le flux de travail général pour le déploiement automatique des mises à jour logicielles :  
 
-1.  Créez une règle de déploiement automatique qui spécifie les paramètres de déploiement.
-2.  Les mises à jour logicielles sont ajoutées à un groupe de mises à jour logicielles.  
-3.  Le groupe de mises à jour logicielles est déployé sur les ordinateurs clients du regroupement cible, s'il est spécifié.  
+Configurez le déploiement automatique de mises à jour logicielles à l’aide d’une règle de déploiement automatique (ADR). Cette méthode est courante pour le déploiement des mises à jour logicielles mensuelles (généralement appelées « Patch Tuesday ») et pour la gestion des mises à jour de définitions. Vous définissez les critères d’une règle ADR afin d’automatiser le processus de déploiement. La liste suivante fournit le flux de travail général pour le déploiement automatique des mises à jour logicielles :  
 
-Vous devez déterminer quelle stratégie de déploiement utiliser dans votre environnement. Par exemple, vous pouvez créer la règle de déploiement automatique et cibler un regroupement de clients test. Après avoir vérifié que les mises à jour logicielles sont installées sur le groupe test, vous pouvez ajouter un nouveau déploiement à la règle ou modifier le regroupement dans le déploiement existant et le remplacer par un regroupement cible qui comprend un ensemble plus important de clients. Les objets de mise à jour logicielle qui sont créés par les règles de déploiement automatique sont interactifs.  
+1.  Créez une règle de déploiement automatique qui spécifie les paramètres de déploiement.  
 
--   Les mises à jour logicielles qui ont été déployées à l'aide d'une règle de déploiement automatique sont déployées automatiquement sur les nouveaux clients ajoutés au regroupement cible.  
--   Les nouvelles mises à jour logicielles ajoutées à un groupe de mises à jour logicielles sont déployées automatiquement sur les clients du regroupement cible.  
--   Vous pouvez activer ou désactiver les déploiements à tout moment pour la règle de déploiement automatique.  
+2.  Le site ajoute les mises à jour logicielles à un groupe de mises à jour logicielles.  
 
-Après avoir créé une règle de déploiement automatique, vous pouvez y ajouter des déploiements supplémentaires. Cela peut vous aider à gérer la complexité liée au déploiement de différentes mises à jour vers différents regroupements. Chaque nouveau déploiement possède la gamme complète de fonctionnalités et d'expérience de surveillance de déploiement, et chaque nouveau déploiement que vous ajoutez :  
+3.  Le site déploie le groupe de mises à jour logicielles sur les clients du regroupement cible.  
 
--   utilise le package et le groupe de mise à jour créés lors de la première exécution de la règle de déploiement automatique ;  
--   peut spécifier un regroupement différent ;  
--   prend en charge des propriétés de déploiement uniques, notamment :  
+Tout d’abord, déterminez votre stratégie de déploiement automatique des mises à jour logicielles. Par exemple, créez la règle ADR pour cibler initialement un regroupement de clients test. Après avoir vérifié que le groupe test avait installé correctement les mises à jour logicielles, ajoutez un nouveau déploiement à la règle. Vous pouvez également modifier le regroupement ciblé dans le déploiement existant pour qu’il inclut un ensemble de clients plus étendu. Quand vous choisissez la stratégie à utiliser, tenez compte des comportements suivants :  
+
+- Vous pouvez modifier les propriétés des objets de mise à jour logicielle créés par la règle ADR.   
+
+- La règle ADR déploie automatiquement les mises à jour logicielles sur les clients quand vous les ajoutez au regroupement cible.  
+
+- Quand la règle ADR ou vous-même ajoutez de nouvelles mises à jour logicielles au groupe de mise à jour logicielles, le site les déploie automatiquement sur les clients du regroupement cible.  
+
+- Activez ou désactivez les déploiements à tout moment pour la règle ADR.  
+
+
+Après avoir créé une règle ADR, vous pouvez y ajouter des déploiements supplémentaires. Cela peut vous aider à gérer la complexité liée au déploiement de différentes mises à jour vers différents regroupements. Chaque nouveau déploiement possède la gamme complète de fonctionnalités et d'expérience de surveillance de déploiement.  
+
+Chaque nouveau déploiement que vous ajoutez :  
+
+-   Utilise le package et le groupe de mise à jour créés par la règle ADR lors de la première exécution.  
+-   Peut cibler un autre regroupement.  
+-   Prend en charge des propriétés de déploiement uniques, notamment :  
    -   Heure d'activation  
    -   Échéance  
-   -   Afficher ou masquer l'expérience utilisateur  
-   -   Séparer les alertes pour ce déploiement  
-
-Pour obtenir des instructions détaillées, consultez [Déployer automatiquement des mises à jour logicielles](automatically-deploy-software-updates.md).
-
-<!-- ###  <a name="BKMK_ClientCache"></a> Client cache setting  
-The Configuration Manager client downloads the content for required software updates to the local client cache soon after it receives the deployment. However, the client waits to download the content until after the **Software available time** setting for the deployment. The client does not download software updates in optional deployments (deployments that do not have a scheduled installation deadline) until the user manually starts the installation. When the configured deadline passes, the software updates client agent performs a scan to verify that the software update is still required, then the software updates client agent checks the local cache on the client computer to verify that the software update source file is still available, and then installs the software update. If the content was deleted from the client cache to make room for another deployment, the client downloads the software updates to the cache. Software updates are always downloaded to the client cache regardless of the configured maximum client cache size. For other deployments, such as applications or packages, the client only downloads content that is within the maximum cache size that you configure for the client. Cached content is not automatically deleted, but it remains in the cache for at least one day after the client used that content.  -->
+   -   Expérience utilisateur  
+   -   Sépare les alertes pour chaque déploiement.  
 
 
- <!-- For more information about the deployment process, see [Software update deployment process](../../sum/understand/software-updates-introduction.md#BKMK_DeploymentProcess).  -->
+Pour plus d’informations et pour obtenir des étapes détaillées, consultez [Déployer automatiquement des mises à jour logicielles](automatically-deploy-software-updates.md).
+

@@ -2,7 +2,7 @@
 title: Liste des rapports
 titleSuffix: Configuration Manager
 description: Passez en revue la liste des rapports fournis avec Configuration Manager. Les rapports sont répartis dans différentes catégories.
-ms.date: 03/22/2018
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b7332ed3-8003-454b-bb12-1fdf8721425c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 705247080fc99a6a9dd7dfcb773b2220283cd7a6
-ms.sourcegitcommit: e3f7bb8cec4b37a311bc86098297534cab947de8
+ms.openlocfilehash: 9f4bbb8ec680248b31b1ddd8c457e62e9be44d4b
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36759030"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39385256"
 ---
 # <a name="list-of-reports-in-system-center-configuration-manager"></a>Liste des rapports dans System Center Configuration Manager
 
@@ -705,7 +705,7 @@ Les huit rapports suivants sont répertoriés sous la catégorie **Mises à jour
 |**Compatibilité 6 - États de mises à jour logicielles spécifiques (secondaire)**|Affiche le nombre et le pourcentage d'ordinateurs dans chaque état de compatibilité pour la mise à jour logicielle spécifiée.|  
 |**Compatibilité 7 - Ordinateurs dans un état de compatibilité spécifique pour un groupe de mises à jour (secondaire)**|Affiche tous les ordinateurs d'un regroupement qui sont dans un état de compatibilité globale spécifié par rapport à un groupe de mises à jour logicielles.|  
 |**Compatibilité 8 - Ordinateurs dans un état de compatibilité spécifique pour une mise à jour (secondaire)**|Affiche tous les ordinateurs d'un regroupement qui sont dans un état de compatibilité spécifié pour une mise à jour logicielle.|  
-
+|**Conformité 9 – Conformité et intégrité globales**|Affiche les données de conformité et d’intégrité globales d’un groupe de mises à jour logicielles. (depuis la version 1806)| 
 
 
 ## <a name="software-updates---b-deployment-management"></a>Mises à jour logicielles - Gestion du déploiement B  

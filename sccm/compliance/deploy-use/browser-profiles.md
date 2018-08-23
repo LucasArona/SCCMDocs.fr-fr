@@ -5,24 +5,23 @@ description: Configurer les paramètres du navigateur web Microsoft Edge sur les
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 03/28/2018
+ms.date: 07/30/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.assetid: 76477b4d-df41-4b25-8318-7d18d46ca2c6
-ms.openlocfilehash: 81bd0a59a24cab446668911f714548581c1347df
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 2b0b553b7281015bfee89f8409fd6c5e255d753c
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32343768"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39384141"
 ---
 # <a name="configure-microsoft-edge-settings-in-system-center-configuration-manager"></a>Configurer les paramètres Microsoft Edge dans System Center Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
-<!-- 1357310 -->
-À compter de la version 1802, pour les clients qui utilisent le navigateur web [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) sur des clients Windows 10, créez une stratégie de paramètres de conformité Configuration Manager pour configurer plusieurs paramètres Microsoft Edge. 
+<!-- 1357310 -->À compter de la version 1802, pour les clients qui utilisent le navigateur web [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) sur des clients Windows 10, créez une stratégie de paramètres de conformité Configuration Manager pour configurer plusieurs paramètres Microsoft Edge. 
 
 Cette stratégie s’applique uniquement aux clients sur Windows 10, versions 1703 ou ultérieures. <!--511552-->
 
@@ -44,14 +43,23 @@ Actuellement, cette stratégie comprend les paramètres suivants :
 - **Autoriser les extensions** : pour plus d’informations, consultez la page [Stratégie de navigateur AllowExtensions](/windows/client-management/mdm/policy-csp-browser#browser-allowextensions).
 
 
+### <a name="configure-windows-defender-smartscreen-settings-for-microsoft-edge"></a>Configurer les paramètres Windows Defender SmartScreen pour Microsoft Edge
+<!--1353701--> À compter de la version 1806, cette stratégie ajoute trois paramètres pour [Windows Defender SmartScreen](/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-overview). Dans la page **Paramètres de SmartScreen**, la stratégie inclut désormais les paramètres supplémentaires suivants :
+
+- **Autoriser SmartScreen** : spécifie si Windows Defender SmartScreen est autorisé. Pour plus d’informations, consultez la [stratégie de navigateur AllowSmartScreen](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen).
+- **Les utilisateurs peuvent remplacer l’invite SmartScreen pour les sites** : spécifie si les utilisateurs peuvent ignorer les avertissements du filtre Windows Defender SmartScreen concernant les sites web potentiellement malveillants. Pour plus d’informations, consultez la [stratégie de navigateur PreventSmartScreenPromptOverride](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride).
+- **Les utilisateurs peuvent remplacer l’invite SmartScreen pour les sites** : spécifie si les utilisateurs peuvent ignorer les avertissements du filtre Windows Defender SmartScreen concernant le téléchargement de fichiers non vérifiés. Pour plus d’informations, consultez la [stratégie de navigateur PreventSmartScreenPromptOverrideForFiles](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles).
+
+
 
 ## <a name="create-the-microsoft-edge-browser-profile"></a>Créer le profil de navigateur Microsoft Edge
 
-1. Dans la console de Configuration Manager, accédez à l’espace de travail **Actifs et conformité**. Développez **Paramètres de conformité** et sélectionnez le nouveau nœud **Profils de navigateur Microsoft Edge**. Cliquez sur l’option du ruban **Créer une stratégie de navigateur Microsoft Edge**.
+1. Dans la console de Configuration Manager, accédez à l’espace de travail **Actifs et conformité**. Développez **Paramètres de conformité** et sélectionnez le nœud **Profils de navigateur Microsoft Edge**. Cliquez sur l’option du ruban **Créer un profil Microsoft Edge**.
 2. Donnez un **Nom** à la stratégie et, éventuellement, une **Description** ; ensuite, cliquez sur **Suivant**.
-3. Sur la page **Paramètres**, remplacez la valeur des paramètres à inclure dans cette stratégie par **Configuré**, puis cliquez sur **Suivant**.
-4. Sur la page **Plateformes prises en charge**, sélectionnez les architectures et les versions de système d’exploitation auxquelles s’applique cette stratégie, puis cliquez sur **Suivant**. 
-5. Effectuez toutes les étapes de l'Assistant.
+3. Dans la page **Paramètres généraux**, remplacez la valeur des paramètres à inclure dans cette stratégie par **Configuré**, puis cliquez sur **Suivant**. Vous devez configurer le paramètre **Définir le navigateur Edge par défaut** pour continuer.
+4. Dans les versions 1806 et ultérieures, configurez les paramètres de la page **Paramètres de SmartScreen**, puis cliquez sur **Suivant**. 
+5. Dans la page **Plateformes prises en charge**, sélectionnez les architectures et les versions de système d’exploitation auxquelles s’applique cette stratégie, puis cliquez sur **Suivant**. 
+6. Effectuez toutes les étapes de l'Assistant.
 
 
 
@@ -59,9 +67,9 @@ Actuellement, cette stratégie comprend les paramètres suivants :
 
 1. Sélectionnez votre stratégie et cliquez sur l’option de ruban **Déployer**.
 2. Cliquez sur **Parcourir** et sélectionnez le regroupement d'utilisateurs ou d'appareils sur lequel la stratégie sera déployée. 
-3. Sélectionnez d’autres options si nécessaire. 
-    a. Générez des alertes lorsque la stratégie n’est pas conforme. 
-    b. Définissez la planification selon laquelle le client évaluera la conformité à cette stratégie.
+3. Sélectionnez d’autres options si nécessaire.  
+     a. Générez des alertes lorsque la stratégie n’est pas conforme.  
+     b. Définissez la planification selon laquelle le client évaluera la conformité à cette stratégie. 
 4. Cliquez sur **OK** pour créer le déploiement.
 
 

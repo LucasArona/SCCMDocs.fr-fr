@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: 8c025d7c7a1dc452cb96f937801656bc4d0cadab
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: a34a50d4c7b917666316f9a4651aaebc2c001287
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32339595"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39384261"
 ---
 # <a name="prepare-windows-10-devices-for-co-management"></a>Préparer les appareils Windows 10 pour la cogestion
 Vous pouvez activer la cogestion sur les appareils Windows 10 qui sont joints à AD et à Azure AD, et inscrits auprès de Microsoft Intune et d’un client dans Configuration Manager. Pour les nouveaux appareils Windows 10 et pour ceux qui sont déjà inscrits à Intune, installez le client Configuration Manager avant de pouvoir les cogérer. Pour les appareils Windows 10 qui sont déjà des clients Configuration Manager, inscrivez-les à Intune et activez la cogestion dans la console Configuration Manager.
@@ -30,6 +30,7 @@ Les prérequis suivants doivent être mis en place avant de pouvoir activer la c
 Les prérequis généraux pour activer la cogestion sont les suivants :  
 
 - Configuration Manager version 1710 ou ultérieure
+    - À compter de Configuration Manager version 1806, vous pouvez connecter plusieurs instances Configuration Manager à un seul locataire Intune. <!--1357944-->
 - [Site intégré à Azure AD pour la gestion cloud](/sccm/core/servers/deploy/configure/azure-services-wizard)
 - Licence EMS ou Intune pour tous les utilisateurs
 - [Inscription automatique auprès d’Azure AD](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment) activée
@@ -39,6 +40,16 @@ Les prérequis généraux pour activer la cogestion sont les suivants :
    > [!Note]  
    > Si vous avez un environnement MDM hybride (Intune intégré à Configuration Manager), vous ne pouvez pas activer la cogestion. Toutefois, vous pouvez commencer la migration d’utilisateurs vers Intune autonome, puis activer leurs appareils Windows 10 associés pour la cogestion. Pour plus d’informations sur la migration vers Intune autonome, consultez [Démarrer la migration de MDM hybride vers Intune autonome](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa).
 
+### <a name="prerequisite-azure-resource-manager-roles"></a>Rôles Azure Resource Manager prérequis
+Pour plus d’informations sur les rôles Azure, consultez [Présentation des différents rôles](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles).
+|Action|Rôle nécessaire|
+|----|----|
+|Configurer une passerelle de gestion cloud|Gestionnaire d’abonnements Azure|
+|Configurer un point de distribution cloud|Gestionnaire d’abonnements Azure|
+|Créer des applications Azure Active Directory à partir de la console Configuration Manager|Administrateur général Azure Active Directory|
+|Importer des applications clientes et serveur Azure dans la console Configuration Manager| Administrateur Configuration Manager, aucun rôle Azure supplémentaire nécessaire|
+|Configurer la cogestion à l’aide de l’Assistant Cogestion| Droits de l’utilisateur Azure Active Directory, et être administrateur Configuration Manager avec des droits sur toutes les étendues 
+ 
 ### <a name="additional-prerequisites-for-devices-with-the-configuration-manager-client"></a>Prérequis supplémentaires pour les appareils dotés du client Configuration Manager
 - Windows 10, version 1709 ou ultérieure
 - [Jonction à Azure AD hybride](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup) (jonction à AD et à Azure AD)
@@ -99,7 +110,7 @@ Pour les nouveaux appareils Windows 10, vous pouvez utiliser le service Autopil
 3. Créez une application dans Intune avec le package du client Configuration Manager et déployez l’application sur les appareils Windows 10 que vous souhaitez gérer conjointement. Utilisez la [ligne de commande pour installer un client Configuration Manager](#command-line-to-install-configuration-manager-client) lorsque vous suivez les étapes permettant d’[installer des clients à partir d’Internet avec Azure AD](https://docs.microsoft.com/en-us/sccm/core/clients/deploy/deploy-clients-cmg-azure).   
 
 ## <a name="windows-10-devices-not-enrolled-in-intune-or-a-configuration-manager-client"></a>Appareils Windows 10 non inscrits à Intune ou non-clients Configuration Manager
-Pour les appareils Windows 10 qui ne sont pas inscrits à Intune ou qui n’ont pas le client Configuration Manager, vous pouvez utiliser l’inscription automatique pour les inscrire dans Intune. Ensuite, créez une application dans Intune pour déployer le client Configuration Manager.
+Pour les appareils Windows 10 qui ne sont pas inscrits dans Intune ou qui disposent du client Configuration Manager, vous pouvez utiliser l’inscription automatique pour les inscrire dans Intune. Ensuite, créez une application dans Intune pour déployer le client Configuration Manager.
 1. Configurez l’inscription automatique dans Azure AD pour que vos appareils soient inscrits automatiquement à Intune. Pour plus d’informations, consultez  [Inscrire des appareils Windows pour Microsoft Intune](https://docs.microsoft.com/intune/windows-enroll).  
 2. Créez une application dans Intune avec le package du client Configuration Manager et déployez l’application sur les appareils Windows 10 que vous souhaitez gérer conjointement. Utilisez la [ligne de commande pour installer un client Configuration Manager](#command-line-to-install-configuration-manager-client) lorsque vous suivez les étapes permettant d’[installer des clients à partir d’Internet avec Azure AD](https://docs.microsoft.com/en-us/sccm/core/clients/deploy/deploy-clients-cmg-azure).
 

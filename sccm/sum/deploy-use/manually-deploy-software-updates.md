@@ -1,314 +1,251 @@
 ---
 title: Déployer manuellement des mises à jour logicielles
 titleSuffix: Configuration Manager
-description: Pour déployer manuellement des mises à jour logicielles, sélectionnez les mises à jour dans la console Configuration Manager et déployez-les manuellement, ou ajoutez les mises à jour à un groupe de mises à jour et déployez ce groupe.
+description: Créez manuellement des déploiements logiciels pour permettre à vos clients de rester à jour avec les mises à jour logicielles nécessaires, ou bien pour déployer des mises à jour hors bande.
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 12/07/2016
+ms.date: 07/30/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 57184274-5fea-4d79-a2b4-22e08ed26daf
-ms.openlocfilehash: 3f79da78df10e97813b221ffca3df25396591fbc
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: a76582e853c2bcacdbd93723dc15b12d3b25f37c
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32352615"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39384438"
 ---
-#  <a name="BKMK_ManualDeploy"></a> Déployer manuellement des mises à jour logicielles  
+# <a name="manually-deploy-software-updates"></a>Déployer manuellement des mises à jour logicielles  
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
- Le déploiement manuel des mises à jour logicielles consiste à sélectionner des mises à jour logicielles dans la console Configuration Manager et à lancer manuellement le processus de déploiement. Ou bien, vous pouvez ajouter des mises à jour logicielles sélectionnées à un groupe de mises à jour, puis déployer manuellement ce groupe. Avant de créer des règles ADR chargées de gérer en continu les déploiements mensuels de mises à jour logicielles, il est probable que vous aurez recours à un déploiement manuel pour mettre à jour vos appareils clients avec les mises à jour logicielles requises. Vous pourrez également utiliser une méthode manuelle pour déployer des mises à jour logicielles hors bande. Si vous avez besoin d’aide pour déterminer la méthode de déploiement qui vous convient, consultez [Déployer des mises à jour logicielles](deploy-software-updates.md).
+Le déploiement manuel de mises à jour logicielles consiste à sélectionner des mises à jour logicielles dans la console Configuration Manager et à lancer manuellement le processus de déploiement. Vous pouvez aussi ajouter certaines mises à jour logicielles à un groupe de mises à jour, puis déployer manuellement ce groupe. Les déploiements manuels visent généralement à permettre à vos clients de rester à jour avec les mises à jour logicielles nécessaires. Des règles de déploiement automatique sont ensuite utilisées pour gérer les déploiements continus de mises à jour logicielles mensuelles. Cette méthode manuelle permet aussi de déployer des mises à jour logicielles hors bande. Pour identifier la méthode de déploiement la plus adaptée à votre cas, consultez [Déployer des mises à jour logicielles](deploy-software-updates.md).
 
- Les sections suivantes décrivent les étapes à effectuer pour déployer manuellement des mises à jour logicielles.  
 
-##  <a name="BKMK_1SearchCriteria"></a> Étape 1 : spécifier les critères de recherche des mises à jour logicielles  
- Des milliers de mises à jour logicielles peuvent potentiellement s’afficher dans la console Configuration Manager. La première étape du flux de travail relatif au déploiement manuel de mises à jour logicielles consiste à identifier les mises à jour logicielles que vous souhaitez déployer. Par exemple, vous pourriez indiquer des critères permettant d'extraire toutes les mises à jour logicielles requises sur plus de 50 appareils clients et dont la classification est **Sécurité** ou **Critique** .  
+
+##  <a name="BKMK_1SearchCriteria"></a> Étape 1 : Spécifier les critères de recherche des mises à jour logicielles  
+
+Selon les combinaisons de produits et les classifications que votre site synchronise, la console Configuration Manager peut potentiellement afficher des milliers de mises à jour logicielles. La première étape du flux de travail relatif au déploiement manuel de mises à jour logicielles consiste à identifier les mises à jour logicielles que vous souhaitez déployer. Par exemple, affichez toutes les mises à jour logicielles nécessaires sur plus de 50 appareils clients à l’aide d’une classification **Sécurité** ou **Critique**.  
 
 > [!IMPORTANT]  
->  Le nombre maximal de mises à jour logicielles pouvant être incluses dans un déploiement unique s'élève à 1 000.  
+>  Un même déploiement de mises à jour logicielles est limité à 1 000 mises à jour logicielles.  
 
-#### <a name="to-specify-search-criteria-for-software-updates"></a>Pour spécifier des critères de recherche pour les mises à jour logicielles  
+### <a name="process-to-specify-search-criteria-for-software-updates"></a>Processus pour spécifier des critères de recherche de mises à jour logicielles  
 
-1.  Dans la console Configuration Manager, cliquez sur **Bibliothèque de logiciels**.  
-
-2.  Dans l'espace de travail Bibliothèque de logiciels, développez **Mises à jour logicielles**et cliquez sur **Toutes les mises à jour logicielles**. Les mises à jour logicielles synchronisées sont affichées.  
+1.  Dans la console Configuration Manager, accédez à l’espace de travail **Bibliothèque de logiciels**, développez **Mises à jour logicielles**, puis cliquez sur **Toutes les mises à jour logicielles**. Ce nœud affiche toutes les mises à jour logicielles synchronisées.  
 
     > [!NOTE]  
-    >  Dans le nœud **Toutes les mises à jour logicielles**, Configuration Manager affiche uniquement les mises à jour logicielles classées selon les critères **Critique** et **Sécurité** qui ont été publiées au cours des 30 derniers jours.  
+    >  Le nœud **Toutes les mises à jour logicielles** affiche uniquement les mises à jour logicielles classées selon les critères **Critique** et **Sécurité** qui ont été publiées au cours des 30 derniers jours.  
 
-3.  Dans le volet de recherche, appliquez un filtre pour identifier les mises à jour logicielles dont vous avez besoin en suivant l'une des étapes suivantes ou les deux :  
+2.  Dans le volet de recherche, filtrez pour identifier les mises à jour logicielles dont vous avez besoin. Utilisez l’une des options suivantes (ou les deux) :  
 
-    -   Dans la zone de texte Rechercher, tapez une chaîne de recherche qui permettra de filtrer les mises à jour logicielles. Par exemple, tapez l'ID de l'article ou du bulletin d'une mise à jour logicielle spécifique, ou entrez une chaîne susceptible d'apparaître dans le titre de plusieurs mises à jour logicielles.  
+    -   Dans la zone de texte de recherche, tapez une chaîne de recherche pour filtrer les mises à jour logicielles. Par exemple, tapez l’ID de l’article ou du bulletin correspondant à une mise à jour logicielle spécifique. Ou bien, entrez une chaîne qui figure dans le titre de plusieurs mises à jour logicielles.  
 
-    -   Cliquez sur **Ajouter des critères**, sélectionnez les critères que vous souhaitez utiliser pour filtrer les mises à jour logicielles, cliquez sur **Ajouter**, puis indiquez les valeurs pour les critères.  
+    -   Cliquez sur **Ajouter des critères**, puis sélectionnez les critères en vue de filtrer les mises à jour logicielles. Cliquez sur **Ajouter**, puis indiquez les valeurs des critères.  
 
-4.  Cliquez sur **Rechercher** pour filtrer les mises à jour logicielles.  
+3.  Cliquez sur **Rechercher** pour filtrer les mises à jour logicielles.  
 
     > [!TIP]  
-    >  Vous avez la possibilité d'enregistrer les critères de filtre sur l'onglet **Rechercher** et dans le groupe **Enregistrer** .  
-
-##  <a name="BKMK_2UpdateGroup"></a> Étape 2 : créer un groupe de mises à jour logicielles contenant les mises à jour logicielles  
- Les groupes de mises à jour logicielles permettent d'organiser efficacement les mises à jour logicielles en préparation à des fins de déploiement. Vous pouvez ajouter manuellement des mises à jour logicielles à un groupe de mises à jour logicielles, ou définir une règle ADR pour que Configuration Manager ajoute automatiquement les mises à jour logicielles à un groupe de mises à jour logicielles nouveau ou existant. Pour ajouter manuellement des mises à jour logicielles à un nouveau groupe de mises à jour logicielles, procédez comme suit.  
-
-#### <a name="to-manually-add-software-updates-to-a-new-software-update-group"></a>Pour ajouter manuellement des mises à jour logicielles à un nouveau groupe de mises à jour logicielles  
-
-1.  Dans la console Configuration Manager, cliquez sur **Bibliothèque de logiciels**.  
-
-2.  Dans l'espace de travail Bibliothèque de logiciels, cliquez sur **Mises à jour logicielles**.  
-
-3.  Sélectionnez les mises à jour logicielles à ajouter au nouveau groupe de mises à jour logicielles.  
-
-4.  Dans l'onglet **Accueil** , dans le groupe **Mise à jour** , cliquez sur **Créer un groupe de mises à jour logicielles**.  
-
-5.  Spécifiez le nom du groupe de mises à jour logicielles et indiquez éventuellement une description. Utilisez un nom et une description suffisamment détaillés pour vous permettre de déterminer quel type de mises à jour logicielles se trouve dans le groupe de mises à jour logicielles. Pour continuer, cliquez sur **Créer**.  
-
-6.  Cliquez sur le nœud **Groupes de mises à jour logicielles** pour afficher le nouveau groupe de mises à jour logicielles.  
-
-7.  Sélectionnez le groupe de mises à jour logicielles et, sous l'onglet **Accueil** , dans le groupe **Mise à jour** , cliquez sur **Afficher les membres** pour afficher la liste des mises à jour logicielles incluses dans le groupe.  
-
-##  <a name="BKMK_3DownloadContent"></a> Étape 3 : télécharger le contenu pour le groupe de mises à jour logicielles  
- Éventuellement, avant de déployer les mises à jour logicielles, vous pouvez télécharger le contenu de celles qui sont incluses dans le groupe de mises à jour logicielles. Vous pouvez choisir de procéder ainsi afin de vérifier que le contenu est disponible sur les points de distribution avant de déployer les mises à jour logicielles. Cela vous permet d'éviter des problèmes inattendus de remise de contenu. Vous pouvez ignorer cette étape et le contenu sera téléchargé et copié sur les points de distribution dans le cadre du processus de déploiement. Pour télécharger le contenu pour les mises à jour logicielles dans le groupe de mises à jour logicielles, procédez comme suit.  
+    >  Enregistrez les critères de filtre fréquemment utilisés. Sur le ruban, cliquez sur l’option **Enregistrer la recherche actuelle**. Récupérez les recherches précédentes en cliquant sur **Recherches enregistrées**.   
 
 
 
-#### <a name="to-download-content-for-the-software-update-group"></a>Pour télécharger le contenu pour le groupe de mises à jour logicielles
+##  <a name="BKMK_2UpdateGroup"></a> Étape 2 : Créer un groupe de mises à jour logicielles contenant les mises à jour logicielles   
+
+Les groupes de mises à jour logicielles vous permettent d’organiser les mises à jour logicielles en vue du déploiement. Utilisez la procédure suivante pour ajouter manuellement des mises à jour logicielles à un nouveau groupe de mises à jour logicielles.  
+
+### <a name="process-to-manually-add-software-updates-to-a-new-software-update-group"></a>Processus pour ajouter manuellement des mises à jour logicielles à un nouveau groupe de mises à jour logicielles  
+
+1.  Dans la console Configuration Manager, accédez à l’espace de travail **Bibliothèque de logiciels**, puis sélectionnez **Mises à jour logicielles**. Sélectionnez les mises à jour logicielles souhaitées.  
+
+2.  Cliquez sur **Créer un groupe de mises à jour logicielles** dans le ruban.  
+
+3.  Spécifiez le nom du groupe de mises à jour logicielles et indiquez éventuellement une description. Utilisez un nom et une description suffisamment révélateurs du type des mises à jour contenues dans le groupe de mises à jour logicielles. Cliquez sur **Créer**.  
+
+4.  Sélectionnez le nœud **Groupes de mises à jour logicielles**, puis sélectionnez le nouveau groupe de mises à jour logicielles. Pour afficher la liste des mises à jour dans le groupe, cliquez sur **Afficher les membres** dans le ruban.  
+
+
+
+##  <a name="BKMK_3DownloadContent"></a> Étape 3 : Télécharger le contenu pour le groupe de mises à jour logicielles  
+
+Avant de déployer les mises à jour logicielles, téléchargez le contenu des mises à jour logicielles dans le groupe de mises à jour logicielles. Cette étape vous permet de vérifier que le contenu est disponible sur les points de distribution avant de déployer les mises à jour logicielles. Par ailleurs, elle vous évite des problèmes inattendus liés à la distribution du contenu. Si vous ignorez cette étape, pendant le déploiement, le site télécharge le contenu et le distribue aux points de distribution. Pour télécharger le contenu pour les mises à jour logicielles dans le groupe de mises à jour logicielles, procédez comme suit.  
+
+
+### <a name="process-to-download-content-for-the-software-update-group"></a>Processus pour télécharger le contenu pour le groupe de mises à jour logicielles
 [!INCLUDE[downloadupdates](..\includes\downloadupdates.md)]
-<!--- 1.  In the Configuration Manager console, click **Software Library**.  
 
-2.  In the Software Library workspace, expand **Software Updates**, and click **Software Update Groups**.  
 
-3.  Select the software update group for which you want to download content.  
+### <a name="process-to-monitor-content-status"></a>Processus pour surveiller l’état du contenu
+1. Pour surveiller l’état du contenu des mises à jour logicielles, accédez à l’espace de travail **Surveillance** dans la console Configuration Manager. Développez **État de distribution**, puis sélectionnez le nœud **État du contenu**.  
 
-4.  On the **Home** tab, in the **Update Group** group, click **Download**. The **Download Software Updates Wizard** opens.  
+2. Sélectionnez le package de mises à jour logicielles que vous avez précédemment identifié pour télécharger les mises à jour logicielles dans le groupe de mises à jour logicielles.  
 
-5.  On the **Deployment Package** page, configure the following settings:  
+3. Cliquez sur **Afficher l’état** dans le ruban.  
 
-    1.  **Select deployment package**: Select this setting to use an existing deployment package for the software updates in the deployment.  
 
-        > [!NOTE]  
-        >  Software updates that have already been downloaded to the selected deployment package are not downloaded again.  
 
-    2.  **Create a new deployment package**: Select this setting to create a new deployment package for the software updates in the deployment. Configure the following settings:  
+##  <a name="BKMK_4DeployUpdateGroup"></a> Étape 4 : Déployer le groupe de mises à jour logicielles  
 
-        -   **Name**: Specifies the name of the deployment package. This must be a unique name that describes the package content. It is limited to 50 characters.  
+Après avoir identifié les mises à jour logicielles que vous souhaitez déployer et après les avoir ajoutées à un groupe de mises à jour logicielles, déployez manuellement le groupe de mises à jour logicielles.  
 
-        -   **Description**: Specifies the description of the deployment package. The package description provides information about the package contents and is limited to 127 characters.  
+### <a name="process-to-manually-deploy-the-software-updates-in-a-software-update-group"></a>Processus pour déployer manuellement les mises à jour logicielles dans un groupe de mises à jour logicielles  
 
-        -   **Package source**: Specifies the location of the software update source files.  Type a network path for the source location, for example, **\\\server\sharename\path**, or click **Browse** to find the network location. You must create the shared folder for the deployment package source files before you proceed to the next page.  
+1.  Dans la console Configuration Manager, accédez à l’espace de travail **Bibliothèque de logiciels**, développez **Mises à jour logicielles**, puis sélectionnez le nœud **Groupes de mises à jour logicielles**.  
 
-            > [!NOTE]  
-            >  The deployment package source location that you specify cannot be used by another software deployment package.  
+2.  Sélectionnez le groupe de mises à jour logicielles que vous souhaitez déployer. Cliquez sur **Déployer** dans le ruban.   
 
-            > [!IMPORTANT]  
-            >  The SMS Provider computer account and the user that is running the wizard to download the software updates must both have **Write** NTFS permissions on the download location. You should carefully restrict access to the download location in order to reduce the risk of attackers tampering with the software update source files.  
+3.  Dans la page **Général** de l’Assistant Déploiement des mises à jour logicielles, configurez les paramètres suivants :  
 
-            > [!IMPORTANT]  
-            >  You can change the package source location in the deployment package properties after Configuration Manager creates the deployment package. But if you do so, you must first copy the content from the original package source to the new package source location.  
+    -   **Nom** : indiquez le nom du déploiement. Le déploiement doit posséder un nom unique qui décrit son objectif et le distingue des autres déploiements dans le site. Ce champ de nom est limité à 256 caractères. Par défaut, Configuration Manager attribue automatiquement un nom au déploiement au format suivant : `Microsoft Software Updates - YYYY-MM-DD <time>`  
 
-     Click **Next**.  
+    -   **Description** : spécifiez la description du déploiement. La description est facultative, mais elle fournit une vue d’ensemble du déploiement. Ajoutez toute autre information pertinente permettant de l’identifier et de le distinguer des autres dans le site. Le champ de description est limité à 256 caractères et est vide par défaut.  
 
-6.  On the Distribution Points page, select the distribution points or distribution point groups that are used to host the software update files defined in the new deployment package, and then click **Next**.  
+    -   **Mise à jour logicielle/Groupe de mises à jour logicielles** : vérifiez que le groupe de mises à jour logicielles ou la mise à jour logicielle qui s’affiche est correct.  
 
-7.  On the Distribution Settings page, specify the following settings:  
+    -   **Sélectionner un modèle de déploiement** : indiquez si un modèle de déploiement enregistré précédemment doit être appliqué. Configurez un modèle de déploiement pour enregistrer des propriétés de déploiement de mises à jour logicielles courantes. Vous appliquerez ensuite ce modèle au moment de déployer ultérieurement des mises à jour logicielles. Ces modèles font gagner du temps et assurent une cohérence entre les déploiements similaires.  
 
-    -   **Distribution priority**: Use this setting to specify the distribution priority for the deployment package. The distribution priority applies when the deployment package is sent to distribution points at child sites. Distribution packages are sent in priority order: **High**, **Medium**, or **Low**. Packages with identical priorities are sent in the order in which they were created. If there is no backlog, the package will process immediately regardless of its priority. By default, packages are sent using **Medium** priority.  
+    -   **Regroupement** : spécifiez le regroupement pour le déploiement. Les appareils contenus dans le regroupement reçoivent les mises à jour logicielles de ce déploiement.  
 
-    -   **Distribute the content for this package to preferred distribution points**: Use this setting to enable on-demand content distribution to preferred distribution points. When this setting is enabled, the management point creates a trigger for the distribution manager to distribute the content to all preferred distribution points when a client requests the content for the package and the content is not available on any preferred distribution points. For more information about preferred distribution points and on-demand content, see [Content source location scenarios](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#bkmk_CSLscenarios).  
+4.  Dans la page **Paramètres de déploiement**, configurez les paramètres suivants :  
 
-    -   **Prestaged distribution point settings**: Use this setting to specify how you want to distribute content to prestaged distribution points. Choose one of the following options:  
-
-        -   **Automatically download content when packages are assigned to distribution points**: Use this setting to ignore the prestage settings and distribute content to the distribution point.  
-
-        -   **Download only content changes to the distribution point**: Use this setting to prestage the initial content to the distribution point, and then distribute content changes to the distribution point.  
-
-        -   **Manually copy the content in this package to the distribution point**: Use this setting to always prestage content on the distribution point. This is the default setting.  
-
-         For more information about prestaging content to distribution points, see [Use Prestaged content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_prestage).  
-
-     Click **Next**.  
-
-8.  On the Download Location page, specify location that Configuration Manager will use to download the software update source files. As needed, use the following options:  
-
-    -   **Download software updates from the Internet**: Select this setting to download the software updates from the location on the Internet. This is the default setting.  
-
-    -   **Download software updates from a location on the local network**: Select this setting to download software updates from a local folder or shared network folder. Use this setting when the computer running the wizard does not have Internet access.  
-
-        > [!NOTE]  
-        >  When you use this setting, download the software updates from any computer with Internet access, and then copy the software updates to a location on the local network that is accessible from the computer running the wizard.  
-
-     Click **Next**.  
-
-9. On the Language Selection page, specify the languages for which the selected software updates are to be downloaded, and then click **Next**. Configuration Manager downloads the software updates only if they are available in the selected languages. Software updates that are not language-specific are always downloaded.  
-
-10. On the Summary page, verify the settings that you selected in the wizard, and then click **Next** to download the software updates.  
-
-11. On the Completion page, verify that the software updates were successfully downloaded, and then click **Close**. --->
-
-#### <a name="to-monitor-content-status"></a>Pour surveiller l'état du contenu
-1. Pour surveiller l’état du contenu des mises à jour logicielles, cliquez sur **Surveillance** dans la console Configuration Manager.  
-
-2. Dans l'espace de travail Surveillance, développez **État de distribution**, puis cliquez sur **État du contenu**.  
-
-3. Sélectionnez le package de mises à jour logicielles que vous avez précédemment identifié pour télécharger les mises à jour logicielles dans le groupe de mises à jour logicielles.  
-
-4. Sous l'onglet **Accueil** , dans le groupe **Contenu** , cliquez sur **Afficher l'état**.  
-
-##  <a name="BKMK_4DeployUpdateGroup"></a> Étape 4 : déployer le groupe de mises à jour logicielles  
- Après avoir déterminé quelles mises à jour logicielles vous voulez déployer et après avoir ajouté ces mises à jour logicielles à un groupe de mises à jour logicielles, vous pouvez déployer manuellement les mises à jour logicielles dans le groupe de mises à jour logicielles. Pour déployer manuellement les mises à jour logicielles dans un groupe de mises à jour logicielles, procédez comme suit.  
-
-#### <a name="to-manually-deploy-the-software-updates-in-a-software-update-group"></a>Pour déployer manuellement les mises à jour logicielles dans un groupe de mises à jour logicielles  
-
-1.  Dans la console Configuration Manager, cliquez sur **Bibliothèque de logiciels**.  
-
-2.  Dans l'espace de travail Bibliothèque de logiciels, développez **Mises à jour logicielles**et cliquez sur **Groupes de mises à jour logicielles**.  
-
-3.  Sélectionnez le groupe de mises à jour logicielles que vous souhaitez déployer.  
-
-4.  Dans l'onglet **Accueil** , dans le groupe **Déploiement** , cliquez sur **Déployer**. L' **Assistant Déploiement des mises à jour logicielles** s'ouvre.  
-
-5.  Sur la page Général, configurez les paramètres suivants :  
-
-    -   **Nom**: indiquez le nom du déploiement. Le déploiement doit porter un nom unique qui décrit son objectif et le différencie des autres déploiements dans le site Configuration Manager. Par défaut, Configuration Manager fournit automatiquement un nom pour le déploiement au format suivant : **Mises à jour logicielles Microsoft -** <*date*><*heure*>  
-
-    -   **Description :** spécifiez la description du déploiement. La description fournit une vue d’ensemble du déploiement et toute autre information pertinente permettant d’identifier et de différencier le déploiement des autres déploiements dans le site Configuration Manager. Le champ de description facultatif est limité à 256 caractères et est vierge par défaut.  
-
-    -   **Mise à jour logicielle/Groupe de mises à jour logicielles**: vérifiez que le groupe de mises à jour logicielles ou la mise à jour logicielle qui s’affiche est correct.  
-
-    -   **Sélectionner un modèle de déploiement**: indiquez si un modèle de déploiement enregistré précédemment doit être appliqué. Vous pouvez configurer un modèle de déploiement de sorte qu'il contienne plusieurs propriétés de déploiement de mises à jour logicielles communes, puis l'utiliser lorsque vous déployez les mises à jour logicielles ultérieures afin d'assurer une cohérence entre des déploiements semblables et de gagner du temps.  
-
-    -   **Regroupement**: indique le regroupement du déploiement, le cas échéant. Les membres du regroupement reçoivent les mises à jour logicielles définies dans le déploiement.  
-
-6.  Sur la page Paramètres de déploiement, configurez les paramètres suivants :  
-
-    -   **Type de déploiement**: indique le type de déploiement pour le déploiement des mises à jour logicielles. Sélectionnez **Obligatoire** pour créer un déploiement de mises à jour logicielles obligatoire où les mises à jour logicielles sont installées automatiquement sur les clients selon une échéance d'installation configurée. Sélectionnez **Disponible** pour créer un déploiement de mises à jour logicielles facultatives que les utilisateurs peuvent installer à partir du Centre logiciel.  
+    -   **Type de déploiement**: indique le type de déploiement pour le déploiement des mises à jour logicielles.  
 
         > [!IMPORTANT]  
-        >  Après avoir créé le déploiement de mises à jour logicielles, vous ne pourrez pas modifier ultérieurement le type de déploiement.  
+        >  Une fois que le déploiement de mises à jour logicielles est créé, vous ne pouvez plus modifier le type de déploiement.  
+
+         - Sélectionnez **Requis** pour créer un déploiement de mises à jour logicielles obligatoire. Les mises à jour logicielles sont automatiquement installées sur les clients avant l’échéance d’installation que vous configurez.  
+
+         - Sélectionnez **Disponible** pour créer un déploiement de mises à jour logicielles facultatif. Les utilisateurs peuvent installer ce déploiement à partir du Centre logiciel.  
 
         > [!NOTE]  
-        >  Un groupe de mises à jour logicielles déployé avec l’option **Obligatoire** est téléchargé en arrière-plan et respecte les paramètres BITS, s’ils sont configurés.  
-        > Toutefois, les groupes de mises à jour logicielles déployés avec l’option **Disponible** sont téléchargés au premier plan et ignore les paramètres BITS.  
+        >  Quand vous déployez un groupe de mises à jour logicielles avec l’option **Requis**, les clients téléchargent le contenu en arrière-plan et respectent les paramètres BITS éventuellement configurés.  
+        > 
+        > Pour les groupes de mises à jour logicielles déployés avec l’option **Disponible**, les clients téléchargent le contenu au premier plan et ignorent les paramètres BITS.  
 
-    -   **Utiliser Wake-on-LAN pour réveiller les clients pour les déploiements requis**: indiquez si l’éveil par appel réseau (Wake On LAN) doit être activé à l’échéance pour envoyer des paquets de mise en éveil aux ordinateurs qui nécessitent une ou plusieurs mises à jour logicielles du déploiement. Tous les ordinateurs en mode veille à l'échéance de l'installation sont mis en éveil afin que l'installation des mises à jour logicielles puisse démarrer. Les clients en mode veille qui ne nécessitent pas les mises à jour logicielles incluses dans le déploiement ne sont pas démarrés. Par défaut, ce paramètre n'est pas activé et il est disponible uniquement lorsque le **Type de déploiement** est défini sur **Obligatoire**.  
+    -   **Utiliser Wake On LAN pour réveiller les clients pour les déploiements requis** : indique si Wake On LAN est activé à l’échéance. Wake On LAN envoie des paquets de mise en éveil aux ordinateurs qui nécessitent une ou plusieurs mises à jour logicielles incluses dans le déploiement. Le site réveille tous les ordinateurs qui sont en mode veille à l’heure d’échéance de l’installation pour que l’installation puisse démarrer. Les clients en mode veille qui n’ont besoin d’aucune des mises à jour logicielle incluses dans le déploiement ne sont pas démarrés. Par défaut, ce paramètre n’est pas activé. Il est disponible uniquement pour les déploiements **Requis**. Avant d’utiliser cette option, configurez les ordinateurs et les réseaux pour Wake On LAN. Pour plus d’informations, consultez [Guide pratique pour configurer Wake On LAN](/sccm/core/clients/deploy/configure-wake-on-lan).  
 
-        > [!WARNING]  
-        >  Pour que vous puissiez utiliser cette option, les ordinateurs et les réseaux doivent être configurés pour utiliser l'éveil par appel réseau.  
+    -   **Niveau de détail** : indiquez le niveau de détail des messages d’état que les clients communiquent au site.  
 
-    -   **Niveau de détail**: indiquez le niveau de détail pour les messages d’état qui sont signalés par les ordinateurs clients.  
+5.  Dans la page **Planification**, configurez les paramètres suivants :  
 
-7.  Sur la page Planification, configurez les paramètres suivants :  
+    -   **Calendrier d’évaluation** : spécifiez le moment où Configuration Manager évalue le temps de mise à disposition et les heures d’échéance de l’installation. Choisissez d’utiliser le temps universel coordonné (UTC) ou l’heure locale de l’ordinateur qui exécute la console Configuration Manager.  
 
-    -   **Calendrier d’évaluation** : indiquez si la durée disponible et la date d’échéance de l’installation sont évaluées à l’heure UTC ou à l’heure locale de l’ordinateur exécutant la console Configuration Manager.  
+        - Quand vous sélectionnez ici **Heure locale du client**, puis **Dès que possible** pour le **Temps disponible du logiciel**, l’heure actuelle de l’ordinateur exécutant la console Configuration Manager est utilisée pour évaluer à quel moment les mises à jour sont disponibles. Ce comportement est le même avec l’**Échéance de l’installation** et l’heure à laquelle les mises à jour sont installées sur un client. Si le client se trouve dans un autre fuseau horaire, ces actions se produisent quand l’heure du client correspond à l’heure de l’évaluation.  
 
-        > [!NOTE]  
-        >  Si vous sélectionnez l’heure locale, puis **Dès que possible** pour le **Temps disponible du logiciel** ou **Échéance d’installation**, l’heure actuelle sur l’ordinateur exécutant la console Configuration Manager est utilisée pour évaluer quand les mises à jour sont disponibles ou quand elles sont installées sur un client. Si le client est dans un autre fuseau horaire, ces actions se produisent quand l’heure du client atteint l’heure de l’évaluation.  
+    -   **Temps disponible du logiciel**: sélectionnez l’un des paramètres suivants pour spécifier le moment où les mises à jour logicielles sont disponibles pour les clients :  
 
-    -   **Temps disponible du logiciel**: sélectionnez l’un des paramètres suivants pour spécifier le moment où les mises à jour logicielles seront disponibles pour les clients :  
+        -   **Dès que possible** : permet aux clients d’accéder dès que possible aux mises à jour logicielles incluses dans le déploiement. Quand vous créez le déploiement avec ce paramètre sélectionné, Configuration Manager met à jour la stratégie client. Ensuite, au prochain cycle d’interrogation de la stratégie client, les clients prennent connaissance du déploiement et les mises à jour sont disponibles pour l’installation.  
 
-        -   **Dès que possible**: sélectionnez ce paramètre pour permettre aux clients d’accéder dès que possible aux mises à jour logicielles incluses dans le déploiement. Lors de la création du déploiement, la stratégie client est mise à jour, les clients sont informés du déploiement au prochain cycle d'interrogation de leur stratégie client, puis les mises à jour logicielles sont mises à disposition en vue de leur installation.  
+        -   **Heure spécifique** : permet aux clients d’accéder aux mises à jour logicielles incluses dans le déploiement à une date et une heure spécifiques. Quand vous créez le déploiement avec ce paramètre activé, Configuration Manager met à jour la stratégie client. Au prochain cycle d’interrogation de la stratégie client, les clients prennent connaissance du déploiement. Cependant, les mises à jour logicielles incluses dans le déploiement ne sont pas disponibles pour l’installation avant la date et l’heure configurées.  
 
-        -   **Heure spécifique**: sélectionnez ce paramètre pour permettre aux clients d’accéder aux mises à jour logicielles incluses dans le déploiement à une date et une heure spécifiques. Lorsque le déploiement est créé, la stratégie client est mise à jour et les clients sont informés au prochain cycle d'interrogation de leur stratégie client. Toutefois, les mises à jour logicielles incluses dans le déploiement ne sont pas disponibles à l'installation avant la date et l'heure spécifiées.  
-
-    -   **Échéance d’installation**: sélectionnez l’un des paramètres suivants pour spécifier l’échéance d’installation des mises à jour logicielles incluses dans le déploiement.  
-
-        > [!NOTE]  
-        >  Vous pouvez configurer le paramètre relatif à l'échéance d'installation uniquement lorsque **Type de déploiement** est défini sur **Obligatoire** sur la page Paramètres de déploiement.  
+    -   **Échéance de l’installation** : ces options son disponibles uniquement pour les déploiements **Requis**. Sélectionnez l’un des paramètres suivants pour spécifier l’échéance d’installation des mises à jour logicielles incluses dans le déploiement.  
 
         -   **Dès que possible**: sélectionnez ce paramètre pour installer automatiquement les mises à jour logicielles incluses dans le déploiement dès que possible.  
 
         -   **Heure spécifique**: sélectionnez ce paramètre pour installer automatiquement les mises à jour logicielles incluses dans le déploiement à une date et une heure spécifiques.  
 
-        > [!NOTE]  
-        >  L'heure d'échéance de l'installation réelle est l'heure spécifique que vous configurez plus un laps de temps aléatoire pouvant atteindre 2 heures. Elle permet de réduire l'impact lié à l'installation simultanée, par tous les ordinateurs clients du regroupement de destination, des mises à jour logicielles incluses dans le déploiement.  
-        >   
-        >  Vous pouvez configurer le paramètre client **Agent ordinateur** , **Désactiver la randomisation des échéances** , pour désactiver le délai de randomisation de l’installation des mises à jour logicielles requises. Pour plus d’informations, voir [Computer Agent](../../core/clients/deploy/about-client-settings.md#computer-agent).  
+            - L’heure d’échéance de l’installation réelle est l’heure d'échéance affichée plus un laps de temps aléatoire pouvant atteindre deux heures. La randomisation réduit l’impact potentiel lié à l’installation simultanée, par les clients du regroupement, des mises à jour incluses dans le déploiement.   
 
-8.  Sur la page Expérience utilisateur, configurez les paramètres suivants :  
+            - Pour désactiver le délai de randomisation de l’installation pour les mises à jour logicielles requises, configurez le paramètre client sur **Désactiver la randomisation des échéances** dans le groupe **Agent ordinateur**. Pour plus d’informations, consultez [Paramètres client de l’Agent ordinateur](/sccm/core/clients/deploy/about-client-settings#computer-agent).  
 
-    -   **Notifications à l’utilisateur**: indiquez si vous souhaitez afficher les notifications des mises à jour logicielles dans le Centre logiciel sur l’ordinateur client selon la valeur **Temps disponible du logiciel** configuré et si les notifications à l’utilisateur doivent s’afficher sur les ordinateurs clients. Lorsque **Type de déploiement** est défini sur **Disponible** sur la page Paramètres de déploiement, vous ne pouvez pas sélectionner **Masquer dans le Centre logiciel et toutes les notifications**.  
+    -  **Différer la mise en œuvre de ce déploiement selon les préférences de l’utilisateur, dans la limite de la période de grâce définie dans les paramètres client** : activez ce paramètre pour accorder aux utilisateurs plus de temps pour installer les mises à jour logicielles requises au-delà de l’échéance.  
 
-    -   **Comportement à l’échéance** : Disponible uniquement quand **Type de déploiement** est défini sur **Obligatoire** dans la page Paramètres de déploiement.   
-    spécifier le comportement qui doit se produire lorsque l'échéance est atteinte pour le déploiement des mises à jour logicielles. Indiquez si vous souhaitez installer les mises à jour logicielles incluses dans le déploiement. Spécifiez également si un redémarrage du système doit être effectué après l'installation des mises à jour logicielles, quelle que soit la fenêtre de maintenance configurée. Pour plus d’informations sur les fenêtres de maintenance, consultez [Guide pratique pour utiliser les fenêtres de maintenance](../../core/clients/manage/collections/use-maintenance-windows.md).  
+        - Ce comportement est généralement obligatoire quand un ordinateur reste longuement inactif et qu’il nécessite l’installation de nombreuses applications ou mises à jour logicielles. Par exemple, quand un utilisateur rentre de congés, il peut être amené à patienter longuement, le temps que le client installe les déploiements en retard.  
 
-    -   **Comportement de redémarrage de l’appareil** : Disponible uniquement quand **Type de déploiement** est défini sur **Obligatoire** dans la page Paramètres de déploiement.    
-    indiquer si le redémarrage du système sur les serveurs et stations de travail doit être supprimé une fois les mises à jour logicielles installées et si un redémarrage du système est nécessaire pour terminer l'installation.  
+        - Configurez cette période de grâce avec la propriété **Période de grâce pour la mise en œuvre après l’échéance du déploiement (en heures)** dans les paramètres client. Pour plus d’informations, consultez la section [Agent ordinateur](/sccm/core/clients/deploy/about-client-settings#computer-agent). La période de grâce de mise en œuvre s’applique à tous les déploiements pour lesquels cette option est activée et vise les appareils sur lesquels vous avez aussi déployé le paramètre client.  
 
-        > [!IMPORTANT]  
-        >  La suppression des redémarrages du système peut s'avérer utile dans les environnements de serveurs ou lorsque vous ne souhaitez pas que les ordinateurs qui installent les mises à jour logicielles redémarrent par défaut. Toutefois, elle peut laisser les ordinateurs dans un état non sécurisé, alors que l'autorisation d'un redémarrage forcé contribue à garantir l'exécution immédiate de l'installation des mises à jour logicielles.
+        - Après l’échéance, le client installe les mises à jour logicielles au cours de la première fenêtre non ouvrée que l’utilisateur a configurée, dans la limite de cette période de grâce. Cependant, l’utilisateur peut toujours ouvrir le Centre logiciel et installer les mises à jour logicielles à tout moment. Une fois que la période de grâce a expiré, le comportement de mise en œuvre redevient normal pour les déploiements en retard.  
 
-    -   **Traitement des filtres d’écriture pour les appareils Windows Embedded**: quand vous déployez des mises à jour logicielles sur des appareils Windows Embedded pour lesquels le filtre d’écriture est activé, vous pouvez choisir d’installer la mise à jour logicielle sur le segment de recouvrement temporaire et valider les modifications ultérieurement ou à l’échéance de l’installation ou bien pendant une fenêtre de maintenance. Lorsque vous validez des modifications à l'échéance de l'installation ou au cours d'une fenêtre de maintenance, un redémarrage est requis et les modifications sont conservées sur l'appareil.  
+6.  Dans la page **Expérience utilisateur**, configurez les paramètres suivants :  
 
-        > [!NOTE]  
-        >  Lorsque vous déployez une mise à jour logicielle sur un appareil Windows Embedded, assurez-vous que l'appareil fait partie des membres d'un regroupement pour lequel une fenêtre de maintenance a été configurée.  
+    -   **Notifications à l’utilisateur** : indiquez si vous souhaitez afficher les notifications dans le Centre logiciel au **Temps disponible du logiciel** configuré. Ce paramètre permet aussi de contrôler si des notifications doivent être envoyées aux utilisateurs sur les ordinateurs clients. Pour les déploiements **disponibles**, vous ne pouvez pas sélectionner l’option **Masquer dans le Centre logiciel et toutes les notifications**.  
 
-    - **Comportement de réévaluation du déploiement des mises à jour logicielles après le redémarrage** : à compter de Configuration Manager version 1606, sélectionnez ce paramètre pour configurer les déploiements de mises à jour logicielles de façon à ce que les clients exécutent une analyse de conformité des mises à jour logicielles immédiatement après avoir installé celles-ci et redémarré. Cela permet au client de vérifier la disponibilité de mises à jour logicielles supplémentaires devenues applicables après le redémarrage, puis de les installer (et devenir ainsi conforme) au cours d’une même fenêtre de maintenance.
+    -   **Comportement à l’échéance** : ce paramètre peut être configuré uniquement pour les déploiements **requis**. Spécifiez ce qui se passe quand le déploiement de mises à jour logicielles arrive à échéance en dehors des fenêtres de maintenance définies. Vous pouvez entre autres choisir d’installer les mises à jour logicielles et d’exécuter un redémarrage du système après l’installation. Pour plus d’informations sur les fenêtres de maintenance, consultez [Guide pratique pour utiliser les fenêtres de maintenance](/sccm/core/clients/manage/collections/use-maintenance-windows).  
 
-9. Sur la page Alertes, configurez la manière dont Configuration Manager et System Center Operations Manager génèreront des alertes pour ce déploiement. Vous pouvez configurer des alertes uniquement lorsque **Type de déploiement** est défini sur **Obligatoire** sur la page Paramètres de déploiement.  
+    -   **Comportement de redémarrage du périphérique** : ce paramètre peut être configuré uniquement pour les déploiements **requis**. Indiquez si le redémarrage du système sur les serveurs et stations de travail doit être supprimé si un redémarrage est nécessaire pour terminer l’installation des mises à jour.  
 
-    > [!NOTE]  
-    >  Vous pouvez consulter les récentes alertes de mises à jour logicielles à partir du nœud **Mises à jour logicielles** dans l'espace de travail **Bibliothèque de logiciels** .  
+        > [!WARNING]  
+        >  La suppression du redémarrage du système peut être utile dans les environnements de serveur ou quand vous ne souhaitez pas que les ordinateurs cibles redémarrent par défaut. Cependant, cela peut laisser les ordinateurs dans un état non sécurisé. Autoriser un redémarrage forcé aide à garantir l’exécution immédiate de l’installation des mises à jour logicielles.  
 
-10. Sur la page Paramètres de téléchargement, configurez les paramètres suivants :  
+    -   **Traitement des filtres d’écriture pour les appareils Windows Embedded** : ce paramètre contrôle le comportement d’installation sur les appareils Windows Embedded qui sont activés avec un filtre d’écriture. Choisissez l’option permettant de valider les modifications à l’échéance de l’installation ou au cours d’une fenêtre de maintenance. Quand vous sélectionnez cette option, un redémarrage est nécessaire et les modifications sont conservées sur l’appareil. Sinon, la mise à jour est installée, appliquée sur l’overlay temporaire et validée ultérieurement.  
 
-    - Indiquez si le client va télécharger et installer les mises à jour logicielles quand il est connecté à un réseau lent ou utilise un emplacement de secours pour le contenu.  
+        -  Quand vous déployez une mise à jour logicielle sur un appareil Windows Embedded, vérifiez que l’appareil est membre d’un regroupement pour lequel une fenêtre de maintenance a été configurée.  
 
-    - Indiquez si le client doit télécharger et installer les mises à jour logicielles à partir d'un point de distribution de secours quand le contenu pour les mises à jour logicielles n'est pas disponible sur un point de distribution préféré.  
+    - **Comportement de réévaluation du déploiement des mises à jour logicielles après le redémarrage** : sélectionnez ce paramètre pour configurer les déploiements de mises à jour logicielles de façon à ce que les clients exécutent une analyse de conformité des mises à jour logicielles immédiatement après avoir installé celles-ci et redémarré. Ce paramètre permet au client de rechercher d’autres mises à jour devenues applicables après son redémarrage, puis de les installer au cours d’une même fenêtre de maintenance.  
 
-    - **Autoriser les clients à partager du contenu avec d’autres clients sur le même sous-réseau**: indiquez si vous souhaitez activer l’utilisation de BranchCache pour les téléchargements du contenu. Pour plus d’informations sur BranchCache, consultez [Concepts fondamentaux de la gestion de contenu](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#branchcache).  
+7. Dans la page **Alertes**, configurez la manière dont Configuration Manager génère des alertes pour ce déploiement. Examinez les alertes de mises à jour logicielles récentes de Configuration Manager dans le nœud **Mises à jour logicielles** de l’espace de travail **Bibliothèque de logiciels**. Si vous utilisez également System Center Operations Manager, configurez aussi ses alertes. Configurez uniquement les alertes pour les déploiements **requis**.  
 
-    - **Si les mises à jour logicielles ne sont pas disponibles sur le point de distribution de groupes actuels, voisins ou de site, téléchargez le contenu à partir de Microsoft Updates** : sélectionnez ce paramètre afin que les clients connectés à l’intranet téléchargent les mises à jour logicielles depuis Microsoft Update si les mises à jour logicielles ne sont pas disponibles sur les points de distribution. Les clients Internet peuvent toujours accéder à Microsoft Update pour obtenir le contenu des mises à jour logicielles.
-
-    - Indiquez si les clients peuvent procéder au téléchargement une fois l’échéance de l’installation dépassée dans le cas où ils utilisent des connexions Internet facturées à l’usage. Les fournisseurs Internet facturent parfois en fonction de la quantité de données que vous envoyez et recevez lorsque vous utilisez une connexion Internet facturée à l'usage.  
+8. Dans la page **Paramètres de téléchargement**, configurez les paramètres suivants :  
 
     > [!NOTE]  
-    >  Les clients demandent l'emplacement du contenu à partir d'un point de gestion pour les mises à jour logicielles dans un déploiement. Le comportement de téléchargement dépend de la manière dont vous avez configuré le point de distribution, le package de déploiement et les paramètres sur cette page. Pour plus d'informations, voir [Content source location scenarios](../../core/plan-design/hierarchy/content-source-location-scenarios.md).  
+    >  Les clients demandent l'emplacement du contenu à partir d'un point de gestion pour les mises à jour logicielles dans un déploiement. Le comportement de téléchargement dépend de la manière dont vous avez configuré le point de distribution, le package de déploiement et les paramètres de cette page.  
 
-11. Si vous avez effectué l' [Étape 3 : télécharger le contenu pour le groupe de mises à jour logicielles](#BKMK_3DownloadContent), les pages Package de déploiement, Points de distribution et Sélection de la langue ne sont pas affichées et vous pouvez passer à l'étape 15 de l'Assistant.  
+    - Indiquez si les clients doivent télécharger et installer les mises à jour quand ils utilisent un point de distribution d’un groupe voisin ou des groupes de limites de site par défaut.  
 
-    > [!IMPORTANT]  
-    >  Les mises à jour logicielles qui ont été téléchargées précédemment dans la bibliothèque de contenu sur le serveur de site ne sont pas téléchargées à nouveau. Cela est vrai même lorsque vous créez un package de déploiement pour les mises à jour logicielles. Si toutes les mises à jour logicielles ont déjà été téléchargées auparavant, l'Assistant passe à la page **Sélection de la langue** (étape 15).  
+    - Indiquez si les clients doivent télécharger et installer les mises à jour logicielles à partir d’un point de distribution dans le groupe de limites de site par défaut quand le contenu des mises à jour logicielles n’est pas disponible à partir d’un point de distribution dans les groupes de limites actuels ou voisins.  
 
-12. Sur la page Package de déploiement, sélectionnez un package de déploiement existant ou configurez les paramètres suivants pour spécifier un nouveau package de déploiement :  
+    - **Autoriser les clients à partager du contenu avec d’autres clients sur le même sous-réseau**: indiquez si vous souhaitez activer l’utilisation de BranchCache pour les téléchargements du contenu. Pour plus d’informations, consultez [BranchCache](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#branchcache). Depuis la version 1802, BranchCache est toujours activé sur les clients. Ce paramètre est supprimé, car les clients utilisent BranchCache si le point de distribution le prend en charge.  
 
-    1.  **Nom** : spécifiez le nom du package de déploiement. Celui-ci doit être un nom unique qui décrit le contenu du package. Il est limité à 50 caractères.  
+    - **Si les mises à jour logicielles ne sont pas disponibles sur le point de distribution des groupes de limites actifs, voisins ou de site, télécharger le contenu à partir de Microsoft Updates** : sélectionnez ce paramètre pour que les clients connectés à l’intranet téléchargent les mises à jour logicielles à partir de Microsoft Update si les mises à jour ne sont pas disponibles sur les points de distribution. Les clients Internet accèdent toujours à Microsoft Update pour obtenir le contenu des mises à jour logicielles.
 
-    2.  **Description**: spécifiez une description qui fournit des informations sur le package de déploiement. La description est limitée à 127 caractères.  
+    - Indiquez si les clients peuvent procéder au téléchargement une fois l’échéance de l’installation dépassée dans le cas où ils utilisent des connexions Internet facturées à l’usage. Les fournisseurs Internet facturent parfois en fonction de la quantité de données que vous envoyez et recevez quand vous utilisez une connexion facturée à l’usage.  
 
-    3.  **Source du package**: spécifiez l’emplacement des fichiers sources des mises à jour logicielles.  Tapez un chemin réseau pour l’emplacement source, par exemple **\\\serveur\nom_partage\chemin**ou cliquez sur **Parcourir** pour trouver l’emplacement réseau. Vous devez créer le dossier partagé pour les fichiers sources du package de déploiement avant de passer à la page suivante.  
+9. Dans la page **Package de déploiement**, sélectionnez l’une des options suivantes :  
 
-        > [!NOTE]  
-        >  L'emplacement source du package de déploiement que vous spécifiez ne peut pas être utilisé par un autre package de déploiement de logiciel.  
+    > [!Note]  
+    > Si vous avez déjà effectué l’[Étape 3 : Télécharger le contenu pour le groupe de mises à jour logicielles](#BKMK_3DownloadContent), l’Assistant n’affiche pas les pages **Package de déploiement**, **Points de distribution** et **Sélection de la langue**. Passez à la page [Résumé](#bkmk_summary) de l’Assistant.  
+    > 
+    >  Les mises à jour logicielles qui ont été téléchargées précédemment dans la bibliothèque de contenu sur le serveur de site ne sont pas téléchargées à nouveau. Ce comportement prévaut même quand vous créez un package de déploiement pour les mises à jour logicielles. Si toutes les mises à jour logicielles ont déjà été téléchargées, l’Assistant passe à la page [Résumé](#bkmk_summary).  
 
-        > [!IMPORTANT]  
-        >  Le compte d'ordinateur du fournisseur SMS et l'utilisateur qui exécute l'Assistant Téléchargement des mises à jour logicielles nécessitent des autorisations NTFS en **Écriture** sur l'emplacement de téléchargement. Vous devez soigneusement limiter l'accès à l'emplacement de téléchargement pour éviter que des personnes malintentionnées ne falsifient les fichiers sources des mises à jour logicielles.  
+    - **Sélectionner un package de déploiement** : ajoute ces mises à jour à un package de déploiement existant.  
 
-        > [!IMPORTANT]  
-        >  Une fois que le package de déploiement a été créé par Configuration Manager, vous pouvez modifier l’emplacement source du package de déploiement dans les propriétés du package. Mais le cas échéant, vous devez d'abord copier le contenu à partir de la source du package d'origine vers le nouvel emplacement source du package.  
+    - **Créer un package de déploiement** : ajoute ces mises à jour à un nouveau package de déploiement. Configurez les paramètres supplémentaires suivants :  
 
-    4.  **Priorité d’expédition**: spécifiez la priorité d’envoi pour le package de déploiement. Configuration Manager utilise la priorité d’expédition du package de déploiement quand il envoie le package aux points de distribution. Les packages de déploiement sont envoyés par ordre de priorité : Haute, Moyenne ou Faible. Les packages disposant de priorités identiques sont transmis dans l'ordre dans lequel ils ont été créés. En l'absence de backlog, le package est immédiatement traité quelle que soit sa priorité.  
+        -  **Nom** : spécifiez le nom du package de déploiement. Utilisez un nom unique qui décrit le contenu du package. Il est limité à 50 caractères.  
 
-13. Sur la page Points de distribution, spécifiez les points de distribution ou les groupes de points de distribution qui vont héberger les fichiers de mise à jour logicielle. Pour plus d’informations sur les points de distribution, consultez [Configurations des points de distribution](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_configs).  
+        -  **Description**: spécifiez une description qui fournit des informations sur le package de déploiement. La description facultative est limitée à 127 caractères.  
 
-14. Sur la page Emplacement de téléchargement, indiquez si les fichiers de mise à jour logicielle doivent être téléchargés à partir d'Internet ou de votre réseau local. Configurez les paramètres suivants :  
+        -  **Source du package**: spécifiez l’emplacement des fichiers sources des mises à jour logicielles. Tapez un chemin réseau pour l’emplacement source, par exemple `\\server\sharename\path`, ou cliquez sur **Parcourir** pour rechercher l’emplacement réseau. Créez le dossier partagé pour les fichiers sources du package de déploiement avant de passer à la page suivante.  
 
-    -   **Télécharger les mises à jour logicielles depuis Internet**: sélectionnez ce paramètre pour télécharger les mises à jour logicielles à partir d’un emplacement spécifié sur Internet. Ce paramètre est activé par défaut.  
+            - Vous ne pouvez pas utiliser l’emplacement spécifié comme source d’un autre package de déploiement logiciel.  
 
-    -   **Télécharger les mises à jour logicielles à partir d’un emplacement sur le réseau local**: sélectionnez ce paramètre pour télécharger les mises à jour logicielles à partir d’un dossier local ou d’un dossier réseau partagé. Ce paramètre s'avère utile lorsque l'ordinateur exécutant l'Assistant ne dispose d'aucun accès à Internet. Les mises à jour logicielles peuvent être préalablement téléchargées à partir de n'importe quel ordinateur qui a accès à Internet, puis stockées à un emplacement sur le réseau local à des fins d'accès ultérieur pour l'installation.  
+            - Une fois que le package de déploiement a été créé par Configuration Manager, vous pouvez modifier l’emplacement source du package de déploiement dans les propriétés du package. Dans ce cas, copiez d’abord le contenu de la source du package d’origine dans le nouvel emplacement source du package.  
 
-15. Sur la page Sélection de la langue, sélectionnez les langues pour lesquelles les mises à jour logicielles sélectionnées sont téléchargées. Les mises à jour logicielles sont téléchargées uniquement si elles sont disponibles dans les langues sélectionnées. Les mises à jour logicielles qui ne sont spécifiques à aucune langue sont toujours téléchargées. Par défaut, l'Assistant sélectionne les langues que vous avez configurées dans les propriétés du point de mise à jour logicielle. Au moins une langue doit être sélectionnée avant de passer à la page suivante. Quand vous sélectionnez uniquement des langues qui ne sont pas prises en charge par une mise à jour logicielle, le téléchargement échoue pour cette mise à jour logicielle.  
+            -  Le compte d’ordinateur du fournisseur SMS et l’utilisateur qui exécute l’Assistant Téléchargement des mises à jour logicielles nécessitent des autorisations d’**Écriture** sur l’emplacement de téléchargement. Limitez l’accès à l’emplacement de téléchargement. Cette restriction réduit le risque que des personnes malveillantes falsifient les fichiers sources des mises à jour logicielles.  
 
-16. Sur la page Résumé, passez en revue les paramètres. Pour enregistrer les paramètres dans un modèle de déploiement, cliquez sur **Enregistrer comme modèle**, entrez un nom et sélectionnez les paramètres à inclure dans le modèle, puis cliquez sur **Enregistrer**. Pour modifier un paramètre configuré, cliquez sur la page de l'Assistant associée et modifiez le paramètre.  
+        -  **Priorité d’expédition** : spécifiez la priorité d’envoi pour le package de déploiement. Configuration Manager utilise cette priorité quand il envoie le package aux points de distribution. Les packages de déploiement sont envoyés par ordre de priorité : haute, moyenne ou faible. Les packages disposant de priorités identiques sont transmis dans l'ordre dans lequel ils ont été créés. S’il n’y a pas de backlog, le package est traité immédiatement, quelle que soit sa priorité.  
 
-    > [!WARNING]  
-    >  Le nom du modèle peut comporter des caractères ASCII alphanumériques ainsi que les caractères **\\** (barre oblique inverse) ou **‘** (guillemet-apostrophe).  
+        - **Activer la réplication différentielle binaire** : activez ce paramètre pour limiter le trafic réseau entre les sites. La réplication différentielle binaire met à jour uniquement le contenu qui a changé dans le package, au lieu de mettre à jour l’ensemble du contenu du package. Pour plus d’informations, consultez [Réplication différentielle binaire](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#binary-differential-replication).  
+
+    - **Aucun package de déploiement** : depuis la version 1806, les mises à jour logicielles sont déployées sur les appareils sans que le contenu soit préalablement téléchargé et distribué aux points de distribution. Ce paramètre est particulièrement utile quand le contenu des mises à jour à traiter est extrêmement volumineux. Vous pouvez aussi l’utiliser quand vous voulez que les clients reçoivent systématiquement le contenu à partir du service cloud Microsoft Update. Dans ce cas, les clients peuvent également télécharger le contenu auprès d’homologues qui disposent déjà du contenu nécessaire. Le client Configuration Manager continue de gérer le téléchargement de contenu. Vous pouvez donc utiliser la fonctionnalité de cache d’homologue Configuration Manager ou d’autres technologies telles que l’optimisation de la distribution. Cette fonctionnalité prend en charge tous les types de mises à jour pris en charge par la gestion des mises à jour logicielles Configuration Manager, notamment les mises à jour Windows et Office.<!--1357933-->  
+
+10. Dans la page **Points de distribution**, spécifiez les points de distribution ou les groupes de points de distribution où héberger les fichiers de mise à jour logicielle. Pour plus d’informations sur les points de distribution, consultez [Configurations des points de distribution](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_configs).  
+
+    > [!Note]  
+    > Si vous avez déjà effectué l’[Étape 3 : Télécharger le contenu pour le groupe de mises à jour logicielles](#BKMK_3DownloadContent), l’Assistant n’affiche pas les pages **Package de déploiement**, **Points de distribution** et **Sélection de la langue**. Passez à la page [Résumé](#bkmk_summary) de l’Assistant.  
+
+11. Dans la page **Emplacement de téléchargement**, indiquez si les fichiers de mise à jour logicielle doivent être téléchargés à partir d’Internet ou de votre réseau local. Configurez les paramètres suivants :  
+
+    -   **Télécharger les mises à jour logicielles depuis Internet** : sélectionnez ce paramètre pour télécharger les mises à jour logicielles à partir d’un emplacement spécifié sur Internet. Ce paramètre est activé par défaut.  
+
+    -   **Télécharger les mises à jour logicielles à partir d’un emplacement sur le réseau local**: sélectionnez ce paramètre pour télécharger les mises à jour logicielles à partir d’un répertoire local ou d’un dossier partagé. Ce paramètre est utile quand l’ordinateur exécutant l’Assistant ne dispose d’aucun accès Internet. Tout ordinateur connecté à Internet peut télécharger préalablement les mises à jour logicielles, puis les stocker à un emplacement sur le réseau local auquel l’ordinateur exécutant l’Assistant peut accéder.  
+
+12. Dans la page **Sélection de la langue**, sélectionnez les langues pour lesquelles le site télécharge les mises à jour logicielles sélectionnées. Le site télécharge uniquement ces mises à jour si elles sont disponibles dans les langues sélectionnées. Les mises à jour logicielles qui ne sont pas propres à une langue sont toujours téléchargées. Par défaut, l’Assistant sélectionne les langues que vous avez configurées dans les propriétés du point de mise à jour logicielle. Au moins une langue doit être sélectionnée avant de passer à la page suivante. Quand vous sélectionnez uniquement des langues qu’une mise à jour logicielle ne prend pas en charge, le téléchargement de cette mise à jour échoue.  
+
+    > [!Note]  
+    > Si vous avez déjà effectué l’[Étape 3 : Télécharger le contenu pour le groupe de mises à jour logicielles](#BKMK_3DownloadContent), l’Assistant n’affiche pas les pages **Package de déploiement**, **Points de distribution** et **Sélection de la langue**. Passez à la page [Résumé](#bkmk_summary) de l’Assistant.  
+
+13. <a name="bkmk_summary"></a> Dans la page **Résumé**, passez en revue les paramètres. Pour enregistrer les paramètres dans un modèle de déploiement, cliquez sur **Enregistrer en tant que modèle**. Entrez un nom et sélectionnez les paramètres que vous souhaitez inclure dans le modèle, puis cliquez sur **Enregistrer**. Pour modifier un paramètre configuré, cliquez sur la page de l'Assistant associée et modifiez le paramètre.  
+
+    -  Le nom du modèle peut comporter des caractères ASCII alphanumériques, ainsi que les caractères `\` (barre oblique inverse) ou `'` (guillemet-apostrophe).  
 
 17. Cliquez sur **Suivant** pour déployer la mise à jour logicielle.  
 
- Quand vous avez terminé l’Assistant, Configuration Manager télécharge les mises à jour logicielles dans la bibliothèque de contenu sur le serveur de site, distribue les mises à jour logicielles aux points de distribution configurés, puis déploie le groupe de mises à jour logicielles sur les clients du regroupement cible. Pour plus d’informations sur le processus de déploiement, consultez [Software update deployment process](../understand/software-updates-introduction.md#BKMK_DeploymentProcess).
+ Une fois l’Assistant terminé, Configuration Manager télécharge les mises à jour logicielles dans la bibliothèque de contenu sur le serveur de site. Il distribue ensuite le contenu aux points de distribution configurés et déploie le groupe de mises à jour logicielles sur les clients du regroupement cible. Pour plus d’informations sur le processus de déploiement, consultez [Software update deployment process](/sum/understand/software-updates-introduction#BKMK_DeploymentProcess).  
+
+
 
 ## <a name="next-steps"></a>Étapes suivantes
 [Surveiller les mises à jour logicielles](monitor-software-updates.md)

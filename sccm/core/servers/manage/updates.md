@@ -1,8 +1,8 @@
 ---
 title: Mises à jour et maintenance
 titleSuffix: Configuration Manager
-description: Découvrez une méthode de service dans la console, appelée « Mises à jour et maintenance », qui facilite la localisation et l’installation des mises à jour recommandées.
-ms.date: 05/01/2018
+description: Découvrez la méthode de service dans la console, appelée « Mises à jour et maintenance », qui facilite la localisation et l’installation des mises à jour recommandées.
+ms.date: 07/31/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,35 +10,35 @@ ms.assetid: 3a832943-580a-4a40-b454-961d0854ac2b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9c2a9d7c754e7a1a02527c4c985d1b9db6bc7d14
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 94d8f3a2ffafb078f3ffe92c4902cc610321ed86
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32341778"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39385047"
 ---
-# <a name="updates-for-system-center-configuration-manager"></a>Mises à jour pour System Center Configuration Manager
+# <a name="updates-and-servicing-for-configuration-manager"></a>Mises à jour et maintenance pour Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
-Configuration Manager utilise une méthode de service dans la console appelée **Mises à jour et maintenance**. Cette méthode dans la console facilite la localisation et l’installation des mises à jour recommandées pour votre infrastructure Configuration Manager. La maintenance dans la console est complétée par des mises à jour hors bande, telles que des correctifs logiciels, qui s’adressent aux clients qui ont besoin de résoudre des problèmes qui peuvent être propres à leur environnement.  
+Configuration Manager utilise une méthode de service dans la console appelée **Mises à jour et maintenance**. Cette méthode dans la console facilite la localisation et l’installation des mises à jour recommandées pour votre infrastructure Configuration Manager. La maintenance dans la console est complétée par des mises à jour hors bande, telles que des correctifs logiciels. Celles-ci s’adressent aux clients qui ont besoin de résoudre des problèmes qui peuvent être propres à leur environnement.  
 
 > [!TIP]  
-> Les termes *mise à niveau*, *mise à jour* et *installation* sont utilisés pour décrire trois concepts distincts dans Configuration Manager. Pour plus d’informations sur l’utilisation de chaque terme, consultez [À propos de la mise à niveau, de la mise à jour et de l’installation](/sccm/core/understand/upgrade-update-install).
+> Les termes *mise à niveau*, *mise à jour* et *installation* sont utilisés pour décrire trois concepts distincts dans Configuration Manager. Pour plus d’informations sur l’utilisation de chaque terme, consultez [À propos de la mise à niveau, de la mise à jour et de l’installation](/sccm/core/understand/upgrade-update-install).  
 
 
- **Les rubriques suivantes peuvent vous aider à comprendre comment rechercher et installer les différents types de mise à jour pour Configuration Manager :**  
+Les articles suivants peuvent vous aider à comprendre comment rechercher et installer les différents types de mise à jour pour Configuration Manager :  
 
--   [Installer des mises à jour dans la console](../../../core/servers/manage/install-in-console-updates.md)  
+-   [Installer des mises à jour dans la console](/sccm/core/servers/manage/install-in-console-updates)  
 
--   [Utiliser l’outil de connexion de service](../../../core/servers/manage/use-the-service-connection-tool.md)  
+-   [Utiliser l’outil de connexion de service](/sccm/core/servers/manage/use-the-service-connection-tool)  
 
--   [Importer des correctifs logiciels avec l’outil Inscription de la mise à jour](../../../core/servers/manage/use-the-update-registration-tool-to-import-hotfixes.md)  
+-   [Importer des correctifs logiciels avec l’outil Inscription de la mise à jour](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes)  
 
--   [Utiliser le programme d’installation de correctif logiciel pour installer des mises à jour](../../../core/servers/manage/use-the-hotfix-installer-to-install-updates.md)  
+-   [Utiliser le programme d’installation de correctif logiciel pour installer des mises à jour](/sccm/core/servers/manage/use-the-hotfix-installer-to-install-updates)  
 
 
-Pour plus d’informations sur la branche Technical Preview, consultez [Technical Preview pour System Center Configuration Manager](/sccm/core/get-started/technical-preview).
+Pour plus d’informations sur la branche Technical Preview, consultez [Technical Preview](/sccm/core/get-started/technical-preview).
 
 
 
@@ -59,33 +59,45 @@ Après avoir installé une version de base, d’autres versions de Configuration
 
 -   Mettez à jour manuellement les sites secondaires vers une nouvelle version de mise à jour à partir de la console.  
 
-Quand vous installez une mise à jour, elle stocke les fichiers d’installation de cette version sur le serveur de site dans un dossier nommé **CD.Latest**. Pour plus d’informations sur ces fichiers, consultez [Dossier CD.Latest](../../../core/servers/manage/the-cd.latest-folder.md).  
+Quand vous installez une mise à jour, elle stocke les fichiers d’installation de cette version sur le serveur de site dans un dossier nommé **CD.Latest**. Pour plus d’informations sur ces fichiers, consultez [Dossier CD.Latest](/sccm/core/servers/manage/the-cd.latest-folder).  
 
 -   Utilisez les fichiers du dossier CD.Latest durant la récupération de site. De même, quand votre hiérarchie n’exécute plus de version de base de référence, utilisez ces fichiers pour installer des sites supplémentaires.  
 
 -   Vous ne pouvez pas vous servir des fichiers d’installation du dossier CD.Latest pour installer le premier site d’une nouvelle hiérarchie, ni pour mettre à niveau un site à partir de System Center 2012 Configuration Manager.  
 
+
+### <a name="version-details"></a>Détails de la version
+
 Certaines mises à jour de Configuration Manager sont disponibles à la fois comme version de mise à jour dans la console pour l’infrastructure existante et comme nouvelle version de base.  
 
-Les versions suivantes de Configuration Manager sont disponibles sous forme de version de base, de mise à jour ou les deux à la fois :  
+Les versions prises en charge suivantes de Configuration Manager sont disponibles sous forme de base de référence, de mise à jour ou les deux à la fois :  
 
-|Version |Date de disponibilité|[Date de fin de support](/sccm/core/servers/manage/current-branch-versions-supported) |De base|Mise à jour dans la console|  
+| Version | Date de disponibilité | [Date de fin de support](/sccm/core/servers/manage/current-branch-versions-supported) | Base de référence | Mise à jour dans la console |  
 |-------------|-----------|------------|--------------|------------------------|  
-|[1802](/sccm/core/plan-design/changes/whats-new-in-version-1802)<br /><br /> 5.00.8634.1000|22 mars 2018|22 septembre 2019|Oui|Oui|
-|[1710](/sccm/core/plan-design/changes/whats-new-in-version-1710)<br /><br /> 5.00.8577.1000|20 novembre 2017|Mai 20, 2019|Non|Oui|
-|[1706](/sccm/core/plan-design/changes/whats-new-in-version-1706)<br /><br /> 5.00.8540.1000|31 juillet 2017|31 juillet 2018|Non|Oui|
-|[1702](/sccm/core/plan-design/changes/whats-new-in-version-1702)<br /><br /> 5.00.8498.1000|27 mars 2017| 27 mars 2018|Oui|Oui|
-|[1610](/sccm/core/plan-design/changes/whats-new-in-version-1610)<br /><br /> 5.00.8458.1000|18 novembre 2016| 18 novembre 2017|Non|Oui|
-|[1606](/sccm/core/plan-design/changes/whats-new-in-version-1606)<br /><br /> 5.00.8412.1000|22 juillet 2016| 22 juillet 2017|Non|Oui|
-|[1606](/sccm/core/plan-design/changes/whats-new-in-version-1606) avec le correctif cumulatif 1606 (KB3186654) </br></br>5.00.8412.1307 *(Note 1)* |12 octobre 2016| 12 octobre 2017|Oui|Non|
-| 1602<br /><br /> 5.00.8355.1000|11 mars 2016| 11 mars 2017|Non|Oui|
-| 1511 <br /><br /> 5.00.8325.1000|8 décembre 2015| 8 décembre 2016|Oui|Non|  
+| [1806](/sccm/core/plan-design/changes/whats-new-in-version-1806)<br /><br /> 5.00.8692.1000 | 31 juillet 2018 | 31 janvier 2020 | Non | Oui |
+| [1802](/sccm/core/plan-design/changes/whats-new-in-version-1802)<br /><br /> 5.00.8634.1000 | 22 mars 2018 | 22 septembre 2019 | Oui<sup>**1**</sup> | Oui |
+| [1710](/sccm/core/plan-design/changes/whats-new-in-version-1710)<br /><br /> 5.00.8577.1000 | 20 novembre 2017 | Mai 20, 2019 | Non | Oui |
+| [1706](/sccm/core/plan-design/changes/whats-new-in-version-1706)<br /><br /> 5.00.8540.1000 | 31 juillet 2017 | 31 juillet 2018 | Non | Oui |
 
+> [!Note]  
+> <sup>**1**</sup> Le support de la base de référence 1802 est disponible dans les versions suivantes du [Centre MVLS](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (Microsoft Volume Licensing Service) :
+> - System Center Config Mgr (Current Branch)
+> - System Center 2016 Datacenter
+> - System Center 2016 Standard  
+> 
+> Par exemple, recherchez `System Center Config Mgr (current branch)` dans le Centre MVLS. Recherchez le support de la base de référence 1802 dans la liste des fichiers, puis téléchargez-le pour cette version.  
 
-*(Remarque 1)* Le support de la base de référence 1802 est disponible dans les versions suivantes du [VLSC](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (Centre de gestion des licences en volume) :
-- System Center Config Mgr (Current Branch)
-- System Center 2016 Datacenter
-- System Center 2016 Standard. Par exemple, recherchez `System Center Config Mgr (current branch)` dans VLSC. Recherchez le support de la base de référence 1802 dans la liste des fichiers, puis téléchargez-le pour cette version.
+Le tableau suivant liste les versions historiques de l’édition Current Branch de Configuration Manager qui ne sont plus prises en charge :
+
+| Version | Date de disponibilité | Date de fin du support | Base de référence | Mise à jour dans la console |  
+|-------------|-----------|------------|--------------|------------------------|  
+| 1702 <br /><br /> 5.00.8498.1000 | 27 mars 2017 | 27 mars 2018 | Oui | Oui |
+| 1610 <br /><br /> 5.00.8458.1000 | 18 novembre 2016 | 18 novembre 2017 | Non | Oui |
+| 1606 <br /><br /> 5.00.8412.1000 | 22 juillet 2016 | 22 juillet 2017 | Non | Oui |
+| 1606 avec le correctif cumulatif 1606 (KB3186654) </br></br>5.00.8412.1307 | 12 octobre 2016 | 12 octobre 2017 | Oui | Non |
+| 1602<br /><br /> 5.00.8355.1000 | 11 mars 2016 | 11 mars 2017 | Non | Oui |
+| 1511 <br /><br /> 5.00.8325.1000 | 8 décembre 2015 | 8 décembre 2016 | Oui | Non |  
+
 
 Pour vérifier la version de votre site Configuration Manager, en haut à gauche de la console, accédez à **À propos de System Center Configuration Manager**. Cette boîte de dialogue affiche les versions du site et de la console.  
 
@@ -95,11 +107,12 @@ Pour vérifier la version de votre site Configuration Manager, en haut à gauche
 
 
 ##  <a name="bkmk_inconsole"></a> Mises à jour et maintenance dans la console  
- Quand vous utilisez une installation Current Branch de System Center Configuration Manager prête pour la production, la plupart des mises à jour sont disponibles via le canal **Mises à jour et maintenance**. Cette méthode identifie, télécharge et met à disposition les mises à jour qui s’appliquent à la version et à la configuration actuelles de votre infrastructure. Elle inclut uniquement les mises à jour que Microsoft recommande à tous les clients.   
 
- Ces mises à jour comportent :  
+Quand vous utilisez une installation Current Branch de System Center Configuration Manager prête pour la production, la plupart des mises à jour sont disponibles via le canal **Mises à jour et maintenance**. Cette méthode identifie, télécharge et met à disposition les mises à jour qui s’appliquent à la version et à la configuration actuelles de votre infrastructure. Elle inclut uniquement les mises à jour que Microsoft recommande à tous les clients.   
 
--   Les nouvelles versions comme la version 1702, 1706, 1710 ou 1802.  
+Ces mises à jour comportent :  
+
+-   Les nouvelles versions comme la version 1710, 1802 ou 1806.  
 
 -   Les mises à jour qui comprennent de nouveaux composants pour votre version actuelle
 
@@ -121,19 +134,19 @@ Les mises à jour dans la console peuvent s’appliquer à un ou plusieurs des s
 
 Configuration Manager découvre de nouvelles mises à jour pour vous. Synchronisez votre point de connexion de service Configuration Manager avec le service cloud Microsoft, en notant les comportements suivants :  
 
--   Quand votre point de connexion de service est en mode en ligne, votre site se synchronise tous les jours avec Microsoft. Il identifie automatiquement les nouvelles mises à jour qui s’appliquent à votre infrastructure. Pour télécharger les mises à jour et les fichiers redistribuables, l’ordinateur qui héberge le rôle de système de site du point de connexion de service utilise le contexte **System** pour accéder aux emplacements Internet suivants : go.microsoft.com et download.microsoft.com. Pour plus d’informations sur les emplacements supplémentaires utilisés par le point de connexion de service, consultez [Conditions requises pour l’accès Internet](../../../core/servers/deploy/configure/about-the-service-connection-point.md#bkmk_urls).  
+-   Quand votre point de connexion de service est en mode en ligne, votre site se synchronise tous les jours avec Microsoft. Il identifie automatiquement les nouvelles mises à jour qui s’appliquent à votre infrastructure. Pour télécharger les mises à jour et les fichiers redistribuables, l’ordinateur qui héberge le rôle de système de site du point de connexion de service utilise le contexte **System** pour accéder aux emplacements Internet suivants : go.microsoft.com et download.microsoft.com. Pour plus d’informations sur les emplacements supplémentaires utilisés par le point de connexion de service, consultez [Conditions requises pour l’accès Internet](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_urls).  
 
--   Quand votre point de connexion de service est en mode hors connexion, utilisez l’outil de connexion de service pour effectuer une synchronisation manuelle avec le cloud Microsoft. Pour plus d’informations, consultez [Utiliser l’outil de connexion de service](../../../core/servers/manage/use-the-service-connection-tool.md).  
+-   Quand votre point de connexion de service est en mode hors connexion, utilisez l’outil de connexion de service pour effectuer une synchronisation manuelle avec le cloud Microsoft. Pour plus d’informations, consultez [Utiliser l’outil de connexion de service](/sccm/core/servers/manage/use-the-service-connection-tool).  
 
 -   Les mises à jour dans la console vous évitent d’avoir à localiser et à installer indépendamment les mises à jour, les service packs et les nouveaux composants.  
 
--   Installez uniquement les mises à jour dans la console de votre choix. Quand vous installez certaines mises à jour, vous pouvez sélectionner des fonctionnalités individuelles à activer et à utiliser. Pour plus d’informations, consultez [Activer les fonctionnalités facultatives des mises à jour](../../../core/servers/manage/install-in-console-updates.md#bkmk_options).  
+-   Installez uniquement les mises à jour dans la console de votre choix. Quand vous installez certaines mises à jour, vous pouvez sélectionner des fonctionnalités individuelles à activer et à utiliser. Pour plus d’informations, consultez [Activer les fonctionnalités facultatives des mises à jour](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).  
 
 Quand vous installez une mise à jour dans la console, le processus suivant se produit :  
 
 -   Elle procède automatiquement à une vérification de la configuration requise. Vous pouvez également effectuer cette vérification manuellement avant de commencer l’installation.  
 
--   Elle s’installe sur le site de niveau supérieur de votre environnement. Ce site est le site d’administration centrale si vous en avez un. Dans une hiérarchie, la mise à jour s’installe automatiquement sur les sites principaux. Contrôlez le moment où chaque serveur de site principal est autorisé à se mettre à jour à l’aide des [fenêtres de maintenance pour les serveurs de site](../../../core/servers/manage/service-windows.md).  
+-   Elle s’installe sur le site de niveau supérieur de votre environnement. Ce site est le site d’administration centrale si vous en avez un. Dans une hiérarchie, la mise à jour s’installe automatiquement sur les sites principaux. Contrôlez le moment où chaque serveur de site principal est autorisé à se mettre à jour à l’aide des [fenêtres de maintenance pour les serveurs de site](/sccm/core/servers/manage/service-windows).  
 
 -   Après la mise à jour d’un serveur de site, tous les rôles de système de site affectés se mettent automatiquement à jour. Ces rôles incluent les instances du fournisseur SMS. Une fois que le site a installé la mise à jour, la console Configuration Manager invite également son utilisateur à la mettre à jour.  
 
@@ -147,22 +160,25 @@ Quand vous installez une mise à jour dans la console, le processus suivant se p
 
 
 ##  <a name="bkmk_outofband"></a> Correctifs logiciels hors bande  
+
 Certains correctifs logiciels sont publiés avec une disponibilité limitée pour résoudre des problèmes spécifiques. D’autres correctifs logiciels s’appliquent à tous les clients mais ne peuvent pas être installés via la méthode dans la console. Ces correctifs logiciels sont fournis hors bande et ne sont pas détectés à partir du service cloud Microsoft.  
 
-En règle générale, quand vous cherchez à corriger ou à résoudre un problème lié à votre déploiement de Configuration Manager, vous pouvez en savoir plus sur les correctifs logiciels hors bande par l’intermédiaire des services de support technique Microsoft, via un article de la Base de connaissances du Support Microsoft ou à partir du [blog de l’équipe System Center Configuration Manager](https://blogs.technet.microsoft.com/configmgrteam). 
+En règle générale, quand vous cherchez à corriger ou à résoudre un problème lié à votre déploiement de Configuration Manager, vous pouvez explorer les correctifs logiciels hors bande par l’intermédiaire des services de support technique Microsoft, via un article de la Base de connaissances du Support Microsoft ou à partir de [billets de l’équipe System Center Configuration Manager](https://cloudblogs.microsoft.com/enterprisemobility/?product=system-center-configuration-manager) dans le blog Enterprise Mobility + Security. 
 
 Installez ces correctifs logiciels manuellement, à l’aide de l’une des deux méthodes suivantes :  
 
--   **Outil Inscription de la mise à jour** : cet outil permet d’importer manuellement le correctif logiciel dans votre console Configuration Manager. Installez ensuite la mise à jour de la même façon que les mises à jour dans la console découvertes automatiquement.  
+#### <a name="update-registration-tool"></a>Outil Inscription de la mise à jour
+Cet outil permet d’importer manuellement le correctif logiciel dans votre console Configuration Manager. Installez ensuite la mise à jour de la même façon que les mises à jour dans la console découvertes automatiquement.  
 
-    - Cette méthode est utilisée pour les correctifs logiciels qui emploient la structure de nom de fichier suivante :  
-         `<Product>-<product version>-<KB article ID>-ConfigMgr.Update.exe`    
+Cette méthode est utilisée pour les correctifs logiciels qui emploient la structure de nom de fichier suivante :  
+  `<Product>-<product version>-<KB article ID>-ConfigMgr.Update.exe`    
 
-    - Pour plus d’informations, consultez [Importer des correctifs logiciels avec l’outil Inscription de la mise à jour](../../../core/servers/manage/use-the-update-registration-tool-to-import-hotfixes.md).  
+Pour plus d’informations, consultez [Importer des correctifs logiciels avec l’outil Inscription de la mise à jour](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes).  
 
--   **Programme d’installation de correctif logiciel :** cet outil permet d’installer manuellement un correctif logiciel qui ne peut pas être installé via la méthode dans la console.  
+#### <a name="hotfix-installer"></a>Programme d’installation de correctif logiciel
+Cet outil permet d’installer manuellement un correctif logiciel qui ne peut pas être installé via la méthode dans la console.  
 
-    - Cette méthode est utilisée pour les correctifs qui emploient la structure de nom de fichier suivante :   
-         `<Product>-<product version>-<KB article ID>-<platform>-<language>.exe`  
+Cette méthode est utilisée pour les correctifs qui emploient la structure de nom de fichier suivante :   
+   `<Product>-<product version>-<KB article ID>-<platform>-<language>.exe`  
 
-    - Pour plus d’informations, consultez [Utiliser le programme d’installation de correctif logiciel pour installer des mises à jour](../../../core/servers/manage/use-the-hotfix-installer-to-install-updates.md).  
+Pour plus d’informations, consultez [Utiliser le programme d’installation de correctif logiciel pour installer des mises à jour](/sccm/core/servers/manage/use-the-hotfix-installer-to-install-updates).  

@@ -2,7 +2,7 @@
 title: Vue d’ensemble des certificats CNG
 titleSuffix: Configuration Manager
 description: Découvrez la prise en charge des certificats Cryptography Next Generation (CNG) pour les clients et serveurs Configuration Manager.
-ms.date: 03/22/2018
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: dba904ae-7c44-46db-ae63-999b9821cb46
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4a4f37330f94111bcc41b81d9127039056f69e2b
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 8b85961c14c3db69c3e02e776798588fadd0fc89
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334264"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39383151"
 ---
 # <a name="cng-certificates-overview"></a>Vue d’ensemble des certificats CNG
 <!-- 1356191 --> 
@@ -37,6 +37,10 @@ Vous pouvez utiliser les modèles de certificat [Cryptography API : Next Genera
 - Point de mise à jour logicielle
 - Point de migration d’état     
 
+À partir de la version 1806, utilisez des certificats CNG pour les rôles serveur HTTPS suivants :
+
+- Point d’enregistrement de certificat, notamment le serveur NDES avec le module de stratégie Configuration Manager <!--1357314-->
+
 > [!NOTE]
 > CNG offre une compatibilité descendante avec Crypto API (CAPI). Les certificats CAPI continuent à être pris en charge même lorsque la prise en charge CNG est activée sur le client.
 
@@ -54,9 +58,11 @@ Les scénarios suivants ne sont actuellement pas pris en charge :
 
 - Utilisation de certificats CNG pour créer un point de distribution cloud.
 
-- Si le module de stratégie NDES utilise un certificat CNG pour l’authentification du client, la communication avec le point d’enregistrement de certificat échoue.
+- Si le module de stratégie NDES utilise un certificat CNG pour l’authentification du client, la communication avec le point d’enregistrement de certificat échoue. 
+    - Ceci est pris en charge à partir de Configuration Manager version 1806.
 
 - Si vous spécifiez un certificat CNG lors de la création d’un média de séquence de tâches, l’Assistant ne parvient pas à créer un média de démarrage.
+    - Ceci est pris en charge à partir de Configuration Manager version 1806.
 
 ## <a name="to-use-cng-certificates"></a>Pour utiliser des certificats CNG
 
@@ -71,6 +77,7 @@ Pour utiliser des certificats CNG, votre autorité de certification (CA) doit fo
 - Onglet **Chiffrement**
 
     - La **catégorie de fournisseur** doit être **Fournisseur de stockage de clés**. (obligatoire)
+    - **La requête doit utiliser l’un des fournisseurs suivants** doit avoir la valeur **Fournisseur de stockage de clés des logiciels Microsoft**. 
 
 > [!NOTE]
 > La configuration requise pour votre environnement ou votre organisation peut être différente. Contactez votre expert PKI. Le point important à ne pas négliger est qu’un modèle de certificat doit utiliser un fournisseur de stockage de clés pour tirer parti de CNG.

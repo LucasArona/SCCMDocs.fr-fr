@@ -2,7 +2,7 @@
 title: Déployer des applications
 titleSuffix: Configuration Manager
 description: Créer ou simuler le déploiement d’une application sur un regroupement d’appareils ou d’utilisateurs
-ms.date: 03/22/2018
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,14 +10,14 @@ ms.assetid: 2629c376-ec43-4f0e-a78b-4223cc9302bf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ed6174bcb3c99461b00ec5fc57d4508b9390747d
-ms.sourcegitcommit: acad0674b2743193f87990fb50194c4f17823a8e
+ms.openlocfilehash: d23c5ee5b81264a9725c4654cd1717b30302c708
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39146926"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39384818"
 ---
-# <a name="deploy-applications-with-system-center-configuration-manager"></a>Déployer des applications avec System Center Configuration Manager
+# <a name="deploy-applications-with-configuration-manager"></a>Déployer les applications avec Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
@@ -25,148 +25,218 @@ Créez ou simulez le déploiement d’une application sur un regroupement d’ap
 
 Avant de déployer une application, créez au moins un type de déploiement pour l’application. Pour plus d’informations, consultez [Créer des applications](/sccm/apps/deploy-use/create-applications).
 
- Vous pouvez aussi simuler un déploiement d’application. Cette simulation teste les conditions d’application d’un déploiement sans installer ou désinstaller l’application. Un déploiement simulé évalue la méthode de détection, les spécifications et les dépendances d’un type de déploiement, et génère un rapport contenant les résultats dans le nœud **Déploiements** de l’espace de travail **Surveillance**. Pour plus d’informations, consultez [Simuler des déploiements d’applications](/sccm/apps/deploy-use/simulate-application-deployments).
+Vous pouvez aussi simuler un déploiement d’application. Cette simulation teste les conditions d’application d’un déploiement sans installer ou désinstaller l’application. Un déploiement simulé évalue la méthode de détection, les spécifications et les dépendances d’un type de déploiement, et génère un rapport contenant les résultats dans le nœud **Déploiements** de l’espace de travail **Surveillance**. Pour plus d’informations, consultez [Simuler des déploiements d’applications](/sccm/apps/deploy-use/simulate-application-deployments).
 
-> [!IMPORTANT]
->  Vous pouvez simuler le déploiement des applications nécessaires, mais pas les packages ni les mises à jour logicielles.   
+> [!Note]
+>  Vous pouvez uniquement simuler le déploiement des applications nécessaires, mais pas les packages ni les mises à jour logicielles.   
+> 
 >  Les appareils inscrits dans MDM ne prennent pas en charge les déploiements simulés, l’expérience utilisateur ou les paramètres de planification.
 
 
 
-## <a name="deploy-an-application"></a>Déployer une application
+## <a name="bkmk_deploy"></a> Déployer une application
 
-1.  Dans la console Configuration Manager, accédez à **Bibliothèque de logiciels** > **Gestion des applications** > **Applications**.
+1.  Dans la console Configuration Manager, accédez à l’espace de travail **Bibliothèque de logiciels**, développez **Gestion des applications** et sélectionnez le nœud **Applications**.  
 
-2.  Dans la liste **Applications** , sélectionnez l'application à déployer. Ensuite, sous l’onglet **Accueil** , dans le groupe **Déploiement** , cliquez sur **Déployer**.
+2.  Dans la liste **Applications**, sélectionnez une application à déployer. Dans le ruban, cliquez sur **Déployer**.  
 
-### <a name="specify-general-information-about-the-deployment"></a>Spécifier des informations générales sur le déploiement
+> [!Note]  
+> Quand vous affichez les propriétés d’un déploiement existant, les sections suivantes correspondent aux onglets de la fenêtre des propriétés du déploiement :  
+> - [Général](#bkmk_deploy-general)
+> - [Contenu](#bkmk_deploy-content)
+> - [Paramètres de déploiement](#bkmk_deploy-settings)
+> - [Planification](#bkmk_deploy-sched)
+> - [Expérience utilisateur](#bkmk_deploy-ux)
+> - [Alertes](#bkmk_deploy-alerts)
+> - [iOS : stratégies de configuration des applications](#bkmk_deploy-ios)
 
-Dans la page **Général** de l’Assistant Déploiement logiciel, spécifiez les informations suivantes :
 
-- **Logiciel** : cette valeur indique l’application à déployer. Cliquez sur **Parcourir** pour sélectionner une autre application.
-- **Regroupement** : cliquez sur **Parcourir** pour sélectionner le regroupement dans lequel déployer l’application.
-- **Utiliser des groupes de points de distribution par défaut associés à ce regroupement** : stocke le contenu de l’application dans le groupe de points de distribution par défaut du regroupement. Si vous n’avez associé aucun groupe de points de distribution au regroupement sélectionné, cette option est grisée.
-- **Distribuer automatiquement le contenu pour les dépendances** : si l’un des types de déploiement de l’application contient des dépendances, le site envoie aussi le contenu de l’application dépendante aux points de distribution.
+### <a name="bkmk_deploy-general"></a> Informations **générales** sur le déploiement 
 
-    >[!IMPORTANT]
-    > Si vous mettez à jour l’application dépendante après avoir déployé l’application principale, le site ne distribue pas automatiquement le nouveau contenu pour la dépendance.
+Dans la page **Général** de l’Assistant Déploiement logiciel, spécifiez les informations suivantes :  
 
-- **Commentaires (facultatif)**  : si vous le souhaitez, entrez une description de ce déploiement.
+- **Logiciel** : cette valeur indique l’application à déployer. Cliquez sur **Parcourir** pour sélectionner une autre application.  
 
-### <a name="specify-content-options-for-the-deployment"></a>Spécifier les options de contenu pour le déploiement
+- **Regroupement** : cliquez sur **Parcourir** pour sélectionner le regroupement dans lequel déployer l’application.  
 
-Dans la page **Contenu**, cliquez sur **Ajouter** pour ajouter le contenu associé à ce déploiement aux points de distribution ou aux groupes de points de distribution. Si vous sélectionnez **Utiliser des groupes de points de distribution par défaut associés à ce regroupement** dans la page **Général**, cette option est automatiquement remplie. Seul un membre du rôle de sécurité Administrateur d’application peut le modifier.
+- **Utiliser des groupes de points de distribution par défaut associés à ce regroupement** : stocke le contenu de l’application dans le groupe de points de distribution par défaut du regroupement. Si vous n’avez associé aucun groupe de points de distribution au regroupement sélectionné, cette option est grisée.  
 
-### <a name="specify-deployment-settings"></a>Spécifier des paramètres de déploiement
+- **Distribuer automatiquement le contenu pour les dépendances** : si l’un des types de déploiement de l’application a des dépendances, le site envoie aussi le contenu de l’application dépendante aux points de distribution.  
 
-Dans la page **Paramètres de déploiement** de l’Assistant Déploiement logiciel, spécifiez les informations suivantes :
+    >[!Note]  
+    > Si vous mettez à jour l’application dépendante après avoir déployé l’application principale, le site ne distribue pas automatiquement le nouveau contenu pour la dépendance.  
 
-- **Action** : à partir de la liste déroulante, indiquez si ce déploiement est destiné à **Installer** ou **Désinstaller** l’application.
+- **Commentaires (facultatif)**  : si vous le souhaitez, entrez une description de ce déploiement.  
 
-    > [!NOTE]
-    >  Si une application est déployée deux fois sur un appareil, une fois avec l’action **Installer** et une autre fois avec l’action **Désinstaller**, le déploiement de l’application avec l’action **Installer** a la priorité.
 
-  Vous ne pouvez pas modifier l’action d’un déploiement une fois que vous l’avez créé.
+### <a name="bkmk_deploy-content"></a> Options relatives au **contenu** du déploiement
+
+Dans la page **Contenu**, cliquez sur **Ajouter** pour distribuer le contenu de cette application à un point de distribution ou à un groupe de points de distribution. 
+
+Si vous avez sélectionné l’option **Utiliser des groupes de points de distribution par défaut associés à ce regroupement** dans la page Général, cette option est automatiquement remplie. Seul un membre du rôle de sécurité **Administrateur d’application** peut le modifier.
+
+Si le contenu de l’application est déjà distribué, il apparaît ici. 
+
+
+### <a name="bkmk_deploy-settings"></a> **Paramètres de déploiement**
+
+Dans la page **Paramètres de déploiement**, spécifiez les informations suivantes :  
+
+- **Action** : à partir de la liste déroulante, indiquez si ce déploiement est destiné à **Installer** ou **Désinstaller** l’application.  
+
+    > [!NOTE]  
+    >  Si vous créez un déploiement pour **installer** une application et un autre pour **désinstaller** la même application sur le même appareil, le déploiement **d’installation** est prioritaire.  
+
+    Vous ne pouvez pas changer l’action d’un déploiement une fois que vous l’avez créé.  
 
 - **Objet**: dans la liste déroulante, choisissez l’une des options suivantes :  
-    - **Disponible** : si l’application est déployée pour un utilisateur, celui-ci peut voir l’application publiée dans le Centre logiciel et l’installer à la demande.
-    - **Obligatoire** : l’application est déployée automatiquement, selon la planification. Si l’état du déploiement de l’application n’est pas masqué, toute personne utilisant l’application peut suivre l’état de son déploiement et installer l’application à partir du Centre logiciel avant l’échéance.
+
+    - **Disponible** : l’utilisateur voit l’application dans le Centre logiciel. Il peut l’installer sur demande.  
+
+    - **Obligatoire** : le client installe automatiquement l’application conformément à la planification que vous définissez. Si l’application n’est pas masquée, un utilisateur peut suivre l’état de son déploiement. Il peut également utiliser le Centre logiciel pour installer l’application avant l’échéance.  
 
     > [!NOTE]   
-    >  Quand l’action de déploiement est définie sur **Désinstaller**, l’objet du déploiement est automatiquement défini sur **Obligatoire**. Vous ne pouvez pas modifier ce comportement.  
+    >  Quand vous définissez l’action de déploiement sur **Désinstaller**, l’objet du déploiement est automatiquement défini sur **Obligatoire**. Vous ne pouvez pas modifier ce comportement.  
 
-- **Déployer automatiquement en fonction de la planification, qu’un utilisateur soit connecté ou non** : si le déploiement est destiné à un utilisateur, sélectionnez cette option pour déployer l’application sur les appareils principaux de l’utilisateur. Ce paramètre ne nécessite pas que l'utilisateur se connecter avant que déploiement ne s'exécute. Ne sélectionnez pas cette option si l’utilisateur doit interagir avec l’installation. Cette option est disponible uniquement lorsque l'objet du déploiement est **Obligatoire**.
+- **Prédéployer des logiciels sur le périphérique principal de l’utilisateur** : si le déploiement est destiné à un utilisateur, sélectionnez cette option pour déployer l’application sur le périphérique principal de l’utilisateur. Ce paramètre ne nécessite pas que l’utilisateur se connecte avant que le déploiement ne s’exécute. Si l’utilisateur doit interagir avec l’installation, ne sélectionnez pas cette option. Cette option est disponible uniquement quand le déploiement est **Obligatoire**.  
 
-- **Envoyer des paquets de mise en éveil** : si l’objet du déploiement est **Obligatoire**, un paquet de mise en éveil est envoyé aux ordinateurs avant que le client exécute le déploiement. Ce paquet réveille les ordinateurs à l’échéance de l’installation. Avant d’utiliser cette option, les ordinateurs et les réseaux doivent être configurés pour Wake On LAN.
-- **Autoriser les clients avec une connexion Internet facturée à l’usage à télécharger le contenu une fois l’échéance d’installation atteinte, ce qui peut entraîner des frais supplémentaires** : cette option est disponible uniquement pour les déploiements dont l’objet est **Obligatoire**.
-- **Fermer automatiquement les fichiers exécutables en cours d’exécution que vous avez spécifiés sous l’onglet de comportement à l’installation de la boîte de dialogue des propriétés du type de déploiement** : pour plus d’informations, consultez [Procédure pour vérifier si des fichiers exécutables sont en cours d’exécution avant d’installer une application](#how-to-check-for-running-executable-files-before-installing-an-application).
+- **Envoyer des paquets de mise en éveil**: si le déploiement est **Obligatoire**, Configuration Manager envoie un paquet de mise en éveil aux ordinateurs avant que le client n’exécute le déploiement. Ce paquet réveille les ordinateurs à l’échéance de l’installation. Avant d’utiliser cette option, les ordinateurs et les réseaux doivent être configurés pour Wake On LAN. Pour plus d’informations, consultez [Planifier la sortie de veille des clients](/sccm/core/clients/deploy/plan/plan-wake-up-clients).  
 
-- **Exiger l’approbation de l’administrateur si des utilisateurs demandent cette application** : pour les versions 1710 et antérieures, l’utilisateur ne peut pas installer l’application demandée tant que l’administrateur ne lui a pas donné son approbation. Cette option est grisée quand l’objet du déploiement est **Obligatoire** ou que l’application est déployée sur un regroupement d’appareils.  
+- **Autoriser les clients avec une connexion Internet facturée à l’usage à télécharger le contenu une fois l’échéance d’installation atteinte, ce qui peut entraîner des frais supplémentaires** : cette option est disponible uniquement pour les déploiements dont l’objet est **Obligatoire**.  
 
-    > [!NOTE]
-    >  Les demandes d'approbation d'application sont affichées dans le nœud **Demandes d'approbation** , sous **Gestion d'applications** dans l'espace de travail **Bibliothèque de logiciels** . Si une demande ne reçoit pas d’approbation dans les 45 jours, elle est supprimée. La réinstallation du client risque d’annuler des demandes d’approbation en attente.  
-    >  Après avoir approuvé l’installation d’une application, vous pouvez **Refuser** la demande dans la console Configuration Manager. Par cette action, le client ne désinstalle pas l’application sur les appareils, mais elle empêche les utilisateurs d’installer de nouvelles copies de l’application à partir du Centre logiciel.
-
-- **Un administrateur doit approuver une demande pour cette application sur le périphérique** : depuis la version 1802, l’utilisateur ne peut pas installer l’application demandée tant que l’administrateur ne lui a pas donné son approbation. Si l’administrateur approuve la demande, l’utilisateur ne pourra installer l’application que sur cet appareil. Il devra soumettre une autre demande pour installer l’application sur un autre appareil. Cette option est grisée quand l’objet du déploiement est **Obligatoire** ou que l’application est déployée sur un regroupement d’appareils. <!--1357015-->  
-
-    Cette fonctionnalité est facultative. Pour plus d’informations, consultez [Activer les fonctionnalités facultatives des mises à jour](/sccm/core/servers/manage/install-in-console-updates#bkmk_options). Si cette fonctionnalité n’est pas activée, c’est l’expérience antérieure qui prévaut.  
-
-    > [!Important]  
-    > Le client Configuration Manager doit aussi se trouver sur la version 1802. Par ailleurs, vous devez utiliser le nouveau Centre logiciel.  
+- **Mettre automatiquement à niveau toutes les versions remplacées de cette application** : le client met à niveau toute version remplacée de l’application avec l’application de remplacement. 
 
     > [!Note]  
-    > Affichez **Demandes d’approbation** sous **Gestion des applications** dans l’espace de travail **Bibliothèque de logiciels** de la console de Configuration Manager. Il y a maintenant une colonne **Appareil** dans la liste de chaque demande. À chaque action effectuée sur la demande, la boîte de dialogue Demande d’application comprend également le nom de l’appareil utilisé par l’utilisateur pour envoyer la demande.  
-    >  Si une demande ne reçoit pas d’approbation dans les 45 jours, elle est supprimée. La réinstallation du client risque d’annuler des demandes d’approbation en attente.  
-    >  Après avoir approuvé l’installation d’une application, vous pouvez **Refuser** la demande dans la console Configuration Manager. Par cette action, le client ne désinstalle pas l’application sur les appareils, mais elle empêche les utilisateurs d’installer de nouvelles copies de l’application à partir du Centre logiciel.
-
-- **Mettre automatiquement à niveau toutes les versions remplacées de cette application** : le client met à niveau toute version remplacée de l’application avec l’application de remplacement.    
+    > Cette option fonctionne, quelle que soit l’approbation de l’administrateur. Si un administrateur a déjà approuvé la version obsolète, il n’a pas besoin d’approuver également la version de remplacement. L’approbation concerne les nouvelles demandes uniquement, pas les mises à niveau de remplacement.<!--515824-->  
 
     > [!NOTE]  
     > Depuis la version 1802, vous pouvez activer ou désactiver cette option pour l’objet d’installation **Disponible**. <!--1351266--> 
 
 
-### <a name="specify-scheduling-settings-for-the-deployment"></a>Spécifier les paramètres de planification pour le déploiement
+#### <a name="bkmk_approval"></a> Paramètres d’approbation
+Un des paramètres d’approbation suivants s’affiche, en fonction de votre version de Configuration Manager :
 
-Dans la page **Planification** de l’Assistant Déploiement logiciel, définissez le moment où cette application est déployée ou mise à la disposition des appareils clients.
-Les options de cette page diffèrent selon que l’action de déploiement est définie sur **Disponible** ou sur **Obligatoire**.
+- **Exiger l’approbation de l’administrateur si des utilisateurs demandent cette application** : pour les versions 1710 et antérieures, l’utilisateur ne peut pas installer l’application demandée tant que l’administrateur ne lui a pas donné son approbation. Cette option est grisée quand l’objet du déploiement est **Obligatoire** ou que vous déployez l’application sur un regroupement d’appareils.  
 
-Dans certains cas, vous pouvez accorder plus de temps aux utilisateurs pour installer les mises à jour logicielles ou les déploiements d’applications obligatoires au-delà des échéances que vous avez définies. Ce comportement est généralement obligatoire après qu’un ordinateur est resté longuement inactif et qu’il nécessite l’installation de nombreuses applications. Par exemple, si un utilisateur est rentré de congés, il peut être amené à patienter longtemps pendant l’installation des déploiements d’applications en retard. Pour résoudre ce problème, vous pouvez désormais définir une période de grâce de mise en œuvre en déployant des paramètres du client Configuration Manager sur un regroupement.
+    Les demandes d'approbation d'application sont affichées dans le nœud **Demandes d'approbation** , sous **Gestion d'applications** dans l'espace de travail **Bibliothèque de logiciels** . Si une demande ne reçoit pas d’approbation dans les 45 jours, elle est supprimée. La réinstallation du client risque d’annuler des demandes d’approbation en attente.  
 
-Pour configurer la période de grâce, procédez comme suit :
+    Après avoir approuvé l’installation d’une application, vous pouvez **Refuser** la demande dans la console Configuration Manager. Cette action n’entraîne pas la désinstallation de l’application de tous les appareils par le client. Elle empêche les utilisateurs d’installer de nouvelles copies de l’application à partir du Centre logiciel.  
 
-- Dans la page **Agent ordinateur** des paramètres du client, configurez la nouvelle propriété **Période de grâce pour la mise en œuvre après l’échéance du déploiement (en heures)** avec une valeur comprise entre **1** et **120** heures.
-- Dans la page **Planification** d’un déploiement d’application obligatoire, choisissez **Différer la mise en œuvre de ce déploiement selon les préférences de l’utilisateur, dans la limite de la période de grâce définie dans les paramètres du client**. La période de grâce de mise en œuvre s’applique à tous les déploiements pour lesquels cette option est activée et vise les appareils sur lesquels vous avez aussi déployé le paramètre client.
+- **Un administrateur doit approuver une demande pour cette application sur le périphérique** : depuis la version 1802, l’utilisateur ne peut pas installer l’application demandée tant que l’administrateur ne lui a pas donné son approbation. Si l’administrateur approuve la demande, l’utilisateur ne pourra installer l’application que sur cet appareil. Il devra soumettre une autre demande pour installer l’application sur un autre appareil. Cette option est grisée quand l’objet du déploiement est **Obligatoire** ou que vous déployez l’application sur un regroupement d’appareils. <!--1357015-->  
 
-Une fois que l’échéance d’installation de l’application est atteinte, le client installe cette dernière au cours de la première fenêtre non ouvrée que l’utilisateur a configurée dans la limite de cette période de grâce. Toutefois, l’utilisateur peut toujours ouvrir le Centre logiciel et installer l’application à tout moment, s’il le souhaite. Une fois que la période de grâce a expiré, le comportement de mise en œuvre redevient normal pour les déploiements en retard.
+    Cette fonctionnalité est facultative. Pour plus d’informations, consultez [Activer les fonctionnalités facultatives des mises à jour](/sccm/core/servers/manage/install-in-console-updates#bkmk_options). Si vous n’activez pas cette fonctionnalité, c’est l’expérience antérieure qui prévaut.  
 
-Si l’application que vous déployez en remplace une autre, vous pouvez définir l’échéance d’installation quand les utilisateurs reçoivent la nouvelle application. Définissez l’**Échéance d’installation** pour mettre à niveau les utilisateurs avec l’application remplacée.
+    > [!Note]  
+    > Pour tirer parti des nouvelles fonctionnalités de Configuration Manager, commencez par mettre à jour les clients vers la dernière version. Bien que les nouvelles fonctionnalités s’affichent dans la console Configuration Manager quand vous mettez à jour le site et la console, le scénario complet n’est pas fonctionnel tant que la version cliente n’est pas également la plus récente.<!--SCCMDocs issue 646-->  
 
-### <a name="specify-user-experience-settings-for-the-deployment"></a>Spécifier les paramètres d’expérience utilisateur pour le déploiement
+    Affichez **Demandes d’approbation** sous **Gestion des applications** dans l’espace de travail **Bibliothèque de logiciels** de la console de Configuration Manager. Il y a maintenant une colonne **Appareil** dans la liste de chaque demande. À chaque action effectuée sur la demande, la boîte de dialogue Demande d’application comprend également le nom de l’appareil utilisé par l’utilisateur pour envoyer la demande.  
 
-Dans la page **Expérience utilisateur** de l’Assistant Déploiement logiciel, spécifiez la façon dont les utilisateurs peuvent interagir avec l’installation de l’application.
+    Si une demande ne reçoit pas d’approbation dans les 45 jours, elle est supprimée. La réinstallation du client risque d’annuler des demandes d’approbation en attente.  
 
-Quand vous déployez des applications sur des appareils Windows Embedded avec le filtre d’écriture activé, vous pouvez demander à ce que l’application soit installée sur un segment de recouvrement temporaire puis les modifications validées ultérieurement. Vous pouvez aussi demander à ce que les modifications soient validées à l’échéance de l’installation ou au cours d’une fenêtre de maintenance. Si les modifications sont validées au moment de l’échéance d’installation ou au cours d’une fenêtre de maintenance, l’appareil doit être redémarré. Les modifications sont conservées sur l’appareil.
+    Après avoir approuvé l’installation d’une application, vous pouvez **Refuser** la demande dans la console Configuration Manager. Cette action n’entraîne pas la désinstallation de l’application de tous les appareils par le client. Elle empêche les utilisateurs d’installer de nouvelles copies de l’application à partir du Centre logiciel.  
 
->[!NOTE]
-    >  Quand vous déployez une application sur un appareil Windows Embedded, vérifiez qu’il est membre d’un regroupement associé à une fenêtre de maintenance. Pour plus d’informations sur les fenêtres de maintenance et les appareils Windows Embedded, consultez [Créer des applications Windows Embedded](../../apps/get-started/creating-windows-embedded-applications.md).
-    > Les options **Installation du logiciel** et **Redémarrage du système (si nécessaire pour terminer l'installation)** ne sont pas utilisées si l'objet du déploiement est défini sur **Disponible**. Vous pouvez également configurer le niveau de notification qu'un utilisateur peut voir lorsque l'application est installée.
+    > [!Important]  
+    > Depuis la version 1806, *le comportement est différent* quand vous révoquez une approbation pour une application qui a été approuvée et installée. Maintenant, quand vous **refusez** la demande visant l’application, le client désinstalle l’application sur l’appareil de l’utilisateur.<!--1357891-->  
 
-### <a name="specify-alert-options-for-the-deployment"></a>Spécifier les options d’alerte pour le déploiement
 
-Dans la page **Alertes** de l’Assistant Déploiement logiciel, configurez comment Configuration Manager et System Center Operations Manager génèrent des alertes pour ce déploiement. Vous pouvez configurer des seuils pour les alertes de rapport et désactiver les rapports pendant la durée du déploiement.
+#### <a name="deployment-properties-deployment-settings"></a>**Paramètres de déploiement** dans les propriétés de déploiement
+Quand vous affichez les propriétés d’un déploiement, l’option suivante s’affiche dans l’onglet **Paramètres de déploiement** si elle est prise en charge par la technologie de type de déploiement :
 
-### <a name="associate-the-deployment-with-an-ios-app-configuration-policy"></a>Associer le déploiement à une stratégie de configuration d’application iOS
-
-Dans la page **Stratégies de configuration des applications**, cliquez sur **Nouveau** pour associer ce déploiement à une stratégie de configuration d’application iOS (si vous en avez créé une). Pour plus d’informations sur ce type de stratégie, consultez [Configurer des applications iOS avec des stratégies de configuration des applications](../../apps/deploy-use/configure-ios-apps-with-app-configuration-policies.md).
-
-### <a name="deployment-properties"></a>Propriétés de déploiement
-
-Recherchez le nouveau déploiement dans le nœud **Déploiements** de l’espace de travail **Analyse**. Vous pouvez modifier les propriétés de ce déploiement ou le supprimer de l'onglet **Déploiements** du volet Détail de l'application.
+**Fermer automatiquement les fichiers exécutables en cours d’exécution que vous avez spécifiés sous l’onglet de comportement à l’installation de la boîte de dialogue des propriétés du type de déploiement**. Pour plus d’informations, consultez [Vérifier si des fichiers exécutables sont en cours d’exécution avant d’installer une application](#bkmk_exe-check).
 
 
 
-## <a name="delete-an-application-deployment"></a>Supprimer le déploiement d’une application
+### <a name="bkmk_deploy-sched"></a> Paramètres de **planification** d’un déploiement
 
-1.  Dans la console Configuration Manager, accédez à **Bibliothèque de logiciels** > **Gestion des applications** > **Applications**.
-3.  Dans la liste **Applications**, sélectionnez l’application qui inclut le déploiement à supprimer.
-4.  Sous l’onglet **Déploiements** de la liste *<nom_application\>*, sélectionnez le déploiement d’application à supprimer. Ensuite, sous l’onglet **Déploiement**, dans le groupe **Déploiement**, cliquez sur **Supprimer**.
+Dans la page **Planification**, définissez le moment où cette application est déployée ou mise à la disposition des appareils clients.
 
-Quand vous supprimez un déploiement d’application, les instances déjà installées de l'application ne sont pas supprimées. Pour supprimer ces applications, vous devez déployer l’application sur des ordinateurs avec **Désinstaller**. Si vous supprimez un déploiement d’application ou que vous retirez une ressource du regroupement sur lequel le déploiement a lieu, l’application n’est plus visible dans le Centre logiciel.
+Par défaut, Configuration Manager met immédiatement la stratégie de déploiement à la disposition des clients. Si vous souhaitez créer le déploiement, mais pas le mettre à la disposition des clients avant une date ultérieure, configurez l’option **Planifier la mise à disposition de l’application**. Ensuite, sélectionnez les date et heure, et indiquez si elles sont basées sur l’heure UTC ou l’heure locale du client. 
+
+Si le déploiement est **Obligatoire**, spécifiez également **l’échéance de l’installation**. Par défaut, cette échéance est dès que possible. 
+
+Par exemple, vous devez déployer une nouvelle application métier. Tous les utilisateurs disposent d’un certain délai pour l’installer, mais vous souhaitez leur donner la possibilité de l’adopter entre-temps. Vous devez également vous assurer que le site a distribué le contenu à tous les points de distribution. Vous planifiez l’application afin qu’elle soit disponible dans cinq jours à partir d’aujourd’hui. Cette planification vous laisse le temps de distribuer le contenu et de vérifier son état. Ensuite, vous définissez l’échéance de l’installation à un mois à compter d’aujourd’hui. Les utilisateurs voient l’application dans le Centre logiciel quand elle est disponible au bout de cinq jours. S’ils ne font rien, le client installe automatiquement l’application à l’échéance de l’installation. 
+
+Si l’application que vous déployez en remplace une autre, définissez l’échéance d’installation quand les utilisateurs reçoivent la nouvelle application. Définissez l’**Échéance d’installation** pour mettre à niveau les utilisateurs avec l’application remplacée.
+
+
+#### <a name="delay-enforcement-with-a-grace-period"></a>Mise en œuvre du délai avec une période de grâce
+Vous pouvez accorder plus de temps aux utilisateurs pour installer les applications obligatoires *au-delà* des échéances que vous avez définies. Ce comportement est généralement obligatoire quand un ordinateur reste longuement inactif et qu’il nécessite l’installation de nombreuses applications. Par exemple, quand un utilisateur rentre de congés, il peut être amené à patienter longtemps pendant que le client installe les déploiements en retard. Pour résoudre ce problème, définissez une période de grâce pour la mise en œuvre.
+
+- Tout d’abord, configurez cette période de grâce avec la propriété **Période de grâce pour la mise en œuvre après l’échéance du déploiement (en heures)** dans les paramètres clients. Pour plus d’informations, consultez le groupe [Agent ordinateur](/sccm/core/clients/deploy/about-client-settings#computer-agent). Spécifiez une valeur comprise entre **1** et **120** heures.  
+
+- Dans la page **Planification** d’un déploiement d’application obligatoire, activez l’option **Différer la mise en œuvre de ce déploiement selon les préférences de l’utilisateur, dans la limite de la période de grâce définie dans les paramètres du client**. La période de grâce de mise en œuvre s’applique à tous les déploiements pour lesquels cette option est activée et vise les appareils sur lesquels vous avez aussi déployé le paramètre client.
+
+Après l’échéance, le client installe l’application au cours de la première fenêtre non ouvrée, que l’utilisateur a configurée, dans la limite de cette période de grâce. Toutefois, l’utilisateur peut toujours ouvrir le Centre logiciel et installer l’application à tout moment. Une fois que la période de grâce a expiré, le comportement de mise en œuvre redevient normal pour les déploiements en retard.
+
+
+### <a name="bkmk_deploy-ux"></a> Paramètres de **l’expérience utilisateur** du déploiement
+
+Dans la page **Expérience utilisateur**, spécifiez la façon dont les utilisateurs peuvent interagir avec l’installation de l’application.
+
+- **Notifications à l’utilisateur** : indiquez si vous souhaitez afficher les notifications dans le Centre logiciel à l’heure de disponibilité configurée. Ce paramètre contrôle également s’il faut avertir les utilisateurs sur les ordinateurs clients. Pour les déploiements disponibles, vous ne pouvez pas sélectionner l’option **Masquer dans le Centre logiciel et toutes les notifications**.  
+
+- **Installation du logiciel** et **Redémarrage système** : configurez ces paramètres pour les déploiements obligatoires uniquement. Ils spécifient ce qui se passe quand le déploiement atteint l’échéance en dehors des fenêtres de maintenance définies. Pour plus d’informations sur les fenêtres de maintenance, consultez [Guide pratique pour utiliser les fenêtres de maintenance](/sccm/core/clients/manage/collections/use-maintenance-windows).  
+
+- **Traitement des filtres d’écriture pour les appareils Windows Embedded** : ce paramètre contrôle le comportement d’installation sur les appareils Windows Embedded qui sont activés avec un filtre d’écriture. Choisissez l’option permettant de valider les modifications à l’échéance de l’installation ou au cours d’une fenêtre de maintenance. Quand vous sélectionnez cette option, un redémarrage est nécessaire, qui conserve les modifications sur l’appareil. Sinon, l’application est installée sur l’overlay temporaire et validée ultérieurement.  
+
+    - Quand vous déployez une mise à jour logicielle sur un appareil Windows Embedded, assurez-vous que l’appareil fait partie des membres d’un regroupement pour lequel une fenêtre de maintenance a été configurée. Pour plus d’informations sur les fenêtres de maintenance et les appareils Windows Embedded, consultez [Créer des applications Windows Embedded](/sccm/apps/get-started/creating-windows-embedded-applications).  
+
+
+### <a name="bkmk_deploy-alerts"></a> **Alertes** de déploiement
+
+Dans la page **Alertes**, configurez la manière dont Configuration Manager génère des alertes pour ce déploiement. Si vous utilisez également Operations Manager, configurez aussi ses alertes. Vous ne pouvez configurer que certaines alertes pour les déploiements obligatoires. 
+
+
+### <a name="bkmk_deploy-ios"></a> iOS : **stratégies de configuration des applications**
+
+Quand vous déployez un type de déploiement iOS, vous voyez également la page **Stratégies de configuration des applications**. Si vous avez déjà créé une stratégie de configuration des applications iOS, cliquez sur **Nouveau** pour associer ce déploiement à la stratégie. Pour plus d’informations sur ce type de stratégie, consultez [Configurer des applications iOS avec des stratégies de configuration des applications](/sccm/apps/deploy-use/configure-ios-apps-with-app-configuration-policies).
 
 
 
-## <a name="user-notifications-for-required-deployments"></a>Notifications à l’utilisateur pour les déploiements obligatoires
-Quand vous recevez des logiciels obligatoires, dans le paramètre **Répéter et me le rappeler**, vous pouvez choisir une valeur dans la liste déroulante suivante :
-- **Ultérieurement** : indique que les notifications sont planifiées selon les paramètres de notification configurés dans les paramètres du client.
-- **Heure fixe** : indique que la notification est programmée pour s’afficher de nouveau après l’heure sélectionnée. Par exemple, si vous sélectionnez 30 minutes, la notification s’affiche de nouveau au bout de 30 minutes.
+## <a name="bkmk_phased"></a> Créer un déploiement par phases
+<!--1358147--> À compter de la version 1806, créez un déploiement par phases pour une application. Ils permettent d’orchestrer un lancement coordonné et séquencé de logiciels en fonction de groupes et de critères personnalisables. Par exemple, déployez l’application sur un regroupement pilote, puis poursuivez automatiquement le déploiement selon des critères de réussite. 
+
+Pour plus d’informations, consultez les articles suivants :  
+
+- [Créer un déploiement par phases](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
+
+- [Gérer et effectuer le monitoring des déploiements par phases](/sccm/osd/deploy-use/manage-monitor-phased-deployments?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
+
+
+
+## <a name="bkmk_delete"></a> Supprimer un déploiement
+
+1.  Dans la console Configuration Manager, accédez à l’espace de travail **Bibliothèque de logiciels**, développez **Gestion des applications** et sélectionnez le nœud **Applications**.  
+
+2.  Dans la liste **Applications**, sélectionnez l’application qui inclut le déploiement à supprimer.  
+
+3.  Basculez vers l’onglet **Déploiements** du volet d’informations, puis sélectionnez le déploiement d’application.  
+
+4. Dans le ruban, sous l’onglet **Déploiement**, dans le groupe **Déploiement**, cliquez sur **Supprimer**.  
+
+Quand vous supprimez un déploiement d’application, les instances de l’application que les clients ont déjà installées ne sont pas supprimées. Pour supprimer ces applications, déployez l’application sur les ordinateurs avec la valeur **Désinstaller**. Si vous supprimez un déploiement d’application ou que vous retirez une ressource du regroupement sur lequel le déploiement a lieu, l’application n’est plus visible dans le Centre logiciel.
+
+
+
+## <a name="bkmk_notify"></a> Notifications à l’utilisateur pour les déploiements obligatoires
+
+Quand les utilisateurs reçoivent des logiciels obligatoires et qu’ils sélectionnent le paramètre **Répéter et me rappeler**, ils peuvent choisir parmi les options suivantes :  
+
+- **Ultérieurement** : indique que les notifications sont planifiées selon les paramètres de notification configurés dans les paramètres du client.  
+
+- **Heure fixe** : indique que la notification est programmée pour s’afficher de nouveau après l’heure sélectionnée. Par exemple, si vous sélectionnez 30 minutes, la notification s’affiche de nouveau au bout de 30 minutes.  
 
 ![Groupe Agent ordinateur dans les paramètres par défaut du client](media/ComputerAgentSettings.png)
 
-L’intervalle de répétition maximal est toujours basé sur les valeurs de notification configurées dans les paramètres du client à tout instant le long de la chronologie du déploiement. Par exemple :
-- Vous configurez le paramètre **Échéance du déploiement supérieure à 24 heures, effectuer un rappel à l’utilisateur toutes les (heures)** dans la page **Agent ordinateur** pour 10 heures.
-- Le client affiche la boîte de dialogue de notification pendant plus de 24 heures avant l’échéance du déploiement.
-- La boîte de dialogue affiche des options de répétition allant jusqu’à 10 heures, mais jamais au-delà. 
-- À l’approche de l’échéance du déploiement, la boîte de dialogue affiche moins d’options. Ces options sont en cohérence avec les paramètres correspondants du client pour chaque composant de la chronologie du déploiement.
+L’intervalle de répétition maximal est toujours basé sur les valeurs de notification configurées dans les paramètres du client à tout instant le long de la chronologie du déploiement. Par exemple :  
+
+- Vous configurez le paramètre **Échéance du déploiement supérieure à 24 heures, effectuer un rappel à l’utilisateur toutes les (heures)** dans la page **Agent ordinateur** pour 10 heures.  
+
+- Le client affiche la boîte de dialogue de notification pendant plus de 24 heures avant l’échéance du déploiement.  
+
+- La boîte de dialogue affiche des options de répétition allant jusqu’à 10 heures, mais jamais au-delà.   
+
+- À l’approche de l’échéance du déploiement, la boîte de dialogue affiche moins d’options. Ces options sont en cohérence avec les paramètres correspondants du client pour chaque composant de la chronologie du déploiement.  
 
 Pour un déploiement à haut risque, à l’image d’une séquence de tâches qui déploie un système d’exploitation, l’expérience de notification à l’utilisateur est plus intrusive. Au lieu d’obtenir une notification temporaire sur la barre des tâches, la boîte de dialogue ci-dessous s’affiche chaque fois que vous êtes averti qu’une maintenance logicielle critique est nécessaire :
 
@@ -174,23 +244,34 @@ Pour un déploiement à haut risque, à l’image d’une séquence de tâches q
 
 
 
-## <a name="how-to-check-for-running-executable-files-before-installing-an-application"></a>Procédure pour vérifier si des fichiers exécutables sont en cours d’exécution avant d’installer une application
+## <a name="bkmk_exe-check"></a> Vérifier si des fichiers exécutables sont en cours d’exécution
 
-Dans la boîte de dialogue **Propriétés** d’un type de déploiement, sous l’onglet **Comportement à l’installation**, spécifiez un ou plusieurs fichiers exécutables. Si l’un de ces fichiers exécutables est en cours d’exécution sur le client, l’installation du type de déploiement est bloquée. L’utilisateur doit fermer le fichier exécutable en cours d’exécution pour permettre au client d’installer le type de déploiement. Pour les déploiements dont l’objet est Obligatoire, le client peut fermer automatiquement le fichier exécutable en cours d’exécution.
+Configurez un déploiement pour vérifier si certains fichiers exécutables sont en cours d’exécution sur le client. Utilisez cette option pour rechercher les processus susceptibles d’interrompre l’installation de l’application. Si l’un de ces fichiers exécutables est en cours d’exécution, le client bloque l’installation du type de déploiement. L’utilisateur doit fermer le fichier exécutable en cours d’exécution pour permettre au client d’installer le type de déploiement. Pour les déploiements dont l’objet est Obligatoire, le client peut fermer automatiquement le fichier exécutable en cours d’exécution.
 
-1. Ouvrez la boîte de dialogue **Propriétés** d’un type de déploiement.
-2. Dans l’onglet **Comportement à l’installation** de la boîte de dialogue **Propriétés** de *<deployment type name>*, cliquez sur **Ajouter**.
-3. Dans la boîte de dialogue **Ajouter ou modifier un fichier exécutable**, entrez le nom du fichier exécutable qui, s’il est en cours d’exécution, bloque l’installation de l’application. Si vous le souhaitez, vous pouvez également entrer un nom convivial pour l’application pour vous aider à l’identifier dans la liste.
-4. Cliquez sur **OK** pour fermer la boîte de dialogue **Propriétés** de *<deployment type name>*.
-5. Au moment de déployer l’application, dans la page **Paramètres du déploiement** de l’Assistant Déploiement logiciel, sélectionnez **Fermer automatiquement les fichiers exécutables en cours d’exécution que vous avez spécifiés sous l’onglet Comportement à l’installation de la boîte de dialogue des propriétés du type de déploiement**.
+1. Ouvrez la boîte de dialogue **Propriétés** du type de déploiement.  
 
-Une fois que les clients ont reçu le déploiement, voici le comportement qui prévaut :
+2. Basculez vers l’onglet **Comportement à l’installation**, puis cliquez sur **Ajouter**.  
 
-- Si vous avez déployé l’application comme étant **Disponible** et qu’un utilisateur final tente de l’installer, le client invite ce dernier à fermer les fichiers exécutables en cours d’exécution spécifiés avant de poursuivre l’installation.
+3. Dans la boîte de dialogue **Ajouter le fichier exécutable**, entrez le nom du fichier exécutable cible. Si vous le souhaitez, entrez un nom convivial pour l’application pour vous aider à l’identifier dans la liste.  
 
-- Si vous avez déployé l’application comme étant **Obligatoire** et que vous avez spécifié **Fermer automatiquement les fichiers exécutables en cours d’exécution que vous avez spécifiés sous l’onglet de comportement à l’installation de la boîte de dialogue des propriétés du type de déploiement**, une boîte de dialogue signale à l’utilisateur que les fichiers exécutables spécifiés se ferment automatiquement une fois que l’échéance d’installation de l’application est atteinte. Vous pouvez planifier ces boîtes de dialogue dans **Paramètres client** > **Agent ordinateur**. Si vous ne souhaitez pas que l’utilisateur final voit ces messages, sélectionnez **Masquer dans le Centre logiciel et toutes les notifications** sous l’onglet **Expérience utilisateur** des propriétés du déploiement.
+4. Cliquez sur **OK**, puis cliquez sur **OK** pour fermer la fenêtre des propriétés de type de déploiement.  
 
-- Si vous avez déployé l’application comme étant **Obligatoire** et que vous n’avez pas spécifié **Fermer automatiquement les fichiers exécutables en cours d’exécution que vous avez spécifiés sous l’onglet de comportement à l’installation de la boîte de dialogue des propriétés du type de déploiement**, l’installation de l’application échoue si une ou plusieurs des applications spécifiées sont en cours d’exécution.
+5. Quand vous déployez l’application, sélectionnez l’option **Fermer automatiquement les fichiers exécutables en cours d’exécution que vous avez spécifiés sous l’onglet de comportement à l’installation de la boîte de dialogue des propriétés du type de déploiement**. Cette option se trouve sous l’onglet **Paramètres de déploiement** des propriétés de déploiement.  
+
+
+### <a name="client-behaviors-and-user-notifications"></a>Comportements clients et notifications à l’utilisateur
+
+Une fois que les clients ont reçu le déploiement, voici le comportement qui prévaut :  
+
+- Si vous avez déployé l’application comme étant **Disponible** et qu’un utilisateur tente de l’installer, le client invite ce dernier à fermer les fichiers exécutables en cours d’exécution spécifiés avant de poursuivre l’installation.  
+
+- Si vous avez déployé l’application comme étant **Obligatoire** et que vous avez spécifié **Fermer automatiquement les fichiers exécutables en cours d’exécution que vous avez spécifiés sous l’onglet de comportement à l’installation de la boîte de dialogue des propriétés du type de déploiement**, le client affiche une notification. Il informe l’utilisateur que les fichiers exécutables spécifiés sont automatiquement fermés quand l’échéance d’installation de l’application est atteinte.  
+
+    - Planifiez ces boîtes de dialogue dans le groupe **Agent ordinateur** des paramètres clients. Pour plus d’informations, consultez [Agent ordinateur](/sccm/core/clients/deploy/about-client-settings#computer-agent).  
+
+    - Si vous ne souhaitez pas que l’utilisateur voit ces messages, sélectionnez l’option **Masquer dans le Centre logiciel et toutes les notifications** sous l’onglet **Expérience utilisateur** des propriétés du déploiement. Pour plus d’informations, consultez [Paramètres de l’expérience utilisateur du déploiement](#bkmk_deploy-ux).  
+
+- Si vous avez déployé l’application comme étant **Obligatoire** et que vous n’avez pas spécifié **Fermer automatiquement les fichiers exécutables en cours d’exécution que vous avez spécifiés sous l’onglet de comportement à l’installation de la boîte de dialogue des propriétés du type de déploiement**, l’installation de l’application échoue si une ou plusieurs des applications spécifiées sont en cours d’exécution.  
 
 
 
@@ -223,13 +304,12 @@ Une fois que les clients ont reçu le déploiement, voici le comportement qui pr
 
     - Ajouter le point de distribution cloud à un groupe de limites utilisé par les clients  
 
-    - Les clients doivent être en mesure de résoudre le nom de domaine complet (FQDN) du point de gestion compatible HTTPS  
+    - Les clients doivent résoudre le nom de domaine complet (FQDN) du point de gestion compatible HTTPS  
 
 
 
 ## <a name="next-steps"></a>Étapes suivantes
-
-   -  [Paramètres de gestion des déploiements à haut risque](../../protect/understand/settings-to-manage-high-risk-deployments.md)  
-   -  [Guide pratique pour configurer les paramètres client](../../core/clients/deploy/configure-client-settings.md)
-   -  [Guide de l’utilisateur sur le Centre logiciel](/sccm/core/understand/software-center)
+ - [Surveiller les applications](/sccm/apps/deploy-use/monitor-applications-from-the-console)
+ - [Tâches de gestion pour les applications](/sccm/apps/deploy-use/management-tasks-applications)
+ - [Guide de l’utilisateur sur le Centre logiciel](/sccm/core/understand/software-center)
 

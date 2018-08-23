@@ -1,56 +1,80 @@
 ---
 title: Bonnes pratiques concernant les mises à jour logicielles
 titleSuffix: Configuration Manager
-description: Adoptez ces bonnes pratiques pour les mises à jour logicielles dans System Center Configuration Manager.
+description: Utilisez ces bonnes pratiques pour les mises à jour logicielles dans Configuration Manager.
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 10/06/2018
+ms.date: 07/30/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 6d20389a-9de2-4a64-bced-9fc4fa519174
-ms.openlocfilehash: 0604c75aedfea5d82bd7d274c4a43edccb497f1e
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: fd16b33b885786d7a613096456774fc05d70f8a4
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32347890"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39383114"
 ---
-# <a name="best-practices-for-software-updates-in-system-center-configuration-manager"></a>Bonnes pratiques concernant les mises à jour logicielles dans System Center Configuration Manager
+# <a name="best-practices-for-software-updates-in-configuration-manager"></a>Bonnes pratiques pour les mises à jour logicielles dans Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
-Cette rubrique indique les bonnes pratiques à suivre pour les mises à jour logicielles dans System Center Configuration Manager. Nous distinguons ci-dessous les bonnes pratiques liées à l'installation initiale, d'une part, et les bonnes pratiques liées aux opérations courantes, d'autre part.  
+Cet article inclut des bonnes pratiques pour les mises à jour logicielles dans Configuration Manager. Nous distinguons ci-dessous les bonnes pratiques liées à l’installation initiale, d’une part, de celles liées aux opérations courantes, d’autre part.  
 
-## <a name="installation-best-practices"></a>Bonnes pratiques concernant l’installation  
- Suivez les bonnes pratiques ci-dessous quand vous installez des mises à jour logicielles dans Configuration Manager.  
 
-### <a name="use-a-shared-wsus-database-for-software-update-points"></a>Utiliser une base de données WSUS partagée pour les points de mise à jour logicielle  
- Lorsque vous installez plusieurs points de mise à jour logicielle sur un site principal, utilisez la même base de données WSUS pour chaque point de mise à jour logicielle d'une même forêt Active Directory. Lorsqu'un client bascule sur un autre point de mise à jour logicielle, les performances du client et du réseau peuvent s'en trouver ralenties. En partageant la même base de données, vous réduisez considérablement l'impact de ce basculement sur les performances. Lorsqu'un client bascule sur un nouveau point de mise à jour logicielle qui utilise la même base de données que l'ancien point de mise à jour logicielle, il se peut qu'une analyse différentielle soit lancée, mais celle-ci sera beaucoup plus restreinte que celle qui aurait lieu si le serveur WSUS avait sa propre base de données.  
+
+## <a name="bkmk_install"></a> Bonnes pratiques concernant l’installation  
+
+Suivez les bonnes pratiques ci-dessous quand vous installez des mises à jour logicielles dans Configuration Manager.  
+
+
+### <a name="bkmk_shared-susdb"></a> Utiliser une base de données WSUS partagée pour les points de mise à jour logicielle  
+
+Lorsque vous installez plusieurs points de mise à jour logicielle sur un site principal, utilisez la même base de données WSUS pour chaque point de mise à jour logicielle d'une même forêt Active Directory. Si vous partagez la même base de données, cela permet d’atténuer considérablement, sans l’éliminer entièrement, l’impact sur les performances du client et du réseau, lequel impact peut se produire quand les clients basculent vers un nouveau point de mise à jour logicielle. Une analyse delta se produit quand même lorsqu’un client bascule vers un nouveau point de mise à jour logicielle qui partage une base de données avec l’ancien point de mise à jour logicielle, mais il s’agit d’une analyse beaucoup plus petite que celle qui se produirait si le serveur WSUS possède sa propre base de données. Pour plus d’informations sur les basculements de point de mise à jour logicielle, consultez [Basculement de point de mise à jour logicielle](/sccm/sum/plan-design/plan-for-software-updates#BKMK_SUPSwitching).  
 
 > [!IMPORTANT]  
->  Vous devez également partager les dossiers de contenu WSUS locaux quand vous utilisez une base de données WSUS partagée pour les points de mise à jour logicielle.  
+>  En outre, partagez les dossiers de contenu WSUS locaux quand vous utilisez une base de données WSUS partagée pour les points de mise à jour logicielle.  
 
- Pour plus d’informations sur le basculement de point de mise à jour logicielle, consultez la section [Basculement de point de mise à jour logicielle](../../sum/plan-design/plan-for-software-updates.md#BKMK_SUPSwitching) dans la rubrique [Planifier les mises à jour logicielles dans System Center Configuration Manager](../../sum/plan-design/plan-for-software-updates.md).  
+Pour plus d’informations sur le partage de la base de données WSUS, consultez les billets de blog suivants :  
 
-### <a name="when-configuration-manager-and-wsus-use-the-same-sql-server-configure-one-of-these-to-use-a-named-instance-and-the-other-to-use-the-default-instance-of-sql-server"></a>Lorsque Configuration Manager et WSUS utilisent le même serveur SQL Server, l'un doit utiliser une instance nommée, et l'autre l'instance par défaut de SQL Server  
- Quand les bases de données Configuration Manager et WSUS utilisent le même serveur SQL Server et partagent la même instance de SQL Server, il est difficile de déterminer quelle application utilise quelles ressources. Il est plus facile de dépanner et de diagnostiquer les éventuels problèmes d’utilisation de ressources de chaque application si Configuration Manager et WSUS utilisent différentes instances de SQL Server.  
+- [Guide pratique pour implémenter une base de données SUS partagée pour les points de mise à jour logicielle Configuration Manager](https://blogs.technet.microsoft.com/configurationmgr/2016/10/12/how-to-implement-a-shared-susdb-for-configuration-manager-software-update-points/)  
 
-### <a name="specify-the-store-updates-locally-setting-for-the-wsus-installation"></a>Spécifier le paramètre « Stocker les mises à jour localement » pour l'installation de WSUS  
- Lorsque vous installez WSUS, sélectionnez le paramètre **Stocker les mises à jour localement** . Lorsque ce paramètre est sélectionné, les termes du contrat de licence relatif aux mises à jour logicielles sont téléchargés au cours du processus de synchronisation et stockés sur le disque dur local du serveur WSUS. Si ce paramètre n'est pas sélectionné, il se peut que l'analyse de la conformité des mises à jour logicielles pour les mises à jour comportant un contrat de licence échoue sur les ordinateurs clients. Lorsque vous installez le point de mise à jour logicielle, toutes les 60 minutes (intervalle par défaut), le Gestionnaire de synchronisation WSUS vérifie que ce paramètre est activé.  
+- [Observations sur le partage par plusieurs instances WSUS d’une base de données de contenu dans le cadre de l’utilisation de System Center Configuration Manager](https://blogs.technet.microsoft.com/wsus/2014/03/22/considerations-for-multiple-wsus-instances-sharing-a-content-database-when-using-system-center-configuration-manager-but-without-network-load-balancing-nlb/)  
 
-## <a name="operational-best-practices"></a>Bonnes pratiques concernant le fonctionnement  
- Suivez les bonnes pratiques ci-dessous lorsque vous utilisez des mises à jour logicielles :  
 
-### <a name="limit-software-updates-to-1000-in-a-single-software-update-deployment"></a>Limiter les mises à jour logicielles à 1 000 dans un déploiement de mises à jour logicielles unique  
- Vous devez limiter le nombre de mises à jour logicielles à 1 000 pour chaque déploiement de mises à jour logicielles. À la création d'une règle de déploiement automatique, vérifiez que les critères spécifiés n'entraînent pas plus de 1 000 mises à jour logicielles. Lorsque vous déployez manuellement des mises à jour logicielles, ne sélectionnez pas plus de 1 000 mises à jour à déployer.  
+### <a name="bkmk_sql-instance"></a> Quand Configuration Manager et WSUS utilisent le même serveur SQL Server, l’un doit utiliser une instance nommée, et l’autre l’instance par défaut  
 
-### <a name="create-a-new-software-update-group-each-time-an-automatic-deployment-rule-runs-for-patch-tuesday-and-for-general-deployment"></a>Créer un groupe de mises à jour logicielles chaque fois qu’une règle de déploiement automatique s’exécute pour « Patch Tuesday » et pour un déploiement général  
- La limite pour les mises à jour logicielles dans un déploiement de mises à jour logicielles est de 1 000. Lorsque vous créez une règle de déploiement automatique, vous spécifiez s'il faut utiliser un groupe de mises à jour existant ou en créer un à chaque exécution de la règle. Si vous spécifiez dans une règle de déploiement automatique des critères entraînant plusieurs mises à jour logicielles et que la règle est exécutée à intervalle régulier, indiquez que vous souhaitez créer un nouveau groupe de mises à jour logicielles à chaque exécution de la règle. La limite de 1000 mises à jour logicielles par déploiement ne pourra ainsi pas être dépassée.  
+Quand les bases de données Configuration Manager et WSUS partagent la même instance de SQL Server, il est difficile de déterminer quelle application utilise quelles ressources. Utilisez différentes instances de SQL Server pour Configuration Manager et WSUS. Cette configuration permet de dépanner et de diagnostiquer plus facilement les éventuels problèmes d’utilisation de ressources de chaque application.  
 
-### <a name="use-an-existing-software-update-group-for-automatic-deployment-rules-for-endpoint-protection-definition-updates"></a>Utiliser un groupe de mises à jour logicielles existant pour les règles de déploiement automatique des mises à jour de définitions Endpoint Protection  
- Utilisez toujours un groupe de mises à jour logicielles existant lorsque vous appliquez une règle de déploiement automatique pour déployer des mises à jour de définitions Endpoint Protection fréquemment. Sinon, au fil du temps, des centaines de groupes de mises à jour logicielles risquent d'être créés. Généralement, les éditeurs de mises à jour de définitions configurent ces mises à jour de telle sorte qu'elles expirent lorsqu'elles sont remplacées par quatre mises à jour plus récentes. Ainsi, le groupe de mises à jour logicielles créé par la règle de déploiement automatique ne contiendra jamais plus de quatre mises à jour de définitions publiées par l'éditeur en question : une active et trois remplacées.  
+
+### <a name="bkmk_store-local"></a> Spécifier le paramètre « Stocker les mises à jour localement »  
+
+Quand vous installez WSUS, sélectionnez le paramètre **Stocker les mises à jour localement**. Grâce à ce paramètre, le serveur WSUS télécharge les termes du contrat de licence qui sont associés aux mises à jour logicielles. Il télécharge les termes du contrat pendant le processus de synchronisation et les stocke sur le disque dur local du serveur WSUS. Si vous ne sélectionnez pas ce paramètre, il se peut que l’analyse de la conformité des mises à jour logicielles comportant un contrat de licence échoue sur les ordinateurs clients. Le composant **Gestionnaire de synchronisation WSUS** du point de mise à jour logicielle vérifie, toutes les 60 minutes (intervalle par défaut), que ce paramètre est activé.  
+
+
+
+## <a name="bkmk_operation"></a> Bonnes pratiques concernant le fonctionnement  
+
+Suivez les bonnes pratiques ci-dessous lorsque vous utilisez des mises à jour logicielles :  
+
+
+### <a name="bkmk_object-limit"></a> Limiter les mises à jour logicielles à 1 000 dans un déploiement de mises à jour logicielles unique  
+
+Limitez le nombre de mises à jour logicielles à 1 000 dans chaque déploiement de mises à jour logicielles. Quand vous créez une règle de déploiement automatique, vérifiez que les critères spécifiés n’entraînent pas plus de 1 000 mises à jour logicielles. Si vous déployez manuellement des mises à jour logicielles, ne sélectionnez pas plus de 1 000 mises à jour.  
+
+
+### <a name="bkmk_new-group"></a> Créer un groupe de mises à jour logicielles chaque fois qu’une règle de déploiement automatique s’exécute pour « Patch Tuesday » et pour des déploiements généraux  
+
+Il existe une limite de 1 000 mises à jour logicielles dans un déploiement. Quand vous créez une règle de déploiement automatique, vous spécifiez s’il faut utiliser un groupe de mises à jour existant ou en créer un à chaque exécution de la règle. Si vous spécifiez dans une règle de déploiement automatique des critères entraînant plusieurs mises à jour logicielles et que la règle est exécutée à intervalle régulier, créez un groupe de mises à jour logicielles à chaque exécution de la règle. Ainsi, la limite de 1 000 mises à jour logicielles par déploiement ne peut pas être dépassée.  
+
+
+### <a name="bkmk_same-group"></a> Utiliser un groupe de mises à jour logicielles existant pour les règles de déploiement automatique des mises à jour de définitions Endpoint Protection  
+
+Quand vous utilisez une règle de déploiement automatique pour déployer des mises à jour de définitions Endpoint Protection fréquemment, utilisez toujours un groupe de mises à jour logicielles existant. Sinon, au fil du temps, la règle de déploiement automatique risque de créer des centaines de groupes de mises à jour logicielles. Les éditeurs de mises à jour de définitions configurent généralement ces mises à jour de telle sorte qu’elles expirent quand elles sont remplacées par quatre mises à jour plus récentes. Ainsi, le groupe de mises à jour logicielles créé par la règle de déploiement automatique ne contient jamais plus de quatre mises à jour de définitions publiées par l’éditeur en question : une active et trois remplacées.  
+
+
 
 ## <a name="see-also"></a>Voir aussi  
- [Planifier les mises à jour logicielles dans System Center Configuration Manager](../../sum/plan-design/plan-for-software-updates.md)
+ [Planifier les mises à jour logicielles](/sccm/sum/plan-design/plan-for-software-updates)

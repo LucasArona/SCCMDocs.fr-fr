@@ -5,17 +5,17 @@ description: Passez en revue les informations relatives aux appareils Surface à
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 03/22/2018
+ms.date: 07/30/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 7397fc17-3ae8-4525-8386-aea8a9cffa06
-ms.openlocfilehash: db5df73db6a973ca689def785ee99a40425303fa
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 96bca886b25cbe5f6ae1c2f06cbc823b4f017075
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334553"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39383913"
 ---
 # <a name="surface-device-dashboard-in-system-center-configuration-manager"></a>Tableau de bord des appareils Surface dans System Center Configuration Manager
 
@@ -51,11 +51,10 @@ Le tableau de bord des appareils Surface présente trois graphiques pour votre e
         ![Liste d’appareils pour le modèle Surface](media\Surface-Model-Device-List.PNG)
 
 - **Cinq principales versions de microprogramme** : affiche un graphique comprenant les cinq principaux modèles de microprogramme de votre environnement. 
-    - Pointer sur une section du graphique vous donne le nombre d’appareils Surface qui sont de la version de microprogramme sélectionnée. 
-       ![Liste d’appareils pour le modèle Surface](media\Surface-Firmware-Hover.PNG)
+    - Pointer sur une section du graphique vous donne le nombre d’appareils Surface qui sont de la version de microprogramme sélectionnée. À compter de Configuration Manager version 1806, cliquer sur une section du graphique affiche la liste des appareils appropriés. <!--1358654--> ![Liste d’appareils pour le modèle Surface](media\Surface-Firmware-Hover.PNG)
 
 
-## <a name="more-information"></a>Plus d'informations
+## <a name="more-information"></a>Informations complémentaires
 
 Pour plus d’informations sur les appareils Surface, consultez les éléments suivants :
  - Le site web [Surface]( https://go.microsoft.com/fwlink/?linkid=861998).

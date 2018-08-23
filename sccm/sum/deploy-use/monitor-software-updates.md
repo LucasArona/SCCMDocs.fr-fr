@@ -5,17 +5,17 @@ description: La console System Center Configuration Manager fournit des alertes 
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 11/20/2016
+ms.date: 07/30/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 9afd7b0f-5c8e-48bc-9a65-1f7d74103688
-ms.openlocfilehash: bc594fe6b870e1054033601a67209aa9ad72ccef
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: e51e2c8236b014063efe9734baf338ebe70d1eb3
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32351857"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39384481"
 ---
 # <a name="monitor-software-updates-in-system-center-configuration-manager"></a>Surveiller les mises à jour logicielles dans System Center Configuration Manager
 
@@ -61,6 +61,26 @@ Après avoir configuré les paramètres d’alerte, si les conditions spécifié
 
 ##  <a name="BKMK_SUReports"></a> Rapports des mises à jour logicielles  
  Les messages d'état des mises à jour logicielles fournissent des informations sur la conformité des mises à jour logicielles et présentent l'état de l'évaluation et de l'application des déploiements des mises à jour logicielles. Vous pouvez exécuter des rapports de mises à jour logicielles pour afficher ces messages d'état. Il existe plus de 30 rapports de mises à jour logicielles prédéfinis disponibles. Ceux-ci sont organisés en plusieurs catégories et peuvent être utilisés pour signaler des informations spécifiques sur les mises à jour logicielles et les déploiements. En plus d'utiliser les rapports préconfigurés, vous pouvez également créer des rapports de mises à jour logicielles personnalisés selon les besoins de votre entreprise. Pour plus d’informations, consultez [Opérations et maintenance pour les rapports](../../core/servers/manage/operations-and-maintenance-for-reporting.md).  
+
+### <a name="recommended-software-updates-reports"></a>Rapports de mises à jour logicielles recommandés
+Voici quelques-uns des rapports qui s’avèrent utiles pour identifier les problèmes potentiels : 
+
+#### <a name="compliance-9---overall-health-and-compliance-starting-in-version-1806"></a>Conformité 9 – Conformité et intégrité globales (à compter de la version 1806)
+Le rapport comprend les parties suivantes :
+
+- **Proportion de clients sains par rapport au nombre total de clients** : ce graphique à barres compare le nombre de clients « sains », qui ont communiqué avec le site au cours de la période indiquée, avec le nombre total de clients dans la collection spécifiée.
+- **Vue d’ensemble de la conformité** : ce graphique à secteurs indique l’état de conformité global du groupe de mises à jour logicielles concerné sur les clients actifs dans la collection spécifiée.
+- **5 principales mises à jour non conformes par ID d’article** : ce graphique à barres affiche les cinq principales mises à jour logicielles du groupe concerné qui ne sont pas conformes sur les clients actifs dans la collection spécifiée.
+- La partie inférieure du rapport est un tableau plus détaillé, qui liste les mises à jour logicielles du groupe spécifié.
+
+#### <a name="management-2---updates-required-but-not-deployed"></a>Gestion 2 - Mises à jour requises mais non déployées
+
+Ce rapport affiche les mises à jour logicielles propres à un fournisseur dont les critères de classification ont été détectés comme étant des mises à jour obligatoires sur les clients, mais qui n’ont pas été déployées dans un regroupement spécifique. 
+
+#### <a name="troubleshooting-2---deployment-errors"></a>Dépannage 2 - Erreurs de déploiement
+
+Ce rapport retourne les erreurs de déploiement rencontrées sur le site, ainsi que le nombre d’ordinateurs subissant chaque erreur. 
+
 
 ##  <a name="BKMK_MonitorContent"></a> Surveiller le contenu  
  Vous pouvez surveiller le contenu dans la console Configuration Manager pour déterminer l’état de tous les types de package en rapport avec les points de distribution associés, notamment l'état de validation du contenu du package, l'état du contenu attribué à un groupe de points de distribution spécifique, l'état du contenu attribué à un point de distribution et l'état des fonctions facultatives de chaque point de distribution (validation du contenu, PXE et multidiffusion).  

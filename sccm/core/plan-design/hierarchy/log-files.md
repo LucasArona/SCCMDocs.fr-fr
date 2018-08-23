@@ -2,7 +2,7 @@
 title: Fichiers journaux pour la résolution des problèmes
 titleSuffix: Configuration Manager
 description: Utilisez des fichiers journaux pour résoudre des problèmes liés aux systèmes de site et aux clients Configuration Manager.
-ms.date: 03/22/2018
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,14 +10,14 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c068ea5a079d43148191e41dc9a2b4fb7a2e00c7
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 2bd3f76b982356fc444681d1990bee08e90b32fc
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342662"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39385284"
 ---
-# <a name="log-files-in-system-center-configuration-manager"></a>Fichiers journaux dans System Center Configuration Manager
+# <a name="log-files-in-configuration-manager"></a>Fichiers journaux de Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
@@ -116,7 +116,7 @@ Dans Configuration Manager, les composants des clients et des serveurs de site e
 ##  <a name="BKMK_AboutLogs"></a> À propos des fichiers journaux de Configuration Manager  
  La plupart des processus dans Configuration Manager consignent des informations sur les opérations dans un fichier journal dédié à ce processus. Ces fichiers journaux sont identifiés par des extensions de fichier **.log** ou **.lo_**. Configuration Manager écrit dans un fichier .log jusqu’à ce que ce journal atteigne sa taille maximale. Une fois le journal plein, le fichier .log est copié vers un fichier portant le même nom mais avec l’extension .lo_, et le processus ou le composant continue à écrire dans le fichier .log. Quand le fichier .log atteint à nouveau sa taille maximale, le fichier .lo_ est remplacé et le processus se répète. Certains composants établissent un historique du fichier journal en ajoutant une date et une heure au nom du fichier journal, et en conservant l’extension .log. Le client pour Linux et UNIX constitue une exception à la taille maximale et à l’utilisation du fichier .lo_. Pour plus d’informations sur la façon dont le client pour Linux et UNIX utilise les fichiers journaux, consultez [Gérer des fichiers journaux dans le client pour Linux et UNIX](#BKMK_ManageLinuxLogs) dans cet article.  
 
- Pour afficher les journaux, utilisez la visionneuse du journal Configuration Manager, CMTrace, qui se trouve dans le dossier \\\SMSSetup\\Tools du média source de Configuration Manager. Il est ajouté à toutes les images de démarrage ajoutées à la Bibliothèque de logiciels.  
+ Pour afficher les journaux, utilisez la visionneuse du journal Configuration Manager, CMTrace, qui se trouve dans le dossier \\\SMSSetup\\Tools du média source de Configuration Manager. Il est ajouté à toutes les images de démarrage ajoutées à la Bibliothèque de logiciels. À compter de la version 1806, l’outil d’affichage des journaux CMTrace est automatiquement installé avec le client Configuration Manager.<!--1357971--> Pour plus d’informations, consultez [CMTrace](/sccm/core/support/cmtrace). 
 
 ###  <a name="BKMK_LogOptions"></a> Configurer des options de journalisation à l’aide du Gestionnaire de service de Configuration Manager  
  Vous pouvez changer l’emplacement où Configuration Manager stocke les fichiers journaux, ainsi que leur taille.  
@@ -333,6 +333,7 @@ Le fichier journal SMS_DM.log sur le serveur de système de site enregistre auss
 |sitecomp.log|Enregistre des détails concernant la maintenance des composants du site installés sur tous les serveurs de système de site du site.|Serveur de site|  
 |sitectrl.log|Enregistre des modifications dans les paramètres du site apportées aux objets de contrôle de site dans la base de données.|Serveur de site|  
 |sitestat.log|Enregistre le processus de surveillance de la disponibilité et de l'espace disque de tous les systèmes de site.|Serveur de site|
+|SMS_ISVUPDATES_SYNCAGENT.log| Fichier journal pour la synchronisation des mises à jour de logiciels tiers à compter de Configuration Manager version 1806.| Point de mise à jour logicielle de plus haut niveau dans la hiérarchie Configuration Manager.|
 |SMS_PhasedDeployment.log| Fichier journal pour les déploiements en plusieurs phases, une fonctionnalité en préversion à compter de Configuration Manager version 1802.|Site de niveau supérieur dans la hiérarchie Configuration Manager|   
 |SmsAdminUI.log|Enregistre l’activité de la console Configuration Manager.|Ordinateur qui exécute la console Configuration Manager|  
 |SMSAWEBSVCSetup.log|Enregistre les activités d'installation du service Web du catalogue des applications.|Serveur de système de site|  
@@ -411,7 +412,8 @@ Le fichier journal SMS_DM.log sur le serveur de système de site enregistre auss
 |--------------|-----------------|----------------------------|  
 |objreplmgr.log|Enregistre les détails concernant la réplication des fichiers de notification de mises à jour logicielles, entre un site parent et des sites enfants.|Serveur de site|  
 |PatchDownloader.log|Enregistre des détails concernant le processus de téléchargement des mises à jour logicielles vers la destination de téléchargement, sur le serveur de site.|Ordinateur qui héberge la console Configuration Manager à partir de laquelle les téléchargements sont lancés|  
-|ruleengine.log|Enregistre des détails concernant les règles de déploiement automatique pour l'identification, le téléchargement de contenu et la création de groupe et de déploiement de mises à jour logicielles.|Serveur de site|  
+|ruleengine.log|Enregistre des détails concernant les règles de déploiement automatique pour l'identification, le téléchargement de contenu et la création de groupe et de déploiement de mises à jour logicielles.|Serveur de site| 
+|SMS_ISVUPDATES_SYNCAGENT.log| Fichier journal pour la synchronisation des mises à jour de logiciels tiers à compter de Configuration Manager version 1806.| Point de mise à jour logicielle de plus haut niveau dans la hiérarchie Configuration Manager.| 
 |SUPSetup.log|Enregistre des détails concernant l'installation du point de mise à jour logicielle. Lorsque l'installation d'un point de mise à jour logicielle se termine, la mention **Installation was successful** est consignée dans ce fichier journal.|Serveur de système de site|  
 |WCM.log|Enregistre les détails concernant la configuration du point de mise à jour logicielle et les connexions au serveur WSUS pour les catégories, les classifications et les langues des mises à jour souscrites.|Serveur de site qui se connecte au serveur WSUS|  
 |WSUSCtrl.log|Enregistre des détails concernant la configuration, la connectivité de la base de données et l'intégrité du serveur WSUS du site.|Serveur de système de site|  
@@ -777,7 +779,8 @@ Le tableau suivant répertorie les fichiers journaux qui contiennent des informa
 |RebootCoordinator.log|Enregistre des détails concernant la coordination des redémarrages du système sur des ordinateurs clients après l'installation de mises à jour logicielles.|Client|  
 |ScanAgent.log|Enregistre des détails concernant les demandes d'analyse pour les mises à jour logicielles, l'emplacement de WSUS et des actions connexes.|Client|  
 |SdmAgent.log|Enregistre les détails concernant le suivi des corrections et de la conformité. Cependant, le fichier journal des mises à jour logicielles, Updateshandler.log, fournit plus d’informations sur l’installation des mises à jour logicielles nécessaires pour la conformité.<br /><br /> Ce fichier journal est partagé avec les paramètres de compatibilité.|Client|  
-|ServiceWindowManager.log|Enregistre des détails concernant l'évaluation des fenêtres de maintenance.|Client|  
+|ServiceWindowManager.log|Enregistre des détails concernant l'évaluation des fenêtres de maintenance.|Client|
+|SMS_ISVUPDATES_SYNCAGENT.log| Fichier journal pour la synchronisation des mises à jour de logiciels tiers à compter de Configuration Manager version 1806.| Point de mise à jour logicielle de plus haut niveau dans la hiérarchie Configuration Manager.|  
 |SmsWusHandler.log|Enregistre des détails concernant le processus d'analyse pour l'outil d'inventaire de Microsoft Updates.|Client|  
 |StateMessage.log|Enregistre les détails concernant les messages d’état des mises à jour logicielles qui sont créés et envoyés au point de gestion.|Client|  
 |SUPSetup.log|Enregistre des détails concernant l'installation du point de mise à jour logicielle. Lorsque l'installation d'un point de mise à jour logicielle se termine, la mention **Installation was successful** est consignée dans ce fichier journal.|Serveur de système de site|  

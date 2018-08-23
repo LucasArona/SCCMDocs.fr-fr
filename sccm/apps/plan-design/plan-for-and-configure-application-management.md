@@ -2,7 +2,7 @@
 title: Planifier et configurer la gestion des applications
 titleSuffix: Configuration Manager
 description: Implémentez et configurez les dépendances nécessaires au déploiement d’applications dans System Center Configuration Manager.
-ms.date: 11/07/2017
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 2be84a1d-ebb9-47ae-8982-c66d5b92a52a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 18d9fe80a1c5525457579dadbfeaeafa3425202d
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 626fbb8d431857b1b672fffd9f3ba0df8b2a3da0
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340146"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39385199"
 ---
 # <a name="plan-for-and-configure-application-management-in-system-center-configuration-manager"></a>Planifier et configurer la gestion des applications dans System Center Configuration Manager
 
@@ -25,7 +25,7 @@ Utilisez les informations de cette article pour savoir comment implémenter les 
 
 ## <a name="dependencies-external-to-configuration-manager"></a>Dépendances externes à Configuration Manager  
 
-|Dépendance|Plus d'informations|  
+|Dépendance|Informations complémentaires|  
 |------------------|----------------------|  
 |Internet Information Services (IIS) est nécessaire sur les serveurs de système de site qui exécutent le point du site web du catalogue des applications, le point de service web du catalogue des applications, le point de gestion et le point de distribution.|Pour plus d’informations sur cette condition, consultez [Configurations prises en charge](../../core/plan-design/configs/supported-configurations.md).|  
 |Appareils mobiles inscrits par Configuration Manager|Quand vous signez le code des applications à déployer sur des appareils mobiles, n’utilisez pas de certificat généré par un modèle Version 3 (**Windows Server 2008, Enterprise Edition**). Ce modèle de certificat crée un certificat qui est compatible avec les applications Configuration Manager pour appareils mobiles.<br /><br /> Si vous utilisez les services de certificat Active Directory pour signer le code des applications pour les applications d’appareils mobiles, n’utilisez pas de modèle de certificat Version 3.|  
@@ -33,7 +33,7 @@ Utilisez les informations de cette article pour savoir comment implémenter les 
 
 ## <a name="configuration-manager-dependencies"></a>Dépendances de Configuration Manager   
 
-|Dépendance|Plus d'informations|  
+|Dépendance|Informations complémentaires|  
 |------------------|----------------------|  
 |Point de gestion|Les clients contactent un point de gestion pour télécharger la stratégie client, localiser du contenu et se connecter au catalogue des applications.<br /><br /> Si les clients ne peuvent pas accéder à un point de gestion, ils ne peuvent pas utiliser le catalogue d'applications.|  
 |Point de distribution|Pour que les applications puissent être déployées sur les clients, la hiérarchie doit contenir au moins un point de distribution. Par défaut, le serveur de site possède un rôle de système de site du point de distribution activé au cours d'une installation standard. Le nombre et l'emplacement des points de distribution dépendent des exigences propres à votre entreprise.<br /><br /> Pour plus d’informations sur l’installation de points de distribution et sur la gestion de contenu, consultez [Gérer le contenu et l’infrastructure de contenu](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).|  
@@ -72,7 +72,7 @@ Utilisez les informations de cette article pour savoir comment implémenter les 
 > [!IMPORTANT]  
 >  Avant d’effectuer cette procédure, vérifiez que vous respectez tous les prérequis répertoriés ci-dessus.  
 
-|Étapes|Détails|Plus d'informations|  
+|Étapes|Détails|Informations complémentaires|  
 |-----------|-------------|----------------------|  
 |**Étape 1 :** si vous souhaitez utiliser des connexions HTTPS, assurez-vous d'avoir déployé un certificat de serveur web sur les serveurs de système de site.|Déployez un certificat de serveur web sur les serveurs de système de site qui exécuteront le point de site web du catalogue d'applications et le point de service web du catalogue d'applications.<br /><br /> De plus, si vous voulez que les clients puissent utiliser le catalogue des applications depuis Internet, déployez un certificat de serveur web sur au moins un serveur de système de site du point de gestion et configurez-le pour les connexions client depuis Internet.|Pour plus d’informations sur la configuration requise des certificats, consultez [Configuration requise des certificats PKI](../../core/plan-design/network/pki-certificate-requirements.md).|  
 |**Étape 2 :** si vous souhaitez utiliser un certificat client PKI pour les connexions à des points de gestion, déployez un certificat d'authentification client sur les ordinateurs clients.|Même si les clients n’utilisent pas un certificat PKI client pour se connecter au catalogue d’applications, ils doivent se connecter à un point de gestion afin d’utiliser le catalogue d’applications. Vous devez déployer un certificat d'authentification client sur les ordinateurs clients dans les cas suivants :<br /><br /><ul><li>Tous les points de gestion sur l'intranet n'acceptent que les connexions client HTTPS.</li><li>Les clients se connecteront au catalogue d'applications depuis Internet.</li></ul>|Pour plus d’informations sur la configuration requise des certificats, consultez [Configuration requise des certificats PKI](../../core/plan-design/network/pki-certificate-requirements.md).|  
@@ -183,8 +183,7 @@ Une marque personnalisée pour le Centre logiciel est appliquée selon les règl
 3. Si un abonnement Microsoft Intune est configuré et connecté à Configuration Manager, le Centre logiciel affiche le nom d’organisation, la couleur et le logo de l’entreprise spécifiés dans les propriétés de l’abonnement Intune. Pour plus d’informations, consultez [Configuration de l’abonnement Microsoft Intune](https://docs.microsoft.com/sccm/mdm/deploy-use/setup-hybrid-mdm#step-3-configure-intune-subscription).
 
 #### <a name="to-manually-set-software-center-branding"></a>Pour définir manuellement la marque du Centre logiciel
-<!-- 1351224 -->
-Avec la version 1710, vous pouvez ajouter manuellement des éléments de personnalisation d’entreprise et spécifier la visibilité des onglets du Centre logiciel. Vous pouvez ajouter votre nom de société Centre logiciel spécifique, définir un modèle de couleurs de configuration Centre logiciel, un logo de société et les onglets visibles pour les périphériques clients.
+<!-- 1351224 -->Avec la version 1710, vous pouvez ajouter manuellement des éléments de personnalisation d’entreprise et spécifier la visibilité des onglets du Centre logiciel. Vous pouvez ajouter votre nom de société Centre logiciel spécifique, définir un modèle de couleurs de configuration Centre logiciel, un logo de société et les onglets visibles pour les périphériques clients.
 
 1. Dans la console **Configuration Manager**, cliquez sur **Administration** > **Paramètres client**. Cliquez sur l’instance de paramètre de client souhaitée.
 2. Sous l’onglet **Accueil**, dans le groupe **Propriétés**, choisissez **Propriétés**.
@@ -201,9 +200,13 @@ Avec la version 1710, vous pouvez ajouter manuellement des éléments de person
     -  Activer l’onglet État de l’installation
     -  Activer l’onglet Conformité de l’appareil
     -  Activer l’onglet Options
+    -  Spécifier un onglet personnalisé pour le Centre logiciel (à compter de la version 1806) <!--1358132 -->
+        - Nom de l'onglet
+        - URL du contenu
 
 > [!IMPORTANT]  
->  La personnalisation du Centre logiciel est synchronisée avec le service Intune tous les 14 jours. Par conséquent, il peut passer un certain temps avant que les modifications que vous apportez dans Intune ne s’affichent dans Configuration Manager.
+> - Certaines fonctionnalités de site web peuvent ne pas fonctionner si vous utilisez le catalogue d'applications en tant qu’onglet personnalisé dans le Centre logiciel. Veillez à tester les résultats avant de le déployer sur des clients. <!--519659--> 
+> - La personnalisation du Centre logiciel est synchronisée avec le service Intune tous les 14 jours. Par conséquent, il peut passer un certain temps avant que les modifications que vous apportez dans Intune ne s’affichent dans Configuration Manager.
 
 ###  <a name="step-5-verify-that-the-application-catalog-is-operational"></a>Étape 5 : vérifier que le catalogue des applications est opérationnel  
  Utilisez les procédures suivantes pour vérifier que le catalogue d'applications est opérationnel. Vous pouvez utiliser le catalogue des applications directement à partir d’un navigateur ou du Centre logiciel.  

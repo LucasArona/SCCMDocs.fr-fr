@@ -2,7 +2,7 @@
 title: Paramètres du client
 titleSuffix: Configuration Manager
 description: Découvrir les paramètres par défaut et personnalisés pour contrôler les comportements du client
-ms.date: 03/22/2018
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,18 +10,18 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a60e54ffac3ae029f07c2df555e905b55ca7b0b5
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 38306efc9fbd7b38a5c5f0dad57fbd1a1b2c0557
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342883"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39385403"
 ---
-# <a name="about-client-settings-in-system-center-configuration-manager"></a>À propos des paramètres client dans System Center Configuration Manager
+# <a name="about-client-settings-in-configuration-manager"></a>À propos des paramètres client dans Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
-Vous pouvez gérer tous les paramètres client dans la console Configuration Manager à partir du nœud **Paramètres client** de l’espace de travail **Administration**. Configuration Manager est fourni avec un ensemble de paramètres par défaut. Quand vous modifiez les paramètres client par défaut, ces paramètres sont appliqués à tous les clients de la hiérarchie. Vous pouvez également configurer des paramètres client personnalisés, qui remplacent les paramètres client par défaut lorsque vous les affectez à des regroupements. Pour plus d’informations, consultez [Guide pratique pour configurer les paramètres client](../../../core/clients/deploy/configure-client-settings.md).
+Vous pouvez gérer tous les paramètres client dans la console Configuration Manager à partir du nœud **Paramètres client** de l’espace de travail **Administration**. Configuration Manager est fourni avec un ensemble de paramètres par défaut. Quand vous modifiez les paramètres client par défaut, ces paramètres sont appliqués à tous les clients de la hiérarchie. Vous pouvez également configurer des paramètres client personnalisés, qui remplacent les paramètres client par défaut lorsque vous les affectez à des regroupements. Pour plus d’informations, consultez [Guide pratique pour configurer les paramètres client](/sccm/core/clients/deploy/configure-client-settings).
 
 Les sections suivantes décrivent en détail les paramètres et les options.  
  
@@ -88,11 +88,11 @@ Spécifie la fréquence à laquelle les clients Configuration Manager suivants t
 
 ### <a name="enable-user-policy-on-clients"></a>Activer la stratégie utilisateur sur les clients
 
-Quand vous affectez la valeur **Oui** à cette option et que vous utilisez la [découverte d’utilisateurs](../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser), les clients reçoivent les applications et programmes destinés à l’utilisateur connecté.  
+Quand vous affectez la valeur **Oui** à cette option et que vous utilisez la [découverte d’utilisateurs](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser), les clients reçoivent les applications et programmes destinés à l’utilisateur connecté.  
 
-Le catalogue d’applications reçoit la liste des logiciels disponibles pour les utilisateurs à partir du serveur de site. Ainsi, ce paramètre ne doit pas obligatoirement être **Oui** pour que les utilisateurs voient et demandent des applications au catalogue d’applications. Si ce paramètre a la valeur **Non**, les comportements suivants ne fonctionnent pas quand les utilisateurs utilisent le catalogue d’applications :  
+Le catalogue d’applications reçoit la liste des logiciels disponibles pour les utilisateurs à partir du serveur de site. Par conséquent, ce paramètre ne doit pas obligatoirement être **Oui** pour que les utilisateurs voient et demandent des applications dans le catalogue d’applications. Si ce paramètre a la valeur **Non**, les comportements suivants ne fonctionnent pas quand les utilisateurs utilisent le catalogue d’applications :  
 
--   Les utilisateurs ne peuvent pas installer les applications qu’ils voient dans le catalogue des applications.  
+-   Les utilisateurs ne peuvent pas installer les applications qu’ils voient dans le catalogue d’applications.  
 
 -   Les utilisateurs ne voient pas les notifications concernant leurs demandes d’approbation d’application. Au lieu de cela, ils doivent actualiser le catalogue d'applications et vérifier l'état d'approbation.  
 
@@ -100,33 +100,33 @@ Le catalogue d’applications reçoit la liste des logiciels disponibles pour le
 
 -   Si vous supprimez le déploiement d’une application après que le client a installé l’application en question à partir du catalogue d’applications, les clients continuent à vérifier que l’application est installée pendant une durée qui peut atteindre deux jours.  
 
-En outre, si ce paramètre est défini sur **Non**, les utilisateurs ne reçoivent pas les applications requises que vous déployez sur les utilisateurs. Ils ne reçoivent pas non plus d’autres tâches de gestion dans les stratégies utilisateur.  
+De plus, si ce paramètre est défini sur **Non**, les utilisateurs ne reçoivent pas les applications exigées que vous déployez sur les utilisateurs. Ils ne reçoivent pas non plus d’autres tâches de gestion dans les stratégies utilisateur.  
 
 Ce paramètre s’applique aux utilisateurs si leur ordinateur se trouve sur l’intranet ou Internet. Il doit avoir la valeur **Oui** si vous souhaitez également activer les stratégies utilisateur sur Internet.  
 
 ### <a name="enable-user-policy-requests-from-internet-clients"></a>Autoriser les demandes de stratégie utilisateur depuis des clients Internet
 
-Définissez ce paramètre sur **Oui** pour que les utilisateurs reçoivent la stratégie utilisateur sur les ordinateurs basés sur Internet. Les conditions suivantes s’appliquent également :  
+Définissez cette option sur **Oui** pour que les utilisateurs reçoivent la stratégie utilisateur sur les ordinateurs basés sur Internet. Les conditions suivantes s’appliquent également :  
 
 -   Le client et le site sont configurés pour la [gestion des clients Internet](/sccm/core/clients/manage/plan-internet-based-client-management) ou pour une [passerelle de gestion cloud](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway).  
 
 -   Le paramètre **Activer la stratégie utilisateur sur les clients** est défini sur **Oui**.  
 
--   Le point de gestion basé sur Internet authentifie correctement l’utilisateur à l’aide de l’authentification Windows (Kerberos ou NTLM). Pour plus d’informations, consultez [Éléments à prendre en considération pour les communications clients à partir d’Internet](../../../core/plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan).  
+-   Le point de gestion basé sur Internet authentifie correctement l’utilisateur à l’aide de l’authentification Windows (Kerberos ou NTLM). Pour plus d’informations, consultez [Éléments à prendre en considération pour les communications clients à partir d’Internet](/sccm/core/plan-design/hierarchy/communications-between-endpoints#BKMK_clientspan).  
 
 -   À compter de la version 1710, la passerelle de gestion cloud peut authentifier l’utilisateur avec Azure Active Directory. Pour plus d’informations, consultez [Déployer des applications disponibles pour l’utilisateur sur des appareils joints à Azure AD](\sccm\apps\deploy-use\deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices).  
 
-Si vous affectez la valeur **Non** à cette option, ou si l’une des conditions ci-dessus n’est pas remplie, un ordinateur sur Internet reçoit uniquement les stratégies ordinateur. Dans ce cas, les utilisateurs peuvent toujours voir, demander et installer des applications à partir d'un catalogue d'applications basé sur Internet. Si ce paramètre est **Non**, mais que **Activer la stratégie utilisateur sur les clients** est **Oui**, les utilisateurs ne reçoivent les stratégies utilisateur qu’une fois l’ordinateur connecté à intranet.  
+Si vous affectez la valeur **Non** à cette option, ou si l’une des conditions ci-dessus n’est pas remplie, un ordinateur sur Internet reçoit uniquement les stratégies ordinateur. Dans ce cas, les utilisateurs peuvent toujours voir, demander et installer des applications à partir d'un catalogue d'applications basé sur Internet. Si ce paramètre a la valeur **Non**, mais que **Activer la stratégie utilisateur sur les clients** a la valeur **Oui**, les utilisateurs ne reçoivent les stratégies utilisateur qu’une fois l’ordinateur connecté à l’intranet.  
 
 > [!NOTE]  
->  Pour la gestion des clients Internet, les demandes d’approbation d’applications des utilisateurs ne nécessitent pas de stratégies utilisateur ou d’authentification utilisateur. La passerelle de gestion cloud ne prend pas en charge les demandes d’approbation d’applications.   
+>  Pour la gestion des clients basée sur Internet, les demandes d’approbation d’applications des utilisateurs ne nécessitent pas de stratégies utilisateur ou d’authentification utilisateur. La passerelle de gestion cloud ne prend pas en charge les demandes d’approbation d’applications.   
 
 
 
 ## <a name="cloud-services"></a>Services cloud
 
 ### <a name="allow-access-to-cloud-distribution-point"></a>Autoriser l'accès au point de distribution cloud
-Définissez ce paramètre sur **Oui** pour que les clients obtiennent le contenu à partir d’un point de distribution cloud. Ce paramètre ne nécessite pas que l’appareil soit basé sur Internet.
+Définissez cette option sur **Oui** pour que les clients obtiennent du contenu à partir d’un point de distribution cloud. Ce paramètre ne nécessite pas que l’appareil soit basé sur Internet.
 
 ### <a name="automatically-register-new-windows-10-domain-joined-devices-with-azure-active-directory"></a>Inscrire automatiquement les nouveaux appareils joints au domaine Windows 10 auprès d'Azure Active Directory 
 Quand vous configurez Azure Active Directory pour prendre en charge la jointure hybride, Configuration Manager configure les appareils Windows 10 pour cette fonctionnalité. Pour plus d’informations, consultez [Guide pratique pour configurer des appareils hybrides joints à Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup).
@@ -139,13 +139,13 @@ Par défaut, tous les clients Internet itinérants utilisent n’importe quelle 
 ##  <a name="compliance-settings"></a>Paramètres de conformité  
 
 ### <a name="enable-compliance-evaluation-on-clients"></a>Activer l'évaluation de compatibilité sur les clients
-Définissez ce paramètre sur **Oui** pour configurer les autres paramètres de ce groupe.
+Définissez cette option sur **Oui** pour configurer les autres paramètres de ce groupe.
  
 ### <a name="schedule-compliance-evaluation"></a>Planifier l'évaluation de compatibilité
 Sélectionnez **Planifier** pour créer le calendrier par défaut pour les déploiements de la base de référence de configuration. Cette valeur est configurable pour chaque ligne de base dans la boîte de dialogue **Déployer la ligne de base de la configuration**.  
 
 ### <a name="enable-user-data-and-profiles"></a>Activer les données et profils utilisateurs
-Choisissez **Oui** si vous souhaitez déployer des éléments de configuration de [données et de profils utilisateur](../../../compliance/deploy-use/create-user-data-and-profiles-configuration-items.md).
+Choisissez **Oui** si vous souhaitez déployer des éléments de configuration de [données et de profils utilisateur](/sccm/compliance/deploy-use/create-user-data-and-profiles-configuration-items).
 
 
 
@@ -169,13 +169,13 @@ Configuration Manager utilise ce paramètre pour connecter les utilisateurs au c
 
 -   Le point de gestion donne aux clients Internet un point de site web du catalogue d’applications basé sur Internet. Le point de gestion donne aux clients intranet un point du site web du catalogue d’applications basé sur intranet.  
 
-La détection automatique ne garantit pas que les clients recevront le point du site web du catalogue d’applications le plus proche. Vous pouvez décider de ne pas utiliser **Détecter automatiquement** pour les raisons suivantes :  
+La détection automatique ne garantit pas que les clients recevront le point du site web du catalogue d’applications le plus proche. Vous pouvez décider de ne pas utiliser l’option **Détecter automatiquement** pour les raisons suivantes :  
 
--   Vous voulez configurer manuellement le serveur le plus proche pour les clients ou vous assurer qu'ils ne connectent pas à un serveur via une connexion réseau lente.  
+-   Vous voulez configurer manuellement le serveur le plus proche pour les clients ou vous assurer qu’ils ne se connectent pas à un serveur via une connexion réseau lente.  
 
 -   Vous souhaitez contrôler quels clients se connectent à quel serveur. Cette configuration convient pour des raisons professionnelles ou de performances ou à des fins de tests.  
 
--   Vous ne souhaitez pas patienter jusqu’à 25 heures ou attendre une modification du réseau pour que les clients utilisent un autre point du site web du catalogue d’applications.  
+-   Vous ne voulez pas patienter jusqu’à 25 heures ou attendre un changement du réseau pour que les clients utilisent un autre point du site web du catalogue d’applications.  
 
 Si vous spécifiez le point de site web du catalogue d’applications au lieu d’utiliser la détection automatique, spécifiez le nom NetBIOS plutôt que le nom de domaine complet de l’intranet. Cette configuration réduit la probabilité que le navigateur web invite l’utilisateur à fournir des informations d’identification quand il accède à un catalogue d’applications basé sur intranet. Pour utiliser le nom NetBIOS, les conditions suivantes doivent s'appliquer :  
 
@@ -190,7 +190,7 @@ En règle générale, les utilisateurs sont invités à entrer leurs information
 > [!NOTE]  
 >  Voici comment fonctionne la détection automatique :  
 >   
->  le client effectue une demande d'emplacement de service à un point de gestion. S'il existe un point de site Web du catalogue d'applications dans le même site que le client, ce serveur est donné au client en tant que le serveur du catalogue d'applications à utiliser. Si plusieurs point du site web du catalogue des applications sont disponibles dans le site, un serveur HTTPS est prioritaire sur un serveur qui n’est pas activé pour le protocole HTTPS. Après ce filtrage, tous les clients reçoivent l'un des serveurs à utiliser comme le catalogue d'applications. Configuration Manager n’équilibre pas la charge entre plusieurs serveurs. Quand le site du client ne contient pas de point du site web du catalogue des applications, le point de gestion retourne de manière non déterministique un point du site web du catalogue des applications à partir de la hiérarchie.  
+>  le client effectue une demande d'emplacement de service à un point de gestion. S'il existe un point de site Web du catalogue d'applications dans le même site que le client, ce serveur est donné au client en tant que le serveur du catalogue d'applications à utiliser. Si plusieurs points du site web du catalogue d’applications sont disponibles dans le site, un serveur HTTPS est prioritaire sur un serveur qui n’est pas activé pour le protocole HTTPS. Après ce filtrage, tous les clients reçoivent l'un des serveurs à utiliser comme le catalogue d'applications. Configuration Manager n’équilibre pas la charge entre plusieurs serveurs. Quand le site du client ne contient pas de point du site web du catalogue d’applications, le point de gestion retourne de manière non déterministe un point du site web du catalogue d’applications à partir de la hiérarchie.  
 >   
 >  Pour les clients basés sur intranet, si vous configurez le point du site web du catalogue d’applications avec un nom NetBIOS pour l’URL du catalogue d’applications, le point de gestion donne aux clients ce nom NetBIOS, plutôt que le nom de domaine complet de l’intranet. Pour les clients basés sur Internet, le point de gestion donne uniquement le nom de domaine complet Internet au client.  
 >   
@@ -200,7 +200,7 @@ En règle générale, les utilisateurs sont invités à entrer leurs information
 
 Si cette option a la valeur **Oui**, le client ajoute automatiquement l’URL actuelle du site web du catalogue d’applications par défaut à la zone des sites de confiance dans Internet Explorer.  
 
-Ce paramètre garantit que le paramètre Internet Explorer en mode protégé n'est pas activé. Si le mode protégé est activé, le client Configuration Manager peut ne pas être en mesure d’installer des applications à partir du catalogue d’applications. Par défaut, la zone des sites de confiance prend également en charge l'ouverture de session utilisateur pour le catalogue d'applications, ce qui requiert l'authentification Windows.  
+Ce paramètre garantit que le paramètre Internet Explorer en mode protégé n’est pas activé. Si le mode protégé est activé, le client Configuration Manager peut ne pas être en mesure d’installer des applications à partir du catalogue d’applications. Par défaut, la zone des sites de confiance prend également en charge l'ouverture de session utilisateur pour le catalogue d'applications, ce qui requiert l'authentification Windows.  
 
 Si vous conservez la valeur **Non** pour cette option, les clients Configuration Manager risquent de ne pas pouvoir installer des applications à partir du catalogue d’applications. Une autre méthode consiste à configurer ces paramètres Internet Explorer dans une autre zone pour l’URL du catalogue d’applications utilisée par les clients.  
 
@@ -215,7 +215,7 @@ Ce paramètre doit être **Oui** pour que les utilisateurs utilisent le catalogu
 
 Si vous modifiez ce paramètre, il prend effet au prochain chargement du navigateur par les utilisateurs ou lorsqu'ils actualisent la fenêtre du navigateur actuellement ouverte.  
 
-Pour plus d’informations sur ce paramètre, consultez [Certificats pour Microsoft Silverlight 5 et mode de confiance élevée obligatoires pour le catalogue des applications](../../../apps/plan-design/security-and-privacy-for-application-management.md#BKMK_CertificatesSilverlight5).  
+Pour plus d’informations sur ce paramètre, consultez [Certificats pour Microsoft Silverlight 5 et mode de confiance élevée obligatoires pour le catalogue des applications](/sccm/apps/plan-design/security-and-privacy-for-application-management#BKMK_CertificatesSilverlight5).  
 
 ### <a name="organization-name-displayed-in-software-center"></a>Nom d'organisation affiché dans le Centre logiciel
 
@@ -223,19 +223,19 @@ Tapez le nom que les utilisateurs voient dans le Centre logiciel. Ces informatio
 
 ### <a name="use-new-software-center"></a>Utiliser le nouveau Centre logiciel
 
-Si vous sélectionnez **Oui**, tous les ordinateurs clients utilisent le Centre logiciel. Le Centre logiciel répertorie les applications accessibles à l’utilisateur qui étaient auparavant uniquement disponibles dans le catalogue d’applications. Le catalogue d’applications nécessite Silverlight, qui n’est pas un prérequis pour le Centre logiciel. À compter de Configuration Manager 1802, la valeur par défaut est **Oui**.  
+Si vous sélectionnez **Oui** pour cette option, tous les ordinateurs clients utilisent le Centre logiciel. Le Centre logiciel répertorie les applications accessibles à l’utilisateur qui étaient auparavant uniquement disponibles dans le catalogue d’applications. Le catalogue d’applications nécessite Silverlight, qui n’est pas un prérequis pour le Centre logiciel. À compter de Configuration Manager 1802, la valeur par défaut est **Oui**.  
 
 Les rôles de système de site Point du site web du catalogue des applications et Point de service web du catalogue des applications sont toujours exigés pour que les applications accessibles à l’utilisateur apparaissent dans le Centre logiciel.  
 
-Pour plus d’informations, consultez [Planifier et configurer la gestion des applications](../../../apps/plan-design/plan-for-and-configure-application-management.md).  
+Pour plus d’informations, consultez [Planifier et configurer la gestion des applications](/sccm/apps/plan-design/plan-for-and-configure-application-management).  
 
 ### <a name="enable-communication-with-health-attestation-service"></a>Activer la communication avec le service d’attestation d’intégrité
 
-Définissez ce paramètre sur **Oui** pour que les appareils Windows 10 utilisent [l’attestation d’intégrité](/sccm/core/servers/manage/health-attestation). Quand vous activez ce paramètre, le paramètre suivant est également disponible pour la configuration.
+Définissez cette option sur **Oui** pour que les appareils Windows 10 utilisent l’[attestation d’intégrité](/sccm/core/servers/manage/health-attestation). Quand vous activez ce paramètre, le paramètre suivant est également disponible pour la configuration.
 
 ### <a name="use-on-premises-health-attestation-service"></a>Utiliser le service d'attestation d'intégrité local
 
-Définissez ce paramètre sur **Oui** pour que les appareils utilisent un service local. Définissez ce paramètre sur **non** pour que les appareils utilisent le service cloud de Microsoft.  
+Définissez cette option sur **Oui** pour que les appareils utilisent un service local. Définissez ce paramètre sur **non** pour que les appareils utilisent le service cloud de Microsoft.  
 
 ### <a name="install-permissions"></a>Autorisations d'installation
 
@@ -258,7 +258,7 @@ Si les ordinateurs exigent une entrée de code PIN BitLocker, cette option conto
 
 -   **Toujours**: Configuration Manager suspend temporairement BitLocker après l'installation d'un logiciel nécessitant un redémarrage de l'ordinateur et qu’un redémarrage a été effectué. Ce paramètre s’applique uniquement à un redémarrage de l’ordinateur lancé par Configuration Manager. Il ne suspend pas l’obligation d’entrer le code PIN BitLocker quand l’utilisateur redémarre l’ordinateur. L’obligation d’entrer un code PIN BitLocker reprend après le démarrage de Windows.
 
--   **Jamais**: Configuration Manager ne suspend pas BitLocker après avoir installé un logiciel qui nécessite un redémarrage. Dans ce cas, l'installation du logiciel ne peut être finalisée que lorsque l'utilisateur entre le code confidentiel pour terminer le processus de démarrage standard et charger Windows.
+-   **Jamais** : Configuration Manager ne suspend pas BitLocker après avoir installé un logiciel qui nécessite un redémarrage. Dans ce cas, l’installation du logiciel ne peut être finalisée que lorsque l’utilisateur entre le code confidentiel pour terminer le processus de démarrage standard et charger Windows.
 
 ### <a name="additional-software-manages-the-deployment-of-applications-and-software-updates"></a>D’autres logiciels gèrent le déploiement d’applications et de mises à jour logicielles
 
@@ -269,7 +269,7 @@ Activez cette option uniquement si l'une des conditions suivantes s'applique :
 -   Vous utilisez le kit de développement logiciel (SDK) Configuration Manager pour gérer les notifications d’agent client et l’installation d’applications et de mises à jour logicielles.  
 
 > [!WARNING]  
->  Si vous choisissez cette option quand aucune de ces conditions ne s’applique, le client n’installe pas les mises à jour logicielles et les applications exigées. Ce paramètre n’empêche pas les utilisateurs d’installer des applications à partir du catalogue d’applications, et n’empêche pas l’installation des packages, programmes et séquences de tâches.  
+>  Si vous choisissez cette option quand aucune de ces conditions ne s’applique, le client n’installe pas les mises à jour logicielles et les applications exigées. Ce paramètre n’empêche pas les utilisateurs d’installer des applications à partir du catalogue d’applications, ou n’empêche pas l’installation de packages, de programmes et de séquences de tâches.  
 
 ### <a name="powershell-execution-policy"></a>Stratégie d'exécution de PowerShell
 
@@ -304,7 +304,7 @@ Si les clients doivent installer des mises à jour logicielles requises à l’�
 
 ### <a name="grace-period-for-enforcement-after-deployment-deadline-hours"></a>Période de grâce pour la mise en œuvre après l’échéance du déploiement (en heures)
 
-Si vous souhaitez accorder aux utilisateurs plus de temps pour installer les déploiements de mises à jour logicielles ou d’applications obligatoires au-delà de l’échéance, définissez ce paramètre sur **Oui**. Cette période de grâce est destinée au scénario dans lequel un ordinateur est hors tension pendant une durée prolongée et l’utilisateur doit installer de nombreux déploiements d’applications ou de mises à jour. Par exemple, ce paramètre est utile si un utilisateur rentre de congés et qu’il doit patienter longtemps pendant que le client installe les déploiements d’applications en retard. 
+Si vous souhaitez accorder aux utilisateurs plus de temps pour installer les déploiements de mises à jour logicielles ou d’applications obligatoires au-delà de l’échéance, définissez cette option sur **Oui**. Cette période de grâce est destinée au scénario dans lequel un ordinateur est hors tension pendant une durée prolongée et l’utilisateur doit installer de nombreux déploiements d’applications ou de mises à jour. Par exemple, ce paramètre est utile si un utilisateur rentre de congés et qu’il doit patienter longtemps pendant que le client installe les déploiements d’applications en retard. 
 
 Définissez une période de grâce comprise entre une et 120 heures. Utilisez ce paramètre conjointement avec la propriété de déploiement **Différer la mise en œuvre de ce déploiement selon les préférences de l’utilisateur**. Pour plus d’informations, consultez [Déployer des applications](/sccm/apps/deploy-use/deploy-applications).
 
@@ -315,14 +315,13 @@ Les paramètres suivants doivent être inférieurs à la durée de la fenêtre d
 -   **Afficher une notification temporaire à l’utilisateur indiquant l’intervalle avant la fermeture de la session de l’utilisateur ou le redémarrage de l’ordinateur (minutes)**
 -   **Afficher une boîte de dialogue que l’utilisateur ne peut pas fermer, indiquant l’intervalle de compte à rebours avant la fermeture de la session de l’utilisateur ou le redémarrage de l’ordinateur (minutes)**
 
-Pour plus d’informations sur les fenêtres de maintenance, consultez [Comment utiliser les fenêtres de maintenance dans System Center Configuration Manager](../../../core/clients/manage/collections/use-maintenance-windows.md).
+Pour plus d’informations sur les fenêtres de maintenance, consultez [Comment utiliser les fenêtres de maintenance dans System Center Configuration Manager](/sccm/core/clients/manage/collections/use-maintenance-windows).
 
 
 
 ## <a name="delivery-optimization"></a>Optimisation de la distribution
 
-<!-- 1324696 -->
-Les groupes de limites Configuration Manager permettent de définir et de réguler la distribution de contenu sur le réseau de l’entreprise et dans les agences. [L’Optimisation de la distribution de Windows](/windows/deployment/update/waas-delivery-optimization) est une technologie cloud pair à pair de partage de contenu entre appareils Windows 10. À compter de la version 1802, configurez-la de façon à ce qu’elle utilise vos groupes de limites pour partager du contenu entre homologues.
+<!-- 1324696 --> Les groupes de limites Configuration Manager permettent de définir et de réguler la distribution de contenu sur le réseau de l’entreprise et dans les agences. [L’Optimisation de la distribution de Windows](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) est une technologie cloud pair à pair de partage de contenu entre appareils Windows 10. À compter de la version 1802, configurez-la de façon à ce qu’elle utilise vos groupes de limites pour partager du contenu entre homologues.
 
  > [!Note]
  > L’Optimisation de la distribution n’est disponible que sur les clients Windows 10
@@ -334,34 +333,36 @@ Les groupes de limites Configuration Manager permettent de définir et de régul
 
 ##  <a name="endpoint-protection"></a>Endpoint Protection  
 >  [!Tip]   
-> En plus des informations suivantes, vous pouvez trouver des détails sur l’utilisation des paramètres du client Endpoint Protection dans [Exemple de scénario : utilisation de System Center Endpoint Protection pour protéger des ordinateurs contre les programmes malveillants dans System Center Configuration Manager](/sccm/protect/deploy-use/scenarios-endpoint-protection).
+> En plus des informations suivantes, vous pouvez trouver des détails sur l’utilisation des paramètres du client Endpoint Protection dans [Exemple de scénario : utilisation d’Endpoint Protection pour protéger des ordinateurs contre les programmes malveillants](/sccm/protect/deploy-use/scenarios-endpoint-protection).
 
 ### <a name="manage-endpoint-protection-client-on-client-computers"></a>Gérer le client Endpoint Protection sur les ordinateurs clients
 
 Choisissez **Oui** si vous souhaitez gérer les clients Endpoint Protection et Windows Defender existants sur des ordinateurs de la hiérarchie.  
 
-Choisissez cette option si vous avez déjà installé le client Endpoint Protection et que vous souhaitez le gérer avec Configuration Manager. Cette installation distincte inclut un processus sous forme de script utilisant un programme et un package ou une application Configuration Manager. À compter de Configuration Manager 1802, l’agent Endpoint Protection n’a pas besoin d’être installé sur les appareils Windows 10. L’option **Gérer le client Endpoint Protection sur les ordinateurs clients** doit néanmoins être activée sur ces ordinateurs. <!--503654-->
+Choisissez cette option si vous avez déjà installé le client Endpoint Protection et que vous souhaitez le gérer avec Configuration Manager. Cette installation distincte inclut un processus sous forme de script utilisant un programme et un package ou une application Configuration Manager. À compter de Configuration Manager 1802, l’agent Endpoint Protection n’a pas besoin d’être installé sur les appareils Windows 10. L’option **Gérer le client Endpoint Protection sur les ordinateurs clients** doit néanmoins être activée sur ces ordinateurs. <!--503654-->
 
 ### <a name="install-endpoint-protection-client-on-client-computers"></a>Installer le client Endpoint Protection sur les ordinateurs clients
 
-Choisissez **Oui** pour installer et activer le client Endpoint Protection sur les ordinateurs clients qui ne l’exécutent pas encore. À compter de Configuration Manager 1802, l’agent Endpoint Protection n’a pas besoin d’être installé sur les clients Windows 10.  
+Choisissez **Oui** pour installer et activer le client Endpoint Protection sur les ordinateurs clients qui ne l’exécutent pas encore. À compter de Configuration Manager 1802, l’agent Endpoint Protection n’a pas besoin d’être installé sur les clients Windows 10.  
 
 > [!NOTE]  
->  Si le client Endpoint Protection est déjà installé, le fait de choisir la valeur **Non** ne désinstalle pas le client Endpoint Protection. Pour désinstaller le client Endpoint Protection, affectez au paramètre client **Gérer le client Endpoint Protection sur les ordinateurs clients** la valeur **Non**. Ensuite, déployez un package et un programme pour désinstaller le client Endpoint Protection.  
+>  Si le client Endpoint Protection est déjà installé, le fait de choisir la valeur **Non** ne le désinstalle pas. Pour désinstaller le client Endpoint Protection, affectez au paramètre client **Gérer le client Endpoint Protection sur les ordinateurs clients** la valeur **Non**. Ensuite, déployez un package et un programme pour désinstaller le client Endpoint Protection.  
 
-### <a name="automatically-remove-previously-installed-antimalware-software-before-endpoint-protection-is-installed"></a>Supprimer automatiquement le logiciel anti-programmes malveillants installé avant Endpoint Protection
+<!-- removed in 1806, SMS 511544
+### Automatically remove previously installed antimalware software before Endpoint Protection is installed
 
-Définissez ce paramètre sur **Oui** pour que le client Endpoint Protection tente de désinstaller les autres applications anti-programmes malveillants. La présence de plusieurs clients anti-programmes malveillants sur le même appareil peut générer un conflit et affecter les performances du système.
+Set this option to **Yes** for the Endpoint Protection client to attempt to uninstall other antimalware applications. Multiple antimalware clients on the same device can conflict, and impact system performance.
+-->
 
 ### <a name="allow-endpoint-protection-client-installation-and-restarts-outside-maintenance-windows-maintenance-windows-must-be-at-least-30-minutes-long-for-client-installation"></a>Autoriser l’installation du client Endpoint Protection et redémarrer en dehors des fenêtres de maintenance. Celles-ci doivent être d’une durée minimale de 30 minutes pour l’installation du client
 
-Définissez ce paramètre sur **Oui** pour remplacer les comportements d’installation par défaut avec des fenêtres de maintenance. Ce paramètre satisfait aux besoins de l’entreprise en ce qui concerne la priorité de la maintenance du système pour des raisons de sécurité. 
+Définissez cette option sur **Oui** pour remplacer les comportements d’installation par défaut avec des fenêtres de maintenance. Ce paramètre satisfait aux besoins de l’entreprise en ce qui concerne la priorité de la maintenance du système pour des raisons de sécurité. 
 
 ### <a name="for-windows-embedded-devices-with-write-filters-commit-endpoint-protection-client-installation-requires-restarts"></a>Pour les appareils Windows Embedded avec des filtres d'écriture, valider l'installation du client Endpoint Protection (nécessite un redémarrage)
 
 Choisissez **Oui** pour désactiver le filtre d’écriture sur l’appareil Windows Embedded et le redémarrer. Cette action valide l’installation sur l’appareil.  
 
-Si vous choisissez **Non**, le client est installé sur une superposition temporaire qui est effacée lors du redémarrage de l’appareil. Dans ce scénario, le client Endpoint Protection n’est entièrement installé que lorsqu’une autre installation valide les modifications apportées à l’appareil. Il s’agit de la configuration par défaut.  
+Si vous choisissez **Non**, le client est installé sur une superposition temporaire qui est effacée lors du redémarrage de l’appareil. Dans ce cas, le client Endpoint Protection n’est entièrement installé que lorsqu’une autre installation valide les changements apportés à l’appareil. Il s’agit de la configuration par défaut.  
 
 ### <a name="suppress-any-required-computer-restarts-after-the-endpoint-protection-client-is-installed"></a>Supprimer tout redémarrage d'ordinateur requis après l'installation du client Endpoint Protection
 
@@ -389,13 +390,13 @@ Sélectionnez **Déf. un interv.** pour spécifier la durée, en minutes ou heur
 Entrez l’intervalle d’interrogation (en minutes) de la stratégie par les appareils récents. Ce paramètre concerne les appareils Windows 10 gérés par le biais de la gestion des appareils mobiles locale.
 
 ### <a name="allow-users-to-enroll-mobile-devices-and-mac-computers"></a>Autoriser les utilisateurs à inscrire des appareils mobiles et des ordinateurs Mac
-Pour activer l’inscription des appareils hérités par l’utilisateur, définissez ce paramètre sur **Oui**, puis configurez le paramètre suivant :
+Pour activer l’inscription basée sur l’utilisateur des appareils hérités, définissez cette option sur **Oui**, puis configurez le paramètre suivant :
 
 -   **Profil d’inscription** </br>
 Sélectionnez **Définir un profil** pour créer ou sélectionner un profil d’inscription. Pour plus d’informations, consultez [Configurer les paramètres client pour l’inscription](/sccm/core/clients/deploy/deploy-clients-to-macs#configure-client-settings-for-enrollment).
 
 ### <a name="allow-users-to-enroll-modern-devices"></a>Autoriser les utilisateurs à inscrire des appareils récents
-Pour activer l’inscription d’appareils modernes, définissez ce paramètre sur **Oui**, puis configurez le paramètre suivant :
+Pour activer l’inscription basée sur l’utilisateur des appareils récents, définissez cette option sur **Oui**, puis configurez le paramètre suivant :
 
 -   **Profil d’inscription des appareils récents** </br>
 Sélectionnez **Définir un profil** pour créer ou sélectionner un profil d’inscription. Pour plus d’informations, consultez [Créer un profil d’inscription qui permet aux utilisateurs d’inscrire des appareils récents](/sccm/mdm/get-started/set-up-device-enrollment-on-premises-mdm#bkmk_createProf).
@@ -418,14 +419,14 @@ Spécifiez le nombre maximal de minutes pour la définition d’un délai aléat
 
 ### <a name="maximum-custom-mif-file-size-kb"></a>Taille maximale du fichier MIF personnalisé (Ko)
 
-Spécifiez la taille maximale, en kilo-octets (Ko), autorisée pour chaque fichier Management Information Format (MIF) personnalisé recueilli par le client lors d’un cycle d’inventaire matériel. L’agent d’inventaire matériel Configuration Manager ne traite pas les fichiers MIF personnalisés qui dépassent cette taille. Vous pouvez spécifier une taille comprise entre 1 et 5 120 Ko. Par défaut, cette valeur est définie à 250 Ko. Ce paramètre n'affecte pas la taille du fichier de données d'inventaire matériel ordinaire.  
+Spécifiez la taille maximale, en kilo-octets (Ko), autorisée pour chaque fichier Management Information Format (MIF) personnalisé recueilli par le client lors d’un cycle d’inventaire matériel. L’agent d’inventaire matériel Configuration Manager ne traite pas les fichiers MIF personnalisés qui dépassent cette taille. Vous pouvez spécifier une taille comprise entre 1 et 5 120 Ko. Par défaut, cette valeur est définie à 250 Ko. Ce paramètre n’affecte pas la taille du fichier de données d’inventaire matériel standard.  
 
 > [!NOTE]  
 >  Ce paramètre est disponible uniquement dans les paramètres client par défaut.  
 
 ### <a name="hardware-inventory-classes"></a>Classes d'inventaire matériel
 
-Sélectionnez **Déf. classes** pour étendre les informations matérielles que vous recueillez auprès des clients sans modifier manuellement le fichier sms_def.mof. Pour plus d’informations, consultez [Guide pratique pour configurer l’inventaire matériel](../../../core/clients/manage/inventory/configure-hardware-inventory.md).  
+Sélectionnez **Déf. classes** pour étendre les informations matérielles que vous recueillez auprès des clients sans modifier manuellement le fichier sms_def.mof. Pour plus d’informations, consultez [Guide pratique pour configurer l’inventaire matériel](/sccm/core/clients/manage/inventory/configure-hardware-inventory).  
 
 ### <a name="collect-mif-files"></a>Collecter des fichiers MIF
 
@@ -446,7 +447,7 @@ Pour qu’un fichier MIF soit collecté par un inventaire matériel, il doit se 
  Gérez la façon dont les ordinateurs Windows 8 et versions ultérieures utilisent des connexions Internet facturées à l’usage pour communiquer avec Configuration Manager. Les fournisseurs Internet facturent parfois en fonction de la quantité de données que vous envoyez et recevez lorsque vous utilisez une connexion Internet facturée à l'usage.  
 
 > [!NOTE]  
->  Le paramètre client configuré n’est pas appliqué dans les scénarios suivants :  
+>  Le paramètre client configuré n’est pas appliqué dans les cas suivants :  
 >   
 > -   Si l’ordinateur se trouve sur une connexion de données itinérante, le client Configuration Manager n’exécute aucune tâche nécessitant le transfert de données vers des sites Configuration Manager.  
 > -   Si les propriétés de la connexion réseau Windows sont configurées pour une connexion non facturée à l’usage, le client Configuration Manager se comporte comme si la connexion n’était pas facturée à l’usage, et transfère donc les données vers le site.  
@@ -472,7 +473,7 @@ Choisissez l’une des options suivantes pour ce paramètre :
 
     Si le client atteint la limite de transfert de données pour la connexion Internet facturée à l’usage, le client n’essaie plus de communiquer avec les sites Configuration Manager.  
 
--   **Bloc** : le client Configuration Manager n’essaie pas de communiquer avec les sites Configuration Manager quand il est sur une connexion Internet limitée. Il s'agit de l'option par défaut.  
+-   **Bloquer** : le client Configuration Manager n’essaie pas de communiquer avec les sites Configuration Manager quand il se trouve sur une connexion Internet limitée. Il s’agit de l’option par défaut.  
 
 
 
@@ -480,7 +481,7 @@ Choisissez l’une des options suivantes pour ce paramètre :
 
 ### <a name="allow-power-management-of-devices"></a>Autoriser la gestion de l'alimentation des périphériques
 
-Définissez ce paramètre sur **Oui** pour activer la gestion de l’alimentation sur les clients. Pour plus d’informations, consultez [Présentation de la gestion de l’alimentation](/sccm/core/clients/manage/power/introduction-to-power-management).
+Définissez cette option sur **Oui** pour activer la gestion de l’alimentation sur les clients. Pour plus d’informations, consultez [Présentation de la gestion de l’alimentation](/sccm/core/clients/manage/power/introduction-to-power-management).
 
 ### <a name="allow-users-to-exclude-their-device-from-power-management"></a>Autoriser les utilisateurs à exclure leur appareil de la gestion de l'alimentation
 
@@ -488,31 +489,27 @@ Choisissez **Oui** pour permettre aux utilisateurs du Centre logiciel d’exclur
 
 ### <a name="enable-wake-up-proxy"></a>Autoriser le proxy de mise en éveil
 
-Spécifiez **Oui** pour compléter le paramètre d'éveil par appel réseau du site lorsqu'il est configuré pour les paquets monodiffusion.  
+Spécifiez **Oui** pour compléter le paramètre Wake On LAN du site quand il est configuré pour les paquets de monodiffusion.  
 
-Pour plus d’informations sur le proxy de mise en éveil, consultez [Planifier la sortie de veille des clients dans System Center Configuration Manager](../../../core/clients/deploy/plan/plan-wake-up-clients.md).  
+Pour plus d’informations sur le proxy de mise en éveil, consultez [Planifier le mode de sortie de veille des clients](/sccm/core/clients/deploy/plan/plan-wake-up-clients).  
 
 > [!WARNING]  
->  N'activez pas le proxy de mise en éveil dans un réseau de production sans d'abord comprendre comment il fonctionne et l'évaluer dans un environnement de test.  
+>  N’activez pas le proxy de mise en éveil dans un réseau de production sans d’abord comprendre comment il fonctionne et l’évaluer dans un environnement de test.  
 
 Ensuite, configurez les paramètres supplémentaires suivants en fonction des besoins :
 
--   **Numéro de port du proxy de mise en éveil (UDP)**  </br>
-         Numéro du port utilisé par les clients pour envoyer des paquets de réveil aux ordinateurs en état de veille. Conservez le port par défaut 25536 ou remplacez-le par le numéro de votre choix.  
+-   **Numéro de port du proxy de mise en éveil (UDP)**  : numéro du port utilisé par les clients pour envoyer des paquets de mise en éveil aux ordinateurs en état de veille. Conservez le port par défaut 25536 ou remplacez-le par le numéro de votre choix.  
 
--   **Numéro de port Wake On LAN (UDP)** </br> 
-         Conservez la valeur par défaut (9), sauf si vous avez modifié le numéro du port Wake On LAN (UDP) sous l’onglet **Ports**des **Propriétés** du site.  
+-   **Numéro de port Wake On LAN (UDP)**  : conservez la valeur par défaut (9), sauf si vous avez changé le numéro du port Wake On LAN (UDP) sous l’onglet **Ports** des **Propriétés** du site.  
 
     > [!IMPORTANT]  
     >  Ce numéro doit correspondre au numéro figurant dans les **Propriétés**du site. Si vous modifiez ce numéro dans un seul emplacement, sachez qu’il n’est pas actualisé automatiquement dans l’autre emplacement.  
 
--   **Exception du pare-feu Windows Defender pour le proxy de mise en éveil** </br>
-         Le client Configuration Manager configure automatiquement le numéro de port du proxy de mise en éveil sur les appareils qui exécutent le Pare-feu Windows Defender. Sélectionnez **Configurer** pour spécifier les profils de pare-feu souhaités.
+-   **Exception du pare-feu Windows Defender pour le proxy de mise en éveil** : le client Configuration Manager configure automatiquement le numéro de port du proxy de mise en éveil sur les appareils qui exécutent le Pare-feu Windows Defender. Sélectionnez **Configurer** pour spécifier les profils de pare-feu souhaités.
 
-    Si les clients exécutent un autre pare-feu, vous devez le configurer manuellement pour autoriser le **Numéro de port du proxy de mise en éveil (UDP)**.  
+    Si les clients exécutent un autre pare-feu, configurez-le manuellement pour autoriser le **Numéro de port du proxy de mise en éveil (UDP)**.  
         
--   **Préfixes IPv6 si nécessaires pour DirectAccess ou d’autres périphériques réseau intervenants. Spécifiez plusieurs entrées en utilisant une virgule** </br>
-        Entrez les préfixes IPv6 nécessaires pour que le proxy de mise en éveil fonctionne sur votre réseau.
+-   **Préfixes IPv6 si nécessaires pour DirectAccess ou d’autres périphériques réseau intervenants. Spécifiez plusieurs entrées en utilisant une virgule** : entrez les préfixes IPv6 nécessaires pour que le proxy de mise en éveil fonctionne sur votre réseau.
 
 
 
@@ -525,7 +522,7 @@ Sélectionnez **Configurer** pour activer la fonctionnalité de contrôle à dis
 Le contrôle à distance est désactivé par défaut.  
 
 > [!IMPORTANT]  
->  Si les paramètres de pare-feu ne sont pas configurés, le contrôle à distance risque de ne pas fonctionner correctement.  
+>  Si vous ne configurez pas de paramètres de pare-feu, le contrôle à distance risque de ne pas fonctionner correctement.  
 
 ### <a name="users-can-change-policy-or-notification-settings-in-software-center"></a>Les utilisateurs peuvent modifier les paramètres de stratégie ou de notification dans le Centre logiciel
 
@@ -541,7 +538,7 @@ Choisissez si l’ordinateur client affiche un message demandant l’autorisatio
 
 ### <a name="prompt-user-for-permission-to-transfer-content-from-shared-clipboard"></a>Demander à l'utilisateur l'autorisation de transférer le contenu du Presse-papiers partagé
 
-Donnez à vos utilisateurs la possibilité d’accepter ou de refuser des transferts de fichiers avant de transférer le contenu du Presse-papiers partagé dans une session de contrôle à distance. Les utilisateurs n’ont besoin d’accorder l’autorisation qu’une seule fois par session tandis que l’observateur ne peut pas s’accorder l’autorisation d’effectuer le transfert de fichiers.
+Avant de transférer le contenu du Presse-papiers partagé dans une session de contrôle à distance, donnez à vos utilisateurs la possibilité d’accepter ou de refuser des transferts de fichiers. Les utilisateurs n’ont besoin d’accorder l’autorisation qu’une seule fois par session. L’observateur ne peut pas s’accorder à lui-même l’autorisation de transférer le fichier.
 
 ### <a name="grant-remote-control-permission-to-local-administrators-group"></a>Accorder l'autorisation de contrôle à distance au groupe Administrateurs local
 
@@ -564,11 +561,11 @@ Configurez ce paramètre sur **Oui** pour afficher une icône dans la barre des 
 
 ### <a name="show-session-connection-bar"></a>Afficher la barre de connexion de session
 
-Définissez ce paramètre sur **Oui** pour afficher une barre de connexion de session de haute visibilité sur les clients quand une session de contrôle à distance est en cours.  
+Définissez cette option sur **Oui** pour afficher une barre de connexion de session très visible sur les clients, pour indiquer qu’une session de contrôle à distance est en cours.  
 
 ### <a name="play-a-sound-on-client"></a>Émettre un signal sonore sur le client
 
-Définissez cette option afin d'utiliser le son pour indiquer qu'une session de contrôle à distance est active sur un ordinateur client. Sélectionnez l'une des options suivantes :
+Définissez cette option afin d’utiliser le son pour indiquer qu’une session de contrôle à distance est active sur un ordinateur client. Sélectionnez l'une des options suivantes :
 - **Aucun signal sonore**
 - **Début et fin de session** (par défaut)
 - **Fréquemment au cours d’une session**  
@@ -577,11 +574,11 @@ Définissez cette option afin d'utiliser le son pour indiquer qu'une session de 
 
 Configurez ce paramètre sur **Oui** pour autoriser Configuration Manager à gérer les sessions d’assistance à distance non sollicitées.  
 
-Dans une session d’assistance à distance non sollicitée, l’utilisateur de l’ordinateur client n’a pas demandé d’assistance pour lancer la session.  
+Dans une session d’Assistance à distance non sollicitée, l’utilisateur de l’ordinateur client n’a pas demandé d’assistance pour lancer la session.  
 
 ### <a name="manage-solicited-remote-assistance-settings"></a>Gérer les paramètres de l'Assistance à distance sollicités
 
-Définissez ce paramètre sur **Oui** pour autoriser Configuration Manager à gérer les sessions d’assistance à distance sollicitées.  
+Définissez cette option sur **Oui** pour autoriser Configuration Manager à gérer les sessions d’Assistance à distance sollicitées.  
 
 Dans une session d’assistance à distance sollicitée, l’utilisateur de l’ordinateur client envoie une demande d’assistance à distance à l’administrateur.  
 
@@ -597,36 +594,39 @@ Choisissez le niveau d’accès à attribuer aux sessions d’assistance à dist
 
 ### <a name="manage-remote-desktop-settings"></a>Gérer les paramètres du Bureau à distance
 
-Définissez ce paramètre sur **Oui** pour autoriser Configuration Manager à gérer les sessions Bureau à distance des ordinateurs.  
+Définissez cette option sur **Oui** pour autoriser Configuration Manager à gérer les sessions Bureau à distance des ordinateurs.  
 
 ### <a name="allow-permitted-viewers-to-connect-by-using-remote-desktop-connection"></a>Autoriser la connexion des observateurs autorisés à l'aide d'une connexion Bureau à distance
 
-Définissez ce paramètre sur **Oui** pour ajouter les utilisateurs spécifiés dans la liste des observateurs autorisés au groupe d’utilisateurs locaux Bureau à distance sur les clients.  
+Définissez cette option sur **Oui** pour ajouter les utilisateurs spécifiés dans la liste des observateurs autorisés au groupe d’utilisateurs locaux du Bureau à distance sur les clients.  
 
 ### <a name="require-network-level-authentication-on-computers-that-run-windows-vista-operating-system-and-later-versions"></a>Exiger l'authentification au niveau du réseau sur les ordinateurs exécutant le système d'exploitation Windows Vista et versions ultérieures
 
-Définissez ce paramètre sur **Oui** pour utiliser l’authentification au niveau du réseau afin d’établir des connexions Bureau à distance aux ordinateurs clients. L’authentification au niveau du réseau nécessite moins de ressources d’ordinateur distant, car l’authentification des utilisateurs se termine avant l’établissement de la connexion Bureau à distance. L’authentification au niveau du réseau est une configuration plus sécurisée. Elle contribue à protéger l’ordinateur des utilisateurs ou logiciels malveillants, et réduit le risque d’attaque par déni de service.  
+Définissez cette option sur **Oui** pour utiliser l’authentification au niveau du réseau afin d’établir des connexions Bureau à distance aux ordinateurs clients. L’authentification au niveau du réseau nécessite moins de ressources d’ordinateur distant, car l’authentification des utilisateurs se termine avant l’établissement de la connexion Bureau à distance. L’authentification au niveau du réseau est une configuration plus sécurisée. Elle contribue à protéger l’ordinateur des utilisateurs ou logiciels malveillants, et réduit le risque d’attaque par déni de service.  
 
 
 
 ## <a name="software-center"></a>Centre logiciel
 
 ### <a name="select-these-new-settings-to-specify-company-information"></a>Sélectionnez ces nouveaux paramètres pour spécifier des informations sur l'entreprise
-Définissez ce paramètre sur **Oui**, puis spécifiez les paramètres suivants pour personnaliser le Centre logiciel et l’adapter à votre organisation :
+Définissez cette option sur **Oui**, puis spécifiez les paramètres suivants pour personnaliser le Centre logiciel et l’adapter à votre organisation :
 
-- **Nom de la société** </br>
-Entrez le nom d’organisation visible par les utilisateurs dans le Centre logiciel.
-- **Modèle de couleurs pour le Centre logiciel** </br>
-Choisissez **Sélectionner une couleur** pour définir la couleur principale utilisée par le Centre logiciel.
-- **Sélectionner un logo pour le Centre logiciel** </br>
-Choisissez **Parcourir** pour sélectionner une image à afficher dans le Centre logiciel. Le logo doit être de type JPEG, PNG ou BMP et au format 400 x 100 pixels, avec une taille maximale de 750 Ko. Le nom de fichier du logo ne doit pas contenir d’espace.  
+- **Nom de la société** : entrez le nom de l’organisation visible par les utilisateurs dans le Centre logiciel.  
+
+- **Modèle de couleurs pour le Centre logiciel** : cliquez sur **Sélectionner une couleur** pour définir la couleur principale utilisée par le Centre logiciel.  
+
+- **Sélectionner un logo pour le Centre logiciel** : cliquez sur **Parcourir** pour sélectionner une image à afficher dans le Centre logiciel. Le logo doit être de type JPEG, PNG ou BMP et au format 400 x 100 pixels, avec une taille maximale de 750 Ko. Le nom de fichier du logo ne doit pas contenir d’espace.  
          
 ### <a name="bkmk_HideUnapproved"></a> Masquer les applications non approuvées dans le Centre logiciel
-À compter de Configuration Manager version 1802, quand cette option est activée, les applications disponibles pour l’utilisateur qui nécessitent une approbation sont masquées dans le Centre logiciel.   <!--1355146-->
+À compter de Configuration Manager version 1802, quand vous activez cette option, les applications disponibles pour l’utilisateur qui nécessitent une approbation sont masquées dans le Centre logiciel.   <!--1355146-->
 
 ### <a name="bkmk_HideInstalled"></a> Masquer les applications installées dans le Centre logiciel
-À compter de Configuration Manager version 1802, les applications qui sont déjà installées ne s’affichent plus sous l’onglet Applications quand cette option est activée. Cette option est définie par défaut quand vous installez ou mettez à niveau vers Configuration Manager 1802.  Les applications installées sont toujours disponibles pour examen sous l’onglet de l’état d’installation. <!--1357592-->   
-  
+À compter de Configuration Manager version 1802, quand vous activez cette option, les applications qui sont déjà installées ne s’affichent plus sous l’onglet Applications. Cette option est définie par défaut quand vous installez ou mettez à niveau vers Configuration Manager 1802. Les applications installées sont toujours disponibles pour examen sous l’onglet de l’état d’installation. <!--1357592-->   
+ 
+### <a name="bkmk_HideAppCat"></a> Masquer le lien du catalogue d’applications dans le Centre logiciel
+À compter de Configuration Manager version 1806, vous pouvez spécifier la visibilité du lien du site web du catalogue d’applications dans le Centre logiciel. Quand cette option est définie, les utilisateurs ne voient pas le lien du site web du catalogue d’applications dans le nœud d’état d’installation du Centre logiciel. <!--1358214-->
+
+
 ### <a name="software-center-tab-visibility"></a>Visibilité de l’onglet Centre logiciel
 Affectez la valeur **Oui** aux paramètres supplémentaires de ce groupe pour afficher les onglets suivants dans le Centre logiciel :
 - **Applications**
@@ -635,6 +635,12 @@ Affectez la valeur **Oui** aux paramètres supplémentaires de ce groupe pour af
 - **État de l’installation**
 - **Conformité de l’appareil**
 - **Options**
+- **Spécifier un onglet personnalisé pour le Centre logiciel** (à compter de la version 1806) <!--1358132-->
+    - **Nom de l’onglet**
+    - **URL du contenu**
+
+>[!NOTE]
+> Certaines fonctionnalités de site web peuvent ne pas fonctionner quand vous utilisez le catalogue d’applications comme onglet personnalisé dans le Centre logiciel. Veillez à tester les résultats avant de les déployer sur des clients. <!--519659-->
 
 Par exemple, si votre organisation n’utilise pas de stratégies de conformité et que vous souhaitez masquer l’onglet Conformité de l’appareil dans le Centre logiciel, définissez l’onglet **Activer l’onglet Conformité de l’appareil** sur **Non**.
 
@@ -646,7 +652,7 @@ Par exemple, si votre organisation n’utilise pas de stratégies de conformité
 Configurez une planification pour la réévaluation des règles de spécifications par Configuration Manager pour tous les déploiements. La valeur par défaut est tous les sept jours.  
 
 > [!IMPORTANT]  
->  Nous vous recommandons de ne pas choisir une valeur inférieure à la valeur par défaut, Un calendrier de réévaluation plus agressif affecte négativement les performances de votre réseau et des ordinateurs clients.  
+>  Ne choisissez pas une valeur inférieure à la valeur par défaut. Une planification de réévaluation plus agressive affecte négativement les performances de votre réseau et des ordinateurs clients.  
 
 Lancez cette action à partir du client en procédant comme suit : dans le panneau de configuration de **Configuration Manager**, dans l’onglet **Actions**, sélectionnez **Cycle d’évaluation du déploiement de l’application**.  
 
@@ -656,7 +662,7 @@ Lancez cette action à partir du client en procédant comme suit : dans le panne
 
 ### <a name="enable-software-inventory-on-clients"></a>Activer l'inventaire logiciel sur les clients
 
-Ce paramètre est défini sur **Oui** par défaut. Pour plus d’informations, consultez [Présentation de l’inventaire logiciel](/sccm/core/clients/manage/inventory/introduction-to-software-inventory).
+Cette option est définie sur **Oui** par défaut. Pour plus d’informations, consultez [Présentation de l’inventaire logiciel](/sccm/core/clients/manage/inventory/introduction-to-software-inventory).
 
 ### <a name="schedule-software-inventory-and-file-collection"></a>Planifier l'inventaire logiciel et le regroupement de fichiers
 
@@ -682,9 +688,9 @@ Si vous souhaitez spécifier les types de fichiers à inventorier, sélectionnez
 
     -   **Emplacement** : sélectionnez **Définir** pour ouvrir la boîte de dialogue **Propriétés du chemin d’accès**. Configurez l’inventaire logiciel pour rechercher le fichier défini sur tous les disques durs des clients, effectuer une recherche à un emplacement donné (tel que **C:\Dossier**) ou rechercher une variable (telle que *%windir%*). Vous pouvez également exécuter une recherche dans tous les sous-dossiers du chemin indiqué.  
 
-    -   **Exclure les fichiers chiffrés et compressés** : quand vous choisissez cette option, tous les fichiers compressés ou chiffrés ne sont pas inventoriés.  
+    -   **Exclure les fichiers chiffrés et compressés**: quand vous choisissez cette option, tous les fichiers compressés ou chiffrés ne sont pas inventoriés.  
 
-    -   **Exclure des fichiers dans le dossier Windows** : quand vous choisissez cette option, tous les fichiers dans le dossier Windows et ses sous-répertoires ne sont pas inventoriés.  
+    -   **Exclure des fichiers dans le dossier Windows** : quand vous choisissez cette option, tout fichier présent dans le dossier Windows et ses sous-répertoires n’est pas inventorié.  
 
     Sélectionnez **OK** pour fermer la boîte de dialogue **Propriétés du fichier inventorié**. Ajoutez tous les fichiers à inventorier, puis sélectionnez **OK** pour fermer la boîte de dialogue **Configurer le paramètre client**.  
 
@@ -703,12 +709,12 @@ Si vous souhaitez collecter des fichiers stockés à partir d’ordinateurs clie
 
     -   **Emplacement** : sélectionnez **Définir** pour ouvrir la boîte de dialogue **Propriétés du chemin d’accès**. Configurez l’inventaire logiciel pour rechercher le fichier à collecter sur tous les disques durs des clients, effectuer une recherche à un emplacement donné (tel que **C:\Dossier**) ou rechercher une variable (telle que *%windir%*). Vous pouvez également exécuter une recherche dans tous les sous-dossiers du chemin indiqué.  
 
-    -   **Exclure les fichiers chiffrés et compressés** : quand vous choisissez cette option, tous les fichiers compressés ou chiffrés ne sont pas collectés.  
+    -   **Exclure les fichiers chiffrés et compressés** : quand vous choisissez cette option, tout fichier compressé ou chiffré n’est pas collecté.  
 
     -   **Arrêter le regroupement de fichiers lorsque la taille totale dépasse (Ko)** : spécifiez la taille de fichier, en Ko, au-delà de laquelle le client arrête la collecte des fichiers spécifiés.  
 
     > [!NOTE]  
-    >  Le serveur de site collecte les cinq dernières versions modifiées des fichiers collectés et les enregistre dans le *&lt;répertoire d’installation ConfigMgr\>* \Inboxes\Sinv.box\Filecol. Si un fichier n’a pas changé depuis le dernier cycle d’inventaire logiciel, le fichier n’est pas recollecté.  
+    >  Le serveur de site collecte les cinq dernières versions changées des fichiers collectés et les stocke dans le répertoire `<ConfigMgr installation directory>\Inboxes\Sinv.box\Filecol`. Si un fichier n’a pas changé depuis le dernier cycle d’inventaire logiciel, le fichier n’est pas recollecté.  
     >   
     >  L’inventaire logiciel ne collecte pas les fichiers de plus de 20 Mo.  
     >   
@@ -717,7 +723,7 @@ Si vous souhaitez collecter des fichiers stockés à partir d’ordinateurs clie
     > [!IMPORTANT]
     >  Si vous configurez l’inventaire logiciel pour collecter un grand nombre de fichiers volumineux, vous risquez d’affecter négativement les performances du serveur de site et du réseau.  
 
-    Pour plus d’informations sur l’affichage des fichiers collectés, consultez [Guide pratique pour utiliser l’Explorateur de ressources pour afficher l’inventaire logiciel](../../../core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md).  
+    Pour plus d’informations sur l’affichage des fichiers collectés, consultez [Guide pratique pour utiliser l’Explorateur de ressources pour afficher l’inventaire logiciel](/sccm/core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory).  
 
     Sélectionnez **OK** pour fermer la boîte de dialogue **Propriétés du fichier collecté**. Ajoutez tous les fichiers à collecter, puis sélectionnez **OK** pour fermer la boîte de dialogue **Configurer le paramètre client**.  
 
@@ -747,14 +753,14 @@ Sélectionnez **Planifier** pour régler la fréquence à laquelle les clients e
 
 ### <a name="enable-software-updates-on-clients"></a>Activer les mises à jour logicielles sur les clients
 
-Utilisez ce paramètre pour activer les mises à jour logicielles sur les clients Configuration Manager. Quand vous désactivez ce paramètre, Configuration Manager supprime les stratégies de déploiement existantes du client. Lorsque vous réactivez ce paramètre, le client télécharge la stratégie de déploiement actuelle.  
+Utilisez ce paramètre pour activer les mises à jour logicielles sur les clients Configuration Manager. Quand vous désactivez ce paramètre, Configuration Manager supprime les stratégies de déploiement existantes des clients. Lorsque vous réactivez ce paramètre, le client télécharge la stratégie de déploiement actuelle.  
 
 > [!IMPORTANT]  
 >  Quand vous désactivez ce paramètre, les stratégies de conformité qui reposent sur les mises à jour logicielles ne fonctionnent plus.  
 
 ### <a name="software-update-scan-schedule"></a>Calendrier d'analyse des mises à jour logicielles
 
-Sélectionnez **Planifier** pour spécifier la fréquence à laquelle le client lance une analyse de la conformité. Cette analyse détermine l’état des mises à jour logicielles sur le client (par exemple, requise ou installée). Pour plus d’informations sur l’évaluation de la conformité, consultez [Évaluation de la conformité des mises à jour logicielles](../../../sum/understand/software-updates-introduction.md#BKMK_SUMCompliance).  
+Sélectionnez **Planifier** pour spécifier la fréquence à laquelle le client lance une analyse de la conformité. Cette analyse détermine l’état des mises à jour logicielles sur le client (par exemple, requise ou installée). Pour plus d’informations sur l’évaluation de la conformité, consultez [Évaluation de la conformité des mises à jour logicielles](/sccm/sum/understand/software-updates-introduction#BKMK_SUMCompliance).  
 
 Par défaut, cette analyse utilise un calendrier simple pour une exécution tous les sept jours. Vous pouvez créer une planification personnalisée. Vous pouvez spécifier une date et une heure exactes de début, utiliser le temps universel coordonné (UTC) ou l’heure locale, et configurer l’intervalle de récurrence pour un jour spécifique de la semaine.  
 
@@ -775,29 +781,33 @@ Ajustez cette planification en fonction de la stratégie de l’entreprise relat
 
 ### <a name="when-any-software-update-deployment-deadline-is-reached-install-all-other-software-update-deployments-with-deadline-coming-within-a-specified-period-of-time"></a>Dès que l'échéance d'un déploiement de mise à jour logicielle est atteinte, installer tous les autres déploiements de mise à jour logicielle avec une échéance pendant une période de temps spécifiée
 
-Définissez ce paramètre sur **Oui** pour installer toutes les mises à jour à partir des déploiements requis dont les échéances ont lieu pendant une période spécifiée. Quand un déploiement de mises à jour logicielles requis atteint une échéance, le client lance l’installation des mises à jour logicielles du déploiement. Ce paramètre détermine s’il faut installer des mises à jour logicielles d’autres déploiements requis dont l’échéance tombe dans le délai spécifié.  
+Définissez cette option sur **Oui** pour installer toutes les mises à jour logicielles à partir des déploiements obligatoires dont les échéances ont lieu pendant une période spécifiée. Quand un déploiement de mises à jour logicielles requis atteint une échéance, le client lance l’installation des mises à jour logicielles du déploiement. Ce paramètre détermine s’il faut installer des mises à jour logicielles d’autres déploiements requis dont l’échéance tombe dans le délai spécifié.  
 
 Utilisez-le pour accélérer l’installation des mises à jour logicielles requises. Ce paramètre est également susceptible d’augmenter la sécurité du client, les notifications à l’utilisateur et réduire les redémarrages du client. Par défaut, ce paramètre est défini sur **Non**.  
 
 ### <a name="period-of-time-for-which-all-pending-deployments-with-deadline-in-this-time-will-also-be-installed"></a>Durée pendant laquelle tous les déploiements en attente avec une échéance dans cette période seront également installés
 
-Utilisez ce paramètre pour spécifier le laps de temps pour le paramètre précédent. Vous pouvez entrer une valeur comprise entre 1 et 23 heures et entre 1 et 365 jours. Par défaut, ce paramètre est configuré pour 7 jours.  
+Utilisez ce paramètre pour spécifier le laps de temps pour le paramètre précédent. Vous pouvez entrer une valeur comprise entre 1 et 23 heures et entre 1 et 365 jours. Par défaut, ce paramètre est configuré pour sept jours.  
 
 ### <a name="enable-installation-of-express-installation-files-on-clients"></a>Activer l’installation de fichiers d’installation rapide sur les clients
 
-Définissez ce paramètre sur **Oui** pour permettre aux clients d’utiliser des fichiers d’installation rapide. Pour plus d’informations, consultez [Gérer les fichiers d’installation rapide pour les mises à jour de Windows 10](/sccm/sum/deploy-use/manage-express-installation-files-for-windows-10-updates).
+Définissez cette option sur **Oui** pour permettre aux clients d’utiliser des fichiers d’installation rapide. Pour plus d’informations, consultez [Gérer les fichiers d’installation rapide pour les mises à jour de Windows 10](/sccm/sum/deploy-use/manage-express-installation-files-for-windows-10-updates). 
+
 
 ### <a name="port-used-to-download-content-for-express-installation-files"></a>Port utilisé pour télécharger du contenu pour les fichiers d’installation rapide
 
-Ce paramètre configure le port local permettant à l’écouteur HTTP de télécharger le contenu express. Par défaut, il s’agit du port 8005. Vous n’avez pas besoin d’ouvrir ce port dans le pare-feu du client.
+Ce paramètre configure le port local permettant à l’écouteur HTTP de télécharger le contenu express. Par défaut, il est définit sur 8005. Vous n’avez pas besoin d’ouvrir ce port dans le pare-feu du client.
 
 ### <a name="enable-management-of-the-office-365-client-agent"></a>Activer la gestion de l'agent Office 365 Client
 
-Lorsque ce paramètre est défini sur **Oui**, il permet de configurer les paramètres d’installation d’Office 365. Il permet également de télécharger des fichiers à partir de réseaux de distribution de contenu (CDN) Office et déployer les fichiers en tant qu’application dans Configuration Manager. Pour plus d’informations, consultez [Gérer Office 365 ProPlus](/sccm/sum/deploy-use/manage-office-365-proplus-updates).
+Quand vous définissez cette option sur **Oui**, il permet de configurer les paramètres d’installation d’Office 365. Il permet également de télécharger des fichiers à partir de réseaux de distribution de contenu (CDN) Office et déployer les fichiers en tant qu’application dans Configuration Manager. Pour plus d’informations, consultez [Gérer Office 365 ProPlus](/sccm/sum/deploy-use/manage-office-365-proplus-updates).
 
 ### <a name="enable-third-party-software-updates"></a>Activer les mises à jour de logiciels tiers 
 
 Le fait d’affecter la valeur **Oui** à cette option définit la stratégie pour « Autoriser les mises à jour signées provenant d’un emplacement intranet du service de mise à jour Microsoft » et installe le certificat de signature dans la banque d’éditeurs approuvés sur le client. Ce paramètre client a été ajouté dans Configuration Manager version 1802.
+
+
+
 ## <a name="state-messaging"></a>Messagerie d’état
 
 ### <a name="state-message-reporting-cycle-minutes"></a>Cycle de diffusion des messages d'état (en minutes)
@@ -808,10 +818,10 @@ Spécifie la fréquence à laquelle les clients signalent les messages d’état
 ##  <a name="user-and-device-affinity"></a>Affinité entre utilisateur et appareil  
 
 ### <a name="user-device-affinity-usage-threshold-minutes"></a>Seuil d'utilisation de l'affinité entre utilisateur et appareil (minutes)
-Spécifiez le nombre de minutes avant que Configuration Manager ne crée un mappage d’affinité entre utilisateur et appareil.  La valeur par défaut est de 2880 minutes (2 jours).
+Spécifiez le nombre de minutes avant que Configuration Manager ne crée un mappage d’affinité entre utilisateur et appareil. Par défaut, cette valeur est 2 880 minutes (deux jours).
 
 ### <a name="user-device-affinity-usage-threshold-days"></a>Seuil d'utilisation de l'affinité entre utilisateur et appareil (jour)
-Spécifiez le nombre de jours durant lesquels le client mesure le seuil de l’affinité d’appareil basée sur l’utilisation.  Par défaut, cette valeur est de 30 jours.
+Spécifiez le nombre de jours durant lesquels le client mesure le seuil de l’affinité d’appareil basée sur l’utilisation. Par défaut, cette valeur est de 30 jours.
 
 > [!NOTE]  
 >  Par exemple, si vous réglez **Seuil d’utilisation de l’affinité entre utilisateur et périphérique (minutes)** sur **60** minutes et **Seuil d’utilisation de l’affinité entre utilisateur et périphérique (jours)** sur **5** jours, l’utilisateur doit utiliser l’appareil pendant 60 minutes sur une période de 5 jours pour créer une affinité automatique avec l’appareil.  

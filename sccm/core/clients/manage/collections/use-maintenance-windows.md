@@ -2,7 +2,7 @@
 title: Utiliser les fenêtres de maintenance
 titleSuffix: Configuration Manager
 description: Utilisez les regroupements et les fenêtres de maintenance pour gérer efficacement les clients dans System Center Configuration Manager.
-ms.date: 02/22/2017
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,18 +10,18 @@ ms.assetid: 4564ebcb-41a8-4eb0-afdb-2e1f0795cfa2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 18a870b111b141cb9b95664a2f66403ea37cb99e
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 6512b42191b5ea627f5e8729fea29aab81ee1aed
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32332521"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39384329"
 ---
 # <a name="how-to-use-maintenance-windows-in-system-center-configuration-manager"></a>Comment utiliser les fenêtres de maintenance dans System Center Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
-Les fenêtres de maintenance vous permettent de définir une période de temps pendant laquelle des opérations Configuration Manager peuvent être effectuées sur un regroupement d’appareils. Vous pouvez utiliser les fenêtres de maintenance afin de vous assurer que les modifications apportées à la configuration client seront effectuées pendant des périodes qui n’affectent pas la productivité.  
+Les fenêtres de maintenance vous permettent de définir une période de temps pendant laquelle des opérations Configuration Manager peuvent être effectuées sur un regroupement d’appareils. Vous utilisez les fenêtres de maintenance pour garantir que les changements apportés à la configuration du client seront effectués pendant des périodes qui n’affectent pas la productivité. À compter de Configuration Manager version 1806, vos utilisateurs peuvent voir quand sera leur prochaine fenêtre de maintenance sous l’onglet **État de l’installation** du **Centre logiciel**. <!--1358131-->
 
  Les opérations suivantes prennent en charge les fenêtres de maintenance :  
 
@@ -48,13 +48,13 @@ Les fenêtres de maintenance vous permettent de définir une période de temps p
 
  Quand un utilisateur lance l’installation d’une application à partir du Centre logiciel, l’application est installée immédiatement, indépendamment de toute fenêtre de maintenance.  
 
- Si le déploiement d’une application avec un objectif **Obligatoire** atteint son échéance d’installation pendant les heures creuses configurées par un utilisateur dans le Centre logiciel, l’application est installée.  
+ Si le déploiement d’une application avec un objectif **Obligatoire** atteint son échéance d’installation pendant les heures creuses configurées par un utilisateur dans le Centre logiciel, l’application est installée. 
 
 ### <a name="how-to-configure-maintenance-windows"></a>Comment configurer les fenêtres de maintenance  
 
 1.  Dans la console Configuration Manager, choisissez **Ressources et Conformité**>  **Regroupements de périphériques**.  
 
-3.  Dans la liste **Regroupements d’appareils**, sélectionnez un regroupement. Vous ne pouvez pas créer de fenêtres de maintenance pour le regroupement **Tous les systèmes** .  
+3.  Dans la liste **Regroupements d’appareils**, sélectionnez un regroupement. Vous ne pouvez pas créer de fenêtres de maintenance pour le regroupement **Tous les systèmes**.  
 
 4.  Sous l’onglet **Accueil**, dans le groupe **Propriétés**, choisissez **Propriétés**.  
 

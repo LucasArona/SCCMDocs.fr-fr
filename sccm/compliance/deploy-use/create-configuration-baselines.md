@@ -2,7 +2,7 @@
 title: Créer des bases de référence de configuration
 titleSuffix: Configuration Manager
 description: Créez des bases de référence de configuration dans System Center Configuration Manager pour les déployer ensuite dans un regroupement.
-ms.date: 10/06/2016
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 678c9622-c61b-47d1-ba25-690616e431c7
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 1a6d09e4a5552770a71dc44f473cebd13ba0715c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 665f5720486164cc4c728d579f1a700c4fb16245
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32331945"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39384669"
 ---
 # <a name="create-configuration-baselines-in-system-center-configuration-manager"></a>Créer des bases de référence de configuration dans System Center Configuration Manager
 
@@ -32,15 +32,15 @@ Les bases de référence de configuration System Center Configuration Manager co
 
 -   Utilisez la boîte de dialogue **Créer une ligne de base de configuration** pour créer une nouvelle ligne de base de configuration.  
 
- Procédez comme suit pour créer une ligne de base de configuration à l'aide de la boîte de dialogue **Créer une ligne de base de configuration** .  
+Pour créer une base de référence de configuration à l’aide de la boîte de dialogue **Créer une base de référence de configuration**, utilisez la procédure suivante :  
 
 1.  Dans la console Configuration Manager, cliquez sur **Ressources et Conformité** > **Paramètres de compatibilité** > **Lignes de base de configuration**.  
 
-3.  Dans l'onglet **Accueil** , dans le groupe **Créer** , cliquez sur **Créer une ligne de base de configuration**.  
+2.  Dans l'onglet **Accueil** , dans le groupe **Créer** , cliquez sur **Créer une ligne de base de configuration**.  
 
-4.  Dans la boîte de dialogue **Créer une ligne de base de configuration** , entrez un nom unique et une description pour la ligne de base de configuration. Vous pouvez utiliser un maximum de 255 caractères pour le nom et de 512 caractères pour la description.  
+3.  Dans la boîte de dialogue **Créer une ligne de base de configuration** , entrez un nom unique et une description pour la ligne de base de configuration. Vous pouvez utiliser un maximum de 255 caractères pour le nom et de 512 caractères pour la description.  
 
-5.  La liste **Données de configuration** affiche tous les éléments de configuration ou toutes les bases de référence de configuration qui sont inclus dans cette base de référence de configuration. Cliquez sur **Ajouter** pour ajouter à la liste un nouvel élément de configuration ou une nouvelle ligne de base de configuration. Vous pouvez choisir parmi les priorités suivantes :  
+4.  La liste **Données de configuration** affiche tous les éléments de configuration ou toutes les bases de référence de configuration qui sont inclus dans cette base de référence de configuration. Cliquez sur **Ajouter** pour ajouter à la liste un nouvel élément de configuration ou une nouvelle ligne de base de configuration. Vous pouvez choisir parmi les éléments suivants :  
 
     -   **Éléments de configuration**  
 
@@ -49,19 +49,26 @@ Les bases de référence de configuration System Center Configuration Manager co
     -   **Lignes de base de configuration**  
       > [!IMPORTANT]
       > Vous devez limiter chaque base de référence de configuration à 1 000 mises à jour logicielles.
-6.  Utilisez la liste **Changer d’objet** pour spécifier le comportement d’un élément de configuration que vous avez sélectionné dans la liste **Données de configuration** . Vous pouvez choisir parmi les options suivantes  
+5.  Utilisez la liste **Changer d’objet** pour spécifier le comportement d’un élément de configuration que vous avez sélectionné dans la liste **Données de configuration**. Vous pouvez choisir parmi les éléments suivants :  
 
-    -   **Obligatoire** La base de référence de configuration est évaluée comme non compatible si l’élément de configuration n’est pas détecté sur un périphérique client. S’il est détecté, sa conformité est évaluée.  
+    -   **Obligatoire** : la base de référence de configuration est évaluée comme non compatible si l’élément de configuration n’est pas détecté sur un appareil client. S’il est détecté, sa conformité est évaluée.  
 
-    -   **Facultatif** La conformité de l’élément de configuration n’est évaluée que si l’application à laquelle il fait référence se trouve sur des ordinateurs client. Si l’application est introuvable, la base de référence de configuration n’est pas marquée comme non compatible (applicable uniquement aux éléments de configuration d’application).  
+    -   **Facultatif** : la conformité de l’élément de configuration n’est évaluée que si l’application qu’il référence se trouve sur des ordinateurs clients. Si l’application est introuvable, la base de référence de configuration n’est pas marquée comme non compatible (applicable uniquement aux éléments de configuration d’application).  
 
-    -   **Interdit** La base de référence de configuration est évaluée comme non compatible si l’élément de configuration est détecté sur des ordinateurs client (applicable uniquement aux éléments de configuration d’application).  
+    -   **Interdit** : la base de référence de configuration est évaluée comme non compatible si l’élément de configuration est détecté sur des ordinateurs clients (applicable uniquement aux éléments de configuration d’application).  
 
     > [!NOTE]
     >  La liste **Changer d’objet** est disponible uniquement si vous avez cliqué sur l’option **Cet élément de configuration contient des paramètres d’application** dans la page **Général** de l’Assistant **Création d’élément de configuration**.  
 
-7.  Utilisez la liste **Changer de révision** pour sélectionner une révision spécifique ou la dernière révision de l’élément de configuration afin d’évaluer la conformité sur des périphériques client ou sélectionnez **Toujours utiliser le dernier** pour toujours utiliser la dernière révision. Pour plus d’informations sur les révisions des éléments de configuration, consultez [Tâches de gestion des données de configuration](../../compliance/deploy-use/management-tasks-for-configuration-data.md).  
+6.  Utilisez la liste **Changer de révision** pour sélectionner une révision spécifique ou la dernière révision de l’élément de configuration afin d’évaluer la conformité sur des périphériques client ou sélectionnez **Toujours utiliser le dernier** pour toujours utiliser la dernière révision. Pour plus d’informations sur les révisions des éléments de configuration, consultez [Tâches de gestion des données de configuration](../../compliance/deploy-use/management-tasks-for-configuration-data.md).  
 
-8.  Pour supprimer un élément de configuration de la base de référence de configuration, sélectionnez un élément de configuration, puis cliquez sur **Supprimer**.  
+7.  Pour supprimer un élément de configuration de la base de référence de configuration, sélectionnez un élément de configuration, puis cliquez sur **Supprimer**.  
 
-9. Cliquez sur **OK** pour fermer la boîte de dialogue **Créer une ligne de base de configuration** et pour créer la ligne de base de configuration.  
+8. Depuis la version 1806, indiquez si vous souhaitez **Toujours appliquer cette base de référence pour les clients cogérés**. Quand cette option est activée, cette base de référence s’applique même sur les clients qui sont gérés par Intune.  Cette exception peut être utilisée pour configurer les paramètres qui sont exigés par votre entreprise, mais qui ne sont pas encore disponibles dans Intune. 
+
+9. Si vous le souhaitez, cliquez sur **Catégories** pour attribuer des catégories à la base de référence pour la recherche et le filtrage. 
+
+10. Cliquez sur **OK** pour fermer la boîte de dialogue **Créer une ligne de base de configuration** et pour créer la ligne de base de configuration.  
+
+>[!NOTE]
+> La modification d’une base de référence existante, par exemple en définissant l’option **Toujours appliquer cette base de référence pour les clients cogérés**, incrémente la version du contenu de la base de référence. Les clients doivent alors évaluer la nouvelle version pour mettre à jour la création de rapports sur la base de référence. 

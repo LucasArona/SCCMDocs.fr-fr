@@ -2,7 +2,7 @@
 title: Versions incrémentielles
 titleSuffix: Configuraton Manager
 description: Découvrez les nouveautés de la dernière mise à jour Configuration Manager.
-ms.date: 03/22/2018
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,14 +10,14 @@ ms.assetid: b57acf0b-05b7-46af-ad4c-f3e707bd3861
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 28b7819b915eb2dea8a34d1474141067ac7751b5
-ms.sourcegitcommit: 0305e710f634529793ae73e5aac24168ee4fe02f
+ms.openlocfilehash: 13037b857b890d400881d8d7173b7ca03dd83ebc
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042777"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39384124"
 ---
-# <a name="whats-new-in-system-center-configuration-manager-incremental-versions"></a>Nouveautés des versions incrémentielles de System Center Configuration Manager
+# <a name="whats-new-in-configuration-manager-incremental-versions"></a>Nouveautés des versions incrémentielles de Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
@@ -27,11 +27,13 @@ ms.locfileid: "37042777"
 
  Les versions des mises à jour sont identifiées par un numéro composé de l’année et du mois. Par exemple, la version 1511 indique « Novembre 2015 » (mois auquel Configuration Manager Current Branch est sorti en version RTM). Les versions suivantes portent des noms tels que 1802, lequel indique que la mise à jour a été créée en février 2018. Ces versions de mise à jour sont essentielles pour identifier la version incrémentielle de votre installation Configuration Manager et les fonctionnalités que vous pouvez activer dans votre environnement.
 
+
+
 ## <a name="supported-versions"></a>Versions prises en charge
  Utilisez les liens suivants pour découvrir les nouveautés propres à chaque version prise en charge :
+  - [Nouveautés de la version 1806](../../../core/plan-design/changes/whats-new-in-version-1806.md)  
   - [Nouveautés de la version 1802](../../../core/plan-design/changes/whats-new-in-version-1802.md)
   - [Nouveautés dans la version 1710](../../../core/plan-design/changes/whats-new-in-version-1710.md)
-  - [Nouveautés dans la version 1706](../../../core/plan-design/changes/whats-new-in-version-1706.md)  
 
 
 Pour les versions de Configuration Manager publiées avant la version 1710, la prise en charge dure 12 mois. À compter de la version 1710, chaque version de mise à jour reste prise en charge pendant 18 mois suivant sa date de disponibilité générale (GA).  Pour rester à jour, utilisez la version la plus récente de la mise à jour. Pour plus d’informations, consultez [Prise en charge des versions Current Branch de Configuration Manager](../../../core/servers/manage/current-branch-versions-supported.md).  

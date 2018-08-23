@@ -2,7 +2,7 @@
 title: Prise en charge de Windows 10
 titleSuffix: Configuration Manager
 description: Découvrir les versions de Windows 10 prises en charge comme clients ou pour OSD avec System Center Configuration Manager
-ms.date: 04/30/2018
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,14 +10,14 @@ ms.assetid: a1626a65-da22-49e0-9564-d2f752ea3f4b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bea7d3d0e2c4482a08473f49fbdc3916065627b7
-ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
+ms.openlocfilehash: f5aac395c71b76a0b83826e8f7c9de1e656aa884
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36260715"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39383633"
 ---
-# <a name="support-for-windows-10-in-system-center-configuration-manager"></a>Prise en charge de Windows 10 dans System Center Configuration Manager  
+# <a name="support-for-windows-10-in-configuration-manager"></a>Prise en charge de Windows 10 dans Configuration Manager  
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
@@ -40,14 +40,14 @@ Par exemple, une version de Configuration Manager est supprimée de la matrice q
 <br/>
 Le tableau suivant liste les versions de Windows 10 que vous pouvez utiliser comme client avec différentes versions de Configuration Manager.
 
-| Version de Windows 10 | Configuration Manager 1706 | Configuration Manager 1710 | Configuration Manager 1802 |
-|---------------------|-----|-----|-----|
-| Enterprise 2015 LTSB            <!--10/14/2025-->   | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) |
-| Entreprise 2016 LTSB            <!--10/13/2026-->   | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) |
-| 1607   <br />(*voir éditions*)   <!--04+6/10/2018-->   | ![Pris en charge](media/green_check.png) <sup>1</sup> | ![Pris en charge](media/green_check.png) <sup>1</sup> | ![Pris en charge](media/green_check.png) <sup>1</sup> |
-| 1703   <br />(*voir éditions*)   <!--10+6/09/2018-->   | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) |
-| 1709   <br />(*voir éditions*)   <!--04+6/09/2019-->   | ![Compatibilité descendante](media/blue_compat.png) | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) |
-| 1803   <br />(*voir éditions*)   <!--11/12/2019-->   | ![Non pris en charge](media/Red_X.png) | ![Non pris en charge](media/Red_X.png) | ![Pris en charge](media/green_check.png) |
+| Version de Windows 10 | Configuration Manager 1706 | Configuration Manager 1710 | Configuration Manager 1802 | Configuration Manager 1806 |
+|---------------------|-----|-----|-----|-----|
+| Enterprise 2015 LTSB            <!--10/14/2025-->   | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) |
+| Entreprise 2016 LTSB            <!--10/13/2026-->   | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) |
+| 1607   <br />(*voir éditions*)   <!--04+6/10/2018-->   | ![Pris en charge](media/green_check.png) <sup>1</sup> | ![Pris en charge](media/green_check.png) <sup>1</sup> | ![Pris en charge](media/green_check.png) <sup>1</sup> | ![Pris en charge](media/green_check.png) <sup>1</sup> |
+| 1703   <br />(*voir éditions*)   <!--10+6/09/2018-->   | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) |
+| 1709   <br />(*voir éditions*)   <!--04+6/09/2019-->   | ![Compatibilité descendante](media/blue_compat.png) | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) |
+| 1803   <br />(*voir éditions*)   <!--11/12/2019-->   | ![Non pris en charge](media/Red_X.png) | ![Non pris en charge](media/Red_X.png) | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) |
 
 <!-- lifecycle reference: https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet -->
 
@@ -71,11 +71,11 @@ Quand vous déployez des systèmes d’exploitation avec Configuration Manager, 
 
 Le tableau suivant répertorie les versions du Windows 10 ADK que vous pouvez utiliser avec différentes versions de Configuration Manager.
 
-| Version de Windows 10 ADK  | Configuration Manager 1706 | Configuration Manager 1710 | Configuration Manager 1802   |
-|--------------------|-----|-----|-----|
-| 1703  | ![Pris en charge](media/green_check.png) | ![Compatibilité descendante](media/blue_compat.png) | ![Compatibilité descendante](media/blue_compat.png) |
-| 1709  | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) |
-| 1803  | ![Non pris en charge](media/Red_X.png)   | ![Non pris en charge](media/Red_X.png) | ![Pris en charge](media/green_check.png) |
+| Version de Windows 10 ADK  | Configuration Manager 1706 | Configuration Manager 1710 | Configuration Manager 1802 | Configuration Manager 1806 |
+|--------------------|-----|-----|-----|-----|
+| 1703  | ![Pris en charge](media/green_check.png) | ![Compatibilité descendante](media/blue_compat.png) | ![Compatibilité descendante](media/blue_compat.png) | ![Non pris en charge](media/Red_X.png)   |
+| 1709  | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) | ![Compatibilité descendante](media/blue_compat.png) |
+| 1803  | ![Non pris en charge](media/Red_X.png)   | ![Non pris en charge](media/Red_X.png) | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) |
 
 |Clé|
 |--|
