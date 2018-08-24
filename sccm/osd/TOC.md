@@ -1,19 +1,15 @@
 # Comprendre et explorer
-## [Introduction au déploiement de systèmes d’exploitation](understand/introduction-to-operating-system-deployment.md)
-## [Étapes de séquence de tâches](understand/task-sequence-steps.md)
-## [Variables d’action de séquence de tâches](understand/task-sequence-action-variables.md)
-## [Variables intégrées de séquence de tâches](understand/task-sequence-built-in-variables.md)
-## [Commandes de prédémarrage pour les médias de séquence de tâches](understand/prestart-commands-for-task-sequence-media.md)
+## [Présentation du déploiement de système d’exploitation](understand/introduction-to-operating-system-deployment.md)
 
 # Planifier et concevoir
 ## [Configuration requise de l’infrastructure pour le déploiement de système d’exploitation](plan-design/infrastructure-requirements-for-operating-system-deployment.md)
 ## [Considérations relatives à la planification de l’automatisation des tâches](plan-design/planning-considerations-for-automating-tasks.md)
-## [Sécurité et confidentialité du déploiement de système d’exploitation](plan-design/security-and-privacy-for-operating-system-deployment.md)
-## [Planification de l’interopérabilité des déploiements de systèmes d’exploitation](plan-design/planning-for-operating-system-deployment-interoperability.md)
+## [Sécurité et confidentialité pour le déploiement de système d’exploitation](plan-design/security-and-privacy-for-operating-system-deployment.md)
+## [Planification de l’interopérabilité pour le déploiement de système d’exploitation](plan-design/planning-for-operating-system-deployment-interoperability.md)
 
 # Bien démarrer
-## [Préparer les rôles système de site pour les déploiements de système d’exploitation](get-started/prepare-site-system-roles-for-operating-system-deployments.md)
-## [Préparer un déploiement de système d’exploitation](get-started/prepare-for-operating-system-deployment.md)
+## [Préparer des rôles de système de site pour les déploiements de système d’exploitation](get-started/prepare-site-system-roles-for-operating-system-deployments.md)
+## [Préparer le déploiement du système d’exploitation](get-started/prepare-for-operating-system-deployment.md)
 ### [Gérer les images de démarrage](get-started/manage-boot-images.md)
 #### [Personnaliser les images de démarrage](get-started/customize-boot-images.md)
 
@@ -47,7 +43,7 @@
 ## [Gérer Windows en tant que service](deploy-use/manage-windows-as-a-service.md)
 ## [Créer un déploiement par phases](deploy-use/create-phased-deployment-for-task-sequence.md)
 ## [Gérer et effectuer le monitoring des déploiements par phases](deploy-use/manage-monitor-phased-deployments.md)
-## [Surveiller les déploiements de système d’exploitation](deploy-use/monitor-operating-system-deployments.md)
+## [Superviser les déploiements de système d’exploitation](deploy-use/monitor-operating-system-deployments.md)
 
 ## [Gérer les séquences de tâches pour automatiser des tâches](deploy-use/manage-task-sequences-to-automate-tasks.md)
 ### [Créer une séquence de tâches pour installer un système d’exploitation](deploy-use/create-a-task-sequence-to-install-an-operating-system.md)
@@ -67,3 +63,10 @@
 ### [Créer un média préparé](deploy-use/create-prestaged-media.md)
 ### [Créer un média de démarrage](deploy-use/create-bootable-media.md)
 ### [Créer un média de capture](deploy-use/create-capture-media.md)
+
+# Informations techniques de référence
+## [Étapes de séquence de tâches](understand/task-sequence-steps.md)
+## [Comment utiliser les variables de séquence de tâches](understand/using-task-sequence-variables.md)
+## [Variables de séquence de tâches](understand/task-sequence-variables.md)
+## [Commandes de prédémarrage pour les médias de séquence de tâches](understand/prestart-commands-for-task-sequence-media.md)
+
