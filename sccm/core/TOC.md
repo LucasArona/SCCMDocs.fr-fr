@@ -93,6 +93,7 @@
 ###  [Déclaration de confidentialité - Bibliothèque d’applets de commande de Configuration Manager](plan-design/security/privacy-statement-cmdlet-library.md)
 ###  [Autres informations sur la confidentialité](plan-design/security/additional-privacy.md)
 ###  [Configurer la sécurité](plan-design/security/configure-security.md)
+###  [Informations techniques de référence sur les contrôles de chiffrement](plan-design/security/cryptographic-controls-technical-reference.md)
 
 #    Bien démarrer
 ##   [Évaluer Configuration Manager dans un laboratoire](get-started/evaluate-with-lab-environment.md)
