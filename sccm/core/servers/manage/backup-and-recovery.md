@@ -2,7 +2,7 @@
 title: Sauvegarder des sites
 titleSuffix: Configuration Manager
 description: Apprenez à sauvegarder vos sites avant toute défaillance ou perte de données dans Configuration Manager.
-ms.date: 07/30/2018
+ms.date: 08/24/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: f7832d83-9ae2-4530-8a77-790e0845e12f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 39af53c6ddfdb58f340432aa3392a046cdeef428
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 85ce1c4b5201c29ffa3543357f50a379c1b11e7f
+ms.sourcegitcommit: 84afecee44200e27d1d5bb5ed2d54fd6a8c51617
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39386210"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43053879"
 ---
 # <a name="back-up-a-configuration-manager-site"></a>Sauvegarde d'un site Configuration Manager
 
@@ -129,7 +129,7 @@ Conservez plusieurs archives de l’instantané de sauvegarde pour les raisons s
 
 
 ## <a name="using-the-afterbackupbat-file"></a>Utilisation du fichier AfterBackup.bat  
-Après avoir sauvegardé correctement le site, la tâche de sauvegarde tente automatiquement d’exécuter un script nommé **AfterBackup.bat**. Créez manuellement le fichier AfterBackup.bat sur le serveur de site dans `<ConfigMgrInstallationFolder>\Inboxes\Smsbkup`. S’il existe un fichier AfterBackup.bat dans le dossier approprié, il s’exécute automatiquement à la fin de la tâche de sauvegarde.
+Après avoir sauvegardé correctement le site, la tâche de sauvegarde tente automatiquement d’exécuter un script nommé **AfterBackup.bat**. Créez manuellement le fichier AfterBackup.bat sur le serveur de site dans `<ConfigMgrInstallationFolder>\Inboxes\Smsbkup.box`. S’il existe un fichier AfterBackup.bat dans le dossier approprié, il s’exécute automatiquement à la fin de la tâche de sauvegarde.
 
 Le fichier AfterBackup.bat vous permet d’archiver l’instantané de sauvegarde à la fin de chaque opération de sauvegarde. Il peut effectuer automatiquement d’autres tâches postérieures à la sauvegarde, qui ne font pas partie de la tâche de maintenance de sauvegarde du serveur de site. Le fichier AfterBackup.bat intègre les opérations d'archivage et de sauvegarde, permettant ainsi d'archiver chaque nouvel instantané de sauvegarde.
 
@@ -169,7 +169,7 @@ La bibliothèque de contenu dans Configuration Manager est l’emplacement où s
 Vérifiez que vous incluez à la fois la bibliothèque de contenu et les fichiers sources de package dans la sauvegarde du système de fichiers du serveur de site.  
 
 ### <a name="back-up-custom-software-updates"></a>Sauvegarder les mises à jour logicielles personnalisées  
-SCUP (System Center Updates Publisher) est un outil autonome qui vous permet de gérer les mises à jour logicielles personnalisées. L’éditeur de mise à jour utilise une base de données locale pour son espace de stockage des mises à jour logicielles. Quand vous utilisez l’éditeur de mise à jour pour gérer les mises à jour logicielles personnalisées, déterminez si vous devez inclure la base de données de l’éditeur de mise à jour dans votre plan de sauvegarde. Pour plus d’informations, consultez [SCUP](/sccm/sum/tools/updates-publisher).  
+SCUP (System Center Updates Publisher) est un outil autonome qui vous permet de gérer les mises à jour logicielles personnalisées. L’éditeur de mise à jour utilise une base de données locale pour son espace de stockage des mises à jour logicielles. Quand vous utilisez l’éditeur de mise à jour pour gérer les mises à jour logicielles personnalisées, déterminez si vous devez inclure la base de données de l’éditeur de mise à jour dans votre plan de sauvegarde. Pour plus d’informations, consultez [Éditeur de mise à jour System Center](/sccm/sum/tools/updates-publisher).  
 
 Utilisez la procédure suivante pour sauvegarder la base de données de l'éditeur de mise à jour.  
 
