@@ -10,12 +10,12 @@ ms.assetid: 7996b3eb-5259-483b-af40-adae2943d123
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 24cb16ab17475bdd063949c7e3e2961b53341026
-ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
+ms.openlocfilehash: 21833d124ee998f0b943d2620370a2fcff264e28
+ms.sourcegitcommit: 7eebd112a9862bf98359c1914bb0c86affc5dbc0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "34450149"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591643"
 ---
 # <a name="capabilities-in-technical-preview-1805-for-system-center-configuration-manager"></a>Fonctionnalités de la version Technical Preview 1805 de System Center Configuration Manager
 
@@ -166,7 +166,7 @@ Pour plus d’informations sur la fonctionnalité LEDBAT de Windows, consultez l
 ### <a name="prerequisites"></a>Prérequis
 - Un point de distribution sur Windows Server, version 1709  
 
-- Un appareil client qui exécute au minimum Windows 10 version 1607
+- Il n’existe aucun prérequis concernant le client.<!--SCCMDocs issue 699-->  
 
 
 ### <a name="try-it-out"></a>Essayez !
