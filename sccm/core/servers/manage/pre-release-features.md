@@ -1,7 +1,7 @@
 ---
-title: Fonctionnalités en préversion
+title: Fonctionnalités de préversion
 titleSuffix: Configuration Manager
-description: Les fonctionnalités en préversion sont des fonctions incluses dans la branche Current Branch à des fins de test préalable dans un environnement de production.
+description: Les fonctionnalités de préversion sont des fonctions incluses dans la branche Current Branch à des fins de test préalable dans un environnement de production.
 ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -10,12 +10,12 @@ ms.assetid: 6bce416b-761d-4b23-bd33-5b7c30edb10d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 04d23383d13e981d8a48f88e84444df1ac4915fe
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: e72cdf667f96828fb6730cf3294c8d20ec553130
+ms.sourcegitcommit: 759098de944b8f7d5eedfc2bae2cb9a6ba15276f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39386040"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43289252"
 ---
 # <a name="pre-release-features-in-configuration-manager"></a>Fonctionnalités en préversion dans Configuration Manager
 
@@ -59,7 +59,7 @@ Quand vous activez une fonctionnalité en préversion, le Gestionnaire de hiéra
 
 
 
-## <a name="pre-release-features"></a>Fonctionnalités en préversion
+## <a name="pre-release-features"></a>Fonctionnalités de préversion
 
 <!--Note/tip for target article
 
@@ -75,11 +75,11 @@ Quand vous activez une fonctionnalité en préversion, le Gestionnaire de hiéra
 
 | Fonctionnalité          | Ajoutée en préversion | Ajoutée en version complète |  
 |------------------|----------------------|-------------------------|
-| Système de site HTTP amélioré<!--1356889,1358228-->|Version 1806|![Pas encore](media/red_x.png)|
-| Applications mobiles pour les appareils cogérés<!--1357892-->|[Version 1806](/sccm/core/clients/manage/co-management-switch-workloads#workloads-able-to-be-transitioned-to-intune)|![Pas encore](media/red_x.png)|
-| Package Conversion Manager<!--1357861-->|Version 1806|![Pas encore](media/red_x.png)|
+| Système de site HTTP amélioré<!--1356889,1358228-->|Version 1806|![Pas encore](media/red_x.png)|
+| Applications mobiles pour les appareils cogérés<!--1357892-->|[Version 1806](/sccm/core/clients/manage/co-management-switch-workloads#workloads-able-to-be-transitioned-to-intune)|![Pas encore](media/red_x.png)|
+| Package Conversion Manager<!--1357861-->|[Version 1806](/sccm/apps/pcm/package-conversion-manager)|![Pas encore](media/red_x.png)|
 | Prise en charge de Cisco AnyConnect 4.0.07x et ultérieur pour iOS<!--1357393-->|[Version 1802](/sccm/mdm/deploy-use/create-vpn-profiles)| [Version 1802 avec mise à jour 4163547](/sccm/mdm/deploy-use/create-vpn-profiles) |
-| Déploiements par phases<!--1356837-->|[Version 1802](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)|[Version 1806](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)|
+| Déploiements par phases<!--1356837-->|[Version 1802](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)|[Version 1806](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)|
 | Exécuter l’étape de la séquence de tâches <!-- 1261338 --> |  [Version 1710](/sccm/osd/understand/task-sequence-steps#child-task-sequence) |[Version 1802](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#add-child-task-sequences-to-a-task-sequence)|
 | Windows Defender Exploit Guard <!-- 1355468 --> |  [Version 1710](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) |[Version 1802](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy)|
 | Évaluation de l’attestation de l’intégrité des appareils pour les stratégies de conformité pour l’accès conditionnel <!-- 1235616 --> |  [Version 1710](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) |[Version 1802](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)|
