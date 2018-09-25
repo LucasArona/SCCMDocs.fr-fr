@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 304a83ea-0f72-437d-9688-2e6e0c7526dd
-ms.openlocfilehash: cefdaec6aff16f0159f9811b6deb7379ab69a4ec
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 7c775df2446dbd0da1d9317982fc752dbfe5120a
+ms.sourcegitcommit: 4e4b71227309bee7e9f1285971f8235c67a9c502
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350542"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46533811"
 ---
 # <a name="service-a-server-group"></a>Maintenance de groupe de serveurs
 
@@ -63,7 +63,7 @@ Les paramètres du groupe de serveurs sont configurés dans les propriétés d�
     >   
     >  `Write-Output "Universal Time: " + $a.ToUniversalTime()  |`  
     >   
-    >  `Out-File C:\temp\start.txt`  
+    >  `Out-File C:\Windows\Temp\start.txt`  
     >   
     >  **Post-déploiement**  
     >   
@@ -73,7 +73,7 @@ Les paramètres du groupe de serveurs sont configurés dans les propriétés d�
     >   
     >  `Write-Output "Universal Time: " + $a.ToUniversalTime()  |`  
     >   
-    >  `Out-File C:\temp\end.txt`  
+    >  `Out-File C:\Windows\Temp\end.txt`  
 
 ## <a name="deploy-software-updates-to-the-server-group-and-monitor-status"></a>Déployer des mises à jour logicielles dans le groupe de serveurs et surveiller leur état  
 Vous déployez des mises à jour logicielles dans le regroupement de groupe de serveurs à l’aide du processus de déploiement standard. Après avoir déployé les mises à jour logicielles, vous pouvez surveiller le déploiement des mises à jour logicielles dans la console Configuration Manager.

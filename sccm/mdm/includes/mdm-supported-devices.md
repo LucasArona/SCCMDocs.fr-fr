@@ -5,7 +5,7 @@
 - PC exécutant Windows 10 (versions Famille, Professionnel, Éducation et Entreprise)
 - Appareils exécutant Windows 10 IoT Entreprise (x86, x64)
 - Appareils exécutant Windows 10 IoT Mobile Entreprise
-- Windows Holographique & Windows Holographique Entreprise
+- Windows Holographic for Business
 - Mac OS X 10.9 et versions ultérieures
 - Windows Phone 8.1, les PC exécutant Windows 8.1 et Windows 8.1 RT sont maintenus (Windows Embedded 8.1 Handheld n’est pas pris en charge)
 

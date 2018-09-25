@@ -10,12 +10,12 @@ ms.assetid: 45388103-2410-4c7e-b4cf-73a1bda485fc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9409b6cc71ea238755f40baf75e6211c447b547f
-ms.sourcegitcommit: 826e9ec385d6a1c1f3aa86ac202883154e0c1285
+ms.openlocfilehash: fdeb9d258c5c80fdd8d98d61943ace5469837d3d
+ms.sourcegitcommit: aca62bd3d267b1dbea46d4db6f32d797c5f6263c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37116495"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348016"
 ---
 # <a name="vpn-profiles-on-mobile-devices-in-system-center-configuration-manager"></a>Utilisation de profils VPN sur des appareils mobiles dans System Center Configuration Manager
 
@@ -57,11 +57,11 @@ Ce tableau affiche le type de connexion pris en charge pour chaque plateforme d�
        - iOS avec Cisco AnyConnect 4.0.7 ou version ultérieure
 
      > [!Tip]  
-     > Cisco AnyConnect 4.0.07x et versions ultérieures pour iOS ont été introduits dans la version 1802 en tant que [fonctionnalité en préversion](/sccm/core/servers/manage/pre-release-features). À compter de la [mise à jour 4163547](https://support.microsoft.com/help/4163547) de la version 1802, cette fonctionnalité n’est plus en préversion.  
+     > Cisco AnyConnect 4.0.07x et versions ultérieures pour iOS ont été introduits dans la version 1802 en tant que [fonctionnalité en préversion](/sccm/core/servers/manage/pre-release-features). À compter de la [mise à jour 4163547](https://support.microsoft.com/help/4163547) de la version 1802, cette fonctionnalité n’est plus en préversion.  
   
   
 > [!Note]  
-> F5 Access 2018 n’est pas pris en charge pour les profils VPN dans la gestion MDM hybride.  
+> Les versions F5 Access 3.0 et ultérieures pour iOS ne sont pas prises en charge pour les profils VPN dans une gestion hybride des appareils mobiles. Ce produit est également appelé F5 Access 2018. Si vous avez besoin de créer des profils VPN pour ce client VPN, utilisez la version autonome d’Intune. Les prochaines versions d’iOS, y compris la version 12, ne prendront pas en charge F5 Access 2.1 ou versions antérieures. Pour plus d’informations, consultez le [blog de l’équipe de support Microsoft Intune](https://aka.ms/iOS12_and_VPN).
 
 
 ## <a name="windows-10-vpn-features-available-when-using-configuration-manager-with-intune"></a>Fonctionnalités VPN Windows 10 disponibles quand vous utilisez Configuration Manager avec Intune  
