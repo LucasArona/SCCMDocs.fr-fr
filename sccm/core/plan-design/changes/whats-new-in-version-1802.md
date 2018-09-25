@@ -10,12 +10,12 @@ ms.assetid: 5bd637b1-d7a1-411b-877a-c7aae9741173
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3da4edf50480821ac9b3677fe80c38e8ed3d7e28
-ms.sourcegitcommit: acad0674b2743193f87990fb50194c4f17823a8e
+ms.openlocfilehash: 0757e7f3fac12c2945a3eab860851b0debf28fd5
+ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39146978"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43893887"
 ---
 # <a name="whats-new-in-version-1802-of-system-center-configuration-manager"></a>Nouveautés de la version 1802 de System Center Configuration Manager
 
@@ -128,7 +128,7 @@ Dans Configuration Manager 1802, les insights suivants sont disponibles :
 <!-- 1357389 --> Vous pouvez configurer la longueur des chaînes à une taille supérieure à 255 caractères pour les propriétés de l’inventaire matériel. Cette modification s’applique seulement aux classes nouvellement ajoutées et aux propriétés de l’inventaire matériel qui ne sont pas des clés. Pour plus d’informations, consultez l’article [Étendre l’inventaire matériel](/sccm/core/clients/manage/inventory/extend-hardware-inventory#BKMK_GreaterThan255). 
 
  ### <a name="deprecation-announcement-for-linux-and-unix-client-support"></a>Annonce de la dépréciation de la prise en charge des clients Linux et Unix
- <!--510139--> Microsoft prévoit de déprécier la prise en charge des clients Linux et UNIX dans System Center Configuration Manager d’ici un an environ, de sorte que les clients ne seront pas inclus dans SCCM version 1902 dans le calendrier anticipé de 2019.  Dans le dernier calendrier 2018, la version 1810 de Configuration Manager est la dernière version à inclure les clients Linux et UNIX qui seront pris en charge pour le cycle de vie complet de Configuration Manager 1810.  Après Configuration Manager 1810, les clients peuvent envisager Operations Management Suite de Microsoft pour la gestion des serveurs Linux.  OMS offre une prise en charge étendue de Linux qui, dans la plupart des cas, dépasse les fonctionnalités de Configuration Manager, notamment la gestion des correctifs de bout en bout pour Linux.
+ <!--510139--> Microsoft prévoit de déprécier la prise en charge des clients Linux et UNIX dans System Center Configuration Manager d’ici un an environ, de sorte que les clients ne seront pas inclus dans SCCM version 1902 dans le calendrier anticipé de 2019. Dans le dernier calendrier 2018, la version 1810 de Configuration Manager est la dernière version à inclure les clients Linux et UNIX qui seront pris en charge pour le cycle de vie complet de Configuration Manager 1810. Après Configuration Manager 1810, les clients devraient envisager d’utiliser Microsoft Azure Management pour gérer les serveurs Linux. Les solutions Azure offrent une prise en charge étendue de Linux qui, dans la plupart des cas, dépasse les fonctionnalités de Configuration Manager, notamment la gestion des correctifs de bout en bout pour Linux.
 
 ### <a name="surface-device-dashboard"></a>Tableau de bord des appareils Surface
 <!--1355788--> Le tableau de bord des appareils Surface fournit des informations sur les appareils Surface trouvés dans votre environnement. Dans la console, accédez à **Surveillance** > **Appareils Surface**. Vous pouvez voir les éléments suivants :

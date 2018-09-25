@@ -2,7 +2,7 @@
 title: Paramètres du client
 titleSuffix: Configuration Manager
 description: Découvrir les paramètres par défaut et personnalisés pour contrôler les comportements du client
-ms.date: 07/30/2018
+ms.date: 08/31/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 38306efc9fbd7b38a5c5f0dad57fbd1a1b2c0557
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: ff4cdcc52e9be329fcfa0fd2127c43255c73ad65
+ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385403"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43893870"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>À propos des paramètres client dans Configuration Manager
 
@@ -90,15 +90,7 @@ Spécifie la fréquence à laquelle les clients Configuration Manager suivants t
 
 Quand vous affectez la valeur **Oui** à cette option et que vous utilisez la [découverte d’utilisateurs](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser), les clients reçoivent les applications et programmes destinés à l’utilisateur connecté.  
 
-Le catalogue d’applications reçoit la liste des logiciels disponibles pour les utilisateurs à partir du serveur de site. Par conséquent, ce paramètre ne doit pas obligatoirement être **Oui** pour que les utilisateurs voient et demandent des applications dans le catalogue d’applications. Si ce paramètre a la valeur **Non**, les comportements suivants ne fonctionnent pas quand les utilisateurs utilisent le catalogue d’applications :  
-
--   Les utilisateurs ne peuvent pas installer les applications qu’ils voient dans le catalogue d’applications.  
-
--   Les utilisateurs ne voient pas les notifications concernant leurs demandes d’approbation d’application. Au lieu de cela, ils doivent actualiser le catalogue d'applications et vérifier l'état d'approbation.  
-
--   Les utilisateurs ne reçoivent pas de révisions et de mises à jour pour les applications qui sont publiées dans le catalogue d’applications. Les utilisateurs voient les modifications apportées aux informations de l’application dans le catalogue d’applications.  
-
--   Si vous supprimez le déploiement d’une application après que le client a installé l’application en question à partir du catalogue d’applications, les clients continuent à vérifier que l’application est installée pendant une durée qui peut atteindre deux jours.  
+Le catalogue d’applications reçoit la liste des logiciels disponibles pour les utilisateurs à partir du serveur de site. Par conséquent, ce paramètre ne doit pas obligatoirement être **Oui** pour que les utilisateurs voient et demandent des applications dans le catalogue d’applications. Si ce paramètre est défini sur **Non**, les utilisateurs ne peuvent pas installer les applications qu’ils voient dans le catalogue d’applications.  
 
 De plus, si ce paramètre est défini sur **Non**, les utilisateurs ne reçoivent pas les applications exigées que vous déployez sur les utilisateurs. Ils ne reçoivent pas non plus d’autres tâches de gestion dans les stratégies utilisateur.  
 
@@ -161,42 +153,19 @@ Pour plus d’informations sur les trois paramètres suivants, consultez [Notifi
 
 ### <a name="default-application-catalog-website-point"></a>Point de site Web du catalogue d'applications par défaut
 
-Configuration Manager utilise ce paramètre pour connecter les utilisateurs au catalogue d’applications du Centre logiciel. Sélectionnez **Définir un site Web** pour spécifier un serveur qui héberge le point du site web du catalogue d’applications. Entrez son nom NetBIOS ou son nom de domaine complet, spécifiez la détection automatique, ou spécifiez une URL pour les déploiements personnalisés. Dans la plupart des cas, la détection automatique est le meilleur choix car elle offre les avantages suivants :  
+> [!Note]  
+> À compter de la version 1806, le point du site Web du catalogue des applications n’est plus *requis*, mais il est toujours *pris en charge*. Pour plus d'informations, consultez [Configurer le Centre logiciel](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex). 
+> 
+> L’**expérience utilisateur Silverlight** pour le point du site web du catalogue des applications n’est plus prise en charge. Pour plus d’informations, consultez [Fonctionnalités supprimées et déconseillées](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
 
--   Si le site a un point du site web du catalogue d’applications, les clients reçoivent automatiquement un point du site web du catalogue d’applications à partir de leur site.  
-
--   Le client préfère les points de site web du catalogue d’applications activés HTTPS sur l’intranet aux serveurs HTTP-uniquement. Cette fonctionnalité offre une protection contre les serveurs non autorisés.
-
--   Le point de gestion donne aux clients Internet un point de site web du catalogue d’applications basé sur Internet. Le point de gestion donne aux clients intranet un point du site web du catalogue d’applications basé sur intranet.  
-
-La détection automatique ne garantit pas que les clients recevront le point du site web du catalogue d’applications le plus proche. Vous pouvez décider de ne pas utiliser l’option **Détecter automatiquement** pour les raisons suivantes :  
-
--   Vous voulez configurer manuellement le serveur le plus proche pour les clients ou vous assurer qu’ils ne se connectent pas à un serveur via une connexion réseau lente.  
-
--   Vous souhaitez contrôler quels clients se connectent à quel serveur. Cette configuration convient pour des raisons professionnelles ou de performances ou à des fins de tests.  
-
--   Vous ne voulez pas patienter jusqu’à 25 heures ou attendre un changement du réseau pour que les clients utilisent un autre point du site web du catalogue d’applications.  
-
-Si vous spécifiez le point de site web du catalogue d’applications au lieu d’utiliser la détection automatique, spécifiez le nom NetBIOS plutôt que le nom de domaine complet de l’intranet. Cette configuration réduit la probabilité que le navigateur web invite l’utilisateur à fournir des informations d’identification quand il accède à un catalogue d’applications basé sur intranet. Pour utiliser le nom NetBIOS, les conditions suivantes doivent s'appliquer :  
-
--   Le nom NetBIOS est spécifié dans les propriétés du point du site Web du catalogue d'applications.  
-
--   Vous utilisez WINS ou tous les clients sont dans le même domaine que le point du site web du catalogue des applications.  
-
--   Vous configurez le point du site web du catalogue d’applications pour les connexions clientes HTTP, ou vous configurez le serveur pour HTTPS et le certificat du serveur web a le nom NetBIOS.  
-
-En règle générale, les utilisateurs sont invités à entrer leurs informations d’identification quand l’URL contient un nom de domaine complet, mais pas quand l’URL est un nom NetBIOS. Les utilisateurs doivent s'attendre à être toujours invités à saisir leurs informations d'identification lorsqu'ils se connectent à partir d'Internet, car cette connexion doit utiliser le nom de domaine complet Internet. Pour un client basé sur Internet, quand le navigateur web invite l’utilisateur à fournir des informations d’identification, vérifiez que le point du site web du catalogue d’applications peut se connecter à un contrôleur de domaine pour le compte de l’utilisateur. Cette configuration permet à l’utilisateur de s’authentifier à l’aide de Kerberos.  
-
-> [!NOTE]  
->  Voici comment fonctionne la détection automatique :  
->   
->  le client effectue une demande d'emplacement de service à un point de gestion. S'il existe un point de site Web du catalogue d'applications dans le même site que le client, ce serveur est donné au client en tant que le serveur du catalogue d'applications à utiliser. Si plusieurs points du site web du catalogue d’applications sont disponibles dans le site, un serveur HTTPS est prioritaire sur un serveur qui n’est pas activé pour le protocole HTTPS. Après ce filtrage, tous les clients reçoivent l'un des serveurs à utiliser comme le catalogue d'applications. Configuration Manager n’équilibre pas la charge entre plusieurs serveurs. Quand le site du client ne contient pas de point du site web du catalogue d’applications, le point de gestion retourne de manière non déterministe un point du site web du catalogue d’applications à partir de la hiérarchie.  
->   
->  Pour les clients basés sur intranet, si vous configurez le point du site web du catalogue d’applications avec un nom NetBIOS pour l’URL du catalogue d’applications, le point de gestion donne aux clients ce nom NetBIOS, plutôt que le nom de domaine complet de l’intranet. Pour les clients basés sur Internet, le point de gestion donne uniquement le nom de domaine complet Internet au client.  
->   
->  Le client effectue cette demande d'emplacement de service toutes les 25 heures ou chaque fois qu'il détecte un changement de réseau. Par exemple, si le client passe de l’intranet à Internet, il s’agit d’une modification de réseau. Si le client peut alors localiser un point de gestion basé sur Internet, celui-ci fournit aux clients des serveurs de points du site web du catalogue d’applications basés sur Internet.  
+Configuration Manager utilise ce paramètre pour connecter les utilisateurs au catalogue d’applications du Centre logiciel. Sélectionnez **Définir un site Web** pour spécifier un serveur qui héberge le point du site web du catalogue d’applications. Entrez son nom NetBIOS ou son nom de domaine complet, spécifiez la détection automatique, ou spécifiez une URL pour les déploiements personnalisés. Dans la plupart des cas, la détection automatique constitue le meilleur choix.
 
 ### <a name="add-default-application-catalog-website-to-internet-explorer-trusted-sites-zone"></a>Ajoute un site Web du catalogue d'applications par défaut à la zone des sites de confiance d'Internet Explorer
+
+> [!Note]  
+> À compter de la version 1806, le point du site Web du catalogue des applications n’est plus *requis*, mais il est toujours *pris en charge*. Pour plus d'informations, consultez [Configurer le Centre logiciel](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex). 
+> 
+> L’**expérience utilisateur Silverlight** pour le point du site web du catalogue des applications n’est plus prise en charge. Pour plus d’informations, consultez [Fonctionnalités supprimées et déconseillées](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
 
 Si cette option a la valeur **Oui**, le client ajoute automatiquement l’URL actuelle du site web du catalogue d’applications par défaut à la zone des sites de confiance dans Internet Explorer.  
 
@@ -204,12 +173,12 @@ Ce paramètre garantit que le paramètre Internet Explorer en mode protégé n�
 
 Si vous conservez la valeur **Non** pour cette option, les clients Configuration Manager risquent de ne pas pouvoir installer des applications à partir du catalogue d’applications. Une autre méthode consiste à configurer ces paramètres Internet Explorer dans une autre zone pour l’URL du catalogue d’applications utilisée par les clients.  
 
-> [!NOTE]  
->  Chaque fois que Configuration Manager ajoute l’URL du catalogue d’applications par défaut à la zone de sites de confiance, Configuration Manager supprime toute URL du catalogue d’applications ajoutée précédemment.  
->   
->  Si l’URL est déjà spécifiée dans l’une des zones de sécurité, Configuration Manager ne peut pas l’ajouter. Dans ce cas, vous devez supprimer l'URL de l'autre zone ou configurer manuellement les paramètres Internet Explorer requis.  
-
 ### <a name="allow-silverlight-applications-to-run-in-elevated-trust-mode"></a>Autoriser les applications Silverlight à s'exécuter en mode de confiance élevé
+
+> [!Important]  
+> À compter de Configuration Manager version 1802, le client n’installe pas automatiquement Silverlight.
+> 
+> À compter de la version 1806, **l’expérience utilisateur Silverlight** pour le point du site Web du catalogue des applications n’est plus prise en charge. Les utilisateurs doivent utiliser le nouveau Centre logiciel. Pour plus d'informations, consultez [Configurer le Centre logiciel](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex).  
 
 Ce paramètre doit être **Oui** pour que les utilisateurs utilisent le catalogue d’applications.  
 
@@ -219,15 +188,18 @@ Pour plus d’informations sur ce paramètre, consultez [Certificats pour Micros
 
 ### <a name="organization-name-displayed-in-software-center"></a>Nom d'organisation affiché dans le Centre logiciel
 
-Tapez le nom que les utilisateurs voient dans le Centre logiciel. Ces informations personnalisées aident les utilisateurs à identifier cette application comme une source approuvée.  
+Tapez le nom que les utilisateurs voient dans le Centre logiciel. Ces informations personnalisées aident les utilisateurs à identifier cette application comme une source approuvée. Pour plus d’informations sur la priorité de ce paramètre, consultez [Personnalisation du Centre logiciel](/sccm/apps/plan-design/plan-for-and-configure-application-management#branding-software-center).  
 
 ### <a name="use-new-software-center"></a>Utiliser le nouveau Centre logiciel
 
-Si vous sélectionnez **Oui** pour cette option, tous les ordinateurs clients utilisent le Centre logiciel. Le Centre logiciel répertorie les applications accessibles à l’utilisateur qui étaient auparavant uniquement disponibles dans le catalogue d’applications. Le catalogue d’applications nécessite Silverlight, qui n’est pas un prérequis pour le Centre logiciel. À compter de Configuration Manager 1802, la valeur par défaut est **Oui**.  
+À compter de Configuration Manager 1802, la valeur par défaut est **Oui**.
 
-Les rôles de système de site Point du site web du catalogue des applications et Point de service web du catalogue des applications sont toujours exigés pour que les applications accessibles à l’utilisateur apparaissent dans le Centre logiciel.  
+Si vous sélectionnez **Oui** pour cette option, tous les ordinateurs clients utilisent le Centre logiciel. Le Centre logiciel répertorie les applications accessibles à l’utilisateur qui étaient auparavant uniquement disponibles dans le catalogue d’applications. Le catalogue d’applications nécessite Silverlight, qui n’est pas un prérequis pour le Centre logiciel.   
 
-Pour plus d’informations, consultez [Planifier et configurer la gestion des applications](/sccm/apps/plan-design/plan-for-and-configure-application-management).  
+À compter de la version 1806, les rôles de point du site Web et de point de service Web du catalogue des applications ne sont plus *requis*, mais ils sont toujours *pris en charge*. Pour plus d'informations, consultez [Configurer le Centre logiciel](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex). 
+ 
+> [!Note]  
+> L’**expérience utilisateur Silverlight** pour le point du site web du catalogue des applications n’est plus prise en charge. Pour plus d’informations, consultez [Fonctionnalités supprimées et déconseillées](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
 
 ### <a name="enable-communication-with-health-attestation-service"></a>Activer la communication avec le service d’attestation d’intégrité
 

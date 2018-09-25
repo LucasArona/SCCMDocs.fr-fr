@@ -10,12 +10,12 @@ ms.assetid: 29dd51b8-6576-4010-81ba-3129ed2c3421
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 561fd23795d52debe0304fa16fd07234dc63e4c2
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: d630c5d02b6c7729e5f26ce3915f48bf20aef7e2
+ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344770"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43893751"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1802-of-system-center-configuration-manager"></a>Niveaux de collecte des données de diagnostic et d’utilisation pour la version 1802 de System Center Configuration Manager
 
@@ -223,11 +223,11 @@ Pour Configuration Manager version 1802, ce niveau inclut les données suivantes
 
   - Nombre d’applications et services Azure Active Directory connectés à Configuration Manager
 
-  - Nombre de regroupements qui sont synchronisés avec Operations Management Suite
+  - Nombre de regroupements synchronisés avec Azure Log Analytics
 
   - Nombre de connecteurs Upgrade Analytics
 
-  - Activation ou non du connecteur cloud Operations Management Suite
+  - Indique si le connecteur cloud Azure Log Analytics est activé
 
 
 ### <a name="co-management"></a>Cogestion  

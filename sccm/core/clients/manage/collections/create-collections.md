@@ -10,12 +10,12 @@ ms.assetid: 1401a35e-4312-4d3b-8ceb-0abbb10d4f05
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 76796cdb56a7106ac709866a9df7c2a08bc6b7bc
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: c314cba909929ee49355eab59dfc813aab7e393e
+ms.sourcegitcommit: a849dab9333ebac799812624d6155f2a96b523ca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32337086"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42584634"
 ---
 # <a name="how-to-create-collections-in-system-center-configuration-manager"></a>Guide pratique pour créer des regroupements dans System Center Configuration Manager
 
@@ -28,7 +28,7 @@ Les regroupements sont des groupes d’utilisateurs ou d’appareils. Utilisez l
 
  Le tableau suivant répertorie les règles que vous pouvez utiliser pour configurer les membres d’un regroupement dans Configuration Manager.  
 
-|Type de règle d'appartenance|Plus d'informations|  
+|Type de règle d'appartenance|Informations complémentaires|  
 |--------------------------|----------------------|  
 |Règle directe|Utilisez les règles directes pour choisir les utilisateurs ou les ordinateurs à ajouter à un regroupement. Cette appartenance ne change pas, à moins qu’une ressource soit supprimée de Configuration Manager. Configuration Manager doit avoir découvert les ressources ou vous devez les avoir importées pour pouvoir les ajouter à un regroupement à règle directe. Les regroupements avec règle directe ont une surcharge administrative plus élevée que celle des regroupements avec règle de requête, car ils nécessitent des modifications manuelles.|  
 |Règle de requête|Les règles de requête mettent à jour dynamiquement l’appartenance à un regroupement en fonction d’une requête que Configuration Manager exécute selon une planification. Par exemple, vous pouvez créer un regroupement d'utilisateurs membres de l'unité d'organisation Ressources Humaines dans les services de domaine Active Directory. Ce regroupement est automatiquement mis à jour quand de nouveaux utilisateurs sont ajoutés ou supprimés dans l’unité d’organisation Ressources Humaines.<br /><br /> Pour examiner des exemples de requêtes que vous pouvez utiliser pour créer des regroupements, consultez [Guide pratique pour créer des requêtes dans System Center Configuration Manager](../../../../core/servers/manage/create-queries.md).|  
@@ -88,7 +88,7 @@ Dans la boîte de dialogue **Sélectionner des regroupements**, sélectionnez le
 
 Dans la boîte de dialogue **Sélectionner des regroupements**, sélectionnez les regroupements à inclure dans le nouveau regroupement, puis choisissez **OK**.  
 
--   **Utiliser des mises à jour incrémentielles pour ce regroupement** : Sélectionnez cette option pour rechercher et mettre à jour régulièrement uniquement les ressources nouvelles ou modifiées dans l’évaluation de regroupement précédente, indépendamment d’une évaluation de regroupement complète. Les mises à jour incrémentielles ont lieu toutes les 10 minutes.  
+-   **Utiliser des mises à jour incrémentielles pour ce regroupement** : Sélectionnez cette option pour rechercher et mettre à jour régulièrement uniquement les ressources nouvelles ou modifiées dans l’évaluation de regroupement précédente, indépendamment d’une évaluation de regroupement complète. Par défaut, les mises à jour incrémentielles ont lieu toutes les 5 minutes.  
 
 > [!IMPORTANT]  
 >  Les regroupements configurés à l'aide de règles de requête qui utilisent les classes suivantes ne prennent pas en charge les mises à jour incrémentielles :  
@@ -160,7 +160,7 @@ Dans la boîte de dialogue **Sélectionner des regroupements**, sélectionnez le
 Dans la boîte de dialogue **Sélectionner des regroupements**, sélectionnez les regroupements à inclure dans le nouveau regroupement, puis choisissez **OK**.  
 
 
--   **Utiliser des mises à jour incrémentielles pour ce regroupement** : Sélectionnez cette option pour rechercher et mettre à jour régulièrement uniquement les ressources nouvelles ou modifiées dans l’évaluation de regroupement précédente, indépendamment d’une évaluation de regroupement complète. Les mises à jour incrémentielles ont lieu toutes les 10 minutes.  
+-   **Utiliser des mises à jour incrémentielles pour ce regroupement** : Sélectionnez cette option pour rechercher et mettre à jour régulièrement uniquement les ressources nouvelles ou modifiées dans l’évaluation de regroupement précédente, indépendamment d’une évaluation de regroupement complète. Par défaut, les mises à jour incrémentielles ont lieu toutes les 5 minutes.  
 
 > [!IMPORTANT]  
 >  Les regroupements configurés à l'aide de règles de requête qui utilisent les classes suivantes ne prennent pas en charge les mises à jour incrémentielles :  

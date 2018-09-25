@@ -9,12 +9,12 @@ ms.assetid: ac034143-003e-4629-aac2-99eaffef4db1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 925a881c6d9cf7249fc138027ceef2d225ee91e2
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: b83dd71f144e49d6dd9021cfb432927019b3d4ff
+ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32339058"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43893727"
 ---
 # <a name="what39s-new-in-version-1706-of-system-center-configuration-manager"></a>Nouveautés de la version 1706 de System Center Configuration Manager
 
@@ -42,35 +42,28 @@ Version 1706 drops support for the following products:
 ## <a name="site-infrastructure"></a>Infrastructure de site
 
 ### <a name="client-peer-cache-support-for-express-installation-files-for-windows-10-and-office-365"></a>Prise en charge du cache d’homologue client pour les fichiers d’installation rapide de Windows 10 et Office 365  
-<!-- 1352486 -->
-À partir de cette version, le cache d’homologue prend en charge la distribution des fichiers d’installation rapide de Windows 10 et des fichiers de mise à jour d’Office 365. Aucune configuration supplémentaire n’est nécessaire pour prendre en charge ce changement.
+<!-- 1352486 --> À partir de cette version, le cache d’homologue prend en charge la distribution des fichiers d’installation rapide de Windows 10 et des fichiers de mise à jour d’Office 365. Aucune configuration supplémentaire n’est nécessaire pour prendre en charge ce changement.
 
 ### <a name="updates-for-the-data-warehouse"></a>Mises à jour de l’entrepôt de données
-<!-- 1277922 -->
-L’entrepôt de données n’est plus une fonctionnalité en préversion. Nous avons également mis à jour les prérequis pour prendre en charge la base de données sur les groupes de disponibilité SQL Server Always On et les clusters de basculement. Pour en savoir plus, consultez la section relative au [point de service de l’entrepôt de données](/sccm/core/servers/manage/data-warehouse).
+<!-- 1277922 --> L’entrepôt de données n’est plus une fonctionnalité en préversion. Nous avons également mis à jour les prérequis pour prendre en charge la base de données sur les groupes de disponibilité SQL Server Always On et les clusters de basculement. Pour en savoir plus, consultez la section relative au [point de service de l’entrepôt de données](/sccm/core/servers/manage/data-warehouse).
 
 ### <a name="accessibility-improvements"></a>Améliorations d’accessibilité
-<!-- 1253000 -->
-Des améliorations supplémentaires ont été apportées aux fonctionnalités d’accessibilité de la console Configuration Manager. Pour plus d’informations, consultez [Fonctionnalités d’accessibilité](/sccm/core/understand/accessibility-features).
+<!-- 1253000 --> Des améliorations supplémentaires ont été apportées aux fonctionnalités d’accessibilité de la console Configuration Manager. Pour plus d’informations, consultez [Fonctionnalités d’accessibilité](/sccm/core/understand/accessibility-features).
 
 ### <a name="improvements--for-sql-server-always-on-availability-groups"></a>Améliorations pour les groupes de disponibilité Always On SQL Server
-<!-- 1352094 -->
-Avec cette version, vous pouvez maintenant utiliser les réplicas avec validation asynchrone dans les groupes de disponibilité Always On SQL Server que vous utilisez avec Configuration Manager. Cela signifie que vous pouvez ajouter des réplicas supplémentaires à vos groupes de disponibilité à utiliser en tant que sauvegardes hors site (à distance) puis de les utiliser dans un scénario de récupération d’urgence.  
+<!-- 1352094 --> Avec cette version, vous pouvez maintenant utiliser les réplicas avec validation asynchrone dans les groupes de disponibilité Always On SQL Server que vous utilisez avec Configuration Manager. Cela signifie que vous pouvez ajouter des réplicas supplémentaires à vos groupes de disponibilité à utiliser en tant que sauvegardes hors site (à distance) puis de les utiliser dans un scénario de récupération d’urgence.  
   -   Configuration Manager prend en charge l’utilisation du réplica avec validation asynchrone pour récupérer votre réplica synchrone. Consultez les [options de récupération de base de données de site](/sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption) dans la rubrique Sauvegarde et récupération pour plus d’informations sur la façon d’y parvenir.
   -   Cette version ne prend pas en charge le basculement pour utiliser le réplica avec validation asynchrone en tant que base de données de votre site.
 Pour plus d’informations, consultez [Se préparer à l’utilisation de groupes de disponibilité SQL Server Always On](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database).
 
 ### <a name="update-reset-tool"></a>Outil de réinitialisation des mises à jour
-<!-- 1324589 -->
-À compter de la version 1706, les sites d’administration centrale et les sites principaux Configuration Manager incluent l’outil de réinitialisation des mises à jour Configuration Manager (**CMUpdateReset.exe**). Utilisez cet outil avec n’importe quelle version de Current Branch prise en charge pour résoudre les problèmes de téléchargement ou de réplication des mises à jour dans la console. Pour plus d’informations, consultez [Outil de réinitialisation des mises à jour](/sccm/core/servers/manage/update-reset-tool).
+<!-- 1324589 --> À compter de la version 1706, les sites d’administration centrale et les sites principaux Configuration Manager incluent l’outil de réinitialisation des mises à jour Configuration Manager (**CMUpdateReset.exe**). Utilisez cet outil avec n’importe quelle version de Current Branch prise en charge pour résoudre les problèmes de téléchargement ou de réplication des mises à jour dans la console. Pour plus d’informations, consultez [Outil de réinitialisation des mises à jour](/sccm/core/servers/manage/update-reset-tool).
 
 ### <a name="high-dpi-console-support"></a>Prise en charge des consoles à résolution élevée  
-<!-- 1353476 -->
-Avec cette version, les problèmes liés à la façon dont la console Configuration Manager met à l’échelle et affiche les différentes parties de l’interface utilisateur lors de son affichage sur des appareils à résolution élevée (comme un livre) devraient être corrigés.
+<!-- 1353476 --> Avec cette version, les problèmes liés à la façon dont la console Configuration Manager met à l’échelle et affiche les différentes parties de l’interface utilisateur lors de son affichage sur des appareils à résolution élevée (comme un livre) devraient être corrigés.
 
 ### <a name="improved-boundary-groups-for-software-update-points"></a>Améliorations des groupes de limites pour les points de mise à jour logicielle
-<!-- 1324591 -->
-Cette version inclut des améliorations pour le fonctionnement des points de mise à jour logicielle avec des groupes de limites. Voici qui résume le nouveau comportement de secours :
+<!-- 1324591 --> Cette version inclut des améliorations pour le fonctionnement des points de mise à jour logicielle avec des groupes de limites. Voici qui résume le nouveau comportement de secours :
 -   L’action de secours pour les points de mise à jour logicielle utilise désormais un temps configurable pour le repli sur les groupes de limites voisins.
 -   Indépendamment de la configuration de secours, un client essaie d’atteindre le dernier point de mise à jour logicielle qu'il a utilisé pendant 120 minutes. Après l’échec de communication avec ce serveur pendant 120 minutes, le client vérifie ensuite son pool de points de mise à jour logicielle disponibles, afin d’en trouver un nouveau.
 -   Après avoir échoué pendant deux heures à atteindre le serveur d’origine, le client passe à un cycle plus court pour contacter un nouveau point de mise à jour logicielle. Cela signifie que si un client ne parvient pas à se connecter avec un nouveau serveur, il sélectionne rapidement le serveur suivant à partir de son pool de serveurs disponibles et tente de le contacter.
@@ -78,13 +71,12 @@ Cette version inclut des améliorations pour le fonctionnement des points de mis
 Pour plus d’informations, consultez la section [Points de mise à jour logicielle](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points) dans la rubrique Groupes de limites pour Current Branch.
 
 ### <a name="azure-ad-integration-with-configuration-manager"></a>Intégration d’Azure AD à Configuration Manager
-<!-- 1248187, 1290765, 1258052, 1298097, 1319334, 1319883, 1352135, 1353331 -->
-Dans cette version, nous avons amélioré l’intégration de Configuration Manager et d’Azure Active Directory (Azure AD).  Ces améliorations simplifient non seulement la configuration des services Azure que vous utilisez avec Configuration Manager, mais aussi la gestion des clients et des utilisateurs qui s’authentifient par le biais d’Azure AD.
+<!-- 1248187, 1290765, 1258052, 1298097, 1319334, 1319883, 1352135, 1353331 --> Dans cette version, nous avons amélioré l’intégration de Configuration Manager et d’Azure Active Directory (Azure AD).  Ces améliorations simplifient non seulement la configuration des services Azure que vous utilisez avec Configuration Manager, mais aussi la gestion des clients et des utilisateurs qui s’authentifient par le biais d’Azure AD.
 
 Grâce à l’intégration améliorée, les opérations suivantes sont possibles :  
   -   Assistant Services Azure : cet Assistant propose une expérience de configuration commune qui remplace les différents flux de travail associés à la configuration des services Azure suivants que vous utilisez avec Configuration Manager.
       - **Gestion cloud** Donnez aux clients la possibilité de s’authentifier à l’aide d’Azure Active Directory (Azure AD). Vous pouvez également configurer la découverte des utilisateurs Azure AD.
-      - **Connecteur OMS** Connectez-vous à Operations Manager Suite (OMS) et synchronisez les données telles que les collections à OMS Log Analytics.
+      - Le **connecteur Log Analytics** se connecte à Azure Log Analytics et synchronise les données de regroupement.
       - **Upgrade Readiness** Connectez-vous à Upgrade Readiness et consultez les données de compatibilité de mise à niveau des clients.
       - **Microsoft Store pour Entreprises** Connectez-vous au Microsoft Store pour Entreprises et obtenez des applications pour votre organisation que vous pouvez déployer avec Configuration Manager.
 
@@ -98,8 +90,7 @@ Grâce à l’intégration améliorée, les opérations suivantes sont possibles
 -   Configurer la découverte des utilisateurs Azure AD.  Utilisez l’Assistant Services Azure pour configurer cette nouvelle méthode de découverte. Cette nouvelle méthode exécute une requête sur votre annuaire Azure AD pour extraire des données utilisateur que vous pouvez utiliser avec vos données de découverte traditionnelles.  La synchronisation complète et la synchronisation delta sont prises en charge.  Pour plus d’informations, consultez [Découverte d’utilisateurs Azure AD](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc).
 
 ### <a name="peer-cache-improvements"></a>Améliorations du cache d’homologue
-<!-- 1252345 -->
-Le cache d’homologue n’utilise plus le compte d’accès réseau pour authentifier les demandes de téléchargement à partir d’homologues. Cela pose problème quand les clients ont besoin de ce compte. Il est en effet exigé par les clients qui démarrent dans WinPE et qui accèdent ensuite au contenu à partir d’une source de cache d’homologue. Pour plus d’informations, consultez [Exigences et considérations relatives au cache d’homologue](/sccm/core/plan-design/hierarchy/client-peer-cache#requirements-and-considerations-for-peer-cache).
+<!-- 1252345 --> Le cache d’homologue n’utilise plus le compte d’accès réseau pour authentifier les requêtes de téléchargement à partir d’homologues. Cela pose problème quand les clients ont besoin de ce compte. Il est en effet exigé par les clients qui démarrent dans WinPE et qui accèdent ensuite au contenu à partir d’une source de cache d’homologue. Pour plus d’informations, consultez [Exigences et considérations relatives au cache d’homologue](/sccm/core/plan-design/hierarchy/client-peer-cache#requirements-and-considerations-for-peer-cache).
 
 
 <!-- ## Migration  -->
@@ -111,8 +102,7 @@ Le cache d’homologue n’utilise plus le compte d’accès réseau pour authen
 ## <a name="compliance-settings"></a>Paramètres de conformité
 
 ### <a name="new-configuration-settings-for-windows-10-devices-that-are-not-managed-with-the-configuration-manager-client"></a>Nouveaux paramètres de configuration pour les appareils Windows 10 qui ne sont pas gérés avec le client Configuration Manager
-<!-- 1354715 -->
-Dans cette version, nous avons ajouté de nouveaux paramètres de configuration pour les appareils Windows 10 inscrits auprès d’Intune ou gérés localement par Configuration Manager. Ces paramètres sont les suivants :
+<!-- 1354715 --> Dans cette version, nous avons ajouté de nouveaux paramètres de configuration pour les appareils Windows 10 inscrits auprès d’Intune ou gérés localement par Configuration Manager. Ces paramètres sont les suivants :
 
 - **Mot de passe**
     - Chiffrement de l’appareil
@@ -182,8 +172,7 @@ Dans Configuration Manager, vous pouvez déployer des scripts sur des appareils 
 Pour plus d’informations, consultez [Créer et exécuter des scripts PowerShell à partir de la console Configuration Manager](/sccm/apps/deploy-use/create-deploy-scripts).
 
 ### <a name="new-mobile-application-management-policy-settings"></a>Nouveaux paramètres de stratégie de gestion d’application mobile    
-<!--1324760-->
-À partir de cette version, vous pouvez utiliser trois nouveaux paramètres de stratégie de gestion des applications mobiles (MAM) :
+<!--1324760--> À partir de cette version, vous pouvez utiliser trois nouveaux paramètres de stratégie de gestion des applications mobiles :
 
 - **Bloquer la capture d’écran (appareils Android uniquement)** : spécifie que les fonctionnalités de capture d'écran de l'appareil sont bloquées lors de l'utilisation de cette application.
 
@@ -207,8 +196,7 @@ Lorsque vous exécutez l’option **Mise à jour des points de distribution** su
 Dans cette version, nous avons considérablement amélioré la durée de téléchargement des mises à jour rapides. Pour plus d’informations, consultez [Gérer les fichiers d’installation rapide pour les mises à jour de Windows 10](/sccm/sum/deploy-use/manage-express-installation-files-for-windows-10-updates).
 
 ### <a name="manage-microsoft-surface-driver-updates"></a>Gérer les mises à jour du pilote Microsoft Surface
-<!-- 1098490 -->
-Vous pouvez maintenant utiliser Configuration Manager pour gérer les mises à jour du pilote Microsoft Surface.    
+<!-- 1098490 --> Vous pouvez maintenant utiliser Configuration Manager pour gérer les mises à jour du pilote Microsoft Surface.    
 
 
 #### <a name="prerequisites"></a>Prérequis
@@ -222,8 +210,7 @@ Vous pouvez maintenant utiliser Configuration Manager pour gérer les mises à j
 3. [Déployer des pilotes Microsoft Surface synchronisés](/sccm/sum/deploy-use/deploy-software-updates)
 
 ### <a name="configure-windows-update-for-business-deferral-policies"></a>Configuration de Windows Update pour les stratégies d’entreprise de report d’entreprise
-<!-- 1290890 -->
-Vous pouvez maintenant configurer des stratégies de report pour les appareils Windows 10 avec mises à jour de fonctionnalités ou de qualité gérés directement par Windows Update for Business. Vous pouvez gérer les stratégies de report du nouveau nœud **Stratégies Windows Update for Business** sous **Bibliothèque de logiciels** > **Maintenance de Windows 10**.
+<!-- 1290890 --> Vous pouvez maintenant configurer des stratégies de report pour les appareils avec Mises à jour des fonctionnalités Windows 10 ou Mises à jour de qualité de Windows 10 et gérés directement par Windows Update pour Entreprise. Vous pouvez gérer les stratégies de report du nouveau nœud **Stratégies Windows Update for Business** sous **Bibliothèque de logiciels** > **Maintenance de Windows 10**.
 
 Pour plus d’informations, consultez [Intégration à Windows Update for Business dans Windows 10](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10#configure-windows-update-for-business-deferral-policies).
 
@@ -233,8 +220,7 @@ Des améliorations ont été apportées pour tirer parti de l’expérience util
 ## <a name="reporting"></a>Rapports
 
 ### <a name="use-windows-analytics-with-configuration-manager"></a>Utiliser Windows Analytics avec Configuration Manager
-<!-- 1318608 -->
-Windows Analytics est un ensemble de solutions qui s’exécutent sur Operations Management Suite. Les solutions vous permettent d’obtenir des insights sur l’état actuel de votre environnement. Les appareils de votre environnement envoient des données de télémétrie Windows. Ces données sont accessibles par le biais du portail web Operations Management Suite. Dans le cadre d’Upgrade Readiness, les données sont directement disponibles dans le nœud de surveillance de la console Configuration Manager.
+<!-- 1318608 --> Windows Analytics regroupe un ensemble de solutions qui vous permettent d’obtenir des insights sur l’état actuel de votre environnement. Les appareils de votre environnement envoient des données de télémétrie Windows. Les données sont accessibles via le portail Azure. Dans le cadre d’Upgrade Readiness, les données sont directement disponibles dans le nœud de surveillance de la console Configuration Manager.
 
 Pour plus d’informations, consultez [Utiliser Windows Analytics avec Configuration Manager](/sccm/core/clients/manage/monitor-windows-analytics).
 
@@ -244,22 +230,19 @@ Pour plus d’informations, consultez [Utiliser Windows Analytics avec Configura
 ## <a name="mobile-device-management"></a>Gestion des appareils mobiles
 
 ### <a name="updates-to-android-for-work-sharing-configuration"></a>Mises à jour apportées à la configuration de partage Android for Work
-<!-- 1338403 -->
-Dans cette version, les valeurs du paramètre **Autoriser le partage de données entre les profils professionnel et personnel** dans le groupe de paramètres **Profil professionnel** ont été mises à jour. Nous avons également ajouté un paramètre personnalisé pour bloquer les opérations copier-coller entre les profils professionnels et personnels.
+<!-- 1338403 --> Dans cette version, les valeurs du paramètre **Autoriser le partage de données entre les profils professionnel et personnel** dans le groupe de paramètres **Profil professionnel** ont été mises à jour. Nous avons également ajouté un paramètre personnalisé pour bloquer les opérations copier-coller entre les profils professionnels et personnels.
 
 Pour plus d’informations, consultez [Éléments de configuration pour les appareils Android for Work](/sccm/mdm/deploy-use/create-configuration-items-for-android-for-work-devices-managed-without-the-client).
 
 ### <a name="android-and-ios-enrollment-restrictions"></a>Restrictions de l’inscription Android et iOS
-<!-- 1290826 -->
-Avec cette version, vous pouvez à présent spécifier que les utilisateurs ne peuvent pas inscrire des appareils Android ou iOS personnels. Les nouveaux paramètres de restriction des appareils permettent de limiter l’inscription des appareils Android aux appareils prédéclarés. Pour les appareils iOS, vous pouvez bloquer l’inscription de tous les appareils à l’exception de ceux qui sont inscrits auprès du Programme d’inscription des appareils d’Apple, d’Apple Configurator ou du compte du gestionnaire d’inscription des appareils Intune.
+<!-- 1290826 --> Avec cette version, vous pouvez à présent spécifier que les utilisateurs ne peuvent pas inscrire des appareils Android ou iOS personnels. Les nouveaux paramètres de restriction des appareils permettent de limiter l’inscription des appareils Android aux appareils prédéclarés. Pour les appareils iOS, vous pouvez bloquer l’inscription de tous les appareils à l’exception de ceux qui sont inscrits auprès du Programme d’inscription des appareils d’Apple, d’Apple Configurator ou du compte du gestionnaire d’inscription des appareils Intune.
 - Pour plus d’informations sur les restrictions d’inscription Android, consultez la page [Configurer la gestion des appareils Android](/sccm/mdm/deploy-use/enroll-hybrid-android).
 - Pour plus d’informations sur les restrictions d’inscription iOS, consultez la page [Configurer des restrictions d’inscription iOS](/sccm/mdm/deploy-use/enroll-hybrid-ios-mac#configure-enrollment-restrictions).
 
 ## <a name="protect-devices"></a>Protéger les appareils
 
 ### <a name="include-trust-for-specific-files-and-folders-in-a-device-guard-policy"></a>Inclure la confiance pour des fichiers et dossiers spécifiques dans une stratégie de protection des appareils
-<!--1324676-->
-Dans cette version, nous avons ajouté des fonctionnalités supplémentaires à la gestion des stratégies Device Guard.
+<!--1324676--> Dans cette version, nous avons ajouté des fonctionnalités supplémentaires à la gestion des stratégies Device Guard.
 
 Vous pouvez éventuellement ajouter l’approbation pour des fichiers spécifiques pour les dossiers dans une stratégie Device Guard. Cela vous permet de :
 

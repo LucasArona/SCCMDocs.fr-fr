@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
-ms.openlocfilehash: 07616a1c03c0383e9001418043dc6cd7ec117c1d
-ms.sourcegitcommit: 493cc42f05b9388ef872e466e5a75d569642b9fc
+ms.openlocfilehash: ce3937b630eea38af34f1abd7c7348ebf2f8dfdb
+ms.sourcegitcommit: 316899b08f2ef372993909e08e069f7edfed1d33
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34703483"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44111091"
 ---
 # <a name="integration-with-windows-update-for-business-in-windows-10"></a>Intégration avec Windows Update for Business dans Windows 10
 
@@ -66,8 +66,7 @@ Windows Update for Business (WUfB) vous permet de garantir la mise à jour des a
 5.  Les ordinateurs qui sont gérés via WUFB affichent **Inconnu** dans l’état de conformité et ne sont pas comptabilisés dans le pourcentage de conformité global.  
 
 ## <a name="configure-windows-update-for-business-deferral-policies"></a>Configuration de Windows Update pour les stratégies d’entreprise de report d’entreprise
-<!-- 1290890 -->
-À compter de Configuration Manager version 1706, vous pouvez configurer des stratégies de report pour les appareils Windows 10 avec Mises à jour de fonctionnalités ou Mises à jour qualité gérés directement par Windows Update for Business. Vous pouvez gérer les stratégies de report du nouveau nœud **Stratégies Windows Update for Business** sous **Bibliothèque de logiciels** > **Maintenance de Windows 10**.
+<!-- 1290890 --> À compter de Configuration Manager version 1706, vous pouvez configurer des stratégies de report pour les appareils Windows 10 avec Mises à jour de fonctionnalités ou Mises à jour de qualité gérés directement par Windows Update pour Entreprise. Vous pouvez gérer les stratégies de report du nouveau nœud **Stratégies Windows Update for Business** sous **Bibliothèque de logiciels** > **Maintenance de Windows 10**.
 
 >[!NOTE] 
 >À compter de Configuration Manager version 1802, vous pouvez définir des stratégies de report pour Windows Insider. <!--507201-->Pour plus d’informations sur le programme Windows Insider, consultez [Programme Windows Insider pour les entreprises](https://docs.microsoft.com/windows/deployment/update/waas-windows-insider-for-business).
@@ -82,10 +81,10 @@ Windows Update for Business (WUfB) vous permet de garantir la mise à jour des a
 3. Dans la page **Général**, indiquez un nom et une description pour la stratégie.
 4. Sur la page **Stratégies de report**, choisissez de différer ou suspendre les mises à jour de fonctionnalités. Les mises à jour de fonctionnalités sont généralement de nouvelles fonctionnalités pour Windows. Après avoir configuré le paramètre **Niveau de préparation de la branche**, vous pouvez définir si et pour quelle durée vous souhaitez différer la réception des fonctionnalités mises à jour après leur disponibilité auprès de Microsoft.
     - **Niveau de préparation de la branche** : définissez la branche pour laquelle l’appareil recevra les mises à jour de Windows (Current Branch ou Current Branch for Business).
-    - **Période de report (jours)** : spécifiez le nombre de jours pendant lesquels les mises à jour de fonctionnalités sont différées. Vous pouvez différer la réception de ces mises à jour de fonctionnalités pendant une période de 180 jours à partir de leur publication.
+    - **Période de report (jours)** : spécifiez le nombre de jours pendant lesquels les mises à jour de fonctionnalités sont différées. Vous pouvez différer la réception de ces mises à jour de fonctionnalités pendant une période de 365 jours à partir de leur publication.
     - **Suspendre le démarrage des mises à jour de fonctionnalités** : choisissez de suspendre la réception des mises à jour de fonctionnalités sur vos appareils pendant une période de 60 jours à partir du moment auquel vous suspendez les mises à jour. Une fois que le nombre maximal de jours s’est écoulé, la fonctionnalité de pause expirera automatiquement et l’appareil analysera les mises à jour de Windows pour déterminer celles qui sont applicables. Suite à cette analyse, vous pouvez à nouveau suspendre les mises à jour. Vous pouvez reprendre les mises à jour de fonctionnalités en désactivant la case à cocher.   
 5. Choisissez de différer ou suspendre les mises à jour de qualité. Les mises à jour de qualité sont généralement des améliorations et correctifs apportés aux fonctionnalités existantes de Windows, et sont généralement publiées le premier mardi de chaque mois, même si la publication peut être effectuée à tout moment par Microsoft. Vous pouvez définir si et pour combien de temps vous souhaitez différer la réception des mises à jour de qualité après leur disponibilité.
-    - **Période de report (jours)** : spécifiez le nombre de jours pendant lesquels les mises à jour de fonctionnalités sont différées. Vous pouvez différer la réception de ces mises à jour de fonctionnalités pendant une période de 180 jours à partir de leur publication.
+    - **Période de report (jours)** : spécifiez le nombre de jours pendant lesquels les mises à jour de qualité sont différées. Vous pouvez différer la réception de ces mises à jour de qualité pendant une période de 30 jours à partir de leur publication.
     - **Suspendre le démarrage des mises à jour de qualité** : choisissez de suspendre la réception des mises à jour de qualité sur vos appareils pendant une période de 35 jours à partir du moment auquel vous suspendez les mises à jour. Une fois que le nombre maximal de jours s’est écoulé, la fonctionnalité de pause expirera automatiquement et l’appareil analysera les mises à jour de Windows pour déterminer celles qui sont applicables. Suite à cette analyse, vous pouvez à nouveau suspendre les mises à jour. Vous pouvez reprendre les mises à jour de qualité en désactivant la case à cocher.
 6. Sélectionnez **Installer les mises à jour à partir d’autres produits Microsoft** pour activer le paramètre de stratégie de groupe qui rend les paramètres de report applicables à Microsoft Update, ainsi qu’aux mises à jour de Windows.
 7. Sélectionnez **Inclure les pilotes avec Windows Update** pour mettre à jour automatiquement les pilotes proposés avec les mises à jour de Windows. Si vous désactivez ce paramètre, les mises à jour de pilotes ne sont pas téléchargées à partir des mises à jour de Windows.

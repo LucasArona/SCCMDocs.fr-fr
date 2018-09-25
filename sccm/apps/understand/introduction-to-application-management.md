@@ -1,8 +1,8 @@
 ---
 title: Présentation de la gestion d’applications
 titleSuffix: Configuration Manager
-description: Découvrez les informations de base dont vous aurez besoin pour gérer et déployer des applications Configuration Manager.
-ms.date: 07/30/2018
+description: Découvrez les informations de base dont vous aurez besoin pour gérer et déployer des applications dans Configuration Manager.
+ms.date: 08/31/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 08f711ba-83bf-4b5f-9520-a0778c6ae7eb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 70ab4136f39b4bf559c3d460ca1528bb4de0f6e1
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 0d4e83cbcb1c95303719b1d86ffc9a8969c16998
+ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39384288"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43893904"
 ---
 # <a name="introduction-to-application-management-in-configuration-manager"></a>Présentation de la gestion d’applications dans Configuration Manager
 
@@ -186,9 +186,9 @@ Pour plus d’informations, consultez les articles suivants :
 - [Guide de l’utilisateur sur le Centre logiciel](/sccm/core/understand/software-center)
 
 > [!Note]  
-> Le rôle de point de service web du catalogue des applications n’est plus nécessaire dans la version 1806, mais demeure pris en charge. 
+> Les rôles de point du site web et de point de service web du catalogue des applications ne sont plus *obligatoires* dans la version 1806. Toutefois, ils sont toujours *pris en charge*. 
 > 
-> Le rôle de site web du catalogue des applications n’est pas pris en charge dans la version 1806. Pour plus d’informations, consultez [Fonctionnalités supprimées et déconseillées](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
+> L’**expérience utilisateur Silverlight** pour le point du site web du catalogue des applications n’est plus prise en charge. Pour plus d’informations, consultez [Fonctionnalités supprimées et déconseillées](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
 
 
 

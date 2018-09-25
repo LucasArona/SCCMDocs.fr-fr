@@ -2,7 +2,7 @@
 title: Fonctionnalités dépréciées
 titleSuffix: Configuration Manager
 description: Découvrez les fonctionnalités que Configuration Manager ne prend plus en charge.
-ms.date: 07/30/2018
+ms.date: 08/14/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 287a6324-ae65-4d38-b2ef-198d47c91231
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8075fb0e00a0cc9bd8190bb2838431be8c2d1ce8
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: a84d25203fc0addc32271446e1375c9013c0bb6e
+ms.sourcegitcommit: 98c3f7848dc9014de05541aefa09f36d49174784
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39382870"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42584614"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Fonctionnalités supprimées et dépréciées pour Configuration Manager
 
@@ -31,6 +31,7 @@ Ces informations sont susceptibles de changer dans les futures versions. Les fon
 
 |Fonctionnalité|Désapprobation annoncée|Prise en charge&nbsp;supprimée|  
 |-----------|---|--------------|  
+|Gestion hybride des appareils mobiles. Pour plus d’informations, consultez [Qu’est-ce que la gestion MDM hybride ?](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->|14 août 2018|1er septembre 2019|
 |L’**expérience utilisateur Silverlight** pour le point du site web du catalogue des applications n’est plus prise en charge. Les utilisateurs doivent utiliser le nouveau Centre logiciel. REMARQUE : Les rôles de point du site web et de point de service web du catalogue des applications sont toujours pris en charge. Dans certains scénarios, le nouveau Centre logiciel communique avec le point du site web du catalogue des applications.|11 août 2017| Version 1806|
 |Ancienne version du Centre logiciel.<br><br>Pour plus d’informations sur le nouveau Centre logiciel, consultez [Planifier et configurer la gestion des applications](/sccm/apps/plan-design/plan-for-and-configure-application-management#configure-software-center-and-the-application-catalog-windows-pcs-only).|13 décembre 2016|Version 1802|
 |Gestion de disques durs virtuels avec Configuration Manager. </br></br>Cette dépréciation inclut la suppression des options permettant de créer un nouveau disque dur virtuel ou de gérer un disque dur virtuel à l’aide d’une séquence de tâches, ainsi que la suppression du nœud Disques durs virtuels dans la console Configuration Manager. </br></br>Les disques durs virtuels existants ne sont pas supprimés, mais ne sont plus accessibles à partir de la console Configuration Manager.  |6 janvier 2017 |Version 1710|

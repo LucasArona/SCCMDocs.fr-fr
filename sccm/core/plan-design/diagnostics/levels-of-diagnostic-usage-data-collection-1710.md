@@ -10,12 +10,12 @@ ms.assetid: 8fce5391-8e75-4f99-813a-76f8842be5bc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 46f9d4bb2b861b767352793cde0ce436a7f4da1d
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 7ba95a61b074fa1ae4cc4c77f896659b91eaaaaa
+ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340530"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43893696"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1710-of-system-center-configuration-manager"></a>Niveaux de collecte des données de diagnostic et d’utilisation pour la version 1710 de System Center Configuration Manager
 
@@ -214,11 +214,11 @@ Pour System Center Configuration Manager version 1710, ce niveau inclut les él
 
   - Nombre de clients joints aux services Azure Active Directory
 
-  - Nombre de regroupements qui sont synchronisés avec Operations Management Suite
+  - Nombre de regroupements synchronisés avec Azure Log Analytics
 
   - Nombre de connecteurs Upgrade Analytics
 
-  - Activation ou non du connecteur cloud Operations Management Suite
+  - Indique si le connecteur cloud Azure Log Analytics est activé
 
 
 - ***[Nouveau]*** Cogestion

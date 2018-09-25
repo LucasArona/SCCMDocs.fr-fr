@@ -10,18 +10,18 @@ ms.assetid: 6ecdfad1-6305-45a8-ae75-3f33b967cb8f
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: e3030b4390e38ca2dfce6805c04d5b0bb7916bba
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 3217fe8f6d9ee541105abdecf9963898af38b907
+ms.sourcegitcommit: 316899b08f2ef372993909e08e069f7edfed1d33
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32347951"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44111023"
 ---
 # <a name="create-and-deploy-windows-firewall-policies-for-endpoint-protection-in-system-center-configuration-manager"></a>Créer et déployer des stratégies de Pare-feu Windows pour Endpoint Protection dans System Center Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
-Les stratégies de pare-feu pour Endpoint Protection dans System Center 2012 Configuration Manager permettent d’effectuer des tâches de maintenance et de configuration de Pare-feu Windows de base sur les ordinateurs clients de votre hiérarchie. Vous pouvez utiliser les stratégies de pare-feu Windows pour effectuer les tâches suivantes :  
+Les stratégies de pare-feu pour Endpoint Protection dans System Center Configuration Manager vous permettent d'effectuer des tâches de maintenance et de configuration de pare-feu Windows de base sur les ordinateurs client de votre hiérarchie. Vous pouvez utiliser les stratégies de pare-feu Windows pour effectuer les tâches suivantes :  
 
 -   Contrôler si le pare-feu Windows est activé ou désactivé.  
 

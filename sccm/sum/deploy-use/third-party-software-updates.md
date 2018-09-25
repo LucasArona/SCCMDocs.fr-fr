@@ -10,12 +10,12 @@ ms.assetid: 946b0f74-0794-4e8f-a6af-9737d877179b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a50aa9d2269830fa09c494c63c7681f1dbda3cc0
-ms.sourcegitcommit: 6e0e5b4b7779ce03e2b56b3b5f68f4ace1acedd8
+ms.openlocfilehash: 3c31b950ef59147f6f3f46c1cba7780b7789948c
+ms.sourcegitcommit: 4b7812b505e80f79fc90dfa8a6db06eea79a3550
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467587"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "42584509"
 ---
 # <a name="enable-third-party-updates"></a>Activer les mises à jour tierces 
 
@@ -164,6 +164,7 @@ La synchronisation des mises à jour logicielles tierces est gérée par le comp
 -  Configuration Manager propose une nouvelle version pour le format de fichier cab de catalogue. La nouvelle version comprend les certificats des fichiers binaires du fournisseur. Ces certificats sont ajoutés au nœud **Certificats** sous **Sécurité** dans l’espace de travail **Administration** dès lors que vous avez approuvé et accordé votre confiance au catalogue.  
      - Vous pouvez toujours utiliser l’ancienne version de fichier cab de catalogue du moment que l’URL de téléchargement est https et que les mises à jour sont signées. La publication du contenu échouera, car les certificats des fichiers binaires ne se trouvent pas dans le fichier cab et sont déjà approuvés. Vous pouvez contourner ce problème en recherchant le certificat dans le nœud **Certificats**, en le débloquant, puis en publiant à nouveau la mise à jour. Si vous publiez plusieurs mises à jour signées avec différents certificats, vous devez débloquer chaque certificat utilisé.
      - Pour plus d’informations, consultez les messages d’état 11523 et 11524 dans le tableau des messages d’état suivant.
+-  Lorsque le service de synchronisation des mises à jour logicielles tiers situé au-dessus du point de mise à jour logicielle de niveau supérieur nécessite un serveur proxy pour accéder à Internet, les vérifications de la signature numérique peuvent échouer. Pour résoudre ce problème, configurez les paramètres de proxy WinHTTP sur le système du site. Pour plus d’informations, consultez [commandes Netsh pour WinHTTP](https://go.microsoft.com/fwlink/p/?linkid=199086).
 
 ## <a name="status-messages"></a>Messages d'état
 
@@ -176,7 +177,7 @@ La synchronisation des mises à jour logicielles tierces est gérée par le comp
 
 
 ## <a name="working-with-third-party-updates-video"></a>Utilisation de mises à jour tierces (vidéo)
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bvAQeDSJIbs?ecver=1" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ai8rLCLtuTI?rel=0" frameborder="0" allowfullscreen></iframe>
 
 
 

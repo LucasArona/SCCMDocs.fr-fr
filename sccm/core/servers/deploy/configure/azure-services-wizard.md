@@ -1,7 +1,7 @@
 ---
 title: Configurer les services Azure
 titleSuffix: Configuration Manager
-description: Connectez votre environnement Configuration Manager aux services Azure pour la gestion cloud, Upgrade Readiness, Microsoft Store pour Entreprises et Operations Management Suite.
+description: Connectez votre environnement Configuration Manager aux services Azure pour la gestion cloud, Upgrade Readiness, Microsoft Store pour Entreprises et Log Analytics.
 ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -10,12 +10,12 @@ ms.assetid: a26a653e-17aa-43eb-ab36-0e36c7d29f49
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5607402171a3b771560ff439b1f1f99a6a947e83
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 1ea47941be51d1bf38de53203aad00c02d0a11d3
+ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383294"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43893768"
 ---
 # <a name="configure-azure-services-for-use-with-configuration-manager"></a>Configurer les services Azure à utiliser avec Configuration Manager
 
@@ -37,7 +37,10 @@ Configurez les services Azure suivants à l’aide de cet Assistant :
 
     - Prendre en charge certains [scénarios de passerelle de gestion cloud](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#scenarios)  
 
--   **Connecteur OMS** : [Connectez-vous à Operations Management Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite) (OMS). Synchronisez des données telles que des regroupements avec OMS Log Analytics.  
+-   **Connecteur Log Analytics** : [se connecte à Azure Log Analytics](/sccm/core/clients/manage/sync-data-log-analytics). Synchronisez les données de regroupement avec Log Analytics.  
+
+    > [!Note]  
+    > Cet article fait référence au *Connecteur Log Analytics*, précédemment appelé *Connecteur OMS*. Il n’existe aucune différence fonctionnelle. Pour plus d’informations, consultez [Gestion Azure - Surveillance](https://docs.microsoft.com/azure/monitoring/#operations-management-suite).  
 
 -   **Connecteur Upgrade Readiness** : Connectez-vous à [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics) dans Windows Analytics. Consultez les données de compatibilité de mise à niveau des clients.  
 
@@ -61,7 +64,7 @@ Le tableau suivant répertorie des informations sur chacun des services.
 |Service  |Locataires  |Clouds  |Application web  |Application native  |Actions  |
 |---------|---------|---------|---------|---------|---------|
 |Gestion cloud avec</br>découverte d’utilisateurs Azure AD | Plusieurs | Public | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) | Importer, Créer |
-|Connecteur OMS | Un | Public, privé | ![Pris en charge](media/green_check.png) | ![Non pris en charge](media/Red_X.png) | Importation |
+|Connecteur Log Analytics | Un | Public, privé | ![Pris en charge](media/green_check.png) | ![Non pris en charge](media/Red_X.png) | Importation |
 |Upgrade Readiness | Un | Public | ![Pris en charge](media/green_check.png) | ![Non pris en charge](media/Red_X.png) | Importation |
 |Microsoft Store pour</br>Professionnel | Un | Public | ![Pris en charge](media/green_check.png) | ![Non pris en charge](media/Red_X.png) | Importer, Créer |
 
@@ -90,7 +93,7 @@ Pour plus d’informations sur les applications Azure, commencez par les article
 
 Après avoir choisi le service auquel vous souhaitez vous connecter, reportez-vous au tableau dans [Détails sur le service](#service-details). Ce tableau fournit les informations nécessaires pour terminer l’Assistant Services Azure. Ayez préalablement une discussion avec votre administrateur Azure AD. Décidez si vous créez manuellement les applications à l’avance dans le portail Azure pour en importer ensuite les détails dans Configuration Manager. Vous pouvez aussi utiliser Configuration Manager pour créer directement les applications dans Azure AD. Pour collecter les données nécessaires à partir d’Azure AD, passez en revue les informations contenues dans les autres sections de cet article.
 
-Certains services nécessitent que les applications Azure AD disposent d’autorisations spécifiques. Passez en revue les informations pour chaque service afin de déterminer les autorisations requises. Par exemple, avant de pouvoir importer une application web, un administrateur Azure doit tout d’abord la créer dans le [portail Azure](https://portal.azure.com). Lors de la configuration du connecteur Upgrade Readiness ou OMS, vous devez donner à votre application web tout juste inscrite une autorisation de *contributeur* sur le groupe de ressources qui contient l’espace de travail OMS approprié. Cette autorisation permet à Configuration Manager d’accéder à cet espace de travail. Au moment d’attribuer l’autorisation, recherchez le nom de l’inscription d’application dans le panneau **Ajouter des utilisateurs** du portail Azure. Ce processus est le même que lors de la [fourniture à Configuration Manager d’autorisations sur OMS](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#provide-configuration-manager-with-permissions-to-oms). Un administrateur Azure doit attribuer ces autorisations avant que vous n’importiez l’application dans Configuration Manager.
+Certains services nécessitent que les applications Azure AD disposent d’autorisations spécifiques. Passez en revue les informations pour chaque service afin de déterminer les autorisations requises. Par exemple, avant de pouvoir importer une application web, un administrateur Azure doit tout d’abord la créer dans le [portail Azure](https://portal.azure.com). Lors de la configuration du connecteur Upgrade Readiness ou Log Analytics, vous devez donner à votre application web tout juste inscrite une autorisation de *contributeur* sur le groupe de ressources qui contient l’espace de travail approprié. Cette autorisation permet à Configuration Manager d’accéder à cet espace de travail. Au moment d’attribuer l’autorisation, recherchez le nom de l’inscription d’application dans le panneau **Ajouter des utilisateurs** du portail Azure. Ce processus est le même que lors de la [fourniture à Configuration Manager d’autorisations sur Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#grant-configuration-manager-with-permissions-to-log-analytics). Un administrateur Azure doit attribuer ces autorisations avant que vous n’importiez l’application dans Configuration Manager.
 
 
 
@@ -209,7 +212,7 @@ Après avoir spécifié les applications natives et web dans la page des applica
 
 -   Service de **gestion cloud**, page **Découverte** : [Configurer la découverte d’utilisateurs Azure AD](/sccm/core/servers/deploy/configure/configure-discovery-methods#azureaadisc)  
 
--   Service du **connecteur OMS**, page **Configuration** : [Configurer la connexion à OMS](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite#use-the-azure-services-wizard-to-configure-the-connection-to-oms)  
+-   Service du **connecteur Log Analytics**, page **Configuration** : [Configurer la connexion à Log Analytics](/sccm/core/clients/manage/sync-data-log-analytics#configure-the-connection-to-log-analytics)  
 
 -   Service du **connecteur Upgrade Readiness**, page **Configuration** : [Utiliser l’Assistant Azure pour créer la connexion](/sccm/core/clients/manage/upgrade/upgrade-analytics#use-the-azure-wizard-to-create-the-connection)  
 
