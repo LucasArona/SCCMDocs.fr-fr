@@ -2,7 +2,7 @@
 title: Mises à jour dans la console
 titleSuffix: Configuration Manager
 description: Installer des mises à jour pour Configuration Manager à partir du cloud Microsoft
-ms.date: 07/30/2018
+ms.date: 08/22/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4ea03f3a91d086a3528047ac6fcd18ff09b03537
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 46aa845197010694e1a1c48ec1d3f18a13268cdf
+ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385556"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42756127"
 ---
 # <a name="install-in-console-updates-for-configuration-manager"></a>Installer des mises à jour dans la console pour Configuration Manager
 
@@ -365,40 +365,13 @@ Accédez à l’espace de travail **Surveillance**, puis sélectionnez le nœud 
 
 ##  <a name="bkmk_after"></a> Après l’installation d’une mise à jour sur un site  
 
-Utilisez la liste de vérification suivante pour effectuer les tâches courantes et les configurations nécessaires après la mise à jour d’un site.   
+Après les mises à jour du site, vérifiez la liste de contrôle postérieure à la mise à jour de la version applicable :  
 
-#### <a name="confirm-site-to-site-replication-is-active"></a>Vérifier que la réplication de site à site est active
-Dans la console Configuration Manager, accédez aux emplacements suivants pour consulter l’état et vérifier que la réplication est active :  
+- [Liste de contrôle postérieure à la mise à jour pour la version 1806](/sccm/core/servers/manage/checklist-for-installing-update-1806#post-update-checklist)  
 
--   Espace de travail **Surveillance**, nœud **Hiérarchie de site**  
+- [Liste de contrôle postérieure à la mise à jour pour la version 1802](/sccm/core/servers/manage/checklist-for-installing-update-1802#post-update-checklist)  
 
--   Espace de travail **Surveillance**, nœud **Réplication de la base de données**  
-
-Pour plus d’informations, consultez les articles suivants :  
-- [Surveiller l’infrastructure de la hiérarchie et de la réplication](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure)
-- [À propos de l’analyseur de lien de réplication](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure#BKMK_RLA)  
-
-#### <a name="confirm-that-servers-restarted-if-necessary"></a>Vérifier que les serveurs ont redémarré (si nécessaire) 
-Examinez l’infrastructure de votre site et vérifiez que les serveurs de site et serveurs de système de site distants appropriés ont redémarré correctement. En règle générale, les serveurs de site redémarrent uniquement quand Configuration Manager installe .NET en tant que prérequis pour un rôle de système de site.  
-
-#### <a name="update-standalone-configuration-manager-consoles"></a>Mettre à jour les consoles Configuration Manager autonomes
-Mettez à jour toutes les consoles Configuration Manager distantes vers la même version. Vous êtes invité à mettre à jour la console dans les cas suivants :  
-
--   lorsque vous accédez à un nouveau nœud dans la console ;  
-
--   lorsque vous ouvrez la console.  
-
-#### <a name="reconfigure-database-replicas-for-management-points"></a>Reconfigurer les réplicas de base de données pour les points de gestion
-Si vous utilisez des réplicas de base de données pour les points de gestion au niveau des sites principaux, désinstallez ces réplicas avant la mise à jour du site. Après avoir mis à niveau un site principal, reconfigurez le réplica de base de données pour les points de gestion. Pour plus d’informations, consultez [Réplicas de base de données pour les points de gestion](/sccm/core/servers/deploy/configure/database-replicas-for-management-points).  
-
-#### <a name="reconfigure-any-disabled-maintenance-tasks"></a>Reconfigurer les tâches de maintenance désactivées
-Si vous avez désactivé les [tâches de maintenance](/sccm/core/servers/manage/maintenance-tasks) de base de données sur un site avant d’installer la mise à jour, reconfigurez ces tâches sur le site. Utilisez les mêmes paramètres qui étaient en vigueur avant la mise à jour.  
-
-#### <a name="upgrade-clients"></a>Mettez à niveau les clients.
-Pour plus d’informations, consultez [Guide pratique pour mettre à niveau les clients pour les ordinateurs Windows](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers).  
-
-#### <a name="additional-configurations"></a>Configurations supplémentaires
-Examinez les modifications que vous avez apportées avant de commencer la mise à jour, puis restaurez ces configurations sur vos sites et votre hiérarchie.  
+- [Liste de contrôle postérieure à la mise à jour pour la version 1710](/sccm/core/servers/manage/checklist-for-installing-update-1710#post-update-checklist)  
 
 
 

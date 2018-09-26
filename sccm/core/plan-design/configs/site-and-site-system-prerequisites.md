@@ -10,12 +10,12 @@ ms.assetid: 1392797b-76cb-46b4-a3e4-8f349ccaa078
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 765f599af115e481197603fabd0f3698807ec13a
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 10dfebccd997a42f4c79e5d88bdf05e26585aebb
+ms.sourcegitcommit: 7eebd112a9862bf98359c1914bb0c86affc5dbc0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385318"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42589870"
 ---
 # <a name="site-and-site-system-prerequisites-for-configuration-manager"></a>Prérequis des sites et systèmes de site pour Configuration Manager
 
@@ -84,7 +84,7 @@ Consultez les sections principales de cet article pour connaître les prérequis
 
 - .NET Framework 3.5 SP1 (ou version ultérieure)  
 
-- .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 ou 4.7.1  
+- .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1 ou 4.7.2  
 
     - Pour plus d’informations sur les versions du .NET Framework, consultez [Versions et dépendances du .NET Framework](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies).
 
@@ -110,7 +110,7 @@ Consultez les sections principales de cet article pour connaître les prérequis
 
 - .NET Framework 3.5 SP1 (ou version ultérieure)  
 
-- .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 ou 4.7.1  
+- .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1 ou 4.7.2  
 
     - Pour plus d’informations sur les versions du .NET Framework, consultez [Versions et dépendances du .NET Framework](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies).  
 
@@ -162,7 +162,7 @@ Consultez les sections principales de cet article pour connaître les prérequis
 
 - .NET Framework 3.5 SP1 (ou version ultérieure)  
 
-- .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 ou 4.7.1  
+- .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1 ou 4.7.2  
 
     - ASP.NET 4.5  
 
@@ -203,7 +203,7 @@ Consultez les sections principales de cet article pour connaître les prérequis
 
 -   .NET Framework 3.5 SP1 (ou version ultérieure)  
 
--   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 ou 4.7.1 :  
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1 ou 4.7.2 :  
 
     -   ASP.NET 4.5 :  
 
@@ -241,7 +241,7 @@ Consultez les sections principales de cet article pour connaître les prérequis
 
 #### <a name="windows-server-roles-and-features"></a>Rôles et fonctionnalités Windows Server  
 
--   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 ou 4.7.1 
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1 ou 4.7.2 
 
 
 
@@ -249,7 +249,7 @@ Consultez les sections principales de cet article pour connaître les prérequis
 
 #### <a name="windows-server-roles-and-features"></a>Rôles et fonctionnalités Windows Server  
 
--   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 ou 4.7.1 :  
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1 ou 4.7.2 :  
 
     -   Activation HTTP  
 
@@ -336,7 +336,7 @@ Pour plus d'informations, consultez [Installer et configurer des points de distr
 
 -   .NET Framework 3.5 (ou version ultérieure).  
 
--   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 ou 4.7.1 :  
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1 ou 4.7.2 :  
 
      Pendant l’installation de ce rôle de système de site, Configuration Manager installe automatiquement .NET Framework 4.5.2. Cette installation peut placer le serveur dans un état d’attente redémarrage. Si un redémarrage est en attente pour .NET Framework, il est possible que les applications .NET ne puissent pas s’exécuter tant que le serveur n’a pas redémarré et que l’installation n’est pas terminée.  
 
@@ -378,7 +378,7 @@ Pour plus d'informations, consultez [Installer et configurer des points de distr
 
 -   .NET Framework 3.5 (ou version ultérieure).  
 
--   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 ou 4.7.1 
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1 ou 4.7.2 
 
      Pendant l’installation de ce rôle de système de site, Configuration Manager installe automatiquement .NET Framework 4.5.2. Cette installation peut placer le serveur dans un état d’attente redémarrage. Si un redémarrage est en attente pour .NET Framework, il est possible que les applications .NET ne puissent pas s’exécuter tant que le serveur n’a pas redémarré et que l’installation n’est pas terminée.  
 
@@ -430,7 +430,7 @@ La configuration IIS par défaut est nécessaire, avec les ajouts suivants :
 
 #### <a name="windows-server-roles-and-features"></a>Rôles et fonctionnalités Windows Server  
 
--   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 ou 4.7.1 
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1 ou 4.7.2 
 
 -   Extensions du serveur BITS (et options sélectionnées automatiquement) ou services BITS (et options sélectionnées automatiquement)  
 
@@ -456,7 +456,7 @@ La configuration IIS par défaut est nécessaire, avec les ajouts suivants :
 
 #### <a name="windows-server-roles-and-features"></a>Rôles et fonctionnalités Windows Server  
 
--   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 ou 4.7.1 
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1 ou 4.7.2 
 
 #### <a name="sql-server-reporting-services"></a>SQL Server Reporting Services  
 
@@ -472,7 +472,7 @@ La configuration IIS par défaut est nécessaire, avec les ajouts suivants :
 
 #### <a name="windows-server-roles-and-features"></a>Rôles et fonctionnalités Windows Server  
 
--   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 ou 4.7.1 
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1 ou 4.7.2 
 
      Pendant l’installation de ce rôle de système de site, Configuration Manager installe automatiquement .NET Framework 4.5.2. Cette installation peut placer le serveur dans un état d’attente redémarrage. Si un redémarrage est en attente pour .NET Framework, il est possible que les applications .NET ne puissent pas s’exécuter tant que le serveur n’a pas redémarré et que l’installation n’est pas terminée.  
 
@@ -490,7 +490,7 @@ La configuration IIS par défaut est nécessaire, avec les ajouts suivants :
 
 -   .NET Framework 3.5 SP1 (ou version ultérieure)  
 
--   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 ou 4.7.1 
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1 ou 4.7.2 
 
 La configuration IIS par défaut est nécessaire.
 
@@ -508,7 +508,7 @@ La configuration IIS par défaut est nécessaire.
 
 -   .NET Framework 3.5 (ou version ultérieure).  
 
--   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7 ou 4.7.1 :  
+-   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1 ou 4.7.2 :  
 
      Pendant l’installation de ce rôle de système de site, Configuration Manager installe automatiquement .NET Framework 4.5.2. Cette installation peut placer le serveur dans un état d’attente redémarrage. Si un redémarrage est en attente pour .NET Framework, il est possible que les applications .NET ne puissent pas s’exécuter tant que le serveur n’a pas redémarré et que l’installation n’est pas terminée.  
 

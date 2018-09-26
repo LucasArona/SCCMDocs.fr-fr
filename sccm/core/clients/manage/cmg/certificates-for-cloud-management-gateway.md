@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
-ms.openlocfilehash: fbae44d1344dd36d3c0a6faf2e50727dfa830ba0
-ms.sourcegitcommit: 8060ea520fb08629e1d5f249daffe825536673a5
+ms.openlocfilehash: 02a830d10263164e26902247856f999523092c76
+ms.sourcegitcommit: a849dab9333ebac799812624d6155f2a96b523ca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35232368"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42584735"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>Certificats pour la passerelle de gestion cloud
 
@@ -63,7 +63,8 @@ Par exemple, Contoso utilise **GraniteFalls.Contoso.com** comme nom commun du ce
 
 Créez un certificat SSL personnalisé pour la passerelle de gestion cloud de la même façon que pour un point de distribution cloud. Suivez les instructions pour le [déploiement du certificat de service pour les points de distribution cloud](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_clouddp2008_cm2012), mais procédez différemment pour ce qui suit :
 
-- Lors de la demande du certificat de serveur web personnalisé, fournissez un nom de domaine complet pour le nom commun du certificat. Pour utiliser la passerelle de gestion cloud sur le cloud public Azure, utilisez un nom qui se termine par **cloudapp.net** ou par **usgovcloudapp.net** pour le cloud Azure US Government.
+- Lors de la demande du certificat de serveur web personnalisé, fournissez un nom de domaine complet pour le nom commun du certificat. Il peut s’agir d’un nom de domaine public se trouvant en votre possession, ou bien vous pouvez utiliser le domaine cloudapp.net. Si vous utilisez votre propre domaine public, référez-vous au processus ci-dessus concernant la création d’un alias DNS dans le DNS public de votre organisation.
+- Lorsque vous utilisez le domaine public cloudapp.net pour le certificat de serveur web de passerelle de gestion cloud, sur le cloud public Azure, choisissez un nom qui se termine par **cloudapp.net** ou par **usgovcloudapp.net** pour le cloud Azure US Government.
 
 
 

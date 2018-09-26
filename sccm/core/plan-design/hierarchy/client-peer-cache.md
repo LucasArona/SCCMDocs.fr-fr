@@ -10,12 +10,12 @@ ms.assetid: 86cd5382-8b41-45db-a4f0-16265ae22657
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 00a79e099255b9ec19660914825334dc95b30682
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: c3dc6189f73b939f632581a8b50f05a72310111d
+ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383848"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42755994"
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>Cache de pair pour les clients Configuration Manager
 
@@ -45,7 +45,7 @@ Le client Configuration Manager utilise le cache de pair pour délivrer aux clie
 Le cache de pair ne remplace pas l’utilisation d’autres solutions, comme Windows BranchCache ou Optimisation de livraison. Le cache de pair fonctionne avec d’autres solutions. Ces technologies vous offrent plus d’options pour étendre les solutions traditionnelles de déploiement de contenu, comme les points de distribution. Le cache de pair est une solution personnalisée qui ne dépend pas de BranchCache. Il fonctionne même sans activer ou utiliser BranchCache.  
 
   > [!Note]  
-  > À compter de la version 1802, Windows BranchCache est toujours activé sur les clients. Le paramètre **Autoriser les clients à partager du contenu avec d’autres clients sur le même sous-réseau** est supprimé. Les clients utilisent BranchCache si le point de distribution le prend en charge.<!--SCCMDocs issue 539-->  
+  > À compter de la version 1802, Windows BranchCache est toujours activé sur les déploiements. Le paramètre **Autoriser les clients à partager du contenu avec d’autres clients sur le même sous-réseau** est supprimé.<!--SCCMDocs issue 539--> Si c’est pris en charge par le point de distribution et activé dans les paramètres clients, les clients utilisent BranchCache. Pour plus d'informations, consultez [Configurer BranchCache](/sccm/core/clients/deploy/about-client-settings#configure-branchcache).<!--SCCMDocs issue 735-->   
 
 
 
@@ -175,7 +175,7 @@ Pour les voir gérer le téléchargement du contenu en parties, examinez le fich
 
 - Le client de source de cache de pair met à jour la dernière date/heure référencée du contenu dans le cache quand un pair le télécharge. Le client utilise cet horodatage quand il gère automatiquement son cache, supprimant d’abord le contenu plus ancien. Ainsi, il doit normalement attendre si possible avant de supprimer du contenu que les clients de cache de pair téléchargent plus fréquemment.  
 
-- Si nécessaire, pendant une séquence de tâches de déploiement de système d’exploitation, utilisez la variable **SMSTSPreserveContent** pour conserver du contenu dans le cache du client. Pour plus d’informations, consultez [Variables intégrées de séquence de tâches](/sccm/osd/understand/task-sequence-built-in-variables).  
+- Si nécessaire, pendant une séquence de tâches de déploiement de système d’exploitation, utilisez la variable **SMSTSPreserveContent** pour conserver du contenu dans le cache du client. Pour plus d’informations, consultez [Variables de séquence de tâches](/sccm/osd/understand/task-sequence-variables#SMSTSPreserveContent).  
 
 - Si nécessaire, lors de la création des types de logiciels suivants, utilisez l’option permettant de **conserver le contenu dans la mémoire cache du client** :  
     - Applications

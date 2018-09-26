@@ -10,12 +10,12 @@ ms.assetid: 7591e386-a9ab-4640-8643-332dce5aa006
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 483b5f8b285fb256005e31e01a0786cef6c8e11d
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: bddcd356a3ee221d5b67935a5be91bbe89d2afc2
+ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383083"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42756052"
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-os-in-configuration-manager"></a>Créer une séquence de tâches pour mettre à niveau un système d’exploitation dans Configuration Manager
 
@@ -155,7 +155,7 @@ La mise en cache préalable du contenu vous permet de laisser le client téléch
 
 - **Supprimer/suspendre la sécurité tierce** : ajoutez des étapes dans ce groupe pour supprimer ou suspendre des programmes de sécurité tiers, par exemple, des antivirus.  
 
-   - Si vous utilisez un programme de chiffrement de disque tiers, indiquez son pilote de chiffrement à l’installation de Windows avec [l’option de ligne de commande](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#23) `/ReflectDrivers`. Ajoutez une étape [Définir une variable de séquence de tâches](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) à la séquence de tâches dans ce groupe. Affectez la valeur **OSDSetupAdditionalUpgradeOptions** à la variable de séquence de tâches. Définissez la valeur `/ReflectDrivers` avec le chemin du pilote. Cette [variable d’action de séquence de tâches](/sccm/osd/understand/task-sequence-action-variables#upgrade-operating-system) ajoute la ligne de commande d’installation de Windows utilisée par la séquence de tâches. Contactez votre éditeur de logiciels pour obtenir de l’aide sur ce processus.  
+   - Si vous utilisez un programme de chiffrement de disque tiers, indiquez son pilote de chiffrement à l’installation de Windows avec [l’option de ligne de commande](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#23) `/ReflectDrivers`. Ajoutez une étape [Définir une variable de séquence de tâches](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) à la séquence de tâches dans ce groupe. Affectez la valeur **OSDSetupAdditionalUpgradeOptions** à la variable de séquence de tâches. Définissez la valeur `/ReflectDrivers` avec le chemin du pilote. Cette [variable de séquence de tâches](/sccm/osd/understand/task-sequence-variables#OSDSetupAdditionalUpgradeOptions) ajoute la ligne de commande d’installation de Windows utilisée par la séquence de tâches. Contactez votre éditeur de logiciels pour obtenir de l’aide sur ce processus.  
 
 
 ### <a name="download-package-content-task-sequence-step"></a>Étape de séquence de tâches Télécharger le contenu du package  
@@ -215,11 +215,11 @@ En cas de problème pendant le processus de mise à niveau après le redémarrag
 
     - Pour plus d’informations sur les journaux du client Configuration Manager, consultez [Journaux du client Configuration Manager](/sccm/core/plan-design/hierarchy/log-files#BKMK_ClientLogs).  
 
-    - Pour plus d’informations sur _SMSTSLogPath et sur d’autres variables utiles, consultez [Variables intégrées de séquence de tâches](/sccm/osd/understand/task-sequence-built-in-variables).  
+    - Pour plus d’informations sur **_SMSTSLogPath** et sur d’autres variables utiles, consultez [Variables de séquence de tâches](/sccm/osd/understand/task-sequence-variables).  
 
 - **Exécuter les outils de diagnostic** : pour exécuter d’autres outils de diagnostic, ajoutez des étapes dans ce groupe. Automatisez ces outils pour collecter des informations supplémentaires à partir du système aussitôt après un échec.  
 
-    - Un exemple est l’outil Windows [SetupDiag](https://docs.microsoft.com/windows/deployment/upgrade/setupdiag). Il s’agit d’un outil de diagnostic autonome qui vous permet d’obtenir des informations détaillées sur la cause de l’échec d’une mise à niveau Windows 10.  
+    - Un exemple est l’outil Windows [SetupDiag](https://docs.microsoft.com/windows/deployment/upgrade/setupdiag). Il s’agit d’un outil de diagnostic autonome qui vous permet d’obtenir des informations détaillées sur la raison de l’échec d’une mise à niveau Windows 10.  
 
         - Dans Configuration Manager, [créez un package](/sccm/apps/deploy-use/packages-and-programs#create-a-package-and-program) pour l’outil.  
 
@@ -234,18 +234,18 @@ En cas de problème pendant le processus de mise à niveau après le redémarrag
 
 - À l’étape **Vérifier la préparation** par défaut, activez **Garantir un espace disque libre minimal (Mo)**. Choisissez une valeur au moins égale à **16384** (16 Go) pour un package de mise à niveau d’un système d'exploitation 32 bits, ou à **20480** (20 Go) pour 64 bits.  
 
-- Utilisez la [variable de séquence de tâches intégrée](/sccm/osd/understand/task-sequence-built-in-variables) **SMSTSDownloadRetryCount** pour réessayer de télécharger la stratégie. Actuellement, le client retente deux fois par défaut ; cette variable est définie sur deux (2). Si vos clients ne sont pas connectés à un réseau intranet, les tentatives supplémentaires les aideront à récupérer la stratégie. Cette variable n’a aucun effet secondaire, en dehors du fait qu’elle retarde l’échec si elle ne parvient pas à télécharger la stratégie.<!--501016--> Augmentez également la variable **SMSTSDownloadRetryDelay** (valeur par défaut : 15 secondes).  
+- Utilisez la [variable de séquence de tâches](/sccm/osd/understand/task-sequence-variables#SMSTSDownloadRetryCount) **SMSTSDownloadRetryCount** pour essayer à nouveau de télécharger la stratégie. Actuellement, le client retente deux fois par défaut ; cette variable est définie sur deux (2). Si vos clients ne sont pas connectés à un réseau intranet, les tentatives supplémentaires les aideront à récupérer la stratégie. Cette variable n’a aucun effet secondaire, en dehors du fait qu’elle retarde l’échec si elle ne parvient pas à télécharger la stratégie.<!--501016--> Augmentez également la variable **SMSTSDownloadRetryDelay** (valeur par défaut : 15 secondes).  
 
 - Effectuez une évaluation de compatibilité inline :  
 
    - Ajoutez une deuxième étape **Mettre à niveau le système d’exploitation** au début du groupe **Préparer la mise à niveau**. Nommez-la *Mettre à niveau l’évaluation*. Spécifiez le même package de mise à niveau, puis activez l’option **Effectuer l’analyse de compatibilité de l’installation de Windows sans démarrer la mise à niveau**. Activez **Continuer en cas d’erreur** dans l’onglet Options.  
 
-   - Juste après cette étape *Mettre à niveau l’évaluation*, ajoutez une étape **Exécuter la ligne de commande**. Spécifiez la ligne de commande suivante :</br> `cmd /c exit %_SMSTSOSUpgradeActionReturnCode%`</br>Dans l'onglet **Options**, ajoutez la condition suivante : </br>`Task Sequence Variable _SMSTSOSUpgradeActionReturnCode not equals 3247440400` </br>Ce code de retour est l’équivalent décimal de MOSETUP_E_COMPAT_SCANONLY (0xC1900210), qui correspond à la réussite d’une analyse de compatibilité sans problème. Si l’étape *Évaluation de la mise à niveau* réussit et retourne ce code, la séquence de tâches ignore cette étape. En revanche, si l’étape d’évaluation retourne un autre code de retour, cette étape échoue à effectuer la séquence de tâches avec le code de retour issu de l’analyse de compatibilité de l’installation de Windows.  
+   - Juste après cette étape *Mettre à niveau l’évaluation*, ajoutez une étape **Exécuter la ligne de commande**. Spécifiez la ligne de commande suivante :</br> `cmd /c exit %_SMSTSOSUpgradeActionReturnCode%`</br>Dans l'onglet **Options**, ajoutez la condition suivante : </br>`Task Sequence Variable _SMSTSOSUpgradeActionReturnCode not equals 3247440400` </br>Ce code de retour est l’équivalent décimal de MOSETUP_E_COMPAT_SCANONLY (0xC1900210), qui correspond à la réussite d’une analyse de compatibilité sans problème. Si l’étape *Évaluation de la mise à niveau* réussit et retourne ce code, la séquence de tâches ignore cette étape. En revanche, si l’étape d’évaluation retourne un autre code de retour, cette étape échoue à effectuer la séquence de tâches avec le code de retour issu de l’analyse de compatibilité de l’installation de Windows. Pour plus d'informations sur **_SMSTSOSUpgradeActionReturnCode**, consultez [Variables de séquence de tâches](/sccm/osd/understand/task-sequence-variables#SMSTSOSUpgradeActionReturnCode).  
 
    - Pour plus d’informations, consultez la section [Mettre à niveau le système d’exploitation](/sccm/osd/understand/task-sequence-steps#BKMK_UpgradeOS).  
 
 - Si vous souhaitez faire passer l’appareil du BIOS au standard UEFI au cours de cette séquence de tâches, consultez la section [Passer du BIOS au standard UEFI pendant une mise à niveau sur place](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion#convert-from-bios-to-uefi-during-an-in-place-upgrade).  
 
-- Si vous utilisez le Chiffrement de lecteur BitLocker, par défaut, l’installation de Windows l’interrompt automatiquement durant la mise à niveau. À partir de Windows 10 version 1803, l’installation de Windows inclut le paramètre de ligne de commande `/BitLocker` qui contrôle ce comportement. Si vos exigences de sécurité impliquent que le chiffrement de lecteur reste toujours activé, utilisez la variable de séquence de tâches **OSDSetupAdditionalUpgradeOptions** dans le groupe **Préparer la mise à niveau** afin d’inclure `/BitLocker TryKeepActive`. Pour plus d’informations, consultez [Options de ligne de commande du programme d’installation de Windows](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#33).<!--SCCMDocs issue #494-->  
+- Si vous utilisez le Chiffrement de lecteur BitLocker, par défaut, l’installation de Windows l’interrompt automatiquement durant la mise à niveau. À partir de Windows 10 version 1803, l’installation de Windows inclut le paramètre de ligne de commande `/BitLocker` qui contrôle ce comportement. Si vos exigences de sécurité impliquent que le chiffrement du disque reste toujours activé, utilisez la [variable de séquence de tâches](/sccm/osd/understand/task-sequence-variables#OSDSetupAdditionalUpgradeOptions) **OSDSetupAdditionalUpgradeOptions** dans le groupe **Préparer la mise à niveau** afin d’inclure `/BitLocker TryKeepActive`. Pour plus d’informations, consultez [Options de ligne de commande du programme d’installation de Windows](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#33).<!--SCCMDocs issue #494-->  
 
 - Certains clients suppriment les applications provisionnées par défaut dans Windows 10. (par exemple, l’application Bing Météo ou Microsoft Solitaire Collection). Dans certains cas, ces applications sont restaurées après la mise à jour de Windows 10. Pour plus d’informations, consultez [Empêcher la restauration d’applications supprimées dans Windows 10](https://docs.microsoft.com/windows/application-management/remove-provisioned-apps-during-update). Ajoutez une étape **Exécuter la ligne de commande** à la séquence de tâches dans le groupe **Préparer la mise à niveau**. Spécifiez une ligne de commande semblable à l’exemple suivant :</br> `cmd /c reg delete "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.BingWeather_8wekyb3d8bbwe" /f` <!--SCCMDocs issue #526-->  

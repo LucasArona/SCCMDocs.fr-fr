@@ -10,12 +10,12 @@ ms.assetid: 1a38421d-24c1-4fef-bf6c-42fce53109ac
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 18435bd43ed74daee646096d1e8d8b6ed7b7bc27
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 057310d7f580cfc61f23a53977716743ed906867
+ms.sourcegitcommit: 849391d3985b057027cae610bd3a79fdaa708b94
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39386340"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42584635"
 ---
 # <a name="high-availability-options-for-configuration-manager"></a>Options de haute disponibilité pour Configuration Manager
 
@@ -25,7 +25,7 @@ Cet article explique comment déployer Configuration Manager avec des options qu
 
 Les options suivantes de Configuration Manager permettent une haute disponibilité :   
 
-- Depuis la version 1806, il est possible de configurer le site d’administration centrale et chaque site principal avec un serveur de site supplémentaire en mode passif.  
+- Depuis la version 1806, il est possible de configurer n’importe quel site principal avec un serveur de site supplémentaire en mode passif.  
  
 - Configurez un groupe de disponibilité SQL Server Always On pour la base de données de site sur les sites principaux et sur le site d’administration centrale.
 
@@ -70,7 +70,7 @@ Par exemple, les clients Configuration Manager fonctionnent généralement de ma
 ##  <a name="bkmk_snh"></a> Haute disponibilité pour les sites et les hiérarchies  
 
 #### <a name="use-a-site-server-in-passive-mode"></a>Utiliser un serveur de site en mode passif
-Depuis la version 1806, il est possible d’installer un serveur de site supplémentaire en mode *passif*. Le serveur de site en mode passif vient s’ajouter à votre serveur de site existant qui se trouve en mode *actif*. Un serveur de site en mode passif est disponible pour une utilisation immédiate, si nécessaire. Pour plus d’informations, consultez [Haute disponibilité du serveur de site](/sccm/core/servers/deploy/configure/site-server-high-availability).  
+Depuis la version 1806, il est possible d’installer un serveur de site supplémentaire en mode *passif* pour un site principal autonome. Le serveur de site en mode passif s’ajoute à votre serveur de site existant, qui est en mode *actif*. Un serveur de site en mode passif est disponible pour une utilisation immédiate, en cas de besoin. Pour plus d’informations, consultez [Haute disponibilité du serveur de site](/sccm/core/servers/deploy/configure/site-server-high-availability).  
 
 #### <a name="use-a-remote-content-library"></a>Utiliser une bibliothèque de contenu distante
 Depuis la version 1806, il est possible de déplacer la bibliothèque de contenu du site vers un emplacement distant qui fournit un stockage hautement disponible. Cette fonctionnalité est nécessaire à la haute disponibilité du serveur de site. Pour plus d’informations, consultez [Bibliothèque de contenu](/sccm/core/plan-design/hierarchy/the-content-library#bkmk_remote).

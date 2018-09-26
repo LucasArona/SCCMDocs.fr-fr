@@ -10,12 +10,12 @@ ms.assetid: b7332ed3-8003-454b-bb12-1fdf8721425c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9f4bbb8ec680248b31b1ddd8c457e62e9be44d4b
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 9d292d85ce5a30e56d7909d74b986ac408d29346
+ms.sourcegitcommit: 849391d3985b057027cae610bd3a79fdaa708b94
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385256"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42584583"
 ---
 # <a name="list-of-reports-in-system-center-configuration-manager"></a>Liste des rapports dans System Center Configuration Manager
 
@@ -51,7 +51,7 @@ Les deux rapports suivants sont répertoriés sous la catégorie **Alertes**.
 
 
 ## <a name="asset-intelligence"></a>Asset Intelligence  
-Les 62 rapports suivants sont répertoriés sous la catégorie **Asset Intelligence**.  
+Les 66 rapports suivants sont répertoriés sous la catégorie **Asset Intelligence**.  
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -117,6 +117,10 @@ Les 62 rapports suivants sont répertoriés sous la catégorie **Asset Intellige
 |**Logiciel 14A - Recherche de logiciels dont la balise d'identification logicielle est activée**|Affiche le nombre de logiciels installés dont la balise d'identification logicielle est activée.|  
 |**Logiciel 14B - Ordinateurs sur lesquels sont installés des logiciels dont la balise d'identification logicielle est activée**|Affiche tous les ordinateurs sur lesquels sont installés des logiciels qui ont une balise d'identification logicielle spécifique activée.|  
 |**Logiciel 14C - Logiciels installés sur un ordinateur spécifique et dont la balise d'identification logicielle est activée**|Affiche tous les logiciels installés qui ont une balise d'identification logicielle spécifiée activée sur un ordinateur spécifié.|  
+|**Cycle de vie 01A : ordinateurs avec un produit logiciel spécifique**|Afficher une liste des ordinateurs sur lesquels un produit spécifique est détecté.|
+|**Cycle de vie 02A : liste des machines avec des produits arrivés à expiration dans l'organisation**|Afficher les ordinateurs sur lesquels des produits arrivés à expiration sont installés. Vous pouvez filtrer ce rapport par nom de produit.|
+|**Cycle de vie 03A : liste des produits arrivés à expiration dans l'organisation**|Afficher les détails sur les produits de votre environnement dont les dates du cycle de vie ont expiré.|
+|**Cycle de vie 04A : vue d'ensemble du cycle de vie des produits**|Afficher une liste des cycles de vie des produits. Filtrez la liste par nom de produit et par nombre de jours avant l’expiration.|
 
 
 
@@ -186,6 +190,18 @@ Les 22 rapports suivants sont répertoriés sous la catégorie **Gestion de la c
 |**Résumé des utilisateurs ayant des applications non conformes**|Affiche des informations sur les utilisateurs qui ont installé des applications non conformes avec une stratégie que vous avez spécifiée.|  
 |**Acceptation des conditions générales**|Affiche les éléments des conditions générales et la version que chaque utilisateur a acceptés.|  
 
+## <a name="data-warehouse"></a>Entrepôt de données  
+Les 7 rapports suivants sont répertoriés sous la catégorie **Entrepôt de données**. 
+
+|Nom du rapport|Description|  
+|-----------------|-----------------|  
+|**Déploiement d’applications**|Historique : affiche les détails du déploiement d’application pour une application et une machine spécifiques.|
+|**Compatibilité des mises à jour logicielles et Endpoint Protection**|Historique : affiche les ordinateurs auxquels il manque des mises à jour logicielles.|
+|**Inventaire matériel général**|Historique : affiche tout l’inventaire matériel pour une machine spécifique.|
+|**Inventaire logiciel général**|Historique : affiche tout l’inventaire logiciel pour une machine spécifique.|
+|**Vue d’ensemble de l’intégrité de l’infrastructure**|Historique : affiche une vue d’ensemble de l’intégrité de votre infrastructure Configuration Manager.|
+|**Liste des programmes malveillants détectés**|Historique : affiche les programmes malveillants qui ont été détectés dans l’organisation.|
+|**Résumé de la distribution de logiciels**|Historique : un résumé de la distribution de logiciels pour une publication et une machine spécifiques.|
 
 
 ## <a name="device-management"></a>Gestion des appareils  
@@ -443,7 +459,6 @@ Les 10 rapports suivants sont répertoriés sous la catégorie **Système d'expl
 |**Services - Informations de services concernant un ordinateur spécifique**|Affiche des informations de synthèse sur les services d'un ordinateur spécifié.|  
 |**Détails de la maintenance de Windows 10 pour un regroupement spécifique**|Affiche des informations générales sur la maintenance de Windows 10 pour un regroupement spécifique.|
 |**Ordinateurs Windows Server**|Affiche la liste des ordinateurs qui exécutent des systèmes d'exploitation Windows Server.|  
-
 
 
 ## <a name="power-management"></a>Gestion de l'alimentation  

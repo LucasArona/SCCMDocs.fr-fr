@@ -2,7 +2,7 @@
 title: CMPivot pour les données en temps réel
 titleSuffix: Configuration Manager
 description: Découvrez comment utiliser CMPivot dans Configuration Manager pour interroger les clients en temps réel.
-ms.date: 07/30/2018
+ms.date: 08/21/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 32e2d6b9-148f-45e2-8083-98c656473f82
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0766bc765712fc493f01eb5aa807426ec44fa5d7
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 0429c62f68a111bc7f620d1c954d5c8cf944d1c1
+ms.sourcegitcommit: 7eebd112a9862bf98359c1914bb0c86affc5dbc0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385940"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590054"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>CMPivot pour les données en temps réel dans Configuration Manager
 
@@ -56,6 +56,8 @@ Les composants suivants sont obligatoires pour l’utilisation de CMPivot :
 - Vous ne pouvez pas personnaliser les propriétés des entités, les colonnes des résultats ou les actions des appareils.  
 
 - Vous pouvez uniquement exécuter une seule instance à la fois de CMPivot sur un ordinateur qui dispose de la console Configuration Manager.  
+
+- Dans la version 1806, la requête pour l’entité **Administrateurs** ne fonctionne que si le groupe est nommé « Administrators ». Il ne fonctionne pas si le nom du groupe est localisé. Par exemple, « Administrateurs » en Français.<!--SCCMDocs issue 759-->  
 
 
 
@@ -229,6 +231,20 @@ Les requêtes et les résultats ne sont que du texte. Les entités **InstallSoft
 
 Une requête expire après une heure. Par exemple, un regroupement contient 500 appareils, et 450 des clients sont en ligne. Ces appareils actifs reçoivent la requête et retournent les résultats quasiment immédiatement. Si vous laissez la fenêtre de CMPivot ouverte, quand les 50 autres clients sont en ligne, ils reçoivent également la requête et retournent les résultats. 
 
+>[!TIP]
+> Les interactions CMPivot sont enregistrées dans les fichiers journaux suivants :
+>
+> **Côté serveur :**
+> - SmsProv.log
+> - bgbServer.log
+> - StateSys.log
+>
+> **Côté client :**
+> - CCMNotificationAgent.log
+> - Scripts.log
+> - StateMessage.log
+>
+> Pour plus d’informations, consultez [Fichiers journaux](/sccm/core/plan-design/hierarchy/log-files).
 
 
 ## <a name="see-also"></a>Voir aussi

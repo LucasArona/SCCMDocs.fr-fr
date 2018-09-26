@@ -1,8 +1,8 @@
 ---
 title: Protéger les données avec la réinitialisation à distance, le verrouillage à distance ou la réinitialisation du code d'accès
 titleSuffix: Configuration Manager
-description: Protégez les données des appareils à l’aide de la réinitialisation complète, de la réinitialisation sélective, du verrouillage à distance ou de la réinitialisation du code d’accès en utilisant System Center Configuration Manager.
-ms.date: 10/27/2017
+description: Protéger les données des appareils à l’aide de la réinitialisation complète, de la réinitialisation sélective, du verrouillage à distance ou de la réinitialisation du code d’accès en utilisant Configuration Manager.
+ms.date: 08/14/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,28 +10,34 @@ ms.assetid: 770da7bd-02dd-474a-9604-93ff1ea0c1e4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 670667c21e85d7e5c174c051b6adbdca3eba55a8
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 21fed8dbba8cc5c8e96218459288b57364fe350e
+ms.sourcegitcommit: 98c3f7848dc9014de05541aefa09f36d49174784
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32352999"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42584437"
 ---
-# <a name="protect-data-with-remote-wipe-lock-or-passcode-reset-by-using-system-center-configuration-manager"></a>Protéger les données à l’aide de la réinitialisation à distance, du verrouillage ou de la réinitialisation du code d’accès en utilisant System Center Configuration Manager
+# <a name="protect-data-with-remote-wipe-lock-or-passcode-reset-by-using-configuration-manager"></a>Protéger les données à l’aide de la réinitialisation à distance, du verrouillage ou de la réinitialisation du code d’accès en utilisant Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager propose des fonctionnalités de réinitialisation sélective, de réinitialisation complète, de verrouillage à distance et de réinitialisation du code d’accès. Les appareils mobiles peuvent stocker leurs données sensibles et fournir un accès à de nombreuses ressources d'entreprise. Pour protéger les appareils, vous pouvez émettre :  
+Configuration Manager propose des fonctionnalités de réinitialisation sélective, de réinitialisation complète, de verrouillage à distance et de réinitialisation du code d’accès. Les appareils mobiles peuvent stocker leurs données sensibles et fournir un accès à de nombreuses ressources d'entreprise. Pour protéger les appareils, vous pouvez émettre :  
 
-- Une réinitialisation complète pour rétablir les paramètres d'usine de l'appareil.  
+- Une réinitialisation complète pour rétablir les paramètres d'usine de l'appareil  
 
-- Une réinitialisation sélective pour supprimer uniquement les données de l'entreprise.  
+- Une réinitialisation sélective pour supprimer uniquement les données de l'entreprise  
 
-- Un verrouillage à distance pour sécuriser un appareil censé être perdu.  
+- Un verrouillage à distance pour sécuriser un appareil censé être perdu  
 
-- Une réinitialisation du code d’accès de l’appareil.  
+- Une réinitialisation du code d’accès de l’appareil  
+
+> [!Important]  
+> Depuis le 14 août 2018, la gestion hybride des appareils mobiles est une [fonctionnalité déconseillée](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). Pour plus d’informations, consultez [Qu’est-ce que la gestion hybride des appareils mobiles ?](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->  
+
+
 
 ## <a name="full-wipe"></a>Réinitialisation complète  
+
 Vous pouvez émettre une commande de réinitialisation vers un appareil lorsque vous devez sécuriser un appareil perdu ou lorsque vous mettez un appareil hors service.  
 
 Émettez une **réinitialisation complète** sur un appareil pour restaurer l'appareil sur ses paramètres d'usine. Cette opération supprime toutes les données de l'entreprise et tous les paramètres utilisateur. Vous pouvez effectuer une réinitialisation complète sur les appareils Windows Phone, iOS, Android et Windows 10.  
@@ -50,7 +56,10 @@ Vous pouvez émettre une commande de réinitialisation vers un appareil lorsque 
 
 3. Choisissez **Actions de l’appareil à distance** dans **Groupe d’appareils**, puis **Mettre hors service/Réinitialiser**.  
 
+
+
 ## <a name="selective-wipe"></a>Réinitialisation sélective  
+
 Émettez une **réinitialisation sélective** sur un appareil pour supprimer uniquement les données de l'entreprise. Le tableau suivant décrit, en fonction de chaque plateforme, les données supprimées et l’effet de cette opération sur les données qui restent sur l’appareil après une réinitialisation sélective.  
 
 **iOS**  
@@ -136,7 +145,10 @@ Les paramètres suivants sont aussi supprimés des appareils Windows 10 Mobile 
 
 3. Choisissez **Actions de l’appareil à distance** dans **Groupe d’appareils**, puis **Mettre hors service/Réinitialiser**.  
 
+
+
 ## <a name="wiping-efs-enabled-content"></a>Réinitialisation du contenu EFS  
+
 Windows 8.1 et Windows RT 8.1 prennent en charge la réinitialisation sélective du contenu EFS (Encrypting File System). Les éléments suivants s'appliquent à une réinitialisation sélective du contenu EFS :  
 
 - Seules les applications et les données protégées par EFS utilisant le même domaine Internet que le compte Intune sont réinitialisées de manière sélective. Pour plus d'informations, consultez la page relative à la [réinitialisation sélective de Windows pour la gestion des données d'appareil](http://technet.microsoft.com/library/dn486874.aspx).  
@@ -153,6 +165,7 @@ Les données et les applications qui sont actuellement prises en charge par la r
 
 - Fichiers et dossiers chiffrés par EFS. Pour plus d'informations, consultez [Meilleures pratiques pour le chiffrement des systèmes de fichiers](http://support.microsoft.com/kb/223316).  
 
+
 ### <a name="best-practices-for-selective-wipe"></a>Meilleures pratiques pour la réinitialisation sélective  
 
 - Pour que la réinitialisation du courrier électronique réussisse, configurez les profils pour les appareils iOS et Windows Phone 8.1.  
@@ -163,7 +176,10 @@ Les données et les applications qui sont actuellement prises en charge par la r
 
 - Si un compte a été désactivé, au bout d’une année il est supprimé par Intune et une réinitialisation sélective est effectuée.  
 
+
+
 ##  <a name="passcode-reset"></a>Réinitialiser le code secret  
+
 Si un utilisateur oublie son code d'accès, vous pouvez l'aider à résoudre ce problème en supprimant le code d'accès d'un appareil ou en forçant l'application d'un nouveau code accès temporaire sur un appareil. Le tableau ci-dessous indique la méthode de réinitialisation du code d’accès sur différentes plateformes mobiles.  
 
 | Plate-forme                              | Réinitialiser le code secret                                                                               |
@@ -197,7 +213,10 @@ Si un utilisateur oublie son code d'accès, vous pouvez l'aider à résoudre ce 
 
 3. Choisissez **Actions de l’appareil à distance** dans **Groupe d’appareils**, puis choisissez **Afficher l’état du code secret**.  
 
+
+
 ## <a name="remote-lock"></a>Verrouillage à distance  
+
 Si un utilisateur perd son appareil, vous pouvez verrouiller ce dernier à distance. Le tableau ci-dessous illustre le fonctionnement du verrouillage à distance sur différentes plateformes mobiles.  
 
 |Plate-forme|Verrouillage à distance|  
@@ -228,5 +247,8 @@ Si un utilisateur perd son appareil, vous pouvez verrouiller ce dernier à dista
 
 3. Choisissez **Actions de l’appareil à distance** dans **Groupe d’appareils**, puis choisissez **Afficher l’état du verrouillage à distance**.  
 
-### <a name="see-also"></a>Voir aussi  
+
+
+## <a name="see-also"></a>Voir aussi  
+
 [Réinitialisation sélective de Windows pour la gestion des données d’appareil](http://technet.microsoft.com/library/dn486874.aspx)   
