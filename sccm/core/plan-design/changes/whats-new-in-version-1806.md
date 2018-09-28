@@ -2,7 +2,7 @@
 title: Nouveautés de la version 1806
 titleSuffix: Configuration Manager
 description: Obtenez des informations détaillées sur les changements et les nouvelles fonctionnalités introduits dans la version 1806 de l’édition Current Branch de Configuration Manager.
-ms.date: 07/31/2018
+ms.date: 08/29/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 0249dbd3-1e85-4d05-a9e5-420fbe44d850
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1c6ae28a50f3145420895b295ebe730fb7b2a9a7
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 89742711f17997487fec403d51c89a42ceff34ec
+ms.sourcegitcommit: 52ec30245ba559596d2f88a3eff70c467b4a056f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39386060"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43381038"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Nouveautés de la version 1806 de l’édition Current Branch de Configuration Manager
 
@@ -23,12 +23,12 @@ ms.locfileid: "39386060"
 
 La mise à jour 1806 pour l’édition Current Branch de Configuration Manager est disponible sous forme de mise à jour dans la console. Appliquez cette mise à jour sur les sites qui exécutent la version 1706, 1710 ou 1802. <!-- baseline only statement: When installing a new site, it's also available as a baseline version.-->
 
+Référez-vous toujours à la dernière liste de contrôle pour installer cette mise à jour. Pour plus d’informations, voir [Liste de contrôle pour installer la mise à jour 1806](/sccm/core/servers/manage/checklist-for-installing-update-1806). Après avoir mis à jour un site, consultez également la [Liste de contrôle post-mise à jour](/sccm/core/servers/manage/checklist-for-installing-update-1806#post-update-checklist).
+
 > [!Important]  
 > Cet article liste toutes les fonctionnalités importantes de cette version. Toutefois, toutes les sections ne sont pas encore liées au contenu mis à jour en fonction des informations supplémentaires sur les nouvelles fonctionnalités. Continuez à consulter régulièrement cette page sur les mises à jour. Les changements apportés sont indiqués à l’aide de l’étiquette ***[Mis à jour]***. Cette indication sera supprimée quand le contenu sera finalisé.  
 
-<!--
-Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in System Center Configuration Manager current branch, version 1806](https://support.microsoft.com/help/4101375).
--->
+En plus des nouvelles fonctionnalités, cette version inclut également des modifications supplémentaires comme des corrections de bogues. Pour plus d’informations, voir [Synthèse des modifications dans System Center Configuration Manager Current Branch, version 1806](https://support.microsoft.com/help/4459701).
 
 <!--
 The following additional updates to this release are also now available:
@@ -40,10 +40,13 @@ Les sections suivantes fournissent des détails sur les changements et les nouve
 
 
 
-<!--
-## Deprecated features and operating systems
-Learn about support changes before they are implemented in [removed and deprecated items](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated).
+## <a name="deprecated-features-and-operating-systems"></a>Fonctionnalités et systèmes d'exploitation déconseillés
 
+Découvrez plus d’informations sur les changements de prise en charge avant leur implémentation dans [Éléments supprimés et dépréciés](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated).
+
+***[Mis à jour]*** Depuis le 14 août 2018, la fonctionnalité de gestion des appareils mobiles hybride est déconseillée. Pour plus d’informations, voir [Présentation de la gestion MDM hybride](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->  
+
+<!--
 Version 1806 drops support for the following products:
 -->
 
@@ -84,14 +87,17 @@ Pour plus d’informations, consultez [Outils de Configuration Manager](/sccm/co
 
 
 ### <a name="exclude-active-directory-containers-from-discovery"></a>Exclure les conteneurs Active Directory de la détection
-<!--1358143--> Pour réduire le nombre d’objets découverts, excluez certains conteneurs spécifiques de la découverte de systèmes Active Directory. 
+<!--1358143-->
+ ***[Mis à jour]*** Pour réduire le nombre d’objets découverts, excluez certains conteneurs de la découverte de systèmes Active Directory. 
+
+Pour plus d’informations, voir [Configurer la découverte de systèmes Active Directory](/sccm/core/servers/deploy/configure/configure-discovery-methods#bkmk_config-adsd).
 
 
 
 ## <a name="content-management"></a>Gestion de contenu
 
 ### <a name="configure-a-remote-content-library-for-the-site-server"></a>Configurer une bibliothèque de contenu à distance pour le serveur de site
-<!--1357525--> Pour configurer la haute disponibilité du serveur de site, ou pour libérer de l’espace disque sur les serveurs de site d’administration centrale ou les serveurs de sites principaux, déplacez la bibliothèque de contenu vers un autre emplacement de stockage. Déplacez la bibliothèque de contenu vers un autre disque du serveur de site, vers un serveur distinct ou vers des disques à tolérance de panne d’un réseau SAN (réseau de zone de stockage). 
+<!--1357525--> Pour configurer la haute disponibilité du serveur de site, ou pour libérer de l’espace disque sur les serveurs de site d’administration centrale ou les serveurs de sites principaux, déplacez la bibliothèque de contenu vers un autre emplacement de stockage. Déplacez la bibliothèque de contenu sur un autre disque du serveur de site, sur un serveur distinct ou sur des disques à tolérance de panne dans un réseau de zone de stockage (SAN). 
 
 Pour plus d’informations, consultez les articles suivants : 
 - [Bibliothèque de contenu](/sccm/core/plan-design/hierarchy/the-content-library)
@@ -125,11 +131,14 @@ Pour plus d’informations, consultez [Prise en charge du téléchargement parti
 
 
 ### <a name="boundary-group-options-for-peer-downloads"></a>Options de groupe de limites pour les téléchargements à partir de pairs
-<!--1356193--> Les groupes de limites intègrent maintenant des paramètres supplémentaires qui offrent davantage de contrôle sur la distribution du contenu dans l’environnement. Cette version ajoute les options suivantes :  
+<!--1356193-->
+ ***[Mis à jour]*** Les groupes de limites intègrent maintenant des paramètres supplémentaires qui offrent davantage de contrôle sur la distribution du contenu dans l’environnement. Cette version ajoute les options suivantes :  
 
-- **Autoriser les téléchargements à partir de pairs dans ce groupe de limites** : ce paramètre est activé par défaut. Le point de gestion fournit aux clients une liste d’emplacements de contenu qui comprend des sources de pairs. Ce paramètre affecte également l’application des ID de groupes pour l’optimisation de la distribution.  
+- **Autoriser les téléchargements de pairs dans ce groupe de limites** : le point de gestion fournit aux clients une liste d’emplacements de contenu qui comprend des sources de pairs. Ce paramètre affecte également l’application des ID de groupes pour l’optimisation de la distribution.  
 
-- **Lors des téléchargements à partir de pairs, utiliser seulement les pairs qui se trouvent dans le même sous-réseau** : ce paramètre dépend de celui qui est illustré ci-dessus. Lorsque cette option est activée, le point de gestion n’inclut dans la liste des emplacements de contenu que les sources de pairs qui se trouvent dans le même sous-réseau que le client.  
+- **Lors des téléchargements de pairs, utiliser uniquement les pairs du même sous-réseau** : le point de gestion n’inclut dans la liste des emplacements de contenu que les sources de pairs qui se trouvent dans le même sous-réseau que le client.  
+
+Pour plus d’informations, voir [Options de groupe de limites pour les téléchargements de pairs](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions).
 
 
 
@@ -288,17 +297,10 @@ Pour plus d’informations, consultez [Déployer des applications](/sccm/apps/de
 
 
 ### <a name="package-conversion-manager"></a>Package Conversion Manager 
-<!--1357861--> Package Conversion Manager est désormais un outil intégré qui vous permet de convertir les packages Configuration Manager 2007 hérités en applications de l’édition Current Branch de Configuration Manager. Ensuite, vous pouvez utiliser les fonctionnalités des applications telles que les dépendances, les règles de spécification et l’affinité entre utilisateur et appareil.
+<!--1357861-->
+ ***[Mis à jour]*** Package Conversion Manager est désormais un outil intégré qui permet de convertir les packages hérités en applications Configuration Manager Current Branch. Ensuite, vous pouvez utiliser les fonctionnalités des applications telles que les dépendances, les règles de spécification et l’affinité entre utilisateur et appareil.
 
-Commencez par les actions suivantes à partir du nœud **Packages** de la console Configuration Manager :  
-
-   - **Analyser le package** : démarre le processus de conversion en analysant le package.  
-
-   - **Convertir le package** : cette action permet de convertir facilement certains packages en applications.  
-
-   - **Corriger et convertir** : certains packages nécessitent que les problèmes soient résolus avant leur conversion en applications.  
-
-Accédez ensuite au tableau de bord **État de la conversion de package** dans l’espace de travail **Analyse**. Ce nouveau tableau de bord montre l’analyse globale, ainsi que l’état de conversion des packages du site. Il s’agit d’une [fonctionnalité en préversion](/sccm/core/servers/manage/pre-release-features).
+Pour plus d’informations, voir [Package Conversion Manager](/sccm/apps/pcm/package-conversion-manager).
 
 
 
@@ -348,16 +350,36 @@ Ces séquences de tâches conviennent aux déploiements de système d’exploita
 ### <a name="other-improvements-to-os-deployment"></a>Autres améliorations apportées au déploiement du système d’exploitation
 
 #### <a name="mask-sensitive-data-stored-in-task-sequence-variables"></a>Masquer les données sensibles stockées dans les variables de séquence de tâches
-<!--1358330--> À l’étape [Définir la variable de séquence de tâches](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable), sélectionnez la nouvelle option **Ne pas afficher cette valeur**. Par exemple, quand vous spécifiez un mot de passe. 
+ <!--1358330-->***[Mis à jour]*** À l’étape **Définir une variable de séquence de tâches**, sélectionnez la nouvelle option **Ne pas afficher cette valeur**. 
+
+ Pour plus d’informations, voir [Définir une variable de séquence de tâches](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable). 
 
 #### <a name="mask-program-name-during-run-command-step-of-a-task-sequence"></a>Masquer le nom du programme durant l’étape Exécuter la commande d’une séquence de tâches
-<!--1358493--> Pour empêcher l’affichage ou la journalisation de données potentiellement sensibles, affectez à la variable de la séquence de tâches **OSDDoNotLogCommand** la valeur `TRUE`. Cette variable masque le nom du programme dans le fichier smsts.log au cours de l’étape [Exécuter la ligne de commande](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) d’une séquence de tâches.   
+ <!--1358493-->***[Mis à jour]*** Pour empêcher l’affichage ou la journalisation de données potentiellement sensibles, configurez la variable de séquence de tâches **OSDDoNotLogCommand**.  
+
+ Pour plus d’informations, voir [Variables de séquence de tâches](/sccm/osd/understand/task-sequence-variables#OSDDoNotLogCommand). 
 
 #### <a name="task-sequence-variable-for-dism-parameters-when-installing-drivers"></a>Variable de séquence de tâches pour les paramètres DISM durant l’installation de pilotes
-<!--516679--> Pour spécifier des paramètres de ligne de commande supplémentaires pour DISM, utilisez la nouvelle variable de séquence de tâches **OSDInstallDriversAdditionalOptions**. Activez le paramètre d’étape [Appliquer le package de pilotes](/sccm/osd/understand/task-sequence-steps#BKMK_ApplyDriverPackage) pour **Installer le package de pilotes en exécutant DISM avec l’option recurse**. 
+ <!--516679/2840016-->***[Mis à jour]*** Pour spécifier des paramètres de ligne de commande supplémentaires pour DISM, utilisez la nouvelle variable de séquence de tâches **OSDInstallDriversAdditionalOptions**. 
+
+ Pour plus d’informations, voir [Variables de séquence de tâches](/sccm/osd/understand/task-sequence-variables#OSDInstallDriversAdditionalOptions). 
 
 #### <a name="option-to-use-full-disk-encryption"></a>Option d’utilisation du chiffrement de disque complet
-<!--SCCMDocs-pr issue 2671--> Les étapes [Activer BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_EnableBitLocker) et [Préconfigurer BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_PreProvisionBitLocker) incluent désormais une option pour **Utiliser le chiffrement de disque complet**. Par défaut, ces étapes permettent de chiffrer l’espace utilisé sur le lecteur. Ce comportement par défaut est recommandé, car il est plus rapide et plus efficace. Si votre organisation doit chiffrer l’intégralité du lecteur durant l’installation, activez cette option. Le programme d’installation de Windows attend que le lecteur entier soit chiffré, ce qui prend beaucoup de temps, en particulier sur les grands lecteurs. 
+ <!--SCCMDocs-pr issue 2671-->***[Mis à jour]*** Les étapes **Activer BitLocker** et **Préconfigurer BitLocker** comportent désormais une option **Utiliser le chiffrement de disque complet**. Par défaut, ces étapes permettent de chiffrer l’espace utilisé sur le lecteur. Ce comportement par défaut est recommandé, car il est plus rapide et plus efficace. 
+
+ Pour plus d’informations, voir [Activer BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_EnableBitLocker) et [Préconfigurer BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_PreProvisionBitLocker). 
+
+#### <a name="client-provisioning-mode-isnt-enabled-with-windows-10-upgrade-compatibility-scan"></a>Le mode d’approvisionnement du client n’est pas activé avec l’analyse de compatibilité des mises à niveau de Windows 10
+ <!--SCCMDocs-pr issue 2812-->***[Mis à jour]*** Maintenant, lorsque l’option **Effectuer une analyse de compatibilité de l’installation de Windows sans lancer la mise à niveau** est activée, l’étape de séquence de tâches **Mettre à niveau le système d’exploitation** ne met pas le client Configuration Client Manager en mode d’approvisionnement.
+
+ Pour plus d’informations, consultez [Mettre à niveau le système d’exploitation](/sccm/osd/understand/task-sequence-steps#BKMK_UpgradeOS).
+
+#### <a name="revised-documentation-for-task-sequence-variables"></a>Documentation révisée pour les variables de séquence de tâches
+ ***[Mis à jour]*** Deux nouveaux articles sont désormais disponibles pour comprendre les variables de séquence de tâches :  
+
+ - [Guide pratique pour utiliser des variables de séquence de tâches](/sccm/osd/understand/using-task-sequence-variables) : nouvel article qui décrit les différents types de variables, les méthodes permettant de les définir et les moyens d’y accéder.  
+
+ - [Variables de séquence de tâches](/sccm/osd/understand/task-sequence-variables) : référence portant sur toutes les variables de séquence de tâches disponibles. Cet article combine les articles précédents, qui distinguaient les variables intégrées des variables d’action. 
 
 
 
@@ -402,7 +424,7 @@ Pour plus d’informations, consultez [Guide pratique pour utiliser les fenêtre
 
 ## <a name="software-updates"></a>Mises à jour logicielles
 
-### <a name="third-party-software-updates"></a>Mises à jour de logiciels tiers
+### <a name="third-party-software-updates"></a>Mises à jour de logiciels de tiers
 <!--1357605, 1352101, 1358714--> Les mises à jour de logiciels tiers vous permettent de vous abonner aux catalogues partenaires de la console Configuration Manager et de publier les mises à jour vers WSUS. Vous pouvez ensuite déployer ces mises à jour à l’aide du processus de gestion des mises à jour logicielles existant. 
 
 Pour plus d’informations, consultez [Activer les mises à jour tierces](/sccm/sum/deploy-use/third-party-software-updates).
@@ -509,7 +531,7 @@ Pour plus d’informations, consultez [Améliorations apportées à la console d
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Quand vous êtes prêt à installer cette version, consultez [Installation des mises à jour pour Configuration Manager](/sccm/core/servers/manage/updates).
+Quand vous êtes prêt à installer cette version, consultez les pages [Installer des mises à jour pour Configuration Manager](/sccm/core/servers/manage/updates) et [Liste de contrôle pour installer la mise à jour 1806](/sccm/core/servers/manage/checklist-for-installing-update-1806).
 
 > [!TIP]  
 > Pour installer un nouveau site, utilisez une version de base de référence de Configuration Manager.  
@@ -519,3 +541,5 @@ Quand vous êtes prêt à installer cette version, consultez [Installation des m
 >   - [Versions de base et de mise à jour](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
 
 Pour plus d’informations sur les problèmes importants et connus, consultez les [Notes de publication](/sccm/core/servers/deploy/install/release-notes).
+
+Après avoir mis à jour un site, consultez également la [Liste de contrôle post-mise à jour](/sccm/core/servers/manage/checklist-for-installing-update-1806#post-update-checklist).
