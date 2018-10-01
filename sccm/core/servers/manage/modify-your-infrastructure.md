@@ -171,7 +171,7 @@ Par exemple, considérez un scénario dans lequel vous installez la console Conf
 
 
 > [!IMPORTANT]  
->  Avant de déplacer une base de données possédant un ou plusieurs réplicas de base de données de points de gestion, vous devez supprimer les réplicas de base de données. Une fois la base de données déplacée, vous pouvez reconfigurer les réplicas de base de données. Pour plus d'informations, consultez [Database replicas for management points for System Center Configuration Manager](../../../core/servers/deploy/configure/database-replicas-for-management-points.md).  
+>  Avant de déplacer une base de données possédant un ou plusieurs réplicas de base de données de points de gestion, vous devez supprimer les réplicas de base de données. Une fois la base de données déplacée, vous pouvez reconfigurer les réplicas de base de données. Pour plus d’informations, consultez [Réplicas de base de données pour les points de gestion de System Center Configuration Manager](../../../core/servers/deploy/configure/database-replicas-for-management-points.md).  
 
 ##  <a name="bkmk_SPN"></a> Gérer le SPN pour le serveur de base de données de site  
 Vous pouvez choisir le compte exécutant les services SQL pour la base de données du site :  
