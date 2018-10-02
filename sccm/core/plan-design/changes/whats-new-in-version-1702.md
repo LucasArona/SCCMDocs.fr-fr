@@ -3,18 +3,19 @@ title: Nouvelle version 1702
 titleSuffix: Configuration Manager
 description: Obtenez des détails sur les modifications et les nouvelles fonctionnalités introduites dans la version 1702 de System Center Configuration Manager.
 ms.date: 05/02/2017
+ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 409e26e1-7716-4f1d-a0ee-34feabf20792
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 99e5cf970a2b4e1afa1a52d49be3afcc8c9d13fc
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 6abf61488a96ec3299b606b10901b0787b82edc9
+ms.sourcegitcommit: fe279229a90fdc8cddbb13c7ffdbbb22af0e25ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32343049"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47229345"
 ---
 # <a name="what39s-new-in-version-1702-of-system-center-configuration-manager"></a>Nouveautés de la version 1702 de System Center Configuration Manager
 

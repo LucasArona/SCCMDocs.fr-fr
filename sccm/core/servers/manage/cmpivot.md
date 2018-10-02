@@ -10,12 +10,12 @@ ms.assetid: 32e2d6b9-148f-45e2-8083-98c656473f82
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0429c62f68a111bc7f620d1c954d5c8cf944d1c1
-ms.sourcegitcommit: 7eebd112a9862bf98359c1914bb0c86affc5dbc0
+ms.openlocfilehash: 2e0f74790437b34d1c5cd5dc00767ec782a51b45
+ms.sourcegitcommit: fe279229a90fdc8cddbb13c7ffdbbb22af0e25ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590054"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47229294"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>CMPivot pour les données en temps réel dans Configuration Manager
 
@@ -78,7 +78,7 @@ Les composants suivants sont obligatoires pour l’utilisation de CMPivot :
 
      - Cliquez sur l’une des **Entités** pour l’ajouter à la chaîne de requête.  
 
-     - Les liens concernant les **opérateurs de table**, les **fonctions d’agrégation** et les **fonctions scalaires** ouvrent une documentation de référence de langage dans le navigateur web. CMPivot utilise le même langage de requête que [Azure Log Analytics](https://docs.loganalytics.io/docs/Language-Reference/Change-log).  
+     - Les liens concernant les **opérateurs de table**, les **fonctions d’agrégation** et les **fonctions scalaires** ouvrent une documentation de référence de langage dans le navigateur web. CMPivot utilise le même langage de requête que [Azure Log Analytics](https://docs.microsoft.com/azure/kusto/query/).  
 
 3. Gardez la fenêtre CMPivot ouverte pour voir les résultats des clients. Quand vous fermez la fenêtre CMPivot, la session s’achève.  
 
@@ -113,7 +113,7 @@ La fenêtre CMPivot contient les éléments suivants :
 
 5. Le volet de requête est l’emplacement où vous créez ou tapez une requête à exécuter sur les clients du regroupement.  
 
-    - CMPivot utilise un sous-ensemble du même langage de requête qu’[Azure Log Analytics](https://docs.loganalytics.io/docs/Language-Reference/Change-log).  
+    - CMPivot utilise un sous-ensemble du même langage de requête qu’[Azure Log Analytics](https://docs.microsoft.com/azure/kusto/query/).  
 
     - Coupez, copiez ou collez du contenu dans le volet de requête.  
 

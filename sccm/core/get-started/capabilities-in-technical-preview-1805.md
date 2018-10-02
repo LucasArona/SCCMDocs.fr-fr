@@ -10,12 +10,12 @@ ms.assetid: 7996b3eb-5259-483b-af40-adae2943d123
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 21833d124ee998f0b943d2620370a2fcff264e28
-ms.sourcegitcommit: 7eebd112a9862bf98359c1914bb0c86affc5dbc0
+ms.openlocfilehash: ebd51b397e37c69e8f6e8d1e154fc369347bd63a
+ms.sourcegitcommit: fe279229a90fdc8cddbb13c7ffdbbb22af0e25ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591643"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47229362"
 ---
 # <a name="capabilities-in-technical-preview-1805-for-system-center-configuration-manager"></a>Fonctionnalités de la version Technical Preview 1805 de System Center Configuration Manager
 
@@ -255,7 +255,7 @@ Essayez d’effectuer les tâches. Envoyez-nous ensuite des [commentaires](capab
 2. L’interface fournit davantage d’informations sur l’utilisation de l’outil. 
      - Vous pouvez entrer manuellement des chaînes de requête en haut de la page, ou cliquer sur les liens de la documentation intégrée.
      - Cliquez sur l’une des **Entités** pour l’ajouter à la chaîne de requête. 
-     - Les liens concernant les **opérateurs de table**, les **fonctions d’agrégation** et les **fonctions scalaires** ouvrent une documentation de référence de langage dans le navigateur web. CMPivot utilise le même langage de requête que [Azure Log Analytics](https://docs.loganalytics.io/docs/Language-Reference/Change-log).
+     - Les liens concernant les **opérateurs de table**, les **fonctions d’agrégation** et les **fonctions scalaires** ouvrent une documentation de référence de langage dans le navigateur web. CMPivot utilise le même langage de requête que [Azure Log Analytics](https://docs.microsoft.com/azure/kusto/query/).
 
 
 
