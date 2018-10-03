@@ -120,7 +120,7 @@ Accordez un accès administratif à Configuration Manager uniquement aux utilisa
 
 Auditez régulièrement les affectations d'utilisateur administratifs et leur niveau d'autorisation pour vérifier les modifications requises.  
 
-Pour plus d'informations sur la configuration de l'administration basée sur des rôles, voir la section [Configure role-based administration for System Center Configuration Manager](../../../core/servers/deploy/configure/configure-role-based-administration.md).  
+Pour plus d'informations sur la configuration de l'administration basée sur des rôles, voir la section [Configurer l’administration basée sur des rôles pour System Center Configuration Manager](../../../core/servers/deploy/configure/configure-role-based-administration.md).  
 
 **Sécurisez les sauvegardes Configuration Manager et le canal de communication lors de la sauvegarde et de la restauration.**  
 
@@ -301,7 +301,7 @@ Identifiez et suivez les meilleures pratiques relatives à votre version du serv
 ##  <a name="BKMK_Security_FSP"></a> Bonnes pratiques de sécurité pour le point d’état de secours  
  Utilisez les bonnes pratiques de sécurité suivantes si vous installez un point d’état de secours dans Configuration Manager.  
 
- Pour plus d'informations sur les considérations relatives à la sécurité, voir [Determine Whether You Require a Fallback Status Point](../../../core/clients/deploy/plan/determine-the-site-system-roles-for-clients.md#determine-if-you-need-a-fallback-status-point).  
+ Pour plus d'informations sur les considérations relatives à la sécurité, voir [Déterminer si vous avez besoin d'un point d'état de secours](../../../core/clients/deploy/plan/determine-the-site-system-roles-for-clients.md#determine-if-you-need-a-fallback-status-point).  
 
 
 **N’exécutez pas d’autres rôles de système de site sur le système de site et n’installez pas le point d’état de secours sur un contrôleur de domaine.**  
