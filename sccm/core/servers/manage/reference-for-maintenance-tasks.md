@@ -147,7 +147,7 @@ Cette tâche s’applique aux appareils qui sont inscrits à l’aide de Microso
 -   **Site principal**  : activé    
 -   Site secondaire : non disponible  
 
-**Supprimer les anciennes données de synthèse de la réplication** : cette tâche permet de supprimer de la base de données du site d’anciennes données de synthèse de la réplication quand elles n’ont pas été mises à jour pendant une période spécifiée. Pour plus d'informations, voir la section [How to monitor database replication links and replication status](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md#BKMK_MonitorRepLinksAndStatuss) dans la rubrique [Monitor hierarchy and replication infrastructure in System Center Configuration Manager](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md).  
+**Supprimer les anciennes données de synthèse de la réplication** : cette tâche permet de supprimer de la base de données du site d’anciennes données de synthèse de la réplication quand elles n’ont pas été mises à jour pendant une période spécifiée. Pour plus d'informations, voir la section [Comment surveiller des liens de réplication de la base de données et l’état de la réplication](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md#BKMK_MonitorRepLinksAndStatuss) dans la rubrique [Surveiller l’infrastructure de la hiérarchie et de la réplication dans System Center Configuration Managerr](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md).  
 
 -   **Site d’administration centrale** : activé    
 -   **Site principal**  : activé    
@@ -159,7 +159,7 @@ Cette tâche s’applique aux appareils qui sont inscrits à l’aide de Microso
 -   **Site principal**  : activé    
 -   Site secondaire : non disponible  
 
-**Supprimer les anciennes données de suivi de réplication** : cette tâche permet de supprimer de la base de données d’anciennes données sur la réplication de base de données entre sites Configuration Manager. Lorsque vous modifiez la configuration de cette tâche de maintenance, la configuration s'applique à chaque site concerné de la hiérarchie. Pour plus d'informations, voir la section [How to monitor database replication links and replication status](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md#BKMK_MonitorRepLinksAndStatuss) dans la rubrique [Monitor hierarchy and replication infrastructure in System Center Configuration Manager](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md).  
+**Supprimer les anciennes données de suivi de réplication** : cette tâche permet de supprimer de la base de données d’anciennes données sur la réplication de base de données entre sites Configuration Manager. Lorsque vous modifiez la configuration de cette tâche de maintenance, la configuration s'applique à chaque site concerné de la hiérarchie. Pour plus d'informations, voir la section [Comment surveiller des liens de réplication de la base de données et l’état de la réplication](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md#BKMK_MonitorRepLinksAndStatuss) dans la rubrique [Surveiller l’infrastructure de la hiérarchie et de la réplication dans System Center Configuration Managerr](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md).  
 
 -   **Site d’administration centrale** : activé    
 -   **Site principal**  : activé    
