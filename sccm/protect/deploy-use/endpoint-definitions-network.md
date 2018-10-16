@@ -10,12 +10,12 @@ ms.assetid: ddef4d2a-f481-4020-9ddd-9cca5f9795cb
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 96fe34d713a1d9d3afb78dc59124865024e9eb77
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 47c6a046dac7cd4b5d0d16f0342d7e95ba3cc2a0
+ms.sourcegitcommit: 4f05517f7b284696a492a1b184cc5f25c5cda5e6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32347040"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48891144"
 ---
 # <a name="enable-endpoint-protection-malware-definitions-to-download-from-a-network-share-for-configuration-manager"></a>Activer le téléchargement des définitions de programmes malveillants pour Endpoint Protection à partir d’un partage réseau dans Configuration Manager
 
@@ -26,7 +26,7 @@ ms.locfileid: "32347040"
 > [!NOTE]
 >  Les clients doivent avoir un accès en lecture au dossier partagé pour pouvoir télécharger des mises à jour de définition.
 
- Pour plus d’informations sur le téléchargement des mises à jour des définitions et des moteurs à stocker sur le partage de fichiers, consultez [Install the latest Microsoft antimalware and antispyware software](http://www.microsoft.com/security/portal/Definitions/HowToForeFront.aspx) (Installer les derniers logiciels anti-programme malveillant et anti-espion de Microsoft).
+ Pour plus d’informations sur le téléchargement des mises à jour des définitions et des moteurs à stocker sur le partage de fichiers, consultez [Install the latest Microsoft antimalware and antispyware software](https://www.microsoft.com/wdsi/definitions) (Installer les derniers logiciels anti-programme malveillant et anti-espion de Microsoft).
 
 ## <a name="to-configure-definition-downloads-from-a-file-share"></a>Pour configurer les téléchargements de définitions à partir d’un partage de fichiers
 

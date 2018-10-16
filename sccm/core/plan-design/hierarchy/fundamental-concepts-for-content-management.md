@@ -10,12 +10,12 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a8f4d93c7bfa73b04ed2c760db17b27e8f1f6de2
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 5c3af900bae26262ba402ea258b8859ba07b999b
+ms.sourcegitcommit: 4f05517f7b284696a492a1b184cc5f25c5cda5e6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385252"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48891212"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Principes de base de la gestion de contenu dans Configuration Manager
 
@@ -146,11 +146,9 @@ Quand un client a besoin de contenu, il envoie au point de gestion une demande q
 1.  Le point de distribution sur le même ordinateur que le client
 2.  Une source de pair dans le même sous-réseau du réseau
 3.  Un point de distribution dans le même sous-réseau du réseau
-4.  Une source de pair dans le même site Active Directory
-5.  Un point de distribution dans le même site Active Directory
-6.  Une source de pair dans le même groupe de limites
-7.  Un point de distribution dans le groupe de limites actif
-8.  Un point de distribution dans un groupe de limites voisin configuré pour le secours
+4.  Une source de pair dans le même groupe de limites
+5.  Un point de distribution dans le groupe de limites actif
+6.  Un point de distribution dans un groupe de limites voisin configuré pour le secours
 9.  Un point de distribution dans le groupe de limites du site par défaut 
 10. Le service cloud Windows Update
 11. Un point de distribution accessible sur Internet
