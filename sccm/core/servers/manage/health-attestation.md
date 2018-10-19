@@ -10,12 +10,12 @@ ms.assetid: 91f9de33-b277-4500-acd6-e7d90a2947c9
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: c41a04d82edb46a234b6e5bd10d796e6544cbfad
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 27e8e3ef78947eb6623a56e670e176aaa2800f68
+ms.sourcegitcommit: 78d2dce465e3500653b252583a6903a006784c26
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340180"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448903"
 ---
 # <a name="health-attestation-for-system-center-configuration-manager"></a>Attestation d’intégrité pour System Center Configuration Manager
 
@@ -56,8 +56,9 @@ Utilisez cette procédure pour activer la surveillance de l’attestation d’in
 2. Cliquez avec le bouton droit sur le site principal ou secondaire avec le point de gestion qui prend en charge des clients d’attestation d’intégrité d’appareils en local, puis sélectionnez **Configurer des composants de site** > **Point de gestion**. La page **Propriétés du composant du point de gestion** s’ouvre.
 3. Dans l’onglet **Options avancées**, sélectionnez **Ajouter** et spécifiez une URL de service d’attestation d’intégrité des appareils en local. Vous pouvez ajouter plusieurs URL. Si plusieurs URL locales sont spécifiées, les clients reçoivent le jeu complet et choisissent de façon aléatoire celle à utiliser.
 4.  Dans la console Configuration Manager, choisissez **Administration** > **Vue d’ensemble** > **Paramètres client**.  Sélectionnez l’onglet des paramètres de l’ **Agent ordinateur** .  
-5.  Dans la boîte de dialogue **Paramètres par défaut**, sélectionnez **Agent ordinateur**, faites défiler jusqu’à **Utiliser le service d’attestation d’intégrité des appareils en local**, puis sélectionnez **Oui**.
-6. Ciblez les regroupements d’appareils qui doivent signaler l’intégrité d’appareil avec les paramètres de l’agent client pour activer les rapports d’attestation d’intégrité des appareils.
+5.  Faites défiler jusqu’à **Activer la communication avec le service d’attestation d’intégrité**, puis sélectionnez la valeur **Oui**.
+7.  Cliquez sur l’option **Utiliser le service d’attestation d’intégrité local**, puis sélectionnez la valeur **Oui**.
+8. Ciblez les regroupements d’appareils qui doivent signaler l’intégrité d’appareil avec les paramètres de l’agent client pour activer les rapports d’attestation d’intégrité des appareils.
 
 Vous pouvez également **modifier** ou **supprimer** les URL du service d’attestation d’intégrité des appareils.
 

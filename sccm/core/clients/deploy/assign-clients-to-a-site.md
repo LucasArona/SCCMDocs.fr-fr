@@ -10,12 +10,12 @@ ms.assetid: ba9b623f-6e86-4006-93f2-83d563de0cd0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 15467e83be28e884acb14309bdbb57768d7f19f0
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 2eb75af410ae1511ae105aa7a3a56659c8ef0442
+ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344464"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48862411"
 ---
 # <a name="how-to-assign-clients-to-a-site-in-system-center-configuration-manager"></a>Comment affecter des clients à un site dans System Center Configuration Manager
 
@@ -23,7 +23,7 @@ ms.locfileid: "32344464"
 
 Une fois un client System Center Configuration Manager installé, il doit rejoindre un site principal Configuration Manager avant de pouvoir être géré. Le site qu’un client rejoint est appelé le *site attribué*. Les clients ne peuvent pas être attribués à un site d'administration centrale ou à un site secondaire.  
 
-Le processus d’attribution se produit une fois le client installé et détermine le site qui gère l’ordinateur client. Vous avez le choix entre une attribution directe à un site et une attribution automatique de site. Dans ce cas, le client trouve automatiquement un site approprié, en fonction de son emplacement réseau actuel, ou un site de secours qui a été configuré pour la hiérarchie.
+Le processus d’attribution se produit une fois le client installé et détermine le site qui gère l’ordinateur client. Vous avez le choix entre une attribution directe à un site et une attribution automatique de site. Dans ce cas, le client trouve automatiquement un site approprié, en fonction de son emplacement réseau actuel, ou un site de repli qui a été configuré pour la hiérarchie.
 
 Quand vous installez le client d’appareil mobile lors de l’inscription de Configuration Manager, l’appareil est toujours attribué automatiquement à un site. Quand vous installez le client sur un ordinateur, vous pouvez choisir d’attribuer ou non le client à un site. Toutefois, lorsque le client est installé mais pas attribué, client n'est pas géré tant que l'attribution de site n'a pas été menée à bien.  
  
@@ -53,7 +53,7 @@ En cas d’échec de l’attribution du client, le logiciel client reste install
 >  Si vous attribuez manuellement un ordinateur client à un code de site Configuration Manager qui n'existe pas, l'attribution de site échoue.   
 
 ##  <a name="BKMK_AutomaticAssignment"></a> Utilisation de l'attribution automatique de site pour les ordinateurs  
- L'attribution automatique de site peut se produire lors du déploiement du client ou lorsque vous cliquez sur **Rechercher un site** sous l'onglet **Avancé** des **Propriétés du Configuration Manager** dans le panneau de configuration. Le client Configuration Manager compare son propre emplacement réseau avec les limites qui sont configurées dans la hiérarchie Configuration Manager. Lorsque l'emplacement réseau du client se situe dans un groupe de limites qui est activé pour l'attribution de site ou lorsque la hiérarchie est configurée pour un site de secours, le client est automatiquement affecté à ce site sans que vous deviez spécifier un code de site.  
+ L'attribution automatique de site peut se produire lors du déploiement du client ou lorsque vous cliquez sur **Rechercher un site** sous l'onglet **Avancé** des **Propriétés du Configuration Manager** dans le panneau de configuration. Le client Configuration Manager compare son propre emplacement réseau avec les limites qui sont configurées dans la hiérarchie Configuration Manager. Lorsque l'emplacement réseau du client se situe dans un groupe de limites qui est activé pour l'attribution de site ou lorsque la hiérarchie est configurée pour un site de repli, le client est automatiquement affecté à ce site sans que vous deviez spécifier un code de site.  
 
  Vous pouvez configurer des limites à l'aide de l'un ou de plusieurs des éléments suivants :  
 
@@ -66,15 +66,15 @@ En cas d’échec de l’attribution du client, le logiciel client reste install
 -   Plage d'adresses IP  
 
 > [!NOTE]  
->  Si un client Configuration Manager a plusieurs cartes réseau et donc plusieurs adresses IP, l’adresse IP utilisée pour évaluer l’attribution de site client est attribuée de façon aléatoire.  
+>  Si un client Configuration Manager a plusieurs cartes réseau et donc plusieurs adresses IP, l’adresse IP utilisée pour évaluer l’attribution du site client est attribuée de façon aléatoire.  
 
- Pour plus d’informations sur la configuration de groupes de limites pour l’attribution de site et sur la configuration d’un site de secours pour l’attribution automatique de site, consultez [Définir des limites de site et les groupes de limites pour System Center Configuration Manager](../../../core/servers/deploy/configure/define-site-boundaries-and-boundary-groups.md).  
+ Pour plus d’informations sur la configuration de groupes de limites pour l’attribution de site et sur la configuration d’un site de repli pour l’attribution automatique de site, consultez [Définir des limites de site et les groupes de limites pour System Center Configuration Manager](../../../core/servers/deploy/configure/define-site-boundaries-and-boundary-groups.md).  
 
  Les clients Configuration Manager qui utilisent l'attribution automatique de site tentent de trouver les groupes de limites qui sont publiés dans les services de domaine Active Directory. En cas d’échec (par exemple, le schéma Active Directory n’est pas étendu pour Configuration Manager ou les clients sont des ordinateurs de groupes de travail), les clients peuvent obtenir les informations sur les groupes de limites à partir d’un point de gestion.  
 
  Vous pouvez spécifier un point de gestion pour les ordinateurs clients lorsqu'ils sont installés, ou les clients peuvent localiser un point de gestion à l'aide de la publication DNS ou WINS.  
 
- Si le client ne trouve pas de site associé à un groupe de limites qui contient son emplacement réseau et que la hiérarchie ne dispose pas d'un site de secours, le client essaie de nouveau toutes les 10 minutes jusqu'à ce qu'il puisse être attribué à un site.  
+ Si le client ne trouve pas de site associé à un groupe de limites qui contient son emplacement réseau et que la hiérarchie ne dispose pas d'un site de repli, le client essaie de nouveau toutes les 10 minutes jusqu'à ce qu'il puisse être attribué à un site.  
 
  Les ordinateurs clients Configuration Manager ne peuvent pas être attribués automatiquement à un site si l’un des scénarios suivants s’applique et doivent être attribués manuellement :  
 
@@ -82,7 +82,7 @@ En cas d’échec de l’attribution du client, le logiciel client reste install
 
 -   Ils se trouvent sur Internet ou sont configurés comme des clients Internet uniquement.  
 
--   Leur emplacement réseau ne tombe pas dans l'un des groupes de limites configurés dans la hiérarchie de Configuration Manager et il n'existe aucun site de secours pour la hiérarchie.  
+-   Leur emplacement réseau ne tombe pas dans l'un des groupes de limites configurés dans la hiérarchie de Configuration Manager et il n'existe aucun site de repli pour la hiérarchie.  
 
 ##  <a name="completing-site-assignment-by-checking-site-compatibility"></a>Fin de l'attribution de site par la vérification de la compatibilité du site  
  Dès lors qu'un client a trouvé le site auquel il est attribué, la version et le système d'exploitation du client sont vérifiés pour s'assurer qu'un site Configuration Manager peut le gérer. Par exemple, Configuration Manager ne peut pas gérer les clients Configuration Manager 2007, System Center 2012 Configuration Manager ou les clients qui exécutent Windows 2000.  

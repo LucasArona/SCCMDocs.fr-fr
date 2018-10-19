@@ -10,12 +10,12 @@ ms.assetid: 101d7d4d-92db-419d-b2ae-3c1c1dea68e9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 585aa6ea6874ac6d6a5264b0f75d8dbcf39ddd0a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 46ede93e8366b4ae387f7e04b83dcb33ce854c5e
+ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334281"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48862513"
 ---
 # <a name="about-client-installation-properties-published-to-active-directory-domain-services"></a>À propos de la publication des propriétés d’installation du client sur les services de domaine Active Directory
 
@@ -43,7 +43,7 @@ Voici une liste de propriétés d’installation du client. Pour plus d’inform
 
 -   Ports de communication client pour HTTP et HTTPS.  
 
--   Point d'état de secours. Si le site a plusieurs points d’état de secours, seul le premier qui a été installé est publié dans les services de domaine Active Directory.  
+-   Point d'état de repli. Si le site a plusieurs points d’état de repli, seul le premier qui a été installé est publié dans les services de domaine Active Directory.  
 
 -   Un paramètre pour indiquer que le client doit communiquer à l'aide de HTTPS uniquement.  
 
@@ -73,12 +73,13 @@ L’installation du client (CCMSetup) utilise les propriétés publiées dans le
 ## <a name="client-push-installation"></a>Installation poussée du client  
  L'installation poussée du client n'utilise pas les services de domaine Active Directory pour accéder aux propriétés d'installation.  
 
- Au lieu de cela, vous pouvez spécifier les propriétés d’installation du client dans l’onglet **Client** de la boîte de dialogue **Propriétés de l’installation push du client**. Ces options et paramètres de site liés aux clients sont stockés dans un fichier que le client lit pendant l'installation du client.  
+ Au lieu de cela, vous pouvez spécifier les propriétés d’installation du client sous l’onglet **Propriétés de l’installation** de la boîte de dialogue **Propriétés de l’installation push du client**. Ces options et paramètres de site liés aux clients sont stockés dans un fichier que le client lit pendant l'installation du client.  
 
 > [!NOTE]  
->  Vous n'avez pas à spécifier de propriétés CCMSetup pour l'installation poussée du client, ni de point d'état de secours ou la clé racine de confiance dans l'onglet **Client** . Ces paramètres sont automatiquement fournis aux clients, lorsqu'ils sont installés par l'installation poussée du client.  
+>  Vous n’avez pas à spécifier de propriétés CCMSetup pour l’installation push du client, ni le point d’état de repli ou la clé racine de confiance sous l’onglet **Propriétés de l’installation**. Ces paramètres sont automatiquement fournis aux clients, lorsqu'ils sont installés par l'installation poussée du client.
+En plus des propriétés de Client.msi, CCMSetup prend en charge les paramètres suivants : /forcereboot, /skipprereq, /logon, /BITSPriority, /downloadtimeout, /forceinstall
 
- Toutes les propriétés que vous spécifiez dans l’onglet **Client** sont publiées dans les services de domaine Active Directory si le site y est publié. Ces paramètres sont lus par les installations du client où CCMSetup est exécuté sans propriété d'installation.  
+ Toutes les propriétés que vous spécifiez sous l’onglet **Propriétés de l’installation** sont publiées dans les services de domaine Active Directory si le site y est publié. Ces paramètres sont lus par les installations du client où CCMSetup est exécuté sans propriété d'installation.  
 
 ## <a name="software-update-point-based-installation"></a>Installation basée sur un point de mise à jour logicielle  
  La méthode d'installation basée sur un point de mise à jour logicielle ne prend pas en charge l'ajout de propriétés d'installation supplémentaires sur la ligne de commande CCMSetup.  

@@ -10,12 +10,12 @@ ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 939ab4b97a1a62eeae834873dd39e2f0d435527d
-ms.sourcegitcommit: 7eebd112a9862bf98359c1914bb0c86affc5dbc0
+ms.openlocfilehash: b31e0c84d0e3920024870361239e22bb90005ccb
+ms.sourcegitcommit: e7732dd67f19218cec576f70fe4ab44e2626b8e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590095"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48045213"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Notes de publication de Configuration Manager
 
@@ -82,9 +82,10 @@ Déplacez le rôle de point de connexion de service vers un autre serveur.
 ## <a name="client-deployment-and-upgrade"></a>Mise à niveau et déploiement du client
 
 ### <a name="azure-ad-enabled-clients-cant-communicate-with-management-point"></a>Les clients compatibles Azure AD ne peuvent pas communiquer avec le point de gestion
-<!--501089-->
-*S’applique à : Configuration Manager version 1706*
-<!--also fixed in 1710 HFRU--> Dans le scénario pour [installer et attribuer des clients Configuration Manager exécutant Windows 10 avec Azure AD pour l’authentification](/sccm/core/clients/deploy/deploy-clients-cmg-azure), les communications du client échouent quand le point de gestion HTTPS utilise d’autres informations d’identification de base de données. 
+<!--501089-->  
+*S’applique à : Configuration Manager, version 1706*
+<!--also fixed in 1710 HFRU-->  
+Dans le scénario pour [installer et attribuer des clients Configuration Manager exécutant Windows 10 avec Azure AD pour l’authentification](/sccm/core/clients/deploy/deploy-clients-cmg-azure), les communications du client échouent quand le point de gestion HTTPS utilise d’autres informations d’identification de base de données. 
 
 #### <a name="workaround"></a>Solution de contournement
 Pour atténuer ce problème, effectuez l’une des actions suivantes :

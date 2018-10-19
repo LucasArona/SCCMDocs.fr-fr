@@ -2,7 +2,7 @@
 title: Nouveautés de la version 1806
 titleSuffix: Configuration Manager
 description: Obtenez des informations détaillées sur les changements et les nouvelles fonctionnalités introduits dans la version 1806 de l’édition Current Branch de Configuration Manager.
-ms.date: 08/29/2018
+ms.date: 09/19/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 0249dbd3-1e85-4d05-a9e5-420fbe44d850
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 89742711f17997487fec403d51c89a42ceff34ec
-ms.sourcegitcommit: 52ec30245ba559596d2f88a3eff70c467b4a056f
+ms.openlocfilehash: 3b5cb217b9351f5d2491070b447d0a96efe0aa29
+ms.sourcegitcommit: 4e4b71227309bee7e9f1285971f8235c67a9c502
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43381038"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46533777"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Nouveautés de la version 1806 de l’édition Current Branch de Configuration Manager
 
@@ -29,6 +29,8 @@ Référez-vous toujours à la dernière liste de contrôle pour installer cette 
 > Cet article liste toutes les fonctionnalités importantes de cette version. Toutefois, toutes les sections ne sont pas encore liées au contenu mis à jour en fonction des informations supplémentaires sur les nouvelles fonctionnalités. Continuez à consulter régulièrement cette page sur les mises à jour. Les changements apportés sont indiqués à l’aide de l’étiquette ***[Mis à jour]***. Cette indication sera supprimée quand le contenu sera finalisé.  
 
 En plus des nouvelles fonctionnalités, cette version inclut également des modifications supplémentaires comme des corrections de bogues. Pour plus d’informations, voir [Synthèse des modifications dans System Center Configuration Manager Current Branch, version 1806](https://support.microsoft.com/help/4459701).
+
+Pour plus d’informations sur les modifications apportées aux applets de commande Windows PowerShell pour Configuration Manager, consultez [Notes de publication pour PowerShell version 1806](https://docs.microsoft.com/powershell/sccm/1806_release_notes?view=sccm-ps).
 
 <!--
 The following additional updates to this release are also now available:
@@ -141,6 +143,13 @@ Pour plus d’informations, consultez [Prise en charge du téléchargement parti
 Pour plus d’informations, voir [Options de groupe de limites pour les téléchargements de pairs](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions).
 
 
+### <a name="improvement-to-peer-cache-source-location-status"></a>Amélioration de l’état d’emplacement des sources de cache de pair
+<!--SCCMDocs issue 850-->
+ ***[Mise à jour]*** Configuration Manager détermine plus efficacement si une source de cache de pair s’est déplacée vers un autre emplacement. Ce comportement garantit que le point de gestion la propose comme une source de contenu aux clients dans le nouvel emplacement, et non dans l’ancien. Si vous utilisez la fonctionnalité de cache de pair avec des sources de cache de pair itinérantes, après avoir mis à jour le site vers la version 1806, vous devez également mettre à jour toutes les sources de cache de pair vers la dernière version du client. Le point de gestion n’inclut pas ces sources de cache de pair dans la liste des emplacements de contenu tant qu’elles n’ont pas été mises à jour vers la version 1806 (minimum).
+
+Pour plus d’informations, consultez [Exigences relatives au cache de pair](/sccm/core/plan-design/hierarchy/client-peer-cache#requirements).
+
+
 
 <!-- ## Migration  -->
 
@@ -177,9 +186,14 @@ Pour plus d’informations, consultez [CMTrace](/sccm/core/support/cmtrace).
 
 
 ### <a name="cloud-management-dashboard"></a>Tableau de bord de gestion cloud
-<!--1358461--> Le nouveau tableau de bord de gestion cloud fournit un affichage centralisé de l’utilisation de la Passerelle de gestion cloud. Lorsque le site est intégré à Azure AD, il affiche également les données sur les utilisateurs cloud et les appareils. Dans la console Configuration Manager, accédez à l’espace de travail **Surveillance**. Sélectionnez le nœud **Gestion cloud** et affichez les vignettes du tableau de bord.  
+<!--1358461-->
+ ***[Mise à jour]*** Le nouveau tableau de bord de gestion cloud fournit un affichage centralisé pour l’utilisation de la passerelle de gestion cloud. Lorsque le site est intégré à Azure AD, il affiche également les données sur les utilisateurs cloud et les appareils.   
 
-Cette fonctionnalité inclut également **l’analyseur de connexion de la passerelle de gestion cloud** pour la vérification en temps réel dans le cadre de la résolution des problèmes. L’utilitaire de la console vérifie l’état actuel du service, ainsi que le canal de communication qui passe par le point de connexion de la passerelle de gestion cloud vers les points de gestion qui autorisent le trafic de la passerelle. Dans la console de Configuration Manager, accédez à l’espace de travail **Administration**. Développez **Services cloud**, puis sélectionnez **Passerelle de gestion cloud**. Sélectionnez l’instance cible de la passerelle de gestion cloud, puis cliquez dans le ruban sur **Analyseur de connexion**.
+Cette fonctionnalité inclut également **l’analyseur de connexion de la passerelle de gestion cloud** pour la vérification en temps réel dans le cadre de la résolution des problèmes. L’utilitaire de la console vérifie l’état actuel du service, ainsi que le canal de communication qui passe par le point de connexion de la passerelle de gestion cloud vers les points de gestion qui autorisent le trafic de la passerelle. 
+
+Pour plus d’informations, consultez les sections suivantes de l’article [Superviser la passerelle de gestion cloud](/sccm/core/clients/manage/cmg/monitor-clients-cloud-management-gateway) :  
+- [Tableau de bord de gestion cloud](/sccm/core/clients/manage/cmg/monitor-clients-cloud-management-gateway#cloud-management-dashboard)  
+- [Analyseur de connexion](/sccm/core/clients/manage/cmg/monitor-clients-cloud-management-gateway#connection-analyzer)  
 
 
 ### <a name="improvements-to-cloud-management-gateway"></a>Améliorations apportées à la passerelle de gestion cloud
@@ -187,26 +201,16 @@ Cette fonctionnalité inclut également **l’analyseur de connexion de la passe
 La version 1806 comprend les améliorations suivantes pour la Passerelle de gestion cloud :
 
 #### <a name="simplified-client-bootstrap-command-line"></a>Ligne de commande de démarrage du client simplifiée
-<!--1358215--> Durant l’installation du client Configuration Manager sur Internet via une passerelle de gestion cloud, le nombre de propriétés nécessaires sur la ligne de commande est désormais réduit. Cette amélioration réduit la taille de la ligne de commande utilisée dans Microsoft Intune pour la préparation de la cogestion. 
+<!--1358215-->
+ ***[Mise à jour]*** Durant l’installation du client Configuration Manager sur Internet via une passerelle de gestion cloud, le nombre de propriétés nécessaires sur la ligne de commande est désormais réduit. Cette amélioration réduit la taille de la ligne de commande utilisée dans Microsoft Intune pour la préparation de la cogestion. 
 
-Les propriétés de ligne de commande suivantes sont nécessaires pour tous les scénarios :
-  - CCMHOSTNAME  
-  - SMSSITECODE  
-
-Les propriétés suivantes sont nécessaires lorsque vous utilisez Azure AD pour l’authentification client, au lieu de certificats d’authentification client PKI :
-  - AADCLIENTAPPID  
-  - AADRESOURCEURI  
-
-La propriété suivante est nécessaire si le client doit revenir à l’intranet :
-  - SMSMP  
-
-L’exemple suivant comprend toutes les propriétés mentionnées ci-dessus :   
-`ccmsetup.exe CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver SMSMP=https://mp1.contoso.com`
-
-<!--For more information, see [Client installation properties](/sccm/core/clients/deploy/about-client-installation-properties).-->
+Pour plus d’informations, consultez [Préparer les appareils Windows 10 pour la cogestion](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client).
 
 #### <a name="download-content-from-a-cmg"></a>Télécharger du contenu à partir d’une passerelle de gestion cloud
-<!--1358651--> Auparavant, vous deviez déployer un point de distribution cloud et une passerelle de gestion cloud sous forme de rôles distincts. À présent, une passerelle de gestion cloud peut également proposer du contenu aux clients. Cette fonctionnalité réduit le nombre de certificats nécessaires, ainsi que les coûts associés aux machines virtuelles Azure. Pour activer cette fonctionnalité, activez la nouvelle option **Allow CMG to function as a cloud distribution point and serve content from Azure storage** (Autoriser la passerelle de gestion cloud à fonctionner comme un point de distribution cloud et à distribuer du contenu à partir du stockage Azure) sous l’onglet **Paramètres** des propriétés de la passerelle de gestion cloud. 
+<!--1358651-->
+ ***[Mise à jour]*** Avant, vous deviez déployer un point de distribution cloud et une passerelle de gestion cloud sous forme de rôles distincts. À présent, une passerelle de gestion cloud peut également proposer du contenu aux clients. Cette fonctionnalité réduit le nombre de certificats nécessaires, ainsi que les coûts associés aux machines virtuelles Azure. 
+
+Pour plus d’informations, consultez [Modifier une passerelle de gestion cloud](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#modify-a-cmg).
 
 #### <a name="trusted-root-certificate-isnt-required-with-azure-ad"></a>Les certificat racines approuvés ne sont plus nécessaires avec Azure AD
 <!--503899-->Quand vous créez une passerelle de gestion cloud, vous n’êtes plus obligé de fournir un [certificat racine approuvé](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#cmg-trusted-root-certificate-to-clients) dans la page Paramètres. Ce certificat n’est pas nécessaire lorsque vous utilisez Azure Active Directory (Azure AD) pour l’authentification client, mais il était auparavant nécessaire dans l’Assistant. Si vous utilisez des certificats d’authentification client PKI, vous devez continuer d’ajouter un certificat racine approuvé pour la passerelle de gestion cloud.
@@ -385,8 +389,15 @@ Ces séquences de tâches conviennent aux déploiements de système d’exploita
 
 ## <a name="software-center"></a>Centre logiciel
 
+> [!Important]  
+> Pour tirer parti des nouvelles fonctionnalités de Configuration Manager, commencez par mettre à jour les clients vers la dernière version. Bien que les nouvelles fonctionnalités apparaissent dans la console Configuration Manager quand vous mettez à jour le site et la console, le scénario complet n’est pas fonctionnel tant que la version des clients n’est pas également la plus récente.
+
+
 ### <a name="software-center-infrastructure-improvements"></a>Améliorations apportées à l’infrastructure du Centre logiciel
-<!--1358309--> Les rôles du catalogue d’applications ne sont plus nécessaires pour afficher les applications accessibles aux utilisateurs dans le Centre logiciel. Cette modification permet d’alléger l’infrastructure de serveur nécessaire pour fournir des applications aux utilisateurs. Le Centre logiciel s’appuie désormais sur le point de gestion pour obtenir ces informations, ce qui permet une meilleure mise à l’échelle des grands environnements par l’attribution de [groupes de limites](/sccm/core/servers/deploy/configure/boundary-groups#management-points).
+<!--1358309-->
+ ***[Mise à jour]*** Les rôles du catalogue d’applications ne sont plus nécessaires pour afficher les applications accessibles aux utilisateurs dans le Centre logiciel. Cette modification permet d’alléger l’infrastructure de serveur nécessaire pour fournir des applications aux utilisateurs. Le Centre logiciel s’appuie désormais sur le point de gestion pour obtenir ces informations, ce qui permet une meilleure mise à l’échelle des grands environnements par l’attribution de [groupes de limites](/sccm/core/servers/deploy/configure/boundary-groups#management-points).
+
+Pour plus d’informations, consultez [Configurer le Centre logiciel](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex).  
 
 > [!Note]  
 > Les rôles de point du site web et de point de service web du catalogue des applications ne sont plus *obligatoires* dans la version 1806. Toutefois, ils sont toujours *pris en charge*. 

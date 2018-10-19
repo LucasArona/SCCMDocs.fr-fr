@@ -10,12 +10,12 @@ ms.assetid: 946b0f74-0794-4e8f-a6af-9737d877179b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3c31b950ef59147f6f3f46c1cba7780b7789948c
-ms.sourcegitcommit: 4b7812b505e80f79fc90dfa8a6db06eea79a3550
+ms.openlocfilehash: fbcf7a7d76146cc11dd4bb57b86fe4752c694e02
+ms.sourcegitcommit: 1e782268d6c0211bd854b5860de72cfd6c6985c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "42584509"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44697036"
 ---
 # <a name="enable-third-party-updates"></a>Activer les mises à jour tierces 
 
@@ -36,13 +36,13 @@ Depuis la version 1806, le nœud **Catalogues de mises à jour de logiciels tie
 
 ## <a name="additional-requirements-when-the-sup-is-remote-from-the-top-level-site-server"></a>Autre exigences quand le point de mise à jour logicielle est distant par rapport au serveur de site de niveau supérieur 
 
-1. SSL doit être activé sur le point de mise à jour logicielle quand celui-ci est distant. 
+1. SSL doit être activé sur le point de mise à jour logicielle quand celui-ci est distant. Ceci nécessite un certificat d’authentification serveur généré à partir d’une autorité de certification interne ou via un fournisseur public.
     - [Configurer SSL sur WSUS](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#bkmk_2.5.ConfigSSL)
         - Quand vous configurez SSL sur WSUS, certains services web et répertoires virtuels utilisent toujours HTTP et non HTTPS. 
         - Configuration Manager télécharge le contenu tiers des packages de mise à jour logicielle à partir de votre répertoire de contenu WSUS via HTTP.   
     - [Configurer SSL sur le point de mise à jour logicielle](../get-started/install-a-software-update-point.md#configure-ssl-communications-to-wsus)
 
-2. Pour permettre la création du certificat WSU auto-signé : 
+2. Lors de la définition de la configuration du certificat de signature WSUS des mises à jour de tiers **Configuration Manager gère les mises à jour** dans les Propriétés du composant du point de mise à jour logicielle, les configurations suivantes sont nécessaires pour autoriser la création du certificat de signature de WSUS auto-signé : 
    - Le Registre à distance doit être activé sur le serveur de point de mise à jour logicielle.
    -  Le **compte de connexion du serveur WSUS** doit disposer d’autorisations de Registre à distance sur le serveur de point de mise à jour logicielle/WSUS. 
 
@@ -50,7 +50,7 @@ Depuis la version 1806, le nœud **Catalogues de mises à jour de logiciels tie
 3. Créez la clé de Registre suivante sur le serveur de site Configuration Manager : 
     - Dans la clé de Registre `HKLM\Software\Microsoft\Update Services\Server\Setup`, créez un DWORD nommé **EnableSelfSignedCertificates** avec la valeur `1`. 
 
-4. Pour permettre l’installation du certificat dans les magasins Éditeurs approuvés et Racine approuvée sur le serveur de point de mise à jour logicielle distant :
+4. Pour permettre l’installation du certificat de signature WSUS auto-signé dans les magasins Éditeurs approuvés et Racine approuvée sur le serveur de point de mise à jour logicielle distant :
    - Le **compte de connexion du serveur WSUS** doit disposer d’autorisations d’administration à distance sur le serveur de point de mise à jour logicielle.
 
     Si cela n’est pas possible, exportez le certificat du magasin WSUS de l’ordinateur local vers les magasins Éditeurs approuvés et Racine approuvée. 
@@ -69,7 +69,7 @@ Si vous activez cette option, vous pouvez vous abonner aux catalogues de mises �
 
 
 ## <a name="configure-the-wsus-signing-certificate"></a>Configurer le certificat de signature WSUS
-Vous devez décider s’il convient de laisser Configuration Manager gérer automatiquement le certificat de signature WSUS tiers ou si vous préférez configurer manuellement le certificat. 
+Vous devez décider si vous voulez que Configuration Manager gère automatiquement le certificat de signature WSUS tiers en utilisant un certificat auto-signé ou si vous préférez configurer manuellement le certificat. 
 
 ### <a name="automatically-manage-the-wsus-signing-certificate"></a>Gérer automatiquement le certificat de signature WSUS
 Si vous n’avez pas l’obligation d’utiliser des certificats PKI, vous pouvez choisir de gérer automatiquement les certificats de signature pour les mises à jour tierces. La gestion des certificats WSUS est assurée pendant le cycle de synchronisation et est consignée dans `wsyncmgr.log`. 

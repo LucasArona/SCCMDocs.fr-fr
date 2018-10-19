@@ -3,18 +3,19 @@ title: Nouvelle version 1710 | Microsoft Docs
 titleSuffix: Configuration Manager
 description: Obtenez des détails sur les modifications et les nouvelles fonctionnalités introduites dans la version 1710 de System Center Configuration Manager.
 ms.date: 1/08/2018
+ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: bc6c3e5f-b9e2-400e-9d9d-446ff93c520c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e33a56a2d7fe395265d76c668db91492c410046f
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 821c7f32799020948630cd873fead144ae21e39e
+ms.sourcegitcommit: fe279229a90fdc8cddbb13c7ffdbbb22af0e25ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32337409"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47229260"
 ---
 # <a name="what39s-new-in-version-1710-of-system-center-configuration-manager"></a>Nouveautés de la version 1710 de System Center Configuration Manager
 
@@ -63,8 +64,7 @@ Les appareils étant désormais équipés de disques durs avec des tailles de pl
 ## <a name="client-management"></a>Gestion des clients
 
 ### <a name="co-management-for-windows-10-devices"></a>Cogestion pour les appareils Windows 10    
-<!-- 1350871 -->
-Dans les mises à jour précédentes de Windows 10, vous pouvez déjà joindre un appareil Windows 10 à Active Directory (AD) en local et à Azure AD sur le cloud (Azure AD hybride). À compter de Configuration Manager version 1710, la cogestion tire parti de cette amélioration et vous permet de gérer simultanément plusieurs appareils Windows 10, version 1709 (également appelée Fall Creators Update) à l’aide de Configuration Manager et d’Intune. C’est une solution qui établit une passerelle entre la gestion classique et la gestion moderne tout en vous donnant la possibilité d’opérer cette transition selon une approche en plusieurs phases. Pour plus d’informations, consultez [Cogestion pour les appareils Windows 10](/sccm/core/clients/manage/co-management-overview).
+<!-- 1350871 --> Dans les mises à jour précédentes de Windows 10, vous pouvez déjà joindre un appareil Windows 10 simultanément à une instance locale d’Active Directory (AD) et à Azure AD sur le cloud (Azure AD hybride). À compter de Configuration Manager version 1710, la cogestion tire parti de cette amélioration et vous permet de gérer simultanément plusieurs appareils Windows 10, version 1709 (également appelée Fall Creators Update) à l’aide de Configuration Manager et d’Intune. C’est une solution qui établit une passerelle entre la gestion classique et la gestion moderne tout en vous donnant la possibilité d’opérer cette transition selon une approche en plusieurs phases. Pour plus d’informations, consultez [Cogestion pour les appareils Windows 10](/sccm/core/clients/manage/co-management-overview).
 
 ### <a name="restart-computers-from-the-configuration-manager-console-----1356283---"></a>Redémarrer les ordinateurs à partir de la console Configuration Manager <!-- 1356283 -->
 À compter de cette version, vous pouvez utiliser la console Configuration Manager pour identifier les périphériques clients qui nécessitent un redémarrage, puis utiliser une action de notification de client pour les redémarrer.
@@ -87,8 +87,7 @@ Les améliorations apportées incluent :
 Pour plus d’informations sur l’utilisation de la fonctionnalité Exécuter les scripts, consultez [Créer et exécuter des scripts](../../../apps/deploy-use/create-deploy-scripts.md).
 
 ### <a name="new-mobile-application-management-policy-settings"></a>Nouveaux paramètres de stratégie de gestion d’application mobile
-<!-- 1324760 -->
-Les paramètres suivants ont été ajoutés aux paramètres de stratégie de gestion des applications mobiles :
+<!-- 1324760 --> Les paramètres suivants ont été ajoutés aux paramètres de stratégie de gestion des applications mobiles :
 - **Désactiver la synchronisation des contacts :** empêche l’application d’enregistrer des données sur l’application Contacts native de l’appareil.
 - **Désactiver l’impression :** empêche l’application d’imprimer des données scolaires ou de travail.
 
@@ -101,8 +100,7 @@ Pour ajouter une icône pour votre application dans le Centre logiciel, consulte
 
 ## <a name="operating-system-deployment"></a>Déploiement du système d'exploitation
  > [!TIP]   
- > <!-- 1354281 -->
- > À compter de la version 1709 de Windows 10 (également appelée Fall Creators Update), Windows Media inclut plusieurs éditions. Quand vous configurez une séquence de tâches pour utiliser un package de mise à niveau de système d’exploitation ou une image de système d’exploitation, veillez à sélectionner une [édition prise en charge par Configuration Manager](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client).
+ > <!-- 1354281 --> À compter de la version 1709 de Windows 10 (également appelée Fall Creators Update), Windows Media inclut plusieurs éditions. Quand vous configurez une séquence de tâches pour utiliser un package de mise à niveau de système d’exploitation ou une image de système d’exploitation, veillez à sélectionner une [édition prise en charge par Configuration Manager](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client).
 
 ### <a name="add-child-task-sequences-to-a-task-sequence"></a>Ajouter des séquences de tâches enfants à une séquence de tâches
 <!-- 1261338 -->
@@ -112,8 +110,7 @@ Vous pouvez ajouter une nouvelle étape de séquence de tâches qui exécute une
 Pour plus d’informations sur la séquence de tâches enfant, consultez [Séquence de tâches enfant](/sccm/osd/understand/task-sequence-steps#child-task-sequence).
 
 ## <a name="software-center-customization"></a>Personnalisation du Centre logiciel
-<!-- 1351224 -->
-Vous pouvez ajouter des éléments de personnalisation d’entreprise et spécifier la visibilité des onglets du Centre logiciel. Vous pouvez ajouter votre nom de société Centre logiciel spécifique, définir un modèle de couleurs de configuration Centre logiciel, un logo de société et les onglets visibles pour les périphériques clients.
+<!-- 1351224 --> Vous pouvez ajouter des éléments de personnalisation d’entreprise et spécifier la visibilité des onglets du Centre logiciel. Vous pouvez ajouter votre nom de société Centre logiciel spécifique, définir un modèle de couleurs de configuration Centre logiciel, un logo de société et les onglets visibles pour les périphériques clients.
 
 Pour plus d’informations, consultez [Planifier et configurer la gestion des applications dans System Center Configuration Manager](/sccm/apps/plan-design/plan-for-and-configure-application-management).
 
@@ -201,8 +198,7 @@ Vous pouvez [créer et déployer des stratégies](/sccm/protect/deploy-use/creat
 Vous pouvez [créer et déployer des stratégies Windows Defender Application Guard](/sccm/protect/deploy-use/create-deploy-application-guard-policy) à l’aide de la protection du point de terminaison Configuration Manager.
 
 ### <a name="device-guard-policy-changes"></a>Modifications des stratégies Device Guard
-<!-- 1355092 -->
-Les trois modifications suivantes ont été apportées au niveau des stratégies Device Guard :
+<!-- 1355092 --> Les trois modifications suivantes ont été apportées au niveau des stratégies Device Guard :
 
 - Les stratégies Device Guard s’appellent désormais les stratégies Windows Defender Application Control. Ainsi, par exemple, l’**Assistant Créer une stratégie Device Guard** s’appelle désormais l’**Assistant Créer une stratégie Windows Defender Application Control**.
 - Les appareils qui utilisent Fall Creators Update pour Windows version 1709 n’ont pas besoin de redémarrage pour appliquer les stratégies Windows Defender Application Control. Le redémarrage est toujours la valeur par défaut, mais vous pouvez [désactiver les redémarrages](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager).

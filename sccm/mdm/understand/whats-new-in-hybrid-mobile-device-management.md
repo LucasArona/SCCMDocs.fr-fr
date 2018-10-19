@@ -2,7 +2,7 @@
 title: Nouveautés de la gestion MDM hybride
 titleSuffix: Configuration Manager
 description: Découvrez les nouvelles fonctionnalités de gestion des appareils mobiles disponibles pour les déploiements hybrides avec Configuration Manager et Intune.
-ms.date: 08/29/2018
+ms.date: 09/18/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 87a40300cfe13ec097d155093fbb7b70af3b459c
-ms.sourcegitcommit: 8661f10596f565ca2b7bdb5951388b44b3b622ee
+ms.openlocfilehash: 195fb8c4ae584b9b5ccb2401b145d9c78a0be781
+ms.sourcegitcommit: 78d2dce465e3500653b252583a6903a006784c26
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43193916"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448869"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Nouveautés de la gestion hybride des appareils mobiles avec Configuration Manager et Microsoft Intune
 
@@ -300,7 +300,7 @@ Demandez aux utilisateurs finaux sur Windows 10 versions 1607 ou ultérieures d�
   <!--1541700-->   
 
 - **Microsoft Planner fait désormais partie de la liste des applications approuvées pour la gestion des applications mobiles (MAM)**    
-  L’application Microsoft Planner pour iOS et Android fait désormais partie des applications approuvées pour la gestion des applications mobiles (MAM). Configurez l’application à partir d’Intune App Protection dans le portail Microsoft Azure de tous les locataires. Pour plus de détails, consultez [Liste GAM d’applications approuvées](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
+  L’application Microsoft Planner pour iOS et Android fait désormais partie des applications approuvées pour la gestion des applications mobiles (MAM). Configurez l’application à partir d’Intune App Protection dans le portail Microsoft Azure de tous les locataires. Pour plus de détails, consultez [Liste MAM d’applications approuvées](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
   <!-- 1248473 -->    
 
 - **Accès aux journaux d’applications managées pour iOS**    
@@ -399,7 +399,7 @@ Demandez aux utilisateurs finaux sur Windows 10 versions 1607 ou ultérieures d�
 - **Nouveaux comportements pour l’application Portail d’entreprise pour Android avec des profils professionnels**     
   Quand vous inscrivez un appareil Android for Work avec un profil professionnel, c’est l’application Portail d’entreprise dans le profil professionnel qui effectue les tâches de gestion sur l’appareil. 
 
-  À moins que vous n’utilisiez une application GAM dans le profil personnel, l’application Portail d’entreprise pour Android n’a plus d’utilité. Pour améliorer l’expérience de profil professionnel, Intune masque automatiquement l’application Portail d’entreprise personnelle après une inscription de profil professionnel réussie.
+  À moins que vous n’utilisiez une application MAM dans le profil personnel, l’application Portail d’entreprise pour Android n’a plus d’utilité. Pour améliorer l’expérience de profil professionnel, Intune masque automatiquement l’application Portail d’entreprise personnelle après une inscription de profil professionnel réussie.
 
   L’application Portail d’entreprise pour Android peut être activée à tout moment dans le profil personnel en recherchant [Portail d’entreprise dans le Play Store](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) et en appuyant sur **Activer**.
   <!--1485783-->    
@@ -460,6 +460,54 @@ Demandez aux utilisateurs finaux sur Windows 10 versions 1607 ou ultérieures d�
 
 
 ## <a name="notices"></a>Remarques
+
+### <a name="plan-for-change-intune-supports-macos-1012-and-higher-in-december"></a>Préparez-vous au changement : en décembre, Intune prendra en charge macOS 10.12 et versions ultérieures 
+<!--2970975--> 
+
+Apple vient de publier macOS 10.14. Par conséquent, à compter de décembre 2018, Intune prendra en charge macOS 10.12 et versions ultérieures. 
+
+#### <a name="how-does-this-affect-me"></a>Dans quelle mesure suis-je affecté ?
+
+À compter de décembre, les utilisateurs d’appareils dotés de macOS 10.11 et versions antérieures ne pourront plus utiliser le portail d’entreprise pour s’inscrire à Intune. Pour continuer à bénéficier du support et pour profiter des nouvelles fonctionnalités, ils devront mettre à niveau leurs appareils vers macOS 10.12 ou version ultérieure, ainsi que mettre à niveau l’application Portail d’entreprise vers la version la plus récente. 
+
+MacOS 10.12 et versions ultérieures sont actuellement prises en charge sur les appareils suivants : 
+- MacBook (fin 2009 ou versions ultérieures)  
+- iMac (fin 2009 ou versions ultérieures)
+- MacBook Air (fin 2010 ou versions ultérieures)  
+- MacBook Pro (fin 2010 ou versions ultérieures)  
+- Mac Mini (fin 2010 ou versions ultérieures)  
+- Mac Pro (fin 2010 ou versions ultérieures)  
+
+Après décembre, les utilisateurs finaux qui disposent d’appareils autres que ceux répertoriés ci-dessus ne pourront plus accéder à la dernière version de l’application Portail d’entreprise pour macOS. Toutefois, vous pouvez continuer à gérer les appareils déjà inscrits qui exécutent des versions non prises en charge antérieures à macOS 10.12.
+
+#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Que faire pour se préparer à ce changement ?
+
+- Demandez à vos utilisateurs de mettre à niveau leurs appareils vers une version de système d’exploitation prise en charge avant décembre 2018.  
+- Vérifiez vos rapports Intune dans le portail Azure pour voir quels appareils ou utilisateurs sont concernés. Accédez à **Appareils** > **Tous les appareils**, puis filtrez par **Système d’exploitation**. Vous pouvez ajouter des colonnes supplémentaires pour identifier les utilisateurs de votre organisation qui disposent d’appareils exécutant macOS 10.11.  
+- Si vous utilisez la gestion hybride des appareils mobiles, dans la console Configuration Manager, accédez à l’espace de travail **Ressources et Conformité**, puis sélectionnez le nœud **Appareils**. Cliquez avec le bouton droit sur les colonnes **Système d’exploitation** et **Version du client** pour les ajouter. Ensuite, triez par version de système d’exploitation. Notez que la gestion hybride des appareils mobiles est désormais dépréciée, et que vous devez passer à Intune sur Azure dès que possible. 
+ 
+#### <a name="additional-information"></a>Informations supplémentaires
+Pour plus d’informations, consultez [Inscrire votre appareil macOS dans Intune avec l’application Portail d’entreprise](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos-cp).
+
+
+### <a name="plan-for-change-new-intune-support-experience-for-premier-customers"></a>Préparez-vous au changement : nouveau support Intune pour les clients Premier 
+<!--2828727--> En tant que client Microsoft Premier, vous pouvez utiliser le [portail Microsoft Premier Online (MPO)](https://premier.microsoft.com) et [Intune sur Azure](https://portal.azure.com) afin de créer des demandes de support pour Intune. À compter du 3 décembre 2018, dans le cadre de l’amélioration du support Premier, vous pourrez créer des demandes de support uniquement dans Intune sur Azure.
+
+#### <a name="how-does-this-affect-me"></a>Dans quelle mesure suis-je affecté ?
+Après le 3 décembre, vous ne pourrez plus créer de demandes de support dans MPO. Si vous tentez de le faire, un message impossible à ignorer s’affichera, et vous serez redirigé vers Intune sur Azure. Lorsque vous créez une demande de support dans le portail Azure, celle-ci est acheminée vers le support Microsoft dédié à Intune. Il se charge de diagnostiquer et de résoudre votre problème le plus rapidement possible. Si vous créez une demande de support dans le portail MPO, vous ne pourrez pas la voir dans le portail Azure. À partir de maintenant, vous ne devez créer des demandes de support que dans Intune sur Azure.  
+
+Si vous utilisez la cogestion ou la gestion hybride des appareils mobiles, vous pouvez continuer à utiliser MPO pour créer des demandes de support concernant Configuration Manager, mais vous devez utiliser le portail Azure pour créer des demandes de support concernant Intune. Pour rappel, la gestion hybride des appareils mobiles est désormais dépréciée. Vous devez donc prévoir de passer à Intune sur Azure dès que possible. Pour plus d’informations, consultez [Move from Hybrid Mobile Device Management to Intune on Azure](https://aka.ms/hybrid_notification).
+
+Notez que seuls les utilisateurs disposant d’un rôle Administrateur général, Administrateur de service Intune et Administrateur du support du service peuvent créer des tickets de support dans le portail Azure.
+
+#### <a name="what-can-i-do-to-prepare-for-this-change"></a>Que faire pour me préparer à ce changement ?
+- Vous devez cesser d’utiliser MPO pour les demandes de support relatives à Intune. Vous devez utiliser Intune sur Azure pour créer et gérer toutes vos demandes de support Intune.  
+- Vous devez notifier votre support technique et mettre à jour votre documentation, si nécessaire.  
+- Si certains de vos utilisateurs créent des demandes de support dans MPO sans disposer d’un rôle Administrateur général ou Administrateur de service Intune, attribuez-leur le rôle Administrateur du support du service dans Azure Active Directory. Pour créer des tickets de support dans le portail Azure, les utilisateurs ont besoin de l’un de ces rôles.  
+
+#### <a name="additional-information"></a>Informations supplémentaires
+Pour plus d’informations, consultez ce [billet de blog de l’équipe de support Microsoft Intune](https://aka.ms/IntuneSupport_MPO_to_Azure).
+
 
 ### <a name="plan-for-change-use-intune-on-azure-now-for-your-mdm-management"></a>Modification planifiée : utilisez désormais Intune sur Azure pour votre gestion des appareils mobiles 
 <!--1227338--> Il y plus d’un an, nous annoncions la [préversion publique d’Intune sur Azure](https://cloudblogs.microsoft.com/enterprisemobility/2016/12/07/public-preview-of-intune-on-azure/), puis il y a six mois la [disponibilité générale de la nouvelle expérience administrateur](https://cloudblogs.microsoft.com/enterprisemobility/2017/06/08/the-new-intune-and-conditional-access-admin-consoles-are-ga/) pour Intune. Depuis le 31 août 2018, nous avons désactivé la gestion des appareils mobiles (MDM) dans la console Silverlight classique pour les clients qui utilisent la version autonome d’Intune. Utilisez plutôt [Intune sur Azure](https://aka.ms/Intune_on_Azure) pour vos besoins de gestion des appareils mobiles. Si vous utilisez toujours la console classique pour la gestion des appareils mobiles, arrêtez-vous et familiarisez-vous avec Intune sur Azure. Cette modification ne devrait avoir aucun impact pour l’utilisateur final. La gestion PC classique avec Intune s’effectuera toujours dans Silverlight. Pour plus d’informations, voir le [billet de blog de l’équipe du support Intune](https://aka.ms/Intune_on_Azure_mdm).

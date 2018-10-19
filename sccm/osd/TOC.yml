@@ -1,0 +1,132 @@
+items:
+- name: Comprendre et explorer
+  items:
+  - name: Présentation du déploiement de système d’exploitation
+    href: understand/introduction-to-operating-system-deployment.md
+- name: Planifier et concevoir
+  items:
+  - name: Configuration requise de l’infrastructure pour le déploiement de système d’exploitation
+    href: plan-design/infrastructure-requirements-for-operating-system-deployment.md
+  - name: Considérations relatives à la planification de l’automatisation des tâches
+    href: plan-design/planning-considerations-for-automating-tasks.md
+  - name: Sécurité et confidentialité pour le déploiement de système d’exploitation
+    href: plan-design/security-and-privacy-for-operating-system-deployment.md
+  - name: Planification de l’interopérabilité pour le déploiement de système d’exploitation
+    href: plan-design/planning-for-operating-system-deployment-interoperability.md
+- name: Bien démarrer
+  items:
+  - name: Préparer des rôles de système de site pour les déploiements de système d’exploitation
+    href: get-started/prepare-site-system-roles-for-operating-system-deployments.md
+  - name: Préparer le déploiement de système d’exploitation
+    href: get-started/prepare-for-operating-system-deployment.md
+    items:
+    - name: Gérer les images de démarrage
+      href: get-started/manage-boot-images.md
+      items:
+      - name: Personnaliser les images de démarrage
+        href: get-started/customize-boot-images.md
+    - name: Gérer les images de système d’exploitation
+      href: get-started/manage-operating-system-images.md
+      items:
+      - name: Personnaliser les images de système d’exploitation
+        href: get-started/customize-operating-system-images.md
+    - name: Gérer les packages de mise à niveau de système d’exploitation
+      href: get-started/manage-operating-system-upgrade-packages.md
+    - name: Gérer les pilotes
+      href: get-started/manage-drivers.md
+    - name: Gérer l’état utilisateur
+      href: get-started/manage-user-state.md
+    - name: Préparer les déploiements d’ordinateurs inconnus
+      href: get-started/prepare-for-unknown-computer-deployments.md
+    - name: Association d’utilisateurs à un ordinateur de destination
+      href: get-started/associate-users-with-a-destination-computer.md
+  - name: Préparer la mise en cache d’homologue Windows PE pour réduire le trafic WAN
+    href: get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md
+- name: Déployer et utiliser
+  items:
+  - name: Scénarios de déploiement de systèmes d’exploitation d’entreprise
+    href: deploy-use/scenarios-to-deploy-enterprise-operating-systems.md
+    items:
+    - name: Effectuer une mise à niveau de Windows vers la dernière version
+      href: deploy-use/upgrade-windows-to-the-latest-version.md
+    - name: Actualiser un ordinateur existant avec une nouvelle version de Windows
+      href: deploy-use/refresh-an-existing-computer-with-a-new-version-of-windows.md
+    - name: Installer une nouvelle version de Windows sur un nouvel ordinateur (système nu)
+      href: deploy-use/install-new-windows-version-new-computer-bare-metal.md
+    - name: Remplacer un ordinateur existant et transférer des paramètres
+      href: deploy-use/replace-an-existing-computer-and-transfer-settings.md
+  - name: Méthodes pour déployer des systèmes d’exploitation d’entreprise
+    href: deploy-use/methods-to-deploy-enterprise-operating-systems.md
+    items:
+    - name: Utiliser PXE pour déployer Windows sur le réseau
+      href: deploy-use/use-pxe-to-deploy-windows-over-the-network.md
+    - name: Utiliser le Centre logiciel pour déployer Windows sur le réseau
+      href: deploy-use/use-software-center-to-deploy-windows-over-the-network.md
+    - name: Utiliser un média de démarrage pour déployer Windows sur le réseau
+      href: deploy-use/use-bootable-media-to-deploy-windows-over-the-network.md
+    - name: Utiliser un média autonome pour déployer Windows sans utiliser le réseau
+      href: deploy-use/use-stand-alone-media-to-deploy-windows-without-using-the-network.md
+    - name: Utiliser la multidiffusion pour déployer Windows sur le réseau
+      href: deploy-use/use-multicast-to-deploy-windows-over-the-network.md
+    - name: Créer une image pour un fabricant OEM en usine ou un dépôt local
+      href: deploy-use/create-an-image-for-an-oem-in-factory-or-a-local-depot.md
+    - name: Déployer Windows To Go
+      href: deploy-use/deploy-windows-to-go.md
+  - name: Gérer Windows en tant que service
+    href: deploy-use/manage-windows-as-a-service.md
+  - name: Créer un déploiement par phases
+    href: deploy-use/create-phased-deployment-for-task-sequence.md
+  - name: Gérer et surveiller les déploiements par phases
+    href: deploy-use/manage-monitor-phased-deployments.md
+  - name: Superviser les déploiements de système d’exploitation
+    href: deploy-use/monitor-operating-system-deployments.md
+  - name: Gérer les séquences de tâches pour automatiser des tâches
+    href: deploy-use/manage-task-sequences-to-automate-tasks.md
+    items:
+    - name: Créer une séquence de tâches pour installer un système d’exploitation
+      href: deploy-use/create-a-task-sequence-to-install-an-operating-system.md
+    - name: Créer une séquence de tâches pour mettre à niveau un système d’exploitation
+      href: deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md
+    - name: Créer une séquence de tâches pour capturer un système d’exploitation
+      href: deploy-use/create-a-task-sequence-to-capture-an-operating-system.md
+    - name: Créer une séquence de tâches pour capturer et restaurer l’état utilisateur
+      href: deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md
+    - name: Utiliser une séquence de tâches pour gérer des disques durs virtuels
+      href: deploy-use/use-a-task-sequence-to-manage-virtual-hard-disks.md
+  - name: Scénarios de séquence de tâches personnalisée
+    items:
+    - name: Créer une séquence de tâches personnalisée
+      href: deploy-use/create-a-custom-task-sequence.md
+    - name: Créer une séquence de tâches pour les déploiements autres que les déploiements de système d’exploitation
+      href: deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md
+    - name: Étapes de séquence de tâches pour gérer la conversion du BIOS en UEFI
+      href: deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md
+    - name: Préparer la mise en service de BitLocker dans Windows PE
+      href: deploy-use/preprovision-bitlocker-in-windows-pe.md
+  - name: Créer un média de séquence de tâches
+    href: deploy-use/create-task-sequence-media.md
+    items:
+    - name: Créer un média autonome
+      href: deploy-use/create-stand-alone-media.md
+    - name: Créer un média préparé
+      href: deploy-use/create-prestaged-media.md
+    - name: Créer un média de démarrage
+      href: deploy-use/create-bootable-media.md
+    - name: Créer un média de capture
+      href: deploy-use/create-capture-media.md
+- name: Informations techniques de référence
+  items:
+  - name: Étapes de séquence de tâches
+    href: understand/task-sequence-steps.md
+  - name: Guide pratique pour utiliser des variables de séquence de tâches
+    href: understand/using-task-sequence-variables.md
+  - name: Variables de séquence de tâches
+    href: understand/task-sequence-variables.md
+  - name: Commandes de prédémarrage pour les médias de séquence de tâches
+    href: understand/prestart-commands-for-task-sequence-media.md
+ms.openlocfilehash: 583f3b6e7fb239455e37253c205a8cc2fc0a5998
+ms.sourcegitcommit: 8661f10596f565ca2b7bdb5951388b44b3b622ee
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "48817606"

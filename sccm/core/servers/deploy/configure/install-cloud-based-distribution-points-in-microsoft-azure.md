@@ -10,12 +10,12 @@ ms.assetid: bb83ac87-9914-4a35-b633-ad070031aa6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: afb32cd827a223ca9f317f2ddc96d9b176858d2d
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: ef8bfead4bb73871f990a455aef87971413701ba
+ms.sourcegitcommit: 2badee2b63ae63687795250e298f463474063100
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385335"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601107"
 ---
 # <a name="install-a-cloud-distribution-point-for-configuration-manager"></a>Installer un point de distribution cloud pour Configuration Manager
 
@@ -224,17 +224,22 @@ Dans un cycle horaire, le site principal qui surveille le point de distribution 
 
 Affichez des informations générales sur le point de distribution dans le nœud **Points de distribution cloud**, situé sous **Services cloud** dans l’espace de travail **Administration** de la console Configuration Manager. Sélectionnez un point de distribution, puis cliquez sur **Propriétés** pour afficher plus de détails.  
 
-Lorsque vous modifiez les propriétés d’un point de distribution cloud, les valeurs suivantes peuvent être modifiées :  
+Lorsque vous modifiez les propriétés d’un point de distribution cloud, les paramètres des onglets suivants peuvent être modifiés :  
 
-- Onglet **Paramètres** :  
+#### <a name="settings"></a>Paramètres  
 
-    - **Description**  
+- **Description**  
 
-    - **Fichier de certificat** : avant l’expiration du certificat d’authentification serveur, émettez un nouveau certificat portant le même nom. Ensuite, ajoutez-y le nouveau certificat pour que le service l’utilise. Si le certificat expire, les clients ne feront pas confiance au service et ne l’utiliseront pas.  
+- **Fichier de certificat** : avant l’expiration du certificat d’authentification serveur, émettez un nouveau certificat portant le même nom. Ensuite, ajoutez-y le nouveau certificat pour que le service l’utilise. Si le certificat expire, les clients ne feront pas confiance au service et ne l’utiliseront pas.  
 
-- Onglet **Alertes** : ajustez les seuils de données pour le stockage et les alertes de transfert mensuel.  
+#### <a name="alerts"></a>Alertes
+Ajustez les seuils de données pour le stockage et les alertes de transfert mensuel.  
 
-- Onglet **Contenu** : gérez le contenu comme pour un point de distribution local.  
+#### <a name="content"></a>Content
+Gérez le contenu comme pour un point de distribution local.  
+
+
+### <a name="redeploy-the-service"></a>Redéployer le service
 
 Les changements plus importants, tels que les configurations suivantes, exigent de redéployer le service :
 - Méthode de déploiement classique sur Azure Resource Manager
@@ -260,6 +265,11 @@ Les changements plus importants, tels que les configurations suivantes, exigent 
     2. Distribuez le contenu du package de logiciels nécessaire vers le nouveau point de distribution cloud.  
 
     3. Supprimez le point de distribution cloud classique.
+
+> [!Tip]  
+> Pour déterminer le modèle de déploiement actuel d’un point de distribution cloud :<!--SCCMDocs issue #611-->  
+> 1. Dans la console Configuration Manager, accédez à l’espace de travail **Administration**, développez **Services cloud**, puis sélectionnez le nœud **Points de distribution cloud**.  
+> 2. Ajoutez l’attribut **Modèle de déploiement** comme colonne de la vue de liste. Pour un déploiement Resource Manager, cet attribut est **Azure Resource Manager**.  
 
 
 ### <a name="stop-or-start-the-cloud-service-on-demand"></a>Arrêter ou démarrer le service cloud à la demande

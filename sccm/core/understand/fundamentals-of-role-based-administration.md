@@ -10,12 +10,12 @@ ms.assetid: 0a2d6c3f-a4e4-4c19-b087-3caada480de9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6fa1ca03db8df7e2d02edfad3af99ca1749224ac
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 3b7916b386cb22f2d1869eface009bd10ff17d18
+ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344719"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48862547"
 ---
 # <a name="fundamentals-of-role-based-administration-for-system-center-configuration-manager"></a>Principes de base de l’administration basée sur des rôles pour System Center Configuration Manager
 
@@ -85,7 +85,7 @@ Quand vous concevez et implémentez la sécurité administrative pour Configurat
 
 2.  Mappez ces tâches administratives vers un ou plusieurs rôles de sécurité intégrés.  
 
-3.  Si certains des utilisateurs administratifs effectuent des tâches de rôles de sécurité multiples, attribuez les rôles de sécurité multiples à ces utilisateurs administratifs au lieu de créer un nouveau rôle de sécurité qui combine les tâches.  
+3.  Si certains des utilisateurs administratifs effectuent les tâches de plusieurs rôles de sécurité, attribuez-leur ces rôles de sécurité, au lieu de créer un nouveau rôle de sécurité permettant d’effectuer toutes ces tâches.  
 
 4.  Si les tâches que vous avez identifiées ne correspondent pas aux rôles de sécurité intégrés, créez et testez de nouveaux rôles de sécurité.  
 

@@ -2,7 +2,7 @@
 title: Fichiers journaux pour la résolution des problèmes
 titleSuffix: Configuration Manager
 description: Utilisez des fichiers journaux pour résoudre des problèmes liés aux systèmes de site et aux clients Configuration Manager.
-ms.date: 07/30/2018
+ms.date: 09/10/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2bd3f76b982356fc444681d1990bee08e90b32fc
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 4435d39dd736db1058b06d09e5722a80a173bf6e
+ms.sourcegitcommit: 2badee2b63ae63687795250e298f463474063100
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385284"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601209"
 ---
 # <a name="log-files-in-configuration-manager"></a>Fichiers journaux de Configuration Manager
 
@@ -49,7 +49,7 @@ Dans Configuration Manager, les composants des clients et des serveurs de site e
 
     -   [Fichiers journaux du point de service de l’entrepôt de données](#BKMK_DataWarehouse)
 
-    -   [Fichiers journaux du point d’état de secours](#BKMK_FSPLog)  
+    -   [Fichiers journaux du point d’état de repli](#BKMK_FSPLog)  
 
     -   [Fichiers journaux du point de gestion](#BKMK_MPLog)  
 
@@ -171,7 +171,7 @@ Le tableau suivant répertorie les fichiers journaux qui se trouvent sur le clie
 |ExternalEventAgent.log|Enregistre l'historique de la détection des programmes malveillants par Endpoint Protection et des événements liés à l'état du client.|  
 |FileBITS.log|Enregistre toutes les tâches d'accès aux packages SMB.|  
 |FileSystemFile.log|Enregistre l'activité du fournisseur de l'infrastructure de gestion Windows (WMI) pour l'inventaire logiciel et le regroupement de fichiers.|  
-|FSPStateMessage.log|Enregistre l'activité des messages d'état envoyés par le client au point d'état de secours.|  
+|FSPStateMessage.log|Enregistre l'activité des messages d'état envoyés par le client au point d'état de repli.|  
 |InternetProxy.log|Enregistre l’activité de configuration de proxy et d’utilisation réseau pour le client.|  
 |InventoryAgent.log|Enregistre les activités de l'inventaire matériel et logiciel et les actions de découverte par pulsations effectuées sur le client.|  
 |LocationCache.log|Enregistre l’activité d’utilisation de l’emplacement du cache et de maintenance pour le client.|  
@@ -302,7 +302,7 @@ Le fichier journal SMS_DM.log sur le serveur de système de site enregistre auss
 |EPSetup.log|Fournit des informations sur l'installation du rôle de système de site Endpoint Protection.|Serveur de système de site|  
 |EnrollSrv.log|Enregistre les activités du processus du service d'inscription.|Serveur de système de site|  
 |EnrollWeb.log|Enregistre les activités du processus du site Web d'inscription.|Serveur de système de site|  
-|fspmgr.log|Enregistre les activités du rôle de système de site d'un point d'état de secours.|Serveur de système de site|  
+|fspmgr.log|Enregistre les activités du rôle de système de site d'un point d'état de repli.|Serveur de système de site|  
 |hman.log|Enregistre des informations sur les modifications de la configuration du site et sur la publication d’informations du site dans les services de domaine Active Directory.|Serveur de site|  
 |Inboxast.log|Enregistre les fichiers déplacés du point de gestion vers le dossier Boîtes de réception correspondant sur le serveur de site.|Serveur de site|  
 |inboxmgr.log|Enregistre les activités de transfert de fichier entre les dossiers des boîtes de réception.|Serveur de site|  
@@ -342,7 +342,7 @@ Le fichier journal SMS_DM.log sur le serveur de système de site enregistre auss
 |SMSENROLLSRVSetup.log|Enregistre les activités d'installation du service Web d'inscription.|Serveur de système de site|  
 |SMSENROLLWEBSetup.log|Enregistre les activités d'installation du site Web d'inscription.|Serveur de système de site|  
 |smsexec.log|Enregistre le traitement de tous les threads du composant de serveur de site.|Serveur de site ou serveur de système de site|  
-|SMSFSPSetup.log|Enregistre les messages générés par l'installation d'un point d'état de secours.|Serveur de système de site|  
+|SMSFSPSetup.log|Enregistre les messages générés par l'installation d'un point d'état de repli.|Serveur de système de site|  
 |SMSPORTALWEBSetup.log|Enregistre les activités d'installation du site Web du catalogue des applications.|Serveur de système de site|  
 |SMSProv.log|Enregistre les accès du fournisseur WMI à la base de données du site.|Ordinateur sur lequel le fournisseur SMS est installé|  
 |srsrpMSI.log|Enregistre des résultats détaillés du processus d'installation du point de rapport à partir de la sortie MSI.|Serveur de système de site|  
@@ -371,14 +371,14 @@ Le fichier journal SMS_DM.log sur le serveur de système de site enregistre auss
 |DWSSSetup.log|Enregistre les messages générés par l’installation d’un point de service de l’entrepôt de données.|Serveur de système de site|  
 |Microsoft.ConfigMgrDataWarehouse.log|Enregistre des informations sur la synchronisation des données entre la base de données de site et la base de données de l’entrepôt de données.|Serveur de système de site|  
 
-###  <a name="BKMK_FSPLog"></a> Fichiers journaux du point d’état de secours  
- Le tableau suivant répertorie les fichiers journaux qui contiennent des informations sur le point d'état de secours.  
+###  <a name="BKMK_FSPLog"></a> Fichiers journaux du point d’état de repli  
+ Le tableau suivant liste les fichiers journaux qui contiennent des informations sur le point d'état de repli.  
 
 |Nom du fichier journal|Description|Ordinateur sur lequel se trouve le fichier journal|  
 |--------------|-----------------|----------------------------|  
-|FspIsapi|Enregistre des détails concernant les communications au point d'état de secours à partir de clients hérités d'appareils mobiles et d'ordinateurs clients.|Serveur de système de site|  
-|fspMSI.log|Enregistre les messages générés par l'installation d'un point d'état de secours.|Serveur de système de site|  
-|fspmgr.log|Enregistre les activités du rôle de système de site d'un point d'état de secours.|Serveur de système de site|  
+|FspIsapi|Enregistre des détails concernant les communications au point d'état de repli à partir de clients hérités d'appareils mobiles et d'ordinateurs clients.|Serveur de système de site|  
+|fspMSI.log|Enregistre les messages générés par l'installation d'un point d'état de repli.|Serveur de système de site|  
+|fspmgr.log|Enregistre les activités du rôle de système de site d'un point d'état de repli.|Serveur de système de site|  
 
 ###  <a name="BKMK_MPLog"></a> Fichiers journaux du point de gestion  
  Le tableau suivant répertorie les fichiers journaux qui contiennent des informations sur le point de gestion.  
@@ -517,9 +517,10 @@ Le tableau suivant répertorie les fichiers journaux qui contiennent des informa
 |--------------|-----------------|----------------------------|  
 |CloudMgr.log|Enregistre les détails concernant le déploiement du service de passerelle de gestion cloud, l’état du service en cours et les données d’utilisation associées au service.<br>Vous pouvez configurer le niveau de journalisation en modifiant la valeur **Niveau de journalisation** dans la clé de Registre HKLM\SOFTWARE\ Microsoft\SMS\COMPONENTS\ SMS_CLOUD_ SERVICES_MANAGER|Le dossier *installdir* sur le serveur de site principal ou les autorités de certification.|
 |CMGSetup.log<sup>1</sup>|Enregistre des détails concernant la deuxième phase du déploiement de la passerelle de gestion cloud (déploiement local dans Azure)<br>Vous pouvez configurer le niveau de journalisation à l’aide du paramètre **Niveau de suivi** (**Information** (par défaut), **Verbose**, **Error**) dans l’onglet de **configuration du portail Azure/services cloud**.|Le dossier **%approot%\logs** sur votre serveur Azure, ou le dossier SMS/Logs sur le serveur de système de site|
-|CMGHttpHandler.log<sup>1</sup>|Enregistre des détails concernant la liaison du gestionnaire http de la passerelle de gestion cloud avec Internet Information Services dans Azure<br>Vous pouvez configurer le niveau de journalisation à l’aide du paramètre **Niveau de suivi** (**Information** (par défaut), **Verbose**, **Error**) dans l’onglet de **configuration du portail Azure/services cloud**.|Le dossier **%approot%\logs** sur votre serveur Azure, ou le dossier SMS/Logs sur le serveur de système de site|
+|CMGHttpHandler.log<sup>1</sup>|Enregistre des détails concernant la liaison du gestionnaire http de la passerelle de gestion cloud avec Internet Information Services dans Azure<br>Vous pouvez configurer le niveau de journalisation à l’aide du paramètre **Niveau de suivi** (**Information** (par défaut), **Verbose**, **Error**) dans l’onglet de **configuration du portail Azure/services cloud**.<br>À compter de la version 1806, ce journal n’existe plus. Cette fonctionnalité a été fusionnée avec le composant de service de passerelle de gestion cloud. Désormais, vous pouvez consulter le journal CMGService.log.<!--SCCMDocs-pr issue #2822-->|Le dossier **%approot%\logs** sur votre serveur Azure, ou le dossier SMS/Logs sur le serveur de système de site|
 |CMGService.log<sup>1</sup>|Enregistre des détails concernant le composant principal du service de passerelle de gestion cloud dans Azure<br>Vous pouvez configurer le niveau de journalisation à l’aide du paramètre **Niveau de suivi** (**Information** (par défaut), **Verbose**, **Error**) dans l’onglet de **configuration du portail Azure/services cloud**.|Le dossier **%approot%\logs** sur votre serveur Azure, ou le dossier SMS/Logs sur le serveur de système de site|
-|SMS_Cloud_</br>ProxyConnector.log|Enregistre des détails sur la configuration des connexions entre le service de passerelle de gestion cloud et le point de connexion de passerelle de gestion cloud.|Serveur de système de site|
+|SMS_Cloud_<br>ProxyConnector.log|Enregistre des détails sur la configuration des connexions entre le service de passerelle de gestion cloud et le point de connexion de passerelle de gestion cloud.|Serveur de système de site|
+|CMGContentService.log<sup>1</sup>|<!--SCCMDocs-pr issue #2822-->À compter de la version 1806, lorsque vous activez une passerelle de gestion cloud pour diffuser du contenu à partir du stockage Azure, ce fichier journal enregistre les informations relatives à ce service.|Le dossier **%approot%\logs** sur votre serveur Azure, ou le dossier SMS/Logs sur le serveur de système de site|
 
 <sup>1</sup> Il s’agit des fichiers journaux Configuration Manager locaux que le gestionnaire de services cloud synchronise toutes les cinq minutes à partir du stockage Azure. La passerelle de gestion cloud transfère (par opération push) les journaux vers le stockage Azure toutes les 5 minutes. Le délai maximal est donc de 10 minutes. Les commutateurs Verbose affectent les journaux locaux et distants. Les noms des fichiers réels incluent le nom du service et l’identificateur de l’instance de rôle. Par exemple, CMG-*NomService*-*IDInstanceRôle*-CMGSetup.log
 
@@ -674,7 +675,7 @@ Le tableau suivant répertorie les fichiers journaux qui contiennent des informa
 |DmpSoftware.log|Enregistre des données de la distribution logicielle provenant de clients hérités d'appareils mobiles sur un point de gestion activé pour les appareils mobiles.|Serveur de système de site|  
 |DmpStatus.log|Enregistre les données de messages d'état à partir de clients d'appareils mobiles sur un point de gestion activé pour les appareils mobiles.|Serveur de système de site|  
 |DmSvc.log|Enregistre les communications provenant de clients hérités d'appareils mobiles avec un point de gestion activé pour les appareils mobiles.|Client|  
-|FspIsapi.log|Enregistre des détails concernant les communications au point d'état de secours à partir de clients hérités d'appareils mobiles et d'ordinateurs clients.|Serveur de système de site|  
+|FspIsapi.log|Enregistre des détails concernant les communications au point d'état de repli à partir de clients hérités d'appareils mobiles et d'ordinateurs clients.|Serveur de système de site|  
 
 ###  <a name="BKMK_OSDLog"></a> Déploiement du système d’exploitation  
  Le tableau suivant répertorie les fichiers journaux qui contiennent des informations relatives au déploiement du système d'exploitation.  

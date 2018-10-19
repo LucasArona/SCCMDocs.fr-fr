@@ -2,7 +2,7 @@
 title: Cache d’homologue client
 titleSuffix: Configuration Manager
 description: Utilisez le cache de pair client pour les emplacements sources lors du déploiement de contenu avec Configuration Manager.
-ms.date: 07/30/2018
+ms.date: 09/19/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 86cd5382-8b41-45db-a4f0-16265ae22657
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c3dc6189f73b939f632581a8b50f05a72310111d
-ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
+ms.openlocfilehash: b1d4e2b7dca44db7ddc5976edde59a04bc3cb45e
+ms.sourcegitcommit: 4e4b71227309bee7e9f1285971f8235c67a9c502
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42755994"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46533760"
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>Cache de pair pour les clients Configuration Manager
 
@@ -59,8 +59,10 @@ Pour activer le cache de pair, déployez les [paramètres clients](#bkmk_setting
 
  -  Comme à chaque fois, le client qui demande le contenu sélectionne une source dans la liste fournie. Le client essaie ensuite d’obtenir le contenu.  
 
+À compter de la version 1806, les groupes de limites intègrent des paramètres supplémentaires qui offrent davantage de contrôle sur la distribution du contenu dans l’environnement. Pour plus d’informations, consultez [Options de groupe de limites pour les téléchargements à partir de pairs](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions).<!--1356193-->
+
 > [!NOTE]  
-> Si le client a recours à un groupe de limites voisin pour le contenu, le point de gestion n’ajoute pas les emplacements sources de cache de pair du groupe de limites voisin à la liste des emplacements de sources de contenu potentielles.  
+> Si le client se replie sur un groupe de limites voisin pour le contenu, le point de gestion n’ajoute pas les emplacements sources de cache de pair du groupe de limites voisin à la liste des emplacements de sources de contenu potentielles.  
 
 Choisissez seulement les clients les plus appropriés comme sources de cache de pair. Évaluez l’adéquation des clients en fonction d’attributs comme le type de châssis, l’espace disque et la connectivité réseau. Pour plus d’informations vous permettant de sélectionner les meilleurs clients à utiliser pour le cache de pair, consultez [ce blog d’un consultant Microsoft](https://blogs.technet.microsoft.com/setprice/2016/06/29/pe-peer-cache-custom-reporting-examples/).
 
@@ -98,9 +100,12 @@ Quand la source de cache de pair rejette une demande de contenu, le client du ca
 
     - Quand c’est nécessaire, la source de cache de pair utilise le compte d’accès réseau pour authentifier les demandes de téléchargement provenant des pairs. Pour cela, ce compte a seulement besoin des autorisations d’utilisateur de domaine.  
 
-- Le dernier envoi de la découverte de pulsation du client détermine la limite actuelle d’une source de cache de pair. Un client qui passe à un groupe de limites différent peut toujours être membre de son groupe de limites précédent pour ce qui concerne le cache de pair. Ce comportement fait qu’un client peut se voir proposer une source de cache de pair qui ne se trouve pas à proximité immédiate de son emplacement réseau. N’autorisez pas des clients itinérants à être des sources de cache de pair.<!--SCCMDocs issue 641-->  
+- Dans la version 1802 et les versions antérieures, le dernier envoi de la découverte de pulsation du client détermine la limite actuelle d’une source de cache de pair. Un client qui passe à un groupe de limites différent peut toujours être membre de son groupe de limites précédent pour ce qui concerne le cache de pair. Ce comportement fait qu’un client peut se voir proposer une source de cache de pair qui ne se trouve pas à proximité immédiate de son emplacement réseau. N’autorisez pas des clients itinérants à être des sources de cache de pair.<!--SCCMDocs issue 641-->  
 
-- Avant de tenter de télécharger du contenu, le client de cache de pair vérifie d’abord que la source de cache de pair est en ligne.<!--sms.498675--> Cette vérification est faite via le « canal rapide » pour la notification des clients, qui utilise le port TCP 10123.<!--511673-->  
+    > [!Important]  
+    > À compter de la version 1806, Configuration Manager détermine plus efficacement si une source de cache de pair s’est déplacée vers un autre emplacement. Ce comportement garantit que le point de gestion la propose comme source de contenu aux clients dans le nouvel emplacement, et non dans l’ancien. Si vous utilisez la fonctionnalité de cache de pair avec des sources de cache de pair itinérantes, après avoir mis à jour le site vers la version 1806, vous devez également mettre à jour toutes les sources de cache de pair vers la dernière version du client. Le point de gestion n’inclut pas ces sources de cache de pair dans la liste des emplacements de contenu tant qu’elles n’ont pas été mises à jour vers la version 1806 (minimum).<!--SCCMDocs issue 850-->  
+
+- Avant de tenter de télécharger du contenu, le point de gestion vérifie d’abord que la source de cache de pair est en ligne.<!--sms.498675--> Cette vérification est faite via le « canal rapide » pour la notification des clients, qui utilise le port TCP 10123.<!--511673-->  
 
 > [!Note]  
 > Pour tirer parti des nouvelles fonctionnalités de Configuration Manager, commencez par mettre à jour les clients vers la dernière version. Bien que les nouvelles fonctionnalités apparaissent dans la console Configuration Manager quand vous mettez à jour le site et la console, le scénario complet n’est pas fonctionnel tant que la version des clients n’est pas également la plus récente.  
@@ -123,13 +128,13 @@ Sur les clients autorisés à utiliser le cache de pair et qui utilisent le pare
 
 ### <a name="example-scenario"></a>Exemple de scénario
 
-Contoso a un seul site principal avec deux groupes de limites : un siège social et une filiale. Il existe une relation de secours de 30 minutes entre les groupes de limites. Le point de gestion et le point de distribution du site se trouvent uniquement dans la limite du siège social. L’emplacement de la filiale n’a aucun point de distribution local. Deux des quatre clients au niveau de la filiale sont configurés comme sources de cache d’homologue. 
+Contoso a un seul site principal avec deux groupes de limites : un siège social et une filiale. Il existe une relation de repli de 30 minutes entre les groupes de limites. Le point de gestion et le point de distribution du site se trouvent uniquement dans la limite du siège social. L’emplacement de la filiale n’a aucun point de distribution local. Deux des quatre clients au niveau de la filiale sont configurés comme sources de cache d’homologue. 
 
 ![Schéma de la configuration réseau comme décrite pour l’exemple de scénario](media/1357346-peer-cache-source-parts.png)
 
 1. Vous ciblez un déploiement avec du contenu sur les quatre clients de la filiale. Vous avez distribué du contenu uniquement au point de distribution.  
 
-2. Client3 et Client4 n’ont pas de source locale pour le déploiement. Le point de gestion indique aux clients de patienter 30 minutes avant de revenir au groupe de limites distantes.  
+2. Client3 et Client4 n’ont pas de source locale pour le déploiement. Le point de gestion indique aux clients de patienter 30 minutes avant de se replier sur le groupe de limites distantes.  
 
 3. Client1 (PCS1) est la première source de cache d’homologue pour actualiser la stratégie avec le point de gestion. Étant donné que ce client est activé comme source de cache d’homologue, le point de gestion lui indique de commencer immédiatement le téléchargement de la partie A à partir du point de distribution.  
 

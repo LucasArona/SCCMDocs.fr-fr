@@ -2,7 +2,7 @@
 title: Bibliothèque de contenu
 titleSuffix: Configuration Manager
 description: Découvrez la bibliothèque de contenu utilisée par Configuration Manager pour réduire la taille globale du contenu distribué.
-ms.date: 07/30/2018
+ms.date: 09/19/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 65c88e54-3574-48b0-a127-9cc914a89dca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 05c49f78d24599c574828cee59118c069b7c4ee8
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 5f063034ed7cdc22a92df8d07d8be03ece12f663
+ms.sourcegitcommit: 4e4b71227309bee7e9f1285971f8235c67a9c502
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39384951"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46533743"
 ---
 # <a name="the-content-library-in-configuration-manager"></a>Bibliothèque de contenu dans Configuration Manager
 
@@ -82,7 +82,9 @@ Cette bibliothèque de contenu distante est un prérequis pour la [haute disponi
 > Cette action déplace uniquement la bibliothèque de contenu sur le serveur de site. Elle n’affecte pas l’emplacement de la bibliothèque de contenu sur les points de distribution. 
 
 > [!Tip]  
-> Planifiez aussi la gestion du contenu des packages, qui est extérieure à la bibliothèque de contenu. Chaque objet de logiciel dans Configuration Manager a une source de package sur un partage réseau. Envisagez la centralisation de toutes les sources sur un seul partage, mais vérifiez que cet emplacement est redondant et à haute disponibilité. Si vous déplacez la bibliothèque de contenu sur le même volume de stockage que vos sources de package, et que ce volume prend en charge la déduplication du contenu, cette conception peut réduire la quantité de stockage nécessaire.  
+> Planifiez aussi la gestion du contenu des packages, qui est extérieure à la bibliothèque de contenu. Chaque objet de logiciel dans Configuration Manager a une source de package sur un partage réseau. Envisagez la centralisation de toutes les sources sur un seul partage, mais vérifiez que cet emplacement est redondant et à haute disponibilité. 
+> 
+> Si vous déplacez la bibliothèque de contenu vers le même volume de stockage que vos sources de package, vous ne pouvez pas marquer ce volume pour la déduplication des données. Contrairement à la bibliothèque de contenu, le volume de sources de package ne prend pas en charge la déduplication des données. Pour plus d’informations, consultez [Déduplication des données](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#bkmmk_datadedup).<!--SCCMDOcs issue #831-->  
 
 
 ### <a name="prerequisites"></a>Prérequis  
@@ -98,6 +100,9 @@ Cette bibliothèque de contenu distante est un prérequis pour la [haute disponi
 ### <a name="process-to-manage-the-content-library"></a>Processus de gestion de la bibliothèque de contenu
 
 1. Créez un dossier dans un partage réseau comme cible de la bibliothèque de contenu. Par exemple, `\\server\share\folder`.  
+
+    > [!Warning]  
+    > Ne réutilisez pas un dossier comprenant déjà du contenu. Par exemple, n’utilisez pas le dossier où se trouvent vos sources de package. Avant de copier la bibliothèque de contenu, Configuration Manager supprime tout le contenu existant de l’emplacement spécifié.  
 
 2. Dans la console de Configuration Manager, accédez à l’espace de travail **Administration**. Développez **Configuration du site**, sélectionnez le nœud **Sites**, puis sélectionnez le site. Dans l’onglet **Résumé** en bas du volet d’informations, vous noterez l’apparition d’une nouvelle colonne pour la **Bibliothèque de contenu**.  
 

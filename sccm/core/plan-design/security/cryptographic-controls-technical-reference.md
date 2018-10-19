@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 884859f9968f6d7f72e0aef3448eab42a3751ec5
-ms.sourcegitcommit: a17be6f5e4659ba3f38c7732b43f3afafcb95171
+ms.openlocfilehash: aa92f935984b52458a3d7daf17a11077c519da84
+ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42906401"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48862530"
 ---
 # <a name="cryptographic-controls-technical-reference"></a>Informations techniques de référence sur les contrôles de chiffrement
 
@@ -120,7 +120,7 @@ System Center Configuration Manager utilise la signature et le chiffrement pour 
  Si vous activez l’inventaire matériel des appareils mobiles, Configuration Manager ou Intune effectue également l’inventaire des certificats installés sur l’appareil mobile.   
 
 ### <a name="operating-system-deployment-and-pki-certificates"></a>Déploiement de systèmes d’exploitation et certificats PKI  
- Quand vous utilisez Configuration Manager pour déployer des systèmes d’exploitation et un point de gestion qui nécessite des connexions client HTTPS, l’ordinateur client a également besoin d’un certificat pour communiquer avec ce point de gestion, même s’il se trouve dans une phase de transition (démarrage depuis le média de séquence de tâches ou un point de distribution PXE, par exemple). Pour la prise en charge de ce scénario, vous devez créer un certificat d’authentification de client PKI, l’exporter avec la clé privée, puis l’importer vers les propriétés du serveur de site. Ajoutez également le certificat de l’autorité de certification racine approuvée du point de gestion.  
+ Quand vous utilisez Configuration Manager pour déployer des systèmes d’exploitation et un point de gestion qui nécessite des connexions client HTTPS, l’ordinateur client a également besoin d’un certificat pour communiquer avec ce point de gestion, même s’il se trouve dans une phase de transition (démarrage depuis le média de séquence de tâches ou un point de distribution PXE, par exemple). Pour la prise en charge de ce scénario, vous devez créer un certificat d’authentification client PKI, l’exporter avec la clé privée, puis l’importer dans les propriétés du serveur de site. Ajoutez également le certificat d’autorité de certification racine approuvée du point de gestion.  
 
  Si vous créez un média de démarrage, vous importez le certificat d'authentification du client lors de la création du média de démarrage. Configurez un mot de passe sur le support de démarrage pour protéger la clé privée et les autres données sensibles configurées dans la séquence de tâches. Chaque ordinateur qui démarre depuis le support de démarrage présentera le même certificat au point de gestion que celui requis pour les fonctions de clients telles que la demande de stratégies client.  
 
@@ -192,7 +192,7 @@ System Center Configuration Manager utilise la signature et le chiffrement pour 
 
 -   Point d'inscription  
 
--   Point d’état de secours  
+-   Point d’état de repli  
 
 -   Point de gestion  
 
@@ -240,11 +240,11 @@ System Center Configuration Manager utilise la signature et le chiffrement pour 
 ### <a name="communication-that-is-unencrypted-when-clients-use-https-communication"></a>Communications non chiffrées quand les clients utilisent la communication HTTPS  
  Lorsque les clients communiquent avec des systèmes de site à l'aide du protocole HTTPS, les communications sont généralement chiffrées via le protocole SSL. Cependant, dans les cas suivants, les clients communiquent avec les systèmes de site sans recourir au chiffrement :  
 
--   le client ne parvient pas à effectuer une connexion HTTPS sur l'Intranet et revient à utiliser le protocole HTTP lorsque les systèmes de site autorisent cette configuration  
+-   le client ne parvient pas à effectuer une connexion HTTPS sur l'intranet et se replie sur l’utilisation du protocole HTTP lorsque les systèmes de site autorisent cette configuration  
 
 -   Communication vers les rôles de système de site suivants :  
 
-    -   le client envoie des messages d'état au point d'état de secours  
+    -   le client envoie des messages d'état au point d'état de repli  
 
     -   le client envoie des demandes PXE à un point de distribution compatible PXE  
 

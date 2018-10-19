@@ -10,12 +10,12 @@ ms.assetid: 463ce307-59dd-4abd-87b8-42ca9db178d7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8d783211396f3cdc9f14798ed7dc97e921e45554
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 793ba0f05c7a188a6bda9649c9d25922ce27d42c
+ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385910"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48862462"
 ---
 # <a name="using-the-system-center-configuration-manager-console"></a>Utilisation de la console System Center Configuration Manager
 
@@ -82,6 +82,17 @@ Vous pouvez ajouter, supprimer, réorganiser et redimensionner des colonnes. Ces
 Au bas du menu contextuel de la colonne, vous pouvez trier ou regrouper selon une colonne. En outre, vous pouvez trier selon une colonne en cliquant sur son en-tête. 
 
 ![Configuration Manager, regrouper selon une colonne](media/column-group-by.png)
+
+##<a name="console-command-line-options"></a>Options de ligne de commande de la console
+La console Microsoft System Center Configuration Manager comprend les options de ligne de commande suivantes.
+
+|Option|Description|  
+|------------|-----------------|  
+|**/sms:debugview=1**|Un DebugView est inclus dans tous les ResultView qui spécifient une vue. DebugView affiche les propriétés brutes (noms et valeurs).|  
+|**/sms:NamespaceView=1**|Affiche la vue d’espace de noms dans la console System Center Configuration Manager.|  
+|**/sms:ResetSettings**|La console System Center Configuration Manager ignore les états de connexion et d’affichage rendus persistants par l’utilisateur (la taille de la fenêtre de Microsoft Management Console n’est pas réinitialisée).|  
+|**/sms:IgnoreExtensions**|Désactive les extensions dans System Center Configuration Manager.|  
+|**/sms:NoRestore**|La console System Center Configuration Manager ignore la navigation de nœuds persistants précédente.|  
 
 ## <a name="console-improvements-in-version-1806"></a>Améliorations apportées à la console dans la version 1806
 Dans Configuration Manager version 1806, les améliorations suivantes ont été apportées à la console :

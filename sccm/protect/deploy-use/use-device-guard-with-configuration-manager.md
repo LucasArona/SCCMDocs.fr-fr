@@ -10,12 +10,12 @@ ms.assetid: 5e5d854c-9cc1-4dd8-b33f-0fcac675b395
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3750e91d96c1ca3eda1ad0ca2fc67b5f627c7a03
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 2ccc918bf5f15798c201ed491dd3824bb20b2ebb
+ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353550"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48862564"
 ---
 # <a name="device-guard-management-with-configuration-manager"></a>Gestion de Device Guard avec Configuration Manager
 
@@ -148,7 +148,7 @@ Dans ce cas, le logiciel peut continuer à être autorisé à s’exécuter mêm
 - Ne déployez pas une stratégie **Mise en conformité activée** puis plus tard une stratégie **Audit uniquement** sur le même appareil. Il se peut que des logiciels non autorisés soient autorisés à s’exécuter à cause de cette configuration.
 - Quand vous utilisez Configuration Manager pour activer Windows Defender Application Control sur des PC clients, la stratégie n’empêche pas les utilisateurs disposant de droits d’administrateur local de contourner les stratégies Application Control ou d’exécuter des logiciels non autorisés. 
 - La seule façon d’empêcher les utilisateurs ayant des droits d’administrateur local de désactiver Application Control consiste à déployer une stratégie de fichiers binaires signés. Ce déploiement est possible par le biais de la stratégie de groupe, mais il n’est pas pris en charge dans Configuration Manager pour le moment.
-- Le paramétrage de Configuration Manager en tant que programme d’installation managé sur les PC clients utilise la stratégie AppLocker. AppLocker est utilisé seulement pour identifier les programmes d’installation managés ; la vérification de la conformité est effectuée avec Application Control. 
+- Le paramétrage de Configuration Manager en tant que programme d’installation managé sur les PC clients utilise la stratégie AppLocker. AppLocker est utilisé uniquement pour identifier les programmes d’installation managés. La mise en conformité est effectuée avec Windows Defender Application Control. 
 
 
 

@@ -1,21 +1,21 @@
 ---
 title: Configurer la passerelle de gestion cloud
-titleSuffix: Configuraton Manager
+titleSuffix: Configuration Manager
 description: Utilisez cette procédure pas à pas pour configurer une passerelle de gestion cloud (CMG).
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 03/22/2018
+ms.date: 09/10/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: 04c1b262704ec6458bd9773c28c43a50d8fc0840
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: a5f356eef4d72040bd069fc17dd20fdbc3587cd6
+ms.sourcegitcommit: 2badee2b63ae63687795250e298f463474063100
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32338310"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601056"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Configurer la passerelle de gestion cloud pour Configuration Manager
 
@@ -40,9 +40,9 @@ Utilisez la liste de vérification suivante pour vous assurer que vous disposez 
 
 - À compter de la version 1802, choisissez si vous utilisez le **déploiement Azure Resource Manager** ou un **déploiement de service classique**. Pour plus d’informations, consultez [Azure Resource Manager](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager). Vous devez respecter les exigences suivantes pour un déploiement Azure Resource Manager de la passerelle de gestion cloud :  
 
-    - Intégration à [Azure AD](/sccm/core/servers/deploy/configure/azure-services-wizard) pour la **gestion cloud**. Découverte d’utilisateurs Azure AD non requise.  
+    - Intégration à [Azure AD](/sccm/core/servers/deploy/configure/azure-services-wizard) pour la **gestion cloud**. La découverte des utilisateurs Azure AD n’est pas nécessaire.  
 
-    - Un administrateur des abonnements doit se connecter.  
+    - Un administrateur de l’abonnement doit se connecter.  
 
 - Vous devez respecter les exigences suivantes pour un déploiement de service classique de la passerelle de gestion cloud :  
 
@@ -60,29 +60,29 @@ Utilisez la liste de vérification suivante pour vous assurer que vous disposez 
 
 ## <a name="set-up-a-cmg"></a>Configurer une passerelle de gestion cloud
 
-Effectuez cette procédure sur le site de niveau supérieur. Ce site est soit un site principal autonome, soit le site d’administration centrale.
+Effectuez cette procédure sur le site de plus haut niveau. Ce site est soit un site principal autonome, soit le site d’administration centrale.
 
 1. Dans la console Configuration Manager, accédez à l’espace de travail **Administration**, développez **Services cloud**, puis sélectionnez **Passerelle de gestion cloud**.  
 
-2. Cliquez sur **Créer une Passerelle de gestion cloud** dans le ruban.  
+2. Sélectionnez **Créer une Passerelle de gestion cloud** dans le ruban.  
 
 3. À compter de la version 1802, dans la page Général de l’Assistant, choisissez d’abord la méthode de déploiement CMG : **Déploiement d’Azure Resource Manager** ou **Déploiement de service Classic**.  
 
-    1. Pour le **déploiement Azure Resource Manager** : cliquez sur **Se connecter** pour vous authentifier avec un compte d’administrateur d’abonnements Azure. L’Assistant remplit automatiquement les champs restants à partir des informations stockées dans les prérequis de l’intégration d’Azure AD. Si vous possédez plusieurs abonnements, sélectionnez l’**ID de l’abonnement** que vous voulez utiliser.  
+    1. Pour le **déploiement Azure Resource Manager** : sélectionnez **Se connecter** pour vous authentifier avec un compte d’administrateur d’abonnements Azure. L’Assistant remplit automatiquement les champs restants à partir des informations stockées dans les prérequis de l’intégration d’Azure AD. Si vous possédez plusieurs abonnements, sélectionnez l’**ID de l’abonnement** que vous voulez utiliser.  
 
-    2. Pour le **déploiement de service classique** *et les versions 1706 et 1710 de Configuration Manager* : entrez votre **ID d’abonnement** Azure. Cliquez ensuite sur **Parcourir**, puis sélectionnez le fichier .PFX du certificat de gestion Azure. 
+    2. Pour le **déploiement de service classique** *et les versions 1706 et 1710 de Configuration Manager* : entrez votre **ID d’abonnement** Azure. Sélectionnez ensuite **Parcourir**, puis choisissez le fichier .PFX du certificat de gestion Azure. 
 
 4. Spécifiez l’**environnement Azure** pour cette passerelle de gestion cloud. Les options disponibles dans la liste déroulante peuvent varier en fonction de la méthode de déploiement.  
 
-5. Cliquez sur **Suivant**. Attendez que le site teste la connexion à Azure.  
+5. Sélectionnez **Suivant**. Attendez que le site teste la connexion à Azure.  
 
-4. Dans la page Paramètres de l’Assistant, cliquez d’abord sur **Parcourir**, puis sélectionnez le fichier .PFX correspondant au certificat d’authentification serveur de la passerelle de gestion cloud. Le nom de ce certificat remplit les champs **Nom de domaine complet du service** et **Nom du service**.  
+4. Dans la page Paramètres de l’Assistant, sélectionnez d’abord **Parcourir**, puis choisissez le fichier .PFX correspondant au certificat d’authentification serveur de la passerelle de gestion cloud. Le nom de ce certificat remplit les champs **Nom de domaine complet du service** et **Nom du service**.  
 
    > [!NOTE]  
    > À compter de la version 1802, le certificat d’authentification serveur de la passerelle de gestion cloud prend en charge les caractères génériques. Si vous utilisez un certificat générique, remplacez l’astérisque (\*) dans le champ **Nom de domaine complet du service** par le nom d’hôte souhaité pour la passerelle de gestion cloud.  
    <!--491233-->  
 
-5. Cliquez sur la liste déroulante **Région** pour choisir la région Azure pour cette passerelle de gestion cloud.  
+5. Sélectionnez la liste déroulante **Région** pour choisir la région Azure pour cette passerelle de gestion cloud.  
 
 6. Dans la version 1802 et si vous utilisez un déploiement Azure Resource Manager, sélectionnez une option**Groupe de ressources**. 
    1. Si vous choisissez **Utiliser le fichier existant**, sélectionnez un groupe de ressources existant dans la liste déroulante.
@@ -90,15 +90,20 @@ Effectuez cette procédure sur le site de niveau supérieur. Ce site est soit un
 
 6. Dans le champ **Instance de machine virtuelle**, entrez le nombre de machines virtuelles pour ce service. La valeur par défaut est 1, mais vous pouvez définir jusqu’à 16 machines virtuelles par passerelle de gestion cloud.  
 
-7. Cliquez sur **Certificats** pour ajouter des certificats racines approuvés de client. Ajoutez jusqu’à deux autorités de certification racines de confiance et quatre autorités de certification (subordonnées) intermédiaires.  
+7. Sélectionnez **Certificats** pour ajouter des certificats racines approuvés de client. Ajoutez jusqu’à deux autorités de certification racines de confiance et quatre autorités de certification (subordonnées) intermédiaires.  
 
-8. Par défaut, l’Assistant active l’option permettant de **Vérifier la révocation des certificats clients**. Une liste de révocation de certificats doit être publiée publiquement pour que cette vérification fonctionne. Si vous ne publiez pas de liste de révocation de certificats, décochez cette option.  
+    > [!Note]  
+    > À compter de la version 1806, quand vous créez une passerelle de gestion cloud, vous n’êtes plus obligé de fournir un certificat racine approuvé dans la page Paramètres. Ce certificat n’est pas nécessaire lorsque vous utilisez Azure Active Directory (Azure AD) pour l’authentification client, mais il était auparavant nécessaire dans l’Assistant. Si vous utilisez des certificats d’authentification client PKI, vous devez néanmoins encore ajouter un certificat racine approuvé pour la passerelle de gestion cloud.<!--SCCMDocs-pr issue #2872-->  
 
-9. Cliquez sur **Suivant**.  
+8. Par défaut, l’Assistant active l’option permettant de **Vérifier la révocation des certificats clients**. Une liste de révocation de certificats doit être publiée publiquement pour que cette vérification fonctionne. Si vous ne publiez pas de liste de révocation de certificats, désélectionnez cette option.  
 
-10. Pour surveiller le trafic de la passerelle de gestion cloud avec un seuil de 14 jours, cochez la case pour activer l’alerte de seuil. Ensuite, spécifiez le seuil et le pourcentage auquel déclencher les différents niveaux d’alerte. Choisissez **Suivant** quand vous avez terminé.  
+9. À compter de la version 1806, par défaut, l’Assistant active l’option suivante : **Autoriser la passerelle de gestion cloud à fonctionner comme point de distribution cloud et à servir du contenu à partir du stockage Azure**. À présent, une passerelle de gestion cloud peut également délivrer du contenu aux clients. Cette fonctionnalité réduit le nombre de certificats nécessaires, ainsi que les coûts associés aux machines virtuelles Azure.  
 
-11. Vérifiez les paramètres, puis choisissez **Suivant**. Configuration Manager commence à configurer le service. Une fois l’Assistant fermé, 5 à 15 minutes sont nécessaires pour provisionner complètement le service dans Azure. Vérifiez la colonne **État** de la nouvelle passerelle de gestion cloud pour déterminer quand le service est prêt.  
+10. Sélectionnez **Suivant**.  
+
+11. Pour surveiller le trafic de la passerelle de gestion cloud avec un seuil de 14 jours, cochez la case pour activer l’alerte de seuil. Ensuite, spécifiez le seuil et le pourcentage auquel déclencher les différents niveaux d’alerte. Choisissez **Suivant** quand vous avez terminé.  
+
+12. Vérifiez les paramètres, puis choisissez **Suivant**. Configuration Manager commence à configurer le service. Une fois l’Assistant fermé, 5 à 15 minutes sont nécessaires pour provisionner complètement le service dans Azure. Vérifiez la colonne **État** de la nouvelle passerelle de gestion cloud pour déterminer quand le service est prêt.  
 
  > [!Note]  
  > Pour résoudre les problèmes de déploiement de passerelle de gestion cloud, utilisez **CloudMgr.log** et **CMGSetup.log**. Pour plus d’informations, consultez [Fichiers journaux](/sccm/core/plan-design/hierarchy/log-files#cloud-management-gateway).
@@ -107,7 +112,7 @@ Effectuez cette procédure sur le site de niveau supérieur. Ce site est soit un
 
 ## <a name="configure-primary-site-for-client-certificate-authentication"></a>Configurer le site principal pour l’authentification de certification client
 
-Si vous utilisez des [certificats d’authentification client](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#client-authentication-certificate) pour que les clients s’authentifient auprès de la passerelle de gestion cloud, suivez la procédure suivante pour configurer chaque site principal.  
+Si vous utilisez des [certificats d’authentification client](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#client-authentication-certificate) pour que les clients s’authentifient auprès de la passerelle de gestion cloud, suivez cette procédure pour configurer chaque site principal.  
 
 1. Dans la console Configuration Manager, accédez à l’espace de travail **Administration**, développez **Configuration du site**, puis sélectionnez **Sites**.  
 
@@ -115,7 +120,7 @@ Si vous utilisez des [certificats d’authentification client](/sccm/core/client
 
 3. Passer à l’onglet **Communications des ordinateurs clients** de la feuille de propriétés du site principal, puis cochez la case **Utiliser le certificat client PKI (fonctionnalité d’authentification du client) lorsqu’il est disponible**.  
 
-4. Si vous ne publiez pas de liste de révocation de certificats, désactivez l’option **Les clients vérifient la liste de révocation des certificats (CRL) pour les systèmes de site**.  
+4. Si vous ne publiez pas de liste de révocation de certificats, désélectionnez l’option **Les clients vérifient la liste de révocation des certificats (CRL) pour les systèmes de site**.  
 
 
 
@@ -135,14 +140,14 @@ Le point de connexion CMG est le rôle de système de site permettant de communi
 
 Configurez les systèmes de site de point de gestion et de point de mise à jour logicielle pour accepter le trafic de la passerelle de gestion cloud. Effectuez cette procédure sur le site principal, pour tous les points de gestion et tous les points de mise à jour logicielle qui gèrent des clients Internet.  
 
-1. Dans la console Configuration Manager, accédez à l’espace de travail **Administration**, développez **Configuration du site**, cliquez avec le bouton droit sur **Serveurs et rôles de système de site**, puis sélectionnez **Point de gestion** dans la liste.  
+1. Dans la console Configuration Manager, accédez à l’espace de travail **Administration**, développez **Configuration du site**, puis sélectionnez le nœud **Serveurs et rôles de système de site**. Sous l’onglet Accueil du ruban, dans le groupe Affichage, sélectionnez **Serveurs avec rôle**. Sélectionnez ensuite **Point de gestion** dans la liste.  
 
-2. Sélectionnez le serveur de système de site que vous souhaitez configurer pour le trafic de la passerelle de gestion cloud. Sélectionnez le rôle **Point de gestion** dans le volet d’informations, puis cliquez sur **Propriétés** dans le ruban.  
+2. Sélectionnez le serveur de système de site que vous souhaitez configurer pour le trafic de la passerelle de gestion cloud. Sélectionnez le rôle **Point de gestion** dans le volet d’informations, puis sélectionnez **Propriétés** dans le ruban.  
 
 3. Dans la feuille des propriétés Point de gestion, sous Connexions client, cochez la case située en regard de l’option **Autoriser le trafic de la passerelle de gestion cloud de Configuration Manager**. 
     - En fonction de votre conception de la passerelle de gestion cloud et de la version de Configuration Manager, vous devrez peut-être activer l’option **HTTPS**. Pour plus d’informations, consultez [Activer le point de gestion pour HTTPS](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#enable-management-point-for-https).  
 
-4. Cliquez sur **OK**.   
+4. Sélectionnez **OK** pour fermer la fenêtre des propriétés du point de gestion.   
 
 Répétez ces étapes pour les points de gestion supplémentaires si nécessaire, et pour tous les points de mise à jour logicielle. 
 
@@ -166,7 +171,7 @@ Le client Configuration Manager détermine automatiquement s’il est sur l’in
 
 Pour vérifier que les clients disposent de la stratégie spécifiant la passerelle de gestion cloud, ouvrez une invite de commandes Windows PowerShell en tant qu’administrateur sur l’ordinateur client, puis exécutez la commande suivante : `Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}`
 
-Cette commande affiche tous les points de gestion Internet que le client connaît. Quand la passerelle de gestion cloud n’est pas techniquement un point de gestion Internet, elle s’affiche comme telle aux clients.
+Cette commande affiche tous les points de gestion Internet que le client connaît. Alors que la passerelle de gestion cloud n’est techniquement pas un point de gestion Internet, les clients la voient cependant comme telle.
 
  > [!Note]  
  > Pour résoudre les problèmes liés au trafic client de passerelle de gestion cloud, utilisez **CMGHttpHandler.log**, **CMGService.log** et **SMS_Cloud_ProxyConnector.log**. Pour plus d’informations, consultez [Fichiers journaux](/sccm/core/plan-design/hierarchy/log-files#cloud-management-gateway).
@@ -175,23 +180,29 @@ Cette commande affiche tous les points de gestion Internet que le client connaî
 
 ## <a name="modify-a-cmg"></a>Modifier une passerelle de gestion cloud
 
-Après avoir créé une passerelle de gestion cloud, vous pouvez modifier certains de ses paramètres. Sélectionnez la passerelle de gestion cloud dans la console Configuration Manager, puis cliquez sur **Propriétés**. Les paramètres suivants sont configurables :  
+Après avoir créé une passerelle de gestion cloud, vous pouvez modifier certains de ses paramètres. Sélectionnez la passerelle de gestion cloud dans la console Configuration Manager, puis sélectionnez **Propriétés**. Configurez les paramètres sous les onglets suivants :  
 
-- **Général**  
+#### <a name="general"></a>Général
 
-    - **Certificat de gestion Azure** : changez le certificat de gestion Azure pour la passerelle de gestion cloud. Cette option est utile lors de la mise à jour du certificat avant son expiration.  
+- **Certificat de gestion Azure** : changez le certificat de gestion Azure pour la passerelle de gestion cloud. Cette option est utile lors de la mise à jour du certificat avant son expiration.  
 
-- **Paramètres**  
+#### <a name="settings"></a>Paramètres
 
-    - **Fichier de certificat** : changez le certificat d’authentification serveur pour la passerelle de gestion cloud. Cette option est utile lors de la mise à jour du certificat avant son expiration.  
+- **Fichier de certificat** : changez le certificat d’authentification serveur pour la passerelle de gestion cloud. Cette option est utile lors de la mise à jour du certificat avant son expiration.  
 
-    - **Instance de machine virtuelle** : changez le nombre de machines virtuelles que le service utilise dans Azure. Ce paramètre vous permet de faire monter ou descendre en puissance le service de façon dynamique en fonction de considérations relatives à l’utilisation ou au coût.  
+- **Instance de machine virtuelle** : changez le nombre de machines virtuelles que le service utilise dans Azure. Ce paramètre vous permet de faire monter ou descendre en puissance le service de façon dynamique en fonction de considérations relatives à l’utilisation ou au coût.  
 
-    - **Certificats** : ajoutez ou supprimez des certificats d’autorité de certification intermédiaires ou racines de confiance. Cette option est utile lors de l’ajout de nouvelles autorités de certification ou du retrait de certificats expirés.  
+- **Certificats** : ajoutez ou supprimez des certificats d’autorité de certification intermédiaires ou racines de confiance. Cette option est utile lors de l’ajout de nouvelles autorités de certification ou du retrait de certificats expirés.  
 
-    - **Vérifier la révocation des certificats clients** : si vous n’avez pas activé ce paramètre initialement lors de la création de la passerelle de gestion cloud, vous pouvez l’activer ultérieurement une fois que vous publiez la liste de révocation de certificats.  
+- **Vérifier la révocation des certificats clients** : si vous n’avez pas initialement activé ce paramètre lors de la création de la passerelle de gestion cloud, vous pouvez l’activer ultérieurement une fois que vous publiez la liste de révocation de certificats.  
 
-- **Alertes** : vous pouvez reconfigurer les alertes à tout moment après avoir créé la passerelle de gestion cloud. 
+- **Autoriser la passerelle de gestion cloud à fonctionner comme point de distribution cloud et à servir du contenu à partir du stockage Azure** : à compter de la version 1806, cette nouvelle option est activée par défaut. À présent, une passerelle de gestion cloud peut également délivrer du contenu aux clients. Cette fonctionnalité réduit le nombre de certificats nécessaires, ainsi que les coûts associés aux machines virtuelles Azure.<!--1358651-->  
+
+#### <a name="alerts"></a>Alertes
+Reconfigurez les alertes à tout moment après avoir créé la passerelle de gestion cloud. 
+
+
+### <a name="redeploy-the-service"></a>Redéployer le service
 
 Les changements plus importants, tels que les configurations suivantes, exigent de redéployer le service :
 - Méthode de déploiement classique sur Azure Resource Manager
@@ -204,18 +215,41 @@ Conservez toujours au moins une passerelle de gestion cloud active pour que les 
 
 Étant donné que les clients actualisent la stratégie par défaut toutes les 24 heures, attendez au moins un jour après avoir créé une passerelle de gestion cloud pour supprimer l’ancienne. Si les clients sont désactivés ou sans connexion Internet, vous devrez peut-être attendre plus longtemps. 
 
-À compter de la version 1802, si vous avez une passerelle de gestion cloud existante sur la méthode de déploiement classique, vous devez déployer une nouvelle passerelle de gestion cloud pour utiliser la méthode de déploiement Azure Resource Manager.<!--509753--> Il existe deux options :
-- Si vous voulez réutiliser le même nom de service :
-    1. Supprimez d’abord la passerelle de gestion cloud classique, en respectant le conseil de toujours avoir au moins une passerelle de gestion cloud active pour les clients Internet.
-    2. Créez une passerelle de gestion cloud à l’aide d’un déploiement Resource Manager. Réutilisez le même certificat d’authentification serveur.
-    3. Reconfigurez le point de connexion CMG pour utiliser la nouvelle instance de passerelle de gestion cloud.
-- Si vous voulez utiliser un nouveau nom de service :
-    1. Créez une passerelle de gestion cloud à l’aide d’un déploiement Resource Manager. Utilisez un nouveau certificat d’authentification serveur.
-    2. Créez un point de connexion CMG et un lien avec la nouvelle passerelle de gestion cloud.
-    3. Attendez au moins un jour que les clients Internet reçoivent la stratégie sur la nouvelle passerelle de gestion cloud.
-    4. Supprimez la passerelle de gestion cloud classique.
+À compter de la version 1802, si vous avez une passerelle de gestion cloud existante sur la méthode de déploiement classique, vous devez déployer une nouvelle passerelle de gestion cloud pour utiliser la méthode de déploiement Azure Resource Manager.<!--509753--> Il existe deux options :  
 
-Modifiez la passerelle de gestion cloud uniquement à partir de la console Configuration Manager. Apporter des modifications au service ou à des machines virtuelles sous-jacentes directement dans Azure n’est pas pris en charge. Tous les changements apportés peuvent être perdus sans préavis. Comme avec n’importe quel service PaaS, le service peut regénérer les machines virtuelles à tout moment. Ces régénérations peuvent se produire pour la maintenance du matériel principal, ou pour appliquer des mises à jour au système d’exploitation des machines virtuelles.
+- Si vous voulez réutiliser le même nom de service :  
+
+    1. Supprimez d’abord la passerelle de gestion cloud classique, en respectant le conseil de toujours avoir au moins une passerelle de gestion cloud active pour les clients Internet.  
+
+    2. Créez une passerelle de gestion cloud à l’aide d’un déploiement Resource Manager. Réutilisez le même certificat d’authentification serveur.  
+
+    3. Reconfigurez le point de connexion CMG pour utiliser la nouvelle instance de passerelle de gestion cloud.  
+
+- Si vous voulez utiliser un nouveau nom de service :  
+
+    1. Créez une passerelle de gestion cloud à l’aide d’un déploiement Resource Manager. Utilisez un nouveau certificat d’authentification serveur.  
+
+    2. Créez un point de connexion CMG et un lien avec la nouvelle passerelle de gestion cloud.  
+
+    3. Attendez au moins un jour que les clients Internet reçoivent la stratégie sur la nouvelle passerelle de gestion cloud.  
+
+    4. Supprimez la passerelle de gestion cloud classique.  
+
+> [!Tip]  
+> Pour déterminer le modèle de déploiement actuel d’une passerelle de gestion cloud :<!--SCCMDocs issue #611-->  
+> 1. Dans la console Configuration Manager, accédez à l’espace de travail **Administration**, développez **Services cloud**, puis sélectionnez le nœud **Passerelle de gestion cloud**.  
+> 2. Sélectionnez l’instance de la passerelle de gestion cloud.  
+> 3. Dans le volet Détails en bas de la fenêtre, recherchez l’attribut **Modèle de déploiement**. Pour un déploiement Resource Manager, cet attribut est **Azure Resource Manager**. 
+> 
+> Vous pouvez aussi ajouter l’attribut **Modèle de déploiement** comme colonne de la vue de liste.  
+
+
+### <a name="modifications-in-the-azure-portal"></a>Modifications dans le portail Azure
+
+Modifiez la passerelle de gestion cloud uniquement à partir de la console Configuration Manager. La possibilité d’apporter des modifications au service ou à des machines virtuelles sous-jacentes directement dans Azure n’est pas prise en charge. Tous les changements apportés peuvent être perdus sans préavis. Comme avec n’importe quel service PaaS, le service peut regénérer les machines virtuelles à tout moment. Ces régénérations peuvent se produire pour la maintenance du matériel principal, ou pour appliquer des mises à jour au système d’exploitation des machines virtuelles.
+
+
+### <a name="delete-the-service"></a>Supprimer le service
 
 Si vous devez supprimer la passerelle de gestion cloud, effectuez-le également à partir de la console Configuration Manager. La suppression manuelle de tout composant dans Azure entraîne l’incohérence du système. Cet état conserve des informations orphelines, et des comportements inattendus peuvent se produire. 
 

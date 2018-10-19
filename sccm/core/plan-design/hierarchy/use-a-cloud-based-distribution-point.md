@@ -2,7 +2,7 @@
 title: Point de distribution cloud
 titleSuffix: Configuration Manager
 description: Planifiez et concevez la distribution de contenu logiciels via Microsoft Azure avec des points de distribution cloud dans Configuration Manager.
-ms.date: 07/30/2018
+ms.date: 09/10/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 3cd9c725-6b42-427d-9191-86e67f84e48c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0c41fddef794049456529d9577275a21668717f5
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 79b17ba00274459401dc81035833163e75939be0
+ms.sourcegitcommit: 2badee2b63ae63687795250e298f463474063100
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385454"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601141"
 ---
 # <a name="use-a-cloud-distribution-point-in-configuration-manager"></a>Utiliser un point de distribution cloud dans Configuration Manager
 
@@ -51,7 +51,7 @@ Le point de distribution cloud prend en charge plusieurs fonctionnalités égale
 
 -   Gérer les points de distribution cloud individuellement ou comme membres de groupes de points de distribution  
 
--   Utiliser un point de distribution cloud comme emplacement de contenu de secours  
+-   Utiliser un point de distribution cloud comme emplacement de contenu de repli  
 
 -   Prend en charge des clients intranet et Internet  
 
@@ -110,7 +110,7 @@ Pour déterminer s’il faut inclure les points de distribution cloud dans des g
 
 - Les clients Internet ne s’appuient pas sur des groupes de limites. Ils utilisent seulement des points de distribution accessibles sur Internet ou des points de distribution cloud. Si vous utilisez seulement des points de distribution cloud pour traiter ces types de clients, vous n’avez pas besoin de les inclure dans les groupes de limites.  
 
-- Si vous voulez que les clients sur votre réseau interne utilisent un point de distribution cloud, celui-ci doit se trouver dans le même groupe de limites que les clients. Les clients placent les points de distribution cloud en dernière priorité dans leur liste de sources de contenu, car un coût est associé au téléchargement de contenu en dehors d’Azure. Ainsi, un point de distribution cloud est généralement utilisé comme source de secours pour les clients intranet. Si vous voulez une conception où le cloud est utilisé en premier, concevez vos groupes de limites pour répondre à cette exigence métier. Pour plus d’informations, consultez [Configurer des groupes de limites](/sccm/core/servers/deploy/configure/boundary-groups).  
+- Si vous voulez que les clients sur votre réseau interne utilisent un point de distribution cloud, celui-ci doit se trouver dans le même groupe de limites que les clients. Les clients placent les points de distribution cloud en dernière priorité dans leur liste de sources de contenu, car un coût est associé au téléchargement de contenu en dehors d’Azure. Ainsi, un point de distribution cloud est généralement utilisé comme source de repli pour les clients intranet. Si vous voulez une conception où le cloud est utilisé en premier, concevez vos groupes de limites pour répondre à cette exigence métier. Pour plus d’informations, consultez [Configurer des groupes de limites](/sccm/core/servers/deploy/configure/boundary-groups).  
 
 
 Même si vous installez des points de distribution cloud dans des régions spécifiques d’Azure, les clients ne sont pas informés des régions Azure. Ils sélectionnent un point de distribution cloud de façon aléatoire. Si vous installez des points de distribution cloud dans plusieurs régions et qu’un client en reçoit plusieurs dans la liste des emplacements de contenu, le client peut ne pas utiliser un point de distribution cloud de la même région Azure.  
@@ -307,6 +307,18 @@ Le service Stockage Azure prend en charge 500 demandes par seconde pour un même
 En fonction de la conception de votre point de distribution cloud, vous avez besoin d’un ou plusieurs certificats numériques.  
 
 
+### <a name="general-information"></a>Informations générales
+<!--SCCMDocs issue #779--> Les certificats pour les points de distribution cloud prennent en charge les configurations suivantes :  
+
+- **Longueur de clé de 4 096 bits**  
+
+- À compter de la version 1710, prise en charge des certificats **Version 3**. Pour plus d’informations, consultez [Vue d’ensemble des certificats CNG](/sccm/core/plan-design/network/cng-certificates-overview).  
+
+- À compter de la version 1802, quand vous configurez Windows avec la stratégie suivante : **Chiffrement système : utilisez des algorithmes compatibles FIPS pour le chiffrement, le hachage et la signature**  
+
+- À compter de la version 1802, prise en charge de **TLS 1.2**. Pour plus d’informations, consultez [Informations techniques de référence sur les contrôles de chiffrement](/sccm/core/plan-design/security/cryptographic-controls-technical-reference#about-ssl-vulnerabilities).  
+
+
 ### <a name="azure-management-certificate"></a>Certificat de gestion Azure
 
 *Ce certificat est obligatoire pour les déploiements de services classiques. Par contre, il ne l’est pas pour les déploiements Azure Resource Manager.*
@@ -345,7 +357,7 @@ Un certificat d’authentification client n’est pas nécessaire. Le client n�
 
 ### <a name="can-my-on-premises-clients-use-a-cloud-distribution-point"></a>Mes clients locaux peuvent-ils utiliser un point de distribution cloud ?
 
-Oui. Si vous voulez que les clients sur votre réseau interne utilisent un point de distribution cloud, celui-ci doit se trouver dans le même groupe de limites que les clients. Les clients placent les points de distribution cloud en dernière priorité dans leur liste de sources de contenu, car un coût est associé au téléchargement de contenu en dehors d’Azure. Ainsi, un point de distribution cloud est généralement utilisé comme source de secours pour les clients intranet. Si vous voulez une conception où le cloud est utilisé en premier, concevez vos groupes de limites en conséquence. Pour plus d’informations, consultez [Configurer des groupes de limites](/sccm/core/servers/deploy/configure/boundary-groups).  
+Oui. Si vous voulez que les clients sur votre réseau interne utilisent un point de distribution cloud, celui-ci doit se trouver dans le même groupe de limites que les clients. Les clients placent les points de distribution cloud en dernière priorité dans leur liste de sources de contenu, car un coût est associé au téléchargement de contenu en dehors d’Azure. Ainsi, un point de distribution cloud est généralement utilisé comme source de repli pour les clients intranet. Si vous voulez une conception où le cloud est utilisé en premier, concevez vos groupes de limites en conséquence. Pour plus d’informations, consultez [Configurer des groupes de limites](/sccm/core/servers/deploy/configure/boundary-groups).  
 
 
 ### <a name="do-i-need-azure-expressroute"></a>Ai-je besoin d’Azure ExpressRoute ?

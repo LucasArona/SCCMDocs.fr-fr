@@ -10,12 +10,12 @@ ms.assetid: 1392797b-76cb-46b4-a3e4-8f349ccaa078
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 10dfebccd997a42f4c79e5d88bdf05e26585aebb
-ms.sourcegitcommit: 7eebd112a9862bf98359c1914bb0c86affc5dbc0
+ms.openlocfilehash: 4ba23a42acb111f4ed7d0337552b2ea90b0268d6
+ms.sourcegitcommit: 78d2dce465e3500653b252583a6903a006784c26
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589870"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448920"
 ---
 # <a name="site-and-site-system-prerequisites-for-configuration-manager"></a>Prérequis des sites et systèmes de site pour Configuration Manager
 
@@ -71,9 +71,9 @@ Consultez les sections principales de cet article pour connaître les prérequis
 - [Point Endpoint Protection](#bkmk_2012EPPpreq)
 - [Point d’inscription](#bkmk_2012Enrollpreq)
 - [Point proxy d’inscription](#bkmk_2012EnrollProxpreq)
-- [Point d’état de secours](#bkmk_2012FSPpreq)
+- [Point d’état de repli](#bkmk_2012FSPpreq)
 - [Point de gestion](#bkmk_2012MPpreq)
-- [Point de rapport](#bkmk_2012RSpoint)
+- [Point de Reporting Services](#bkmk_2012RSpoint)
 - [Point de connexion de service](#bkmk_SCPpreq)
 - [Point de mise à jour logicielle](#bkmk_2012SUPpreq)
 - [Point de migration d’état](#bkmk_2012SMPpreq)
@@ -416,7 +416,7 @@ Pour plus d'informations, consultez [Installer et configurer des points de distr
 
 
 
-##  <a name="bkmk_2012FSPpreq"></a> Point d’état de secours  
+##  <a name="bkmk_2012FSPpreq"></a> Point d’état de repli  
 
 La configuration IIS par défaut est nécessaire, avec les ajouts suivants :  
 
@@ -452,7 +452,7 @@ La configuration IIS par défaut est nécessaire, avec les ajouts suivants :
 
 
 
-##  <a name="bkmk_2012RSpoint"></a> Point de rapport  
+##  <a name="bkmk_2012RSpoint"></a> Point de Reporting Services  
 
 #### <a name="windows-server-roles-and-features"></a>Rôles et fonctionnalités Windows Server  
 
