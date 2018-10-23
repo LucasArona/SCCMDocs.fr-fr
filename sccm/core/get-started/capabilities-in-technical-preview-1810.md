@@ -2,7 +2,7 @@
 title: Technical Preview 1810
 titleSuffix: Configuration Manager
 description: Découvrez les nouvelles fonctionnalités disponibles dans la branche Technical Preview version 1810 de Configuration Manager.
-ms.date: 10/03/2018
+ms.date: 10/05/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 8109d0fe-a8d8-4cf2-92a1-94afa5299719
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1e06250a5b88c3db000ee11662f4199f97232104
-ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
+ms.openlocfilehash: ab2f9ce34367e5042a4c02a3b7e2af3a73dc25dc
+ms.sourcegitcommit: dd785ad7146b8491c98ccd7804d0959a5c1fb034
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48862343"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49382978"
 ---
 # <a name="capabilities-in-configuration-manager-technical-preview-version-1810"></a>Fonctionnalités Technical Preview version 1810 de Configuration Manager 
 
@@ -51,6 +51,8 @@ Consultez l’article sur la version [Technical Preview](/sccm/core/get-started/
 [!INCLUDE [Management insights dashboard](includes/1810/1357979.md)]
 [!INCLUDE [In-console documentation dashboard](includes/1810/1357546.md)]
 [!INCLUDE [Improvements to driver maintenance](includes/1810/1358270.md)]
+[!INCLUDE [Task sequence support of Windows Autopilot for existing devices](includes/1810/1358333.md)]
+
 
 
 ## <a name="next-steps"></a>Étapes suivantes

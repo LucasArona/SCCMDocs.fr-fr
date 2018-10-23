@@ -10,12 +10,12 @@ ms.assetid: 868049d3-3209-47ec-b34a-9cc26941893a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6ba7adf52ce084d640bf53aef32678576d5828f5
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 12dd7a4d806a82e3c55898e249d1caa2a6ffb508
+ms.sourcegitcommit: 19fc4f27667d51502fc9d7d02d164f2837d65dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340201"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461288"
 ---
 # <a name="how-to-create-queries-in-system-center-configuration-manager"></a>Comment créer des requêtes dans System Center Configuration Manager
 
@@ -113,7 +113,7 @@ SMS_R_System.OperatingSystemNameandVersion like "%Workstation 6.1%"
 
 ### <a name="computers-with-a-specific-software-package-installed"></a>Ordinateurs avec un package logiciel spécifique installé  
 
-Utilisez la requête suivante pour retourner le nom NetBIOS et le nom du package logiciel de tous les ordinateurs dotés d’un package logiciel spécifique installé. Cet exemple affiche tous les ordinateurs sur lesquels une version de Microsoft Visio est installée. Remplacez `%Visio%` par le package logiciel à rechercher.  
+Utilisez la requête suivante pour retourner le nom NetBIOS et le nom du package logiciel de tous les ordinateurs dotés d’un package logiciel spécifique installé. Cet exemple affiche tous les ordinateurs sur lesquels une version de Microsoft Visio est installée. Remplacez `Microsoft%Visio%` par le package logiciel à rechercher.  
 
 > [!TIP]  
 > Cette requête recherche le package logiciel en utilisant les noms figurant dans la liste des programmes inclus dans le Panneau de configuration Windows.  
@@ -124,7 +124,7 @@ SMS_G_System_ADD_REMOVE_PROGRAMS.DisplayName from
 SMS_R_System inner join SMS_G_System_ADD_REMOVE_PROGRAMS on   
 SMS_G_System_ADD_REMOVE_PROGRAMS.ResourceId =   
 SMS_R_System.ResourceId where   
-SMS_G_System_ADD_REMOVE_PROGRAMS.DisplayName like "%Visio%"  
+SMS_G_System_ADD_REMOVE_PROGRAMS.DisplayName like "Microsoft%Visio%"  
 ```  
 
 ### <a name="computers-that-are-in-a-specific-active-directory-domain-services-organizational-unit"></a>Ordinateurs situés dans une unité d’organisation (UO) des services de domaine Active Directory spécifique
