@@ -170,7 +170,7 @@ Après avoir émis un certificat d’authentification client pour un ordinateur,
 
 6.  Dans cette boîte de dialogue Nouveau certificat, accédez à l’onglet **Détails**. Sélectionnez **Copier dans un fichier...**.  
 
-7.  Effectuez l’Assistant Exportation de certificat en utilisant le format de certificat par défaut, **X.509 binaire encodé DER (*.cer)**. Notez le nom et l’emplacement du certificat exporté.  
+7.  Effectuez l’Assistant Exportation de certificat en utilisant le format de certificat par défaut, **X.509 binaire encodé DER (.cer)**. Notez le nom et l’emplacement du certificat exporté.  
 
 8. Exportez tous les certificats dans le chemin de certification du certificat d’authentification client d’origine. Notez quels certificats exportés sont des autorités de certification intermédiaires, et lesquels sont des autorités de certification racines de confiance.  
 
