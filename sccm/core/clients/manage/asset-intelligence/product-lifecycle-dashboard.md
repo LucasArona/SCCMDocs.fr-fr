@@ -10,12 +10,12 @@ ms.assetid: 8b5b144a-0e5f-4fcc-87b2-33b9bcdb5655
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f99aeba109ed4de3ef1b88b721b59eebb4653cb6
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: dd1a3a56bac6d7917c70db731b1735a195fae3df
+ms.sourcegitcommit: dfb2cb01c1608b848f2f2fee7c84500e7adcb7a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39384629"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49101243"
 ---
 # <a name="manage-microsoft-lifecycle-policy-with-configuration-manager"></a>Gérer la stratégie de cycle de vie Microsoft avec Configuration Manager
 
@@ -63,7 +63,7 @@ Le tableau de bord comporte les vignettes suivantes :
 
 - **Cinq produits principaux dont la fin de vie est dépassée :** cette vignette est une vue de données consolidée des produits de votre environnement dont la fin de vie est dépassée. Lors de la comparaison avec le cycle de vie du support pour les systèmes d’exploitation et les produits SQL Server, le graphe affiche les logiciels installés qui ont expiré.  
 
-- **Cinq produits principaux dont la fin de vie est proche :** cette vignette est une vue de données consolidée des produits de votre environnement dont la fin de vie est prévue dans les six prochains mois. Lors de la comparaison avec le cycle de vie du support pour les systèmes d’exploitation et les produits SQL Server, le graphe affiche les logiciels installés dont la fin de vie est prévue dans les six prochains mois.  
+- **Cinq produits principaux dont la fin de vie est proche :** cette vignette est une vue de données consolidée des produits de votre environnement dont la fin de vie est prévue dans les dix-huit prochains mois. Lors de la comparaison avec le cycle de vie du support pour les systèmes d’exploitation et les produits SQL Server, le graphe affiche les logiciels installés dont la fin de vie est prévue dans les dix-huit prochains mois.  
 
 - **Données de cycle de vie des produits installés :** cette vignette vous donne une idée générale du moment de la transition d’un produit de l’état pris en charge à l’état expiré. Le graphe fournit une répartition du nombre de clients où le produit est installé, l’état de disponibilité du support, ainsi qu’un lien pour en savoir plus sur les étapes à suivre. Les informations suivantes sont incluses dans le graphe :     
     - Temps de prise en charge restant

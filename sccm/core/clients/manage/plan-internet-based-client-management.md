@@ -10,12 +10,12 @@ ms.assetid: 83a7c934-3b11-435d-ba22-cbc274951e83
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f31a221151239b6a72a750652731dca7e4557649
-ms.sourcegitcommit: a849dab9333ebac799812624d6155f2a96b523ca
+ms.openlocfilehash: aaa033fb64c3b525eff3ca54537df6dcdf773502
+ms.sourcegitcommit: dfb2cb01c1608b848f2f2fee7c84500e7adcb7a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42584410"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49101260"
 ---
 # <a name="plan-for-internet-based-client-management-in-system-center-configuration-manager"></a>Planifier la gestion des clients basée sur Internet dans System Center Configuration Manager
 
@@ -47,6 +47,9 @@ La gestion des clients basée sur Internet (ou IBCM, Internet-Based Client Manag
  En outre, la gestion des clients sur Internet ne prend pas en charge l'itinérance. L'itinérance permet aux clients de toujours trouver les points de distribution les plus proches pour télécharger du contenu. Les clients qui ne sont pas gérés sur Internet communiquent avec des systèmes de site à partir du site qui leur est affecté lorsque ces systèmes de site sont configurés pour utiliser un nom de domaine complet Internet et les rôles de système de site autorisent les connexions client à partir d'Internet. Les clients sélectionnent de manière non déterministique l'un des systèmes de site basés sur Internet, indépendamment de la bande passante ou de l'emplacement physique.  
 
  Lorsque vous disposez d'un point de mise à jour logicielle qui est configuré pour accepter les connexions à partir d'Internet, les clients Configuration Manager basés sur Internet qui se trouvent sur Internet effectuent toujours une analyse par rapport à ce point de mise à jour logicielle afin de déterminer quelles mises à jour logicielles sont requises. Toutefois, lorsque ces clients se trouvent sur Internet, ils commencent par essayer de télécharger les mises à jour logicielles à partir de Microsoft Update, plutôt qu'à partir d'un point de distribution basé sur Internet. Uniquement en cas d'échec, ils tenteront de télécharger les mises à jour logicielles requises à partir d'un point de distribution basé sur Internet. Les clients qui ne sont pas configurés pour la gestion des clients basés sur Internet n’essaient jamais de télécharger les mises à jour logicielles auprès de Microsoft Update, mais utilisent toujours des points de distribution Configuration Manager.  
+ 
+[!Tip]  
+Le client Configuration Manager détermine automatiquement s’il est sur l’intranet ou sur Internet. Si le client peut contacter un contrôleur de domaine ou un point de gestion local, il définit son type de connexion sur Intranet actuellement. Sinon, il bascule vers Internet actuellement et le client utilise les points de gestion, les points de mise à jour logicielle, les points de distribution attribués à son site pour la communication.
 
 ##  <a name="considerations-for-client-communications-from-the-internet-or-untrusted-forest"></a>Éléments à prendre en considération pour les communications client à partir d'Internet ou d'une forêt non approuvée  
  Les rôles de système de site suivants installés sur les sites principaux prennent en charge les connexions de clients qui se trouvent dans des emplacements non approuvés, tels qu'Internet ou une forêt non approuvée (les sites secondaires ne prennent pas en charge les connexions client à partir d'emplacements non approuvés) :  
