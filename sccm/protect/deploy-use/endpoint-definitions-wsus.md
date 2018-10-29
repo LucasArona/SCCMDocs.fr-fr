@@ -10,12 +10,12 @@ author: aczechowski
 description: Découvrez comment configurer Windows Server Update Services pour approuver automatiquement les mises à jour de définition.
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: b1c79a839ad1c83c96d7fe4583b46f6a3edbffba
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 5aa857141b047fc0f9929ca72041980a8bc8b6a7
+ms.sourcegitcommit: 19fc4f27667d51502fc9d7d02d164f2837d65dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32349855"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461254"
 ---
 # <a name="enable-endpoint-protection-malware-definitions-to-download-from-windows-server-update-services-wsus-for-configuration-manager"></a>Activer le téléchargement des définitions de programmes malveillants pour Endpoint Protection à partir de Windows Server Update Services (WSUS) pour Configuration Manager
 
@@ -37,7 +37,7 @@ ms.locfileid: "32349855"
 
     -   Pour Windows 8.1 et les versions antérieures, sous l’onglet **Produits** de la boîte de dialogue **Propriétés du composant du point de mise à jour logicielle** , cochez la case **Forefront Endpoint Protection 2010** .
 
-    -   Pour Windows 10 et les versions ultérieures, sous l’onglet **Produits** de la boîte de dialogue **Propriétés du composant du point de mise à jour logicielle** , cochez les cases **Windows Defender** et **Windows Technical Preview 2** .
+    -   Pour Windows 10 et les versions ultérieures, sous l’onglet **Produits** de la boîte de dialogue **Propriétés du composant du point de mise à jour logicielle**, cochez les cases **Windows Defender**.
 
 6.  Cliquez sur **OK** pour fermer la boîte de dialogue **Propriétés du composant du point de mise à jour logicielle** .
 
@@ -51,7 +51,7 @@ ms.locfileid: "32349855"
 
     -   Pour Windows 8.1 et les versions antérieures, sous l’onglet **Produits** de la boîte de dialogue **Propriétés du composant du point de mise à jour logicielle** , cochez la case **Forefront Endpoint Protection 2010** .
 
-    -   Pour Windows 10 et les versions ultérieures, sous l’onglet **Produits** de la boîte de dialogue **Propriétés du composant du point de mise à jour logicielle** , cochez les cases **Windows Defender** et **Windows Technical Preview 2** .
+    -   Pour Windows 10 et les versions ultérieures, sous l’onglet **Produits** de la boîte de dialogue **Propriétés du composant du point de mise à jour logicielle**, cochez les cases **Windows Defender**.
 
 3.  Sous l’onglet **Classifications** de la boîte de dialogue **Produits et classifications** , cochez les cases **Mises à jour de définitions** et **Mises à jour** .
 

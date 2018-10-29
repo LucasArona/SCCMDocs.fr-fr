@@ -10,20 +10,21 @@ ms.assetid: bb95154b-f63e-4491-896e-41d732c802f8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9f65c7665d5c055fc2a1636a1c9556b4ff75a4f7
-ms.sourcegitcommit: 98c3f7848dc9014de05541aefa09f36d49174784
+ms.openlocfilehash: 22e685889f51f3b35c3ba58e94d161816424b2a3
+ms.sourcegitcommit: dd785ad7146b8491c98ccd7804d0959a5c1fb034
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42584422"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383012"
 ---
 # <a name="hybrid-mdm-with-configuration-manager-and-microsoft-intune"></a>MDM hybride avec Configuration Manager et Microsoft Intune
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
 > [!Important]  
-> Depuis le 14 août 2018, la gestion des appareils mobiles hybride est une [fonctionnalité déconseillée](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).
-> <!--Intune feature 2683117-->Depuis son lancement sur Azure il y a plus d’un an, Intune a ajouté des centaines de nouvelles fonctionnalités demandées par les clients et de services de premier plan. Il propose à présent bien plus de fonctionnalités que celles de la gestion des appareils mobiles (MDM) hybride. Intune sur Azure offre une expérience d’administration simplifiée et mieux intégrée pour répondre à vos besoins de mobilité d’entreprise.
+> Depuis le 14 août 2018, la gestion hybride des appareils mobiles est une [fonctionnalité déconseillée](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).
+> <!--Intune feature 2683117-->  
+> Depuis son lancement sur Azure il y a plus d’un an, Intune a ajouté des centaines de nouvelles fonctionnalités demandées par les clients et de services de premier plan. Il propose à présent bien plus de fonctionnalités que celles de la gestion des appareils mobiles (MDM) hybride. Intune sur Azure offre une expérience d’administration simplifiée et mieux intégrée pour répondre à vos besoins de mobilité d’entreprise.
 > 
 > Par conséquent, la plupart des clients choisissent Intune sur Azure de préférence à la gestion MDM hybride. Le nombre de clients qui utilisent la gestion MDM hybride continue de diminuer au fur et à mesure des migrations vers le cloud. C’est pourquoi, le 1er septembre 2019, Microsoft retirera l’offre de service de gestion MDM hybride. Prévoyez une [migration vers Intune sur Azure](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa) pour vos besoins de gestion MDM. 
 > 

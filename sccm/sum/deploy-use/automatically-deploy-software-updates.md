@@ -5,17 +5,17 @@ description: Déployez automatiquement des mises à jour logicielles à l’aide
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 08/21/2018
+ms.date: 10/02/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.openlocfilehash: 6c23dc7328e2618d42b70f12bf7df8aa22fddb91
-ms.sourcegitcommit: 7eebd112a9862bf98359c1914bb0c86affc5dbc0
+ms.openlocfilehash: 01c6de94fd4cb0d05b482c1c05df2f09780db7fd
+ms.sourcegitcommit: 8827ffaea108678da968a3623f072876990c830c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589024"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49411291"
 ---
 #  <a name="automatically-deploy-software-updates"></a>Déployer automatiquement des mises à jour logicielles  
 
@@ -234,9 +234,9 @@ Après avoir créé une règle ADR, vous pouvez y ajouter des déploiements supp
      - Alertes
      - Paramètres de téléchargement  
 
+Les déploiements peuvent également être ajoutés par programmation à l’aide des cmdlets Windows PowerShell. Pour obtenir une description complète de l’utilisation de cette méthode, consultez [New-CMSoftwareUpdateDeployment](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmsoftwareupdatedeployment) .
 
 Pour plus d’informations sur le processus de déploiement, consultez [Software update deployment process](/sccm/sum/understand/software-updates-introduction#BKMK_DeploymentProcess).
-
 
 
 ## <a name="next-steps"></a>Étapes suivantes

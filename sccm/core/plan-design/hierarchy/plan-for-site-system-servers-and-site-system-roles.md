@@ -10,12 +10,12 @@ ms.assetid: 0a7415ba-2c53-4433-983e-780e92aa662f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6805aed620ea6bd41d1ec3460c1076b44d28f67a
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: f2c3052337b5c985798c15950a541086587176d1
+ms.sourcegitcommit: 19fc4f27667d51502fc9d7d02d164f2837d65dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385352"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461305"
 ---
 # <a name="plan-for-site-system-servers-and-site-system-roles-in-configuration-manager"></a>Planifier des serveurs de système de site et des rôles de système de site dans Configuration Manager
 
