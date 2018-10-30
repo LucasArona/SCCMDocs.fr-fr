@@ -10,12 +10,12 @@ ms.assetid: 463ce307-59dd-4abd-87b8-42ca9db178d7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 793ba0f05c7a188a6bda9649c9d25922ce27d42c
-ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
+ms.openlocfilehash: f936cf1c1317940f28691863eafdb4aa883fc1cb
+ms.sourcegitcommit: aa91f0d376de03b614b70d5fc513cb384ff58db4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48862462"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216912"
 ---
 # <a name="using-the-system-center-configuration-manager-console"></a>Utilisation de la console System Center Configuration Manager
 
@@ -116,5 +116,5 @@ Dans Configuration Manager version 1806, les améliorations suivantes ont été 
 
 ## <a name="next-steps"></a>Étapes suivantes
 > [!div class="nextstepaction"]
-> [Fonctionnalités d’accessibilité](/sccm/core/understand/accessibility-features.md)
+> [Fonctionnalités d’accessibilité](../../understand/accessibility-features.md)
 
