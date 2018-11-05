@@ -10,12 +10,12 @@ ms.assetid: fab13949-371c-4a4c-978e-471db1e54966
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3b0931671c05604a0115c14a5e7fc5d9c6767b7c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 82909cced6783f73608f155e64b7dd30b4087b06
+ms.sourcegitcommit: a52255da16c9f8b0b60a6c299a369347c7e01bef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350100"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49989159"
 ---
 # <a name="manage-operating-system-images-with-system-center-configuration-manager"></a>Gérer les images de système d’exploitation avec System Center Configuration Manager
 
@@ -109,6 +109,9 @@ Pour en savoir plus sur les étapes de création d’une image de système d’e
 7.  Vérifiez les informations figurant sur la page **Résumé** , puis cliquez sur **Suivant**.  
 
 8.  Sur la page **Dernière étape** , vérifiez que les mises à jour logicielles ont été correctement appliquées à l'image de système d'exploitation.  
+
+> [!NOTE]  
+>  Pour réduire la taille de la charge utile, la maintenance des packages de mise à niveau du système d’exploitation et des images de système d’exploitation supprime l’ancienne version.  
 
 ##  <a name="BKMK_OSImageMulticast"></a> Préparer l’image de système d’exploitation pour les déploiements en multidiffusion  
  Utilisez des déploiements en multidiffusion pour permettre à plusieurs ordinateurs de télécharger simultanément une image de système d’exploitation. L’image est multidiffusée aux clients par le point de distribution, au lieu que le point de distribution envoie une copie de l’image à chaque client via une connexion distincte. Si vous choisissez la méthode de déploiement de système d’exploitation [Utiliser la multidiffusion pour déployer Windows sur le réseau](../deploy-use/use-multicast-to-deploy-windows-over-the-network.md), vous devez configurer le package d’image de système d’exploitation pour prendre en charge la multidiffusion avant de distribuer l’image du système d’exploitation vers un point de distribution multidiffusion. Pour définir les options de multidiffusion pour un package d'images du système d'exploitation existant, procédez comme suit.  

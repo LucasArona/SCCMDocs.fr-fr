@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: aa92f935984b52458a3d7daf17a11077c519da84
-ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
+ms.openlocfilehash: cc98ee85ffe4fd419ccc2a2e16bf566144f8b670
+ms.sourcegitcommit: ee434c53b3695a039b56298082b6f61f1006d9dd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48862530"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49943306"
 ---
 # <a name="cryptographic-controls-technical-reference"></a>Informations techniques de référence sur les contrôles de chiffrement
 
@@ -90,7 +90,7 @@ System Center Configuration Manager utilise la signature et le chiffrement pour 
  Quand vous importez des données de configuration, Configuration Manager vérifie la signature numérique du fichier. Si les fichiers n'ont pas été signés, ou si la vérification de la signature numérique échoue, vous recevrez un avertissement et serez invité à continuer l'importation. Ne poursuivez l'importation des données de configuration que si vous faites explicitement confiance à l'éditeur et si vous êtes certain de l'intégrité des fichiers.  
 
 ### <a name="encryption-and-hashing-for-client-notification"></a>Chiffrement et hachage pour la notification du client  
- Si vous utilisez la notification du client, toutes les communications utilisent le protocole TLS et le niveau de chiffrement le plus élevé que le serveur et les systèmes d'exploitation clients peuvent négocier. Par exemple, un ordinateur client exécutant Windows 7 et un point de gestion exécutant Windows Server 2008 R2 peuvent prendre en charge le chiffrement AES 128 bits, tandis qu'un ordinateur client exécutant Vista et communiquant avec le même point de gestion négociera seulement un chiffrement 3DES. La même négociation se produit lors du hachage des paquets transférés lors de la notification du client, qui utilise l'algorithme SHA-1 ou SHA-2.  
+ Si vous utilisez la notification du client, toutes les communications utilisent le protocole TLS et le niveau de chiffrement le plus élevé que le serveur et les systèmes d'exploitation clients peuvent négocier. Par exemple, un ordinateur client exécutant Windows 7 et un point de gestion exécutant Windows Server 2008 R2 peuvent prendre en charge le chiffrement AES 128 bits, tandis qu’un ordinateur client exécutant Vista et communiquant avec le même point de gestion négociera seulement un chiffrement 3DES. La même négociation se produit lors du hachage des paquets transférés lors de la notification du client, qui utilise l'algorithme SHA-1 ou SHA-2.  
 
 ##  <a name="certificates-used-by-configuration-manager"></a>Certificats utilisés par Configuration Manager  
  Pour obtenir la liste des certificats d’infrastructure à clé publique (PKI) pris en charge par Configuration Manager, connaître les exigences ou limitations particulières et savoir comment utiliser les certificats, consultez [Configuration requise des certificats PKI](/sccm/core/plan-design/network/pki-certificate-requirements). Cette liste inclut les longueurs de clé et les algorithmes de hachage pris en charge. La plupart des certificats prennent en charge l'algorithme SHA-256 et la longueur de clé 2 048 bits.  
@@ -192,7 +192,7 @@ System Center Configuration Manager utilise la signature et le chiffrement pour 
 
 -   Point d'inscription  
 
--   Point d’état de repli  
+-   Point d’état de secours  
 
 -   Point de gestion  
 
@@ -240,11 +240,11 @@ System Center Configuration Manager utilise la signature et le chiffrement pour 
 ### <a name="communication-that-is-unencrypted-when-clients-use-https-communication"></a>Communications non chiffrées quand les clients utilisent la communication HTTPS  
  Lorsque les clients communiquent avec des systèmes de site à l'aide du protocole HTTPS, les communications sont généralement chiffrées via le protocole SSL. Cependant, dans les cas suivants, les clients communiquent avec les systèmes de site sans recourir au chiffrement :  
 
--   le client ne parvient pas à effectuer une connexion HTTPS sur l'intranet et se replie sur l’utilisation du protocole HTTP lorsque les systèmes de site autorisent cette configuration  
+-   le client ne parvient pas à effectuer une connexion HTTPS sur l'Intranet et revient à utiliser le protocole HTTP lorsque les systèmes de site autorisent cette configuration  
 
 -   Communication vers les rôles de système de site suivants :  
 
-    -   le client envoie des messages d'état au point d'état de repli  
+    -   le client envoie des messages d'état au point d'état de secours  
 
     -   le client envoie des demandes PXE à un point de distribution compatible PXE  
 

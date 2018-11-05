@@ -10,12 +10,12 @@ ms.assetid: b9b22655-b8c1-461f-8047-3a7e906f647a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e323fa8df7d8ae88d6526a5d1777ceb8fa27c2de
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 1caaf1b63a5773e61c3e8d7b500e9d0acfca1010
+ms.sourcegitcommit: a52255da16c9f8b0b60a6c299a369347c7e01bef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353145"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49989125"
 ---
 # <a name="manage-operating-system-upgrade-packages-with-system-center-configuration-manager"></a>Gérer des packages de mise à niveau de système d’exploitation avec System Center Configuration Manager
 
@@ -87,3 +87,6 @@ Dans System Center Configuration Manager, un package de mise à niveau contient 
 7.  Vérifiez les informations figurant sur la page **Résumé** , puis cliquez sur **Suivant**.  
 
 8.  Sur la page **Dernière étape** , vérifiez que les mises à jour logicielles ont été correctement appliquées à l'image de système d'exploitation.  
+
+> [!NOTE]  
+>  Pour réduire la taille de la charge utile, la maintenance des packages de mise à niveau du système d’exploitation et des images de système d’exploitation supprime l’ancienne version. 

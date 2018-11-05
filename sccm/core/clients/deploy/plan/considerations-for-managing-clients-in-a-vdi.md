@@ -10,12 +10,12 @@ ms.assetid: abd45393-d84e-4583-bc80-74bbb3709577
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ec8989a2e7b71d09198e03f2e263364bebc6b169
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: a17bb43d91d26cf10da0e1d3da5d8f6e4a2af2a7
+ms.sourcegitcommit: 5b3ff56018cfc6bda9643c9f1bebc575173f61bc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344158"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083783"
 ---
 # <a name="considerations-for-managing-system-center-configuration-manager-clients--in-a-virtual-desktop-infrastructure-vdi"></a>Considérations sur la gestion des clients System Center Configuration Manager dans une infrastructure VDI
 
@@ -42,4 +42,4 @@ System Center Configuration Manager prend en charge l’installation du client C
 > [!NOTE]  
 >  À l’exception des clients Windows Embedded en mode maintenance, les clients Configuration Manager qui ne s’exécutent pas dans des environnements virtualisés utilisent aussi ce délai randomisé. Quand le nombre de clients déployés est important, ce comportement permet d’éviter des pics d’utilisation de la bande passante réseau et de réduire les besoins de traitement processeur sur les systèmes de site Configuration Manager, tels que le point de gestion et le serveur de site. L’intervalle du délai varie en fonction de la fonctionnalité de Configuration Manager.  
 >   
->  Le délai de randomisation est désactivé par défaut pour les mises à jour logicielles requises et les déploiements d’applications requis à l’aide du paramètre client suivant : **Agent ordinateur**: **Désactiver la randomisation des échéances**.
+>  Le délai de randomisation est désactivé par défaut pour les mises à jour logicielles requises à l’aide du paramètre client suivant : **Agent ordinateur**: **Désactiver la randomisation des échéances**.

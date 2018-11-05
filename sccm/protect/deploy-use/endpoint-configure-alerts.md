@@ -10,12 +10,12 @@ ms.assetid: f504de3e-4caf-455c-80d7-a63f13f4c5d9
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 78afa39b173abc79c4ed1cadc79f41ab32150ecf
-ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
+ms.openlocfilehash: 626c52b827e38a53ed3b8982963496f29f11acb5
+ms.sourcegitcommit: 5b3ff56018cfc6bda9643c9f1bebc575173f61bc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48862360"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083766"
 ---
 #  <a name="configure-alerts-for-endpoint-protection-in-configuration-manager"></a>Configurer des alertes pour Endpoint Protection dans Configuration Manager
 
@@ -39,12 +39,12 @@ ms.locfileid: "48862360"
     > [!NOTE]
     >  Vous ne pouvez pas configurer d'alertes pour les regroupements d'utilisateurs.
 
-4.  Sous l’onglet **Alertes** de la boîte de dialogue *Propriétés de <nom_regroupement***\>**, sélectionnez **Afficher ce regroupement dans le tableau de bord Endpoint Protection** si vous voulez voir les détails des opérations anti-programme malveillant de ce regroupement dans l’espace de travail **Surveillance** de la console Configuration Manager.
+4.  Sous l’onglet **Alertes** de la boîte de dialogue _Propriétés de\>_ **nom_regroupement**, sélectionnez **Afficher ce regroupement dans le tableau de bord Endpoint Protection** si vous voulez voir les détails des opérations anti-programme malveillant de ce regroupement dans l’espace de travail **Surveillance** de la console Configuration Manager.
 
     > [!NOTE]
     >  Cette option n'est pas disponible pour le regroupement **Tous les systèmes** .
 
-5.  Sous l’onglet **Alertes** de la boîte de dialogue *Propriétés de <nom_regroupement***\>**, cliquez sur **Ajouter**.
+5.  Sous l’onglet **Alertes** de la boîte de dialogue _Propriétés de\>_ **<nom_regroupement**, cliquez sur **Ajouter**.
 
 6.  Dans la section **Générer une alerte lorsque ces conditions s’appliquent** de la boîte de dialogue **Ajouter de nouvelles alertes de regroupement**, sélectionnez les alertes que doit générer Configuration Manager lorsque les événements Endpoint Protection spécifiés se produisent, puis cliquez sur **OK**.
 
@@ -83,7 +83,7 @@ ms.locfileid: "48862360"
 
         -   **Intervalle de détection (heures) :** spécifiez l’intervalle de détection, en heures, au cours duquel le nombre de détections de programme malveillant doit être exécuté. Spécifiez un nombre compris entre **1** et **168**.
 
-9. Cliquez sur **OK** pour fermer la boîte de dialogue *Propriétés de <nom_regroupement\>**.  
+9. Cliquez sur **OK** pour fermer la boîte de dialogue _Propriétés de\>_ **nom_regroupement**.  
 
 ## <a name="alert-for-outdated-malware-client"></a>Alerte pour les clients contre les programmes malveillants obsolètes
 
