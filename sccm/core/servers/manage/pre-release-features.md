@@ -2,7 +2,7 @@
 title: Fonctionnalités de préversion
 titleSuffix: Configuration Manager
 description: Les fonctionnalités de préversion sont des fonctions incluses dans la branche Current Branch à des fins de test préalable dans un environnement de production.
-ms.date: 07/30/2018
+ms.date: 10/24/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 6bce416b-761d-4b23-bd33-5b7c30edb10d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7b82bdfcbe69c7e9d59185fc6af20a85e65a6e7d
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.openlocfilehash: e3b3b31c31725c6b9931d0c2cc67324c4b39f974
+ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43893564"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411134"
 ---
 # <a name="pre-release-features-in-configuration-manager"></a>Fonctionnalités en préversion dans Configuration Manager
 
@@ -75,7 +75,7 @@ Quand vous activez une fonctionnalité en préversion, le Gestionnaire de hiéra
 
 | Fonctionnalité          | Ajoutée en préversion | Ajoutée en version complète |  
 |------------------|----------------------|-------------------------|
-| Système de site HTTP amélioré<!--1356889,1358228-->|Version 1806|![Pas encore](media/red_x.png)|
+| Système de site HTTP amélioré<!--1356889,1358228-->|[Version 1806](/sccm/core/plan-design/hierarchy/enhanced-http)|![Pas encore](media/red_x.png)|
 | Applications mobiles pour les appareils cogérés<!--1357892-->|[Version 1806](/sccm/core/clients/manage/co-management-switch-workloads#workloads-able-to-be-transitioned-to-intune)|![Pas encore](media/red_x.png)|
 | Package Conversion Manager<!--1357861-->|[Version 1806](/sccm/apps/pcm/package-conversion-manager)|![Pas encore](media/red_x.png)|
 | Prise en charge de Cisco AnyConnect 4.0.07x et ultérieur pour iOS<!--1357393-->|[Version 1802](/sccm/mdm/deploy-use/create-vpn-profiles)| [Version 1802 avec mise à jour 4163547](/sccm/mdm/deploy-use/create-vpn-profiles) |

@@ -10,12 +10,12 @@ ms.assetid: 86cd5382-8b41-45db-a4f0-16265ae22657
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b1d4e2b7dca44db7ddc5976edde59a04bc3cb45e
-ms.sourcegitcommit: 4e4b71227309bee7e9f1285971f8235c67a9c502
+ms.openlocfilehash: e5099be5ff6b34bcbc232e78056f1937a9508c4f
+ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46533760"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411423"
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>Cache de pair pour les clients Configuration Manager
 
@@ -62,7 +62,7 @@ Pour activer le cache de pair, déployez les [paramètres clients](#bkmk_setting
 À compter de la version 1806, les groupes de limites intègrent des paramètres supplémentaires qui offrent davantage de contrôle sur la distribution du contenu dans l’environnement. Pour plus d’informations, consultez [Options de groupe de limites pour les téléchargements à partir de pairs](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions).<!--1356193-->
 
 > [!NOTE]  
-> Si le client se replie sur un groupe de limites voisin pour le contenu, le point de gestion n’ajoute pas les emplacements sources de cache de pair du groupe de limites voisin à la liste des emplacements de sources de contenu potentielles.  
+> Si le client a recours à un groupe de limites voisin pour le contenu, le point de gestion n’ajoute pas les emplacements sources de cache de pair du groupe de limites voisin à la liste des emplacements de sources de contenu potentielles.  
 
 Choisissez seulement les clients les plus appropriés comme sources de cache de pair. Évaluez l’adéquation des clients en fonction d’attributs comme le type de châssis, l’espace disque et la connectivité réseau. Pour plus d’informations vous permettant de sélectionner les meilleurs clients à utiliser pour le cache de pair, consultez [ce blog d’un consultant Microsoft](https://blogs.technet.microsoft.com/setprice/2016/06/29/pe-peer-cache-custom-reporting-examples/).
 
@@ -94,7 +94,7 @@ Quand la source de cache de pair rejette une demande de contenu, le client du ca
 
 - Les clients peuvent télécharger du contenu seulement à partir de sources de cache de pair qui se trouvent dans leur groupe de limites actuel.  
 
-- Un [compte d’accès réseau](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content#a-namebkmknaaa-network-access-account) n’est pas nécessaire, à cette exception près :  
+- Un [compte d’accès réseau](/sccm/core/plan-design/hierarchy/accounts#network-access-account) n’est pas nécessaire, à cette exception près :  
 
     - Configurez un compte d’accès réseau dans le site quand un client autorisé à utiliser le cache de pair exécute une séquence de tâches depuis le Centre logiciel, et qu’il redémarre à partir d’une image de démarrage. Quand l’appareil est sur Windows PE, il utilise le compte d’accès réseau pour obtenir du contenu auprès de la source de cache de pair.  
 
@@ -128,13 +128,13 @@ Sur les clients autorisés à utiliser le cache de pair et qui utilisent le pare
 
 ### <a name="example-scenario"></a>Exemple de scénario
 
-Contoso a un seul site principal avec deux groupes de limites : un siège social et une filiale. Il existe une relation de repli de 30 minutes entre les groupes de limites. Le point de gestion et le point de distribution du site se trouvent uniquement dans la limite du siège social. L’emplacement de la filiale n’a aucun point de distribution local. Deux des quatre clients au niveau de la filiale sont configurés comme sources de cache d’homologue. 
+Contoso a un seul site principal avec deux groupes de limites : un siège social et une filiale. Il existe une relation de secours de 30 minutes entre les groupes de limites. Le point de gestion et le point de distribution du site se trouvent uniquement dans la limite du siège social. L’emplacement de la filiale n’a aucun point de distribution local. Deux des quatre clients au niveau de la filiale sont configurés comme sources de cache d’homologue. 
 
 ![Schéma de la configuration réseau comme décrite pour l’exemple de scénario](media/1357346-peer-cache-source-parts.png)
 
 1. Vous ciblez un déploiement avec du contenu sur les quatre clients de la filiale. Vous avez distribué du contenu uniquement au point de distribution.  
 
-2. Client3 et Client4 n’ont pas de source locale pour le déploiement. Le point de gestion indique aux clients de patienter 30 minutes avant de se replier sur le groupe de limites distantes.  
+2. Client3 et Client4 n’ont pas de source locale pour le déploiement. Le point de gestion indique aux clients de patienter 30 minutes avant de revenir au groupe de limites distantes.  
 
 3. Client1 (PCS1) est la première source de cache d’homologue pour actualiser la stratégie avec le point de gestion. Étant donné que ce client est activé comme source de cache d’homologue, le point de gestion lui indique de commencer immédiatement le téléchargement de la partie A à partir du point de distribution.  
 
@@ -180,7 +180,7 @@ Pour les voir gérer le téléchargement du contenu en parties, examinez le fich
 
 - Le client de source de cache de pair met à jour la dernière date/heure référencée du contenu dans le cache quand un pair le télécharge. Le client utilise cet horodatage quand il gère automatiquement son cache, supprimant d’abord le contenu plus ancien. Ainsi, il doit normalement attendre si possible avant de supprimer du contenu que les clients de cache de pair téléchargent plus fréquemment.  
 
-- Si nécessaire, pendant une séquence de tâches de déploiement de système d’exploitation, utilisez la variable **SMSTSPreserveContent** pour conserver du contenu dans le cache du client. Pour plus d’informations, consultez [Variables de séquence de tâches](/sccm/osd/understand/task-sequence-variables#SMSTSPreserveContent).  
+- Si nécessaire, pendant une séquence de tâches de déploiement de système d’exploitation, utilisez la variable **SMSTSPreserveContent** pour conserver du contenu dans le cache du client. Pour plus d’informations, voir [Variables de séquence de tâches](/sccm/osd/understand/task-sequence-variables#SMSTSPreserveContent).  
 
 - Si nécessaire, lors de la création des types de logiciels suivants, utilisez l’option permettant de **conserver le contenu dans la mémoire cache du client** :  
     - Applications
