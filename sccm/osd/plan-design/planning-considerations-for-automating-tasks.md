@@ -2,7 +2,7 @@
 title: Prévoir l’automatisation des tâches
 titleSuffix: Configuration Manager
 description: Avant de créer des séquences de tâches, prévoyez d’automatiser les tâches avec Configuration Manager.
-ms.date: 08/17/2018
+ms.date: 10/29/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: fc497a8a-3c54-4529-8403-6f6171a21c64
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1ea1b104dfbdf23a080bc71da94b88cdcad31fa1
-ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
+ms.openlocfilehash: 608b947e75ff29cf9653b2a12497918846556f4d
+ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42755946"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411287"
 ---
 # <a name="planning-considerations-for-automating-tasks-in-configuration-manager"></a>Considérations relatives à la planification de l’automatisation des tâches dans Configuration Manager
 
@@ -236,18 +236,42 @@ ms.locfileid: "42755946"
 
 ##  <a name="BKMK_TSNetworkAccessAccount"></a>Séquences de tâches et compte d’accès réseau  
 
- Même si les séquences de tâches s’exécutent seulement dans le contexte du compte système local, il peut être nécessaire de configurer le [compte d’accès réseau](/sccm/core/plan-design/hierarchy/accounts#network-access) dans les circonstances suivantes :  
+> [!Important]  
+> À compter de la version 1806, certains scénarios de déploiement de système d’exploitation ne nécessitent pas l’utilisation du compte d’accès réseau. Pour plus d’informations, consultez [HTTP amélioré](#enhanced-http).
 
- - Si la séquence de tâches tente d’accéder au contenu Configuration Manager sur les points de distribution. Configurez correctement le compte d’accès réseau ; sinon, la séquence de tâches échouera.   
+Même si les séquences de tâches s’exécutent seulement dans le contexte du compte système local, il peut être nécessaire de configurer le [compte d’accès réseau](/sccm/core/plan-design/hierarchy/accounts#network-access-account) dans les circonstances suivantes :  
 
- - Si vous utilisez une image de démarrage pour lancer un déploiement de système d’exploitation. Dans ce cas, Configuration Manager utilise l’environnement Windows PE, qui n’est pas un système d’exploitation complet. Cet environnement utilise un nom aléatoire généré automatiquement qui ne fait partie d’aucun domaine. Si vous ne configurez pas correctement le compte d’accès réseau, l’ordinateur ne peut pas accéder au contenu requis pour la séquence de tâches.  
+- Si la séquence de tâches tente d’accéder au contenu Configuration Manager sur les points de distribution. Configurez correctement le compte d’accès réseau ; sinon, la séquence de tâches échouera.   
+
+- Si vous utilisez une image de démarrage pour lancer un déploiement de système d’exploitation. Dans ce cas, Configuration Manager utilise l’environnement Windows PE, qui n’est pas un système d’exploitation complet. Cet environnement utilise un nom aléatoire généré automatiquement qui ne fait partie d’aucun domaine. Si vous ne configurez pas correctement le compte d’accès réseau, l’ordinateur ne peut pas accéder au contenu requis pour la séquence de tâches.  
+
+> [!NOTE]  
+>  Le compte d’accès réseau n’est jamais utilisé comme contexte de sécurité pour l’exécution de programmes et de séquences de tâches ou pour l’installation d’applications et de mises à jour logicielles. Il ne sert qu’à accéder aux ressources associées sur le réseau.  
+
+Pour plus d’informations sur le compte d’accès réseau, voir [Compte d’accès réseau](/sccm/core/plan-design/hierarchy/accounts#network-access-account).  
 
 
- > [!NOTE]  
- >  Le compte d’accès réseau n’est jamais utilisé comme contexte de sécurité pour l’exécution de programmes et de séquences de tâches ou pour l’installation d’applications et de mises à jour logicielles. Il ne sert qu’à accéder aux ressources associées sur le réseau.  
+### <a name="enhanced-http"></a>HTTP amélioré
+<!--1358278-->
 
+À compter de la version 1806, quand vous activez **HTTP amélioré**, les scénarios suivants ne nécessitent pas un compte d’accès réseau pour télécharger du contenu à partir d’un point de distribution :
+  
+- Séquences de tâches exécutées à partir d’un support de démarrage ou d’un environnement PXE  
+- Séquence de tâches exécutées à partir du Centre logiciel  
 
- Pour plus d’informations sur le compte d’accès réseau, voir [Compte d’accès réseau](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content#bkmk_NAA).  
+Ces séquences de tâches conviennent aux déploiements de système d’exploitation et aux déploiements personnalisés. Elles sont également prises en charge par les ordinateurs de groupe de travail.
+ 
+Pour plus d’informations, consultez [HTTP amélioré](/sccm/core/plan-design/hierarchy/enhanced-http).  
+
+> [!Note]  
+> Les scénarios de déploiement de système d’exploitation suivants nécessitent toujours l’utilisation d’un compte d’accès réseau :
+>  
+> - **Accéder au contenu directement à partir d’un point de distribution lorsque la séquence de tâches en cours d’exécution en a besoin** ([option de déploiement](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS) de séquence de tâches)   
+> - **Si le compte d’ordinateur ne parvient pas à se connecter au magasin d’état, utiliser le compte d’accès réseau** (option de l’étape [Demander le magasin d’état](/sccm/osd/understand/task-sequence-steps#BKMK_RequestStateStore)) 
+> - Connexion à un domaine non approuvé ou entre forêts Active Directory 
+> - **Accéder au contenu directement depuis le point de distribution** (option de l’étape [Appliquer l’image de système d’exploitation](/sccm/osd/understand/task-sequence-steps#BKMK_ApplyOperatingSystemImage)) 
+> - **Exécuter un autre programme en premier** ([paramètre avancé](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#bkmk_prop-advanced) de séquence de tâches) 
+> - [Multidiffusion](/sccm/osd/deploy-use/use-multicast-to-deploy-windows-over-the-network)  
 
 
 

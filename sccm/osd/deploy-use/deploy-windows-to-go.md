@@ -10,12 +10,12 @@ ms.assetid: 8eed50f5-80a4-422e-8aa6-a7ccb2171475
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 12b7a28ff5ea0e2e1870c0c37edd8e056930b09f
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: afc76b59d594c6b8f52062add480874ba5c5686d
+ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32351885"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411491"
 ---
 # <a name="deploy-windows-to-go-with-system-center-configuration-manager"></a>Déployer Windows To Go avec System Center Configuration Manager
 
@@ -151,7 +151,7 @@ Cette rubrique fournit les étapes permettant de mettre en service Windows To Go
     -   **Point de distribution**: spécifiez le point de distribution qui héberge l’image de démarrage. L'Assistant extrait l'image de démarrage à partir du point de distribution et l'écrit sur le média.  
 
         > [!NOTE]  
-        >  L'utilisateur administratif doit posséder des droits d'accès en **Lecture** au contenu de l'image de démarrage sur le point de distribution. Pour plus d’informations, consultez [Gérer les comptes pour accéder au contenu](../../core/plan-design/hierarchy/manage-accounts-to-access-content.md).  
+        >  L'utilisateur administratif doit posséder des droits d'accès en **Lecture** au contenu de l'image de démarrage sur le point de distribution. Pour plus d’informations, consultez [Compte d’accès au package](/sccm/core/plan-design/hierarchy/accounts#package-access-account).  
 
     -   Si vous avez sélectionné **Média basé sur le site** sur la page **Gestion du média** de l'Assistant, dans la zone **Point de gestion** , spécifiez un point de gestion à partir d'un site principal.  
 
@@ -166,7 +166,7 @@ Cette rubrique fournit les étapes permettant de mettre en service Windows To Go
     -   **Point de distribution**: spécifiez le point de distribution qui héberge le package d’images de système d’exploitation. L'Assistant extrait l'image du système d'exploitation à partir du point de distribution et l'écrit sur le média.  
 
         > [!NOTE]  
-        >  L'utilisateur administratif doit posséder des droits d'accès en **Lecture** au contenu de l'image du système d'exploitation sur le point de distribution. Pour plus d’informations, consultez [Gérer les comptes pour accéder au contenu](../../core/plan-design/hierarchy/manage-accounts-to-access-content.md).  
+        >  L'utilisateur administratif doit posséder des droits d'accès en **Lecture** au contenu de l'image du système d'exploitation sur le point de distribution. Pour plus d’informations, consultez [Compte d’accès au package](/sccm/core/plan-design/hierarchy/accounts#package-access-account).  
 
 11. Sur la page **Sélectionner une application** , sélectionnez le contenu d'application à inclure dans le fichier du média, puis cliquez sur **Suivant**.  
 

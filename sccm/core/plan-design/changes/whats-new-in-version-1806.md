@@ -2,7 +2,7 @@
 title: Nouveautés de la version 1806
 titleSuffix: Configuration Manager
 description: Obtenez des informations détaillées sur les changements et les nouvelles fonctionnalités introduits dans la version 1806 de l’édition Current Branch de Configuration Manager.
-ms.date: 09/19/2018
+ms.date: 10/26/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 0249dbd3-1e85-4d05-a9e5-420fbe44d850
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3b5cb217b9351f5d2491070b447d0a96efe0aa29
-ms.sourcegitcommit: 4e4b71227309bee7e9f1285971f8235c67a9c502
+ms.openlocfilehash: e5fd7c26c190407ba5e497068582704b03c71f00
+ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46533777"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411508"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Nouveautés de la version 1806 de l’édition Current Branch de Configuration Manager
 
@@ -25,17 +25,17 @@ La mise à jour 1806 pour l’édition Current Branch de Configuration Manager 
 
 Référez-vous toujours à la dernière liste de contrôle pour installer cette mise à jour. Pour plus d’informations, voir [Liste de contrôle pour installer la mise à jour 1806](/sccm/core/servers/manage/checklist-for-installing-update-1806). Après avoir mis à jour un site, consultez également la [Liste de contrôle post-mise à jour](/sccm/core/servers/manage/checklist-for-installing-update-1806#post-update-checklist).
 
+<!--
 > [!Important]  
-> Cet article liste toutes les fonctionnalités importantes de cette version. Toutefois, toutes les sections ne sont pas encore liées au contenu mis à jour en fonction des informations supplémentaires sur les nouvelles fonctionnalités. Continuez à consulter régulièrement cette page sur les mises à jour. Les changements apportés sont indiqués à l’aide de l’étiquette ***[Mis à jour]***. Cette indication sera supprimée quand le contenu sera finalisé.  
+> This article currently lists all significant features in this version. However, not all sections yet link to updated content with further information on the new features. Keep checking this page regularly for updates. Changes are noted with the ***[Updated]*** tag. This note will be removed when the content is finalized.  
+-->
 
-En plus des nouvelles fonctionnalités, cette version inclut également des modifications supplémentaires comme des corrections de bogues. Pour plus d’informations, voir [Synthèse des modifications dans System Center Configuration Manager Current Branch, version 1806](https://support.microsoft.com/help/4459701).
+En plus des nouvelles fonctionnalités, cette version inclut également des modifications supplémentaires comme des corrections de bogues. Pour plus d’informations, consultez [Récapitulatif des changements dans Configuration Manager Current Branch, version 1806](https://support.microsoft.com/help/4459701).
 
 Pour plus d’informations sur les modifications apportées aux applets de commande Windows PowerShell pour Configuration Manager, consultez [Notes de publication pour PowerShell version 1806](https://docs.microsoft.com/powershell/sccm/1806_release_notes?view=sccm-ps).
 
-<!--
-The following additional updates to this release are also now available:
-- [Update rollup for System Center Configuration Manager current branch, version 1806](https://support.microsoft.com/help/4057517)
--->
+Les mises à jour supplémentaires suivantes pour cette version sont également disponibles :
+- [Correctif cumulatif pour Configuration Manager Current Branch, version 1806](https://support.microsoft.com/help/4462978)
 
 
 Les sections suivantes fournissent des détails sur les changements et les nouvelles fonctionnalités de la version 1806 de l’édition Current Branch de Configuration Manager.  
@@ -46,7 +46,7 @@ Les sections suivantes fournissent des détails sur les changements et les nouve
 
 Découvrez plus d’informations sur les changements de prise en charge avant leur implémentation dans [Éléments supprimés et dépréciés](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated).
 
-***[Mis à jour]*** Depuis le 14 août 2018, la fonctionnalité de gestion des appareils mobiles hybride est déconseillée. Pour plus d’informations, voir [Présentation de la gestion MDM hybride](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->  
+Depuis le 14 août 2018, la fonctionnalité de gestion des appareils mobiles hybrides est dépréciée. Pour plus d’informations, voir [Présentation de la gestion MDM hybride](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->  
 
 <!--
 Version 1806 drops support for the following products:
@@ -89,8 +89,7 @@ Pour plus d’informations, consultez [Outils de Configuration Manager](/sccm/co
 
 
 ### <a name="exclude-active-directory-containers-from-discovery"></a>Exclure les conteneurs Active Directory de la détection
-<!--1358143-->
- ***[Mis à jour]*** Pour réduire le nombre d’objets découverts, excluez certains conteneurs de la découverte de systèmes Active Directory. 
+<!--1358143--> Pour réduire le nombre d’objets découverts, excluez certains conteneurs spécifiques de la découverte de systèmes Active Directory. 
 
 Pour plus d’informations, voir [Configurer la découverte de systèmes Active Directory](/sccm/core/servers/deploy/configure/configure-discovery-methods#bkmk_config-adsd).
 
@@ -133,8 +132,7 @@ Pour plus d’informations, consultez [Prise en charge du téléchargement parti
 
 
 ### <a name="boundary-group-options-for-peer-downloads"></a>Options de groupe de limites pour les téléchargements à partir de pairs
-<!--1356193-->
- ***[Mis à jour]*** Les groupes de limites intègrent maintenant des paramètres supplémentaires qui offrent davantage de contrôle sur la distribution du contenu dans l’environnement. Cette version ajoute les options suivantes :  
+<!--1356193--> Les groupes de limites intègrent maintenant des paramètres supplémentaires qui offrent davantage de contrôle sur la distribution du contenu dans l’environnement. Cette version ajoute les options suivantes :  
 
 - **Autoriser les téléchargements de pairs dans ce groupe de limites** : le point de gestion fournit aux clients une liste d’emplacements de contenu qui comprend des sources de pairs. Ce paramètre affecte également l’application des ID de groupes pour l’optimisation de la distribution.  
 
@@ -144,8 +142,7 @@ Pour plus d’informations, voir [Options de groupe de limites pour les téléch
 
 
 ### <a name="improvement-to-peer-cache-source-location-status"></a>Amélioration de l’état d’emplacement des sources de cache de pair
-<!--SCCMDocs issue 850-->
- ***[Mise à jour]*** Configuration Manager détermine plus efficacement si une source de cache de pair s’est déplacée vers un autre emplacement. Ce comportement garantit que le point de gestion la propose comme une source de contenu aux clients dans le nouvel emplacement, et non dans l’ancien. Si vous utilisez la fonctionnalité de cache de pair avec des sources de cache de pair itinérantes, après avoir mis à jour le site vers la version 1806, vous devez également mettre à jour toutes les sources de cache de pair vers la dernière version du client. Le point de gestion n’inclut pas ces sources de cache de pair dans la liste des emplacements de contenu tant qu’elles n’ont pas été mises à jour vers la version 1806 (minimum).
+<!--SCCMDocs issue 850--> Configuration Manager détermine plus efficacement si une source de cache de pair s’est déplacée vers un autre emplacement. Ce comportement garantit que le point de gestion la propose comme source de contenu aux clients dans le nouvel emplacement, et non dans l’ancien. Si vous utilisez la fonctionnalité de cache de pair avec des sources de cache de pair itinérantes, après avoir mis à jour le site vers la version 1806, vous devez également mettre à jour toutes les sources de cache de pair vers la dernière version du client. Le point de gestion n’inclut pas ces sources de cache de pair dans la liste des emplacements de contenu tant qu’elles n’ont pas été mises à jour vers la version 1806 (minimum).
 
 Pour plus d’informations, consultez [Exigences relatives au cache de pair](/sccm/core/plan-design/hierarchy/client-peer-cache#requirements).
 
@@ -168,15 +165,13 @@ Pour plus d’informations, consultez [Comment installer des clients selon la m�
 
 Cette version comprend des améliorations concernant la façon dont les clients communiquent avec les systèmes de site. Dans les propriétés du site, sous l’onglet **Communication de l’ordinateur client**, sélectionnez l’option **HTTPS ou HTTP**, puis activez la nouvelle option **Utiliser les certificats générés par Configuration Manager pour les systèmes de site HTTP**. Il s’agit d’une [fonctionnalité en préversion](/sccm/core/servers/manage/pre-release-features).
 
-Cette option prend en charge les scénarios principaux suivants :  
-
-- **Du client au point de gestion HTTP**<!--1356889--> : les [appareils joints à Azure AD](https://docs.microsoft.com/azure/active-directory/device-management-introduction#azure-ad-joined-devices) peuvent communiquer via une Passerelle de gestion cloud avec un point de gestion configuré pour le protocole HTTP. Le serveur de site génère un certificat pour le point de gestion afin de lui permettre de communiquer via un canal sécurisé.   
-
-- **Du client au point de distribution HTTP**<!--1358228--> : un groupe de travail ou un client joint à Azure AD peut télécharger du contenu via un canal sécurisé à partir d’un point de distribution configuré pour le protocole HTTP.   
+Pour plus d’informations, consultez [HTTP amélioré](/sccm/core/plan-design/hierarchy/enhanced-http).
 
 
 ### <a name="azure-ad-device-identity"></a>Identité d’appareil Azure AD 
 <!--1358460--> Un appareil [joint à Azure AD](https://docs.microsoft.com/azure/active-directory/device-management-introduction#azure-ad-joined-devices) ou un [appareil Azure AD hybride](https://docs.microsoft.com/azure/active-directory/device-management-introduction#hybrid-azure-ad-joined-devices) peut communiquer de manière sécurisée avec son site attribué, sans qu’un utilisateur Azure AD soit connecté. L’identité d’appareil cloud est désormais suffisante pour s’authentifier auprès du point de gestion et de la passerelle de gestion cloud.  
+
+Pour plus d’informations, consultez [HTTP amélioré](/sccm/core/plan-design/hierarchy/enhanced-http).
 
 
 ### <a name="cmtrace-installed-with-client"></a>CMTrace installé avec le client
@@ -186,8 +181,7 @@ Pour plus d’informations, consultez [CMTrace](/sccm/core/support/cmtrace).
 
 
 ### <a name="cloud-management-dashboard"></a>Tableau de bord de gestion cloud
-<!--1358461-->
- ***[Mise à jour]*** Le nouveau tableau de bord de gestion cloud fournit un affichage centralisé pour l’utilisation de la passerelle de gestion cloud. Lorsque le site est intégré à Azure AD, il affiche également les données sur les utilisateurs cloud et les appareils.   
+<!--1358461--> Le nouveau tableau de bord de gestion cloud fournit un affichage centralisé de l’utilisation de la Passerelle de gestion cloud. Lorsque le site est intégré à Azure AD, il affiche également les données sur les utilisateurs cloud et les appareils.   
 
 Cette fonctionnalité inclut également **l’analyseur de connexion de la passerelle de gestion cloud** pour la vérification en temps réel dans le cadre de la résolution des problèmes. L’utilitaire de la console vérifie l’état actuel du service, ainsi que le canal de communication qui passe par le point de connexion de la passerelle de gestion cloud vers les points de gestion qui autorisent le trafic de la passerelle. 
 
@@ -201,14 +195,12 @@ Pour plus d’informations, consultez les sections suivantes de l’article [Sup
 La version 1806 comprend les améliorations suivantes pour la Passerelle de gestion cloud :
 
 #### <a name="simplified-client-bootstrap-command-line"></a>Ligne de commande de démarrage du client simplifiée
-<!--1358215-->
- ***[Mise à jour]*** Durant l’installation du client Configuration Manager sur Internet via une passerelle de gestion cloud, le nombre de propriétés nécessaires sur la ligne de commande est désormais réduit. Cette amélioration réduit la taille de la ligne de commande utilisée dans Microsoft Intune pour la préparation de la cogestion. 
+<!--1358215--> Durant l’installation du client Configuration Manager sur Internet via une passerelle de gestion cloud, le nombre de propriétés nécessaires sur la ligne de commande est désormais réduit. Cette amélioration réduit la taille de la ligne de commande utilisée dans Microsoft Intune pour la préparation de la cogestion. 
 
 Pour plus d’informations, consultez [Préparer les appareils Windows 10 pour la cogestion](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client).
 
 #### <a name="download-content-from-a-cmg"></a>Télécharger du contenu à partir d’une passerelle de gestion cloud
-<!--1358651-->
- ***[Mise à jour]*** Avant, vous deviez déployer un point de distribution cloud et une passerelle de gestion cloud sous forme de rôles distincts. À présent, une passerelle de gestion cloud peut également proposer du contenu aux clients. Cette fonctionnalité réduit le nombre de certificats nécessaires, ainsi que les coûts associés aux machines virtuelles Azure. 
+<!--1358651--> Auparavant, vous deviez déployer un point de distribution cloud et une passerelle de gestion cloud sous forme de rôles distincts. À présent, une passerelle de gestion cloud peut également proposer du contenu aux clients. Cette fonctionnalité réduit le nombre de certificats nécessaires, ainsi que les coûts associés aux machines virtuelles Azure. 
 
 Pour plus d’informations, consultez [Modifier une passerelle de gestion cloud](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#modify-a-cmg).
 
@@ -301,8 +293,7 @@ Pour plus d’informations, consultez [Déployer des applications](/sccm/apps/de
 
 
 ### <a name="package-conversion-manager"></a>Package Conversion Manager 
-<!--1357861-->
- ***[Mis à jour]*** Package Conversion Manager est désormais un outil intégré qui permet de convertir les packages hérités en applications Configuration Manager Current Branch. Ensuite, vous pouvez utiliser les fonctionnalités des applications telles que les dépendances, les règles de spécification et l’affinité entre utilisateur et appareil.
+<!--1357861--> Package Conversion Manager est maintenant un outil intégré qui vous permet de convertir des packages hérités en applications Configuration Manager Current Branch. Ensuite, vous pouvez utiliser les fonctionnalités des applications telles que les dépendances, les règles de spécification et l’affinité entre utilisateur et appareil.
 
 Pour plus d’informations, voir [Package Conversion Manager](/sccm/apps/pcm/package-conversion-manager).
 
@@ -350,36 +341,38 @@ Pour plus d’informations, consultez les détails relatifs à l’[activation d
 
 Ces séquences de tâches conviennent aux déploiements de système d’exploitation et aux déploiements personnalisés. Elles sont également prises en charge par les ordinateurs de groupe de travail.
 
+Pour plus d’informations, consultez [Séquences de tâches et compte d’accès réseau](/sccm/osd/plan-design/planning-considerations-for-automating-tasks#BKMK_TSNetworkAccessAccount).
+
 
 ### <a name="other-improvements-to-os-deployment"></a>Autres améliorations apportées au déploiement du système d’exploitation
 
 #### <a name="mask-sensitive-data-stored-in-task-sequence-variables"></a>Masquer les données sensibles stockées dans les variables de séquence de tâches
- <!--1358330-->***[Mis à jour]*** À l’étape **Définir une variable de séquence de tâches**, sélectionnez la nouvelle option **Ne pas afficher cette valeur**. 
+ <!--1358330--> À l’étape **Définir la variable de séquence de tâches**, sélectionnez la nouvelle option **Ne pas afficher cette valeur**. 
 
  Pour plus d’informations, voir [Définir une variable de séquence de tâches](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable). 
 
 #### <a name="mask-program-name-during-run-command-step-of-a-task-sequence"></a>Masquer le nom du programme durant l’étape Exécuter la commande d’une séquence de tâches
- <!--1358493-->***[Mis à jour]*** Pour empêcher l’affichage ou la journalisation de données potentiellement sensibles, configurez la variable de séquence de tâches **OSDDoNotLogCommand**.  
+ <!--1358493--> Pour empêcher l’affichage ou la journalisation de données potentiellement sensibles, configurez la variable de séquence de tâches **OSDDoNotLogCommand**.  
 
  Pour plus d’informations, voir [Variables de séquence de tâches](/sccm/osd/understand/task-sequence-variables#OSDDoNotLogCommand). 
 
 #### <a name="task-sequence-variable-for-dism-parameters-when-installing-drivers"></a>Variable de séquence de tâches pour les paramètres DISM durant l’installation de pilotes
- <!--516679/2840016-->***[Mis à jour]*** Pour spécifier des paramètres de ligne de commande supplémentaires pour DISM, utilisez la nouvelle variable de séquence de tâches **OSDInstallDriversAdditionalOptions**. 
+ <!--516679/2840016--> Pour spécifier des paramètres de ligne de commande supplémentaires pour DISM, utilisez la nouvelle variable de séquence de tâches **OSDInstallDriversAdditionalOptions**. 
 
  Pour plus d’informations, voir [Variables de séquence de tâches](/sccm/osd/understand/task-sequence-variables#OSDInstallDriversAdditionalOptions). 
 
 #### <a name="option-to-use-full-disk-encryption"></a>Option d’utilisation du chiffrement de disque complet
- <!--SCCMDocs-pr issue 2671-->***[Mis à jour]*** Les étapes **Activer BitLocker** et **Préconfigurer BitLocker** comportent désormais une option **Utiliser le chiffrement de disque complet**. Par défaut, ces étapes permettent de chiffrer l’espace utilisé sur le lecteur. Ce comportement par défaut est recommandé, car il est plus rapide et plus efficace. 
+ <!--SCCMDocs-pr issue 2671--> Les étapes **Activer BitLocker** et **Préconfigurer BitLocker** incluent désormais une option pour **Utiliser le chiffrement de disque complet**. Par défaut, ces étapes permettent de chiffrer l’espace utilisé sur le lecteur. Ce comportement par défaut est recommandé, car il est plus rapide et plus efficace. 
 
  Pour plus d’informations, voir [Activer BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_EnableBitLocker) et [Préconfigurer BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_PreProvisionBitLocker). 
 
 #### <a name="client-provisioning-mode-isnt-enabled-with-windows-10-upgrade-compatibility-scan"></a>Le mode d’approvisionnement du client n’est pas activé avec l’analyse de compatibilité des mises à niveau de Windows 10
- <!--SCCMDocs-pr issue 2812-->***[Mis à jour]*** Maintenant, lorsque l’option **Effectuer une analyse de compatibilité de l’installation de Windows sans lancer la mise à niveau** est activée, l’étape de séquence de tâches **Mettre à niveau le système d’exploitation** ne met pas le client Configuration Client Manager en mode d’approvisionnement.
+ <!--SCCMDocs-pr issue 2812--> Maintenant, quand vous activez l’option **Effectuer une analyse de compatibilité d’installation de Windows sans démarrer la mise à niveau**, l’étape de séquence de tâches **Mettre à niveau le système d’exploitation** ne met pas le client Configuration Client Manager en mode de provisionnement.
 
  Pour plus d’informations, consultez [Mettre à niveau le système d’exploitation](/sccm/osd/understand/task-sequence-steps#BKMK_UpgradeOS).
 
 #### <a name="revised-documentation-for-task-sequence-variables"></a>Documentation révisée pour les variables de séquence de tâches
- ***[Mis à jour]*** Deux nouveaux articles sont désormais disponibles pour comprendre les variables de séquence de tâches :  
+ Deux nouveaux articles sont désormais disponibles pour comprendre les variables de séquence de tâches :  
 
  - [Guide pratique pour utiliser des variables de séquence de tâches](/sccm/osd/understand/using-task-sequence-variables) : nouvel article qui décrit les différents types de variables, les méthodes permettant de les définir et les moyens d’y accéder.  
 
@@ -394,8 +387,7 @@ Ces séquences de tâches conviennent aux déploiements de système d’exploita
 
 
 ### <a name="software-center-infrastructure-improvements"></a>Améliorations apportées à l’infrastructure du Centre logiciel
-<!--1358309-->
- ***[Mise à jour]*** Les rôles du catalogue d’applications ne sont plus nécessaires pour afficher les applications accessibles aux utilisateurs dans le Centre logiciel. Cette modification permet d’alléger l’infrastructure de serveur nécessaire pour fournir des applications aux utilisateurs. Le Centre logiciel s’appuie désormais sur le point de gestion pour obtenir ces informations, ce qui permet une meilleure mise à l’échelle des grands environnements par l’attribution de [groupes de limites](/sccm/core/servers/deploy/configure/boundary-groups#management-points).
+<!--1358309--> Les rôles du catalogue d’applications ne sont plus nécessaires pour afficher les applications accessibles aux utilisateurs dans le Centre logiciel. Cette modification permet d’alléger l’infrastructure de serveur nécessaire pour fournir des applications aux utilisateurs. Le Centre logiciel s’appuie désormais sur le point de gestion pour obtenir ces informations, ce qui permet une meilleure mise à l’échelle des grands environnements par l’attribution de [groupes de limites](/sccm/core/servers/deploy/configure/boundary-groups#management-points).
 
 Pour plus d’informations, consultez [Configurer le Centre logiciel](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex).  
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: d15484ef38264a5c954dc664f9885b800a078ca6
-ms.sourcegitcommit: 2badee2b63ae63687795250e298f463474063100
+ms.openlocfilehash: 9aab4273129e6a3032d7e85d2545e6abc5b616c4
+ms.sourcegitcommit: 8dd9199bfe8e27f62e9df307f1c6ac58a3b81717
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601005"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50237154"
 ---
 # <a name="prepare-windows-10-devices-for-co-management"></a>Préparer les appareils Windows 10 pour la cogestion
 Vous pouvez activer la cogestion sur les appareils Windows 10 qui sont joints à AD et à Azure AD, et inscrits auprès de Microsoft Intune et d’un client dans Configuration Manager. Pour les nouveaux appareils Windows 10 et pour ceux qui sont déjà inscrits à Intune, installez le client Configuration Manager avant de pouvoir les cogérer. Pour les appareils Windows 10 qui sont déjà des clients Configuration Manager, inscrivez-les à Intune et activez la cogestion dans la console Configuration Manager.
@@ -68,7 +68,7 @@ Les prérequis généraux pour activer la cogestion sont les suivants :
 
 - Windows 10, version 1709 ou ultérieure  
 
-- [Jonction à Azure AD hybride](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup) (jonction à AD et à Azure AD)  
+- [Joint à Azure AD Hybride](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup) (jonction à AD et Azure AD) ou joint à Azure AD uniquement (ce type est parfois appelé « joint à un domaine cloud »).
 
 
 ### <a name="additional-prerequisites-for-devices-without-the-configuration-manager-client"></a>Prérequis supplémentaires pour les appareils non dotés du client Configuration Manager

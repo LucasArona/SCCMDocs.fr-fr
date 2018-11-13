@@ -2,7 +2,7 @@
 title: Principes de base de la gestion de contenu
 titleSuffix: Configuration Manager
 description: Utilisez les outils et les options de Configuration Manager pour gérer le contenu que vous déployez.
-ms.date: 07/30/2018
+ms.date: 10/26/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5c3af900bae26262ba402ea258b8859ba07b999b
-ms.sourcegitcommit: 4f05517f7b284696a492a1b184cc5f25c5cda5e6
+ms.openlocfilehash: b73ead1492b143260d327f428db5a6183f84434c
+ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48891212"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411338"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Principes de base de la gestion de contenu dans Configuration Manager
 
@@ -33,15 +33,19 @@ Les rubriques suivantes exposent des concepts clés de la gestion de contenu. Si
 ## <a name="accounts-used-for-content-management"></a>Comptes utilisés pour la gestion de contenu  
  Les comptes suivants peuvent être utilisés pour la gestion de contenu :  
 
--   **Compte d’accès réseau**: compte utilisé par les clients pour se connecter à un point de distribution et accéder au contenu. Par défaut, le compte d’ordinateur est utilisé en premier.  
+#### <a name="network-access-account"></a>Compte d'accès réseau
+Utilisé par les clients pour se connecter à un point de distribution et accéder au contenu. Par défaut, le compte d’ordinateur est utilisé en premier.  
 
-     Ce compte est également utilisé par les points de distribution d’extraction pour télécharger du contenu à partir d’un point de distribution source dans une forêt distante.  
+Ce compte est également utilisé par les points de distribution d’extraction pour télécharger du contenu à partir d’un point de distribution source dans une forêt distante.  
 
--   **Compte d’accès au package** : par défaut, Configuration Manager permet aux utilisateurs et aux administrateurs des comptes d’accès génériques d’accéder au contenu sur un point de distribution. Toutefois, vous pouvez configurer des autorisations supplémentaires pour limiter l’accès.   
+Depuis la version 1806, certains scénarios ne nécessitent plus l’utilisation d’un compte d’accès réseau. Vous pouvez autoriser le site à utiliser l’HTTP amélioré avec l’authentification Azure Active Directory.<!--1358228--> 
 
--   **Compte de connexion multidiffusion** : utilisé pour les déploiements de système d’exploitation.  
+Pour plus d’informations, consultez [Compte d’accès réseau](/sccm/core/plan-design/hierarchy/accounts#network-access-account).
 
-Pour plus d’informations sur ces comptes, consultez [Gérer les comptes pour accéder au contenu](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content).
+#### <a name="package-access-account"></a>Compte d'accès au package
+Par défaut, Configuration Manager permet aux utilisateurs et aux administrateurs des comptes d’accès génériques d’accéder au contenu sur un point de distribution. Toutefois, vous pouvez configurer des autorisations supplémentaires pour limiter l’accès.   
+
+Pour plus d’informations, consultez [Compte d’accès au package](/sccm/core/plan-design/hierarchy/accounts#package-access-account).
 
 
 

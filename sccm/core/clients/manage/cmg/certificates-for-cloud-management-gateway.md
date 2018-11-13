@@ -4,39 +4,54 @@ description: Découvrez les différents certificats numériques à utiliser avec
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 09/10/2018
+ms.date: 10/24/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
-ms.openlocfilehash: 052210b53ec330a75d73508ae41218231bd75153
-ms.sourcegitcommit: 65423b94f0fee5dc5026804d88f13416872b93d4
+ms.openlocfilehash: 121b3840ea4f61f4789c5d6c21ab857cb091e199
+ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47173476"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411304"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>Certificats pour la passerelle de gestion cloud
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
-Selon le scénario que vous utilisez pour gérer des clients sur Internet avec la passerelle de gestion cloud, vous avez besoin d’un ou de plusieurs certificats numériques. Pour plus d’informations sur les différents scénarios, consultez [Planifier la passerelle de gestion cloud](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway).
+Selon le scénario que vous utilisez pour gérer des clients sur Internet avec la passerelle de gestion cloud, vous avez besoin d’un ou de plusieurs des certificats numériques suivants :  
+
+- [Certificat d’authentification serveur de passerelle de gestion cloud](#bkmk_serverauth)  
+    - [Certificat racine approuvé de passerelle de gestion cloud pour les clients](#bkmk_cmgroot)  
+    - [Certificat d’authentification serveur émis par le fournisseur public](#bkmk_serverauthpublic)  
+    - [Certificat d’authentification serveur émis par l’infrastructure à clé publique (PLI) d’entreprise](#bkmk_serverauthpki)  
+
+- [Certificat de gestion Azure](#bkmk_azuremgmt)  
+
+- [Certificat d’authentification client](#bkmk_clientauth)  
+    - [Certificat racine approuvé de client pour la passerelle de gestion cloud](#bkmk_clientroot)  
+
+- [Activer le point de gestion pour HTTPS](#bkmk_mphttps)  
+
+
+Pour plus d’informations sur les différents scénarios, consultez [Planifier la passerelle de gestion cloud](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway).
 
 
 ### <a name="general-information"></a>Informations générales
 <!--SCCMDocs issue #779--> Les certificats pour la passerelle de gestion cloud prennent en charge les configurations suivantes :  
 
-- **Longueur de clé de 4 096 bits**  
+- **Longueur de clé de 4 096 bits**  
 
-- À compter de la version 1710, prise en charge des certificats **Version 3**. Pour plus d’informations, consultez [Vue d’ensemble des certificats CNG](/sccm/core/plan-design/network/cng-certificates-overview).  
+- À compter de la version 1710, les fournisseurs de stockage de clés sont pris en charge pour les clés privées de certificat. Pour plus d’informations, consultez [Vue d’ensemble des certificats CNG](/sccm/core/plan-design/network/cng-certificates-overview).  
 
-- À compter de la version 1802, quand vous configurez Windows avec la stratégie suivante : **Chiffrement système : utilisez des algorithmes compatibles FIPS pour le chiffrement, le hachage et la signature**  
+- À compter de la version 1802, quand vous configurez Windows avec la stratégie suivante : **Chiffrement système : utilisez des algorithmes compatibles FIPS pour le chiffrement, le hachage et la signature**  
 
 - À compter de la version 1802, prise en charge de **TLS 1.2**. Pour plus d’informations, consultez [Informations techniques de référence sur les contrôles de chiffrement](/sccm/core/plan-design/security/cryptographic-controls-technical-reference#about-ssl-vulnerabilities).  
 
 
 
-## <a name="cmg-server-authentication-certificate"></a>Certificat d’authentification serveur de passerelle de gestion cloud
+## <a name="bkmk_serverauth"></a> Certificat d’authentification serveur de passerelle de gestion cloud
 
 *Ce certificat est obligatoire dans tous les scénarios.*
 
@@ -53,7 +68,7 @@ La passerelle de gestion cloud crée un service HTTPS auquel les clients Interne
  > Pour plus d’informations sur l’utilisation d’un certificat générique avec une passerelle de gestion cloud, consultez [Configurer une passerelle de gestion cloud](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#set-up-a-cmg).<!--SCCMDocs issue #565-->  
 
 
-### <a name="cmg-trusted-root-certificate-to-clients"></a>Certificat racine approuvé de passerelle de gestion cloud pour les clients
+### <a name="bkmk_cmgroot"></a> Certificat racine approuvé de passerelle de gestion cloud pour les clients
 
 Les clients doivent approuver le certificat d’authentification serveur de la passerelle de gestion cloud. Deux méthodes existent pour effectuer cette approbation : 
 
@@ -67,7 +82,7 @@ Les clients doivent approuver le certificat d’authentification serveur de la p
 > À compter de la version 1806, quand vous créez une passerelle de gestion cloud, vous n’êtes plus obligé de fournir un certificat racine approuvé dans la page Paramètres. Ce certificat n’est pas nécessaire lorsque vous utilisez Azure Active Directory (Azure AD) pour l’authentification client, mais il était auparavant nécessaire dans l’Assistant. Si vous utilisez des certificats d’authentification client PKI, vous devez néanmoins encore ajouter un certificat racine approuvé pour la passerelle de gestion cloud.<!--SCCMDocs-pr issue #2872-->  
 
 
-### <a name="server-authentication-certificate-issued-by-public-provider"></a>Certificat d’authentification serveur émis par le fournisseur public
+### <a name="bkmk_serverauthpublic"></a> Certificat d’authentification serveur émis par le fournisseur public
 
 Un fournisseur de certificats tiers ne peut pas créer un certificat pour CloudApp.net, car ce domaine est détenu par Microsoft. Vous pouvez seulement obtenir un certificat émis pour un domaine qui vous appartient. La principale raison pour acquérir un certificat auprès d’un fournisseur tiers est que vos clients approuvent déjà le certificat de racine de ce fournisseur.
 
@@ -91,7 +106,7 @@ Par exemple, Contoso utilise **GraniteFalls.Contoso.com** comme nom commun du ce
 Quand vous créez l’instance de la passerelle de gestion cloud dans Configuration Manager, alors que le certificat comporte GraniteFalls.Contoso.com, Configuration Manager extrait seulement le nom d’hôte, par exemple GraniteFalls. Il ajoute ce nom d’hôte à CloudApp.net, ce qui est exigé par Azure lors de la création d’un service cloud. L’alias CNAME dans l’espace de noms DNS pour votre domaine, Contoso.com, mappe ces deux noms de domaine complets. Configuration Manager donne aux clients une stratégie pour accéder à cette passerelle de gestion cloud et le mappage DNS les lie ensemble pour qu’ils puissent accéder de façon sécurisée au service dans Azure.<!--SCCMDocs issue #565-->  
 
 
-### <a name="server-authentication-certificate-issued-from-enterprise-pki"></a>Certificat d’authentification serveur émis par l’infrastructure à clé publique d’entreprise
+### <a name="bkmk_serverauthpki"></a> Certificat d’authentification serveur émis par l’infrastructure à clé publique (PKI) d’entreprise
 
 Créez un certificat SSL personnalisé pour la passerelle de gestion cloud de la même façon que pour un point de distribution cloud. Suivez les instructions pour le [déploiement du certificat de service pour les points de distribution cloud](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_clouddp2008_cm2012), mais procédez différemment pour ce qui suit :
 
@@ -105,7 +120,7 @@ Créez un certificat SSL personnalisé pour la passerelle de gestion cloud de la
 
 
 
-## <a name="azure-management-certificate"></a>Certificat de gestion Azure
+## <a name="bkmk_azuremgmt"></a> Certificat de gestion Azure
 
 *Ce certificat est obligatoire pour les déploiements de services classiques. Il n’est pas nécessaire pour les déploiements Azure Resource Manager.*
 
@@ -124,7 +139,7 @@ Pour plus d’informations et des instructions sur la manière de charger un cer
 
 
 
-## <a name="client-authentication-certificate"></a>Certificat d'authentification client
+## <a name="bkmk_clientauth"></a> Certificat d’authentification client
 
 *Ce certificat est obligatoire pour les clients Internet exécutant Windows 7 ou Windows 8.1, et pour les appareils Windows 10 non joints à Azure Active Directory (Azure AD). Il est également obligatoire sur le point de connexion de passerelle de gestion cloud. Il n’est pas nécessaire pour les clients Windows 10 joints à Azure AD.*
 
@@ -132,8 +147,10 @@ Les clients utilisent ce certificat pour s’authentifier auprès de la passerel
 
 Provisionnez ce certificat en dehors du contexte de Configuration Manager. Par exemple, utilisez les services de certificats Active Directory et la stratégie de groupe pour émettre des certificats d’authentification clients. Pour plus d’informations, consultez [Déploiement du certificat client pour les ordinateurs Windows](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_client2008_cm2012).
 
+Le point de connexion de la passerelle de gestion cloud nécessite ce certificat pour transférer de manière sécurisée les requêtes clientes vers un point de gestion HTTPS. Si vous utilisez Azure AD ou HTTP amélioré, ce certificat n’est pas nécessaire. Pour plus d’informations, consultez [Activer le point de gestion pour HTTPS](#bkmk_mphttps).
 
-### <a name="client-trusted-root-certificate-to-cmg"></a>Certificat racine approuvé de client pour la passerelle de gestion cloud
+
+### <a name="bkmk_clientroot"></a> Certificat racine approuvé de client pour la passerelle de gestion cloud
 
 *Ce certificat est obligatoire lors de l’utilisation de certificats d’authentification clients. Quand tous les clients utilisent Azure AD pour l’authentification, ce certificat n’est pas nécessaire.* 
 
@@ -176,9 +193,10 @@ Après avoir émis un certificat d’authentification client pour un ordinateur,
 
 
 
-## <a name="enable-management-point-for-https"></a>Activer le point de gestion pour HTTPS
+## <a name="bkmk_mphttps"></a> Activer le point de gestion pour HTTPS
 
-*Spécifications pour les certificats*
+Provisionnez ce certificat en dehors du contexte de Configuration Manager. Par exemple, utilisez les services de certificats Active Directory et la stratégie de groupe pour émettre un certificat de serveur web. Pour plus d’informations, consultez [Spécifications pour les certificats d’infrastructure à clé publique](/sccm/core/plan-design/network/pki-certificate-requirements) et [Déployer le certificat de serveur web pour les systèmes de site qui exécutent IIS](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012).
+
 
 - Dans les versions 1706 ou 1710, lors de la gestion de clients traditionnels avec des identités locales en utilisant un certificat d’authentification client, ce certificat est recommandé mais pas obligatoire.  
 
@@ -186,12 +204,57 @@ Après avoir émis un certificat d’authentification client pour un ordinateur,
 
 - À compter de la version 1802, ce certificat est obligatoire dans tous les scénarios. Seuls les points de gestion que vous activez pour la passerelle de gestion cloud doivent être HTTPS. Ce changement de comportement offre une meilleure prise en charge de l’authentification basée sur un jeton Azure AD.  
 
-Provisionnez ce certificat en dehors du contexte de Configuration Manager. Par exemple, utilisez les services de certificats Active Directory et la stratégie de groupe pour émettre un certificat de serveur web. Pour plus d’informations, consultez [Spécifications pour les certificats d’infrastructure à clé publique](/sccm/core/plan-design/network/pki-certificate-requirements) et [Déployer le certificat de serveur web pour les systèmes de site qui exécutent IIS](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012).
+- À compter de la version 1806, quand vous utilisez l’option de site destinée à **Utiliser les certificats générés par Configuration Manager pour les systèmes de site HTTP**, le point de gestion peut être HTTP. Pour plus d’informations, consultez [HTTP amélioré](/sccm/core/plan-design/hierarchy/enhanced-http).
+
+### <a name="management-point-client-connection-mode-summary"></a>Récapitulatif du mode de connexion client du point de gestion
+Les tableaux suivants récapitulent si le point de gestion nécessite HTTP ou HTTPS, en fonction du type de client et de la version du site.
+
+#### <a name="for-internet-based-clients-communicating-with-the-cloud-management-gateway"></a>Pour les clients basés sur Internet qui communiquent avec la passerelle de gestion cloud
+Configurez un point de gestion local pour autoriser les connexions à partir de la passerelle de gestion cloud avec le mode de connexion client suivant :
+
+| Type de client   | 1706        | 1710        | 1802        | 1806        |
+|------------------|-------------|-------------|-------------|-------------|
+| Groupe de travail        | HTTP, HTTPS | HTTP, HTTPS | HTTPS       | E-HTTP<sup>[Remarque 1](#bkmk_note1)</sup>, HTTPS |
+| Joint à un domaine AD | HTTP, HTTPS | HTTP, HTTPS | HTTPS       | E-HTTP<sup>[Remarque 1](#bkmk_note1)</sup>, HTTPS |
+| Joint à Azure AD  | HTTPS       | HTTPS       | HTTPS       | E-HTTP, HTTPS |
+| Joint à une version hybride    | HTTP, HTTPS | HTTP, HTTPS | HTTPS       | E-HTTP, HTTPS |
+
+<a name="bkmk_note1"></a> 
+
+> [!Note]  
+> **Remarque 1** : Avec cette configuration, le client doit avoir un [certificat d’authentification client](#bkmk_clientauth) et prendre uniquement en charge des scénarios centrés sur les appareils.  
+
+#### <a name="for-on-premises-clients-communicating-with-the-on-premises-management-point"></a>Pour les clients locaux qui communiquent avec le point de gestion local
+Configurez un point de gestion local avec le mode de connexion client suivant :
+
+| Type de client   | 1706        | 1710        | 1802        | 1806        |
+|------------------|-------------|-------------|-------------|-------------|
+| Groupe de travail        | HTTP, HTTPS | HTTP, HTTPS | HTTP, HTTPS | HTTP, HTTPS |
+| Joint à un domaine AD | HTTP, HTTPS | HTTP, HTTPS | HTTP, HTTPS | HTTP, HTTPS |
+| Joint à Azure AD  | HTTPS       | HTTPS       | HTTPS       | HTTPS       |
+| Joint à une version hybride    | HTTP, HTTPS | HTTP, HTTPS | HTTP, HTTPS | HTTP, HTTPS |
+
+> [!Note]  
+> Dans la version 1806, les clients joints à un domaine AD prennent en charge les scénarios centrés sur l’utilisateur et ceux centrés sur les appareils qui communiquent avec un point de gestion HTTP ou HTTPS.  
+> 
+> Les clients joints à Azure AD et ceux joints à une version hybride peuvent communiquer par le biais du protocole HTTP pour les scénarios centrés sur les appareils, mais ils ont besoin d’E-HTTP ou de HTTPS pour autoriser les scénarios centrés sur l’utilisateur. Sinon, ils se comportent comme des clients de groupe de travail.  
+
+
+#### <a name="legend-of-terms"></a>Légende des termes
+- *Groupe de travail* : l’appareil n’est pas joint à un domaine ou à Azure AD, mais il dispose d’un [certificat d’authentification client](#bkmk_clientauth)  
+- *Joint à un domaine AD* : vous joignez l’appareil à un domaine Active Directory local  
+- *Joint à Azure AD* : (également appelé « joint à un domaine cloud ») vous joignez l’appareil à un locataire Azure Active Directory  
+- *Joint à une version hybride* : vous joignez l’appareil à un domaine Active Directory et à un locataire Azure AD  
+- *HTTP* : dans les propriétés du point de gestion, vous définissez les connexions clientes sur **HTTP**  
+- *HTTPS* : dans les propriétés du point de gestion, vous définissez les connexions clientes sur **HTTPS**  
+- *E-HTTP* : dans les propriétés du site, sous l’onglet Communication de l’ordinateur client, vous définissez les paramètres du système de site sur **HTTPS ou HTTP**, puis vous activez l’option sur **Utiliser les certificats générés par Configuration Manager pour les systèmes de site HTTP**. Vous configurez le point de gestion pour HTTP ou HTTPS.  
 
 
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-- [Configurer la passerelle de gestion cloud](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway)
-- [Questions fréquentes (FAQ) sur la passerelle de gestion cloud](/sccm/core/clients/manage/cmg/cloud-management-gateway-faq)
-- [Sécurité et confidentialité de la passerelle de gestion cloud](/sccm/core/clients/manage/cmg/security-and-privacy-for-cloud-management-gateway)
+- [Configurer la passerelle de gestion cloud](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway)  
+
+- [Questions fréquentes (FAQ) sur la passerelle de gestion cloud](/sccm/core/clients/manage/cmg/cloud-management-gateway-faq)  
+
+- [Sécurité et confidentialité de la passerelle de gestion cloud](/sccm/core/clients/manage/cmg/security-and-privacy-for-cloud-management-gateway)  

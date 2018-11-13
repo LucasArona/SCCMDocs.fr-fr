@@ -2,7 +2,7 @@
 title: Nouveautés de la gestion MDM hybride
 titleSuffix: Configuration Manager
 description: Découvrez les nouvelles fonctionnalités de gestion des appareils mobiles disponibles pour les déploiements hybrides avec Configuration Manager et Intune.
-ms.date: 10/18/2018
+ms.date: 10/31/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3082bb6d6cc96be8ba7a56e1e2bb5a6bcd32bc9b
-ms.sourcegitcommit: 19fc4f27667d51502fc9d7d02d164f2837d65dae
+ms.openlocfilehash: f51e54ede8df8c18ca8614f6a75c82c53bb7916c
+ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461271"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411525"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Nouveautés de la gestion hybride des appareils mobiles avec Configuration Manager et Microsoft Intune
 
@@ -51,14 +51,23 @@ Chaque section de cet article répertorie les fonctionnalités hybrides sous tro
 
 ### <a name="new-in-microsoft-intune"></a>Nouveautés de Microsoft Intune
 
+#### <a name="updates-for-application-transport-security"></a>Mises à jour pour Application Transport Security 
+<!--748318--> Microsoft Intune prend en charge le protocole TLS (Transport Layer Security) 1.2+ pour fournir un chiffrement de qualité, garantir une meilleure sécurisation par défaut et s’aligner avec d’autres services Microsoft comme Microsoft Office 365. Pour répondre à cette exigence, les portails d’entreprise iOS et macOS vont appliquer les impératifs de la fonctionnalité ATS (Application Transport Security) mise à jour d’Apple, celle-ci nécessitant également TLS 1.2+. ATS permet de renforcer la sécurité de toutes les communications d’application sur HTTPS. Ce changement impacte les clients Intune qui utilisent les applications du portail d’entreprise iOS et macOS. Pour plus d’informations, consultez le billet de blog [Intune moving to TLS 1.2 for encryption](https://blogs.technet.microsoft.com/intunesupport/2018/06/05/intune-moving-to-tls-1-2-for-encryption/).
+
+#### <a name="remove-an-email-profile-from-a-device-even-when-theres-only-one-email-profile"></a>Supprimer un profil de messagerie d’un appareil, même s’il n’y a qu’un seul profil 
+<!--1818139--> Par le passé, vous ne pouviez pas supprimer le profil de messagerie d’un appareil si ce dernier ne contenait qu’un seul profil. Cette mise à jour change ce comportement. Vous pouvez à présent supprimer un profil de messagerie même si l’appareil n’en contient pas d’autres. 
+
+#### <a name="remove-pkcs-and-scep-certificates-from-your-devices"></a>Supprimer les certificats PKCS et SCEP de vos appareils 
+<!--3218390--> Dans certains scénarios, les certificats PKCS et SCEP restaient sur les appareils même après la suppression d’une stratégie d’un groupe, la suppression d’une configuration ou d’un déploiement de conformité, ou la mise à jour par un administrateur d’un profil SCEP ou PKCS existant. 
+
+Cette mise à jour change le comportement. Il existe des scénarios dans lesquels les certificats PKCS et SCEP sont supprimés des appareils, et d’autres dans lesquels ces certificats restent sur l’appareil. 
+
 #### <a name="access-to-key-profile-properties-using-the-company-portal-app"></a>Accès aux propriétés de profil clés à l’aide de l’application Portail d’entreprise
 <!--772203-->  
-
 Les utilisateurs finaux peuvent désormais accéder aux propriétés de compte et aux actions clés, comme la réinitialisation du mot de passe, à partir de l’application Portail d’entreprise. 
 
 #### <a name="pin-prompt-when-you-change-fingerprints-or-face-id-on-an-ios-device"></a>Invite PIN lorsque vous modifiez des empreintes digitales ou Face ID sur un appareil iOS  
 <!--2637704-->  
-
 Les utilisateurs sont maintenant invités à entrer un code PIN après avoir apporté des modifications biométriques sur leur appareil iOS. Cela inclut les modifications apportées aux empreintes digitales ou à Face ID. Le délai de l’invite dépend de la configuration du délai d’attente *Revérifier les conditions d’accès requises après (minutes)*.  Si aucun code PIN n’est défini, l’utilisateur est invité à en configurer un.  
 
 Cette fonctionnalité est uniquement disponible pour iOS et nécessite la participation d’applications qui intègrent le SDK d’application Intune pour iOS, version 8.1.1 ou version ultérieure. L’intégration du SDK est nécessaire afin que le comportement puisse être appliqué sur les applications ciblées. Cette intégration se produit en continu et repose sur les équipes d’application spécifiques. Certaines applications participantes incluent WXP, Outlook, Managed Browser et Yammer.
@@ -408,23 +417,23 @@ Demandez aux utilisateurs finaux sur Windows 10 versions 1607 ou ultérieures d�
   <!--1029830-->   
 
 - **Améliorations apportées au workflow de configuration des appareils dans Portail d’entreprise**     
-  Nous avons amélioré le workflow de configuration des appareils dans l’application Portail d’entreprise pour Android. La langue est plus conviviale et spécifique à votre entreprise, et nous avons regroupé des écrans quand cela était possible. Vous pouvez voir ces améliorations sur la page [Nouveautés de l’interface utilisateur de l’application](https://docs.microsoft.com/intune/whats-new-app-ui#week-of-october-2-2017).
+  Nous avons amélioré le workflow de configuration des appareils dans l’application Portail d’entreprise pour Android. La langue est plus conviviale et spécifique à votre entreprise, et nous avons regroupé des écrans quand cela était possible. Vous pouvez voir ces améliorations sur la page [Nouveautés de l’interface utilisateur de l’application](https://docs.microsoft.com/intune/whats-new-app-ui#week-of-october-2-2017).
   <!--1490692-->     
 
 - **Amélioration des indications sur la demande d’accès aux contacts sur les appareils Android**     
-  L’application Portail d’entreprise pour Android nécessite souvent que l’utilisateur final accepte l’autorisation pour permettre l’accès des contacts. Si un utilisateur final refuse cet accès, il voit une notification dans l’application l’invitant à autoriser un accès conditionnel. 
+  L’application Portail d’entreprise pour Android nécessite souvent que l’utilisateur final accepte l’autorisation pour permettre l’accès des contacts. Si un utilisateur final refuse cet accès, il voit une notification dans l’application l’invitant à autoriser un accès conditionnel. 
   <!--1484985-->     
 
 - **Mise à jour du démarrage sécurisé pour Android**     
-  Les utilisateurs finaux d’appareils Android peuvent indiquer la raison de la non-conformité dans l’application Portail d’entreprise. Lorsque cela est possible, cette action leur permet d’accéder directement à l’emplacement approprié dans l’application Paramètres pour résoudre le problème. 
+  Les utilisateurs finaux d’appareils Android peuvent indiquer la raison de la non-conformité dans l’application Portail d’entreprise. Dans la mesure du possible, cette action leur permet d’accéder directement à l’emplacement approprié dans l’application Paramètres pour résoudre le problème. 
   <!--1490712-->    
 
 - **Notifications Push supplémentaires pour les utilisateurs finaux sur l’application Portail d’entreprise pour Android Oreo**    
-  Les utilisateurs finaux voient des notifications supplémentaires leur indiquant si l’application Portail d’entreprise pour Android Oreo effectue des tâches en arrière-plan, par exemple récupérer des stratégies auprès du service Intune. Les notifications améliorent la transparence pour les utilisateurs finaux, qui savent quand le Portail d’entreprise effectue des tâches d’administration sur leur appareil. Cette amélioration fait partie de [l’optimisation générale de l’interface utilisateur du Portail d’entreprise](https://blogs.technet.microsoft.com/intunesupport/2017/08/21/android-8-0-o-behaviour-changes-and-microsoft-intune), et en particulier de l’application Portail d’entreprise pour Android Oreo. 
+  Les utilisateurs finaux voient des notifications supplémentaires leur indiquant si l’application Portail d’entreprise pour Android Oreo effectue des tâches en arrière-plan, par exemple récupérer des stratégies auprès du service Intune. Les notifications améliorent la transparence pour les utilisateurs finaux, qui savent quand le Portail d’entreprise effectue des tâches d’administration sur leur appareil. Cette amélioration fait partie de [l’optimisation générale de l’interface utilisateur du Portail d’entreprise](https://blogs.technet.microsoft.com/intunesupport/2017/08/21/android-8-0-o-behaviour-changes-and-microsoft-intune), et en particulier de l’application Portail d’entreprise pour Android Oreo. 
   <!--1475932 -->     
 
 - **Nouveaux comportements pour l’application Portail d’entreprise pour Android avec des profils professionnels**     
-  Quand vous inscrivez un appareil Android for Work avec un profil professionnel, c’est l’application Portail d’entreprise dans le profil professionnel qui effectue les tâches de gestion sur l’appareil. 
+  Quand vous inscrivez un appareil Android for Work avec un profil professionnel, c’est l’application Portail d’entreprise dans le profil professionnel qui effectue les tâches de gestion sur l’appareil. 
 
   À moins que vous n’utilisiez une application GAM dans le profil personnel, l’application Portail d’entreprise pour Android n’a plus d’utilité. Pour améliorer l’expérience de profil professionnel, Intune masque automatiquement l’application Portail d’entreprise personnelle après une inscription de profil professionnel réussie.
 
@@ -436,7 +445,7 @@ Demandez aux utilisateurs finaux sur Windows 10 versions 1607 ou ultérieures d�
   <!--1428681-->    
 
 - **Empêcher l’inscription des appareils Samsung Knox non pris en charge**   
-  L’application Portail d’entreprise tente uniquement d’inscrire des appareils Samsung Knox pris en charge. Pour éviter les erreurs d’activation KNOX qui empêchent l’inscription MDM, l’inscription d’un appareil est uniquement tentée si l’appareil figure dans la [liste des périphériques publiée par Samsung](https://www.samsungknox.com/knox-supported-devices/knox-workspace). Certains appareils Samsung peuvent avoir des numéros de modèle prenant en charge KNOX, mais pas tous. Vérifiez la compatibilité de votre appareil avec Knox auprès de votre revendeur avant de l’acheter et de le déployer. Vous trouverez la liste complète des périphériques vérifiés dans les [paramètres de stratégie Android et Samsung KNOX Standard](https://docs.microsoft.com/intune-classic/deploy-use/android-policy-settings-in-microsoft-intune#supported-samsung-knox-standard-devices).
+  L’application Portail d’entreprise tente uniquement d’inscrire des appareils Samsung Knox pris en charge. Pour éviter les erreurs d’activation KNOX qui empêchent l’inscription MDM, l’inscription d’un appareil est uniquement tentée si l’appareil figure dans la [liste des périphériques publiée par Samsung](https://www.samsungknox.com/knox-supported-devices/knox-workspace). Certains appareils Samsung peuvent avoir des numéros de modèle prenant en charge KNOX, mais pas tous. Vérifiez la compatibilité de votre appareil avec Knox auprès de votre revendeur avant de l’acheter et de le déployer. Vous trouverez la liste complète des périphériques vérifiés dans les [paramètres de stratégie Android et Samsung KNOX Standard](https://docs.microsoft.com/intune-classic/deploy-use/android-policy-settings-in-microsoft-intune#supported-samsung-knox-standard-devices).
   <!-- 1490695 -->     
 
 - **Fin du support pour Android 4.3 et versions antérieures**     
@@ -458,7 +467,7 @@ Demandez aux utilisateurs finaux sur Windows 10 versions 1607 ou ultérieures d�
     <!-- 1132468 -->     
 
 - **Informer les utilisateurs finaux au sujet des informations sur les appareils qui sont consultables pour iOS**   
-    Nous avons ajouté le **Type de propriété** à l’écran Détails de l’appareil sur l’application Portail d’entreprise pour iOS. Ces informations permettent aux utilisateurs d’en savoir plus sur la confidentialité directement à partir de la documentation utilisateur Intune. Les utilisateurs peuvent également ces informations sur l’écran À propos de. 
+    Nous avons ajouté   **Type de propriété** à l’écran Détails de l’appareil dans l’application Portail d’entreprise pour iOS. Ces informations permettent aux utilisateurs d’en savoir plus sur la confidentialité directement à partir de la documentation utilisateur Intune. Les utilisateurs peuvent également ces informations sur l’écran À propos de. 
     <!--739894-->    
 
 - **Formulations plus claires dans l’application Portail d’entreprise pour Android**   
@@ -574,33 +583,16 @@ Toutefois, si vous utilisez ou souhaitez inscrire l’un des appareils répertor
 Recherchez les appareils ou utilisateurs qui sont concernés dans votre organisation. Dans Intune dans le portail Azure, accédez à **Appareils** > **Tous les appareils** et filtrez par **Système d’exploitation**.  Cliquez sur **Colonnes** pour afficher des détails tels que la version du système d’exploitation. Demandez à vos utilisateurs de mettre à niveau leurs appareils vers une version de système d’exploitation prise en charge avant septembre.
 
 
-### <a name="plan-for-change-intune-moving-to-tls-12"></a>Modification planifiée : mise à jour d’Intune vers TLS 1.2
-
-À compter du 31 octobre 2018, Intune prendra en charge la version 1.2 du protocole de sécurité TLS (Transport Layer Security) afin de fournir un chiffrement de qualité, de garantir une meilleure sécurisation par défaut de notre service et de s’aligner avec d’autres services Microsoft tels que Microsoft Office 365. Office a publié une communication concernant cette modification dans MC128929.
-
-#### <a name="how-does-this-change-affect-me"></a>Quel est l’impact de ce changement ?
-
-À compter du 31 octobre 2018, Intune ne prendra plus en charge les versions 1.0 et 1.1 du protocole TLS. Toutes les combinaisons client-serveur et navigateur-serveur doivent utiliser TLS version 1.2 afin de garantir une connexion sans problème à Intune. Ce changement impacte les appareils des utilisateurs finaux qui ne sont pas pris en charge par Intune, mais qui reçoivent toujours la stratégie par le biais d’Intune et qui ne peuvent pas utiliser la version 1.2 du protocole TLS. Sont notamment concernés les appareils qui exécutent Android 4.3 et versions antérieures. Pour obtenir la liste des appareils et navigateurs impactés, consultez le lien ci-dessous.
-
-Après le 31 octobre 2018, si vous rencontrez un problème lié à l’utilisation d’une ancienne version de TLS, vous devrez effectuer une mise à jour vers TLS 1.2 ou vers un appareil qui prend en charge TLS 1.2 dans le cadre du processus de résolution.
-
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Que faire pour se préparer à ce changement ?
-
-Nous vous recommandons de supprimer les dépendances TLS 1.0 et 1.1 de manière proactive dans vos environnements, et de désactiver TLS 1.0 et 1.1 au niveau du système d’exploitation dans la mesure du possible. Commencez à planifier votre migration vers TLS 1.2 dès aujourd’hui. Consultez le billet de blog de support ci-dessous pour obtenir la liste des appareils qui ne sont pas pris en charge par Intune aujourd’hui, mais qui peuvent encore recevoir la stratégie et qui ne pourront pas communiquer à l’aide du protocole TLS version 1.2. Vous devrez informer ces utilisateurs qu’ils perdront l’accès aux ressources d’entreprise.
-
-Pour plus d’informations, consultez le billet de blog [Intune moving to TLS 1.2 for encryption](https://blogs.technet.microsoft.com/intunesupport/2018/06/05/intune-moving-to-tls-1-2-for-encryption/).
-
-
 ### <a name="company-portal-for-windows-81-and-windows-phone-81-moving-to-sustaining-mode"></a>Portail d’entreprise pour Windows 8.1 et Windows Phone 8.1 désormais simplement maintenu 
 <!--1428681-->
 *6 octobre 2017*   
  
-Depuis octobre 2017, les applications Portail d’entreprise pour Windows 8.1 et Windows Phone 8.1 sont simplement maintenues. Ce mode signifie que les applications et les scénarios existants, tels que l’inscription et la conformité, continuent d’être pris en charge pour ces plateformes. Ces applications peuvent toujours être téléchargées par le biais des canaux de distribution existants, tels que Microsoft Store. 
+Depuis octobre 2017, les applications Portail d’entreprise pour Windows 8.1 et Windows Phone 8.1 sont simplement maintenues. Ce mode signifie que les applications et les scénarios existants, tels que l’inscription et la conformité, continuent d’être pris en charge pour ces plateformes. Ces applications peuvent toujours être téléchargées par le biais des canaux de distribution existants, tels que Microsoft Store. 
 
-Mais une fois qu’elles sont simplement maintenues, ces applications reçoivent uniquement les mises à jour de sécurité critiques. Il n’y aura aucune mise à jour supplémentaire ou nouvelle fonctionnalité disponible pour ces applications. Pour bénéficier des nouvelles fonctionnalités, nous vous recommandons de mettre à jour vos appareils vers Windows 10 ou Windows 10 Mobile. 
+Mais une fois qu’elles sont simplement maintenues, ces applications reçoivent uniquement les mises à jour de sécurité critiques. Il n’y aura aucune mise à jour supplémentaire ou nouvelle fonctionnalité disponible pour ces applications. Pour bénéficier des nouvelles fonctionnalités, nous vous recommandons de mettre à jour vos appareils vers Windows 10 ou Windows 10 Mobile. 
 
 ### <a name="end-of-support-for-ios-80"></a>Fin du support d’iOS 8.0 
-<!---1164477---> Les applications gérées et l’application Portail d’entreprise pour iOS nécessitent iOS 9.0 ou version ultérieure pour accéder aux ressources de l’entreprise. Les appareils qui ne sont pas mis à jour avant le mois de septembre ne peuvent plus accéder au Portail d’entreprise ou à ces applications. 
+<!---1164477---> Les applications gérées et l’application Portail d’entreprise pour iOS nécessitent iOS 9.0 ou version ultérieure pour accéder aux ressources de l’entreprise. Les appareils qui ne sont pas mis à jour avant le mois de septembre ne peuvent plus accéder au Portail d’entreprise ou à ces applications. 
 
 ### <a name="platform-support-reminder-windows-phone-81-mainstream-support-ended-july-11-2017"></a>Rappel relatif au support de la plateforme : le support standard de Windows Phone 8.1 a pris fin le 11 juillet 2017
 <!-- 1327781 -->

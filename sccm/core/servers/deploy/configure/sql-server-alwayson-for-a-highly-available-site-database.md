@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9657cbbf60a90f21f0daa8bb5ef3d5cf80f7da4e
-ms.sourcegitcommit: 7eebd112a9862bf98359c1914bb0c86affc5dbc0
+ms.openlocfilehash: 0cb94f8d14ff525687909290085e16ecd47fa39f
+ms.sourcegitcommit: 22257e35a7d7263939a6802602050190897412a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589392"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51562046"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Se préparer à l’utilisation de groupes de disponibilité SQL Server Always On avec Configuration Manager
 
@@ -171,7 +171,7 @@ N’appliquez ces configurations qu’à un réplica principal. Pour configurer 
 
 Exécutez le script SQL suivant afin de vérifier les configurations de base de données des réplicas principal et secondaires. Pour pouvoir résoudre un problème sur un réplica secondaire, modifiez-le en le définissant comme réplica principal.
 
-``` SQL
+```SQL
     SET NOCOUNT ON
 
     DECLARE @dbname NVARCHAR(128)
@@ -182,7 +182,7 @@ Exécutez le script SQL suivant afin de vérifier les configurations de base de 
     RAISERROR(N'ERROR: Script is targetting a system database.  It should be targeting the DB you created instead.', 0, 1)
     GOTO Branch_Exit;
     END ELSE
-    PRINT N'INFO: Targetted database is ' + @dbname + N'.'
+    PRINT N'INFO: Targeted database is ' + @dbname + N'.'
 
     PRINT N'INFO: Running verifications....'
 

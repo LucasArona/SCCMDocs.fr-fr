@@ -10,19 +10,18 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fcf3bc335efc4c7436842b29d30c67c118ceb05d
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 4435802ad67857ad9f79168f96aa046eae8f7097
+ms.sourcegitcommit: 471cf13bc1ff7543c3d32465df9eecff9aaaa5be
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32339024"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753647"
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Créer et exécuter des scripts PowerShell à partir de la console Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
-<!--1236459-->
-System Center Configuration Manager a la capacité intégrée d’exécuter des scripts PowerShell. Powershell a l’avantage de créer des scripts automatisés et sophistiqués, qui sont compris et partagés par une large communauté. Les scripts simplifient la création d’outils personnalisés pour administrer des logiciels et vous permettent d’accomplir des tâches courantes rapidement, plus facilement et de façon plus cohérente.  
+<!--1236459--> System Center Configuration Manager a la capacité intégrée d’exécuter des scripts PowerShell. Powershell a l’avantage de créer des scripts automatisés et sophistiqués, qui sont compris et partagés par une large communauté. Les scripts simplifient la création d’outils personnalisés pour administrer des logiciels et vous permettent d’accomplir des tâches courantes rapidement, plus facilement et de façon plus cohérente.  
 
 > [!TIP]  
 > Cette fonctionnalité a été introduite dans la version 1706 comme [fonctionnalité en préversion](/sccm/core/servers/manage/pre-release-features). À compter de la version 1802, cette fonctionnalité n’est plus en préversion.  
@@ -95,7 +94,7 @@ Cette approbation est principalement utilisée pour la phase de test du dévelop
 1. Dans la console Configuration Manager, cliquez sur **Administration**.
 2. Dans l'espace de travail **Administration** , développez **Configuration du site**, puis cliquez sur **Sites**.
 3. Dans la liste des sites, sélectionnez votre site, puis, dans l’onglet **accueil**, sous le groupe **Sites**, cliquez sur **Paramètres de hiérarchie**.
-4. Dans l’onglet **Général** de la boîte de dialogue **Propriétés des paramètres de hiérarchie**, décochez la case **Ne pas autoriser les auteurs à approuver leurs propres scripts**.
+4. Sous l’onglet **Général** de la boîte de dialogue **Propriétés des paramètres de hiérarchie**, décochez la case **Les auteurs de script nécessitent un approbateur de script supplémentaire**.
 
 >[!IMPORTANT]
 >En tant que bonne pratique, vous ne devriez pas autoriser un auteur de script à approuver ses propres scripts. Ceci ne devrait être autorisé que dans un environnement de laboratoire. Mesurez minutieusement l’impact qu’aurait la modification de ce paramètre dans un environnement de production.

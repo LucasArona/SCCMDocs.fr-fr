@@ -2,7 +2,7 @@
 title: Planifier la passerelle de gestion cloud
 titleSuffix: Configuration Manager
 description: Planifiez et concevez la passerelle de gestion cloud pour simplifier la gestion des clients Internet.
-ms.date: 09/10/2018
+ms.date: 10/24/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9b25b7a5b7df42dc83bec18d38b44c7807e6dc1a
-ms.sourcegitcommit: 2badee2b63ae63687795250e298f463474063100
+ms.openlocfilehash: 0f7e598da0953a20412f6c8279b90a95c1d26581
+ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601124"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411474"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Planifier la passerelle de gestion cloud dans Configuration Manager
 
@@ -103,7 +103,7 @@ Le déploiement et le fonctionnement de la passerelle de gestion cloud incluent 
 L’Assistant CMG propose toujours l’option de **déploiement de service classique** à l’aide d’un certificat de gestion Azure. Pour simplifier le déploiement et la gestion des ressources, l’utilisation du modèle de déploiement Azure Resource Manager est recommandé pour toutes les nouvelles instances de passerelle de gestion cloud. Si possible, redéployez les instances CMG existantes avec Resource Manager. Pour plus d’informations, consultez [Modifier une passerelle de gestion cloud](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#modify-a-cmg).
 
 > [!IMPORTANT]  
-> Cette fonctionnalité ne permet pas la prise en charge des fournisseurs de services cloud Azure. Le déploiement CMG avec Azure Resource Manager continue d’utiliser le service cloud classique, que ne prend pas en charge le fournisseur de services cloud. Pour plus d’informations, consultez les [services Azure disponibles auprès du fournisseur de services cloud Azure](/azure/cloud-solution-provider/overview/azure-csp-available-services). 
+> Cette fonctionnalité ne permet pas la prise en charge des fournisseurs de services cloud Azure. Le déploiement de la passerelle de gestion cloud avec Azure Resource Manager continue d’utiliser le service cloud classique, que le fournisseur de services cloud ne prend pas en charge. Pour plus d’informations, consultez les [services Azure disponibles auprès du fournisseur de services cloud Azure](/azure/cloud-solution-provider/overview/azure-csp-available-services). 
 
 
 ### <a name="hierarchy-design"></a>Conception de hiérarchie
@@ -139,7 +139,7 @@ Quand les clients basés à Seattle se déplacent et utilisent Internet, ils com
 De même, quand les clients basés à Paris se déplacent et utilisent Internet, ils communiquent avec la passerelle de gestion cloud dans la région Azure Europe de l’Ouest. La passerelle de gestion cloud transfère cette communication au point de connexion de passerelle de gestion cloud basé à Paris. Quand des utilisateurs basés à Paris se déplacent au siège de la société à Seattle, leurs ordinateurs continuent de communiquer avec la passerelle de gestion cloud dans la région Azure Europe de l’Ouest. 
 
  > [!Note]  
- > Fourth Coffee a envisagé la création d’un autre point de connexion de passerelle de gestion cloud sur le site principal de Paris lié à la passerelle de gestion cloud États-Unis de l’Ouest. Les clients basés à Paris utiliseraient alors les deux passerelles de gestion cloud, quel que soit l’endroit où ils se trouvent. Si cette configuration permet d’équilibrer le trafic et offre une redondance du service, elle peut également entraîner des délais quand des clients basés à Paris communiquent avec la passerelle de gestion cloud basée aux États-Unis. Les clients Configuration Manager ne sont pas informés de leur région géographique et ne cherchent donc pas à préférer une passerelle de gestion cloud qui est géographiquement plus proche. Les clients utilisent de façon aléatoire une passerelle de gestion cloud disponible.
+ > Fourth Coffee a envisagé la création d’un autre point de connexion de passerelle de gestion cloud sur le site principal de Paris lié à la passerelle de gestion cloud États-Unis de l’Ouest. Les clients basés à Paris utiliseraient alors les deux passerelles de gestion cloud, quel que soit l’endroit où ils se trouvent. Si cette configuration permet d’équilibrer le trafic et offre une redondance du service, elle peut également entraîner des délais quand des clients basés à Paris communiquent avec la passerelle de gestion cloud basée aux États-Unis. Les clients Configuration Manager ne sont actuellement pas informés de leur région géographique et ne cherchent donc pas à préférer une passerelle de gestion cloud qui est géographiquement plus proche. Les clients utilisent de façon aléatoire une passerelle de gestion cloud disponible.
 
 
 
@@ -149,20 +149,23 @@ De même, quand les clients basés à Paris se déplacent et utilisent Internet,
 
     - Un **administrateur Azure** doit participer à la création initiale de certains composants, en fonction de votre conception. Cette personne n’a pas besoin d’autorisations dans Configuration Manager.  
 
-- Au moins un serveur Windows local pour héberger le **point de connexion de passerelle de gestion cloud**. Vous pouvez colocaliser ce rôle avec d’autres rôles de système de site Configuration Manager.  
+- Au moins un serveur Windows local pour héberger le **point de connexion de passerelle de gestion cloud**. Vous pouvez colocaliser ce rôle avec d’autres rôles système de site Configuration Manager.  
 
 - Le **point de connexion de service**  doit être en [mode en ligne](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_modes).   
 
-- Un [**certificat d’authentification serveur**](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#cmg-server-authentication-certificate) pour la passerelle de gestion cloud.  
+- Un [**certificat d’authentification serveur**](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_serverauth) pour la passerelle de gestion cloud.  
 
-- Si vous utilisez la méthode de déploiement classique Azure, vous devez utiliser un [**certificat de gestion Azure**](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#azure-management-certificate).  
+- Si vous utilisez la méthode de déploiement classique Azure, vous devez utiliser un [**certificat de gestion Azure**](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_azuremgmt).  
 
     > [!TIP]  
-    > À compter de Configuration Manager version 1802, l’utilisation du modèle de déploiement **Azure Resource Manager** est recommandé. Il ne nécessite pas ce certificat de gestion.  
+    > À compter de Configuration Manager version 1802, Microsoft recommande d’utiliser le modèle de déploiement **Azure Resource Manager**. Il ne nécessite pas ce certificat de gestion.  
 
 - **D’autres certificats** peuvent être nécessaires, en fonction de la version du système d’exploitation et du modèle d’authentification de votre client. Pour plus d’informations, consultez [Certificats de passerelle de gestion cloud](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway).  
 
-    - À compter de la version 1802, vous devez configurer tous les [**points de gestion activés pour la passerelle de gestion cloud afin d’utiliser le protocole HTTPS**](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#enable-management-point-for-https).  
+    - À compter de la version 1802, vous devez configurer tous les [**points de gestion activés pour la passerelle de gestion cloud afin d’utiliser le protocole HTTPS**](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_mphttps).  
+
+    - À compter de la version 1806, quand vous utilisez l’option de site destinée à **Utiliser les certificats générés par Configuration Manager pour les systèmes de site HTTP**, le point de gestion peut être HTTP. Pour plus d’informations, consultez [HTTP amélioré](/sccm/core/plan-design/hierarchy/enhanced-http).  
+
 
 - L’intégration à **Azure AD** peut être nécessaire pour les clients Windows 10. Pour plus d’informations, consultez [Configurer des services Azure](/sccm/core/servers/deploy/configure/azure-services-wizard).  
 
@@ -325,14 +328,14 @@ Ce tableau répertorie les ports et les protocoles réseau nécessaires. Le *cli
 |---------|---------|---------|---------|---------|
 | point de connexion de service     | HTTPS | 443        | Azure        | Déploiement CMG |
 | Point de connexion CMG     |  TCP-TLS | 10140-10155        | Service de passerelle de gestion cloud        | Protocole préféré pour créer le canal de passerelle de gestion cloud<sup>1</sup> |
-| Point de connexion CMG     | HTTPS | 443        | Service de passerelle de gestion cloud       | Repli pour créer le canal de passerelle de gestion cloud pour une seule instance de machine virtuelle<sup>2</sup> |
-| Point de connexion CMG     |  HTTPS   | 10124-10139     | Service de passerelle de gestion cloud       | Repli pour créer le canal de passerelle de gestion cloud pour plusieurs instances de machine virtuelle<sup>3</sup> |
+| Point de connexion CMG     | HTTPS | 443        | Service de passerelle de gestion cloud       | Protocole de repli pour générer le canal de passerelle de gestion cloud sur une seule instance de machine virtuelle<sup>2</sup> |
+| Point de connexion CMG     |  HTTPS   | 10124-10139     | Service de passerelle de gestion cloud       | Protocole de repli pour générer le canal de passerelle de gestion cloud sur deux ou plusieurs instances de machine virtuelle<sup>3</sup> |
 | Client     |  HTTPS | 443         | CMG        | Communication client générale |
 | Point de connexion CMG      | HTTPS ou HTTP | 443 ou 80         | Point de gestion<br>(version 1706 ou 1710) | Trafic local, le port dépend de la configuration du point de gestion |
 | Point de connexion CMG      | HTTPS | 443      | Point de gestion<br>(version 1802) | Le trafic de local doit être sur HTTPS |
 | Point de connexion CMG      | HTTPS ou HTTP | 443 ou 80         | Point de mise à jour logicielle | Trafic local, le port dépend de la configuration du point de mise à jour logicielle |
 
-<sup>1</sup> Le point de connexion de la passerelle de gestion cloud tente d’abord d’établir une connexion TCP-TLS à long terme avec chaque instance de machine virtuelle de la passerelle. Il se connecte à la première instance de machine virtuelle sur le port 10140. La deuxième instance de machine virtuelle utilise le port 10141, jusqu’à la seizième sur le port 10155. Une connexion TCP-TLS offre les meilleures performances, mais elle ne prend pas en charge le proxy Internet. Si le point de connexion de la passerelle de gestion cloud ne peut pas se connecter via TCP-TLS, il se replie sur HTTPS<sup>2</sup>.  
+<sup>1</sup> Le point de connexion de la passerelle de gestion cloud tente d’abord d’établir une connexion TCP-TLS à long terme avec chaque instance de machine virtuelle de la passerelle. Il se connecte à la première instance de machine virtuelle sur le port 10140. La deuxième instance de machine virtuelle utilise le port 10141, jusqu’à la seizième sur le port 10155. Une connexion TCP-TLS offre les meilleures performances, mais elle ne prend pas en charge le proxy Internet. Si le point de connexion de la passerelle de gestion cloud ne peut pas se connecter via TCP-TLS, elle passe à l’alternative de secours HTTPS<sup>2</sup>.  
 
 <sup>2</sup> Si le point de connexion de la passerelle de gestion cloud ne peut pas se connecter à la passerelle via TCP-TLS<sup>1</sup>, il se connecte à l’équilibreur de charge réseau Azure via HTTPS 443 pour une seule instance de machine virtuelle.  
 

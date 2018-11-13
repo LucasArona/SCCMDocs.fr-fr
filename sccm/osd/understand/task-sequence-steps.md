@@ -10,12 +10,12 @@ ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3e0b70a2b024555bd67f63b3a31a6408b07c273b
-ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
+ms.openlocfilehash: bec95b13ecba5ae5238d758ae06566042a95d939
+ms.sourcegitcommit: 303d826f45c8fd9a05d8883afc1ca645e56bd576
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42756075"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269244"
 ---
 # <a name="task-sequence-steps-in-configuration-manager"></a>Étapes de séquence de tâches dans Configuration Manager
 
@@ -134,7 +134,7 @@ ms.locfileid: "42756075"
 
  Utilisez cette étape pour spécifier les informations de configuration du réseau ou du groupe de travail pour l’ordinateur de destination. La séquence de tâches stocke ces valeurs dans le fichier de réponses approprié. Le programme d’installation de Windows utilise ce fichier de réponses pendant l’action **Configurer Windows et ConfigMgr**.  
 
- Cette étape de séquence de tâches s’exécute dans le système d’exploitation complet ou Windows PE. 
+ Cette étape de séquence de tâches s'exécute uniquement dans Windows PE. Elle ne s’exécute dans le système d’exploitation complet. 
 
  Utilisez les variables de séquence de tâches suivantes avec cette étape :  
  - [OSDAdapter](/sccm/osd/understand/task-sequence-variables#OSDAdapter)  
@@ -1041,7 +1041,7 @@ ms.locfileid: "42756075"
 
  Dans la plupart des cas, utilisez le paramètre par défaut pour utiliser les résultats de l’analyse en cache. 
 
- La variable **SMSTSSoftwareUpdateScanTimeout** contrôle le délai d’expiration de l’analyse des mises à jour logicielles pendant cette étape. La valeur par défaut est de 30 minutes. Pour plus d’informations, consultez [Variables de séquence de tâches](/sccm/osd/understand/task-sequence-variables#SMSTSSoftwareUpdateScanTimeout).
+ La variable **SMSTSSoftwareUpdateScanTimeout** contrôle le délai d’expiration de l’analyse des mises à jour logicielles pendant cette étape. La valeur par défaut est de 30 minutes. Pour plus d’informations, voir [Variables de séquence de tâches](/sccm/osd/understand/task-sequence-variables#SMSTSSoftwareUpdateScanTimeout).
 
 
 ### <a name="options"></a>Options   
@@ -1052,7 +1052,7 @@ ms.locfileid: "42756075"
  Si une des mises à jour redémarre l’ordinateur de façon inattendue, recommence cette étape. L’étape active ce paramètre par défaut avec deux nouvelles tentatives. Vous pouvez spécifier de une à cinq nouvelles tentatives.  
 
  > [!NOTE]  
- > Configurez la variable **SMSTSWaitForSecondReboot** pour spécifier le nombre de secondes de mise en suspens de la séquence de tâches après le redémarrage de l’ordinateur dans ce scénario. Pour plus d’informations, consultez [Variables de séquence de tâches](/sccm/osd/understand/task-sequence-variables#SMSTSWaitForSecondReboot).  
+ > Configurez la variable **SMSTSWaitForSecondReboot** pour spécifier le nombre de secondes de mise en suspens de la séquence de tâches après le redémarrage de l’ordinateur dans ce scénario. Pour plus d’informations, voir [Variables de séquence de tâches](/sccm/osd/understand/task-sequence-variables#SMSTSWaitForSecondReboot).  
 
 
 

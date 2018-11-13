@@ -10,12 +10,12 @@ ms.assetid: 0e45290e-f8f7-4335-801e-570225d12c2b
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: a2051088b70c721250842548f877792adc84b38f
-ms.sourcegitcommit: 59afe6f05333d4150afaf88ab0a85a979818e3fb
+ms.openlocfilehash: 1b632a9b7b7b20bc8d6653d35b267043dde6660d
+ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36957778"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50410998"
 ---
 # <a name="how-to-configure-hardware-inventory-in-system-center-configuration-manager"></a>Comment configurer l’inventaire matériel dans Configuration Manager
 
@@ -24,7 +24,10 @@ ms.locfileid: "36957778"
 Cette procédure configure les paramètres client par défaut pour l’inventaire matériel et s’applique à tous les clients de votre hiérarchie. Si vous voulez que ces paramètres s’appliquent uniquement à certains clients, créez un paramètre client de périphérique personnalisé et affectez-le à un regroupement contenant les périphériques pour lesquels utiliser l’inventaire matériel. Consultez [Guide pratique pour configurer les paramètres clients dans System Center Configuration Manager](../../../../core/clients/deploy/configure-client-settings.md).  
 
 > [!NOTE]  
->  Si un périphérique client reçoit des paramètres d’inventaire matériel de la part de plusieurs ensembles de paramètres client, les classes d’inventaire matériel de chaque ensemble de paramètres sont alors fusionnées lors de l’inventaire matériel.  
+>  Si un périphérique client reçoit des paramètres d’inventaire matériel de la part de plusieurs ensembles de paramètres client, les classes d’inventaire matériel de chaque ensemble de paramètres sont alors fusionnées lors de l’inventaire matériel. De plus, si vous ne cochez pas une classe dans un paramètre client personnalisé ayant une priorité plus élevée, l’inventaire de cette classe par le client n’est pas désactivé. 
+
+Pour désactiver une classe d’inventaire matériel spécifique sur la plupart des systèmes, hormis quelques uns, la classe doit être décochée dans les paramètres clients par défaut. Créez ensuite un paramètre client personnalisé pour activer la classe, puis déployez-le sur les systèmes cibles.
+
 
 ### <a name="to-configure-hardware-inventory"></a>Pour configurer l'inventaire matériel  
 
