@@ -10,12 +10,12 @@ ms.assetid: 6e4964c5-43cb-4372-9a89-b62ae6a4775c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e0051b00f9c9540291db94c79a81c600c87ad59c
-ms.sourcegitcommit: 4f05517f7b284696a492a1b184cc5f25c5cda5e6
+ms.openlocfilehash: e88d40317fe0c1385d78ab7b5919f0f766254598
+ms.sourcegitcommit: 303d826f45c8fd9a05d8883afc1ca645e56bd576
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48891195"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269210"
 ---
 # <a name="use-the-service-connection-tool-for-system-center-configuration-manager"></a>Utiliser l’outil de connexion de service pour System Center Configuration Manager
 
@@ -84,7 +84,7 @@ Vous devez également copier le dossier ServiceConnectionTool avec tout son cont
 
 2.  **Connexion** : lors de cette étape, vous exécutez l’outil sur un ordinateur distant qui se connecte à Internet pour charger les données d’utilisation puis télécharger les mises à jour.  
 
-3.  **Importation** : cette étape doit être exécutée sur l’ordinateur hébergeant le point de connexion de service. Quand vous exécutez l’outil, il importe les données que vous avez téléchargées et les ajoute à votre site pour que vous puissiez ensuite afficher et installer ces mises à jour à partir de la console Configuration Manager.  
+3.  **Importation** : cette étape doit être exécutée sur l’ordinateur hébergeant le point de connexion de service. Quand vous exécutez l’outil, il importe les mises à jour que vous avez téléchargées et les ajoute à votre site pour que vous puissiez ensuite afficher et installer ces mises à jour à partir de la console Configuration Manager.  
 
 À compter de la version 1606, quand vous vous connectez à Microsoft, vous pouvez charger plusieurs fichiers .cab à la fois (chacun à partir d’une hiérarchie différente) et spécifier un serveur proxy et un utilisateur du serveur proxy.   
 
