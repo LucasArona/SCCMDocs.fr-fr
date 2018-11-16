@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: a99983583aa8c21f8a987f3e20550752e7b77ba4
-ms.sourcegitcommit: 83806460b6fd88a1d08a2c97f4d72b9e36e04102
+ms.openlocfilehash: 1791217e22e2bcc6d5fd2603abee3aaced816afe
+ms.sourcegitcommit: 1f8731ed8f0308cb2cb576722adb0821a366e9ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39495558"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51223736"
 ---
 # <a name="co-management-for-windows-10-devices"></a>Cogestion pour les appareils Windows 10    
 
@@ -72,7 +72,7 @@ Utilisation immédiate des fonctionnalités Intune suivantes :
 
  - Les appareils Windows 10 doivent être joints à Azure AD. Ils peuvent être de l’un des types suivants :  
 
-     - [Joint à une version hybride d’Azure AD](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup), où l’appareil est joint à Azure AD et à votre domaine local  
+     - [Joint à Azure AD Hybride](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup), où l’appareil est joint à votre annuaire Active Directory local et inscrit dans Azure Active Directory.
 
      - Joint à Azure AD uniquement. (Ce type est parfois appelé « joint à un domaine cloud »)<!--SCCMDocs issue 605-->
 

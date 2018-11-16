@@ -10,12 +10,12 @@ ms.assetid: fab13949-371c-4a4c-978e-471db1e54966
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 82909cced6783f73608f155e64b7dd30b4087b06
-ms.sourcegitcommit: a52255da16c9f8b0b60a6c299a369347c7e01bef
+ms.openlocfilehash: d442955d62989d3bbc7b32e0aba122a0853a3f14
+ms.sourcegitcommit: 1f8731ed8f0308cb2cb576722adb0821a366e9ce
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49989159"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51223668"
 ---
 # <a name="manage-operating-system-images-with-system-center-configuration-manager"></a>Gérer les images de système d’exploitation avec System Center Configuration Manager
 
@@ -35,9 +35,9 @@ Les images de système d’exploitation dans Configuration Manager sont stockée
 
 -   **Inconvénients**  
 
-    -   L’installation du système d’exploitation peut prendre plus de temps, car l’installation des applications et d’autres configurations s’effectue une fois l’installation du système d’exploitation terminée.  
+    -   L’installation du système d’exploitation peut prendre plus de temps, car l’installation des applications et d’autres configurations s’effectue une fois l’installation du système d’exploitation terminée.
 
- **Image capturée**  
+**Image capturée**  
 
  Pour créer une image de système d’exploitation personnalisée, vous créez un ordinateur de référence avec le système d’exploitation souhaité, puis vous installez les applications, vous configurez les paramètres, etc. Vous capturez ensuite l’image du système d’exploitation à partir de l’ordinateur de référence pour créer le fichier WIM. Vous pouvez créer manuellement l'ordinateur de référence ou utiliser une séquence de tâches pour automatiser certaines ou toutes les étapes de construction.   
 Pour en savoir plus sur les étapes de création d’une image de système d’exploitation personnalisée, consultez [Personnaliser les images de système d’exploitation](customize-operating-system-images.md).  
@@ -48,8 +48,9 @@ Pour en savoir plus sur les étapes de création d’une image de système d’e
 
 -   **Inconvénients**  
 
-    -   L’installation du système d’exploitation peut prendre plus de temps, car l’installation des applications et d’autres configurations s’effectue une fois l’installation du système d’exploitation terminée.  
-
+    -   La taille de l’image est potentiellement supérieure à celle de l’image par défaut.
+    
+    -   Vous devez créer une autre image quand des mises à jour d’applications et d’outils sont obligatoires.
 
 ##  <a name="BKMK_AddOSImages"></a> Ajouter des images de système d’exploitation à Configuration Manager  
  Avant d’utiliser une image de système d’exploitation, vous devez ajouter l’image à un site Configuration Manager. Utilisez la procédure suivante pour ajouter une image de système d’exploitation à un site.  
