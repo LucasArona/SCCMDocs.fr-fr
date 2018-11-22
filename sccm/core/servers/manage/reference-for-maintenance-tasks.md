@@ -10,12 +10,12 @@ ms.assetid: 68dc6acd-5848-47a4-b4c1-ffa40e47890b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5492382afdb523846fcdd40b68d498730073eb7e
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: f8450308f0719903bc4b3f74d6c2ab1ca5e17c59
+ms.sourcegitcommit: e0209e4549e9828eb74089313dbee323ece1fc2f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342441"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51598612"
 ---
 # <a name="reference-for-maintenance-tasks-for-system-center-configuration-manager"></a>Référence des tâches de maintenance pour System Center Configuration Manager
 
@@ -120,7 +120,7 @@ Cette rubrique répertorie les détails de chaque tâche de maintenance de site 
 
 **Supprimer les anciens périphériques inscrits** : à compter de la mise à jour pour la version 1602, cette tâche est désactivée par défaut. Vous pouvez utiliser cette tâche pour supprimer de la base de données de site d’anciennes données concernant les appareils mobiles qui n’ont signalé aucune information au site pendant une durée spécifiée.
 
-Cette tâche s’applique aux appareils qui sont inscrits à l’aide de Microsoft Intune (hybride) ou de la gestion des appareils mobiles locale de Configuration Manager. Pour plus d’informations sur les systèmes d’exploitation des appareils inscrits à l’aide de Configuration Manager ou d’Intune, consultez la section [Appareils mobiles inscrits par Microsoft Intune](../../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md#mobile-devices-enrolled-by-microsoft-intune) dans [Systèmes d’exploitation pris en charge pour les clients et les appareils pour System Center Configuration Manager](../../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md).
+Cette tâche s’applique aux appareils qui sont inscrits à l’aide de Microsoft Intune (hybride) ou de la gestion des appareils mobiles locale de Configuration Manager. Pour plus d’informations, voir [Systèmes d’exploitation pris en charge pour les clients et les appareils](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices#bkmk_OnpremOS).
 
 -   Site d’administration centrale : non disponible    
 -   **Site principal**non activé    

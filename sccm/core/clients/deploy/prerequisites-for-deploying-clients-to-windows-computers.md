@@ -10,12 +10,12 @@ ms.assetid: 1a2a9b48-a95b-4643-b00c-b3079584ae2e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 025edee312e1c67eba9f9e4f812b03806f51dbbb
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 11474f54aaf7a9afe13d411b0dd469abb1eef963
+ms.sourcegitcommit: c2c44329f1f9a2e6c14095360b4fc4aafabc27f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39384312"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694941"
 ---
 # <a name="prerequisites-for-deploying-clients-to-windows-computers-in-configuration-manager"></a>Prérequis pour le déploiement de clients sur des ordinateurs Windows dans Configuration Manager
 
@@ -60,7 +60,7 @@ Si le client nécessite ces dépendances pour terminer l’installation, il les 
 |Microsoft Policy Platform 1.2.3514.0|Requis pour autoriser les clients à évaluer les paramètres de conformité.|  
 |Microsoft Silverlight 5.1.41212.0|Requis pour prendre en charge l'expérience utilisateur du site Web du catalogue d'applications. À compter de Configuration Manager 1802, le client n’installe pas automatiquement Silverlight. La fonctionnalité principale du catalogue des applications est désormais incluse dans le Centre logiciel. Le support du site web du catalogue d’applications se termine avec la version 1806.<!--1356195-->|  
 |Microsoft .NET Framework version 4.5.2.|Requis pour prendre en charge les opérations de clients. Installé automatiquement sur l’ordinateur client si Microsoft .NET Framework 4.5 ou une version ultérieure n’est pas installé. Pour plus d’informations, consultez [Détails supplémentaires sur Microsoft .NET Framework version 4.5.2](#dotNet).|  
-|Composants Microsoft SQL Server Compact 3.5 SP2|Requis pour conserver les informations liées aux opérations du client.|  
+|Composants Microsoft SQL Server Compact 4.0 SP1|Requis pour conserver les informations liées aux opérations du client.|  
 
 
 ####  <a name="dotNet"></a> Informations supplémentaires sur Microsoft .NET Framework version 4.5.2  

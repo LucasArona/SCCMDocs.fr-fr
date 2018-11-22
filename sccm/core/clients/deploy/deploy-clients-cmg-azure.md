@@ -10,12 +10,12 @@ ms.assetid: a44006eb-8650-49f6-94e1-18fa0ca959ee
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 91ebb0c35687b231a6f08b7bc92cccb83cf0e602
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 490e5a614a98633629df98abcd554b02cec1261a
+ms.sourcegitcommit: ae03ad403b1732a5a61dec981e3a3010a0f09188
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344685"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "51860244"
 ---
 # <a name="install-and-assign-configuration-manager-windows-10-clients-using-azure-ad-for-authentication"></a>Installer et affecter des clients Windows 10 Configuration Manager à l’aide d’Azure AD à des fins d’authentification
 
@@ -41,9 +41,7 @@ Pour installer le client Configuration Manager sur des appareils Windows 10 en u
 
 - En plus des [prérequis](/sccm/core/plan-design/configs/site-and-site-system-prerequisites#bkmk_2012MPpreq) pour le rôle de système de site du point de gestion, activez aussi **ASP.NET 4.5** sur ce serveur. Incluez toutes les autres options qui sont sélectionnées automatiquement quand vous activez ASP.NET 4.5.  
 
-- Configurez tous les points de gestion pour le mode HTTPS. Pour plus d’informations, consultez [Spécifications pour les certificats d’infrastructure à clé publique](/sccm/core/plan-design/network/pki-certificate-requirements) et [Déployer le certificat de serveur web pour les systèmes de site qui exécutent IIS](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012).  
-    - Si vous utilisez la passerelle de gestion cloud, vous devez uniquement configurer HTTPS pour les points de gestion que vous activez pour celle-ci.
-    - Si vous déployez des clients sur l’intranet à l’aide de l’authentification basée sur un jeton Azure AD, tous les points de gestion que ces clients peuvent contacter doivent être activés pour HTTPS. 
+- Déterminez si votre point de gestion a besoin du protocole HTTPS. Pour plus d’informations, consultez [Activer le point de gestion pour HTTPS](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_mphttps).  
 
 - Vous pouvez aussi configurez une [passerelle de gestion cloud](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) pour déployer des clients Internet. Pour les clients locaux qui s’authentifient avec Azure AD, vous n’avez pas besoin d’une passerelle de gestion cloud.  
 

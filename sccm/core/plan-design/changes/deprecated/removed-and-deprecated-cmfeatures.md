@@ -2,7 +2,7 @@
 title: Fonctionnalités dépréciées
 titleSuffix: Configuration Manager
 description: Découvrez les fonctionnalités que Configuration Manager ne prend plus en charge.
-ms.date: 08/31/2018
+ms.date: 10/26/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 287a6324-ae65-4d38-b2ef-198d47c91231
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: dbebfa1ef5d4851cfd6bbc118c2d7bab30f0b01f
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.openlocfilehash: 7c1e07a2911a5f8560e3b69d7596716eb526bb34
+ms.sourcegitcommit: 3772ece83823714b2aae46ec20523cc094701760
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43893448"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681424"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Fonctionnalités supprimées et dépréciées pour Configuration Manager
 
@@ -31,6 +31,7 @@ Ces informations sont susceptibles de changer dans les futures versions. Les fon
 
 |Fonctionnalité|Désapprobation annoncée|Prise en charge&nbsp;supprimée|  
 |-----------|---|--------------|  
+|System Center Endpoint Protection pour Mac et Linux<br>Pour plus d’informations, consultez le [billet de blog sur la fin du support](https://go.microsoft.com/fwlink/?linkid=870182).|Octobre 2018|31 décembre 2018|
 |Gestion hybride des appareils mobiles. Pour plus d’informations, consultez [Qu’est-ce que la gestion MDM hybride ?](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->|14 août 2018|1er septembre 2019|
 |L’**expérience utilisateur Silverlight** pour le point du site web du catalogue des applications n’est plus prise en charge. Les utilisateurs doivent utiliser le nouveau Centre logiciel. REMARQUE : Les rôles de point du site web et de point de service web du catalogue des applications sont toujours pris en charge. Dans certains scénarios, le nouveau Centre logiciel communique avec le point du site web du catalogue des applications. Pour plus d'informations, consultez [Configurer le Centre logiciel](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex).<!--1358309-->|11 août 2017| Version 1806|
 |Ancienne version du Centre logiciel.<br><br>Pour plus d’informations sur le nouveau Centre logiciel, consultez [Planifier et configurer la gestion des applications](/sccm/apps/plan-design/plan-for-and-configure-application-management##bkmk_userex).|13 décembre 2016|Version 1802|
