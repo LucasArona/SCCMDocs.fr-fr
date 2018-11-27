@@ -10,12 +10,12 @@ ms.assetid: f4f9a5fd-f573-4b99-ad93-b2c76812e922
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e0a4369e9c302c687f15b29b0daafbf4329e22a5
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 7d6b957ebcc19dfe8c14dd781f71678db8e160af
+ms.sourcegitcommit: 1a1bac2d5ee0f20ce565d29798ee4dd99aaca044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342305"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52281904"
 ---
 # <a name="install-and-upgrade-with-the-version-1606-baseline-media-for-system-center-configuration-manager"></a>Installer et mettre à niveau avec le support de la base de référence de la version 1606 pour System Center Configuration Manager
 
@@ -23,7 +23,7 @@ ms.locfileid: "32342305"
 
 Lorsque vous exécutez le programme d’installation à partir du support de la base de référence 1606 pour Configuration Manager, vous pouvez installer Long-Term Servicing Branch ou à un site Current Branch de System Center Configuration Manager.
 
-Le support de la base de référence est disponible sous forme de DVD dans le cadre de Microsoft System Center 2016 ou de System Center Configuration Manager (Current Branch et Long-Term Servicing Branch 1606). Pour en savoir plus sur le support de la base de référence, consultez [Versions de base et de mise à jour](/sccm/core/servers/manage/updates#baseline-and-udpate-versions).
+Le support de la base de référence est disponible sous forme de DVD dans le cadre de Microsoft System Center 2016 ou de System Center Configuration Manager (Current Branch et Long-Term Servicing Branch 1606). Pour en savoir plus sur le support de la base de référence, consultez [Versions de base et de mise à jour](../servers/manage/updates.md#bkmk_Baselines).
 
 
 Quand vous utilisez le média de la base de référence de la version 1606, le site que vous installez (ou vers lequel vous effectuez la mise à niveau) est le suivant :

@@ -1,6 +1,6 @@
 ---
 title: Basculer les charges de travail de Configuration Manager sur Intune
-titleSuffix: Configuraton Manager
+titleSuffix: Configuration Manager
 description: Découvrez comment basculer les charges de travail actuellement gérées par Configuration Manager vers Microsoft Intune.
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -10,12 +10,12 @@ manager: dougeby
 ms.date: 07/30/2018
 ms.topic: conceptual
 ms.assetid: 60e2022f-a4f9-40dd-af01-9ecb37b43878
-ms.openlocfilehash: c1f5f96c4178068ced727cfe96b1c6fe8b60a0fc
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 739773e83213033103b414cc9bb79f7abccb230c
+ms.sourcegitcommit: 2cc635835709fb8d86cdb63ea34233b36c94d4d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383997"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52258942"
 ---
 # <a name="switch-configuration-manager-workloads-to-intune"></a>Basculer les charges de travail de Configuration Manager sur Intune
 Dans [Préparer les appareils Windows 10 pour la cogestion](co-management-prepare.md), vous avez préparé les appareils Windows 10 à la cogestion. Ces appareils sont joints à AD et à Azure AD. Ils sont inscrits dans Intune et disposent du client Configuration Manager. Vous avez probablement encore des appareils Windows 10 joints à AD et qui ont le client Configuration Manager, mais qui ne sont pas joints à Azure AD ni inscrits à Intune. La procédure suivante présente les étapes permettant d’activer la cogestion et de préparer le reste de vos appareils Windows 10 (les clients Configuration Manager sans inscription à Intune) pour la cogestion ; elle vous sert également à lancer le basculement de charges de travail spécifiques de Configuration Manager vers Intune.

@@ -1,6 +1,6 @@
 ---
 title: Extensions SCAP
-titleSuffix: Configuraton Manager
+titleSuffix: Configuration Manager
 description: Découvrez les extensions SCAP (Security Content Automation Protocol) pour Configuration Manager.
 ms.date: 07/30/2018
 ms.prod: configuration-manager
@@ -10,12 +10,12 @@ ms.assetid: a315489d-5e12-46d6-903e-3a35235b72c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0992b3853776cc487c6c0a88d80cbce21bf79782
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 0cf248704d49f429bf4ca9dc4ea2be375093f92c
+ms.sourcegitcommit: 2cc635835709fb8d86cdb63ea34233b36c94d4d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39384852"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52259002"
 ---
 # <a name="about-the-security-content-automation-protocol-scap-extensions"></a>À propos des Extensions SCAP (Security Content Automation Protocol)
 

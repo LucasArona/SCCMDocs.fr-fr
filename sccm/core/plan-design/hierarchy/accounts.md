@@ -1,6 +1,6 @@
 ---
 title: Comptes utilisés
-titleSuffix: Configuraton Manager
+titleSuffix: Configuration Manager
 description: Identifiez et gérez les groupes Windows, ainsi que les comptes utilisés dans Configuration Manager.
 ms.date: 10/26/2018
 ms.prod: configuration-manager
@@ -10,12 +10,12 @@ ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 12196f042409a3128736beab78ee8dfab0078d76
-ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
+ms.openlocfilehash: 3981d454d0b007f5b057ccca4c8888da609dba97
+ms.sourcegitcommit: 2cc635835709fb8d86cdb63ea34233b36c94d4d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411542"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52259078"
 ---
 # <a name="accounts-used-in-configuration-manager"></a>Comptes utilisés dans Configuration Manager
 

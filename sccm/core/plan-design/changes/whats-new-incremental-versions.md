@@ -1,6 +1,6 @@
 ---
 title: Versions incrémentielles
-titleSuffix: Configuraton Manager
+titleSuffix: Configuration Manager
 description: Découvrez les nouveautés de la dernière mise à jour Configuration Manager.
 ms.date: 07/30/2018
 ms.prod: configuration-manager
@@ -10,12 +10,12 @@ ms.assetid: b57acf0b-05b7-46af-ad4c-f3e707bd3861
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 13037b857b890d400881d8d7173b7ca03dd83ebc
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 3afe14d62f55bf5ef7923882bbb2bbe57e245661
+ms.sourcegitcommit: 2cc635835709fb8d86cdb63ea34233b36c94d4d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39384124"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52258925"
 ---
 # <a name="whats-new-in-configuration-manager-incremental-versions"></a>Nouveautés des versions incrémentielles de Configuration Manager
 

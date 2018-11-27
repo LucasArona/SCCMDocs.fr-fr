@@ -1,6 +1,6 @@
 ---
 title: Tableau de bord des appareils Surface
-titleSuffix: Configuraton Manager
+titleSuffix: Configuration Manager
 description: Passez en revue les informations relatives aux appareils Surface à l’aide du tableau de bord.
 author: aczechowski
 ms.author: aaroncz
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 7397fc17-3ae8-4525-8386-aea8a9cffa06
-ms.openlocfilehash: 96bca886b25cbe5f6ae1c2f06cbc823b4f017075
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: f9f896cdd1c3a0459d6f85e043bc1bba137c912c
+ms.sourcegitcommit: 2cc635835709fb8d86cdb63ea34233b36c94d4d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383913"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52258857"
 ---
 # <a name="surface-device-dashboard-in-system-center-configuration-manager"></a>Tableau de bord des appareils Surface dans System Center Configuration Manager
 
