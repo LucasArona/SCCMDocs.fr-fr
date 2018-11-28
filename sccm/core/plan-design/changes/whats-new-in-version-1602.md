@@ -1,6 +1,6 @@
 ---
 title: Nouveautés dans la version 1602
-titleSuffix: Configuraton Manager
+titleSuffix: Configuration Manager
 description: Obtenez des détails sur les modifications et les nouvelles fonctionnalités introduites dans la version 1602 de System Center Configuration Manager.
 ms.date: 12/30/2016
 ms.prod: configuration-manager
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: noindex,nofollow
-ms.openlocfilehash: cdc8797d436e50c60f17d4c26c802465608bb26a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: c6d085fd33513a32207a3b9acfdfe6fe91657a88
+ms.sourcegitcommit: 2cc635835709fb8d86cdb63ea34233b36c94d4d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32338582"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52259044"
 ---
 # <a name="what39s-new-in-version-1602-of-system-center-configuration-manager"></a>Nouveautés dans la version 1602 de System Center Configuration Manager
 
@@ -122,7 +122,7 @@ Vous trouverez ces applications dans le nœud **Applications** de la console Con
  Pour plus d’informations, consultez [Gérer l’accès aux services O365 des PC gérés par System Center Configuration Manager](../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md).  
 
 ### <a name="restricting-access-based-on-the-health-of-devices"></a>Restriction des accès en fonction de l’intégrité des appareils  
- Vous pouvez désormais restreindre l’accès aux services de messagerie et Office 365 en fonction de l’intégrité des appareils, qui est indiquée par le service d’attestation d’intégrité. De plus, les périphériques gérés par Intune sont inclus dans les rapports d’intégrité des périphériques.  
+ Vous pouvez désormais restreindre l’accès aux services de messagerie et Office 365 en fonction de l’intégrité des appareils, qui est indiquée par le service d’attestation d’intégrité. De plus, les appareils gérés par Intune sont inclus dans les rapports d’intégrité des appareils.  
 
  La console Configuration Manager a une nouvelle règle de conformité qui vous permet de spécifier si l’accès doit être autorisé ou refusé aux appareils en fonction de leur état d’intégrité. Pour plus d’informations sur le service d’attestation d’intégrité et la manière dont l’intégrité des appareils est indiquée dans Intune, consultez [Attestation d’intégrité pour System Center Configuration Manager](../../../core/servers/manage/health-attestation.md).  
 
@@ -134,7 +134,7 @@ Vous trouverez ces applications dans le nœud **Applications** de la console Con
 ### <a name="make-sure-enrolled-and-compliant-devices-always-have-access-to-exchange-on-premises"></a>Vérifier que les appareils inscrits et conformes ont toujours accès à Exchange sur site  
  Quand vous sélectionnez l’option **Remplacer la règle par défaut : toujours autoriser les appareils inscrits et conformes à Intune à accéder à Exchange sur site :**, les appareils inscrits dans Intune et qui sont conformes aux stratégies de conformité sont autorisés à accéder à Exchange sur site. Cette règle est disponible dans la page **Général** de l’**Assistant Configuration de la stratégie d’accès conditionnel** pour Exchange sur site.
 
- Cette règle remplace la règle par défaut, ce qui signifie que même si vous définissez la règle par défaut de façon à mettre en quarantaine ou à bloquer l’accès, les appareils inscrits et conformes peuvent néanmoins toujours accéder à Exchange sur site. Utilisez ce paramètre quand vous voulez que les périphériques inscrits et conformes aient toujours accès à la messagerie via Exchange sur site.   
+ Cette règle remplace la règle par défaut, ce qui signifie que même si vous définissez la règle par défaut de façon à mettre en quarantaine ou à bloquer l’accès, les appareils inscrits et conformes peuvent néanmoins toujours accéder à Exchange sur site. Utilisez ce paramètre quand vous voulez que les appareils inscrits et conformes aient toujours accès à la messagerie via Exchange sur site.   
 
  Pour la procédure détaillée, consultez [Gérer l’accès à la messagerie dans System Center Configuration Manager](../../../protect/deploy-use/manage-email-access.md).  
 
