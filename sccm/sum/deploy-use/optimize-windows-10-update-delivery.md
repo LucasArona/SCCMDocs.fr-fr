@@ -10,12 +10,12 @@ ms.assetid: b670cfaf-96a4-4fcb-9caa-0f2e8c2c6198
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 801cd2cd35d370fbe469b16613da7f7592feff6e
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.openlocfilehash: 6fb655ae6094d7c764f2c3d0b84a505e9dfda3d2
+ms.sourcegitcommit: 9f02f21fbd4324ee8cc1af2d56db67c9c2fce969
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43893806"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52709931"
 ---
 # <a name="optimize-windows-10-update-delivery-with-configuration-manager"></a>Optimiser la distribution de Windows Update pour Windows 10 avec Configuration Manager
 
@@ -88,7 +88,7 @@ La technologie de mise en cache partagé entre systèmes homologues à privilég
 | Prise en charge du contenu partiel | Oui | Seulement pour Office 365 et les mises à jour rapides | Oui |
 | Contrôle de la taille du cache sur le disque | Oui | Oui | Oui |
 | Détection d’une source de pairs | Automatique | Manuelle (paramètre de l’agent client) | Automatique |
-| Découverte de pairs | Par le biais du service cloud d’Optimisation de la distribution (accès à Internet requis) | Par le biais du point de gestion (en fonction des groupes de limites du client) | Diffusion |
+| Découverte de pairs | Par le biais du service cloud d’Optimisation de la distribution (accès à Internet requis) | Par le biais du point de gestion (en fonction des groupes de limites du client) | Multidiffusion |
 | Rapports | Oui (avec Windows Analytics) | Tableau de bord des sources de données du client ConfigMgr | Tableau de bord des sources de données du client ConfigMgr |
 | Contrôle de l’utilisation du réseau WAN | Oui (natif, contrôlable par le biais de paramètres de stratégie de groupe) | Groupes de limites | Prise en charge des sous-réseaux uniquement |
 | Types de contenus pris en charge | - Mises à jour rapides (avec ConfigMgr)</br> - Mises à jour Windows et de sécurité</br> - Pilotes</br> - Applications du Windows Store</br> - Applications du Windows Store pour Entreprises | Tous les types de contenus de ConfigMgr, y compris les images téléchargées dans [Windows PE](/sccm/osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic) | Tous les types de contenus de ConfigMgr, à l’exception des images |
