@@ -2,7 +2,7 @@
 title: Mettre à niveau l’infrastructure locale
 titleSuffix: Configuration Manager
 description: Découvrez comment mettre à niveau l’infrastructure, telles que SQL Server et le système d’exploitation des systèmes de site.
-ms.date: 05/23/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,206 +10,246 @@ ms.assetid: 8ca970dd-e71c-404f-9435-d36e773a0db2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: dc433d63eb647ef7a0a88ada212f949783ac25c0
-ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
+ms.openlocfilehash: 7ff6d885ca635e15c62eddcdfa06abdc1a09cdf8
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "34474249"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456598"
 ---
-# <a name="upgrade-on-premises-infrastructure-that-supports-system-center-configuration-manager"></a>Mettre à niveau l’infrastructure locale qui prend en charge System Center Configuration Manager
+# <a name="upgrade-on-premises-infrastructure-that-supports-configuration-manager"></a>Mettre à niveau l’infrastructure locale qui prend en charge Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
 Utilisez les informations de cet article pour mettre à niveau l’infrastructure de serveur qui exécute Configuration Manager.  
 
- - Si vous voulez effectuer la *mise à niveau* à partir d’une version antérieure de Configuration Manager vers System Center Configuration Manager, Current Branch, consultez [Mettre à niveau vers System Center Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager).
+- Si vous voulez effectuer la *mise à niveau* à partir d’une version antérieure de Configuration Manager, Current Branch, consultez [Mettre à niveau vers Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager).  
 
-- Si vous voulez *mettre à jour* votre infrastructure System Center Configuration Manager, Current Branch, vers une nouvelle version, consultez [Mises à jour pour System Center Configuration Manager](/sccm/core/servers/manage/updates).
+- Si vous voulez *mettre à jour* votre infrastructure Configuration Manager, Current Branch, vers une nouvelle version, consultez [Mises à jour pour Configuration Manager](/sccm/core/servers/manage/updates).  
 
 
 
-##  <a name="BKMK_SupConfigUpgradeSiteSrv"></a> Mettre à niveau le système d’exploitation des systèmes de site  
- Configuration Manager prend en charge la mise à niveau sur place du système d’exploitation de serveurs qui hébergent un serveur de site et des serveurs distants hébergeant un rôle de système de site, dans les situations suivantes :  
+## <a name="BKMK_SupConfigUpgradeSiteSrv"></a> Mettre à niveau le système d’exploitation des systèmes de site  
 
--   Mise à niveau sur place vers un Service Pack Windows Server ultérieur si le niveau du Service Pack de Windows résultant est pris en charge par Configuration Manager.  
--   Mise à niveau sur place à partir de :
-    - Windows Server 2012 R2 vers Windows Server 2016 ([afficher des informations supplémentaires](#bkmk_2016)).
-    - Windows Server 2012 vers Windows Server 2016 ([afficher des informations supplémentaires](#bkmk_2016)).
-    - Windows Server 2012 vers Windows Server 2012 R2 ([afficher des informations supplémentaires](#bkmk_2012r2)).
-    - Windows Server 2008 R2 vers Windows Server 2012 R2 ([afficher des informations supplémentaires](#bkmk_from2008r2)).
+Configuration Manager prend en charge la mise à niveau sur place du système d’exploitation serveur qui héberge un serveur de site et un rôle de système de site, dans les situations suivantes :  
 
-    > [!WARNING]  
-    >  Avant d’effectuer une mise à niveau vers un autre système d’exploitation, *vous devez désinstaller WSUS* du serveur. Vous pouvez conserver la base de données SUSDB et l’attacher de nouveau après la réinstallation de WSUS. Pour plus d’informations sur cette étape critique, consultez la section Fonctionnalités nouvelles et modifiées de la rubrique [Vue d’ensemble des services WSUS (Windows Server Update Services)](https://technet.microsoft.com/library/hh852345.aspx) dans la documentation de Windows Server.  
+- Si Configuration Manager prend toujours en charge le niveau du Service Pack Windows résultant, il prend en charge la mise à niveau sur place vers un Service Pack Windows Server plus récent.  
 
-Pour mettre à niveau un serveur, utilisez les procédures de mise à niveau fournies par le système d’exploitation vers lequel vous effectuez la mise à niveau. Consultez les articles suivants :
-  -  [Options de mise à niveau pour Windows Server 2012 R2](https://technet.microsoft.com/library/dn303416.aspx) dans la documentation de Windows Server.  
-  - [Options de mise à niveau et de conversion pour Windows Server 2016](/windows-server/get-started/supported-upgrade-paths) dans la documentation de Windows Server.
+- Mise à niveau sur place de :  
 
-### <a name="bkmk_2016"></a> Mise à niveau de Windows Server 2012 ou Windows Server 2012 R2 vers la version 2016
-Lorsque vous mettez à niveau Windows Server 2012 ou Windows Server 2012 R2 vers Windows Server 2016, ce qui suit s’applique :
+    - Windows Server 2016 vers Windows Server 2019   
+
+    - Windows Server 2012 R2 vers Windows Server 2019   
+
+    - Windows Server 2012 R2 vers Windows Server 2016   
+
+    - Windows Server 2012 vers Windows Server 2016   
+
+    - Windows Server 2012 vers Windows Server 2012 R2   
+
+    - Windows Server 2008 R2 vers Windows Server 2012 R2   
+
+Pour mettre à niveau un serveur, utilisez les procédures de mise à niveau fournies par le système d’exploitation vers lequel vous effectuez la mise à niveau. Consultez les articles suivants :  
+
+- [Centre de mise à niveau de Windows Server](http://aka.ms/upgradecenter)  
+
+- [Options de mise à niveau et de conversion pour Windows Server 2016](https://docs.microsoft.com/windows-server/get-started/supported-upgrade-paths)  
+
+- [Options de mise à niveau pour Windows Server 2012 R2](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416\(v=ws.11))   
+
+
+### <a name="bkmk_2016-2019"></a> Mise à niveau vers Windows Server 2016 ou 2019
+
+Utilisez les étapes de cette section pour les scénarios de mise à niveau suivantes :  
+
+- Mise à niveau de Windows Server 2012 R2 ou Windows Server 2016 vers Windows Server 2019  
+
+- Mise à niveau de Windows Server 2012 ou Windows Server 2012 R2 vers Windows Server 2016  
 
 
 #### <a name="before-upgrade"></a>Avant la mise à niveau  
--   Supprimez le client SCEP (System Center Endpoint Protection). Windows Defender, qui remplace le client SCEP, est intégré à Windows Server 2016. La présence du client SCEP peut empêcher une mise à niveau vers Windows Server 2016.
--   Supprimez le rôle WSUS du serveur, s’il est installé. Vous pouvez conserver la base de données SUSDB et l’attacher de nouveau après la réinstallation de WSUS.
+- (Windows Server 2012 or Windows Server 2012 R2) : Supprimez le client SCEP (System Center Endpoint Protection). Windows Server intègre désormais Windows Defender, qui remplace le client SCEP. La présence du client SCEP peut empêcher une mise à niveau vers Windows Server.  
+
+- Supprimez le rôle WSUS du serveur s’il est installé. Vous pouvez conserver la base de données SUSDB et l’attacher de nouveau après la réinstallation de WSUS.  
 
 #### <a name="after-upgrade"></a>Après la mise à niveau   
--   Vérifiez que Windows Defender est activé, configuré pour démarrer automatiquement et en cours d’exécution.
--   Vérifiez que les services Configuration Manager suivants sont en cours d’exécution :
-  -     SMS_EXECUTIVE
-  -     SMS_SITE_COMPONENT_MANAGER
+- Vérifiez que Windows Defender est activé, configuré pour démarrer automatiquement et en cours d’exécution.  
 
+- Vérifiez que les services Configuration Manager suivants sont en cours d’exécution :  
 
--   Vérifiez que le **service d’activation des processus Windows** et le **service WWW/W3SVC** sont activés, configurés pour démarrer automatiquement et en cours d’exécution pour les rôles de système de site suivants (ces services sont désactivés pendant la mise à niveau) :
-  -     Serveur de site
-  -     Point de gestion
-  -     Point de service web du catalogue des applications
-  -     Point du site web du catalogue des applications
+    - SMS_EXECUTIVE  
 
--   Vérifiez que chaque serveur qui héberge un rôle de système de site respecte l’ensemble des [prérequis pour les rôles de système de site](/sccm/core/plan-design/configs/site-and-site-system-prerequisites) qui s’exécutent sur ce serveur. Par exemple, il se peut que vous deviez réinstaller le service BITS ou le service WSUS, ou de configurer des paramètres spécifiques pour IIS.
+    - SMS_SITE_COMPONENT_MANAGER  
 
--   Après avoir restauré les prérequis manquants, redémarrez le serveur une fois de plus pour être sûr que les services sont démarrés et en cours d’exécution.
+- Vérifiez que les services d’**activation des processus Windows** et **WWW/W3svc** sont activés et configurés pour démarrer automatiquement. Sachant que le processus de mise à niveau désactive ces services, vérifiez qu’ils s’exécutent pour les rôles de système de site suivants :  
 
--   Si vous mettez à niveau le serveur de site principal, [exécutez une réinitialisation du site](/sccm/core/servers/manage/modify-your-infrastructure#bkmk_reset).
+    - Serveur de site  
+
+    - Point de gestion  
+
+    - Point de service web du catalogue des applications  
+
+    - Point du site web du catalogue des applications  
+
+- Vérifiez que chaque serveur qui héberge un rôle de système de site continue de respecter tous les [prérequis](/sccm/core/plan-design/configs/site-and-site-system-prerequisites). Par exemple, il se peut que vous deviez réinstaller le service BITS ou le service WSUS, ou de configurer des paramètres spécifiques pour IIS.  
+
+- Après avoir restauré les prérequis manquants, redémarrez le serveur une fois de plus pour être certain que les services sont démarrés et opérationnels.  
+
+- Si vous mettez à niveau le serveur de site principal, [exécutez une réinitialisation du site](/sccm/core/servers/manage/modify-your-infrastructure#bkmk_reset).  
 
 #### <a name="known-issue-for-remote-configuration-manager-consoles"></a>Problème connu lié aux consoles Configuration Manager distantes   
-Une fois la mise à niveau du serveur de site ou d’un serveur qui héberge une instance de SMS_Provider vers Windows Server 2016 effectuée, il se peut que les utilisateurs administratifs ne puissent pas connecter une console Configuration Manager au site. Pour contourner ce problème, vous devez restaurer manuellement les autorisations pour le groupe Administrateurs SMS dans WMI. Les autorisations doivent être définies sur le serveur de site, ainsi que sur chaque serveur distant qui héberge une instance de SMS_Provider :
+Après avoir mis à niveau le serveur de site ou une instance du fournisseur SMS, vous ne pouvez pas vous connecter avec la console Configuration Manager. Pour contourner ce problème, restaurez manuellement les autorisations pour le groupe **Administrateurs SMS** dans WMI. Les autorisations doivent être définies sur le serveur de site, ainsi que sur chaque serveur distant qui héberge une instance du fournisseur SMS :
 
-1. Sur les serveurs applicables, ouvrez la console MMC (Microsoft Management Console) et ajoutez le composant logiciel enfichable pour le **Contrôle WMI**, puis sélectionnez **Ordinateur local**.
-2. Dans la console MMC, ouvrez les **Propriétés** du **Contrôle WMI (local)**, puis sélectionnez l’onglet **Sécurité**.
-3. Développez l’arborescence sous la racine, sélectionnez le nœud **SMS**, puis choisissez **Sécurité**.  Vérifiez que le groupe **Administrateurs SMS** dispose des autorisations suivantes :
-  -     Activer le compte
-  -     Appel à distance autorisé
-4. Dans **l’onglet Sécurité** sous le nœud **SMS**, sélectionnez le nœud **site_&lt;sitecode**>, puis choisissez **Sécurité**. Vérifiez que le groupe **Administrateurs SMS** dispose des autorisations suivantes :
-  -   Méthodes d’exécution
-  -   Écriture fournisseur
-  -   Activer le compte
-  -   Appel à distance autorisé
-5. Enregistrez les autorisations pour restaurer l’accès à la console Configuration Manager.
+1. Sur les serveurs applicables, ouvrez la console MMC (Microsoft Management Console) et ajoutez le composant logiciel enfichable pour le **Contrôle WMI**, puis sélectionnez **Ordinateur local**.  
 
+2. Dans la console MMC, ouvrez les **Propriétés** du **Contrôle WMI (local)**, puis sélectionnez l’onglet **Sécurité**.  
 
-### <a name="bkmk_2012r2"></a> Windows Server 2012 vers Windows Server 2012 R2
+3. Développez l’arborescence sous la racine, sélectionnez le nœud **SMS**, puis choisissez **Sécurité**.  Vérifiez que le groupe **Administrateurs SMS** dispose des autorisations suivantes :  
 
-#### <a name="before-upgrade"></a>Avant la mise à niveau  
--   Supprimez le rôle WSUS du serveur, s’il est installé. Vous pouvez conserver la base de données SUSDB et l’attacher de nouveau après la réinstallation de WSUS.
+    - Activer le compte  
 
-#### <a name="after-upgrade"></a>Après la mise à niveau  
-  - Vérifiez que le service de déploiement Windows est démarré et en cours d’exécution pour les rôles de système de site suivants (ce service est arrêté pendant la mise à niveau) :
-    - Serveur de site
-    - Point de gestion
-    - Point de service web du catalogue des applications
-    - Point du site web du catalogue des applications
+    - Appel à distance autorisé  
 
-  -     Vérifiez que le **service d’activation des processus Windows** et le **service WWW/W3SVC** sont activés, configurés pour démarrer automatiquement et en cours d’exécution pour les rôles de système de site suivants (ces services sont désactivés pendant la mise à niveau) :
-    -   Serveur de site
-    -   Point de gestion
-    -   Point de service web du catalogue des applications
-    -   Point du site web du catalogue des applications
+4. Dans **l’onglet Sécurité** sous le nœud **SMS**, sélectionnez le nœud **site_&lt;sitecode**>, puis choisissez **Sécurité**. Vérifiez que le groupe **Administrateurs SMS** dispose des autorisations suivantes :  
+
+    - Méthodes d’exécution  
+
+    - Écriture fournisseur  
+
+    - Activer le compte  
+
+    - Appel à distance autorisé  
+
+5. Enregistrez les autorisations pour restaurer l’accès à la console Configuration Manager.  
 
 
-  -     Vérifiez que chaque serveur qui héberge un rôle de système de site respecte l’ensemble des [prérequis pour les rôles de système de site](/sccm/core/plan-design/configs/site-and-site-system-prerequisites) qui s’exécutent sur ce serveur. Par exemple, il se peut que vous deviez réinstaller le service BITS ou le service WSUS, ou de configurer des paramètres spécifiques pour IIS.
+### <a name="bkmk_2012r2"></a> Mise à niveau vers Windows Server 2012 R2
 
-  Après avoir restauré les prérequis manquants, redémarrez le serveur une fois de plus pour être sûr que les services sont démarrés et en cours d’exécution.
-
-### <a name="bkmk_from2008r2"></a> Mise à niveau de Windows Server 2008 R2 vers Windows Server 2012 R2
-Ce scénario de mise à niveau du système d’exploitation a les conditions suivantes :  
+Quand vous procédez à une mise à niveau de Windows Server 2008 R2 ou Windows Server 2012 vers Windows Server 2012 R2, voici les conditions qui s’appliquent :
 
 #### <a name="before-upgrade"></a>Avant la mise à niveau  
--   Désinstallez WSUS 3.2.  
-    Avant de mettre à niveau le système d’exploitation d’un serveur vers Windows Server 2012 R2, vous devez désinstaller WSUS 3.2 du serveur. Pour plus d’informations sur cette étape critique, consultez la section Fonctionnalités nouvelles et modifiées de la rubrique [Vue d’ensemble des services WSUS (Windows Server Update Services)](https://technet.microsoft.com/library/hh852345.aspx) dans la documentation de Windows Server.
+- Sur Windows Server 2012 : Supprimez le rôle WSUS du serveur s’il est installé. Vous pouvez conserver la base de données SUSDB et l’attacher de nouveau après la réinstallation de WSUS.  
+
+- Sur Windows Server 2008 R2 : Avant d’effectuer la mise à niveau vers Windows Server 2012 R2, vous devez désinstaller WSUS 3.2 du serveur. Vous pouvez conserver la base de données SUSDB et l’attacher de nouveau après la réinstallation de WSUS. Pour plus d’informations, consultez [Vue d’ensemble de Windows Server Update Services](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345\(v=ws.11)#new-and-changed-functionality).  
 
 #### <a name="after-upgrade"></a>Après la mise à niveau  
-  - Vérifiez que le service de déploiement Windows est démarré et en cours d’exécution pour les rôles de système de site suivants (ce service est arrêté pendant la mise à niveau) :
-    - Serveur de site
-    - Point de gestion
-    - Point de service web du catalogue des applications
-    - Point du site web du catalogue des applications
+- Le processus de mise à niveau désactive les services de déploiement Windows. Vérifiez que ce service est démarré et en cours d’exécution pour les rôles de système de site suivants :  
 
+    - Serveur de site  
 
-  -     Vérifiez que le **service d’activation des processus Windows** et le **service WWW/W3SVC** sont activés, configurés pour démarrer automatiquement et en cours d’exécution pour les rôles de système de site suivants (ces services sont désactivés pendant la mise à niveau) :
-    -   Serveur de site
-    -   Point de gestion
-    -   Point de service web du catalogue des applications
-    -   Point du site web du catalogue des applications
+    - Point de gestion  
 
+    - Point de service web du catalogue des applications  
 
-  -     Vérifiez que chaque serveur qui héberge un rôle de système de site respecte l’ensemble de la [configuration requise pour les rôles de système de site](/sccm/core/plan-design/configs/site-and-site-system-prerequisites) qui s’exécutent sur ce serveur. Par exemple, il se peut que vous deviez réinstaller le service BITS ou le service WSUS, ou de configurer des paramètres spécifiques pour IIS.
+    - Point du site web du catalogue des applications  
 
-  Après avoir restauré les prérequis manquants, redémarrez le serveur une fois de plus pour être sûr que les services sont démarrés et en cours d’exécution.
+- Vérifiez que les services d’**activation des processus Windows** et **WWW/W3svc** sont activés et configurés pour démarrer automatiquement. Sachant que le processus de mise à niveau désactive ces services, vérifiez qu’ils s’exécutent pour les rôles de système de site suivants :  
+
+    - Serveur de site  
+
+    - Point de gestion  
+
+    - Point de service web du catalogue des applications  
+
+    - Point du site web du catalogue des applications  
+
+- Vérifiez que chaque serveur qui héberge un rôle de système de site continue de respecter tous les [prérequis](/sccm/core/plan-design/configs/site-and-site-system-prerequisites). Par exemple, il se peut que vous deviez réinstaller le service BITS ou le service WSUS, ou de configurer des paramètres spécifiques pour IIS.  
+
+    Après avoir restauré les prérequis manquants, redémarrez le serveur une fois de plus pour être certain que les services sont démarrés et opérationnels.  
 
 
 ### <a name="unsupported-upgrade-scenarios"></a>Scénarios de mise à niveau non pris en charge
+
 Les scénarios de mise à niveau de Windows Server suivants font souvent l’objet de questions, mais ils ne sont pas pris en charge par Configuration Manager :  
 
--   Windows Server 2008 vers Windows Server 2012 ou version ultérieure  
--   Windows Server 2008 R2 vers Windows Server 2012
+- Windows Server 2008 vers Windows Server 2012 ou version ultérieure  
+
+- Windows Server 2008 R2 vers Windows Server 2012  
 
 
 
-##  <a name="BKMK_SupConfigUpgradeClient"></a> Mettre à niveau le système d’exploitation de clients Configuration Manager  
- Configuration Manager prend en charge une mise à niveau sur place du système d’exploitation pour les clients Configuration Manager dans les situations suivantes :  
+##  <a name="BKMK_SupConfigUpgradeClient"></a> Mise à niveau du système d’exploitation des clients  
 
--   La mise à niveau sur place vers un Service Pack Windows ultérieur si le niveau du Service Pack résultant est pris en charge par Configuration Manager.  
+Configuration Manager prend en charge une mise à niveau sur place du système d’exploitation pour les clients Configuration Manager dans les situations suivantes :  
 
--   Mise à niveau sur place de Windows à partir d’une version prise en charge vers Windows 10. Pour plus d’informations, consultez [Effectuer une mise à niveau de Windows vers la dernière version](../../../osd/deploy-use/upgrade-windows-to-the-latest-version.md).  
+- Si Configuration Manager prend en charge le niveau du Service Pack résultant, il prend en charge la mise à niveau sur place vers un Service Pack Windows plus récent.  
 
--   Mises à niveau de la maintenance de build à build de Windows 10. Pour plus d’informations, consultez [Gérer Windows as a service](../../../osd/deploy-use/manage-windows-as-a-service.md).  
+- Mise à niveau sur place de Windows à partir d’une version prise en charge vers Windows 10. Pour plus d’informations, consultez [Effectuer une mise à niveau de Windows vers la dernière version](/sccm/osd/deploy-use/upgrade-windows-to-the-latest-version).  
+
+- Mises à niveau de la maintenance de build à build de Windows 10. Pour plus d’informations, consultez [Gérer Windows as a service](/sccm/osd/deploy-use/manage-windows-as-a-service).  
 
 
 
-##  <a name="BKMK_SupConfigUpgradeDBSrv"></a> Mettre à niveau SQL Server sur le serveur de base de données de site  
-  Configuration Manager prend en charge une mise à niveau sur place de SQL Server à partir d’une version prise en charge de SQL sur le serveur de base de données de site. Les scénarios de mise à niveau de SQL Server décrits dans cette section sont pris en charge par Configuration Manager et incluent la configuration requise pour chaque scénario.
+##  <a name="BKMK_SupConfigUpgradeDBSrv"></a> Mise à niveau de SQL Server  
 
- Pour plus d’informations sur les versions de SQL Server prises en charge par Configuration Manager, consultez [Prise en charge des versions de SQL Server](../../../core/plan-design/configs/support-for-sql-server-versions.md).  
+Configuration Manager prend en charge une mise à niveau sur place de SQL Server sur le serveur de base de données de site. 
 
- ### <a name="upgrade-the-service-pack-version-of-sql-server"></a>Mise à niveau de la version du Service Pack de SQL Server    
- Configuration Manager prend en charge la mise à niveau sur place de SQL Server vers un Service Pack ultérieur si le niveau du Service Pack SQL Server résultant est pris en charge par Configuration Manager.
+Pour plus d’informations sur les versions de SQL Server que prend en charge Configuration Manager, consultez [Prise en charge des versions de SQL Server](/sccm/core/plan-design/configs/support-for-sql-server-versions).  
 
- Si vous utilisez plusieurs sites Configuration Manager dans une hiérarchie, chaque site peut exécuter une version différente du Service Pack de SQL Server. Il n’existe pas de limitation quant à l’ordre dans lequel les sites effectuent une à niveau de la version du Service Pack de SQL Server utilisé pour la base de données de site.
+
+### <a name="upgrade-the-service-pack-version-of-sql-server"></a>Mise à niveau de la version du Service Pack de SQL Server    
+
+Si Configuration Manager prend toujours en charge le niveau du Service Pack SQL Server résultant, il prend en charge la mise à niveau sur place de SQL Server vers un Service Pack plus récent.
+
+Si vous utilisez plusieurs sites Configuration Manager dans une hiérarchie, chaque site peut exécuter une version différente du Service Pack SQL Server. Il n’existe aucune limitation quant à l’ordre dans lequel les sites mettent à niveau la version du Service Pack SQL Server.
+
 
 ### <a name="upgrade-to-a-new-version-of-sql-server"></a>Mise à niveau vers une nouvelle version de SQL Server   
- Configuration Manager prend en charge la mise à niveau sur place de SQL Server vers les versions suivantes :
 
- - SQL Server 2017
- - SQL Server 2016  
- - SQL Server 2014  
+Configuration Manager prend en charge la mise à niveau sur place de SQL Server vers les versions suivantes :
 
-Quand vous mettez à niveau la version de SQL Server qui héberge la base de données du site, vous devez mettre à niveau la version de SQL Server qui est utilisée sur les sites dans l’ordre suivant :
+- SQL Server 2017  
 
- 1. Mettez d'abord à niveau SQL Server sur le site administration centrale.
- 2. Mettez à niveau les sites secondaires avant de mettre à niveau le site principal parent d’un site secondaire.
- 3. Mettez à niveau les sites principaux parents en dernier. Ces sites incluent les sites principaux enfants qui dépendent d'un site d'administration centrale et les sites principaux autonomes qui constituent les sites de plus haut niveau d'une hiérarchie.
+- SQL Server 2016  
 
-### <a name="sql-server-cardinality-estimation-level-and-the-site-database"></a>Niveau Estimation de cardinalité SQL Server et base de données de site   
-Quand une base de données de site est mise à niveau à partir d’une version antérieure de SQL Server, la base de données conserve son niveau Estimation de cardinalité SQL Server (SQL Server CE) existant s’il est au minimum autorisé pour cette instance de SQL Server. En mettant à niveau SQL Server avec une base de données à un niveau de compatibilité inférieur que celui autorisé automatiquement, vous définissez la base de données sur le niveau de compatibilité le plus bas autorisé par SQL Server.
+- SQL Server 2014  
+
+Quand vous mettez à niveau la version de SQL Server qui héberge la base de données de site, vous devez mettre à niveau la version de SQL Server qui est utilisée sur les sites dans l’ordre suivant :
+
+1. Mettez d’abord à niveau SQL Server sur le site administration centrale.  
+
+2. Mettez à niveau les sites secondaires avant de mettre à niveau le site principal parent d’un site secondaire.  
+
+3. Mettez à niveau les sites principaux parents en dernier. Ces sites incluent les sites principaux enfants qui dépendent d'un site d'administration centrale et les sites principaux autonomes qui constituent les sites de plus haut niveau d'une hiérarchie.  
+
+
+### <a name="sql-server-cardinality-estimation-level"></a>Niveau d’estimation de cardinalité SQL Server   
+
+Quand vous mettez à niveau une base de données de site à partir d’une version antérieure de SQL Server, la base de données conserve son niveau d’estimation de cardinalité SQL existant, s’il est au minimum autorisé pour cette instance de SQL Server. En mettant à niveau SQL Server avec une base de données à un niveau de compatibilité inférieur que celui autorisé automatiquement, vous définissez la base de données sur le niveau de compatibilité le plus bas autorisé par SQL Server.
 
 Le tableau suivant identifie les niveaux de compatibilité recommandés pour les bases de données de site Configuration Manager :
 
-|Version SQL Server | Niveaux de compatibilité pris en charge |Niveau conseillé|
+|Version SQL Server | Niveaux de compatibilité pris en charge | Niveau conseillé |
 |----------------|--------------------|--------|
 | SQL Server 2017 | 140, 130, 120, 110  | 140 |
 | SQL Server 2016 | 130, 120, 110  | 130 |
 | SQL Server 2014 | 120, 110      | 110 |
 
-Pour identifier le niveau de compatibilité SQL Server CE en cours d’utilisation pour votre base de données de site, exécutez la requête SQL suivante sur le serveur de base de données de site :  
-`SELECT name, compatibility_level FROM sys.databases`
+Pour identifier le niveau de compatibilité de l’estimation de cardinalité SQL Server utilisé pour votre base de données de site, exécutez la requête SQL suivante sur le serveur de base de données de site :  
+```SQL
+SELECT name, compatibility_level FROM sys.databases
+```
 
- Pour plus d’informations sur les niveaux de compatibilité SQL CE et comment les définir, consultez [Niveau de compatibilité ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017).
+Pour plus d’informations sur les niveaux de compatibilité SQL CE et comment les définir, consultez [Niveau de compatibilité ALTER DATABASE (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017).
 
 
-Pour plus d’informations sur la mise à niveau de SQL Server, consultez la documentation de SQL Server suivante :
--   [Mise à niveau vers SQL Server 2017](/sql/database-engine/install-windows/supported-version-and-edition-upgrades-2017)
--   [Mise à niveau vers SQL Server 2016](/sql/database-engine/install-windows/supported-version-and-edition-upgrades)
--   [Mise à niveau vers SQL Server 2014](http://technet.microsoft.com/library/ms143393\(v=sql.120))  
+Pour plus d’informations sur la mise à niveau de SQL Server, consultez les articles SQL Server suivants :  
+
+- [Mise à niveau vers SQL Server 2017](https://docs.microsoft.com/sql/database-engine/install-windows/supported-version-and-edition-upgrades-2017)  
+
+- [Mise à niveau vers SQL Server 2016](https://docs.microsoft.com/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2016)  
+
+- [Mise à niveau vers SQL Server 2014](https://docs.microsoft.com/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2014)  
 
 
 
 ### <a name="to-upgrade-sql-server-on-the-site-database-server"></a>Pour mettre à niveau SQL Server sur le serveur de base de données de site  
 
-1.  Arrêtez tous les services de Configuration Manager sur le site.  
-2.  Mettez à niveau SQL Server vers une version prise en charge.  
-3.  Redémarrez les services de Configuration Manager.  
+1. Arrêtez tous les services Configuration Manager sur le site.  
+
+2. Mettez à niveau SQL Server vers une version prise en charge.  
+
+3. Redémarrez les services Configuration Manager.  
 
 > [!NOTE]  
->  Quand vous changez l'édition de SQL Server utilisée sur le site d'administration centrale d'une édition Standard en une édition Enterprise ou Datacenter, la partition de base de données qui limite le nombre de clients que la hiérarchie prend en charge ne change pas.
+> Quand vous passez de l’édition Standard de SQL Server sur le site administration centrale à l’édition Datacenter ou Enterprise, la partition de la base de données ne change pas. Cette partition de la base de données limite le nombre de clients pris en charge dans la hiérarchie.  
