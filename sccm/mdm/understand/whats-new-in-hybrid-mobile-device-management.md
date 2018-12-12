@@ -10,12 +10,12 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c637703fc65b6d867dd1670ff40abc8214e6d234
-ms.sourcegitcommit: 4f34250aa850f13f415b7afe975a033d6a00fa9d
+ms.openlocfilehash: 6ecc3f47b908678b1849e16c2cb2053f100a655a
+ms.sourcegitcommit: 2491fbe98915b7a30c2422a371c929d0d4ebf22f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52978620"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53247524"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Nouveautés de la gestion hybride des appareils mobiles avec Configuration Manager et Microsoft Intune
 
@@ -489,7 +489,7 @@ Demandez aux utilisateurs finaux sur Windows 10 versions 1607 ou ultérieures d�
     <!-- 1132468 -->     
 
 - **Informer les utilisateurs finaux au sujet des informations sur les appareils qui sont consultables pour iOS**   
-    Nous avons ajouté   **Type de propriété** à l’écran Détails de l’appareil dans l’application Portail d’entreprise pour iOS. Ces informations permettent aux utilisateurs d’en savoir plus sur la confidentialité directement à partir de la documentation utilisateur Intune. Les utilisateurs peuvent également ces informations sur l’écran À propos de. 
+    Nous avons ajouté **Type de propriété** à l’écran de détails de l’appareil sur l’application portail d’entreprise pour iOS. Ces informations permettent aux utilisateurs d’en savoir plus sur la confidentialité directement à partir de la documentation utilisateur Intune. Les utilisateurs peuvent également ces informations sur l’écran À propos de. 
     <!--739894-->    
 
 - **Formulations plus claires dans l’application Portail d’entreprise pour Android**   
