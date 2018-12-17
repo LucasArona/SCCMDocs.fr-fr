@@ -5,17 +5,17 @@ description: Utilisez cette procédure pas à pas pour configurer une passerelle
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 09/10/2018
+ms.date: 11/27/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: a5f356eef4d72040bd069fc17dd20fdbc3587cd6
-ms.sourcegitcommit: 2badee2b63ae63687795250e298f463474063100
+ms.openlocfilehash: 041ea28e91b77545b8984742b4199782d1edb6b7
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601056"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456530"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Configurer la passerelle de gestion cloud pour Configuration Manager
 
@@ -38,13 +38,16 @@ Utilisez la liste de vérification suivante pour vous assurer que vous disposez 
 
 - Vous avez besoin d’un ou de plusieurs certificats pour la passerelle de gestion cloud, en fonction de votre conception. Pour plus d’informations, consultez [Certificats pour la passerelle de gestion cloud](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway).  
 
-- À compter de la version 1802, choisissez si vous utilisez le **déploiement Azure Resource Manager** ou un **déploiement de service classique**. Pour plus d’informations, consultez [Azure Resource Manager](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager). Vous devez respecter les exigences suivantes pour un déploiement Azure Resource Manager de la passerelle de gestion cloud :  
+- À compter de la version 1802, sélectionnez le **déploiement Azure Resource Manager**. Pour plus d’informations, consultez [Azure Resource Manager](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager). Vous devez respecter les exigences suivantes pour un déploiement Azure Resource Manager de la passerelle de gestion cloud :  
 
     - Intégration à [Azure AD](/sccm/core/servers/deploy/configure/azure-services-wizard) pour la **gestion cloud**. La découverte des utilisateurs Azure AD n’est pas nécessaire.  
 
     - Un administrateur de l’abonnement doit se connecter.  
 
 - Vous devez respecter les exigences suivantes pour un déploiement de service classique de la passerelle de gestion cloud :  
+
+    > [!Important]  
+    > Depuis la version 1810, les déploiements de services Classic dans Azure sont dépréciés dans Configuration Manager. Commencez par utiliser des déploiements Azure Resource Manager pour la passerelle de gestion cloud. Pour plus d’informations, consultez [Planifier la passerelle de gestion cloud](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager).  
 
     - ID d’abonnement Azure  
 
@@ -66,11 +69,14 @@ Effectuez cette procédure sur le site de plus haut niveau. Ce site est soit un 
 
 2. Sélectionnez **Créer une Passerelle de gestion cloud** dans le ruban.  
 
-3. À compter de la version 1802, dans la page Général de l’Assistant, choisissez d’abord la méthode de déploiement CMG : **Déploiement d’Azure Resource Manager** ou **Déploiement de service Classic**.  
+3. À compter de la version 1802, dans la page Général de l’Assistant, sélectionnez **Déploiement d’Azure Resource Manager** comme méthode de déploiement de la passerelle de gestion cloud.  
 
-    1. Pour le **déploiement Azure Resource Manager** : sélectionnez **Se connecter** pour vous authentifier avec un compte d’administrateur d’abonnements Azure. L’Assistant remplit automatiquement les champs restants à partir des informations stockées dans les prérequis de l’intégration d’Azure AD. Si vous possédez plusieurs abonnements, sélectionnez l’**ID de l’abonnement** que vous voulez utiliser.  
+    Sélectionnez **Se connecter** pour vous authentifier avec un compte Administrateur d’abonnement Azure. L’Assistant remplit automatiquement les champs restants à partir des informations stockées dans les prérequis de l’intégration d’Azure AD. Si vous possédez plusieurs abonnements, sélectionnez l’**ID de l’abonnement** que vous voulez utiliser.
 
-    2. Pour le **déploiement de service classique** *et les versions 1706 et 1710 de Configuration Manager* : entrez votre **ID d’abonnement** Azure. Sélectionnez ensuite **Parcourir**, puis choisissez le fichier .PFX du certificat de gestion Azure. 
+    > [!Note]  
+    > Depuis la version 1810, les déploiements de services Classic dans Azure sont dépréciés dans Configuration Manager. 
+    > 
+    > Si vous devez utiliser un déploiement de service Classic, sélectionnez cette option dans cette page. Entrer d’abord votre **ID d’abonnement** Azure. Sélectionnez ensuite **Parcourir**, puis choisissez le fichier .PFX du certificat de gestion Azure. 
 
 4. Spécifiez l’**environnement Azure** pour cette passerelle de gestion cloud. Les options disponibles dans la liste déroulante peuvent varier en fonction de la méthode de déploiement.  
 

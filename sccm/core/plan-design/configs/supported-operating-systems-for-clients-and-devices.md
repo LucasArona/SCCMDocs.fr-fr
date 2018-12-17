@@ -10,12 +10,12 @@ ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 82fd328d65e67df2506f31679ed3c1b3abc1262c
-ms.sourcegitcommit: e0209e4549e9828eb74089313dbee323ece1fc2f
+ms.openlocfilehash: 48eb4abcc328c57fdb35e3511e49500099a68cf2
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51598595"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456479"
 ---
 # <a name="supported-os-versions-for-clients-and-devices-for-configuration-manager"></a>Versions de système d’exploitation prises en charge par Configuration Manager pour les clients et les appareils
 
@@ -206,6 +206,7 @@ Les versions du Canal semi-annuel Windows Server sont des installations Server C
 
 -   **Mac OS X 10.13** (macOS High Sierra)
 
+- **macOS Mojave (10.14)** 
 
 
 ##  <a name="linux-and-unix-servers"></a>Serveurs Linux et UNIX  

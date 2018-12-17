@@ -2,7 +2,7 @@
 title: Déployer des applications
 titleSuffix: Configuration Manager
 description: Créer ou simuler le déploiement d’une application sur un regroupement d’appareils ou d’utilisateurs
-ms.date: 07/30/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 2629c376-ec43-4f0e-a78b-4223cc9302bf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d23c5ee5b81264a9725c4654cd1717b30302c708
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 5b70c651186a35e0f1c5a5da8b9c7dffe0abc7da
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39384818"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456581"
 ---
 # <a name="deploy-applications-with-configuration-manager"></a>Déployer les applications avec Configuration Manager
 
@@ -98,6 +98,8 @@ Dans la page **Paramètres de déploiement**, spécifiez les informations suivan
     > [!NOTE]   
     >  Quand vous définissez l’action de déploiement sur **Désinstaller**, l’objet du déploiement est automatiquement défini sur **Obligatoire**. Vous ne pouvez pas modifier ce comportement.  
 
+- **Autoriser les utilisateurs finaux à tenter de réparer cette application** : depuis la version 1810, si vous avez créé l’application avec une ligne de commande de réparation, activez cette option. Les utilisateurs voient une option dans le Centre logiciel pour **Réparer** l’application.<!--1357866-->  
+
 - **Prédéployer des logiciels sur le périphérique principal de l’utilisateur** : si le déploiement est destiné à un utilisateur, sélectionnez cette option pour déployer l’application sur le périphérique principal de l’utilisateur. Ce paramètre ne nécessite pas que l’utilisateur se connecte avant que le déploiement ne s’exécute. Si l’utilisateur doit interagir avec l’installation, ne sélectionnez pas cette option. Cette option est disponible uniquement quand le déploiement est **Obligatoire**.  
 
 - **Envoyer des paquets de mise en éveil**: si le déploiement est **Obligatoire**, Configuration Manager envoie un paquet de mise en éveil aux ordinateurs avant que le client n’exécute le déploiement. Ce paquet réveille les ordinateurs à l’échéance de l’installation. Avant d’utiliser cette option, les ordinateurs et les réseaux doivent être configurés pour Wake On LAN. Pour plus d’informations, consultez [Planifier la sortie de veille des clients](/sccm/core/clients/deploy/plan/plan-wake-up-clients).  
@@ -118,25 +120,9 @@ Un des paramètres d’approbation suivants s’affiche, en fonction de votre ve
 
 - **Exiger l’approbation de l’administrateur si des utilisateurs demandent cette application** : pour les versions 1710 et antérieures, l’utilisateur ne peut pas installer l’application demandée tant que l’administrateur ne lui a pas donné son approbation. Cette option est grisée quand l’objet du déploiement est **Obligatoire** ou que vous déployez l’application sur un regroupement d’appareils.  
 
-    Les demandes d'approbation d'application sont affichées dans le nœud **Demandes d'approbation** , sous **Gestion d'applications** dans l'espace de travail **Bibliothèque de logiciels** . Si une demande ne reçoit pas d’approbation dans les 45 jours, elle est supprimée. La réinstallation du client risque d’annuler des demandes d’approbation en attente.  
-
-    Après avoir approuvé l’installation d’une application, vous pouvez **Refuser** la demande dans la console Configuration Manager. Cette action n’entraîne pas la désinstallation de l’application de tous les appareils par le client. Elle empêche les utilisateurs d’installer de nouvelles copies de l’application à partir du Centre logiciel.  
-
 - **Un administrateur doit approuver une demande pour cette application sur le périphérique** : depuis la version 1802, l’utilisateur ne peut pas installer l’application demandée tant que l’administrateur ne lui a pas donné son approbation. Si l’administrateur approuve la demande, l’utilisateur ne pourra installer l’application que sur cet appareil. Il devra soumettre une autre demande pour installer l’application sur un autre appareil. Cette option est grisée quand l’objet du déploiement est **Obligatoire** ou que vous déployez l’application sur un regroupement d’appareils. <!--1357015-->  
 
-    Cette fonctionnalité est facultative. Pour plus d’informations, consultez [Activer les fonctionnalités facultatives des mises à jour](/sccm/core/servers/manage/install-in-console-updates#bkmk_options). Si vous n’activez pas cette fonctionnalité, c’est l’expérience antérieure qui prévaut.  
-
-    > [!Note]  
-    > Pour tirer parti des nouvelles fonctionnalités de Configuration Manager, commencez par mettre à jour les clients vers la dernière version. Bien que les nouvelles fonctionnalités s’affichent dans la console Configuration Manager quand vous mettez à jour le site et la console, le scénario complet n’est pas fonctionnel tant que la version cliente n’est pas également la plus récente.<!--SCCMDocs issue 646-->  
-
-    Affichez **Demandes d’approbation** sous **Gestion des applications** dans l’espace de travail **Bibliothèque de logiciels** de la console de Configuration Manager. Il y a maintenant une colonne **Appareil** dans la liste de chaque demande. À chaque action effectuée sur la demande, la boîte de dialogue Demande d’application comprend également le nom de l’appareil utilisé par l’utilisateur pour envoyer la demande.  
-
-    Si une demande ne reçoit pas d’approbation dans les 45 jours, elle est supprimée. La réinstallation du client risque d’annuler des demandes d’approbation en attente.  
-
-    Après avoir approuvé l’installation d’une application, vous pouvez **Refuser** la demande dans la console Configuration Manager. Cette action n’entraîne pas la désinstallation de l’application de tous les appareils par le client. Elle empêche les utilisateurs d’installer de nouvelles copies de l’application à partir du Centre logiciel.  
-
-    > [!Important]  
-    > Depuis la version 1806, *le comportement est différent* quand vous révoquez une approbation pour une application qui a été approuvée et installée. Maintenant, quand vous **refusez** la demande visant l’application, le client désinstalle l’application sur l’appareil de l’utilisateur.<!--1357891-->  
+Pour plus d’informations, consultez [Approuver des applications](/sccm/apps/deploy-use/app-approval).
 
 
 #### <a name="deployment-properties-deployment-settings"></a>**Paramètres de déploiement** dans les propriétés de déploiement
@@ -177,9 +163,9 @@ Dans la page **Expérience utilisateur**, spécifiez la façon dont les utilisat
 
 - **Installation du logiciel** et **Redémarrage système** : configurez ces paramètres pour les déploiements obligatoires uniquement. Ils spécifient ce qui se passe quand le déploiement atteint l’échéance en dehors des fenêtres de maintenance définies. Pour plus d’informations sur les fenêtres de maintenance, consultez [Guide pratique pour utiliser les fenêtres de maintenance](/sccm/core/clients/manage/collections/use-maintenance-windows).  
 
-- **Traitement des filtres d’écriture pour les appareils Windows Embedded** : ce paramètre contrôle le comportement d’installation sur les appareils Windows Embedded qui sont activés avec un filtre d’écriture. Choisissez l’option permettant de valider les modifications à l’échéance de l’installation ou au cours d’une fenêtre de maintenance. Quand vous sélectionnez cette option, un redémarrage est nécessaire, qui conserve les modifications sur l’appareil. Sinon, l’application est installée sur l’overlay temporaire et validée ultérieurement.  
+- **Traitement des filtres d’écriture pour les appareils Windows Embedded** : ce paramètre contrôle le comportement d’installation sur les appareils Windows Embedded qui sont activés avec un filtre d’écriture. Choisissez l’option permettant de valider les modifications à l’échéance de l’installation ou au cours d’une fenêtre de maintenance. Quand vous sélectionnez cette option, un redémarrage est nécessaire, qui conserve les modifications sur l’appareil. Sinon, l’application est installée sur l’overlay temporaire et validée ultérieurement.  
 
-    - Quand vous déployez une mise à jour logicielle sur un appareil Windows Embedded, assurez-vous que l’appareil fait partie des membres d’un regroupement pour lequel une fenêtre de maintenance a été configurée. Pour plus d’informations sur les fenêtres de maintenance et les appareils Windows Embedded, consultez [Créer des applications Windows Embedded](/sccm/apps/get-started/creating-windows-embedded-applications).  
+    - Quand vous déployez une mise à jour logicielle sur un appareil Windows Embedded, vérifiez que l’appareil est membre d’un regroupement pour lequel une fenêtre de maintenance a été configurée. Pour plus d’informations sur les fenêtres de maintenance et les appareils Windows Embedded, consultez [Créer des applications Windows Embedded](/sccm/apps/get-started/creating-windows-embedded-applications).  
 
 
 ### <a name="bkmk_deploy-alerts"></a> **Alertes** de déploiement
@@ -194,7 +180,7 @@ Quand vous déployez un type de déploiement iOS, vous voyez également la page 
 
 
 ## <a name="bkmk_phased"></a> Créer un déploiement par phases
-<!--1358147--> À compter de la version 1806, créez un déploiement par phases pour une application. Ils permettent d’orchestrer un lancement coordonné et séquencé de logiciels en fonction de groupes et de critères personnalisables. Par exemple, déployez l’application sur un regroupement pilote, puis poursuivez automatiquement le déploiement selon des critères de réussite. 
+<!--1358147--> À compter de la version 1806, créez un déploiement par phases pour une application. Ils permettent d’orchestrer un lancement coordonné et séquencé de logiciels en fonction de groupes et de critères personnalisables. Par exemple, déployez l’application sur un regroupement pilote, puis poursuivez automatiquement le lancement en fonction des critères de réussite. 
 
 Pour plus d’informations, consultez les articles suivants :  
 

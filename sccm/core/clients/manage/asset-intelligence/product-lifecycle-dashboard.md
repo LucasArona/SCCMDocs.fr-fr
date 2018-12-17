@@ -2,7 +2,7 @@
 title: Tableau de bord Cycle de vie du produit
 titleSuffix: Configuration Manager
 description: Affichez la stratégie de cycle de vie Microsoft avec le tableau de bord Cycle de vie des produits dans Configuration Manager.
-ms.date: 07/30/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 8b5b144a-0e5f-4fcc-87b2-33b9bcdb5655
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: dd1a3a56bac6d7917c70db731b1735a195fae3df
-ms.sourcegitcommit: dfb2cb01c1608b848f2f2fee7c84500e7adcb7a4
+ms.openlocfilehash: bda6e266c6be8897de87a2a30fb0198a4b4c8446
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49101243"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456021"
 ---
 # <a name="manage-microsoft-lifecycle-policy-with-configuration-manager"></a>Gérer la stratégie de cycle de vie Microsoft avec Configuration Manager
 
@@ -24,6 +24,8 @@ ms.locfileid: "49101243"
 À compter de la version 1806, vous pouvez utiliser le tableau de bord Cycle de vie des produits de Configuration Manager pour afficher la stratégie de cycle de vie Microsoft. Ce tableau de bord affiche l’état de la stratégie de cycle de vie Microsoft des produits Microsoft installés sur des appareils gérés avec Configuration Manager. Il vous fournit également des informations sur les produits Microsoft de votre environnement, leur état de support et leur date de fin de support. Utilisez le tableau de bord pour comprendre la disponibilité du support de chaque produit. Ces informations vous aident à planifier quand mettre à jour les produits Microsoft que vous utilisez avant la fin actuelle de leur prise en charge.  
 
 Pour plus d’informations, consultez [Stratégie de cycle de vie Microsoft](https://support.microsoft.com/lifecycle).
+
+Depuis la version 1810, le tableau de bord comprend des informations pour System Center 2012 Configuration Manager et les versions ultérieures<!--1358702-->.  
 
 
 
@@ -59,6 +61,13 @@ Pour accéder au tableau de bord de cycle de vie dans la console Configuration M
 
 ![Capture d’écran du tableau de bord de cycle de vie des produits dans la console](media/product-lifecycle-dashboard.png)
 
+Modifiez l’affichage en sélectionnant l’une des options suivantes dans la liste **Catégorie de produit** :  
+- **Tous** : affiche tous les produits  
+- **Client Windows** : affiche les versions du système d’exploitation de client Windows  
+- **Windows Server** : affiche les versions du système d’exploitation de serveur Windows Server  
+- **Base de données** : affiche les versions de SQL Server  
+- **Configuration Manager** : depuis la version 1810, affiche les versions de Configuration Manager  
+
 Le tableau de bord comporte les vignettes suivantes :  
 
 - **Cinq produits principaux dont la fin de vie est dépassée :** cette vignette est une vue de données consolidée des produits de votre environnement dont la fin de vie est dépassée. Lors de la comparaison avec le cycle de vie du support pour les systèmes d’exploitation et les produits SQL Server, le graphe affiche les logiciels installés qui ont expiré.  
@@ -79,13 +88,16 @@ Le tableau de bord comporte les vignettes suivantes :
 
 ## <a name="reporting"></a>Rapports
 
-Des rapports supplémentaires sont également disponibles. Dans l’espace de travail **Analyse** de la console Configuration Manager, développez le nœud **Création de rapports**, puis **Rapports**. Les nouveaux rapports ci-dessous sont ajoutés sous la catégorie **Cycle de vie du produit** :  
+Des rapports supplémentaires sont également disponibles. Dans l’espace de travail **Analyse** de la console Configuration Manager, développez le nœud **Création de rapports**, puis **Rapports**. Les nouveaux rapports ci-dessous sont ajoutés sous la catégorie **Asset Intelligence** :  
 
-- **Vue d’ensemble du cycle de vie des produits :** affichez la liste des cycles de vie des produits. Filtrez la liste par nom de produit et par nombre de jours avant l’expiration.  
+- **Cycle de vie 01A - Ordinateurs avec un produit logiciel spécifique** : affiche la liste des ordinateurs sur lesquels un produit spécifique est détecté.  
 
-- **Ordinateurs avec un produit logiciel spécifique :** affichez la liste des ordinateurs sur lesquels un produit spécifique est détecté.  
+- **Cycle de vie 02A - Liste des ordinateurs avec des produits expirés dans l’organisation** : affiche les ordinateurs sur lesquels des produits ont expiré. Vous pouvez filtrer ce rapport par nom de produit.
 
-- **Liste des produits expirés trouvés dans l’organisation :** affichez les détails sur les produits de votre environnement dont les dates du cycle de vie ont expiré.  
+- **Cycle de vie 03A - Liste des produits expirés trouvés dans l’organisation** : affiche les détails sur les produits de votre environnement dont les dates du cycle de vie ont expiré.  
 
-- **Liste des ordinateurs avec des produits expirés dans l’organisation :** affichez les ordinateurs sur lesquels des produits ont expiré. Vous pouvez filtrer ce rapport par nom de produit.
+- **Cycle de vie 04A - Vue d’ensemble du cycle de vie des produits** : affiche la liste des cycles de vie des produits. Filtrez la liste par nom de produit et par nombre de jours avant l’expiration.  
 
+- **Cycle de vie 05A - Tableau de bord Cycle de vie du produit** : depuis la version 1810, ce rapport comporte des informations comparables à celles du tableau de bord de la console. Sélectionnez une catégorie pour afficher le nombre de produits présents dans votre environnement ainsi que le nombre de jours de support restants.  
+
+Pour plus d’informations, consultez [Liste des rapports](/sccm/core/servers/manage/list-of-reports#asset-intelligence).<!--SCCMDocs issue 997-->  

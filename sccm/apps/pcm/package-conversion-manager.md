@@ -10,12 +10,12 @@ ms.assetid: f053fa73-c553-4522-a6b9-f885f23fe57c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7057084ba976408f189a0d4fbb96f176bc0c6656
-ms.sourcegitcommit: 759098de944b8f7d5eedfc2bae2cb9a6ba15276f
+ms.openlocfilehash: 41dd6ad6f8a0292fdb16a0d727665b17e038f87b
+ms.sourcegitcommit: 1439817f1309658b31008d7bafaab32fc5ef8789
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43297243"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52820039"
 ---
 # <a name="package-conversion-manager"></a>Package Conversion Manager
 
@@ -25,8 +25,9 @@ ms.locfileid: "43297243"
 
 À partir de la version 1806, Package Conversion Manager vous permet de convertir en applications des packages Configuration Manager hérités. Les applications offrent d’autres avantages tels que les dépendances, les règles de spécification, les méthodes de détection et l’affinité entre utilisateur et appareil.
 
-> [!Note]  
-> Dans cette version de Configuration Manager, Package Conversion Manager est une fonctionnalité en préversion. Pour l’activer, consultez [Fonctionnalités de préversion](/sccm/core/servers/manage/pre-release-features).  
+> [!Tip]  
+> Cette fonctionnalité a été introduite dans la version 1806 comme [fonctionnalité en préversion](/sccm/core/servers/manage/pre-release-features). Depuis la version 1810, cette fonctionnalité n’est plus en préversion.  
+
 
 Une application Configuration Manager contient des fichiers et programmes que vous pouvez déployer sur des appareils clients. Toutefois, contrairement aux packages et programmes hérités, une application fournit des fonctionnalités supplémentaires centrées sur le client. Par exemple, une application peut contenir des types de déploiement pour une installation locale d'un package de logiciel, un package d'application virtuelle ou une version de l'application pour les appareils mobiles.
 
@@ -217,7 +218,7 @@ Testez les applications dans votre environnement de test ou votre environnement 
 
 - Utilisez le tableau de bord **État de la conversion de package** dans l’espace de travail **Analyse**. Il affiche des informations de synthèse sur les processus d'analyse et de conversion.  
 
-- Examinez les programmes dans vos packages appelés wrappers. Utilisez le plug-in Package Conversion Manager pour convertir leurs fonctions en fonctionnalité Configuration Manager équivalente.  
+- Examinez les programmes dans vos packages appelés wrappers. Utilisez le plug-in Package Conversion Manager pour convertir leurs fonctions en fonctionnalités Configuration Manager équivalentes.  
 
 - Assurez-vous de tester minutieusement chaque application convertie avant de la déployer dans un environnement de production.  
 

@@ -2,7 +2,7 @@
 title: Gérer les séquences de tâches
 titleSuffix: Configuration Manager
 description: Créez, modifiez, déployez, importez et exportez des séquences de tâches pour les gérer et automatiser les tâches dans votre environnement.
-ms.date: 08/17/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a1f099f1-e9b5-4189-88b3-f53e3b4e4add
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a6c1fb447719a36bd3c0cb7e2c91daf6a58d85ff
-ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
+ms.openlocfilehash: 44cfb06c8d92568a4468c1f46b90ceeb259c3c1f
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42755922"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456632"
 ---
 # <a name="manage-task-sequences-to-automate-tasks-in-configuration-manager"></a>Gérer des séquences de tâches pour automatiser des tâches dans Configuration Manager
 
@@ -391,6 +391,9 @@ Le message de notification suivant s’affiche quand l’utilisateur final ouvre
     -   **Quand aucun point de distribution local n’est disponible, utiliser un point de distribution distant** : indiquez si les clients peuvent utiliser les points de distribution d’un groupe de limites voisin pour télécharger le contenu exigé par la séquence de tâches.  
 
     - **Autoriser les clients à utiliser des points de distribution du groupe de limites de site par défaut** : indiquez si les clients doivent télécharger le contenu à partir d’un point de distribution du groupe de limites de site par défaut quand il n’est pas disponible sur le point de distribution des groupes de limites actifs ou voisins.  
+
+        > [!Note]  
+        > À compter de la version 1810, quand un appareil exécute une séquence de tâches et a besoin d’acquérir du contenu, il utilise des comportements de groupe de limites comparables à ceux du client Configuration Manager. Pour plus d’informations, consultez [Prise en charge des séquences de tâches pour les groupes de limites](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgr-osd).<!--1359025-->  
 
 11. À compter de Configuration Manager 1802, vous pouvez enregistrer les paramètres que vous voulez réutiliser. Pour cela, sous l’onglet **Résumé**, cliquez sur **Enregistrer comme modèle**. Entrez un nom pour le modèle et sélectionnez les paramètres à enregistrer.  
 

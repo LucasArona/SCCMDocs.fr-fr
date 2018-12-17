@@ -2,7 +2,7 @@
 title: Liste des rapports
 titleSuffix: Configuration Manager
 description: Passez en revue la liste des rapports fournis avec Configuration Manager. Les rapports sont répartis dans différentes catégories.
-ms.date: 07/30/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,14 +10,14 @@ ms.assetid: b7332ed3-8003-454b-bb12-1fdf8721425c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9d292d85ce5a30e56d7909d74b986ac408d29346
-ms.sourcegitcommit: 849391d3985b057027cae610bd3a79fdaa708b94
+ms.openlocfilehash: 01112dac89ba0fe9e18dabe186353506d9476213
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42584583"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456768"
 ---
-# <a name="list-of-reports-in-system-center-configuration-manager"></a>Liste des rapports dans System Center Configuration Manager
+# <a name="list-of-reports-in-configuration-manager"></a>Liste des rapports dans Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
@@ -28,7 +28,8 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="administrative-security"></a>Sécurité administrative  
- Les six rapports suivants sont répertoriés sous la catégorie **Sécurité administrative**.  
+
+Les six rapports suivants sont répertoriés sous la catégorie **Sécurité administrative**.  
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -42,7 +43,9 @@ Les rapports suivants sont fournis avec Configuration Manager. Les rapports sont
 
 
 ## <a name="alerts"></a>Alertes  
+
 Les deux rapports suivants sont répertoriés sous la catégorie **Alertes**.  
+
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
 |**Tableau de bord des alertes**|Affiche la synthèse de toutes les alertes différées qui ont été générées entre les dates de début et de fin spécifiées.|  
@@ -51,14 +54,15 @@ Les deux rapports suivants sont répertoriés sous la catégorie **Alertes**.
 
 
 ## <a name="asset-intelligence"></a>Asset Intelligence  
-Les 66 rapports suivants sont répertoriés sous la catégorie **Asset Intelligence**.  
+
+Les 67 rapports suivants sont répertoriés sous la catégorie **Asset Intelligence**.  
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
 |**Matériel 01A - Synthèse des ordinateurs d'un regroupement spécifique**|Affiche la vue de synthèse d'Asset Intelligence des ordinateurs inclus dans un regroupement que vous spécifiez.|  
-|**Matériel 03A - Utilisateurs d'ordinateurs principaux**|Affiche les utilisateurs et le nombre d'ordinateurs sur lesquels ils sont l'utilisateur principal.|  
+|**Matériel 03A - Utilisateurs d'ordinateurs principaux**|Affiche les utilisateurs et le nombre d’ordinateurs sur lesquels ils sont l’utilisateur principal.|  
 |**Matériel 03B - Ordinateurs d'un utilisateur de console principal spécifique**|Affiche tous les ordinateurs pour lesquels un utilisateur spécifié est l'utilisateur principal de la console.|  
-|**Matériel 04A - Ordinateurs avec plusieurs utilisateurs (partagés)**|Affiche les ordinateurs qui n'ont pas d'utilisateur principal car aucun utilisateur n'a un pourcentage de temps de connexion à la console supérieur à 66 %.|  
+|**Matériel 04A - Ordinateurs avec plusieurs utilisateurs (partagés)**|Affiche les ordinateurs qui n’ont pas d’utilisateur principal, car aucun utilisateur n’a un pourcentage de temps de connexion supérieur à 66 %.|  
 |**Matériel 05A - Utilisateurs de la console sur un ordinateur spécifique**|Affiche tous les utilisateurs de la console sur un ordinateur spécifié.|  
 |**Matériel 06A - Ordinateurs pour lesquels aucun utilisateur de console n'a pu être déterminé**|Aide les utilisateurs administratifs à identifier les ordinateurs pour lesquels la journalisation de sécurité doit être activée.|  
 |**Matériel 07A - Périphériques USB par fabricant**|Affiche les périphériques USB, regroupés par fabricant.|  
@@ -84,7 +88,7 @@ Les 66 rapports suivants sont répertoriés sous la catégorie **Asset Intellige
 |**Licence 06A - Nombre de processeurs pour les produits avec une licence par processeur**|Affiche le nombre total de processeurs sur des ordinateurs qui utilisent des produits Microsoft prenant en charge la gestion des licences pour chaque processeur.|  
 |**Licence 06B - Ordinateurs équipés d'un produit spécifique prenant en charge la gestion des licences par processeur**|Affiche la liste des ordinateurs sur lesquels est installé un produit Microsoft spécifié qui prend en charge la gestion des licences par processeur.|  
 |**Licence 14A - Rapport de rapprochement des licences en volume Microsoft**|Affiche le rapprochement entre les licences logicielles achetées via le contrat de licence en volume Microsoft et le nombre réel de logiciels.|  
-|**Licence 14B - Liste des logiciels Microsoft introuvables dans MVLS**|Ce rapport affiche les logiciels Microsoft en cours d'utilisation qui ne figurent pas dans le contrat de licence en volume Microsoft.|  
+|**Licence 14B - Liste des logiciels Microsoft introuvables dans MVLS**|Ce rapport affiche les logiciels Microsoft en cours d’utilisation qui ne figurent pas dans le contrat de licence en volume Microsoft.|  
 |**Licence 15A - Rapport de rapprochement des licences générales**|Affiche le rapprochement entre les licences logicielles générales achetées et le nombre réel de logiciels.|  
 |**Licence 15B - Rapport de rapprochement des licences générales par ordinateur**|Affiche les ordinateurs qui ont installé le produit sous licence avec une version spécifiée.|  
 |**Logiciel 01A - Synthèse des logiciels installés dans un regroupement spécifique**|Affiche la synthèse des logiciels installés, classés par nombre d'instances, répertoriés dans l'inventaire.|  
@@ -113,7 +117,7 @@ Les 66 rapports suivants sont répertoriés sous la catégorie **Asset Intellige
 |**Logiciel 10A - Titres des logiciels avec plusieurs légendes personnalisées spécifiques définies**|Affiche les titres des logiciels selon leur correspondance à tous les critères de légende personnalisée spécifiés. Il est possible de sélectionner jusqu'à trois légendes personnalisées pour affiner une recherche de titre de logiciel.|  
 |**Logiciel 10B - Ordinateurs équipés d'un logiciel avec une légende personnalisée spécifique**|Affiche tous les ordinateurs d'un regroupement sur lesquels est installé un logiciel spécifique avec une légende personnalisée.|  
 |**Logiciel 11A - Titres des logiciels avec une légende personnalisée spécifique définie**|Affiche les titres des logiciels selon leur correspondance à au moins un des critères de légende personnalisée spécifiés.|  
-|**Software 12A - Titres des logiciels sans légende personnalisée**|Affiche tous les titres des logiciels qui n'ont pas de légende personnalisée définie.|  
+|**Software 12A - Titres des logiciels sans légende personnalisée**|Affiche tous les titres des logiciels qui n’ont pas de légende personnalisée définie.|  
 |**Logiciel 14A - Recherche de logiciels dont la balise d'identification logicielle est activée**|Affiche le nombre de logiciels installés dont la balise d'identification logicielle est activée.|  
 |**Logiciel 14B - Ordinateurs sur lesquels sont installés des logiciels dont la balise d'identification logicielle est activée**|Affiche tous les ordinateurs sur lesquels sont installés des logiciels qui ont une balise d'identification logicielle spécifique activée.|  
 |**Logiciel 14C - Logiciels installés sur un ordinateur spécifique et dont la balise d'identification logicielle est activée**|Affiche tous les logiciels installés qui ont une balise d'identification logicielle spécifiée activée sur un ordinateur spécifié.|  
@@ -121,10 +125,12 @@ Les 66 rapports suivants sont répertoriés sous la catégorie **Asset Intellige
 |**Cycle de vie 02A : liste des machines avec des produits arrivés à expiration dans l'organisation**|Afficher les ordinateurs sur lesquels des produits arrivés à expiration sont installés. Vous pouvez filtrer ce rapport par nom de produit.|
 |**Cycle de vie 03A : liste des produits arrivés à expiration dans l'organisation**|Afficher les détails sur les produits de votre environnement dont les dates du cycle de vie ont expiré.|
 |**Cycle de vie 04A : vue d'ensemble du cycle de vie des produits**|Afficher une liste des cycles de vie des produits. Filtrez la liste par nom de produit et par nombre de jours avant l’expiration.|
+|**Cycle de vie 05A - Tableau de bord Cycle de vie du produit**|À compter de la version 1810, ce rapport comporte des informations comparables à celles du tableau de bord de la console.|
 
 
 
 ## <a name="client-push"></a>Installation Push du client  
+
 Les quatre rapports suivants sont répertoriés sous la catégorie **Push client**.  
 
 |Nom du rapport|Description|  
@@ -137,6 +143,7 @@ Les quatre rapports suivants sont répertoriés sous la catégorie **Push client
 
 
 ## <a name="client-status"></a>État du client  
+
 Les sept rapports suivants sont répertoriés sous la catégorie **État du client**.  
 
 |Nom du rapport|Description|  
@@ -152,6 +159,7 @@ Les sept rapports suivants sont répertoriés sous la catégorie **État du clie
 
 
 ## <a name="company-resource-access"></a>Accès aux ressources d'entreprise  
+
 Les trois rapports suivants sont répertoriés sous la catégorie **Accès aux ressources de l'entreprise**. 
 
 |Nom du rapport|Description|  
@@ -163,6 +171,7 @@ Les trois rapports suivants sont répertoriés sous la catégorie **Accès aux r
 
 
 ## <a name="compliance-and-settings-management"></a>Gestion de la conformité et des paramètres  
+
 Les 22 rapports suivants sont répertoriés sous la catégorie **Gestion de la conformité et des paramètres**. 
 
 |Nom du rapport|Description|  
@@ -172,16 +181,16 @@ Les 22 rapports suivants sont répertoriés sous la catégorie **Gestion de la c
 |**Conformité de l’accès conditionnel pour l’utilisateur**|Affiche la conformité de l’accès conditionnel détaillée pour un utilisateur spécifique.|
 |**Rapport de conformité de l’accès conditionnel**|Rapport de conformité de l’accès conditionnel pour chaque stratégie de conformité ciblée.|
 |**Détails des règles de compatibilité des éléments de configuration dans la ligne de base de configuration d'un composant**|Affiche des informations sur les règles évaluées comme compatibles pour un élément de configuration spécifié pour un appareil ou un utilisateur spécifié.|  
-|**Détails des règles en conflit pour les éléments de configuration de la ligne de base de configuration d'un composant**|Affiche des informations sur les règles d’un élément de configuration déployé en conflit avec d’autres règles. Les autres règles peuvent être contenues dans le même élément de configuration déployé ou dans un autre.|  
+|**Détails des règles en conflit pour les éléments de configuration de la ligne de base de configuration d'un composant**|Affiche des informations sur les règles d’un élément de configuration déployé en conflit avec d’autres règles. Comprend les autres règles qui peuvent être contenues dans le même élément de configuration déployé ou dans un autre.|  
 |**Détails des erreurs des éléments de configuration dans la ligne de base de configuration d'un composant**|Affiche des informations sur les erreurs générées par un élément de configuration spécifié pour un utilisateur ou un périphérique spécifié.|  
 |**Détails des règles de non-compatibilité des éléments de configuration dans la ligne de base de configuration d'un composant**|Affiche des informations sur les règles évaluées comme non compatibles pour un élément de configuration spécifié, pour un périphérique ou un utilisateur spécifié.|  
 |**Détails des règles corrigées des éléments de configuration dans la ligne de base de configuration d'un composant**|Affiche des informations sur les règles corrigées par un élément de configuration spécifié pour un utilisateur ou un périphérique spécifié.|  
 |**Liste des composants par état de compatibilité d'une ligne de base de configuration**|Affiche les périphériques ou utilisateurs d'un état de compatibilité spécifié selon l'évaluation d'une ligne de base de configuration spécifié.|  
 |**Liste des composants par état de compatibilité pour un élément de configuration d'une ligne de base de configuration**|Affiche les périphériques ou utilisateurs d'un état de compatibilité spécifié selon l'évaluation d'un élément de configuration spécifié.|  
-|**Liste d'applications et de périphériques non conformes pour un utilisateur spécifié**|Affiche des informations sur les utilisateurs et les périphériques qui ont installé des applications non conformes avec une stratégie que vous avez spécifiée.|  
+|**Liste d'applications et de périphériques non conformes pour un utilisateur spécifié**|Affiche des informations sur les utilisateurs et les appareils qui ont installé des applications non conformes avec une stratégie que vous avez spécifiée.|  
 |**Liste des règles en conflit avec la règle spécifique d'un composant**|Affiche une liste de règles qui sont en conflit avec une règle spécifiée pour un élément de configuration déployé.|  
-|**Liste des composants inconnus d'une ligne de base de configuration**|Affiche la liste des périphériques ou utilisateurs qui n'ont pas encore renvoyé de données de compatibilité pour une ligne de base de configuration spécifiée.|  
-|**Liste des composants inconnus d'un élément de configuration**|Affiche la liste des périphériques ou utilisateurs qui n'ont pas encore renvoyé de données de compatibilité pour un élément de configuration spécifié.|  
+|**Liste des composants inconnus d'une ligne de base de configuration**|Affiche la liste des appareils ou des utilisateurs qui n’ont pas encore renvoyé de données de compatibilité pour une base de référence de configuration spécifiée.|  
+|**Liste des composants inconnus d'un élément de configuration**|Affiche la liste des appareils ou des utilisateurs qui n’ont pas encore renvoyé de données de compatibilité pour un élément de configuration spécifié.|  
 |**Résumé des règles et des erreurs des éléments de configuration dans une ligne de base de configuration d'un composant**|Affiche une synthèse de l’état de compatibilité des règles et toutes les erreurs de réglage pour un élément de configuration spécifié. L’élément de configuration doit être déployé sur un appareil ou utilisateur.|  
 |**Résumé de conformité par ligne de base de configuration**|Affiche le résumé de la compatibilité générale des lignes de base de configuration déployées dans la hiérarchie.|  
 |**Résumé de compatibilité par élément de configuration pour une ligne de base de configuration**|Affiche le résumé de la compatibilité des éléments de configuration dans une ligne de base de configuration spécifiée.|  
@@ -190,8 +199,11 @@ Les 22 rapports suivants sont répertoriés sous la catégorie **Gestion de la c
 |**Résumé des utilisateurs ayant des applications non conformes**|Affiche des informations sur les utilisateurs qui ont installé des applications non conformes avec une stratégie que vous avez spécifiée.|  
 |**Acceptation des conditions générales**|Affiche les éléments des conditions générales et la version que chaque utilisateur a acceptés.|  
 
+
+
 ## <a name="data-warehouse"></a>Entrepôt de données  
-Les 7 rapports suivants sont répertoriés sous la catégorie **Entrepôt de données**. 
+
+Les sept rapports suivants sont répertoriés sous la catégorie **Entrepôt de données**. 
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -204,7 +216,8 @@ Les 7 rapports suivants sont répertoriés sous la catégorie **Entrepôt de don
 |**Résumé de la distribution de logiciels**|Historique : un résumé de la distribution de logiciels pour une publication et une machine spécifiques.|
 
 
-## <a name="device-management"></a>Gestion des appareils  
+## <a name="device-management"></a>Gestion des périphériques  
+
 Les 37 rapports suivants sont répertoriés sous la catégorie **Gestion des périphériques**. 
 
 |Nom du rapport|Description|  
@@ -236,7 +249,7 @@ Les 37 rapports suivants sont répertoriés sous la catégorie **Gestion des pé
 |**Périphériques mobiles non gérés car inscrits mais non affectés à un site**|Affiche les appareils mobiles qui ont été inscrits dans Configuration Manager et qui possèdent un certificat, mais qui n’ont pas terminé l’attribution de site.|  
 |**Périphériques mobiles et quantité spécifique de mémoire programme libre**|Affiche tous les appareils mobiles ainsi que la quantité spécifiée de mémoire programme libre.|  
 |**Périphériques mobiles avec une quantité spécifique de mémoire de stockage amovible libre**|Affiche tous les appareils mobiles ainsi que la quantité spécifiée de mémoire amovible libre.|  
-|**Périphériques mobiles rencontrant des problèmes de renouvellement de certificat**|Affiche les appareils mobiles inscrits qui n'ont pas réussi à renouveler leur certificat. Si vous ne renouvelez pas le certificat avant la période d’expiration, les appareils mobiles ne sont plus gérés.|  
+|**Périphériques mobiles rencontrant des problèmes de renouvellement de certificat**|Affiche les appareils mobiles inscrits qui n'ont pas réussi à renouveler leur certificat. Si vous ne renouvelez pas le certificat avant la période d’expiration, les appareils mobiles ne seront plus gérés.|  
 |**Périphériques mobiles avec une mémoire programme faible (inférieure à l'espace libre spécifié en Ko)**|Affiche les appareils mobiles pour lesquels la mémoire programme est inférieure à une taille spécifiée en Ko.|  
 |**Périphériques mobiles avec une mémoire de stockage amovible faible (inférieure à l'espace libre spécifié en Ko)**|Affiche les appareils mobiles pour lesquels la mémoire de stockage amovible est inférieure à une taille spécifiée en Ko.|  
 |**Nombre d’appareils inscrits par utilisateur dans Microsoft Intune**|Affiche les utilisateurs activés pour l’abonnement Microsoft Intune. Il indique également le nombre total d’appareils inscrits pour chaque utilisateur.|  
@@ -250,6 +263,7 @@ Les 37 rapports suivants sont répertoriés sous la catégorie **Gestion des pé
 
 
 ## <a name="driver-management"></a>Gestion des pilotes  
+
 Les 13 rapports suivants sont répertoriés sous la catégorie **Gestion des pilotes**. 
 
 |Nom du rapport|Description|  
@@ -271,7 +285,9 @@ Les 13 rapports suivants sont répertoriés sous la catégorie **Gestion des pil
 
 
 ## <a name="endpoint-protection"></a>Endpoint Protection  
+
 Les six rapports suivants sont répertoriés sous la catégorie **Endpoint Protection**. 
+
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
 |**Rapport d'activité des logiciels anti-programme malveillant**|Affiche une vue d'ensemble de l'activité des logiciels anti-programme malveillant.|  
@@ -284,7 +300,9 @@ Les six rapports suivants sont répertoriés sous la catégorie **Endpoint Prote
 
 
 ## <a name="hardware---cd-rom"></a>Matériel - CD-ROM  
+
 Les quatre rapports suivants sont répertoriés sous la catégorie **Matériel - CD-ROM**. 
+
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
 |**Informations de CD-ROM pour un ordinateur spécifique**|Affiche des informations sur les lecteurs de CD-ROM d'un ordinateur spécifié.|  
@@ -295,6 +313,7 @@ Les quatre rapports suivants sont répertoriés sous la catégorie **Matériel -
 
 
 ## <a name="hardware---disk"></a>Matériel - Disque  
+
 Les huit rapports suivants sont répertoriés sous la catégorie **Matériel - disque**. 
 
 |Nom du rapport|Description|  
@@ -311,6 +330,7 @@ Les huit rapports suivants sont répertoriés sous la catégorie **Matériel - d
 
 
 ## <a name="hardware---general"></a>Matériel – Général  
+
 Les cinq rapports suivants sont répertoriés sous la catégorie **Matériel - Général**.
 
 |Nom du rapport|Description|  
@@ -324,6 +344,7 @@ Les cinq rapports suivants sont répertoriés sous la catégorie **Matériel - G
 
 
 ## <a name="hardware---memory"></a>Matériel - Mémoire  
+
 Les cinq rapports suivants sont répertoriés sous la catégorie **Matériel - Mémoire**.
 
 |Nom du rapport|Description|  
@@ -337,6 +358,7 @@ Les cinq rapports suivants sont répertoriés sous la catégorie **Matériel - M
 
 
 ## <a name="hardware---modem"></a>Matériel - Modem  
+
 Les trois rapports suivants sont répertoriés sous la catégorie **Matériel - Modem**.
 
 |Nom du rapport|Description|  
@@ -348,6 +370,7 @@ Les trois rapports suivants sont répertoriés sous la catégorie **Matériel - 
 
 
 ## <a name="hardware---network-adapter"></a>Matériel - Carte réseau  
+
 Les rapports suivants sont répertoriés sous la catégorie **Matériel - Carte réseau**.
 
 |Nom du rapport|Description|  
@@ -359,6 +382,7 @@ Les rapports suivants sont répertoriés sous la catégorie **Matériel - Carte 
 
 
 ## <a name="hardware---processor"></a>Matériel - Processeur  
+
 Les cinq rapports suivants sont répertoriés sous la catégorie **Matériel - Processeur**.
 
 |Nom du rapport|Description|  
@@ -372,6 +396,7 @@ Les cinq rapports suivants sont répertoriés sous la catégorie **Matériel - P
 
 
 ## <a name="hardware---scsi"></a>Matériel - SCSI  
+
 Les cinq rapports suivants sont répertoriés sous la catégorie **Matériel - SCSI**.
 
 |Nom du rapport|Description|  
@@ -383,6 +408,7 @@ Les cinq rapports suivants sont répertoriés sous la catégorie **Matériel - S
 
 
 ## <a name="hardware---security"></a>Matériel - Sécurité
+
 Le rapport suivant est répertoriés sous la catégorie **Matériel - Sécurité**.
 
 |Nom du rapport|Description|  
@@ -392,6 +418,7 @@ Le rapport suivant est répertoriés sous la catégorie **Matériel - Sécurité
 
 
 ## <a name="hardware---sound-card"></a>Matériel - Carte audio  
+
 Les trois rapports suivants sont répertoriés sous la catégorie **Matériel - SCSI**.
 
 |Nom du rapport|Description|  
@@ -402,7 +429,8 @@ Les trois rapports suivants sont répertoriés sous la catégorie **Matériel - 
 
 
 
-## <a name="hardware---video-card"></a>Matériel – Carte vidéo  
+## <a name="hardware---video-card"></a>Matériel - Carte vidéo  
+
 Les trois rapports suivants sont répertoriés sous la catégorie **Matériel - Carte vidéo**.
 
 |Nom du rapport|Description|  
@@ -446,7 +474,6 @@ Les six rapports suivants sont répertoriés sous la catégorie **Réseau**.
 
 Les 10 rapports suivants sont répertoriés sous la catégorie **Système d'exploitation**.
 
-
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
 |**Historique des versions du système d'exploitation de l'ordinateur**|Affiche l'historique de l'inventaire du système d'exploitation sur un ordinateur spécifié.|  
@@ -480,7 +507,7 @@ Les 18 rapports suivants sont répertoriés sous la catégorie **Gestion de l'al
 |**Gestion de l'alimentation - Coût énergétique journalier**|Affiche le coût énergétique total pour un regroupement donné au cours des 31 derniers jours.|  
 |**Gestion de l'alimentation - Incidence sur l'environnement**|Affiche un graphique montrant les émissions de dioxyde de carbone (CO2) générées par un regroupement spécifié sur une période de temps précise.|  
 |**Gestion de l'alimentation - Incidence journalière sur l'environnement**|Affiche un graphique montrant les émissions de CO2 générées par un regroupement spécifié au cours des 31 derniers jours.|  
-|**Gestion de l'alimentation - Détails de l'ordinateur non mis en veille**|Affiche des informations détaillées sur les ordinateurs qui ne se sont pas mis en veille ou veille prolongée sur une période donnée.|  
+|**Gestion de l'alimentation - Détails de l'ordinateur non mis en veille**|Affiche des informations détaillées sur les ordinateurs qui ne se sont pas mis en veille ou en veille prolongée sur une période donnée.|  
 |**Gestion de l'alimentation - Rapport sur la non-mise en veille**|Affiche une liste de causes courantes empêchant les ordinateurs de se mettre en veille ou veille prolongée. Il indique également le nombre d’ordinateurs affectés par chaque cause sur une période donnée.|  
 |**Gestion de l'alimentation - Fonctions de gestion de l'alimentation**|Affiche les fonctions de gestion de l'alimentation des ordinateurs inclus dans le regroupement spécifié.|  
 |**Gestion de l'alimentation - Paramètres du mode de gestion de l'alimentation**|Affiche la liste globale des paramètres d'alimentation utilisés par les ordinateurs d'un regroupement spécifié.|  
@@ -489,6 +516,7 @@ Les 18 rapports suivants sont répertoriés sous la catégorie **Gestion de l'al
 
 
 ## <a name="replication-traffic"></a>Trafic de réplication  
+
 Les 10 rapports suivants sont répertoriés sous la catégorie **Trafic de réplication**.
 
 |Nom du rapport|Description|  
@@ -507,6 +535,7 @@ Les 10 rapports suivants sont répertoriés sous la catégorie **Trafic de répl
 
 
 ## <a name="site---client-information"></a>Site - Informations client  
+
 Les 19 rapports suivants sont répertoriés sous la catégorie **Site - Informations client**.
 
 |Nom du rapport|Description|  
@@ -519,30 +548,31 @@ Les 19 rapports suivants sont répertoriés sous la catégorie **Site - Informat
 |**Détails de l'état du déploiement des clients**|Affiche des informations de synthèse sur l'état des installations des clients.|  
 |**Rapport de réussite du déploiement des clients**|Affiche des informations détaillées sur les clients dont le déploiement a réussi.|  
 |**Clients non compatibles avec une communication HTTPS**|Affiche des informations détaillées sur chaque client exécutant l’outil HTTPS Communication Readiness et signalé comme étant dans l’impossibilité de communiquer via HTTPS.|  
-|**Ordinateurs attribués mais non installés pour un site précis**|Affiche une liste d’ordinateurs attribués à un site précis, mais qui ne rendent pas compte à ce site.|  
+|**Ordinateurs attribués mais non installés pour un site précis**|Affiche la liste des ordinateurs qui sont attribués à un site précis, mais qui ne lui envoient pas de rapports.|  
 |**Ordinateurs avec une version spécifique du client Configuration Manager**|Affiche une liste d'ordinateurs exécutant une version spécifique du logiciel client Configuration Manager.|  
 |**Nombre de clients et protocole utilisé pour la communication**|Affiche le résumé des méthodes de communication utilisées par les clients (HTTP ou HTTPS).|  
-|**Nombre de clients affectés et installés pour chaque site**|Affiche le nombre d'ordinateurs attribués et installés pour chaque site. Les clients possédant un emplacement réseau associé à plusieurs sites ne sont considérés comme installés que s'ils sont sous la supervision de ce site.|  
+|**Nombre de clients affectés et installés pour chaque site**|Affiche le nombre d'ordinateurs attribués et installés pour chaque site. Les clients disposant d’un emplacement réseau associé à plusieurs sites ne sont considérés comme installés que s’ils envoient des rapports à ce site.|  
 |**Nombre de clients compatibles avec une communication HTTPS**|Affiche des informations détaillées sur chaque client exécutant l’outil HTTPS Communication Readiness et signalé comme étant en mesure ou non de communiquer via HTTPS.|  
 |**Nombre de clients pour chaque site**|Affiche le nombre de clients de Configuration Manager installés par code de site.|  
 |**Nombre de clients de Configuration Manager par versions de client**|Affiche le nombre d’ordinateurs découverts par la version de client Configuration Manager.|  
-|**Détail des problèmes signalés jusqu'au point d'état de secours pour un regroupement spécifié**|Affiche des informations détaillées pour les problèmes signalés par les clients dans un regroupement spécifié. Un point d’état de secours doit avoir été attribué à ces clients.|  
-|**Détails des problèmes signalés jusqu'au point d'état de secours pour un site spécifié**|Affiche des informations détaillées sur les problèmes signalés par les clients dans un site spécifié. Un point d’état de secours doit avoir été attribué à ces clients.|  
-|**Récapitulatif des problèmes signalés jusqu'au point d'état de secours**|Affiche des informations sur tous les problèmes signalés par les clients. Un point d’état de secours doit avoir été attribué à ces clients.|  
-|**Récapitulatif des problèmes signalés jusqu'au point d'état de secours pour un regroupement spécifique**|Affiche des informations de synthèse pour les problèmes signalés par les clients dans un regroupement spécifié. Un point d’état de secours doit avoir été attribué à ces clients.|  
+|**Détail des problèmes signalés jusqu'au point d'état de repli pour un regroupement spécifié**|Affiche des informations détaillées pour les problèmes signalés par les clients dans un regroupement spécifié. Un point d’état de repli doit avoir été attribué à ces clients.|  
+|**Détails des problèmes signalés jusqu'au point d'état de repli pour un site spécifié**|Affiche des informations détaillées sur les problèmes signalés par les clients dans un site spécifié. Un point d’état de repli doit avoir été attribué à ces clients.|  
+|**Récapitulatif des problèmes signalés jusqu'au point d'état de repli**|Affiche des informations sur tous les problèmes signalés par les clients. Un point d’état de repli doit avoir été attribué à ces clients.|  
+|**Récapitulatif des problèmes signalés jusqu'au point d'état de repli pour un regroupement spécifique**|Affiche des informations de synthèse pour les problèmes signalés par les clients dans un regroupement spécifié. Un point d’état de repli doit avoir été attribué à ces clients.|  
 
 
 
-## <a name="site---discovery-and-inventory-information"></a>Site - Informations de découverte et d'inventaire  
+## <a name="site---discovery-and-inventory-information"></a>Site - Informations de découverte et d’inventaire  
+
 Les 10 rapports suivants sont répertoriés sous la catégorie **Site - Informations de découverte et d'inventaire**.
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
-|**Clients qui n'ont pas émis de rapports récemment (pendant le nombre de jours spécifié)**|Affiche la liste des clients qui n'ont pas signalé de données de découverte, d'inventaire matériel ou d'inventaire logiciel pendant un nombre de jours spécifié.|  
+|**Clients qui n'ont pas émis de rapports récemment (pendant le nombre de jours spécifié)**|Affiche la liste des clients qui n’ont pas envoyé de données de découverte, d’inventaire matériel ou d’inventaire logiciel pendant un nombre de jours spécifié.|  
 |**Ordinateurs découverts par un site spécifique**|Affiche une liste de tous les ordinateurs découverts par le site spécifié. Il montre également la date de la dernière découverte.|  
 |**Ordinateurs récemment découverts par une méthode de découverte**|Affiche une liste des ordinateurs découverts par le site pendant le nombre de jours spécifié. Il répertorie également les agents qui les ont découverts. Un même ordinateur peut apparaître plusieurs fois dans la liste s’il a été découvert par plusieurs agents.|  
-|**Ordinateurs non découverts récemment (dans un nombre de jours spécifié)**|Affiche une liste des ordinateurs qui n’ont pas été découverts récemment par le site. Il indique également le nombre de jours depuis leur découverte.|  
-|**Ordinateurs non inventoriés récemment (dans un nombre de jours spécifié)**|Affiche une liste des ordinateurs qui n’ont pas été inventoriés récemment par le site. Il indique également les dates des derniers inventaires des ordinateurs par le client.|  
+|**Ordinateurs non découverts récemment (dans un nombre de jours spécifié)**|Affiche la liste des ordinateurs qui n’ont pas été découverts récemment par le site. Il indique également le nombre de jours depuis leur découverte.|  
+|**Ordinateurs non inventoriés récemment (dans un nombre de jours spécifié)**|Affiche la liste des ordinateurs qui n’ont pas été inventoriés récemment par le site. Il indique également les dates des derniers inventaires des ordinateurs par le client.|  
 |**Ordinateurs susceptibles de partager le même identifiant Configuration Manager unique**|Affiche la liste des ordinateurs qui ont modifié leur nom. Un changement de nom est un symptôme possible d’un ordinateur qui partage un identificateur unique Configuration Manager avec un autre ordinateur.|  
 |**Ordinateurs ayant des adresses MAC en double**|Affiche les ordinateurs qui partagent une adresse MAC.|  
 |**Compter les ordinateurs dans les domaines de ressources ou groupes de travail**|Affiche le nombre d'ordinateurs dans chaque domaine de ressources ou groupe de travail.|  
@@ -552,6 +582,7 @@ Les 10 rapports suivants sont répertoriés sous la catégorie **Site - Informat
 
 
 ## <a name="site---general"></a>Site - Général  
+
 Les trois rapports suivants sont répertoriés sous la catégorie **Site - Général**.
 
 |Nom du rapport|Description|  
@@ -563,6 +594,7 @@ Les trois rapports suivants sont répertoriés sous la catégorie **Site - Gén�
 
 
 ## <a name="site---server-information"></a>Site - Informations sur le serveur  
+
 Le rapport suivant est répertorié sous la catégorie **Site - Informations sur le serveur**.
 
 |Nom du rapport|Description|  
@@ -572,6 +604,7 @@ Le rapport suivant est répertorié sous la catégorie **Site - Informations sur
 
 
 ## <a name="software---companies-and-products"></a>Logiciel - Sociétés et produits  
+
 Les 15 rapports suivants sont répertoriés sous la catégorie **Logiciel - Sociétés et produits**.
 
 |Nom du rapport|Description|  
@@ -586,7 +619,7 @@ Les 15 rapports suivants sont répertoriés sous la catégorie **Logiciel - Soci
 |**Compter les produits et versions inventoriés pour un produit spécifique**|Affiche la liste des versions inventoriées d'un produit spécifié, ainsi que le nombre d'ordinateurs sur lesquels chacune est installée.|  
 |**Décompte de toutes les instances de logiciels inscrits avec Ajout/Suppression de programmes**|Affiche le résumé de toutes les instances de logiciels installées et inscrites avec Ajout/Suppression de programmes ou Programmes et fonctionnalités sur des ordinateurs au sein du regroupement spécifié.|  
 |**Décompte des instances d'un logiciel spécifique inscrit avec Ajout/Suppression de programmes**|Affiche le nombre d'instances des packages logiciels spécifiés installés et inscrits dans Ajout/Suppression de programmes ou Programmes et fonctionnalités.|  
-|**Nombre de navigateurs par défaut**|Affiche le nombre de clients ayant spécifié un certain navigateur web par défaut sous Windows. </br>Utilisez la référence suivante pour les valeurs BrowserProgID courantes :</br> - AppXq0fevzme2pys62n3e0fbqa7peapykr8v : Microsoft Edge</br> - IE.HTTP : Microsoft Internet Explorer</br> - ChromeHTML : Google Chrome</br> - OperaStable : Opera Software</br> - FirefoxURL-308046B0AF4A39CB : Mozilla Firefox</br> - Inconnu : le système d’exploitation client ne prend pas en charge la requête, la requête n’a pas été exécutée ou un utilisateur ne s’est pas connecté|
+|**Nombre de navigateurs par défaut**|Affiche le nombre de clients ayant spécifié un certain navigateur web par défaut sous Windows. <br>Utilisez la référence suivante pour les valeurs BrowserProgID courantes :<br> - AppXq0fevzme2pys62n3e0fbqa7peapykr8v : Microsoft Edge<br> - IE.HTTP : Microsoft Internet Explorer<br> - ChromeHTML : Google Chrome<br> - OperaStable : Opera Software<br> - FirefoxURL-308046B0AF4A39CB : Mozilla Firefox<br> - Inconnu : le système d’exploitation client ne prend pas en charge la requête, la requête n’a pas été exécutée ou un utilisateur ne s’est pas connecté|
 |**Installations des applications Windows spécifiées**|Ce rapport répertorie tous les ordinateurs dotés d’une application Windows spécifiée.|  
 |**Produits sur un ordinateur spécifique**|Affiche le résumé des produits logiciels inventoriés et de leurs fabricants sur un ordinateur spécifié.|  
 |**Logiciels inscrits dans Ajout/Suppression de programmes sur un ordinateur spécifique**|Affiche le résumé des logiciels installés sur un ordinateur spécifié et inscrits dans Ajout/Suppression de programmes ou Programmes et fonctionnalités.|  
@@ -595,6 +628,7 @@ Les 15 rapports suivants sont répertoriés sous la catégorie **Logiciel - Soci
 
 
 ## <a name="software---files"></a>Fichiers logiciels  
+
 Les rapports suivants sont répertoriés sous la catégorie **Fichiers logiciels**.
 
 |Nom du rapport|Description|  
@@ -607,7 +641,8 @@ Les rapports suivants sont répertoriés sous la catégorie **Fichiers logiciels
 
 
 
-## <a name="software-distribution---application-monitoring"></a>Distribution de logiciels - Surveillance des applications  
+## <a name="software-distribution---application-monitoring"></a>Distribution de logiciels - Supervision des applications  
+
 Les 10 rapports suivants sont répertoriés sous la catégorie **Distribution de logiciels - Surveillance des applications**.
 
 |Nom du rapport|Description|  
@@ -626,6 +661,7 @@ Les 10 rapports suivants sont répertoriés sous la catégorie **Distribution de
 
 
 ## <a name="software-distribution---collections"></a>Distribution de logiciels - Regroupements  
+
 Les trois rapports suivants sont répertoriés sous la catégorie **Distribution de logiciels - Regroupements**.
 
 |Nom du rapport|Description|  
@@ -637,6 +673,7 @@ Les trois rapports suivants sont répertoriés sous la catégorie **Distribution
 
 
 ## <a name="software-distribution---content"></a>Distribution de logiciels - Contenu  
+
 Les 16 rapports suivants sont répertoriés sous la catégorie **Distribution de logiciels - Contenu**.
 
 |Nom du rapport|Description|  
@@ -648,12 +685,12 @@ Les 16 rapports suivants sont répertoriés sous la catégorie **Distribution de
 |**Tous les messages d'état pour un package spécifique sur un point de distribution spécifique**|Affiche tous les messages d'état pour un package spécifié sur un point de distribution spécifié.|  
 |**État de distribution du contenu de l'application**|Affiche des informations sur l'état de distribution du contenu de l'application.|  
 |**Applications ciblées pour le groupe de points de distribution**|Affiche des informations sur le contenu de l'application qui a été déployé sur un groupe de points de distribution spécifié.|  
-|**Applications qui ne sont pas synchronisées dans un groupe de points de distribution spécifié**|Affiche les applications pour lesquelles des fichiers de contenu associés n'ont pas été mis à jour avec la version la plus récente sur un groupe de points de distribution spécifié.|  
+|**Applications qui ne sont pas synchronisées dans un groupe de points de distribution spécifié**|Affiche les applications pour lesquelles des fichiers de contenu associés n’ont pas été mis à jour avec la version la plus récente sur un groupe de points de distribution spécifié.|  
 |**Groupe de points de distribution**|Affiche des informations sur un groupe de points de distribution spécifié.|  
 |**Résumé de l'utilisation des points de distribution**|Affiche le résumé de l'utilisation de chaque point de distribution.|  
 |**État de distribution d'un package donné**|Affiche l'état de distribution du contenu du package spécifié sur chaque point de distribution.|  
 |**Packages ciblés pour le groupe de points de distribution**|Affiche des informations sur les packages qui ciblent un groupe de points de distribution spécifié.|  
-|**Packages non synchronisés sur un groupe de points de distribution spécifié**|Affiche les packages pour lesquels des fichiers de contenu associés n'ont pas été mis à jour avec la version la plus récente sur un groupe de points de distribution spécifié.|  
+|**Packages non synchronisés sur un groupe de points de distribution spécifié**|Affiche les packages pour lesquels des fichiers de contenu associés n’ont pas été mis à jour avec la version la plus récente sur un groupe de points de distribution spécifié.|  
 |**Rejet du contenu par une source de cache d’homologue**|Affiche le nombre de rejets par une source de cache d’homologue par groupe de limites.|
 |**Rejet du contenu par une source de cache d’homologue par condition**|Affiche les sources de cache d’homologue ayant rejeté la diffusion de contenu en fonction d’une condition.|
 |**Détails du rejet du contenu par une source de cache d’homologue**|Affiche le nom du contenu rejeté par une source d’homologue.|
@@ -661,6 +698,7 @@ Les 16 rapports suivants sont répertoriés sous la catégorie **Distribution de
 
 
 ## <a name="software-distribution---package-and-program-deployment"></a>Distribution de logiciels - Déploiement du package et du programme 
+
 Les cinq rapports suivants sont répertoriés sous la catégorie **Distribution de logiciels - Déploiement du package et du programme**.
 
 |Nom du rapport|Description|  
@@ -674,6 +712,7 @@ Les cinq rapports suivants sont répertoriés sous la catégorie **Distribution 
 
 
 ## <a name="software-distribution---package-and-program-deployment-status"></a>Distribution de logiciels - État du déploiement du package et du programme  
+
 Les cinq rapports suivants sont répertoriés sous la catégorie **Distribution de logiciels - État du déploiement du package et du programme**.
 
 |Nom du rapport|Description|  
@@ -687,12 +726,13 @@ Les cinq rapports suivants sont répertoriés sous la catégorie **Distribution 
 
 
 ## <a name="software-metering"></a>Contrôle de logiciel  
+
 Les 13 rapports suivants sont répertoriés sous la catégorie **Contrôle de logiciel**.
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
 |**Toutes les règles de contrôle de logiciel appliquées à ce site**|Affiche la liste de toutes les règles de contrôle de logiciel au niveau du site.|  
-|**Ordinateurs disposant d'un programme contrôlé mais qui ne l'ont pas encore exécuté depuis une date donnée**|Affiche tous les ordinateurs avec l’application contrôlée spécifiée, mais aucun utilisateur n’a exécuté ce programme depuis la date spécifiée.|  
+|**Ordinateurs disposant d’un programme contrôlé, mais qui ne l’ont pas exécuté depuis une date donnée**|Affiche tous les ordinateurs avec l’application contrôlée spécifiée, mais aucun utilisateur n’a exécuté ce programme depuis la date spécifiée.|  
 |**Ordinateurs ayant exécuté un programme contrôlé spécifique**|Affiche la liste des ordinateurs qui ont exécuté des programmes correspondant à la règle de contrôle de logiciel spécifiée pendant le mois et l'année spécifiés.|  
 |**Utilisation simultanée de tous les programmes contrôlés**|Affiche le nombre maximal d'utilisateurs qui ont exécuté simultanément chaque logiciel contrôlé pendant le mois et l'année spécifiés.|  
 |**Analyse de la tendance d'utilisation simultanée d'un programme contrôlé spécifique**|Affiche le nombre maximal d'utilisateurs qui ont exécuté simultanément le logiciel contrôlé spécifié au cours de chaque mois de l'année précédente.|  
@@ -708,6 +748,7 @@ Les 13 rapports suivants sont répertoriés sous la catégorie **Contrôle de lo
 
 
 ## <a name="software-updates---a-compliance"></a>Mises à jour logicielles - Compatibilité A  
+
 Les huit rapports suivants sont répertoriés sous la catégorie **Mises à jour logicielles - Compatibilité A**.
 
 |Nom du rapport|Description|  
@@ -724,6 +765,7 @@ Les huit rapports suivants sont répertoriés sous la catégorie **Mises à jour
 
 
 ## <a name="software-updates---b-deployment-management"></a>Mises à jour logicielles - Gestion du déploiement B  
+
 Les huit rapports suivants sont répertoriés sous la catégorie **Mises à jour logicielles - Gestion du déploiement B**.
 
 |Nom du rapport|Description|  
@@ -735,11 +777,12 @@ Les huit rapports suivants sont répertoriés sous la catégorie **Mises à jour
 |**Gestion 5 - Déploiements ciblant un ordinateur**|Affiche tous les déploiements de mises à jour logicielles sur un ordinateur spécifié.|  
 |**Gestion 6 - Déploiements contenant une mise à jour spécifique**|Affiche tous les déploiements qui contiennent une mise à jour logicielle spécifiée et le regroupement cible associé au déploiement.|  
 |**Gestion 7 - Mises à jour dans un déploiement dont le contenu manque**|Affiche les mises à jour logicielles incluses dans un déploiement spécifié qui n’ont pas récupéré tout le contenu associé. Cet état empêche les clients d’installer ces mises à jour et d’atteindre 100 % de compatibilité pour le déploiement.|  
-|**Gestion 8 - Contenu d'ordinateurs manquant (secondaire)**|Affiche tous les ordinateurs qui nécessitent la mise à jour logicielle spécifiée, mais le contenu associé n’est pas encore distribué à un point de distribution.|  
+|**Gestion 8 - Contenu d'ordinateurs manquant (secondaire)**|Affiche tous les ordinateurs qui nécessitent la mise à jour logicielle spécifiée, mais dont le contenu associé n’a pas encore été distribué à un point de distribution.|  
 
 
 
 ## <a name="software-updates---c-deployment-states"></a>Mises à jour logicielles - États du déploiement C  
+
 Les six rapports suivants sont répertoriés sous la catégorie **Mises à jour logicielles - États du déploiement C**.
 
 |Nom du rapport|Description|  
@@ -754,6 +797,7 @@ Les six rapports suivants sont répertoriés sous la catégorie **Mises à jour 
 
 
 ## <a name="software-updates---d-scan"></a>Mises à jour logicielles - Analyse D  
+
 Les quatre rapports suivants sont répertoriés sous la catégorie **Mises à jour logicielles - Analyse D**.
 
 |Nom du rapport|Description|  
@@ -778,7 +822,8 @@ Les quatre rapports suivants sont répertoriés sous la catégorie **Mises à jo
 
 
 
-## <a name="state-migration"></a>Migration de l'état  
+## <a name="state-migration"></a>Migration de l’état  
+
 Les trois rapports suivants sont répertoriés sous la catégorie **Migration de l'état**.
 
 |Nom du rapport|Description|  
@@ -790,6 +835,7 @@ Les trois rapports suivants sont répertoriés sous la catégorie **Migration de
 
 
 ## <a name="status-messages"></a>Messages d'état  
+
 Les 12 rapports suivants sont répertoriés sous la catégorie **Messages d'état**.
 
 |Nom du rapport|Description|  
@@ -809,7 +855,7 @@ Les 12 rapports suivants sont répertoriés sous la catégorie **Messages d'éta
 
 
 
-## <a name="status-messages---audit"></a>Messages d'état - Audit  
+## <a name="status-messages---audit"></a>Messages d’état - Audit  
 
 Les trois rapports suivants sont répertoriés sous la catégorie **Messages d'état - Audit**.
 
@@ -821,15 +867,16 @@ Les trois rapports suivants sont répertoriés sous la catégorie **Messages d'�
 
 
 
-## <a name="task-sequence---deployment-status"></a>État du déploiement de séquence de tâches  
+## <a name="task-sequence---deployment-status"></a>Séquence de tâches - État du déploiement  
+
 Les 11 rapports suivants sont répertoriés sous la catégorie **Séquence de tâches - État du déploiement**.
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
 |**Toutes les ressources système pour un déploiement de séquences de tâches dans un état spécifié**|Affiche la liste des ordinateurs de destination pour le déploiement de séquences de tâches spécifié dans un état de déploiement spécifié.|  
 |**Toutes les ressources système pour un déploiement de séquences de tâches qui est dans un état spécifique et disponible pour les ordinateurs inconnus**|Affiche la liste des ordinateurs de destination pour le déploiement de séquences de tâches spécifié présentant l'état de déploiement spécifié.|  
-|**Nombre de ressources système auxquelles des déploiements de séquences de tâches sont affectés mais pas encore exécutés**|Affiche le nombre d'ordinateurs qui ont accepté des séquences de tâches, mais qui n'en ont pas encore exécuté une.|  
-|**Historique d'un déploiement de séquences de tâches sur un ordinateur**|Affiche l'état de chaque étape du déploiement de séquences de tâches spécifié sur l'ordinateur de destination spécifié. Si aucun rapport n'est créé, la séquence de tâches n'a pas commencé sur l'ordinateur.|  
+|**Nombre de ressources système auxquelles des déploiements de séquences de tâches sont affectés mais pas encore exécutés**|Affiche le nombre d’ordinateurs qui ont accepté des séquences de tâches, mais qui n’en ont pas encore exécuté une.|  
+|**Historique d'un déploiement de séquences de tâches sur un ordinateur**|Affiche l'état de chaque étape du déploiement de séquences de tâches spécifié sur l'ordinateur de destination spécifié. Si aucun enregistrement n’est retourné, la séquence de tâches n’a pas encore démarré sur l’ordinateur.|  
 |**Liste des ordinateurs ayant dépassé la durée spécifique d'exécution d'un déploiement de séquences de tâches**|Affiche la liste des ordinateurs de destination qui ont dépassé la durée spécifiée d'exécution d'une séquence de tâches.|  
 |**Durée d'exécution d'un déploiement de séquences de tâches spécifique sur un ordinateur de destination spécifique**|Affiche le temps total nécessaire pour réussir une séquence de tâches spécifiée sur un ordinateur spécifié.|  
 |**Durée d'exécution de chaque étape d'un déploiement de séquences de tâches sur un ordinateur de destination spécifique**|Affiche le temps nécessaire pour exécuter chaque chaque étape du déploiement de séquences de tâches spécifié sur l'ordinateur de destination spécifié.|  
@@ -841,6 +888,7 @@ Les 11 rapports suivants sont répertoriés sous la catégorie **Séquence de t�
 
 
 ## <a name="task-sequence---deployments"></a>Séquence de tâches - Déploiements  
+
 Les 11 rapports suivants sont répertoriés sous la catégorie **Séquence de tâches - Déploiements**.
 
 |Nom du rapport|Description|  
@@ -860,6 +908,7 @@ Les 11 rapports suivants sont répertoriés sous la catégorie **Séquence de t�
 
 
 ## <a name="task-sequence---progress"></a>Séquence de tâches - Progression  
+
 Les cinq rapports suivants sont répertoriés sous la catégorie **Séquence de tâches - Progression**.
 
 |Nom du rapport|Description|  
@@ -868,11 +917,12 @@ Les cinq rapports suivants sont répertoriés sous la catégorie **Séquence de 
 |**Progression d'une séquence de tâches**|Affiche la progression de la séquence de tâches spécifiée.|  
 |**Progression de toutes les séquences de tâches**|Affiche le résumé de la progression de toutes les séquences de tâches.|  
 |**Progression des séquences de tâches pour les déploiements de systèmes d'exploitation**|Affiche la progression de toutes les séquences de tâches qui déploient des systèmes d'exploitation.|  
-|**État de tous les ordinateurs inconnus**|Affiche une liste des ordinateurs qui étaient inconnus au moment où ils ont exécuté un déploiement de séquences de tâches, et indique si ce sont désormais des ordinateurs connus.|  
+|**État de tous les ordinateurs inconnus**|Affiche la liste des ordinateurs qui étaient inconnus au moment où ils ont exécuté un déploiement de séquences de tâches, et indique si ce sont désormais des ordinateurs connus.|  
 
 
 
 ## <a name="task-sequences---references"></a>Séquences de tâches - Références  
+
 Le rapport suivant est répertoriés sous la catégorie **Séquence de tâches - Références**.
 
 |Nom du rapport|Description|  
@@ -914,6 +964,7 @@ Les deux rapports suivants sont répertoriés sous la catégorie **Utilisateur -
 
 
 ## <a name="user-data-and-profiles-health"></a>Intégrité du profil et des données utilisateur  
+
 Les quatre rapports suivants sont répertoriés sous la catégorie **Intégrité du profil et des données utilisateur**.
 
 |Nom du rapport|Description|  
@@ -926,6 +977,7 @@ Les quatre rapports suivants sont répertoriés sous la catégorie **Intégrité
 
 
 ## <a name="users"></a>Utilisateurs  
+
 Les trois rapports suivants sont répertoriés sous la catégorie **Utilisateurs**.
 
 |Nom du rapport|Description|  
@@ -937,6 +989,7 @@ Les trois rapports suivants sont répertoriés sous la catégorie **Utilisateurs
 
 
 ## <a name="virtual-applications"></a>Applications virtuelles  
+
 Les sept rapports suivants sont répertoriés sous la catégorie **Applications virtuelles**.
 
 |Nom du rapport|Description|  
@@ -952,7 +1005,8 @@ Les sept rapports suivants sont répertoriés sous la catégorie **Applications 
 
 
 ## <a name="volume-purchase-programs---apple"></a>Programmes d’achat en volume (VPP) - Apple
-Le rapport suivant est répertorié sous la catégorie **Programmes d’achat en volume - Apple**.
+
+Le rapport suivant est listé sous la catégorie **Programmes d’achat en volume - Apple**.
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
@@ -961,6 +1015,7 @@ Le rapport suivant est répertorié sous la catégorie **Programmes d’achat en
 
 
 ## <a name="vulnerability-assessment"></a>Évaluation de la vulnérabilité
+
 Le rapport suivant est répertorié sous la catégorie **Évaluation de la vulnérabilité**.
 
 |Nom du rapport|Description|  
@@ -970,6 +1025,7 @@ Le rapport suivant est répertorié sous la catégorie **Évaluation de la vuln�
 
 
 ## <a name="wake-on-lan"></a>Éveil par appel réseau  
+
 Les sept rapports suivants sont répertoriés sous la catégorie **Wake On LAN**.
 
 |Nom du rapport|Description|  

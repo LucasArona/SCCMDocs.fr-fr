@@ -5,17 +5,17 @@ description: Découvrez comment déployer manuellement ou automatiquement des mi
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 07/30/2018
+ms.date: 11/27/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 04536d51-3bf7-45e5-b4af-36ceed10583d
-ms.openlocfilehash: d456d7232133333bf6cd88374d5288227f6dfea1
-ms.sourcegitcommit: 2ea71b048307a93a2db7898700aea984a8f88824
+ms.openlocfilehash: f59ca099325028ccf29904a2108939d0047df745
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52304280"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52455941"
 ---
 # <a name="deploy-software-updates"></a>Déployer des mises à jour logicielles  
 
@@ -36,7 +36,15 @@ Une fois que vous avez créé le déploiement, le site envoie une stratégie de 
 
 Si vous configurez un déploiement de mises à jour logicielles requises, celles-ci sont automatiquement installées à l'échéance prévue. L'utilisateur sur l'ordinateur client peut également planifier ou lancer l'installation des mises à jour logicielles avant l'échéance. Après la tentative d'installation, les ordinateurs clients renvoient des messages d'état au serveur de site pour indiquer si l'installation des mises à jour logicielles a réussi. Pour plus d’informations sur les déploiements de mises à jour logicielles, consultez [Software update deployment workflows](/sccm/sum/understand/software-updates-introduction#BKMK_DeploymentWorkflows).  
 
-Il existe deux principaux scénarios de déploiement des mises à jour logicielles : le déploiement manuel et le déploiement automatique. On commence en général par déployer manuellement les mises à jour logicielles afin de créer une référence pour les clients, avant de gérer les mises à jour logicielles sur les clients à l’aide d’un déploiement automatique.  
+Il existe trois principaux scénarios de déploiement des mises à jour logicielles : 
+- [Déploiement manuel](#BKMK_ManualDeployment)  
+- [Déploiement automatique](#bkmk_auto)  
+- [Déploiement par phases](#bkmk_phased)  
+
+En général, vous commencez par déployer manuellement les mises à jour logicielles afin de créer une référence pour vos clients, puis vous gérez les mises à jour logicielles sur les clients à l’aide d’un déploiement automatique ou par phases.  
+
+> [!Note]  
+> Vous ne pouvez pas utiliser une règle de déploiement automatique avec un déploiement par phases.
 
 
 
@@ -65,7 +73,7 @@ Pour plus d’informations et pour obtenir des instructions détaillées, consul
 
 
 
-## <a name="automatically-deploy-software-updates"></a>Déployer automatiquement des mises à jour logicielles
+## <a name="bkmk_auto"></a> Déployer automatiquement des mises à jour logicielles
 
 Configurez le déploiement automatique de mises à jour logicielles à l’aide d’une règle de déploiement automatique (ADR). Cette méthode est courante pour le déploiement des mises à jour logicielles mensuelles (généralement appelées « Patch Tuesday ») et pour la gestion des mises à jour de définitions. Vous définissez les critères d’une règle ADR afin d’automatiser le processus de déploiement. La liste suivante fournit le flux de travail général pour le déploiement automatique des mises à jour logicielles :  
 
@@ -100,4 +108,12 @@ Chaque nouveau déploiement que vous ajoutez :
 
 
 Pour plus d’informations et pour obtenir des étapes détaillées, consultez [Déployer automatiquement des mises à jour logicielles](automatically-deploy-software-updates.md).
+
+
+
+## <a name="bkmk_phased"></a> Déployer les mises à jour logicielles par phases
+
+<!--1358146--> À compter de la version 1810, créez des déploiement par phases pour les mises à jour logicielles. Ils permettent d’orchestrer un lancement coordonné et séquencé de logiciels en fonction de groupes et de critères personnalisables.
+
+Pour plus d’informations, voir [Créer des déploiements par phases](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json).
 

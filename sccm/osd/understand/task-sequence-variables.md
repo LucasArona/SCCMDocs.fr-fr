@@ -2,7 +2,7 @@
 title: Référence sur la variable de séquence de tâches
 titleSuffix: Configuration Manager
 description: En savoir plus sur les variables pour contrôler et personnaliser une séquence de tâches Configuration Manager.
-ms.date: 08/17/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cfecd7441abd206bdff1d2f6618d763a30dddc51
-ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
+ms.openlocfilehash: cde62242fc4db99d762d670037aad22bd25d6c00
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42756263"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456734"
 ---
 # <a name="task-sequence-variables-in-configuration-manager"></a>Variables de séquence de tâches dans Configuration Manager
 
@@ -124,6 +124,12 @@ Pour plus d'informations, consultez [Utilisation des variables de séquence de t
  *S’applique à l’étape [Définir des variables dynamiques](task-sequence-steps.md#BKMK_SetDynamicVariables).*
 
  Spécifie les adresses IP utilisées par l’ordinateur.
+
+
+### <a name="SMSTSLastActionName"></a> _SMSTSLastActionName
+ *À compter de la version 1810*  
+
+ Stocke le nom de la dernière action exécutée. Cette variable se rapporte à **_SMSTSLastActionRetCode**. La séquence de tâches consigne ces valeurs dans le fichier smsts.log. Cette variable est utile lors du dépannage d’une séquence de tâches. Lorsqu’une étape échoue, un script personnalisé peut inclure le nom de l’étape avec le code de retour.
 
 
 ### <a name="SMSTSLastActionRetCode"></a> _SMSTSLastActionRetCode
@@ -709,7 +715,7 @@ Pour plus d'informations, consultez [Utilisation des variables de séquence de t
 
  *S’applique aux étapes suivantes :*  
  - [Appliquer les paramètres réseau](task-sequence-steps.md#BKMK_ApplyNetworkSettings)   
- - [Joindre le domaine ou le groupe de travail](task-sequence-steps.md#BKMK_JoinDomainorWorkgroup)  
+ - [Joindre un domaine ou un groupe de travail](task-sequence-steps.md#BKMK_JoinDomainorWorkgroup)  
 
 
  (entrée)
@@ -744,7 +750,7 @@ Pour plus d'informations, consultez [Utilisation des variables de séquence de t
 
  *S’applique aux étapes suivantes :*  
  - [Appliquer les paramètres réseau](task-sequence-steps.md#BKMK_ApplyNetworkSettings)  
- - [Joindre le domaine ou le groupe de travail](task-sequence-steps.md#BKMK_JoinDomainorWorkgroup)  
+ - [Joindre un domaine ou un groupe de travail](task-sequence-steps.md#BKMK_JoinDomainorWorkgroup)  
 
 
  (entrée)

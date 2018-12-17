@@ -2,7 +2,7 @@
 title: Versions Current Branch
 titleSuffix: Configuration Manager
 description: Consultez l’historique des versions de Configuration Manager, puis découvrez les phases de service proposées.
-ms.date: 07/30/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 35b5baec-d313-46aa-9d14-c443aa0d6c09
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8a8f646b1cd535809689daacb1390fd79f8ce5c1
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: dd8116bc74f855fff956d0bb201691c741a6d351
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383777"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52455986"
 ---
 # <a name="support-for-configuration-manager-current-branch-versions"></a>Prise en charge des versions Current Branch de Configuration Manager
 
@@ -33,8 +33,8 @@ Figure 1. Exemple de la superposition du cycle de publication pour la prise en 
 > [!NOTE]  
 >  La dernière version Current Branch est toujours en phase de maintenance **Mises à jour de sécurité et mises à jour critiques**. Cette déclaration de support signifie que si vous rencontrez une erreur de code qui nécessite une mise à jour critique, vous devez avoir la dernière version Current Branch afin de recevoir un correctif. Toutes les autres versions Current Branch prises en charge sont autorisées à recevoir uniquement les mises à jour de sécurité.
 > - Pour les versions 1710 et ultérieures, toute prise en charge se termine après l’expiration du cycle de vie de 18 mois des versions Current Branch.
-> - Pour les versions antérieures à la version 1710, toute prise en charge se termine après l’expiration du cycle de vie de 12 mois.
-
+> - Pour la version 1706 et les versions antérieures, la prise en charge se termine après l’expiration du cycle de vie de 12 mois.
+> 
 > Mettez à jour votre environnement Configuration Manager avec la dernière version avant l’expiration de la prise en charge de votre version actuelle.
 
 Pour obtenir la liste des versions Current Branch, consultez [Détails de la version](/sccm/core/servers/manage/updates#version-details).

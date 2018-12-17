@@ -2,7 +2,7 @@
 title: Point de distribution cloud
 titleSuffix: Configuration Manager
 description: Planifiez et concevez la distribution de contenu logiciels via Microsoft Azure avec des points de distribution cloud dans Configuration Manager.
-ms.date: 09/10/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 3cd9c725-6b42-427d-9191-86e67f84e48c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 79b17ba00274459401dc81035833163e75939be0
-ms.sourcegitcommit: 2badee2b63ae63687795250e298f463474063100
+ms.openlocfilehash: 4673da59da7fede2f425948472c31a620d13a258
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601141"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456292"
 ---
 # <a name="use-a-cloud-distribution-point-in-configuration-manager"></a>Utiliser un point de distribution cloud dans Configuration Manager
 
@@ -51,7 +51,7 @@ Le point de distribution cloud prend en charge plusieurs fonctionnalités égale
 
 -   Gérer les points de distribution cloud individuellement ou comme membres de groupes de points de distribution  
 
--   Utiliser un point de distribution cloud comme emplacement de contenu de repli  
+-   Utiliser un point de distribution cloud comme emplacement de contenu de secours  
 
 -   Prend en charge des clients intranet et Internet  
 
@@ -87,12 +87,15 @@ Le déploiement et le fonctionnement du point de distribution cloud incluent les
 ### <a name="azure-resource-manager"></a>Azure Resource Manager
 <!--1322209--> À compter de la version 1806, créez un point de distribution cloud en utilisant un **déploiement Azure Resource Manager**. [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview) est une plateforme moderne permettant de gérer l’ensemble des ressources de la solution comme une seule entité, nommée [groupe de ressources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups). Lors du déploiement d’un point de distribution cloud avec Azure Resource Manager, le site utilise Azure Active Directory (Azure AD) pour authentifier et créer les ressources cloud nécessaires. Le certificat de gestion Azure classique n’est pas nécessaire pour ce déploiement modernisé.  
 
+> [!Note]  
+> Cette fonctionnalité ne permet pas la prise en charge des fournisseurs de services cloud Azure. Les déploiements de points de distribution cloud avec Azure Resource Manager continuent d’utiliser le service cloud classique, que ne prend pas en charge le fournisseur de services cloud. Pour plus d’informations, consultez les [services Azure disponibles auprès du fournisseur de services cloud Azure](/azure/cloud-solution-provider/overview/azure-csp-available-services).  
+
 L’Assistant Point de distribution cloud propose toujours l’option de **déploiement de service classique** à l’aide d’un certificat de gestion Azure. Pour simplifier le déploiement et la gestion des ressources, Microsoft recommande d’utiliser le modèle de déploiement Azure Resource Manager pour tous les nouveaux points de distribution cloud. Si possible, redéployez les points de distribution cloud existants avec Resource Manager.
 
-Configuration Manager ne migre pas les points de distribution cloud classiques existants vers le modèle de déploiement Azure Resource Manager. Créez de nouveaux points de distribution cloud à l’aide de déploiements Azure Resource Manager, puis supprimez les points de distribution cloud classiques. 
+> [!Important]  
+> Depuis la version 1810, l’utilisation du déploiement de service Classic dans Azure est déprécié dans Configuration Manager. Cette version est la dernière à prendre en charge la création de ces déploiements Azure. Cette fonctionnalité sera supprimée dans la première version de Configuration Manager publiée après le 1er juillet 2019. Déplacez votre passerelle de gestion cloud et vos points de distribution cloud vers des déploiements Azure Resource Manager avant cette date. <!--SCCMDocs-pr issue #2993-->  
 
-> [!IMPORTANT]  
-> Cette fonctionnalité ne permet pas la prise en charge des fournisseurs de services cloud Azure. Les déploiements de points de distribution cloud avec Azure Resource Manager continuent d’utiliser le service cloud classique, que ne prend pas en charge le fournisseur de services cloud. Pour plus d’informations, consultez les [services Azure disponibles auprès du fournisseur de services cloud Azure](/azure/cloud-solution-provider/overview/azure-csp-available-services).  
+Configuration Manager ne migre pas les points de distribution cloud classiques existants vers le modèle de déploiement Azure Resource Manager. Créez de nouveaux points de distribution cloud à l’aide de déploiements Azure Resource Manager, puis supprimez les points de distribution cloud classiques. 
 
 
 ### <a name="hierarchy-design"></a>Conception de hiérarchie
@@ -110,7 +113,7 @@ Pour déterminer s’il faut inclure les points de distribution cloud dans des g
 
 - Les clients Internet ne s’appuient pas sur des groupes de limites. Ils utilisent seulement des points de distribution accessibles sur Internet ou des points de distribution cloud. Si vous utilisez seulement des points de distribution cloud pour traiter ces types de clients, vous n’avez pas besoin de les inclure dans les groupes de limites.  
 
-- Si vous voulez que les clients sur votre réseau interne utilisent un point de distribution cloud, celui-ci doit se trouver dans le même groupe de limites que les clients. Les clients placent les points de distribution cloud en dernière priorité dans leur liste de sources de contenu, car un coût est associé au téléchargement de contenu en dehors d’Azure. Ainsi, un point de distribution cloud est généralement utilisé comme source de repli pour les clients intranet. Si vous voulez une conception où le cloud est utilisé en premier, concevez vos groupes de limites pour répondre à cette exigence métier. Pour plus d’informations, consultez [Configurer des groupes de limites](/sccm/core/servers/deploy/configure/boundary-groups).  
+- Si vous voulez que les clients sur votre réseau interne utilisent un point de distribution cloud, celui-ci doit se trouver dans le même groupe de limites que les clients. Les clients placent les points de distribution cloud en dernière priorité dans leur liste de sources de contenu, car un coût est associé au téléchargement de contenu en dehors d’Azure. Ainsi, un point de distribution cloud est généralement utilisé comme source de secours pour les clients intranet. Si vous voulez une conception où le cloud est utilisé en premier, concevez vos groupes de limites pour répondre à cette exigence métier. Pour plus d’informations, consultez [Configurer des groupes de limites](/sccm/core/servers/deploy/configure/boundary-groups).  
 
 
 Même si vous installez des points de distribution cloud dans des régions spécifiques d’Azure, les clients ne sont pas informés des régions Azure. Ils sélectionnent un point de distribution cloud de façon aléatoire. Si vous installez des points de distribution cloud dans plusieurs régions et qu’un client en reçoit plusieurs dans la liste des emplacements de contenu, le client peut ne pas utiliser un point de distribution cloud de la même région Azure.  
@@ -134,12 +137,14 @@ Quand vous utilisez un point de distribution cloud dans votre hiérarchie, aidez
 
 - Le serveur de site nécessite un **accès Internet** pour déployer et gérer le service cloud.  
 
+- Lorsque vous utilisez la méthode de déploiement **Azure Resource Manager**, intégrez Configuration Manager à [Azure AD](/sccm/core/servers/deploy/configure/azure-services-wizard) pour la **gestion cloud**. La *découverte des utilisateurs* Azure AD n’est pas nécessaire.  
+
 - Si vous utilisez la méthode de déploiement classique Azure, vous avez besoin d’un **certificat de gestion Azure**. Pour plus d’informations, consultez la section [Certificats](#bkmk_certs) ci-dessous.   
 
     > [!TIP]  
     > À compter de Configuration Manager version 1806, utilisez le modèle de déploiement **Azure Resource Manager**. Il ne nécessite pas ce certificat de gestion.  
-
-- Si vous utilisez la méthode de déploiement **Azure Resource Manager**, intégrez Configuration Manager à [Azure AD](/sccm/core/clients/deploy/deploy-clients-cmg-azure). La découverte des utilisateurs Azure AD n’est pas nécessaire.  
+    > 
+    > La méthode de déploiement classique est dépréciée depuis la version 1810.   
 
 - Un **certificat d’authentification serveur**. Pour plus d’informations, consultez la section [Certificats](#bkmk_certs) ci-dessous.  
 
@@ -327,6 +332,8 @@ Si vous utilisez la méthode de déploiement classique Azure, vous avez besoin d
 
 > [!TIP]  
 > À compter de Configuration Manager version 1806, utilisez le modèle de déploiement **Azure Resource Manager**. Il ne nécessite pas ce certificat de gestion.  
+> 
+> La méthode de déploiement classique est dépréciée depuis la version 1810.   
 
 Pour réduire la complexité, utilisez le même certificat de gestion Azure pour tous les déploiements classiques de points de distribution cloud et de passerelles de gestion cloud, sur tous les abonnements Azure et tous les sites Configuration Manager.
 
@@ -357,7 +364,7 @@ Un certificat d’authentification client n’est pas nécessaire. Le client n�
 
 ### <a name="can-my-on-premises-clients-use-a-cloud-distribution-point"></a>Mes clients locaux peuvent-ils utiliser un point de distribution cloud ?
 
-Oui. Si vous voulez que les clients sur votre réseau interne utilisent un point de distribution cloud, celui-ci doit se trouver dans le même groupe de limites que les clients. Les clients placent les points de distribution cloud en dernière priorité dans leur liste de sources de contenu, car un coût est associé au téléchargement de contenu en dehors d’Azure. Ainsi, un point de distribution cloud est généralement utilisé comme source de repli pour les clients intranet. Si vous voulez une conception où le cloud est utilisé en premier, concevez vos groupes de limites en conséquence. Pour plus d’informations, consultez [Configurer des groupes de limites](/sccm/core/servers/deploy/configure/boundary-groups).  
+Oui. Si vous voulez que les clients sur votre réseau interne utilisent un point de distribution cloud, celui-ci doit se trouver dans le même groupe de limites que les clients. Les clients placent les points de distribution cloud en dernière priorité dans leur liste de sources de contenu, car un coût est associé au téléchargement de contenu en dehors d’Azure. Ainsi, un point de distribution cloud est généralement utilisé comme source de secours pour les clients intranet. Si vous voulez une conception où le cloud est utilisé en premier, concevez vos groupes de limites en conséquence. Pour plus d’informations, consultez [Configurer des groupes de limites](/sccm/core/servers/deploy/configure/boundary-groups).  
 
 
 ### <a name="do-i-need-azure-expressroute"></a>Ai-je besoin d’Azure ExpressRoute ?

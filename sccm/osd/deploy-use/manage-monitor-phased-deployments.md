@@ -2,7 +2,7 @@
 title: Gérer et surveiller les déploiements par phases
 titleSuffix: Configuration Manager
 description: Découvrez comment gérer et surveiller les déploiements par phases de logiciels dans Configuration Manager.
-ms.date: 07/30/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,18 +10,21 @@ ms.assetid: dc245916-bc11-4983-9c4d-015f655007c1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1889ba3ea19d27676089f2a9a24cef812c9f526c
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 5324e00f17770feca25d40c645d8e344df797f21
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385860"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456326"
 ---
 # <a name="manage-and-monitor-phased-deployments"></a>Gérer et surveiller les déploiements par phases
 
 Cet article décrit comment gérer et surveiller les déploiements par phases. Les tâches de gestion incluent le démarrage manuel de la phase suivante et l’interruption ou la reprise d’une phase. 
 
-Vous devez tout d’abord [créer un déploiement par phases](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence). 
+Vous devez tout d’abord créer un déploiement par phases : 
+- [Application](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
+- [Mise à jour logicielle](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json)  
+- [Séquence de tâches](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)  
 
 
 
@@ -31,7 +34,14 @@ Lorsque vous sélectionnez le paramètre **Commencer manuellement la deuxième p
 
 1. La méthode de lancement de cette action varie en fonction du type de logiciel que vous déployez :  
 
-    - **Application** (uniquement dans la version 1806 ou ultérieure) : accédez à **Bibliothèque de logiciels**, développez **Gestion des applications** et sélectionnez **Applications**.   
+    - **Application** (uniquement dans la version 1806 ou ultérieure) : accédez à l’espace de travail **Bibliothèque de logiciels**, développez **Gestion des applications** et sélectionnez **Applications**.   
+
+    - **Mise à jour logicielle** (uniquement dans la version 1810 ou ultérieure) : accédez à l’espace de travail **Bibliothèque de logiciels**, puis sélectionnez un des nœuds suivants :    
+        - mises à jour logicielles  
+            - **Toutes les mises à jour logicielles**  
+            - **Groupes de mises à jour logicielles**   
+        - Maintenance de Windows 10, **toutes les mises à jour Windows 10**  
+        - Gestion des clients Office 365, **mises à jour Office 365**  
 
     - **Séquence de tâches** : accédez à l’espace de travail **Bibliothèque de logiciels**, développez **Systèmes d’exploitation**, puis sélectionnez **Séquences de tâches**.   
 
@@ -47,11 +57,18 @@ Lorsque vous sélectionnez le paramètre **Commencer manuellement la deuxième p
 
 ## <a name="bkmk_suspend"></a> Interrompre et reprendre des phases 
 
-Vous pouvez avoir besoin d’interrompre ou de reprendre manuellement un déploiement par phases. Par exemple, vous venez de créer un déploiement par phases pour une séquence de tâches. Pendant la période de surveillance de la phase dans votre groupe pilote, vous remarquez un grand nombre d’échecs. Vous interrompez le déploiement par phases afin d’arrêter l’exécution de la séquence de tâches sur d’autres appareils. Après avoir résolu le problème, vous reprenez le déploiement par phases pour continuer le processus. 
+Vous pouvez interrompre ou reprendre manuellement un déploiement par phases. Par exemple, vous venez de créer un déploiement par phases pour une séquence de tâches. Pendant la période de surveillance de la phase dans votre groupe pilote, vous remarquez un grand nombre d’échecs. Vous interrompez le déploiement par phases afin d’arrêter l’exécution de la séquence de tâches sur d’autres appareils. Après avoir résolu le problème, vous reprenez le déploiement par phases pour continuer le processus. 
 
 1. La méthode de lancement de cette action varie en fonction du type de logiciel que vous déployez :  
 
-    - **Application** (uniquement dans la version 1806 ou ultérieure) : accédez à **Bibliothèque de logiciels**, développez **Gestion des applications** et sélectionnez **Applications**.   
+    - **Application** (uniquement dans la version 1806 ou ultérieure) : accédez à l’espace de travail **Bibliothèque de logiciels**, développez **Gestion des applications** et sélectionnez **Applications**.   
+
+    - **Mise à jour logicielle** (uniquement dans la version 1810 ou ultérieure) : accédez à l’espace de travail **Bibliothèque de logiciels**, puis sélectionnez un des nœuds suivants :    
+        - mises à jour logicielles  
+            - **Toutes les mises à jour logicielles**  
+            - **Groupes de mises à jour logicielles**   
+        - Maintenance de Windows 10, **toutes les mises à jour Windows 10**  
+        - Gestion des clients Office 365, **mises à jour Office 365**  
 
     - **Séquence de tâches** : accédez à l’espace de travail **Bibliothèque de logiciels**, développez **Systèmes d’exploitation**, puis sélectionnez **Séquences de tâches**. Sélectionnez une séquence de tâches existante, puis cliquez sur **Créer un déploiement par phases** dans le ruban.  
 
@@ -91,8 +108,9 @@ Ce tableau de bord montre les informations suivantes pour chaque phase du déplo
 
 Utilisez la liste déroulante **Select Phase** (Sélectionnez la phase) pour changer l’affichage de la vignette **Critères de réussite**. Cette vignette compare la valeur **Objectif de la phase** par rapport à la conformité actuelle du déploiement. Avec les paramètres par défaut, l’objectif de la phase est de 95 %. Cette valeur signifie que le déploiement doit présenter une conformité de 95 % pour passer à la phase suivante. 
 
-Dans cet exemple, l’objectif de la phase est de 65 % et la conformité actuelle est de 66,7 %. Comme la première phase répondait aux critères de réussite, le déploiement par phases a automatiquement commencé la deuxième phase.
-![Exemple de vignette Critères de réussite dans la fenêtre État du déploiement par phases](media/pod-status-success-criteria-tile.png)
+Dans cet exemple, l’objectif de la phase est de 65 % et la conformité actuelle est de 66,7 %. Comme la première phase répondait aux critères de réussite, le déploiement par phases a automatiquement commencé la deuxième phase.  
+
+![Exemple de vignette Critères de réussite dans État du déploiement par phases](media/pod-status-success-criteria-tile.png)
 
 L’objectif de la phase est le même que le **pourcentage de réussite du déploiement** dans la page de paramètres de la phase *suivante*. C’est cette deuxième phase qui définit les critères de réussite de la première phase selon lesquels le déploiement par phases peut démarrer la phase suivante. Pour voir ce paramètre : 
 

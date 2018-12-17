@@ -2,7 +2,7 @@
 title: Planifier la sécurité
 titleSuffix: Configuration Manager
 description: Découvrez les bonnes pratiques et d’autres informations relatives à la sécurité dans Configuration Manager.
-ms.date: 10/22/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 2a216814-ca8c-4d2e-bcef-dc00966a3c9f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e03c2b53044225eeb790d70474868e337a4cc997
-ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
+ms.openlocfilehash: 5332fa778b343a5eaae93a08db0826823fffce42
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411457"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456377"
 ---
 # <a name="plan-for-security-in-configuration-manager"></a>Planifier la sécurité dans Configuration Manager
 
@@ -40,6 +40,8 @@ Cet article décrit les concepts à prendre en compte lors de la planification d
 - [Planifier l’administration basée sur des rôles](#BKMK_PlanningForRBA)  
 
 - [Planifier Azure Active Directory](#bkmk_planazuread)  
+
+- [Planifier l’authentification du fournisseur SMS](#bkmk_auth)
 
 
 
@@ -409,6 +411,25 @@ La chaîne retournée est la clé racine approuvée. Vérifiez qu’elle corresp
 
 
  Pour plus d’informations sur Azure AD, consultez la [documentation d’Azure Active Directory](https://docs.microsoft.com/azure/active-directory/).
+
+
+
+## <a name="bkmk_auth"></a> Planifier l’authentification du fournisseur SMS
+<!--1357013--> 
+
+Depuis la version 1810, vous pouvez spécifier le niveau d’authentification minimal pour les administrateurs qui accèdent aux sites Configuration Manager. Cette fonctionnalité force les administrateurs à se connecter à Windows avec le niveau requis. Cela s’applique à tous les composants qui accèdent au fournisseur SMS. Par exemple, la console Configuration Manager, les méthodes SDK et les cmdlets Windows PowerShell. 
+
+Cette configuration est un paramètre à l’échelle de la hiérarchie. Avant de modifier ce paramètre, assurez-vous que tous les administrateurs Configuration Manager peuvent se connecter à Windows avec le niveau d’authentification requis. 
+
+Les niveaux ci-dessous sont disponibles :
+
+- **Authentification Windows** : exige une authentification avec les informations d'identification du domaine Active Directory.   
+
+- **Authentification par certificat** : exige l’authentification avec un certificat valide émis par une autorité de certification PKI approuvée.  
+
+- **Authentification Windows Hello Entreprise** : exige une authentification forte à deux facteurs liée à un appareil et utilisant la biométrie ou un code PIN.  
+
+Pour plus d’informations, consultez [Planifier le fournisseur SMS](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_auth). 
 
 
 

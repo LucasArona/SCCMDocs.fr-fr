@@ -2,7 +2,7 @@
 title: Créer des applications
 titleSuffix: Configuration Manager
 description: Créez des applications avec des types de déploiement, des méthodes de détection et des spécifications pour installer les logiciels.
-ms.date: 07/30/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 848b81ee9e1d6d9ebc189a2d8cb0126648f91be0
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 947dfac82db43e5cb21d8304d31be23219bb83aa
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385182"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456649"
 ---
 # <a name="create-applications-in-configuration-manager"></a>Créer des applications dans Configuration Manager
 
@@ -238,9 +238,13 @@ Dans la page **Contenu**, spécifiez les informations suivantes :
 
     - **Début de l’installation dans** : spécifiez éventuellement le dossier contenant le programme d’installation pour le type de déploiement. Ce dossier peut être un chemin absolu sur le client, ou un chemin vers le dossier du point de distribution contenant les fichiers d’installation.  
 
-- **Programme de désinstallation** : spécifiez éventuellement le nom du programme de désinstallation, ainsi que les paramètres requis, le cas échéant.  
+- **Programme de désinstallation** : spécifiez éventuellement le nom du programme de désinstallation et les paramètres obligatoires, le cas échéant.  
 
     - **Début de la désinstallation dans** : spécifiez éventuellement le dossier contenant le programme de désinstallation pour le type de déploiement. Ce dossier peut être un chemin absolu sur le client. Il peut aussi s’agir d’un chemin relatif sur un point de distribution du dossier contenant le package.  
+
+- **Réparer le programme** : depuis la version 1810, pour les types de déploiement Windows Installer et Programme d’installation de script, spécifiez éventuellement le nom du programme de réparation et les paramètres obligatoires, le cas échéant.<!--1357866-->  
+
+    - **Début de la réparation dans** : spécifiez éventuellement le dossier contenant le programme de réparation pour le type de déploiement. Ce dossier peut être un chemin absolu sur le client. Il peut aussi s’agir d’un chemin relatif sur un point de distribution du dossier contenant le package.  
 
 - **Exécutez l'installation et désinstallez le programme en tant que processus 32 bits sur des clients 64 bits**: utilisez les emplacements de fichier et de Registre 32 bits sur des ordinateurs fonctionnant sous Windows pour exécuter le programme d'installation pour le type de déploiement.  
 
@@ -262,7 +266,7 @@ Quand vous affichez les propriétés d’un type de déploiement, les options su
 
 - **Options de déploiement** : indiquez si les clients doivent télécharger l’application quand ils utilisent un point de distribution à partir des groupes de limites de site par défaut ou d’un groupe voisin.  
 
-- **Autoriser les clients à partager du contenu avec d’autres clients sur le même sous-réseau**: indiquez si vous souhaitez activer l’utilisation de BranchCache pour les téléchargements du contenu. Pour plus d’informations, consultez [BranchCache](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#branchcache). À partir de la version 1802, BranchCache est toujours activé sur les clients. Ce paramètre est supprimé, car les clients utilisent BranchCache si le point de distribution le prend en charge.  
+- **Autoriser les clients à partager du contenu avec d’autres clients sur le même sous-réseau**: indiquez si vous souhaitez activer l’utilisation de BranchCache pour les téléchargements du contenu. Pour plus d’informations, consultez [BranchCache](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#branchcache). Depuis la version 1802, BranchCache est toujours activé sur les clients. Ce paramètre est supprimé, car les clients utilisent BranchCache si le point de distribution le prend en charge.  
 
 
 ### <a name="bkmk_dt-detect"></a> Options de la **méthode de détection** du type de déploiement   

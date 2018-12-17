@@ -10,12 +10,12 @@ ms.assetid: e102fd1a-76df-4d8e-b1b0-10ee18318f67
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5d7c967ce02c009cd9659c7956f7ca79f4a34faf
-ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
+ms.openlocfilehash: 03b34c09a5fef63316bb1d9d1a94dbbfc3ccf69f
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42755970"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456258"
 ---
 # <a name="how-to-manage-collections-in-configuration-manager"></a>Comment gérer des regroupements dans Configuration Manager
 
@@ -73,40 +73,11 @@ Aidez-vous des informations générales de cet article pour effectuer les tâche
 
 
 #### <a name="client-notification"></a>Notification du client
- Indique à tous les clients du regroupement d’appareils sélectionnés d’effectuer immédiatement l’une des actions suivantes :
-
- - **Télécharger la stratégie d’ordinateur** : actualiser la stratégie de l’appareil. Pour plus d’informations, consultez [Lancer une récupération de stratégie pour un client Configuration Manager](/sccm/core/clients/manage/manage-clients#BKMK_PolicyRetrieval).  
-
- - **Télécharger la stratégie utilisateur** : actualiser la stratégie de l’appareil.  
-
- - **Collecter les données de découverte** : déclencher les clients pour envoyer un enregistrement de données de découverte (DDR). Pour plus d’informations, consultez [Découverte par pulsations d’inventaire](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutHeartbeat).  
-
- - **Collecter l’inventaire logiciel** : déclencher les clients pour exécuter un cycle d’inventaire logiciel. Pour plus d’informations, consultez [Présentation de l’inventaire logiciel](/sccm/core/clients/manage/inventory/introduction-to-software-inventory).  
-
- - **Collecter l’inventaire matériel** : déclencher les clients pour exécuter un cycle d’inventaire matériel. Pour plus d’informations, consultez [Présentation de l’inventaire matériel](/sccm/core/clients/manage/inventory/introduction-to-hardware-inventory).  
-
- - **Évaluer les déploiements d’applications** : déclencher les clients pour exécuter un cycle d’évaluation du déploiement application. Pour plus d'informations, consultez [Planifier la réévaluation des déploiements](/sccm/core/clients/deploy/about-client-settings#schedule-re-evaluation-for-deployments).  
-
- - **Évaluer les déploiements de mises à jour logicielles** : déclencher les clients pour exécuter un cycle d’évaluation du déploiement de mises à jour logicielles. Pour plus d’informations, consultez [Présentation de mises à jour logicielles](/sccm/sum/understand/software-updates-introduction).  
-
- - **Basculez vers le point de mise à jour logicielle suivant** : déclenchez les clients pour basculer vers le point de mise à jour logicielle suivant. Pour plus d’informations, consultez [Basculement de point de mise à jour logicielle](/sccm/sum/plan-design/plan-for-software-updates#BKMK_SUPSwitching).  
-
- - **Évaluer l’attestation d’intégrité de l’appareil** : déclenchez les clients Windows 10 pour vérifier et envoyer leur dernier état d’intégrité de l’appareil. Pour plus d’informations, consultez [Attestation d’intégrité](/sccm/core/servers/manage/health-attestation).  
-
- - **Vérifier la conformité de l'accès conditionnel** : déclenchez les clients pour vérifier leur conformité avec l’accès conditionnel. Pour plus d’informations, consultez [Gérer l’accès aux services O365 pour PC](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm).  
+ Pour plus d’informations, consultez [Notifications du client](/sccm/core/clients/manage/client-notification).
 
 
 #### <a name="endpoint-protection"></a>Endpoint Protection
- Indique à tous les clients du regroupement d’appareils sélectionnés d’effectuer immédiatement l’une des actions suivantes :
-
- - **Analyse complète** : déclencher Endpoint Protection ou Windows Defender pour exécuter une analyse *complète* des logiciels malveillants  
-
- - **Analyse rapide** : déclencher Endpoint Protection ou Windows Defender pour exécuter une analyse *rapide* des logiciels malveillants  
-
- - **Télécharger la définition** : déclencher Endpoint Protection ou Windows Defender pour télécharger les dernières définitions de logiciels anti-programme malveillant  
-
-
- Pour plus d’informations, consultez [Endpoint Protection dans Configuration Manager](/sccm/protect/deploy-use/endpoint-protection).
+ Pour plus d’informations, consultez [Notifications du client](/sccm/core/clients/manage/client-notification).
 
 
 #### <a name="export"></a>Exporter

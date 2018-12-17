@@ -2,7 +2,7 @@
 title: Configurer les services Azure
 titleSuffix: Configuration Manager
 description: Connectez votre environnement Configuration Manager aux services Azure pour la gestion cloud, Upgrade Readiness, Microsoft Store pour Entreprises et Log Analytics.
-ms.date: 03/22/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a26a653e-17aa-43eb-ab36-0e36c7d29f49
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1ea47941be51d1bf38de53203aad00c02d0a11d3
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.openlocfilehash: 0e1cdef0acc799fc60c622f11e4c9c7426dfc19c
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43893768"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456454"
 ---
 # <a name="configure-azure-services-for-use-with-configuration-manager"></a>Configurer les services Azure à utiliser avec Configuration Manager
 
@@ -63,10 +63,10 @@ Le tableau suivant répertorie des informations sur chacun des services.
 
 |Service  |Locataires  |Clouds  |Application web  |Application native  |Actions  |
 |---------|---------|---------|---------|---------|---------|
-|Gestion cloud avec</br>découverte d’utilisateurs Azure AD | Plusieurs | Public | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) | Importer, Créer |
+|Gestion cloud avec<br>découverte d’utilisateurs Azure AD | Plusieurs | Public, privé | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) | Importer, Créer |
 |Connecteur Log Analytics | Un | Public, privé | ![Pris en charge](media/green_check.png) | ![Non pris en charge](media/Red_X.png) | Importation |
 |Upgrade Readiness | Un | Public | ![Pris en charge](media/green_check.png) | ![Non pris en charge](media/Red_X.png) | Importation |
-|Microsoft Store pour</br>Professionnel | Un | Public | ![Pris en charge](media/green_check.png) | ![Non pris en charge](media/Red_X.png) | Importer, Créer |
+|Microsoft Store pour<br>Professionnel | Un | Public | ![Pris en charge](media/green_check.png) | ![Non pris en charge](media/Red_X.png) | Importer, Créer |
 
 
 ### <a name="about-azure-ad-apps"></a>À propos des applications Azure AD
@@ -75,7 +75,8 @@ Des services Azure différents nécessitent des configurations distinctes, que v
 
 Vous pouvez utiliser une seule application pour plusieurs services. Il n’existe qu’un seul objet à gérer dans Configuration Manager et Azure AD. Quand la clé de sécurité de l’application expire, il vous suffit d’actualiser une clé.
 
-La configuration la plus sécurisée consiste à utiliser des applications distinctes pour chaque service. Une application pour un service peut nécessiter des autorisations supplémentaires qui s’avèrent inutiles pour un autre service. L’utilisation d’une application pour différents services peut fournir à l’application plus d’autorisations que nécessaire. 
+<!-- The most secure configuration is using separate apps for each service. An app for one service might require additional permissions that another service doesn't require. Using one app for different services can provide the app with more permissions than it otherwise requires. 
+ --> 
 
 Quand vous créez des services Azure supplémentaires dans l’Assistant, Configuration Manager est conçu pour réutiliser les informations qui sont communes aux services. Ce comportement vous évite d’avoir à entrer les mêmes informations plusieurs fois. 
 
@@ -91,9 +92,15 @@ Pour plus d’informations sur les applications Azure, commencez par les article
 
 ## <a name="before-you-begin"></a>Avant de commencer
 
-Après avoir choisi le service auquel vous souhaitez vous connecter, reportez-vous au tableau dans [Détails sur le service](#service-details). Ce tableau fournit les informations nécessaires pour terminer l’Assistant Services Azure. Ayez préalablement une discussion avec votre administrateur Azure AD. Décidez si vous créez manuellement les applications à l’avance dans le portail Azure pour en importer ensuite les détails dans Configuration Manager. Vous pouvez aussi utiliser Configuration Manager pour créer directement les applications dans Azure AD. Pour collecter les données nécessaires à partir d’Azure AD, passez en revue les informations contenues dans les autres sections de cet article.
+Après avoir choisi le service auquel vous souhaitez vous connecter, reportez-vous au tableau dans [Détails sur le service](#service-details). Ce tableau fournit les informations nécessaires pour terminer l’Assistant Services Azure. Ayez préalablement une discussion avec votre administrateur Azure AD. Déterminez, parmi les actions suivantes, celles à effectuer : 
 
-Certains services nécessitent que les applications Azure AD disposent d’autorisations spécifiques. Passez en revue les informations pour chaque service afin de déterminer les autorisations requises. Par exemple, avant de pouvoir importer une application web, un administrateur Azure doit tout d’abord la créer dans le [portail Azure](https://portal.azure.com). Lors de la configuration du connecteur Upgrade Readiness ou Log Analytics, vous devez donner à votre application web tout juste inscrite une autorisation de *contributeur* sur le groupe de ressources qui contient l’espace de travail approprié. Cette autorisation permet à Configuration Manager d’accéder à cet espace de travail. Au moment d’attribuer l’autorisation, recherchez le nom de l’inscription d’application dans le panneau **Ajouter des utilisateurs** du portail Azure. Ce processus est le même que lors de la [fourniture à Configuration Manager d’autorisations sur Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#grant-configuration-manager-with-permissions-to-log-analytics). Un administrateur Azure doit attribuer ces autorisations avant que vous n’importiez l’application dans Configuration Manager.
+- Créez manuellement les applications à l’avance dans le portail Microsoft Azure. Importez ensuite les détails d’application dans Configuration Manager.  
+
+- Utilisez Configuration Manager pour créer directement les applications dans Azure AD. Pour collecter les données nécessaires à partir d’Azure AD, passez en revue les informations contenues dans les autres sections de cet article.  
+
+Certains services nécessitent que les applications Azure AD disposent d’autorisations spécifiques. Passez en revue les informations pour chaque service afin de déterminer les autorisations requises. Par exemple, avant de pouvoir importer une application web, un administrateur Azure doit tout d’abord la créer dans le [portail Azure](https://portal.azure.com). 
+
+Lors de la configuration du connecteur Upgrade Readiness ou Log Analytics, donnez à votre application web tout juste inscrite une autorisation de *contributeur* sur le groupe de ressources qui contient l’espace de travail approprié. Cette autorisation permet à Configuration Manager d’accéder à cet espace de travail. Au moment d’attribuer l’autorisation, recherchez le nom de l’inscription d’application dans le panneau **Ajouter des utilisateurs** du portail Azure. Ce processus est le même que lors de la [fourniture à Configuration Manager d’autorisations sur Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#grant-configuration-manager-with-permissions-to-log-analytics). Un administrateur Azure doit attribuer ces autorisations avant que vous n’importiez l’application dans Configuration Manager.
 
 
 
@@ -101,7 +108,7 @@ Certains services nécessitent que les applications Azure AD disposent d’autor
 
 1.  Dans la console Configuration Manager, accédez à l’espace de travail **Administration**, développez **Services cloud**, puis sélectionnez le nœud **Services Azure**.  
 
-2.  Sous l’onglet **Accueil** du ruban, dans le groupe **Services Azure**, cliquez sur **Configurer les services Azure**.  
+2.  Sous l’onglet **Accueil** du ruban, dans le groupe **Services Azure**, sélectionnez **Configurer les services Azure**.  
 
 3.  Dans la page **Services Azure** de l’Assistant Services Azure :  
 
@@ -111,7 +118,7 @@ Certains services nécessitent que les applications Azure AD disposent d’autor
 
     3. Sélectionnez le service Azure que vous souhaitez connecter à Configuration Manager.  
 
-4. Cliquez sur **Suivant** pour passer à la page [Propriétés de l’application Azure](#azure-app-properties) de l’Assistant Services Azure.  
+4. Sélectionnez **Suivant** pour passer à la page [Propriétés de l’application Azure](#azure-app-properties) de l’Assistant Services Azure.  
 
 
 
@@ -120,10 +127,12 @@ Certains services nécessitent que les applications Azure AD disposent d’autor
 Dans la page **Application** de l’Assistant Services Azure, sélectionnez d’abord **l’environnement Azure** dans la liste. Reportez-vous au tableau dans [Détails sur le service](#service-details) pour connaître l’environnement actuellement disponible pour le service.
 
 Le reste de la page Application varie selon le service spécifique. Reportez-vous au tableau dans [Détails sur le service](#service-details) pour connaître le type d’application utilisé par le service et l’action que vous pouvez effectuer. 
-- Si l’application prend en charge les deux actions Importer et Créer, cliquez sur **Parcourir**. Cette action ouvre la [boîte de dialogue Application serveur](#server-app-dialog) ou la [boîte de dialogue Application cliente](#client-app-dialog).
-- Si l’application prend uniquement en charge l’action Importer, cliquez sur **Importer**. Cette action ouvre la [boîte de dialogue Importer des applications (serveur)](#import-apps-dialog-server) ou la [boîte de dialogue Importer des applications (client)](#import-apps-dialog-client).
 
-Après avoir spécifié les applications dans cette page, cliquez sur **Suivant** pour passer à la page [Configuration ou Découverte](#configuration-or-discovery) de l’Assistant Services Azure.
+- Si l’application prend en charge les deux actions Importer et Créer, sélectionnez **Parcourir**. Cette action ouvre la [boîte de dialogue Application serveur](#server-app-dialog) ou la [boîte de dialogue Application cliente](#client-app-dialog).  
+
+- Si l’application prend uniquement en charge l’action Importer, sélectionnez **Importer**. Cette action ouvre la [boîte de dialogue Importer des applications (serveur)](#import-apps-dialog-server) ou la [boîte de dialogue Importer des applications (client)](#import-apps-dialog-client).
+
+Après avoir spécifié les applications dans cette page, sélectionnez **Suivant** pour passer à la page [Configuration ou Découverte](#configuration-or-discovery) de l’Assistant Services Azure.
 
 ### <a name="web-app"></a>Application web
 
@@ -131,21 +140,21 @@ Il s’agit d’une application Azure AD de type *Application/API web*, égaleme
 
 #### <a name="server-app-dialog"></a>Boîte de dialogue Application serveur
 
-Quand vous cliquez sur **Parcourir** pour **Application web** dans la page Application de l’Assistant Services Azure, il ouvre la boîte de dialogue Application serveur. Il affiche une liste qui indique les propriétés suivantes de toutes les applications web existantes :
+Quand vous sélectionnez **Parcourir** pour **Application web** dans la page Application de l’Assistant Services Azure, la boîte de dialogue Application serveur s’ouvre. Il affiche une liste qui indique les propriétés suivantes de toutes les applications web existantes :
 - Nom convivial du locataire
 - Nom convivial de l’application
 - Type de service
 
 Il existe trois actions possibles à partir de la boîte de dialogue Application serveur :
 - Pour réutiliser une application web existante, sélectionnez-la dans la liste. 
-- Cliquez sur **Importer** pour ouvrir la [boîte de dialogue Importer des applications](#import-apps-dialog-server).
-- Cliquez sur **Créer** pour ouvrir la [boîte de dialogue Créer une application serveur](#create-server-application-dialog).
+- Sélectionnez **Importer** pour ouvrir la [boîte de dialogue Importer des applications](#import-apps-dialog-server).
+- Sélectionnez **Créer** pour ouvrir la [boîte de dialogue Créer une application serveur](#create-server-application-dialog).
 
-Après avoir sélectionné, importé ou créé une application web, cliquez sur **OK** pour fermer la boîte de dialogue Application serveur. Cette action renvoie à la [page Application](#azure-app-properties) de l’Assistant Services Azure.
+Après avoir sélectionné, importé ou créé une application web, sélectionnez **OK** pour fermer la boîte de dialogue Application serveur. Cette action renvoie à la [page Application](#azure-app-properties) de l’Assistant Services Azure.
 
 #### <a name="import-apps-dialog-server"></a>Boîte de dialogue Importer des applications (serveur)
 
-Quand vous cliquez sur **Importer** dans la boîte de dialogue Application serveur ou la page Application de l’Assistant Services Azure, il ouvre la boîte de dialogue Importer des applications. Cette page vous permet d’entrer des informations sur une application web Azure AD qui est déjà créée dans le portail Azure. Les métadonnées relatives à cette application web sont importées dans Configuration Manager. Spécifiez les informations suivantes :
+Quand vous sélectionnez **Importer** dans la boîte de dialogue Application serveur ou la page Application de l’Assistant Services Azure, la boîte de dialogue Importer des applications s’ouvre. Cette page vous permet d’entrer des informations sur une application web Azure AD qui est déjà créée dans le portail Azure. Les métadonnées relatives à cette application web sont importées dans Configuration Manager. Spécifiez les informations suivantes :
 - **Nom du locataire Azure AD**
 - **ID de locataire Azure AD**
 - **Nom de l’application** : nom convivial pour l’application.
@@ -154,19 +163,19 @@ Quand vous cliquez sur **Importer** dans la boîte de dialogue Application serve
 - **Expiration de la clé secrète** : sélectionnez une date ultérieure dans le calendrier. 
 - **URI ID d’application** : cette valeur doit être unique dans votre locataire Azure AD. Elle se trouve dans le jeton d’accès utilisé par le client Configuration Manager pour demander l’accès au service. Par défaut, cette valeur est https://ConfigMgrService.  
 
-Après avoir entré les informations, cliquez sur **Vérifier**. Cliquez ensuite sur **OK** pour fermer la boîte de dialogue Importer des applications. Cette action renvoie à la [page Application](#azure-app-properties) de l’Assistant Services Azure ou à la [boîte de dialogue Application serveur](#server-app-dialog).
+Après avoir entré les informations, sélectionnez **Vérifier**. Sélectionnez ensuite **OK** pour fermer la boîte de dialogue Importer des applications. Cette action renvoie à la [page Application](#azure-app-properties) de l’Assistant Services Azure ou à la [boîte de dialogue Application serveur](#server-app-dialog).
 
 #### <a name="create-server-application-dialog"></a>Boîte de dialogue Créer une application serveur
 
-Quand vous cliquez sur **Créer** dans la boîte de dialogue Application serveur, la boîte de dialogue Créer une application serveur s’ouvre. Cette page permet d’automatiser la création d’une application web dans Azure AD. Spécifiez les informations suivantes :
+Quand vous sélectionnez **Créer** dans la boîte de dialogue Application serveur, la boîte de dialogue Créer une application serveur s’ouvre. Cette page permet d’automatiser la création d’une application web dans Azure AD. Spécifiez les informations suivantes :
 - **Nom de l’application** : nom convivial pour l’application.
 - **URL de la page d’accueil** : cette valeur n’est pas utilisée par Configuration Manager, mais elle est exigée par Azure AD. Par défaut, cette valeur est https://ConfigMgrService.  
 - **URI ID d’application** : cette valeur doit être unique dans votre locataire Azure AD. Elle se trouve dans le jeton d’accès utilisé par le client Configuration Manager pour demander l’accès au service. Par défaut, cette valeur est https://ConfigMgrService.  
-- **Période de validité de la clé secrète** : cliquez sur la liste déroulante et sélectionnez **1 an** ou **2 ans**. Un an est la valeur par défaut.
+- **Période de validité de la clé secrète** : choisissez **1 an** ou **2 ans** dans la liste déroulante. Un an est la valeur par défaut.
 
-Cliquez sur **Se connecter** pour vous authentifier auprès d’Azure en tant qu’utilisateur administratif. Ces informations d’identification ne sont pas enregistrées par Configuration Manager. Ce rôle ne nécessite pas d’autorisations dans Configuration Manager et ne doit pas obligatoirement être le même compte que celui qui exécute l’Assistant Services Azure. Après vous être authentifié correctement auprès d’Azure, la page affiche le **Nom du locataire Azure AD** pour référence. 
+Sélectionnez **Se connecter** pour vous authentifier auprès d’Azure en tant qu’utilisateur administratif. Ces informations d’identification ne sont pas enregistrées par Configuration Manager. Ce rôle ne nécessite pas d’autorisations dans Configuration Manager et ne doit pas obligatoirement être le même compte que celui qui exécute l’Assistant Services Azure. Après vous être authentifié correctement auprès d’Azure, la page affiche le **Nom du locataire Azure AD** pour référence. 
 
-Cliquez sur **OK** pour créer l’application web dans Azure AD et fermer la boîte de dialogue Créer une application serveur. Cette action renvoie à la [boîte de dialogue Application serveur](#server-app-dialog).
+Sélectionnez **OK** pour créer l’application web dans Azure AD et fermer la boîte de dialogue Créer une application serveur. Cette action renvoie à la [boîte de dialogue Application serveur](#server-app-dialog).
 
 
 ### <a name="native-client-app"></a>Application cliente native
@@ -175,35 +184,35 @@ Il s’agit d’une application Azure AD de type *Native*, également appelée a
 
 #### <a name="client-app-dialog"></a>Boîte de dialogue Application cliente
 
-Quand vous cliquez sur **Parcourir** pour **Application cliente native** dans la page Application de l’Assistant Services Azure, il ouvre la boîte de dialogue Application cliente. Il affiche une liste qui indique les propriétés suivantes de toutes les applications natives existantes :
+Quand vous sélectionnez **Parcourir** pour **Application cliente native** dans la page Application de l’Assistant Services Azure, la boîte de dialogue Application cliente s’ouvre. Il affiche une liste qui indique les propriétés suivantes de toutes les applications natives existantes :
 - Nom convivial du locataire
 - Nom convivial de l’application
 - Type de service
 
 Il existe trois actions possibles à partir de la boîte de dialogue Application cliente :
 - Pour réutiliser une application native existante, sélectionnez-la dans la liste. 
-- Cliquez sur **Importer** pour ouvrir la [boîte de dialogue Importer des applications](#import-apps-dialog-client).
-- Cliquez sur **Créer** pour ouvrir la [boîte de dialogue Créer une application cliente](#create-client-application-dialog).
+- Sélectionnez **Importer** pour ouvrir la [boîte de dialogue Importer des applications](#import-apps-dialog-client).
+- Sélectionnez **Créer** pour ouvrir la [boîte de dialogue Créer une application cliente](#create-client-application-dialog).
 
-Après avoir sélectionné, importé ou créé une application native, cliquez sur **OK** pour fermer la boîte de dialogue Application cliente. Cette action renvoie à la [page Application](#azure-app-properties) de l’Assistant Services Azure.
+Après avoir sélectionné, importé ou créé une application native, choisissez **OK** pour fermer la boîte de dialogue Application cliente. Cette action renvoie à la [page Application](#azure-app-properties) de l’Assistant Services Azure.
 
 #### <a name="import-apps-dialog-client"></a>Boîte de dialogue Importer des applications (client)
 
-Quand vous cliquez sur **Importer** dans la boîte de dialogue Application cliente, la boîte de dialogue Importer des applications s’ouvre. Cette page vous permet d’entrer des informations sur une application native Azure AD qui est déjà créée dans le portail Azure. Les métadonnées relatives à cette application native sont importées dans Configuration Manager. Spécifiez les informations suivantes :
+Quand vous sélectionnez **Importer** dans la boîte de dialogue Application cliente, la boîte de dialogue Importer des applications s’ouvre. Cette page vous permet d’entrer des informations sur une application native Azure AD qui est déjà créée dans le portail Azure. Les métadonnées relatives à cette application native sont importées dans Configuration Manager. Spécifiez les informations suivantes :
 - **Nom de l’application** : nom convivial pour l’application.
 - **ID de client** 
 
-Après avoir entré les informations, cliquez sur **Vérifier**. Cliquez ensuite sur **OK** pour fermer la boîte de dialogue Importer des applications. Cette action renvoie à la [boîte de dialogue Application cliente](#client-app-dialog).
+Après avoir entré les informations, sélectionnez **Vérifier**. Sélectionnez ensuite **OK** pour fermer la boîte de dialogue Importer des applications. Cette action renvoie à la [boîte de dialogue Application cliente](#client-app-dialog).
 
 #### <a name="create-client-application-dialog"></a>Boîte de dialogue Créer une application cliente
 
-Quand vous cliquez sur **Créer** dans la boîte de dialogue Application cliente, la boîte de dialogue Créer une application cliente s’ouvre. Cette page permet d’automatiser la création d’une application native dans Azure AD. Spécifiez les informations suivantes :
+Quand vous sélectionnez **Créer** dans la boîte de dialogue Application cliente, la boîte de dialogue Créer une application cliente s’ouvre. Cette page permet d’automatiser la création d’une application native dans Azure AD. Spécifiez les informations suivantes :
 - **Nom de l’application** : nom convivial pour l’application.
 - **URL de réponse** : cette valeur n’est pas utilisée par Configuration Manager, mais elle est exigée par Azure AD. Par défaut, cette valeur est https://ConfigMgrService. 
 
-Cliquez sur **Se connecter** pour vous authentifier auprès d’Azure en tant qu’utilisateur administratif. Ces informations d’identification ne sont pas enregistrées par Configuration Manager. Ce rôle ne nécessite pas d’autorisations dans Configuration Manager et ne doit pas obligatoirement être le même compte que celui qui exécute l’Assistant Services Azure. Après vous être authentifié correctement auprès d’Azure, la page affiche le **Nom du locataire Azure AD** pour référence. 
+Sélectionnez **Se connecter** pour vous authentifier auprès d’Azure en tant qu’utilisateur administratif. Ces informations d’identification ne sont pas enregistrées par Configuration Manager. Ce rôle ne nécessite pas d’autorisations dans Configuration Manager et ne doit pas obligatoirement être le même compte que celui qui exécute l’Assistant Services Azure. Après vous être authentifié correctement auprès d’Azure, la page affiche le **Nom du locataire Azure AD** pour référence. 
 
-Cliquez sur **OK** pour créer l’application native dans Azure AD et fermer la boîte de dialogue Créer une application cliente. Cette action renvoie à la [boîte de dialogue Application cliente](#client-app-dialog).
+Sélectionnez **OK** pour créer l’application native dans Azure AD et fermer la boîte de dialogue Créer une application cliente. Cette action renvoie à la [boîte de dialogue Application cliente](#client-app-dialog).
 
 
 ## <a name="configuration-or-discovery"></a>Configuration ou Découverte
@@ -223,9 +232,9 @@ Pour finir, terminez l’Assistant Services Azure via les pages de résumé, de 
 
 
 ## <a name="view-the-configuration-of-an-azure-service"></a>Afficher la configuration d’un service Azure
-Affichez les propriétés du service Azure que vous avez configuré en vue de son utilisation. Dans la console Configuration Manager, accédez à l’espace de travail **Administration**, développez **Services cloud**, puis sélectionnez **Services Azure**. Sélectionnez le service que vous souhaitez afficher ou modifier, puis cliquez sur **Propriétés**.
+Affichez les propriétés du service Azure que vous avez configuré en vue de son utilisation. Dans la console Configuration Manager, accédez à l’espace de travail **Administration**, développez **Services cloud**, puis sélectionnez **Services Azure**. Sélectionnez le service que vous souhaitez voir ou modifier, puis sélectionnez **Propriétés**.
 
-Si vous sélectionnez un service, puis cliquez sur **Supprimer** dans le ruban, cette action supprime la connexion dans Configuration Manager. Elle ne supprime pas l’application dans Azure AD. Demandez à votre administrateur Azure de supprimer l’application quand elle est devenue inutile. Vous pouvez aussi exécuter l’Assistant Services Azure pour importer l’application.<!--483440-->
+Si vous sélectionnez un service, puis choisissez **Supprimer** dans le ruban, cette action supprime la connexion dans Configuration Manager. Elle ne supprime pas l’application dans Azure AD. Demandez à votre administrateur Azure de supprimer l’application quand elle est devenue inutile. Vous pouvez aussi exécuter l’Assistant Services Azure pour importer l’application.<!--483440-->
 
 
 ## <a name="cloud-management-data-flow"></a>Flux de données de gestion cloud

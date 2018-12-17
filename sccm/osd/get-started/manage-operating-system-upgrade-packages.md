@@ -1,8 +1,8 @@
 ---
 title: Gérer les packages de mise à niveau de système d’exploitation
 titleSuffix: Configuration Manager
-description: Découvrez comment gérer des packages de mise à niveau de système d’exploitation dans System Center Configuration Manager.
-ms.date: 12/06/2016
+description: Découvrez comment gérer des packages de mise à niveau de système d’exploitation dans Configuration Manager.
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,83 +10,66 @@ ms.assetid: b9b22655-b8c1-461f-8047-3a7e906f647a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1caaf1b63a5773e61c3e8d7b500e9d0acfca1010
-ms.sourcegitcommit: a52255da16c9f8b0b60a6c299a369347c7e01bef
+ms.openlocfilehash: f7b8b18cbec5a3b5972a448e8a70339533dc11fb
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49989125"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456004"
 ---
-# <a name="manage-operating-system-upgrade-packages-with-system-center-configuration-manager"></a>Gérer des packages de mise à niveau de système d’exploitation avec System Center Configuration Manager
+# <a name="manage-os-upgrade-packages-with-configuration-manager"></a>Gérer des packages de mise à niveau de système d’exploitation avec Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
-Dans System Center Configuration Manager, un package de mise à niveau contient les fichiers sources d’installation de Windows utilisés pour mettre à niveau un système d’exploitation existant sur un ordinateur. Aidez-vous des informations des sections suivantes pour gérer les packages de mise à niveau de système d’exploitation dans Configuration Manager.
+Dans Configuration Manager, un package de mise à niveau de système d’exploitation contient les fichiers sources d’installation de Windows qui permettent de mettre à niveau un système d’exploitation existant sur un ordinateur. Cet article explique comment ajouter, distribuer et gérer un package de mise à niveau du système d’exploitation.
 
-##  <a name="BKMK_AddOSUpgradePkgs"></a> Ajouter des packages de mise à niveau de système d’exploitation à Configuration Manager  
- Avant d’utiliser un package de mise à niveau de système d’exploitation, vous devez l’ajouter à un site Configuration Manager. Pour ajouter un package de mise à niveau de système d’exploitation à un site, procédez comme suit.  
 
-#### <a name="to-add-an-operating-system-upgrade-package"></a>Pour ajouter un package de mise à niveau de système d’exploitation  
 
-1.  Dans la console Configuration Manager, cliquez sur **Bibliothèque de logiciels**.  
+##  <a name="BKMK_AddOSUpgradePkgs"></a> Ajouter un package de mise à niveau du système d’exploitation  
 
-2.  Dans l’espace de travail **Bibliothèque de logiciels** , développez **Systèmes d’exploitation**, puis cliquez sur **Packages de mise à niveau du système d’exploitation**.  
+Avant de pouvoir utiliser un package de mise à niveau de système d’exploitation, vous devez l’ajouter à votre site Configuration Manager. 
 
-3.  Sous l’onglet **Accueil** , dans le groupe **Créer** , cliquez sur **Ajouter un package de mise à niveau du système d’exploitation** pour démarrer l’Assistant Ajout d’un package de mise à niveau du système d’exploitation.  
+1.  Dans la console Configuration Manager, accédez à l’espace de travail **Bibliothèque de logiciels**, développez **Systèmes d’exploitation**, puis sélectionnez le nœud **Packages de mise à niveau du système d’exploitation**.  
 
-4.  Dans la page **Source de données** , spécifiez le chemin d’accès réseau aux fichiers sources d’installation du package de mise à niveau de système d’exploitation. Par exemple, spécifiez le chemin UNC **\\\serveur\chemin** des fichiers sources d’installation.  
+2.  Sous l’onglet **Accueil** du ruban, dans le groupe **Créer**, sélectionnez **Ajouter un package de mise à niveau du système d’exploitation**. Cette action démarre l’Assistant Ajout d’un package de mise à niveau du système d’exploitation.  
 
-    > [!NOTE]  
-    >  Les fichiers sources d’installation contiennent Setup.exe et d’autres fichiers et dossiers pour installer le système d’exploitation.  
+3.  Dans la page **Source de données**, spécifiez les paramètres suivants : 
 
-    > [!IMPORTANT]  
-    >  Limiter l’accès aux fichiers sources d’installation pour empêcher toute falsification indésirable.  
+    - **Chemin** réseau des fichiers sources d’installation du package de mise à niveau du système d’exploitation. Par exemple, `\\server\share\path`.  
 
-5.  Sur la page **Général** , spécifiez les informations suivantes, puis cliquez sur **Suivant**. Cette information est utile à des fins d'identification lorsque vous avez plusieurs programmes d'installation de système d'exploitation.  
+        > [!NOTE]  
+        >  Les fichiers sources d’installation contiennent Setup.exe et d’autres fichiers et dossiers pour installer le système d’exploitation.  
 
-    -   **Nom**: Spécifiez le nom du programme d'installation de système d'exploitation.  
+        > [!IMPORTANT]  
+        >  Limitez l’accès aux fichiers sources d’installation pour empêcher toute falsification indésirable.  
 
-    -   **Version**: Spécifiez la version du programme d'installation de système d'exploitation.  
+    - Si vous souhaitez effectuer une mise en cache préliminaire du contenu d’un client, spécifiez l’**Architecture** et la **Langue** de l’image. Pour plus d’informations, consultez la section [Configurer le contenu précache](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content).  
 
-    -   **Commentaire**: spécifiez une brève description du programme d'installation de système d'exploitation.  
+4.  Dans la page **Général**, spécifiez les informations suivantes. Ces informations sont utiles à des fins d’identification lorsque vous avez plusieurs packages de mise à niveau du système d’exploitation.  
 
-6.  Effectuez toutes les étapes de l'Assistant.  
+    -   **Nom** : nom unique du package de mise à niveau du système d’exploitation.  
 
- Vous pouvez désormais distribuer le programme d'installation de système d'exploitation aux points de distribution auxquels vos séquences de tâches de déploiement accèdent.  
+    -   **Version** : identificateur de version facultatif. Il n’est pas nécessaire que cette propriété corresponde à la version du package de mise à niveau. Il s’agit souvent de la version du package de votre organisation.  
 
-##  <a name="BKMK_DistributeBootImages"></a> Distribuer des images de système d’exploitation à un point de distribution  
- Les images de système d’exploitation sont distribuées aux points de distribution de la même façon que vous distribuez d’autre contenu. Dans la plupart des cas, vous devez distribuer l’image de système d’exploitation à au moins un point de distribution avant de déployer le système d’exploitation. Pour découvrir comment distribuer une image de système d’exploitation, consultez [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).  
+    -   **Commentaire** : brève description facultative.  
 
-##  <a name="BKMK_OSUpgradePkgApplyUpdates"></a> Appliquer des mises à jour logicielles à un package de mise à niveau du système d’exploitation  
- À compter de Configuration Manager version 1602, vous pouvez appliquer les nouvelles mises à jour logicielles à l’image de système d’exploitation dans votre package de mise à niveau du système d’exploitation. Avant de pouvoir appliquer des mises à jour logicielles à un package de mise à niveau, votre infrastructure de mises à jour logicielles doit être en place, et vous devez avoir synchronisé les mises à jour logicielles et téléchargé les mises à jour logicielles dans la bibliothèque de contenu sur le serveur de site. Pour plus d’informations, consultez [Déployer des mises à jour logicielles](../../sum/deploy-use/deploy-software-updates.md).  
+5.  Effectuez toutes les étapes de l'Assistant.  
 
- Vous pouvez appliquer les mises à jour logicielles appropriées à un package de mise à niveau selon une planification définie. Aux heures planifiées, Configuration Manager applique les mises à jour logicielles sélectionnées au package de mise à niveau du système d’exploitation puis, si vous le souhaitez, distribue le package de mise à niveau mis à jour aux points de distribution. Les informations sur le package de mise à niveau du système d’exploitation sont stockées dans la base de données du site, y compris les mises à jour logicielles qui ont été appliquées au moment de l’importation. Les mises à jour logicielles appliquées au package de mise à niveau depuis son ajout initial sont également stockées dans la base de données du site. Lorsque vous ouvrez l’Assistant pour appliquer des mises à jour logicielles au package de mise à niveau du système d’exploitation, l’Assistant récupère la liste des mises à jour logicielles applicables qui n’ont pas encore été appliquées au package de mise à niveau, pour vous permettre de les sélectionner. Configuration Manager copie les mises à jour logicielles de la bibliothèque de contenu sur le serveur de site, puis applique les mises à jour logicielles au package de mise à niveau du système d’exploitation.  
 
- Pour appliquer des mises à jour logicielles à un package de mise à niveau du système d’exploitation, procédez comme suit.  
+Ensuite, distribuez le package de mise à niveau du système d’exploitation sur les points de distribution.  
 
-#### <a name="to-apply-software-updates-to-an-operating-system-upgrade-package"></a>Pour appliquer des mises à jour logicielles à un package de mise à niveau du système d’exploitation  
 
-1.  Dans la console Configuration Manager, cliquez sur **Bibliothèque de logiciels**.  
 
-2.  Dans l’espace de travail **Bibliothèque de logiciels** , développez **Systèmes d’exploitation**, puis cliquez sur **Packages de mise à niveau du système d’exploitation**.  
+##  <a name="BKMK_Distribute"></a> Distribuer du contenu vers un point de distribution  
 
-3.  Sélectionnez le package de mise à niveau du système d’exploitation auquel appliquer les mises à jour logicielles.  
+Distribuez les packages de mise à niveau du système d’exploitation vers les points de distribution comme vous le feriez pour tout autre contenu. Avant de déployer la séquence de tâches, distribuez le package de mise à niveau du système d’exploitation vers au moins un point de distribution. Pour plus d’informations, consultez [Distribuer du contenu](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_distribute).  
 
-4.  Sous l’onglet **Accueil** , dans le groupe **Packages de mise à niveau du système d’exploitation** , cliquez sur **Planifier les mises à jour** pour démarrer l’Assistant.  
 
-5.  Sur la page **Choisir des mises à jour** , sélectionnez les mises à jour logicielles à appliquer à l'image du sytème d'exploitation, puis cliquez sur **Suivant**.  
 
-6.  Sur la page **Définir le calendrier** , spécifiez les paramètres suivants, puis cliquez sur **Suivant**.  
+[!INCLUDE [Apply software updates to an image](includes/wim-apply-updates.md)]
 
-    1.  **Calendrier**: définissez le calendrier d’application des mises à jour logicielles à l’image du système d’exploitation.  
 
-    2.  **Continuer en cas d’erreur**: sélectionnez cette option pour continuer à appliquer les mises à jour logicielles à l’image même si une erreur survient.  
 
-    3.  **Distribuer l’image aux points de distribution**: sélectionnez cette option pour mettre à jour l’image du système d’exploitation sur les points de distribution après l’application des mises à jour logicielles.  
+## <a name="next-steps"></a>Étapes suivantes
 
-7.  Vérifiez les informations figurant sur la page **Résumé** , puis cliquez sur **Suivant**.  
-
-8.  Sur la page **Dernière étape** , vérifiez que les mises à jour logicielles ont été correctement appliquées à l'image de système d'exploitation.  
-
-> [!NOTE]  
->  Pour réduire la taille de la charge utile, la maintenance des packages de mise à niveau du système d’exploitation et des images de système d’exploitation supprime l’ancienne version. 
+[Créer une séquence de tâches pour mettre à niveau un système d’exploitation](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system)

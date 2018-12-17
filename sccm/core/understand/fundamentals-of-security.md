@@ -10,12 +10,12 @@ ms.assetid: 035b7f73-8b78-4ed1-835e-a31f9a5c4a02
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 45b65e5ff35f93bb79418f00795aecab5cc208b9
-ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
+ms.openlocfilehash: 1a7d8e6fe1824ab2a7fe3cfb6f89965a4b5800c0
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411202"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456071"
 ---
 # <a name="fundamentals-of-security-for-configuration-manager"></a>Notions de base de la sécurité pour Configuration Manager
 
@@ -40,9 +40,9 @@ La sécurité pour Configuration Manager se compose des couches suivantes :
 #### <a name="bkmk_layer-windows"></a> Système d’exploitation Windows et sécurité réseau
 La première couche est fournie par les fonctionnalités de sécurité Windows tant pour le système d’exploitation que pour le réseau. Cette couche inclut les composants suivants :  
 
--   Le partage de fichiers pour transférer les fichiers entre des composants Configuration Manager  
+-   le partage de fichiers pour transférer les fichiers entre des composants Configuration Manager ;  
 
--   Des listes de contrôle d'accès pour sécuriser les fichiers et les clés de Registre  
+-   des listes de contrôle d'accès pour sécuriser les fichiers et les clés de Registre ;  
 
 -   La sécurité du protocole Internet (IPsec) pour sécuriser les communications  
 
@@ -50,7 +50,7 @@ La première couche est fournie par les fonctionnalités de sécurité Windows t
 
 -   Des autorisations DCOM (Distributed Component Object Model) pour les applications distribuées, comme la console Configuration Manager  
 
--   Des services de domaine Active Directory pour stocker les entités de sécurité  
+-   des services de domaine Active Directory pour stocker les entités de sécurité ;  
 
 -   La sécurité de compte Windows, notamment certains groupes créés par Configuration Manager durant la configuration  
 
@@ -65,6 +65,8 @@ En plus de la sécurité fournie par l’infrastructure réseau et de serveur Wi
 #### <a name="bkmk_layer-provider"></a> Fournisseur SMS
 
 La couche de sécurité suivante est basée sur l'accès via WMI (Windows Management Instrumentation), en particulier le fournisseur SMS. Le fournisseur SMS est un composant Configuration Manager qui octroie un accès à un utilisateur pour interroger la base de données du site afin d’obtenir des informations. Par défaut, l’accès au fournisseur est restreint aux membres du groupe Administrateurs SMS local. À l’origine, ce groupe contient uniquement l’utilisateur qui a installé Configuration Manager. Pour accorder d'autres autorisations de compte à l'emplacement de stockage CIM (Common Information Model) et au fournisseur SMS, ajoutez les autres comptes au groupe Administrateurs SMS.  
+
+À compter de la version 1810, vous pouvez spécifier le niveau d’authentification minimal pour les administrateurs qui accèdent aux sites Configuration Manager. Cette fonctionnalité force les administrateurs à se connecter à Windows avec le niveau requis. <!--1357013-->  
 
 Pour plus d’informations, consultez [Planifier le fournisseur SMS](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider).
 

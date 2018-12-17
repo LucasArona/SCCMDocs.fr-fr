@@ -2,7 +2,7 @@
 title: Fichiers journaux pour la résolution des problèmes
 titleSuffix: Configuration Manager
 description: Utilisez des fichiers journaux pour résoudre des problèmes liés aux systèmes de site et aux clients Configuration Manager.
-ms.date: 09/10/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4435d39dd736db1058b06d09e5722a80a173bf6e
-ms.sourcegitcommit: 2badee2b63ae63687795250e298f463474063100
+ms.openlocfilehash: cf7ca86dd04d60f1ff914294a7430d9f4a7a2fb7
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601209"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456700"
 ---
 # <a name="log-files-in-configuration-manager"></a>Fichiers journaux de Configuration Manager
 
@@ -49,7 +49,7 @@ Dans Configuration Manager, les composants des clients et des serveurs de site e
 
     -   [Fichiers journaux du point de service de l’entrepôt de données](#BKMK_DataWarehouse)
 
-    -   [Fichiers journaux du point d’état de repli](#BKMK_FSPLog)  
+    -   [Fichiers journaux du point d’état de secours](#BKMK_FSPLog)  
 
     -   [Fichiers journaux du point de gestion](#BKMK_MPLog)  
 
@@ -171,7 +171,7 @@ Le tableau suivant répertorie les fichiers journaux qui se trouvent sur le clie
 |ExternalEventAgent.log|Enregistre l'historique de la détection des programmes malveillants par Endpoint Protection et des événements liés à l'état du client.|  
 |FileBITS.log|Enregistre toutes les tâches d'accès aux packages SMB.|  
 |FileSystemFile.log|Enregistre l'activité du fournisseur de l'infrastructure de gestion Windows (WMI) pour l'inventaire logiciel et le regroupement de fichiers.|  
-|FSPStateMessage.log|Enregistre l'activité des messages d'état envoyés par le client au point d'état de repli.|  
+|FSPStateMessage.log|Enregistre l'activité des messages d'état envoyés par le client au point d'état de secours.|  
 |InternetProxy.log|Enregistre l’activité de configuration de proxy et d’utilisation réseau pour le client.|  
 |InventoryAgent.log|Enregistre les activités de l'inventaire matériel et logiciel et les actions de découverte par pulsations effectuées sur le client.|  
 |LocationCache.log|Enregistre l’activité d’utilisation de l’emplacement du cache et de maintenance pour le client.|  
@@ -302,7 +302,7 @@ Le fichier journal SMS_DM.log sur le serveur de système de site enregistre auss
 |EPSetup.log|Fournit des informations sur l'installation du rôle de système de site Endpoint Protection.|Serveur de système de site|  
 |EnrollSrv.log|Enregistre les activités du processus du service d'inscription.|Serveur de système de site|  
 |EnrollWeb.log|Enregistre les activités du processus du site Web d'inscription.|Serveur de système de site|  
-|fspmgr.log|Enregistre les activités du rôle de système de site d'un point d'état de repli.|Serveur de système de site|  
+|fspmgr.log|Enregistre les activités du rôle de système de site d'un point d'état de secours.|Serveur de système de site|  
 |hman.log|Enregistre des informations sur les modifications de la configuration du site et sur la publication d’informations du site dans les services de domaine Active Directory.|Serveur de site|  
 |Inboxast.log|Enregistre les fichiers déplacés du point de gestion vers le dossier Boîtes de réception correspondant sur le serveur de site.|Serveur de site|  
 |inboxmgr.log|Enregistre les activités de transfert de fichier entre les dossiers des boîtes de réception.|Serveur de site|  
@@ -314,6 +314,7 @@ Le fichier journal SMS_DM.log sur le serveur de système de site enregistre auss
 |mpMSI.log|Enregistre des détails sur l’installation du point de gestion.|Serveur de site|  
 |MPSetup.log|Enregistre le processus de wrapper d'installation du point de gestion.|Serveur de site|  
 |netdisc.log|Enregistre les actions de découverte du réseau.|Serveur de site|  
+|NotiCtrl.log|Notifications de demande d’application.|Serveur de site|  
 |ntsvrdis.log|Enregistre l'activité de découverte des serveurs de système de site.|Serveur de site|  
 |Objreplmgr|Enregistre le traitement des notifications de modification d'objet pour la réplication.|Serveur de site|  
 |offermgr.log|Enregistre les mises à jour des publications.|Serveur de site|  
@@ -334,7 +335,7 @@ Le fichier journal SMS_DM.log sur le serveur de système de site enregistre auss
 |sitectrl.log|Enregistre des modifications dans les paramètres du site apportées aux objets de contrôle de site dans la base de données.|Serveur de site|  
 |sitestat.log|Enregistre le processus de surveillance de la disponibilité et de l'espace disque de tous les systèmes de site.|Serveur de site|
 |SMS_ISVUPDATES_SYNCAGENT.log| Fichier journal pour la synchronisation des mises à jour de logiciels tiers à compter de Configuration Manager version 1806.| Point de mise à jour logicielle de plus haut niveau dans la hiérarchie Configuration Manager.|
-|SMS_PhasedDeployment.log| Fichier journal pour les déploiements en plusieurs phases, une fonctionnalité en préversion à compter de Configuration Manager version 1802.|Site de niveau supérieur dans la hiérarchie Configuration Manager|   
+|SMS_PhasedDeployment.log| Fichier journal pour les déploiements par phases|Site de niveau supérieur dans la hiérarchie Configuration Manager|   
 |SmsAdminUI.log|Enregistre l’activité de la console Configuration Manager.|Ordinateur qui exécute la console Configuration Manager|  
 |SMSAWEBSVCSetup.log|Enregistre les activités d'installation du service Web du catalogue des applications.|Serveur de système de site|  
 |smsbkup.log|Enregistre les résultats du processus de sauvegarde de site.|Serveur de site|  
@@ -342,7 +343,7 @@ Le fichier journal SMS_DM.log sur le serveur de système de site enregistre auss
 |SMSENROLLSRVSetup.log|Enregistre les activités d'installation du service Web d'inscription.|Serveur de système de site|  
 |SMSENROLLWEBSetup.log|Enregistre les activités d'installation du site Web d'inscription.|Serveur de système de site|  
 |smsexec.log|Enregistre le traitement de tous les threads du composant de serveur de site.|Serveur de site ou serveur de système de site|  
-|SMSFSPSetup.log|Enregistre les messages générés par l'installation d'un point d'état de repli.|Serveur de système de site|  
+|SMSFSPSetup.log|Enregistre les messages générés par l'installation d'un point d'état de secours.|Serveur de système de site|  
 |SMSPORTALWEBSetup.log|Enregistre les activités d'installation du site Web du catalogue des applications.|Serveur de système de site|  
 |SMSProv.log|Enregistre les accès du fournisseur WMI à la base de données du site.|Ordinateur sur lequel le fournisseur SMS est installé|  
 |srsrpMSI.log|Enregistre des résultats détaillés du processus d'installation du point de rapport à partir de la sortie MSI.|Serveur de système de site|  
@@ -371,14 +372,14 @@ Le fichier journal SMS_DM.log sur le serveur de système de site enregistre auss
 |DWSSSetup.log|Enregistre les messages générés par l’installation d’un point de service de l’entrepôt de données.|Serveur de système de site|  
 |Microsoft.ConfigMgrDataWarehouse.log|Enregistre des informations sur la synchronisation des données entre la base de données de site et la base de données de l’entrepôt de données.|Serveur de système de site|  
 
-###  <a name="BKMK_FSPLog"></a> Fichiers journaux du point d’état de repli  
- Le tableau suivant liste les fichiers journaux qui contiennent des informations sur le point d'état de repli.  
+###  <a name="BKMK_FSPLog"></a> Fichiers journaux du point d’état de secours  
+ Le tableau suivant répertorie les fichiers journaux qui contiennent des informations sur le point d'état de secours.  
 
 |Nom du fichier journal|Description|Ordinateur sur lequel se trouve le fichier journal|  
 |--------------|-----------------|----------------------------|  
-|FspIsapi|Enregistre des détails concernant les communications au point d'état de repli à partir de clients hérités d'appareils mobiles et d'ordinateurs clients.|Serveur de système de site|  
-|fspMSI.log|Enregistre les messages générés par l'installation d'un point d'état de repli.|Serveur de système de site|  
-|fspmgr.log|Enregistre les activités du rôle de système de site d'un point d'état de repli.|Serveur de système de site|  
+|FspIsapi|Enregistre des détails concernant les communications au point d'état de secours à partir de clients hérités d'appareils mobiles et d'ordinateurs clients.|Serveur de système de site|  
+|fspMSI.log|Enregistre les messages générés par l'installation d'un point d'état de secours.|Serveur de système de site|  
+|fspmgr.log|Enregistre les activités du rôle de système de site d'un point d'état de secours.|Serveur de système de site|  
 
 ###  <a name="BKMK_MPLog"></a> Fichiers journaux du point de gestion  
  Le tableau suivant répertorie les fichiers journaux qui contiennent des informations sur le point de gestion.  
@@ -436,6 +437,7 @@ Le fichier journal SMS_DM.log sur le serveur de système de site enregistre auss
 |CCMSDKProvider.log|Enregistre les activités de la gestion des applications SDK.|Client|  
 |colleval.log|Enregistre des détails concernant la création, la modification et la suppression de regroupements par l'Évaluateur de regroupements.|Serveur de système de site|  
 |ConfigMgrSoftwareCatalog.log|Enregistre l'activité du catalogue d'applications, dont l'utilisation de Silverlight.|Client|  
+|NotiCtrl.log|Notifications de demande d’application.|Serveur de site|  
 |portlctl.log|Enregistre les activités de surveillance du rôle de système de site du point de site Web du catalogue d'applications.|Serveur de système de site|  
 |portlwebMSI.log|Enregistre l'activité d'installation MSI pour le rôle de site Web du catalogue d'applications.|Serveur de système de site|  
 |PrestageContent.log|Enregistre les détails concernant l’utilisation de l’outil ExtractContent.exe sur un point de distribution préparé distant. Cet outil extrait le contenu qui a été exporté vers un fichier.|Serveur de système de site|  
@@ -675,7 +677,7 @@ Le tableau suivant répertorie les fichiers journaux qui contiennent des informa
 |DmpSoftware.log|Enregistre des données de la distribution logicielle provenant de clients hérités d'appareils mobiles sur un point de gestion activé pour les appareils mobiles.|Serveur de système de site|  
 |DmpStatus.log|Enregistre les données de messages d'état à partir de clients d'appareils mobiles sur un point de gestion activé pour les appareils mobiles.|Serveur de système de site|  
 |DmSvc.log|Enregistre les communications provenant de clients hérités d'appareils mobiles avec un point de gestion activé pour les appareils mobiles.|Client|  
-|FspIsapi.log|Enregistre des détails concernant les communications au point d'état de repli à partir de clients hérités d'appareils mobiles et d'ordinateurs clients.|Serveur de système de site|  
+|FspIsapi.log|Enregistre des détails concernant les communications au point d'état de secours à partir de clients hérités d'appareils mobiles et d'ordinateurs clients.|Serveur de système de site|  
 
 ###  <a name="BKMK_OSDLog"></a> Déploiement du système d’exploitation  
  Le tableau suivant répertorie les fichiers journaux qui contiennent des informations relatives au déploiement du système d'exploitation.  
@@ -708,7 +710,7 @@ Le tableau suivant répertorie les fichiers journaux qui contiennent des informa
 |smpperf.log|Enregistre les mises à jour du compteur de performances du point de migration d'état.|Serveur de système de site|  
 |smspxe.log|Enregistre les détails concernant les réponses aux clients qui effectuent un démarrage PXE et les détails concernant l’expansion d’images de démarrage et des fichiers de démarrage.|Serveur de système de site|  
 |smssmpsetup.log|Enregistre les détails d'installation et de configuration du point de migration d'état.|Serveur de système de site|
-| SMS_PhasedDeployment.log| Fichier journal pour les déploiements en plusieurs phases, une fonctionnalité en préversion à compter de Configuration Manager version 1802.|Site de niveau supérieur dans la hiérarchie Configuration Manager| 
+| SMS_PhasedDeployment.log| Fichier journal pour les déploiements par phases|Site de niveau supérieur dans la hiérarchie Configuration Manager| 
 |Smsts.log|Enregistre les activités de séquences de tâches.|Client|  
 |TSAgent.log|Enregistre le résultat des dépendances des séquences de tâche avant de démarrer une séquence de tâches.|Client|  
 |TaskSequenceProvider.log|Enregistre des détails concernant les séquences de tâches importées, exportées ou modifiées.|Serveur de système de site|  

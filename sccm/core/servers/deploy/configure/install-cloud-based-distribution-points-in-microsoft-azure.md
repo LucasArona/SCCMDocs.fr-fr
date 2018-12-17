@@ -2,7 +2,7 @@
 title: Installer des points de distribution cloud
 titleSuffix: Configuration Manager
 description: Utilisez ces étapes pour configurer un point de distribution cloud dans Configuration Manager.
-ms.date: 07/30/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: bb83ac87-9914-4a35-b633-ad070031aa6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ef8bfead4bb73871f990a455aef87971413701ba
-ms.sourcegitcommit: 2badee2b63ae63687795250e298f463474063100
+ms.openlocfilehash: a2d39617db7f2ea9a61e73a3c21cc2509fed2f07
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601107"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456615"
 ---
 # <a name="install-a-cloud-distribution-point-for-configuration-manager"></a>Installer un point de distribution cloud pour Configuration Manager
 
@@ -43,7 +43,7 @@ Utilisez la liste de vérification suivante pour vérifier que vous disposez des
 
 - **L’environnement Azure** à utiliser. Par exemple, le cloud public Azure ou le cloud Azure US Government.  
 
-- (*Pratique recommandée*) Depuis la version 1806, si vous prévoyez d’utiliser le **déploiement Azure Resource Manager**, vous aurez besoin des éléments suivants :<!--1322209-->  
+- Depuis la version 1806 et *recommandée*, utilisez le **déploiement Azure Resource Manager**. Les conditions requises sont les suivantes :<!--1322209-->  
 
     - L’intégration à [Azure Active Directory](/sccm/core/servers/deploy/configure/azure-services-wizard) pour la **gestion cloud**. La découverte des utilisateurs Azure AD n’est pas nécessaire.  
 
@@ -54,6 +54,8 @@ Utilisez la liste de vérification suivante pour vérifier que vous disposez des
     - Un **compte d’administrateur des abonnements** qui doit se connecter au cours de l’Assistant  
 
 - Si vous prévoyez d’utiliser le **déploiement de service classique** Azure, vous aurez besoin des éléments suivants :  
+    > [!Important]  
+    > Depuis la version 1810, les déploiements de services Classic dans Azure sont dépréciés dans Configuration Manager. Commencez à utiliser des déploiements Azure Resource Manager pour la passerelle de gestion cloud. Pour plus d’informations, consultez [Planifier la passerelle de gestion cloud](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager).  
 
     - **L’ID d’abonnement** Azure  
 
@@ -64,7 +66,7 @@ Utilisez la liste de vérification suivante pour vérifier que vous disposez des
 - Un **nom de service** global unique pour le point de distribution cloud  
 
     > [!TIP]  
-    > Avant de demander le certificat d’authentification serveur qui utilise ce nom de service, vérifiez que le nom de domaine Azure souhaité est unique. Par exemple, *WallaceFalls.CloudApp.Net*. Connectez-vous au [portail Microsoft Azure](https://portal.azure.com). Cliquez sur **Créer une ressource**, sélectionnez la catégorie **Calcul**, puis cliquez sur **Service cloud**. Dans le champ **Nom DNS**, tapez le préfixe souhaité, par exemple *WallaceFalls*. L’interface indique si le nom de domaine est disponible ou déjà utilisé par un autre service. Ne créez pas le service dans le portail. Utilisez ce processus seulement pour vérifier la disponibilité du nom.  
+    > Avant de demander le certificat d’authentification serveur qui utilise ce nom de service, vérifiez que le nom de domaine Azure souhaité est unique. Par exemple, *WallaceFalls.CloudApp.Net*. Connectez-vous au [portail Microsoft Azure](https://portal.azure.com). Sélectionnez **Créer une ressource**, choisissez la catégorie **Calcul**, puis sélectionnez **Service cloud**. Dans le champ **Nom DNS**, tapez le préfixe souhaité, par exemple *WallaceFalls*. L’interface indique si le nom de domaine est disponible ou déjà utilisé par un autre service. Ne créez pas le service dans le portail. Utilisez ce processus seulement pour vérifier la disponibilité du nom.  
  
 - La **région** Azure pour ce déploiement  
 
@@ -74,21 +76,22 @@ Utilisez la liste de vérification suivante pour vérifier que vous disposez des
 
 Suivez cette procédure sur le site qui doit héberger ce point de distribution cloud, comme déterminé par votre [conception](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#bkmk_topology).  
 
-1.  Dans la console Configuration Manager, accédez à l’espace de travail **Administration**, développez **Services cloud**, puis sélectionnez **Points de distribution cloud**. Dans le ruban, cliquez sur **Créer un point de distribution cloud**.  
+1.  Dans la console Configuration Manager, accédez à l’espace de travail **Administration**, développez **Services cloud**, puis sélectionnez **Points de distribution cloud**. Dans le ruban, sélectionnez **Créer un point de distribution cloud**.  
 
 2.  Dans la page **Général** de l’Assistant Création d’un point de distribution cloud, configurez les paramètres suivants :  
 
-    a. Spécifiez **l’environnement Azure**.  
+    1. Spécifiez **l’environnement Azure**.  
 
-    b. Choisissez la méthode de déploiement Azure, puis configurez les paramètres associés.  
+    2. Depuis la version 1806 et *recommandée*, sélectionnez **Déploiement Azure Resource Manager** comme méthode de déploiement. Sélectionnez **Se connecter** pour vous authentifier avec un compte Administrateur d’abonnement Azure. L’Assistant remplit automatiquement les champs restants à partir des informations stockées dans les prérequis de l’intégration d’Azure AD. Si vous possédez plusieurs abonnements, sélectionnez l’**ID de l’abonnement** que vous voulez utiliser.  
 
-       - **Déploiement Azure Resource Manager** (*pratique recommandée* à compter de la version 1806) : cliquez sur **Se connecter** pour vous authentifier avec un compte d’administrateur d’abonnements Azure. L’Assistant remplit automatiquement les champs restants à partir des informations stockées dans les prérequis de l’intégration d’Azure AD. Si vous possédez plusieurs abonnements, sélectionnez l’**ID de l’abonnement** que vous voulez utiliser.  
+    > [!Note]  
+    > Depuis la version 1810, les déploiements de services Classic dans Azure sont dépréciés dans Configuration Manager. 
+    > 
+    > Si vous devez utiliser un déploiement de service Classic, sélectionnez cette option dans cette page. Entrez d’abord votre **ID d’abonnement** Azure. Sélectionnez ensuite **Parcourir**, puis le fichier .PFX du certificat de gestion Azure.  
 
-       - **Déploiement de service classique** (Configuration Manager versions 1802 et antérieures) : entrez votre **ID d’abonnement** Azure. Cliquez ensuite sur **Parcourir**, puis sélectionnez le fichier .PFX du certificat de gestion Azure.  
+3.  Sélectionnez **Suivant**. Attendez que le site teste la connexion à Azure.  
 
-3.  Cliquez sur **Suivant**. Attendez que le site teste la connexion à Azure.  
-
-4.  Dans la page **Paramètres**, spécifiez les paramètres suivants, puis cliquez sur **Suivant** :  
+4.  Dans la page **Paramètres**, spécifiez les paramètres suivants, puis sélectionnez **Suivant** :  
 
     - **Région** : sélectionnez la région Azure dans laquelle vous souhaitez créer le point de distribution cloud.  
 
@@ -100,12 +103,12 @@ Suivez cette procédure sur le site qui doit héberger ce point de distribution 
 
     - **Site principal** : sélectionnez le site principal qui doit distribuer du contenu à ce point de distribution.
 
-    - **Fichier de certificat** : cliquez sur **Parcourir**, puis sélectionnez le fichier .PFX pour le certificat d’authentification serveur de ce point de distribution cloud. Le nom commun de ce certificat remplit les champs obligatoires **FQDN du service** et **Nom du service**.  
+    - **Fichier de certificat** : sélectionnez **Parcourir**, puis le fichier .PFX du certificat d’authentification serveur de ce point de distribution cloud. Le nom commun de ce certificat remplit les champs obligatoires **FQDN du service** et **Nom du service**.  
 
         > [!NOTE]  
         > Le certificat d’authentification serveur du point de distribution cloud prend en charge les caractères génériques. Si vous utilisez un certificat avec caractères génériques, remplacez l’astérisque (*) dans le champ **FQDN du service** par le nom d’hôte souhaité pour le service.  
 
-5. Dans la page **Alertes**, configurez les quotas de stockage, les quotas de transfert, ainsi que le pourcentage de ces quotas auquel Configuration Manager doit générer des alertes. Cliquez ensuite sur **Suivant**.  
+5. Dans la page **Alertes**, configurez les quotas de stockage, les quotas de transfert, ainsi que le pourcentage de ces quotas auquel Configuration Manager doit générer des alertes. Puis sélectionnez **Suivant**.  
 
 6. Effectuez toutes les étapes de l'Assistant.  
 
@@ -222,7 +225,7 @@ Dans un cycle horaire, le site principal qui surveille le point de distribution 
 
 ## <a name="bkmk_modify"></a> Modifier
 
-Affichez des informations générales sur le point de distribution dans le nœud **Points de distribution cloud**, situé sous **Services cloud** dans l’espace de travail **Administration** de la console Configuration Manager. Sélectionnez un point de distribution, puis cliquez sur **Propriétés** pour afficher plus de détails.  
+Affichez des informations générales sur le point de distribution dans le nœud **Points de distribution cloud**, situé sous **Services cloud** dans l’espace de travail **Administration** de la console Configuration Manager. Sélectionnez un point de distribution, puis **Propriétés** pour afficher plus de détails.  
 
 Lorsque vous modifiez les propriétés d’un point de distribution cloud, les paramètres des onglets suivants peuvent être modifiés :  
 
@@ -282,9 +285,9 @@ Utilisez la procédure suivante pour arrêter un point de distribution cloud :
 
 1. Dans la console de Configuration Manager, accédez à l’espace de travail **Administration**. Développez **Services cloud**, puis sélectionnez le nœud **Points de distribution cloud**.  
 
-2. Sélectionnez le point de distribution cloud. Pour arrêter le service cloud qui s’exécute dans Azure, cliquez sur **Arrêter le service** dans le ruban.  
+2. Sélectionnez le point de distribution cloud. Pour arrêter le service cloud qui s’exécute dans Azure, sélectionnez **Arrêter le service** dans le ruban.  
 
-3. Cliquez sur **Démarrer le service** pour redémarrer le point de distribution cloud.  
+3. Sélectionnez **Démarrer le service** pour redémarrer le point de distribution cloud.  
 
 
 ### <a name="delete-a-cloud-distribution-point"></a>Supprimer un point de distribution cloud

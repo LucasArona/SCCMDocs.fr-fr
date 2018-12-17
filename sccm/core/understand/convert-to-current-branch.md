@@ -10,12 +10,12 @@ ms.assetid: ec5b54cf-62b7-4ed1-9bb3-e8c63b9641c8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2c739f52553aca8680328e581e183a5ca974ffdf
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: f1683f69ae065d0523719edd3d24da52d499341b
+ms.sourcegitcommit: 1439817f1309658b31008d7bafaab32fc5ef8789
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32337504"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52819997"
 ---
 # <a name="upgrade-the-long-term-servicing-branch-to-the-current-branch"></a>Mettre à niveau Long-Term Servicing Branch vers Current Branch
 
@@ -46,6 +46,6 @@ Si votre site s’exécute LTSB, vous pouvez utiliser l’option suivante dans l
 
  1. Dans la console, accédez à **Administration** > **Configuration du site** > **Sites**, puis ouvrez **Paramètres de hiérarchie**.  
 
- 2. Sélectionnez l’option de conversion vers Current Branch, puis choisissez **Appliquer**.  
+ 2. Dans **Paramètres de hiérarchie**, passez à l’onglet **Licences**. Sélectionnez l’option **Convertir vers Current Branch**, puis choisissez **Appliquer**.  
 
 Une fois votre site converti en version Current Branch, vous avez accès à des fonctions et fonctionnalités qui n’étaient pas disponibles auparavant.

@@ -2,7 +2,7 @@
 title: Prise en charge de Windows 10
 titleSuffix: Configuration Manager
 description: Découvrir les versions de Windows 10 prises en charge comme clients ou pour OSD avec System Center Configuration Manager
-ms.date: 10/02/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a1626a65-da22-49e0-9564-d2f752ea3f4b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ab8c0336b34fd3e9496d1fd7c5956aaca4c5cc32
-ms.sourcegitcommit: e0209e4549e9828eb74089313dbee323ece1fc2f
+ms.openlocfilehash: a02f904614e245a61e533164d25c0280e3a4d486
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51598544"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456129"
 ---
 # <a name="support-for-windows-10-in-configuration-manager"></a>Prise en charge de Windows 10 dans Configuration Manager  
 
@@ -51,16 +51,16 @@ Une version de Configuration Manager est supprimée de la matrice quand la [pris
 <br/>
 Le tableau suivant liste les versions de Windows 10 que vous pouvez utiliser comme client avec différentes versions de Configuration Manager.
 
-| Version de Windows 10 | Configuration Manager 1710 | Configuration Manager 1802 | Configuration Manager 1806 |
+| Version de Windows 10 | Configuration Manager 1710 | Configuration Manager 1802 | Configuration Manager 1806 | Configuration Manager 1810 |
 |---------------------|-----|-----|-----|-----|
-| Entreprise 2015 LTSB <!--10/14/2025-->   | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) |
-| Entreprise 2016 LTSB <!--10/13/2026-->   | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) |
-| Entreprise LTSC 2019 <!--10/10/2028-->   | ![Non pris en charge](media/Red_X.png)   | ![Non pris en charge](media/Red_X.png)   | ![Pris en charge](media/green_check.png) |
-| 1607   <!--04/09/2019-->   | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) |
-| 1703   <!--10/08/2019-->   | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) |
-| 1709   <!--04/14/2020-->   | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) |
-| 1803   <!--11/10/2020-->   | ![Non pris en charge](media/Red_X.png) | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) |
-| 1809   <!--04/12/2021?-->   | ![Non pris en charge](media/Red_X.png) | ![Non pris en charge](media/Red_X.png) | ![Pris en charge](media/green_check.png) |
+| Entreprise 2015 LTSB <!--10/14/2025-->   | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) |
+| Entreprise 2016 LTSB <!--10/13/2026-->   | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) |
+| Entreprise LTSC 2019 <!--10/10/2028-->   | ![Non pris en charge](media/Red_X.png)   | ![Non pris en charge](media/Red_X.png)   | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) |
+| 1607   <!--04/09/2019-->   | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) |
+| 1703   <!--10/08/2019-->   | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) |
+| 1709   <!--04/14/2020-->   | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) |
+| 1803   <!--11/10/2020-->   | ![Non pris en charge](media/Red_X.png) | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) |
+| 1809   <!--04/12/2021?-->   | ![Non pris en charge](media/Red_X.png) | ![Non pris en charge](media/Red_X.png) | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) |
 
 <!-- lifecycle reference: https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet -->
 
@@ -85,12 +85,12 @@ Quand vous déployez des systèmes d’exploitation avec Configuration Manager, 
 
 Le tableau suivant répertorie les versions du Windows 10 ADK que vous pouvez utiliser avec différentes versions de Configuration Manager.
 
-| Version de Windows 10 ADK  | Configuration Manager 1710 | Configuration Manager 1802 | Configuration Manager 1806 |
+| Version de Windows 10 ADK  | Configuration Manager 1710 | Configuration Manager 1802 | Configuration Manager 1806 | Configuration Manager 1810 |
 |--------------------|-----|-----|-----|-----|
-| 1703  | ![Compatibilité descendante](media/blue_compat.png) | ![Compatibilité descendante](media/blue_compat.png) | ![Non pris en charge](media/Red_X.png)   |
-| 1709  | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) | ![Compatibilité descendante](media/blue_compat.png) |
-| 1803  | ![Non pris en charge](media/Red_X.png) | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) |
-| 1809  | ![Non pris en charge](media/Red_X.png) | ![Non pris en charge](media/Red_X.png) | ![Pris en charge](media/green_check.png) |
+| 1703  | ![Compatibilité descendante](media/blue_compat.png) | ![Compatibilité descendante](media/blue_compat.png) | ![Non pris en charge](media/Red_X.png) | ![Non pris en charge](media/Red_X.png) |
+| 1709  | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) | ![Compatibilité descendante](media/blue_compat.png) | ![Non pris en charge](media/Red_X.png)   |
+| 1803  | ![Non pris en charge](media/Red_X.png) | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) | ![Compatibilité descendante](media/blue_compat.png) |
+| 1809  | ![Non pris en charge](media/Red_X.png) | ![Non pris en charge](media/Red_X.png) | ![Pris en charge](media/green_check.png) | ![Pris en charge](media/green_check.png) |
 
 |Clé|
 |--|

@@ -2,7 +2,7 @@
 title: Mises à jour et maintenance
 titleSuffix: Configuration Manager
 description: Découvrez la méthode de service dans la console, appelée « Mises à jour et maintenance », qui facilite la localisation et l’installation des mises à jour recommandées.
-ms.date: 07/31/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 3a832943-580a-4a40-b454-961d0854ac2b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 94d8f3a2ffafb078f3ffe92c4902cc610321ed86
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 1acc1bd6a6ccbd010308d026933a371f9e8227d8
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385047"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456547"
 ---
 # <a name="updates-and-servicing-for-configuration-manager"></a>Mises à jour et maintenance pour Configuration Manager
 
@@ -25,20 +25,6 @@ Configuration Manager utilise une méthode de service dans la console appelée *
 
 > [!TIP]  
 > Les termes *mise à niveau*, *mise à jour* et *installation* sont utilisés pour décrire trois concepts distincts dans Configuration Manager. Pour plus d’informations sur l’utilisation de chaque terme, consultez [À propos de la mise à niveau, de la mise à jour et de l’installation](/sccm/core/understand/upgrade-update-install).  
-
-
-Les articles suivants peuvent vous aider à comprendre comment rechercher et installer les différents types de mise à jour pour Configuration Manager :  
-
--   [Installer des mises à jour dans la console](/sccm/core/servers/manage/install-in-console-updates)  
-
--   [Utiliser l’outil de connexion de service](/sccm/core/servers/manage/use-the-service-connection-tool)  
-
--   [Importer des correctifs logiciels avec l’outil Inscription de la mise à jour](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes)  
-
--   [Utiliser le programme d’installation de correctif logiciel pour installer des mises à jour](/sccm/core/servers/manage/use-the-hotfix-installer-to-install-updates)  
-
-
-Pour plus d’informations sur la branche Technical Preview, consultez [Technical Preview](/sccm/core/get-started/technical-preview).
 
 
 
@@ -70,35 +56,40 @@ Quand vous installez une mise à jour, elle stocke les fichiers d’installation
 
 Certaines mises à jour de Configuration Manager sont disponibles à la fois comme version de mise à jour dans la console pour l’infrastructure existante et comme nouvelle version de base.  
 
+#### <a name="supported-versions"></a>Versions prises en charge
 Les versions prises en charge suivantes de Configuration Manager sont disponibles sous forme de base de référence, de mise à jour ou les deux à la fois :  
 
-| Version | Date de disponibilité | [Date de fin de support](/sccm/core/servers/manage/current-branch-versions-supported) | Base de référence | Mise à jour dans la console |  
+| Version | Date de disponibilité | [Date de fin de support](/sccm/core/servers/manage/current-branch-versions-supported) | De base | Mise à jour dans la console |  
 |-------------|-----------|------------|--------------|------------------------|  
+| [1810](/sccm/core/plan-design/changes/whats-new-in-version-1810)<br /><br /> 5.00.8740.1000 | 27 novembre 2018 | 27 mai 2020 | Non | Oui |
 | [1806](/sccm/core/plan-design/changes/whats-new-in-version-1806)<br /><br /> 5.00.8692.1000 | 31 juillet 2018 | 31 janvier 2020 | Non | Oui |
-| [1802](/sccm/core/plan-design/changes/whats-new-in-version-1802)<br /><br /> 5.00.8634.1000 | 22 mars 2018 | 22 septembre 2019 | Oui<sup>**1**</sup> | Oui |
+| [1802](/sccm/core/plan-design/changes/whats-new-in-version-1802)<br /><br /> 5.00.8634.1000 | 22 mars 2018 | 22 septembre 2019 | Oui<sup>[Remarque 1](#bkmk_note1)</sup> | Oui |
 | [1710](/sccm/core/plan-design/changes/whats-new-in-version-1710)<br /><br /> 5.00.8577.1000 | 20 novembre 2017 | Mai 20, 2019 | Non | Oui |
-| [1706](/sccm/core/plan-design/changes/whats-new-in-version-1706)<br /><br /> 5.00.8540.1000 | 31 juillet 2017 | 31 juillet 2018 | Non | Oui |
+
+<a name="bkmk_note1"></a> 
 
 > [!Note]  
-> <sup>**1**</sup> Le support de la base de référence 1802 est disponible dans les versions suivantes du [Centre MVLS](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (Microsoft Volume Licensing Service) :
+> <sup>**Remarque 1**</sup> Le support de la base de référence 1802 est disponible dans les versions suivantes du [VLSC](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (Centre de gestion des licences en volume) :
 > - System Center Config Mgr (Current Branch)
 > - System Center 2016 Datacenter
 > - System Center 2016 Standard  
 > 
 > Par exemple, recherchez `System Center Config Mgr (current branch)` dans le Centre MVLS. Recherchez le support de la base de référence 1802 dans la liste des fichiers, puis téléchargez-le pour cette version.  
 
+#### <a name="historical-versions"></a>Versions historiques
 Le tableau suivant liste les versions historiques de l’édition Current Branch de Configuration Manager qui ne sont plus prises en charge :
 
-| Version | Date de disponibilité | Date de fin du support | Base de référence | Mise à jour dans la console |  
+| Version | Date de disponibilité | Date de fin du support | De base | Mise à jour dans la console |  
 |-------------|-----------|------------|--------------|------------------------|  
+| 1706 <br /><br /> 5.00.8540.1000 | 31 juillet 2017 | 31 juillet 2018 | Non | Oui |
 | 1702 <br /><br /> 5.00.8498.1000 | 27 mars 2017 | 27 mars 2018 | Oui | Oui |
 | 1610 <br /><br /> 5.00.8458.1000 | 18 novembre 2016 | 18 novembre 2017 | Non | Oui |
 | 1606 <br /><br /> 5.00.8412.1000 | 22 juillet 2016 | 22 juillet 2017 | Non | Oui |
-| 1606 avec le correctif cumulatif 1606 (KB3186654) </br></br>5.00.8412.1307 | 12 octobre 2016 | 12 octobre 2017 | Oui | Non |
+| 1606 avec le correctif cumulatif 1606 (KB3186654) <br><br>5.00.8412.1307 | 12 octobre 2016 | 12 octobre 2017 | Oui | Non |
 | 1602<br /><br /> 5.00.8355.1000 | 11 mars 2016 | 11 mars 2017 | Non | Oui |
 | 1511 <br /><br /> 5.00.8325.1000 | 8 décembre 2015 | 8 décembre 2016 | Oui | Non |  
 
-
+#### <a name="how-to-check-the-version"></a>Comment vérifier la version
 Pour vérifier la version de votre site Configuration Manager, en haut à gauche de la console, accédez à **À propos de System Center Configuration Manager**. Cette boîte de dialogue affiche les versions du site et de la console.  
 
  > [!Note]  
@@ -112,7 +103,7 @@ Quand vous utilisez une installation Current Branch de System Center Configurati
 
 Ces mises à jour comportent :  
 
--   Les nouvelles versions comme la version 1710, 1802 ou 1806.  
+-   Les nouvelles versions comme la version 1802, 1806 ou 1810.  
 
 -   Les mises à jour qui comprennent de nouveaux composants pour votre version actuelle
 
@@ -182,3 +173,20 @@ Cette méthode est utilisée pour les correctifs qui emploient la structure de n
    `<Product>-<product version>-<KB article ID>-<platform>-<language>.exe`  
 
 Pour plus d’informations, consultez [Utiliser le programme d’installation de correctif logiciel pour installer des mises à jour](/sccm/core/servers/manage/use-the-hotfix-installer-to-install-updates).  
+
+
+
+## <a name="next-steps"></a>Étapes suivantes
+
+Les articles suivants peuvent vous aider à comprendre comment rechercher et installer les différents types de mise à jour pour Configuration Manager :  
+
+-   [Installer des mises à jour dans la console](/sccm/core/servers/manage/install-in-console-updates)  
+
+-   [Utiliser l’outil de connexion de service](/sccm/core/servers/manage/use-the-service-connection-tool)  
+
+-   [Importer des correctifs logiciels avec l’outil Inscription de la mise à jour](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes)  
+
+-   [Utiliser le programme d’installation de correctif logiciel pour installer des mises à jour](/sccm/core/servers/manage/use-the-hotfix-installer-to-install-updates)  
+
+
+Pour plus d’informations sur la branche Technical Preview, consultez [Technical Preview](/sccm/core/get-started/technical-preview).

@@ -1,8 +1,8 @@
 ---
 title: Gérer les images de système d’exploitation
 titleSuffix: Configuration Manager
-description: Découvrez les différentes méthodes disponibles dans Configuration Manager pour gérer les images de système d’exploitation stockées dans des fichiers WIM (Windows Imaging).
-ms.date: 12/06/2016
+description: Découvrez les méthodes permettant de gérer les images de système d’exploitation stockées dans les fichiers image Windows (WIM).
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,131 +10,105 @@ ms.assetid: fab13949-371c-4a4c-978e-471db1e54966
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d442955d62989d3bbc7b32e0aba122a0853a3f14
-ms.sourcegitcommit: 1f8731ed8f0308cb2cb576722adb0821a366e9ce
+ms.openlocfilehash: 700a9d8f88c64e11449349ace8c431b4ad6611cf
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51223668"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456173"
 ---
-# <a name="manage-operating-system-images-with-system-center-configuration-manager"></a>Gérer les images de système d’exploitation avec System Center Configuration Manager
+# <a name="manage-os-images-with-configuration-manager"></a>Gérer les images de système d’exploitation avec Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
-Les images de système d’exploitation dans Configuration Manager sont stockées au format de fichier WIM (Windows Imaging Format) et représentent un regroupement compressé de fichiers et de dossiers de référence nécessaires pour installer et configurer avec succès un système d’exploitation sur un ordinateur. Pour tous les scénarios de déploiement de système d’exploitation, vous devez sélectionner une image de système d’exploitation.   Vous pouvez utiliser l’image de système d’exploitation par défaut ou créer l’image de système d’exploitation à partir d’un ordinateur de référence que vous configurez. Quand vous créez l’ordinateur de référence, vous pouvez ajouter des fichiers de système d’exploitation, des pilotes, des fichiers de support, des mises à jour logicielles, des outils et d’autres applications logicielles au système d’exploitation avant de le capturer pour créer le fichier image. La section suivante fournit des informations sur chacune de ces méthodes.  
+Dans Configuration Manager, les images de système d’exploitation sont stockées dans des fichiers image Windows (WIM). Ces images sont une collection compressée de fichiers de référence et de dossiers, qui est utilisée pour installer et configurer un nouveau système d’exploitation sur un ordinateur. De nombreux scénarios de déploiement de système d’exploitation nécessitent une image de système d’exploitation. 
 
- **Image par défaut**  
+Vous pouvez utiliser une [image de système d’exploitation par défaut](#default-image) ou créer une image de système d’exploitation à partir d’un [ordinateur de référence](#bkmk_capture) que vous configurez. Lorsque vous créez l’ordinateur de référence, vous ajoutez des fichiers de système d’exploitation, des pilotes, des fichiers de prise en charge, des mises à jour logicielles, des outils et des applications au système d’exploitation. Ensuite, vous le capturez pour créer le fichier image. 
 
- L’image de système d’exploitation par défaut (install.wim) est fournie avec les fichiers d’installation du système d’exploitation Windows. Cette image est une image de système d’exploitation de base qui contient un ensemble standard de pilotes. Quand vous utilisez l’image de système d’exploitation par défaut, vous pouvez installer des applications et effectuer d’autres configurations après l’installation du système d’exploitation à l’aide d’étapes de séquence de tâches.  L’image de système d’exploitation par défaut se trouve dans <*chemin_source_système_exploitation*>\Sources\install.wim.  
+### <a name="default-image"></a>Image par défaut
 
--   **Avantages**  
+Les fichiers d’installation Windows incluent l’image du système d’exploitation par défaut. Cette image est une image de système d’exploitation de base qui contient un ensemble standard de pilotes. Si vous utilisez l’image de système d’exploitation par défaut, utilisez les étapes de séquence de tâches pour installer des applications et effectuer d’autres configurations une fois que le système d’exploitation est installé sur l’appareil. Recherchez l’image de système d’exploitation par défaut dans les fichiers de source Windows : `\Sources\install.wim`.  
 
-    -   La taille de l’image est inférieure à celle d’une image capturée.  
+#### <a name="default-image-advantages"></a>Avantages de l’image par défaut
 
-    -   L’installation d’applications et de configurations avec des étapes de séquence de tâches est plus dynamique. Par exemple, vous pouvez modifier les applications qui s’installeront et les configurations de la séquence de tâches sans avoir à recréer l’image du système d’exploitation.  
+- La taille de l’image est inférieure à celle d’une image capturée.  
 
--   **Inconvénients**  
+- L’installation d’applications et de configurations avec des étapes de séquence de tâches est plus dynamique. Par exemple, vous pouvez changer les configurations et les applications qui sont installées avec la séquence de tâches, sans avoir à réinitialiser l’appareil.  
 
-    -   L’installation du système d’exploitation peut prendre plus de temps, car l’installation des applications et d’autres configurations s’effectue une fois l’installation du système d’exploitation terminée.
+#### <a name="default-image-disadvantages"></a>Inconvénients de l’image par défaut
 
-**Image capturée**  
+- L’installation du système d’exploitation peut prendre plus de temps. L’installation de l’application et des autres configurations est effectuée après l’installation du système d’exploitation.  
 
- Pour créer une image de système d’exploitation personnalisée, vous créez un ordinateur de référence avec le système d’exploitation souhaité, puis vous installez les applications, vous configurez les paramètres, etc. Vous capturez ensuite l’image du système d’exploitation à partir de l’ordinateur de référence pour créer le fichier WIM. Vous pouvez créer manuellement l'ordinateur de référence ou utiliser une séquence de tâches pour automatiser certaines ou toutes les étapes de construction.   
-Pour en savoir plus sur les étapes de création d’une image de système d’exploitation personnalisée, consultez [Personnaliser les images de système d’exploitation](customize-operating-system-images.md).  
 
--   **Avantages**  
+### <a name="bkmk_capture"></a> Image capturée à partir d’un ordinateur de référence
 
-    -   L’installation peut être plus rapide que l’utilisation de l’image par défaut. Par exemple, les applications peuvent être préinstallées avec l’image de système d’exploitation capturée. Vous n’avez alors pas à installer les applications ultérieurement à l’aide d’étapes de séquence de tâches.  
+Pour créer une image de système d’exploitation personnalisée, créez un ordinateur de référence avec le système d’exploitation souhaité. Ensuite, installez des applications et configurez les paramètres. Capturez l’image du système d’exploitation à partir de l’ordinateur de référence pour créer le fichier WIM. Créez manuellement l’ordinateur de référence ou utilisez une séquence de tâches pour automatiser certaines étapes de création ou l’ensemble du processus. Pour plus d’informations, consultez [Personnaliser les images de système d’exploitation](/sccm/osd/get-started/customize-operating-system-images).  
 
--   **Inconvénients**  
+#### <a name="captured-image-advantages"></a>Avantages de l’image capturée
 
-    -   La taille de l’image est potentiellement supérieure à celle de l’image par défaut.
-    
-    -   Vous devez créer une autre image quand des mises à jour d’applications et d’outils sont obligatoires.
+- L’installation peut être plus rapide que l’utilisation de l’image par défaut. Par exemple, l’image de système d’exploitation capturée vous permet de préinstaller des applications. Dans ce cas, vous n’aurez pas besoin d’installer de nouveau ces mêmes applications à l’aide des étapes de séquence de tâches.  
 
-##  <a name="BKMK_AddOSImages"></a> Ajouter des images de système d’exploitation à Configuration Manager  
- Avant d’utiliser une image de système d’exploitation, vous devez ajouter l’image à un site Configuration Manager. Utilisez la procédure suivante pour ajouter une image de système d’exploitation à un site.  
+#### <a name="captured-image-disadvantages"></a>Inconvénients de l’image capturée
 
-#### <a name="to-add-an-operating-system-image-to-a-site"></a>Pour ajouter une image de système d’exploitation à un site  
+- La taille de l’image est potentiellement supérieure à celle de l’image par défaut.  
 
-1.  Dans la console Configuration Manager, cliquez sur **Bibliothèque de logiciels**.  
+- Vous devez créer une nouvelle image quand des mises à jour d’applications et d’outils sont nécessaires.  
 
-2.  Dans l'espace de travail **Bibliothèque de logiciels** , développez **Systèmes d'exploitation**, puis cliquez sur **Images du système d'exploitation**.  
 
-3.  Sous l'onglet **Accueil** , dans le groupe **Créer** , cliquez sur **Ajouter une image de système d'exploitation** pour démarrer l'Assistant Ajout d'une image de système d'exploitation.  
 
-4.  Sur la page **Source de données** , indiquez le chemin réseau d'accès à l'image de système d'exploitation. Par exemple, spécifiez **\\\serveur\chemin\OS.WIM**.  
+##  <a name="BKMK_AddOSImages"></a> Ajouter une image de système d’exploitation  
 
-5.  Sur la page **Général** , spécifiez les informations suivantes, puis cliquez sur **Suivant**. Ces informations sont utiles à des fins d'identification lorsque vous ajoutez plusieurs images du système d'exploitation sur le même site.  
+Avant de pouvoir utiliser une image de système d’exploitation, vous devez l’ajouter à votre site Configuration Manager. 
 
-    -   **Nom** : spécifiez le nom de l'image. Par défaut, le nom de l'image est extrait du fichier WIM.  
+1.  Dans la console Configuration Manager, accédez à l’espace de travail **Bibliothèque de logiciels**, développez **Systèmes d’exploitation**, puis sélectionnez le nœud **Images du système d’exploitation**.  
 
-    -   **Version** : spécifiez la version de l’image.  
+2.  Sous l’onglet **Accueil** du ruban, dans le groupe **Créer**, sélectionnez **Ajouter une image du système d’exploitation**. Cette action démarre l’Assistant Ajout d’une image de système d’exploitation.  
 
-    -   **Commentaire** : spécifiez une brève description de l’image.  
+3.  Dans la page **Source de données**, spécifiez le **chemin** réseau du fichier image du système d’exploitation. Par exemple, `\\server\share\path\image.wim`.  
 
-6.  Effectuez toutes les étapes de l'Assistant.  
+4.  Dans la page **Général**, spécifiez les informations suivantes. Ces informations sont utiles à des fins d’identification lorsque vous avez plusieurs images de système d’exploitation.  
 
- Vous pouvez maintenant distribuer l’image du système d’exploitation à des points de distribution.  
+    -   **Nom** : nom unique de l’image. Par défaut, le nom est tiré de celui du fichier WIM.  
 
-##  <a name="BKMK_DistributeBootImages"></a> Distribuer des images de système d’exploitation à des points de distribution  
- Les images de système d’exploitation sont distribuées aux points de distribution de la même façon que vous distribuez d’autre contenu. Dans la plupart des cas, vous devez distribuer l’image de système d’exploitation à au moins un point de distribution avant de déployer le système d’exploitation. Pour découvrir comment distribuer une image de système d’exploitation, consultez [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).  
+    -   **Version** : identificateur de version facultatif. Il n’est pas nécessaire que cette propriété corresponde à la version du système d’exploitation de l’image. Il s’agit souvent de la version du package de votre organisation.   
 
-##  <a name="BKMK_OSImagesApplyUpdates"></a> Appliquer des mises à jour logicielles à une image de système d’exploitation  
- De nouvelles mises à jour logicielles applicables au système d'exploitation figurant dans votre image de système d'exploitation sont régulièrement publiées. Avant de pouvoir appliquer des mises à jour logicielles à une image, votre infrastructure de mises à jour logicielles doit être en place, vous devez avoir synchronisé correctement les mises à jour logicielles et vous devez avoir téléchargé les mises à jour logicielles dans la bibliothèque de contenu sur le serveur de site. Pour plus d’informations, consultez [Déployer des mises à jour logicielles](../../sum/deploy-use/deploy-software-updates.md).  
+    -   **Commentaire** : brève description facultative.  
 
- Vous pouvez appliquer ces mises à jour logicielles à une image selon un calendrier défini. Aux heures spécifiées dans ce calendrier, Configuration Manager applique les mises à jour logicielles sélectionnées à l’image de système d’exploitation et, si vous le souhaitez, distribue l’image mise à jour aux points de distribution. Les informations sur l'image de système d'exploitation sont stockées dans la base de données du site, y compris les mises à jour logicielles qui ont été appliquées au moment de l'importation. Les mises à jour logicielles appliquées à l'image depuis son ajout initial sont également stockées dans la base de données du site. Lorsque vous ouvrez l'Assistant pour appliquer des mises à jour logicielles à l'image de système d'exploitation, l'Assistant récupère une liste des mises à jour logicielles applicables qui n'ont pas encore été appliquées à l'image, pour vous permettre de les sélectionner. Configuration Manager copie les mises à jour logicielles de la bibliothèque de contenu sur le serveur de site, puis applique les mises à jour logicielles à l’image de système d’exploitation.  
+5.  Effectuez toutes les étapes de l'Assistant.  
 
- Pour appliquer des mises à jour logicielles à une image de système d'exploitation, suivez la procédure ci-dessous.  
 
-#### <a name="to-apply-software-updates-to-an-operating-system-image"></a>Pour appliquer des mises à jour logicielles à une image de système d'exploitation  
+Ensuite, distribuez l’image de système d’exploitation sur les points de distribution.  
 
-1.  Dans la console Configuration Manager, cliquez sur **Bibliothèque de logiciels**.  
 
-2.  Dans l'espace de travail **Bibliothèque de logiciels** , développez **Systèmes d'exploitation**, puis cliquez sur **Images du système d'exploitation**.  
 
-3.  Sélectionnez l'image de système d'exploitation à laquelle appliquer les mises à jour logicielles.  
+##  <a name="BKMK_DistributeBootImages"></a> Distribuer du contenu vers les points de distribution  
 
-4.  Sous l'onglet **Accueil** , dans le groupe **Image du système d'exploitation** , cliquez sur **Planifier les mises à jour** pour démarrer l'Assistant.  
+Distribuez les images de système d’exploitation vers les points de distribution comme vous le feriez pour tout autre contenu. Avant de déployer la séquence de tâches, distribuez l’image de système d’exploitation vers au moins un point de distribution. Pour plus d’informations, consultez [Distribuer du contenu](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_distribute).  
 
-5.  Sur la page **Choisir des mises à jour** , sélectionnez les mises à jour logicielles à appliquer à l'image du système d'exploitation, puis cliquez sur **Suivant**.  
 
-6.  Sur la page **Définir le calendrier** , spécifiez les paramètres suivants, puis cliquez sur **Suivant**.  
 
-    1.  **Calendrier**: définissez le calendrier d’application des mises à jour logicielles à l’image du système d’exploitation.  
+[!INCLUDE [Apply software updates to an image](includes/wim-apply-updates.md)]
 
-    2.  **Continuer en cas d’erreur**: sélectionnez cette option pour continuer à appliquer les mises à jour logicielles à l’image même si une erreur survient.  
 
-    3.  **Distribuer l’image aux points de distribution**: sélectionnez cette option pour mettre à jour l’image du système d’exploitation sur les points de distribution après l’application des mises à jour logicielles.  
-
-7.  Vérifiez les informations figurant sur la page **Résumé** , puis cliquez sur **Suivant**.  
-
-8.  Sur la page **Dernière étape** , vérifiez que les mises à jour logicielles ont été correctement appliquées à l'image de système d'exploitation.  
-
-> [!NOTE]  
->  Pour réduire la taille de la charge utile, la maintenance des packages de mise à niveau du système d’exploitation et des images de système d’exploitation supprime l’ancienne version.  
 
 ##  <a name="BKMK_OSImageMulticast"></a> Préparer l’image de système d’exploitation pour les déploiements en multidiffusion  
- Utilisez des déploiements en multidiffusion pour permettre à plusieurs ordinateurs de télécharger simultanément une image de système d’exploitation. L’image est multidiffusée aux clients par le point de distribution, au lieu que le point de distribution envoie une copie de l’image à chaque client via une connexion distincte. Si vous choisissez la méthode de déploiement de système d’exploitation [Utiliser la multidiffusion pour déployer Windows sur le réseau](../deploy-use/use-multicast-to-deploy-windows-over-the-network.md), vous devez configurer le package d’image de système d’exploitation pour prendre en charge la multidiffusion avant de distribuer l’image du système d’exploitation vers un point de distribution multidiffusion. Pour définir les options de multidiffusion pour un package d'images du système d'exploitation existant, procédez comme suit.  
 
-#### <a name="to-modify-an-operating-system-image-package-to-use-multicast"></a>Pour modifier un package d'images du système d'exploitation afin d'utiliser la multidiffusion  
+Utilisez des déploiements en multidiffusion pour permettre à plusieurs ordinateurs de télécharger simultanément une image de système d’exploitation. L’image est multidiffusée aux clients par le point de distribution. De cette façon, vous évitez la situation dans laquelle chaque client télécharge une copie de l’image à partir du point de distribution via sa propre connexion. Si vous choisissez la méthode de déploiement de système d’exploitation [Utiliser la multidiffusion pour déployer Windows sur le réseau](/sccm/osd/deploy-use/use-multicast-to-deploy-windows-over-the-network), configurez l’image du système d’exploitation de manière à prendre en charge la multidiffusion. Ensuite, distribuez l’image vers un point de distribution configuré pour la multidiffusion. 
 
-1.  Dans la console Configuration Manager, cliquez sur **Bibliothèque de logiciels**.  
+1.  Dans la console Configuration Manager, accédez à l’espace de travail **Bibliothèque de logiciels**, développez **Systèmes d’exploitation**, puis sélectionnez le nœud **Images du système d’exploitation**.  
 
-2.  Dans l'espace de travail **Bibliothèque de logiciels** , développez **Systèmes d'exploitation**, puis cliquez sur **Images du système d'exploitation**.  
+2.  Sélectionnez l’image du système d’exploitation que vous souhaitez distribuer vers le point de distribution configuré pour la multidiffusion.  
 
-3.  Sélectionnez l'image du système d'exploitation que vous souhaitez distribuer au point de distribution multidiffusion.  
+3.  Dans le groupe **Propriétés** de l’onglet **Accueil** du ruban, sélectionnez **Propriétés**.  
 
-4.  Dans l'onglet **Accueil** , dans le groupe **Propriétés** , cliquez sur **Propriétés**.  
+4.  Passez à l’onglet **Paramètres de distribution**, puis configurez les options suivantes :  
 
-5.  Sélectionnez l'onglet **Paramètres de distribution** et configurez les options suivantes :  
+    -   **Autoriser ce package à être transféré par multidiffusion (WinPE uniquement)**  : sélectionnez cette option pour permettre à Configuration Manager de déployer simultanément plusieurs images de système d’exploitation à l’aide de la multidiffusion.  
 
-    -   **Autoriser ce package à être transféré par multidiffusion (WinPE uniquement)**  : sélectionnez cette option pour permettre à Configuration Manager de déployer simultanément plusieurs images de système d’exploitation.  
-
-    -   **Chiffrer les packages de multidiffusion** : spécifiez si l’image est chiffrée avant d'être envoyée au point de distribution. Utiliser cette option si le package contient des informations sensibles. Si l'image n'est pas chiffrée, le contenu du package sera visible en texte clair sur le réseau et pourra être lu par un utilisateur non autorisé.  
+    -   **Chiffrer les packages de multidiffusion** : spécifiez si le site doit chiffrer l’image avant de l’envoyer au point de distribution. Si l’image contient des informations sensibles, utilisez cette option. Si l’image n’est pas chiffrée, son contenu s’affiche sous forme de texte en clair sur le réseau. Dans ce cas, un utilisateur non autorisé peut intercepter et voir le contenu de l’image.  
 
     -   **Transférer ce package uniquement par multidiffusion** : spécifiez si vous souhaitez que le point de distribution déploie l’image uniquement pendant une session de multidiffusion.  
 
-         Si vous sélectionnez **Transférer ce package uniquement par multidiffusion**, vous devez également spécifier **Télécharger le contenu localement si nécessaire, en exécutant la séquence de tâches** comme option de déploiement pour l'image du système d'exploitation. Vous pouvez spécifier les options de déploiement pour l'image lorsque vous déployez l'image du système d'exploitation, ou vous pouvez les spécifier ultérieurement en modifiant les propriétés du déploiement. Les options de déploiement se trouvent sur l'onglet **Points de distribution** de la page **Propriétés** de l'objet de déploiement.  
+         Si vous sélectionnez **Transférer ce package uniquement par multidiffusion**, vous devez également spécifier **Télécharger le contenu localement si nécessaire, en exécutant la séquence de tâches** comme option de déploiement pour l’image du système d’exploitation. Pour plus d'informations, voir [Déployer une séquence de tâches](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS).   
 
-6.  Cliquez sur **OK**.  
+5.  Sélectionnez **OK** pour enregistrer les paramètres et fermer les propriétés de l’image.  

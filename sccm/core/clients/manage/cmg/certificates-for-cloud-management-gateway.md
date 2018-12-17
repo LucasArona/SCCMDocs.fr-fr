@@ -4,17 +4,17 @@ description: Découvrez les différents certificats numériques à utiliser avec
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 10/24/2018
+ms.date: 11/27/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
-ms.openlocfilehash: 121b3840ea4f61f4789c5d6c21ab857cb091e199
-ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
+ms.openlocfilehash: 4ef9746b9a1eb90beeec6a477ad1d406acebbb05
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411304"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456564"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>Certificats pour la passerelle de gestion cloud
 
@@ -123,6 +123,9 @@ Créez un certificat SSL personnalisé pour la passerelle de gestion cloud de la
 ## <a name="bkmk_azuremgmt"></a> Certificat de gestion Azure
 
 *Ce certificat est obligatoire pour les déploiements de services classiques. Il n’est pas nécessaire pour les déploiements Azure Resource Manager.*
+
+> [!Important]  
+> Depuis la version 1810, les déploiements de services Classic dans Azure sont dépréciés dans Configuration Manager. Commencez par utiliser des déploiements Azure Resource Manager pour la passerelle de gestion cloud. Pour plus d’informations, consultez [Planifier la passerelle de gestion cloud](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager).
 
 Vous fournissez ce certificat dans le portail Azure, lors de la création de la passerelle de gestion cloud dans la console Configuration Manager.
 

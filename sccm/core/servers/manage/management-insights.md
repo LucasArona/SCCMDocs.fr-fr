@@ -2,7 +2,7 @@
 title: Management insights
 titleSuffix: Configuration Manager
 description: Découvrez plus en détail la fonctionnalité Insights de gestion disponible dans la console Configuration Manager.
-ms.date: 07/30/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a79f83be-884c-48e6-94d6-ed0a68c22e2f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 92f82ee7247030d19df63e50b0ac4437f250717a
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 3721c4c35dd22a0d2a59d2300bd25dfbd3c75aeb
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383495"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456309"
 ---
 # <a name="management-insights-in-configuration-manager"></a>Insights de gestion dans Configuration Manager
 
@@ -31,11 +31,12 @@ Pour afficher les règles, votre compte nécessite l’autorisation de **lecture
 
 1. Ouvrez la console Configuration Manager.  
 
-2. Accédez à l’espace de travail **Administration** et cliquez sur **Insights de gestion**.  
+2. Accédez à l’espace de travail **Administration**, développez **Insights de gestion**, puis sélectionnez **Tous les insights**.  
 
-3. Sélectionnez **Tous les insights**.  
+    > [!Note]  
+    > Dans la version 1810, lorsque vous sélectionnez le nœud **Insights de gestion**, celui-ci affiche le [Tableau de bord des insights de gestion](#bkmk_insights).  
 
-4. Double-cliquez sur le **Nom du groupe d’insights de gestion** que vous souhaitez examiner. Vous pouvez également le mettre en surbrillance et cliquer sur **Afficher les insights** dans le ruban.  
+3. Ouvrez le groupe d’insights de gestion que vous souhaitez examiner. Dans le ruban, sélectionnez **Afficher les insights**.  
 
 Les quatre onglets suivants sont disponibles pour l’examen : 
 
@@ -45,7 +46,7 @@ Les quatre onglets suivants sont disponibles pour l’examen :
 
 - **En cours** : affiche les règles quand certains prérequis, mais pas tous, sont remplis.  
 
-- **Action nécessaire** : les règles nécessitant la prise de mesures sont listées. Cliquez avec le bouton droit et sélectionnez **Plus de détails** pour récupérer des éléments spécifiques quand une action est nécessaire.  
+- **Action nécessaire** : les règles nécessitant la prise de mesures sont listées. Sélectionnez **Plus de détails** pour récupérer des éléments spécifiques quand une action est nécessaire.  
 
 Le volet **Prérequis** répertorie les éléments nécessaires pour exécuter la règle.
 
@@ -53,7 +54,7 @@ Le volet **Prérequis** répertorie les éléments nécessaires pour exécuter l
 ![Insights de gestion : ensemble des règles et prérequis pour le groupe de services cloud](./media/Management-insights-all-cloud-rules.png)
 
 
-Sélectionnez une règle et cliquez sur **Plus de détails** pour en afficher les détails.
+Sélectionnez une règle, puis sélectionnez **Plus de détails** pour en afficher les détails.
 
 
 
@@ -63,7 +64,7 @@ Les règles des insights de gestion réévaluent leur mise en application selon 
 
 Le fichier journal pour les règles des insights de gestion est **SMS_DataEngine.log** sur le serveur de site.
 
-<!--1357930--> Depuis la version 1806, certaines règles vous permettent de prendre des mesures. Sélectionnez une règle, cliquez sur **Plus de détails**, puis sur **Entreprendre une action** si cette option est disponible. 
+<!--1357930--> Depuis la version 1806, certaines règles vous permettent de prendre des mesures. Sélectionnez une règle, sélectionnez **Plus de détails**, puis sélectionnez **Entreprendre une action** si cette option est disponible. 
 
 En fonction de la règle, cette action présente l’un des comportements suivants :  
 
@@ -73,9 +74,45 @@ En fonction de la règle, cette action présente l’un des comportements suivan
 
 
 
+## <a name="bkmk_insights"></a> Tableau de bord Insights de gestion
+<!--1357979-->
+
+À compter de la version 1810, le nœud **Insights de gestion** comprend un tableau de bord graphique. Ce tableau de bord présente une vue d’ensemble de l’état des règles, ce qui vous permet de montrer plus facilement votre progression. 
+
+Pour affiner la vue, utilisez les filtres suivants en haut du tableau de bord :
+- Afficher les tâches terminées
+- Facultatif
+- Recommandé
+- Critique
+
+Le tableau de bord comprend les vignettes suivantes :  
+
+- **Index des insights de gestion** : suit la progression globale des règles d’insights de gestion. L’index est une moyenne pondérée. Les règles critiques sont celles qui comptent le plus. Les règles facultatives sont celles qui ont le moins de poids.  
+
+- **Groupes d’insights de gestion** : indique le pourcentage des règles dans chaque groupe, en respectant les filtres. Sélectionnez un groupe pour explorer les règles spécifiques de ce groupe.  
+
+- **Priorité des insights de gestion** : indique le pourcentage des règles par priorité, en respectant les filtres.   
+
+- **Tous les insights** : tableau des insights comprenant la priorité et l’état. Utilisez le champ **Filtre** situé en haut du tableau pour rechercher des chaînes dans les colonnes disponibles. Le tableau de bord trie les colonnes du tableau dans l’ordre suivant :
+    - État : Action nécessaire, Terminé, Inconnu  
+    - Priorité : Critique, Recommandé, Facultatif  
+    - Dernière modification : les dates les plus anciennes se trouvent en haut de la liste   
+
+![Capture d’écran du tableau de bord Insights de gestion](media/1357979-management-insights-dashboard.png)
+
+
+
 ## <a name="groups-and-rules"></a>Groupes et règles
 
-Les règles sont organisées en différents groupes d’insights de gestion. Consultez la liste suivante pour connaître les groupes et les règles qui sont actuellement disponibles :
+Les règles sont organisées dans les groupes d’insights de gestion suivants :
+- [Applications](#applications)  
+- [Services cloud](#cloud-services)  
+- [Regroupements](#collections)  
+- [Maintenance proactive](#proactive-maintenance)  
+- [Security](#security)  
+- [Gestion simplifiée](#simplified-management)  
+- [Centre logiciel](#software-center)  
+- [Windows 10](#windows-10)  
 
 
 ### <a name="applications"></a>Applications
@@ -119,6 +156,8 @@ Insights qui permettent de simplifier la gestion par le nettoyage et la reconfig
 - **Images de démarrage inutilisées** : images de démarrage non référencées pour l’utilisation de séquences de tâches ou le démarrage PXE. Pour plus d’informations, consultez [Gérer les images de démarrage](/sccm/osd/get-started/manage-boot-images).  
 
 - **Éléments de configuration inutilisés** : éléments de configuration qui ne font pas partie d’une base de référence de configuration et datent de plus de 30 jours. Pour plus d’informations, consultez [Créer des bases de référence de configuration](/sccm/compliance/deploy-use/create-configuration-baselines).  
+
+- **Mettre à niveau les sources de cache de pair avec la dernière version du client Configuration Manager** : identifiez les clients qui servent de sources de cache de pair, mais qui n’ont pas été mis à niveau à partir d’une version antérieure à 1806. Les clients antérieurs à 1806 ne peuvent pas être utilisés en tant que source de cache d’homologue pour les clients qui exécutent la version 1806 ou une version ultérieure. Sélectionnez **Entreprendre une action** pour ouvrir une vue d’appareil qui affiche la liste des clients.<!--1358008-->  
 
 
 ### <a name="security"></a>Sécurité

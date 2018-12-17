@@ -2,7 +2,7 @@
 title: Mises à jour dans la console
 titleSuffix: Configuration Manager
 description: Installer des mises à jour pour Configuration Manager à partir du cloud Microsoft
-ms.date: 08/22/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 503255c571288fa0da0b0b81f3a76fc2b38bbb19
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.openlocfilehash: 7635dce325a2612c144c6eaa9c733b7dffc7c251
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43893921"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456207"
 ---
 # <a name="install-in-console-updates-for-configuration-manager"></a>Installer des mises à jour dans la console pour Configuration Manager
 
@@ -105,11 +105,11 @@ Passez en revue les étapes suivantes avant d’installer une mise à jour à pa
 
 Passez en revue la liste de contrôle de mise à jour applicable pour connaître les actions à entreprendre avant de lancer la mise à jour :
 
+- [Liste de contrôle pour l’installation de la mise à jour 1810](/sccm/core/servers/manage/checklist-for-installing-update-1810)  
+
 - [Liste de contrôle pour l’installation de la mise à jour 1806](/sccm/core/servers/manage/checklist-for-installing-update-1806)  
 
 - [Liste de contrôle pour l’installation de la mise à jour 1802](/sccm/core/servers/manage/checklist-for-installing-update-1802)
-
-- [Liste de contrôle pour l’installation de la mise à jour 1710](/sccm/core/servers/manage/checklist-for-installing-update-1710)  
 
 
 ###  <a name="bkmk_step2"></a> Étape 2 : exécuter l’outil de vérification des prérequis avant d’installer une mise à jour  
@@ -367,11 +367,11 @@ Accédez à l’espace de travail **Surveillance**, puis sélectionnez le nœud 
 
 Après les mises à jour du site, vérifiez la liste de contrôle postérieure à la mise à jour de la version applicable :  
 
+- [Liste de contrôle postérieure à la mise à jour pour la version 1810](/sccm/core/servers/manage/checklist-for-installing-update-1810#post-update-checklist)  
+
 - [Liste de contrôle postérieure à la mise à jour pour la version 1806](/sccm/core/servers/manage/checklist-for-installing-update-1806#post-update-checklist)  
 
 - [Liste de contrôle postérieure à la mise à jour pour la version 1802](/sccm/core/servers/manage/checklist-for-installing-update-1802#post-update-checklist)  
-
-- [Liste de contrôle postérieure à la mise à jour pour la version 1710](/sccm/core/servers/manage/checklist-for-installing-update-1710#post-update-checklist)  
 
 
 
@@ -399,7 +399,7 @@ Les fonctionnalités suivantes sont facultatives dans la dernière version de Co
 
 -->
 
-- [Haute disponibilité du serveur de site](/sccm/core/servers/deploy/configure/site-server-high-availability)<!--1128774-->
+- [Package Conversion Manager](/sccm/apps/pcm/package-conversion-manager) <!--1357861-->
 - [Mises à jour des logiciels tiers](/sccm/sum/deploy-use/third-party-software-updates)<!--1357605,1352101,1358714-->
 - [Approuver les demandes d’application pour les utilisateurs par appareil](/sccm/apps/deploy-use/deploy-applications#specify-deployment-settings) <!--1357015-->  
 - [Prise en charge de Cisco AnyConnect 4.0.07x et version supérieure pour iOS](/sccm/mdm/deploy-use/create-vpn-profiles)<!--1357393-->
@@ -410,12 +410,12 @@ Les fonctionnalités suivantes sont facultatives dans la dernière version de Co
 - [Mises à jour du pilote Surface](/sccm/sum/get-started/configure-classifications-and-products) <!--1098490-->
 - [Passerelle de gestion cloud](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) <!--1101764-->
 - [Point de service de l’entrepôt de données](/sccm/core/servers/manage/data-warehouse) <!--1277922-->
-- [Cache d’homologue client](/sccm/core/plan-design/hierarchy/client-peer-cache) <!--1101436-->
+- [Cache de pair client](/sccm/core/plan-design/hierarchy/client-peer-cache) <!--1101436-->
 - [Créer un certificat PFX](/sccm/protect/deploy-use/introduction-to-certificate-profiles) <!--1321368-->
 - [Connecteur Azure Log Analytics](/sccm/core/clients/manage/sync-data-log-analytics) <!--1258052-->
 - [Stratégie Windows Defender Exploit Guard](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) <!--1355468-->
 - [VPN pour Windows 10](/sccm/protect/deploy-use/vpn-profiles) <!--1283610-->
-- [Passport for Work](/sccm/protect/deploy-use/windows-hello-for-business-settings) (également appelé *Windows Hello Entreprise*) <!--1245704-->
+- [Windows Hello Entreprise](/sccm/protect/deploy-use/windows-hello-for-business-settings) (précédemment *Passport for Work*) <!--1245704-->
 - [Accès conditionnel pour les PC gérés](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)  <!--1191496-->
 
 

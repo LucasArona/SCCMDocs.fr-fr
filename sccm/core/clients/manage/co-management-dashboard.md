@@ -1,8 +1,8 @@
 ---
 title: Tableau de bord de cogestion
 titleSuffix: Configuration Manager
-description: Passez en revue les informations relatives à la cogestion à l’aide du tableau de bord.
-ms.date: 03/22/2018
+description: Utilisez le tableau de bord de cogestion pour consulter les informations sur les appareils cogérés.
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,67 +10,115 @@ ms.assetid: e83a7b0d-b381-4b4a-8eca-850385abbebb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 72b42aec2b50e229b90e9a642343386e8588aab7
-ms.sourcegitcommit: 2cc635835709fb8d86cdb63ea34233b36c94d4d8
+ms.openlocfilehash: ad76140285df1c0125fcd2efab0f4794ed4881bf
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52258995"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52455940"
 ---
-# <a name="co-management-dashboard-in-system-center-configuration-manager"></a>Tableau de bord de cogestion dans System Center Configuration Manager
+# <a name="co-management-dashboard-in-configuration-manager"></a>Tableau de bord de cogestion dans Configuration Manager
+
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
-À compter de la version 1802, vous pouvez consulter un tableau de bord contenant des informations sur la cogestion. Le tableau de bord vous permet d’examiner les machines qui sont cogérées dans votre environnement. Les graphiques peuvent vous aider à identifier les appareils qui demandent une attention particulière.<!--1356648-->
+Depuis la version 1802, consultez un tableau de bord comportant des informations sur la cogestion. Le tableau de bord vous permet d’examiner les machines qui sont cogérées dans votre environnement. Les graphiques peuvent vous aider à identifier les appareils qui demandent une attention particulière.<!--1356648-->
 
-## <a name="open-the-co-management-dashboard"></a>Ouvrir le tableau de bord de cogestion
-Pour ouvrir le tableau de bord de cogestion, effectuez les étapes suivantes : 
+Dans la console Configuration Manager, accédez à l’espace de travail **Surveillance**, puis sélectionnez le nœud **Cogestion**.
 
-1. Ouvrez la console Configuration Manager. 
-2. Cliquez sur le nœud **Analyse**. 
-3. Pour charger le tableau de bord, cliquez sur **Cogestion**.
-
-## <a name="reviewing-information-in-the-co-management-dashboard"></a>Consultation des informations contenues dans le tableau de bord de cogestion
-
-Le tableau de bord de cogestion présente quatre graphiques pour votre environnement. 
-
-- **Appareils cogérés** : indique le pourcentage d’appareils cogérés dans tout votre environnement.
-
-    ![Graphique des appareils cogérés](media\co-management-dashboard\Percent-Co-managed-graph.PNG)
-
-- **Distribution de système d’exploitation client** : affiche le nombre d’appareils clients par système d’exploitation et par version. Les regroupements suivants sont utilisés : </br>
-    - Windows 7 et 8.x
-    - Windows 10 antérieur à 1709
-    - Windows 10 1709 et ultérieur
-
-         > [!NOTE] 
-         > Windows 10, version 1709 et ultérieures, est un prérequis pour la cogestion.
-
-     Pointer sur une section du graphique vous donne le pourcentage d’appareils du regroupement de systèmes d’exploitation sélectionné.
-
-     ![Graphique de distribution des systèmes d’exploitation clients](media\co-management-dashboard\Co-management-OS-distribution-graph.PNG)
-
-- **État de la cogestion** : répartition des réussites et des échecs des appareils selon les catégories suivantes :
-    - Réussite, Joint à une version hybride d’Azure AD
-    - Réussite, Joint à Azure AD
-    - Échec : Échec de l’inscription automatique
-    
-     Pointer sur une section du graphique vous donne le pourcentage d’appareils dans la catégorie. 
-
-     ![Graphique d’état pour la cogestion](media\co-management-dashboard\Co-management-status-graph.PNG)
-
-     Cliquer sur une section du graphique vous permet d’accéder à une liste d’appareils pour la catégorie.
- 
-     ![Liste des appareils en échec d’inscription](media\co-management-dashboard\Enrollment-Failure_Device-List.PNG)
+Depuis la version 1810, le tableau de bord de cogestion a été amélioré avec des informations plus détaillées. <!--1358980-->
 
 
-- **Transition des charges de travail** : affiche un graphique à barres indiquant le nombre d’appareils que vous avez fait passer à Microsoft Intune pour les quatre charges de travail disponibles :
-    - Stratégies de conformité
-    - Accès aux ressources
-    - Windows Update for Business
-    - Endpoint Protection
 
-     Pointer sur une section du graphique vous donne le nombre d’appareils transférés pour la charge de travail. 
-     ![Graphique à barres de transition des charges de travail](media\co-management-dashboard\Workload-Transition.PNG)
+## <a name="dashboard-tiles"></a>Vignettes du tableau de bord 
+
+Le tableau de bord de cogestion présente des vignettes qui varient en fonction de la version du site. 
+
+
+### <a name="co-managed-devices"></a>Appareils cogérés
+
+*S’applique aux versions 1802 et 1806*
+
+Indique le pourcentage d’appareils cogérés dans tout votre environnement.
+ ![Vignette des appareils cogérés](media\co-management-dashboard\Percent-Co-managed-graph.PNG)
+
+
+### <a name="client-os-distribution"></a>Distribution des systèmes d’exploitation clients
+
+*S’applique à toutes les versions* 
+
+Indique le nombre d’appareils clients par système d’exploitation et par version. Elle utilise les regroupements suivants :  
+- Windows 7 et 8.x  
+- Windows 10 antérieur à 1709  
+- Windows 10 1709 et ultérieur  
+
+    > [!Tip]  
+    > Windows 10, version 1709 et ultérieures, est un prérequis pour la cogestion.  
+
+Pointez sur une section du graphique pour connaître le pourcentage d’appareils appartenant à ce groupe de système d’exploitation.
+ ![Vignette de distribution des systèmes d’exploitation clients](media\co-management-dashboard\Co-management-OS-distribution-graph.PNG)
+
+
+### <a name="co-management-status-donut"></a>État de la cogestion (anneau)
+
+*S’applique aux versions 1802 et 1806*
+
+Indique la répartition des réussites et des échecs des appareils dans les catégories suivantes :
+- Réussite, Joint à une version hybride d’Azure AD  
+- Réussite, Joint à Azure AD  
+- Échec : Échec de l’inscription automatique  
+
+Pointez sur une section du graphe pour connaître le pourcentage d’appareils appartenant à cette catégorie. 
+ ![Vignette de l’état de la cogestion (anneau)](media\co-management-dashboard\Co-management-status-graph.PNG)
+
+Sélectionnez une section du graphe pour voir la liste des appareils appartenant à cette catégorie.
+ ![Liste des appareils en échec d’inscription](media\co-management-dashboard\Enrollment-Failure_Device-List.PNG)
+
+
+### <a name="co-management-status-funnel"></a>État de la cogestion (entonnoir)
+
+*S’applique à la version 1810 et ultérieures*
+
+Graphique en entonnoir qui indique le nombre d’appareils associés aux états suivants du processus d’inscription :  
+- Appareils éligibles  
+- Planifié  
+- Inscription lancée  
+- Inscrit  
+
+![Vignette d’état de la cogestion (entonnoir)](media\co-management-dashboard\1358980-status-funnel.png)
+
+
+### <a name="co-management-enrollment-status"></a>État d'inscription à la cogestion
+
+*S’applique à la version 1810 et ultérieures*
+
+Montre la répartition de l’état des appareils dans les catégories suivantes :
+- Réussite, joint à une version hybride d’Azure AD  
+- Réussite, joint à Azure AD  
+- Inscription en cours, joint à une version hybride d’Azure AD  
+- Échec, joint à une version hybride d’Azure AD  
+- Échec, joint à Azure AD  
+- En attente de la connexion de l’utilisateur  
+
+Sélectionnez un état dans la vignette pour accéder à la liste des appareils qui se trouvent dans cet état.  
+
+![Vignette d’état d’inscription à la cogestion](media\co-management-dashboard\1358980-enrollment-status.png)
+
+
+### <a name="enrollment-errors"></a>Erreurs d’inscription
+
+*S’applique à la version 1810 et ultérieures*
+
+Tableau qui indique le nombre d’erreurs d’inscription des appareils.  
+
+
+### <a name="workload-transition"></a>Transition des charges de travail
+
+*S’applique à toutes les versions*
+
+Affiche un graphique à barres indiquant le nombre d’appareils dont vous avez opéré la transition vers Microsoft Intune pour les charges de travail disponibles. (La liste des charges de travail varie en fonction de la version de Configuration Manager. Pour plus d’informations, consultez [Charges de travail pouvant être transférées à Intune](/sccm/core/clients/manage/co-management-switch-workloads#workloads-able-to-be-transitioned-to-intune).)
+
+Pointez sur une section du graphique pour connaître le nombre d’appareils ayant fait l’objet d’une transition pour la charge de travail. 
+ ![Graphique à barres de transition des charges de travail](media\co-management-dashboard\Workload-Transition.PNG)
 
 
 ## <a name="next-steps"></a>Étapes suivantes

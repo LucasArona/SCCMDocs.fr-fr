@@ -2,7 +2,7 @@
 title: Configurer la sécurité
 titleSuffix: Configuration Manager
 description: Configurez les options de sécurité pour Configuration Manager.
-ms.date: 10/22/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 552e7e3d-e584-4a7c-9155-0f796a14b678
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: dc0f57bcc06911f34da481c2e3be81c3cb0de1c2
-ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
+ms.openlocfilehash: d1aaf6db583d9749dda3be14cfd06acbff19b093
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411406"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456088"
 ---
 # <a name="configure-security-in-configuration-manager"></a>Configurer la sécurité dans Configuration Manager
 
@@ -27,6 +27,7 @@ Utilisez les informations de cet article pour configurer les options de sécurit
 - [Administration basée sur des rôles](#BKMK_ConfigureRBA)  
 - [Gérer les comptes](#BKMK_ManageAccounts)  
 - [Configurer Azure Active Directory](#bkmk_azuread)  
+- [Configurer l’authentification du fournisseur SMS](#bkmk_auth)  
 
 
 
@@ -145,6 +146,12 @@ Pour plus d’informations, consultez [Comptes utilisés dans Configuration Mana
 ##  <a name="bkmk_azuread"></a> Configurer Azure Active Directory
 
 Intégrez Configuration Manager à Azure Active Directory (Azure AD) pour simplifier et activer votre environnement pour le cloud. Permettez au site et aux clients de s’authentifier avec Azure AD. Pour plus d’informations, reportez-vous au service **Gestion cloud** dans [Configurer les services Azure](/sccm/core/servers/deploy/configure/azure-services-wizard).
+
+
+
+## <a name="bkmk_auth"></a> Configurer l’authentification du fournisseur SMS
+
+Depuis la version 1810, vous pouvez spécifier le niveau d’authentification minimal pour les administrateurs qui accèdent aux sites Configuration Manager. Cette fonctionnalité force les administrateurs à se connecter à Windows avec le niveau requis. Pour plus d’informations, consultez [Planifier le fournisseur SMS](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_auth). <!--1357013-->  
 
 
 

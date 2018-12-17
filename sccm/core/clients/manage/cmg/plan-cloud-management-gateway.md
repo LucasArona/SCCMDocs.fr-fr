@@ -2,7 +2,7 @@
 title: Planifier la passerelle de gestion cloud
 titleSuffix: Configuration Manager
 description: Planifiez et concevez la passerelle de gestion cloud pour simplifier la gestion des clients Internet.
-ms.date: 10/24/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0f7e598da0953a20412f6c8279b90a95c1d26581
-ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
+ms.openlocfilehash: b059fd3b8511a3cbbf308ea7a3ee21a4ec9dbfaa
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411474"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456717"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Planifier la passerelle de gestion cloud dans Configuration Manager
 
@@ -98,12 +98,15 @@ Le déploiement et le fonctionnement de la passerelle de gestion cloud incluent 
 
 
 ### <a name="azure-resource-manager"></a>Azure Resource Manager
-<!-- 1324735 --> À compter de la version 1802, vous pouvez créer la passerelle de gestion cloud en utilisant un **déploiement Azure Resource Manager**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) est une plateforme moderne permettant de gérer l’ensemble des ressources de la solution comme une seule entité, nommée [groupe de ressources](/azure/azure-resource-manager/resource-group-overview#resource-groups). Lors du déploiement d’une Passerelle CMG avec Azure Resource Manager, le site utilise Azure Active Directory (Azure AD) pour authentifier et créer les ressources cloud nécessaires. Le certificat de gestion Azure classique n’est pas nécessaire pour ce déploiement modernisé.  
+<!-- 1324735 --> À compter de la version 1802, vous pouvez créer la passerelle de gestion cloud en utilisant un **déploiement Azure Resource Manager**. [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview) est une plateforme moderne permettant de gérer l’ensemble des ressources de la solution comme une seule entité, nommée [groupe de ressources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups). Lors du déploiement d’une Passerelle CMG avec Azure Resource Manager, le site utilise Azure Active Directory (Azure AD) pour authentifier et créer les ressources cloud nécessaires. Le certificat de gestion Azure classique n’est pas nécessaire pour ce déploiement modernisé.  
+
+> [!Note]  
+> Cette fonctionnalité ne permet pas la prise en charge des fournisseurs de services cloud Azure. Le déploiement de la passerelle de gestion cloud avec Azure Resource Manager continue d’utiliser le service cloud classique, que le fournisseur de services cloud ne prend pas en charge. Pour plus d’informations, consultez les [services Azure disponibles auprès du fournisseur de services cloud Azure](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services). 
 
 L’Assistant CMG propose toujours l’option de **déploiement de service classique** à l’aide d’un certificat de gestion Azure. Pour simplifier le déploiement et la gestion des ressources, l’utilisation du modèle de déploiement Azure Resource Manager est recommandé pour toutes les nouvelles instances de passerelle de gestion cloud. Si possible, redéployez les instances CMG existantes avec Resource Manager. Pour plus d’informations, consultez [Modifier une passerelle de gestion cloud](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#modify-a-cmg).
 
-> [!IMPORTANT]  
-> Cette fonctionnalité ne permet pas la prise en charge des fournisseurs de services cloud Azure. Le déploiement de la passerelle de gestion cloud avec Azure Resource Manager continue d’utiliser le service cloud classique, que le fournisseur de services cloud ne prend pas en charge. Pour plus d’informations, consultez les [services Azure disponibles auprès du fournisseur de services cloud Azure](/azure/cloud-solution-provider/overview/azure-csp-available-services). 
+> [!Important]  
+> Depuis la version 1810, le déploiement de services Classic dans Azure est déprécié pour une utilisation dans Configuration Manager. Cette version est la dernière à prendre en charge la création de ces déploiements Azure. Cette fonctionnalité sera supprimée dans la première version de Configuration Manager publiée après le 1er juillet 2019. Déplacez votre passerelle de gestion cloud et vos points de distribution cloud vers des déploiements Azure Resource Manager avant cette date. <!--SCCMDocs-pr issue #2993-->  
 
 
 ### <a name="hierarchy-design"></a>Conception de hiérarchie
@@ -158,7 +161,9 @@ De même, quand les clients basés à Paris se déplacent et utilisent Internet,
 - Si vous utilisez la méthode de déploiement classique Azure, vous devez utiliser un [**certificat de gestion Azure**](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_azuremgmt).  
 
     > [!TIP]  
-    > À compter de Configuration Manager version 1802, Microsoft recommande d’utiliser le modèle de déploiement **Azure Resource Manager**. Il ne nécessite pas ce certificat de gestion.  
+    > À compter de Configuration Manager version 1802, Microsoft recommande d’utiliser le modèle de déploiement **Azure Resource Manager**. Il ne nécessite pas ce certificat de gestion. 
+    > 
+    > La méthode de déploiement classique est dépréciée depuis la version 1810.   
 
 - **D’autres certificats** peuvent être nécessaires, en fonction de la version du système d’exploitation et du modèle d’authentification de votre client. Pour plus d’informations, consultez [Certificats de passerelle de gestion cloud](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway).  
 
@@ -183,7 +188,7 @@ De même, quand les clients basés à Paris se déplacent et utilisent Internet,
 
 - Les points de mise à jour logicielle utilisant un équilibreur de charge réseau ne fonctionnent pas avec la passerelle de gestion cloud. <!--505311-->  
 
-- À compter de la version 1802, les déploiements de passerelle de gestion cloud avec le modèle Azure Resource Manager ne permettent pas la prise en charge des fournisseurs de services cloud Azure. Le déploiement de la passerelle de gestion cloud avec Azure Resource Manager continue d’utiliser le service cloud classique, que le fournisseur de services cloud ne prend pas en charge. Pour plus d’informations, consultez les [services Azure disponibles dans les fournisseurs de services cloud Azure](/azure/cloud-solution-provider/overview/azure-csp-available-services).  
+- À compter de la version 1802, les déploiements de passerelle de gestion cloud avec le modèle Azure Resource Manager ne permettent pas la prise en charge des fournisseurs de services cloud Azure. Le déploiement de la passerelle de gestion cloud avec Azure Resource Manager continue d’utiliser le service cloud classique, que le fournisseur de services cloud ne prend pas en charge. Pour plus d’informations, consultez les [services Azure disponibles dans les fournisseurs de services cloud Azure](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services).  
 
 
 ### <a name="support-for-configuration-manager-features"></a>Prise en charge des fonctionnalités de Configuration Manager
