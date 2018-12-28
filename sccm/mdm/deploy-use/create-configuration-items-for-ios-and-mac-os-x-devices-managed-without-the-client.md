@@ -10,36 +10,36 @@ ms.assetid: 613a48ac-c55d-4c4a-94ea-d3747a1b10cb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0a6925cdc1f3b3a5018cc4895820019d88254bd3
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: bf5f580d10c48bb44b3c202832ffff3a06c5c37f
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353339"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416178"
 ---
 # <a name="how-to-create-configuration-items-for-ios-and-mac-os-x-devices-managed-with-intune"></a>Comment créer des éléments de configuration pour les appareils iOS et Mac OS X gérés via Microsoft Intune
 Utilisez l’élément de configuration System Center Configuration Manager **iOS et Mac OS X** pour gérer les paramètres des appareils iOS et Mac OS X qui sont inscrits dans Microsoft Intune ou gérés localement par Configuration Manager.  
   
 ### <a name="to-create-an-ios-and-mac-os-x-configuration-item"></a>Pour créer un élément de configuration iOS et Mac OS X  
   
-1.  Dans la console Configuration Manager, cliquez sur **Ressources et conformité**.  
+1. Dans la console Configuration Manager, cliquez sur **Ressources et conformité**.  
   
-2.  Dans l'espace de travail **Biens et conformité** , développez **Paramètres de compatibilité**, puis cliquez sur **Éléments de configuration**.  
+2. Dans l'espace de travail **Biens et conformité** , développez **Paramètres de compatibilité**, puis cliquez sur **Éléments de configuration**.  
   
-3.  Dans l'onglet **Accueil** , dans le groupe **Créer** , cliquez sur **Créer un élément de configuration**.  
+3. Dans l'onglet **Accueil** , dans le groupe **Créer** , cliquez sur **Créer un élément de configuration**.  
   
-4.  Dans la page **Général** de l’ **Assistant Création d’élément de configuration**, spécifiez un nom et une description éventuelle pour l’élément de configuration.  
+4. Dans la page **Général** de l’ **Assistant Création d’élément de configuration**, spécifiez un nom et une description éventuelle pour l’élément de configuration.  
   
-5.  Sous **Spécifier le type d’élément de configuration que vous voulez créer**, sélectionnez **iOS et Mac OS X**.  
+5. Sous **Spécifier le type d’élément de configuration que vous voulez créer**, sélectionnez **iOS et Mac OS X**.  
   
-6.  Cliquez sur **Catégories** si vous créez et attribuez des catégories pour faciliter la recherche et le filtrage des éléments de configuration dans la console Configuration Manager.  
+6. Cliquez sur **Catégories** si vous créez et attribuez des catégories pour faciliter la recherche et le filtrage des éléments de configuration dans la console Configuration Manager.  
   
-7.  Dans la page **Plateformes prises en charge** de l’Assistant, sélectionnez les plateformes iOS ou Mac OS X spécifiques chargées d’évaluer l’élément de configuration.  
+7. Dans la page **Plateformes prises en charge** de l’Assistant, sélectionnez les plateformes iOS ou Mac OS X spécifiques chargées d’évaluer l’élément de configuration.  
   
-8.  Dans la page **Paramètres de périphérique** de l’Assistant, sélectionnez le groupe de paramètres à configurer. Consultez [Informations de référence sur les paramètres d’élément de configuration iOS et Mac OS X](#BKMK_Setref) dans cette rubrique pour plus d’informations, puis cliquez sur **Suivant**.  
+8. Dans la page **Paramètres de périphérique** de l’Assistant, sélectionnez le groupe de paramètres à configurer. Consultez [Informations de référence sur les paramètres d’élément de configuration iOS et Mac OS X](#BKMK_Setref) dans cette rubrique pour plus d’informations, puis cliquez sur **Suivant**.  
   
-    > [!TIP]  
-    >  Si le paramètre souhaité n’est pas répertorié, cochez la case **Configurer d’autres paramètres qui ne se trouvent pas dans les groupes de paramètres par défaut**.  
+   > [!TIP]  
+   >  Si le paramètre souhaité n’est pas répertorié, cochez la case **Configurer d’autres paramètres qui ne se trouvent pas dans les groupes de paramètres par défaut**.  
   
 9. Dans chaque page de paramètres, configurez les paramètres dont vous avez besoin et indiquez si vous voulez les corriger quand ils ne sont pas conformes sur des périphériques (quand cela est pris en charge).  
   
@@ -62,7 +62,7 @@ Utilisez l’élément de configuration System Center Configuration Manager **iO
   
 12. Effectuez toutes les étapes de l'Assistant.  
   
- Vous pouvez afficher le nouvel élément de configuration dans le nœud **Éléments de configuration** de l’espace de travail **Ressources et Conformité** .  
+    Vous pouvez afficher le nouvel élément de configuration dans le nœud **Éléments de configuration** de l’espace de travail **Ressources et Conformité** .  
   
 ##  <a name="ios-and-mac-os-x-configuration-item-settings-reference"></a>Informations de référence sur les paramètres d’élément de configuration iOS et Mac OS X  
   
@@ -226,35 +226,35 @@ Utilisez l’élément de configuration System Center Configuration Manager **iO
   
 #### <a name="to-specify-the-compliant-or-noncompliant-apps-list"></a>Pour spécifier la liste des applications conformes ou non conformes  
   
-1.  Dans la page **Applications conformes et non conformes (iOS)** , spécifiez les informations suivantes :  
+1. Dans la page **Applications conformes et non conformes (iOS)** , spécifiez les informations suivantes :  
   
-    -   **Liste des applications non conformes** - Sélectionnez cette option si vous souhaitez spécifier une liste d’applications qui seront signalées comme non conformes en cas d’installation par des utilisateurs.  
+   -   **Liste des applications non conformes** - Sélectionnez cette option si vous souhaitez spécifier une liste d’applications qui seront signalées comme non conformes en cas d’installation par des utilisateurs.  
   
-    -   **Liste des applications conformes** - Sélectionnez cette option si vous souhaitez spécifier une liste d’applications que les utilisateurs sont autorisés à installer. Toutes les autres applications installées sont signalées comme non conformes.  
+   -   **Liste des applications conformes** - Sélectionnez cette option si vous souhaitez spécifier une liste d’applications que les utilisateurs sont autorisés à installer. Toutes les autres applications installées sont signalées comme non conformes.  
   
-    -   **Ajouter** - Ajoute une application à la liste sélectionnée. Spécifiez le nom de votre choix, éventuellement l’éditeur de l’application, ainsi que l’URL de l’application dans la boutique d’applications.  
+   -   **Ajouter** - Ajoute une application à la liste sélectionnée. Spécifiez le nom de votre choix, éventuellement l’éditeur de l’application, ainsi que l’URL de l’application dans la boutique d’applications.  
   
-         Pour spécifier l'URL, à partir de l'iTunes App Store, recherchez l'application que vous voulez utiliser.  
+        Pour spécifier l'URL, à partir de l'iTunes App Store, recherchez l'application que vous voulez utiliser.  
   
-         Ouvrez la page de l'application, puis copiez l'URL dans le Presse-papiers. Vous pouvez maintenant utiliser cette URL dans la liste des applications conformes ou non conformes.  
+        Ouvrez la page de l'application, puis copiez l'URL dans le Presse-papiers. Vous pouvez maintenant utiliser cette URL dans la liste des applications conformes ou non conformes.  
   
-         **Exemple :** recherchez l’application **Microsoft Word pour iPad** dans le Store. L’URL que vous utilisez est **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**.  
+        **Exemple :** Recherchez dans le store le **Microsoft Word pour iPad** application. L’URL que vous utilisez est **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**.  
   
-    -   **Modifier** - Vous permet de modifier le nom, l’éditeur et l’URL de l’application sélectionnée.  
+   -   **Modifier** - Vous permet de modifier le nom, l’éditeur et l’URL de l’application sélectionnée.  
   
-    -   **Supprimer** - Supprime l’application sélectionnée dans la liste.  
+   -   **Supprimer** - Supprime l’application sélectionnée dans la liste.  
   
-    -   **Importer** - Importe une liste d’applications que vous avez spécifiée dans un fichier de valeurs séparées par des virgules. Utilisez le format Nom de l'application, Éditeur, URL de l'application dans le fichier.  
+   -   **Importer** - Importe une liste d’applications que vous avez spécifiée dans un fichier de valeurs séparées par des virgules. Utilisez le format Nom de l'application, Éditeur, URL de l'application dans le fichier.  
   
-2.  Lorsque vous avez terminé, cliquez sur **Suivant**.  
+2. Lorsque vous avez terminé, cliquez sur **Suivant**.  
   
- Vous pouvez utiliser l’un des rapports suivants pour surveiller les applications conformes et non conformes :  
+   Vous pouvez utiliser l’un des rapports suivants pour surveiller les applications conformes et non conformes :  
   
--   **Liste des applications et des appareils non conformes d'un utilisateur spécifié** : affiche des informations sur les utilisateurs et les appareils sur lesquels sont installées des applications non conformes avec une stratégie que vous avez spécifiée.  
+- **Liste des applications et des appareils non conformes d'un utilisateur spécifié** : affiche des informations sur les utilisateurs et les appareils sur lesquels sont installées des applications non conformes avec une stratégie que vous avez spécifiée.  
   
--   **Résumé des utilisateurs ayant des applications non conformes** : affiche des informations sur les utilisateurs qui ont installé des applications non conformes avec une stratégie que vous avez spécifiée.  
+- **Résumé des utilisateurs ayant des applications non conformes** : affiche des informations sur les utilisateurs qui ont installé des applications non conformes avec une stratégie que vous avez spécifiée.  
   
- Pour plus d’informations sur la façon d’utiliser les rapports, consultez [Rapports dans System Center Configuration Manager](../../core/servers/manage/reporting.md).  
+  Pour plus d’informations sur la façon d’utiliser les rapports, consultez [Rapports dans System Center Configuration Manager](../../core/servers/manage/reporting.md).  
   
 ###  <a name="compliant-and-noncompliant-apps-mac-os-x"></a>Applications conformes et non conformes (Mac OS X)  
  Permet de spécifier une liste d’applications Mac OS X conformes ou non conformes dans votre entreprise. Vous pouvez ensuite utiliser des rapports pour afficher les appareils sur lesquels sont installées des applications non conformes et l'utilisateur associé.  
@@ -263,39 +263,39 @@ Utilisez l’élément de configuration System Center Configuration Manager **iO
   
 #### <a name="to-specify-the-compliant-or-noncompliant-apps-list"></a>Pour spécifier la liste des applications conformes ou non conformes  
   
-1.  Dans la page **Applications conformes et non conformes (Mac OS X)** , spécifiez les informations suivantes :  
+1. Dans la page **Applications conformes et non conformes (Mac OS X)** , spécifiez les informations suivantes :  
   
-    -   **Liste des applications non conformes** - Sélectionnez cette option si vous souhaitez spécifier une liste d’applications qui seront signalées comme non conformes en cas d’installation par des utilisateurs.  
+   - **Liste des applications non conformes** - Sélectionnez cette option si vous souhaitez spécifier une liste d’applications qui seront signalées comme non conformes en cas d’installation par des utilisateurs.  
   
-    -   **Liste des applications conformes** - Sélectionnez cette option si vous souhaitez spécifier une liste d’applications que les utilisateurs sont autorisés à installer. Toutes les autres applications installées sont signalées comme non conformes.  
+   - **Liste des applications conformes** - Sélectionnez cette option si vous souhaitez spécifier une liste d’applications que les utilisateurs sont autorisés à installer. Toutes les autres applications installées sont signalées comme non conformes.  
   
-    -   **Ajouter** - Ajoute une application à la liste sélectionnée. Spécifiez un nom de votre choix, éventuellement l’éditeur de l’application, et l’ID d’offre groupée de l’application.  
+   - **Ajouter** - Ajoute une application à la liste sélectionnée. Spécifiez un nom de votre choix, éventuellement l’éditeur de l’application, et l’ID d’offre groupée de l’application.  
   
-        > [!TIP]  
-        >  Pour rechercher l’ID d’offre groupée d’une application, effectuez les étapes suivantes sur un ordinateur Mac où l’application est installée :  
-        >   
-        >  1.  Ouvrez le dossier dans lequel l’application est installée (par exemple, **/Applications**)  
-        > 2.  Sélectionnez le bundle *<Nom de l’application\>***.app** et choisissez **Afficher le contenu du package**  
-        > 3.  Ouvrez le fichier **Info.plist**  
-        > 4.  Vérifiez la valeur associée à la clé **CFBundleIdentifier**  
-        >   
-        >  L’ID d’offre groupée se présente ainsi : **com.contoso.nomapp**  
+     > [!TIP]
+     >  Pour rechercher l’ID d’offre groupée d’une application, effectuez les étapes suivantes sur un ordinateur Mac où l’application est installée :  
+     > 
+     > 1. Ouvrez le dossier dans lequel l’application est installée (par exemple, **/Applications**)  
+     >    2.  Sélectionnez le bundle *<Nom de l’application\>***.app** et choisissez **Afficher le contenu du package**  
+     >    3.  Ouvrez le fichier **Info.plist**  
+     >    4.  Vérifiez la valeur associée à la clé **CFBundleIdentifier**  
+     > 
+     >    L’ID d’offre groupée se présente ainsi : **com.contoso.nomapp**  
   
-    -   **Modifier** - Vous permet de modifier le nom, l’éditeur et l’ID d’offre groupée de l’application sélectionnée.  
+   - **Modifier** - Vous permet de modifier le nom, l’éditeur et l’ID d’offre groupée de l’application sélectionnée.  
   
-    -   **Supprimer** - Supprime l’application sélectionnée dans la liste.  
+   - **Supprimer** - Supprime l’application sélectionnée dans la liste.  
   
-    -   **Importer** - Importe une liste d’applications que vous avez spécifiée dans un fichier de valeurs séparées par des virgules. Utilisez le format, le nom de l’application, l’éditeur et l’ID d’offre groupée dans le fichier.  
+   - **Importer** - Importe une liste d’applications que vous avez spécifiée dans un fichier de valeurs séparées par des virgules. Utilisez le format, le nom de l’application, l’éditeur et l’ID d’offre groupée dans le fichier.  
   
-2.  Lorsque vous avez terminé, cliquez sur **Suivant**.  
+2. Lorsque vous avez terminé, cliquez sur **Suivant**.  
   
- Vous pouvez utiliser l’un des rapports suivants pour surveiller les applications conformes et non conformes :  
+   Vous pouvez utiliser l’un des rapports suivants pour surveiller les applications conformes et non conformes :  
   
--   **Liste des applications et des appareils non conformes d'un utilisateur spécifié** : affiche des informations sur les utilisateurs et les appareils sur lesquels sont installées des applications non conformes avec une stratégie que vous avez spécifiée.  
+- **Liste des applications et des appareils non conformes d'un utilisateur spécifié** : affiche des informations sur les utilisateurs et les appareils sur lesquels sont installées des applications non conformes avec une stratégie que vous avez spécifiée.  
   
--   **Résumé des utilisateurs ayant des applications non conformes** : affiche des informations sur les utilisateurs qui ont installé des applications non conformes avec une stratégie que vous avez spécifiée.  
+- **Résumé des utilisateurs ayant des applications non conformes** : affiche des informations sur les utilisateurs qui ont installé des applications non conformes avec une stratégie que vous avez spécifiée.  
   
- Pour plus d’informations sur la façon d’utiliser les rapports, consultez [Rapports dans System Center Configuration Manager](../../core/servers/manage/reporting.md).  
+  Pour plus d’informations sur la façon d’utiliser les rapports, consultez [Rapports dans System Center Configuration Manager](../../core/servers/manage/reporting.md).  
   
 ### <a name="ios-and-mac-os-x-custom-profile-settings"></a>Paramètres du profil personnalisé iOS et Mac OS X  
  Utilisez des **Profils personnalisés iOS et Mac OS X** pour déployer les paramètres que vous avez créés à l’aide de l’ [outil Apple Configurator](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12) sur des appareils iOS et Mac OS X. Cet outil vous permet de créer plusieurs paramètres qui contrôlent le fonctionnement de ces appareils et de les exporter vers un profil de configuration. Vous pouvez ensuite importer ce profil de configuration dans un profil personnalisé iOS et Mac OS X et déployer les paramètres pour les utilisateurs et les appareils de votre organisation.  
@@ -344,67 +344,67 @@ Utilisez l’élément de configuration System Center Configuration Manager **iO
   
 #### <a name="to-configure-kiosk-mode-for-ios-devices"></a>Pour configurer le mode kiosque pour des appareils iOS  
   
-1.  Dans la page **Configurer les paramètres du mode kiosque pour les appareils iOS** de l' **Assistant Création d'élément de configuration**, spécifiez les informations suivantes :  
+1. Dans la page **Configurer les paramètres du mode kiosque pour les appareils iOS** de l' **Assistant Création d'élément de configuration**, spécifiez les informations suivantes :  
   
-    -   **Sélectionner une application** - Sélectionnez l’application qui sera autorisée à s’exécuter quand l’appareil est en mode plein écran. Aucune autre application ne pourra s'exécuter sur l'appareil. Choisissez parmi :  
+   - **Sélectionner une application** - Sélectionnez l’application qui sera autorisée à s’exécuter quand l’appareil est en mode plein écran. Aucune autre application ne pourra s'exécuter sur l'appareil. Choisissez parmi :  
   
-        -   **Application gérée** : cliquez sur Parcourir, puis sélectionnez une application gérée.  
+     - **Application gérée** : cliquez sur Parcourir, puis sélectionnez une application gérée.  
   
-        -   **Application du Store** : spécifiez l'URL d'une application de l'App Store, puis cliquez sur **Obtenir l'ID de l'application** pour remplir le champ **ID de l'application** .  
+     - **Application du Store** : spécifiez l'URL d'une application de l'App Store, puis cliquez sur **Obtenir l'ID de l'application** pour remplir le champ **ID de l'application** .  
   
-         Pour trouver l'URL de l'application :  
+       Pour trouver l'URL de l'application :  
   
-        -   À l'aide d'un moteur de recherche, recherchez l'application à utiliser dans l'App Store iTunes, puis ouvrez la page de l'application.  
+     - À l'aide d'un moteur de recherche, recherchez l'application à utiliser dans l'App Store iTunes, puis ouvrez la page de l'application.  
   
-        -   Copiez l'URL de la page et utilisez-la en tant qu'URL pour spécifier l'application que vous souhaitez exécuter en mode kiosque.  
+     - Copiez l'URL de la page et utilisez-la en tant qu'URL pour spécifier l'application que vous souhaitez exécuter en mode kiosque.  
   
-        -   **Exemple :** recherchez **Microsoft Word pour iPad**. L’URL que vous utilisez est **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**.  
+     - **Exemple :** Recherchez **Microsoft Word pour iPad**. L’URL que vous utilisez est **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**.  
   
-    -   **Tactile** - Active ou désactive l’écran tactile sur l’appareil.  
+   - **Tactile** - Active ou désactive l’écran tactile sur l’appareil.  
   
-    -   **Rotation écran** - Active ou désactive la modification de l’orientation de l’écran quand vous faites pivoter l’appareil.  
+   - **Rotation écran** - Active ou désactive la modification de l’orientation de l’écran quand vous faites pivoter l’appareil.  
   
-    -   **Boutons de volume** - Active ou désactive l’utilisation des boutons de volume sur l’appareil.  
+   - **Boutons de volume** - Active ou désactive l’utilisation des boutons de volume sur l’appareil.  
   
-    -   **Fonction de sonnerie** - Active ou désactive le commutateur de sonnerie (désactivation du son) sur l’appareil.  
+   - **Fonction de sonnerie** - Active ou désactive le commutateur de sonnerie (désactivation du son) sur l’appareil.  
   
-    -   **Bouton de mise en veille et en éveil de l’écran** - Active ou désactive le bouton Veille/sortie de veille de l’écran sur l’appareil.  
+   - **Bouton de mise en veille et en éveil de l’écran** - Active ou désactive le bouton Veille/sortie de veille de l’écran sur l’appareil.  
   
-    -   **Verrouillage automatique** - Active ou désactive le verrouillage automatique de l’appareil.  
+   - **Verrouillage automatique** - Active ou désactive le verrouillage automatique de l’appareil.  
   
-    -   **Audio mono** - Active ou désactive le paramètre d’accessibilité **Audio mono**.  
+   - **Audio mono** - Active ou désactive le paramètre d’accessibilité **Audio mono**.  
   
-    -   **VoiceOver** - Active ou désactive le paramètre d’accessibilité **VoiceOver** qui lit à haute voix le texte sur l’affichage de l’appareil.  
+   - **VoiceOver** - Active ou désactive le paramètre d’accessibilité **VoiceOver** qui lit à haute voix le texte sur l’affichage de l’appareil.  
   
-    -   **Réglages des commentaires audio** - Active ou désactive les réglages VoiceOver qui vous permettent de régler la fonction VoiceOver (par exemple la vitesse de lecture à haute voix du texte à l’écran).  
+   - **Réglages des commentaires audio** - Active ou désactive les réglages VoiceOver qui vous permettent de régler la fonction VoiceOver (par exemple la vitesse de lecture à haute voix du texte à l’écran).  
   
-    -   **Zoom** - Active ou désactive le paramètre d’accessibilité **Zoom** qui vous permet d’utiliser la fonctionnalité tactile pour agrandir l’affichage de l’appareil.  
+   - **Zoom** - Active ou désactive le paramètre d’accessibilité **Zoom** qui vous permet d’utiliser la fonctionnalité tactile pour agrandir l’affichage de l’appareil.  
   
-    -   **Réglage du zoom** - Active ou désactive les réglages du zoom qui vous permettent de régler la fonction de zoom.  
+   - **Réglage du zoom** - Active ou désactive les réglages du zoom qui vous permettent de régler la fonction de zoom.  
   
-    -   **Inverser les couleurs** - Active ou désactive le paramètre d’accessibilité **Inverser les couleurs** qui ajuste l’affichage pour aider les utilisateurs ayant des troubles visuels.  
+   - **Inverser les couleurs** - Active ou désactive le paramètre d’accessibilité **Inverser les couleurs** qui ajuste l’affichage pour aider les utilisateurs ayant des troubles visuels.  
   
-    -   **Réglage de l’inversion des couleurs** - Active ou désactive les réglages de couleurs inversées qui vous permettent d’ajuster la fonction de couleurs inversées.  
+   - **Réglage de l’inversion des couleurs** - Active ou désactive les réglages de couleurs inversées qui vous permettent d’ajuster la fonction de couleurs inversées.  
   
-    -   **Assistance tactile** - Active ou désactive le paramètre d’accessibilité **Assistance tactile** qui aide les utilisateurs à effectuer des gestes à l’écran qui peuvent être difficiles à effectuer.  
+   - **Assistance tactile** - Active ou désactive le paramètre d’accessibilité **Assistance tactile** qui aide les utilisateurs à effectuer des gestes à l’écran qui peuvent être difficiles à effectuer.  
   
-    -   **Réglages de l’assistance tactile** - Active ou désactive les réglages d’assistance tactile qui vous permettent de régler la fonction tactile d’assistance.  
+   - **Réglages de l’assistance tactile** - Active ou désactive les réglages d’assistance tactile qui vous permettent de régler la fonction tactile d’assistance.  
   
-    -   **Sélection de la reconnaissance vocale** - Active ou désactive les paramètres d’accessibilité **Sélection Speak** qui peuvent lire à haute voix le texte que vous sélectionnez.  
+   - **Sélection de la reconnaissance vocale** - Active ou désactive les paramètres d’accessibilité **Sélection Speak** qui peuvent lire à haute voix le texte que vous sélectionnez.  
   
-    -   **Résoudre les paramètres non compatibles** - Sélectionnez si vous souhaitez corriger les paramètres de configuration non conformes (si cela est pris en charge).  
+   - **Résoudre les paramètres non compatibles** - Sélectionnez si vous souhaitez corriger les paramètres de configuration non conformes (si cela est pris en charge).  
   
-    -   **Gravité de non-compatibilité pour les rapports** - Spécifiez le niveau de gravité signalé si cette stratégie de conformité est évaluée comme non conforme. Les degrés de gravité disponibles sont les suivants :  
+   - **Gravité de non-compatibilité pour les rapports** - Spécifiez le niveau de gravité signalé si cette stratégie de conformité est évaluée comme non conforme. Les degrés de gravité disponibles sont les suivants :  
   
-        -   **Aucun** : les appareils qui ne respectent pas cette règle de conformité ne signalent pas la gravité d’un échec pour les rapports Configuration Manager.  
+     -   **Aucun** : les appareils qui ne respectent pas cette règle de conformité ne signalent pas la gravité d’un échec pour les rapports Configuration Manager.  
   
-        -   **Informations** : les appareils qui ne respectent pas cette règle de conformité signalent la gravité d’un échec de niveau **Informations** pour les rapports Configuration Manager.  
+     -   **Informations** : les appareils qui ne respectent pas cette règle de conformité signalent la gravité d’un échec de niveau **Informations** pour les rapports Configuration Manager.  
   
-        -   **Avertissement** : les appareils qui ne respectent pas cette règle de conformité signalent la gravité d’un échec de niveau **Avertissement** pour les rapports Configuration Manager.  
+     -   **Avertissement** : les appareils qui ne respectent pas cette règle de conformité signalent la gravité d’un échec de niveau **Avertissement** pour les rapports Configuration Manager.  
   
-        -   **Critique** : les appareils qui ne respectent pas cette règle de conformité signalent la gravité d’un échec de niveau **Critique** pour les rapports Configuration Manager.  
+     -   **Critique** : les appareils qui ne respectent pas cette règle de conformité signalent la gravité d’un échec de niveau **Critique** pour les rapports Configuration Manager.  
   
-        -   **Critique avec événement** : les appareils qui ne respectent pas cette règle de conformité signalent la gravité d’un échec de niveau **Critique** pour les rapports Configuration Manager. Ce niveau de gravité est également enregistré comme événement Windows dans le journal des événements des applications.  
+     -   **Critique avec événement** : les appareils qui ne respectent pas cette règle de conformité signalent la gravité d’un échec de niveau **Critique** pour les rapports Configuration Manager. Ce niveau de gravité est également enregistré comme événement Windows dans le journal des événements des applications.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Éléments de configuration pour les appareils gérés sans le client System Center Configuration Manager](../../compliance/deploy-use/configuration-items-for-devices-managed-without-the-client.md)

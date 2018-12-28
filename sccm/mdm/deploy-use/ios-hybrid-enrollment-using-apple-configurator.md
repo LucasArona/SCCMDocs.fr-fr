@@ -10,12 +10,12 @@ ms.assetid: 61a19d95-83ff-4ad8-9a67-f304d2ba54f2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4c3dea67cd16c8efe272038894aa4f958f4ef160
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: de83706e92150a654967ec5cf38c5b18508d4e2b
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32348978"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416909"
 ---
 # <a name="ios-hybrid-enrollment-using-apple-configurator-with-configuration-manager"></a>Inscription d’appareils iOS à l’aide d’Apple Configurator pour les déploiements hybrides avec Configuration Manager
 
@@ -47,9 +47,9 @@ La procédure qui suit est recommandée pour les appareils iOS dédiés utilisé
 
     -   **Affinité utilisateur** : spécifie la façon dont les appareils sont inscrits. Pour la plupart des scénarios de l’Assistant Configuration, utilisez **Demander une affinité utilisateur**.  
 
-        -   **Demander une affinité utilisateur**: l’appareil doit être affilié à un utilisateur durant la configuration initiale. Il peut ensuite être autorisé à accéder aux données de l’entreprise et à envoyer des e-mails au nom de cet utilisateur.  
+        -   **Demander l’affinité utilisateur**: L’appareil doit être affilié à un utilisateur pendant l’installation initiale et peut ensuite être autorisé à accéder aux e-mails tant que cet utilisateur et les données d’entreprise.  
 
-        -   **Pas d'affinité utilisateur**: L'appareil n'est pas affilié à un utilisateur. Utilisez cette affiliation pour les appareils qui effectuent des tâches sans accéder aux données de l'utilisateur local. Les applications nécessitant une affiliation de l'utilisateur ne fonctionneront pas.
+        -   **Aucune affinité utilisateur**: L’appareil n’est pas affilié à un utilisateur. Utilisez cette affiliation pour les appareils qui effectuent des tâches sans accéder aux données de l'utilisateur local. Les applications nécessitant une affiliation de l'utilisateur ne fonctionneront pas.
 
     Cliquez sur **Suivant** pour continuer.  
 
@@ -97,29 +97,29 @@ Pour préparer des appareils iOS pour l’inscription, connectez chaque appareil
 > [!WARNING]  
 >  Apple Configurator réinitialise les appareils et rétablit les configurations d’usine.  
 
-1.  Sur un ordinateur Mac, ouvrez **Apple Configurator 2**.  
+1. Sur un ordinateur Mac, ouvrez **Apple Configurator 2**.  
 
-2.  Dans la barre de menus, cliquez sur **Apple Configurator 2** > **Préférences**.  
+2. Dans la barre de menus, cliquez sur **Apple Configurator 2** > **Préférences**.  
 
-2.  Dans le volet Préférences, sélectionnez **Serveurs**, puis cliquez sur le symbole « + » situé sous le volet gauche pour lancer l’Assistant Serveur MDM. Cliquez sur **Suivant**.  
+3. Dans le volet Préférences, sélectionnez **Serveurs**, puis cliquez sur le symbole « + » situé sous le volet gauche pour lancer l’Assistant Serveur MDM. Cliquez sur **Suivant**.  
 
-3.  Entrez le **nom** et l’**URL d’inscription** enregistrés [précédemment](#step-3-export-the-profile-to-deploy-to-ios-devices). Cliquez sur **Suivant**.  
+4. Entrez le **nom** et l’**URL d’inscription** enregistrés [précédemment](#step-3-export-the-profile-to-deploy-to-ios-devices). Cliquez sur **Suivant**.  
 
    > [!NOTE]
    > Si vous recevez un avertissement à propos des exigences de profil de confiance pour Apple TV, vous pouvez annuler en toute sécurité l’option **Profil de confiance** en cliquant sur le « X » gris. Vous pouvez également ignorer tout avertissement relatif au certificat d’ancrage (ou certificat racine).
 
    Pour continuer, cliquez sur **Suivant** jusqu’à la fin de l’exécution de l’Assistant.  
 
-4.  Dans le volet **Serveurs**, cliquez sur « Modifier » en regard du profil du nouveau serveur. Vérifiez que l’URL d’inscription correspond exactement à l’URL entrée précédemment. Retapez l’URL si elle est différente, puis cliquez sur **Enregistrer**.  
+5. Dans le volet **Serveurs**, cliquez sur « Modifier » en regard du profil du nouveau serveur. Vérifiez que l’URL d’inscription correspond exactement à l’URL entrée précédemment. Retapez l’URL si elle est différente, puis cliquez sur **Enregistrer**.  
 
-5.  Connectez un appareil iOS à l’ordinateur Mac à l’aide d’un câble USB.  
+6. Connectez un appareil iOS à l’ordinateur Mac à l’aide d’un câble USB.  
 
-  > [!WARNING]  
-  >  Ce processus rétablit les configurations d’usine des appareils. Avant de connecter l’appareil, réinitialisez-le et mettez-le en marche. Nous vous recommandons d’attendre que l’appareil affiche l’écran Hello avant de continuer.  
+   > [!WARNING]  
+   >  Ce processus rétablit les configurations d’usine des appareils. Avant de connecter l’appareil, réinitialisez-le et mettez-le en marche. Nous vous recommandons d’attendre que l’appareil affiche l’écran Hello avant de continuer.  
 
-6.  Cliquez sur **Préparer**. Dans le volet **Prepare iOS Device** (Préparer l’appareil iOS), sélectionnez **Manual** (Manuel), puis cliquez sur **Suivant**.  
+7. Cliquez sur **Préparer**. Dans le volet **Prepare iOS Device** (Préparer l’appareil iOS), sélectionnez **Manual** (Manuel), puis cliquez sur **Suivant**.  
 
-7.  Dans le volet **Enroll in MDM Server** (Inscription dans un serveur MDM), sélectionnez le nom du serveur que vous avez créé, puis cliquez sur **Suivant**.  
+8. Dans le volet **Enroll in MDM Server** (Inscription dans un serveur MDM), sélectionnez le nom du serveur que vous avez créé, puis cliquez sur **Suivant**.  
 
 9. Dans le volet **Create an Organization** (Créer une organisation), choisissez ou créez une **organisation**, puis cliquez sur **Suivant**.  
 

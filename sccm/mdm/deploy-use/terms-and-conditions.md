@@ -10,12 +10,12 @@ ms.assetid: 4d3f9e6b-4d71-4fc4-9b91-47f1bfbd8c70
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cda5f01842f08ccc3e8dfbd17078fe157954d985
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: e7f5eefe532c3a0a48bc0703365bf07028bfae71
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353468"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419629"
 ---
 # <a name="add-terms-and-conditions-with-system-center-configuration-manager"></a>Ajouter des conditions générales dans System Center Configuration Manager
 
@@ -28,29 +28,29 @@ Vous pouvez déployer les conditions générales de System Center Configuration 
 
 ## <a name="to-create-a-terms-and-conditions"></a>Pour créer des conditions générales  
 
-1.  Dans la console Configuration Manager, accédez à **Ressources et Conformité** > **Vue d’ensemble** > **Paramètres de compatibilité** > **Conditions générales**.  
+1. Dans la console Configuration Manager, accédez à **Ressources et Conformité** > **Vue d’ensemble** > **Paramètres de compatibilité** > **Conditions générales**.  
 
-2.  Cliquez sur **Créer les conditions générales** pour créer des conditions générales.  
+2. Cliquez sur **Créer les conditions générales** pour créer des conditions générales.  
 
-3.  Sur la page **Général** , spécifiez informations suivantes :  
+3. Sur la page **Général** , spécifiez informations suivantes :  
 
-    -   **Nom** : nom unique affiché dans la console Configuration Manager.  
+   - **Nom** : nom unique affiché dans la console Configuration Manager.  
 
-    -   **Description** : détails qui vous aident à identifier les conditions générales dans la console Configuration Manager.  
-
-     Puis cliquez sur **Suivant**.  
-
-4.  Dans la page **Termes** , spécifiez les informations suivantes :  
-
-    -   **Titre** : titre affiché dans le Portail d’entreprise.  
-
-    -   **Texte pour les conditions** : conditions générales affichées dans le Portail d’entreprise.  
-
-    -   **Texte expliquant ce que cela signifie si l'utilisateur accepte** : étiquette informant les utilisateurs des conséquence de l'acceptation. **Exemple** : « J’accepte les conditions générales. »  
+   - **Description** : détails qui vous aident à identifier les conditions générales dans la console Configuration Manager.  
 
      Puis cliquez sur **Suivant**.  
 
-5.  Terminez l’Assistant pour créer les conditions générales. Les nouvelles conditions générales sont affichées dans le nœud Conditions générales de l’espace de travail Ressources et Conformité.  
+4. Dans la page **Termes** , spécifiez les informations suivantes :  
+
+   - **Titre** : titre affiché dans le Portail d’entreprise.  
+
+   - **Texte pour les conditions** : conditions générales affichées dans le Portail d’entreprise.  
+
+   - **Texte expliquant ce que cela signifie si l'utilisateur accepte** : étiquette informant les utilisateurs des conséquence de l'acceptation. **Exemple** : « J’accepte les termes et conditions. »  
+
+     Puis cliquez sur **Suivant**.  
+
+5. Terminez l’Assistant pour créer les conditions générales. Les nouvelles conditions générales sont affichées dans le nœud Conditions générales de l’espace de travail Ressources et Conformité.  
 
 ## <a name="to-deploy-a-terms-and-conditions"></a>Pour déployer des conditions générales  
 
@@ -117,4 +117,4 @@ Vous pouvez déployer les conditions générales de System Center Configuration 
      Nous vous recommandons d’incrémenter le numéro de version et d’exiger l’acceptation chaque fois que vous apportez des modifications majeures à vos conditions générales. Conservez le numéro de version actuel si vous corrigez des fautes de frappe ou si vous modifiez la mise en forme, par exemple.
 
 > [!div class="button"]
-[< Étape précédente](configure-intune-subscription.md) [Étape suivante >](create-service-connection-point.md)
+> [< Étape précédente](configure-intune-subscription.md) [Étape suivante >](create-service-connection-point.md)

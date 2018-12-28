@@ -10,12 +10,12 @@ ms.assetid: 7c3b9316-247b-490b-a363-8f8553821579
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f94cc80d41eb346cb1d4c2fc314d310005c7b5f2
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 86d79a193f09014206b72efcf745212712a3352e
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350185"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417239"
 ---
 # <a name="manage-volume-purchased-ios-apps-with-system-center-configuration-manager"></a>Gérer des applications iOS achetées en volume avec System Center Configuration Manager
 
@@ -99,19 +99,19 @@ Vous pouvez à tout moment synchroniser entièrement les données détenues par 
 
 ## <a name="step-2---deploy-a-volume-purchased-app"></a>Étape 2 : déployer une application achetée en volume  
 
-1.  Dans la console Configuration Manager, choisissez **Bibliothèque de logiciels** > **Gestion des applications** > **Informations de licence pour les applications du Store**.  
+1. Dans la console Configuration Manager, choisissez **Bibliothèque de logiciels** > **Gestion des applications** > **Informations de licence pour les applications du Store**.  
 
-3.  Choisissez l’application que vous voulez déployer puis, sous l’onglet **Accueil**, dans le groupe **Créer**, choisissez **Créer une application**.
-L’application Configuration Manager qui est créée contient l’application Microsoft Store pour Entreprises. Vous pouvez ensuite déployer et surveiller cette application comme n’importe quelle autre application Configuration Manager.  
+2. Choisissez l’application que vous voulez déployer puis, sous l’onglet **Accueil**, dans le groupe **Créer**, choisissez **Créer une application**.
+   L’application Configuration Manager qui est créée contient l’application Microsoft Store pour Entreprises. Vous pouvez ensuite déployer et surveiller cette application comme n’importe quelle autre application Configuration Manager.  
 
-    > [!IMPORTANT]  
-    > Vous devez choisir l’objectif de déploiement **Obligatoire**. Les installations disponibles ne sont pas prises en charge actuellement.
+   > [!IMPORTANT]  
+   > Vous devez choisir l’objectif de déploiement **Obligatoire**. Les installations disponibles ne sont pas prises en charge actuellement.
 
- Quand vous déployez l’application, une licence est utilisée par chaque utilisateur, ou pour les installations d’appareils, chaque appareil qui installe l’application. Si vous ciblez un regroupement d’appareils avec une application prenant en charge les licences d’appareils, une licence d’appareil est demandée. Si vous ciblez un regroupement d’appareils avec une application ne prenant pas en charge les licences d’appareils, une licence d’utilisateur est demandée. 
+   Quand vous déployez l’application, une licence est utilisée par chaque utilisateur, ou pour les installations d’appareils, chaque appareil qui installe l’application. Si vous ciblez un regroupement d’appareils avec une application prenant en charge les licences d’appareils, une licence d’appareil est demandée. Si vous ciblez un regroupement d’appareils avec une application ne prenant pas en charge les licences d’appareils, une licence d’utilisateur est demandée. 
 
- Lorsque vous créez une application à partir du nœud **Informations de licence pour les applications du Windows Store**, l’application est associée à des licences provenant du jeton de l’application que vous avez sélectionnée. Par exemple, vous pouvez afficher les deux versions de la même application dans le nœud. En effet, chaque version de l’application est associée à un jeton VPP Apple distinct. Vous pouvez ensuite créer des applications à partir de chaque jeton et les déployer séparément.
+   Lorsque vous créez une application à partir du nœud **Informations de licence pour les applications du Windows Store**, l’application est associée à des licences provenant du jeton de l’application que vous avez sélectionnée. Par exemple, vous pouvez afficher les deux versions de la même application dans le nœud. En effet, chaque version de l’application est associée à un jeton VPP Apple distinct. Vous pouvez ensuite créer des applications à partir de chaque jeton et les déployer séparément.
 
- Pour récupérer une licence, vous devez créer un déploiement de l’application avec l’action de déploiement **Désinstaller**. Vous ne pouvez pas changer l’action de déploiement dans le déploiement d’origine. La licence est récupérée une fois l’application désinstallée.  
+   Pour récupérer une licence, vous devez créer un déploiement de l’application avec l’action de déploiement **Désinstaller**. Vous ne pouvez pas changer l’action de déploiement dans le déploiement d’origine. La licence est récupérée une fois l’application désinstallée.  
 
 
 

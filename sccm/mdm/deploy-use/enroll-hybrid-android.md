@@ -10,12 +10,12 @@ ms.assetid: c517fe34-0130-465b-a020-bdb555878778
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f833a28a22e4b3ffd2c8fc237effec94e26e69e8
-ms.sourcegitcommit: 10b3a571e2a822bbd7b58a25840ee1e6f703a7a2
-ms.translationtype: HT
+ms.openlocfilehash: fb488ccfc186fcc56ea91c30b6c0319aead5208e
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34814254"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416977"
 ---
 # <a name="set-up-android-hybrid-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>Configurer la gestion hybride des appareils mobiles Android avec System Center Configuration Manager et Microsoft Intune
 
@@ -35,7 +35,7 @@ Les étapes suivantes permettent à Configuration Manager de gérer des appareil
 3. Sous l’onglet **Accueil**, dans le groupe **Abonnement** , choisissez **Configurer des plateformes** > **Android**.  
 4. Dans la boîte de dialogue **Propriétés d’abonnement Microsoft Intune**, choisissez l’onglet **Android** et cochez la case **Activer l’inscription Android** . Vous pouvez choisir de **Bloquer les appareils personnels** pour limiter l’inscription aux [appareils prédéclarés](predeclare-devices-with-hardware-id.md).
 
- Une fois la configuration terminée, vous devez indiquer aux utilisateurs comment inscrire leurs appareils. Consultez [Ce qu’il faut dire aux utilisateurs sur l’inscription de leurs appareils](/intune/end-user-educate). Ces informations s’appliquent aux appareils mobiles gérés par Microsoft Intune et Configuration Manager.
+   Une fois la configuration terminée, vous devez indiquer aux utilisateurs comment inscrire leurs appareils. Consultez [Ce qu’il faut dire aux utilisateurs sur l’inscription de leurs appareils](/intune/end-user-educate). Ces informations s’appliquent aux appareils mobiles gérés par Microsoft Intune et Configuration Manager.
 
 
 
@@ -80,4 +80,4 @@ Après avoir activé l’inscription Android for Work, vous pouvez effectuer les
 - [Réinitialiser de façon sélective le profil professionnel](/sccm/mdm/deploy-use/wipe-lock-reset-devices#selective-wipe)
 
 > [!div class="button"]
-[< Étape précédente](create-service-connection-point.md) [Étape suivante >](set-up-additional-management.md)
+> [< Étape précédente](create-service-connection-point.md) [Étape suivante >](set-up-additional-management.md)

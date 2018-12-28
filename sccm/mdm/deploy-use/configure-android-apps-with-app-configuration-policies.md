@@ -10,12 +10,12 @@ ms.assetid: 9126d188-7780-45a4-b21d-7fcf4fad7da2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 79ab2548453c84cfff7450574ed46562d7c1a005
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 6f83f26f746c54e3d1defe31df47b3c7c8a7e117
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32348179"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417946"
 ---
 # <a name="apply-settings-to-android-for-work-apps-with-app-configuration-policies-in-system-center-configuration-manager"></a>Appliquer des paramètres à des applications Android for Work avec des stratégies de configuration des applications dans System Center Configuration Manager
 
@@ -39,19 +39,19 @@ Pour plus d’informations sur les types d’installation d’application, consu
 1. Dans la console Configuration Manager, choisissez **Bibliothèque de logiciels** > **Gestion des applications** > **Stratégies de configuration des applications**.
 2. Sur l’onglet **Accueil**, dans le groupe **Stratégies de configuration des applications**, choisissez **Créer une stratégie de configuration des applications**.
 3. Dans la page **Général** de l’Assistant Création d’une stratégie de configuration d’applications, définissez les informations de cette stratégie :
-  - **Nom**. Entrez un nom unique pour la stratégie.
-  - **Description**. (Facultatif) Pour identifier plus facilement la stratégie, vous pouvez ajouter une description.
-  -  **Sélectionnez un type de stratégie de configuration**. Spécifiez la plateforme ciblée par la stratégie de configuration des applications : **stratégie de configuration pour les applications Android for Work**.
-  -  **Catégories attribuées pour améliorer la recherche et le filtrage**. (Facultatif) Pour créer et attribuer des catégories à la stratégie, choisissez **Catégories**. L’utilisation de catégories facilite le tri et la recherche d’éléments dans la console Configuration Manager.
+   - **Nom**. Entrez un nom unique pour la stratégie.
+   - **Description**. (Facultatif) Pour identifier plus facilement la stratégie, vous pouvez ajouter une description.
+   -  **Sélectionnez un type de stratégie de configuration**. Spécifier la plateforme ciblée par la stratégie de configuration d’application : **Stratégie de configuration pour Android pour les applications professionnelles**.
+   -  **Catégories attribuées pour améliorer la recherche et le filtrage**. (Facultatif) Pour créer et attribuer des catégories à la stratégie, choisissez **Catégories**. L’utilisation de catégories facilite le tri et la recherche d’éléments dans la console Configuration Manager.
 4. Sur la page **Stratégie Android for Work**, choisissez de quelle façon les informations sur la stratégie de configuration sont définies :
-  - **Spécifier des paires nom/valeur**. Vous pouvez utiliser cette option pour les fichiers de liste de propriétés simples sans imbrication. Pour spécifier une paire nom/valeur :
+   - **Spécifier des paires nom/valeur**. Vous pouvez utiliser cette option pour les fichiers de liste de propriétés simples sans imbrication. Pour spécifier une paire nom/valeur :
         1. Pour ajouter une paire JSON, choisissez **Nouveau**.
         2. Dans la boîte de dialogue **Ajouter une paire nom/valeur**, spécifiez les informations suivantes :
             - **Type**. Dans la liste, sélectionnez le type de valeur que vous souhaitez spécifier.
             - **Nom**. Entrez le nom de la clé de liste de propriétés pour laquelle vous voulez spécifier une valeur.
             - **Valeur**. Entrez la valeur à appliquer à la clé spécifiée.
 
-  - **Accédez à un fichier JSON de liste de propriétés**. Utilisez cette option si vous avez déjà un fichier JSON de configuration des applications, ou pour les fichiers complexes avec imbrication. Dans le champ **Stratégie de configuration des applications**, entrez les informations de la liste de propriétés au format JSON approprié.
+   - **Accédez à un fichier JSON de liste de propriétés**. Utilisez cette option si vous avez déjà un fichier JSON de configuration des applications, ou pour les fichiers complexes avec imbrication. Dans le champ **Stratégie de configuration des applications**, entrez les informations de la liste de propriétés au format JSON approprié.
 5. Pour importer un fichier JSON créé précédemment, choisissez **Sélectionner un fichier**.
 6. Choisissez **Suivant**. Si le code JSON contient des erreurs, corrigez-les avant de continuer.
 7. Terminez les étapes de l’Assistant.

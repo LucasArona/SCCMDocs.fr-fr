@@ -10,12 +10,12 @@ ms.assetid: 4877d674-6bbc-4e16-810c-daad70c74daa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 58a61dffbdd9b04d3e872e23f88ddc0ac864f99d
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 8c2ded7509c8097ae219aa594e56fda3f0c35ccd
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32346343"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417137"
 ---
 # <a name="set-up-additional-management-with-system-center-configuration-manager"></a>Configurer des solutions de gestion supplémentaires grâce à System Center Configuration Manager
 
@@ -46,4 +46,4 @@ L’**accès conditionnel** vous permet de gérer l’accès aux ressources de l
 Auparavant, vous deviez accéder à la console Intune ou à la console Configuration Manager pour définir l’authentification multifacteur pour les inscriptions Intune. Désormais, vous pouvez vous connecter au [portail Microsoft Azure](https://manage.windowsazure.com) en utilisant vos informations d’identification Intune et configurer les paramètres de l’authentification multifacteur via Azure AD. Pour en savoir plus, voir [Authentification multifacteur pour les inscriptions d’appareils Intune](https://aka.ms/mfa_ad).
 
 > [!div class="button"]
-[< Étape précédente](enable-platform-enrollment.md) [Étape suivante >](verify-mdm-configuration.md)
+> [< Étape précédente](enable-platform-enrollment.md) [Étape suivante >](verify-mdm-configuration.md)

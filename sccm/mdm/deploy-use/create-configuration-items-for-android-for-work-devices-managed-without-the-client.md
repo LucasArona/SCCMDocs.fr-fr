@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: ab6784fd-8c57-4be9-858f-50fe39f2ff5f
 author: aczechowski
 ms.author: aaroncz
-ms.openlocfilehash: ba70e4d3a87f2a305312449907730174c62c4775
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 0b2104b72a155f269beefc6f64c2615b62266b66
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32351273"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53415437"
 ---
 # <a name="how-to-create-configuration-items-for-android-for-work-devices-managed-with-intune"></a>Comment créer des éléments de configuration pour les appareils Android for Work gérés via Microsoft Intune
 
@@ -21,47 +21,47 @@ ms.locfileid: "32351273"
 
 ### <a name="to-create-an-android-for-work-configuration-item"></a>Pour créer un élément de configuration Android for Work  
 
-1.  Dans la console Configuration Manager, cliquez sur **Ressources et conformité**.  
+1. Dans la console Configuration Manager, cliquez sur **Ressources et conformité**.  
 
-2.  Dans l'espace de travail **Biens et conformité** , développez **Paramètres de compatibilité**, puis cliquez sur **Éléments de configuration**.  
+2. Dans l'espace de travail **Biens et conformité** , développez **Paramètres de compatibilité**, puis cliquez sur **Éléments de configuration**.  
 
-3.  Dans l'onglet **Accueil** , dans le groupe **Créer** , cliquez sur **Créer un élément de configuration**.  
+3. Dans l'onglet **Accueil** , dans le groupe **Créer** , cliquez sur **Créer un élément de configuration**.  
 
-4.  Dans la page **Général** de l’ **Assistant Création d’élément de configuration**, spécifiez un nom et une description éventuelle pour l’élément de configuration.  
+4. Dans la page **Général** de l’ **Assistant Création d’élément de configuration**, spécifiez un nom et une description éventuelle pour l’élément de configuration.  
 
-5.  Sous **Spécifier le type d’élément de configuration que vous voulez créer**, sélectionnez **Android for Work**.  
+5. Sous **Spécifier le type d’élément de configuration que vous voulez créer**, sélectionnez **Android for Work**.  
 
-6.  Cliquez sur **Catégories** si vous créez et attribuez des catégories pour faciliter la recherche et le filtrage des éléments de configuration dans la console Configuration Manager.  
+6. Cliquez sur **Catégories** si vous créez et attribuez des catégories pour faciliter la recherche et le filtrage des éléments de configuration dans la console Configuration Manager.  
 
-  Cliquez sur **Suivant**.
+   Cliquez sur **Suivant**.
 
-7.  Dans la page **Paramètres de périphérique** de l’Assistant, sélectionnez les groupes de paramètres à configurer. Consultez [Informations de référence sur les paramètres d’élément de configuration Android for Work](#android-for-work-configuration-item-settings-reference) pour plus d’informations, puis cliquez sur **suivant**.  
+7. Dans la page **Paramètres de périphérique** de l’Assistant, sélectionnez les groupes de paramètres à configurer. Consultez [Informations de référence sur les paramètres d’élément de configuration Android for Work](#android-for-work-configuration-item-settings-reference) pour plus d’informations, puis cliquez sur **suivant**.  
 
-  > [!TIP]  
-  >  Si le paramètre souhaité n’est pas répertorié, cochez la case **Configurer d’autres paramètres qui ne se trouvent pas dans les groupes de paramètres par défaut**.  
+   > [!TIP]  
+   >  Si le paramètre souhaité n’est pas répertorié, cochez la case **Configurer d’autres paramètres qui ne se trouvent pas dans les groupes de paramètres par défaut**.  
 
-9. Dans chaque page de paramètres, configurez les paramètres dont vous avez besoin et indiquez si vous voulez les corriger quand ils ne sont pas conformes sur des périphériques (quand cela est pris en charge).  
+8. Dans chaque page de paramètres, configurez les paramètres dont vous avez besoin et indiquez si vous voulez les corriger quand ils ne sont pas conformes sur des périphériques (quand cela est pris en charge).  
 
-10. Pour chaque groupe de paramètres, vous pouvez également configurer la gravité signalée quand un élément de configuration n’est pas conforme :  
+9. Pour chaque groupe de paramètres, vous pouvez également configurer la gravité signalée quand un élément de configuration n’est pas conforme :  
 
-    -   **Aucun** : les appareils qui ne respectent pas cette règle de conformité ne signalent pas la gravité d’un échec pour les rapports Configuration Manager.  
+   -   **Aucun** : les appareils qui ne respectent pas cette règle de conformité ne signalent pas la gravité d’un échec pour les rapports Configuration Manager.  
 
-    -   **Informations** : les appareils qui ne respectent pas cette règle de conformité signalent la gravité d’un échec de niveau **Informations** pour les rapports Configuration Manager.  
+   -   **Informations** : les appareils qui ne respectent pas cette règle de conformité signalent la gravité d’un échec de niveau **Informations** pour les rapports Configuration Manager.  
 
-    -   **Avertissement** : les appareils qui ne respectent pas cette règle de conformité signalent la gravité d’un échec de niveau **Avertissement** pour les rapports Configuration Manager.  
+   -   **Avertissement** : les appareils qui ne respectent pas cette règle de conformité signalent la gravité d’un échec de niveau **Avertissement** pour les rapports Configuration Manager.  
 
-    -   **Critique** : les appareils qui ne respectent pas cette règle de conformité signalent la gravité d’un échec de niveau **Critique** pour les rapports Configuration Manager.  
+   -   **Critique** : les appareils qui ne respectent pas cette règle de conformité signalent la gravité d’un échec de niveau **Critique** pour les rapports Configuration Manager.  
 
-    -   **Critique avec événement** : les appareils qui ne respectent pas cette règle de conformité signalent la gravité d’un échec de niveau **Critique** pour les rapports Configuration Manager. Ce niveau de gravité est également enregistré comme événement Windows dans le journal des événements des applications.  
+   -   **Critique avec événement** : les appareils qui ne respectent pas cette règle de conformité signalent la gravité d’un échec de niveau **Critique** pour les rapports Configuration Manager. Ce niveau de gravité est également enregistré comme événement Windows dans le journal des événements des applications.  
 
-11. Dans la page **Condition d’application de la plateforme** de l’Assistant, passez en revue tous les paramètres qui ne sont pas compatibles avec les plateformes prises en charge que vous avez sélectionnées précédemment. Vous pouvez revenir sur ces paramètres et les supprimer, ou vous pouvez continuer.  
+10. Dans la page **Condition d’application de la plateforme** de l’Assistant, passez en revue tous les paramètres qui ne sont pas compatibles avec les plateformes prises en charge que vous avez sélectionnées précédemment. Vous pouvez revenir sur ces paramètres et les supprimer, ou vous pouvez continuer.  
 
     > [!TIP]  
     >  La conformité des paramètres non pris en charge n’est pas évaluée.  
 
-12. Effectuez toutes les étapes de l'Assistant.  
+11. Effectuez toutes les étapes de l'Assistant.  
 
- Vous pouvez afficher le nouvel élément de configuration dans le nœud **Éléments de configuration** de l’espace de travail **Ressources et Conformité**.  
+    Vous pouvez afficher le nouvel élément de configuration dans le nœud **Éléments de configuration** de l’espace de travail **Ressources et Conformité**.  
 
 ##  <a name="android-for-work-configuration-item-settings-reference"></a>Informations de référence sur les paramètres d’élément de configuration Android for Work  
 
@@ -92,7 +92,7 @@ ms.locfileid: "32351273"
 Aucune des options **Autoriser le partage de données entre les profils professionnel et personnel** n’empêche le comportement copier-coller. Utilisez un paramètre personnalisé qui peut être configuré pour empêcher le copier-coller. Vous pouvez le définir via une URI personnalisée.
 
 - OMA-URI: ./Vendor/MSFT/WorkProfile/DisallowCrossProfileCopyPaste
-- Type de valeur : booléen
+- Type de valeur : Booléen
 
 Le paramètre DisallowCrossProfileCopyPaste réglé sur true empêche le comportement de copier-coller entre le profil personnel et le profil de travail Android for Work.
 

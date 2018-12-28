@@ -10,12 +10,12 @@ ms.assetid: 02979fb8-ea7e-4ec6-b7e0-ecbfda73e52d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 10cddac80b9a7ea4bd912e2f52585cdcef7e70da
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 35170f4584f9c327c542ac35d2f63803163330ba
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32351239"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422281"
 ---
 # <a name="plan-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>Planifier la gestion des appareils mobiles locale dans System Center Configuration Manager
 
@@ -52,54 +52,54 @@ Tenez compte des conditions requises suivantes avant de préparer l’infrastruc
 ##  <a name="bkmk_roles"></a> Rôles système de site nécessaires  
  La gestion des appareils mobiles locale nécessite au moins un rôle système de site parmi chacun des suivants :  
 
--   **Point proxy d’inscription** pour prendre en charge les demandes d’inscription.  
+- **Point proxy d’inscription** pour prendre en charge les demandes d’inscription.  
 
--   **Point d’inscription** pour prendre en charge l’inscription des appareils.  
+- **Point d’inscription** pour prendre en charge l’inscription des appareils.  
 
--   **Point de gestion du périphérique** pour la remise de la stratégie. Ce rôle de système de site est une variante du rôle de point de gestion qui a été configuré pour autoriser la gestion des appareils mobiles.  
+- **Point de gestion du périphérique** pour la remise de la stratégie. Ce rôle de système de site est une variante du rôle de point de gestion qui a été configuré pour autoriser la gestion des appareils mobiles.  
 
--   **Point de distribution** pour la remise du contenu.  
+- **Point de distribution** pour la remise du contenu.  
 
--   **Point de connexion de service** pour la connexion à Intune pour informer les appareils à l’extérieur du pare-feu.  
+- **Point de connexion de service** pour la connexion à Intune pour informer les appareils à l’extérieur du pare-feu.  
 
- Vous pouvez installer ces rôles de système de site sur le serveur de système de site unique, ou vous pouvez les exécuter séparément sur des serveurs distincts en fonction des besoins de votre organisation. Chaque serveur de système de site utilisé pour la gestion des appareils mobiles locale doit être configuré comme point de terminaison HTTPS pour communiquer avec les appareils de confiance. Pour plus d'informations, voir [Communications fiables requises](#bkmk_trustedComs).  
+  Vous pouvez installer ces rôles de système de site sur le serveur de système de site unique, ou vous pouvez les exécuter séparément sur des serveurs distincts en fonction des besoins de votre organisation. Chaque serveur de système de site utilisé pour la gestion des appareils mobiles locale doit être configuré comme point de terminaison HTTPS pour communiquer avec les appareils de confiance. Pour plus d'informations, voir [Communications fiables requises](#bkmk_trustedComs).  
 
- Pour plus d’informations sur la planification des rôles de système de site, consultez [Planifier des serveurs de système de site et des rôles système de site pour System Center Configuration Manager](../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md).  
+  Pour plus d’informations sur la planification des rôles de système de site, consultez [Planifier des serveurs de système de site et des rôles système de site pour System Center Configuration Manager](../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md).  
 
- Pour plus d’informations sur l’ajout des rôles de système de site obligatoires, consultez [Installer des rôles de système de site pour la gestion des appareils mobiles locale dans System Center Configuration Manager](../../mdm/get-started/install-site-system-roles-for-on-premises-mdm.md).  
+  Pour plus d’informations sur l’ajout des rôles de système de site obligatoires, consultez [Installer des rôles de système de site pour la gestion des appareils mobiles locale dans System Center Configuration Manager](../../mdm/get-started/install-site-system-roles-for-on-premises-mdm.md).  
 
 ##  <a name="bkmk_trustedComs"></a> Communications fiables requises  
  La gestion des appareils mobiles locale exige que des rôles système de site soient activés pour les communications HTTPS. En fonction de vos besoins, vous pouvez utiliser l’autorité de certification de votre entreprise pour établir les connexions approuvées entre les serveurs et les appareils, ou vous pouvez utiliser une autorité de certification publique comme autorité de confiance.  Dans les deux cas, vous devez configurer un certificat de serveur web avec IIS sur les serveurs de système de site hébergeant les rôles de système de site nécessaires, et vous devez installer le certificat racine de cette autorité de certification sur les appareils qui doivent se connecter à ces serveurs.  
 
  Si vous utilisez l’autorité de certification de votre entreprise pour établir des communications approuvées, vous devez effectuer les tâches suivantes :  
 
--   Créer et émettre le modèle de certificat de serveur web sur l’autorité de certification.  
+- Créer et émettre le modèle de certificat de serveur web sur l’autorité de certification.  
 
--   Demander un certificat de serveur web pour chaque serveur de système de site hébergeant un rôle de système de site nécessaire.  
+- Demander un certificat de serveur web pour chaque serveur de système de site hébergeant un rôle de système de site nécessaire.  
 
--   Configurer IIS sur le serveur de système de site pour utiliser le certificat de serveur web demandé.  
+- Configurer IIS sur le serveur de système de site pour utiliser le certificat de serveur web demandé.  
 
- Pour les appareils joints au domaine Active Directory d’entreprise, le certificat racine de l’autorité de certification d’entreprise est déjà disponible sur l’appareil pour les connexions approuvées. Cela signifie que les appareils appartenant au domaine (comme les ordinateurs de bureau) sont automatiquement approuvés pour les connexions HTTPS avec les serveurs de système de site. En revanche, les appareils non joints au domaine (généralement les appareils mobiles) ne possèdent pas le certificat racine nécessaire. Vous devez installer manuellement le certificat racine sur ces appareils pour qu’ils puissent communiquer correctement avec les serveurs de système de site prenant en charge la gestion des appareils mobiles locale.  
+  Pour les appareils joints au domaine Active Directory d’entreprise, le certificat racine de l’autorité de certification d’entreprise est déjà disponible sur l’appareil pour les connexions approuvées. Cela signifie que les appareils appartenant au domaine (comme les ordinateurs de bureau) sont automatiquement approuvés pour les connexions HTTPS avec les serveurs de système de site. En revanche, les appareils non joints au domaine (généralement les appareils mobiles) ne possèdent pas le certificat racine nécessaire. Vous devez installer manuellement le certificat racine sur ces appareils pour qu’ils puissent communiquer correctement avec les serveurs de système de site prenant en charge la gestion des appareils mobiles locale.  
 
- Vous devez exporter le certificat racine de l’autorité de certification émettrice pour une utilisation par les différents appareils. Pour obtenir le fichier de certificat racine, vous pouvez l’exporter à l’aide de l’autorité de certification. Une méthode plus simple consiste à utiliser le certificat de serveur web émis par l’autorité de certification pour extraire la racine et créer un fichier de certificat racine.   Ensuite, le certificat racine doit être remis à l’appareil.  Voici quelques exemples de méthodes de remise :  
+  Vous devez exporter le certificat racine de l’autorité de certification émettrice pour une utilisation par les différents appareils. Pour obtenir le fichier de certificat racine, vous pouvez l’exporter à l’aide de l’autorité de certification. Une méthode plus simple consiste à utiliser le certificat de serveur web émis par l’autorité de certification pour extraire la racine et créer un fichier de certificat racine.   Ensuite, le certificat racine doit être remis à l’appareil.  Voici quelques exemples de méthodes de remise :  
 
--   Système de fichiers  
+- Système de fichiers  
 
--   Pièce jointe  
+- Pièce jointe  
 
--   Carte mémoire  
+- Carte mémoire  
 
--   Périphérique attaché  
+- Périphérique attaché  
 
--   Stockage cloud (tel que OneDrive)  
+- Stockage cloud (tel que OneDrive)  
 
--   Connexion NFC (communication en champ proche)  
+- Connexion NFC (communication en champ proche)  
 
--   Lecteur de code-barres  
+- Lecteur de code-barres  
 
--   Package d’approvisionnement OOBE (Out of Box Experience)  
+- Package d’approvisionnement OOBE (Out of Box Experience)  
 
- Pour plus d'informations, consultez [Configurer des certificats pour les communications approuvées pour la gestion des appareils mobiles locale dans System Center Configuration Manager](../../mdm/get-started/set-up-certificates-on-premises-mdm.md).  
+  Pour plus d'informations, consultez [Configurer des certificats pour les communications approuvées pour la gestion des appareils mobiles locale dans System Center Configuration Manager](../../mdm/get-started/set-up-certificates-on-premises-mdm.md).  
 
 ##  <a name="bkmk_enrollment"></a> Considérations relatives à l’inscription  
  Pour permettre l’inscription des appareils à la gestion des appareils mobiles locale, vous devez autoriser les utilisateurs à inscrire leurs appareils et ceux-ci doivent pouvoir établir des communications approuvées avec les serveurs de système de site hébergeant les rôles système de site nécessaires.  

@@ -9,36 +9,36 @@ ms.assetid: df10dc4d-c9ff-4574-bb33-8d30eb14cfe3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4590077b303d5676aa72a816d785a0864fe2205f
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 6cfeae4ddc582d1d641d1065f2542319d5519b5e
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32351970"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416420"
 ---
 # <a name="how-to-create-configuration-items-for-windows-phone-devices-managed-without-the-system-center-configuration-manager-client"></a>Comment créer des éléments de configuration pour des appareils Windows Phone gérés sans le client System Center Configuration Manager
 Utilisez l’élément de configuration System Center Configuration Manager **Windows Phone** pour gérer les paramètres des appareils Windows Phone qui sont inscrits dans Microsoft Intune ou gérés localement par Configuration Manager.  
   
 ### <a name="to-create-a-windows-phone-configuration-item"></a>Pour créer un élément de configuration Windows Phone  
   
-1.  Dans la console Configuration Manager, cliquez sur **Ressources et conformité**.  
+1. Dans la console Configuration Manager, cliquez sur **Ressources et conformité**.  
   
-2.  Dans l'espace de travail **Biens et conformité** , développez **Paramètres de compatibilité**, puis cliquez sur **Éléments de configuration**.  
+2. Dans l'espace de travail **Biens et conformité** , développez **Paramètres de compatibilité**, puis cliquez sur **Éléments de configuration**.  
   
-3.  Dans l'onglet **Accueil** , dans le groupe **Créer** , cliquez sur **Créer un élément de configuration**.  
+3. Dans l'onglet **Accueil** , dans le groupe **Créer** , cliquez sur **Créer un élément de configuration**.  
   
-4.  Dans la page **Général** de l’ **Assistant Création d’élément de configuration**, spécifiez un nom et une description éventuelle pour l’élément de configuration.  
+4. Dans la page **Général** de l’ **Assistant Création d’élément de configuration**, spécifiez un nom et une description éventuelle pour l’élément de configuration.  
   
-5.  Sous **Spécifier le type d’élément de configuration que vous voulez créer**, sélectionnez **Windows Phone**.  
+5. Sous **Spécifier le type d’élément de configuration que vous voulez créer**, sélectionnez **Windows Phone**.  
   
-6.  Cliquez sur **Catégories** si vous créez et attribuez des catégories pour faciliter la recherche et le filtrage des éléments de configuration dans la console Configuration Manager.  
+6. Cliquez sur **Catégories** si vous créez et attribuez des catégories pour faciliter la recherche et le filtrage des éléments de configuration dans la console Configuration Manager.  
   
-7.  Dans la page **Plateformes prises en charge** de l’Assistant, sélectionnez les plateformes Windows Phone spécifiques chargées d’évaluer l’élément de configuration.  
+7. Dans la page **Plateformes prises en charge** de l’Assistant, sélectionnez les plateformes Windows Phone spécifiques chargées d’évaluer l’élément de configuration.  
   
-8.  Dans la page **Paramètres de périphérique** de l’Assistant, sélectionnez le groupe de paramètres à configurer. Consultez [Informations de référence sur les paramètres d’élément de configuration Windows Phone](#BKMK_Setref) dans cette rubrique pour plus d’informations, puis cliquez sur **Suivant**.  
+8. Dans la page **Paramètres de périphérique** de l’Assistant, sélectionnez le groupe de paramètres à configurer. Consultez [Informations de référence sur les paramètres d’élément de configuration Windows Phone](#BKMK_Setref) dans cette rubrique pour plus d’informations, puis cliquez sur **Suivant**.  
   
-    > [!TIP]  
-    >  Si le paramètre souhaité n’est pas répertorié, cochez la case **Configurer d’autres paramètres qui ne se trouvent pas dans les groupes de paramètres par défaut**.  
+   > [!TIP]  
+   >  Si le paramètre souhaité n’est pas répertorié, cochez la case **Configurer d’autres paramètres qui ne se trouvent pas dans les groupes de paramètres par défaut**.  
   
 9. Dans chaque page de paramètres, configurez les paramètres dont vous avez besoin et indiquez si vous voulez les corriger quand ils ne sont pas conformes sur des périphériques (quand cela est pris en charge).  
   
@@ -61,7 +61,7 @@ Utilisez l’élément de configuration System Center Configuration Manager **Wi
   
 12. Effectuez toutes les étapes de l'Assistant.  
   
- Vous pouvez afficher le nouvel élément de configuration dans le nœud **Éléments de configuration** de l’espace de travail **Ressources et conformité** .  
+    Vous pouvez afficher le nouvel élément de configuration dans le nœud **Éléments de configuration** de l’espace de travail **Ressources et conformité** .  
   
 ##  <a name="windows-phone-configuration-item-settings-reference"></a>Informations de référence sur les paramètres d’élément de configuration Windows Phone  
   
@@ -207,7 +207,7 @@ Utilisez l’élément de configuration System Center Configuration Manager **Wi
   
 2.  Dans la boîte de dialogue **Connexion réseau sans fil** , spécifiez les informations suivantes sur la connexion sans fil qui sera configurée sur les appareils mobiles :  
   
-|Paramètre|Plus d'informations|  
+|Paramètre|Informations complémentaires|  
 |-------------|----------------------|  
 |**Nom réseau (SSID)**||  
 |**Connexion réseau**|Choisissez entre **Internet** et **Travail**.|  
@@ -290,10 +290,10 @@ Utilisez l’élément de configuration System Center Configuration Manager **Wi
   
 |||  
 |-|-|  
-|Paramètre|Plus d'informations|  
+|Paramètre|Informations complémentaires|  
 |**Liste des applications bloquées**|Sélectionnez cette option si vous souhaitez spécifier une liste d'applications que les utilisateurs sont autorisés à installer.|  
 |**Liste des applications autorisées**|Sélectionnez cette option si vous souhaitez spécifier une liste d'applications que les utilisateurs sont autorisés à installer.|  
-|**Ajouter**|Ajoute une application à la liste sélectionnée. Spécifiez le nom de votre choix, éventuellement l’éditeur de l’application, ainsi que l’URL de l’application dans la boutique d’applications.<br /><br /> Pour spécifier l’URL, dans la page Windows Phone Store, recherchez l’application que vous voulez utiliser.<br /><br /> **Exemple :** recherchez l’application **Skype** dans le Store. L’URL que vous utilisez est http://www.windowsphone.com/en-us/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51.<br /><br /> Pour l'application du portail d'entreprise, ou des applications métiers, il est inutile de spécifier une URL complète, le GUID de l'application suffit.|  
+|**Ajouter**|Ajoute une application à la liste sélectionnée. Spécifiez le nom de votre choix, éventuellement l’éditeur de l’application, ainsi que l’URL de l’application dans la boutique d’applications.<br /><br /> Pour spécifier l’URL, dans la page Windows Phone Store, recherchez l’application que vous voulez utiliser.<br /><br /> **Exemple :** Recherchez dans le store le **Skype** application. L’URL que vous utilisez est http://www.windowsphone.com/en-us/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51.<br /><br /> Pour l'application du portail d'entreprise, ou des applications métiers, il est inutile de spécifier une URL complète, le GUID de l'application suffit.|  
 |**Éditer**|Vous permet de modifier le nom, l'éditeur et l'URL de l'application sélectionnée.|  
 |**Supprimer**|Supprime l'application sélectionnée dans la liste.|  
 |**Importerer**|Importe une liste d'applications que vous avez spécifiée dans un fichier de valeurs séparées par des virgules. Utilisez le format Nom de l'application, Éditeur, URL de l'application dans le fichier.|  

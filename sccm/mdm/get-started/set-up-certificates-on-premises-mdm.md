@@ -10,12 +10,12 @@ ms.assetid: 2a7d7170-1933-40e9-96d6-74a6eb7278e2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c538c3b7668cc93069f0805b98f29586c3d7c86c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 391ecbd4ff9f863f41454786e8f8232b31a112a5
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32351691"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418320"
 ---
 # <a name="set-up-certificates-for-trusted-communications-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>Configurer des certificats pour les communications approuvées pour la gestion des appareils mobiles locale dans System Center Configuration Manager
 
@@ -111,21 +111,21 @@ La gestion des appareils mobiles locale System Center Configuration Manager exig
 ##  <a name="bkmk_requestCert"></a> Demander le certificat de serveur web pour chaque rôle de système de site  
  Les appareils inscrits pour la gestion des appareils mobiles locale doivent approuver les points de terminaison SSL hébergeant le point d’inscription, le point proxy d’inscription, le point de distribution et le point de gestion d’appareil.  Les étapes ci-dessous décrivent comment demander le certificat de serveur web pour IIS. Vous devez faire cela pour chaque serveur (point de terminaison SSL) hébergeant l’un des rôles de système de site nécessaires à la gestion des appareils mobiles locale.  
 
-1.  Sur le serveur de site principal, ouvrez une invite de commandes avec des droits d’administrateur, tapez **MMC** et appuyez sur **Entrée**.  
+1. Sur le serveur de site principal, ouvrez une invite de commandes avec des droits d’administrateur, tapez **MMC** et appuyez sur **Entrée**.  
 
-2.  Dans la console MMC, cliquez sur **Fichier** > **Ajouter/supprimer un composant logiciel enfichable**.  
+2. Dans la console MMC, cliquez sur **Fichier** > **Ajouter/supprimer un composant logiciel enfichable**.  
 
-3.  Dans le composant logiciel enfichable Certificats, sélectionnez **Certificats**, cliquez sur **Ajouter**, sélectionnez **Compte d’ordinateur**, cliquez sur **Suivant**, sur **Terminer**, puis sur **OK** pour fermer la fenêtre Ajouter/supprimer un composant logiciel enfichable.  
+3. Dans le composant logiciel enfichable Certificats, sélectionnez **Certificats**, cliquez sur **Ajouter**, sélectionnez **Compte d’ordinateur**, cliquez sur **Suivant**, sur **Terminer**, puis sur **OK** pour fermer la fenêtre Ajouter/supprimer un composant logiciel enfichable.  
 
-4.  Cliquez avec le bouton droit sur **Personnel**, puis cliquez sur **Toutes les tâches** > **Demander un nouveau certificat**.  
+4. Cliquez avec le bouton droit sur **Personnel**, puis cliquez sur **Toutes les tâches** > **Demander un nouveau certificat**.  
 
-5.  Dans l’Assistant Inscription de certificats, cliquez sur **Suivant**, sélectionnez **Stratégie d’inscription à Active Directory**, puis cliquez sur **Suivant**.  
+5. Dans l’Assistant Inscription de certificats, cliquez sur **Suivant**, sélectionnez **Stratégie d’inscription à Active Directory**, puis cliquez sur **Suivant**.  
 
-6.  Cochez la case en regard du certificat de serveur web (**Serveur web ConfigMgr MDM**), puis cliquez sur **Inscrire**.  
+6. Cochez la case en regard du certificat de serveur web (**Serveur web ConfigMgr MDM**), puis cliquez sur **Inscrire**.  
 
-7.  Une fois que le certificat est inscrit, cliquez sur **Terminer**.  
+7. Une fois que le certificat est inscrit, cliquez sur **Terminer**.  
 
- Étant donné que chaque serveur a besoin d’un certificat de serveur web unique, vous devez répéter ce processus pour chaque serveur hébergeant l’un des rôles de système de site nécessaire à la gestion des appareils mobiles locale.  Si un serveur héberge tous les rôles système de site, vous ne devez demander qu’un seul certificat de serveur web.  
+   Étant donné que chaque serveur a besoin d’un certificat de serveur web unique, vous devez répéter ce processus pour chaque serveur hébergeant l’un des rôles de système de site nécessaire à la gestion des appareils mobiles locale.  Si un serveur héberge tous les rôles système de site, vous ne devez demander qu’un seul certificat de serveur web.  
 
 ##  <a name="bkmk_bindCert"></a> Lier le certificat au serveur web  
  Le nouveau certificat doit maintenant être lié au serveur web de chaque serveur de système de site hébergeant les rôles de système de site nécessaires à la gestion des appareils mobiles locale. Procédez de la manière décrite ci-dessous pour chaque serveur hébergeant les rôles système de site point d’inscription et point proxy d’inscription. Si un serveur héberge tous les rôles système de site, vous ne devez suivre ces étapes qu’une seule fois. Vous n’avez pas à effectuer cette tâche pour les rôles système de site point de distribution et point de gestion d’appareil, car ils reçoivent automatiquement le certificat requis lors de l’inscription.  

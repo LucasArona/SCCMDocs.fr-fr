@@ -10,12 +10,12 @@ ms.assetid: 120442be-179e-450c-a0c4-284046895da3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5ee29053f69eaf624079f42a33efa5cdba9d1de9
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: decd16a03a0381718ada3e4c977d10c159c6be25
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32352598"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417062"
 ---
 # <a name="exchange-activesync-email-profiles-in-system-center-configuration-manager"></a>Profils de messagerie Exchange ActiveSync dans System Center Configuration Manager
 
@@ -45,71 +45,71 @@ Pour déployer des profils de messagerie sur des appareils, vous devez inscrire 
 
 Pour créer un profil, vous pouvez utiliser l’Assistant Création d’un profil de messagerie Exchange ActiveSync. 
 
-1.  Dans la console Configuration Manager, choisissez **Ressources et Conformité**.  
+1. Dans la console Configuration Manager, choisissez **Ressources et Conformité**.  
 
-2.  Dans l’espace de travail **Ressources et Conformité**, développez **Paramètres de conformité**, puis **Accès aux ressources de l’entreprise** et choisissez **Profils de messagerie**.  
+2. Dans l’espace de travail **Ressources et Conformité**, développez **Paramètres de conformité**, puis **Accès aux ressources de l’entreprise** et choisissez **Profils de messagerie**.  
 
-3.  Sous l’onglet **Accueil**, dans le groupe **Créer**, cliquez sur **Créer un profil d’e-mail Exchange ActiveSync** pour lancer l’Assistant.
+3. Sous l’onglet **Accueil**, dans le groupe **Créer**, cliquez sur **Créer un profil d’e-mail Exchange ActiveSync** pour lancer l’Assistant.
 
-4.  Sur la page **Général** de l’Assistant, configurez les éléments suivants :
+4. Sur la page **Général** de l’Assistant, configurez les éléments suivants :
 
-    - **Nom**. Fournissez un nom descriptif pour le profil de messagerie.
+   - **Nom**. Fournissez un nom descriptif pour le profil de messagerie.
 
-    - **Description**. Si vous le souhaitez, entrez une description du profil de messagerie pour en faciliter l’identification dans la console Configuration Manager.
+   - **Description**. Si vous le souhaitez, entrez une description du profil de messagerie pour en faciliter l’identification dans la console Configuration Manager.
 
-    - **Ce profil de messagerie est pour Android for Work**. Choisissez cette option si vous déployez ce profil de messagerie uniquement sur des appareils Android for Work. Si vous cochez cette case, la page **Plateformes prises en charge** de l’Assistant ne s’affiche pas. Seuls les profils de messagerie Android for Work sont configurés.
+   - **Ce profil de messagerie est pour Android for Work**. Choisissez cette option si vous déployez ce profil de messagerie uniquement sur des appareils Android for Work. Si vous cochez cette case, la page **Plateformes prises en charge** de l’Assistant ne s’affiche pas. Seuls les profils de messagerie Android for Work sont configurés.
 
-4.  Sur la page **Exchange ActiveSync** de l’Assistant, spécifiez les informations suivantes :  
+5. Sur la page **Exchange ActiveSync** de l’Assistant, spécifiez les informations suivantes :  
 
-    -   **Hôte Exchange ActiveSync**. Spécifiez le nom d’hôte de l’instance Exchange Server d’entreprise qui héberge les services Exchange ActiveSync.  
+   - **Hôte Exchange ActiveSync**. Spécifiez le nom d’hôte de l’instance Exchange Server d’entreprise qui héberge les services Exchange ActiveSync.  
 
-    -   **Nom du compte**. Spécifiez le nom complet du compte de messagerie, tel qu’il apparaît aux utilisateurs sur leurs appareils.  
+   - **Nom du compte**. Spécifiez le nom complet du compte de messagerie, tel qu’il apparaît aux utilisateurs sur leurs appareils.  
 
-    -   **Nom d’utilisateur du compte**. Sélectionnez le mode de configuration du nom d’utilisateur du compte de messagerie sur les appareils clients. Vous pouvez sélectionner l’une des options suivantes dans la liste déroulante :  
+   - **Nom d’utilisateur du compte**. Sélectionnez le mode de configuration du nom d’utilisateur du compte de messagerie sur les appareils clients. Vous pouvez sélectionner l’une des options suivantes dans la liste déroulante :  
 
-        -   **Nom principal de l’utilisateur**. Utilisez le nom principal complet de l’utilisateur pour la connexion à Exchange.  
+     -   **Nom principal de l’utilisateur**. Utilisez le nom principal complet de l’utilisateur pour la connexion à Exchange.  
 
-        -   **Nom du compte**. Utilisez le nom complet du compte utilisateur à partir d’Active Directory.
+     -   **Nom du compte**. Utilisez le nom complet du compte utilisateur à partir d’Active Directory.
 
-        -   **Adresse SMTP principale**. Utilisez l’adresse SMTP principale de l’utilisateur pour la connexion à Exchange.  
+     -   **Adresse SMTP principale**. Utilisez l’adresse SMTP principale de l’utilisateur pour la connexion à Exchange.  
 
-    -   **Adresse de messagerie**. Sélectionnez la façon dont l’adresse de messagerie de l’utilisateur est générée sur chaque appareil client. Vous pouvez sélectionner l’une des options suivantes dans la liste déroulante :  
+   - **Adresse de messagerie**. Sélectionnez la façon dont l’adresse de messagerie de l’utilisateur est générée sur chaque appareil client. Vous pouvez sélectionner l’une des options suivantes dans la liste déroulante :  
 
-        -   **Adresse SMTP principale**. Utilisez l’adresse SMTP principale de l’utilisateur pour la connexion à Exchange.  
+     -   **Adresse SMTP principale**. Utilisez l’adresse SMTP principale de l’utilisateur pour la connexion à Exchange.  
 
-        -   **Nom principal de l’utilisateur**. Utilisez le nom principal complet de l'utilisateur comme adresse de messagerie.  
+     -   **Nom principal de l’utilisateur**. Utilisez le nom principal complet de l'utilisateur comme adresse de messagerie.  
 
-    -   **Domaine du compte**. Choisissez l'une des options suivantes :  
+   - **Domaine du compte**. Choisissez l'une des options suivantes :  
 
-        -   **Obtenir à partir d'Active Directory**  
+     - **Obtenir à partir d'Active Directory**  
 
-        -   **Personnalisé**  
+     - **Personnalisé**  
 
-         Ce champ s’applique uniquement si **sAMAccountName** est sélectionné dans la liste déroulante **Nom d’utilisateur du compte** .  
+       Ce champ s’applique uniquement si **sAMAccountName** est sélectionné dans la liste déroulante **Nom d’utilisateur du compte** .  
 
-    -   **Méthode d’authentification**. choisissez l'une des méthodes d'authentification suivantes à utiliser pour authentifier la connexion à Exchange ActiveSync :  
+   - **Méthode d’authentification**. choisissez l'une des méthodes d'authentification suivantes à utiliser pour authentifier la connexion à Exchange ActiveSync :  
 
-        -   **Certificats**. Un certificat d’identité est utilisé pour authentifier la connexion Exchange ActiveSync.  
+     -   **Certificats**. Un certificat d’identité est utilisé pour authentifier la connexion Exchange ActiveSync.  
 
-        -   **Nom d’utilisateur et mot de passe**. L’utilisateur de l’appareil doit fournir un mot de passe pour se connecter à Exchange ActiveSync. (Le nom d’utilisateur est configuré en tant que partie du profil de messagerie).  
+     -   **Nom d’utilisateur et mot de passe**. L’utilisateur de l’appareil doit fournir un mot de passe pour se connecter à Exchange ActiveSync. (Le nom d’utilisateur est configuré en tant que partie du profil de messagerie).  
 
-    -   **Certificat d’identité**. Cliquez sur **Sélectionner**, puis choisissez un certificat à utiliser pour l'identité.  
+   - **Certificat d’identité**. Cliquez sur **Sélectionner**, puis choisissez un certificat à utiliser pour l'identité.  
 
-         Les certificats d’identité doivent être des certificats SCEP ; vous ne pouvez pas utiliser un certificat PFX.  Pour plus d’informations, consultez [Profils de certificat dans System Center Configuration Manager](/sccm/protect/deploy-use/introduction-to-certificate-profiles).  
+      Les certificats d’identité doivent être des certificats SCEP ; vous ne pouvez pas utiliser un certificat PFX.  Pour plus d’informations, consultez [Profils de certificat dans System Center Configuration Manager](/sccm/protect/deploy-use/introduction-to-certificate-profiles).  
 
-         Cette option est disponible uniquement si vous avez sélectionné **Certificats** sous **Méthode d’authentification**.  
+      Cette option est disponible uniquement si vous avez sélectionné **Certificats** sous **Méthode d’authentification**.  
 
-    -   **Utiliser S/MIME**. Envoyez des messages électroniques en utilisant le chiffrement S/MIME. Cette option s'applique aux appareils iOS uniquement. Choisissez parmi les options suivantes :
+   - **Utiliser S/MIME**. Envoyez des messages électroniques en utilisant le chiffrement S/MIME. Cette option s'applique aux appareils iOS uniquement. Choisissez parmi les options suivantes :
 
-        -   **Certificats de signature**.  Choisissez **Sélectionner**, puis un profil de certificat à utiliser pour le chiffrement.  
+     - **Certificats de signature**.  Choisissez **Sélectionner**, puis un profil de certificat à utiliser pour le chiffrement.  
 
-            Le profil peut être un certificat SCEP ou PFX.  Toutefois, si la signature et le chiffrement sont tous deux utilisés, vous devez sélectionner des profils de certificat PFX pour *à la fois* la signature et le chiffrement.
+       Le profil peut être un certificat SCEP ou PFX.  Toutefois, si la signature et le chiffrement sont tous deux utilisés, vous devez sélectionner des profils de certificat PFX pour *à la fois* la signature et le chiffrement.
 
-        -   **Certificats de chiffrement**. Cliquez sur **Sélectionner**, puis choisissez un certificat à utiliser pour le chiffrement. Vous pouvez uniquement sélectionner un certificat PFX pour l’utiliser en tant que certificat de chiffrement.
+     - **Certificats de chiffrement**. Cliquez sur **Sélectionner**, puis choisissez un certificat à utiliser pour le chiffrement. Vous pouvez uniquement sélectionner un certificat PFX pour l’utiliser en tant que certificat de chiffrement.
 
-        -   Pour chiffrer tous les e-mails sur les appareils iOS, cochez la case **Exiger le chiffrement**.    
+     - Pour chiffrer tous les e-mails sur les appareils iOS, cochez la case **Exiger le chiffrement**.    
 
-         Vous ne pouvez choisir des profils de certificat à ce stade que si vous les avez déjà créés.  Pour plus d’informations, consultez [Profils de certificat dans System Center Configuration Manager](/sccm/protect/deploy-use/introduction-to-certificate-profiles).  
+       Vous ne pouvez choisir des profils de certificat à ce stade que si vous les avez déjà créés.  Pour plus d’informations, consultez [Profils de certificat dans System Center Configuration Manager](/sccm/protect/deploy-use/introduction-to-certificate-profiles).  
 
 ## <a name="configure-synchronization-settings-for-the-exchange-activesync-email-profile"></a>Configurer les paramètres de synchronisation du profil de messagerie Exchange ActiveSync  
 

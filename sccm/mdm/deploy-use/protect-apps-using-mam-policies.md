@@ -10,12 +10,12 @@ ms.assetid: 28115475-e563-4e16-bf30-f4c9fe704754
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e410e50d05a0f190e3dfdc87df066b5ebce92321
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 35064653fc00d63a1e5ad371ce337fea9b141684
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32351164"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424738"
 ---
 # <a name="protect-apps-using-mobile-application-management-policies-in-system-center-configuration-manager"></a>Protéger des applications à l’aide de stratégies de gestion des applications mobiles dans System Center Configuration Manager
 
@@ -30,74 +30,74 @@ Les stratégies de gestion des applications System Center Configuration Manager 
 Vous pouvez également utiliser des stratégies de gestion des applications mobiles pour protéger des applications sur des appareils non gérés par Intune. Grâce à cette nouvelle fonctionnalité, vous pouvez appliquer des stratégies de gestion des applications mobiles aux applications se connectant aux services Office 365. Ces stratégies ne sont pas prises en charge pour les applications qui se connectent à Exchange ou SharePoint au niveau local.  
 
 Pour utiliser cette nouvelle fonctionnalité, vous devez utiliser le portail Azure en version préliminaire. Les rubriques suivantes peuvent vous aider dans la prise en main :  
--   [Prise en main des stratégies de gestion des applications mobiles dans le portail Azure](https://technet.microsoft.com/library/mt627830.aspx)  
--   [Créer et déployer des stratégies de gestion des applications mobiles à l’aide de Microsoft Intune](https://technet.microsoft.com/library/mt627829.aspx)  
+- [Prise en main des stratégies de gestion des applications mobiles dans le portail Azure](https://technet.microsoft.com/library/mt627830.aspx)  
+- [Créer et déployer des stratégies de gestion des applications mobiles à l’aide de Microsoft Intune](https://technet.microsoft.com/library/mt627829.aspx)  
 
- Contrairement aux éléments de configuration et aux bases de référence dans Configuration Manager, vous ne déployez pas une stratégie de gestion des applications directement. Au lieu de cela, vous associez la stratégie au type de déploiement d’application que vous voulez restreindre. Quand le type de déploiement d’application est déployé et installé sur les appareils, les paramètres que vous spécifiez prennent effet.  
+  Contrairement aux éléments de configuration et aux bases de référence dans Configuration Manager, vous ne déployez pas une stratégie de gestion des applications directement. Au lieu de cela, vous associez la stratégie au type de déploiement d’application que vous voulez restreindre. Quand le type de déploiement d’application est déployé et installé sur les appareils, les paramètres que vous spécifiez prennent effet.  
 
 Pour appliquer des restrictions à une application, celle-ci doit intégrer le Kit de développement logiciel (SDK) d’application Microsoft Intune. Il existe deux méthodes pour obtenir ce type d'application :  
 
--   **Utiliser une application gérée par une stratégie** (Android et iOS) : ces applications intègrent le SDK d’application. Pour ajouter ce type d'application, spécifiez un lien vers l'application à partir d'un magasin d'applications tel que l'iTunes Store ou Google Play. Aucun traitement supplémentaire n'est nécessaire pour ce type d'application. Pour obtenir une liste des applications gérées par une stratégie qui sont disponibles pour les appareils iOS et Android, consultez [Applications gérées pour les stratégies de gestion des applications mobiles Microsoft Intune](https://technet.microsoft.com/library/dn708489.aspx).  
+-   **Utiliser une application gérée par stratégie** (Android et iOS) : Ces applications ont le SDK d’application. Pour ajouter ce type d'application, spécifiez un lien vers l'application à partir d'un magasin d'applications tel que l'iTunes Store ou Google Play. Aucun traitement supplémentaire n'est nécessaire pour ce type d'application. Pour obtenir une liste des applications gérées par une stratégie qui sont disponibles pour les appareils iOS et Android, consultez [Applications gérées pour les stratégies de gestion des applications mobiles Microsoft Intune](https://technet.microsoft.com/library/dn708489.aspx).  
 
--   **Utiliser une application « encapsulée »** (Android et iOS) : applications repackagées pour inclure le SDK d’application à l’aide de l’**outil de création de package de restrictions d’application Microsoft Intune**. On utilise généralement cet outil pour traiter les applications d'entreprise qui ont été créées en interne. Vous ne pouvez pas l'utiliser pour traiter les applications qui ont été téléchargées à partir du magasin d'applications. Pour plus d’informations, consultez les articles suivants :
+-   **Utiliser une application « encapsulée »** (Android et iOS) : Ces applications sont réempaquetées pour inclure le SDK d’application à l’aide de la **Microsoft Intune App Wrapping Tool**. On utilise généralement cet outil pour traiter les applications d'entreprise qui ont été créées en interne. Vous ne pouvez pas l'utiliser pour traiter les applications qui ont été téléchargées à partir du magasin d'applications. Pour plus d’informations, consultez les articles suivants :
     - [Préparer des applications iOS pour la gestion des applications mobiles avec l’outil de création de package de restrictions d’application Microsoft Intune](https://technet.microsoft.com/library/dn878028.aspx)
 
     - [Préparer des applications Android pour la gestion des applications mobiles avec l’outil de création de package de restrictions d’application Microsoft Intune](https://technet.microsoft.com/library/mt147413.aspx)  
 
 ## <a name="create-and-deploy-an-app-with-a-mobile-application-management-policy"></a>Créer et déployer une application avec une stratégie de gestion des applications mobiles  
 
-##  <a name="step-1-obtain-the-link-to-a-policy-managed-app-or-create-a-wrapped-app"></a>Étape 1 : Obtenir le lien vers une application gérée par une stratégie ou créer une application encapsulée  
+##  <a name="step-1-obtain-the-link-to-a-policy-managed-app-or-create-a-wrapped-app"></a>Étape 1 : Obtenir le lien vers une application gérée par stratégie ou créer une application encapsulée  
 
--   **Pour obtenir un lien vers une application gérée par une stratégie** : à partir du magasin d’applications, recherchez et notez l’URL de l’application gérée par une stratégie que vous souhaitez déployer.  
+-   **Pour obtenir un lien à une stratégie d’application gérée**: À partir de l’app store, recherchez et notez l’URL de l’application gérée de stratégie à déployer.  
 
      Par exemple, l’URL de l’application Microsoft Word pour iPad est **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**  
 
--   **Pour créer une application encapsulée** : utilisez les informations fournies dans les rubriques [Préparer des applications iOS pour la gestion des applications mobiles avec l’outil de création de package de restrictions d’application Microsoft Intune](https://technet.microsoft.com/library/dn878028.aspx) et [Préparer des applications Android pour la gestion des applications mobiles avec l’outil de création de package de restrictions d’application Microsoft Intune](https://technet.microsoft.com/library/mt147413.aspx) pour créer une application encapsulée.  
+-   **Pour créer une application encapsulée**: Utilisez les informations dans les rubriques [préparer des applications iOS pour la gestion des applications mobiles avec Microsoft Intune App Wrapping Tool](https://technet.microsoft.com/library/dn878028.aspx) et [préparer des applications Android pour la gestion des applications mobiles avec Microsoft Intune App Wrapping Tool](https://technet.microsoft.com/library/mt147413.aspx) pour créer une application encapsulée.  
 
      L'outil crée une application traitée et un fichier manifeste associé. Vous utilisez ces fichiers quand vous créez une application Configuration Manager contenant l’application.  
 
-##  <a name="step-2-create-a-configuration-manager-application-that-contains-an-app"></a>Étape 2 : créer une application Configuration Manager qui contient une application  
+##  <a name="step-2-create-a-configuration-manager-application-that-contains-an-app"></a>Étape 2 : Créer une application Configuration Manager qui contient une application  
  La procédure de création de l’application Configuration Manager diffère selon que vous utilisez une application gérée par une stratégie (lien externe) ou une application qui a été créée avec l’outil de création de package de restrictions d’application Microsoft Intune pour iOS (package d’application pour iOS). Utilisez l’une des procédures suivantes pour créer l’application Configuration Manager.  
 
-1.  Dans la console Configuration Manager, choisissez **Bibliothèque de logiciels** > **Gestion des applications** > **Applications**.  
+1. Dans la console Configuration Manager, choisissez **Bibliothèque de logiciels** > **Gestion des applications** > **Applications**.  
 
-3.  Sous l’onglet **Accueil**, dans le groupe **Créer**, choisissez **Créer une application** pour ouvrir l’Assistant **Création d’une application**.  
+2. Sous l’onglet **Accueil**, dans le groupe **Créer**, choisissez **Créer une application** pour ouvrir l’Assistant **Création d’une application**.  
 
-4.  Sous l'onglet **Général** , sélectionnez **Détecter automatiquement les informations de cette application à partir des fichiers d'installation**.  
+3. Sous l'onglet **Général** , sélectionnez **Détecter automatiquement les informations de cette application à partir des fichiers d'installation**.  
 
-5.  Dans la liste déroulante **Type**, sélectionnez **Package d’application pour iOS (fichier \*.ipa)**.  
+4. Dans la liste déroulante **Type**, sélectionnez **Package d’application pour iOS (fichier \*.ipa)**.  
 
-6.  Choisissez **Parcourir** pour sélectionner le package d’application à importer, puis **Suivant**.  
+5. Choisissez **Parcourir** pour sélectionner le package d’application à importer, puis **Suivant**.  
 
-7.  Sur la page **Informations générales** , entrez le texte descriptif et les informations de catégorie que vous souhaitez montrer aux utilisateurs sur le portail d'entreprise.  
+6. Sur la page **Informations générales** , entrez le texte descriptif et les informations de catégorie que vous souhaitez montrer aux utilisateurs sur le portail d'entreprise.  
 
-8.  Effectuez toutes les étapes de l'Assistant.  
+7. Effectuez toutes les étapes de l'Assistant.  
 
- La nouvelle application s'affiche dans le nœud **Applications** de l'espace de travail **Bibliothèque de logiciels** .  
+   La nouvelle application s'affiche dans le nœud **Applications** de l'espace de travail **Bibliothèque de logiciels** .  
 
 ### <a name="create-an-application-that-contains-a-link-to-a-policy-managed-app"></a>Créer une application contenant un lien vers une application gérée par une stratégie  
 
-1.  Dans la console Configuration Manager, choisissez **Bibliothèque de logiciels** > **Gestion des applications** > **Applications**.  
+1. Dans la console Configuration Manager, choisissez **Bibliothèque de logiciels** > **Gestion des applications** > **Applications**.  
 
-3.  Sous l’onglet **Accueil**, dans le groupe **Créer**, choisissez **Créer une application** pour ouvrir l’Assistant **Création d’une application**.  
+2. Sous l’onglet **Accueil**, dans le groupe **Créer**, choisissez **Créer une application** pour ouvrir l’Assistant **Création d’une application**.  
 
-4.  Sous l'onglet **Général** , sélectionnez **Détecter automatiquement les informations de cette application à partir des fichiers d'installation**.  
+3. Sous l'onglet **Général** , sélectionnez **Détecter automatiquement les informations de cette application à partir des fichiers d'installation**.  
 
-5.  Dans la liste déroulante **Type** , sélectionnez l'un des éléments suivants :  
+4. Dans la liste déroulante **Type** , sélectionnez l'un des éléments suivants :  
 
-    -   Pour iOS : **Package d’application pour iOS dans l’App Store**  
+   -   Pour iOS : **Package d’application pour iOS depuis l’App Store**  
 
-    -   Pour Android : **Package d’application pour Android sur Google Play**  
+   -   Pour Android : **Package d’application pour Android sur Google Play**  
 
-6.  Entrez l’URL de l’application (obtenue à l’étape 1), puis choisissez **Suivant**.  
+5. Entrez l’URL de l’application (obtenue à l’étape 1), puis choisissez **Suivant**.  
 
-7.  Sur la page **Informations générales** , entrez le texte descriptif et les informations de catégorie que vous souhaitez montrer aux utilisateurs sur le portail d'entreprise.  
+6. Sur la page **Informations générales** , entrez le texte descriptif et les informations de catégorie que vous souhaitez montrer aux utilisateurs sur le portail d'entreprise.  
 
-8.  Effectuez toutes les étapes de l'Assistant.  
+7. Effectuez toutes les étapes de l'Assistant.  
 
- La nouvelle application s'affiche dans le nœud **Applications** de l'espace de travail **Bibliothèque de logiciels** .  
+   La nouvelle application s'affiche dans le nœud **Applications** de l'espace de travail **Bibliothèque de logiciels** .  
 
-##  <a name="step-3-create-an-application-management-policy"></a>Étape 3 : créer une stratégie de gestion d’application  
+##  <a name="step-3-create-an-application-management-policy"></a>Étape 3 : Créer une stratégie de gestion des applications  
  Ensuite, créez une stratégie de gestion d’application que vous associez à l’application. Vous pouvez créer une stratégie générale ou Managed Browser.  
 
 1)  Dans la console Configuration Manager, choisissez **Bibliothèque de logiciels** > **Gestion des applications** > **Stratégies de gestion d’application**.  
@@ -108,13 +108,13 @@ Pour appliquer des restrictions à une application, celle-ci doit intégrer le K
 
 4)  Dans la page **Type de stratégie**, sélectionnez la plateforme et le type de cette stratégie, puis choisissez **Suivant**. Les types de stratégies suivants sont disponibles :  
 
--   **Général** : le type de stratégie Général permet de modifier les fonctionnalités des applications que vous déployez pour les adapter aux stratégies de sécurité et de conformité de votre entreprise. Par exemple, vous pouvez limiter les opérations Couper, Copier et Coller dans une application restreinte.  
+-   **Général**: Le type de stratégie général vous permet de modifier les fonctionnalités des applications que vous déployez pour aider à les aligner sur la conformité et votre entreprise des stratégies de sécurité. Par exemple, vous pouvez limiter les opérations Couper, Copier et Coller dans une application restreinte.  
 
--   **Managed Browser** : la stratégie Managed Browser vous permet d’indiquer s’il faut autoriser Managed Browser à ouvrir une liste d’URL ou l’en empêcher. Le type de stratégie Managed Browser vous permet de modifier les fonctionnalités de l'application Intune Managed Browser. Il s'agit d'un navigateur web qui vous permet de gérer les actions que les utilisateurs peuvent effectuer, y compris les sites qu'ils peuvent visiter et le mode d'ouverture des liens vers du contenu dans le navigateur. En savoir plus sur l’  [application Intune Managed Browser pour iOS](https://itunes.apple.com/us/app/microsoft-intune-managed-browser/id943264951?mt=8) et [l’application Intune Managed Browser pour Android](https://play.google.com/store/apps/details?id=com.microsoft.intune.mam.managedbrowser&hl=en).
+-   **Managed Browser**: La stratégie Managed Browser vous permet de décider s’il faut autoriser ou empêcher managed browser d’ouvrir une liste d’URL. Le type de stratégie Managed Browser vous permet de modifier les fonctionnalités de l'application Intune Managed Browser. Il s'agit d'un navigateur web qui vous permet de gérer les actions que les utilisateurs peuvent effectuer, y compris les sites qu'ils peuvent visiter et le mode d'ouverture des liens vers du contenu dans le navigateur. En savoir plus sur l’  [application Intune Managed Browser pour iOS](https://itunes.apple.com/us/app/microsoft-intune-managed-browser/id943264951?mt=8) et [l’application Intune Managed Browser pour Android](https://play.google.com/store/apps/details?id=com.microsoft.intune.mam.managedbrowser&hl=en).
 
 5)  Dans la page **Stratégie iOS** ou **Stratégie Android**, configurez les valeurs suivantes selon les besoins, puis choisissez **Suivant**. Les options peuvent différer selon le type d'appareil pour lequel vous configurez la stratégie.  
 
-|Valeur|Plus d'informations|  
+|Valeur|Informations complémentaires|  
 |-----------|----------------------|  
 |**Afficher le contenu web uniquement dans Managed Browser**|Autorise l’ouverture de tous les liens de l’application dans Managed Browser. Pour que cette option fonctionne, vous devez avoir déployé cette application sur des appareils.|  
 |**Interdire les sauvegardes Android** ou **Interdire les sauvegardes iTunes et iCloud**|Désactive la sauvegarde de toutes les informations à partir de l'application.|  
@@ -139,7 +139,7 @@ Pour plus d’informations, consultez [Gérer l’accès à Internet à l’aide
 
  La nouvelle stratégie s'affiche dans le nœud **Stratégies de gestion d'application** de l'espace de travail **Bibliothèque de logiciels** .  
 
-##  <a name="step-4-associate-the-application-management-policy-with-a-deployment-type"></a>Étape 4 : associer la stratégie de gestion d’application à un type de déploiement  
+##  <a name="step-4-associate-the-application-management-policy-with-a-deployment-type"></a>Étape 4 : Associer la stratégie de gestion des applications avec un type de déploiement  
 
  Quand un type de déploiement est créé pour une application qui nécessite une stratégie de gestion des applications, Configuration Manager vous invite à associer une stratégie de gestion des applications. Pour Managed Browser, vous devez associer une stratégie Général et une stratégie Managed Browser. Pour plus d’informations, consultez [Créer des applications](create-applications.md).  
 
@@ -151,16 +151,16 @@ Pour plus d’informations, consultez [Gérer l’accès à Internet à l’aide
 >   
 >  Si l’inscription de l’appareil dans Configuration Manager est annulée, les stratégies ne sont pas supprimées des applications. Les applications pour lesquelles des stratégies étaient appliquées conservent les paramètres de stratégie après la désinstallation et la réinstallation de l’application.  
 
-##  <a name="step-5-monitor-the-app-deployment"></a>Étape 5 : surveiller le déploiement de l’application  
+##  <a name="step-5-monitor-the-app-deployment"></a>Étape 5 : Surveiller le déploiement de l’application  
  Une fois que vous avez créé et déployé une application associée à une stratégie de gestion des applications mobiles, vous pouvez analyser l’application et résoudre les éventuels conflits de stratégie.  
 
-1.  Dans la console Configuration Manager, choisissez **Bibliothèque de logiciels** > **Vue d’ensemble** > **Déploiements**.  
+1. Dans la console Configuration Manager, choisissez **Bibliothèque de logiciels** > **Vue d’ensemble** > **Déploiements**.  
 
-3.  Sélectionnez le déploiement que vous avez créé. Sous l’onglet **Accueil**, choisissez **Propriétés**.  
+2. Sélectionnez le déploiement que vous avez créé. Sous l’onglet **Accueil**, choisissez **Propriétés**.  
 
-4.  Dans le volet de détails du déploiement, sous **Objets associés**, choisissez **Stratégies de gestion d’application**.  
+3. Dans le volet de détails du déploiement, sous **Objets associés**, choisissez **Stratégies de gestion d’application**.  
 
- Pour plus d’informations sur la surveillance des applications, consultez [Surveiller des applications](/sccm/apps/deploy-use/monitor-applications-from-the-console).  
+   Pour plus d’informations sur la surveillance des applications, consultez [Surveiller des applications](/sccm/apps/deploy-use/monitor-applications-from-the-console).  
 
 ##  <a name="learn-how-policy-conflicts-are-resolved"></a>Découvrir comment les conflits de stratégie sont résolus  
  En cas de conflit de stratégie de gestion des applications mobiles lors du premier déploiement vers l’utilisateur ou l’appareil, la valeur de paramètre spécifique en conflit est supprimée de la stratégie déployée sur l’application. L’application utilise ensuite une valeur de conflit intégrée.  

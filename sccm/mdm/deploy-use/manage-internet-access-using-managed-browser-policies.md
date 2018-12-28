@@ -10,12 +10,12 @@ ms.assetid: 8e25e00c-c9a8-473f-bcb7-ea989f6ca3c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9fe64aef541a4e6405b0fbf6308afc6269d88f56
-ms.sourcegitcommit: f03cb34693b9806e9fecd3c0162de70cc8cb4b1e
-ms.translationtype: HT
+ms.openlocfilehash: 2483a15286a2784f2fb8a4256029004374a313dc
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37886482"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419782"
 ---
 # <a name="manage-internet-access-using-managed-browser-policies-with-system-center-configuration-manager"></a>Gérer l’accès à Internet à l’aide de stratégies Managed Browser avec System Center Configuration Manager
 
@@ -86,52 +86,54 @@ La nouvelle stratégie s'affiche dans le nœud **Stratégies de gestion d'applic
 
 Utilisez les informations suivantes pour en savoir plus sur les formats et les caractères génériques que vous pouvez utiliser pour spécifier des URL dans les listes autorisées et les listes bloquées.  
 
--   Utilisez le caractère générique `*` (astérisque) conformément aux règles de la liste de modèles autorisés ci-dessous.  
+- Utilisez le caractère générique `*` (astérisque) conformément aux règles de la liste de modèles autorisés ci-dessous.  
 
--   Faites précéder toutes les URL du préfixe **http** ou **https** quand vous les entrez dans la liste.  
+- Faites précéder toutes les URL du préfixe **http** ou **https** quand vous les entrez dans la liste.  
 
--   Spécifiez des numéros de port dans l’adresse. Si vous ne spécifiez pas de numéro de port, les valeurs suivantes sont utilisées :  
+- Spécifiez des numéros de port dans l’adresse. Si vous ne spécifiez pas de numéro de port, les valeurs suivantes sont utilisées :  
 
-    -   Port 80 pour http  
+  - Port 80 pour http  
 
-    -   Port 443 pour https  
+  - Port 443 pour https  
 
-     N’utilisez pas de caractères génériques pour le numéro de port, car ce n’est pas pris en charge. Par exemple, `http://www.contoso.com:*`   
+    N’utilisez pas de caractères génériques pour le numéro de port, car ce n’est pas pris en charge. Par exemple, `http://www.contoso.com:*`   
 
--   Utilisez le tableau suivant pour en savoir plus sur les modèles autorisés que vous pouvez utiliser pour spécifier des URL :  
+- Utilisez le tableau suivant pour en savoir plus sur les modèles autorisés que vous pouvez utiliser pour spécifier des URL :  
 
-    |Adresse URL|Correspond à|Ne correspond pas à|  
-    |---------|-------------|--------------------|  
-    |`http://www.contoso.com`<br /><br /> Correspond à une page unique|`www.contoso.com`|`host.contoso.com`<br /><br /> `www.contoso.com/images`<br /><br /> `contoso.com/`|  
-    |`http://contoso.com`<br /><br /> Correspond à une page unique|`contoso.com`|`host.contoso.com`<br /><br /> `www.contoso.com/images`<br /><br /> `www.contoso.com`|  
-    |`http://www.contoso.com/*`<br /><br /> Correspond à toutes les URL commençant par `www.contoso.com`|`www.contoso.com`<br /><br /> `www.contoso.com/images`<br /><br /> `www.contoso.com/videos/tvshows`|`host.contoso.com`<br /><br /> `host.contoso.com/images`|  
-    |`http://*.contoso.com/*`<br /><br /> Correspond à tous les sous-domaines sous contoso.com|`developer.contoso.com/resources`<br /><br /> `news.contoso.com/images`<br /><br /> `news.contoso.com/videos`|`contoso.host.com`|  
-    |`http://www.contoso.com/images`<br /><br /> Correspond à un dossier unique|`www.contoso.com/images`|`www.contoso.com/images/dogs`|  
-    |`http://www.contoso.com:80`<br /><br /> Correspond à une page unique avec un numéro de port|`http://www.contoso.com:80`||  
-    |`https://www.contoso.com`<br /><br /> Correspond à une page unique sécurisée|`https://www.contoso.com`|`http://www.contoso.com`|  
-    |`http://www.contoso.com/images/*`<br /><br /> Correspond à un dossier unique et à tous ses sous-dossiers|`www.contoso.com/images/dogs`<br /><br /> `www.contoso.com/images/cats`|`www.contoso.com/videos`|  
 
--   Voici quelques exemples de certaines entrées que vous ne pouvez pas spécifier :  
+  |                                           Adresse URL                                            |                                                    Correspond à                                                    |                                    Ne correspond pas à                                     |
+  |------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|
+  |                `http://www.contoso.com`<br /><br /> Correspond à une page unique                |                                               `www.contoso.com`                                               |  `host.contoso.com`<br /><br /> `www.contoso.com/images`<br /><br /> `contoso.com/`   |
+  |                  `http://contoso.com`<br /><br /> Correspond à une page unique                  |                                                 `contoso.com`                                                 | `host.contoso.com`<br /><br /> `www.contoso.com/images`<br /><br /> `www.contoso.com` |
+  | `http://www.contoso.com/*`<br /><br /> Correspond à toutes les URL commençant par `www.contoso.com` |      `www.contoso.com`<br /><br /> `www.contoso.com/images`<br /><br /> `www.contoso.com/videos/tvshows`      |               `host.contoso.com`<br /><br /> `host.contoso.com/images`                |
+  |      `http://*.contoso.com/*`<br /><br /> Correspond à tous les sous-domaines sous contoso.com      | `developer.contoso.com/resources`<br /><br /> `news.contoso.com/images`<br /><br /> `news.contoso.com/videos` |                                  `contoso.host.com`                                   |
+  |           `http://www.contoso.com/images`<br /><br /> Correspond à un dossier unique            |                                           `www.contoso.com/images`                                            |                             `www.contoso.com/images/dogs`                             |
+  |    `http://www.contoso.com:80`<br /><br /> Correspond à une page unique avec un numéro de port    |                                          `http://www.contoso.com:80`                                          |                                                                                       |
+  |           `https://www.contoso.com`<br /><br /> Correspond à une page unique sécurisée            |                                           `https://www.contoso.com`                                           |                               `http://www.contoso.com`                                |
+  | `http://www.contoso.com/images/*`<br /><br /> Correspond à un dossier unique et à tous ses sous-dossiers |                    `www.contoso.com/images/dogs`<br /><br /> `www.contoso.com/images/cats`                    |                               `www.contoso.com/videos`                                |
 
-    -   `*.com`  
 
-    -   `*.contoso/*`  
+- Voici quelques exemples de certaines entrées que vous ne pouvez pas spécifier :  
 
-    -   `www.contoso.com/*images`  
+  -   `*.com`  
 
-    -   `www.contoso.com/*images*pigs`  
+  -   `*.contoso/*`  
 
-    -   `www.contoso.com/page*`  
+  -   `www.contoso.com/*images`  
 
-    -   Adresses IP  
+  -   `www.contoso.com/*images*pigs`  
 
-    -   `https://*`  
+  -   `www.contoso.com/page*`  
 
-    -   `http://*`  
+  -   Adresses IP  
 
-    -   `http://www.contoso.com:*`  
+  -   `https://*`  
 
-    -   `http://www.contoso.com: /*`  
+  -   `http://*`  
+
+  -   `http://www.contoso.com:*`  
+
+  -   `http://www.contoso.com: /*`  
 
 > [!NOTE]  
 >  `*.microsoft.com` est toujours autorisé.  

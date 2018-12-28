@@ -2,7 +2,7 @@
 title: Nouveautés de la gestion MDM hybride
 titleSuffix: Configuration Manager
 description: Découvrez les nouvelles fonctionnalités de gestion des appareils mobiles disponibles pour les déploiements hybrides avec Configuration Manager et Intune.
-ms.date: 12/05/2018
+ms.date: 12/14/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6ecc3f47b908678b1849e16c2cb2053f100a655a
-ms.sourcegitcommit: 2491fbe98915b7a30c2422a371c929d0d4ebf22f
+ms.openlocfilehash: 7cf1adf7d73e60fba0d748022ab7c241d60ffed7
+ms.sourcegitcommit: c60e057075a83f07d1ca2577c3de1c7d7c8e9cec
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53247524"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626495"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Nouveautés de la gestion hybride des appareils mobiles avec Configuration Manager et Microsoft Intune
 
@@ -47,7 +47,24 @@ Chaque section de cet article répertorie les fonctionnalités hybrides sous tro
 
 
 
-## <a name="november-2018"></a>Novembre 2018
+## <a name="december-2018"></a>Décembre 2018
+
+### <a name="new-in-microsoft-intune"></a>Nouveautés de Microsoft Intune
+
+#### <a name="microsoft-auto-update-version-450-required-for-macos-devices"></a>Version de mise à jour automatique de Microsoft 4.5.0 requise pour les appareils macOS
+<!--3503442--> Pour continuer à recevoir des mises à jour pour le portail d’entreprise et d’autres applications Office, vous doivent mettre à niveau les appareils macOS gérés par Intune à la mise à jour automatique Microsoft 4.5.0. Utilisateurs devront peut-être déjà cette version pour leurs applications Office.
+
+#### <a name="the-intune-app-sdk-will-support-256-bit-encryption-keys"></a>Le SDK d’application Intune prendra en charge les clés de chiffrement 256 bits 
+<!--1832174--> Le SDK d’application Intune pour Android utilise désormais les clés de chiffrement 256 bits lorsque le chiffrement est activé par des stratégies de Protection d’application. Le SDK continue prendre en charge des clés 128 bits pour assurer la compatibilité avec du contenu et les applications qui utilisent les versions antérieures du Kit de développement logiciel.
+
+#### <a name="intune-requires-macos-1012-or-later"></a>Intune nécessite macOS 10.12 ou version ultérieure 
+<!--2827778--> Intune exige désormais que macOS 10.12 ou version ultérieure. Appareils à l’aide de versions antérieures de macOS ne peut pas utiliser le portail d’entreprise pour inscrire dans Intune. Pour recevoir la prise en charge et les nouvelles fonctionnalités, les utilisateurs doivent mettre à niveau son appareil à macOS 10.12 ou version ultérieure et mettre à niveau le portail d’entreprise vers la dernière version.
+
+Pour plus d’informations, consultez [modification planifiée : Intune prend en charge macOS 10.12 et versions ultérieures en décembre](#plan-for-change-intune-supports-macos-1012-and-higher-in-december).
+
+
+
+## <a name="november-2018"></a>Novembre 2018
 
 ### <a name="new-in-microsoft-intune"></a>Nouveautés de Microsoft Intune
 
@@ -549,7 +566,11 @@ Pour plus d’informations, consultez [Inscrire votre appareil macOS dans Intune
 
 
 ### <a name="plan-for-change-new-intune-support-experience-for-premier-customers"></a>Modification planifiée : Nouvelle prise en charge Intune expérience pour Premier clients 
-<!--2828727--> En tant que client Microsoft Premier, vous pouvez utiliser le [portail Microsoft Premier Online (MPO)](https://premier.microsoft.com) et [Intune sur Azure](https://portal.azure.com) afin de créer des demandes de support pour Intune. À compter du 3 décembre 2018, dans le cadre de l’amélioration du support Premier, vous pourrez créer des demandes de support uniquement dans Intune sur Azure.
+<!--2828727-->
+
+mise à jour 4/12/2018 : Nous essayons d’améliorer ce processus pour vous. Prise en charge la création de demande dans MPO ne sont pas désactivée le 3 décembre. Nous vous informerons via le centre de messages et de mettre à jour de ce billet rapidement pour partager des chronologies pour que cette modification.
+
+En tant que Microsoft Premier client, vous pouvez actuellement utiliser la [portal d’en ligne Premier Microsoft (MPO)](https://premier.microsoft.com) et [Intune sur Azure](https://portal.azure.com) pour créer des demandes de support pour Intune. À compter du 3 décembre 2018, dans le cadre de l’amélioration du support Premier, vous pourrez créer des demandes de support uniquement dans Intune sur Azure.
 
 #### <a name="how-does-this-affect-me"></a>Dans quelle mesure suis-je affecté ?
 Après le 3 décembre, vous ne pourrez plus créer de demandes de support dans MPO. Si vous tentez de le faire, un message impossible à ignorer s’affichera, et vous serez redirigé vers Intune sur Azure. Lorsque vous créez une demande de support dans le portail Azure, celle-ci est acheminée vers le support Microsoft dédié à Intune. Il se charge de diagnostiquer et de résoudre votre problème le plus rapidement possible. Si vous créez une demande de support dans le portail MPO, vous ne pourrez pas la voir dans le portail Azure. À partir de maintenant, vous ne devez créer des demandes de support que dans Intune sur Azure.  

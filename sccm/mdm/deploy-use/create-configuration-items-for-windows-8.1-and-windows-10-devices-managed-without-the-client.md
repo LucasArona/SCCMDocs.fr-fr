@@ -10,67 +10,67 @@ ms.assetid: 23e1e4dc-623a-4521-ad04-ae9482927097
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 639fabbe1e2f51194669fc1f196d88140193a727
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 6a637b7379e4ffa507beece9d9384cb8847402f9
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32352099"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420768"
 ---
 # <a name="how-to-create-configuration-items-for-windows-81-and-windows-10-devices-managed-without-the-system-center-configuration-manager-client"></a>Comment créer des éléments de configuration pour des appareils Windows 8.1 et Windows 10 gérés sans le client System Center Configuration Manager
 
-  
+
  Utilisez l’élément de configuration System Center Configuration Manager **Windows 8.1 et Windows 10** pour gérer les paramètres des appareils Windows 8.1 et Windows 10 qui sont inscrits dans Microsoft Intune ou gérés localement par Configuration Manager.  
-  
+
 ### <a name="to-create-a-windows-81-and-windows-10-configuration-item"></a>Pour créer un élément de configuration Windows 8.1 et Windows 10  
-  
-1.  Dans la console Configuration Manager, cliquez sur **Ressources et conformité**.  
-  
-2.  Dans l'espace de travail **Biens et conformité** , développez **Paramètres de compatibilité**, puis cliquez sur **Éléments de configuration**.  
-  
-3.  Dans l'onglet **Accueil** , dans le groupe **Créer** , cliquez sur **Créer un élément de configuration**.  
-  
-4.  Dans la page **Général** de l’ **Assistant Création d’élément de configuration**, spécifiez un nom et une description éventuelle pour l’élément de configuration.  
-  
-5.  Sous **Spécifier le type d’élément de configuration que vous voulez créer**, sélectionnez **Windows 8.1 et Windows 10**.  
-  
-6.  Cliquez sur **Catégories** si vous créez et attribuez des catégories pour faciliter la recherche et le filtrage des éléments de configuration dans la console Configuration Manager.  
-  
-7.  Dans la page **Plateformes prises en charge** de l’Assistant, sélectionnez les plateformes Windows spécifiques chargées d’évaluer l’élément de configuration.  
-  
-8.  Dans la page **Paramètres de périphérique** de l’Assistant, sélectionnez le groupe de paramètres à configurer. Consultez [Informations de référence sur les paramètres d’élément de configuration Windows 8.1 et Windows 10](#BKMK_Setref) dans cette rubrique pour plus d’informations, puis cliquez sur **Suivant**.  
-  
-    > [!TIP]  
-    >  Si le paramètre souhaité n’est pas répertorié, cochez la case **Configurer d’autres paramètres qui ne se trouvent pas dans les groupes de paramètres par défaut**.  
-  
+
+1. Dans la console Configuration Manager, cliquez sur **Ressources et conformité**.  
+
+2. Dans l'espace de travail **Biens et conformité** , développez **Paramètres de compatibilité**, puis cliquez sur **Éléments de configuration**.  
+
+3. Dans l'onglet **Accueil** , dans le groupe **Créer** , cliquez sur **Créer un élément de configuration**.  
+
+4. Dans la page **Général** de l’ **Assistant Création d’élément de configuration**, spécifiez un nom et une description éventuelle pour l’élément de configuration.  
+
+5. Sous **Spécifier le type d’élément de configuration que vous voulez créer**, sélectionnez **Windows 8.1 et Windows 10**.  
+
+6. Cliquez sur **Catégories** si vous créez et attribuez des catégories pour faciliter la recherche et le filtrage des éléments de configuration dans la console Configuration Manager.  
+
+7. Dans la page **Plateformes prises en charge** de l’Assistant, sélectionnez les plateformes Windows spécifiques chargées d’évaluer l’élément de configuration.  
+
+8. Dans la page **Paramètres de périphérique** de l’Assistant, sélectionnez le groupe de paramètres à configurer. Consultez [Informations de référence sur les paramètres d’élément de configuration Windows 8.1 et Windows 10](#BKMK_Setref) dans cette rubrique pour plus d’informations, puis cliquez sur **Suivant**.  
+
+   > [!TIP]  
+   >  Si le paramètre souhaité n’est pas répertorié, cochez la case **Configurer d’autres paramètres qui ne se trouvent pas dans les groupes de paramètres par défaut**.  
+
 9. Dans chaque page de paramètres, configurez les paramètres dont vous avez besoin et indiquez si vous voulez les corriger quand ils ne sont pas conformes sur des périphériques (quand cela est pris en charge).  
-  
+
 10. Pour chaque groupe de paramètres, vous pouvez également configurer la gravité signalée quand un élément de configuration n’est pas conforme :  
-  
+
     -   **Aucun** : les appareils qui ne respectent pas cette règle de conformité ne signalent pas la gravité d’un échec pour les rapports Configuration Manager.  
-  
+
     -   **Informations** : les appareils qui ne respectent pas cette règle de conformité signalent la gravité d’un échec de niveau **Informations** pour les rapports Configuration Manager.  
-  
+
     -   **Avertissement** : les appareils qui ne respectent pas cette règle de conformité signalent la gravité d’un échec de niveau **Avertissement** pour les rapports Configuration Manager.  
-  
+
     -   **Critique** : les appareils qui ne respectent pas cette règle de conformité signalent la gravité d’un échec de niveau **Critique** pour les rapports Configuration Manager.  
-  
+
     -   **Critique avec événement** : les appareils qui ne respectent pas cette règle de conformité signalent la gravité d’un échec de niveau **Critique** pour les rapports Configuration Manager. Ce niveau de gravité est également enregistré comme événement Windows dans le journal des événements des applications.  
-  
+
 11. Dans la page **Condition d’application de la plateforme** de l’Assistant, passez en revue tous les paramètres qui ne sont pas compatibles avec les plateformes prises en charge que vous avez sélectionnées précédemment. Vous pouvez revenir sur ces paramètres et les supprimer, ou vous pouvez continuer.  
-  
+
     > [!TIP]  
     >  La conformité des paramètres non pris en charge n’est pas évaluée.  
-  
+
 12. Effectuez toutes les étapes de l'Assistant.  
-  
- Vous pouvez afficher le nouvel élément de configuration dans le nœud **Éléments de configuration** de l’espace de travail **Ressources et Conformité**.  
-  
+
+    Vous pouvez afficher le nouvel élément de configuration dans le nœud **Éléments de configuration** de l’espace de travail **Ressources et Conformité**.  
+
 ##  <a name="windows-81-and-windows-10-configuration-item-settings-reference"></a>Informations de référence sur les paramètres d’élément de configuration Windows 8.1 et Windows 10  
-  
+
 ### <a name="password"></a>Mot de passe  
  Ces paramètres concernent uniquement les appareils exécutant Windows 10 et versions ultérieures.  
-  
+
 |Paramètre|Détails|  
 |-------------|-------------|  
 |**Exiger des paramètres de mot de passe sur les appareils**|Exigez un mot de passe sur les appareils pris en charge.|  
@@ -83,9 +83,9 @@ ms.locfileid: "32352099"
 |**Qualité du mot de passe**|Sélectionnez le niveau de complexité du mot de passe requis et spécifiez si les appareils biométriques peuvent être utilisés.|  
 |**Envoyer le code PIN de récupération du mot de passe au serveur Exchange Server**|-|
 |**Chiffrement de l’appareil**|Activez le chiffrement sur les appareils ciblés.|  
-  
+
 ###  <a name="device"></a>Appareil  
-  
+
 |Nom du paramètre|Détails|  
 |------------------|-------------|  
 |**Capture d'écran**|Permet de prendre une capture d'écran de l'affichage de l'appareil.<br /><br /> (Windows 10 uniquement)|  
@@ -105,10 +105,10 @@ ms.locfileid: "32352099"
 |**Modification des paramètres de langue (poste de travail uniquement)**|Empêche l’utilisateur de changer les paramètres de langue sur l’appareil.|
 |**Modification de l’heure du système**|Empêche l’utilisateur final de changer les date et heure sur l’appareil.|
 |**Changement de nom d’appareil**|Empêche l’utilisateur final de changer le nom de l’appareil.|
-  
+
 ### <a name="email-management"></a>Gestion de la messagerie  
  Ces paramètres concernent les appareils exécutant Windows 8.1 et Windows 10.  
-  
+
 |Paramètre|Détails|  
 |-------------|-------------|  
 |**Messagerie POP et IMAP**|Autorise la connexion à des comptes de messagerie qui utilisent les normes POP et IMAP.|  
@@ -120,10 +120,10 @@ ms.locfileid: "32352099"
 |**Synchronisation du calendrier**|Autoriser la synchronisation des calendriers sur l’appareil.|  
 |**Compte de messagerie personnalisé**|Autorisez l'utilisation d'un compte non Microsoft sur l'appareil.|  
 |**Rendre le compte Microsoft facultatif dans l'application Windows Mail**|Configurez cette option pour supprimer l’obligation de disposer d’un compte Microsoft dans Windows Mail.|  
-  
+
 ### <a name="store"></a>Magasin  
  Ces paramètres concernent uniquement les appareils exécutant Windows 10 et versions ultérieures.  
-  
+
 |Paramètre|Détails|  
 |-------------|-------------|  
 |**Boutique d'applications**|Permet d'accéder à l'App Store sur l'appareil.|  
@@ -132,10 +132,10 @@ ms.locfileid: "32352099"
 |**Mettre à jour automatiquement les applications du Store**|Permet la mise à jour automatique des applications installées à partir du Windows Store.|
 |**Utiliser uniquement le magasin privé**|Activez cette option pour n’autoriser les utilisateurs à télécharger des applications qu’à partir de votre magasin privé.|
 |**Stocker le démarrage de l’application d’origine**|Désactive toutes les applications qui ont été préinstallées sur l’appareil ou téléchargées à partir du Windows Store.|
-  
+
 ### <a name="browser"></a>Navigateur  
  Ces paramètres concernent les appareils exécutant Windows 8.1 et Windows 10.  
-  
+
 |Paramètre|Détails|  
 |-------------|-------------|  
 |**Autoriser le navigateur web**|Autoriser l’utilisation du navigateur web sur l’appareil.|  
@@ -145,10 +145,10 @@ ms.locfileid: "32352099"
 |**Bloqueur de fenêtres publicitaires**|Active ou désactive le bloqueur de fenêtres publicitaires du navigateur.|  
 |**Cookies**|Autorisez l'enregistrement des cookies sur l'appareil.|  
 |**Avertissement de fraude**|Activez ou désactivez les avertissements des sites Web frauduleux potentiels.|  
-  
+
 ###  <a name="internet-explorer"></a>Internet Explorer  
  Ces paramètres concernent les appareils exécutant Windows 8.1 et Windows 10.  
-  
+
 |Nom du paramètre|Détails|  
 |------------------|-------------|  
 |**Toujours envoyer un en-tête Aucun tracking**|Empêche que les informations d'exploration ne soient envoyées à des sites tiers.|  
@@ -162,19 +162,19 @@ ms.locfileid: "32352099"
 |**Option de menu du mode entreprise**|Autorisez les utilisateurs à activer et désactiver le mode Entreprise à partir du menu **Outils** d’Internet Explorer.|  
 |**Emplacement du rapport de journalisation (URL)**|Spécifiez une URL où les sites web visités sont enregistrés quand le Mode entreprise est actif.|  
 |**Emplacement de la liste des sites en Mode entreprise (URL)**|Spécifiez l’emplacement de la liste des sites web qui utilisent le Mode entreprise quand il est actif.|  
-  
+
 ###  <a name="cloud"></a>Cloud  
  Ces paramètres concernent les appareils exécutant Windows 8.1 et Windows 10.  
-  
+
 |Nom du paramètre|Détails|Windows 8.1|Windows 10|  
 |------------------|-------------|-----------------|----------------|  
 |**Synchronisation des paramètres**|Permet la synchronisation des paramètres entre les appareils.|Oui|Oui|  
 |**Synchronisation des informations d'identification**|Permet la synchronisation des informations d'identification entre les appareils.|Oui|Oui|  
 |**Compte Microsoft**|Autorisez l'utilisation d'un compte Microsoft sur l'appareil.|Oui|Oui|  
 |**Synchronisation des paramètres via des connexions limitées**|Autorisez la synchronisation des paramètres quand la connexion Internet est mesurée.|Oui|Oui|  
-  
+
 ###  <a name="security"></a>Sécurité  
-  
+
 |Nom du paramètre|Détails|  
 |------------------|-------------|  
 |**Installation du fichier non signé**|Autorise le chargement des fichiers non signés.<br /><br /> (Windows 10 uniquement)|  
@@ -188,18 +188,18 @@ ms.locfileid: "32352099"
 |**Fichier de profil**|Configure un profil VPN de profil pour les appareils Windows RT.<br /><br /> Windows 8.1 uniquement)|  
 |**Nom du profil**|Configure un profil VPN de profil pour les appareils Windows RT.<br /><br /> Windows 8.1 uniquement)|  
 |**Profil pour tous les utilisateurs**|Configure un profil VPN de profil pour les appareils Windows RT.<br /><br /> Windows 8.1 uniquement)|  
-  
+
 ###  <a name="peak-synchronization"></a>Synchronisation de pointe  
  Ces paramètres concernent uniquement les appareils exécutant Windows 10 et versions ultérieures.  
-  
+
 |Nom du paramètre|Détails|  
 |------------------|-------------|  
 |**Spécifier les heures de pointe**|Configurer la période de pointe pour la synchronisation des appareils mobiles.|  
 |**Fréquence de synchronisation pendant les heures de pointe**|Configurer la fréquence à laquelle la synchronisation se produit pendant les heures de pointe que vous avez configurées.|  
 |**Fréquence de synchronisation pendant les heures creuses**|Configurer la fréquence à laquelle la synchronisation se produit en dehors des heures de pointe que vous avez configurées.|  
-  
+
 ###  <a name="roaming"></a>Itinérant  
-  
+
 |Nom du paramètre|Détails|  
 |------------------|-------------|  
 |**Gestion des appareils en itinérance**|Permet à l’appareil d’être géré par Configuration Manager en phase d’itinérance.<br /><br /> (Windows 10 uniquement)|  
@@ -208,9 +208,9 @@ ms.locfileid: "32352099"
 |**Itinérance des données**|Autorisez l'itinérance entre réseaux lors de l'accès aux données.| 
 |**VPN sur réseau de téléphonie mobile**|Permet à l’appareil d’accéder aux connexions VPN quand il est connecté à un réseau de téléphonie mobile.<br /><br /> (Windows 10 uniquement)|
 |**Itinérance VPN sur réseau de téléphonie mobile**|Permet à l’appareil d’accéder aux connexions VPN quand il est en itinérance sur un réseau de téléphonie mobile.<br /><br /> (Windows 10 uniquement)| 
-  
+
 ###  <a name="encryption"></a>Chiffrement  
-  
+
 |Nom du paramètre|Détails|  
 |------------------|-------------|  
 |**Chiffrement de la carte de stockage**|Exigez le chiffrement des cartes de stockage utilisées avec l'appareil.<br /><br /> (Windows 10 uniquement)|  
@@ -219,10 +219,10 @@ ms.locfileid: "32352099"
 |**Algorithme de signature**|Sélectionnez l’algorithme de signature pour les messages électroniques signés.|  
 |**Demander le chiffrement des courriers électroniques**|Requiert le chiffrement des messages électroniques avant leur envoi.|  
 |**Algorithme de chiffrement**|Sélectionnez l’algorithme de chiffrement des messages électroniques.|  
-  
+
 ###  <a name="wireless-communications"></a>Communications sans fil  
  Ces paramètres concernent uniquement les appareils exécutant Windows 10 et versions ultérieures.  
-  
+
 |Nom du paramètre|Détails|  
 |------------------|-------------|  
 |**Connexion réseau sans fil**|Activez ou désactivez la fonctionnalité Wi-Fi des appareils.|  
@@ -230,14 +230,14 @@ ms.locfileid: "32352099"
 |**Décharger les données en Wi-Fi si possible**|Configurez cette option pour utiliser la connexion Wi-Fi sur le périphérique lorsque cela est possible.|  
 |**Rapports de point d'accès Wi-Fi**|-|  
 |**Configuration manuelle du Wi-Fi**|-|  
-  
+
 #### <a name="to-configure-a-wireless-network-connection"></a>Pour configurer une connexion réseau sans fil  
-  
+
 1.  Dans la page **Configurer les paramètres de communication sans fil de l'appareil mobile** , cliquez sur **Ajouter**.  
-  
+
 2.  Dans la boîte de dialogue **Connexion réseau sans fil**, spécifiez les informations suivantes sur la connexion sans fil qui est configurée sur les appareils mobiles :  
-  
-|Paramètre|Plus d'informations|  
+
+|Paramètre|Informations complémentaires|  
 |-------------|----------------------|  
 |**Nom réseau (SSID)**|Entrez le nom du réseau Wi-Fi.|  
 |**Connexion réseau**|Choisissez entre **Internet** et **Travail**.|  
@@ -248,46 +248,46 @@ ms.locfileid: "32352099"
 |**Paramètres du serveur proxy**|Spécifiez si nécessaire les paramètres **Serveur** et **Port** pour **HTTP**, **WAP** et **Sockets**.|  
 |**Activer l'accès réseau 802.1X**|Sélectionnez cette option si vous souhaitez sécuriser la connexion en spécifiant un type EAP.|  
 |**Type EAP**|Choisissez le type EAP à utiliser :<br /><br /> - **PEAP**<br> - **Carte à puce ou certificat**|  
-  
-  
-  
+
+
+
 ### <a name="certificates"></a>Certificats  
  Importez les certificats à installer sur les appareils mobiles.  
-  
+
  Cliquez sur **Importer**, puis spécifiez les valeurs suivantes :  
-  
+
 -   **Fichier de certificat** : cliquez sur Parcourir, puis sélectionnez le fichier de certificat avec l’extension **.cer** que vous souhaitez importer.  
-  
+
 -   **Banque d’informations de destination** : choisissez une ou plusieurs banques de destination où le certificat importé est ajouté sur l’appareil mobile :  
-  
+
     -   **Racine**  
-  
+
     -   **Autorité de certification**  
-  
+
     -   **Normal**  
-  
+
     -   **Privilégié**  
-  
+
     -   **SPC**  
-  
+
     -   **Homologue**  
-  
+
 -   **Rôle** : si **SPC** (Software Publisher Certificate) est sélectionné en tant que banque de destination, choisissez le rôle qui est associé au certificat :  
-  
+
     -   **Opérateur mobile**  
-  
+
     -   **Gestionnaire**  
-  
+
     -   **Utilisateur authentifié**  
-  
+
     -   **Administrateur informatique**  
-  
+
     -   **Utilisateur non authentifié**  
-  
+
     -   **Serveur d’approvisionnement approuvé**  
-  
+
 ### <a name="system-security"></a>Sécurité système  
-  
+
 |Paramètre|Détails|  
 |-------------|-------------|  
 |**Contrôle de compte d'utilisateur**|Active ou désactive le contrôle de compte d'utilisateur Windows sur l'appareil.|  
@@ -303,45 +303,47 @@ ms.locfileid: "32352099"
 |**Fonctionnalités de la version préliminaire**|Permet à Microsoft de déployer des versions préliminaires de paramètres et de fonctionnalités sur le périphérique.<br /><br /> (Windows 10 uniquement)|  
 |**Installation manuelle du certificat racine**|(Windows 10 uniquement)| 
 |**Autoriser la désinscription manuelle**|Permet à l’utilisateur de se désinscrire de la gestion par une solution de gestion des appareils mobiles.| 
-  
+
 ###  <a name="windows-server-work-folders"></a>Dossiers de travail du serveur Windows  
  Ces paramètres concernent les appareils exécutant Windows 8.1 et Windows 10.  
-  
+
 |Nom du paramètre|Détails|  
 |------------------|-------------|  
 |**URL des dossiers de travail**|Configure l'emplacement d'un dossier de travail Windows Server auquel les utilisateurs peuvent se connecter à partir de leur appareil.|  
-  
+
 ### <a name="allowed-and-blocked-apps-windows-phone-only"></a>Applications autorisées et bloquées (Windows Phone uniquement)  
  Permet de spécifier la liste des applications gérées par Intune qui sont conformes ou non conformes au sein de votre entreprise. Windows Phone peut autoriser ou bloquer l’installation de ces applications.  
-  
+
  Vous ne pouvez pas spécifier à la fois les applications conformes et non conformes dans le même élément de configuration.  
-  
+
 #### <a name="to-specify-apps-that-are-allowed-or-blocked"></a>Pour spécifier les applications autorisées ou bloquées  
-  
+
 Dans la page **Liste des applications autorisées et bloquées**, spécifiez les informations suivantes :  
-  
-|Paramètre|Plus d'informations|  
-    |-------------|----------------------|  
-    |**Liste des applications bloquées**|Sélectionnez cette option si vous souhaitez spécifier une liste d’applications que les utilisateurs ne sont pas autorisés à installer.|  
-    |**Liste des applications autorisées**|Sélectionnez cette option si vous souhaitez spécifier une liste d'applications que les utilisateurs sont autorisés à installer. L’installation de toutes les autres applications est bloquée.|  
-    |**Ajouter**|Ajoute une application à la liste sélectionnée. Spécifiez le nom de votre choix, éventuellement l’éditeur de l’application, ainsi que l’URL de l’application dans la boutique d’applications.<br /><br /> Pour spécifier l’URL, dans le Windows Store, recherchez l’application à utiliser.<br /><br /> Ouvrez la page de l'application, puis copiez l'URL dans le Presse-papiers. Vous pouvez maintenant utiliser cette URL dans la liste des applications autorisées ou bloquées.<br /><br /> **Exemple :** recherchez l’application **Skype** dans le Store. L’URL que vous utilisez est **http://www.windowsphone.com/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51**.|  
-    |**Éditer**|Vous permet de modifier le nom, l'éditeur et l'URL de l'application sélectionnée.|  
-    |**Supprimer**|Supprime l'application sélectionnée dans la liste.|  
-    |**Importerer**|Importe une liste d'applications que vous avez spécifiée dans un fichier de valeurs séparées par des virgules. Utilisez le format Nom de l'application, Éditeur, URL de l'application dans le fichier.|  
-  
+
+
+|        Paramètre        |                                                                                                                                                                                                                                                                        Informations complémentaires                                                                                                                                                                                                                                                                         |
+|-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Liste des applications bloquées** |                                                                                                                                                                                                                                 Sélectionnez cette option si vous souhaitez spécifier une liste d’applications que les utilisateurs ne sont pas autorisés à installer.                                                                                                                                                                                                                                 |
+| **Liste des applications autorisées** |                                                                                                                                                                                                             Sélectionnez cette option si vous souhaitez spécifier une liste d'applications que les utilisateurs sont autorisés à installer. L’installation de toutes les autres applications est bloquée.                                                                                                                                                                                                             |
+|        **Ajouter**        | Ajoute une application à la liste sélectionnée. Spécifiez le nom de votre choix, éventuellement l’éditeur de l’application, ainsi que l’URL de l’application dans la boutique d’applications.<br /><br /> Pour spécifier l’URL, dans le Windows Store, recherchez l’application à utiliser.<br /><br /> Ouvrez la page de l'application, puis copiez l'URL dans le Presse-papiers. Vous pouvez maintenant utiliser cette URL dans la liste des applications autorisées ou bloquées.<br /><br /> **Exemple :** Recherchez dans le store le **Skype** application. L’URL que vous utilisez est **<http://www.windowsphone.com/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51>**. |
+|       **Éditer**        |                                                                                                                                                                                                                                                 Vous permet de modifier le nom, l'éditeur et l'URL de l'application sélectionnée.                                                                                                                                                                                                                                                 |
+|      **Supprimer**       |                                                                                                                                                                                                                                                             Supprime l'application sélectionnée dans la liste.                                                                                                                                                                                                                                                             |
+|      **Importerer**       |                                                                                                                                                                                                          Importe une liste d'applications que vous avez spécifiée dans un fichier de valeurs séparées par des virgules. Utilisez le format Nom de l'application, Éditeur, URL de l'application dans le fichier.                                                                                                                                                                                                          |
+
 ### <a name="windows-10-team"></a>Équipe Windows 10  
  Ces paramètres concernent uniquement les appareils exécutant Windows 10 Collaboration.  
-  
-|Nom du paramètre|Détails|  
-|------------------|-------------|  
-|**Autoriser l’écran à sortir de veille automatiquement quand les capteurs détectent la présence d’une personne dans la pièce**|Permet à l’appareil de sortir automatiquement quand son capteur détecte la présence d’une personne dans la pièce.|  
-|**Code PIN exigé pour la projection sans fil**|Indique si vous devez entrer un code confidentiel avant de pouvoir utiliser les fonctionnalités de projection sans fil de l’appareil.|  
-|**Fenêtre de maintenance**|Configure la fenêtre quand des mises à jour peuvent avoir lieu sur l’appareil. Vous pouvez configurer l’heure de début de la fenêtre et la durée (de 1 à 5 heures).|
-|**Azure Operational Insights**|Azure Operational Insights, qui fait partie de la suite Microsoft Operations Manager, collecte, stocke et analyse les données des fichiers journaux provenant des appareils Windows 10 Collaboration.<br>Pour vous connecter à Azure Operational Insights, vous devez spécifier un ID d’espace de travail et une Clé d’espace de travail.| 
-|**Projection sans fil Miracast**|Activez cette option si vous voulez permettre à l’appareil Windows 10 Collaboration d’utiliser des appareils compatibles Miracast pour la projection.<br>Si vous activez cette option, dans **Choisir un canal Miracast**, sélectionnez le canal Miracast utilisé projeter du contenu.|
-|**Informations sur la réunion affichées sur l’écran d’accueil**|Si vous activez cette option, vous pouvez choisir les informations qui sont affichées sur la vignette **Réunions** de l’écran **Bienvenue**. Vous pouvez :<br><br>- **Afficher uniquement l’organisateur et l’heure**<br>- **Afficher l’organisateur, l’heure et l’objet (objet masqué pour les réunions privées)**|
-|**URL de l’image d’arrière-plan de l’écran de verrouillage**|Utilisez ce paramètre pour afficher un arrière-plan personnalisé sur l’écran **Bienvenue** des appareils Windows 10 Collaboration à partir de l’URL que vous spécifiez.<br>L’image doit être au format PNG et l’URL doit commencer par **https://**.| 
-  
+
+
+|                                  Nom du paramètre                                  |                                                                                                                              Détails                                                                                                                               |
+|--------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Autoriser l’écran à sortir de veille automatiquement quand les capteurs détectent la présence d’une personne dans la pièce** |                                                                                        Permet à l’appareil de sortir automatiquement quand son capteur détecte la présence d’une personne dans la pièce.                                                                                        |
+|                    **Code PIN exigé pour la projection sans fil**                    |                                                                           Indique si vous devez entrer un code confidentiel avant de pouvoir utiliser les fonctionnalités de projection sans fil de l’appareil.                                                                            |
+|                             **Fenêtre de maintenance**                             |                                                         Configure la fenêtre quand des mises à jour peuvent avoir lieu sur l’appareil. Vous pouvez configurer l’heure de début de la fenêtre et la durée (de 1 à 5 heures).                                                         |
+|                         **Azure Operational Insights**                         |      Azure Operational Insights, qui fait partie de la suite Microsoft Operations Manager, collecte, stocke et analyse les données des fichiers journaux provenant des appareils Windows 10 Collaboration.<br>Pour vous connecter à Azure Operational Insights, vous devez spécifier un ID d’espace de travail et une Clé d’espace de travail.       |
+|                        **Projection sans fil Miracast**                        |                   Activez cette option si vous voulez permettre à l’appareil Windows 10 Collaboration d’utiliser des appareils compatibles Miracast pour la projection.<br>Si vous activez cette option, dans **Choisir un canal Miracast**, sélectionnez le canal Miracast utilisé projeter du contenu.                    |
+|              **Informations sur la réunion affichées sur l’écran d’accueil**               | Si vous activez cette option, vous pouvez choisir les informations qui sont affichées sur la vignette **Réunions** de l’écran **Bienvenue**. Vous pouvez :<br><br>- **Afficher uniquement l’organisateur et l’heure**<br>- **Afficher l’organisateur, l’heure et l’objet (objet masqué pour les réunions privées)** |
+|                      **URL de l’image d’arrière-plan de l’écran de verrouillage**                       |                            Utilisez ce paramètre pour afficher un arrière-plan personnalisé sur l’écran **Bienvenue** des appareils Windows 10 Collaboration à partir de l’URL que vous spécifiez.<br>L’image doit être au format PNG et l’URL doit commencer par **https://**.                             |
+
 ### <a name="windows-information-protection"></a>Protection des informations Windows  
 
 Avec l’augmentation du nombre d’appareils appartenant aux employés au sein de l’entreprise, il existe un risque accru de fuites accidentelles de données via les applications et les services, tels que le courrier électronique, les réseaux sociaux et le cloud public, qui sont en dehors du contrôle de l’entreprise. C’est par exemple le cas quand un employé envoie les dernières photos de conception à partir de son compte de messagerie personnel, quand il copie et colle des informations sur des produits dans un tweet ou quand il enregistre un rapport des ventes en cours dans son stockage cloud public.
@@ -355,7 +357,7 @@ Pour plus d’informations sur la configuration de la protection des données d�
 
 ### <a name="microsoft-edge"></a>Microsoft Edge  
 Ces paramètres concernent les appareils exécutant Windows 10 et versions ultérieures.  
-  
+
 |Nom du paramètre|Détails|  
 |------------------|-------------| 
 |Microsoft Edge|Autoriser l’utilisation du navigateur web Edge sur l’appareil.| 
@@ -379,7 +381,7 @@ Ces paramètres concernent les appareils exécutant Windows 10 et versions ult�
 
 ### <a name="windows-defender"></a>Windows Defender
 Ces paramètres concernent les appareils exécutant Windows 10 et versions ultérieures.
- 
+
 |Nom du paramètre|Détails|  
 |------------------|-------------|  
 |**Autoriser la surveillance en temps réel**|Active l’analyse en temps réel pour les logiciels malveillants, les logiciels espions et d’autres logiciels indésirables.|
@@ -406,6 +408,6 @@ Ces paramètres concernent les appareils exécutant Windows 10 et versions ult�
 |**Exclusions des extensions de fichier**|Ajoute une ou plusieurs extensions de fichier, comme jpg ou txt, à la liste des exclusions. Les fichiers avec ces extensions ne sont pas inclus dans les analyses en temps réel ou planifiées.|
 |**Exclusions des processus**|Ajoute un ou plusieurs processus du type .exe, .com ou .scr à la liste des exclusions. Ces processus ne sont pas inclus dans les analyses en temps réel ou planifiées.|
 
-  
+
 ## <a name="see-also"></a>Voir aussi  
  [Éléments de configuration pour les appareils gérés sans le client System Center Configuration Manager](../../compliance/deploy-use/configuration-items-for-devices-managed-without-the-client.md)

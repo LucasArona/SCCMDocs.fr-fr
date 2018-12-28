@@ -1,5 +1,5 @@
 ---
-title: Configurer des applications iOS avec des stratégie de configuration d’applications
+title: Configure iOS apps with app configuration policies
 titleSuffix: Configuration Manager
 description: Évitez les problèmes de configuration sur les appareils exécutant iOS 8 ou version ultérieure en déployant des stratégies de configuration des applications sur les appareils avant que les utilisateurs exécutent les applications.
 ms.date: 03/05/2017
@@ -10,12 +10,12 @@ ms.assetid: f0a78038-ea22-4826-9c07-1771b7dd2e8d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e5d00b1efd02d3b096a0b64033b450f0da949eeb
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 19b55204566c49c95e76a3eff3f88206df553e13
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32349457"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416161"
 ---
 # <a name="apply-settings-to-ios-apps-with-app-configuration-policies-in-system-center-configuration-manager"></a>Appliquer des paramètres aux applications iOS à l’aide de stratégies de configuration d’application dans System Center Configuration Manager
 
@@ -44,11 +44,11 @@ Pour plus d’informations sur les types d’installation d’application, consu
 1. Dans la console Configuration Manager, choisissez **Bibliothèque de logiciels** > **Gestion des applications** > **Stratégies de configuration des applications**.
 2. Sous l’onglet **Accueil**, dans le groupe **Stratégies de configuration des applications**, choisissez **Créer une stratégie de configuration d’applications**.
 3. Dans la page **Général** de l’Assistant Création d’une stratégie de configuration d’applications, définissez les informations de cette stratégie :
-  - **Nom**. Entrez un nom unique pour la stratégie.
-  - **Description**. (Facultatif) Pour identifier plus facilement la stratégie, vous pouvez ajouter une description.
-  - **Catégories attribuées pour améliorer la recherche et le filtrage**. (Facultatif) Pour créer et attribuer des catégories à la stratégie, choisissez **Catégories**. L’utilisation de catégories facilite le tri et la recherche d’éléments dans la console Configuration Manager.
+   - **Nom**. Entrez un nom unique pour la stratégie.
+   - **Description**. (Facultatif) Pour identifier plus facilement la stratégie, vous pouvez ajouter une description.
+   - **Catégories attribuées pour améliorer la recherche et le filtrage**. (Facultatif) Pour créer et attribuer des catégories à la stratégie, choisissez **Catégories**. L’utilisation de catégories facilite le tri et la recherche d’éléments dans la console Configuration Manager.
 4. Dans la page **Stratégie iOS**, choisissez de quelle façon les informations sur la stratégie de configuration sont définies :
-  - **Spécifier des paires nom/valeur**. Vous pouvez utiliser cette option pour les fichiers de liste de propriétés simples sans imbrication.
+   - **Spécifier des paires nom/valeur**. Vous pouvez utiliser cette option pour les fichiers de liste de propriétés simples sans imbrication.
 
       *Pour spécifier une paire nom/valeur*
         1. Pour ajouter une nouvelle paire, choisissez **Nouveau**.
@@ -57,13 +57,13 @@ Pour plus d’informations sur les types d’installation d’application, consu
             - **Nom**. Entrez le nom de la clé de liste de propriétés pour laquelle vous voulez spécifier une valeur.
             - **Valeur**. Entrez la valeur à appliquer à la clé spécifiée.
 
-  - **Accéder à un fichier de liste de propriétés**. Utilisez cette option si vous avez déjà un fichier XML de configuration d’applications, ou pour les fichiers de liste de propriétés plus complexes avec imbrication.
+   - **Accéder à un fichier de liste de propriétés**. Utilisez cette option si vous avez déjà un fichier XML de configuration d’applications, ou pour les fichiers de liste de propriétés plus complexes avec imbrication.
 
-    *Pour accéder à un fichier de liste de propriétés*
+     *Pour accéder à un fichier de liste de propriétés*
 
-      1.  Dans le champ **Stratégie de configuration des applications**, entrez les informations de la liste de propriétés au format XML correct.
+     1. Dans le champ **Stratégie de configuration des applications**, entrez les informations de la liste de propriétés au format XML correct.
 
-      Pour en savoir plus sur les listes de propriétés XML, consultez [Understanding XML Property Lists](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/PropertyLists/UnderstandXMLPlist/UnderstandXMLPlist.html) (Présentation des listes de propriétés XML) sur le site iOS Developer Library.
+        Pour en savoir plus sur les listes de propriétés XML, consultez [Understanding XML Property Lists](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/PropertyLists/UnderstandXMLPlist/UnderstandXMLPlist.html) (Présentation des listes de propriétés XML) sur le site iOS Developer Library.
 
 Le format de la liste de propriétés XML varie en fonction de l’application que vous configurez. Pour connaître le format à utiliser, contactez le fournisseur de l’application.
 Intune prend en charge les types de données suivants dans une liste de propriétés :

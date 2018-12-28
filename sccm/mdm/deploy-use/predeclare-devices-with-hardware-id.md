@@ -10,12 +10,12 @@ ms.assetid: ddb4c68e-e7f7-475a-89e2-7379a86e44c4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 86ef14c871f476df39923e01e47874702271a08d
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 118e9b32d691c228857fc31b2da1e9d9b72b7b58
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32348281"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53415923"
 ---
 # <a name="predeclare-devices-with-imei-or-ios-serial-numbers"></a>Prédéclarer des appareils avec des numéros IMEI ou numéros de série iOS
 
@@ -30,33 +30,33 @@ Lorsque vous téléchargez des numéros de série d’appareils iOS appartenant 
 
 ## <a name="how-to-predeclare-corporate-owned-devices"></a>Comment prédéclarer des appareils d’entreprise
 
-1.  Dans la console Configuration Manager, accédez à **Actifs et Conformité** > **Vue d’ensemble** > **Tous les appareils d’entreprise** > **Predeclared devices** (Appareils prédéclarés).
+1. Dans la console Configuration Manager, accédez à **Actifs et Conformité** > **Vue d’ensemble** > **Tous les appareils d’entreprise** > **Predeclared devices** (Appareils prédéclarés).
 
-2.  Cliquez sur **Create Predeclared Devices** (Créer des appareils prédéclarés). L’Assistant Create Predeclared Devices (Création d’appareils prédéclarés) s’ouvre.
+2. Cliquez sur **Create Predeclared Devices** (Créer des appareils prédéclarés). L’Assistant Create Predeclared Devices (Création d’appareils prédéclarés) s’ouvre.
 
-3.  Choisissez la façon dont vous souhaitez ajouter les informations sur les appareils :
+3. Choisissez la façon dont vous souhaitez ajouter les informations sur les appareils :
 
-     -  **Charger un fichier CSV contenant des numéros IMEI ou numéros de série et des informations détaillées**
+    -  **Charger un fichier CSV contenant des numéros IMEI ou numéros de série et des informations détaillées**
 
-        Pour cette option, cliquez sur **Parcourir** pour spécifier le fichier .csv contenant les informations à utiliser pour prédéclarer les appareils d’entreprise. Le fichier .csv doit être formaté correctement. Pour plus d’informations, consultez [Format pour le chargement des fichiers .csv](#format-for-uploading-csv-files).
+       Pour cette option, cliquez sur **Parcourir** pour spécifier le fichier .csv contenant les informations à utiliser pour prédéclarer les appareils d’entreprise. Le fichier .csv doit être formaté correctement. Pour plus d’informations, consultez [Format pour le chargement des fichiers .csv](#format-for-uploading-csv-files).
 
-     -  **Ajouter manuellement des numéros IMEI ou numéros de série et des informations détaillées**
+    -  **Ajouter manuellement des numéros IMEI ou numéros de série et des informations détaillées**
 
-        Pour entrer manuellement les informations, tapez le numéro IMEI ou le numéro de série iOS ainsi que les informations détaillées pour les appareils. Corrigez les éventuels avertissements ou erreurs avant de continuer.
+       Pour entrer manuellement les informations, tapez le numéro IMEI ou le numéro de série iOS ainsi que les informations détaillées pour les appareils. Corrigez les éventuels avertissements ou erreurs avant de continuer.
 
-    Cliquez sur **Suivant**.
+   Cliquez sur **Suivant**.
 
 4. Si vous avez chargé un fichier .csv, passez en revue les résultats de l’importation du fichier. Si un numéro d’appareil avait déjà été importé, Configuration Manager affiche les appareils correspondants et les **détails** de remplacement. Sélectionnez les appareils pour lesquels vous voulez remplacer les détails. Les détails sur un appareil peuvent uniquement être modifiés en réimportant le numéro IMEI ou le numéro de série de l’appareil.
 
-  Si vous choisissez d’entrer manuellement le numéro, remplissez le formulaire pour les appareils que vous souhaitez prédéclarer.
+   Si vous choisissez d’entrer manuellement le numéro, remplissez le formulaire pour les appareils que vous souhaitez prédéclarer.
 
-  Cliquez sur **Suivant** pour continuer.
+   Cliquez sur **Suivant** pour continuer.
 
-4. Si votre liste inclut des numéros de série iOS, sélectionnez **Profil d’inscription à affecter** dans la liste des profils disponibles, puis cliquez sur **Suivant**.
+5. Si votre liste inclut des numéros de série iOS, sélectionnez **Profil d’inscription à affecter** dans la liste des profils disponibles, puis cliquez sur **Suivant**.
 
-5. Cliquez sur **Suivant** pour passer en revue les détails, puis à nouveau sur **Suivant** pour charger les données.
+6. Cliquez sur **Suivant** pour passer en revue les détails, puis à nouveau sur **Suivant** pour charger les données.
 
-6. Cliquez sur **Fermer** pour terminer.
+7. Cliquez sur **Fermer** pour terminer.
 
 ## <a name="format-for-uploading-csv-files"></a>Format pour le chargement des fichiers .csv
 

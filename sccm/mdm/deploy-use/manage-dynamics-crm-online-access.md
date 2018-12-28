@@ -10,12 +10,12 @@ ms.assetid: 2bfc4c51-b25c-4c70-b81e-8a3b6ddf02c8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d77dbcf0b8b7853153a0b2ead4b2db3affd03733
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 5e2c8ab4f8dc0b544a79b2113c278f97444357bf
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32352774"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420955"
 ---
 # <a name="manage-dynamics-crm-online-access-in-system-center-configuration-manager"></a>Gérer l’accès à Dynamics CRM Online dans System Center Configuration Manager
 
@@ -44,7 +44,7 @@ Si une condition n'est pas remplie, l'utilisateur reçoit l'un des messages suiv
 * Si l’appareil n’est pas conforme, l’utilisateur reçoit un message le redirigeant vers le site web du portail d’entreprise Microsoft Intune ou l’application Portail d’entreprise, où il peut trouver des informations sur le problème et des solutions pour y remédier.
 
 ## <a name="configure-conditional-access-for-dynamics-crm-online"></a>Configurer l’accès conditionnel pour Dynamics CRM Online  
-### <a name="step-1-configure-active-directory-security-groups"></a>Étape 1 : configurer les groupes de sécurité Active Directory
+### <a name="step-1-configure-active-directory-security-groups"></a>Étape 1 : Configurer des groupes de sécurité Active Directory
 
 Avant de commencer, configurez les groupes de sécurité Azure Active Directory pour la stratégie d'accès conditionnel. Vous pouvez configurer ces groupes dans le **Centre d’administration Office 365**. Ces groupes serviront à cibler des utilisateurs avec la stratégie ou à les exempter de la stratégie. Quand un utilisateur est ciblé par une stratégie, chaque appareil qu'il utilise doit être conforme à cette stratégie pour qu'il puisse accéder aux ressources.
 
@@ -54,7 +54,7 @@ Vous pouvez spécifier deux types de groupes à utiliser pour la stratégie de D
 
 Si un utilisateur se trouve dans les deux groupes, il est exempt de la stratégie.
 
-### <a name="step-2-configure-and-deploy-a-compliance-policy"></a>Étape 2 : configurer et déployer une stratégie de conformité
+### <a name="step-2-configure-and-deploy-a-compliance-policy"></a>Étape 2 : Configurer et déployer une stratégie de conformité
 [Créez et déployez](../../protect/deploy-use/device-compliance-policies.md) une stratégie de conformité pour tous les appareils auxquels appliquer la stratégie. Il s’agit de tous les appareils qui sont utilisés par les membres des groupes ciblés.
 
 > [!NOTE]
@@ -64,20 +64,20 @@ Si un utilisateur se trouve dans les deux groupes, il est exempt de la stratégi
 > Si vous n’avez pas déployé de stratégie de conformité, les appareils sont considérés comme conformes.
 
 Quand vous êtes prêt, passez à l’Étape 3.
-### <a name="step-3-configure-the-dynamics-crm-policy"></a>Étape 3 : configurer la stratégie Dynamics CRM
+### <a name="step-3-configure-the-dynamics-crm-policy"></a>Étape 3 : Configurer la stratégie Dynamics CRM
 Configurez maintenant la stratégie pour restreindre l’accès à Dynamics CRM aux appareils gérés et conformes. Cette stratégie sera stockée dans Azure Active Directory.
 
-1.  Dans la console d’administration Microsoft Intune, choisissez **Stratégie > Accès conditionnel > Stratégie Dynamics CRM Online**.
+1. Dans la console d’administration Microsoft Intune, choisissez **Stratégie > Accès conditionnel > Stratégie Dynamics CRM Online**.
 
-     ![Capture d’écran de la page de la stratégie d’accès conditionnel Dynamics CRM Online](media/mdm-ca-dynamics-crm-policy-configuration.png)
+    ![Capture d’écran de la page de la stratégie d’accès conditionnel Dynamics CRM Online](media/mdm-ca-dynamics-crm-policy-configuration.png)
 
-2.  Sélectionnez **Activer la stratégie d’accès conditionnel**.
-3.  Sous **Accès à l’application**, vous pouvez choisir d’appliquer la stratégie d’accès conditionnel à :
-  * **iOS**
-  * **Android**
-4.  Sous **Groupes ciblés**, choisissez **Modifier** pour sélectionner les groupes de sécurité Active Directory auxquels la stratégie doit s’appliquer. Vous avez la possibilité de cibler cette stratégie sur tous les utilisateurs ou uniquement sur un groupe sélectionné d’utilisateurs.
-5.  Sous **Groupes exemptés**, choisissez **Modifier** pour sélectionner les groupes de sécurité Azure Active Directory à exempter de cette stratégie (facultatif).
-6.  Une fois que vous avez terminé, choisissez **Enregistrer**.
+2. Sélectionnez **Activer la stratégie d’accès conditionnel**.
+3. Sous **Accès à l’application**, vous pouvez choisir d’appliquer la stratégie d’accès conditionnel à :
+   * **iOS**
+   * **Android**
+4. Sous **Groupes ciblés**, choisissez **Modifier** pour sélectionner les groupes de sécurité Active Directory auxquels la stratégie doit s’appliquer. Vous avez la possibilité de cibler cette stratégie sur tous les utilisateurs ou uniquement sur un groupe sélectionné d’utilisateurs.
+5. Sous **Groupes exemptés**, choisissez **Modifier** pour sélectionner les groupes de sécurité Azure Active Directory à exempter de cette stratégie (facultatif).
+6. Une fois que vous avez terminé, choisissez **Enregistrer**.
 
 Vous avez configuré l’accès conditionnel pour Dynamics CRM. La stratégie d'accès conditionnel prend effet immédiatement. Il est donc inutile de la déployer.
 ##  <a name="monitor-the-compliance-and-conditional-access-policies"></a>analyser la conformité et les stratégies d'accès conditionnel

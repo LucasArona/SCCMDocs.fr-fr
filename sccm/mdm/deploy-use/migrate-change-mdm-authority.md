@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: be503ec9-5324-4f7c-bcf5-77204328e99c
-ms.openlocfilehash: d5efcb78ad5e732691cc2f214f81db0b357e0e19
-ms.sourcegitcommit: 316899b08f2ef372993909e08e069f7edfed1d33
-ms.translationtype: HT
+ms.openlocfilehash: 4ded99c2084f274d519680e78fdc54825b3857cb
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44111108"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419510"
 ---
 # <a name="change-your-mdm-authority-to-intune-standalone"></a>Utiliser la version autonome d’Intune comme autorité MDM
 
@@ -48,20 +48,20 @@ Passez en revue les informations suivantes pour préparer le passage à l’auto
 ## <a name="change-the-mdm-authority-to-intune"></a>Utiliser Intune comme autorité MDM
 Utilisez la procédure suivante pour choisir Intune comme autorité MDM côté client.
 
-1.  Dans la console Configuration Manager, accédez à **Administration** &gt; **Vue d’ensemble** &gt; **Services Cloud** &gt; **Abonnement Microsoft Intune**, puis supprimez votre abonnement Intune existant.
-2.  Sélectionnez **Utiliser Microsoft Intune comme autorité MDM**, puis cliquez sur **Suivant**.
+1. Dans la console Configuration Manager, accédez à **Administration** &gt; **Vue d’ensemble** &gt; **Services Cloud** &gt; **Abonnement Microsoft Intune**, puis supprimez votre abonnement Intune existant.
+2. Sélectionnez **Utiliser Microsoft Intune comme autorité MDM**, puis cliquez sur **Suivant**.
 
-    ![Supprimer la boîte de dialogue de l’abonnement Microsoft Intune](media/mdm-change-delete-subscription.png)
-3.  Ouvrez une session dans le locataire Intune que vous avez utilisé lorsque vous avez défini pour la première fois l’autorité MDM dans Configuration Manager.
-4.  Cliquez sur **Suivant** pour terminer l'Assistant.
-5.  L’autorité MDM est maintenant réinitialisée. L’abonnement Intune n’apparaît plus dans le nœud des abonnements Microsoft Intune de la console Configuration Manager.
-6.  Connectez-vous au [portail Intune](https://aka.ms/IntunePortal).
-7.  Dans le panneau Microsoft Intune, cliquez sur **Inscription de l’appareil**.
-8.  Dans la vue d’ensemble de l’inscription d’appareil, regardez la propriété **Autorité MDM**.
+   ![Supprimer la boîte de dialogue de l’abonnement Microsoft Intune](media/mdm-change-delete-subscription.png)
+3. Ouvrez une session dans le locataire Intune que vous avez utilisé lorsque vous avez défini pour la première fois l’autorité MDM dans Configuration Manager.
+4. Cliquez sur **Suivant** pour terminer l'Assistant.
+5. L’autorité MDM est maintenant réinitialisée. L’abonnement Intune n’apparaît plus dans le nœud des abonnements Microsoft Intune de la console Configuration Manager.
+6. Connectez-vous au [portail Intune](https://aka.ms/IntunePortal).
+7. Dans le panneau Microsoft Intune, cliquez sur **Inscription de l’appareil**.
+8. Dans la vue d’ensemble de l’inscription d’appareil, regardez la propriété **Autorité MDM**.
 
-  > [!Important]    
-  > N’utilisez pas la console Intune classique. Vous devez vous connecter à Intune sur le Portail Azure.
-7.  Vérifiez que l’autorité MDM a été remplacée par **Microsoft Intune**. 
+   > [!Important]    
+   > N’utilisez pas la console Intune classique. Vous devez vous connecter à Intune sur le Portail Azure.
+9. Vérifiez que l’autorité MDM a été remplacée par **Microsoft Intune**. 
 
 ## <a name="next-steps"></a>Étapes suivantes
 Une fois le changement d’autorité MDM effectué, lisez les informations suivantes :

@@ -10,12 +10,12 @@ ms.assetid: e3bb3e13-3037-4122-93bc-504bfd080a4d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 81847846efe99bbc3ad5f0ff5a074b393c8b140a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 214dcdca927e515f776e99f005f968a4b98f4112
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32349549"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418830"
 ---
 # <a name="how-to-create-pfx-certificate-profiles-by-importing-certificate-details"></a>Guide pratique pour créer des profils de certificat PFX en important les détails du certificat
 
@@ -26,11 +26,11 @@ Vous allez découvrir ici comment créer un profil de certificat en important de
 
 Les [profils de certificat](../../protect/deploy-use/introduction-to-certificate-profiles.md) fournissent des informations générales sur la création et la configuration des profils de certificat. Cette rubrique met en évidence des informations spécifiques sur les profils de certificat associés aux certificats PFX.
 
--  Configuration Manager donne accès à divers magasins de certificats adaptés à différents appareils et systèmes d’exploitation.  À savoir :
+- Configuration Manager donne accès à divers magasins de certificats adaptés à différents appareils et systèmes d’exploitation.  À savoir :
 
- -   iOS et MacOS/OSX
- -   Android et Android for Work
- -   Windows 10, notamment Windows 10 Mobile.
+  -   iOS et MacOS/OSX
+  -   Android et Android for Work
+  -   Windows 10, notamment Windows 10 Mobile.
 
 Pour plus d’informations, consultez [Prérequis des profils de certificat](../../protect/plan-design/prerequisites-for-certificate-profiles.md).
 
@@ -51,15 +51,15 @@ System Center Configuration Manager vous permet d’importer des informations d�
 
 4.  Dans la page **Général** de l'Assistant **Créer un profil de certificat** , spécifiez les informations suivantes :  
 
-    -   **Nom**: entrez un nom unique pour le profil de certificat. Vous pouvez utiliser jusqu'à 256 caractères.  
+    -   **Nom**: Entrez un nom unique pour le profil de certificat. Vous pouvez utiliser jusqu'à 256 caractères.  
 
-    -   **Description** : entrez une description qui donne un aperçu du profil de certificat et d’autres informations utiles pour identifier facilement ce profil dans la console System Center Configuration Manager. Vous pouvez utiliser jusqu'à 256 caractères.  
+    -   **Description** : Fournissez une description qui donne un aperçu du profil de certificat et d’autres informations pertinentes qui facilitent son identification dans la console System Center Configuration Manager. Vous pouvez utiliser jusqu'à 256 caractères.  
 
-    -   **Spécifiez le type de profil de certificat que vous voulez créer** : pour les certificats PFX, choisissez l’une des options suivantes :  
+    -   **Spécifiez le type de profil de certificat que vous souhaitez créer**: Pour les certificats PFX, choisissez l’une des options suivantes :  
 
-        -   **Échange d’informations personnelles -- Paramètres PKCS #12 (PFX) -- Importation** : crée un profil de certificat en important des informations par programmation à partir de certificats existants.  
+        -   **Les paramètres personnels d’informations Exchange PKCS #12 (PFX) - importation**: Crée un profil de certificat en important des informations par programme à partir de certificats existants.  
 
-        -   **Échange d’informations personnelles -- Paramètres PKCS #12 (PFX) -- Créer** : crée un profil de certificat PFX à l’aide des informations d’identification fournies par une autorité de certification.  Pour plus d’informations, consultez [Guide pratique pour créer des profils de certificat PFX à l’aide d’une autorité de certification](../../mdm/deploy-use/create-pfx-certificate-profiles.md).
+        -   **Échange d’informations personnelles - paramètres PKCS #12 (PFX) - créer**: Crée un profil de certificat PFX à l’aide des informations d’identification fournies par une autorité de certification.  Pour plus d’informations, consultez [Guide pratique pour créer des profils de certificat PFX à l’aide d’une autorité de certification](../../mdm/deploy-use/create-pfx-certificate-profiles.md).
 
 
 ### <a name="create-a-pfx-certificate-profile-for-the-imported-credentials"></a>Créer un profil de certificat PFX pour les informations d’identification importées

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 19044a9fb7f53ca540bccd324f711b60e0ad91c4
-ms.sourcegitcommit: 9cff0702c2cc0f214173b47ec241f7e5a40f84e6
-ms.translationtype: HT
+ms.openlocfilehash: 172ca284a5a030682e01d9be63031180d7175421
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34747797"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53423199"
 ---
 # <a name="past-hybrid-features-with-system-center-configuration-manager-and-microsoft-intune"></a>Précédentes fonctionnalités hybrides avec System Center Configuration Manager et Microsoft Intune
 
@@ -66,11 +66,11 @@ Cet article fournit des informations sur les précédentes fonctionnalités de g
 - **Nouvelle expérience utilisateur pour l’application Portail d’entreprise pour Android**  
   L’application Portail d’entreprise pour Android a une interface utilisateur d’apparence plus moderne. Les mises à jour importantes sont :
 
-  - Couleurs : les en-têtes des onglets du portail d’entreprise sont de la couleur définie dans la personnalisation.
-  - Applications : dans l’onglet **Applications**, les boutons **Applications à la une** et **Toutes les applications** ont été mis à jour.
-  - Rechercher : Dans l’onglet **Applications**, le bouton **Rechercher** est un bouton d’action flottant.
-  - Navigation dans les applications : la vue **Toutes les applications** montre une vue à onglets avec **À la une**, **Toutes** et **Catégories** pour faciliter la navigation.
-  - Prise en charge : les onglets **Mes appareils** et **Contacter le service informatique** ont été mis à jour de façon à améliorer la lisibilité.
+  - Couleurs : En-têtes d’onglet portail entreprise sont colorés selon une personnalisation définie par l’informatique.
+  - Applications : Dans le **applications** onglet, le **applications proposées** et **toutes les applications** boutons sont mis à jour.
+  - Recherche : Dans le **applications** onglet, le **recherche** bouton est un bouton d’action flottant.
+  - Navigation dans les applications : **Toutes les applications** vue affiche une vue comprenant les onglets **en vedette**, **tous les**, et **catégories** pour faciliter la navigation.
+  - Prise en charge : **Mes appareils** et **contacter le service informatique** onglets sont mis à jour pour améliorer la lisibilité.
 
   Pour plus d’informations sur ces modifications, consultez [Mises à jour de l’interface utilisateur pour les applications Intune de l’utilisateur final](https://docs.microsoft.com/intune/whats-new-app-ui).
 
@@ -207,7 +207,7 @@ Les fonctionnalités hybrides supplémentaires suivantes sont également incluse
 
 - **L’authentification multifacteur sur l’inscription est déplacée dans le portail Azure**
 
-  Auparavant, vous deviez accéder à la console Intune ou à la console Configuration Manager pour définir l’authentification multifacteur pour les inscriptions Intune. Avec cette fonctionnalité mise à jour, vous vous connectez maintenant au [portail Microsoft Azure] (https://manage.windowsazure.com) en utilisant vos informations d’identification Intune et vous configurez les paramètres de l’authentification multifacteur via Azure AD. Pour en savoir plus, consultez [Authentification multifacteur pour Microsoft Intune] (https://aka.ms/mfa_ad).
+  Auparavant, vous deviez accéder à la console Intune ou à la console Configuration Manager pour définir l’authentification multifacteur pour les inscriptions Intune. Avec cette fonctionnalité de mise à jour, vous vous connectez maintenant à la [portail Microsoft Azure](https://manage.windowsazure.com) à l’aide de vos informations d’identification Intune et configurer les paramètres d’authentification Multifacteur via Azure AD. Pour en savoir plus, voir [Authentification multifacteur pour les inscriptions d’appareils Intune](https://aka.ms/mfa_ad).
 
 - **Application Portail d’entreprise pour Android maintenant disponible en Chine**
 
@@ -291,7 +291,7 @@ Les fonctionnalités Intune suivantes introduites en octobre 2016 fonctionnent 
 
   Vous pouvez restreindre l’accès à Exchange Online afin que l’accès soit fourni uniquement à partir d’applications qui prennent en charge les stratégies de gestion des applications mobiles Intune, telles qu’Outlook. [Cette nouvelle fonctionnalité](/intune/deploy-use/allow-policy-managed-apps-access-to-o365) s’associe parfaitement aux stratégies de gestion des applications mobiles (GAM) Intune, car vous pouvez bloquer l’accès aux clients de messagerie intégrés ou à d’autres applications qui n’ont pas été configurées avec les stratégies GAM Intune. Cela garantit que vos utilisateurs accèdent aux données de votre organisation avec des applications qui peuvent être protégées à l’aide de la GAM Intune. Vous pouvez bien démarrer avec la gestion des applications mobiles Intune à l’aide du portail Azure. Recherchez la nouvelle section Accès conditionnel dans le panneau « Paramètres ».
 
--   **Outil de création de package de restrictions d’application Intune pour Android**
+- **Outil de création de package de restrictions d’application Intune pour Android**
 
   Vous pouvez activer vos applications pour utiliser les stratégies de gestion des applications mobiles (MAM) Intune à l’aide de l’outil de création de package de restrictions d’application Intune.
 
@@ -429,7 +429,7 @@ Les fonctionnalités Intune suivantes introduites en juillet 2016 fonctionnent 
 
   Quand vous utilisez l’accès conditionnel, les étapes d’inscription pour Windows 8.1, Windows 10 Desktop et Windows 10 Mobile ont été clarifiées dans le site web Portail d’entreprise. Les utilisateurs verront à présent des étapes **Inscription de l’appareil** et **Jonction d’espace de travail** distinctes, ce qui leur permet de voir plus facilement l’état de leur appareil et de terminer le processus s’ils rencontrent un échec de jonction d’espace de travail. Les étapes distinctes sont également supposées simplifier le processus de dépannage pour les administrateurs informatiques. Auparavant, quand les utilisateurs finaux tentaient d’effectuer une inscription et que toutes les étapes d’inscription réussissaient à l’exception de la jonction d’espace de travail, l’appareil inscrit n’apparaissait pas dans la liste des appareils pour être identifiés par les utilisateurs, ce qui est une source de confusion pour les utilisateurs.
 
- - **Réinitialisation complète désormais disponible pour les appareils Windows 10**
+  - **Réinitialisation complète désormais disponible pour les appareils Windows 10**
 
     Les PC Windows 10 et les ordinateurs portables inscrits en tant qu’appareils mobiles peuvent être réinitialisés pour rétablir les paramètres d’usine de l’appareil. Pour plus d’informations, consultez [Guide pratique pour protéger vos appareils avec la réinitialisation à distance](/sccm/mdm/deploy-use/wipe-lock-reset).
 
@@ -536,7 +536,7 @@ Aucune nouvelle fonctionnalité hybride n’a été introduite en juin 2016 pou
 ### <a name="new-in-microsoft-intune"></a>Nouveautés de Microsoft Intune  
  Les fonctionnalités Intune suivantes introduites en mai 2016 fonctionnent dans les déploiements hybrides.
 
-- **SDK GAM : Prendre en charge la configuration de la longueur du code confidentiel**
+- **SDK GAM : Configuration de longueur de code confidentiel de prise en charge**
 
   Vous pouvez désormais spécifier une longueur de code confidentiel pour les applications GAM semblable à un code confidentiel d’appareil. Cela nécessite que les utilisateurs finaux se conforment aux nouvelles restrictions que vous définissez. L’écran de saisie du code confidentiel est légèrement modifié pour tenir compte de l’entrée la plus longue. Pour plus d’informations, consultez [Paramètres de stratégie GAM pour Android](https://docs.microsoft.com/intune/deploy-use/android-mam-policy-settings) et [Paramètres de stratégie GAM pour iOS](https://docs.microsoft.com/intune/deploy-use/ios-mam-policy-settings).  
 
@@ -548,11 +548,11 @@ Aucune nouvelle fonctionnalité hybride n’a été introduite en juin 2016 pou
 
   Les applications Microsoft Word, Excel et PowerPoint pour Android peuvent maintenant être associées à des stratégies GAM sur les appareils qui ne sont pas inscrits avec Intune. Pour obtenir une liste complète des applications prises en charge, accédez à la galerie des applications mobiles Microsoft Intune dans la page [Partenaires d’application Microsoft Intune](https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/partners.aspx).  
 
-- **Application Portail d’entreprise Android : notifications toast pour l’utilisateur final**
+- **Application portail d’entreprise Android : Notifications toast l’utilisateur final**
 
   Les notifications toast de l’application Portail d’entreprise Android apparaissent quand les utilisateurs finaux inscrivent ou suppriment leurs appareils dans le portail d’entreprise.  
 
-- **Site web du portail d’entreprise : la bannière d’identification de l’appareil fournit d’autres informations aux utilisateurs finaux**
+- **Site Web du portail d’entreprise : Bannière d’identification de l’appareil fournit d’autres informations aux utilisateurs finaux**
 
   Les utilisateurs finaux peuvent désormais identifier plus facilement l’appareil qu’ils ont sélectionné quand ils utilisent le site web du portail d’entreprise. Si l’appareil choisi n’est pas correct, ils peuvent sélectionner l’appareil approprié en appuyant sur le lien **Appuyer ici** dans la bannière de la page d’accueil.  
 
@@ -670,7 +670,7 @@ Aucune nouvelle fonctionnalité hybride n’a été introduite en juin 2016 pou
 
 - **Tirer parti de la fonctionnalité de gestion iOS Open In pour les appareils inscrits dans une solution de gestion des appareils mobiles tierce**
 
-  Vous pouvez utiliser votre fournisseur de solution de gestion des appareils mobiles tierce pour tirer parti de la fonctionnalité de gestion iOS Open In. Vous pouvez définir les restrictions dans les paramètres de profil de configuration et déployer l’application à l’aide de votre logiciel de gestion des appareils mobiles. Quand l’utilisateur installe l’application gérée, les restrictions sont appliquées. Pour plus d’informations, consultez [Stratégies de gestion des applications mobiles Microsoft Intune et iOS Open In](/intune/deploy-use/introduction-to-device-compliance-policies-in-microsoft-intune) dans la bibliothèque Intune.  
+  Vous pouvez utiliser votre fournisseur de solution de gestion des appareils mobiles tierce pour tirer parti de la fonctionnalité de gestion iOS Open In. Vous pouvez définir les restrictions dans les paramètres de profil de configuration et déployer l’application à l’aide de votre logiciel de gestion des appareils mobiles. Quand l’utilisateur installe l’application gérée, les restrictions sont appliquées. Lire les détails : [Stratégies de gestion des applications mobiles Microsoft Intune et iOS Open In](/intune/deploy-use/introduction-to-device-compliance-policies-in-microsoft-intune) dans la bibliothèque Intune.  
 
 - **Applications Microsoft qui prennent en charge GAM**
 
@@ -731,7 +731,7 @@ Aucune nouvelle fonctionnalité hybride n’a été introduite en juin 2016 pou
 
 ## <a name="notices"></a>Remarques
 
-### <a name="system-center-2012-configuration-sp1-and-system-center-2012-r2-configuration-manager-rtm-support-for-hybrid-mobile-device-management-ending-on-april-10-2017"></a>System Center 2012 Configuration SP1 et System Center 2012 R2 Configuration Manager (RTM) : fin de la prise en charge de la gestion hybride des appareils mobiles le 10 avril 2017
+### <a name="system-center-2012-configuration-sp1-and-system-center-2012-r2-configuration-manager-rtm-support-for-hybrid-mobile-device-management-ending-on-april-10-2017"></a>System Center 2012 Configuration SP1 et System Center 2012 R2 Configuration Manager (RTM) : Prise en charge pour la gestion des appareils mobiles hybride fin le 10 avril 2017
 *11 janvier 2017*
 
 La prise en charge de System Center 2012 Configuration Manager SP1 et de System Center 2012 R2 Configuration Manager RTM a pris fin le 12 juillet 2016. Par conséquent, la prise en charge de ces versions se connectant au service Microsoft Intune pour la gestion hybride des appareils mobiles prendra fin le 10 avril 2017. Après cette date, la gestion hybride des appareils mobiles cessera de fonctionner avec ces versions. Les appareils gérés deviendront essentiellement non gérés car le connecteur Intune ne se connectera plus au service Intune. Les données de Configuration Manager (par exemple, les stratégies et les applications) ne seront plus transmises à Intune et les données d’appareil mobile ne parviendront plus à Configuration Manager jusqu’à ce qu’une mise à niveau soit appliquée.
