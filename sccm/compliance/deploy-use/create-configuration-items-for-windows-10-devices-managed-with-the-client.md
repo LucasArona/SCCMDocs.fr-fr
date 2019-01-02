@@ -10,12 +10,12 @@ ms.assetid: 14226fbe-dd07-4432-910b-130790624a4e
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: bdb48689efba4c6f884d4c36c1a4dee0bbcc6b65
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 319721e18c6571949cf3b1a9d864d9c601f29e39
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334672"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424202"
 ---
 # <a name="how-to-create-configuration-items-for-windows-10-devices-managed-with-the-system-center-configuration-manager-client"></a>Comment créer des éléments de configuration pour des périphériques Windows 10 gérés avec le client System Center Configuration Manager
 Utilisez l’élément de configuration System Center Configuration Manager **Windows 10** pour gérer les paramètres des ordinateurs Windows 10 gérés par le client Configuration Manager.  
@@ -27,24 +27,24 @@ Utilisez l’élément de configuration System Center Configuration Manager **Wi
   
 ### <a name="to-create-a-windows-10-configuration-item"></a>Pour créer un élément de configuration Windows 10  
   
-1.  Dans la console Configuration Manager, cliquez sur **Ressources et Conformité**.  
+1. Dans la console Configuration Manager, cliquez sur **Ressources et Conformité**.  
   
-2.  Dans l'espace de travail **Biens et conformité** , développez **Paramètres de compatibilité**, puis cliquez sur **Éléments de configuration**.  
+2. Dans l'espace de travail **Biens et conformité** , développez **Paramètres de compatibilité**, puis cliquez sur **Éléments de configuration**.  
   
-3.  Dans l'onglet **Accueil** , dans le groupe **Créer** , cliquez sur **Créer un élément de configuration**.  
+3. Dans l'onglet **Accueil** , dans le groupe **Créer** , cliquez sur **Créer un élément de configuration**.  
   
-4.  Dans la page **Général** page de l’ **Assistant Création d’élément de configuration**, spécifiez un nom et éventuellement une description pour l’élément de configuration.  
+4. Dans la page **Général** page de l’ **Assistant Création d’élément de configuration**, spécifiez un nom et éventuellement une description pour l’élément de configuration.  
   
-5.  Sous **Spécifier le type d’élément de configuration que vous voulez créer**, sélectionnez **Windows 10**.  
+5. Sous **Spécifier le type d’élément de configuration que vous voulez créer**, sélectionnez **Windows 10**.  
   
-6.  Cliquez sur **Catégories** si vous créez et attribuez des catégories pour faciliter la recherche et le filtrage des éléments de configuration dans la console Configuration Manager.  
+6. Cliquez sur **Catégories** si vous créez et attribuez des catégories pour faciliter la recherche et le filtrage des éléments de configuration dans la console Configuration Manager.  
   
-7.  Dans la page **Plateformes prises en charge** de l’Assistant, sélectionnez les plateformes Windows 10 spécifiques qui évaluent l’élément de configuration.  
+7. Dans la page **Plateformes prises en charge** de l’Assistant, sélectionnez les plateformes Windows 10 spécifiques qui évaluent l’élément de configuration.  
   
-8.  Dans la page **Paramètres de périphérique** de l’Assistant, sélectionnez le groupe de paramètres à configurer. Consultez [Windows 10 configuration item settings reference](#BKMK_Ref) dans cette rubrique pour plus d’informations, puis cliquez sur **Suivant**.  
+8. Dans la page **Paramètres de périphérique** de l’Assistant, sélectionnez le groupe de paramètres à configurer. Consultez [Windows 10 configuration item settings reference](#BKMK_Ref) dans cette rubrique pour plus d’informations, puis cliquez sur **Suivant**.  
   
-    > [!TIP]  
-    >  Si le paramètre souhaité n’est pas répertorié, cochez la case **Configurer d’autres paramètres qui ne se trouvent pas dans les groupes de paramètres par défaut**.  
+   > [!TIP]  
+   >  Si le paramètre souhaité n’est pas répertorié, cochez la case **Configurer d’autres paramètres qui ne se trouvent pas dans les groupes de paramètres par défaut**.  
   
 9. Dans chaque page de paramètres, configurez les paramètres dont vous avez besoin et indiquez si vous voulez les corriger quand ils ne sont pas conformes sur des périphériques (quand cela est pris en charge).  
   
@@ -67,7 +67,7 @@ Utilisez l’élément de configuration System Center Configuration Manager **Wi
   
 12. Effectuez toutes les étapes de l'Assistant.  
   
- Vous pouvez afficher le nouvel élément de configuration dans le nœud **Éléments de configuration** de l’espace de travail **Ressources et Conformité**.  
+    Vous pouvez afficher le nouvel élément de configuration dans le nœud **Éléments de configuration** de l’espace de travail **Ressources et Conformité**.  
   
 ##  <a name="windows-10-configuration-item-settings-reference"></a>Informations de référence sur les paramètres d’élément de configuration Windows 10  
   
