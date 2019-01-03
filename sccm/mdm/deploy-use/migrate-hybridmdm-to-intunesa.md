@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: 1dd696ce-3e46-4dfa-a76d-592fe0f0320e
-ms.openlocfilehash: 09ea3340d8474c69e6e346fc68120b8849159374
-ms.sourcegitcommit: 316899b08f2ef372993909e08e069f7edfed1d33
-ms.translationtype: HT
+ms.openlocfilehash: bc8a504a8490126fb9f4d7110c041f3c8916b162
+ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44111040"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817917"
 ---
 # <a name="migrate-hybrid-mdm-users-and-devices-to-intune-standalone"></a>Faire migrer des utilisateurs et appareils MDM hybrides vers la version autonome d’Intune
 
@@ -55,7 +55,7 @@ Pour plus d’informations, consultez les articles suivants :
 
     - Installer des connecteurs NDES et Exchange  
 
-    Ces étapes et le démarrage de la migration vers la version autonome d’Intune doivent être transparents pour vos utilisateurs.   
+    Lorsque vous effectuez les étapes et démarrez la migration vers Intune autonome, il n’existe aucun impact significatif sur vos utilisateurs.   
 
 3.  [Changer l’autorité MDM pour des utilisateurs spécifiques (autorité MDM mixte)](migrate-mixed-authority.md)    
 
