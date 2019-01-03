@@ -10,12 +10,12 @@ ms.assetid: 8ca970dd-e71c-404f-9435-d36e773a0db2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7ff6d885ca635e15c62eddcdfa06abdc1a09cdf8
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 2d51774688b80faf808653cde77aa3b651ea210c
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456598"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422587"
 ---
 # <a name="upgrade-on-premises-infrastructure-that-supports-configuration-manager"></a>Mettre à niveau l’infrastructure locale qui prend en charge Configuration Manager
 
@@ -35,7 +35,7 @@ Configuration Manager prend en charge la mise à niveau sur place du système d�
 
 - Si Configuration Manager prend toujours en charge le niveau du Service Pack Windows résultant, il prend en charge la mise à niveau sur place vers un Service Pack Windows Server plus récent.  
 
-- Mise à niveau sur place de :  
+- Mise à niveau sur place à partir de :  
 
     - Windows Server 2016 vers Windows Server 2019   
 
@@ -55,7 +55,7 @@ Pour mettre à niveau un serveur, utilisez les procédures de mise à niveau fou
 
 - [Options de mise à niveau et de conversion pour Windows Server 2016](https://docs.microsoft.com/windows-server/get-started/supported-upgrade-paths)  
 
-- [Options de mise à niveau pour Windows Server 2012 R2](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416\(v=ws.11))   
+- [Options de mise à niveau pour Windows Server 2012 R2](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416(v=ws.11))   
 
 
 ### <a name="bkmk_2016-2019"></a> Mise à niveau vers Windows Server 2016 ou 2019
@@ -68,7 +68,7 @@ Utilisez les étapes de cette section pour les scénarios de mise à niveau suiv
 
 
 #### <a name="before-upgrade"></a>Avant la mise à niveau  
-- (Windows Server 2012 or Windows Server 2012 R2) : Supprimez le client SCEP (System Center Endpoint Protection). Windows Server intègre désormais Windows Defender, qui remplace le client SCEP. La présence du client SCEP peut empêcher une mise à niveau vers Windows Server.  
+- (Windows Server 2012 ou Windows Server 2012 R2) : Supprimez le client SCEP (System Center Endpoint Protection). Windows Server intègre désormais Windows Defender, qui remplace le client SCEP. La présence du client SCEP peut empêcher une mise à niveau vers Windows Server.  
 
 - Supprimez le rôle WSUS du serveur s’il est installé. Vous pouvez conserver la base de données SUSDB et l’attacher de nouveau après la réinstallation de WSUS.  
 
@@ -128,9 +128,9 @@ Après avoir mis à niveau le serveur de site ou une instance du fournisseur SMS
 Quand vous procédez à une mise à niveau de Windows Server 2008 R2 ou Windows Server 2012 vers Windows Server 2012 R2, voici les conditions qui s’appliquent :
 
 #### <a name="before-upgrade"></a>Avant la mise à niveau  
-- Sur Windows Server 2012 : Supprimez le rôle WSUS du serveur s’il est installé. Vous pouvez conserver la base de données SUSDB et l’attacher de nouveau après la réinstallation de WSUS.  
+- Sous Windows Server 2012 : Supprimez le rôle WSUS du serveur s’il est installé. Vous pouvez conserver la base de données SUSDB et l’attacher de nouveau après la réinstallation de WSUS.  
 
-- Sur Windows Server 2008 R2 : Avant d’effectuer la mise à niveau vers Windows Server 2012 R2, vous devez désinstaller WSUS 3.2 du serveur. Vous pouvez conserver la base de données SUSDB et l’attacher de nouveau après la réinstallation de WSUS. Pour plus d’informations, consultez [Vue d’ensemble de Windows Server Update Services](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345\(v=ws.11)#new-and-changed-functionality).  
+- Sous Windows Server 2008 R2 : Avant de mettre à niveau vers Windows Server 2012 R2, vous devez désinstaller WSUS 3.2 du serveur. Vous pouvez conserver la base de données SUSDB et l’attacher de nouveau après la réinstallation de WSUS. Pour plus d’informations, consultez [Vue d’ensemble de Windows Server Update Services](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345(v=ws.11)#new-and-changed-functionality).  
 
 #### <a name="after-upgrade"></a>Après la mise à niveau  
 - Le processus de mise à niveau désactive les services de déploiement Windows. Vérifiez que ce service est démarré et en cours d’exécution pour les rôles de système de site suivants :  

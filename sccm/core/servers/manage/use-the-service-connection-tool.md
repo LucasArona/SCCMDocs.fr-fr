@@ -10,12 +10,12 @@ ms.assetid: 6e4964c5-43cb-4372-9a89-b62ae6a4775c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e88d40317fe0c1385d78ab7b5919f0f766254598
-ms.sourcegitcommit: 303d826f45c8fd9a05d8883afc1ca645e56bd576
+ms.openlocfilehash: 96f816e20d31315e2eaf63b5bf4a14376f3c9261
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269210"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417895"
 ---
 # <a name="use-the-service-connection-tool-for-system-center-configuration-manager"></a>Utiliser l’outil de connexion de service pour System Center Configuration Manager
 
@@ -59,11 +59,11 @@ Voici la liste des prérequis et des problèmes connus.
 
  Dans cette procédure, les exemples de ligne de commande utilisent les noms de fichiers et les emplacements de dossiers suivants (vous pouvez très bien utiliser d’autres chemins et noms de fichiers qui correspondent à votre environnement et à vos préférences) :  
 
--   Chemin à une clé USB où sont stockées les données pour le transfert entre les serveurs : **D:\USB\\**  
+-   Chemin à une clé USB où sont stockées les données pour le transfert entre les serveurs :  **D:\USB\\**  
 
 -   Nom du fichier .cab contenant les données exportées à partir de votre site : **UsageData.cab**  
 
--   Nom du dossier vide dans lequel les mises à jour téléchargées pour Configuration Manager sont stockées à des fins de transfert entre les serveurs : **UpdatePacks**  
+-   Nom du dossier vide dans lequel les mises à jour téléchargées pour Configuration Manager sont stockées à des fins de transfert entre les serveurs : **UpdatePacks**  
 
 Sur l’ordinateur qui héberge le point de connexion de service :  
 
@@ -80,11 +80,11 @@ Vous devez également copier le dossier ServiceConnectionTool avec tout son cont
 ### <a name="overview"></a>Vue d'ensemble
 #### <a name="there-are-three-primary-steps-to-using-the-service-connection-tool"></a>L’utilisation de l’outil de connexion de service nécessite trois étapes principales  
 
-1.  **Préparation** : cette étape doit être exécutée sur l’ordinateur hébergeant le point de connexion de service. Quand vous exécutez l’outil, il place les données d’utilisation dans un fichier .cab et les stocke sur un lecteur USB (ou dans un autre emplacement de transfert spécifié).  
+1.  **Préparer** :  Cette étape doit être exécutée sur l’ordinateur hébergeant le point de connexion de service. Quand vous exécutez l’outil, il place les données d’utilisation dans un fichier .cab et les stocke sur un lecteur USB (ou dans un autre emplacement de transfert spécifié).  
 
-2.  **Connexion** : lors de cette étape, vous exécutez l’outil sur un ordinateur distant qui se connecte à Internet pour charger les données d’utilisation puis télécharger les mises à jour.  
+2.  **Connexion** : Lors de cette étape, vous exécutez l’outil sur un ordinateur distant qui se connecte à Internet pour charger les données d’utilisation puis télécharger les mises à jour.  
 
-3.  **Importation** : cette étape doit être exécutée sur l’ordinateur hébergeant le point de connexion de service. Quand vous exécutez l’outil, il importe les mises à jour que vous avez téléchargées et les ajoute à votre site pour que vous puissiez ensuite afficher et installer ces mises à jour à partir de la console Configuration Manager.  
+3.  **Importer** : Cette étape doit être exécutée sur l’ordinateur hébergeant le point de connexion de service. Quand vous exécutez l’outil, il importe les mises à jour que vous avez téléchargées et les ajoute à votre site pour que vous puissiez ensuite afficher et installer ces mises à jour à partir de la console Configuration Manager.  
 
 À compter de la version 1606, quand vous vous connectez à Microsoft, vous pouvez charger plusieurs fichiers .cab à la fois (chacun à partir d’une hiérarchie différente) et spécifier un serveur proxy et un utilisateur du serveur proxy.   
 
@@ -121,51 +121,51 @@ Exemple de ligne de commande utilisant *- downloadsiteversion* :
 
 ### <a name="to-use-the-service-connection-tool"></a>Pour utiliser l’outil de connexion de service  
 
-1.  Sur l’ordinateur qui héberge le point de connexion de service :  
+1. Sur l’ordinateur qui héberge le point de connexion de service :  
 
-    -   Ouvrez une invite de commandes avec des privilèges d’administration, puis changez de répertoire pour accéder à l’emplacement du fichier **serviceconnectiontool.exe**.   
+   -   Ouvrez une invite de commandes avec des privilèges d’administration, puis changez de répertoire pour accéder à l’emplacement du fichier **serviceconnectiontool.exe**.   
 
-2.  Exécutez la commande suivante pour que l’outil prépare un fichier .cab contenant des informations sur l’utilisation et le copie vers un emplacement que vous spécifiez :  
+2. Exécutez la commande suivante pour que l’outil prépare un fichier .cab contenant des informations sur l’utilisation et le copie vers un emplacement que vous spécifiez :  
 
-    -   **serviceconnectiontool.exe -prepare -usagedatadest D:\USB\UsageData.cab**  
+   -   **serviceconnectiontool.exe -prepare -usagedatadest D:\USB\UsageData.cab**  
 
-    Si vous allez charger des fichiers .cab à partir de plusieurs hiérarchies en même temps, chaque fichier .cab dans le dossier doit avoir un nom unique. Vous pouvez renommer manuellement les fichiers que vous ajoutez au dossier.
+   Si vous allez charger des fichiers .cab à partir de plusieurs hiérarchies en même temps, chaque fichier .cab dans le dossier doit avoir un nom unique. Vous pouvez renommer manuellement les fichiers que vous ajoutez au dossier.
 
-    Si vous souhaitez afficher les informations d’utilisation collectées pour le chargement sur le service cloud Configuration Manager, exécutez la commande suivante pour exporter les mêmes données dans un fichier .csv que vous pouvez ensuite afficher à l’aide d’une application comme Excel :  
+   Si vous souhaitez afficher les informations d’utilisation collectées pour le chargement sur le service cloud Configuration Manager, exécutez la commande suivante pour exporter les mêmes données dans un fichier .csv que vous pouvez ensuite afficher à l’aide d’une application comme Excel :  
 
-    -   **serviceconnectiontool.exe -export -dest D:\USB\UsageData.csv**  
+   -   **serviceconnectiontool.exe -export -dest D:\USB\UsageData.csv**  
 
-3.  Une fois l’étape de préparation terminée, connectez le lecteur USB (ou transférez les données exportées au moyen d’une autre méthode) à un ordinateur ayant accès à Internet.  
+3. Une fois l’étape de préparation terminée, connectez le lecteur USB (ou transférez les données exportées au moyen d’une autre méthode) à un ordinateur ayant accès à Internet.  
 
-4.  Sur l’ordinateur connecté à Internet, ouvrez une invite de commandes avec des privilèges d’administration, puis changez de répertoire pour accéder à l’emplacement contenant une copie de l’outil  **serviceconnectiontool.exe** et les fichiers supplémentaires de ce dossier.  
+4. Sur l’ordinateur connecté à Internet, ouvrez une invite de commandes avec des privilèges d’administration, puis changez de répertoire pour accéder à l’emplacement contenant une copie de l’outil  **serviceconnectiontool.exe** et les fichiers supplémentaires de ce dossier.  
 
-5.  Exécutez la commande suivante pour commencer le chargement des informations d’utilisation et le téléchargement des mises à jour pour Configuration Manager :  
+5. Exécutez la commande suivante pour commencer le chargement des informations d’utilisation et le téléchargement des mises à jour pour Configuration Manager :  
 
-    -   **serviceconnectiontool.exe -connect -usagedatasrc D:\USB -updatepackdest D:\USB\UpdatePacks**
+   -   **serviceconnectiontool.exe -connect -usagedatasrc D:\USB -updatepackdest D:\USB\UpdatePacks**
 
-    Pour obtenir plus d’exemples de cette ligne de commande, consultez la section [Options de ligne de commande](../../../core/servers/manage/use-the-service-connection-tool.md#bkmk_cmd) plus loin dans cette rubrique.
+   Pour obtenir plus d’exemples de cette ligne de commande, consultez la section [Options de ligne de commande](../../../core/servers/manage/use-the-service-connection-tool.md#bkmk_cmd) plus loin dans cette rubrique.
 
-    > [!NOTE]  
-    >  Quand vous exécutez la ligne de commande pour vous connecter au service cloud Configuration Manager, une erreur semblable à la suivante peut se produire :  
-    >   
-    >  -   Exception non gérée : System.UnauthorizedAccessException :  
-    >   
-    >      L’accès au chemin « C:\  
-    >     Users\br\AppData\Local\Temp\extractmanifestcab\95F8A562.sql » est refusé.  
-    >   
-    > Vous pouvez ignorer cette erreur sans risque. Fermez la fenêtre d’erreur et continuez.  
+   > [!NOTE]  
+   >  Quand vous exécutez la ligne de commande pour vous connecter au service cloud Configuration Manager, une erreur semblable à la suivante peut se produire :  
+   >   
+   >  -   Exception non gérée : System.UnauthorizedAccessException :  
+   >   
+   >      L’accès au chemin « C:\  
+   >     Users\br\AppData\Local\Temp\extractmanifestcab\95F8A562.sql » est refusé.  
+   >   
+   > Vous pouvez ignorer cette erreur sans risque. Fermez la fenêtre d’erreur et continuez.  
 
-6.  Une fois le téléchargement des mises à jour pour Configuration Manager terminé, connectez le lecteur USB (ou transférez les données exportées au moyen d’une autre méthode) à l’ordinateur qui héberge le point de connexion de service.  
+6. Une fois le téléchargement des mises à jour pour Configuration Manager terminé, connectez le lecteur USB (ou transférez les données exportées au moyen d’une autre méthode) à l’ordinateur qui héberge le point de connexion de service.  
 
-7.  Sur l’ordinateur qui héberge le point de connexion de service, ouvrez une invite de commandes avec des privilèges d’administration, changez de répertoire pour accéder à l’emplacement contenant **serviceconnectiontool.exe**, puis exécutez la commande suivante :  
+7. Sur l’ordinateur qui héberge le point de connexion de service, ouvrez une invite de commandes avec des privilèges d’administration, changez de répertoire pour accéder à l’emplacement contenant **serviceconnectiontool.exe**, puis exécutez la commande suivante :  
 
-    -   **serviceconnectiontool.exe -import -updatepacksrc D:\USB\UpdatePacks**  
+   -   **serviceconnectiontool.exe -import -updatepacksrc D:\USB\UpdatePacks**  
 
-8.  Une fois l’importation terminée, vous pouvez fermer l’invite de commandes. (Seules les mises à jour pour la hiérarchie applicable sont importées.)  
+8. Une fois l’importation terminée, vous pouvez fermer l’invite de commandes. (Seules les mises à jour pour la hiérarchie applicable sont importées.)  
 
 9. Ouvrez la console Configuration Manager, puis accédez à **Administration** > **Mises à jour et maintenance**. Les mises à jour qui ont été importées peuvent désormais être installées. (Avant la version 1702, les mises à jour et la maintenance s’effectuaient via le menu **Administration** > **Services cloud**.)
 
- Pour plus d’informations, consultez [Installer des mises à jour dans la console pour System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md).  
+   Pour plus d’informations, consultez [Installer des mises à jour dans la console pour System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md).  
 
 ## <a name="bkmk_cmd"></a> Fichiers journaux
 

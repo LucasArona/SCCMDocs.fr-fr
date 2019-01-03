@@ -10,12 +10,12 @@ ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 962029dc6bc5584e1edf0bd26d4be3fc280d6204
-ms.sourcegitcommit: 147aae8300831c722a559087c735df0f761b2041
+ms.openlocfilehash: 43093f38a2769c46d3d96a51afbf47f33ed38b51
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51645240"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53423794"
 ---
 # <a name="supported-sql-server-versions-for-configuration-manager"></a>Versions SQL Server prises en charge pour Configuration Manager
 
@@ -75,71 +75,71 @@ La prise en charge d’un Service Pack de SQL Server spécifique inclut les mise
 > [!IMPORTANT]  
 >  Si vous utilisez SQL Server Standard pour la base de données du site d’administration centrale, vous limitez le nombre total de clients qu’une hiérarchie peut prendre en charge. Consultez [Taille et échelle en chiffres](/sccm/core/plan-design/configs/size-and-scale-numbers).
 
-### <a name="sql-server-2017-standard-enterprise"></a>SQL Server 2017 : Standard, Enterprise  
+### <a name="sql-server-2017-standard-enterprise"></a>SQL Server 2017 : Standard, Entreprise  
 Vous pouvez utiliser cette version de SQL Server, avec au minimum la [version de mise à jour cumulative 2](https://support.microsoft.com/help/4052574), en commençant par [Configuration Manager version 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710) pour les sites suivants : 
 
--   Un site d’administration centrale  
--   Un serveur de site principal  
--   Un site secondaire  
-<!--SMS.498506-->
+- Un site d’administration centrale  
+- Un serveur de site principal  
+- Un site secondaire  
+  <!--SMS.498506-->
 
-### <a name="sql-server-2016-sp2-standard-enterprise"></a>SQL Server 2016 SP2 : Standard, Enterprise  
+### <a name="sql-server-2016-sp2-standard-enterprise"></a>SQL Server 2016 SP2 : Standard, Entreprise  
 <!--514985--> Vous pouvez utiliser cette version de SQL Server sans version de mise à jour cumulative minimale pour les sites suivants :  
 
 -   Un site d’administration centrale  
 -   Un serveur de site principal  
 -   Un site secondaire  
 
-### <a name="sql-server-2016-sp1-standard-enterprise"></a>SQL Server 2016 SP1 : Standard, Enterprise  
+### <a name="sql-server-2016-sp1-standard-enterprise"></a>SQL Server 2016 SP1 : Standard, Entreprise  
 Vous pouvez utiliser cette version de SQL Server sans version de mise à jour cumulative minimale pour les sites suivants :  
 
 -   Un site d’administration centrale  
 -   Un serveur de site principal  
 -   Un site secondaire  
 
-### <a name="sql-server-2016-standard-enterprise"></a>SQL Server 2016 : Standard, Enterprise  
+### <a name="sql-server-2016-standard-enterprise"></a>SQL Server 2016 : Standard, Entreprise  
 Vous pouvez utiliser cette version de SQL Server sans version de mise à jour cumulative minimale pour les sites suivants :  
 
 -   Un site d’administration centrale  
 -   Un serveur de site principal  
 -   Un site secondaire  
 
-### <a name="sql-server-2014-sp3-standard-enterprise"></a>SQL Server 2014 SP3 : Standard, Enterprise  
-Vous pouvez utiliser cette version de SQL Server sans version de mise à jour cumulative minimale pour les sites suivants :  
-
--   Un site d’administration centrale  
--   Un serveur de site principal  
--   Un site secondaire
-
-### <a name="sql-server-2014-sp2-standard-enterprise"></a>SQL Server 2014 SP2 : Standard, Enterprise  
+### <a name="sql-server-2014-sp3-standard-enterprise"></a>SQL Server 2014 SP3 : Standard, Entreprise  
 Vous pouvez utiliser cette version de SQL Server sans version de mise à jour cumulative minimale pour les sites suivants :  
 
 -   Un site d’administration centrale  
 -   Un serveur de site principal  
 -   Un site secondaire
 
-### <a name="sql-server-2014-sp1-standard-enterprise"></a>SQL Server 2014 SP1 : Standard, Enterprise  
+### <a name="sql-server-2014-sp2-standard-enterprise"></a>SQL Server 2014 SP2 : Standard, Entreprise  
+Vous pouvez utiliser cette version de SQL Server sans version de mise à jour cumulative minimale pour les sites suivants :  
+
+-   Un site d’administration centrale  
+-   Un serveur de site principal  
+-   Un site secondaire
+
+### <a name="sql-server-2014-sp1-standard-enterprise"></a>SQL Server 2014 SP1 : Standard, Entreprise  
  Vous pouvez utiliser cette version de SQL Server sans version de mise à jour cumulative minimale pour les sites suivants :  
 
 -   Un site d’administration centrale  
 -   Un serveur de site principal  
 -   Un site secondaire
 
-### <a name="sql-server-2012-sp4-standard-enterprise"></a>SQL Server 2012 SP4 : Standard, Enterprise  
+### <a name="sql-server-2012-sp4-standard-enterprise"></a>SQL Server 2012 SP4 : Standard, Entreprise  
  Vous pouvez utiliser cette version de SQL Server sans version de mise à jour cumulative minimale pour les sites suivants :  
 
 -   Un site d’administration centrale  
 -   Un serveur de site principal  
 -   Un site secondaire  
 
-### <a name="sql-server-2012-sp3-standard-enterprise"></a>SQL Server 2012 SP3 : Standard, Enterprise  
+### <a name="sql-server-2012-sp3-standard-enterprise"></a>SQL Server 2012 SP3 : Standard, Entreprise  
  Vous pouvez utiliser cette version de SQL Server sans version de mise à jour cumulative minimale pour les sites suivants :  
 
 -   Un site d’administration centrale  
 -   Un serveur de site principal  
 -   Un site secondaire  
 
-### <a name="sql-server-2008-r2-sp3-standard-enterprise-datacenter"></a>SQL Server 2008 R2 SP3 : Standard, Enterprise, Datacenter     
+### <a name="sql-server-2008-r2-sp3-standard-enterprise-datacenter"></a>SQL Server 2008 R2 SP3 : Standard, Entreprise, Datacenter     
   Cette version de SQL Server n’est pas prise en charge. Pour plus d’informations, consultez [Prise en charge déconseillée pour les versions de SQL Server en tant que base de données du site](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-support-for-sql-server-versions-as-a-site-database).  
 
 ### <a name="sql-server-2017-express"></a>SQL Server 2017 Express   
@@ -187,7 +187,7 @@ Vous pouvez utiliser cette version de SQL Server sans version de mise à jour cu
  Configuration Manager requiert une version 64 bits de SQL Server pour héberger la base de données de site.  
 
 ### <a name="database-collation"></a>Classement de base de données  
- Sur chaque site, à la fois l'instance de SQL Server qui est utilisée pour le site et la base de données de site doivent utiliser le classement suivant : **SQL_Latin1_General_CP1_CI_AS**.  
+ Sur chaque site, à la fois l'instance de SQL Server qui est utilisée pour le site et la base de données de site doivent utiliser le classement suivant : **SQL_Latin1_General_CP1_CI_AS**.  
 
  Configuration Manager prend en charge deux exceptions à ce classement pour satisfaire aux normes définies dans GB18030 pour une utilisation en Chine. Pour plus d’informations, consultez [Prise en charge internationale](/sccm/core/plan-design/hierarchy/international-support).  
 
@@ -208,15 +208,15 @@ Vous pouvez utiliser cette version de SQL Server sans version de mise à jour cu
 ### <a name="sql-server-memory"></a>Mémoire de SQL Server  
  Réservez de la mémoire pour SQL Server en utilisant SQL Server Management Studio et en définissant le paramètre **Mémoire minimale du serveur** sous **Options mémoire du serveur**. Pour plus d’informations sur la façon de configurer ce paramètre, consultez [Options de configuration de la mémoire serveur SQL Server](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options).  
 
--   **Pour un serveur de base de données installé sur le même ordinateur que le serveur du site :** limitez la mémoire pour SQL Server à 50-80 % de la mémoire système adressable disponible.  
+-   **Pour un serveur de base de données installé sur le même ordinateur que le serveur de site** : Limitez la mémoire disponible pour SQL Server à 50-80 % de la mémoire système adressable disponible.  
 
--   **Pour un serveur de base de données dédié (distant du serveur de site) :** limitez la mémoire pour SQL Server à 80-90 % de la mémoire système adressable disponible.  
+-   **Pour un serveur de base de données dédié (distant du serveur de site)**  : Limitez la mémoire disponible pour SQL Server à 80-90 % de la mémoire système adressable disponible.  
 
 -   **Pour une réserve de mémoire pour le pool de mémoires tampons de chaque instance SQL Server en cours d’utilisation** :  
 
-    -   Pour un site d’administration centrale, définissez un minimum de 8 gigaoctets (Go).  
-    -   Pour un site principal, définissez un minimum de 8 gigaoctets (Go).  
-    -   Pour un site secondaire, définissez un minimum de 4 gigaoctets (Go).  
+    -   Pour un site d’administration centrale : Définir au minimum 8 gigaoctets (Go).  
+    -   Pour un site principal : Définir au minimum 8 gigaoctets (Go).  
+    -   Pour un site secondaire : Définir au minimum 4 gigaoctets (Go).  
 
 ### <a name="sql-nested-triggers"></a>Déclencheurs imbriqués SQL  
  Les déclencheurs imbriqués SQL doivent être activés. Pour plus d’informations, consultez [Configurer l’option de configuration des déclencheurs imbriqués du serveur](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option) 
@@ -252,7 +252,7 @@ Pour plus d’informations sur la façon de modifier le compte utilisé par le s
 SQL Server Reporting Services est nécessaire pour installer un point de Reporting Services permettant de générer des rapports.  
 
 > [!IMPORTANT]  
-> Une fois SQL Server mis à niveau à partir d’une version précédente, l’erreur suivante peut s’afficher : *Le Générateur de rapports n’existe pas*.  
+> Une fois SQL Server mis à niveau à partir d’une version précédente, l’erreur suivante peut s’afficher :  *Le Générateur de rapports n’existe pas*.  
 > Pour corriger cette erreur, vous devez réinstaller le rôle de système de site du point de Reporting Services.  
 
 ### <a name="sql-server-ports"></a>Ports SQL Server  
