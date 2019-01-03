@@ -10,16 +10,16 @@ ms.technology: configmgr-sum
 ms.assetid: de78e8d3-043f-4cd3-97e0-4dfb824fd3fb
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 6c4aa062c79a1ed03d32b894ac6764d63c657ddb
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 84d3afdd7f0416e733777cd52165c98128c013a6
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32348400"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417793"
 ---
 # <a name="download-software-updates"></a>Télécharger les mises à jour logicielles  
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Vous avez le choix entre plusieurs méthodes pour télécharger les mises à jour logicielles dans Configuration Manager. Quand vous créez une règle de déploiement automatique (ADR) ou que vous déployez manuellement des mises à jour logicielles, celles-ci sont téléchargées vers la bibliothèque de contenu du serveur de site. Ensuite, les mises à jour logicielles sont copiées dans la bibliothèque de contenu sur les points de distribution associés au package de déploiement configuré. Si vous souhaitez télécharger les mises à jour logicielles avant de les déployer, vous pouvez utiliser l'Assistant Téléchargement des mises à jour. Cela vous permet de vérifier que les mises à jour logicielles sont disponibles sur les points de distribution avant de les déployer sur les ordinateurs clients.  
 
@@ -29,7 +29,8 @@ Vous avez le choix entre plusieurs méthodes pour télécharger les mises à jou
 Pour télécharger des mises à jour logicielles à l'aide de l'Assistant Téléchargement de mises à jour logicielles, procédez comme suit.  
 
 #### <a name="to-download-software-updates"></a>Pour télécharger des mises à jour logicielles  
-[!INCLUDE[downloadupdates](..\includes\downloadupdates.md)]
+[!INCLUDE [downloadupdates](../includes/downloadupdates.md)]
+
 <!---
 1.  In the Configuration Manager console, navigate to **Software Library** > **Software Updates**.  
 
