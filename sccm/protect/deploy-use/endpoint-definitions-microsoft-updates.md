@@ -10,16 +10,16 @@ ms.assetid: ab7626ae-d4bf-4ca6-ab25-c61f96800a02
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 0d8037f2258f97e2782d475598ca62d2f605e5cd
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: d401eea9b3556eae2ad8b3c26eda5a243fc07211
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32346479"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419136"
 ---
 # <a name="enable-endpoint-protection-malware-definitions-to-download-from-microsoft-updates-for-configuration-manager"></a>Activer le téléchargement des définitions de programmes malveillants Endpoint Protection à partir de Microsoft Updates pour Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 
  Quand vous choisissez de télécharger des mises à jour de définition à partir de Microsoft Update, les clients vérifient le site Microsoft Update à l’intervalle défini dans la section **Mises à jour de définitions** de la boîte de dialogue Stratégie de logiciel anti-programme malveillant.
@@ -34,10 +34,10 @@ ms.locfileid: "32346479"
 
 > [!IMPORTANT]
 >  Les clients doivent avoir accès à Microsoft Update sur Internet pour pouvoir utiliser cette méthode de téléchargement des mises à jour de définition.
-
-
+> 
+> 
 > [!div class="button"]
-[Étape suivante >](endpoint-antimalware-policies.md)
-
+> [Étape suivante >](endpoint-antimalware-policies.md)
+> 
 > [!div class="button"]
-[Retour >](endpoint-configure-alerts.md)
+> [Retour >](endpoint-configure-alerts.md)

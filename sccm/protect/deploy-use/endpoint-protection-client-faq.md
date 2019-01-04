@@ -10,16 +10,16 @@ ms.assetid: e3aaa9d2-a40e-42b1-ad75-5a115351729e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7e86c8196cf2ff2473b066fccf741c2df20cd8f9
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 74bcd026dff0b67ae91276c63ba85597008dfd70
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353240"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422475"
 ---
 # <a name="endpoint-protection-client-frequently-asked-questions"></a>Forum aux questions sur le client Endpoint Protection
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 
 Ce forum aux questions est destiné aux utilisateurs dont l’administrateur informatique a déployé Windows Defender ou Endpoint Protection sur leur ordinateur. Les informations fournies ci-après peuvent ne pas s’appliquer aux autres logiciels anti-programme malveillant. Microsoft System Center Endpoint Protection gère Windows Defender sur Windows 10. Il peut également déployer et gérer le client Endpoint Protection sur des ordinateurs exécutant une version antérieure à Windows 10. Windows Defender est décrit dans cet article, mais les informations qui le concernent s’appliquent également à Endpoint Protection.  
@@ -98,13 +98,13 @@ Des logiciels malveillants peuvent être présents sur votre ordinateur, même s
 
  Selon le niveau d'alerte, vous pouvez appliquer une des trois actions suivantes à l'élément détecté :  
 
--   **Supprimer** : cette action supprime de façon définitive le logiciel de votre ordinateur.  
+- **Supprimer** : cette action supprime de façon définitive le logiciel de votre ordinateur.  
 
--   **Mettre en quarantaine** : cette action met le logiciel en quarantaine pour l’empêcher de s’exécuter. Quand Windows Defender met un logiciel en quarantaine, il le déplace à un autre emplacement de votre ordinateur, puis l’empêche de s’exécuter jusqu’à sa restauration ou sa suppression de l’ordinateur.  
+- **Mettre en quarantaine** : cette action met le logiciel en quarantaine pour l’empêcher de s’exécuter. Quand Windows Defender met un logiciel en quarantaine, il le déplace à un autre emplacement de votre ordinateur, puis l’empêche de s’exécuter jusqu’à sa restauration ou sa suppression de l’ordinateur.  
 
--   **Autoriser** : cette action ajoute le logiciel à la liste autorisée de Windows Defender et l’autorise à s’exécuter sur votre ordinateur. Windows Defender ne vous avertira plus des risques que le logiciel peut poser pour la confidentialité de vos données ou de votre ordinateur.  
+- **Autoriser** : cette action ajoute le logiciel à la liste autorisée de Windows Defender et l’autorise à s’exécuter sur votre ordinateur. Windows Defender ne vous avertira plus des risques que le logiciel peut poser pour la confidentialité de vos données ou de votre ordinateur.  
 
- Si vous choisissez **Autoriser** pour un élément, par exemple un logiciel, Windows Defender ne vous avertira plus des risques que le logiciel peut poser pour la confidentialité de vos données ou de votre ordinateur. Par conséquent, ajoutez le logiciel à la liste des éléments autorisés uniquement si vous connaissez le logiciel et faites confiance à son éditeur.  
+  Si vous choisissez **Autoriser** pour un élément, par exemple un logiciel, Windows Defender ne vous avertira plus des risques que le logiciel peut poser pour la confidentialité de vos données ou de votre ordinateur. Par conséquent, ajoutez le logiciel à la liste des éléments autorisés uniquement si vous connaissez le logiciel et faites confiance à son éditeur.  
 
 ### <a name="how-to-remove-potentially-harmful-software"></a>Comment supprimer les logiciels potentiellement dangereux
 
@@ -203,11 +203,11 @@ Pour supprimer rapidement et facilement tous les éléments indésirables ou pot
 
  Chaque fois que la protection en temps réel détecte une menace ou une menace potentielle, Windows Defender affiche une notification. Vous pouvez maintenant choisir parmi les options suivantes :  
 
--   Cliquez sur **Nettoyer l’ordinateur** pour supprimer l’élément détecté. Windows Defender va supprimer automatiquement l’élément de votre ordinateur.  
+- Cliquez sur **Nettoyer l’ordinateur** pour supprimer l’élément détecté. Windows Defender va supprimer automatiquement l’élément de votre ordinateur.  
 
--   Cliquez sur le lien **Afficher les détails** pour afficher la fenêtre Détails concernant les menaces potentielles, puis choisissez l’action à appliquer à l’élément détecté.  
+- Cliquez sur le lien **Afficher les détails** pour afficher la fenêtre Détails concernant les menaces potentielles, puis choisissez l’action à appliquer à l’élément détecté.  
 
- Vous pouvez choisir les logiciels et les paramètres à surveiller par Windows Defender, mais nous vous recommandons d’activer la protection en temps réel, ainsi que toutes ses options. Le tableau suivant explique les options disponibles.  
+  Vous pouvez choisir les logiciels et les paramètres à surveiller par Windows Defender, mais nous vous recommandons d’activer la protection en temps réel, ainsi que toutes ses options. Le tableau suivant explique les options disponibles.  
 
 |||  
 |-|-|  
@@ -231,9 +231,9 @@ Pour supprimer rapidement et facilement tous les éléments indésirables ou pot
 
  Vous recevrez également d'autres types de notifications, par exemple si, pour une raison quelconque, la protection en temps réel a été désactivée, si vous n'avez pas mis à jour vos définitions de virus et de logiciels espions depuis un certain nombre de jours ou lorsque les mises à niveau du programme sont disponibles. Windows Defender affiche aussi brièvement une notification pour vous avertir qu’il analyse votre ordinateur.  
 
-> [!TIP]  
-
->Si vous ne voyez pas l’icône de Windows Defender dans la zone de notification, cliquez sur la flèche dans cette zone pour afficher les icônes masquées, notamment l’icône de Windows Defender.  
+> [!TIP]
+> 
+> Si vous ne voyez pas l’icône de Windows Defender dans la zone de notification, cliquez sur la flèche dans cette zone pour afficher les icônes masquées, notamment l’icône de Windows Defender.  
 
 
  La couleur de l'icône dépend du statut actuel de l'ordinateur :  

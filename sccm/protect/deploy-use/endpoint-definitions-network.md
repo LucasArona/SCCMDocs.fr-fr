@@ -10,16 +10,16 @@ ms.assetid: ddef4d2a-f481-4020-9ddd-9cca5f9795cb
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 47c6a046dac7cd4b5d0d16f0342d7e95ba3cc2a0
-ms.sourcegitcommit: 4f05517f7b284696a492a1b184cc5f25c5cda5e6
-ms.translationtype: HT
+ms.openlocfilehash: 5c4dd69510134efecc730d7cc1bdb5cb2d647653
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48891144"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53414529"
 ---
 # <a name="enable-endpoint-protection-malware-definitions-to-download-from-a-network-share-for-configuration-manager"></a>Activer le téléchargement des définitions de programmes malveillants pour Endpoint Protection à partir d’un partage réseau dans Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
  Vous pouvez télécharger manuellement les dernières mises à jour de définition à partir de Microsoft et configurer les clients pour télécharger ces définitions à partir d’un dossier partagé sur le réseau. Les utilisateurs peuvent également lancer des mises à jour de définition quand vous utilisez cette source de mise à jour.
 
@@ -48,7 +48,7 @@ ms.locfileid: "48891144"
 
 
 > [!div class="button"]
-[Étape suivante >](endpoint-antimalware-policies.md)
-
+> [Étape suivante >](endpoint-antimalware-policies.md)
+> 
 > [!div class="button"]
-[Retour >](endpoint-configure-alerts.md)
+> [Retour >](endpoint-configure-alerts.md)

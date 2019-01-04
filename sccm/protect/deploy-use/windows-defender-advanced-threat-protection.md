@@ -10,16 +10,16 @@ ms.assetid: a5fc033e-828e-4e45-9097-bbbd0697ebdf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 10d746f88d0e7b869e2b73d389944f3b382d687d
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: f474db6768204403978eb188c3dbd138e34035d4
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32348383"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422791"
 ---
 # <a name="windows-defender-advanced-threat-protection"></a>Windows Defender - Protection avancée contre les menaces
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 À compter de la version 1606 de Configuration Manager (Current Branch), Endpoint Protection facilite la gestion et le monitoring du service [Windows Defender - Protection avancée contre les menaces (ATP)](http://aka.ms/technet-wdatp). Windows Defender ATP permet aux entreprises de détecter, d’investiguer et de répondre aux attaques avancées sur leur réseau.  Les stratégies Configuration Manager ou Microsoft Intune facilitent l’intégration et le monitoring des appareils gérés qui exécutent Windows 10 version 1607 (build 14328) ou ultérieure.
 
@@ -46,23 +46,23 @@ Windows Defender ATP est un service disponible dans le [Centre de sécurité Win
 
 ## <a name="onboard-devices-for-windows-defender-atp"></a>Intégrer des appareils pour Windows Defender ATP  
 
-1.  Dans la console Configuration Manager, accédez à **Ressources et Conformité** > **Vue d’ensemble** > **Endpoint Protection** > **Stratégies Windows Defender ATP**, puis cliquez sur **Créer une stratégie Windows Defender ATP**. L’Assistant Création d’une stratégie Windows Defender ATP s’ouvre.  
+1. Dans la console Configuration Manager, accédez à **Ressources et Conformité** > **Vue d’ensemble** > **Endpoint Protection** > **Stratégies Windows Defender ATP**, puis cliquez sur **Créer une stratégie Windows Defender ATP**. L’Assistant Création d’une stratégie Windows Defender ATP s’ouvre.  
 
-2.  Tapez un **nom** et une **description** pour la nouvelle stratégie Windows Defender ATP, puis sélectionnez **Intégration**. Cliquez sur **Suivant**.  
+2. Tapez un **nom** et une **description** pour la nouvelle stratégie Windows Defender ATP, puis sélectionnez **Intégration**. Cliquez sur **Suivant**.  
 
-3.  Sélectionnez **Parcourir** pour accéder au fichier de configuration fourni par le locataire du service cloud Windows Defender ATP de votre organisation. Cliquez sur **Suivant**.  
+3. Sélectionnez **Parcourir** pour accéder au fichier de configuration fourni par le locataire du service cloud Windows Defender ATP de votre organisation. Cliquez sur **Suivant**.  
 
-4.  Spécifiez les exemples de fichiers collectés et partagés à partir des appareils gérés pour les besoins d’analyse.  
+4. Spécifiez les exemples de fichiers collectés et partagés à partir des appareils gérés pour les besoins d’analyse.  
 
-    -   **Aucun**   
+   - **Aucun**   
 
-    -   **Tous les types de fichiers**  
+   - **Tous les types de fichiers**  
 
      Cliquez sur **Suivant**.  
 
-5.  Passez en revue les informations de résumé et terminez l’Assistant.  
+5. Passez en revue les informations de résumé et terminez l’Assistant.  
 
-6.  Vous pouvez maintenant déployer la stratégie Windows Defender ATP sur les ordinateurs clients gérés en cliquant sur **Déployer**.  
+6. Vous pouvez maintenant déployer la stratégie Windows Defender ATP sur les ordinateurs clients gérés en cliquant sur **Déployer**.  
 
 ## <a name="monitor-windows-defender-atp"></a>Surveiller Windows Defender ATP  
 

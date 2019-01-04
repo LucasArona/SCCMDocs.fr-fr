@@ -10,32 +10,32 @@ ms.assetid: 537dd2a7-4e44-4877-b8dd-5e1499407f8d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f650ba7bc703ec4fa0492fc86859cb8742e0510d
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: e83f999ccd3e7625b2f83372464569771520632a
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32347363"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419205"
 ---
 #  <a name="configure-definition-updates-for-endpoint-protection"></a>Configurer les mises à jour des définitions pour Endpoint Protection  
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
  Avec Endpoint Protection dans System Center Configuration Manager, vous pouvez utiliser une des diverses méthodes disponibles pour tenir à jour les définitions du logiciel anti-programme malveillant sur les ordinateurs clients de votre hiérarchie. Les informations contenues dans cette rubrique peuvent vous aider à sélectionner et à configurer ces méthodes.
 
  Pour mettre à jour des définitions de logiciels anti-programmes malveillants, vous pouvez utiliser une ou plusieurs des méthodes suivantes :
 
--   [Mises à jour distribuées depuis Configuration Manager](endpoint-definitions-configmgr.md) : cette méthode utilise des mises à jour logicielles de Configuration Manager pour remettre les mises à jour du moteur et des définitions aux ordinateurs de votre hiérarchie.
+- [Mises à jour distribuées depuis Configuration Manager](endpoint-definitions-configmgr.md) : cette méthode utilise des mises à jour logicielles de Configuration Manager pour remettre les mises à jour du moteur et des définitions aux ordinateurs de votre hiérarchie.
 
--   [Mises à jour distribuées à partir de Windows Server Update Services (WSUS)](endpoint-definitions-wsus.md) : cette méthode utilise l’infrastructure WSUS pour remettre les mises à jour du moteur et des définitions aux ordinateurs.
+- [Mises à jour distribuées à partir de Windows Server Update Services (WSUS)](endpoint-definitions-wsus.md) : cette méthode utilise l’infrastructure WSUS pour remettre les mises à jour du moteur et des définitions aux ordinateurs.
 
--   [Mises à jour distribuées à partir de Microsoft Update](endpoint-definitions-microsoft-updates.md) : cette méthode permet aux ordinateurs de se connecter directement à Microsoft Update pour télécharger les mises à jour du moteur et des définitions. Cette méthode peut être utile pour les ordinateurs qui ne sont pas souvent connectés au réseau d’entreprise.
+- [Mises à jour distribuées à partir de Microsoft Update](endpoint-definitions-microsoft-updates.md) : cette méthode permet aux ordinateurs de se connecter directement à Microsoft Update pour télécharger les mises à jour du moteur et des définitions. Cette méthode peut être utile pour les ordinateurs qui ne sont pas souvent connectés au réseau d’entreprise.
 
--   [Mises à jour distribuées à partir du Centre de protection Microsoft contre les programmes malveillants](endpoint-definitions-protection-center.md) : cette méthode télécharge les mises à jour des définitions à partir du Centre de protection Microsoft contre les programmes malveillants.
+- [Mises à jour distribuées à partir du Centre de protection Microsoft contre les programmes malveillants](endpoint-definitions-protection-center.md) : cette méthode télécharge les mises à jour des définitions à partir du Centre de protection Microsoft contre les programmes malveillants.
 
--   [Mises à jour à partir de partages de fichiers UNC](endpoint-definitions-network.md) : avec cette méthode, vous pouvez enregistrer les dernières mises à jour du moteur et des définitions dans un partage sur le réseau. Les clients peuvent ensuite accéder au réseau pour installer les mises à jour.
+- [Mises à jour à partir de partages de fichiers UNC](endpoint-definitions-network.md) : avec cette méthode, vous pouvez enregistrer les dernières mises à jour du moteur et des définitions dans un partage sur le réseau. Les clients peuvent ensuite accéder au réseau pour installer les mises à jour.
 
- Vous pouvez configurer plusieurs sources de mise à jour de définition et contrôler l’ordre dans lequel elles sont évaluées et appliquées. Cette opération s’effectue dans la boîte de dialogue **Configurer les sources de mise à jour de définition** quand vous créez une stratégie de logiciel anti-programme malveillant.
+  Vous pouvez configurer plusieurs sources de mise à jour de définition et contrôler l’ordre dans lequel elles sont évaluées et appliquées. Cette opération s’effectue dans la boîte de dialogue **Configurer les sources de mise à jour de définition** quand vous créez une stratégie de logiciel anti-programme malveillant.
 
 > [!IMPORTANT]
 >  Pour les PC Windows 10, vous devez configurer Endpoint Protection pour mettre à jour les définitions de programmes malveillants pour Windows Defender.
