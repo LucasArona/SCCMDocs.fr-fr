@@ -10,16 +10,16 @@ ms.assetid: c21eec87-ad1c-4465-8e45-5feb60b92707
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fbba0306cececebeb7a0e20757e7de3b0d4d0e70
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 35312c92a20f8e3842b5ee47dd3b916631671e45
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32348332"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417343"
 ---
 # <a name="upgrade-windows-to-the-latest-version-with-system-center-configuration-manager"></a>Mettre à niveau Windows vers la dernière version avec System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Cet article fournit les étapes dans Configuration Manager pour mettre à niveau le système d’exploitation sur un ordinateur. Vous pouvez choisir parmi différentes méthodes de déploiement, telles qu’un média autonome ou le Centre logiciel. Le scénario de mise à niveau sur place présente les caractéristiques suivantes :  
 
@@ -46,21 +46,21 @@ Cet article fournit les étapes dans Configuration Manager pour mettre à niveau
 
 Passez en revue les exigences et limitations suivantes de la séquence de tâches de mise à niveau d’un système d’exploitation pour vérifier qu’elle répond à vos besoins :  
 
-  -   Ajoutez uniquement les étapes de séquence de tâches qui sont liées à la tâche principale de mise à niveau de système d’exploitation. Ces étapes sont principalement l’installation des packages, des applications ou des mises à jour. Utilisez également les étapes qui exécutent des lignes de commande, PowerShell, ou définissent des variables dynamiques.  
+- Ajoutez uniquement les étapes de séquence de tâches qui sont liées à la tâche principale de mise à niveau de système d’exploitation. Ces étapes sont principalement l’installation des packages, des applications ou des mises à jour. Utilisez également les étapes qui exécutent des lignes de commande, PowerShell, ou définissent des variables dynamiques.  
 
-  -   Passez en revue les pilotes et les applications installés sur les ordinateurs pour vérifier qu’ils sont compatibles avec Windows 10 avant de déployer la séquence de tâches de mise à niveau.  
+- Passez en revue les pilotes et les applications installés sur les ordinateurs pour vérifier qu’ils sont compatibles avec Windows 10 avant de déployer la séquence de tâches de mise à niveau.  
 
-  -   Les tâches suivantes ne sont pas compatibles avec la mise à niveau sur place. Elles vous obligent à utiliser des déploiements de système d’exploitation classiques :  
+- Les tâches suivantes ne sont pas compatibles avec la mise à niveau sur place. Elles vous obligent à utiliser des déploiements de système d’exploitation classiques :  
 
-     -   Changement de l’appartenance de domaine de l’ordinateur ou mise à jour du groupe Administrateurs locaux.  
+  - Changement de l’appartenance de domaine de l’ordinateur ou mise à jour du groupe Administrateurs locaux.  
 
-     -   Implémentation d’un changement fondamental sur l’ordinateur, par exemple : 
-         - Changement des partitions de disque
-         - Changement de l’architecture système x86 en x64
-         - Implémentation d’UEFI. (Pour plus d’informations sur une option possible, consultez [Passer de BIOS à UEFI pendant une mise à niveau sur place](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion#convert-from-bios-to-uefi-during-an-in-place-upgrade).)
-         - Modification de la langue de système d’exploitation de base  
+  - Implémentation d’un changement fondamental sur l’ordinateur, par exemple : 
+    - Changement des partitions de disque
+    - Changement de l’architecture système x86 en x64
+    - Implémentation d’UEFI. (Pour plus d’informations sur une option possible, consultez [Passer de BIOS à UEFI pendant une mise à niveau sur place](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion#convert-from-bios-to-uefi-during-an-in-place-upgrade).)
+    - Modification de la langue de système d’exploitation de base  
 
-     -   Vous avez des besoins personnalisés, notamment l’utilisation d’une image personnalisée de base ou du chiffrement de disque tiers, ou vous avez besoin d’exécuter des opérations hors connexion WinPE.  
+  - Vous avez des besoins personnalisés, notamment l’utilisation d’une image personnalisée de base ou du chiffrement de disque tiers, ou vous avez besoin d’exécuter des opérations hors connexion WinPE.  
 
 ### <a name="infrastructure-requirements"></a>Exigences de l'infrastructure  
 

@@ -10,31 +10,31 @@ ms.assetid: d2ad00e8-9f10-41b6-816a-d8542c23a22e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d610b9f5980376bc9859fcd1e8bb34660e068b09
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 71ad5ae8ff823d03951d5f9ae1a13e8051cba23e
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335012"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416569"
 ---
 # <a name="capabilities-in-technical-preview-1611-for-system-center-configuration-manager"></a>Fonctionnalités de la version d’évaluation technique 1611 pour System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Technical Preview)*
+*S’applique à : System Center Configuration Manager (préversion technique)*
 
 
 
 Cet article présente les fonctionnalités disponibles dans la version d’évaluation technique 1611 pour System Center Configuration Manager. Vous pouvez installer cette version pour mettre à jour et ajouter de nouvelles fonctionnalités à votre site Configuration Manager Technical Preview. Avant d’installer cette version de la version d’évaluation technique, passez en revue la rubrique de présentation, [Version d’évaluation technique pour System Center Configuration Manager](../../core/get-started/technical-preview.md), pour vous familiariser avec les conditions générales et limitations d’utilisation d’une version d’évaluation technique, la mise à jour entre les versions et l’envoi de commentaires sur les fonctionnalités dans une version d’évaluation technique.    
 
 **Problèmes connus dans cette version d’évaluation technique :**   
-- ***État des prérequis*** : Quand vous installez la version 1611, l’état global des prérequis peut indiquer une installation réussie avec des avertissements. Toutefois, les prérequis à l’origine des avertissements ne sont pas répertoriés. Cela peut être dû aux deux prérequis suivants :
+- ***État des prérequis*** : Quand vous installez la version 1611, l’état global des prérequis peut indiquer une installation réussie avec des avertissements. Toutefois, les prérequis à l’origine des avertissements ne sont pas répertoriés. Cela peut être dû aux deux prérequis suivants :
   - Options de création d’index en mémoire SQL
   - Vérifications de la version de SQL Server prise en charge  
 
- Comme il s’agit uniquement d’avertissements, vous pouvez les ignorer.
+  Comme il s’agit uniquement d’avertissements, vous pouvez les ignorer.
 
-- ***PowerShell*** : quand vous vous connectez à Windows PowerShell à partir de la console Configuration Manager, vous pouvez recevoir l’erreur suivante : **Microsoft.ConfigurationManagement.PowerShell.Types.ps1xml n’est pas signé numériquement**.  
+- ***PowerShell*** : Lorsque vous vous connectez à Windows PowerShell à partir de la console Configuration Manager, il se peut que vous receviez l’erreur suivante : **Microsoft.ConfigurationManagement.PowerShell.Types.ps1xml n’est pas signé numériquement**.  
 
-   Vous pouvez résoudre ce problème en remplaçant certains fichiers par les versions signées de la version 1610. Copiez tous les fichiers avec les extensions suivantes qui figurent dans le dossier **&lt;répertoire d’installation>\AdminConsole\bin\** de l’installation de la version 1610 : **.psd1**, **.ps1xml** et **.psm1**. Collez-les dans le dossier **&lt;répertoire_installation>\AdminConsole\bin\** de l’installation de la version d’évaluation technique 1611, en remplaçant la version 1611 des fichiers.
+   Vous pouvez résoudre ce problème en remplaçant certains fichiers par les versions signées de la version 1610. Copiez tous les fichiers avec les extensions suivantes qui figurent dans le dossier **&lt;répertoire d’installation>\AdminConsole\bin\\** de l’installation de la version 1610 : **.psd1**, **.ps1xml** et **.psm1**. Collez-les dans le dossier **&lt;répertoire_installation>\AdminConsole\bin\\** de l’installation de la préversion technique 1611, en remplaçant la version 1611 des fichiers.
 
 
 **Vous trouverez ci-dessous les nouvelles fonctionnalités propres à cette version.**  

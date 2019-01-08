@@ -10,26 +10,26 @@ ms.assetid: 309b9a09-a611-4ba2-90ab-dde51582cf87
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 2a779f80f42439fe6526c05d7027c22fb191e41e
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 1c5f4b9cd76379d94c1cedb40ce38eda651b5845
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32332108"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416756"
 ---
 # <a name="import-configuration-data-with-system-center-configuration-manager"></a>Importer des données de configuration avec System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Vous pouvez créer des bases de référence de configuration et des éléments de configuration dans la console System Center Configuration Manager, mais également importer des données de configuration contenues dans un fichier CAB (.cab) et conformes au schéma SML (Service Modeling Language) pris en charge. Vous pouvez importer les données de configuration suivantes :  
 
--   Données de configuration recommandées (packs de configuration) téléchargées à partir de Microsoft ou d’autres sites d’éditeurs de logiciels.  
+- Données de configuration recommandées (packs de configuration) téléchargées à partir de Microsoft ou d’autres sites d’éditeurs de logiciels.  
 
--   Données de configuration exportées à partir de System Center 2012 Configuration Manager et versions ultérieures.  
+- Données de configuration exportées à partir de System Center 2012 Configuration Manager et versions ultérieures.  
 
--   Données de configuration créées en externe et conformes au schéma SML.  
+- Données de configuration créées en externe et conformes au schéma SML.  
 
- Pour obtenir un exemple de pack de configuration qui vous permet de gérer la compatibilité aux rôles de serveur de site System Center 2012 Configuration Manager, consultez [Pack de configuration de System Center 2012 Configuration Manager](http://www.microsoft.com/en-us/download/details.aspx?id=30710&WT.mc_id=rss_alldownloads_all).  
+  Pour obtenir un exemple de pack de configuration qui vous permet de gérer la compatibilité aux rôles de serveur de site System Center 2012 Configuration Manager, consultez [Pack de configuration de System Center 2012 Configuration Manager](http://www.microsoft.com/en-us/download/details.aspx?id=30710&WT.mc_id=rss_alldownloads_all).  
 
 Lorsque vous importez une ligne de base de configuration, une partie ou la totalité des éléments de configuration référencés dans la ligne de base peuvent être également inclus dans le fichier CAB. Pendant le processus d’importation, Configuration Manager vérifie que tous les éléments de configuration référencés dans la base de référence de configuration sont également inclus dans le fichier CAB ou qu’ils existent déjà sur le site Configuration Manager. Le processus d’importation échoue si vous tentez d’importer une base de référence de configuration qui fait référence à des données de configuration que Configuration Manager ne trouve pas.  
 

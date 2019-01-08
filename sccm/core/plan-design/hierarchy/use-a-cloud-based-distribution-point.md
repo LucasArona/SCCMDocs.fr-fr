@@ -10,16 +10,16 @@ ms.assetid: 3cd9c725-6b42-427d-9191-86e67f84e48c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4673da59da7fede2f425948472c31a620d13a258
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 00c04190b954a7b19d4bea0e43b2dc6ecf9d8388
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456292"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53414988"
 ---
 # <a name="use-a-cloud-distribution-point-in-configuration-manager"></a>Utiliser un point de distribution cloud dans Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Un point de distribution cloud est un point de distribution Configuration Manager qui est hébergé en tant que plateforme PaaS (Platform-as-a-Service) dans Microsoft Azure. Ce service prend en charge les scénarios suivants :  
 
@@ -102,9 +102,9 @@ Configuration Manager ne migre pas les points de distribution cloud classiques e
 
 L’endroit où vous créez le point de distribution cloud varie selon les clients qui doivent accéder au contenu. À compter de la version 1806, il existe trois types de points de distribution cloud :  
 
-- Déploiement de service classique : créez ce type seulement sur un site principal.  
+- Déploiement de service Classic : créez ce type uniquement sur un site principal.  
 
-- Déploiement Azure Resource Manager : créez ce type sur un site principal ou sur le site d’administration centrale.  
+- Déploiement d’Azure Resource Manager : créez ce type sur un site principal ou sur le site d’administration centrale.  
 
 - La passerelle de gestion cloud peut également délivrer du contenu à des clients. Cette fonctionnalité réduit le nombre de certificats nécessaires, ainsi que les coûts associés aux machines virtuelles Azure. Pour plus d’informations, consultez [Planifier la passerelle de gestion cloud](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway).<!--1358651-->  
 
@@ -161,10 +161,10 @@ Quand vous utilisez un point de distribution cloud dans votre hiérarchie, aidez
 - Le point de distribution cloud prend en charge toutes les versions de Windows listées dans [Systèmes d’exploitation pris en charge pour les clients et les appareils](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices).  
 
 - Un administrateur distribue les types de contenu logiciel pris en charge suivants :  
-    - Applications
-    - Packages
-    - Packages de mise à niveau de système d’exploitation
-    - Mises à jour de logiciels de tiers  
+  - Applications
+  - Packages
+  - Packages de mise à niveau de système d’exploitation
+  - Mises à jour de logiciels de tiers  
 
     > [!Important]  
     > Si la console Configuration Manager ne bloque pas la distribution des mises à jour logicielles de Microsoft vers un point de distribution cloud, vous payez des coûts Azure pour stocker du contenu que les clients n’utilisent pas. Les clients Internet obtiennent toujours le contenu des mises à jour logicielles de Microsoft auprès du service cloud Microsoft Update. Ne distribuez pas les mises à jour logicielles de Microsoft sur un point de distribution cloud.    
@@ -203,11 +203,11 @@ Configuration Manager inclut les options suivantes qui facilitent le contrôle d
 - Configurer Configuration Manager pour être averti quand les seuils mensuels des téléchargements des clients sont atteints ou dépassés. Pour plus d’informations, consultez [Alertes de seuil de transfert de données](/sccm/core/servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure#bkmk_alerts).   
 
 - Pour réduire le nombre de transferts de données que les clients effectuent à partir des points de distribution cloud, utilisez une des technologies suivantes de cache entre pairs :  
-    - Cache entre pairs Configuration Manager
-    - Windows BranchCache
-    - Optimisation de la distribution de Windows 10  
+  - Cache entre pairs Configuration Manager
+  - Windows BranchCache
+  - Optimisation de la distribution de Windows 10  
 
-   Pour plus d’informations, consultez [Concepts fondamentaux de la gestion de contenu](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management).   
+    Pour plus d’informations, consultez [Concepts fondamentaux de la gestion de contenu](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management).   
 
 
 ### <a name="components"></a>Composants
@@ -276,7 +276,7 @@ Quand un client utilise un point de distribution cloud comme emplacement de cont
 
 2. Le point de gestion répond à la demande d’emplacement du client avec le **nom de domaine complet du service** du point de distribution cloud. Cette propriété est la même que le nom commun du certificat d’authentification serveur.  
 
-    Si vous utilisez votre nom de domaine, par exemple WallaceFalls.contoso.com, le client essaie d’abord de résoudre ce nom de domaine complet. Vous avez besoin d’un alias CNAME dans le DNS accessible via Internet de votre domaine pour que les clients puissent résoudre le nom du service Azure, par exemple WallaceFalls.cloudapp.net.  
+    Si vous utilisez votre nom de domaine, par exemple WallaceFalls.contoso.com, le client essaie d’abord de résoudre ce nom de domaine complet. Vous avez besoin d’un alias CNAME dans le DNS accessible via Internet de votre domaine pour que les clients puissent résoudre le nom du service Azure, par exemple : WallaceFalls.cloudapp.net.  
 
 3. Le client résout ensuite le nom du service Azure, par exemple WallaceFalls.cloudapp.net, en une adresse IP valide. Cette réponse doit être gérée par le DNS d’Azure.  
 
@@ -319,7 +319,7 @@ En fonction de la conception de votre point de distribution cloud, vous avez bes
 
 - À compter de la version 1710, prise en charge des certificats **Version 3**. Pour plus d’informations, consultez [Vue d’ensemble des certificats CNG](/sccm/core/plan-design/network/cng-certificates-overview).  
 
-- À compter de la version 1802, quand vous configurez Windows avec la stratégie suivante : **Chiffrement système : utilisez des algorithmes compatibles FIPS pour le chiffrement, le hachage et la signature**  
+- À compter de la version 1802, lorsque vous configurez Windows avec la stratégie suivante : **Chiffrement système : utilisez des algorithmes compatibles FIPS pour le chiffrement, le hachage et la signature**  
 
 - À compter de la version 1802, prise en charge de **TLS 1.2**. Pour plus d’informations, consultez [Informations techniques de référence sur les contrôles de chiffrement](/sccm/core/plan-design/security/cryptographic-controls-technical-reference#about-ssl-vulnerabilities).  
 

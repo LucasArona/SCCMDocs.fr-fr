@@ -10,16 +10,16 @@ ms.assetid: a3be4f8f-3d44-4e3c-9fa1-e85f30a36e72
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4331ec4120141ab9aa20301b9a99c3c6ebeef568
-ms.sourcegitcommit: 0305e710f634529793ae73e5aac24168ee4fe02f
+ms.openlocfilehash: 35e1675e74b0df768d143441fa4cbb2dda47affc
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042743"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418219"
 ---
 # <a name="which-branch-of-configuration-manager-should-i-use"></a>Quelle branche de Configuration Manager dois-je utiliser ?
 
-*S’applique à : System Center Configuration Manager (Current Branch, Long-Term Servicing Branch et Technical Preview)*
+*S’applique à : System Center Configuration Manager (Current Branch, Long-Term Servicing Branch et Technical Preview)*
 
 
 Il existe trois branches pour System Center Configuration Manager : Current Branch, Long-Term Servicing Branch et Technical Preview. Utilisez cette rubrique pour mieux choisir la branche qui vous convient.
@@ -43,11 +43,11 @@ Pour installer Current Branch en tant que nouveau site, utilisez le [support de 
 
 Vous pouvez également utiliser le support de la base de référence pour installer un nouveau site en tant qu’édition d’évaluation de Current Branch. L’édition d’évaluation ne nécessite aucune licence. Vous pouvez utiliser l’édition d’évaluation pendant 180 jours. Elle prend en charge la mise à niveau vers une édition sous licence de Current Branch. Pour installer uniquement une édition d’évaluation, accédez au site [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection).
 
->  [!NOTE]  
+> [!NOTE]
 > Utilisez uniquement le média de référence pour installer des sites pour une nouvelle hiérarchie Configuration Manager. Si vous avez installé une version de base de référence, utilisez les mises à jour dans la console pour mettre à jour vos sites vers une nouvelle version.  
->  
+> 
 > Les sites mis à jour à l’aide de mises à jour dans la console sont équivalents au nouveau site installé à l’aide du média de référence.
->
+> 
 > Pour plus d’informations, consultez [Mises à jour pour System Center Configuration Manager](/sccm/core/servers/manage/updates).  
 
 

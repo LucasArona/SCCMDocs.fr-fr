@@ -10,16 +10,16 @@ ms.assetid: 95033a9b-ff13-4b70-b1de-bcb25bcb6024
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b9a3f4583944f0818f74930753bad99e3408a928
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 0b218d665d574c74358e3d018f45dd5b173cc21c
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350015"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424168"
 ---
 # <a name="customize-operating-system-images-with-system-center-configuration-manager"></a>Personnaliser les images de système d’exploitation avec System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Dans System Center Configuration Manager, les images de système d’exploitation sont des fichiers WIM qui représentent un regroupement compressé des fichiers et dossiers de référence nécessaires à l’installation et à la configuration d’un système d’exploitation sur un ordinateur. Une image de système d’exploitation personnalisée est créée et capturée à partir d’un ordinateur de référence que vous configurez avec l’ensemble des fichiers de système d’exploitation, fichiers de prise en charge, mises à jour logicielles, outils et autres applications logicielles nécessaires. Il vous revient de décider dans quelle mesure vous voulez configurer manuellement l’ordinateur de référence. Vous pouvez totalement automatiser la configuration de l’ordinateur de référence à l’aide d’une séquence de tâches de création et de capture, vous pouvez configurer manuellement certains aspects de l’ordinateur de référence puis automatiser le reste à l’aide de séquences de tâches ou vous pouvez configurer manuellement l’ordinateur de référence sans utiliser de séquences de tâches. Utilisez les sections suivantes pour personnaliser un système d’exploitation.
 
@@ -32,34 +32,34 @@ Dans System Center Configuration Manager, les images de système d’exploitatio
 #### <a name="automated-configuration"></a>Configuration automatisée  
  **Avantages**  
 
--   La configuration peut être complètement autonome et ne pas nécessiter la présence d'un administrateur ou d'un utilisateur.  
+- La configuration peut être complètement autonome et ne pas nécessiter la présence d'un administrateur ou d'un utilisateur.  
 
--   Vous pouvez réutiliser la séquence de tâches pour répéter la configuration d'ordinateurs de référence supplémentaires, en toute confiance.  
+- Vous pouvez réutiliser la séquence de tâches pour répéter la configuration d'ordinateurs de référence supplémentaires, en toute confiance.  
 
--   Vous pouvez modifier la séquence de tâches pour appliquer des différences aux ordinateurs de référence sans avoir à recréer toute la séquence de tâches.  
+- Vous pouvez modifier la séquence de tâches pour appliquer des différences aux ordinateurs de référence sans avoir à recréer toute la séquence de tâches.  
 
- **Inconvénients**  
+  **Inconvénients**  
 
--   L'action initiale de création et de test d'une séquence de tâches peut prendre du temps.  
+- L'action initiale de création et de test d'une séquence de tâches peut prendre du temps.  
 
--   Si la configuration requise de l'ordinateur de référence change de façon significative, les nouvelles étapes de création et de test de la séquence de tâches peuvent prendre du temps.  
+- Si la configuration requise de l'ordinateur de référence change de façon significative, les nouvelles étapes de création et de test de la séquence de tâches peuvent prendre du temps.  
 
 #### <a name="manual-configuration"></a>Configuration manuelle  
  **Avantages**  
 
--   Vous n'avez pas besoin de créer une séquence de tâches, ni de perdre du temps à tester et corriger la séquence de tâches.  
+- Vous n'avez pas besoin de créer une séquence de tâches, ni de perdre du temps à tester et corriger la séquence de tâches.  
 
--   Vous pouvez l’installer directement à partir de CD sans avoir à insérer tous les packages logiciels (y compris Windows lui-même) dans un package Configuration Manager.  
+- Vous pouvez l’installer directement à partir de CD sans avoir à insérer tous les packages logiciels (y compris Windows lui-même) dans un package Configuration Manager.  
 
- **Inconvénients**  
+  **Inconvénients**  
 
--   La précision de la configuration de l’ordinateur de référence dépend de l’administrateur ou de l’utilisateur qui configure l’ordinateur.  
+- La précision de la configuration de l’ordinateur de référence dépend de l’administrateur ou de l’utilisateur qui configure l’ordinateur.  
 
--   Vous devez toujours vérifier et tester l'ordinateur de référence pour vous assurer qu'il est correctement configuré.  
+- Vous devez toujours vérifier et tester l'ordinateur de référence pour vous assurer qu'il est correctement configuré.  
 
--   Vous ne pouvez pas réutiliser la méthode de configuration.  
+- Vous ne pouvez pas réutiliser la méthode de configuration.  
 
--   Requiert qu'une personne soit activement impliquée tout au long du processus.  
+- Requiert qu'une personne soit activement impliquée tout au long du processus.  
 
 ###  <a name="BKMK_RefComputerConsiderations"></a> Considérations relatives à l’ordinateur de référence  
  La section suivante répertorie les éléments de base à prendre en compte lorsque vous configurez un ordinateur de référence.  
@@ -113,20 +113,20 @@ Dans System Center Configuration Manager, les images de système d’exploitatio
 
 #### <a name="to-manually-build-the-reference-computer"></a>Pour créer manuellement l’ordinateur de référence  
 
-1.  Identifiez l'ordinateur à utiliser comme ordinateur de référence.  
+1. Identifiez l'ordinateur à utiliser comme ordinateur de référence.  
 
-2.  Configurez l'ordinateur de référence avec le système d'exploitation approprié et tout autre logiciel requis pour créer l'image du système d'exploitation que vous souhaitez déployer.  
+2. Configurez l'ordinateur de référence avec le système d'exploitation approprié et tout autre logiciel requis pour créer l'image du système d'exploitation que vous souhaitez déployer.  
 
-    > [!WARNING]  
-    >  Installez au minimum le système d’exploitation et le Service Pack appropriés, les pilotes de prise en charge et les mises à jour logicielles requises.  
+   > [!WARNING]  
+   >  Installez au minimum le système d’exploitation et le Service Pack appropriés, les pilotes de prise en charge et les mises à jour logicielles requises.  
 
-3.  Configurez l'ordinateur de référence en tant que membre d'un groupe de travail.  
+3. Configurez l'ordinateur de référence en tant que membre d'un groupe de travail.  
 
-4.  Réinitialisez le mot de passe de l'administrateur local sur l'ordinateur de référence pour que la valeur du mot de passe soit vide.  
+4. Réinitialisez le mot de passe de l'administrateur local sur l'ordinateur de référence pour que la valeur du mot de passe soit vide.  
 
-5.  Exécutez Sysprep au moyen de la commande :  **sysprep /quiet /generalize /reboot**. L’option /generalize indique à Sysprep de supprimer les données propres au système de l’installation de Windows. Les informations spécifiques du système incluent, entre autres, les journaux des événements et les ID de sécurité uniques (SID). Une fois les informations système uniques supprimées, l’ordinateur redémarre.  
+5. Exécutez Sysprep au moyen de la commande :  **sysprep /quiet /generalize /reboot**. L’option /generalize indique à Sysprep de supprimer les données propres au système de l’installation de Windows. Les informations spécifiques du système incluent, entre autres, les journaux des événements et les ID de sécurité uniques (SID). Une fois les informations système uniques supprimées, l’ordinateur redémarre.  
 
- Une fois que l’ordinateur de référence est prêt, capturez l’image de système d’exploitation de l’ordinateur de référence à l’aide d’une séquence de tâches.  Pour une procédure détaillée, consultez [Capturer une image de système d’exploitation à partir d’un ordinateur de référence existant](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md#BKMK_CaptureExistingRefComputer).  
+   Une fois que l’ordinateur de référence est prêt, capturez l’image de système d’exploitation de l’ordinateur de référence à l’aide d’une séquence de tâches.  Pour une procédure détaillée, consultez [Capturer une image de système d’exploitation à partir d’un ordinateur de référence existant](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md#BKMK_CaptureExistingRefComputer).  
 
 ##  <a name="BKMK_UseTSToBuildReference"></a> Utiliser une séquence de tâches pour créer un ordinateur de référence  
  Vous pouvez automatiser le processus de création d’un ordinateur de référence en déployant le système d’exploitation, les pilotes, les applications et autres éléments à l’aide d’une séquence de tâches.  Pour créer l’ordinateur de référence et capturer l’image de système d’exploitation à partir de ce même ordinateur de référence, procédez comme suit.  

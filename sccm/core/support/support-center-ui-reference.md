@@ -10,16 +10,16 @@ ms.assetid: 41cdebfe-b595-40aa-a385-32e0746255ed
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c7fbba9bc6c56a7d4b7a4fc908bfd7fdc9ffa762
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: df7d443a9f611278296c729949d5dfb764a43e9e
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52458084"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420785"
 ---
 # <a name="support-center-user-interface-reference"></a>Référence de l’interface utilisateur du Centre d’aide et de support
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Cet article est une référence décrivant les interfaces utilisateur des outils du Centre d’aide et de support :
 - Centre d’aide et de support
@@ -84,24 +84,24 @@ Pendant que le Centre d’aide et de support collecte des données, sélectionne
 #### <a name="data-types"></a>Types de données
 Lorsque vous cochez la case d’une option, le Centre d’aide et de support collecte ce type de données la prochaine fois que vous sélectionnez **Collecter les données sélectionnées**. Les types suivants sont disponibles :  
 
-- **Fichiers journaux** : fichiers journaux client, y compris les journaux d’installation  
+- **Fichiers journaux** : fichiers journaux client, y compris les journaux d’installation  
 
-- **Stratégie** : collecte de la stratégie client  
+- **Stratégie** : collecte de la stratégie client  
 
-- **Certificats** : Collecte les informations de clé publique des certificats clients. Le Centre d’aide et de support ne collecte pas les clés privées de certificat.  
+- **Certificats** : informations de clé publique des certificats clients. Le Centre d’aide et de support ne collecte pas les clés privées de certificat.  
 
-- **Collecteur de configuration client** : informations sur le client Configuration Manager. Vous ne pouvez pas désactiver ce type de données.  
+- **Collecteur de configuration client** : collecte les informations de client Gestionnaire de configuration. Vous ne pouvez pas désactiver ce type de données.  
 
-- **Registre client** : collecte les informations de configuration client à partir du Registre. Le Centre d’aide et de support collecte uniquement les informations de Registre de Configuration Manager.  
+- **Registre de client** : informations de configuration client du Registre. Le Centre d’aide et de support collecte uniquement les informations de Registre de Configuration Manager.  
 
-- **WMI client** : Collecte les informations de configuration de client à partir de WMI. Le Centre d’aide et de support ne collecte pas la stratégie client.  
+- **WMI client** : informations de configuration de client de WMI. Le Centre d’aide et de support ne collecte pas la stratégie client.  
 
-- **Résolution des problèmes** : Collecte des données de dépannage en temps réel qui vous aideront à diagnostiquer les problèmes clients courants liés à Active Directory, aux points de gestion, au réseau, aux attributions de stratégies et à l’inscription.  
+- **Résolution des problèmes** : données de dépannage en temps réel qui vous permettent de diagnostiquer les problèmes client courants liés à Active Directory, aux points de gestion, au réseau, aux attributions de stratégies et à l’inscription.  
 
     > [!NOTE]  
     > Ce type de données n’est pas pris en charge quand vous vous connectez à distance à un autre client.  
 
-- **Vidages de débogage** : Effectue le vidage de débogage des processus clients et connexes. Les vidages de débogage peuvent être de grande ampleur. Activez cette option uniquement lors de la résolution de problèmes de performances du client.  
+- **Vidages de débogage** : effectuez le vidage de débogage des processus clients et connexes. Les vidages de débogage peuvent être de grande ampleur. Activez cette option uniquement lors de la résolution de problèmes de performances du client.  
 
     > [!WARNING]  
     > La collecte des vidages de débogage augmente considérablement la taille des groupes de données (dans certains cas, plusieurs centaines de Mo).  
@@ -137,29 +137,29 @@ Effectuez l’une des actions suivantes sur le service Agent du client Configura
 #### <a name="properties"></a>Propriétés
 Lorsque vous chargez les détails du client, le Centre d’aide et de support montre les propriétés suivantes :  
 
-- **ID du client** : identificateur unique utilisé par Configuration Manager pour identifier le client  
+- **ID de client** : identificateur unique utilisé par Configuration Manager pour identifier le client  
 
-- **ID matériel** : identificateur unique utilisé par Configuration Manager pour identifier le matériel client  
+- **ID du matériel** : identificateur unique utilisé par Configuration Manager pour identifier le matériel client  
 
-- **Approuvé** : indique si le client est approuvé dans Configuration Manager  
+- **Approuvé** : indique si le client est approuvé dans Configuration Manager  
 
-- **État de l’inscription** : indique si le client est enregistré auprès de Configuration Manager  
+- **État de l’inscription** : indique si le client est inscrit auprès de Configuration Manager  
 
-- **Accessible sur Internet** : indique si le client est sur Internet  
+- **Accessible sur Internet** : indique si le client est sur Internet  
 
-- **Version** : numéro de version du client Configuration Manager installé  
+- **Version** : numéro de version du client Gestionnaire de configuration installé  
 
-- **Code de site** : code de site pour le site principal auquel le client est affecté  
+- **Code de site** : code de site pour le site principal auquel le client est assigné  
 
-- **Point de gestion attribué** : nom de domaine complet (FQDN) du point de gestion actuellement attribué au client  
+- **Point de gestion attribué** : nom de domaine complet (FQDN) du point de gestion actuellement attribué au client  
 
-- **Point de gestion résident** : nom de domaine complet du point de gestion résident  
+- **Point de gestion résident** : nom de domaine complet (FQDN) du point de gestion résident  
 
-- **Point de gestion proxy** : nom d’hôte ou nom de domaine complet du point de gestion proxy (s’il existe)  
+- **Point de gestion proxy** : nom d’hôte ou nom de domaine complet (FQDN) du point de gestion proxy (le cas échéant)  
 
-- **Code de site proxy** : code de site du site secondaire (s’il existe)  
+- **Code de site proxy** : Code du site secondaire (s'il existe)  
 
-- **État du proxy** : état du point de gestion proxy du client Configuration Manager. Par exemple, **Actif** ou **En attente**.  
+- **État du proxy** : état du point de gestion proxy du client Gestionnaire de configuration. Par exemple, **Actif** ou **En attente**.  
 
 
 
@@ -170,15 +170,15 @@ Utilisez les actions proposées sous cet onglet à la place de l’ancien outil 
 #### <a name="load-policy"></a>Charger la stratégie
 Cette option varie en fonction de la vue :
 
-- **Charger la stratégie réelle** : sélectionnez **Réel** dans le groupe d’affichage, puis sélectionnez cette option dans le groupe de stratégie. Le Centre d’aide et de support charge la stratégie client que vous avez actuellement sélectionnée.  
+- **Charger la stratégie réelle** : sélectionnez **Réel** dans le groupe d’affichage, puis sélectionnez cette option dans le groupe de stratégie. Le Centre d’aide et de support charge la stratégie client que vous avez actuellement sélectionnée.  
 
-- **Charger la stratégie demandée** : sélectionnez **Demandé** dans le groupe d’affichage, puis sélectionnez cette option dans le groupe de stratégie. Le Centre d’aide et de support charge la stratégie client demandée du client.  
+- **Charger la stratégie demandée** : sélectionnez **Demandé** dans le groupe d’affichage, puis sélectionnez cette option dans le groupe de stratégie. Le Centre d’aide et de support charge la stratégie client demandée du client.  
 
-- **Charger la stratégie par défaut** : sélectionnez **Par défaut** dans le groupe d’affichage, puis sélectionnez cette option dans le groupe de stratégie. Le Centre d’aide et de support charge la stratégie par défaut pour ce client.  
+- **Charger la stratégie par défaut** : sélectionnez **Par défaut** dans le groupe d’affichage, puis sélectionnez cette option dans le groupe de stratégie. Le Centre d’aide et de support charge la stratégie par défaut pour ce client.  
 
 Sélectionnez la liste déroulante au bas de ce bouton pour accéder à des options supplémentaires :
 
-- **Charger ou actualiser tout** : charge ou actualise simultanément les stratégies active, demandée et par défaut.  
+- **Charger ou actualiser tout** : charge ou actualise simultanément la stratégie réelle, demandée et par défaut.  
 
 #### <a name="actual-view"></a>Vue réelle
 Ouvre la vue de la stratégie réelle
@@ -194,11 +194,11 @@ Le Centre d’aide et de support demande la stratégie client à partir du point
 
 Sélectionnez la liste déroulante au bas de ce bouton pour accéder à des options supplémentaires :  
 
-- **Demander une stratégie** : le Centre d’aide et de support demande la stratégie client à partir du point de gestion.  
+- **Demander une stratégie** : le Centre d’aide et de support demande la stratégie client à partir du point de gestion.  
 
-- **Évaluer la stratégie** : le Centre d’aide et de support évalue la stratégie client sur le client.  
+- **Évaluer la stratégie** : le Centre d’aide et de support évalue la stratégie client sur le client.  
 
-- **Rétablir la stratégie par défaut** : le Centre d’aide et de support indique au client Configuration Manager de réappliquer la stratégie par défaut. Il supprime toutes les stratégies machine et utilisateur sur le client.  
+- **Rétablir la stratégie par défaut** : le Centre d’aide et de support indique au client Gestionnaire de configuration de réappliquer la stratégie par défaut. Il supprime toutes les stratégies machine et utilisateur sur le client.  
 
 #### <a name="listen-for-policy-events"></a>Écouter les événements de stratégie
 Le Centre d’aide et de support est à l’écoute des événements de stratégie. Sélectionnez à nouveau cette option pour désactiver l’écoute des événements de stratégie. Pour afficher les **événements de stratégie**, sélectionnez la flèche au bas de cet onglet. 
@@ -222,30 +222,30 @@ Les éléments suivants de ce menu demandent une action du client associée au c
 
 - **Services d’emplacement**  
 
-    - **Actualiser les emplacements des contenus** : actualise les points de distribution utilisés par les téléchargements de contenu actifs.  
+    - **Actualiser les emplacements des contenus** : actualise les points de distribution utilisés par les téléchargements de contenu actifs.  
 
-    - **Actualiser les points de gestion** : met à jour la liste interne des points de gestion utilisés par le client.  
+    - **Actualiser les points de gestion** : met à jour la liste interne des points de gestion utilisés par le client.  
 
-    - **Faire expirer les demandes de contenu** : met un terme à toutes les demandes d’emplacement de contenu dont la durée d’exécution est trop longue.  
+    - **Faire expirer les demandes de contenu** : met un terme à toutes les demandes d’emplacement de contenu dont la durée d’exécution est trop longue.  
 
- - **Évaluation du déploiement des applications**: démarre une tâche qui évalue les applications déployées.  
+  - **Évaluation du déploiement des applications** : démarre une tâche qui évalue les applications déployées.  
 
- - **Évaluation du déploiement des mises à jour logicielles**: démarre une tâche qui évalue les mises à jour logicielles déployées.  
+  - **Évaluation du déploiement des mises à jour logicielles** : démarre une tâche qui évalue les mises à jour logicielles déployées.  
 
- - **Analyse de la source des mises à jour logicielles**: démarre une tâche qui analyse les emplacements source des mises à jour.  
+  - **Analyse de la source des mises à jour logicielles** : démarre une tâche qui analyse les emplacements source des mises à jour.  
 
- - **Mise à jour de la liste de sources de Windows Installer**: démarre une tâche qui met à jour l'emplacement source pour les installations de Windows Installer (MSI).  
+  - **Mise à jour de la liste de sources de Windows Installer** : démarre une tâche qui met à jour l'emplacement source pour les installations de Windows Installer (MSI).  
 
 #### <a name="content-view"></a>Affichage du contenu
 Consultez les applications, les packages et les mises à jour chargés sur le client. Quand vous sélectionnez une application, un package ou une mise à jour, vous pouvez afficher des détails sur ce contenu. Pour certaines applications, vous pouvez également effectuer les actions suivantes :  
 
- - **Actualiser** : actualise l’affichage des détails  
+ - **Actualiser** : actualiser l’affichage des détails  
 
- - **Vérifier ou Télécharger** : vérifiez qu’une application est disponible pour le téléchargement  
+ - **Vérifier ou Télécharger** : vérifier qu’une application est disponible pour le téléchargement  
 
- - **Installer** : installez l’application  
+ - **Installer** : installer l’application  
 
- - **Désinstaller** : désinstallez l’application  
+ - **Désinstaller** : Désinstaller l'application  
 
 #### <a name="cache-view"></a>Vue Cache
 Affichez la configuration du cache client et les détails sur le contenu du cache. Lorsque vous connectez le Centre d’aide et de support à un client local, vous pouvez également effectuer les actions suivantes :  
@@ -258,23 +258,23 @@ Affichez la configuration du cache client et les détails sur le contenu du cach
 
 Cette vue montre les propriétés suivantes :  
 
- - **Emplacement** : emplacement de chaque dossier de cache. Sélectionnez ce lien pour ouvrir le dossier dans l’Explorateur Windows.   
+ - **Emplacement** : emplacement de chaque dossier de cache. Sélectionnez ce lien pour ouvrir le dossier dans l’Explorateur Windows.   
  - **ID du contenu**  
  - **ID du cache**  
  - **Size**  
- - **Dernière référence le** : cette propriété est la date à laquelle le client a lu ou écrit dans cet élément du cache.  
+ - **Dernière référence le** : cette propriété est la date à laquelle le client a lu ou écrit pour la dernière fois dans cet élément du cache.  
 
 #### <a name="monitoring-view"></a>Vue Analyse
 Sélectionnez **Analyse** pour afficher la progression des déploiements des mises à jour logicielles et d’application. Cette vue affiche les messages d'état déclenchés à partir de l'application et les messages d'événement WMI des mises à jour logicielles.
 
 Pour chaque événement, cette vue montre les propriétés suivantes :  
 
- - **Heure** : heure à laquelle le client a déclenché l’événement  
- - **Type de rubrique** : type du message d’état  
- - **ID de rubrique**: ID du message d'état, utilisé pour le mappage à des événements des fichiers journaux  
- - **Type d’ID de rubrique** : sous-type du message d’état  
- - **ID d’état** : résultat de l’action que vous analysez  
- - **Détails** et **Données d’événement** : informations supplémentaires sur les messages d’état affichés dans cette vue. Les détails d'état peuvent parfois être vides.  
+ - **Heure** : heure à laquelle le client a déclenché l’événement  
+ - **Type de rubrique** : le type du message d'état  
+ - **ID de rubrique** : ID du message d'état, utilisé pour le mappage à des événements des fichiers journaux  
+ - **Type d’ID de rubrique** : sous-type du message d’état  
+ - **ID d’état** : résultat de l’action que vous surveillez  
+ - **Détails** et **Données d’événement** : informations supplémentaires sur les messages d’état affichés dans cette vue. Les détails d'état peuvent parfois être vides.  
 
 
 
@@ -292,19 +292,19 @@ Le Centre d’aide et de support charge ou actualise la liste d’inventaire cli
 
 Les éléments suivants de ce menu demandent une action du client associée à l’inventaire :  
 
- - **Cycle de collecte des données de découverte (pulsation)**  : déclenche la tâche du client utilisée pour collecter les informations de découverte d’appareil  
+ - **Cycle de collecte des données de découverte (pulsation)** : déclenche la tâche du client utilisée pour collecter les informations de découverte d’appareil  
 
- - **Cycle de collecte de fichiers** : déclenche la tâche du client utilisée pour collecter les fichiers locaux  
+ - **Cycle de collecte de fichiers** : déclenche la tâche du client utilisée pour collecter les fichiers locaux  
 
- - **Cycle d’inventaire matériel** : déclenche la tâche du client utilisée pour collecter les données d’inventaire matériel  
+ - **Cycle d’inventaire matériel** : déclenche la tâche du client utilisée pour collecter les données d’inventaire matériel  
 
- - **Cycle de collecte IDMIF** : déclenche la tâche du client utilisée pour collecter des données IDMIF  
+ - **Cycle de collecte IDMIF** : déclenche la tâche du client utilisée pour collecter des données IDMIF  
 
- - **Cycle d’inventaire logiciel** : déclenche la tâche du client utilisée pour collecter les données d’inventaire logiciel  
+ - **Cycle d’inventaire logiciel** : déclenche la tâche du client utilisée pour collecter les données d’inventaire logiciel  
 
- - **Cycle du rapport de contrôle de logiciel**: déclenche la tâche du client utilisée pour générer un rapport de contrôle de logiciel et l'envoyer au point de gestion. Suivez la progression de cette tâche dans **SWMTRReportGen.log**.
+ - **Cycle du rapport de contrôle de logiciel** : déclenche la tâche du client utilisée pour générer un rapport de contrôle de logiciel et l'envoyer au point de gestion. Suivez la progression de cette tâche dans **SWMTRReportGen.log**.
 
- - **Envoyer les messages d'état non envoyés de la file d'attente**: déclenche la tâche du client qui permet de vider la file d'attente de messages d'état.
+ - **Envoyer les messages d’état non envoyés de la file d’attente** : déclenche la tâche du client qui permet de vider la file d'attente de messages d'état.
 
  - **Avancé**  
      - **Cycle d’inventaire matériel (resynchronisation complète)**  
@@ -314,19 +314,19 @@ Les éléments suivants de ce menu demandent une action du client associée à l
 #### <a name="views"></a>Affichages
 Si une fonctionnalité n’est pas activée, la vue n’affiche aucune donnée. 
 
-- **État** : affiche les jeux de données d’inventaire que le client a collectés  
+- **État** : affiche les jeux de données d’inventaire que le client a collectés  
 
-- **DDR** : informations sur les données de découverte client collectées à partir du client  
+- **DDR** : informations sur les données de découverte client collectées à partir du client  
 
-- **HINV** : informations sur les données d’inventaire matériel collectées à partir du client  
+- **HINV** : informations sur les données d’inventaire matériel collectées à partir du client  
 
-- **SINV** : informations sur les données d’inventaire matériel collectées à partir du client  
+- **SINV** : informations sur les données d’inventaire matériel collectées à partir du client  
 
-- **Regroupement de fichiers** : informations sur les fichiers collectés à partir du client  
+- **Regroupement de fichiers** : informations sur les fichiers collectés à partir du client  
 
-- **IDMIF** : informations sur les données IDMIF et NOIDMIF collectées à partir du client  
+- **IDMIF** : informations sur les données IDMIF et NOIDMIF collectées à partir du client  
 
-- **Contrôle** : informations sur les données de contrôle de logiciel collectées à partir du client  
+- **Contrôle** : informations sur les données de contrôle de logiciel collectées à partir du client  
 
 
 
@@ -348,13 +348,13 @@ Résolvez certains des problèmes les plus courants liés aux clients Configurat
 #### <a name="start"></a>Démarrer
 Démarre la résolution des problèmes du client
 
-- **Active Directory** : interroge Active Directory pour récupérer les informations publiées du site Configuration Manager  
-- **MPCERTIFICATE** : obtient les certificats des points de gestion  
-- **MPLIST** : obtient la liste des points de gestion  
-- **MPKEYINFORMATION** : obtient les informations de clé de chiffrement des points de gestion  
-- **Mise en réseau** : permet de résoudre les problèmes de mise en réseau  
-- **Attributions de stratégies** : récupère les attributions de stratégies  
-- **Enregistrement** : vérifie que le client est inscrit auprès du site  
+- **Active Directory** : interroge Active Directory pour récupérer les informations publiées du site Configuration Manager  
+- **MPCERTIFICATE** : Obtient les certificats du point de gestion  
+- **MPLIST** : Obtient une liste des points de gestion  
+- **MPKEYINFORMATION** : obtient les informations de clé de chiffrement des points de gestion  
+- **Réseau** : Permet de résoudre les problèmes de mise en réseau  
+- **Attributions de stratégies** : Récupère les attributions de stratégies  
+- **Enregistrement** : vérifie que le client est inscrit auprès du site  
 
 #### <a name="view-selected-log"></a>Afficher le journal sélectionné
 Après avoir sélectionné une ligne sous l’onglet Résolution des problèmes, sélectionnez cette action pour consulter le fichier journal.
@@ -373,9 +373,9 @@ Cet onglet est presque identique à l’outil **Visionneuse du journal**. L’ou
 #### <a name="configure-client-logging"></a>Configurer la journalisation du client
 
 Spécifiez les options suivantes : 
-- **Niveau de consignation client** : taille des fichiers et niveau de détail des journaux  
-- **Nombre maximal de fichiers** : permet d’autoriser plusieurs fichiers journaux d’un type donné  
-- **Taille de fichier maximale** : taille en octets d’un fichier journal donné avant que le client crée un nouveau journal  
+- **Niveau de consignation client** : taille de fichier et niveau de détail des journaux  
+- **Nombre maximal de fichiers** : permet d’autoriser plusieurs fichiers journaux d’un type donné  
+- **Taille de fichier maximale** : taille en octets d’un fichier journal donné avant que le client crée un journal  
 
 > [!NOTE]  
 > Si vous définissez des valeurs trop basses, le client ne peut pas consigner d’informations utiles. Si vous définissez des valeurs trop élevées, les journaux du client peuvent consommer un volume important de stockage.  
@@ -429,15 +429,15 @@ Ferme la visionneuse du journal du Centre d’aide et de support
 Le Centre d’aide et de support vous invite à sélectionner un ou plusieurs fichiers journaux à ouvrir.
 
 Sélectionnez la liste déroulante au bas du bouton **Ouvrir les fichiers journaux** dans le ruban, puis sélectionnez l’une des options supplémentaires suivantes : 
-- **Ouvrir les fichiers journaux dans l’affichage actuel** : ouvre les fichiers journaux sélectionnés dans la vue actuelle  
-- **Ouvrir les fichiers journaux dans une nouvelle fenêtre** : ouvre les fichiers journaux sélectionnés dans une nouvelle fenêtre **Visionneuse du journal**  
+- **Ouvrir les fichiers journaux dans l’affichage actuel** : ouvre les fichiers journaux sélectionnés dans l’affichage actuel  
+- **Ouvrir les journaux dans une nouvelle fenêtre** : ouvre les fichiers journaux sélectionnés dans une nouvelle fenêtre **Visionneuse du journal**  
 
 #### <a name="close-and-clear-logs"></a>Fermer et effacer les journaux
 Ferme tous les fichiers journaux ouverts. Efface également toutes les entrées de fichier journal affichées dans la fenêtre. Le Centre d’aide et de support n’affichera plus ces entrées.
 
 Sélectionnez la liste déroulante au bas du bouton **Fermer et effacer les journaux** dans le ruban, puis sélectionnez l’une des options supplémentaires suivantes : 
-- **Effacer toutes les entrées** : efface toutes les entrées de fichier journal affichées dans la fenêtre. Le Centre d’aide et de support n’affichera plus ces entrées.  
-- **Fermer tous les journaux** : ferme tous les fichiers journaux ouverts  
+- **Effacer toutes les entrées** : Efface toutes les entrées de fichier journal affichées dans la fenêtre. Le Centre d’aide et de support n’affichera plus ces entrées.  
+- **Fermer tous les journaux** : Ferme tous les fichiers journaux ouverts  
 
 #### <a name="find"></a>Trouver
 Ouvre la boîte de dialogue **Rechercher**. Entrez une chaîne à rechercher. Pour éviter les correspondances sur des chaînes courtes dans d’autres chaînes, vous pouvez choisir de rechercher des mots entiers. Vous pouvez également décider d’effectuer une recherche respectant la casse pour la chaîne.
@@ -450,27 +450,27 @@ Après avoir trouvé au moins deux correspondances pour la chaîne que vous rech
 
 #### <a name="options"></a>Options
 
-- **Mise à jour dynamique** : analysez un fichier journal actuellement ouvert pour rechercher des modifications. Cette fonctionnalité ne fonctionne pas quand plusieurs fichiers journaux sont ouverts. Cette option est activée par défaut.  
+- **Mise à jour dynamique** : surveillez un fichier journal actuellement ouvert pour rechercher des modifications. Cette fonctionnalité ne fonctionne pas quand plusieurs fichiers journaux sont ouverts. Cette option est activée par défaut.  
 
-- **Défilement automatique** : si vous avez également choisi l’option **Mise à jour dynamique**, cette option permet de faire défiler la vue du journal pour afficher les dernières entrées ajoutées. Cette fonctionnalité ne fonctionne pas quand plusieurs fichiers journaux sont ouverts. Cette option est activée par défaut.  
+- **Défilement automatique** : si vous avez également choisi l’option **Mise à jour dynamique**, cette option permet de faire défiler automatiquement la vue du journal pour afficher les dernières entrées ajoutées. Cette fonctionnalité ne fonctionne pas quand plusieurs fichiers journaux sont ouverts. Cette option est activée par défaut.  
 
-- **Afficher les détails** : quand vous sélectionnez un message de fichier journal, les détails du message du fichier journal sont affichés au bas de l’onglet **Journaux**. Cette option est activée par défaut.  
+- **Afficher les détails** : quand vous sélectionnez un message de fichier journal, les détails du message du fichier journal sont affichés au bas de l’onglet **Journaux**. Cette option est activée par défaut.  
 
-- **Filtre rapide** : filtrez les messages de fichier journal dans tous les fichiers journaux ouverts pour rechercher une chaîne spécifique. Vous pouvez filtrer par texte du journal, nom du composant et ID de thread Pour rechercher des messages de journal similaires, cliquez avec le bouton droit sur un message de journal et sélectionnez **Filtre rapide** sur le texte du journal.  
+- **Filtre rapide** : filtrez les messages de fichier journal dans tous les fichiers journaux ouverts pour rechercher une chaîne spécifique. Vous pouvez filtrer par texte du journal, nom du composant et ID de thread Pour rechercher des messages de journal similaires, cliquez avec le bouton droit sur un message de journal et sélectionnez **Filtre rapide** sur le texte du journal.  
 
-- **Retour automatique du texte du journal** : renvoyez à la ligne les messages longs et multilignes afin qu’ils tiennent dans une seule colonne. Ce comportement facilite la lecture des messages. Cette option est activée par défaut.  
+- **Retour automatique du texte du journal** : renvoyez à la ligne les messages longs et multilignes afin qu’ils tiennent dans une seule colonne. Ce comportement facilite la lecture des messages. Cette option est activée par défaut.  
 
-- **Affichage des entrées brutes du journal** : affiche les lignes de journal non traitées.  
+- **Affichage des entrées brutes du journal** : affiche les lignes de journal non traitées.  
 
-- **Filtres avancés** : ouvrez la boîte de dialogue **Filtres avancés**. Pour plus d’informations, consultez [Filtres de fichier journal avancés](#bkmk_adv-filters).  
+- **Filtres avancés** : ouvrez la boîte de dialogue **Filtres avancés**. Pour plus d’informations, consultez [Filtres de fichier journal avancés](#bkmk_adv-filters).  
 
-- **Liens de code d’erreur** : les codes d’erreur sont mis en surbrillance et interactifs dans le texte du journal. Cette option est activée par défaut.  
+- **Liens de code d’erreur** : les codes d’erreur sont mis en surbrillance et interactifs dans le texte du journal. Cette option est activée par défaut.  
 
 #### <a name="error-lookup"></a>Recherche d'erreurs
 Entrez un code d’erreur pour le rechercher dans les fichiers journaux ouverts. Utilisez les formats de code d’erreur suivants :
- - **Entier 32 bits (signé)**  : par exemple, `-2147024891`  
- - **Entier 32 bits (non signé)**  : par exemple, `2147942405`  
- - **Hexadécimal 32 bits** : par exemple, `0x80070005`  
+ - **Entier 32 bits (signé)** : Par exemple, `-2147024891`  
+ - **Entier 32 bits (non signé)** : Par exemple, `2147942405`  
+ - **Hexadécimal 32 bits** : Par exemple, `0x80070005`  
 
 #### <a name="decode-certificate"></a>Décoder un certificat
 Dans la boîte de dialogue **Décoder un certificat**, collez la valeur sérialisée de n’importe quel certificat sur le client. Recherchez cette valeur dans le Registre, les fichiers journaux ou WMI. Sélectionnez **Processus** pour afficher des informations générales et des détails sur le certificat. Ces informations incluent son chemin de certification. Sélectionnez **Exporter** pour exporter le certificat en tant que fichier  **.cer**.
@@ -497,19 +497,19 @@ Dans la boîte de dialogue Filtres avancés, vous pouvez créer des jeux de filt
 
 3. Dans la boîte de dialogue **Configuration du filtre avancé**, choisissez une colonne et un opérateur :  
 
-    - **Colonne** : choisissez l’emplacement où rechercher les chaînes correspondant à votre filtre :  
+    - **Colonne** : choisir l’emplacement où rechercher les chaînes correspondant à votre filtre :  
 
-         - **Texte du journal** : recherchez dans le texte d’un fichier journal.  
+         - **Texte du journal** : rechercher dans le texte d’un fichier journal  
 
-         - **Gravité des journaux** : recherchez les journaux avec un niveau de gravité spécifique. Définissez ces niveaux de gravité dans le champ **Valeur**.  
+         - **Gravité des journaux** : recherchez des journaux avec un niveau de gravité spécifique. Définissez ces niveaux de gravité dans le champ **Valeur**.  
 
-         - **Composant** : recherchez un composant spécifique par nom.  
+         - **Composant** : rechercher un composant spécifique par nom  
 
-         - **ID de thread** : recherchez les messages de journal dotés d’un ID de thread spécifique.  
+         - **ID de thread** : rechercher les messages de journal dotés d’un ID de thread spécifique  
 
-         - **Fichier source** : recherchez les messages de journal figurant dans un fichier journal spécifique.  
+         - **Fichier source** : rechercher les messages de journal figurant dans un fichier journal spécifique  
 
-    - **Opérateur** : choisissez un opérateur pour votre filtre.  
+    - **Opérateur** : choisir un opérateur pour votre filtre  
 
 4. Entrez une valeur de filtre dans le champ **Valeur**. Si la valeur contient des expressions régulières, sélectionnez **Permettre une correspondance d’expression régulière**.  
 
@@ -626,11 +626,11 @@ Cet onglet affiche l’ensemble des données WMI du client Configuration Manager
 #### <a name="find"></a>Trouver
 Ouvre la boîte de dialogue Rechercher, qui propose les fonctionnalités suivantes :  
 
-- **Chaîne à rechercher** : entrez une chaîne à rechercher dans le jeu de données WMI. Les caractères génériques sont pris en charge.  
+- **Chaîne à rechercher** : entrez une chaîne à rechercher dans le jeu de données WMI. Les caractères génériques sont pris en charge.  
 
-- **Consulter**: choisissez si vous souhaitez chercher dans le jeu de données WMI un **Nom de classe ou d'instance**, une **Propriété**ou une **Valeur**.  
+- **Consulter** : choisissez si vous souhaitez chercher dans le jeu de données WMI un **Nom de classe ou d’instance**, une **Propriété** ou une **Valeur**.  
 
-- **Mot entier seulement** : par défaut, la boîte de dialogue Rechercher recherche les chaînes qui contiennent la chaîne que vous recherchez. Cochez cette case pour ne rechercher que les chaînes qui correspondent exactement à la chaîne recherchée.  
+- **Mot entier seulement** : par défaut, la boîte de dialogue Rechercher recherche les chaînes qui contiennent la chaîne que vous recherchez. Cochez cette case pour ne rechercher que les chaînes qui correspondent exactement à la chaîne recherchée.  
 
 #### <a name="find-next"></a>Rechercher suivant
 Ce bouton ouvre l'instance suivante de la chaîne que vous avez indiquée dans la boîte de dialogue Rechercher dans le jeu de données WMI.
@@ -649,11 +649,11 @@ Enregistrez une copie de la clé de Registre et des sous-clés que vous sélecti
 #### <a name="find"></a>Trouver
 Ouvre la boîte de dialogue Rechercher, qui propose les fonctionnalités suivantes :  
 
-- **Chaîne à rechercher** : entrez une chaîne à rechercher dans le jeu de données WMI. Les caractères génériques sont pris en charge.  
+- **Chaîne à rechercher** : entrez une chaîne à rechercher dans le jeu de données WMI. Les caractères génériques sont pris en charge.  
 
-- **Consulter**: choisissez si vous souhaitez chercher dans le jeu de données WMI un **Nom de classe ou d'instance**, une **Propriété**ou une **Valeur**.  
+- **Consulter** : choisissez si vous souhaitez chercher dans le jeu de données WMI un **Nom de classe ou d’instance**, une **Propriété** ou une **Valeur**.  
 
-- **Mot entier seulement** : par défaut, la boîte de dialogue Rechercher recherche les chaînes qui contiennent la chaîne que vous recherchez. Cochez cette case pour ne rechercher que les chaînes qui correspondent exactement à la chaîne recherchée.  
+- **Mot entier seulement** : par défaut, la boîte de dialogue Rechercher recherche les chaînes qui contiennent la chaîne que vous recherchez. Cochez cette case pour ne rechercher que les chaînes qui correspondent exactement à la chaîne recherchée.  
 
 #### <a name="find-next"></a>Rechercher suivant
 Ce bouton ouvre l'instance suivante de la chaîne que vous avez indiquée dans la boîte de dialogue Rechercher dans le jeu de données WMI.
@@ -669,11 +669,11 @@ L'onglet **Stratégie** permet d'afficher les données de stratégie du groupe d
 #### <a name="find"></a>Trouver
 Ouvre la boîte de dialogue Rechercher, qui propose les fonctionnalités suivantes :  
 
-- **Chaîne à rechercher** : entrez une chaîne à rechercher dans le jeu de données WMI. Les caractères génériques sont pris en charge.  
+- **Chaîne à rechercher** : entrez une chaîne à rechercher dans le jeu de données WMI. Les caractères génériques sont pris en charge.  
 
-- **Consulter**: choisissez si vous souhaitez chercher dans le jeu de données WMI un **Nom de classe ou d'instance**, une **Propriété**ou une **Valeur**.  
+- **Consulter** : choisissez si vous souhaitez chercher dans le jeu de données WMI un **Nom de classe ou d’instance**, une **Propriété** ou une **Valeur**.  
 
-- **Mot entier seulement** : par défaut, la boîte de dialogue Rechercher recherche les chaînes qui contiennent la chaîne que vous recherchez. Cochez cette case pour ne rechercher que les chaînes qui correspondent exactement à la chaîne recherchée.  
+- **Mot entier seulement** : par défaut, la boîte de dialogue Rechercher recherche les chaînes qui contiennent la chaîne que vous recherchez. Cochez cette case pour ne rechercher que les chaînes qui correspondent exactement à la chaîne recherchée.  
 
 #### <a name="find-next"></a>Rechercher suivant
 Ce bouton ouvre l'instance suivante de la chaîne que vous avez indiquée dans la boîte de dialogue Rechercher dans le jeu de données WMI.

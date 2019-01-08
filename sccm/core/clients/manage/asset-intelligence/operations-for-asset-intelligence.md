@@ -10,16 +10,16 @@ ms.assetid: e8159bd9-5c2b-4d25-82f9-78fcfd732ba9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7d12fb7f3c7e14df57ec23074de23bfcf53e6c4b
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 1bd9afcf12be3bae1e45ea2e0edf8a677e161bcf
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32341166"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420816"
 ---
 # <a name="how-to-use-asset-intelligence-in-system-center-configuration-manager"></a>Guide pratique pour utiliser Asset Intelligence dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Cette rubrique contient des informations destinées à vous aider à gérer les tâches courantes Asset Intelligence dans votre hiérarchie System Center Configuration Manager :  
 
@@ -29,14 +29,14 @@ Cette rubrique contient des informations destinées à vous aider à gérer les 
 ###  <a name="BKMK_AssetIntelligenceHomePage"></a> Page d’accueil d’Asset Intelligence  
  La page d'accueil d' **Asset Intelligence** contient un tableau de bord récapitulant les informations du catalogue Asset Intelligence. Sur la page d'accueil, vous pouvez visualiser des informations sur la synchronisation du catalogue et l'état des logiciels inventoriés. La page d'accueil d' **Asset Intelligence** comporte les sections suivantes :  
 
--   **Synchronisation de catalogue**: indique si Asset Intelligence est activé, l’état du point de synchronisation Asset Intelligence, la planification de la synchronisation, si la déclaration de licence du client est importée, la date/heure de la dernière mise à jour de l’état et de la prochaine mise à jour planifiée et le nombre de modifications effectuées après l’installation du système de site du point de synchronisation Asset Intelligence.  
+- **Synchronisation de catalogue** : indique si Asset Intelligence est activé, l'état du point de synchronisation Asset Intelligence, la planification de la synchronisation, si la déclaration de licence du client est importée, la date/heure de la dernière mise à jour de l'état et de la prochaine mise à jour planifiée et le nombre de modifications effectuées après l'installation du système de site du point de synchronisation Asset Intelligence.  
 
-    > [!NOTE]  
-    >  La section de synchronisation du catalogue Asset Intelligence de la page d'accueil **Asset Intelligence** s'affiche uniquement si un rôle de système de site du point de synchronisation Asset Intelligence a été installé.  
+  > [!NOTE]  
+  >  La section de synchronisation du catalogue Asset Intelligence de la page d'accueil **Asset Intelligence** s'affiche uniquement si un rôle de système de site du point de synchronisation Asset Intelligence a été installé.  
 
--   **État des logiciels inventoriés**: indique le nombre et le pourcentage de logiciels, catégories de logiciels et familles de logiciels inventoriés qui sont identifiés par Microsoft, identifiés par un utilisateur administratif, en attente d’identification en ligne ou non identifiés et pas en attente. Les informations affichées dans un tableau indiquent le nombre pour chacun des éléments, tandis que les informations affichées dans le graphique indiquent le pourcentage de chacun des éléments.  
+- **État des logiciels inventoriés** : indique le nombre et le pourcentage de logiciels, de catégories de logiciels et de familles de logiciels identifiés par Microsoft, identifiés par un utilisateur administratif, en attente d'identification en ligne ou non identifiés et non en attente. Les informations affichées dans un tableau indiquent le nombre pour chacun des éléments, tandis que les informations affichées dans le graphique indiquent le pourcentage de chacun des éléments.  
 
- Utilisez la procédure suivante pour afficher les informations Asset Intelligence sur la page d'accueil **Asset Intelligence** .  
+  Utilisez la procédure suivante pour afficher les informations Asset Intelligence sur la page d'accueil **Asset Intelligence** .  
 
 ##### <a name="to-view-asset-intelligence-information-on-the-asset-intelligence-home-page"></a>Pour afficher les informations Asset Intelligence sur la page d'accueil Asset Intelligence  
 
@@ -73,20 +73,20 @@ Cette rubrique contient des informations destinées à vous aider à gérer les 
 
 #### <a name="to-create-a-synchronization-schedule-for-the-asset-intelligence-catalog"></a>Pour créer une planification de synchronisation pour le catalogue Asset Intelligence  
 
-1.  Dans la console Configuration Manager, cliquez sur **Ressources et Conformité**.  
+1. Dans la console Configuration Manager, cliquez sur **Ressources et Conformité**.  
 
-2.  Dans l'espace de travail **Biens et conformité** , cliquez sur **Asset Intelligence**.  
+2. Dans l'espace de travail **Biens et conformité** , cliquez sur **Asset Intelligence**.  
 
-3.  Sur l'onglet **Accueil** , dans le groupe **Créer** , cliquez sur **Synchroniser**, puis sur **Planifier la synchronisation**.  
+3. Sur l'onglet **Accueil** , dans le groupe **Créer** , cliquez sur **Synchroniser**, puis sur **Planifier la synchronisation**.  
 
-4.  Dans la boîte de dialogue **Planification de point de synchronisation Asset Intelligence** , sélectionnez **Activer la synchronisation dans un calendrier**, puis définissez une planification simple ou personnalisée.  
+4. Dans la boîte de dialogue **Planification de point de synchronisation Asset Intelligence** , sélectionnez **Activer la synchronisation dans un calendrier**, puis définissez une planification simple ou personnalisée.  
 
-5.  Cliquez sur **OK** pour enregistrer les modifications.  
+5. Cliquez sur **OK** pour enregistrer les modifications.  
 
-    > [!NOTE]  
-    >  Pour plus d’informations sur la planification de la synchronisation, y compris la prochaine synchronisation planifiée, consultez le nœud **Asset Intelligence** dans l’espace de travail **Ressources et Conformité** sur le site de niveau supérieur de la hiérarchie.  
+   > [!NOTE]  
+   >  Pour plus d’informations sur la planification de la synchronisation, y compris la prochaine synchronisation planifiée, consultez le nœud **Asset Intelligence** dans l’espace de travail **Ressources et Conformité** sur le site de niveau supérieur de la hiérarchie.  
 
- Utilisez la procédure suivante pour synchroniser manuellement le catalogue Asset Intelligence.  
+   Utilisez la procédure suivante pour synchroniser manuellement le catalogue Asset Intelligence.  
 
 > [!WARNING]  
 >  System Center Online n'accepte qu'une seule demande de synchronisation manuelle sur une période de 12 heures.  
@@ -180,31 +180,31 @@ Cette rubrique contient des informations destinées à vous aider à gérer les 
 
 ##### <a name="to-create-a-user-defined-hardware-requirements"></a>Pour créer une configuration matérielle requise définie par l'utilisateur  
 
-1.  Dans la console Configuration Manager, cliquez sur **Ressources et Conformité**.  
+1. Dans la console Configuration Manager, cliquez sur **Ressources et Conformité**.  
 
-2.  Dans l'espace de travail **Biens et conformité** , cliquez sur **Asset Intelligence**, puis sur **Configuration matérielle requise**.  
+2. Dans l'espace de travail **Biens et conformité** , cliquez sur **Asset Intelligence**, puis sur **Configuration matérielle requise**.  
 
-3.  Dans l'onglet **Accueil** , dans le groupe **Créer** , cliquez sur **Créer la configuration matérielle requise**.  
+3. Dans l'onglet **Accueil** , dans le groupe **Créer** , cliquez sur **Créer la configuration matérielle requise**.  
 
-4.  Sur la page **Général** , spécifiez les informations suivantes :  
+4. Sur la page **Général** , spécifiez les informations suivantes :  
 
-    1.  **Nom du logiciel**: spécifie le nom du logiciel auquel la configuration matérielle requise est associée. Le titre du logiciel ne peut pas exister déjà dans le catalogue Asset Intelligence.  
+   1. **Nom du logiciel** : spécifie le titre du logiciel auquel la configuration matérielle requise est associée. Le titre du logiciel ne peut pas exister déjà dans le catalogue Asset Intelligence.  
 
-    2.  **État de validation**: indique l’état de validation, tel que **Défini par l’utilisateur** , de la configuration matérielle requise. Vous ne pouvez pas modifier ce paramètre.  
+   2. **État de validation** : indique l’état de validation, tel que **Défini par l’utilisateur**, de la configuration matérielle requise. Vous ne pouvez pas modifier ce paramètre.  
 
-    3.  **Vitesse min. du processeur (MHz)**: spécifie la vitesse minimale du processeur, en mégahertz (MHz), nécessaire au logiciel.  
+   3. **Vitesse min. du processeur (MHz)** : spécifie la vitesse minimale (en mégahertz (MHz)) du processeur nécessaire au logiciel.  
 
-    4.  **Mémoire RAM minimum (Ko)**: spécifie la quantité de mémoire vive minimale en kilo-octets (Ko) nécessaire au logiciel.  
+   4. **Mémoire RAM minimum (Ko)** : spécifie la quantité de mémoire RAM minimale en kilo-octets (Ko) nécessaire au logiciel.  
 
-    5.  **Espace disque minimum (Ko)**: spécifie l’espace disque libre minimal en Ko nécessaire au logiciel.  
+   5. **Espace disque minimum (Ko)** : spécifie l'espace disque libre minimal en Ko nécessaire au logiciel.  
 
-    6.  **Taille minimale du disque (Ko)**: spécifie l’espace disque libre minimal en Ko nécessaire au logiciel.  
+   6. **Taille minimale du disque (Ko)** : spécifie la taille de disque libre minimal en Ko nécessaire au logiciel.  
 
-     Cliquez sur **Suivant**.  
+      Cliquez sur **Suivant**.  
 
-5.  Sur la page **Résumé** , vérifiez les paramètres, puis cliquez sur **Suivant**.  
+5. Sur la page **Résumé** , vérifiez les paramètres, puis cliquez sur **Suivant**.  
 
-6.  Sur la page **Dernière étape** , cliquez sur **Fermer** pour quitter l'Assistant.  
+6. Sur la page **Dernière étape** , cliquez sur **Fermer** pour quitter l'Assistant.  
 
 ###  <a name="BKMK_ModifyCategorization"></a> Modifier les informations de catégorisation des logiciels inventoriés  
  Le logiciel prédéfini dans le catalogue Asset Intelligence est configuré avec des informations de catégorisation spécifiques, telles que le nom du produit, le fournisseur, la catégorie du logiciel et la famille du logiciel. Lorsque les informations de catégorisation prédéfinies ne répondent pas à vos besoins, vous pouvez modifier les informations dans les propriétés du titre du logiciel. Lorsque vous modifiez les informations de catégorisation des logiciels prédéfinis, l'état de validation **Validé** des modifications de logiciels devient **Défini par l'utilisateur**.  
@@ -216,27 +216,27 @@ Cette rubrique contient des informations destinées à vous aider à gérer les 
 
 ##### <a name="to-modify-the-categorizations-for-software-titles"></a>Pour modifier les catégorisations des titres de logiciels  
 
-1.  Dans la console Configuration Manager, cliquez sur **Ressources et Conformité**.  
+1. Dans la console Configuration Manager, cliquez sur **Ressources et Conformité**.  
 
-2.  Dans l'espace de travail **Biens et conformité** , cliquez sur **Asset Intelligence**, puis sur **Logiciels inventoriés**.  
+2. Dans l'espace de travail **Biens et conformité** , cliquez sur **Asset Intelligence**, puis sur **Logiciels inventoriés**.  
 
-3.  Sélectionnez le ou les titres de logiciels dont vous voulez modifier les catégorisations.  
+3. Sélectionnez le ou les titres de logiciels dont vous voulez modifier les catégorisations.  
 
-4.  Dans l'onglet **Accueil** , dans le groupe **Propriétés** , cliquez sur **Propriétés**.  
+4. Dans l'onglet **Accueil** , dans le groupe **Propriétés** , cliquez sur **Propriétés**.  
 
-5.  Sur l'onglet **Général** , vous pouvez modifier les informations de catégorisation suivantes :  
+5. Sur l'onglet **Général** , vous pouvez modifier les informations de catégorisation suivantes :  
 
-    -   **Nom du produit**: spécifie le nom du logiciel inventorié.  
+   -   **Nom du produit** : spécifie le titre du logiciel inventorié.  
 
-    -   **Fournisseur**: spécifie le nom du fournisseur qui a développé le logiciel inventorié.  
+   -   **Fournisseur** : spécifie le nom du fournisseur qui a développé le logiciel inventorié.  
 
-    -   **Catégorie**: spécifie la catégorie de logiciels actuellement affectée au logiciel inventorié.  
+   -   **Catégorie** : spécifie la catégorie affectée au titre de logiciel inventorié.  
 
-    -   **Famille**: spécifie la famille de logiciels actuellement affectée au logiciel inventorié.  
+   -   **Famille** : spécifie la famille affectée au titre de logiciel inventorié.  
 
-6.  Cliquez sur **OK** pour enregistrer les modifications.  
+6. Cliquez sur **OK** pour enregistrer les modifications.  
 
- Utilisez la procédure suivante pour restaurer les informations de catégorisation d'origine d'un logiciel.  
+   Utilisez la procédure suivante pour restaurer les informations de catégorisation d'origine d'un logiciel.  
 
 ### <a name="revert-categorization-information-to-original-settings-for-software"></a>Restaurer les paramètres d’origine des informations de catégorisation des logiciels  
  Configuration Manager stocke les informations de catégorisation obtenues de System Center Online dans la base de données. Les informations ne peuvent pas être supprimées. Une fois les informations modifiées, vous pouvez restaurer les informations de catégorisation System Center Online. Vous pouvez également restaurer les paramètres d'origine des logiciels inventoriés qui ne figurent pas dans le catalogue Asset Intelligence.  
@@ -310,24 +310,24 @@ Cette rubrique contient des informations destinées à vous aider à gérer les 
 
 #### <a name="to-resolve-a-software-details-conflict"></a>Pour résoudre un conflit de détails de logiciel  
 
-1.  Dans la console Configuration Manager, cliquez sur **Ressources et Conformité**.  
+1. Dans la console Configuration Manager, cliquez sur **Ressources et Conformité**.  
 
-2.  Dans l'espace de travail **Biens et conformité** , cliquez sur **Asset Intelligence**, puis sur **Logiciels inventoriés**.  
+2. Dans l'espace de travail **Biens et conformité** , cliquez sur **Asset Intelligence**, puis sur **Logiciels inventoriés**.  
 
-3.  Passez en revue la colonne **État** pour les logiciels dont l'état est **Peut être mis à jour** .  
+3. Passez en revue la colonne **État** pour les logiciels dont l'état est **Peut être mis à jour** .  
 
-4.  Sélectionnez le logiciel pour lequel vous devez résoudre un conflit, puis sur l'onglet **Accueil** , dans le groupe **Produit** , puis cliquez sur **Résoudre le conflit**.  
+4. Sélectionnez le logiciel pour lequel vous devez résoudre un conflit, puis sur l'onglet **Accueil** , dans le groupe **Produit** , puis cliquez sur **Résoudre le conflit**.  
 
-5.  Passez en revue les informations suivantes :  
+5. Passez en revue les informations suivantes :  
 
-    -   **Valeur locale**: spécifie les informations existantes de catégorisation de logiciels dans le catalogue Asset Intelligence qui entrent en conflit avec les détails de catégorisation de logiciels System Center Online plus récents.  
+   -   **Valeur locale** : Spécifie les informations de catégorisation de logiciels dans le catalogue Asset Intelligence qui entrent en conflit avec les détails de catégorisation System Center Online récents.  
 
-    -   **Valeur téléchargée**: spécifie les nouvelles informations de catégorisation de logiciels System Center Online pour les informations de catégorisation de logiciels en conflit dans le catalogue Asset Intelligence.  
+   -   **Valeur téléchargée** : Spécifie les nouvelles informations de catégorisation de logiciels System Center Online pour les informations de catégorisation de logiciels en conflit dans le catalogue Asset Intelligence.  
 
-6.  Sélectionnez l'un des paramètres suivants pour résoudre le conflit de détails du logiciel :  
+6. Sélectionnez l'un des paramètres suivants pour résoudre le conflit de détails du logiciel :  
 
-    -   **Ne changez pas la valeur des informations de catalogue modifiées localement**: résout le conflit de détails de logiciel en conservant les informations existantes de catégorisation de logiciels du catalogue Asset Intelligence. Lorsque vous sélectionnez ce paramètre, l'état du logiciel passe de **Peut être mis à jour** à **Défini par l'utilisateur**.  
+   - **Ne changez pas la valeur des informations de catalogue modifiées localement** : Résout le conflit de détails de logiciel en conservant les informations de catégorisation de logiciels du catalogue Asset Intelligence. Lorsque vous sélectionnez ce paramètre, l'état du logiciel passe de **Peut être mis à jour** à **Défini par l'utilisateur**.  
 
-    -   **Remplacez la valeur des informations de catalogue modifiées localement par la valeur System Center Online téléchargée**: résout le conflit de détails de logiciel en remplaçant les informations existantes de catégorisation de logiciels du catalogue Asset Intelligence par les nouvelles informations obtenues depuis System Center Online. Lorsque vous sélectionnez ce paramètre, l'état du logiciel passe de **Peut être mis à jour** à **Validé**.  
+   - **Remplacez la valeur des informations de catalogue modifiées localement par la valeur System Center Online téléchargée** : Résout le conflit de détails de logiciel en remplaçant les informations de catégorisation de logiciels du catalogue Asset Intelligence existant par les nouvelles informations obtenues depuis System Center Online. Lorsque vous sélectionnez ce paramètre, l'état du logiciel passe de **Peut être mis à jour** à **Validé**.  
 
      Cliquez sur **OK** pour enregistrer la résolution du conflit.  

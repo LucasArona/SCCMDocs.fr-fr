@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cc98ee85ffe4fd419ccc2a2e16bf566144f8b670
-ms.sourcegitcommit: ee434c53b3695a039b56298082b6f61f1006d9dd
+ms.openlocfilehash: 6d25c6a11821b73f34c8a3cd6aa95d4a78c86587
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49943306"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418393"
 ---
 # <a name="cryptographic-controls-technical-reference"></a>Informations techniques de référence sur les contrôles de chiffrement
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 
 System Center Configuration Manager utilise la signature et le chiffrement pour sécuriser la gestion des appareils dans la hiérarchie Configuration Manager. La signature permet d’ignorer les données qui ont été modifiées lors du transit. Le chiffrement permet d’empêcher une personne malveillante de lire les données à l’aide d’un analyseur de protocole réseau.  
@@ -100,19 +100,19 @@ System Center Configuration Manager utilise la signature et le chiffrement pour 
 
  Les certificats PKI sont requis pour les scénarios suivants :  
 
--   Quand vous gérez des clients Configuration Manager sur Internet.  
+- Quand vous gérez des clients Configuration Manager sur Internet.  
 
--   Quand vous gérez des clients Configuration Manager sur des appareils mobiles.  
+- Quand vous gérez des clients Configuration Manager sur des appareils mobiles.  
 
--   Lorsque vous gérez des ordinateurs Mac.  
+- Lorsque vous gérez des ordinateurs Mac.  
 
--   Lorsque vous utilisez des points de distribution cloud.  
+- Lorsque vous utilisez des points de distribution cloud.  
 
--   Lorsque vous gérez des ordinateurs Intel AMT hors bande.  
+- Lorsque vous gérez des ordinateurs Intel AMT hors bande.  
 
- Pour la plupart des autres communications Configuration Manager nécessitant des certificats pour l’authentification, la signature ou le chiffrement, Configuration Manager utilise automatiquement les certificats PKI disponibles. S’il n’y a pas de certificats PKI disponibles, Configuration Manager génère des certificats auto-signés.  
+  Pour la plupart des autres communications Configuration Manager nécessitant des certificats pour l’authentification, la signature ou le chiffrement, Configuration Manager utilise automatiquement les certificats PKI disponibles. S’il n’y a pas de certificats PKI disponibles, Configuration Manager génère des certificats auto-signés.  
 
- Configuration Manager n’utilise pas de certificats PKI quand il gère des appareils mobiles à l’aide du connecteur Exchange Server.  
+  Configuration Manager n’utilise pas de certificats PKI quand il gère des appareils mobiles à l’aide du connecteur Exchange Server.  
 
 ### <a name="mobile-device-management-and-pki-certificates"></a>Gestion d’appareils mobiles et certificats PKI  
  Si l’appareil mobile n’a pas été verrouillé par l’opérateur mobile, vous pouvez utiliser Configuration Manager ou Microsoft Intune pour demander et installer un certificat client. Ce certificat fournit une authentification mutuelle entre le client de l’appareil mobile et les systèmes de site Configuration Manager ou les services Microsoft Intune. Si l’appareil mobile est verrouillé, vous ne pouvez pas utiliser Configuration Manager ou Intune pour déployer des certificats.  
@@ -180,39 +180,39 @@ System Center Configuration Manager utilise la signature et le chiffrement pour 
 
  En plus de ce certificat pour chaque serveur de système de site, Configuration Manager génère un certificat auto-signé pour la plupart des rôles de système de site. Lorsqu'il existe plusieurs instances de rôle de système de site dans le même site, ils partagent le même certificat. Par exemple, vous pouvez disposer de plusieurs points de gestion ou de plusieurs points d'inscription dans le même site. Ce certificat auto-signé utilise également l'algorithme SHA-256 et sa longueur de clé est de 2 048 bits. Il est également copié dans le magasin Personnes autorisées sur des serveurs de système de site qui pourront avoir besoin de l'approuver. Les rôles de système de site suivants génèrent ce certificat :  
 
--   Point de service web du catalogue des applications  
+- Point de service web du catalogue des applications  
 
--   Point du site web du catalogue des applications  
+- Point du site web du catalogue des applications  
 
--   Point de synchronisation Asset Intelligence  
+- Point de synchronisation Asset Intelligence  
 
--   Point d'enregistrement de certificat  
+- Point d'enregistrement de certificat  
 
--   Point Endpoint Protection  
+- Point Endpoint Protection  
 
--   Point d'inscription  
+- Point d'inscription  
 
--   Point d’état de secours  
+- Point d’état de secours  
 
--   Point de gestion  
+- Point de gestion  
 
--   Point de distribution multidiffusion  
+- Point de distribution multidiffusion  
 
--   Point de service hors bande  
+- Point de service hors bande  
 
--   Point de Reporting Services  
+- Point de Reporting Services  
 
--   Point de mise à jour logicielle  
+- Point de mise à jour logicielle  
 
--   Point de migration d’état  
+- Point de migration d’état  
 
--   Point du programme de validation d'intégrité système  
+- Point du programme de validation d'intégrité système  
 
--   Connecteur Microsoft Intune  
+- Connecteur Microsoft Intune  
 
- Ces certificats sont gérés automatiquement par Configuration Manager et, si nécessaire, générés automatiquement.  
+  Ces certificats sont gérés automatiquement par Configuration Manager et, si nécessaire, générés automatiquement.  
 
- Configuration Manager utilise également un certificat d’authentification du client pour envoyer des messages d’état du point de distribution vers le point de gestion. Lorsque le point de gestion est configuré pour les connexions client HTTPS uniquement, vous devez utiliser un certificat PKI. Si le point de gestion accepte les connexions HTTP, vous pouvez utiliser un certificat PKI ou choisir d'utiliser un certificat auto-signé qui possède la possibilité d'authentification client, utilise l'algorithme SHA-256 et dont la longueur de clé est de 2 048 bits.  
+  Configuration Manager utilise également un certificat d’authentification du client pour envoyer des messages d’état du point de distribution vers le point de gestion. Lorsque le point de gestion est configuré pour les connexions client HTTPS uniquement, vous devez utiliser un certificat PKI. Si le point de gestion accepte les connexions HTTP, vous pouvez utiliser un certificat PKI ou choisir d'utiliser un certificat auto-signé qui possède la possibilité d'authentification client, utilise l'algorithme SHA-256 et dont la longueur de clé est de 2 048 bits.  
 
 ### <a name="server-communication-between-sites"></a>Communications serveur entre les sites  
  Configuration Manager transfère des données entre les sites en utilisant la réplication de base de données et la réplication basée sur les fichiers. Pour plus d’informations, consultez [Communications entre les points de terminaison](/sccm/core/plan-design/hierarchy/communications-between-endpoints).  
@@ -223,11 +223,11 @@ System Center Configuration Manager utilise la signature et le chiffrement pour 
 
  La réplication de base de données dans Configuration Manager utilise Service Broker SQL Server pour transférer des données entre les sites à l’aide des mécanismes suivants :  
 
--   Connexion SQL Server à SQL Server : cette connexion utilise des informations d’identification Windows pour l’authentification serveur et des certificats auto-signés 1024 bits pour signer et chiffrer les données à l’aide de la norme AES (Advanced Encryption Standard). Si les certificats PKI avec la possibilité d'authentification serveur sont disponibles, ils seront utilisés. Le certificat doit se trouver dans le magasin Personnel pour le magasin de certificats Ordinateur.  
+- Connexion SQL Server à SQL Server : cette connexion utilise des informations d'identification Windows pour l'authentification serveur et des certificats auto-signés 1 024 bits pour signer et chiffrer les données à l'aide de la norme AES (Advanced Encryption Standard). Si les certificats PKI avec la possibilité d'authentification serveur sont disponibles, ils seront utilisés. Le certificat doit se trouver dans le magasin Personnel pour le magasin de certificats Ordinateur.  
 
--   SQL Service Broker : utilise des certificats auto-signés avec 2048 bits pour l’authentification et pour signer et chiffrer les données à l’aide de la norme AES (Advanced Encryption Standard). Le certificat doit se trouver dans la base de données principale SQL Server.  
+- SQL Service Broker : il utilise des certificats auto-signés avec 2 048 bits pour l'authentification et pour signer et chiffrer les données à l'aide de la norme AES (Advanced Encryption Standard). Le certificat doit se trouver dans la base de données principale SQL Server.  
 
- La réplication basée sur des fichiers utilise le protocole SMB (Server Message Block) et l'algorithme SHA-256 pour signer les données qui ne sont pas chiffrées mais elle ne contient aucune donnée sensible. Si vous souhaitez chiffrer ces données, vous pouvez utiliser IPsec. Vous devez effectuer ce chiffrement indépendamment de Configuration Manager.  
+  La réplication basée sur des fichiers utilise le protocole SMB (Server Message Block) et l'algorithme SHA-256 pour signer les données qui ne sont pas chiffrées mais elle ne contient aucune donnée sensible. Si vous souhaitez chiffrer ces données, vous pouvez utiliser IPsec. Vous devez effectuer ce chiffrement indépendamment de Configuration Manager.  
 
 ##  <a name="cryptographic-controls-for-clients-that-use-https-communication-to-site-systems"></a>Contrôles de chiffrement pour les clients qui utilisent la communication HTTPS avec les systèmes de site  
  Lorsque les rôles de système de site acceptent les connexions client, vous pouvez les configurer pour accepter les connexions HTTP et HTTPS, ou uniquement les connexions HTTPS. Les rôles de système de site qui acceptent les connexions à partir d'Internet acceptent uniquement les connexions client via HTTPS.  
@@ -240,17 +240,17 @@ System Center Configuration Manager utilise la signature et le chiffrement pour 
 ### <a name="communication-that-is-unencrypted-when-clients-use-https-communication"></a>Communications non chiffrées quand les clients utilisent la communication HTTPS  
  Lorsque les clients communiquent avec des systèmes de site à l'aide du protocole HTTPS, les communications sont généralement chiffrées via le protocole SSL. Cependant, dans les cas suivants, les clients communiquent avec les systèmes de site sans recourir au chiffrement :  
 
--   le client ne parvient pas à effectuer une connexion HTTPS sur l'Intranet et revient à utiliser le protocole HTTP lorsque les systèmes de site autorisent cette configuration  
+- le client ne parvient pas à effectuer une connexion HTTPS sur l'Intranet et revient à utiliser le protocole HTTP lorsque les systèmes de site autorisent cette configuration  
 
--   Communication vers les rôles de système de site suivants :  
+- Communication vers les rôles de système de site suivants :  
 
-    -   le client envoie des messages d'état au point d'état de secours  
+  -   le client envoie des messages d'état au point d'état de secours  
 
-    -   le client envoie des demandes PXE à un point de distribution compatible PXE  
+  -   le client envoie des demandes PXE à un point de distribution compatible PXE  
 
-    -   Le client envoie les données de notification à un point de gestion  
+  -   Le client envoie les données de notification à un point de gestion  
 
- Les points Reporting services sont configurés pour utiliser HTTP ou HTTPS, indépendamment du mode de communication client.  
+  Les points Reporting services sont configurés pour utiliser HTTP ou HTTPS, indépendamment du mode de communication client.  
 
 ##  <a name="cryptographic-controls-for-clients-chat-use-http-communication-to-site-systems"></a>Contrôles de chiffrement pour les clients qui utilisent la communication HTTP avec les systèmes de site  
  Quand les clients utilisent la communication HTTP avec des rôles de système de site, ils peuvent utiliser des certificats PKI pour l’authentification du client ou bien les certificats auto-signés que Configuration Manager génère. Les certificats auto-signés qui sont générés par Configuration Manager comportent un identificateur d’objet personnalisé utilisé pour la signature et le chiffrement. Ces certificats permettent d’identifier le client de façon unique. Pour tous les systèmes d'exploitation pris en charge sauf Windows Server 2003, ces certificats auto-signés utilisent SHA-256 et ont une longueur de clé de 2 048 bits. Pour Windows Server 2003, SHA1 est utilisé avec une longueur de clé de 1 024 bits.  

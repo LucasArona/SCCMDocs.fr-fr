@@ -10,16 +10,16 @@ ms.assetid: 507bf676-2679-4e4d-8831-3ffc9cf8557e
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 70e6f4ddfa335a08bdf7039274b388b5a468311e
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: c0cff0787549624ab0b987fbacdb6f5b4f9c3ec1
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32341761"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416212"
 ---
 # <a name="how-to-monitor-and-plan-for-power-management-in-system-center-configuration-manager"></a>Comment surveiller et planifier la gestion de l’alimentation dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Utilisez les informations suivantes pour mieux surveiller et planifier la gestion de l’alimentation dans System Center Configuration Manager.  
 
@@ -43,17 +43,17 @@ Utilisez les informations suivantes pour mieux surveiller et planifier la gestio
 ###  <a name="BKMK_Activity"></a> Rapport Activité de l’ordinateur  
  Le rapport **Activité de l'ordinateur** affiche un graphique indiquant l'activité suivante pour un regroupement spécifié sur une période donnée :  
 
--   **Ordinateur allumé** : l'ordinateur a été mis sous tension.  
+- **Ordinateur allumé** : l'ordinateur a été mis sous tension.  
 
--   **Moniteur allumé** : l'écran a été mis sous tension.  
+- **Moniteur allumé** : l'écran a été mis sous tension.  
 
--   **Utilisateur actif** : une activité a été détectée au niveau de la souris ou du clavier de l'ordinateur ou d'une connexion Bureau à distance à l'ordinateur.  
+- **Utilisateur actif** : une activité a été détectée au niveau de la souris ou du clavier de l'ordinateur ou d'une connexion Bureau à distance à l'ordinateur.  
 
- Ce rapport est utilisé pendant les phases de surveillance, de planification et d'application pour comprendre le parallèle entre l'activité de l'ordinateur, l'activité de l'écran et l'activité de l'utilisateur pendant une période de 24 heures. Si vous exécutez le rapport sur un nombre de jours, les données sont agrégées pour cette période. Ce rapport peut vous aider à déterminer les heures d'activité (de pointe) et les heures d'inactivité (heures creuses) types pour le regroupement sélectionné pour déterminer quand il est nécessaire d'appliquer les modes de gestion d'alimentation configurés.  
+  Ce rapport est utilisé pendant les phases de surveillance, de planification et d'application pour comprendre le parallèle entre l'activité de l'ordinateur, l'activité de l'écran et l'activité de l'utilisateur pendant une période de 24 heures. Si vous exécutez le rapport sur un nombre de jours, les données sont agrégées pour cette période. Ce rapport peut vous aider à déterminer les heures d'activité (de pointe) et les heures d'inactivité (heures creuses) types pour le regroupement sélectionné pour déterminer quand il est nécessaire d'appliquer les modes de gestion d'alimentation configurés.  
 
- Le graphique indique les périodes au cours desquelles un ordinateur peut être allumé sans aucune activité de l'utilisateur. Pensez à appliquer des paramètres d'alimentation plus restrictifs durant ces périodes pour réduire les coûts d'électricité des ordinateurs qui sont sous tension, mais pas utilisés. Un ordinateur est considéré actif s'il existe une activité d'ordinateur, d'utilisateur ou de surveillance pendant au moins une minute pour une heure donnée sur le graphique. Si un ordinateur ne signale pas de données de gestion de l'alimentation, il ne figure pas dans le rapport **Activité de l'ordinateur** .  
+  Le graphique indique les périodes au cours desquelles un ordinateur peut être allumé sans aucune activité de l'utilisateur. Pensez à appliquer des paramètres d'alimentation plus restrictifs durant ces périodes pour réduire les coûts d'électricité des ordinateurs qui sont sous tension, mais pas utilisés. Un ordinateur est considéré actif s'il existe une activité d'ordinateur, d'utilisateur ou de surveillance pendant au moins une minute pour une heure donnée sur le graphique. Si un ordinateur ne signale pas de données de gestion de l'alimentation, il ne figure pas dans le rapport **Activité de l'ordinateur** .  
 
- Utilisez les paramètres suivants pour configurer ce rapport.  
+  Utilisez les paramètres suivants pour configurer ce rapport.  
 
 #### <a name="required-report-parameters"></a>Paramètres de rapport obligatoires  
  Les paramètres suivants doivent être spécifiés pour exécuter ce rapport.  
@@ -78,13 +78,13 @@ Utilisez les informations suivantes pour mieux surveiller et planifier la gestio
 ###  <a name="BKMK_Comp_Activity_by_computer"></a> Rapport Activité par ordinateur  
  Le rapport **Activité par ordinateur** contient un graphique qui indique l'activité suivante pour un ordinateur spécifié à une date donnée :  
 
--   **Ordinateur allumé** : l'ordinateur a été mis sous tension.  
+- **Ordinateur allumé** : l'ordinateur a été mis sous tension.  
 
--   **Moniteur allumé** : l'écran a été mis sous tension.  
+- **Moniteur allumé** : l'écran a été mis sous tension.  
 
--   **Utilisateur actif** : une activité a été détectée au niveau de la souris ou du clavier de l'ordinateur ou d'une connexion Bureau à distance à l'ordinateur.  
+- **Utilisateur actif** : une activité a été détectée au niveau de la souris ou du clavier de l'ordinateur ou d'une connexion Bureau à distance à l'ordinateur.  
 
- Ce rapport peut être exécuté indépendamment ou appelé par le rapport **Détails de l'activité de l'ordinateur** .  
+  Ce rapport peut être exécuté indépendamment ou appelé par le rapport **Détails de l'activité de l'ordinateur** .  
 
 > [!NOTE]  
 >  Les informations sur l'activité des ordinateurs sont collectées depuis les ordinateurs clients durant l'inventaire matériel. L'activité pendant un mode de faible ou de forte alimentation appliqué peut être collectée, selon le moment où l'inventaire matériel est exécuté.  
@@ -233,13 +233,13 @@ Utilisez les informations suivantes pour mieux surveiller et planifier la gestio
 ###  <a name="BKMK_Consumption"></a> Rapport Consommation énergétique  
  Le rapport **Consommation énergétique** affiche les informations suivantes :  
 
--   Un graphique indiquant la consommation électrique mensuelle totale des ordinateurs, exprimée en kilowatts/heure (kWh) dans le regroupement spécifié pour la période indiquée.  
+- Un graphique indiquant la consommation électrique mensuelle totale des ordinateurs, exprimée en kilowatts/heure (kWh) dans le regroupement spécifié pour la période indiquée.  
 
--   Un graphique indiquant la consommation électrique moyenne, exprimée en kilowatts/heure (kWh) de chaque ordinateur dans le regroupement spécifié pour la période indiquée.  
+- Un graphique indiquant la consommation électrique moyenne, exprimée en kilowatts/heure (kWh) de chaque ordinateur dans le regroupement spécifié pour la période indiquée.  
 
--   Un tableau montrant la consommation électrique mensuelle totale, exprimée en kilowatts/heure (kWh) et la consommation électrique moyenne des ordinateurs du regroupement spécifié pour la période indiquée.  
+- Un tableau montrant la consommation électrique mensuelle totale, exprimée en kilowatts/heure (kWh) et la consommation électrique moyenne des ordinateurs du regroupement spécifié pour la période indiquée.  
 
- Ces informations peuvent être utilisées pour comprendre les tendances de consommation électrique dans votre environnement. Après avoir appliqué un mode d'alimentation aux ordinateurs du regroupement sélectionné, la consommation électrique des ordinateurs doit diminuer.  
+  Ces informations peuvent être utilisées pour comprendre les tendances de consommation électrique dans votre environnement. Après avoir appliqué un mode d'alimentation aux ordinateurs du regroupement sélectionné, la consommation électrique des ordinateurs doit diminuer.  
 
 > [!NOTE]  
 >  Si vous ajoutez ou supprimez des membres dans le regroupement après avoir appliqué un mode d'alimentation, les résultats du rapport **Consommation énergétique** changent et peuvent compliquer la comparaison des résultats des phases de surveillance et de planification et de la phase d'application.  
@@ -276,13 +276,13 @@ Utilisez les informations suivantes pour mieux surveiller et planifier la gestio
 ###  <a name="BKMK_Consumption_by_Day"></a> Rapport Consommation énergétique journalière  
  Le rapport **Consommation énergétique journalière** affiche les informations suivantes :  
 
--   Un graphique indiquant la consommation électrique journalière totale des ordinateurs, exprimée en kilowatts/heure (kWh), dans le regroupement spécifié pour les 31 derniers jours.  
+- Un graphique indiquant la consommation électrique journalière totale des ordinateurs, exprimée en kilowatts/heure (kWh), dans le regroupement spécifié pour les 31 derniers jours.  
 
--   Un graphique indiquant la consommation électrique quotidienne moyenne en kilowatts/heure (kWh) de chaque ordinateur du regroupement spécifié au cours des 31 derniers jours.  
+- Un graphique indiquant la consommation électrique quotidienne moyenne en kilowatts/heure (kWh) de chaque ordinateur du regroupement spécifié au cours des 31 derniers jours.  
 
--   Un tableau indiquant la consommation électrique quotidienne totale en kilowatts/heure (kWh) et la consommation électrique quotidienne moyenne des ordinateurs du regroupement spécifié pour les 31 derniers jours.  
+- Un tableau indiquant la consommation électrique quotidienne totale en kilowatts/heure (kWh) et la consommation électrique quotidienne moyenne des ordinateurs du regroupement spécifié pour les 31 derniers jours.  
 
- Ces informations peuvent être utilisées pour comprendre les tendances de consommation électrique dans votre environnement. Après avoir appliqué un mode d'alimentation aux ordinateurs du regroupement sélectionné, la consommation électrique des ordinateurs doit diminuer.  
+  Ces informations peuvent être utilisées pour comprendre les tendances de consommation électrique dans votre environnement. Après avoir appliqué un mode d'alimentation aux ordinateurs du regroupement sélectionné, la consommation électrique des ordinateurs doit diminuer.  
 
 > [!NOTE]  
 >  Si vous ajoutez ou supprimez des membres dans le regroupement après avoir appliqué un mode d'alimentation, les résultats du rapport **Consommation énergétique** changent et peuvent compliquer la comparaison des résultats des phases de surveillance et de planification et de la phase d'application.  
@@ -317,15 +317,15 @@ Utilisez les informations suivantes pour mieux surveiller et planifier la gestio
 ###  <a name="BKMK_Cost"></a> Rapport Coût énergétique  
  Le rapport **Coût énergétique** affiche les informations suivantes :  
 
--   Un graphique indiquant le coût mensuel total d'électricité des ordinateurs du regroupement spécifié pour la période indiquée.  
+- Un graphique indiquant le coût mensuel total d'électricité des ordinateurs du regroupement spécifié pour la période indiquée.  
 
--   Un graphique indiquant le coût mensuel moyen d'électricité de chaque ordinateur du regroupement spécifié pour la période indiquée.  
+- Un graphique indiquant le coût mensuel moyen d'électricité de chaque ordinateur du regroupement spécifié pour la période indiquée.  
 
--   Un tableau affichant le coût mensuel total d'électricité et le coût mensuel moyen d'électricité des ordinateurs du regroupement spécifié au cours des 31 derniers jours.  
+- Un tableau affichant le coût mensuel total d'électricité et le coût mensuel moyen d'électricité des ordinateurs du regroupement spécifié au cours des 31 derniers jours.  
 
- Ces informations peuvent être utilisées pour comprendre les tendances de coût d'électricité dans votre environnement. Après avoir appliqué un mode d'alimentation aux ordinateurs du regroupement sélectionné, le coût d'électricité des ordinateurs doit diminuer.  
+  Ces informations peuvent être utilisées pour comprendre les tendances de coût d'électricité dans votre environnement. Après avoir appliqué un mode d'alimentation aux ordinateurs du regroupement sélectionné, le coût d'électricité des ordinateurs doit diminuer.  
 
- Utilisez les paramètres suivants pour configurer ce rapport.  
+  Utilisez les paramètres suivants pour configurer ce rapport.  
 
 #### <a name="required-report-parameters"></a>Paramètres de rapport obligatoires  
  Les paramètres suivants doivent être spécifiés pour exécuter ce rapport.  
@@ -359,15 +359,15 @@ Utilisez les informations suivantes pour mieux surveiller et planifier la gestio
 ###  <a name="BKMK_Cost_by_Day"></a> Rapport Coût énergétique journalier  
  Le rapport **Coût énergétique journalier** affiche les informations suivantes :  
 
--   Un graphique indiquant le coût total d'électricité quotidien des ordinateurs du regroupement spécifié pour les 31 derniers jours.  
+- Un graphique indiquant le coût total d'électricité quotidien des ordinateurs du regroupement spécifié pour les 31 derniers jours.  
 
--   Un graphique indiquant le coût moyen d'électricité quotidien de chaque ordinateur du regroupement spécifié pour les 31 derniers jours.  
+- Un graphique indiquant le coût moyen d'électricité quotidien de chaque ordinateur du regroupement spécifié pour les 31 derniers jours.  
 
--   Un tableau affichant le coût total d'électricité quotidien et le coût moyen d'électricité quotidien des ordinateurs du regroupement spécifié pour les 31 derniers jours.  
+- Un tableau affichant le coût total d'électricité quotidien et le coût moyen d'électricité quotidien des ordinateurs du regroupement spécifié pour les 31 derniers jours.  
 
- Ces informations peuvent être utilisées pour comprendre les tendances de coût d'électricité dans votre environnement. Après avoir appliqué un mode d'alimentation aux ordinateurs du regroupement sélectionné, le coût d'électricité des ordinateurs doit diminuer.  
+  Ces informations peuvent être utilisées pour comprendre les tendances de coût d'électricité dans votre environnement. Après avoir appliqué un mode d'alimentation aux ordinateurs du regroupement sélectionné, le coût d'électricité des ordinateurs doit diminuer.  
 
- Utilisez les paramètres suivants pour configurer ce rapport.  
+  Utilisez les paramètres suivants pour configurer ce rapport.  
 
 #### <a name="required-report-parameters"></a>Paramètres de rapport obligatoires  
  Les paramètres suivants doivent être spécifiés pour exécuter ce rapport.  
@@ -399,15 +399,15 @@ Utilisez les informations suivantes pour mieux surveiller et planifier la gestio
 ###  <a name="BKMK_Environmental_Impact"></a> Rapport Incidence sur l’environnement  
  Le rapport **Incidence sur l'environnement** affiche les informations suivantes :  
 
--   Un graphique indiquant la quantité mensuelle totale de CO2 générée (en tonnes) par les ordinateurs du regroupement spécifié pendant la période indiquée.  
+- Un graphique indiquant la quantité mensuelle totale de CO2 générée (en tonnes) par les ordinateurs du regroupement spécifié pendant la période indiquée.  
 
--   Un graphique indiquant la quantité mensuelle moyenne de CO2 générée (en tonnes) par chaque ordinateur du regroupement spécifié pendant la période indiquée.  
+- Un graphique indiquant la quantité mensuelle moyenne de CO2 générée (en tonnes) par chaque ordinateur du regroupement spécifié pendant la période indiquée.  
 
--   Un tableau indiquant la quantité mensuelle totale de CO2 générée et la quantité mensuelle moyenne de CO2 générée par les ordinateurs du regroupement spécifié pendant la période indiquée.  
+- Un tableau indiquant la quantité mensuelle totale de CO2 générée et la quantité mensuelle moyenne de CO2 générée par les ordinateurs du regroupement spécifié pendant la période indiquée.  
 
- Le rapport **Incidence sur l’environnement** calcule la quantité de CO2 générée (en tonnes) en utilisant la durée pendant laquelle un ordinateur ou un moniteur est resté sous tension sur une période de 24 heures.  
+  Le rapport **Incidence sur l’environnement** calcule la quantité de CO2 générée (en tonnes) en utilisant la durée pendant laquelle un ordinateur ou un moniteur est resté sous tension sur une période de 24 heures.  
 
- Utilisez les paramètres suivants pour configurer ce rapport.  
+  Utilisez les paramètres suivants pour configurer ce rapport.  
 
 #### <a name="required-report-parameters"></a>Paramètres de rapport obligatoires  
  Les paramètres suivants doivent être spécifiés pour exécuter ce rapport.  
@@ -440,13 +440,13 @@ Utilisez les informations suivantes pour mieux surveiller et planifier la gestio
 ###  <a name="BKMK_Environmental_Impact_by_Day"></a> Rapport Incidence journalière sur l’environnement  
  Le rapport **Incidence journalière sur l'environnement** affiche les informations suivantes :  
 
--   Un graphique indiquant la quantité quotidienne totale de CO2 générée (en tonnes) par les ordinateurs du regroupement spécifié pendant les 31 derniers jours.  
+- Un graphique indiquant la quantité quotidienne totale de CO2 générée (en tonnes) par les ordinateurs du regroupement spécifié pendant les 31 derniers jours.  
 
--   Un graphique indiquant la quantité quotidienne moyenne de CO2 générée (en tonnes) par chaque ordinateur du regroupement spécifié pendant les 31 derniers jours.  
+- Un graphique indiquant la quantité quotidienne moyenne de CO2 générée (en tonnes) par chaque ordinateur du regroupement spécifié pendant les 31 derniers jours.  
 
--   Un tableau indiquant la quantité quotidienne totale de CO2 générée et la quantité quotidienne moyenne de CO2 générée par les ordinateurs du regroupement spécifié pendant les 31 derniers jours.  
+- Un tableau indiquant la quantité quotidienne totale de CO2 générée et la quantité quotidienne moyenne de CO2 générée par les ordinateurs du regroupement spécifié pendant les 31 derniers jours.  
 
- Le rapport **Incidence journalière sur l’environnement** calcule la quantité de CO2 générée (en tonnes) en utilisant la durée pendant laquelle un ordinateur ou un moniteur est resté sous tension sur une période de 24 heures.  
+  Le rapport **Incidence journalière sur l’environnement** calcule la quantité de CO2 générée (en tonnes) en utilisant la durée pendant laquelle un ordinateur ou un moniteur est resté sous tension sur une période de 24 heures.  
 
 #### <a name="required-report-parameters"></a>Paramètres de rapport obligatoires  
  Les paramètres suivants doivent être spécifiés pour exécuter ce rapport.  
@@ -534,17 +534,17 @@ Utilisez les informations suivantes pour mieux surveiller et planifier la gestio
 ###  <a name="BKMK_Capabilites"></a> Rapport Fonctions de gestion de l’alimentation  
  Le rapport **Fonctions de gestion de l'alimentation** affiche les fonctions matérielles de gestion de l'alimentation des ordinateurs dans le regroupement spécifique. Ce rapport est généralement utilisé dans la phase de surveillance de la gestion de l'alimentation pour déterminer les fonctions de gestion de l'alimentation des ordinateurs de votre organisation. Les informations affichées dans le rapport peuvent ensuite être utilisées pour créer des regroupements d'ordinateurs auxquels seront appliqués des modes d'alimentation ou qui seront exclus de la gestion de l'alimentation. Les fonctions de gestion de l'alimentation affichées par ce rapport sont les suivantes :  
 
--   **Compatible avec le mode veille** - Indique si l'ordinateur a la possibilité d'entrer en veille s'il est configuré pour ce faire.  
+- **Compatible avec le mode veille** - Indique si l'ordinateur a la possibilité d'entrer en veille s'il est configuré pour ce faire.  
 
--   **Compatible avec le mode veille prolongée** – Indique si l'ordinateur peut entrer en veille prolongée s'il est configuré pour ce faire.  
+- **Compatible avec le mode veille prolongée** – Indique si l'ordinateur peut entrer en veille prolongée s'il est configuré pour ce faire.  
 
--   **Compatible avec la sortie de veille** – Indique si l'ordinateur peut sortir du mode veille s'il est configuré pour ce faire.  
+- **Compatible avec la sortie de veille** – Indique si l'ordinateur peut sortir du mode veille s'il est configuré pour ce faire.  
 
--   **Compatible avec la sortie de veille prolongée** – Indique si l'ordinateur peut sortir du mode veille prolongée s'il est configuré pour ce faire.  
+- **Compatible avec la sortie de veille prolongée** – Indique si l'ordinateur peut sortir du mode veille prolongée s'il est configuré pour ce faire.  
 
- Les valeurs signalées par le rapport **Fonctions de gestion de l'alimentation** indiquent les possibilités de mise en veille et en veille prolongée d'ordinateurs, tels que signalés par Windows. Toutefois, les valeurs signalées ne reflètent pas les cas où les paramètres de BIOS ou de Windows empêchent ces fonctions d'opérer.  
+  Les valeurs signalées par le rapport **Fonctions de gestion de l'alimentation** indiquent les possibilités de mise en veille et en veille prolongée d'ordinateurs, tels que signalés par Windows. Toutefois, les valeurs signalées ne reflètent pas les cas où les paramètres de BIOS ou de Windows empêchent ces fonctions d'opérer.  
 
- Utilisez les paramètres suivants pour configurer ce rapport.  
+  Utilisez les paramètres suivants pour configurer ce rapport.  
 
 #### <a name="required-report-parameters"></a>Paramètres de rapport obligatoires  
  Les paramètres suivants doivent être spécifiés pour exécuter ce rapport.  

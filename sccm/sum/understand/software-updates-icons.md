@@ -10,16 +10,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 63c5ef72-5715-4d86-85a2-71beba469fab
 ms.author: aaroncz
-ms.openlocfilehash: d772b4ede4c8bfe13c68597ec8fe9a1f3dccbf38
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 77c6772682c8eb6d1532c0ea38489a45d2466c30
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32352931"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422859"
 ---
 # <a name="icons-used-for-software-updates-in-system-center-configuration-manager"></a>Icônes utilisées pour les mises à jour logicielles dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Les mises à jour logicielles synchronisées sont affichées dans la console Configuration Manager, où la première colonne de chaque mise à jour logicielle contient une icône indiquant un état spécifique. Les groupes de mises à jour logicielles sont également représentés par une icône qui fournit des informations sur l’état des mises à jour logicielles contenues dans chaque groupe. Cette section fournit des informations sur les icônes des mises à jour logicielles et sur la signification de chaque icône.  
 
@@ -55,17 +55,17 @@ Les mises à jour logicielles synchronisées sont affichées dans la console Con
 
  Les mises à jour logicielles remplacées ont été remplacées par des versions plus récentes de la mise à jour logicielle. En règle générale, une mise à jour logicielle qui en remplace une autre effectue une ou plusieurs des opérations suivantes :  
 
--   Elle optimise, améliore ou s’ajoute au correctif fourni par une ou plusieurs mises à jour logicielles précédemment publiées.  
+- Elle optimise, améliore ou s’ajoute au correctif fourni par une ou plusieurs mises à jour logicielles précédemment publiées.  
 
--   Elle améliore l’efficacité de son package de fichiers de mise à jour logicielle, que les clients installent si la mise à jour logicielle est approuvée pour l’installation. Par exemple, la mise à jour logicielle remplacée peut contenir des fichiers qui ne sont plus pertinents pour le correctif ou pour les systèmes d’exploitation récemment pris en charge par la nouvelle mise à jour logicielle. Ces fichiers ne sont donc pas inclus dans le package de fichiers de la mise à jour logicielle de remplacement.  
+- Elle améliore l’efficacité de son package de fichiers de mise à jour logicielle, que les clients installent si la mise à jour logicielle est approuvée pour l’installation. Par exemple, la mise à jour logicielle remplacée peut contenir des fichiers qui ne sont plus pertinents pour le correctif ou pour les systèmes d’exploitation récemment pris en charge par la nouvelle mise à jour logicielle. Ces fichiers ne sont donc pas inclus dans le package de fichiers de la mise à jour logicielle de remplacement.  
 
--   Met à jour les versions les plus récentes d'un produit, c'est-à-dire, ne s'applique plus aux anciennes versions ou configurations d'un produit. Les mises à jour logicielles peuvent également remplacer d’autres mises à jour logicielles si des modifications ont été apportées pour étendre la prise en charge des langues. Par exemple, une révision récente d’une mise à jour de produit pour Microsoft Office peut supprimer la prise en charge d’un système d’exploitation antérieur, mais ajouter une prise en charge de langues supplémentaires dans la version de mise à jour logicielle initiale.  
+- Met à jour les versions les plus récentes d'un produit, c'est-à-dire, ne s'applique plus aux anciennes versions ou configurations d'un produit. Les mises à jour logicielles peuvent également remplacer d’autres mises à jour logicielles si des modifications ont été apportées pour étendre la prise en charge des langues. Par exemple, une révision récente d’une mise à jour de produit pour Microsoft Office peut supprimer la prise en charge d’un système d’exploitation antérieur, mais ajouter une prise en charge de langues supplémentaires dans la version de mise à jour logicielle initiale.  
 
- Sous l’onglet Règles de remplacement dans Propriétés du composant du point de mise à jour logicielle, vous pouvez indiquer de quelle façon les mises à jour logicielles remplacées doivent être gérées. Pour plus d'informations, voir [Supersedence rules](../plan-design/plan-for-software-updates.md#BKMK_SupersedenceRules).  
+  Sous l’onglet Règles de remplacement dans Propriétés du composant du point de mise à jour logicielle, vous pouvez indiquer de quelle façon les mises à jour logicielles remplacées doivent être gérées. Pour plus d'informations, voir [Supersedence rules](../plan-design/plan-for-software-updates.md#BKMK_SupersedenceRules).  
 
- **Problèmes liés au fonctionnement :**  
+  **Problèmes liés au fonctionnement :**  
 
- Quand cela est possible, déployez la mise à jour logicielle de remplacement sur les ordinateurs clients au lieu de la mise à jour logicielle remplacée. Vous pouvez afficher une liste des mises à jour logicielles qui remplacent la mise à jour logicielle, sous l’onglet **Informations de remplacement** dans les propriétés de mise à jour logicielle.  
+  Quand cela est possible, déployez la mise à jour logicielle de remplacement sur les ordinateurs clients au lieu de la mise à jour logicielle remplacée. Vous pouvez afficher une liste des mises à jour logicielles qui remplacent la mise à jour logicielle, sous l’onglet **Informations de remplacement** dans les propriétés de mise à jour logicielle.  
 
 ### <a name="invalid-icon"></a>Icône Non valide  
  ![icône](../media/Invalid.jpg "Icône Non valide") L’icône avec un X rouge représente une mise à jour logicielle non valide.  
@@ -74,13 +74,13 @@ Les mises à jour logicielles synchronisées sont affichées dans la console Con
 
  Les mises à jour logicielles non valides font partie d’un déploiement actif, mais, pour une raison quelconque, le contenu (fichiers de mise à jour logicielle) n’est pas disponible. Voici les scénarios susceptibles de générer cet état :  
 
--   Vous avez déployé la mise à jour logicielle, mais le fichier de mise à jour logicielle a été supprimé du package de déploiement et n’est plus disponible.  
+- Vous avez déployé la mise à jour logicielle, mais le fichier de mise à jour logicielle a été supprimé du package de déploiement et n’est plus disponible.  
 
--   Vous avez créé un déploiement de mise à jour logicielle sur un site, et l’objet de déploiement a été répliqué sur un site enfant, mais le package de déploiement n’a pas été répliqué sur le site enfant.  
+- Vous avez créé un déploiement de mise à jour logicielle sur un site, et l’objet de déploiement a été répliqué sur un site enfant, mais le package de déploiement n’a pas été répliqué sur le site enfant.  
 
- **Problèmes liés au fonctionnement :**  
+  **Problèmes liés au fonctionnement :**  
 
- Si le contenu d’une mise à jour logicielle est manquant, les clients ne peuvent pas installer la mise à jour logicielle tant que ce contenu n’est pas disponible sur un point de distribution. Vous pouvez redistribuer le contenu aux points de distribution à l’aide de l’action **Redistribuer** . Quand le contenu d’une mise à jour logicielle est manquant dans un déploiement créé sur un site parent, vous devez répliquer ou redistribuer la mise à jour logicielle sur le site enfant. Pour plus d’informations sur la redistribution de contenu, consultez [Gérer le contenu que vous avez distribué](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_manage).  
+  Si le contenu d’une mise à jour logicielle est manquant, les clients ne peuvent pas installer la mise à jour logicielle tant que ce contenu n’est pas disponible sur un point de distribution. Vous pouvez redistribuer le contenu aux points de distribution à l’aide de l’action **Redistribuer** . Quand le contenu d’une mise à jour logicielle est manquant dans un déploiement créé sur un site parent, vous devez répliquer ou redistribuer la mise à jour logicielle sur le site enfant. Pour plus d’informations sur la redistribution de contenu, consultez [Gérer le contenu que vous avez distribué](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_manage).  
 
 ### <a name="metadata-only-icon"></a>Icône Métadonnées uniquement
  ![icône](../media/MetadataOnly.png "Icône Métadonnées uniquement") L’icône avec une flèche bleue représente une mise à jour logicielle de métadonnées uniquement.

@@ -11,16 +11,16 @@ author: aczechowski
 robots: noindex,nofollow
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 8a805d6b7075d61b0e7669200670ac8434eccdf5
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: d58a780ecf6232bd8ef6e7f0d9851ead34486177
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32336559"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53414750"
 ---
 # <a name="capabilities-in-technical-preview-1511-for-system-center-configuration-manager"></a>Fonctionnalités de la version d’évaluation technique 1511 pour System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Technical Preview)*
+*S’applique à : System Center Configuration Manager (Technical Preview)*
 
 Cet article présente les fonctionnalités qui sont disponibles dans la version d’évaluation technique 1511 pour System Center Configuration Manager. Cette version est une installation de base de référence pour la version d’évaluation technique que vous pouvez utiliser pour installer un nouveau site de version d’évaluation technique ou pour effectuer la mise à niveau à partir d’une version antérieure de la version d’évaluation technique.   Avant d’installer cette version de la version d’évaluation technique, passez en revue la rubrique de présentation, [Version d’évaluation technique pour System Center Configuration Manager](/sccm/core/get-started/technical-preview), pour vous familiariser avec les conditions générales et limitations d’utilisation d’une version d’évaluation technique, la mise à jour entre les versions et l’envoi de commentaires sur les fonctionnalités dans une version d’évaluation technique.  
 
@@ -59,15 +59,15 @@ Quand Microsoft publie une nouvelle mise à jour du client de bureau Office 365
 ### <a name="try-it-out"></a>Essayez !  
  Essayez d'exécuter la tâche suivante, puis utilisez les informations fournies au début de cette rubrique pour nous dire si tout a fonctionné comme prévu :  
 
-1.  Vous pouvez synchroniser les mises à jour d’Office 365 avec le serveur de site Configuration Manager et les afficher à partir de la console Configuration Manager.  
+1. Vous pouvez synchroniser les mises à jour d’Office 365 avec le serveur de site Configuration Manager et les afficher à partir de la console Configuration Manager.  
 
-2.  Vous pouvez approuver et déployer avec succès les mises à jour d’Office 365.  
+2. Vous pouvez approuver et déployer avec succès les mises à jour d’Office 365.  
 
-3.  Vous pouvez télécharger et installer correctement les mises à jour d’Office 365 sur les clients.  
+3. Vous pouvez télécharger et installer correctement les mises à jour d’Office 365 sur les clients.  
 
-4.  Vous pouvez vérifier la compatibilité pour les mises à jour d’Office 365 à l’aide de rapports ou de la surveillance dans la console.  
+4. Vous pouvez vérifier la compatibilité pour les mises à jour d’Office 365 à l’aide de rapports ou de la surveillance dans la console.  
 
- Pour une procédure détaillée, consultez [Gérer les mises à jour du client Office 365 avec System Center Configuration Manager Technical Preview](https://technet.microsoft.com/library/mt628083.aspx).  
+   Pour une procédure détaillée, consultez [Gérer les mises à jour du client Office 365 avec System Center Configuration Manager Technical Preview](https://technet.microsoft.com/library/mt628083.aspx).  
 
 ##  <a name="BKMK_AlwasyOn"></a> Prise en charge de SQL Server AlwaysOn pour les bases de données à haute disponibilité  
  Configuration Manager prend désormais en charge l’utilisation d’un groupe de disponibilité SQL Server AlwaysOn pour héberger la base de données de site.  Quand vous installez un nouveau site, vous pouvez indiquer au programme d’installation d’utiliser le groupe de disponibilité au lieu d’une instance normale de SQL Server.  
@@ -131,13 +131,13 @@ Pour installer un site qui utilise un groupe de disponibilité SQL Server
 
 1.  Remplacez les éléments suivants quand le programme d’installation de Configuration Manager vous y invite :  
 
-    -   **Nom SQL Server**: entrez le nom virtuel du point de terminaison que vous avez configuré lors de la création du groupe de disponibilité. Le nom virtuel doit être un nom DNS complet, comme **&lt;serveur_point_de_terminaison\>.fabrikam.com**.  
+    -   **Nom du serveur SQL Server** : entrez le nom virtuel du point de terminaison que vous avez configuré lors de la création du groupe de disponibilité. Le nom virtuel doit être un nom DNS complet, comme **&lt;serveur_point_de_terminaison\>.fabrikam.com**.  
 
-    -   **Instance**: cette valeur doit rester vierge. Il n'y a aucune instance dans cette configuration.  
+    -   **Instance** :  cette valeur doit rester vierge. Il n'y a aucune instance dans cette configuration.  
 
-    -   **Base de données**: entrez le nom de la base de données que vous avez créée sur le réplica principal du groupe de disponibilité.  
+    -   **Base de données** : entrez le nom de la base de données que vous avez créée sur le réplica principal du groupe de disponibilité.  
 
-2.  Ensuite, vous devez fournir un emplacement réseau accessible par chaque serveur SQL Server du groupe :  
+2.  Ensuite, vous devez fournir un emplacement réseau accessible par chaque serveur SQL Server du groupe :  
 
     -   Le compte d'ordinateur et le compte de service de chaque serveur SQL Server nécessitent un accès en contrôle total à cet emplacement.  
 

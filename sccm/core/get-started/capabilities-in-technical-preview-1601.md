@@ -11,16 +11,16 @@ author: aczechowski
 robots: noindex,nofollow
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: f75c27ece3b9a8b490fb136a411a65ac4cbe2129
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: a11abd53a83f52cbb05d2a49c3271becb4cedb64
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32339466"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420190"
 ---
 # <a name="capabilities-in-technical-preview-1601-for-system-center-configuration-manager"></a>Fonctionnalités de la version d’évaluation technique 1601 pour System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Technical Preview)*
+*S’applique à : System Center Configuration Manager (Technical Preview)*
 
 Cet article présente les fonctionnalités qui sont disponibles dans la version d’évaluation technique 1601 pour System Center Configuration Manager. Vous pouvez installer cette version pour mettre à jour et ajouter de nouvelles fonctionnalités à votre site Configuration Manager Technical Preview.      Avant d’installer cette version d’évaluation technique, passez en revue la rubrique de présentation, [Technical Preview pour System Center Configuration Manager](../../core/get-started/technical-preview.md), pour vous familiariser avec les conditions générales et les limitations d’utilisation d’une version d’évaluation technique, la mise à jour entre les versions et l’envoi de commentaires sur les fonctionnalités dans une version d’évaluation technique.  
 
@@ -81,11 +81,11 @@ Dans la version Technical Preview 1601, nous avons ajouté la prise en charge d
 
     -   **Exiger l’inscription dans Azure Active Directory :** Cette règle vérifie si l’appareil de l’utilisateur a fait l’objet d’une jonction d’espace de travail à Azure AD. Dans le cas contraire, l’appareil est automatiquement inscrit dans Azure AD. L’inscription automatique est prise en charge seulement sur Windows 8.1. Pour les PC Windows 7, déployez un fichier MSI pour effectuer l’inscription automatique. Pour plus d’informations, cliquez [ici](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1).  
 
-    -   **Toutes les mises à jour requises installées avec une échéance supérieure à X jours :** Cette règle vérifie si l’appareil de l’utilisateur a toutes les mises à jour obligatoires (spécifiées dans la règle **Mises à jour automatiques requises**) dans le délai et la période de grâce que vous avez spécifiés. Elle installe automatiquement toutes les mises à jour requises en attente.  
+    -   **Toutes les mises à jour requises installées avec une échéance supérieure à un certain nombre de jours :** cette règle vérifie si l’appareil de l’utilisateur a toutes les mises à jour obligatoires (spécifiées dans la règle **Mises à jour automatiques requises**) dans le délai et la période de grâce que vous avez spécifiés. Elle installe automatiquement toutes les mises à jour obligatoires en attente.  
 
-    -   **Exiger le chiffrement de lecteur BitLocker :** Cette règle vérifie si le lecteur principal (par exemple C:\\) de l’appareil est chiffré avec BitLocker. Si le chiffrement BitLocker n’est pas activé sur le lecteur principal, l’accès de l’appareil aux services de messagerie et SharePoint est bloqué.  
+    -   **Exiger le chiffrement de lecteur BitLocker :** cette règle vérifie si le lecteur principal (par exemple C:\\) de l’appareil est chiffré avec BitLocker. Si le chiffrement BitLocker n’est pas activé sur le lecteur principal, l’accès de l’appareil aux services de messagerie et SharePoint est bloqué.  
 
-    -   **Exiger un logiciel anti-programme malveillant :** Cette règle vérifie si le logiciel anti-programme malveillant (System Center Endpoint Protection ou Windows Defender uniquement) est activé et en cours d’exécution.  
+    -   **Exiger un logiciel anti-programme malveillant :** cette règle vérifie si le logiciel anti-programme malveillant (System Center Endpoint Protection ou Windows Defender uniquement) est activé et en cours d’exécution.  
          S’il n’est pas activé, l’accès aux services de messagerie et SharePoint est bloqué.  
 
     Les utilisateurs finaux bloqués en raison d’une non-conformité peuvent consulter des informations sur la conformité dans le Centre logiciel SCCM et lancer une nouvelle évaluation de la stratégie quand les problèmes de conformité sont résolus.  
@@ -94,23 +94,23 @@ Dans la version Technical Preview 1601, nous avons ajouté la prise en charge d
 
     Une nouvelle règle de conformité a été ajoutée à la console Configuration Manager pour vous permettre de spécifier si l’accès doit être autorisé ou refusé aux appareils en fonction de leur état d’intégrité.  Pour créer cette règle, ouvrez l’**Assistant Création de stratégies de conformité** et ajoutez une nouvelle règle.  Sélectionnez comme condition **Signalé comme ne posant aucun problème d’intégrité par le service HAS (Health Attestation Service)** pour la condition et affectez la valeur **True**.  Cette opération permet de garantir que seuls les appareils qui sont signalés comme étant en état d’intégrité auront accès aux ressources de votre entreprise. Pour plus d’informations sur le service d’attestation d’intégrité et sur la façon dont l’intégrité des appareils est signalée dans Intune, consultez [Attestation d’intégrité de l’appareil](#bkmk_devicehealth).  
 
--   **Nouveaux paramètres de stratégie de conformité :** Les nouveaux paramètres de stratégie de conformité vous aident à améliorer la sécurité et la protection sur les appareils utilisés pour accéder aux services de messagerie d’entreprise et SharePoint :  
+-   **Nouveaux paramètres de stratégie de conformité :** les nouveaux paramètres de stratégie de conformité vous aident à améliorer la sécurité et la protection sur les appareils utilisés pour accéder aux services de messagerie d’entreprise et SharePoint :  
 
-    -   **Exiger les mises à jour automatiques :** Vous pouvez obliger les appareils dotés de Windows 8.1 ou version ultérieure à autoriser l’installation automatique des mises à jour, et spécifier la classe des mises à jour qui sont installées.  Vous pouvez choisir d’installer uniquement les mises à jour marquées comme importantes ou d’installer toutes les mises à jour recommandées.  
+    -   **Exiger les mises à jour automatiques :** vous pouvez obliger les appareils dotés de Windows 8.1 ou version ultérieure à autoriser l’installation automatique des mises à jour, et spécifier la classe des mises à jour qui sont installées.  Vous pouvez choisir d’installer uniquement les mises à jour marquées comme importantes ou d’installer toutes les mises à jour recommandées.  
 
          Pour créer une règle pour les mises à jour automatiques, ouvrez l’**Assistant Création de stratégies de conformité** et ajoutez une nouvelle règle.  Sélectionnez **Classification minimale des mises à jour nécessaires** comme condition et définissez-la sur une des valeurs disponibles : **Aucun**, **Recommandé** et **Important**.  
 
-        -   **Aucun :** Les mises à jour logicielles sont installées automatiquement.  
+        -   **Aucun :** les mises à jour logicielles ne sont pas installées automatiquement.  
 
-        -   **Recommandé :** Toutes les mises à jour recommandées sont installées.  
+        -   **Recommandé :** toutes les mises à jour recommandées sont installées  
 
-        -   **Important :** Seules les mises à jour classifiées comme importantes sont installées.  
+        -   **Important :** seules les mises à jour classifiées comme importantes sont installées.  
 
-    -   **Exiger un mot de passe pour déverrouiller des appareils mobiles :** Quand ce paramètre a la valeur **Oui**, les utilisateurs finaux doivent entrer un mot de passe avant de pouvoir accéder à leur appareil.  
+    -   **Exiger un mot de passe pour déverrouiller des appareils mobiles :** Si ce paramètre est défini sur **Oui**, les utilisateurs finaux doivent entrer un mot de passe pour pouvoir accéder à leur appareil.  
 
          Pour créer une règle exigeant un mot de passe pour déverrouiller les appareils mobiles, ouvrez l’**Assistant Création de stratégies de conformité** et ajoutez une nouvelle règle. Sélectionnez **Exiger un mot de passe pour déverrouiller un appareil inactif** comme condition et définissez la valeur sur **True**.  
 
-    -   **Minutes d’inactivité avant demande du mot de passe :** Spécifie la durée d’inactivité au terme de laquelle l’utilisateur doit entrer à nouveau son mot de passe.  
+    -   **Minutes d’inactivité avant demande du mot de passe :**  Spécifie la durée d'inactivité au terme de laquelle l'utilisateur doit entrer à nouveau sont mot de passe.  
 
          Pour créer cette règle, ouvrez l’**Assistant Création de stratégies de conformité** et ajoutez une nouvelle règle. Sélectionnez **Minutes d’inactivité avant qu’un mot de passe soit demandé** comme condition et définissez la valeur sur l’une des options disponibles : 1 minute, 5 minutes, 15 minutes, 30 minutes et 1 heure.  
 
@@ -119,7 +119,7 @@ Dans la version Technical Preview 1601, nous avons ajouté la prise en charge d
      Quand vous activez cette option, les appareils inscrits dans Intune et conformes aux stratégies de conformité sont autorisés à accéder à Exchange sur site. Cette règle remplace la règle par défaut, ce qui signifie que même si vous définissez la règle par défaut de façon à mettre en quarantaine ou à bloquer l’accès, les appareils inscrits et conformes peuvent néanmoins toujours accéder à Exchange sur site.  
      Utilisez ce paramètre quand vous voulez que les appareils inscrits et conformes aient toujours accès à la messagerie via Exchange sur site.  
 
-     Cela est pris en charge sur les plateformes suivantes : Windows Phone 8 et versions ultérieures, iOS 6 et versions ultérieures. Android 4.0 et ultérieur, Samsung Knox Standard 4.0 et ultérieur  
+     Ceci est pris en charge sur les plateformes suivantes :  Windows Phone 8 et versions ultérieures, iOS 6 et versions ultérieures. Android 4.0 et ultérieur, Samsung Knox Standard 4.0 et ultérieur  
 
      Pour utiliser cette option, accédez à la page **Général** de l’**Assistant Configuration de la stratégie d’accès conditionnel** pour Exchange sur site.  
 
@@ -144,17 +144,17 @@ Un client est en ligne s’il est actuellement connecté à un rôle de système
 
 ### <a name="to-view-client-online-status"></a>Pour afficher l’état de connexion du client  
 
-1.  Dans la console Configuration Manager, accédez à **Ressources et Conformité > Vue d’ensemble > Appareils**.  
+1. Dans la console Configuration Manager, accédez à **Ressources et Conformité > Vue d’ensemble > Appareils**.  
 
-2.  Cliquez avec le bouton droit dans l’en-tête de colonne, puis cliquez sur un des champs de l’état de connexion du client pour l’ajouter à la vue des appareils. Les champs sont :  
+2. Cliquez avec le bouton droit dans l’en-tête de colonne, puis cliquez sur un des champs de l’état de connexion du client pour l’ajouter à la vue des appareils. Les champs sont :  
 
-    -   **Statut de connexion de l’appareil** indique si le client est actuellement en ligne ou hors connexion.  
+   -   **Statut de connexion de l’appareil** indique si le client est actuellement en ligne ou hors connexion.  
 
-    -   **Heure de la dernière connexion** : indique quand l’état de connexion du client est passé de hors connexion à en ligne.  
+   -   **Heure de la dernière connexion** : indique quand l’état de connexion du client est passé de hors connexion à en ligne.  
 
-    -   **Heure de la dernière déconnexion** : indique quand l’état de connexion du client est passé de en ligne à hors connexion.  
+   -   **Heure de la dernière déconnexion** : indique quand l’état de connexion du client est passé de en ligne à hors connexion.  
 
- Pour afficher les modifications récentes apportées à l’état du client, actualisez la console.  
+   Pour afficher les modifications récentes apportées à l’état du client, actualisez la console.  
 
 ##  <a name="bkmk_appmgmt1601"></a> Améliorations de la gestion d’applications  
  Dans la version Technical Preview 1601, nous avons ajouté la prise en charge des fonctionnalités suivantes :  

@@ -10,16 +10,16 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ff4cdcc52e9be329fcfa0fd2127c43255c73ad65
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.openlocfilehash: c4cd6c45d21c58459fcd23ee02db4b5900996939
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43893870"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421992"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>À propos des paramètres client dans Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (current branch)*
 
 Vous pouvez gérer tous les paramètres client dans la console Configuration Manager à partir du nœud **Paramètres client** de l’espace de travail **Administration**. Configuration Manager est fourni avec un ensemble de paramètres par défaut. Quand vous modifiez les paramètres client par défaut, ces paramètres sont appliqués à tous les clients de la hiérarchie. Vous pouvez également configurer des paramètres client personnalisés, qui remplacent les paramètres client par défaut lorsque vous les affectez à des regroupements. Pour plus d’informations, consultez [Guide pratique pour configurer les paramètres client](/sccm/core/clients/deploy/configure-client-settings).
 
@@ -100,13 +100,13 @@ Ce paramètre s’applique aux utilisateurs si leur ordinateur se trouve sur l�
 
 Définissez cette option sur **Oui** pour que les utilisateurs reçoivent la stratégie utilisateur sur les ordinateurs basés sur Internet. Les conditions suivantes s’appliquent également :  
 
--   Le client et le site sont configurés pour la [gestion des clients Internet](/sccm/core/clients/manage/plan-internet-based-client-management) ou pour une [passerelle de gestion cloud](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway).  
+- Le client et le site sont configurés pour la [gestion des clients Internet](/sccm/core/clients/manage/plan-internet-based-client-management) ou pour une [passerelle de gestion cloud](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway).  
 
--   Le paramètre **Activer la stratégie utilisateur sur les clients** est défini sur **Oui**.  
+- Le paramètre **Activer la stratégie utilisateur sur les clients** est défini sur **Oui**.  
 
--   Le point de gestion basé sur Internet authentifie correctement l’utilisateur à l’aide de l’authentification Windows (Kerberos ou NTLM). Pour plus d’informations, consultez [Éléments à prendre en considération pour les communications clients à partir d’Internet](/sccm/core/plan-design/hierarchy/communications-between-endpoints#BKMK_clientspan).  
+- Le point de gestion basé sur Internet authentifie correctement l’utilisateur à l’aide de l’authentification Windows (Kerberos ou NTLM). Pour plus d’informations, consultez [Éléments à prendre en considération pour les communications clients à partir d’Internet](/sccm/core/plan-design/hierarchy/communications-between-endpoints#BKMK_clientspan).  
 
--   À compter de la version 1710, la passerelle de gestion cloud peut authentifier l’utilisateur avec Azure Active Directory. Pour plus d’informations, consultez [Déployer des applications disponibles pour l’utilisateur sur des appareils joints à Azure AD](\sccm\apps\deploy-use\deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices).  
+- À compter de la version 1710, la passerelle de gestion cloud peut authentifier l’utilisateur avec Azure Active Directory. Pour plus d’informations, consultez [Déployer des applications disponibles pour l’utilisateur sur des appareils joints à Azure AD](/sccm/apps/deploy-use/deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices).  
 
 Si vous affectez la valeur **Non** à cette option, ou si l’une des conditions ci-dessus n’est pas remplie, un ordinateur sur Internet reçoit uniquement les stratégies ordinateur. Dans ce cas, les utilisateurs peuvent toujours voir, demander et installer des applications à partir d'un catalogue d'applications basé sur Internet. Si ce paramètre a la valeur **Non**, mais que **Activer la stratégie utilisateur sur les clients** a la valeur **Oui**, les utilisateurs ne reçoivent les stratégies utilisateur qu’une fois l’ordinateur connecté à l’intranet.  
 
@@ -154,7 +154,7 @@ Pour plus d’informations sur les trois paramètres suivants, consultez [Notifi
 ### <a name="default-application-catalog-website-point"></a>Point de site Web du catalogue d'applications par défaut
 
 > [!Note]  
-> À compter de la version 1806, le point du site Web du catalogue des applications n’est plus *requis*, mais il est toujours *pris en charge*. Pour plus d'informations, consultez [Configurer le Centre logiciel](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex). 
+> À compter de la version 1806, le point du site Web du catalogue des applications n’est plus *requis*, mais il est toujours *pris en charge*. Pour plus d’informations, consultez [Configurer le Centre logiciel](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex). 
 > 
 > L’**expérience utilisateur Silverlight** pour le point du site web du catalogue des applications n’est plus prise en charge. Pour plus d’informations, consultez [Fonctionnalités supprimées et déconseillées](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
 
@@ -163,7 +163,7 @@ Configuration Manager utilise ce paramètre pour connecter les utilisateurs au c
 ### <a name="add-default-application-catalog-website-to-internet-explorer-trusted-sites-zone"></a>Ajoute un site Web du catalogue d'applications par défaut à la zone des sites de confiance d'Internet Explorer
 
 > [!Note]  
-> À compter de la version 1806, le point du site Web du catalogue des applications n’est plus *requis*, mais il est toujours *pris en charge*. Pour plus d'informations, consultez [Configurer le Centre logiciel](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex). 
+> À compter de la version 1806, le point du site Web du catalogue des applications n’est plus *requis*, mais il est toujours *pris en charge*. Pour plus d’informations, consultez [Configurer le Centre logiciel](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex). 
 > 
 > L’**expérience utilisateur Silverlight** pour le point du site web du catalogue des applications n’est plus prise en charge. Pour plus d’informations, consultez [Fonctionnalités supprimées et déconseillées](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
 
@@ -178,7 +178,7 @@ Si vous conservez la valeur **Non** pour cette option, les clients Configuration
 > [!Important]  
 > À compter de Configuration Manager version 1802, le client n’installe pas automatiquement Silverlight.
 > 
-> À compter de la version 1806, **l’expérience utilisateur Silverlight** pour le point du site Web du catalogue des applications n’est plus prise en charge. Les utilisateurs doivent utiliser le nouveau Centre logiciel. Pour plus d'informations, consultez [Configurer le Centre logiciel](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex).  
+> À compter de la version 1806, **l’expérience utilisateur Silverlight** pour le point du site Web du catalogue des applications n’est plus prise en charge. Les utilisateurs doivent utiliser le nouveau Centre logiciel. Pour plus d’informations, consultez [Configurer le Centre logiciel](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex).  
 
 Ce paramètre doit être **Oui** pour que les utilisateurs utilisent le catalogue d’applications.  
 
@@ -196,7 +196,7 @@ Tapez le nom que les utilisateurs voient dans le Centre logiciel. Ces informatio
 
 Si vous sélectionnez **Oui** pour cette option, tous les ordinateurs clients utilisent le Centre logiciel. Le Centre logiciel répertorie les applications accessibles à l’utilisateur qui étaient auparavant uniquement disponibles dans le catalogue d’applications. Le catalogue d’applications nécessite Silverlight, qui n’est pas un prérequis pour le Centre logiciel.   
 
-À compter de la version 1806, les rôles de point du site Web et de point de service Web du catalogue des applications ne sont plus *requis*, mais ils sont toujours *pris en charge*. Pour plus d'informations, consultez [Configurer le Centre logiciel](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex). 
+À compter de la version 1806, les rôles de point du site Web et de point de service Web du catalogue des applications ne sont plus *requis*, mais ils sont toujours *pris en charge*. Pour plus d’informations, consultez [Configurer le Centre logiciel](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex). 
  
 > [!Note]  
 > L’**expérience utilisateur Silverlight** pour le point du site web du catalogue des applications n’est plus prise en charge. Pour plus d’informations, consultez [Fonctionnalités supprimées et déconseillées](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
@@ -218,19 +218,19 @@ Configurez la manière dont les utilisateurs peuvent lancer l'installation des l
 
 -   **Tous les utilisateurs** : les utilisateurs disposant de toutes les autorisations, sauf Invité.  
 
--   **Administrateurs uniquement** : les utilisateurs doivent être membres du groupe Administrateurs local.  
+-   **Administrateurs uniquement** : l’utilisateur doit être membre du groupe Administrateurs local.  
 
--   **Administrateurs et utilisateurs principaux uniquement**: les utilisateurs doivent être membres du groupe Administrateurs local ou des utilisateurs principaux de l’ordinateur.  
+-   **Administrateurs et utilisateurs principaux uniquement** : les utilisateurs doivent être membres du groupe Administrateurs local ou des utilisateurs principaux de l’ordinateur.  
 
--   **Aucun utilisateur**: aucun utilisateur connecté à un ordinateur client ne peut lancer l’installation des logiciels, mises à jour logicielles et séquences de tâches. Les déploiements requis pour l’ordinateur sont toujours installés à la date d’échéance. Les utilisateurs ne peuvent pas lancer l’installation du logiciel à partir du catalogue d’applications ou du Centre logiciel.  
+-   **Aucun utilisateur** : aucun utilisateur connecté à un ordinateur client ne peut lancer l’installation des logiciels, mises à jour logicielles et séquences de tâches. Les déploiements requis pour l’ordinateur sont toujours installés à la date d’échéance. Les utilisateurs ne peuvent pas lancer l’installation du logiciel à partir du catalogue d’applications ou du Centre logiciel.  
 
 ### <a name="suspend-bitlocker-pin-entry-on-restart"></a>Interrompre l'entrée du code confidentiel BitLocker au redémarrage
 
 Si les ordinateurs exigent une entrée de code PIN BitLocker, cette option contourne la nécessité d’entrer un code PIN quand l’ordinateur redémarre après l’installation d’un logiciel.  
 
--   **Toujours**: Configuration Manager suspend temporairement BitLocker après l'installation d'un logiciel nécessitant un redémarrage de l'ordinateur et qu’un redémarrage a été effectué. Ce paramètre s’applique uniquement à un redémarrage de l’ordinateur lancé par Configuration Manager. Il ne suspend pas l’obligation d’entrer le code PIN BitLocker quand l’utilisateur redémarre l’ordinateur. L’obligation d’entrer un code PIN BitLocker reprend après le démarrage de Windows.
+-   **Toujours** : Configuration Manager suspend temporairement BitLocker après l’installation d’un logiciel nécessitant un redémarrage de l’ordinateur et qu’un redémarrage a été effectué. Ce paramètre s’applique uniquement à un redémarrage de l’ordinateur lancé par Configuration Manager. Il ne suspend pas l’obligation d’entrer le code PIN BitLocker quand l’utilisateur redémarre l’ordinateur. L’obligation d’entrer un code PIN BitLocker reprend après le démarrage de Windows.
 
--   **Jamais** : Configuration Manager ne suspend pas BitLocker après avoir installé un logiciel qui nécessite un redémarrage. Dans ce cas, l’installation du logiciel ne peut être finalisée que lorsque l’utilisateur entre le code confidentiel pour terminer le processus de démarrage standard et charger Windows.
+-   **Jamais** : Configuration Manager ne suspend pas BitLocker après avoir installé un logiciel qui nécessite un redémarrage. Dans ce cas, l’installation du logiciel ne peut être finalisée que lorsque l’utilisateur entre le code confidentiel pour terminer le processus de démarrage standard et charger Windows.
 
 ### <a name="additional-software-manages-the-deployment-of-applications-and-software-updates"></a>D’autres logiciels gèrent le déploiement d’applications et de mises à jour logicielles
 
@@ -247,11 +247,11 @@ Activez cette option uniquement si l'une des conditions suivantes s'applique :
 
 Configurez la façon dont les clients Configuration Manager peuvent exécuter des scripts Windows PowerShell. Vous pouvez utiliser ces scripts pour la détection dans les éléments de configuration de paramètres de conformité. Vous pouvez également envoyer les scripts dans un déploiement sous la forme d’un script standard.  
 
--   **Ignorer** : le client Configuration Manager ignore la configuration Windows PowerShell sur l’ordinateur client afin que les scripts non signés puissent s’exécuter.  
+-   **Ignorer** : le client Configuration Manager ignore la configuration Windows PowerShell sur l’ordinateur client afin que les scripts non signés puissent s’exécuter.  
 
--   **Restreint** : le client Configuration Manager utilise la configuration PowerShell actuelle sur l’ordinateur client. Cette configuration détermine si les scripts non signés peuvent s’exécuter.  
+-   **Restreint** : le client Configuration Manager utilise la configuration PowerShell actuelle sur l’ordinateur client. Cette configuration détermine si les scripts non signés peuvent s’exécuter.  
 
--   **Toutes signées** : le client Configuration Manager exécute les scripts uniquement s’ils sont signés par un éditeur approuvé. Cette restriction s'applique indépendamment de la configuration PowerShell actuelle sur l'ordinateur client.  
+-   **Tous signés** : le client Configuration Manager exécute les scripts uniquement s’ils sont signés par un éditeur approuvé. Cette restriction s'applique indépendamment de la configuration PowerShell actuelle sur l'ordinateur client.  
 
 Cette option nécessite au minimum la version 2.0 de Windows PowerShell. La valeur par défaut est **Toutes signées**.  
 
@@ -259,8 +259,8 @@ Cette option nécessite au minimum la version 2.0 de Windows PowerShell. La val
 >  Si les scripts non signés ne parviennent pas à s’exécuter en raison de ce paramètre client, Configuration Manager signale cette erreur ainsi :  
 >   
 > -   L’espace de travail **Surveillance** dans la console affiche l’ID d’erreur d’état de déploiement **0x87D00327**. Il affiche également la description **Le script n’est pas signé**.  
-> -   Les rapports affichent le type d’erreur **Erreur de découverte**. Les rapports affichent ensuite le code d’erreur **0x87D00327** et la description **Le script n’est pas signé**, ou le code d’erreur  **0x87D00320** et la description **L’environnement d’exécution de scripts n’a pas encore été installé**. Exemple de rapport : **Détails des erreurs des éléments de configuration dans la base de référence de configuration d’un composant**.  
-> -   Le fichier **DcmWmiProvider.log** affiche le message **Le script n’est pas signé (Erreur : 87D00327; Source : CCM)**.  
+> -   Les rapports affichent le type d’erreur **Erreur de découverte**. Les rapports affichent ensuite le code d’erreur **0x87D00327** et la description **Le script n’est pas signé**, ou le code d’erreur  **0x87D00320** et la description **L’environnement d’exécution de scripts n’a pas encore été installé**. Exemple de rapport : **Détails des erreurs des éléments de configuration dans la ligne de base de configuration d’un composant**.  
+> -   Le fichier **DcmWmiProvider.log** affiche le message : **Le script n’est pas signé (Erreur : 87D00327; Source : CCM)**.  
 
 ### <a name="show-notifications-for-new-deployments"></a>Afficher les notifications de nouveaux déploiements
 
@@ -304,7 +304,7 @@ Pour plus d’informations sur les fenêtres de maintenance, consultez [Comment 
 
 
 ##  <a name="endpoint-protection"></a>Endpoint Protection  
->  [!Tip]   
+> [!Tip]
 > En plus des informations suivantes, vous pouvez trouver des détails sur l’utilisation des paramètres du client Endpoint Protection dans [Exemple de scénario : utilisation d’Endpoint Protection pour protéger des ordinateurs contre les programmes malveillants](/sccm/protect/deploy-use/scenarios-endpoint-protection).
 
 ### <a name="manage-endpoint-protection-client-on-client-computers"></a>Gérer le client Endpoint Protection sur les ordinateurs clients
@@ -428,9 +428,9 @@ Pour qu’un fichier MIF soit collecté par un inventaire matériel, il doit se 
 
 Choisissez l’une des options suivantes pour ce paramètre :  
 
--   **Autoriser**: toutes les communications client sont autorisées via la connexion Internet facturée à l’usage, sauf si l’appareil client utilise une connexion de données itinérante.  
+-   **Autoriser** : toutes les communications client sont autorisées via la connexion Internet facturée à l’usage, sauf si l’appareil client utilise une connexion de données itinérante.  
 
--   **Limite**: seules les communications client suivantes sont autorisées via la connexion Internet facturée à l’usage :  
+-   **Limiter** : seules les communications client suivantes sont autorisées via la connexion Internet facturée à l’usage :  
 
     -   Récupération de stratégie client  
 
@@ -445,7 +445,7 @@ Choisissez l’une des options suivantes pour ce paramètre :
 
     Si le client atteint la limite de transfert de données pour la connexion Internet facturée à l’usage, le client n’essaie plus de communiquer avec les sites Configuration Manager.  
 
--   **Bloquer** : le client Configuration Manager n’essaie pas de communiquer avec les sites Configuration Manager quand il se trouve sur une connexion Internet limitée. Il s’agit de l’option par défaut.  
+-   **Bloquer** : le client Configuration Manager n’essaie pas de communiquer avec les sites Configuration Manager quand il se trouve sur une connexion Internet limitée. Il s’agit de l’option par défaut.  
 
 
 
@@ -470,18 +470,18 @@ Pour plus d’informations sur le proxy de mise en éveil, consultez [Planifier 
 
 Ensuite, configurez les paramètres supplémentaires suivants en fonction des besoins :
 
--   **Numéro de port du proxy de mise en éveil (UDP)**  : numéro du port utilisé par les clients pour envoyer des paquets de mise en éveil aux ordinateurs en état de veille. Conservez le port par défaut 25536 ou remplacez-le par le numéro de votre choix.  
+-   **Numéro de port du proxy de mise en éveil (UDP)** : Numéro du port utilisé par les clients pour envoyer des paquets de réveil aux ordinateurs en état de veille. Conservez le port par défaut 25536 ou remplacez-le par le numéro de votre choix.  
 
--   **Numéro de port Wake On LAN (UDP)**  : conservez la valeur par défaut (9), sauf si vous avez changé le numéro du port Wake On LAN (UDP) sous l’onglet **Ports** des **Propriétés** du site.  
+-   **Numéro de port Wake On LAN (UDP)** : Conservez la valeur par défaut (9), sauf si vous avez modifié le numéro du port Wake On LAN (UDP) sous l’onglet **Ports** des **Propriétés** du site.  
 
     > [!IMPORTANT]  
     >  Ce numéro doit correspondre au numéro figurant dans les **Propriétés**du site. Si vous modifiez ce numéro dans un seul emplacement, sachez qu’il n’est pas actualisé automatiquement dans l’autre emplacement.  
 
--   **Exception du pare-feu Windows Defender pour le proxy de mise en éveil** : le client Configuration Manager configure automatiquement le numéro de port du proxy de mise en éveil sur les appareils qui exécutent le Pare-feu Windows Defender. Sélectionnez **Configurer** pour spécifier les profils de pare-feu souhaités.
+-   **Exception du pare-feu Windows Defender pour le proxy de mise en éveil** : Le client Configuration Manager configure automatiquement le numéro de port du proxy de mise en éveil sur les appareils qui exécutent le Pare-feu Windows Defender. Sélectionnez **Configurer** pour spécifier les profils de pare-feu souhaités.
 
     Si les clients exécutent un autre pare-feu, configurez-le manuellement pour autoriser le **Numéro de port du proxy de mise en éveil (UDP)**.  
         
--   **Préfixes IPv6 si nécessaires pour DirectAccess ou d’autres périphériques réseau intervenants. Spécifiez plusieurs entrées en utilisant une virgule** : entrez les préfixes IPv6 nécessaires pour que le proxy de mise en éveil fonctionne sur votre réseau.
+-   **Préfixes IPv6 si nécessaires pour DirectAccess ou d’autres périphériques réseau intervenants. Spécifiez plusieurs entrées en utilisant une virgule** : Entrez les préfixes IPv6 nécessaires pour que le proxy de mise en éveil fonctionne sur votre réseau.
 
 
 
@@ -583,11 +583,11 @@ Définissez cette option sur **Oui** pour utiliser l’authentification au nivea
 ### <a name="select-these-new-settings-to-specify-company-information"></a>Sélectionnez ces nouveaux paramètres pour spécifier des informations sur l'entreprise
 Définissez cette option sur **Oui**, puis spécifiez les paramètres suivants pour personnaliser le Centre logiciel et l’adapter à votre organisation :
 
-- **Nom de la société** : entrez le nom de l’organisation visible par les utilisateurs dans le Centre logiciel.  
+- **Nom de la société** : Entrez le nom d’organisation visible par les utilisateurs dans le Centre logiciel.  
 
-- **Modèle de couleurs pour le Centre logiciel** : cliquez sur **Sélectionner une couleur** pour définir la couleur principale utilisée par le Centre logiciel.  
+- **Modèle de couleurs pour le Centre logiciel** : Choisissez **Sélectionner une couleur** pour définir la couleur principale utilisée par le Centre logiciel.  
 
-- **Sélectionner un logo pour le Centre logiciel** : cliquez sur **Parcourir** pour sélectionner une image à afficher dans le Centre logiciel. Le logo doit être de type JPEG, PNG ou BMP et au format 400 x 100 pixels, avec une taille maximale de 750 Ko. Le nom de fichier du logo ne doit pas contenir d’espace.  
+- **Sélectionner un logo pour le Centre logiciel** : Choisissez **Parcourir** pour sélectionner une image à afficher dans le Centre logiciel. Le logo doit être de type JPEG, PNG ou BMP et au format 400 x 100 pixels, avec une taille maximale de 750 Ko. Le nom de fichier du logo ne doit pas contenir d’espace.  
          
 ### <a name="bkmk_HideUnapproved"></a> Masquer les applications non approuvées dans le Centre logiciel
 À compter de Configuration Manager version 1802, quand vous activez cette option, les applications disponibles pour l’utilisateur qui nécessitent une approbation sont masquées dans le Centre logiciel.   <!--1355146-->
@@ -656,11 +656,11 @@ Si vous souhaitez spécifier les types de fichiers à inventorier, sélectionnez
 
 -   Sélectionnez **Nouveau** pour ajouter un nouveau type de fichier à l’inventaire. Ensuite, spécifiez les informations suivantes dans la boîte de dialogue **Propriétés du fichier inventorié** :  
 
-    -   **Nom** : définissez le nom du fichier à inventorier. Utilisez un astérisque (**&#42;**) comme caractère générique pour représenter une chaîne de texte et un point d’interrogation (**?**) pour représenter n’importe quel caractère. Par exemple, si vous souhaitez inventorier tous les fichiers portant l’extension .doc, spécifiez le nom de fichier **\*.doc**.  
+    -   **Nom** : définissez le nom du fichier à inventorier. Utilisez un astérisque (**&#42;**) comme caractère générique pour représenter une chaîne de texte et un point d’interrogation (**?**) pour représenter n’importe quel caractère. Par exemple, si vous souhaitez inventorier tous les fichiers portant l’extension .doc, spécifiez le nom de fichier **\*.doc**.  
 
     -   **Emplacement** : sélectionnez **Définir** pour ouvrir la boîte de dialogue **Propriétés du chemin d’accès**. Configurez l’inventaire logiciel pour rechercher le fichier défini sur tous les disques durs des clients, effectuer une recherche à un emplacement donné (tel que **C:\Dossier**) ou rechercher une variable (telle que *%windir%*). Vous pouvez également exécuter une recherche dans tous les sous-dossiers du chemin indiqué.  
 
-    -   **Exclure les fichiers chiffrés et compressés**: quand vous choisissez cette option, tous les fichiers compressés ou chiffrés ne sont pas inventoriés.  
+    -   **Exclure les fichiers chiffrés et compressés** : quand vous choisissez cette option, tous les fichiers compressés ou chiffrés ne sont pas inventoriés.  
 
     -   **Exclure des fichiers dans le dossier Windows** : quand vous choisissez cette option, tout fichier présent dans le dossier Windows et ses sous-répertoires n’est pas inventorié.  
 
@@ -677,13 +677,13 @@ Si vous souhaitez collecter des fichiers stockés à partir d’ordinateurs clie
 
 -   Dans la boîte de dialogue **Propriétés du fichier collecté** , fournissez les informations suivantes :  
 
-    -   **Nom** : définissez le nom du fichier à collecter. Utilisez un astérisque (**&#42;**) comme caractère générique pour représenter une chaîne de texte et un point d’interrogation (**?**) pour représenter n’importe quel caractère.  
+    -   **Nom** : définissez le nom du fichier à collecter. Utilisez un astérisque (**&#42;**) comme caractère générique pour représenter une chaîne de texte et un point d’interrogation (**?**) pour représenter n’importe quel caractère.  
 
     -   **Emplacement** : sélectionnez **Définir** pour ouvrir la boîte de dialogue **Propriétés du chemin d’accès**. Configurez l’inventaire logiciel pour rechercher le fichier à collecter sur tous les disques durs des clients, effectuer une recherche à un emplacement donné (tel que **C:\Dossier**) ou rechercher une variable (telle que *%windir%*). Vous pouvez également exécuter une recherche dans tous les sous-dossiers du chemin indiqué.  
 
-    -   **Exclure les fichiers chiffrés et compressés** : quand vous choisissez cette option, tout fichier compressé ou chiffré n’est pas collecté.  
+    -   **Exclure les fichiers chiffrés et compressés** : quand vous choisissez cette option, tout fichier compressé ou chiffré n’est pas collecté.  
 
-    -   **Arrêter le regroupement de fichiers lorsque la taille totale dépasse (Ko)** : spécifiez la taille de fichier, en Ko, au-delà de laquelle le client arrête la collecte des fichiers spécifiés.  
+    -   **Arrêter le regroupement de fichiers lorsque la taille totale dépasse (Ko)** : spécifiez la taille des fichiers, en kilo-octets (Ko), au-delà de laquelle le client arrête le regroupement des fichiers spécifiés.  
 
     > [!NOTE]  
     >  Le serveur de site collecte les cinq dernières versions changées des fichiers collectés et les stocke dans le répertoire `<ConfigMgr installation directory>\Inboxes\Sinv.box\Filecol`. Si un fichier n’a pas changé depuis le dernier cycle d’inventaire logiciel, le fichier n’est pas recollecté.  
@@ -703,11 +703,11 @@ Si vous souhaitez collecter des fichiers stockés à partir d’ordinateurs clie
 
 L’agent d’inventaire logiciel récupère le nom du fabricant et du produit à partir des informations d’en-tête de fichier. Ces noms ne sont pas systématiquement normalisés dans les informations d’en-tête de fichier. Quand vous affichez l’inventaire logiciel dans l’Explorateur de ressources, des versions différentes du même nom de fabricant ou de produit peuvent apparaître. Pour normaliser ces noms complets, sélectionnez **Définir des noms**, puis configurez les paramètres suivants :  
 
--   **Type de nom**  : l’inventaire logiciel collecte des informations sur les produits et les fabricants. Choisissez si vous souhaitez configurer des noms complets pour un **Fabricant** ou un **Produit**.  
+-   **Type de nom** : l'inventaire logiciel recueille des informations sur les produits et les fabricants. Choisissez si vous souhaitez configurer des noms complets pour un **Fabricant** ou un **Produit**.  
 
--   **Nom complet** : spécifiez le nom complet que vous souhaitez utiliser à la place des noms dans la liste **Noms inventoriés**. Sélectionnez **Nouveau** pour spécifier un nouveau nom complet.  
+-   **Nom complet** : spécifiez le nom complet que vous souhaitez utiliser à la place des noms dans la liste **Noms inventoriés**. Sélectionnez **Nouveau** pour spécifier un nouveau nom complet.  
 
--   **Noms inventoriés**: sélectionnez **Nouveau** pour ajouter un nom inventorié. Ce nom est remplacé dans l’inventaire logiciel par le nom choisi dans la liste **Nom complet**. Vous pouvez ajouter plusieurs noms à remplacer.  
+-   **Noms inventoriés** : sélectionnez **Nouveau** pour ajouter un nom inventorié. Ce nom est remplacé dans l’inventaire logiciel par le nom choisi dans la liste **Nom complet**. Vous pouvez ajouter plusieurs noms à remplacer.  
 
 
 

@@ -10,16 +10,16 @@ ms.assetid: aaf43e69-68b4-469a-ad58-9b66deb29057
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7671025b0a643063f30c98922f7da0659e2e1ab9
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 0c04ee9a62b6c629060f79df2f4b104fe78ca794
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456904"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418983"
 ---
 #  <a name="the-data-warehouse-service-point-for-configuration-manager"></a>Point de service de l’entrepôt de données pour Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 <!--1277922--> Utilisez le point de service de l’entrepôt de données pour stocker des données d’historique à long terme et créer des rapports sur celles-ci pour votre déploiement de Configuration Manager.
 
@@ -90,25 +90,25 @@ Quand vous installez le rôle, Configuration Manager crée la base de données d
 
 #### <a name="general-page"></a>Page Général
 
-- **Nom de domaine complet SQL Server** : spécifiez le nom de domaine complet (FQDN) du serveur qui héberge la base de données du point de service de l’entrepôt de données.  
+- **Nom de domaine complet de SQL Server** : spécifiez le nom de domaine complet (FQDN) du serveur qui héberge le point de service de l’entrepôt de données et la base de données.  
 
-- **Nom de l’instance de SQL Server, le cas échéant** : si vous n’utilisez pas l’instance par défaut de SQL Server, spécifiez l’instance nommée.  
+- **Nom d’instance SQL Server, le cas échéant** : si vous n’utilisez pas une instance par défaut de SQL Server, spécifiez l’instance nommée.  
 
-- **Nom de la base de données** : spécifiez le nom de la base de données de l’entrepôt de données. Configuration Manager crée la base de données de l’entrepôt de données en lui donnant ce nom. Si vous spécifiez un nom de base de données qui existe déjà sur l’instance de SQL Server, Configuration Manager utilise cette base de données.  
+- **Nom de la base de données** : indiquez le nom de la base de données de l’entrepôt de données. Configuration Manager crée la base de données de l’entrepôt de données en lui donnant ce nom. Si vous spécifiez un nom de base de données qui existe déjà sur l’instance de SQL Server, Configuration Manager utilise cette base de données.  
 
-- **Port SQL Server utilisé pour la connexion** : spécifiez le numéro de port TCP/IP utilisé par l’instance de SQL Server qui héberge la base de données de l’entrepôt de données. Le service de synchronisation de l’entrepôt de données utilise ce port pour se connecter à la base de données de l’entrepôt de données. Par défaut, il utilise le port SQL Server **1433** pour la communication.  
+- **Port SQL Server utilisé pour la connexion** : spécifiez le numéro de port TCP/IP utilisé par l’instance SQL Server qui héberge la base de données de l’entrepôt de données. Le service de synchronisation de l’entrepôt de données utilise ce port pour se connecter à la base de données de l’entrepôt de données. Par défaut, il utilise le port SQL Server **1433** pour la communication.  
 
-- **Compte de point de service de l’entrepôt de données** : à compter de la version 1802, définissez le **nom d’utilisateur** que SQL Server Reporting Services doit utiliser lors de la connexion à la base de données de l’entrepôt de données.  
+- **Compte de point de service de l’entrepôt de données** : à compter de la version 1802, définissez le **nom d’utilisateur** que SQL Server Reporting Services doit utiliser lors de la connexion à la base de données de l’entrepôt de données.  
 
 
 #### <a name="synchronization-schedule-page"></a>Page Calendrier des synchronisations
 *S’applique à la version 1806 et aux versions antérieures*
 
-- **Heure de début** : indiquez l’heure de début de la synchronisation de l’entrepôt de données.  
+- **Heure de début** : indiquez l’heure de début de la synchronisation de l’entrepôt de données.  
 
 - **Périodicité**
 
-    - **Tous les jours** : permet d’indiquer que la synchronisation doit s’exécuter chaque jour.  
+    - **Tous les jours** : permet d’indiquer que la synchronisation doit s’exécuter chaque jour.  
 
     - **Hebdomadaire** : permet de spécifier une seule journée chaque semaine ainsi qu’une périodicité hebdomadaire pour la synchronisation.
 
@@ -116,16 +116,16 @@ Quand vous installez le rôle, Configuration Manager crée la base de données d
 #### <a name="synchronization-settings-page"></a>Page Paramètres de synchronisation
 *S’applique à la version 1810 et aux versions ultérieures*
 
-- **Paramètre personnalisé de synchronisation de données** : choisissez l’option **Sélectionner des tables**. Dans la fenêtre Tables de base de données, sélectionnez les noms des tables à synchroniser avec la base de données de l’entrepôt de données. Utilisez le filtre pour effectuer une recherche par nom ou sélectionnez la liste déroulante pour choisir des groupes spécifiques. Lorsque vous avez terminé, sélectionnez **OK** pour enregistrer.  
+- **Paramètre personnalisé de synchronisation de données** : choisissez l’option **Sélectionner des tables**. Dans la fenêtre Tables de base de données, sélectionnez les noms des tables à synchroniser avec la base de données de l’entrepôt de données. Utilisez le filtre pour effectuer une recherche par nom ou sélectionnez la liste déroulante pour choisir des groupes spécifiques. Lorsque vous avez terminé, sélectionnez **OK** pour enregistrer.  
 
     > [!Note]  
     > Vous ne pouvez pas supprimer les tables sélectionnées par défaut par le rôle.  
 
-- **Heure de début** : indiquez l’heure de début de la synchronisation de l’entrepôt de données.  
+- **Heure de début** : indiquez l’heure de début de la synchronisation de l’entrepôt de données.  
 
 - **Périodicité**
 
-    - **Tous les jours** : permet d’indiquer que la synchronisation doit s’exécuter chaque jour.  
+    - **Tous les jours** : permet d’indiquer que la synchronisation doit s’exécuter chaque jour.  
 
     - **Hebdomadaire** : permet de spécifier une seule journée chaque semaine ainsi qu’une périodicité hebdomadaire pour la synchronisation.
 
@@ -142,19 +142,19 @@ Une fois que vous aurez installé un point de service de l’entrepôt de donné
 
 Le rôle de système de site de l’entrepôt de données comprend les rapports suivants, qui appartiennent à la catégorie **Entrepôt de données** :  
 
-- **Déploiement de l’application – Historique** : détails du déploiement d’une application donnée pour une machine en particulier.  
+- **Déploiement de l’application - Historique** : Affiche les détails du déploiement d’application pour une application et un ordinateur spécifiques.  
 
-- **Endpoint Protection et Compatibilité des mises à jour logicielles - Historique** : affiche les ordinateurs sur lesquels des mises à jour logicielles n’ont pas été effectuées.  
+- **Endpoint Protection et conformité des mises à jour logicielles - Historique** : Affiche les ordinateurs auxquels il manque des mises à jour logicielles.  
 
-- **Inventaire matériel général – Historique** : tout l’inventaire matériel d’une machine en particulier.  
+- **Inventaire matériel général - Historique** : Affiche tout l’inventaire matériel pour un ordinateur spécifique.  
 
-- **Inventaire logiciel général – Historique** : tout l’inventaire logiciel d’une machine en particulier.  
+- **Inventaire logiciel général - Historique** : Affiche tout l’inventaire logiciel pour un ordinateur spécifique.  
 
-- **Vue d’ensemble de l’intégrité de l’infrastructure – Historique** : vue d’ensemble de l’intégrité de l’infrastructure Configuration Manager.  
+- **Vue d'ensemble de l'intégrité de l'infrastructure - Historique** : Affiche une vue d’ensemble de l’intégrité de votre infrastructure Configuration Manager.  
 
-- **Liste des programmes malveillants détectés – Historique** : programmes malveillants détectés dans l’organisation.  
+- **Liste des programmes malveillants détectés - Historique** :    Affiche les programmes malveillants qui ont été détectés dans l’organisation.  
 
-- **Synthèse de la distribution de logiciels – Historique** : synthèse de la distribution de logiciels pour une publication et une machine en particulier.  
+- **Résumé de la distribution de logiciels - Historique** : Synthèse de la distribution de logiciels pour une publication et un ordinateur spécifiques.  
 
 
 
@@ -189,9 +189,9 @@ Procédez comme suit pour déplacer la base de données de l’entrepôt de donn
 
 Utilisez les journaux suivants pour examiner les problèmes d’installation du point de service de l’entrepôt de données ou de synchronisation des données :
 
-- **DWSSMSI.log** et **DWSSSetup.log** : utilisez ces journaux pour examiner les erreurs survenues lors de l’installation du point de service de l’entrepôt de données.  
+- **DWSSMSI.log** et **DWSSSetup.log** : utilisez ces journaux pour examiner les erreurs survenues lors de l’installation du point de service de l’entrepôt de données.  
 
-- **Microsoft.ConfigMgrDataWarehouse.log** : utilisez ce journal pour examiner la synchronisation des données entre la base de données de site et la base de données de l’entrepôt de données.  
+- **Microsoft.ConfigMgrDataWarehouse.log** : utilisez ce journal pour examiner la synchronisation des données entre la base de données de site et la base de données de l’entrepôt de données.  
 
 
 ### <a name="set-up-failure"></a>Échec d’installation 

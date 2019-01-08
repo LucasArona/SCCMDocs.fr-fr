@@ -10,16 +10,16 @@ ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 48eb4abcc328c57fdb35e3511e49500099a68cf2
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 6f60d7f3a8c3bd81f4de38b2ce4080f54756de14
+ms.sourcegitcommit: c60e057075a83f07d1ca2577c3de1c7d7c8e9cec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456479"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626461"
 ---
 # <a name="supported-os-versions-for-clients-and-devices-for-configuration-manager"></a>Versions de système d’exploitation prises en charge par Configuration Manager pour les clients et les appareils
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
  Configuration Manager prend en charge l’installation de logiciels clients sur des ordinateurs Windows, Mac, Linux et UNIX.  
 
@@ -42,33 +42,33 @@ ms.locfileid: "52456479"
 
     Pour plus d’informations, voir [Prise en charge de Windows 10](/sccm/core/plan-design/configs/support-for-windows-10).  
 
--   **Windows 8.1** (x86, x64) : Professionnel, Entreprise    
+-   **Windows 8.1** (x86, x64) : Professionnel, Entreprise    
 
--   **Windows 7 avec SP1** (x86, x64) : Professionnel, Entreprise et Édition Intégrale    
+-   **Windows 7 avec SP1** (x86, x64) : Professionnel, Entreprise et Édition intégrale    
 
 
 ### <a name="supported-server-os-versions"></a>Versions des système d’exploitation serveur prises en charge
 
--  **Windows Server 2019** : Standard, Datacenter <sup>[Remarque 1](#bkmk_note1)</sup>  
+-  **Windows Server 2019** : Standard, Datacenter <sup>[Note 1](#bkmk_note1)</sup>  
     (À partir de Configuration Manager version 1806.)
 
--  **Windows Server 2016** : Standard, Datacenter <sup>[Remarque 1](#bkmk_note1)</sup>  
+-  **Windows Server 2016** : Standard, Datacenter <sup>[Note 1](#bkmk_note1)</sup>  
 
 -   **Windows Storage Server 2016** : Workgroup, Standard  
 
--   **Windows Server 2012 R2** (x64) : Standard, Datacenter <sup>[Remarque 1](#bkmk_note1)</sup>    
+-   **Windows Server 2012 R2** (x64) : Standard, Datacenter <sup>[Note 1](#bkmk_note1)</sup>    
 
 -   **Windows Storage Server 2012 R2** (x64)    
 
--   **Windows Server 2012** (x64) : Standard, Datacenter <sup>[Remarque 1](#bkmk_note1)</sup>    
+-   **Windows Server 2012** (x64) : Standard, Datacenter <sup>[Note 1](#bkmk_note1)</sup>    
 
 -   **Windows Storage Server 2012** (x64)    
 
--   **Windows Server 2008 R2 with SP1** (x64) : Standard, Enterprise, Datacenter <sup>[Remarque 1](#bkmk_note1)</sup>    
+-   **Windows Server 2008 R2 avec SP1** (x64) : Standard, Enterprise, Datacenter <sup>[Note 1](#bkmk_note1)</sup>    
 
--   **Windows Storage Server 2008 R2** (x86, x64) : Workgroup, Standard, Enterprise    
+-   **Windows Storage Server 2008 R2** (x86, x64) : Workgroup, Standard, Enterprise    
 
--   **Windows Server 2008 with SP2** (x86, x64) : Standard, Enterprise, Datacenter <sup>[Remarque 1](#bkmk_note1)</sup>    
+-   **Windows Server 2008 avec SP2** (x86, x64) : Standard, Enterprise, Datacenter <sup>[Note 1](#bkmk_note1)</sup>    
 
 
 #### <a name="server-core"></a>Minimale
@@ -360,10 +360,10 @@ Configuration Manager prend en charge une gestion limitée des appareils qui se 
 
 ### <a name="supported-versions-of-exchange-server"></a>Versions d’Exchange Server prises en charge
 
--   **Exchange Server 2010 SP1**  
+- **Exchange Online (Office 365)** : Cette version inclut Business Productivity Online Standard Suite  
 
--   **Exchange Server 2010 SP2**  
+- **Exchange Server 2016** (à compter de la version 1802)  
 
--   **Exchange Server 2013**  
+- **Exchange Server 2013**  
 
--   **Exchange Online (Office 365)**  : cette version inclut Business Productivity Online Standard Suite  
+- **Exchange Server 2010 SP1** ou **Exchange Server 2010 SP2** 

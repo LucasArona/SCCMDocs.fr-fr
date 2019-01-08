@@ -2,7 +2,7 @@
 title: Approuver les applications
 titleSuffix: Configuration Manager
 description: Découvrez les paramètres et les comportements d’approbation d’applications dans Configuration Manager.
-ms.date: 11/27/2018
+ms.date: 12/14/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.assetid: 20493c86-6454-4b35-8f22-0d049b68b8bb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f19146da963055ffc20b274e1017802274844698
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 666df71b32ea0dc95411b8ffd58d18f7666d7b23
+ms.sourcegitcommit: d36e4c7082a5144e79035dd8847c8e741fa04667
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52458055"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53444584"
 ---
 # <a name="approve-applications-in-configuration-manager"></a>Approuver des applications dans Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Au moment de [déployer une application](/sccm/apps/deploy-use/deploy-applications) dans Configuration Manager, vous pouvez exiger une approbation avant l’installation. Une fois que les utilisateurs ont demandé l’application dans le Centre logiciel, vous examinez la demande dans la console Configuration Manager. Vous pouvez l’approuver ou la refuser. 
 
@@ -45,7 +45,7 @@ Après avoir approuvé l’installation d’une application, vous pouvez **Refus
 <a name="bkmk_note1"></a>
 
 > [!Note]  
-> **Remarque 1** : Par défaut, Configuration Manager n’active pas cette fonctionnalité facultative. Vous devez activer cette fonctionnalité avant de l’utiliser. Pour plus d’informations, consultez [Activer les fonctionnalités facultatives des mises à jour](/sccm/core/servers/manage/install-in-console-updates#bkmk_options). 
+> **Remarque 1** : Par défaut, Configuration Manager n’active pas cette fonctionnalité facultative. Vous devez activer cette fonctionnalité avant de l’utiliser. Pour plus d’informations, consultez [Activer les fonctionnalités facultatives des mises à jour](/sccm/core/servers/manage/install-in-console-updates#bkmk_options). 
 > 
 > Si vous n’activez pas cette fonctionnalité, c’est l’expérience antérieure qui prévaut.  
 
@@ -80,6 +80,14 @@ Avec ces prérequis, les destinataires reçoivent un e-mail avec une notificatio
 
 - Configurez la [notification par e-mail pour les alertes](/sccm/core/servers/manage/use-alerts-and-the-status-system#to-configure-email-notification-for-alerts).  
 
+- Autorisez le fournisseur SMS à utiliser un certificat.<!--SCCMDocs-pr issue 3135--> Utilisez l’une des options suivantes :  
+
+    - Activer [HTTP amélioré](/sccm/core/plan-design/hierarchy/enhanced-http) (recommandé)  
+
+        > [!Note]  
+        > Lorsque le site crée un certificat pour le fournisseur SMS, il n’est pas approuvé par le navigateur web sur le client. En fonction de vos paramètres de sécurité, lors de la réponse à une requête d’application, vous pouvez voir un avertissement de sécurité.  
+
+    - Liez manuellement un certificat basé sur une infrastructure à clé publique (PKI) dans IIS au port 443 du serveur qui héberge le rôle Fournisseur SMS  
 
 
 #### <a name="to-take-action-from-internet"></a>Pour effectuer une action depuis Internet

@@ -9,12 +9,12 @@ ms.assetid: 6d665cef-fc67-4686-bcb3-0572c0a3760c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8d9665d67bd0d6fe75efbea851d631d49a508ff9
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 40bc33779cd67cc2105bb7ba52336fc933622641
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334298"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419612"
 ---
 # <a name="online-documentation-for-system-center-configuration-manager"></a>Documentation en ligne de System Center Configuration Manager
 
@@ -23,7 +23,7 @@ Bienvenue dans la bibliothèque de documentation de System Center Configuration 
 Recherchez la bibliothèque de documentation pour la version du produit que vous utilisez :  
 
 ## <a name="system-center-configuration-manager-current-branch"></a>System Center Configuration Manager (branche actuelle)  
-**Documentation en ligne :** vous pouvez afficher la documentation en ligne pour la branche actuelle de System Center Configuration Manager sur TechNet :  
+**Documentation en ligne :** Vous pouvez afficher la documentation en ligne pour la branche actuelle de System Center Configuration Manager sur TechNet :  
 
 -   [Présentation de System Center Configuration Manager](https://technet.microsoft.com/library/mt622715.aspx)  
 
@@ -45,21 +45,21 @@ Recherchez la bibliothèque de documentation pour la version du produit que vous
 
 -   [Sécurité et confidentialité pour System Center Configuration Manager](https://technet.microsoft.com/library/mt622694.aspx)  
 
-**Notes de publication :** les notes de publication contiennent des informations non disponibles dans la documentation du produit, mais qui peuvent être nécessaires pour installer et utiliser correctement System Center Configuration Manager. Consultez [Notes de publication de System Center Configuration Manager](https://technet.microsoft.com/library/mt592024.aspx)  
+**Notes de publication :** Les notes de publication contiennent des informations indisponibles dans la documentation du produit, mais qui peuvent être nécessaires pour installer et utiliser correctement System Center Configuration Manager. Consultez [Notes de publication de System Center Configuration Manager](https://technet.microsoft.com/library/mt592024.aspx)  
 
-**Trouver de l’aide :** consultez [Trouver de l’aide pour l’utilisation de System Center Configuration Manager](https://technet.microsoft.com/library/mt628521.aspx) :  
+**Trouver de l’aide :** Consultez [Trouver de l’aide pour l’utilisation de System Center Configuration Manager](https://technet.microsoft.com/library/mt628521.aspx) :  
 
-**Accessibilité :** consultez [Fonctionnalités d’accessibilité pour la console Configuration Manager](https://technet.microsoft.com/library/mt628521.aspx)  
+**Accessibilité :** Consultez [Fonctionnalités d’accessibilité pour la console Configuration Manager](https://technet.microsoft.com/library/mt628521.aspx)  
 
 
 ## <a name="system-center-configuration-manager-technical-preview"></a>System Center Configuration Manager Technical Preview  
-**Documentation en ligne :** vous pouvez afficher la documentation en ligne dans les guides suivants sur TechNet :  
+**Documentation en ligne :** Vous pouvez afficher la documentation en ligne dans les guides suivants sur TechNet :  
 
  [System Center Configuration Manager Technical Preview](https://go.microsoft.com/fwlink/p/?LinkId=534001)  
 
-**Notes de publication :** les notes de publication pour cette version Technical Preview sont incluses dans la documentation principale pour cette version et elles sont présentées en ligne avec les informations pour chaque fonctionnalité.  
+**Notes de publication :** Les notes de publication de cette préversion technique sont incluses dans la documentation principale pour cette version et elles sont présentées conformément aux informations pour chaque fonctionnalité.  
 
-**Accessibilité :** les informations d’accessibilité pour cette version Technical Preview sont inchangées depuis System Center 2012 Configuration Manager. Consultez [Accessibility Features of Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkId=258586)pour obtenir des informations sur les fonctionnalités, produits et services qui rendent Configuration Manager plus accessible aux personnes en situation de handicap.  
+**Accessibilité :** Les informations d’accessibilité pour cette préversion technique sont inchangées depuis System Center 2012 Configuration Manager. Consultez [Accessibility Features of Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkId=258586)pour obtenir des informations sur les fonctionnalités, produits et services qui rendent Configuration Manager plus accessible aux personnes en situation de handicap.  
 
 ## <a name="system-center-2012-configuration-manager"></a>System Center 2012 Configuration Manager  
 **Documentation en ligne :** pour les éléments suivants :  
@@ -70,30 +70,30 @@ Recherchez la bibliothèque de documentation pour la version du produit que vous
 
 vous pouvez afficher la documentation en ligne dans les guides suivants sur TechNet :  
 
--   [Prise en main de System Center 2012 Configuration Manager](https://go.microsoft.com/fwlink/p/?LinkId=210632)  
+- [Prise en main de System Center 2012 Configuration Manager](https://go.microsoft.com/fwlink/p/?LinkId=210632)  
 
--   [Administration de site pour System Center 2012 Configuration Manager](https://go.microsoft.com/fwlink/p/?LinkId=210636)  
+- [Administration de site pour System Center 2012 Configuration Manager](https://go.microsoft.com/fwlink/p/?LinkId=210636)  
 
--   [Migration des hiérarchies dans System Center 2012 Configuration Manager](https://go.microsoft.com/fwlink/p/?LinkId=210645)  
+- [Migration des hiérarchies dans System Center 2012 Configuration Manager](https://go.microsoft.com/fwlink/p/?LinkId=210645)  
 
--   [Déploiement de clients pour System Center 2012 Configuration Manager](https://go.microsoft.com/fwlink/p/?LinkId=210638)  
+- [Déploiement de clients pour System Center 2012 Configuration Manager](https://go.microsoft.com/fwlink/p/?LinkId=210638)  
 
--   [Gestion des appareils mobiles avec Microsoft Intune et Configuration Manager](https://go.microsoft.com/fwlink/?LinkId=529959)  
+- [Gestion des appareils mobiles avec Microsoft Intune et Configuration Manager](https://go.microsoft.com/fwlink/?LinkId=529959)  
 
--   [Déploiement de logiciels et de systèmes d’exploitation dans System Center 2012 Configuration Manager](https://go.microsoft.com/fwlink/p/?LinkId=210635)  
+- [Déploiement de logiciels et de systèmes d’exploitation dans System Center 2012 Configuration Manager](https://go.microsoft.com/fwlink/p/?LinkId=210635)  
 
--   [Ressources et conformité dans System Center 2012 Configuration Manager](https://go.microsoft.com/fwlink/p/?LinkId=210639)  
+- [Ressources et conformité dans System Center 2012 Configuration Manager](https://go.microsoft.com/fwlink/p/?LinkId=210639)  
 
--   [Sécurité et confidentialité dans System Center 2012 Configuration Manager](https://go.microsoft.com/fwlink/p/?LinkId=210640)  
+- [Sécurité et confidentialité dans System Center 2012 Configuration Manager](https://go.microsoft.com/fwlink/p/?LinkId=210640)  
 
--   [Scénarios et solutions pour System Center 2012 Configuration Manager](https://go.microsoft.com/fwlink/p/?LinkId=290889)  
+- [Scénarios et solutions pour System Center 2012 Configuration Manager](https://go.microsoft.com/fwlink/p/?LinkId=290889)  
 
- **Notes de publication et publications techniques :** les notes de publication et les publications techniques complètent les guides de Configuration Manager. Les notes de publication contiennent des informations non disponibles dans la documentation du produit, mais nécessaires pour installer Configuration manager avec succès. Les publications techniques contiennent des informations supplémentaires pour Configuration Manager.  
+  **Notes de publication et publications techniques :** Les notes de publication et les publications techniques complètent les guides de Configuration Manager. Les notes de publication contiennent des informations non disponibles dans la documentation du produit, mais nécessaires pour installer Configuration manager avec succès. Les publications techniques contiennent des informations supplémentaires pour Configuration Manager.  
 
--   [Notes de publication de System Center 2012 Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=529437)  
+- [Notes de publication de System Center 2012 Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=529437)  
 
--   [Publications techniques pour System Center 2012 Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkId=261032)  
+- [Publications techniques pour System Center 2012 Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkId=261032)  
 
-**Accessibilité :** consultez la rubrique en ligne [Accessibility Features of Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkId=258586)pour obtenir des informations sur les fonctionnalités, produits et services qui rendent Configuration Manager plus accessible aux personnes en situation de handicap.  
+**Accessibilité :** Consultez la rubrique en ligne [Fonctionnalités d’accessibilité de Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkId=258586) pour obtenir des informations sur les fonctionnalités, produits et services qui rendent Configuration Manager plus accessible aux personnes en situation de handicap.  
 
-**Documentation téléchargeable :** vous pouvez télécharger une [copie de cette documentation technique à partir du Centre de téléchargement Microsoft](http://go.microsoft.com/fwlink/?LinkId=253643). Utilisez la bibliothèque TechNet en ligne pour obtenir les informations les plus récentes.
+**Documentation téléchargeable :** Vous pouvez télécharger une [copie de cette documentation technique à partir du centre de téléchargement Microsoft](http://go.microsoft.com/fwlink/?LinkId=253643). Utilisez la bibliothèque TechNet en ligne pour obtenir les informations les plus récentes.

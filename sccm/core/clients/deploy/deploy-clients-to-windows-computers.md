@@ -10,16 +10,16 @@ ms.assetid: 341f0d0b-f907-44cf-9e10-e1b41fc15f82
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6eaac644b876fa3adfa1a2c79e7c4c5810942d9f
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 187f876999f39dd1d2d4aa345a7e9037f745a0ed
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385573"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418898"
 ---
 # <a name="how-to-deploy-clients-to-windows-computers-in-configuration-manager"></a>Guide pratique pour déployer des clients sur des ordinateurs Windows dans Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Cet article fournit des informations détaillées sur la façon de déployer le client Configuration Manager sur des ordinateurs Windows. Pour plus d’informations sur la planification et la préparation du déploiement des clients, consultez les articles suivants :
 - [Méthodes d’installation du client](/sccm/core/clients/deploy/plan/client-installation-methods)  
@@ -147,7 +147,7 @@ Utilisez les procédures suivantes pour configurer des ordinateurs sans client C
 
 3.  Ouvrez les propriétés du paramètre **Spécifier l’emplacement intranet du service de mise à jour Microsoft**, puis choisissez **Activé**.  
 
-4.  **Configurer le service de Mise à jour pour la détection des mises à jour** : spécifiez le nom et le port du serveur du point de mise à jour logicielle.  
+4.  **Configurer le service intranet de mise à jour pour la détection des mises à jour** : Spécifiez le nom et le port du serveur de point de mise à jour de logiciels.  
 
     -   Si vous avez configuré le système de site Configuration Manage pour utiliser un nom de domaine complet (FQDN), utilisez ce format.  
 
@@ -158,7 +158,7 @@ Utilisez les procédures suivantes pour configurer des ordinateurs sans client C
 
      Exemple avec le format de nom de domaine complet (FQDN) : `http://server1.contoso.com:8530`  
 
-5.  **Configurer le serveur intranet de statistiques** : ce paramètre est généralement le même nom de serveur.   
+5.  **Configurer le serveur intranet de statistiques** : Ce paramètre est généralement le même nom de serveur.   
 
 6.  Attribuez l’objet de stratégie de groupe aux ordinateurs sur lesquels vous voulez installer le client et recevoir les mises à jour logicielles.  
 
@@ -256,7 +256,7 @@ Exécutez ensuite l’une des commandes suivantes :
 
 Cet exemple installe le client sans paramètre ou propriété supplémentaire. Le client est configuré automatiquement par rapport aux propriétés d’installation du client publiées dans Active Directory Domain Services, notamment les paramètres suivants :  
 
-- Code du site : ce paramètre exige que l’emplacement réseau du client soit inclus dans un groupe de limites que vous avez configuré pour l’attribution du client.  
+- Code du site : Ce paramètre exige que l’emplacement réseau du client soit inclus dans un groupe de limites que vous avez configuré pour l’attribution du client.  
 - Point de gestion
 - Point d’état de secours
 - Communiquer à l’aide de HTTPS uniquement  
@@ -340,7 +340,7 @@ Pour plus d’informations sur la procédure d’installation du client Configur
 
 2. Dans l’Éditeur de logiciel Intune, entrez des paramètres de ligne de commande. Par exemple, utilisez la ligne de commande suivante avec un client classique sur l’intranet :  
 
-  `CCMSETUPCMD="/MP:<FQDN of management point> SMSMP=<FQDN of management point> SMSSITECODE=<Your site code> DNSSUFFIX=<DNS Suffix of management point>"`  
+   `CCMSETUPCMD="/MP:<FQDN of management point> SMSMP=<FQDN of management point> SMSSITECODE=<Your site code> DNSSUFFIX=<DNS Suffix of management point>"`  
 
    > [!Note]  
    > Pour obtenir un exemple de ligne commande à utiliser avec un client Windows 10 moderne exploitant l’authentification Azure AD, consultez [Préparer des appareils Windows 10 à la cogestion](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client).  

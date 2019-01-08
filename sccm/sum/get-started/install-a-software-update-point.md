@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b099a645-6434-498f-a408-1d438e394396
-ms.openlocfilehash: 3b2bb1f6866bb5266f20fb94451bfbfd2ce675bb
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 2c6c397b7b790b2cecada7fc5a7811ff77ae2d07
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353077"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422978"
 ---
 # <a name="install-and-configure-a-software-update-point"></a>Installer et configurer un point de mise à jour logicielle  
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 
 > [!IMPORTANT]  
@@ -33,7 +33,7 @@ ms.locfileid: "32353077"
 > [!IMPORTANT]  
 >  Vous ne pouvez pas installer le rôle système de site du point de mise à jour logicielle sur un serveur configuré et utilisé comme serveur WSUS autonome ni utiliser un point de mise à jour logicielle pour gérer directement des clients WSUS. Les serveurs WSUS existants sont uniquement pris en charge en tant que sources de synchronisation en amont pour le point de mise à jour logicielle actif. Consultez [Synchroniser à partir d’un emplacement de source de données en amont](#BKMK_wsussync)
 
- Vous pouvez ajouter le rôle de système de site de point de mise à jour logicielle à un serveur de système de site existant ou en créer un nouveau. Dans la page **Sélection du rôle système** de **l’Assistant Création d’un serveur de système de site** ou **l’Assistant Ajout des rôles de système de site, selon que vous ajoutez le rôle de système de site à un serveur de site nouveau ou existant, sélectionnez **Point de mise à jour logicielle**, puis configurez les paramètres du point de mise à jour logicielle dans l’Assistant. Les paramètres varient selon la version de Configuration Manager utilisée. Pour plus d’informations sur l’installation de rôles de système de site, consultez [Installer des rôles de système de site](../../core/servers/deploy/configure/install-site-system-roles.md).  
+ Vous pouvez ajouter le rôle de système de site de point de mise à jour logicielle à un serveur de système de site existant ou en créer un nouveau. Sur la page **Sélection du rôle système** de l’assistant **Création d’un serveur de système de site** ou <strong>Ajout des rôles de système de site</strong>, selon que vous ajoutez le rôle de système de site à un serveur de site nouveau ou existant, sélectionnez **Point de mise à jour logicielle, puis configurez les paramètres du point de mise à jour logicielle dans l’assistant. Les paramètres varient selon la version de Configuration Manager utilisée. Pour plus d’informations sur l’installation de rôles de système de site, consultez [Installer des rôles de système de site](../../core/servers/deploy/configure/install-site-system-roles.md).  
 
  Utilisez les sections suivantes pour plus d'informations sur les paramètres du point de mise à jour logicielle sur un site.  
 
@@ -50,7 +50,7 @@ ms.locfileid: "32353077"
         >  Le paramètre **Utiliser un serveur proxy lors du téléchargement du contenu avec des règles de déploiement automatiques** est disponible mais il n'est pas utilisé pour un point de mise à jour logicielle situé sur un site secondaire. Seul le point de mise à jour logicielle situé sur le site d'administration centrale et le site principal télécharge du contenu depuis la page Microsoft Update.  
 
 > [!IMPORTANT]  
->  Par défaut, le compte **Système local** pour le serveur sur lequel une règle de déploiement automatique a été créée est utilisé pour se connecter à Internet et télécharger les mises à jour logicielles lors de l'exécution des règles de déploiement automatique. Si ce compte n’a pas accès à Internet, les mises à jour logicielles ne peuvent pas être téléchargées et l’entrée suivante est consignée dans le fichier ruleengine.log : **Échec du téléchargement de la mise à jour sur Internet. Erreur = 12007**. Configurez les informations d'identification nécessaires pour se connecter au serveur proxy lorsque le compte système local n'a pas accès à Internet.  
+>  Par défaut, le compte **Système local** pour le serveur sur lequel une règle de déploiement automatique a été créée est utilisé pour se connecter à Internet et télécharger les mises à jour logicielles lors de l'exécution des règles de déploiement automatique. Lorsque ce compte n'a pas accès à Internet, les mises à jour logicielles ne peuvent pas être téléchargées et l'entrée suivante est consignée dans le fichier ruleengine.log : **Impossible de télécharger la mise à jour à partir d'Internet. Erreur = 12007**. Configurez les informations d'identification nécessaires pour se connecter au serveur proxy lorsque le compte système local n'a pas accès à Internet.  
 
 
 ## <a name="wsus-settings"></a>Paramètres WSUS  
@@ -88,14 +88,14 @@ ms.locfileid: "32353077"
 
  La liste suivante fournit plus d'informations sur chaque option que vous pouvez utiliser comme source de synchronisation :  
 
--   **Synchroniser à partir de Microsoft Update**: utilisez ce paramètre pour synchroniser les métadonnées des mises à jour logicielles à partir de Microsoft Update. Le site d'administration centrale doit avoir accès à Internet ; sinon, la synchronisation échoue. Ce paramètre est disponible uniquement lorsque vous configurez le point de mise à jour logicielle sur le site de niveau supérieur.  
+-   **Synchroniser à partir de Microsoft Update** : Utilisez ce paramètre pour synchroniser les métadonnées des mises à jour logicielles à partir de Microsoft Update. Le site d'administration centrale doit avoir accès à Internet ; sinon, la synchronisation échoue. Ce paramètre est disponible uniquement lorsque vous configurez le point de mise à jour logicielle sur le site de niveau supérieur.  
 
     > [!NOTE]  
     >  En présence d’un pare-feu entre le point de mise à jour logicielle et Internet, une configuration du pare-feu peut s’avérer nécessaire pour autoriser l’utilisation des ports HTTP et HTTPS pour le site web WSUS. Vous pouvez également choisir de restreindre l'accès sur le pare-feu à des domaines limités. Pour plus d’informations sur la planification d’un pare-feu prenant en charge les mises à jour logicielles, consultez [Configure firewalls](../plan-design/plan-for-software-updates.md#BKMK_ConfigureFirewalls).  
 
--   **<a name="BKMK_wsussync"></a>Synchroniser à partir d’un emplacement de source de données en amont** : utilisez ce paramètre pour synchroniser les métadonnées des mises à jour logicielles à partir de la source de synchronisation en amont. Les sites principaux enfants et les sites secondaires sont automatiquement configurés pour utiliser l'URL du site parent pour ce paramètre. Vous pouvez synchroniser les mises à jour logicielles à partir d’un serveur WSUS existant. Spécifiez une URL, comme https://WSUSServer:8531, où 8531 est le port utilisé pour se connecter au serveur WSUS.  
+-   **<a name="BKMK_wsussync"></a>Synchroniser à partir d’un emplacement de source de données en amont** : Utilisez ce paramètre pour synchroniser les métadonnées des mises à jour logicielles à partir de la source de synchronisation en amont. Les sites principaux enfants et les sites secondaires sont automatiquement configurés pour utiliser l'URL du site parent pour ce paramètre. Vous pouvez synchroniser les mises à jour logicielles à partir d’un serveur WSUS existant. Spécifiez une URL, comme https://WSUSServer:8531, où 8531 est le port utilisé pour se connecter au serveur WSUS.  
 
--   **Ne pas synchroniser à partir de Microsoft Update ou de la source de données en amont**: utilisez ce paramètre pour synchroniser manuellement les mises à jour logicielles quand le point de mise à jour logicielle sur le site de niveau supérieur est déconnecté d’Internet. Pour plus d’informations, consultez [Synchroniser les mises à jour logicielles à partir d’un point de mise à jour logicielle déconnecté](synchronize-software-updates-disconnected.md).  
+-   **Ne pas synchroniser à partir de Microsoft Update ou de la source de données en amont** : Utilisez ce paramètre pour synchroniser manuellement les mises à jour logicielles lorsque le point de mise à jour logicielle sur le site de niveau supérieur est déconnecté d'Internet. Pour plus d’informations, consultez [Synchroniser les mises à jour logicielles à partir d’un point de mise à jour logicielle déconnecté](synchronize-software-updates-disconnected.md).  
 
 > [!NOTE]  
 >  En présence d’un pare-feu entre le point de mise à jour logicielle et Internet, une configuration du pare-feu peut s’avérer nécessaire pour autoriser l’utilisation des ports HTTP et HTTPS pour le site web WSUS. Vous pouvez également choisir de restreindre l'accès sur le pare-feu à des domaines limités. Pour plus d’informations sur la planification d’un pare-feu prenant en charge les mises à jour logicielles, consultez [Configure firewalls](../plan-design/plan-for-software-updates.md#BKMK_ConfigureFirewalls).  

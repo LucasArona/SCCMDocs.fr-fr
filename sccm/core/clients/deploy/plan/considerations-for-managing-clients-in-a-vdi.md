@@ -10,26 +10,26 @@ ms.assetid: abd45393-d84e-4583-bc80-74bbb3709577
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a17bb43d91d26cf10da0e1d3da5d8f6e4a2af2a7
-ms.sourcegitcommit: 5b3ff56018cfc6bda9643c9f1bebc575173f61bc
+ms.openlocfilehash: 6733a4dc3b027efa23ddc64e06e4269260c43101
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50083783"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418626"
 ---
 # <a name="considerations-for-managing-system-center-configuration-manager-clients--in-a-virtual-desktop-infrastructure-vdi"></a>Considérations sur la gestion des clients System Center Configuration Manager dans une infrastructure VDI
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager prend en charge l’installation du client Configuration Manager dans les scénarios VDI suivants :  
 
--   **Machines virtuelles personnelles** : les machines virtuelles personnelles sont généralement utilisées quand vous voulez vous assurer que les données et les paramètres utilisateur sont conservés sur les machines virtuelles entre les sessions.  
+- **Machines virtuelles personnelles** : les machines virtuelles personnelles sont généralement utilisées quand vous voulez vous assurer que les données et les paramètres utilisateur sont conservés sur les machines virtuelles entre les sessions.  
 
--   **Sessions de services Bureau à distance** : les services Bureau à distance permettent à un serveur d’héberger plusieurs sessions clientes simultanées. Les utilisateurs peuvent se connecter à une session, puis exécuter des applications sur ce serveur.  
+- **Sessions de services Bureau à distance** : les services Bureau à distance permettent à un serveur d’héberger plusieurs sessions clientes simultanées. Les utilisateurs peuvent se connecter à une session, puis exécuter des applications sur ce serveur.  
 
--   **Machines virtuelles regroupées** : les machines virtuelles regroupées ne sont pas conservées entre les sessions. Lorsqu'une session est fermée, toutes les données et tous les paramètres sont supprimés. Les machines virtuelles regroupées sont utiles lorsqu'il est impossible d'utiliser les services Bureau à distance, car une application métier requise ne peut pas s'exécuter sur le serveur Windows hébergeant les sessions clientes.  
+- **Machines virtuelles regroupées** : les machines virtuelles regroupées ne sont pas conservées entre les sessions. Lorsqu'une session est fermée, toutes les données et tous les paramètres sont supprimés. Les machines virtuelles regroupées sont utiles lorsqu'il est impossible d'utiliser les services Bureau à distance, car une application métier requise ne peut pas s'exécuter sur le serveur Windows hébergeant les sessions clientes.  
 
- Le tableau suivant recense les éléments à prendre en considération pour la gestion du client Configuration Manager dans une infrastructure VDI.  
+  Le tableau suivant recense les éléments à prendre en considération pour la gestion du client Configuration Manager dans une infrastructure VDI.  
 
 |Type de machine virtuelle|Éléments à prendre en considération|  
 |--------------------------|--------------------|  
@@ -42,4 +42,4 @@ System Center Configuration Manager prend en charge l’installation du client C
 > [!NOTE]  
 >  À l’exception des clients Windows Embedded en mode maintenance, les clients Configuration Manager qui ne s’exécutent pas dans des environnements virtualisés utilisent aussi ce délai randomisé. Quand le nombre de clients déployés est important, ce comportement permet d’éviter des pics d’utilisation de la bande passante réseau et de réduire les besoins de traitement processeur sur les systèmes de site Configuration Manager, tels que le point de gestion et le serveur de site. L’intervalle du délai varie en fonction de la fonctionnalité de Configuration Manager.  
 >   
->  Le délai de randomisation est désactivé par défaut pour les mises à jour logicielles requises à l’aide du paramètre client suivant : **Agent ordinateur**: **Désactiver la randomisation des échéances**.
+>  Le délai de randomisation est désactivé par défaut pour les mises à jour logicielles requises à l’aide du paramètre client suivant : **Agent ordinateur** : **Désactiver la randomisation des échéances**.

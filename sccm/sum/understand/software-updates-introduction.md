@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: e9778b13-c8a3-40eb-8655-34ac8ce9cdaa
-ms.openlocfilehash: d5528fc3e035cd5bed8bc92c8b65f3025d97a2d1
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: b59d7063cbe1a16dd023466b272d2c1ebea0e5b6
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32351545"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424542"
 ---
 # <a name="introduction-to-software-updates-in-system-center-configuration-manager"></a>Présentation des mises à jour logicielles dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Les mises à jour logicielles dans System Center Configuration Manager offrent un ensemble d’outils et de ressources qui peuvent faciliter la gestion de la tâche complexe que représentent le suivi et l’application des mises à jour logicielles sur les ordinateurs clients de l’entreprise. Il est essentiel de disposer d'un processus de gestion des mises à jour logicielles efficace pour assurer le fonctionnement des opérations, résoudre les problèmes de sécurité et préserver la stabilité de l'infrastructure réseau. Toutefois, la gestion des mises à jour logicielles nécessite une attention constante et continue du fait que les technologies évoluent rapidement et que de nouvelles menaces de sécurité émergent constamment.  
 
@@ -129,19 +129,19 @@ Pour obtenir un exemple de scénario illustrant la façon dont vous pouvez dépl
 
  En incluant la planification de l'analyse, l'analyse de la conformité des mises à jour logicielles peut être lancée de différentes manières :  
 
--   **Calendrier d’analyse des mises à jour logicielles**: l’analyse de la conformité des mises à jour logicielles commence selon le calendrier d’analyse configuré dans les paramètres Agent client des mises à jour logicielles. Pour plus d’informations sur la configuration des paramètres client des mises à jour logicielles, consultez [paramètres client des mises à jour logicielles](../../core/clients/deploy/about-client-settings.md#software-updates).  
+-   **Calendrier d’analyse des mises à jour logicielles** : l'analyse de la conformité des mises à jour logicielles commence selon le calendrier d'analyse configuré dans les paramètres Agent client des mises à jour logicielles. Pour plus d’informations sur la configuration des paramètres client des mises à jour logicielles, consultez [paramètres client des mises à jour logicielles](../../core/clients/deploy/about-client-settings.md#software-updates).  
 
--   **Action Propriétés de Configuration Manager**: l’utilisateur peut démarrer l’action **Cycle d’analyse des mises à jour de logiciels** ou **Cycle d’évaluation des déploiements de mises à jour de logiciels** sous l’onglet **Action** de la boîte de dialogue **Propriétés du Configuration Manager** sur l’ordinateur client.  
+-   **Action dans Propriétés de Configuration Manager** : l’utilisateur peut démarrer l’action **Cycle d’analyse des mises à jour de logiciels** ou **Cycle d’évaluation des déploiements de mises à jour de logiciels** sur l’onglet **Action** dans la boîte de dialogue **Propriétés de Configuration Manager** sur l’ordinateur client.  
 
--   **Planification de la réévaluation du déploiement**: l’évaluation du déploiement et l’analyse de la conformité des mises à jour logicielles commencent selon le calendrier de réévaluation du déploiement configuré, comme indiqué dans les paramètres Agent client des mises à jour logicielles. Pour plus d’informations sur les paramètres client des mises à jour logicielles, consultez [paramètres client des mises à jour logicielles](../../core/clients/deploy/about-client-settings.md#software-updates).  
+-   **Planification de la réévaluation du déploiement** : L'évaluation du déploiement et l'analyse de la conformité des mises à jour logicielles commence selon le calendrier de réévaluation du déploiement configuré, comme indiqué dans les paramètres Agent client des mises à jour logicielles. Pour plus d’informations sur les paramètres client des mises à jour logicielles, consultez [paramètres client des mises à jour logicielles](../../core/clients/deploy/about-client-settings.md#software-updates).  
 
--   **Avant de télécharger les fichiers de mises à jour**: quand un ordinateur client reçoit une stratégie d’attribution pour un nouveau déploiement obligatoire, l’Agent client des mises à jour logicielles télécharge les fichiers de mise à jour logicielle dans le cache du client local. Avant de télécharger les fichiers de mise à jour logicielle, l'agent du client démarre une analyse pour vérifier que la mise à jour logicielle est toujours nécessaire.  
+-   **Avant de télécharger les fichiers de mises à jour** : Quand un ordinateur client reçoit une stratégie d'attribution pour un nouveau déploiement requis, l'Agent client des mises à jour logicielles télécharge les fichiers de mise à jour logicielle dans le cache du client local. Avant de télécharger les fichiers de mise à jour logicielle, l'agent du client démarre une analyse pour vérifier que la mise à jour logicielle est toujours nécessaire.  
 
--   **Avant l’installation des mises à jour logicielles**: juste avant d’installer des mises à jour logicielles, l’Agent client des mises à jour logicielles démarre une analyse pour vérifier que les mises à jour logicielles sont toujours nécessaires.  
+-   **Avant l’installation des mises à jour logicielles** : Juste avant d'installer des mises à jour logicielles, l'Agent client des mises à jour logicielles démarre une analyse pour vérifier que les mises à jour logicielles sont toujours nécessaires.  
 
--   **Après l’installation des mises à jour logicielles**: juste après la fin de l’installation des mises à jour logicielles, l’Agent client des mises à jour logicielles démarre une analyse pour vérifier que les mises à jour logicielles ne sont plus nécessaires et crée un message d’état indiquant que la mise à jour logicielle est installée. Lorsque l'installation est terminée mais qu'un redémarrage est nécessaire, le message d'état indique que l'ordinateur client doit être redémarré.  
+-   **Après l’installation des mises à jour logicielles** : juste après la fin de l'installation des mises à jour logicielles, l'Agent client des mises à jour logicielles démarre une analyse pour vérifier que plus aucune mise à jour logicielle n'est nécessaire et crée un message d'état indiquant que la mise à jour logicielle est installée. Lorsque l'installation est terminée mais qu'un redémarrage est nécessaire, le message d'état indique que l'ordinateur client doit être redémarré.  
 
--   **Après le redémarrage du système**: si un ordinateur client attend le redémarrage du système pour terminer l’installation de la mise à jour logicielle, l’Agent client des mises à jour logicielles démarre une analyse après le redémarrage pour vérifier que la mise à jour logicielle n’est plus nécessaire et crée un message d’état indiquant que la mise à jour logicielle est installée.  
+-   **Après le redémarrage du système** : si un ordinateur client attend le redémarrage du système pour terminer l'installation de la mise à jour logicielle, l'Agent client des mises à jour logicielles démarre une analyse après le redémarrage pour vérifier que la mise à jour logicielle n'est désormais plus requise et il crée un message d'état indiquant que la mise à jour logicielle est installée.  
 
 #### <a name="time-to-live-value"></a>Valeur de la durée de vie  
  Les métadonnées des mises à jour logicielles requises pour l'analyse de la conformité des mises à jour logicielles sont stockées sur l'ordinateur client local et, par défaut, sont pertinentes pendant 24 heures. Cette durée est appelée durée de vie.  
@@ -209,47 +209,47 @@ Pour obtenir un exemple de scénario illustrant la façon dont vous pouvez dépl
 ###  <a name="BKMK_AutomaticDeployment"></a> Déploiement automatique de mises à jour logicielles  
  La configuration du déploiement automatique de mises à jour logicielles s’effectue à l'aide d’une règle de déploiement automatique. Vous utilisez généralement cette méthode de déploiement pour vos mises à jour logicielles mensuelles (généralement appelées Patch Tuesday) et pour la gestion des mises à jour de définitions. Quand la règle s'exécute, les mises à jour logicielles sont supprimées du groupe de mises à jour logicielles (dans le cas d'un groupe existant), celles qui répondent aux critères spécifiés (par exemple, toutes les mises à jour logicielles publiées au cours de la dernière semaine) sont ajoutées à un groupe de mises à jour logicielles, les fichiers de contenu des mises à jour logicielles sont téléchargés et copiés dans les points de distribution, et les mises à jour logicielles sont déployées sur les ordinateurs clients du regroupement cible. La liste suivante fournit le flux de travail général pour le déploiement automatique de mises à jour logicielles :  
 
-1.  Créez une règle de déploiement automatique qui spécifie des paramètres de déploiement tels que :  
+1. Créez une règle de déploiement automatique qui spécifie des paramètres de déploiement tels que :  
 
-    -   Regroupement cible  
+   -   Regroupement cible  
 
-    -   Décider d'activer ou non le déploiement ou le rapport sur la conformité des mises à jour logicielles pour les ordinateurs clients du regroupement cible  
+   -   Décider d'activer ou non le déploiement ou le rapport sur la conformité des mises à jour logicielles pour les ordinateurs clients du regroupement cible  
 
-    -   Critères de mises à jour logicielles  
+   -   Critères de mises à jour logicielles  
 
-    -   Calendriers d'évaluation et de déploiement  
+   -   Calendriers d'évaluation et de déploiement  
 
-    -   Expérience utilisateur  
+   -   Expérience utilisateur  
 
-    -   Propriétés de téléchargement  
+   -   Propriétés de téléchargement  
 
-2.  Les mises à jour logicielles sont ajoutées à un groupe de mises à jour logicielles.  
+2. Les mises à jour logicielles sont ajoutées à un groupe de mises à jour logicielles.  
 
-3.  Le groupe de mises à jour logicielles est déployé sur les ordinateurs clients du regroupement cible, s'il est spécifié.  
+3. Le groupe de mises à jour logicielles est déployé sur les ordinateurs clients du regroupement cible, s'il est spécifié.  
 
- Vous devez déterminer quelle stratégie de déploiement utiliser dans votre environnement. Par exemple, vous pouvez créer la règle de déploiement automatique et cibler un regroupement de clients test. Après avoir vérifié que les mises à jour logicielles sont installées sur le groupe test, vous pouvez ajouter un nouveau déploiement à la règle ou modifier le regroupement dans le déploiement existant et le remplacer par un regroupement cible qui comprend un ensemble plus important de clients. Les objets de mise à jour logicielle qui sont créés par les règles de déploiement automatique sont interactifs.  
+   Vous devez déterminer quelle stratégie de déploiement utiliser dans votre environnement. Par exemple, vous pouvez créer la règle de déploiement automatique et cibler un regroupement de clients test. Après avoir vérifié que les mises à jour logicielles sont installées sur le groupe test, vous pouvez ajouter un nouveau déploiement à la règle ou modifier le regroupement dans le déploiement existant et le remplacer par un regroupement cible qui comprend un ensemble plus important de clients. Les objets de mise à jour logicielle qui sont créés par les règles de déploiement automatique sont interactifs.  
 
--   Les mises à jour logicielles qui ont été déployées à l'aide d'une règle de déploiement automatique sont déployées automatiquement sur les nouveaux clients ajoutés au regroupement cible.  
+- Les mises à jour logicielles qui ont été déployées à l'aide d'une règle de déploiement automatique sont déployées automatiquement sur les nouveaux clients ajoutés au regroupement cible.  
 
--   Les nouvelles mises à jour logicielles ajoutées à un groupe de mises à jour logicielles sont déployées automatiquement sur les clients du regroupement cible.  
+- Les nouvelles mises à jour logicielles ajoutées à un groupe de mises à jour logicielles sont déployées automatiquement sur les clients du regroupement cible.  
 
--   Vous pouvez activer ou désactiver les déploiements à tout moment pour la règle de déploiement automatique.  
+- Vous pouvez activer ou désactiver les déploiements à tout moment pour la règle de déploiement automatique.  
 
- Après avoir créé une règle de déploiement automatique, vous pouvez y ajouter des déploiements supplémentaires. Cela peut vous aider à gérer la complexité liée au déploiement de différentes mises à jour vers différents regroupements. Chaque nouveau déploiement possède la gamme complète de fonctionnalités et d'expérience de surveillance de déploiement, et chaque nouveau déploiement que vous ajoutez :  
+  Après avoir créé une règle de déploiement automatique, vous pouvez y ajouter des déploiements supplémentaires. Cela peut vous aider à gérer la complexité liée au déploiement de différentes mises à jour vers différents regroupements. Chaque nouveau déploiement possède la gamme complète de fonctionnalités et d'expérience de surveillance de déploiement, et chaque nouveau déploiement que vous ajoutez :  
 
--   utilise les mêmes packages et groupes de mise à jour que ceux créés lors de la première exécution de la règle de déploiement automatique ;  
+- utilise les mêmes packages et groupes de mise à jour que ceux créés lors de la première exécution de la règle de déploiement automatique ;  
 
--   peut spécifier un regroupement différent ;  
+- peut spécifier un regroupement différent ;  
 
--   prend en charge des propriétés de déploiement uniques, notamment :  
+- prend en charge des propriétés de déploiement uniques, notamment :  
 
-    -   Heure d'activation  
+  -   Heure d'activation  
 
-    -   Échéance  
+  -   Échéance  
 
-    -   Afficher ou masquer l'expérience utilisateur  
+  -   Afficher ou masquer l'expérience utilisateur  
 
-    -   Séparer les alertes pour ce déploiement  
+  -   Séparer les alertes pour ce déploiement  
 
 ##  <a name="BKMK_DeploymentProcess"></a> Processus de déploiement des mises à jour logicielles  
  Après avoir déployé des mises à jour logicielles ou lorsqu'une règle de déploiement automatique exécute et déploie des mises à jour logicielles, une stratégie d'attribution du déploiement est ajoutée à la stratégie de l'ordinateur pour le site. Les mises à jour logicielles sont téléchargées à partir de l'emplacement de téléchargement, d'Internet, ou du dossier réseau, vers la source du package. Les mises à jour logicielles sont copiées depuis la source du package vers la bibliothèque de contenu sur le serveur de site, puis copiées dans la bibliothèque de contenu sur le point de distribution.  

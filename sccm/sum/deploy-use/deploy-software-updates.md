@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 04536d51-3bf7-45e5-b4af-36ceed10583d
-ms.openlocfilehash: f59ca099325028ccf29904a2108939d0047df745
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 80effa7ec3439925248e19dbf9d35efcf1694b8a
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52455941"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419357"
 ---
 # <a name="deploy-software-updates"></a>Déployer des mises à jour logicielles  
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 La phase de déploiement de mises à jour logicielles consiste à déployer les mises à jour logicielles. Quelle que soit la façon dont vous déployez des mises à jour logicielles, le site :
 - Ajoute les mises à jour à un groupe de mises à jour logicielles.
@@ -98,13 +98,13 @@ Après avoir créé une règle ADR, vous pouvez y ajouter des déploiements supp
 
 Chaque nouveau déploiement que vous ajoutez :  
 
--   Utilise le package et le groupe de mise à jour créés par la règle ADR lors de la première exécution.  
--   Peut cibler un autre regroupement.  
--   prend en charge des propriétés de déploiement uniques, notamment :  
-   -   Heure d'activation  
-   -   Échéance  
-   -   Expérience utilisateur  
-   -   Sépare les alertes pour chaque déploiement.  
+- Utilise le package et le groupe de mise à jour créés par la règle ADR lors de la première exécution.  
+- Peut cibler un autre regroupement.  
+- prend en charge des propriétés de déploiement uniques, notamment :  
+  -   Heure d'activation  
+  -   Échéance  
+  -   Expérience utilisateur  
+  -   Sépare les alertes pour chaque déploiement.  
 
 
 Pour plus d’informations et pour obtenir des étapes détaillées, consultez [Déployer automatiquement des mises à jour logicielles](automatically-deploy-software-updates.md).

@@ -10,16 +10,16 @@ ms.assetid: 1a2a9b48-a95b-4643-b00c-b3079584ae2e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 11474f54aaf7a9afe13d411b0dd469abb1eef963
-ms.sourcegitcommit: c2c44329f1f9a2e6c14095360b4fc4aafabc27f0
+ms.openlocfilehash: 2a830b36bec3d112c0b112d2df6887a84c837fa2
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694941"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418252"
 ---
 # <a name="prerequisites-for-deploying-clients-to-windows-computers-in-configuration-manager"></a>Prérequis pour le déploiement de clients sur des ordinateurs Windows dans Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Le déploiement de clients Configuration Manager dans votre environnement présente des dépendances externes et internes au produit, comme décrit ci-dessous. En outre, chaque méthode de déploiement client possède ses propres dépendances qui doivent être respectées pour le bon déroulement des installations clients.  
 
@@ -115,9 +115,9 @@ Les conditions requises suivantes sont spécifiques aux différentes méthodes d
 
 Pour utiliser l’installation Push du client, vous devez disposer des autorisations de sécurité suivantes :  
 
-   -   Pour configurer le compte d’installation Push du client : autorisation **Modifier** et **Lire** pour l’objet **Site**.  
+   -   Pour configurer le compte d’installation Push du client : Autorisations **Modifier** et **Lecture** pour l’objet **Site**.  
 
-   -   Pour utiliser l’installation Push du client pour installer le client dans des regroupements, des appareils et des requêtes : autorisation **Modifier la ressource** et **Lire** pour l’objet **Regroupement**.  
+   -   Pour utiliser l'installation poussée du client pour les regroupements, appareils et requêtes : Autorisations **Modifier la ressource** et **Lecture** pour l’objet **Regroupement**.  
 
 
 Le rôle de sécurité par défaut **Administrateur d’infrastructure** comprend les autorisations nécessaires pour gérer les installations Push des clients.  
@@ -222,54 +222,54 @@ Quand vous installez le client Configuration Manager sur des appareils mobiles e
 
 Pour plus d’informations, consultez [Déterminer les rôles système de site pour les clients](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients).  
 
--   Point de gestion configuré pour les connexions client HTTPS et activé pour les appareils mobiles  
+- Point de gestion configuré pour les connexions client HTTPS et activé pour les appareils mobiles  
 
-     Un point de gestion est toujours nécessaire pour installer le client Configuration Manager sur des appareils mobiles. En plus des exigences de configuration et d’activation de HTTPS pour les appareils mobiles, le point de gestion doit être configuré avec un nom de domaine complet Internet et accepter les connexions client en provenance d’Internet.  
+   Un point de gestion est toujours nécessaire pour installer le client Configuration Manager sur des appareils mobiles. En plus des exigences de configuration et d’activation de HTTPS pour les appareils mobiles, le point de gestion doit être configuré avec un nom de domaine complet Internet et accepter les connexions client en provenance d’Internet.  
 
--   Point d'inscription et point proxy d'inscription  
+- Point d'inscription et point proxy d'inscription  
 
-     Un point proxy d'inscription gère les demandes d'inscription de la part d'appareils mobiles et le point d'inscription termine le processus d'inscription. Le point d'inscription doit être dans la même forêt Active Directory que le serveur de site, mais le point proxy d'inscription peut être dans une autre forêt.  
+   Un point proxy d'inscription gère les demandes d'inscription de la part d'appareils mobiles et le point d'inscription termine le processus d'inscription. Le point d'inscription doit être dans la même forêt Active Directory que le serveur de site, mais le point proxy d'inscription peut être dans une autre forêt.  
 
--   Paramètres client pour l'inscription d'appareils mobiles  
+- Paramètres client pour l'inscription d'appareils mobiles  
 
-     Configurez des paramètres client pour permettre aux utilisateurs d'inscrire des appareils mobiles et de configurer au moins un profil d'inscription.  
+   Configurez des paramètres client pour permettre aux utilisateurs d'inscrire des appareils mobiles et de configurer au moins un profil d'inscription.  
 
--   Point de Reporting Services  
+- Point de Reporting Services  
 
-     Le point de Reporting Services est un rôle de système de site, facultatif mais recommandé, qui peut afficher des rapports liés à l'inscription d'appareils mobiles et à la gestion de clients.  
+   Le point de Reporting Services est un rôle de système de site, facultatif mais recommandé, qui peut afficher des rapports liés à l'inscription d'appareils mobiles et à la gestion de clients.  
 
-     Pour plus d’informations, consultez [Rapports dans Configuration Manager](/sccm/core/servers/manage/reporting).  
+   Pour plus d’informations, consultez [Rapports dans Configuration Manager](/sccm/core/servers/manage/reporting).  
 
--   Pour configurer l'inscription pour les appareils mobiles, vous devez disposer des autorisations de sécurité suivantes :  
+- Pour configurer l'inscription pour les appareils mobiles, vous devez disposer des autorisations de sécurité suivantes :  
 
-    -   Pour ajouter, modifier et supprimer les rôles de système de site d’inscription : autorisation **Modifier** pour l’objet **Site** .  
+  - Pour ajouter, modifier et supprimer les rôles de système de site d'inscription : Autorisation **Modifier** pour l’objet **Site**.  
 
-    -   Pour configurer les paramètres clients de l’inscription : les paramètres clients par défaut nécessitent l’autorisation **Modifier** pour l’objet **Site** et les paramètres clients personnalisés nécessitent des autorisations **Agent client**  .  
+  - Pour configurer des paramètres client pour l'inscription : Les paramètres client par défaut nécessitent l’autorisation **Modifier** pour l’objet **Site** et les paramètres client personnalisés nécessitent des autorisations **Agent client**.  
 
-     Le rôle de sécurité **Administrateur complet** comprend les autorisations nécessaires pour configurer les rôles de système de site d’inscription.  
+    Le rôle de sécurité **Administrateur complet** comprend les autorisations nécessaires pour configurer les rôles de système de site d’inscription.  
 
-     Pour gérer des appareils mobiles inscrits, vous devez disposer des autorisations de sécurité suivantes :  
+    Pour gérer des appareils mobiles inscrits, vous devez disposer des autorisations de sécurité suivantes :  
 
-    -   Pour réinitialiser ou retirer un appareil mobile : **Supprimer la ressource** pour l’objet **Collection** .  
+  - Pour réinitialiser ou mettre hors service un appareil mobile : **Supprimer la ressource** pour l’objet **Regroupement**.  
 
-    -   Pour annuler une réinitialisation ou retirer une commande : **Supprimer la ressource** pour l’objet **Collection** .  
+  - Pour annuler une commande de réinitialisation ou de mise hors service : **Supprimer la ressource** pour l’objet **Regroupement**.  
 
-    -   Pour autoriser et bloquer des appareils mobiles : **Modifier la ressource** pour l’objet **Collection** .  
+  - Pour autoriser et bloquer des appareils mobiles : **Modifier la ressource** pour l’objet **Regroupement**.  
 
-    -   Pour verrouiller à distance ou réinitialiser le mot de passe sur un appareil mobile : **Modifier la ressource** pour l’objet **Collection** .  
+  - Pour réinitialiser le mot de passe ou verrouiller à distance un appareil mobile : **Modifier la ressource** pour l’objet **Regroupement**.  
 
-     Le rôle de sécurité par défaut **Administrateur d’opérations** comprend les autorisations nécessaires pour la gestion des appareils mobiles.  
+    Le rôle de sécurité par défaut **Administrateur d’opérations** comprend les autorisations nécessaires pour la gestion des appareils mobiles.  
 
-     Pour plus d’informations sur la configuration des autorisations de sécurité, consultez [Principes de base de l’administration basée sur des rôles](/sccm/core/understand/fundamentals-of-role-based-administration) et [Configurer l’administration basée sur des rôles](/sccm/core/servers/deploy/configure/configure-role-based-administration).  
+    Pour plus d’informations sur la configuration des autorisations de sécurité, consultez [Principes de base de l’administration basée sur des rôles](/sccm/core/understand/fundamentals-of-role-based-administration) et [Configurer l’administration basée sur des rôles](/sccm/core/servers/deploy/configure/configure-role-based-administration).  
 
 
 ### <a name="firewall-requirements"></a>Configuration requise du pare-feu  
 
 Les appareils réseau intervenants, tels que des routeurs et des pare-feu, ainsi que le Pare-feu Windows, le cas échéant, doivent autoriser le trafic associé à l'inscription d'appareils mobiles :  
 
--   Entre les appareils mobiles et le point proxy d'inscription : HTTPS (par défaut, TCP 443)  
+-   Entre les appareils mobiles et le point proxy d'inscription : HTTPS (par défaut, port TCP 443)  
 
--   Entre le point proxy d'inscription et le point d'inscription : HTTPS (par défaut, TCP 443)  
+-   Entre les points proxy d'inscription et le point d'inscription : HTTPS (par défaut, port TCP 443)  
 
 
 Si vous utilisez un serveur web proxy, il doit être configuré pour le tunnel SSL. Le pontage SSL n’est pas pris en charge pour les appareils mobiles.  

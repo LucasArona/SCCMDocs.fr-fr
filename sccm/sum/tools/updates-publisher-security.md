@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: b3ce22747cddc1371fb38718cc97b70cda8afcb1
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 3632cbf8a512ef39413685f29b769e133fbcee40
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353601"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424279"
 ---
 # <a name="manage-certificates-and-security-for-updates-publisher"></a>Gérer les certificats et la sécurité pour l’éditeur de mise à jour
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Les procédures suivantes peuvent vous aider à configurer le magasin de certificats sur le serveur de mise à jour, à configurer un certificat d’auto-signature sur l’ordinateur client, et à configurer la stratégie de groupe pour permettre à l’Agent Windows Update sur les ordinateurs de rechercher les mises à jour publiées.
 
@@ -60,29 +60,29 @@ Vous pouvez utiliser une des méthodes disponibles pour configurer des certifica
 Voici un exemple montrant comment configurer le certificat de signature sur les ordinateurs clients.
 
 ### <a name="to-configure-a-self-signing-certificate-on-client-computers"></a>Pour configurer un certificat d’auto-signature sur les ordinateurs clients
-1.  Sur un ordinateur disposant d’un accès au serveur de mise à jour, cliquez sur **Démarrer**, cliquez sur **Exécuter**, tapez **MMC** dans la zone de texte, puis cliquez sur **OK** pour ouvrir la console MMC (Microsoft Management Console).
+1. Sur un ordinateur disposant d’un accès au serveur de mise à jour, cliquez sur **Démarrer**, cliquez sur **Exécuter**, tapez **MMC** dans la zone de texte, puis cliquez sur **OK** pour ouvrir la console MMC (Microsoft Management Console).
 
-2.  Cliquez sur **Fichier**, sur **Ajouter/supprimer un composant logiciel enfichable**, **Ajouter**, **Certificats**, **Ajouter**, sélectionnez **Compte de l’ordinateur**, puis cliquez sur **Suivant**.
+2. Cliquez sur **Fichier**, sur **Ajouter/supprimer un composant logiciel enfichable**, **Ajouter**, **Certificats**, **Ajouter**, sélectionnez **Compte de l’ordinateur**, puis cliquez sur **Suivant**.
 
-3.  Sélectionnez **Un autre ordinateur**, saisissez le nom du serveur de mise à jour ou cliquez sur **Parcourir** pour rechercher l’ordinateur du serveur de mise à jour, cliquez sur **Terminer**, sur **Fermer** puis sur **OK**.
+3. Sélectionnez **Un autre ordinateur**, saisissez le nom du serveur de mise à jour ou cliquez sur **Parcourir** pour rechercher l’ordinateur du serveur de mise à jour, cliquez sur **Terminer**, sur **Fermer** puis sur **OK**.
 
-4.  Développez ***Certificats (* nom du serveur de mise à jour**), **WSUS**, puis cliquez sur **Certificats**.
+4. Développez ***Certificats (* nom du serveur de mise à jour**), **WSUS**, puis cliquez sur **Certificats**.
 
-5.  Cliquez avec le bouton droit sur le certificat dans le volet des résultats, sélectionnez **Toutes les tâches**, puis cliquez sur **Exporter**. Terminez l **’Assistant Exportation de certificat**, utilisez les paramètres par défaut pour créer un fichier de certificat d’exportation avec le nom et l’emplacement spécifiés dans l’Assistant.
+5. Cliquez avec le bouton droit sur le certificat dans le volet des résultats, sélectionnez **Toutes les tâches**, puis cliquez sur **Exporter**. Terminez l **’Assistant Exportation de certificat**, utilisez les paramètres par défaut pour créer un fichier de certificat d’exportation avec le nom et l’emplacement spécifiés dans l’Assistant.
 
-6.  À l’aide de l’une des méthodes suivantes, ajoutez le certificat utilisé pour signer le catalogue de mises à jour sur chaque ordinateur client qui utilisera WUA pour rechercher les mises à jour dans le catalogue. Ajoutez le certificat sur l’ordinateur client comme suit :
+6. À l’aide de l’une des méthodes suivantes, ajoutez le certificat utilisé pour signer le catalogue de mises à jour sur chaque ordinateur client qui utilisera WUA pour rechercher les mises à jour dans le catalogue. Ajoutez le certificat sur l’ordinateur client comme suit :
 
-    -   Pour les certificats auto-signés : ajoutez le certificat aux magasins de certificats **Autorités de certification racines de confiance** et **Éditeurs approuvés**.
+   -   Pour les certificats auto-signés : Ajoutez le certificat aux magasins de certificats **Autorités de certification racines de confiance** et **Éditeurs approuvés**.
 
-    -   Pour les certificats émis par une autorité de certification (CA) : ajoutez le certificat au magasin de certificats **Éditeurs approuvés**.
+   -   Pour les certificats délivrés une autorité de certification : Ajoutez le certificat au magasin de certificats **Éditeurs approuvés**.
 
-    > [!NOTE]
-    > WUA vérifie également si le paramètre **Autoriser le contenu signé de la stratégie de groupe d'emplacement des services de mise à jour Microsoft sur l'intranet** est activé sur l'ordinateur local. Ce paramètre de stratégie doit être activé pour que WUA analyse les mises à jour qui ont été créées et publiées à l'aide de l'éditeur de mises à jour. Pour plus d’informations sur l’activation de ce paramètre Stratégie de groupe, consultez [Guide pratique pour configurer la stratégie de groupe sur les ordinateurs clients] (https://technet.microsoft.com/library/bb530967.aspx(d=robot).
+   > [!NOTE]
+   > WUA vérifie également si le paramètre **Autoriser le contenu signé de la stratégie de groupe d'emplacement des services de mise à jour Microsoft sur l'intranet** est activé sur l'ordinateur local. Ce paramètre de stratégie doit être activé pour que WUA analyse les mises à jour qui ont été créées et publiées à l'aide de l'éditeur de mises à jour. Pour plus d’informations sur l’activation du paramètre Stratégie de groupe, consultez le [Guide pratique pour configurer la stratégie de groupe sur les ordinateurs clients](<https://technet.microsoft.com/library/bb530967.aspx(d=robot>).
 
 
 
-## <a name="configuring-group-policy-to-allow-wua-on-computers-to-scan-for-published-updates"></a>Configuration de la stratégie de groupe pour autoriser WUA à rechercher sur les ordinateurs les mises à jour publiées
-Avant que l'Agent Windows Update (WUA) recherche sur les ordinateurs les mises à jour logicielles qui ont été créées et publiées à l'aide de l'éditeur de mise à jour, un paramètre de stratégie doit être activé pour autoriser le contenu signé de l'emplacement intranet du service de mise à jour Microsoft. Lorsque vous activez le paramètre de stratégie, l'Agent Windows Update (WUA) accepte les mises à jour reçues via un emplacement intranet si les mises à jour apparaissent signées dans le magasin de certificats **Éditeurs approuvés** sur l'ordinateur local. Il existe plusieurs méthodes pour configurer la stratégie de groupe sur les ordinateurs dans l’environnement.
+## <a name="configuring-group-policy-to-allow-wuaon-computers-to-scan-for-published-updates"></a>Configuration de la stratégie de groupe pour autoriser WUA à rechercher sur les ordinateurs les mises à jour publiées
+Avant que l’Agent Windows Update (WUA) recherche sur les ordinateurs les mises à jour logicielles qui ont été créées et publiées à l’aide de l’éditeur de mise à jour, un paramètre de stratégie doit être activé pour autoriser le contenu signé de l’emplacement intranet du service de mise à jour Microsoft. Lorsque vous activez le paramètre de stratégie, l’Agent Windows Update (WUA) accepte les mises à jour reçues via un emplacement intranet si les mises à jour apparaissent signées dans le magasin de certificats **Éditeurs approuvés** sur l’ordinateur local. Il existe plusieurs méthodes pour configurer la stratégie de groupe sur les ordinateurs dans l’environnement.
 
 Pour les ordinateurs qui ne figurent pas sur le domaine, un paramètre de clé de registre peut être configuré afin d’autoriser le contenu signé de l'emplacement intranet du service de mise à jour Microsoft.
 

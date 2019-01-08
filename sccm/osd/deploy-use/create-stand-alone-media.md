@@ -10,16 +10,16 @@ ms.assetid: c6b9ccd2-78d9-4f0e-b25a-70d0866300ba
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 35dd110c2566dab945bb0701e113becb3412d65c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: e2a9c4a1d2feba0c96dcbe3a2f7ee03c7c5a4555
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32351942"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418694"
 ---
 # <a name="create-stand-alone-media-with-system-center-configuration-manager"></a>Créer un média autonome avec System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Un média autonome dans Configuration Manager contient tous les éléments requis pour déployer le système d’exploitation sur un ordinateur sans connexion réseau. Utilisez un média autonome avec les scénarios de déploiement de système d’exploitation suivants :  
 
@@ -81,55 +81,55 @@ Avant d'exécuter l'Assistant Création d'un média de séquence de tâches afin
 
 ## <a name="to-create-stand-alone-media"></a>Pour créer un média autonome  
 
-1.  Dans la console Configuration Manager, cliquez sur **Bibliothèque de logiciels**.  
+1. Dans la console Configuration Manager, cliquez sur **Bibliothèque de logiciels**.  
 
-2.  Dans l'espace de travail **Bibliothèque de logiciels** , développez **Systèmes d'exploitation**, puis cliquez sur **Séquences de tâches**.  
+2. Dans l'espace de travail **Bibliothèque de logiciels** , développez **Systèmes d'exploitation**, puis cliquez sur **Séquences de tâches**.  
 
-3.  Dans l'onglet **Accueil** , dans le groupe **Créer** , cliquez sur **Créer un média de séquence de tâches** pour démarrer l'Assistant Création d'un média de séquence de tâches.  
+3. Dans l'onglet **Accueil** , dans le groupe **Créer** , cliquez sur **Créer un média de séquence de tâches** pour démarrer l'Assistant Création d'un média de séquence de tâches.  
 
-4.  Sur la page **Sélectionner le type de média** , spécifiez les options suivantes, puis cliquez sur **Suivant**.  
+4. Sur la page **Sélectionner le type de média** , spécifiez les options suivantes, puis cliquez sur **Suivant**.  
 
-    -   Sélectionnez **Média autonome**.  
+   -   Sélectionnez **Média autonome**.  
 
-    -   Éventuellement, si vous souhaitez autoriser le déploiement du système d'exploitation sans intervention de l'utilisateur, sélectionnez **Autoriser le déploiement du système d'exploitation de manière autonome**. Lorsque vous sélectionnez cette option, l'utilisateur n'est pas invité à fournir des informations de configuration réseau ou des séquences de tâches facultatives. Si le média est configuré avec une protection par mot de passe, l’utilisateur est quand même invité à fournir un mot de passe.  
+   -   Éventuellement, si vous souhaitez autoriser le déploiement du système d'exploitation sans intervention de l'utilisateur, sélectionnez **Autoriser le déploiement du système d'exploitation de manière autonome**. Lorsque vous sélectionnez cette option, l'utilisateur n'est pas invité à fournir des informations de configuration réseau ou des séquences de tâches facultatives. Si le média est configuré avec une protection par mot de passe, l’utilisateur est quand même invité à fournir un mot de passe.  
 
-5.  Dans la page **Type de média**, spécifiez s’il s’agit d’un lecteur USB amovible ou d’un ensemble CD/DVD :  
+5. Dans la page **Type de média**, spécifiez s’il s’agit d’un lecteur USB amovible ou d’un ensemble CD/DVD :  
 
-    > [!IMPORTANT]  
-    >  Par défaut, le média autonome utilise un système de fichiers FAT32. Vous ne pouvez pas créer de média autonome sur un lecteur USB amovible dont le contenu inclut un fichier d’une taille supérieure à 4 Go.  
+   > [!IMPORTANT]  
+   >  Par défaut, le média autonome utilise un système de fichiers FAT32. Vous ne pouvez pas créer de média autonome sur un lecteur USB amovible dont le contenu inclut un fichier d’une taille supérieure à 4 Go.  
 
-    -   Si vous sélectionnez **Lecteur USB amovible**, spécifiez le lecteur sur lequel stocker le contenu.  
+   - Si vous sélectionnez **Lecteur USB amovible**, spécifiez le lecteur sur lequel stocker le contenu.  
 
-        - **Formater le lecteur USB amovible (FAT32) et le rendre démarrable** : par défaut, laisser Configuration Manager préparer le lecteur USB. De nombreux appareils UEFI récents nécessitent une partition FAT32 amorçable. Toutefois, ce format limite également la taille des fichiers et la capacité globale du lecteur. Si vous avez déjà formaté et configuré le lecteur amovible, désactivez cette option. 
+     - **Formater le lecteur USB amovible (FAT32) et le rendre démarrable** : Par défaut, laissez Configuration Manager préparer le lecteur USB. De nombreux appareils UEFI récents nécessitent une partition FAT32 amorçable. Toutefois, ce format limite également la taille des fichiers et la capacité globale du lecteur. Si vous avez déjà formaté et configuré le lecteur amovible, désactivez cette option. 
 
-    -   Si vous sélectionnez **Ensemble CD/DVD**, spécifiez la capacité du média et le nom et le chemin d'accès des fichiers de sortie. L'Assistant écrit les fichiers de sortie à cet emplacement. Par exemple : **\\\nom_serveur\dossier\fichier_sortie.iso**  
+   - Si vous sélectionnez **Ensemble CD/DVD**, spécifiez la capacité du média et le nom et le chemin d'accès des fichiers de sortie. L'Assistant écrit les fichiers de sortie à cet emplacement. Par exemple : **\\\nom_serveur\dossier\fichier_sortie.iso**  
 
-         Si la capacité du média est insuffisante pour stocker l’ensemble du contenu, plusieurs fichiers sont créés et vous devez stocker le contenu sur plusieurs CD ou DVD. Quand plusieurs médias sont nécessaires, Configuration Manager ajoute un numéro de séquence au nom de chaque fichier de sortie qu’il crée. De plus, si vous déployez une application en même temps que le système d’exploitation et que cette application ne peut pas tenir sur un seul média, Configuration Manager stocke l’application sur plusieurs médias. Quand le média autonome est exécuté, Configuration Manager invite l’utilisateur à insérer le média suivant sur lequel l’application est stockée.   
+      Si la capacité du média est insuffisante pour stocker l’ensemble du contenu, plusieurs fichiers sont créés et vous devez stocker le contenu sur plusieurs CD ou DVD. Quand plusieurs médias sont nécessaires, Configuration Manager ajoute un numéro de séquence au nom de chaque fichier de sortie qu’il crée. De plus, si vous déployez une application en même temps que le système d’exploitation et que cette application ne peut pas tenir sur un seul média, Configuration Manager stocke l’application sur plusieurs médias. Quand le média autonome est exécuté, Configuration Manager invite l’utilisateur à insérer le média suivant sur lequel l’application est stockée.   
 
-         > [!IMPORTANT]  
-         >  Si vous sélectionnez une image .iso existante, l'Assistant Média de séquence de tâches supprime cette image du lecteur ou du partage dès lors que vous passez à la page suivante de l'Assistant. L'image existante est supprimée même si vous annulez ensuite l'Assistant.  
+      > [!IMPORTANT]  
+      >  Si vous sélectionnez une image .iso existante, l'Assistant Média de séquence de tâches supprime cette image du lecteur ou du partage dès lors que vous passez à la page suivante de l'Assistant. L'image existante est supprimée même si vous annulez ensuite l'Assistant.  
 
      Cliquez sur **Suivant**.  
 
-6.  Sur la page **Sécurité**, choisissez parmi les paramètres suivants, puis cliquez sur **Suivant** :
-    - **Protéger le média à l’aide d’un mot de passe** : entrez un mot de passe fort pour protéger le média. Si vous spécifiez un mot de passe, celui-ci est requis pour utiliser le média.  
+6. Sur la page **Sécurité**, choisissez parmi les paramètres suivants, puis cliquez sur **Suivant** :
+   - **Protéger le média à l’aide d’un mot de passe** : Entrez un mot de passe fort pour protéger le média. Si vous spécifiez un mot de passe, celui-ci est requis pour utiliser le média.  
 
-        > [!IMPORTANT]  
-        >  Sur un média autonome, seules les étapes de séquence de tâches et leurs variables sont chiffrées. Le reste du contenu du média n'est pas chiffré, donc n'incluez pas d'informations sensibles dans les scripts de séquence de tâches. Stockez et mettez en œuvre toutes les informations sensibles en utilisant des variables de séquence de tâches.  
+       > [!IMPORTANT]  
+       >  Sur un média autonome, seules les étapes de séquence de tâches et leurs variables sont chiffrées. Le reste du contenu du média n'est pas chiffré, donc n'incluez pas d'informations sensibles dans les scripts de séquence de tâches. Stockez et mettez en œuvre toutes les informations sensibles en utilisant des variables de séquence de tâches.  
 
-    - **Sélectionner une plage de dates pour que le média autonome soit valide** (à partir de la version 1702) : définissez des dates de début et d’expiration facultatives sur le média. Ces paramètres sont désactivés par défaut. Les dates sont comparées à l’heure système de l’ordinateur avant l’exécution du support autonome. Lorsque l’heure du système est antérieure à l’heure de début ou ultérieure à l’heure d’expiration, le support autonome n’est pas démarré. Ces options sont également disponibles avec l’applet de commande New-CMStandaloneMedia PowerShell.
-7.  Sur la page **CD/DVD autonome** , spécifiez la séquence de tâches qui déploie le système d'exploitation, puis cliquez sur **Suivant**. Pour ajouter du contenu au média autonome pour les dépendances d’application, choisissez **Détecter les dépendances d’application associées et les ajouter à ce média**.
-    > [!TIP]
-    > Si les dépendances d’application attendues ne s’affichent pas, désélectionnez, puis sélectionnez à nouveau le paramètre **Détecter les dépendances d’application associées et les ajouter à ce média** pour actualiser la liste.
+   - **Sélectionner une plage de dates pendant laquelle le média autonome est valide** (à partir de la version 1702) : Définissez des dates de début et d’expiration facultatives pour le média. Ces paramètres sont désactivés par défaut. Les dates sont comparées à l’heure système de l’ordinateur avant l’exécution du support autonome. Lorsque l’heure du système est antérieure à l’heure de début ou ultérieure à l’heure d’expiration, le support autonome n’est pas démarré. Ces options sont également disponibles avec l’applet de commande New-CMStandaloneMedia PowerShell.
+7. Sur la page **CD/DVD autonome** , spécifiez la séquence de tâches qui déploie le système d'exploitation, puis cliquez sur **Suivant**. Pour ajouter du contenu au média autonome pour les dépendances d’application, choisissez **Détecter les dépendances d’application associées et les ajouter à ce média**.
+   > [!TIP]
+   > Si les dépendances d’application attendues ne s’affichent pas, désélectionnez, puis sélectionnez à nouveau le paramètre **Détecter les dépendances d’application associées et les ajouter à ce média** pour actualiser la liste.
 
-    L'Assistant vous permet de sélectionner uniquement les séquences de tâches qui sont associées à une image de démarrage.  
+   L'Assistant vous permet de sélectionner uniquement les séquences de tâches qui sont associées à une image de démarrage.  
 
 8. Sur la page **Sélectionner une application** (disponible à partir de la version 1702), spécifiez le contenu d’application à inclure dans le fichier du média, puis cliquez sur **Suivant**.
 9. Sur la page **Sélectionner un package** (disponible à partir de la version 1702), spécifiez le contenu de package à inclure dans le fichier du média, puis cliquez sur **Suivant**.
 10. Sur la page **Sélectionner le package de pilotes** (disponible à partir de la version 1702), spécifiez le contenu de package de pilotes à inclure dans le fichier du média, puis cliquez sur **Suivant**.
-11.  Dans la page **Points de distribution**, spécifiez les points de distribution où se trouve le contenu requis, puis cliquez sur **Suivant**.  
+11. Dans la page **Points de distribution**, spécifiez les points de distribution où se trouve le contenu requis, puis cliquez sur **Suivant**.  
 
-     Configuration Manager n’affiche que les points de distribution qui disposent du contenu. Distribuez tout le contenu associé à la séquence de tâches sur au moins un point de distribution avant de continuer. Après avoir distribué le contenu, actualisez la liste des points de distribution. Supprimez les points de distribution que vous avez déjà sélectionnés dans cette page, accédez à la page précédente, puis revenez à la page **Points de Distribution**. Vous pouvez également redémarrer l’Assistant. Pour plus d’informations, consultez [Distribuer du contenu référencé par une séquence de tâches](manage-task-sequences-to-automate-tasks.md#BKMK_DistributeTS) et [Gérer le contenu et l’infrastructure de contenu](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+    Configuration Manager n’affiche que les points de distribution qui disposent du contenu. Distribuez tout le contenu associé à la séquence de tâches sur au moins un point de distribution avant de continuer. Après avoir distribué le contenu, actualisez la liste des points de distribution. Supprimez les points de distribution que vous avez déjà sélectionnés dans cette page, accédez à la page précédente, puis revenez à la page **Points de Distribution**. Vous pouvez également redémarrer l’Assistant. Pour plus d’informations, consultez [Distribuer du contenu référencé par une séquence de tâches](manage-task-sequences-to-automate-tasks.md#BKMK_DistributeTS) et [Gérer le contenu et l’infrastructure de contenu](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
     > [!NOTE]  
     >  Vous devez disposer de droits d’accès en **Lecture** à la bibliothèque de contenu sur les points de distribution.  
@@ -147,7 +147,7 @@ Avant d'exécuter l'Assistant Création d'un média de séquence de tâches afin
 
 13. Effectuez toutes les étapes de l'Assistant.  
 
- Les fichiers de média autonome (.iso) sont créés dans le dossier de destination. Si vous avez sélectionné **CD/DVD autonome**, vous pouvez maintenant copier les fichiers de sortie sur un ensemble de CD ou DVD.  
+    Les fichiers de média autonome (.iso) sont créés dans le dossier de destination. Si vous avez sélectionné **CD/DVD autonome**, vous pouvez maintenant copier les fichiers de sortie sur un ensemble de CD ou DVD.  
 
 ##  <a name="BKMK_StandAloneMediaTSExample"></a> Exemple de séquence de tâches pour un média autonome  
  Pour créer une séquence de tâches afin de déployer un système d’exploitation à l’aide d’un média autonome, utilisez le tableau suivant comme guide. Le tableau vous aide à décider de la séquence générale pour vos étapes de séquence de tâches. Il aide également à organiser et à structurer les étapes de séquence de tâches en groupes logiques. La séquence de tâches que vous créez peut être différente de celle de cet exemple, et elle peut contenir un nombre de groupes et d'étapes de séquence de tâches plus ou moins important.  

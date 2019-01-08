@@ -10,16 +10,16 @@ ms.assetid: 4884a2d3-13ce-44e5-88c4-a66dc7ec6014
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c960ee37e5f4b7b3b644afd06a04c2747cc1f1eb
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: a71fff51f39e6292489a28436dfd18a3755698dc
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32343219"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417011"
 ---
 # <a name="capabilities-in-technical-preview-1802-for-system-center-configuration-manager"></a>Fonctionnalités de Technical Preview 1802 pour System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Technical Preview)*
+*S’applique à : System Center Configuration Manager (préversion technique)*
 
 Cet article présente les fonctionnalités disponibles dans la version Technical Preview 1802 de System Center Configuration Manager. Vous pouvez installer cette version pour mettre à jour et ajouter de nouvelles fonctionnalités à votre site Configuration Manager Technical Preview. 
 
@@ -32,14 +32,14 @@ Consultez [Technical Preview pour System Center Configuration Manager](/sccm/cor
     Workaround details.
 -->
 ## <a name="known-issues-in-this-technical-preview"></a>Problèmes connus dans cette préversion technique
--   **La mise à jour vers une nouvelle préversion échoue s’il existe un serveur de site en mode passif**. Si vous avez un [serveur de site principal en mode passif](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability), vous devez désinstaller le serveur de site en mode passif avant de procéder à la mise à jour vers cette nouvelle préversion. Vous pouvez réinstaller le serveur de site en mode passif une fois votre site mis à jour.
+- **La mise à jour vers une nouvelle préversion échoue s’il existe un serveur de site en mode passif**. Si vous avez un [serveur de site principal en mode passif](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability), vous devez désinstaller le serveur de site en mode passif avant de procéder à la mise à jour vers cette nouvelle préversion. Vous pouvez réinstaller le serveur de site en mode passif une fois votre site mis à jour.
 
   Pour désinstaller le serveur de site en mode passif :
   1. Dans la console Configuration Manager, accédez à **Administration** > **Vue d’ensemble** > **Configuration du site** > **Serveurs et rôles de système de site**, puis sélectionnez le serveur de site en mode passif.
   2. Dans le volet **Rôles de système de site**, cliquez avec le bouton droit sur le rôle **Serveur de site**, puis choisissez **Supprimer le rôle**.
   3. Cliquez avec le bouton droit sur le serveur de site en mode passif, puis choisissez **Supprimer**.
   4. Après la désinstallation du serveur de site, redémarrez le service **CONFIGURATION_MANAGER_UPDATE** sur le serveur de site principal actif.
-<!--sms 489412-->
+  <!--sms 489412-->
 
 
 </br>
@@ -48,14 +48,12 @@ Consultez [Technical Preview pour System Center Configuration Manager](/sccm/cor
 
 
 ## <a name="transition-endpoint-protection-workload-to-intune-using-co-management"></a>Transférer la charge de travail Endpoint Protection vers Intune à l’aide de la cogestion    
-<!-- 1357365 -->
-Dans cette version, vous pouvez maintenant transférer la charge de travail Endpoint Protection de Configuration Manager à Intune après avoir activé la cogestion. Pour cela, accédez à la page des propriétés de cogestion et déplacez le curseur de Configuration Manager sur **Pilote** ou **Tout**. Pour plus d’informations, consultez [Cogestion pour les appareils Windows 10](/sccm/core/clients/manage/co-management-overview).
+<!-- 1357365 --> Dans cette version, vous pouvez maintenant transférer la charge de travail Endpoint Protection de Configuration Manager à Intune après avoir activé la cogestion. Pour cela, accédez à la page des propriétés de cogestion et déplacez le curseur de Configuration Manager sur **Pilote** ou **Tout**. Pour plus d’informations, consultez [Cogestion pour les appareils Windows 10](/sccm/core/clients/manage/co-management-overview).
 
 
  
 ## <a name="configure-windows-delivery-optimization-to-use-configuration-manager-boundary-groups"></a>Configurer l’Optimisation de la distribution de Windows de façon à utiliser des groupes de limites Configuration Manager
-<!-- 1324696 -->
-Les groupes de limites Configuration Manager permettent de définir et de réguler la distribution de contenu sur le réseau de l’entreprise et dans les agences. [L’Optimisation de la distribution de Windows](/windows/deployment/update/waas-delivery-optimization) est une technologie cloud pair à pair de partage de contenu entre appareils Windows 10. À partir de cette version, vous pourrez la configurer de façon à ce qu’elle utilise vos groupes de limites pour partager du contenu entre pairs. Un nouveau paramètre client s’applique à l’identificateur de groupe de limites sous la forme de l’identificateur de groupe d’Optimisation de la distribution sur le client. Lorsque le client communique avec le service de cloud d’Optimisation de la distribution, il utilise cet identificateur pour localiser les pairs possédant le contenu souhaité. 
+<!-- 1324696 --> Les groupes de limites Configuration Manager permettent de définir et de réguler la distribution de contenu sur le réseau de l’entreprise et dans les agences. [L’Optimisation de la distribution de Windows](/windows/deployment/update/waas-delivery-optimization) est une technologie cloud pair à pair de partage de contenu entre appareils Windows 10. À partir de cette version, vous pourrez la configurer de façon à ce qu’elle utilise vos groupes de limites pour partager du contenu entre pairs. Un nouveau paramètre client s’applique à l’identificateur de groupe de limites sous la forme de l’identificateur de groupe d’Optimisation de la distribution sur le client. Lorsque le client communique avec le service de cloud d’Optimisation de la distribution, il utilise cet identificateur pour localiser les pairs possédant le contenu souhaité. 
 
 ### <a name="prerequisites"></a>Prérequis
 - L’Optimisation de la distribution n’est disponible que sur les clients Windows 10
@@ -86,22 +84,21 @@ Lorsque vous déployez une séquence de tâches de mise à niveau, utilisez les 
 
 
 ## <a name="improvements-to-windows-10-in-place-upgrade-task-sequence"></a>Améliorations apportées à la séquence de tâches de mise à niveau sur place de Windows 10
-<!-- 1357425 -->
-Le modèle de séquence de tâches par défaut pour la mise à niveau sur place de Windows 10 comprend maintenant des groupes supplémentaires, avec des actions recommandées à ajouter avant ou après le processus de mise à niveau. Ces actions sont communes à de nombreux clients qui parviennent à mettre à niveau des appareils sur Windows 10. 
+<!-- 1357425 --> Le modèle de séquence de tâches par défaut pour la mise à niveau sur place de Windows 10 comprend maintenant des groupes supplémentaires, avec des actions recommandées à ajouter avant ou après le processus de mise à niveau. Ces actions sont communes à de nombreux clients qui parviennent à mettre à niveau des appareils sur Windows 10. 
 
 ### <a name="new-groups-under-prepare-for-upgrade"></a>Nouveaux groupes sous **Préparer la mise à niveau**
-- **Vérification de la batterie** : ajoutez des étapes dans ce groupe pour contrôler si l’ordinateur est sur batterie ou sur secteur. Cette action doit être effectuée par un utilitaire ou un script personnalisé.
-- **Vérification de la connexion réseau/câblée** : ajoutez des étapes dans ce groupe pour contrôler si l’ordinateur est connecté à un réseau et n’utilise pas de connexion sans fil. Cette action doit être effectuée par un utilitaire ou un script personnalisé.
-- **Supprimer les applications incompatibles** : ajoutez des étapes dans ce groupe pour supprimer toutes les applications incompatibles avec cette version de Windows 10. Il existe différentes façons de désinstaller une application selon les cas. Si l’application utilise Windows Installer, copiez la ligne de commande **Programme de désinstallation** de l’onglet **Programmes** dans les propriétés de type de déploiement de Windows Installer de l’application. Ensuite, ajoutez dans ce groupe une étape **Exécuter la ligne de commande** comportant la ligne de commande du programme de désinstallation. Par exemple : </br>`msiexec /x {150031D8-1234-4BA8-9F52-D6E5190D1CBA} /q`</br> 
-- **Supprimer les pilotes incompatibles** : ajoutez des étapes dans ce groupe pour supprimer tous les pilotes incompatibles avec cette version de Windows 10.
-- **Supprimer/suspendre la sécurité tierce** : ajoutez des étapes dans ce groupe pour supprimer ou suspendre des programmes de sécurité tiers, par exemple, des antivirus.
+- **Vérifications de la batterie** : Ajoutez des étapes dans ce groupe pour vérifier si l'ordinateur utilise la batterie ou l'alimentation secteur. Cette action doit être effectuée par un utilitaire ou un script personnalisé.
+- **Vérifications de la connexion réseau/câblée** : Ajoutez des étapes dans ce groupe pour vérifier si l'ordinateur est connecté à un réseau et n'utilise pas de connexion sans fil. Cette action doit être effectuée par un utilitaire ou un script personnalisé.
+- **Supprimer les applications incompatibles** : Ajoutez des étapes dans ce groupe pour supprimer les applications incompatibles avec cette version de Windows 10. Il existe différentes façons de désinstaller une application selon les cas. Si l’application utilise Windows Installer, copiez la ligne de commande **Programme de désinstallation** de l’onglet **Programmes** dans les propriétés de type de déploiement de Windows Installer de l’application. Ensuite, ajoutez dans ce groupe une étape **Exécuter la ligne de commande** comportant la ligne de commande du programme de désinstallation. Par exemple : </br>`msiexec /x {150031D8-1234-4BA8-9F52-D6E5190D1CBA} /q`</br> 
+- **Supprimer les pilotes incompatibles** : Ajoutez des étapes dans ce groupe pour supprimer les pilotes incompatibles avec cette version de Windows 10.
+- **Supprimer/suspendre la sécurité tierce** : Ajoutez des étapes dans ce groupe pour supprimer ou suspendre les programmes de sécurité tiers, comme les antivirus.
    - Si vous utilisez un programme de chiffrement de disque tiers, indiquez son pilote de chiffrement à l’installation de Windows avec [l’option de ligne de commande](/windows-hardware/manufacture/desktop/windows-setup-command-line-options) **/ReflectDrivers**. Ajoutez une étape [Définir une variable de séquence de tâches](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) à la séquence de tâches dans ce groupe. Affectez la valeur **OSDSetupAdditionalUpgradeOptions** à la variable de séquence de tâches. Définissez la valeur **/ReflectDriver** avec le chemin d’accès au pilote. Cette [variable d’action de séquence de tâches](/sccm/osd/understand/task-sequence-action-variables#upgrade-operating-system) ajoute la ligne de commande d’installation de Windows utilisée par la séquence de tâches. Contactez votre éditeur de logiciels pour obtenir de l’aide sur ce processus.
 
 ### <a name="new-groups-under-post-processing"></a>Nouveaux groupes sous **Post-traitement**
-- **Appliquer les pilotes basés sur le programme d’installation** : ajoutez des étapes dans ce groupe pour installer des pilotes basés sur le programme d’installation (.exe) à partir de packages.
-- **Installer/activer la sécurité tierce** : ajoutez des étapes dans ce groupe pour installer ou activer des programmes de sécurité tiers, par exemple, des antivirus. 
-- **Définir les associations et applications Windows par défaut** : ajoutez des étapes dans ce groupe pour définir des associations de fichiers et des applications Windows par défaut. Tout d’abord, préparez un ordinateur de référence avec les associations d’applications de votre choix. Ensuite, exécutez la commande suivante pour exporter : </br>`dism /online /Export-DefaultAppAssociations:"%UserProfile%\Desktop\DefaultAppAssociations.xml"`</br>Ajoutez le fichier XML à un package. Ensuite, ajoutez une étape [Exécuter la ligne de commande](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) dans ce groupe. Indiquez le package contenant le fichier XML, puis spécifiez la ligne de commande suivante : </br>`dism /online /Import-DefaultAppAssociations:DefaultAppAssocations.xml`</br> Pour plus d’informations, consultez la page [Exporter ou importer des associations d’applications par défaut](/windows-hardware/manufacture/desktop/export-or-import-default-application-associations).
-- **Appliquez les personnalisations** : ajoutez des étapes dans ce groupe pour appliquer des personnalisations du menu Démarrer, par exemple, l’organisation des groupes de programmes. Pour plus d’informations, consultez la section [Personnaliser l’écran de démarrage](/windows-hardware/manufacture/desktop/customize-the-start-screen).
+- **Appliquer des pilotes basés sur l'installation** : Ajoutez des étapes dans ce groupe pour installer des pilotes basés sur l'installation (.exe) à partir de packages.
+- **Installer/activer une sécurité tierce** : Ajoutez des étapes dans ce groupe pour installer ou activer des programmes de sécurité tiers, comme des antivirus. 
+- **Définir les applications Windows par défaut et les associations** : Ajoutez des étapes dans ce groupe pour définir les applications Windows par défaut et les associations de fichiers. Tout d’abord, préparez un ordinateur de référence avec les associations d’applications de votre choix. Ensuite, exécutez la commande suivante pour exporter : </br>`dism /online /Export-DefaultAppAssociations:"%UserProfile%\Desktop\DefaultAppAssociations.xml"`</br>Ajoutez le fichier XML à un package. Ensuite, ajoutez une étape [Exécuter la ligne de commande](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) dans ce groupe. Indiquez le package contenant le fichier XML, puis spécifiez la ligne de commande suivante : </br>`dism /online /Import-DefaultAppAssociations:DefaultAppAssocations.xml`</br> Pour plus d’informations, consultez la page [Exporter ou importer des associations d’applications par défaut](/windows-hardware/manufacture/desktop/export-or-import-default-application-associations).
+- **Appliquer les personnalisations** : Ajoutez des étapes dans ce groupe pour appliquer les personnalisations du menu Démarrer, comme l'organisation de groupes de programmes. Pour plus d’informations, consultez la section [Personnaliser l’écran de démarrage](/windows-hardware/manufacture/desktop/customize-the-start-screen).
 
 ### <a name="additional-recommendations"></a>Recommandations supplémentaires
 - Consultez la documentation Windows pour [Résoudre les erreurs de mise à niveau de Windows 10](/windows/deployment/upgrade/resolve-windows-10-upgrade-errors). Cet article comporte également des informations détaillées sur le processus de mise à niveau.
@@ -118,8 +115,7 @@ Envoyer vos **Commentaires** dans l’onglet **Accueil** du ruban si vous avez d
 
 
 ## <a name="improvements-to-pxe-enabled-distribution-points"></a>Améliorations apportées aux points de distribution compatibles PXE
-<!-- 1357580 -->
-Pour préciser le comportement de la [nouvelle fonctionnalité PXE](/sccm/core/get-started/capabilities-in-technical-preview-1706#pxe-network-boot-support-for-ipv6) introduite dans la version Technical Preview 1706, nous avons renommé l’option **Prise en charge IPv6**. Sur l’onglet **PXE** des propriétés des points de distribution, cochez **Activer un répondeur PXE sans les Services de déploiement Windows**. 
+<!-- 1357580 --> Pour préciser le comportement de la [nouvelle fonctionnalité PXE](/sccm/core/get-started/capabilities-in-technical-preview-1706#pxe-network-boot-support-for-ipv6) introduite dans la préversion technique 1706, nous avons renommé l’option **Prise en charge IPv6**. Sur l’onglet **PXE** des propriétés des points de distribution, cochez **Activer un répondeur PXE sans les Services de déploiement Windows**. 
 
 Cette option active un répondeur PXE sur le point de distribution, qui n’a pas besoin des Services de déploiement Windows (WDS). Si vous activez cette nouvelle option sur un point de distribution qui est déjà compatible PXE, Configuration Manager suspend les services WDS. Si vous la désactivez tout en choisissant **d’Activer la prise en charge PXE pour les clients**, le point de distribution réactive les services WDS.
 
@@ -136,8 +132,7 @@ Pour pouvoir activer et configurer la multidiffusion sur l’onglet **Multidiffu
 
 
 ## <a name="deployment-templates-for-task-sequences"></a>Modèles de déploiement pour les séquences de tâches
-<!-- 1357391 -->
-L’Assistant Déploiement de séquences de tâches peut maintenant créer un modèle de déploiement. Celui-ci peut être enregistré et appliqué à une séquence de tâches existante ou nouvelle pour créer un déploiement. 
+<!-- 1357391 --> L’assistant de déploiement de séquences de tâches peut maintenant créer un modèle de déploiement. Celui-ci peut être enregistré et appliqué à une séquence de tâches existante ou nouvelle pour créer un déploiement. 
 
 ### <a name="try-it-out"></a>Essayez !  
 Essayez d’effectuer les tâches. Envoyez ensuite des **commentaires** à partir de l’onglet **Accueil** du ruban et faites-nous savoir comment cela a fonctionné. 
@@ -154,22 +149,19 @@ Essayez d’effectuer les tâches. Envoyez ensuite des **commentaires** à parti
 
 
 ## <a name="product-lifecycle-dashboard"></a>Tableau de bord Cycle de vie du produit
-<!--1319632-->
-Le nouveau [tableau de bord Cycle de vie du produit](/sccm/core/clients/manage/asset-intelligence/product-lifecycle-dashboard) affiche l’état de la stratégie de cycle de vie des produits Microsoft installés sur des appareils gérés avec Configuration Manager. Il fournit des informations sur les produits Microsoft de votre environnement, leur état de support et leur date de fin de support. Vous pouvez l’utiliser pour comprendre la disponibilité du support de chacun des produits. 
+<!--1319632--> Le nouveau [tableau de bord Cycle de vie du produit](/sccm/core/clients/manage/asset-intelligence/product-lifecycle-dashboard) affiche l’état de la stratégie de cycle de vie des produits Microsoft installés sur des appareils gérés avec Configuration Manager. Il fournit des informations sur les produits Microsoft de votre environnement, leur état de support et leur date de fin de support. Vous pouvez l’utiliser pour comprendre la disponibilité du support de chacun des produits. 
 
 Pour accéder au tableau de bord Cycle de vie dans la console de Configuration Manager, accédez à **Biens et conformité** >**Asset Intelligence** >**Cycle de vie du produit**.
 
 
 
 ## <a name="improvements-to-reporting"></a>Améliorations apportées à la création de rapports
-<!--1357653-->
-À partir de [vos commentaires](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/32434147-new-builtin-reports-about-windows-10-versions-and), nous avons ajouté un nouveau rapport, **Détails des Services de maintenance Windows 10 pour une collection donnée**. Il affiche l’ID de la ressource, le nom NetBIOS, le nom du système d’exploitation et de sa version, la build, la branche du système d’exploitation et l’état du service de maintenance pour les appareils Windows 10. Pour le consulter, accédez à **Monitoring** >**Création de rapports** >**Rapports** >**Systèmes d’exploitation**  > **Détails des Services de maintenance Windows 10 pour une collection donnée**.
+<!--1357653--> À partir de [vos commentaires](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/32434147-new-builtin-reports-about-windows-10-versions-and), nous avons ajouté un nouveau rapport, **Détails des services de maintenance Windows 10 pour une collection donnée**. Il affiche l’ID de la ressource, le nom NetBIOS, le nom du système d’exploitation et de sa version, la build, la branche du système d’exploitation et l’état du service de maintenance pour les appareils Windows 10. Pour le consulter, accédez à **Monitoring** >**Création de rapports** >**Rapports** >**Systèmes d’exploitation**  > **Détails des Services de maintenance Windows 10 pour une collection donnée**.
 
 
 
 ## <a name="improvements-to-software-center"></a>Améliorations apportées au Centre logiciel
-<!--1357592-->
-Grâce à [vos commentaires](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/13002684-software-center-show-only-available-software-hid), il est maintenant possible de masquer les applications installées dans le Centre logiciel. Celles qui sont déjà installées ne s’afficheront plus dans l’onglet Applications lorsque cette option est activée. 
+<!--1357592--> Grâce à [vos commentaires](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/13002684-software-center-show-only-available-software-hid), il est maintenant possible de masquer les applications installées dans le Centre logiciel. Celles qui sont déjà installées ne s’afficheront plus dans l’onglet Applications lorsque cette option est activée. 
 
 ### <a name="try-it-out"></a>Essayez !
 Activez le paramètre **Masquer les applications installées dans le Centre logiciel** dans les paramètres clients du Centre logiciel. Observez le comportement sur le Centre logiciel lorsque l’utilisateur final installe une application.
@@ -177,14 +169,12 @@ Activez le paramètre **Masquer les applications installées dans le Centre logi
 
 
 ## <a name="improvements-to-run-scripts"></a>Améliorations apportées à l’exécution de scripts
-<!--1236459-->
-La fonctionnalité [Exécuter des scripts](/sccm/apps/deploy-use/create-deploy-scripts) retourne maintenant le script de sortie suivant la mise en forme JSON. Ce format retourne toujours une sortie de script lisible. Il est possible que les scripts qui ne parviennent pas à s’exécuter ne génèrent pas de sortie. 
+<!--1236459--> La fonctionnalité [Exécuter des scripts](/sccm/apps/deploy-use/create-deploy-scripts) retourne maintenant le script de sortie suivant la mise en forme JSON. Ce format retourne toujours une sortie de script lisible. Il est possible que les scripts qui ne parviennent pas à s’exécuter ne génèrent pas de sortie. 
 
 
 
 ## <a name="boundary-group-fallback-for-management-points"></a>Groupe de limites de secours pour les points de gestion
-<!-- 1324594 -->
-À partir de cette version, vous pourrez configurer des relations de secours pour les points de gestion entre [groupes de limites](/sccm/core/servers/deploy/configure/boundary-groups). Ce comportement offre un meilleur contrôle des points de gestion que les clients utilisent. L’onglet **Relations** des propriétés du groupe de limites comporte une nouvelle colonne pour le point de gestion. Lors de l’ajout d’un nouveau groupe de limites de secours, le temps de secours du point de gestion est actuellement toujours égal à zéro (0). Ce comportement est identique pour le **Comportement par défaut** dans le groupe de limites de site par défaut.
+<!-- 1324594 --> À partir de cette version, vous pourrez configurer des relations de secours pour les points de gestion entre [groupes de limites](/sccm/core/servers/deploy/configure/boundary-groups). Ce comportement offre un meilleur contrôle des points de gestion que les clients utilisent. L’onglet **Relations** des propriétés du groupe de limites comporte une nouvelle colonne pour le point de gestion. Lors de l’ajout d’un nouveau groupe de limites de secours, le temps de secours du point de gestion est actuellement toujours égal à zéro (0). Ce comportement est identique pour le **Comportement par défaut** dans le groupe de limites de site par défaut.
 
 Auparavant, un problème se produisait souvent pour les points de gestion protégés présents dans un réseau sécurisé. Les clients du réseau d’entreprise principal recevaient une stratégie comprenant ce point de gestion protégé, même s’ils ne pouvaient pas communiquer avec lui à travers un pare-feu. Pour résoudre ce problème, utilisez l’option **Jamais d’action de secours** pour que les clients n’utilisent en secours que les points de gestion avec lesquels ils peuvent communiquer.
 
@@ -200,8 +190,8 @@ L’action de secours du groupe de limites de point de gestion ne modifie pas le
 
 ### <a name="troubleshooting"></a>Résolution des problèmes
 De nouvelles entrées apparaissent dans **LocationServices.log**. L’attribut **Localité** identifie l’un des états suivants :
-- 0 : Inconnu
-- 1 : Le point de gestion spécifié se trouve uniquement dans le groupe de limites de site par défaut pour l’action de secours
+- 0 : Inconnu.
+- 1 : Le point de gestion spécifié se trouve uniquement dans le groupe de limites de site par défaut pour l’action de secours.
 - 2 : Le point de gestion spécifié se trouve dans un groupe de limites voisin ou distant. S’il est à la fois dans le groupe de limites de site par défaut et dans un groupe voisin, la localité est 2.
 - 3 : Le point de gestion spécifié se trouve dans le groupe de limites local ou actif. S’il est à la fois dans le groupe de limites actif et dans un groupe voisin ou le groupe de limites de site par défaut, la localité est 3. Si vous n’activez pas le paramètre des points de gestion préférés dans les Paramètres de hiérarchie, la localité est toujours 3, quel que soit le groupe de limites du point de gestion.
 
@@ -212,8 +202,7 @@ Lorsqu’un client reçoit des cinq erreurs en dix minutes et ne parvient pas à
 
 
 ## <a name="improved-support-for-cng-certificates"></a>Prise en charge améliorée des certificats CNG
-<!-- 1357314 -->
-La version 1710 de Configuration Manager (Current Branch) prend en charge les [certificats Cryptography : Next Generation (CNG)](/sccm/core/plan-design/network/cng-certificates-overview). La version 1710 limite la prise en charge aux certificats clients dans plusieurs scénarios. 
+<!-- 1357314 --> La version 1710 de Configuration Manager (Current Branch) prend en charge [les certificats CNG (Cryptography : Next Generation)](/sccm/core/plan-design/network/cng-certificates-overview). La version 1710 limite la prise en charge aux certificats clients dans plusieurs scénarios. 
 
 À partir de cette version Technical Preview, utilisez des certificats CNG pour les rôles serveurs HTTPS suivants :
 - Point de gestion
@@ -225,8 +214,7 @@ La liste des [scénarios pris en charge](/sccm/core/plan-design/network/cng-cert
 
 
 ## <a name="cloud-management-gateway-support-for-azure-resource-manager"></a>Prise en charge de la Passerelle de gestion cloud pour Azure Resource Manager
-<!-- 1324735 -->
-Lors de la création d’une instance de [Passerelle de gestion cloud](/sccm/core/clients/manage/plan-cloud-management-gateway) (CMG), l’Assistant offre maintenant la possibilité de créer un **déploiement Azure Resource Manager**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) est une plateforme moderne permettant de gérer l’ensemble des ressources de la solution comme une seule entité, nommée [groupe de ressources](/azure/azure-resource-manager/resource-group-overview#resource-groups). Lors du déploiement d’une Passerelle CMG avec Azure Resource Manager, le site utilise Azure Active Directory (Azure AD) pour authentifier et créer les ressources cloud nécessaires. Le certificat de gestion Azure classique n’est pas nécessaire pour ce déploiement modernisé.  
+<!-- 1324735 --> Lors de la création d’une instance de [Passerelle de gestion cloud](/sccm/core/clients/manage/plan-cloud-management-gateway) (CMG), l’Assistant offre maintenant la possibilité de créer un **déploiement Azure Resource Manager**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) est une plateforme moderne permettant de gérer l’ensemble des ressources de la solution comme une seule entité, nommée [groupe de ressources](/azure/azure-resource-manager/resource-group-overview#resource-groups). Lors du déploiement d’une Passerelle CMG avec Azure Resource Manager, le site utilise Azure Active Directory (Azure AD) pour authentifier et créer les ressources cloud nécessaires. Le certificat de gestion Azure classique n’est pas nécessaire pour ce déploiement modernisé.  
 
 L’Assistant CMG propose toujours l’option de **déploiement de service classique** à l’aide d’un certificat de gestion Azure. Pour simplifier le déploiement et la gestion des ressources, nous vous recommandons d’utiliser le modèle de déploiement Azure Resource Manager pour toutes les nouvelles instances CMG. Si possible, redéployez les instances CMG existantes avec Resource Manager.
 
@@ -255,8 +243,7 @@ Suivez la progression du déploiement de service avec **cloudmgr.log** sur le po
 
 
 ## <a name="approve-application-requests-for-users-per-device"></a>Approuver les demandes d’application pour les utilisateurs appareil par appareil
-<!-- 1357015 -->
-À compter de cette version, lorsqu’un utilisateur demande une application qui nécessite une approbation, le nom de l’appareil fait partie de la demande. Si l’administrateur approuve la demande, l’utilisateur ne pourra installer l’application que sur cet appareil. Il devra soumettre une autre demande pour installer l’application sur un autre appareil. 
+<!-- 1357015 --> À compter de cette version, lorsqu’un utilisateur demande une application qui nécessite une approbation, le nom de l’appareil fait partie de la demande. Si l’administrateur approuve la demande, l’utilisateur ne pourra installer l’application que sur cet appareil. Il devra soumettre une autre demande pour installer l’application sur un autre appareil. 
 
 > [!NOTE]
 > Cette fonctionnalité est facultative. Lors du passage à cette version, activez cette fonctionnalité dans l’Assistant Mise à jour. Vous pourrez également le faire par la suite dans la console. Pour plus d’informations, consultez [Activer les fonctionnalités facultatives des mises à jour](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).
@@ -269,15 +256,14 @@ Suivez la progression du déploiement de service avec **cloudmgr.log** sur le po
  Essayez d’effectuer les tâches. Envoyez ensuite des **commentaires** à partir de l’onglet **Accueil** du ruban et faites-nous savoir comment cela a fonctionné.
 
 1. Déployez une application en la rendant accessible à un regroupement d’utilisateurs.
-2. Sur la page **Paramètres de déploiement**, activez l’option : **Un administrateur doit approuver une demande pour cette application sur l’appareil**.
+2. Sur la page **Paramètres de déploiement**, activez l’option suivante : **Un administrateur doit approuver la demande de cette application sur l’appareil**.
 3. En tant qu’utilisateur ciblé, utilisez le Centre logiciel pour soumettre une demande pour l’application. 
 4. Affichez **Demandes d’approbation** sous **Gestion des applications** dans l’espace de travail **Bibliothèque de logiciels** de la console de Configuration Manager. Il y a maintenant une colonne **Appareil** dans la liste de chaque demande. À chaque action effectuée sur la demande, la boîte de dialogue Demande d’application comprend également le nom de l’appareil utilisé par l’utilisateur pour envoyer la demande.
 
 
 
 ## <a name="use-software-center-to-browse-and-install-user-available-applications-on-azure-ad-joined-devices"></a>Utiliser le Centre logiciel pour parcourir et installer des applications accessibles aux utilisateurs sur des appareils joints à Azure AD
-<!-- 1322613 -->
-Les utilisateurs peuvent maintenant parcourir et installer les applications accessibles aux utilisateurs sur des appareils Azure Active Directory (Azure AD) en utilisant le Centre logiciel.  
+<!-- 1322613 --> Les utilisateurs peuvent maintenant parcourir et installer les applications accessibles aux utilisateurs sur des appareils Azure Active Directory (Azure AD) en utilisant le Centre logiciel.  
 
 ### <a name="prerequisites"></a>Prérequis
 - Activer HTTPS sur le point de gestion
@@ -290,7 +276,7 @@ Les utilisateurs peuvent maintenant parcourir et installer les applications acce
    - Joint à Azure AD, autrement dit joint à un domaine cloud
 - Pour prendre en charge les clients basés sur Internet :
     - [Passerelle de gestion cloud](/sccm/core/clients/manage/plan-cloud-management-gateway) 
-    - Activer le paramètre client : **Autoriser les demandes de stratégies utilisateurs provenant de clients Internet** dans le groupe [Stratégie client](/sccm/core/clients/deploy/about-client-settings#client-policy)
+    - Activez le paramètre client : **Autoriser les demandes de stratégies utilisateurs provenant de clients Internet** dans le groupe [Stratégie client](/sccm/core/clients/deploy/about-client-settings#client-policy)
 - Pour prendre en charge les clients sur le réseau d’entreprise :
     - Ajouter le point de distribution cloud à un groupe de limites utilisé par les clients
     - Les clients doivent être en mesure de résoudre le nom de domaine complet (FQDN) du point de gestion compatible HTTPS
@@ -298,8 +284,7 @@ Les utilisateurs peuvent maintenant parcourir et installer les applications acce
 
 
 ## <a name="report-on-windows-autopilot-device-information"></a>Générer un rapport sur les informations d’appareil Windows AutoPilot
-<!-- 1351442 -->
-Windows AutoPilot est une solution permettant d’intégrer et de configurer de nouveaux appareils Windows 10 d’une manière moderne. Pour plus d'informations, consultez la page [Vue d’ensemble de Windows AutoPilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot). Pour inscrire un appareil existant auprès de Windows AutoPilot, vous pouvez charger les informations de l’appareil dans Microsoft Store pour Entreprises et Éducation : numéro de série, identificateur de produit Windows et identificateur matériel. Utilisez Configuration Manager pour collecter et consigner ces informations sur l’appareil. 
+<!-- 1351442 --> Windows AutoPilot est une solution permettant d’intégrer et de configurer de nouveaux appareils Windows 10 d’une manière moderne. Pour plus d'informations, consultez la page [Vue d’ensemble de Windows AutoPilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot). Pour inscrire un appareil existant auprès de Windows AutoPilot, vous pouvez charger les informations de l’appareil dans Microsoft Store pour Entreprises et Éducation : numéro de série, identificateur de produit Windows et identificateur matériel. Utilisez Configuration Manager pour collecter et consigner ces informations sur l’appareil. 
 
 ### <a name="prerequisites"></a>Prérequis
 - Ces informations sur l’appareil s’appliquent uniquement aux clients sous Windows 10 version 1703 et versions ultérieures
@@ -315,11 +300,10 @@ Windows AutoPilot est une solution permettant d’intégrer et de configurer de 
 
 
 ## <a name="improvements-to-configuration-manager-policies-for-windows-defender-exploit-guard"></a>Améliorations apportées aux stratégies de Configuration Manager pour Windows Defender Exploit Guard
-<!-- 1356220 -->
-Des paramètres de stratégie supplémentaires pour les composants Réduction de la surface d’attaque et Accès contrôlé aux dossiers ont été ajoutés à Configuration Manager pour [Windows Defender Exploit Guard](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard).
+<!-- 1356220 --> Des paramètres de stratégie supplémentaires pour les composants Réduction de la surface d’attaque et Accès contrôlé aux dossiers ont été ajoutés à Configuration Manager pour [Windows Defender Exploit Guard](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard).
 
 **Nouveaux paramètres pour l’accès contrôlé aux dossiers**<br/>
-Il existe deux options supplémentaires pour configurer l’accès contrôlé aux dossiers : **Bloquer uniquement les secteurs de disque** et **Auditer uniquement les secteurs de disque**. Ces deux paramètres permettent de n’autoriser l’accès contrôlé aux dossiers que pour les secteurs de démarrage et n’activent pas la protection de dossiers spécifiques ou des dossiers protégés par défaut. 
+Il existe deux options supplémentaires pour configurer l’accès contrôlé aux dossiers : **Bloquer uniquement les secteurs de disque** et **Auditer uniquement les secteurs de disque**. Ces deux paramètres permettent de n’autoriser l’accès contrôlé aux dossiers que pour les secteurs de démarrage et n’activent pas la protection de dossiers spécifiques ou des dossiers protégés par défaut. 
 
 **Nouveaux paramètres pour la réduction de la surface d’attaque**
 - Utilise une protection avancée contre les ransomware.
@@ -330,21 +314,20 @@ Il existe deux options supplémentaires pour configurer l’accès contrôlé au
 
 
 ## <a name="microsoft-edge-browser-policies"></a>Stratégies du navigateur Microsoft Edge
-<!-- 1357310 -->
-Les clients qui utilisent le navigateur web [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) sur des clients Windows 10 peuvent maintenant créer une stratégie de paramètres de conformité Configuration Manager pour configurer plusieurs paramètres Microsoft Edge. Actuellement, cette stratégie comprend les paramètres suivants :
+<!-- 1357310 --> Les clients qui utilisent le navigateur web [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) sur des clients Windows 10 peuvent maintenant créer une stratégie de paramètres de conformité Configuration Manager pour configurer plusieurs paramètres Microsoft Edge. Actuellement, cette stratégie comprend les paramètres suivants :
 - **Définir Microsoft Edge comme navigateur par défaut** : configure le paramètre d’application Windows 10 par défaut avec le navigateur web Microsoft Edge
-- **Autoriser la barre d’adresse déroulante** : nécessite la version 1703 ou une version ultérieure de Windows 10. Pour plus d’informations, consultez la section [Stratégie de navigateur AllowAddressBarDropdown](/windows/client-management/mdm/policy-csp-browser#browser-allowaddressbardropdown).
-- **Autoriser la synchronisation des favoris entre les navigateurs Microsoft** : nécessite la version 1703 ou une version ultérieure de Windows 10. Pour plus d’informations, consultez la section [Stratégie de navigateur SyncFavoritesBetweenIEAndMicrosoftEdge](/windows/client-management/mdm/policy-csp-browser#browser-syncfavoritesbetweenieandmicrosoftedge).
-- **Autoriser l’effacement des données de navigation à la fermeture** : nécessite la version 1703 ou une version ultérieure de Windows 10. Pour plus d’informations, consultez la section [Stratégie de navigateur ClearBrowsingDataOnExit](/windows/client-management/mdm/policy-csp-browser#browser-clearbrowsingdataonexit).
-- **Autoriser les en-têtes Do Not Track** : pour plus d’informations, consultez la section [Stratégie de navigateur AllowDoNotTrack](/windows/client-management/mdm/policy-csp-browser#browser-allowdonottrack).
-- **Autoriser le remplissage automatique** : pour plus d’informations, consultez la section [Stratégie de navigateur AllowAutofill](/windows/client-management/mdm/policy-csp-browser#browser-allowautofill).
-- **Autoriser les cookies** : pour plus d’informations, consultez la section [Stratégie de navigateur AllowCookies](/windows/client-management/mdm/policy-csp-browser#browser-allowcookies).
-- **Autoriser le bloqueur de fenêtres publicitaires** : pour plus d’informations, consultez la section [Stratégie de navigateur AllowPopups](/windows/client-management/mdm/policy-csp-browser#browser-allowpopups).
-- **Autoriser les suggestions de recherche dans la barre d’adresses** : pour plus d’informations, consultez la section [Stratégie de navigateur AllowSearchSuggestionsinAddressBar](/windows/client-management/mdm/policy-csp-browser#browser-allowsearchsuggestionsinaddressbar).
-- **Autoriser l’envoi du trafic intranet vers Internet Explorer** : pour plus d’informations, consultez la section [Stratégie de navigateur SendIntranetTraffictoInternetExplorer](/windows/client-management/mdm/policy-csp-browser#browser-sendintranettraffictointernetexplorer).
-- **Autoriser le gestionnaire de mot de passe** : pour plus d’informations, consultez la page [Stratégie de navigateur AllowPasswordManager](/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager).
-- **Autoriser les Outils de développement** : pour plus d’informations, consultez la page [Stratégie de navigateur AllowDeveloperTools](/windows/client-management/mdm/policy-csp-browser#browser-allowdevelopertools).
-- **Autoriser les extensions** : pour plus d’informations, consultez la page [Stratégie de navigateur AllowExtensions](/windows/client-management/mdm/policy-csp-browser#browser-allowextensions).
+- **Autoriser la liste déroulante de la barre d'adresses** : Windows 10 version 1703 ou ultérieure est requise. Pour plus d’informations, consultez la section [Stratégie de navigateur AllowAddressBarDropdown](/windows/client-management/mdm/policy-csp-browser#browser-allowaddressbardropdown).
+- **Autoriser la synchronisation des favoris entre navigateurs Microsoft** : Windows 10 version 1703 ou ultérieure est requise. Pour plus d’informations, consultez la section [Stratégie de navigateur SyncFavoritesBetweenIEAndMicrosoftEdge](/windows/client-management/mdm/policy-csp-browser#browser-syncfavoritesbetweenieandmicrosoftedge).
+- **Autoriser l'effacement des données de navigation en quittant** : Windows 10 version 1703 ou ultérieure est requise. Pour plus d’informations, consultez la section [Stratégie de navigateur ClearBrowsingDataOnExit](/windows/client-management/mdm/policy-csp-browser#browser-clearbrowsingdataonexit).
+- **Autoriser les en-têtes Do Not Track** : Pour plus d’informations, consultez la section [Stratégie de navigateur AllowDoNotTrack](/windows/client-management/mdm/policy-csp-browser#browser-allowdonottrack).
+- **Autoriser le remplissage automatique** : Pour plus d’informations, consultez la section [Stratégie de navigateur AllowAutofill](/windows/client-management/mdm/policy-csp-browser#browser-allowautofill).
+- **Autoriser les cookies** : Pour plus d’informations, consultez la section [Stratégie de navigateur AllowCookies](/windows/client-management/mdm/policy-csp-browser#browser-allowcookies).
+- **Autoriser le bloqueur de fenêtres publicitaires** : Pour plus d’informations, consultez la section [Stratégie de navigateur AllowPopups](/windows/client-management/mdm/policy-csp-browser#browser-allowpopups).
+- **Autoriser les suggestions de recherche dans la barre d’adresse** : Pour plus d’informations, consultez la section [Stratégie de navigateur AllowSearchSuggestionsinAddressBar](/windows/client-management/mdm/policy-csp-browser#browser-allowsearchsuggestionsinaddressbar).
+- **Autoriser l'envoi de trafic intranet vers Internet Explorer** : Pour plus d’informations, consultez la section [Stratégie de navigateur SendIntranetTraffictoInternetExplorer](/windows/client-management/mdm/policy-csp-browser#browser-sendintranettraffictointernetexplorer).
+- **Autoriser le gestionnaire de mots de passe** : Pour plus d’informations, consultez la page [Stratégie de navigateur AllowPasswordManager](/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager).
+- **Autoriser les outils de développement** : Pour plus d’informations, consultez la page [Stratégie de navigateur AllowDeveloperTools](/windows/client-management/mdm/policy-csp-browser#browser-allowdevelopertools).
+- **Autoriser les extensions** : Pour plus d’informations, consultez la page [Stratégie de navigateur AllowExtensions](/windows/client-management/mdm/policy-csp-browser#browser-allowextensions).
 
 ### <a name="prerequisites"></a>Prérequis
 - Client Windows 10 joint à Azure Active Directory. 
@@ -373,8 +356,7 @@ Comme toute stratégie de paramètres de conformité, le client corrige les para
 
 
 ## <a name="report-for-default-browser-counts"></a>Rapports pour le nombre de navigateurs par défaut
-<!-- 1357830 -->
-Il existe maintenant un nouveau rapport qui affiche le nombre de clients ayant spécifié un certain navigateur web par défaut sous Windows. 
+<!-- 1357830 --> Il existe maintenant un nouveau rapport qui affiche le nombre de clients ayant spécifié un certain navigateur web par défaut sous Windows. 
 
 ### <a name="known-issues"></a>Problèmes connus
 - Lorsque vous ouvrez le rapport pour la première fois, il affiche uniquement le nombre, et non la valeur BrowserProgID. Pour contourner ce problème, remplacez la requête du rapport par la syntaxe suivante :  
@@ -397,12 +379,10 @@ Utilisez la référence suivante pour les valeurs BrowserProgID courantes :
 
 
 ## <a name="support-for-windows-10-arm64-devices"></a>Prise en charge des appareils Windows 10 ARM64
-<!-- 1353704 -->
-À partir de cette version, le client Configuration Manager est pris en charge sur les appareils Windows 10 ARM64. Les fonctionnalités de gestion du client existantes devraient fonctionner avec ces nouveaux appareils, par exemple, l’inventaire matériel et logiciel, les mises à jour logicielles et la gestion des applications. Le déploiement de système d’exploitation n’est pas pris en charge pour le moment. 
+<!-- 1353704 --> À partir de cette version, le client Configuration Manager est pris en charge sur les appareils Windows 10 ARM64. Les fonctionnalités de gestion du client existantes devraient fonctionner avec ces nouveaux appareils, par exemple, l’inventaire matériel et logiciel, les mises à jour logicielles et la gestion des applications. Le déploiement de système d’exploitation n’est pas pris en charge pour le moment. 
 
 ## <a name="changes-to-phased-deployments"></a>Modifications apportées aux déploiements par phases
-<!-- 1357405 -->
-Les déploiements par phases permettent d’automatiser le déploiement coordonné et séquencé de logiciels sur plusieurs regroupements. Dans cette version Technical Preview, l’Assistant Déploiement par phases peut être utilisé pour des séquences de tâches dans la console d’administration, et des déploiements sont créés. Toutefois, la deuxième phase ne démarre pas automatiquement une fois les critères de réussite de la première phase remplis. Vous pouvez la démarrer manuellement avec une instruction SQL.   
+<!-- 1357405 --> Les déploiements par phases permettent d’automatiser le déploiement coordonné et séquencé de logiciels sur plusieurs regroupements. Dans cette version Technical Preview, l’Assistant Déploiement par phases peut être utilisé pour des séquences de tâches dans la console d’administration, et des déploiements sont créés. Toutefois, la deuxième phase ne démarre pas automatiquement une fois les critères de réussite de la première phase remplis. Vous pouvez la démarrer manuellement avec une instruction SQL.   
 
 ### <a name="try-it-out"></a>Essayez !  
   Essayez d’effectuer les tâches. Envoyez ensuite des **commentaires** à partir de l’onglet **Accueil** du ruban et faites-nous savoir comment cela a fonctionné.

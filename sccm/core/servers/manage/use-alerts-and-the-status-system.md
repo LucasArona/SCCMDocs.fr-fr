@@ -10,16 +10,16 @@ ms.assetid: 7341cc6e-9e08-41e4-bcc6-6c1ff12e85ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 891366f7e5fa3f4fd2b8f9a8606e823f0a48c394
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 98deb50a35bd96684bf537c1821c58d1d08ca738
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342509"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420122"
 ---
 # <a name="use-alerts-and-the-status-system-for-system-center-configuration-manager"></a>Utiliser des alertes et le système d’état pour System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Configurez des alertes et utilisez le système d’état intégré pour rester informé de l’état de votre déploiement de System Center Configuration Manager.  
 
@@ -29,7 +29,7 @@ Configurez des alertes et utilisez le système d’état intégré pour rester i
 
  Par défaut, le système d’état de Configuration Manager fonctionne sans configuration en utilisant les paramètres qui conviennent à la plupart des environnements. Toutefois, vous pouvez configurer les éléments suivants :  
 
--   **Outils de synthèse d’état :** vous pouvez modifier les outils de synthèse d’état sur chaque site pour contrôler la fréquence des messages d’état qui génèrent un changement d’indicateur d’état pour les quatre outils de synthèse suivants :  
+-   **Outils de synthèse d’état :** Vous pouvez modifier les outils de synthèse d’état sur chaque site pour contrôler la fréquence des messages d’état qui génèrent un changement d’indicateur d’état pour les quatre outils de synthèse suivants :  
 
     -   Outil de synthèse du déploiement d'application  
 
@@ -39,12 +39,12 @@ Configurez des alertes et utilisez le système d’état intégré pour rester i
 
     -   Outil de synthèse d'état du système de site  
 
--   **Règles de filtre d’état :** vous pouvez créer des règles de filtre d’état, modifier la priorité des règles, activer ou désactiver des règles, ainsi que supprimer des règles non utilisées sur chaque site.  
+-   **Règles de filtre d’état :** Vous pouvez créer des règles de filtre d’état, modifier la priorité des règles, activer ou désactiver des règles, ainsi que supprimer des règles non utilisées sur chaque site.  
 
     > [!NOTE]  
     >  Les règles de filtre d'état ne prennent pas en charge l'utilisation de variables d'environnement pour exécuter des commandes externes.  
 
--   **Rapport d’état :** vous pouvez configurer le rapport des composants client et serveur pour modifier la façon dont les messages d’état sont signalées dans un rapport au système d’état de Configuration Manager et spécifier où les messages d’état sont envoyés.  
+-   **Rapport d'état :** Vous pouvez configurer le rapport des composants client et serveur pour modifier la façon dont les messages d’état sont signalés dans un rapport au système d’état de Configuration Manager et spécifier où les messages d’état sont envoyés.  
 
     > [!WARNING]  
     >  Étant donné que les paramètres de rapport par défaut conviennent à la plupart des environnements, ils doivent être modifiés avec précaution. Lorsque vous augmentez le niveau du rapport d'état en choisissant de rapporter tous les détails d'état, vous pouvez augmenter la quantité de messages d'état à traiter, ce qui accroît la charge de traitement sur le site Configuration Manager. À l'inverse, une diminution du niveau du rapport d'état peut limiter l'utilité des outils de synthèse d'état.  
@@ -159,7 +159,7 @@ Configurez des alertes et utilisez le système d’état intégré pour rester i
 
  Utilisez le tableau suivant pour identifier les différents affichages de l'état du système et les situations dans lesquelles les utiliser.  
 
-|Nœud|Plus d'informations|  
+|Nœud|Informations complémentaires|  
 |----------|----------------------|  
 |État du site|Ce nœud permet d'afficher une synthèse de l'état de chaque système de site pour consulter l'intégrité de chaque serveur de système de site. L'intégrité d'un système de site est déterminée par des seuils que vous configurez pour chaque site dans l' **Outil de synthèse d'état du système de site**.<br /><br /> Vous pouvez afficher les messages d'état de chaque système de site, définir des seuils pour les messages d'état et gérer le fonctionnement des composants sur des systèmes de site à l'aide du **Gestionnaire de service de Configuration Manager**.|  
 |État du composant|Utilisez ce nœud pour afficher une synthèse de l'état de chaque composant de Configuration Manager pour vérifier son bon fonctionnement. L'intégrité d'un composant est déterminée par les seuils que vous configurez pour chaque site dans l' **Outil de synthèse d'état des composants**.<br /><br /> Vous pouvez afficher les messages d'état pour chaque composant, définir des seuils pour les messages d'état et gérer le fonctionnement des composants à l'aide du **Gestionnaire de service de Configuration Manager**.|  
@@ -181,15 +181,15 @@ Configurez des alertes et utilisez le système d’état intégré pour rester i
 ##  <a name="bkmk_Alerts"></a> Alertes  
  Les alertes Configuration Manager sont générées par certaines opérations quand une condition spécifique se produit.  
 
--   Les alertes sont habituellement générées quand une erreur que vous devez résoudre se produit  
+- Les alertes sont habituellement générées quand une erreur que vous devez résoudre se produit  
 
--   Les alertes peuvent être générées pour vous avertir qu’une condition a été détectée afin que vous puissiez continuer à surveiller la situation.  
+- Les alertes peuvent être générées pour vous avertir qu’une condition a été détectée afin que vous puissiez continuer à surveiller la situation.  
 
--   Certaines alertes que vous configurez, telles que les alertes concernant l’état de Endpoint Protection et du client, tandis que les autres alertes sont configurées automatiquement  
+- Certaines alertes que vous configurez, telles que les alertes concernant l’état de Endpoint Protection et du client, tandis que les autres alertes sont configurées automatiquement  
 
--   Vous pouvez configurer des abonnements aux alertes qui peuvent ensuite envoyer des détails par courrier électronique, ce qui permet une plus grande sensibilisation aux problèmes clés  
+- Vous pouvez configurer des abonnements aux alertes qui peuvent ensuite envoyer des détails par courrier électronique, ce qui permet une plus grande sensibilisation aux problèmes clés  
 
- Utilisez le tableau suivant pour rechercher des informations sur la façon de configurer des alertes et des abonnements aux alertes dans Configuration Manager :  
+  Utilisez le tableau suivant pour rechercher des informations sur la façon de configurer des alertes et des abonnements aux alertes dans Configuration Manager :  
 
 
 |Action|Informations complémentaires|  
@@ -204,9 +204,9 @@ Configurez des alertes et utilisez le système d’état intégré pour rester i
 
 ##### <a name="to-manage-general-alerts"></a>Pour gérer les alertes générales  
 
-1.  Dans la console Configuration Manager, accédez à **Surveillance** > **Alertes**, puis sélectionnez une tâche de gestion.  
+1. Dans la console Configuration Manager, accédez à **Surveillance** > **Alertes**, puis sélectionnez une tâche de gestion.  
 
-  Utilisez le tableau suivant pour obtenir plus d'informations sur les tâches de gestion qui pourraient nécessiter certaines informations avant de les sélectionner.  
+   Utilisez le tableau suivant pour obtenir plus d'informations sur les tâches de gestion qui pourraient nécessiter certaines informations avant de les sélectionner.  
 
 |Tâche de gestion|Détails|  
     |---------------------|-------------|  
@@ -253,15 +253,15 @@ Configurez des alertes et utilisez le système d’état intégré pour rester i
 
 3.  Dans la boîte de dialogue **Propriétés du composant de notification de courrier électronique** , définissez ce qui suit :  
 
-    -   **Activer les notifications par courrier électronique pour les alertes** : cochez cette case pour permettre à Configuration Manager d’utiliser un serveur SMTP pour envoyer des alertes par e-mail.  
+    -   **Activer les notifications par e-mail pour les alertes** : Cochez cette case pour permettre à Configuration Manager d’utiliser un serveur SMTP pour envoyer des alertes par e-mail.  
 
-    -   **Nom de domaine complet ou adresse IP du serveur SMTP pour envoyer des alertes par courrier électronique**: entrez le nom de domaine complet (FQDN) ou l’adresse IP et le port SMTP du serveur de messagerie à utiliser pour ces alertes.  
+    -   **Nom de domaine complet ou adresse IP du serveur SMTP pour envoyer des alertes par e-mail** : entrez le nom de domaine complet (FQDN) ou l'adresse IP et le port SMTP du serveur de messagerie à utiliser pour ces alertes.  
 
-    -   **Compte de connexion au serveur SMTP** : spécifiez la méthode d’authentification que Configuration Manager doit utiliser pour se connecter au serveur de messagerie.  
+    -   **Compte de connexion au serveur SMTP** : Spécifiez la méthode d’authentification que Configuration Manager doit utiliser pour se connecter au serveur de messagerie.  
 
-    -   **Adresse de l’expéditeur pour les alertes de courrier électronique**: spécifiez l’adresse électronique à partir de laquelle les courriers électroniques d’alerte sont envoyés.  
+    -   **Adresse de l’expéditeur pour les alertes par e-mail** : spécifiez l'adresse électronique émettrice des alertes électroniques.  
 
-    -   **Tester le serveur SMTP**: envoie un courrier électronique de test à l’adresse électronique spécifiée dans **Adresse de l’expéditeur pour les alertes de courrier électronique**.  
+    -   **Tester le serveur SMTP** : Envoie un e-mail de test à l’adresse électronique spécifiée dans **Adresse de l’expéditeur pour les alertes par e-mail**.  
 
 4.  Cliquez sur **OK** pour enregistrer les paramètres et fermer la boîte de dialogue des **Propriétés du composant de notification de courrier électronique** .  
 
@@ -273,11 +273,11 @@ Configurez des alertes et utilisez le système d’état intégré pour rester i
 
 3.  Dans la boîte de dialogue **Nouvel abonnement** , spécifiez les éléments suivants :  
 
-    -   **Nom**: entrez le nom permettant d’identifier l’abonnement par courrier électronique. Vous pouvez entrer jusqu'à 255 caractères.  
+    -   **Nom** : entrez le nom de l'abonnement par courrier électronique. Vous pouvez entrer jusqu'à 255 caractères.  
 
-    -   **Adresse de messagerie**: entrez les adresses de messagerie de destination de l’alerte. Vous pouvez séparer plusieurs adresses de messagerie par un point-virgule.  
+    -   **Adresse e-mail** : entrez les adresses de messagerie de destination de l'alerte. Vous pouvez séparer plusieurs adresses de messagerie par un point-virgule.  
 
-    -   **Langue de messagerie**: dans la liste, spécifiez la langue du courrier électronique.  
+    -   **Langue de l’e-mail** : Dans la liste, spécifiez la langue du courrier électronique.  
 
 4.  Cliquez sur **OK** pour fermer la boîte de dialogue **Nouvel abonnement** et créer l'abonnement par courrier électronique.  
 
@@ -287,22 +287,22 @@ Configurez des alertes et utilisez le système d’état intégré pour rester i
 ###  <a name="BKMK_MonitorAlerts"></a> Surveiller les alertes  
  Vous pouvez consulter les alertes dans le nœud **Alertes** de l'espace de travail **Surveillance** . Les alertes présentent l'un des états d'alerte suivants :  
 
--   **Jamais déclenché**: la condition de l’alerte n’a pas été remplie.  
+- **Jamais déclenché** : la condition de l'alerte n'a pas été remplie.  
 
--   **Actif**: la condition de l’alerte est remplie.  
+- **Actif** : la condition de l'alerte est remplie.  
 
--   **Annulé**: la condition d’une alerte active n’est plus remplie. Cet état indique que la condition qui a entraîné l'alerte est maintenant résolue.  
+- **Annulé** : la condition d'une alerte active n'est plus remplie. Cet état indique que la condition qui a entraîné l'alerte est maintenant résolue.  
 
--   **Reporté à plus tard** : un utilisateur administratif a configuré Configuration Manager pour évaluer l’état de l’alerte ultérieurement.  
+- **Reporté à plus tard** : un utilisateur administratif a configuré Configuration Manager pour évaluer l’état de l’alerte ultérieurement.  
 
--   **Désactivé**: l’alerte a été désactivée par un utilisateur administratif. Lorsqu'une alerte présente cet état, Configuration Manager ne la met pas à jour même si l'état de l'alerte change.  
+- **Disabled** : l'alerte a été désactivée par un utilisateur administratif. Lorsqu'une alerte présente cet état, Configuration Manager ne la met pas à jour même si l'état de l'alerte change.  
 
- Vous pouvez effectuer l'une des actions suivantes lorsque Configuration Manager génère une alerte :  
+  Vous pouvez effectuer l'une des actions suivantes lorsque Configuration Manager génère une alerte :  
 
--   Corrigez la condition qui a généré l'alerte, par exemple, corrigez un problème réseau ou un problème de configuration qui a généré l'alerte. Une fois que Configuration Manager a détecté que le problème n'existe plus, l'état de l'alerte passe à **Annuler**.  
+- Corrigez la condition qui a généré l'alerte, par exemple, corrigez un problème réseau ou un problème de configuration qui a généré l'alerte. Une fois que Configuration Manager a détecté que le problème n'existe plus, l'état de l'alerte passe à **Annuler**.  
 
--   Si l'alerte est un problème connu, vous pouvez reporter l'alerte pendant une durée spécifique. À ce moment, Configuration Manager met à jour l'alerte à son état actuel.  
+- Si l'alerte est un problème connu, vous pouvez reporter l'alerte pendant une durée spécifique. À ce moment, Configuration Manager met à jour l'alerte à son état actuel.  
 
-     Vous pouvez reporter une alerte uniquement lorsque celle-ci est active.  
+   Vous pouvez reporter une alerte uniquement lorsque celle-ci est active.  
 
--   Vous pouvez modifier le **Commentaire** d'une alerte afin d'informer les autres utilisateurs administratifs que cette alerte est surveillée. Par exemple, dans le commentaire, vous pouvez identifier comment résoudre la condition, fournir des informations sur l'état actuel de la condition ou expliquer la raison du report de l'alerte.  
+- Vous pouvez modifier le **Commentaire** d'une alerte afin d'informer les autres utilisateurs administratifs que cette alerte est surveillée. Par exemple, dans le commentaire, vous pouvez identifier comment résoudre la condition, fournir des informations sur l'état actuel de la condition ou expliquer la raison du report de l'alerte.  

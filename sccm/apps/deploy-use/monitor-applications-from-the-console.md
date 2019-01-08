@@ -10,16 +10,16 @@ ms.assetid: 784c295c-b8b8-4202-ab9f-665908d49d6d
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 4aed4ecda35fded9314ae54b6601deb6f8e07197
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 129223a111085854ede038575653655ad13884dd
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32343886"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53423811"
 ---
 # <a name="monitor-applications-from-the-system-center-configuration-manager-console"></a>Surveiller des applications à partir de la console System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 
 System Center Configuration Manager permet de surveiller le déploiement de tous les logiciels : mises à jour logicielles, paramètres de compatibilité, applications, séquences de tâches, packages, programmes, etc. Vous pouvez surveiller les déploiements à l’aide de l’espace de travail **Surveillance** de la console Configuration Manager ou par le biais de rapports.  
@@ -41,17 +41,17 @@ System Center Configuration Manager permet de surveiller le déploiement de tous
 
 Vous pouvez consulter des informations supplémentaires pour chaque état de compatibilité, dont des sous-catégories de l’état de compatibilité ainsi que le nombre d’utilisateurs et d’appareils de cette catégorie. Par exemple, l'état de compatibilité **Erreur** comprend les sous-catégories suivantes :  
 
--   Erreur lors de l'évaluation de la configuration requise  
+- Erreur lors de l'évaluation de la configuration requise  
 
--   Erreurs liées au contenu  
+- Erreurs liées au contenu  
 
--   Erreurs d'installation  
+- Erreurs d'installation  
 
- Lorsque plusieurs états de compatibilité s'appliquent à un déploiement d'application, vous pouvez consulter l'état de l'agrégat dont la compatibilité est la plus faible. Par exemple :  
+  Lorsque plusieurs états de compatibilité s'appliquent à un déploiement d'application, vous pouvez consulter l'état de l'agrégat dont la compatibilité est la plus faible. Par exemple :  
 
-    -   Si un utilisateur se connecte à deux appareils et que l’installation de l’application réussit sur un appareil, mais échoue sur le deuxième, l’état du déploiement de l’agrégat de l’application pour cet utilisateur a l’état **Erreur**.  
+  -   Si un utilisateur se connecte à deux appareils et que l’installation de l’application réussit sur un appareil, mais échoue sur le deuxième, l’état du déploiement de l’agrégat de l’application pour cet utilisateur a l’état **Erreur**.  
 
-    -   Si une application est déployée sur tous les utilisateurs se connectant à un ordinateur donné, vous recevez plusieurs résultats de déploiement pour cet ordinateur. Si l'un des déploiements échoue, l'état du déploiement de l'agrégat pour l'ordinateur est **Erreur**.  
+  -   Si une application est déployée sur tous les utilisateurs se connectant à un ordinateur donné, vous recevez plusieurs résultats de déploiement pour cet ordinateur. Si l'un des déploiements échoue, l'état du déploiement de l'agrégat pour l'ordinateur est **Erreur**.  
 
 L'état du déploiement des packages et des programmes n'est pas agrégé.  
 

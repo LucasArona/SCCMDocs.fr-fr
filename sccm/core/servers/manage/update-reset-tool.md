@@ -10,16 +10,16 @@ ms.assetid: 25fa89d6-7e47-45a6-8f4e-70b77560fba6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e6ae6ed46cc1db5f545182e4b4f6b46374b5c174
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: de5c98e45c6f5d6dca1569de812825cce80d6f70
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344086"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417334"
 ---
 # <a name="update-reset-tool"></a>Outil de réinitialisation des mises à jour
 
-*S’applique à : System Center Configuration Manager (Current Branch)*  
+*S’applique à : System Center Configuration Manager (Current Branch)*  
 
 
 À compter de la version 1706, les sites d’administration centrale et les sites principaux Configuration Manager incluent l’outil de réinitialisation des mises à jour Configuration Manager (**CMUpdateReset.exe**). Utilisez l’outil pour résoudre les problèmes de téléchargement ou de réplication des mises à jour dans la console. L’outil se trouve dans le dossier ***\cd.latest\SMSSETUP\TOOLS*** du serveur de site.
@@ -62,14 +62,16 @@ Une fois que l’outil s’exécute :
 
 **Paramètres de ligne de commande :**  
 
-| Paramètre        |Description                 |  
-|------------------|----------------------------|  
-|**-S &lt;Nom de domaine complet de l’instance SQL Server de votre site de niveau supérieur >** | *Obligatoire* <br> Permet de spécifier le nom de domaine complet de l’instance SQL Server qui héberge la base de données de site pour le site de niveau supérieur de votre hiérarchie.    |  
-| **D - &lt;Nom de la base de données>**                        | *Obligatoire* <br> Permet de spécifier le nom de la base de données pour le site de niveau supérieur.  |  
-| **-P &lt;GUID du package>**                         | *Obligatoire* <br> Permet de spécifier le GUID du package de mise à jour à réinitialiser.   |  
-| **-I &lt;Nom de l'instance SQL Server>**             | *Facultatif* <br> Permet d’identifier l’instance de SQL Server qui héberge la base de données du site. |
-| **-FDELETE**                              | *Facultatif* <br> Permet de forcer la suppression d’un package de mise à jour téléchargé avec succès. |  
+
+|                        Paramètre                         |                                                       Description                                                        |
+|----------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
+| **-S &lt;Nom de domaine complet de l’instance SQL Server de votre site de niveau supérieur >** | *Obligatoire* <br> Permet de spécifier le nom de domaine complet de l’instance SQL Server qui héberge la base de données de site pour le site de niveau supérieur de votre hiérarchie. |
+|                **D - &lt;Nom de la base de données>**                 |                          *Obligatoire* <br> Permet de spécifier le nom de la base de données pour le site de niveau supérieur.                          |
+|                 **-P &lt;GUID du package>**                 |                        *Obligatoire* <br> Permet de spécifier le GUID du package de mise à jour à réinitialiser.                        |
+|           **-I &lt;Nom de l'instance SQL Server>**           |                    *Facultatif* <br> Permet d’identifier l’instance de SQL Server qui héberge la base de données du site.                     |
+|                       **-FDELETE**                       |                       *Facultatif* <br> Permet de forcer la suppression d’un package de mise à jour téléchargé avec succès.                        |
+
  **Exemples :**  
- Dans un scénario classique, vous souhaitez réinitialiser une mise à jour qui présente des problèmes de téléchargement. Votre nom de domaine complet SQL Server est *server1.fabrikam.com*, la base de données du site est *CM_XYZ* et le GUID du package est *61F16B3C-F1F6-4F9F-8647-2A524B0C802C*.  Vous exécutez : ***CMUpdateReset.exe -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
+ Dans un scénario classique, vous souhaitez réinitialiser une mise à jour qui présente des problèmes de téléchargement. Votre nom de domaine complet SQL Server est *server1.fabrikam.com*, la base de données du site est *CM_XYZ* et le GUID du package est *61F16B3C-F1F6-4F9F-8647-2A524B0C802C*.  Vous exécutez : ***CMUpdateReset.exe -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
 
  Dans un scénario plus extrême, vous souhaitez forcer la suppression du package de mise à jour problématique. Votre nom de domaine complet SQL Server est *server1.fabrikam.com*, la base de données du site est *CM_XYZ* et le GUID du package est *61F16B3C-F1F6-4F9F-8647-2A524B0C802C*.  Vous exécutez : ***CMUpdateReset.exe  -FDELETE -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***

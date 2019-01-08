@@ -10,16 +10,16 @@ ms.assetid: 79cd131a-1a24-4751-87c8-7f275e45d847
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 35ccc4944359b89bad3ccac52309a289f69933f7
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 12a3bffb48cba2e3f258d06489b7511d05b7daad
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32338211"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422077"
 ---
 # <a name="create-linux-and-unix-server-applications-with-system-center-configuration-manager"></a>Créer des applications serveur Linux et UNIX avec System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Prenez en compte les points suivants quand vous créez et déployez des applications pour des ordinateurs qui exécutent Linux et UNIX.  
 
@@ -77,7 +77,7 @@ Les principales différences entre le déploiement de packages et de programmes 
 
 Le tableau suivant répertorie les propriétés pour packages et programmes qui ne sont pas prises en charge :  
 
-|Propriété de package et de programme|Comportement|Plus d'informations|  
+|Propriété de package et de programme|Comportement|Informations complémentaires|  
 |----------------------------------|--------------|----------------------|  
 |Paramètres de partage de package :<br /><br /> - Toutes les options|Une erreur est générée et l’installation du logiciel échoue.|Le client ne prend pas en charge cette configuration. Au lieu de cela, le client doit télécharger le logiciel à l'aide du protocole HTTP ou HTTPS, puis exécuter la ligne de commande à partir de sa mémoire cache locale.|  
 |Paramètres de mise à jour de package :<br /><br /> - Déconnecter les utilisateurs des points de distribution|Les paramètres sont ignorés.|Le client ne prend pas en charge cette configuration.|  
@@ -100,17 +100,17 @@ Le tableau suivant répertorie les propriétés pour packages et programmes qui 
 ### <a name="deploy-software-to-a-linux-or-unix-server"></a>Déployer un logiciel sur un serveur Linux ou UNIX
  Pour déployer un logiciel sur un serveur Linux ou UNIX à l’aide d’un package et d’un programme, vous pouvez utiliser l’**Assistant Déploiement logiciel** de la console Configuration Manager. Le client pour Linux et UNIX prend en charge la plupart des paramètres de déploiement. Cela n’est toutefois pas le cas pour certains paramètres. Lors du déploiement d’un logiciel, tenez compte des points suivants :  
 
--   Vous devez préparer le package sur au moins un point de distribution associé à un groupe de limites configuré pour l'emplacement du contenu.  
+- Vous devez préparer le package sur au moins un point de distribution associé à un groupe de limites configuré pour l'emplacement du contenu.  
 
--   Le client pour Linux et UNIX qui reçoit ce déploiement doit être en mesure d’accéder à ce point de distribution à partir de son emplacement réseau.  
+- Le client pour Linux et UNIX qui reçoit ce déploiement doit être en mesure d’accéder à ce point de distribution à partir de son emplacement réseau.  
 
--   Le client pour Linux et UNIX télécharge le package à partir du point de distribution et exécute le programme sur l'ordinateur local.  
+- Le client pour Linux et UNIX télécharge le package à partir du point de distribution et exécute le programme sur l'ordinateur local.  
 
--   Le client pour Linux et UNIX ne peut pas télécharger de packages à partir de dossiers partagés. Il télécharge les packages à partir de points de distribution compatibles IIS qui prennent en charge le protocole HTTP ou HTTPS.  
+- Le client pour Linux et UNIX ne peut pas télécharger de packages à partir de dossiers partagés. Il télécharge les packages à partir de points de distribution compatibles IIS qui prennent en charge le protocole HTTP ou HTTPS.  
 
- Le tableau suivant répertorie les propriétés destinées aux déploiements non prises en charge :  
+  Le tableau suivant répertorie les propriétés destinées aux déploiements non prises en charge :  
 
-|Propriété de déploiement|Comportement|Plus d'informations|  
+|Propriété de déploiement|Comportement|Informations complémentaires|  
 |-------------------------|--------------|----------------------|  
 |Paramètres de déploiement – objet :<br /><br /> - Disponible<br /><br /> - Obligatoire|Les paramètres sont ignorés.|Les paramètres spécifiques à l’utilisateur ne sont pas pris en charge.<br /><br /> Toutefois, le client prend en charge le paramètre **Obligatoire**, qui applique l'heure d'installation planifiée, mais toute installation manuelle avant cette heure planifiée n'est pas prise en charge.|  
 |Envoyer des paquets de mise en éveil|Les paramètres sont ignorés.|Le client ne prend pas en charge cette configuration.|  
@@ -131,23 +131,23 @@ Le tableau suivant répertorie les propriétés pour packages et programmes qui 
 
  Pour configurer l'utilisation des contrôles de bande passante réseau par un client, configurez les paramètres clients pour **Transfert intelligent en arrière-plan** , puis appliquez les paramètres à l'ordinateur client. Pour utiliser les contrôles de bande passante, le client doit recevoir des paramètres du client pour **Transfert intelligent en arrière-plan** avec les paramètres suivants configurés sur **Oui** :  
 
--   **Limiter la bande passante réseau maximale pour les transferts BITS en arrière-plan**  
+- **Limiter la bande passante réseau maximale pour les transferts BITS en arrière-plan**  
 
- Le client prend en charge les configurations suivantes pour le Transfert intelligent en arrière-plan :  
+  Le client prend en charge les configurations suivantes pour le Transfert intelligent en arrière-plan :  
 
-    -   **Heure de début de la fenêtre de limitation**  
+  -   **Heure de début de la fenêtre de limitation**  
 
-    -   **Heure de fin de la fenêtre de limitation**  
+  -   **Heure de fin de la fenêtre de limitation**  
 
-    -   **Taux de transfert maximal dans la fenêtre de limitation (Kbit/s)**  
+  -   **Taux de transfert maximal dans la fenêtre de limitation (Kbit/s)**  
 
-    -   **Taux de transfert maximal en dehors de la fenêtre de limitation (Kbit/s)**  
+  -   **Taux de transfert maximal en dehors de la fenêtre de limitation (Kbit/s)**  
 
 La configuration suivante pour le Transfert intelligent en arrière-plan n'est pas prise en charge et est ignorée par le client pour Linux et UNIX :  
 
--   **Autoriser les téléchargements BITS en dehors de la fenêtre de limitation**  
+- **Autoriser les téléchargements BITS en dehors de la fenêtre de limitation**  
 
- Si le téléchargement de logiciels vers le client à partir d’un point de distribution est interrompu, le client pour Linux et UNIX ne reprend pas le téléchargement. Au lieu de cela, il redémarre le téléchargement de l’ensemble du package logiciel.  
+  Si le téléchargement de logiciels vers le client à partir d’un point de distribution est interrompu, le client pour Linux et UNIX ne reprend pas le téléchargement. Au lieu de cela, il redémarre le téléchargement de l’ensemble du package logiciel.  
 
 ##  <a name="configure-operations-for-software-deployments"></a>Configurer des opérations pour les déploiements de logiciels  
  À l’instar du client Windows, le client Configuration Manager pour Linux et UNIX détecte les nouveaux déploiements de logiciels en sondant et recherchant une nouvelle stratégie. La fréquence à laquelle le client recherche une nouvelle stratégie dépend de ses paramètres. Vous pouvez configurer les fenêtres de maintenance de façon à contrôler à quels moments les déploiements de logiciels se produisent.  

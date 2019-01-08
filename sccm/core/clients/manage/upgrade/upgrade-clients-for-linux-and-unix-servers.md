@@ -10,16 +10,16 @@ ms.assetid: 7d2bb377-1005-4a55-bd1f-b80a6d0b22e1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 239cb81c975c51a98733a6f325d46c3da676784c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: ae91988f895f916b3c22b636a5c7b51f51e1a811
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334495"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420989"
 ---
 # <a name="how-to-upgrade-clients-for-linux-and-unix-servers-in-system-center-configuration-manager"></a>Comment mettre à niveau les clients pour des serveurs Linux et UNIX dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Vous pouvez mettre à niveau la version du client pour Linux et UNIX vers une version plus récente du client sans désinstaller au préalable le client actuel. Pour cela, installez le nouveau package d’installation du client sur l’ordinateur en utilisant la propriété de ligne de commande **-keepdb**. Quand le client pour Linux et UNIX est installé, il remplace les données du client existantes par les nouveaux fichiers du client. Toutefois, la propriété de ligne de commande **-keepdb** demande au processus d’installation de conserver l’identificateur unique (GUID) du client, la base de données locale d’informations et le magasin de certificats. Ces informations sont ensuite utilisées par la nouvelle installation du client.  
 
@@ -38,27 +38,27 @@ Vous pouvez mettre à niveau la version du client pour Linux et UNIX vers une ve
 
 #### <a name="to-use-a-software-deployment-to-upgrade-the-client-on-linux-and-unix-servers"></a>Pour utiliser un déploiement de logiciels destiné à mettre à niveau le client sur des serveurs Linux et UNIX  
 
-1.  Copiez le nouveau package d’installation du client sur l’ordinateur qui exécute le client Configuration Manager à mettre à niveau.  
+1. Copiez le nouveau package d’installation du client sur l’ordinateur qui exécute le client Configuration Manager à mettre à niveau.  
 
-     Par exemple, placez le package d’installation du client et le script d’installation de la mise à jour cumulative 1 dans l’emplacement suivant sur l’ordinateur client : **/tmp/PATCH**  
+    Par exemple, placez le package d’installation du client et le script d’installation de la mise à jour cumulative 1 dans l’emplacement suivant sur l’ordinateur client : **/tmp/PATCH**  
 
-2.  Créez un script pour gérer la mise à niveau du client Configuration Manager. Placez ensuite une copie de ce script dans le même dossier sur l’ordinateur client que les fichiers d’installation du client de l’étape 1.  
+2. Créez un script pour gérer la mise à niveau du client Configuration Manager. Placez ensuite une copie de ce script dans le même dossier sur l’ordinateur client que les fichiers d’installation du client de l’étape 1.  
 
-     Le script ne doit pas obligatoirement porter un nom spécifique. Il doit contenir les lignes de commande nécessaires pour utiliser les fichiers d’installation du client à partir d’un dossier local sur l’ordinateur client et installer le package d’installation du client à l’aide de la propriété de ligne de commande **-keepdb**. Utilisez la propriété de ligne de commande **-keepdb** pour conserver l’identificateur unique du client actuel afin qu’il soit utilisé par le nouveau client que vous installez.  
+    Le script ne doit pas obligatoirement porter un nom spécifique. Il doit contenir les lignes de commande nécessaires pour utiliser les fichiers d’installation du client à partir d’un dossier local sur l’ordinateur client et installer le package d’installation du client à l’aide de la propriété de ligne de commande **-keepdb**. Utilisez la propriété de ligne de commande **-keepdb** pour conserver l’identificateur unique du client actuel afin qu’il soit utilisé par le nouveau client que vous installez.  
 
-     Par exemple, créez un script nommé **upgrade.sh** contenant les lignes suivantes :  
+    Par exemple, créez un script nommé **upgrade.sh** contenant les lignes suivantes :  
 
-    ```  
-    #!/bin/sh  
-    #  
-    /tmp/PATCH/install -sitecode <code> -mp <hostname> -keepdb /tmp/PATCH/ccm-Universal-x64.<build>.tar  
+   ```  
+   #!/bin/sh  
+   #  
+   /tmp/PATCH/install -sitecode <code> -mp <hostname> -keepdb /tmp/PATCH/ccm-Universal-x64.<build>.tar  
 
-    ```  
+   ```  
 
-     Copiez-le ensuite dans le dossier **/tmp/PATCH** sur l’ordinateur client.
+    Copiez-le ensuite dans le dossier **/tmp/PATCH** sur l’ordinateur client.
 
-3.  Utilisez le déploiement de logiciels pour que chaque client utilise la commande **at** intégrée de l’ordinateur pour exécuter le script **upgrade.sh** avec un court délai avant l’exécution du script.  
+3. Utilisez le déploiement de logiciels pour que chaque client utilise la commande **at** intégrée de l’ordinateur pour exécuter le script **upgrade.sh** avec un court délai avant l’exécution du script.  
 
-     Par exemple, utilisez la ligne de commande suivante pour exécuter le script : **at -f /tmp/upgrade.sh -m now + 5 minutes**  
+    Par exemple, utilisez la ligne de commande suivante pour exécuter le script : **at -f /tmp/upgrade.sh -m now + 5 minutes**  
 
- Une fois que le client a correctement planifié l’exécution du script **upgrade.sh** , le client envoie un message d’état indiquant que le déploiement de logiciels s’est terminé avec succès. Toutefois, l’installation du client actuel est ensuite gérée par l’ordinateur, une fois le délai écoulé. Une fois la mise à niveau du client terminée, validez l’installation en consultant le fichier **/var/opt/microsoft/scxcm.log** sur l’ordinateur client. Vérifiez que le client est installé et qu’il communique avec le site en affichant les détails relatifs au client dans le nœud **Appareils** de l’espace de travail **Ressources et Conformité** dans la console Configuration Manager.  
+   Une fois que le client a correctement planifié l’exécution du script **upgrade.sh** , le client envoie un message d’état indiquant que le déploiement de logiciels s’est terminé avec succès. Toutefois, l’installation du client actuel est ensuite gérée par l’ordinateur, une fois le délai écoulé. Une fois la mise à niveau du client terminée, validez l’installation en consultant le fichier **/var/opt/microsoft/scxcm.log** sur l’ordinateur client. Vérifiez que le client est installé et qu’il communique avec le site en affichant les détails relatifs au client dans le nœud **Appareils** de l’espace de travail **Ressources et Conformité** dans la console Configuration Manager.  

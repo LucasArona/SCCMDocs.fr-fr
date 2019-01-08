@@ -10,26 +10,26 @@ ms.assetid: f74fdb86-c7c2-447f-91f6-b42df6370d7f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d0beb10dca04fe26fb4add22b64ab61b53154185
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 0d8f5cf6b30bb465dea5ae680510f16814287daa
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32349165"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419119"
 ---
 # <a name="scenarios-to-deploy-enterprise-operating-systems-with-system-center-configuration-manager"></a>Scénarios pour déployer des systèmes d’exploitation d’entreprise avec System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Les scénarios de déploiement de système d’exploitation suivants sont disponibles dans System Center Configuration Manager :  
 
--   [Mettre à niveau Windows vers la dernière version](upgrade-windows-to-the-latest-version.md) : ce scénario met à niveau le système d’exploitation sur les ordinateurs qui exécutent actuellement Windows 7, Windows 8, Windows 8.1 ou Windows 10. Le processus de mise à niveau conserve les applications, les paramètres et les données utilisateur sur l’ordinateur. Il n’existe aucune dépendance externe, telle que Windows ADK, et ce processus est plus rapide et plus fiable que les déploiements de système d’exploitation traditionnels.  
+-   [Mettre à niveau Windows vers la dernière version](upgrade-windows-to-the-latest-version.md) : ce scénario met à niveau le système d’exploitation sur les ordinateurs qui exécutent actuellement Windows 7, Windows 8, Windows 8.1 ou Windows 10. Le processus de mise à niveau conserve les applications, les paramètres et les données utilisateur sur l’ordinateur. Il n’existe aucune dépendance externe, telle que Windows ADK, et ce processus est plus rapide et plus fiable que les déploiements de système d’exploitation traditionnels.  
 
--   [Actualiser un ordinateur existant avec une nouvelle version de Windows](refresh-an-existing-computer-with-a-new-version-of-windows.md) : ce scénario partitionne et formate (efface) un ordinateur existant, et installe un nouveau système d’exploitation sur l’ordinateur. Vous pouvez migrer les données et paramètres utilisateur une fois le système d’exploitation installé.  
+-   [Actualiser un ordinateur existant avec une nouvelle version de Windows](refresh-an-existing-computer-with-a-new-version-of-windows.md) : ce scénario partitionne et formate (efface) un ordinateur existant, et installe un nouveau système d’exploitation sur l’ordinateur. Vous pouvez migrer les données et paramètres utilisateur une fois le système d’exploitation installé.  
 
--   [Installer une nouvelle version de Windows sur un nouvel ordinateur (nu)](install-new-windows-version-new-computer-bare-metal.md) : ce scénario installe un système d’exploitation sur un nouvel ordinateur. Il s’agit d’une nouvelle installation du système d’exploitation. Elle n’inclut pas de paramètres ou de migration des données utilisateur.  
+-   [Installer une nouvelle version de Windows sur un nouvel ordinateur (système nu)](install-new-windows-version-new-computer-bare-metal.md) : ce scénario installe un système d’exploitation sur un nouvel ordinateur. Il s’agit d’une nouvelle installation du système d’exploitation. Elle n’inclut pas de paramètres ou de migration des données utilisateur.  
 
--   [Remplacer un ordinateur existant et transférer les paramètres](replace-an-existing-computer-and-transfer-settings.md) : ce scénario installe un système d’exploitation sur un nouvel ordinateur. Si vous le souhaitez, vous pouvez migrer des données et des paramètres utilisateur de l’ancien ordinateur vers le nouvel ordinateur.  
+-   [Remplacer un ordinateur existant et transférer des paramètres](replace-an-existing-computer-and-transfer-settings.md) : ce scénario installe un système d’exploitation sur un nouvel ordinateur. Si vous le souhaitez, vous pouvez migrer des données et des paramètres utilisateur de l’ancien ordinateur vers le nouvel ordinateur.  
 
 ## <a name="things-to-consider-before-you-deploy-operating-system-images"></a>Éléments à prendre en compte avant de déployer des images de système d’exploitation  
  Vous devez prendre en compte certains éléments avant de déployer un système d’exploitation.  
@@ -51,12 +51,12 @@ Les scénarios de déploiement de système d’exploitation suivants sont dispon
 ## <a name="task-sequence-deployments"></a>Déploiements de séquences de tâches  
  La séquence de tâches que vous créez peut déployer l'image du système d'exploitation sur un ordinateur client Configuration Manager selon l'une des manières suivantes :  
 
--   Téléchargez d'abord l'image et son contenu dans le cache du client Configuration Manager à partir d'un point de distribution, puis installez-le.  
+- Téléchargez d'abord l'image et son contenu dans le cache du client Configuration Manager à partir d'un point de distribution, puis installez-le.  
 
--   Installez immédiatement l'image et son contenu à partir du point de distribution.  
+- Installez immédiatement l'image et son contenu à partir du point de distribution.  
 
--   Installer l'image et son contenu comme requis à partir du point de distribution  
+- Installer l'image et son contenu comme requis à partir du point de distribution  
 
- Par défaut, lorsque vous créez le déploiement pour la séquence de tâches, l'image est d'abord téléchargée dans le cache du client Configuration Manager, puis installée. Si vous choisissez de télécharger l’image dans le cache du client Configuration Manager avant de l’exécuter, et si la séquence de tâches contient une étape de repartitionnement du disque dur, cette étape de repartitionnement échoue car le partitionnement du disque dur efface le contenu du cache du client Configuration Manager. Si la séquence de tâches doit repartitionner le disque dur, vous devez exécuter l'installation de l'image depuis le point de distribution à l'aide de l'option **Exécuter le programme à partir du point de distribution**  quand vous déployez la séquence de tâches.  
+  Par défaut, lorsque vous créez le déploiement pour la séquence de tâches, l'image est d'abord téléchargée dans le cache du client Configuration Manager, puis installée. Si vous choisissez de télécharger l’image dans le cache du client Configuration Manager avant de l’exécuter, et si la séquence de tâches contient une étape de repartitionnement du disque dur, cette étape de repartitionnement échoue car le partitionnement du disque dur efface le contenu du cache du client Configuration Manager. Si la séquence de tâches doit repartitionner le disque dur, vous devez exécuter l'installation de l'image depuis le point de distribution à l'aide de l'option **Exécuter le programme à partir du point de distribution**  quand vous déployez la séquence de tâches.  
 
- Pour plus d'informations, voir [Déployer une séquence de tâches](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS).  
+  Pour plus d'informations, voir [Déployer une séquence de tâches](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS).  

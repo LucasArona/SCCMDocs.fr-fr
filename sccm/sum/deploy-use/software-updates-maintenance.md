@@ -10,16 +10,16 @@ ms.technology: configmgr-sum
 ms.assetid: 4b0e2e90-aac7-4d06-a707-512eee6e576c
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 3a44643870234a08169db1d55cc834e4ca5fcbb5
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: d2196890070aa842ac58bc127af8aaa876640ec4
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385488"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417028"
 ---
 # <a name="software-updates-maintenance"></a>Maintenance des mises à jour logicielles
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Vous pouvez planifier et exécuter des tâches de nettoyage WSUS à partir de la console Configuration Manager, dans les propriétés du composant de point de mise à jour logicielle. Quand vous choisissez pour la première fois d’exécuter la tâche de nettoyage WSUS, elle s’exécute à l’issue de la synchronisation des mises à jour logicielles suivante.  
 
@@ -68,7 +68,7 @@ Toutes les opérations de maintenance WSUS doivent être exécutées manuellemen
 - Ordinateurs ne contactant pas le serveur
 - Fichiers de mise à jour superflus
 
- Pour obtenir des informations complémentaires et des instructions, consultez le billet de blog [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](https://blogs.technet.microsoft.com/configurationmgr/2016/01/26/the-complete-guide-to-microsoft-wsus-and-configuration-manager-sup-maintenance/). 
+  Pour obtenir des informations complémentaires et des instructions, consultez le billet de blog [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](https://blogs.technet.microsoft.com/configurationmgr/2016/01/26/the-complete-guide-to-microsoft-wsus-and-configuration-manager-sup-maintenance/). 
 
 ## <a name="updates-cleanup-log-entries"></a>Entrées du journal de nettoyage des mises à jour
  

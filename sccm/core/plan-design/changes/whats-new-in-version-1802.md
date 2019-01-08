@@ -10,16 +10,16 @@ ms.assetid: 5bd637b1-d7a1-411b-877a-c7aae9741173
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0757e7f3fac12c2945a3eab860851b0debf28fd5
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.openlocfilehash: a0e16c137604480ab23e15b52723692491d1816d
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43893887"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53414852"
 ---
 # <a name="whats-new-in-version-1802-of-system-center-configuration-manager"></a>Nouveautés de la version 1802 de System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 La mise à jour 1802 pour la Current Branch de Configuration Manager est disponible en tant que mise à jour dans la console. Appliquez cette mise à jour sur les sites qui exécutent la version 1702, 1706 ou 1710. <!-- baseline only statement: -->Lors de l’installation d’un nouveau site, elle est également disponible sous la forme d’une version de base de référence.
 
@@ -58,7 +58,7 @@ Version 1802 drops support for the following products:
 <!-- 1353704 --> À partir de cette version, le client Configuration Manager est pris en charge sur les appareils Windows 10 ARM64. Les fonctionnalités de gestion du client existantes devraient fonctionner avec ces nouveaux appareils, par exemple, l’inventaire matériel et logiciel, les mises à jour logicielles et la gestion des applications. Le déploiement de système d’exploitation n’est pas pris en charge pour le moment. 
 
 ### <a name="improved-support-for-cng-certificates"></a>Prise en charge améliorée des certificats CNG
-<!-- 1357314 --> La version 1710 de Configuration Manager (Current Branch) prend en charge les certificats [Cryptography : Next Generation (CNG)](/sccm/core/plan-design/network/cng-certificates-overview). La version 1710 limite la prise en charge aux certificats clients dans plusieurs scénarios. 
+<!-- 1357314 --> La version 1710 de Configuration Manager (Current Branch) prend en charge [les certificats CNG (Cryptography : Next Generation)](/sccm/core/plan-design/network/cng-certificates-overview). La version 1710 limite la prise en charge aux certificats clients dans plusieurs scénarios. 
 
 À compter de cette version, utilisez des certificats de passerelle de gestion cloud pour les rôles serveurs HTTPS suivants :
 - Point de gestion
@@ -147,7 +147,7 @@ Pour plus d’informations, consultez l’article [Tableau de bord Surface](/scc
 <!-- 1357365 --> La charge de travail Endpoint Protection peut être transférée à Intune après activation de la cogestion. Pour cela, accédez à la page des propriétés de cogestion et déplacez le curseur de Configuration Manager sur **Pilote** ou **Tout**. Pour plus d’informations sur les charges de travail, consultez [Charges de travail pouvant être transférées à Intune](/sccm/core/clients/manage/co-management-switch-workloads#Workloads-able-to-be-transitioned-to-Intune). Pour plus d’informations sur la cogestion, consultez [Cogestion pour les appareils Windows 10](/sccm/core/clients/manage/co-management-overview).
  
 ### <a name="co-management-dashboard-in-system-center-configuration-manager"></a>Tableau de bord de cogestion dans System Center Configuration Manager
-<!--1356648--> À compter de cette version, vous pouvez consulter un tableau de bord avec des informations sur la cogestion. Le tableau de bord vous permet d’examiner les machines qui sont cogérées dans votre environnement. Les graphes peuvent vous aider à identifier les appareils qui demandent une attention particulière. Pour plus d’informations, consultez l’article [Tableau de bord de cogestion](\sccm\core\clients\manage\client-management-dashboard). 
+<!--1356648--> À compter de cette version, vous pouvez consulter un tableau de bord avec des informations sur la cogestion. Le tableau de bord vous permet d’examiner les machines qui sont cogérées dans votre environnement. Les graphes peuvent vous aider à identifier les appareils qui demandent une attention particulière. Pour plus d’informations, consultez l’article [Tableau de bord de cogestion](/sccm/core/clients/manage/client-management-dashboard). 
 
 
 ## <a name="compliance-settings"></a>Paramètres de conformité

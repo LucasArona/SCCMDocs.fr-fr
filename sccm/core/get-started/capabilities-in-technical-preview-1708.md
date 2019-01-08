@@ -10,16 +10,16 @@ ms.assetid: 3c061ceb-3bdb-4d4f-8c60-344964bd416b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b6764acf3ecc1aaad4a19c9d56880e7bd5692464
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: b751dab7ca02112959a9a7d6ed8a51b037f25b0e
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334614"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422655"
 ---
 # <a name="capabilities-in-technical-preview-1708-for-system-center-configuration-manager"></a>Fonctionnalités de la version d’évaluation technique 1708 pour System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Technical Preview)*
+*S’applique à : System Center Configuration Manager (Technical Preview)*
 
 Cet article présente les fonctionnalités qui sont disponibles dans la version d’évaluation technique 1708 pour System Center Configuration Manager. Vous pouvez installer cette version pour mettre à jour et ajouter de nouvelles fonctionnalités à votre site Configuration Manager Technical Preview. Avant d’installer cette version Technical Preview, passez en revue [Technical Preview pour System Center Configuration Manager](../../core/get-started/technical-preview.md) pour vous familiariser avec les conditions générales et les limitations d’utilisation d’une version Technical Preview, la mise à jour entre les versions et l’envoi de commentaires sur les fonctionnalités d’une version Technical Preview.     
 
@@ -30,7 +30,7 @@ Cet article présente les fonctionnalités qui sont disponibles dans la version 
     Workaround details.
 -->
 **Problèmes connus dans cette version d’évaluation technique :**
--   **La mise à jour vers la préversion 1708 échoue s’il existe un serveur de site en mode passif**. Si vous exécutez la préversion 1706 ou 1707 et que vous avez un [serveur de site principal en mode passif](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability), vous devez le désinstaller pour pouvoir mettre à jour votre site de la préversion vers la version 1708. Vous pourrez réinstaller le serveur de site en mode passif lorsque votre site sera passé à la version 1708.
+- **La mise à jour vers la préversion 1708 échoue s’il existe un serveur de site en mode passif**. Si vous exécutez la préversion 1706 ou 1707 et que vous avez un [serveur de site principal en mode passif](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability), vous devez le désinstaller pour pouvoir mettre à jour votre site de la préversion vers la version 1708. Vous pourrez réinstaller le serveur de site en mode passif lorsque votre site sera passé à la version 1708.
 
   Pour désinstaller le serveur de site en mode passif :
   1. Dans la console, accédez à **Administration** > **Vue d’ensemble** > **Configuration du site** > **Serveurs et rôles de système de site**, puis sélectionnez le serveur de site en mode passif.
@@ -72,16 +72,14 @@ L’Assistant indique les paramètres obligatoires ainsi que les paramètres fac
 Lorsque le script s’exécute, il utilise les valeurs de paramètre que vous avez définies. Si vous n’avez pas configuré de paramètre obligatoire, l’utilisateur final sera invité à fournir ce paramètre lors de l’exécution du script.
 
 ## <a name="management-insights"></a>Management insights
-<!-- 1353967 -->
-Vous pouvez désormais obtenir des informations sur l’état actuel de votre environnement en fonction de l’analyse des données de la base de données du site. Ces informations vous aident à mieux comprendre votre environnement et à prendre des mesures en fonction de ces renseignements. Passez en revue les informations de gestion dans la console Configuration Manager en sélectionnant **Administration** > **Management Insights** > **All Insights**. Dans cette version, les informations suivantes sont disponibles :
+<!-- 1353967 --> Vous pouvez désormais obtenir des informations sur l’état actuel de votre environnement en fonction de l’analyse des données de la base de données du site. Ces informations vous aident à mieux comprendre votre environnement et à prendre des mesures en fonction de ces renseignements. Passez en revue les informations de gestion dans la console Configuration Manager en sélectionnant **Administration** > **Management Insights** > **All Insights**. Dans cette version, les informations suivantes sont disponibles :
 
-- **Applications without deployments** : répertorie les applications de votre environnement qui n’ont pas de déploiements actifs. Cette option facilite la recherche et la suppression des applications inutilisées pour simplifier la liste des applications affichées dans la console.
-- **Empty collections** : répertorie les collections de votre environnement qui n’ont aucun membre. Vous pouvez supprimer ces collections pour simplifier la liste des collections affichées lors du déploiement des objets, par exemple.
+- **Applications sans déploiements** : répertorie les applications de votre environnement qui n’ont pas de déploiements actifs. Cette option facilite la recherche et la suppression des applications inutilisées pour simplifier la liste des applications affichées dans la console.
+- **Regroupements vides** : répertorie les regroupements de votre environnement qui n’ont aucun membre. Vous pouvez supprimer ces collections pour simplifier la liste des collections affichées lors du déploiement des objets, par exemple.
 
 
 ## <a name="restart-computers-from-the-configuration-manager-console"></a>Redémarrer les ordinateurs à partir de la console Configuration Manager   
-<!-- 1356283 -->
-À compter de cette version, vous pouvez utiliser la console Configuration Manager pour identifier les périphériques clients qui nécessitent un redémarrage, puis utiliser une action de notification de client pour les redémarrer.
+<!-- 1356283 --> À compter de cette version, vous pouvez utiliser la console Configuration Manager pour identifier les appareils clients qui nécessitent un redémarrage, puis utiliser une action de notification de client pour les redémarrer.
 
 Pour identifier les périphériques en attente d’un redémarrage, sélectionnez **Ressources et Conformité** > **Périphériques** puis choisissez une collection de périphériques pouvant nécessiter un redémarrage. Après avoir sélectionné une collection, vous pouvez afficher l’état de chaque périphérique dans le volet des détails d’une nouvelle colonne nommée **Redémarrage en attente**. Chaque périphérique affiche la valeur **Yes** ou **No**.
 
@@ -100,16 +98,15 @@ Essayez d’effectuer les tâches suivantes, puis envoyez-nous vos **Commentaire
 
 
 ## <a name="software-center-customization"></a>Personnalisation du Centre logiciel
-<!-- 1351224 -->
-Vous pouvez ajouter des éléments de personnalisation d’entreprise et spécifier la visibilité des onglets du Centre logiciel. Vous pouvez ajouter votre nom de société Centre logiciel spécifique, définir un modèle de couleurs de configuration Centre logiciel, un logo de société et les onglets visibles pour les périphériques clients.
+<!-- 1351224 --> Vous pouvez ajouter des éléments de personnalisation d’entreprise et spécifier la visibilité des onglets du Centre logiciel. Vous pouvez ajouter votre nom de société Centre logiciel spécifique, définir un modèle de couleurs de configuration Centre logiciel, un logo de société et les onglets visibles pour les périphériques clients.
 
 ### <a name="customize-software-center"></a>Personnaliser le Centre logiciel
 
 Pour modifier le Centre logiciel :
 
-1. Dans la console **Configuration Manager**, cliquez sur **Administration** > **Paramètres client**. Cliquez sur l’instance de paramètre de client souhaitée.
-2. Sous l’onglet **Accueil**, dans le groupe **Propriétés**, choisissez **Propriétés**.
-3. Dans la boîte de dialogue **Paramètres par défaut**, choisissez **Centre logiciel**.
+1. Dans la console **Configuration Manager**, choisissez  **Administration** > **Paramètres client**. Cliquez sur l’instance de paramètre de client souhaitée.
+2. Sur l’onglet  **Accueil** , dans le groupe  **Propriétés** , choisissez  **Propriétés**.
+3. Dans la boîte de dialogue  **Paramètres par défaut** , choisissez  **Centre logiciel**.
 4. Sélectionnez **Oui** pour **sélectionner de nouveaux paramètres afin de spécifier les informations de l’entreprise** et permettre la modification des paramètres de personnalisation du Centre logiciel.
 5. Spécifiez le **nom de votre entreprise**.
 6. Sélectionnez votre **modèle de couleurs pour le Centre logiciel**.
@@ -125,4 +122,4 @@ Pour modifier le Centre logiciel :
 
 ### <a name="next-steps"></a>Étapes suivantes
 
-Pour en savoir plus sur la gestion d’applications dans Configuration Manager, consultez [Présentation de la gestion d’applications dans System Center Configuration Manager](\sccm\apps\understand\introduction-to-application-management).
+Pour en savoir plus sur la gestion d’applications dans Configuration Manager, consultez [Présentation de la gestion d’applications dans System Center Configuration Manager](/sccm/apps/understand/introduction-to-application-management).

@@ -10,16 +10,16 @@ ms.assetid: 52d64ef0-8c0d-42c3-857e-07d7ec776f29
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4933e4e6d9037edd01d80c9535627287275f7462
-ms.sourcegitcommit: 10b3a571e2a822bbd7b58a25840ee1e6f703a7a2
+ms.openlocfilehash: 8914c9ff7a33d24b5d68893018edff8d8e0de444
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34814295"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424285"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-system-center-configuration-manager"></a>Fonctionnalités de la version Technical Preview 1806 de System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Technical Preview)*
+*S’applique à : System Center Configuration Manager (Technical Preview)*
 
 Cet article présente les fonctionnalités disponibles dans la version Technical Preview 1806 de Configuration Manager. Vous pouvez installer cette version pour mettre à jour et ajouter de nouvelles fonctionnalités au site de votre préversion technique. 
 
@@ -39,8 +39,7 @@ Steps to workaround, if any.
 ## <a name="known-issues-in-this-technical-preview"></a>Problèmes connus dans cette préversion technique
 
 ### <a name="ki_contentlib"></a> Impossible de mettre à niveau le site à l’aide de la bibliothèque de contenu distante
-<!--514642-->
-Vous ne parvenez pas à mettre à niveau le site, et les erreurs suivantes sont journalisées dans **cmupdate.log** :  
+<!--514642--> Vous ne parvenez pas à mettre à niveau le site, et les erreurs suivantes sont journalisées dans **cmupdate.log** :  
 ```  
 Failed to find any valid drives  
 GetContentLibraryParameters failed; 0x80070057  
@@ -61,10 +60,10 @@ Déplacez la bibliothèque de contenu vers un lecteur local du serveur de site. 
 
 
 ## <a name="bkmk-3pupdate"></a> Mises à jour des logiciels tiers
-<!--1352101-->
-Pour répondre à la demande que vous avez exprimée par le biais des [commentaires UserVoice](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8803711-3rd-party-patching-scup-integration-with-sccm-co), cette nouvelle version comprend une meilleure prise en charge des mises à jour de logiciels tiers. Pour certains scénarios courants, vous n’avez plus besoin d’utiliser l’éditeur de mise à jour System Center (SCUP). Le nouveau nœud **Catalogues de mises à jour de logiciels tiers** de la console Configuration Manager vous permet de vous abonner à des catalogues tiers, de publier leurs mises à jour sur votre point de mise à jour logicielle, puis de les déployer sur les clients. 
+<!--1352101--> Pour répondre à la demande que vous avez exprimée par le biais des [commentaires UserVoice](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8803711-3rd-party-patching-scup-integration-with-sccm-co), cette nouvelle version comprend une meilleure prise en charge des mises à jour de logiciels tiers. Pour certains scénarios courants, vous n’avez plus besoin d’utiliser l’éditeur de mise à jour System Center (SCUP). Le nouveau nœud **Catalogues de mises à jour de logiciels tiers** de la console Configuration Manager vous permet de vous abonner à des catalogues tiers, de publier leurs mises à jour sur votre point de mise à jour logicielle, puis de les déployer sur les clients. 
 
 Cette version comprend les catalogues de mise à jour de logiciels tiers suivants :
+
  | Éditeur | Nom du catalogue |
  |--------|---------------------|
  | HP | Catalogue de mises à jour des clients HP |
@@ -74,7 +73,12 @@ SCUP continue de prendre en charge les autres catalogues et scénarios. La liste
 
 ### <a name="prerequisites"></a>Prérequis
 - Configurez la gestion des mises à jour de logiciels avec un point de mise à jour logicielle HTTPS. Pour plus d’informations, consultez [Préparer la gestion des mises à jour logicielles](/sccm/sum/get-started/prepare-for-software-updates-management).  
-   - Dans cette version, le point de mise à jour logicielle doit se trouver sur le serveur de site pour cette fonctionnalité. <!--515810--> 
+  - Dans cette version, le point de mise à jour logicielle doit se trouver sur le serveur de site pour cette fonctionnalité. <!--515810--> 
+
+    > [!Tip]  
+    > Le point de mise à jour logicielle nécessite HTTPS, car il est nécessaire pour les API WSUS utilisées pour gérer les certificats de signature. HTTPS ne doit pas nécessairement être activé pour les clients non plus. Pour plus d’informations sur l’activation de HTTPS sur WSUS, consultez les articles suivants pour obtenir une assistance :  
+    > - [Sécuriser WSUS avec le protocole SSL](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#bkmk_2.5.ConfigSSL) 
+    > - [Billet de blog de prise en charge de WSUS](https://blogs.technet.microsoft.com/sus/2011/05/09/how-to-create-an-internet-facing-wsus-server-that-uses-different-internal-and-external-names/)
 
 - Suffisamment d’espace disque sur le point de mise à jour logicielle où se trouve le dossier WSUSContent pour stocker le contenu binaire source des mises à jour de logiciels tiers. La quantité de stockage nécessaire varie en fonction du fournisseur, du type de mise à jour, ainsi que des mises à jour que vous publiez en vue de leur déploiement. Si vous devez déplacer le dossier WSUSContent vers un lecteur qui contient davantage d’espace, consultez ce billet de blog de l’équipe du support WSUS : [How to change the location where WSUS stores updates locally](https://blogs.technet.microsoft.com/sus/2008/05/19/wsus-how-to-change-the-location-where-wsus-stores-updates-locally/).  
 
@@ -87,7 +91,7 @@ SCUP continue de prendre en charge les autres catalogues et scénarios. La liste
  Essayez d’effectuer les tâches. Envoyez-nous ensuite des [commentaires](capabilities-in-technical-preview-1804.md#bkmk_feedback) pour nous indiquer comment cela a fonctionné.
 
 
-#### <a name="phase-1-enable-and-set-up-the-feature"></a>Phase 1 : Activer et configurer la fonctionnalité
+#### <a name="phase-1-enable-and-set-up-the-feature"></a>Phase 1 : Activer et configurer la fonctionnalité
 Pour activer et configurer la fonctionnalité à utiliser, effectuez les opérations suivantes *une fois pour chaque hiérarchie* :  
 
 1. Dans la console de Configuration Manager, accédez à l’espace de travail **Administration**. Développez **Configuration du site**, puis sélectionnez le nœud **Sites**.  
@@ -154,23 +158,20 @@ Pour plus d’informations sur ce compte, consultez [Compte de connexion de poin
 
 
 ## <a name="configure-windows-defender-smartscreen-settings-for-microsoft-edge"></a>Configurer les paramètres Windows Defender SmartScreen pour Microsoft Edge
-<!--1353701-->
-Cette version ajoute les trois paramètres [Windows Defender SmartScreen](/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-overview) à la [stratégie de paramètres de conformité du navigateur Microsoft Edge](/sccm/compliance/deploy-use/browser-profiles). Dans la page **Paramètres de SmartScreen**, la stratégie inclut désormais les paramètres supplémentaires suivants :
-- **Autoriser SmartScreen** : spécifie si Windows Defender SmartScreen est autorisé. Pour plus d’informations, consultez la [stratégie de navigateur AllowSmartScreen](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen).
-- **Les utilisateurs peuvent remplacer l’invite SmartScreen pour les sites** : spécifie si les utilisateurs peuvent ignorer les avertissements du filtre Windows Defender SmartScreen concernant les sites web potentiellement malveillants. Pour plus d’informations, consultez la [stratégie de navigateur PreventSmartScreenPromptOverride](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride).
-- **Les utilisateurs peuvent remplacer l’invite SmartScreen pour les sites** : spécifie si les utilisateurs peuvent ignorer les avertissements du filtre Windows Defender SmartScreen concernant le téléchargement de fichiers non vérifiés. Pour plus d’informations, consultez la [stratégie de navigateur PreventSmartScreenPromptOverrideForFiles](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles).
+<!--1353701--> Cette version ajoute les trois paramètres [Windows Defender SmartScreen](/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-overview) à la [stratégie de paramètres de conformité du navigateur Microsoft Edge](/sccm/compliance/deploy-use/browser-profiles). Dans la page **Paramètres de SmartScreen**, la stratégie inclut désormais les paramètres supplémentaires suivants :
+- **Autoriser SmartScreen** : Spécifie si Windows Defender SmartScreen est autorisé. Pour plus d’informations, consultez la [stratégie de navigateur AllowSmartScreen](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen).
+- **Les utilisateurs peuvent remplacer l’invite SmartScreen pour les sites** : Indique si les utilisateurs peuvent ignorer les avertissements du filtre Windows Defender SmartScreen concernant les sites web potentiellement malveillants. Pour plus d’informations, consultez la [stratégie de navigateur PreventSmartScreenPromptOverride](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride).
+- **Les utilisateurs peuvent remplacer l’invite SmartScreen pour les fichiers** : Indique si les utilisateurs peuvent ignorer les avertissements du filtre Windows Defender SmartScreen concernant le téléchargement de fichiers non vérifiés. Pour plus d’informations, consultez la [stratégie de navigateur PreventSmartScreenPromptOverrideForFiles](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles).
 
 
 
 ## <a name="sync-mdm-policy-from-microsoft-intune-for-a-co-managed-device"></a>Synchroniser la stratégie MDM de Microsoft Intune pour un appareil cogéré
-<!--1357377-->
-À compter de cette version, lorsque vous [passez à une charge de travail en cogestion](/sccm/core/clients/manage/co-management-switch-workloads), les appareils cogérés sont automatiquement synchronisés avec la stratégie MDM de Microsoft Intune. Cette synchronisation est effectuée lorsque vous lancez l’action **Télécharger la stratégie d’ordinateur** à partir de Notification du client, dans la console Configuration Manager. Pour plus d’informations, consultez [Lancer une récupération de stratégie client en utilisant une notification de client](/sccm/core/clients/manage/manage-clients#initiate-client-policy-retrieval-using-client-notification).
+<!--1357377--> À compter de cette version, lorsque vous [passez à une charge de travail en cogestion](/sccm/core/clients/manage/co-management-switch-workloads), les appareils cogérés sont automatiquement synchronisés avec la stratégie MDM de Microsoft Intune. Cette synchronisation est effectuée lorsque vous lancez l’action **Télécharger la stratégie d’ordinateur** à partir de Notification du client, dans la console Configuration Manager. Pour plus d’informations, consultez [Lancer une récupération de stratégie client en utilisant une notification de client](/sccm/core/clients/manage/manage-clients#initiate-client-policy-retrieval-using-client-notification).
 
 
 
 ## <a name="transition-office-365-workload-to-intune-using-co-management"></a>Transférer la charge de travail Office 365 vers Intune avec la cogestion
-<!--1357841-->
-Vous pouvez désormais transférer la charge de travail Office 365 de Configuration Manager vers Microsoft Intune après avoir activé la cogestion. Pour transférer cette charge de travail, accédez à la page de propriétés de cogestion et déplacez le curseur actuellement sur Configuration Manager vers Pilote ou Tout. Pour plus d’informations, consultez [Cogestion pour les appareils Windows 10](/sccm/core/clients/manage/co-management-overview).
+<!--1357841--> Vous pouvez désormais transférer la charge de travail Office 365 de Configuration Manager vers Microsoft Intune après avoir activé la cogestion. Pour transférer cette charge de travail, accédez à la page de propriétés de cogestion et déplacez le curseur actuellement sur Configuration Manager vers Pilote ou Tout. Pour plus d’informations, consultez [Cogestion pour les appareils Windows 10](/sccm/core/clients/manage/co-management-overview).
 
 Il existe également une nouvelle condition globale : **Are Office 365 applications managed by Intune on the device ?** (Les applications Office 365 sont-elles gérées par Intune sur cet appareil ?). Cette condition est ajoutée par défaut dans le cadre d’une exigence pour les nouvelles applications Office 365. Si vous transférez cette charge de travail, les clients cogérés ne répondront pas à cette exigence de l’application. Par conséquent, n’installez pas Office 365 par le biais d’un déploiement Configuration Manager.
 
@@ -180,8 +181,7 @@ Il existe également une nouvelle condition globale : **Are Office 365 applicati
 
 
 ## <a name="package-conversion-manager"></a>Package Conversion Manager 
-<!--1357861-->
-Package Conversion Manager est un nouvel outil intégré qui vous permet de convertir des packages Configuration Manager 2007 hérités en applications Configuration Manager Current Branch. Ensuite, vous pouvez utiliser les fonctionnalités des applications telles que les dépendances, les règles de spécification et l’affinité entre utilisateur et appareil.
+<!--1357861--> Package Conversion Manager est désormais un outil intégré qui vous permet de convertir les packages Configuration Manager 2007 hérités en applications de l’édition Current Branch de Configuration Manager. Ensuite, vous pouvez utiliser les fonctionnalités des applications telles que les dépendances, les règles de spécification et l’affinité entre utilisateur et appareil.
 
 > [!Tip]  
 > La documentation héritée concernant les fonctionnalités existantes de Package Conversion Manager est disponible sur [TechNet](https://technet.microsoft.com/library/hh531519.aspx). Les informations pertinentes sont en cours de migration vers la bibliothèque docs.microsoft.com.
@@ -194,9 +194,9 @@ Package Conversion Manager est un nouvel outil intégré qui vous permet de conv
 
 1. Dans la console Configuration Manager, accédez à l’espace de travail **Bibliothèque de logiciels**. Développez **Gestion des applications**, puis sélectionnez **Packages**.  
 2. Sélectionnez un package. Les trois options suivantes sont disponibles dans le groupe **Conversion de packages** du ruban :  
-     - **Analyser le package** : démarre le processus de conversion en analysant le package.
-     - **Convertir le package** : cette action permet de convertir facilement certains packages en applications.
-     - **Corriger et convertir** : certains packages nécessitent que les problèmes soient résolus avant leur conversion en applications.  
+     - **Analyser le package** : Démarre le processus de conversion en analysant le package.
+     - **Convertir le package** : Cette action permet de convertir facilement certains packages en applications.
+     - **Corriger et convertir** : Certains packages nécessitent que les problèmes soient résolus avant leur conversion en applications.  
 
    Pour plus d’informations sur ces actions, consultez [Comment analyser et convertir des packages](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/hh846244%28v%3dtechnet.10%29).  
 
@@ -210,8 +210,7 @@ Package Conversion Manager est un nouvel outil intégré qui vous permet de conv
 
 
 ## <a name="deploy-software-updates-without-content"></a>Déployer des mises à jour logicielles sans contenu
-<!--1357933-->
-Vous pouvez désormais déployer des mises à jour logicielles sur vos appareils sans avoir à télécharger et à distribuer préalablement le contenu des mises à jour logicielles sur les points de distribution. Cette fonctionnalité est utile lorsque le contenu des mises à jour est très volumineux, ou si vous souhaitez que les clients obtiennent toujours le contenu via le service cloud Microsoft Update. Dans ce cas, les clients peuvent également télécharger le contenu auprès d’homologues qui disposent déjà du contenu nécessaire. Le client Configuration Manager continue de gérer le téléchargement de contenu. Vous pouvez donc utiliser la fonctionnalité de cache d’homologue Configuration Manager ou d’autres technologies telles que l’optimisation de la distribution. Cette fonctionnalité prend en charge tous les types de mises à jour pris en charge par la gestion des mises à jour logicielles Configuration Manager, y compris les mises à jour Windows et Office. 
+<!--1357933--> Vous pouvez désormais déployer des mises à jour logicielles sur vos appareils sans avoir à télécharger et à distribuer préalablement le contenu des mises à jour logicielles sur les points de distribution. Cette fonctionnalité est utile lorsque le contenu des mises à jour est très volumineux, ou si vous souhaitez que les clients obtiennent toujours le contenu via le service cloud Microsoft Update. Dans ce cas, les clients peuvent également télécharger le contenu auprès d’homologues qui disposent déjà du contenu nécessaire. Le client Configuration Manager continue de gérer le téléchargement de contenu. Vous pouvez donc utiliser la fonctionnalité de cache d’homologue Configuration Manager ou d’autres technologies telles que l’optimisation de la distribution. Cette fonctionnalité prend en charge tous les types de mises à jour pris en charge par la gestion des mises à jour logicielles Configuration Manager, y compris les mises à jour Windows et Office. 
 
 ### <a name="try-it-out"></a>Essayez !
  Essayez d’effectuer les tâches. Envoyez-nous ensuite des [commentaires](capabilities-in-technical-preview-1804.md#bkmk_feedback) pour nous indiquer comment cela a fonctionné.
@@ -226,8 +225,7 @@ Vous pouvez désormais déployer des mises à jour logicielles sur vos appareils
 
 
 ## <a name="office-customization-tool-integration-with-the-office-365-installer"></a>Intégration de l’Outil de personnalisation Office au programme d’installation d’Office 365
-<!--1358149-->
-L’outil de personnalisation Office est désormais intégré au programme d’installation d’Office 365 dans la console Configuration Manager. Lorsque vous créez un déploiement pour Office 365, vous pouvez désormais configurer dynamiquement les derniers paramètres de gestion Office. L’outil de personnalisation Office est mis à jour en même temps que les nouvelles builds d’Office 365. Vous pouvez désormais profiter des nouveaux paramètres de gestion d’Office 365 dès leur publication. 
+<!--1358149--> L’Outil de personnalisation Office est désormais intégré au programme d’installation d’Office 365 dans la console Configuration Manager. Lorsque vous créez un déploiement pour Office 365, vous pouvez désormais configurer dynamiquement les derniers paramètres de gestion Office. L’outil de personnalisation Office est mis à jour en même temps que les nouvelles builds d’Office 365. Vous pouvez désormais profiter des nouveaux paramètres de gestion d’Office 365 dès leur publication. 
 
 ### <a name="prerequisites"></a>Prérequis
 - L’ordinateur qui exécute la console Configuration Manager nécessite un accès Internet via le port HTTPS 443. L’Assistant Installation du client Office 365 utilise une API de navigateur web Windows standard pour ouvrir https://config.office.com. Si un serveur proxy Internet est utilisé, l’utilisateur doit pouvoir accéder à cette URL.
@@ -246,8 +244,7 @@ L’outil de personnalisation Office est désormais intégré au programme d’i
 Dans cette version, les améliorations suivantes ont été apportées à la passerelle de gestion cloud :
 
 ### <a name="simplified-client-bootstrap-command-line"></a>Ligne de commande de démarrage du client simplifiée
-<!--1358215-->
-Lorsque vous installez le client Configuration Manager via une passerelle de gestion cloud, le nombre de propriétés de ligne de commande nécessaires est désormais réduit. Lorsque vous vous préparez à la cogestion, consultez [Ligne de commande pour installer un client Configuration Manager](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client) pour obtenir des informations détaillées sur l’un des exemples de ce scénario. 
+<!--1358215--> Lorsque vous installez le client Configuration Manager via une passerelle de gestion cloud, le nombre de propriétés de ligne de commande nécessaires est désormais réduit. Lorsque vous vous préparez à la cogestion, consultez [Ligne de commande pour installer un client Configuration Manager](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client) pour obtenir des informations détaillées sur l’un des exemples de ce scénario. 
 
 Les propriétés de ligne de commande suivantes sont nécessaires pour tous les scénarios :
   - CCMHOSTNAME  
@@ -266,12 +263,10 @@ L’exemple suivant comprend toutes les propriétés mentionnées ci-dessus :
 Pour plus d’informations, consultez [Propriétés de l’installation du client](/sccm/core/clients/deploy/about-client-installation-properties).
 
 ### <a name="download-content-from-a-cmg"></a>Télécharger du contenu à partir d’une passerelle de gestion cloud
-<!--1358651-->
-Auparavant, vous deviez déployer un point de distribution cloud et une passerelle de gestion cloud en leur attribuant un rôle distinct. Dans cette version, une passerelle de gestion cloud peut également distribuer du contenu Office aux clients. Cette fonctionnalité réduit le nombre de certificats nécessaires, ainsi que les coûts associés aux machines virtuelles Azure. Pour activer cette fonctionnalité, activez la nouvelle option **Allow CMG to function as a cloud distribution point and serve content from Azure storage** (Autoriser la passerelle de gestion cloud à fonctionner comme un point de distribution cloud et à distribuer du contenu à partir du stockage Azure) sous l’onglet **Paramètres** des propriétés de la passerelle de gestion cloud. 
+<!--1358651--> Auparavant, vous deviez déployer un point de distribution cloud et une passerelle de gestion cloud sous forme de rôles distincts. Dans cette version, une passerelle de gestion cloud peut également distribuer du contenu Office aux clients. Cette fonctionnalité réduit le nombre de certificats nécessaires, ainsi que les coûts associés aux machines virtuelles Azure. Pour activer cette fonctionnalité, activez la nouvelle option **Allow CMG to function as a cloud distribution point and serve content from Azure storage** (Autoriser la passerelle de gestion cloud à fonctionner comme un point de distribution cloud et à distribuer du contenu à partir du stockage Azure) sous l’onglet **Paramètres** des propriétés de la passerelle de gestion cloud. 
 
 ### <a name="trusted-root-certificate-isnt-required-with-azure-ad"></a>Les certificat racines approuvés ne sont plus nécessaires avec Azure AD
-<!--503899-->
-Lorsque vous créez une passerelle de gestion cloud, il n’est plus nécessaire de fournir un [certificat racine approuvé](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#cmg-trusted-root-certificate-to-clients) dans la page Paramètres. Ce certificat n’est pas nécessaire lorsque vous utilisez Azure Active Directory (Azure AD) pour l’authentification client, mais il était auparavant nécessaire dans l’Assistant.
+<!--503899-->Quand vous créez une passerelle de gestion cloud, vous n’êtes plus obligé de fournir un [certificat racine approuvé](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#cmg-trusted-root-certificate-to-clients) dans la page Paramètres. Ce certificat n’est pas nécessaire lorsque vous utilisez Azure Active Directory (Azure AD) pour l’authentification client, mais il était auparavant nécessaire dans l’Assistant.
 
 > [!Important]  
 > Si vous utilisez des certificats d’authentification client PKI, vous devez continuer d’ajouter un certificat racine approuvé pour la passerelle de gestion cloud.
@@ -279,8 +274,7 @@ Lorsque vous créez une passerelle de gestion cloud, il n’est plus nécessaire
 
 
 ## <a name="improvements-to-secure-client-communications"></a>Amélioration des communications clientes sécurisées
-<!--1358278,1358279-->
-Cette version améliore encore davantage les [communications clientes sécurisées](/sccm/core/get-started/capabilities-in-technical-preview-1805#improved-secure-client-communications) en supprimant les dépendances supplémentaires du compte d’accès réseau. Lorsque vous activez la nouvelle option de site **Utiliser les certificats générés par Configuration Manager pour les systèmes de site HTTP**, les scénarios suivants ne nécessitent pas de compte d’accès réseau pour télécharger le contenu à partir d’un point de distribution :  
+<!--1358278,1358279--> Cette version améliore encore davantage les [communications clientes sécurisées](/sccm/core/get-started/capabilities-in-technical-preview-1805#improved-secure-client-communications) en supprimant les dépendances supplémentaires du compte d’accès réseau. Lorsque vous activez la nouvelle option de site **Utiliser les certificats générés par Configuration Manager pour les systèmes de site HTTP**, les scénarios suivants ne nécessitent pas de compte d’accès réseau pour télécharger le contenu à partir d’un point de distribution :  
 
 - Séquences de tâches exécutées à partir d’un support de démarrage ou d’un environnement PXE
 - Séquence de tâches exécutées à partir du Centre logiciel  
@@ -290,8 +284,7 @@ Ces séquences de tâches conviennent aux déploiements de système d’exploita
 
 
 ## <a name="software-center-infrastructure-improvements"></a>Améliorations apportées à l’infrastructure du Centre logiciel
-<!--1358309-->
-Les rôles du catalogue d’applications ne sont plus nécessaires pour afficher les applications accessibles aux utilisateurs dans le Centre logiciel. Cette modification permet d’alléger l’infrastructure de serveur nécessaire pour fournir des applications aux utilisateurs. Le Centre logiciel s’appuie désormais sur le point de gestion pour obtenir ces informations, ce qui permet une meilleure mise à l’échelle des grands environnements par l’attribution de [groupes de limites](/sccm/core/servers/deploy/configure/boundary-groups#management-points).
+<!--1358309--> Les rôles du catalogue d’applications ne sont plus nécessaires pour afficher les applications accessibles aux utilisateurs dans le Centre logiciel. Cette modification permet d’alléger l’infrastructure de serveur nécessaire pour fournir des applications aux utilisateurs. Le Centre logiciel s’appuie désormais sur le point de gestion pour obtenir ces informations, ce qui permet une meilleure mise à l’échelle des grands environnements par l’attribution de [groupes de limites](/sccm/core/servers/deploy/configure/boundary-groups#management-points).
 
 ### <a name="try-it-out"></a>Essayez !
  Essayez d’effectuer les tâches. Envoyez-nous ensuite des [commentaires](capabilities-in-technical-preview-1804.md#bkmk_feedback) pour nous indiquer comment cela a fonctionné.
@@ -306,8 +299,7 @@ Les rôles du catalogue d’applications ne sont plus nécessaires pour afficher
 
 
 ## <a name="provision-windows-app-packages-for-all-users-on-a-device"></a>Provisionner les packages d’application Windows pour tous les utilisateurs sur un appareil
-<!--1358310-->
-Vous pouvez désormais provisionner une application avec un package d’application Windows pour tous les utilisateurs d’un appareil. Un exemple courant de ce scénario est le provisionnement d’une application telle que « Minecraft : Education Edition » à partir de Microsoft Store pour Entreprises et Éducation, pour tous les appareils utilisés par les élèves d’une école. Auparavant, Configuration Manager ne prenait en charge l’installation de ces applications que pour un seul utilisateur. Quand il se connectait à un nouvel appareil, l’élève devait attendre pour accéder à une application. À présent que l’application est provisionnée pour tous les utilisateurs d’un appareil, ceux-ci peuvent l’utiliser plus rapidement.
+<!--1358310--> Vous pouvez désormais approvisionner une application avec un package d’application Windows pour tous les utilisateurs d’un appareil. Un exemple courant de ce scénario est l’approvisionnement d’une application telle que « Minecraft : Education Edition » à partir de Microsoft Store pour Entreprises et Éducation, pour tous les appareils utilisés par les étudiants d’une école. Auparavant, Configuration Manager ne prenait en charge l’installation de ces applications que pour un seul utilisateur. Quand il se connectait à un nouvel appareil, l’élève devait attendre pour accéder à une application. À présent que l’application est provisionnée pour tous les utilisateurs d’un appareil, ceux-ci peuvent l’utiliser plus rapidement.
 
 > [!Important]  
 > Sachez que l’installation, le provisionnement et la mise à jour de plusieurs versions d’un même package d’application Windows sur un appareil peut entraîner des résultats inattendus. De tels résultats peuvent être obtenus lorsque vous utilisez Configuration Manager pour provisionner l’application, et que vous permettez aux utilisateurs de mettre à jour l’application à partir de Microsoft Store. Pour plus d’informations, consultez les instructions de la section Étapes suivantes pour [gérer les applications à partir du Microsoft Store pour Entreprises](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#next-steps).  
@@ -334,8 +326,7 @@ Lorsque vous provisionnez une application sous licence hors connexion, Configura
 
 
 ## <a name="improvements-to-the-surface-dashboard"></a>Améliorations apportées au tableau de bord Surface
-<!--1358654-->
-Dans cette version, les améliorations suivantes ont été apportées au [tableau de bord Surface](/sccm/core/clients/manage/surface-device-dashboard) :
+<!--1358654--> Cette version intègre les améliorations suivantes du [tableau de bord Surface](/sccm/core/clients/manage/surface-device-dashboard) :
 - Le tableau de bord Surface affiche désormais la liste des appareils appropriés quand les sections de graphe sont sélectionnées.
    - En cliquant sur la vignette **Pourcentage d’appareils Surface**, vous affichez la liste des appareils Surface.
    - En cliquant sur une barre de la vignette **Top cinq des versions de microprogramme**, vous affichez la liste des appareils Surface avec la version de leur microprogramme.
@@ -344,8 +335,7 @@ Dans cette version, les améliorations suivantes ont été apportées au [tablea
 
 
 ## <a name="hardware-inventory-default-unit-revision"></a>Révision de l’unité par défaut pour l’inventaire matériel
-<!--514442-->
-Dans [Configuration Manager version 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710#site-infrastructure), l’unité par défaut utilisée dans de nombreuses vues de rapports était passée des mégaoctets (Mo) aux gigaoctets (Go). En raison des [améliorations apportées à l’inventaire matériel au niveau des valeurs d’entiers longs](/sccm/core/get-started/capabilities-in-technical-preview-1805#improvement-to-hardware-inventory-for-large-integer-values), et en vue de répondre à la demande des utilisateurs, nous sommes repassé aux mégaoctets pour l’unité par défaut.
+<!--514442--> Dans [Configuration Manager version 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710#site-infrastructure), l’unité par défaut utilisée dans de nombreuses vues Rapports est passée des mégaoctets (Mo) aux gigaoctets (Go). En raison des [améliorations apportées à l’inventaire matériel au niveau des valeurs d’entiers longs](/sccm/core/get-started/capabilities-in-technical-preview-1805#improvement-to-hardware-inventory-for-large-integer-values), et en vue de répondre à la demande des utilisateurs, nous sommes repassé aux mégaoctets pour l’unité par défaut.
 
 
 

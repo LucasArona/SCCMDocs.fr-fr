@@ -9,15 +9,15 @@ ms.assetid: d24257d8-8136-47f4-8e0d-34021356dc37
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2b952e76fc21e3190430cdf34cb4a264918fd199
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: fa201029b81bb3e0ca8fb5e97f126c899497d503
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342594"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422927"
 ---
 # <a name="configuration-manager-on-azure---frequently-asked-questions"></a>Configuration Manager dans Azure – Forum Aux Questions
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Les questions et réponses suivantes peuvent vous aider à comprendre quand utiliser et comment configurer Configuration Manager dans Microsoft Azure.
 
@@ -45,13 +45,13 @@ Excellente question. Voici les zones les plus importantes quand vous prenez cett
 ### <a name="what-about-networking-requirements-should-i-use-expressroute-or-an-azure-vpn-gateway"></a>Qu’en est-il de la configuration réseau requise ? Dois-je utiliser ExpressRoute ou une passerelle VPN Azure ?
 La mise en réseau est une décision très importante. Les vitesses et la latence des réseaux peuvent affecter les fonctionnalités entre le serveur de site et les systèmes de site distants, ainsi que les communications des clients vers les systèmes de site. Nous vous recommandons d’utiliser ExpressRoute. Toutefois, Configuration Manager ne présente aucune limitation pour vous empêcher d’utiliser la passerelle VPN Azure. Vous devez examiner attentivement vos besoins (performances, correctifs, distribution de logiciels, déploiement de système d’exploitation) à partir de cette infrastructure, puis prendre votre décision. Voici quelques points à prendre en compte pour chaque solution :
 
- - **ExpressRoute** (recommandé)
+- **ExpressRoute** (recommandé)
   - Extension naturelle de votre centre de données (peut relier plusieurs centres de données)
   - Connexions privées entre des centres de données Azure et votre infrastructure
   - Ne parvient pas jusqu’à l’Internet public
   - Offre une fiabilité, des vitesses élevées, une latence plus faible, une haute sécurité
   - Offre des vitesses pouvant atteindre 10 Gbits/s et des options de plan de données illimitées
- - **Passerelle VPN**
+- **Passerelle VPN**
   - Réseaux VPN de site à site/point à site
   - Le trafic parvient jusqu’à l’Internet public
   - Utilise la sécurité du protocole Internet (IPsec) et Internet Key Exchange (IKE)
@@ -107,11 +107,11 @@ Les tableaux suivants répertorient les nombres de disques suggérés initiaux �
 
 | Clients bureau    |Taille de machine virtuelle recommandée|Disques recommandés |
 |--------------------|-------------------|------------------|
-|**Jusqu’à 25 000**       | Serveur de site : F4S </br>Serveur de base de données : DS12_V2 | Serveur de site : 1xP30 </br>Serveur de base de données : 2xP30 (agrégé par bandes)  |
-|**de 25 000 à 50 000**      | Serveur de site : F4S </br>Serveur de base de données : DS13_V2 | Serveur de site : 1xP30 </br>Serveur de base de données : 2xP30 (agrégé par bandes)   |
-|**de 50 000 à 100 000**     | Serveur de site : F8S </br>Serveur de base de données : DS14_V2 | Serveur de site : 2xP30 (agrégé par bandes)   </br>Serveur de base de données : 3xP30 (agrégé par bandes)   |
+|**Jusqu’à 25 000**       | Serveur de site : F4S </br>Serveur de base de données : DS12_V2 | Serveur de site : 1xP30 </br>Serveur de base de données : 2xP30 (agrégé par bandes)  |
+|**de 25 000 à 50 000**      | Serveur de site : F4S </br>Serveur de base de données : DS13_V2 | Serveur de site : 1xP30 </br>Serveur de base de données : 2xP30 (agrégé par bandes)   |
+|**de 50 000 à 100 000**     | Serveur de site : F8S </br>Serveur de base de données : DS14_V2 | Serveur de site : 2xP30 (agrégé par bandes)   </br>Serveur de base de données : 3xP30 (agrégé par bandes)   |
 
-Voici un exemple de configuration pour 50 000 à 100 000 clients sur DS14_V2 avec 3 disques P30 dans un volume agrégé par bandes avec des volumes logiques distincts pour les fichiers d’installation de Configuration Manager et les fichiers de base de données : ![VM)disks](media/vm_disks.png)  
+Voici un exemple de configuration pour 50 000 à 100 000 clients sur DS14_V2 avec 3 disques P30 dans un volume agrégé par bandes avec des volumes logiques distincts pour les fichiers d’installation de Configuration Manager et les fichiers de base de données : ![VM)disks](media/vm_disks.png)  
 
 
 

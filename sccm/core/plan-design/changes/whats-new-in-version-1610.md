@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: cb9b19c95caaf914fa1cbf040258c30ede2dc54a
-ms.sourcegitcommit: fe279229a90fdc8cddbb13c7ffdbbb22af0e25ef
+ms.openlocfilehash: f53dbbf341d3c6474c1c5dd5066b8d1f2a0fdc63
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47229311"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424236"
 ---
 # <a name="what39s-new-in-version-1610-of-system-center-configuration-manager"></a>Nouveautés dans la version 1610 de System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 La mise à jour 1610 de la version Current Branch de System Center Configuration Manager est une mise à jour dans la console des sites déjà installés qui exécutent la version 1511, 1602 ou 1606.
 
@@ -36,7 +36,7 @@ Les sections suivantes fournissent des détails sur les modifications et les nou
 
 
 ## <a name="in-console-monitoring-of-update-installation-status"></a>Surveillance de l’état d’installation des mises à jour dans la console  
-À partir de la version 1610, quand vous installez un pack de mises à jour et surveillez l’installation dans la console, une nouvelle phase est disponible : **Après l’installation**. Cette phase inclut l’état des tâches comme le redémarrage des services principaux et le lancement de la surveillance de la réplication. (Cette phase n’est pas disponible dans la console tant que votre site n’est pas mis à jour vers la version 1610.) Pour plus d’informations sur l’état d’installation des mises à jour, consultez [Installer des mises à jour dans la console](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkinstalla-install-in-console-updates).
+À partir de la version 1610, quand vous installez un pack de mises à jour et surveillez l’installation dans la console, une nouvelle phase est disponible : **Après l’installation**. Cette phase inclut l’état des tâches comme le redémarrage des services principaux et le lancement de la surveillance de la réplication. (Cette phase n’est pas disponible dans la console tant que votre site n’est pas mis à jour vers la version 1610.) Pour plus d’informations sur l’état d’installation des mises à jour, consultez [Installer des mises à jour dans la console](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkinstalla-install-in-console-updates).
 
 
 ## <a name="exclude-clients-from-automatic-upgrade"></a>Exclure des clients de la mise à niveau automatique
@@ -131,8 +131,8 @@ Une marque personnalisée pour le Centre logiciel est appliquée selon les règl
 Dans certains cas, vous pouvez accorder plus de temps aux utilisateurs pour installer les mises à jour logicielles ou les déploiements d’applications obligatoires au-delà des échéances que vous avez définies. Par exemple, cela peut être nécessaire lorsqu’un ordinateur a été éteint pendant une période de temps prolongée et qu’il doit installer un grand nombre de déploiements d’applications ou de mises à jour. Par exemple, si un utilisateur final vient de rentrer de congés, il peut être amené à patienter longtemps pendant l’installation des déploiements d’applications en retard. Pour résoudre ce problème, vous pouvez désormais définir une période de grâce de mise en œuvre en déployant des paramètres du client Configuration Manager sur un regroupement. 
 
 Pour configurer la période de grâce, procédez comme suit :
-1.      Dans la page **Agent ordinateur** des paramètres du client, configurez la nouvelle propriété **Période de grâce pour la mise en œuvre après l’échéance du déploiement (en heures)** avec une valeur comprise entre **1** et **120** heures.
-2.      Dans un nouveau déploiement d’application exigé, ou dans les propriétés d’un déploiement existant, dans la page **Planification**, cochez la case **Différer la mise en œuvre de ce déploiement selon les préférences de l’utilisateur, dans la limite de la période de grâce définie dans les paramètres client**. Tous les déploiements pour lesquels cette case est cochée et qui sont destinés à des appareils sur lesquels vous avez également déployé le paramètre du client utilisent la période de grâce de mise en œuvre.
+1. Dans la page **Agent ordinateur** des paramètres du client, configurez la nouvelle propriété **Période de grâce pour la mise en œuvre après l’échéance du déploiement (en heures)** avec une valeur comprise entre **1** et **120** heures.
+2. Dans un nouveau déploiement d’application exigé, ou dans les propriétés d’un déploiement existant, dans la page **Planification**, cochez la case **Différer la mise en œuvre de ce déploiement selon les préférences de l’utilisateur, dans la limite de la période de grâce définie dans les paramètres client**. Tous les déploiements pour lesquels cette case est cochée et qui sont destinés à des appareils sur lesquels vous avez également déployé le paramètre du client utilisent la période de grâce de mise en œuvre.
 
 Si vous configurez une période de grâce de mise en œuvre et cochez la case, une fois que l’échéance d’installation d’application est atteinte, l’application est installée dans la première fenêtre non professionnelle que l’utilisateur a configurée jusqu’à cette période de grâce. Toutefois, l’utilisateur peut toujours ouvrir le Centre logiciel et installer l’application à tout moment, s’il le souhaite. Une fois que la période de grâce a expiré, le comportement de mise en œuvre redevient normal pour les déploiements en retard. Des options similaires ont été ajoutées dans l’Assistant de déploiement de mises à jour logicielles, dans l’Assistant des règles de déploiement automatique et dans les pages de propriétés.
 
@@ -191,7 +191,7 @@ Pour plus d’informations, consultez [Gérer les mises à jour Office 365 ProP
 ## <a name="task-sequence-steps-to-manage-bios-to-uefi-conversion"></a>Étapes de séquence de tâches pour gérer la conversion du BIOS en UEFI
 Vous pouvez maintenant personnaliser une séquence de tâches de déploiement de système d’exploitation avec une nouvelle variable, TSUEFIDrive, afin que l’étape **Redémarrer l’ordinateur** prépare une partition FAT32 sur le disque dur pour la transition vers UEFI. La procédure suivante fournit un exemple de création des étapes de séquence de tâches pour préparer le disque dur pour la conversion du BIOS en UEFI. Pour plus d’informations, consultez [Étapes de séquence de tâches pour gérer la conversion du BIOS en UEFI](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion).
 
-##  <a name="improvements-to-the-task-sequence-step-prepare-configmgr-client-for-capture"></a>Améliorations apportées à l’étape de séquence de tâches : Préparer le client ConfigMgr pour capture  
+##  <a name="improvements-to-the-task-sequence-step-prepare-configmgr-client-for-capture"></a>Améliorations apportées à l’étape de séquence de tâches : Prepare ConfigMgr Client for Capture  
 L’étape de préparation du client ConfigMgr va désormais supprimer complètement le client Configuration Manager, au lieu de supprimer uniquement des informations clés. Quand la séquence de tâches déploie l’image capturée du système d’exploitation, elle installe un nouveau client Configuration Manager chaque fois. Pour plus d’informations, consultez [Étapes de séquence de tâches](/sccm/osd/understand/task-sequence-steps#BKMK_PrepareConfigMgrClientforCapture).
 
 

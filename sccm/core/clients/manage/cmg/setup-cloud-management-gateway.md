@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: 041ea28e91b77545b8984742b4199782d1edb6b7
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 8f743514af8b89212b10073c07b24990ffedcb1a
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456530"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420394"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Configurer la passerelle de gestion cloud pour Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*  
+*S’applique à : System Center Configuration Manager (Current Branch)*  
 
 Ce processus comprend les étapes nécessaires pour configurer une passerelle de gestion cloud (CMG). 
 
@@ -82,37 +82,37 @@ Effectuez cette procédure sur le site de plus haut niveau. Ce site est soit un 
 
 5. Sélectionnez **Suivant**. Attendez que le site teste la connexion à Azure.  
 
-4. Dans la page Paramètres de l’Assistant, sélectionnez d’abord **Parcourir**, puis choisissez le fichier .PFX correspondant au certificat d’authentification serveur de la passerelle de gestion cloud. Le nom de ce certificat remplit les champs **Nom de domaine complet du service** et **Nom du service**.  
+6. Dans la page Paramètres de l’Assistant, sélectionnez d’abord **Parcourir**, puis choisissez le fichier .PFX correspondant au certificat d’authentification serveur de la passerelle de gestion cloud. Le nom de ce certificat remplit les champs **Nom de domaine complet du service** et **Nom du service**.  
 
    > [!NOTE]  
    > À compter de la version 1802, le certificat d’authentification serveur de la passerelle de gestion cloud prend en charge les caractères génériques. Si vous utilisez un certificat générique, remplacez l’astérisque (\*) dans le champ **Nom de domaine complet du service** par le nom d’hôte souhaité pour la passerelle de gestion cloud.  
    <!--491233-->  
 
-5. Sélectionnez la liste déroulante **Région** pour choisir la région Azure pour cette passerelle de gestion cloud.  
+7. Sélectionnez la liste déroulante **Région** pour choisir la région Azure pour cette passerelle de gestion cloud.  
 
-6. Dans la version 1802 et si vous utilisez un déploiement Azure Resource Manager, sélectionnez une option**Groupe de ressources**. 
+8. Dans la version 1802 et si vous utilisez un déploiement Azure Resource Manager, sélectionnez une option**Groupe de ressources**. 
    1. Si vous choisissez **Utiliser le fichier existant**, sélectionnez un groupe de ressources existant dans la liste déroulante.
    2. Si vous choisissez **Créer**, entrez le nom du nouveau groupe de ressources.
 
-6. Dans le champ **Instance de machine virtuelle**, entrez le nombre de machines virtuelles pour ce service. La valeur par défaut est 1, mais vous pouvez définir jusqu’à 16 machines virtuelles par passerelle de gestion cloud.  
+9. Dans le champ **Instance de machine virtuelle**, entrez le nombre de machines virtuelles pour ce service. La valeur par défaut est 1, mais vous pouvez définir jusqu’à 16 machines virtuelles par passerelle de gestion cloud.  
 
-7. Sélectionnez **Certificats** pour ajouter des certificats racines approuvés de client. Ajoutez jusqu’à deux autorités de certification racines de confiance et quatre autorités de certification (subordonnées) intermédiaires.  
+10. Sélectionnez **Certificats** pour ajouter des certificats racines approuvés de client. Ajoutez jusqu’à deux autorités de certification racines de confiance et quatre autorités de certification (subordonnées) intermédiaires.  
+
+     > [!Note]  
+     > À compter de la version 1806, quand vous créez une passerelle de gestion cloud, vous n’êtes plus obligé de fournir un certificat racine approuvé dans la page Paramètres. Ce certificat n’est pas nécessaire lorsque vous utilisez Azure Active Directory (Azure AD) pour l’authentification client, mais il était auparavant nécessaire dans l’Assistant. Si vous utilisez des certificats d’authentification client PKI, vous devez néanmoins encore ajouter un certificat racine approuvé pour la passerelle de gestion cloud.<!--SCCMDocs-pr issue #2872-->  
+
+11. Par défaut, l’Assistant active l’option permettant de **Vérifier la révocation des certificats clients**. Une liste de révocation de certificats doit être publiée publiquement pour que cette vérification fonctionne. Si vous ne publiez pas de liste de révocation de certificats, désélectionnez cette option.  
+
+12. À compter de la version 1806, l’assistant active l’option suivante par défaut : **Autoriser la passerelle de gestion cloud à fonctionner comme point de distribution cloud et à servir du contenu à partir du stockage Azure**. À présent, une passerelle de gestion cloud peut également délivrer du contenu aux clients. Cette fonctionnalité réduit le nombre de certificats nécessaires, ainsi que les coûts associés aux machines virtuelles Azure.  
+
+13. Sélectionnez **Suivant**.  
+
+14. Pour surveiller le trafic de la passerelle de gestion cloud avec un seuil de 14 jours, cochez la case pour activer l’alerte de seuil. Ensuite, spécifiez le seuil et le pourcentage auquel déclencher les différents niveaux d’alerte. Choisissez **Suivant** quand vous avez terminé.  
+
+15. Vérifiez les paramètres, puis choisissez **Suivant**. Configuration Manager commence à configurer le service. Une fois l’Assistant fermé, 5 à 15 minutes sont nécessaires pour provisionner complètement le service dans Azure. Vérifiez la colonne **État** de la nouvelle passerelle de gestion cloud pour déterminer quand le service est prêt.  
 
     > [!Note]  
-    > À compter de la version 1806, quand vous créez une passerelle de gestion cloud, vous n’êtes plus obligé de fournir un certificat racine approuvé dans la page Paramètres. Ce certificat n’est pas nécessaire lorsque vous utilisez Azure Active Directory (Azure AD) pour l’authentification client, mais il était auparavant nécessaire dans l’Assistant. Si vous utilisez des certificats d’authentification client PKI, vous devez néanmoins encore ajouter un certificat racine approuvé pour la passerelle de gestion cloud.<!--SCCMDocs-pr issue #2872-->  
-
-8. Par défaut, l’Assistant active l’option permettant de **Vérifier la révocation des certificats clients**. Une liste de révocation de certificats doit être publiée publiquement pour que cette vérification fonctionne. Si vous ne publiez pas de liste de révocation de certificats, désélectionnez cette option.  
-
-9. À compter de la version 1806, par défaut, l’Assistant active l’option suivante : **Autoriser la passerelle de gestion cloud à fonctionner comme point de distribution cloud et à servir du contenu à partir du stockage Azure**. À présent, une passerelle de gestion cloud peut également délivrer du contenu aux clients. Cette fonctionnalité réduit le nombre de certificats nécessaires, ainsi que les coûts associés aux machines virtuelles Azure.  
-
-10. Sélectionnez **Suivant**.  
-
-11. Pour surveiller le trafic de la passerelle de gestion cloud avec un seuil de 14 jours, cochez la case pour activer l’alerte de seuil. Ensuite, spécifiez le seuil et le pourcentage auquel déclencher les différents niveaux d’alerte. Choisissez **Suivant** quand vous avez terminé.  
-
-12. Vérifiez les paramètres, puis choisissez **Suivant**. Configuration Manager commence à configurer le service. Une fois l’Assistant fermé, 5 à 15 minutes sont nécessaires pour provisionner complètement le service dans Azure. Vérifiez la colonne **État** de la nouvelle passerelle de gestion cloud pour déterminer quand le service est prêt.  
-
- > [!Note]  
- > Pour résoudre les problèmes de déploiement de passerelle de gestion cloud, utilisez **CloudMgr.log** et **CMGSetup.log**. Pour plus d’informations, consultez [Fichiers journaux](/sccm/core/plan-design/hierarchy/log-files#cloud-management-gateway).
+    > Pour résoudre les problèmes de déploiement de passerelle de gestion cloud, utilisez **CloudMgr.log** et **CMGSetup.log**. Pour plus d’informations, consultez [Fichiers journaux](/sccm/core/plan-design/hierarchy/log-files#cloud-management-gateway).
 
 
 
@@ -202,7 +202,7 @@ Après avoir créé une passerelle de gestion cloud, vous pouvez modifier certai
 
 - **Vérifier la révocation des certificats clients** : si vous n’avez pas initialement activé ce paramètre lors de la création de la passerelle de gestion cloud, vous pouvez l’activer ultérieurement une fois que vous publiez la liste de révocation de certificats.  
 
-- **Autoriser la passerelle de gestion cloud à fonctionner comme point de distribution cloud et à servir du contenu à partir du stockage Azure** : à compter de la version 1806, cette nouvelle option est activée par défaut. À présent, une passerelle de gestion cloud peut également délivrer du contenu aux clients. Cette fonctionnalité réduit le nombre de certificats nécessaires, ainsi que les coûts associés aux machines virtuelles Azure.<!--1358651-->  
+- **Autoriser la passerelle de gestion cloud à fonctionner comme point de distribution cloud et à servir du contenu à partir du stockage Azure** : À compter de la version 1806, cette nouvelle option est activée par défaut. À présent, une passerelle de gestion cloud peut également délivrer du contenu aux clients. Cette fonctionnalité réduit le nombre de certificats nécessaires, ainsi que les coûts associés aux machines virtuelles Azure.<!--1358651-->  
 
 #### <a name="alerts"></a>Alertes
 Reconfigurez les alertes à tout moment après avoir créé la passerelle de gestion cloud. 

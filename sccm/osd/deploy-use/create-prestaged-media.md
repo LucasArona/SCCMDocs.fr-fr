@@ -10,27 +10,27 @@ ms.assetid: ff6e7267-302a-4563-815e-cdc0d1a4b60f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 61c54ad6c0224dfae03a26784f0b3f61271b172c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 97c4bde7e589e5d3d3c3ee3683055ca8e7412a03
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353060"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419833"
 ---
 # <a name="create-prestaged-media-with-system-center-configuration-manager"></a>Créer un média préparé avec System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Le média préparé dans System Center Configuration Manager est un fichier WIM (Windows Imaging Format) qui peut être installé sur un ordinateur nu par le fabricant ou dans un centre de reclassement d’entreprise qui n’est pas connecté à l’environnement Configuration Manager.  
 Un média préparé contient l'image de démarrage utilisée pour démarrer l'ordinateur de destination et l'image du système d'exploitation qui est appliquée à l'ordinateur de destination. Vous pouvez aussi spécifier les applications, les packages et les packages de pilotes à inclure dans le média préparé. La séquence de tâches qui déploie le système d'exploitation n'est pas incluse dans le média. Un média préparé est appliqué au disque dur d'un nouvel ordinateur avant que l'ordinateur soit envoyé à l'utilisateur final. Utilisez un média préparé pour les scénarios de déploiement de système d’exploitation suivants :  
 
--   [Créer une image pour un fabricant OEM en usine ou dépôt local](../../osd/deploy-use/create-an-image-for-an-oem-in-factory-or-a-local-depot.md)  
+- [Créer une image pour un fabricant OEM en usine ou dépôt local](../../osd/deploy-use/create-an-image-for-an-oem-in-factory-or-a-local-depot.md)  
 
--   [Installation d’une nouvelle version de Windows sur un nouvel ordinateur (système nu)](install-new-windows-version-new-computer-bare-metal.md)  
+- [Installation d’une nouvelle version de Windows sur un nouvel ordinateur (système nu)](install-new-windows-version-new-computer-bare-metal.md)  
 
--   [Déployer Windows To Go](deploy-windows-to-go.md)  
+- [Déployer Windows To Go](deploy-windows-to-go.md)  
 
- Quand l’ordinateur démarre pour la première fois après l’application du média préparé, il démarre Windows PE et se connecte à un point de gestion pour localiser la séquence de tâches qui finalise le processus de déploiement du système d’exploitation. Vous pouvez spécifier les applications, les packages et les packages de pilotes à inclure dans le média préparé. Lorsque vous déployez une séquence de tâches qui fait appel à un média préparé, l'Assistant vérifie tout d'abord que le contenu du cache local de la séquence de tâches est valide. Si ce contenu est introuvable ou a été modifié, l'Assistant télécharge le contenu auprès du point de distribution.  
+  Quand l’ordinateur démarre pour la première fois après l’application du média préparé, il démarre Windows PE et se connecte à un point de gestion pour localiser la séquence de tâches qui finalise le processus de déploiement du système d’exploitation. Vous pouvez spécifier les applications, les packages et les packages de pilotes à inclure dans le média préparé. Lorsque vous déployez une séquence de tâches qui fait appel à un média préparé, l'Assistant vérifie tout d'abord que le contenu du cache local de la séquence de tâches est valide. Si ce contenu est introuvable ou a été modifié, l'Assistant télécharge le contenu auprès du point de distribution.  
 
 ##  <a name="BKMK_CreatePrestagedMedia"></a> Comment créer un média préparé  
  Avant de créer un média préparé à l’aide de l’Assistant Création d’un média de séquence de tâches, vérifiez que toutes les conditions suivantes sont remplies :  
@@ -69,13 +69,13 @@ Un média préparé contient l'image de démarrage utilisée pour démarrer l'or
 
 6.  Dans la page **Propriétés du média**  , spécifiez les informations suivantes, puis cliquez sur **Suivant**.  
 
-    -   **Créé par**: spécifiez qui a créé le média.  
+    -   **Créé par** : spécifiez qui a créé le média.  
 
-    -   **Version**: spécifiez le numéro de version du média.  
+    -   **Version** : spécifiez le numéro de version du média.  
 
-    -   **Commentaire**: spécifiez une description unique de ce pour quoi le média est utilisé.  
+    -   **Commentaire** : spécifiez une description unique de ce pour quoi le média est utilisé.  
 
-    -   **Fichier multimédia**: spécifiez le nom et le chemin des fichiers de sortie. L'Assistant écrit les fichiers de sortie à cet emplacement. Par exemple : **\\\nomserveur\dossier\outputfile.wim**  
+    -   **Fichier multimédia** : spécifiez le nom et le chemin d'accès des fichiers de sortie. L'Assistant écrit les fichiers de sortie à cet emplacement. Par exemple : **\\\nomserveur\dossier\outputfile.wim**  
 
 7.  Sur la page **Sécurité** , spécifiez les informations suivantes, puis cliquez sur **Suivant**.  
 
@@ -92,7 +92,7 @@ Un média préparé contient l'image de démarrage utilisée pour démarrer l'or
 
          Pour plus d’informations sur ce certificat client utilisé pour les images de démarrage, consultez [Configuration requise des certificats PKI](../../core/plan-design/network/pki-certificate-requirements.md).  
 
-    -   **Affinité entre appareil et utilisateur** : pour prendre en charge la gestion centrée sur l’utilisateur dans Configuration Manager, spécifiez la manière dont vous voulez que le média associe des utilisateurs à l’ordinateur de destination. Pour plus d’informations sur la prise en charge de l’affinité entre utilisateur et appareil par le déploiement de systèmes d’exploitation, consultez [Associer des utilisateurs à un ordinateur de destination](../get-started/associate-users-with-a-destination-computer.md).  
+    -   **Affinité entre utilisateur et périphérique** : Pour prendre en charge la gestion centrée sur l’utilisateur dans Configuration Manager, spécifiez la manière dont vous voulez que le média associe des utilisateurs à l’ordinateur de destination. Pour plus d’informations sur la prise en charge de l’affinité entre utilisateur et appareil par le déploiement de systèmes d’exploitation, consultez [Associer des utilisateurs à un ordinateur de destination](../get-started/associate-users-with-a-destination-computer.md).  
 
         -   Spécifiez **Autoriser une affinité entre périphérique et utilisateur avec approbation automatique** si vous voulez que le média associe automatiquement des utilisateurs à l'ordinateur de destination. Cette fonctionnalité est basée sur les actions de la séquence de tâches qui déploie le système d'exploitation. Dans ce scénario, la séquence de tâches crée une relation entre les utilisateurs spécifiés et l'ordinateur de destination lorsqu'elle déploie le système d'exploitation sur l'ordinateur de destination.  
 

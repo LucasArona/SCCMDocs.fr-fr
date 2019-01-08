@@ -10,16 +10,16 @@ ms.assetid: 946b0f74-0794-4e8f-a6af-9737d877179b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fbcf7a7d76146cc11dd4bb57b86fe4752c694e02
-ms.sourcegitcommit: 1e782268d6c0211bd854b5860de72cfd6c6985c6
+ms.openlocfilehash: 32aced9e14f98008dfd769564c553370d067896e
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44697036"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53423097"
 ---
 # <a name="enable-third-party-updates"></a>Activer les mises à jour tierces 
 
-*S’applique à : System Center Configuration Manager version 1806*
+*S’applique à : version 1806 de System Center Configuration Manager*
 
 Depuis la version 1806, le nœud **Catalogues de mises à jour de logiciels tiers** de la console Configuration Manager vous permet de vous abonner à des catalogues tiers, de publier leurs mises à jour sur votre point de mise à jour logicielle, puis de les déployer sur les clients.  <!--1357605, 1352101, 1358714-->
 
@@ -53,7 +53,7 @@ Depuis la version 1806, le nœud **Catalogues de mises à jour de logiciels tie
 4. Pour permettre l’installation du certificat de signature WSUS auto-signé dans les magasins Éditeurs approuvés et Racine approuvée sur le serveur de point de mise à jour logicielle distant :
    - Le **compte de connexion du serveur WSUS** doit disposer d’autorisations d’administration à distance sur le serveur de point de mise à jour logicielle.
 
-    Si cela n’est pas possible, exportez le certificat du magasin WSUS de l’ordinateur local vers les magasins Éditeurs approuvés et Racine approuvée. 
+     Si cela n’est pas possible, exportez le certificat du magasin WSUS de l’ordinateur local vers les magasins Éditeurs approuvés et Racine approuvée. 
 
 > [!NOTE] 
 >Le **compte de connexion du serveur WSUS** peut être identifié sous l’onglet **Paramètres de compte et proxy** dans les propriétés de rôle Système du point de mise à jour logicielle. Si aucun compte n’est spécifié, le compte d’ordinateur du serveur de site est utilisé.
@@ -109,10 +109,10 @@ Les *catalogues de partenaires* sont des catalogues d’éditeurs de logiciels d
 1. Dans la page **Général**, spécifiez les éléments suivants : 
     - **URL de téléchargement** : adresse HTTPS valide du catalogue personnalisé.
     - **Éditeur** : nom de l’organisation qui publie le catalogue. 
-    - **Nom** : nom du catalogue à afficher dans la console Configuration Manager. 
-    - **Description** : description du catalogue. 
-    - **URL de support** (facultatif) : adresse HTTPS valide d’un site web d’aide sur le catalogue. 
-    - **Contact de support** (facultatif) : coordonnées à contacter pour obtenir de l’aide sur le catalogue. 
+    - **Nom** : nom du catalogue à afficher dans la console Configuration Manager. 
+    - **Description** : description du catalogue. 
+    - **URL de support** (facultatif) : adresse HTTPS valide d’un site web d’aide sur le catalogue. 
+    - **Contact de support** (facultatif) : coordonnées de la personne à contacter pour obtenir de l’aide sur le catalogue. 
 2. Cliquez sur **Suivant** pour passer en revue le résumé du catalogue et poursuivre l’**Assistant Catalogue personnalisé de mises à jour logicielles tierces**.
 
 
@@ -122,17 +122,17 @@ Quand vous vous abonnez à un catalogue tiers dans la console Configuration Mana
 1. Dans la console Configuration Manager, accédez à l’espace de travail **Bibliothèque de logiciels**. Développez **Mises à jour logicielles**, puis sélectionnez le nœud **Catalogues de mises à jour de logiciels tiers**.  
 2. Sélectionnez le catalogue auquel vous abonner, puis cliquez sur **S’abonner au catalogue** dans le ruban. 
     ![Ajout d’un catalogue personnalisé de mises à jour tierces](media/third-party-updates-subscribe.png)
-1. Examinez et approuvez le certificat du catalogue.  
-    >[!NOTE]
-    
-    > Lorsque vous vous abonnez à un catalogue de mises à jour de logiciels tiers, le certificat que vous examinez et approuvez dans l’Assistant est ajouté au site. Ce certificat appartient au type **Catalogue des mises à jour de logiciels tiers**. Vous pouvez le gérer dans le nœud **Certificats**, situé sous **Sécurité**, dans l’espace de travail **Administration**.  
-2. Effectuez toutes les étapes de l'Assistant. À l’issue de l’abonnement initial, le téléchargement du catalogue débute après quelques minutes. 
+3. Examinez et approuvez le certificat du catalogue.  
+   > [!NOTE]
+   > 
+   > Lorsque vous vous abonnez à un catalogue de mises à jour de logiciels tiers, le certificat que vous examinez et approuvez dans l’Assistant est ajouté au site. Ce certificat appartient au type **Catalogue des mises à jour de logiciels tiers**. Vous pouvez le gérer dans le nœud **Certificats**, situé sous **Sécurité**, dans l’espace de travail **Administration**.  
+4. Effectuez toutes les étapes de l'Assistant. À l’issue de l’abonnement initial, le téléchargement du catalogue débute après quelques minutes. 
     - Le catalogue se synchronise automatiquement tous les 7 jours.
     - Cliquez sur **Synchroniser maintenant** dans le ruban pour forcer une synchronisation.
-3. Une fois le catalogue téléchargé, les métadonnées de produit doivent être synchronisées de la base de données WSUS vers la base de données Configuration Manager. [Démarrez manuellement la synchronisation des mises à jour logicielles](../get-started/synchronize-software-updates.md#manually-start-software-updates-synchronization) pour synchroniser les informations de produit.
-4. Une fois les informations de produit synchronisées, [configurez le point de mise à jour logicielle pour synchroniser le produit souhaité](../get-started/configure-classifications-and-products.md#to-configure-classifications-and-products-to-synchronize) dans Configuration Manager.  
-5. [Démarrez manuellement la synchronisation des mises à jour logicielles](../get-started/synchronize-software-updates.md#manually-start-software-updates-synchronization) pour synchroniser les nouvelles mises à jour de produit dans Configuration Manager.  
-6. À l’issue de la synchronisation, les mises à jour tierces figurent dans le nœud **Toutes les mises à jour**. Ces mises à jour sont publiées en tant que mises à jour de **métadonnées uniquement** jusqu’à ce que vous choisissiez de les publier. 
+5. Une fois le catalogue téléchargé, les métadonnées de produit doivent être synchronisées de la base de données WSUS vers la base de données Configuration Manager. [Démarrez manuellement la synchronisation des mises à jour logicielles](../get-started/synchronize-software-updates.md#manually-start-software-updates-synchronization) pour synchroniser les informations de produit.
+6. Une fois les informations de produit synchronisées, [configurez le point de mise à jour logicielle pour synchroniser le produit souhaité](../get-started/configure-classifications-and-products.md#to-configure-classifications-and-products-to-synchronize) dans Configuration Manager.  
+7. [Démarrez manuellement la synchronisation des mises à jour logicielles](../get-started/synchronize-software-updates.md#manually-start-software-updates-synchronization) pour synchroniser les nouvelles mises à jour de produit dans Configuration Manager.  
+8. À l’issue de la synchronisation, les mises à jour tierces figurent dans le nœud **Toutes les mises à jour**. Ces mises à jour sont publiées en tant que mises à jour de **métadonnées uniquement** jusqu’à ce que vous choisissiez de les publier. 
      - L’icône avec une flèche bleue représente une mise à jour logicielle de métadonnées uniquement. ![Icône de mise à jour logicielle de métadonnées uniquement](media/MetadataOnly.png)
 
 

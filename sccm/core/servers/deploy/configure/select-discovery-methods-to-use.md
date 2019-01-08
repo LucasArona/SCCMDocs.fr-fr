@@ -10,16 +10,16 @@ ms.assetid: 127ce713-d085-430f-ac7b-2701637fe126
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: faa974fda68c9448902f2f5c8e8fcf8ef2f2d386
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 0eec065c9b5d4f75e6a66260760ba08e7bb2c481
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340233"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422553"
 ---
 # <a name="select-discovery-methods-to-use-for-system-center-configuration-manager"></a>Sélectionner des méthodes de découverte à utiliser pour System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Pour utiliser correctement et efficacement la découverte pour System Center Configuration Manager, vous devez prendre en compte les méthodes à utiliser et les sites sur lesquels les exécuter.  
 
@@ -104,22 +104,22 @@ Dans la mesure où la **Découverte par pulsations d’inventaire** ne s’exéc
 ##  <a name="bkmk_best"></a> Bonnes pratiques pour la découverte  
 Pour obtenir de meilleurs résultats avec la découverte, nous vous recommandons d’effectuer les opérations suivantes :
 
- - **Réalisez une découverte de systèmes Active Directory et une découverte d’utilisateurs Active Directory avant de procéder à une découverte de groupes Active Directory.**  
+- **Réalisez une découverte de systèmes Active Directory et une découverte d’utilisateurs Active Directory avant de procéder à une découverte de groupes Active Directory.**  
 
- Lorsqu'une découverte de groupes Active Directory identifie en tant que membre d'un groupe un ordinateur ou un utilisateur jusqu'alors inconnu, elle tente de découvrir les détails de base concernant cet utilisateur ou cet ordinateur. La découverte de groupes Active Directory n’étant pas optimisée pour ce type de découverte, ce processus peut provoquer un ralentissement de son exécution. Par ailleurs, la découverte de groupes Active Directory identifie uniquement les informations de base sur les utilisateurs et les ordinateurs, et ne crée pas d’enregistrement complet de découverte d’utilisateurs ou d’ordinateurs. Quand vous procédez à une découverte de systèmes Active Directory et à une découverte d’utilisateurs Active Directory, les attributs Active Directory supplémentaires de chaque type d’objet sont disponibles. Ainsi, la découverte de groupes Active Directory est plus performante.  
+  Lorsqu'une découverte de groupes Active Directory identifie en tant que membre d'un groupe un ordinateur ou un utilisateur jusqu'alors inconnu, elle tente de découvrir les détails de base concernant cet utilisateur ou cet ordinateur. La découverte de groupes Active Directory n’étant pas optimisée pour ce type de découverte, ce processus peut provoquer un ralentissement de son exécution. Par ailleurs, la découverte de groupes Active Directory identifie uniquement les informations de base sur les utilisateurs et les ordinateurs, et ne crée pas d’enregistrement complet de découverte d’utilisateurs ou d’ordinateurs. Quand vous procédez à une découverte de systèmes Active Directory et à une découverte d’utilisateurs Active Directory, les attributs Active Directory supplémentaires de chaque type d’objet sont disponibles. Ainsi, la découverte de groupes Active Directory est plus performante.  
 
 - **Quand vous configurez la découverte de groupes Active Directory, spécifiez uniquement les groupes que vous utilisez avec Configuration Manager.**  
 
- Pour mieux contrôler les ressources utilisées par le processus de découverte de groupes Active Directory, spécifiez uniquement les groupes que vous utilisez avec Configuration Manager. En effet, la découverte de groupes Active Directory recherche de manière récursive les utilisateurs, les ordinateurs et les groupes imbriqués dans chaque groupe qu'elle découvre. La recherche dans chaque groupe imbriqué peut élargir l’étendue de la découverte de groupes Active Directory et réduire les performances. En outre, quand vous configurez la découverte delta pour la découverte de groupes Active Directory, la méthode de découverte surveille les modifications apportées à chaque groupe. Les performances sont ainsi d'autant plus ralenties lorsque la méthode doit rechercher des groupes qui ne sont pas nécessaires.  
+  Pour mieux contrôler les ressources utilisées par le processus de découverte de groupes Active Directory, spécifiez uniquement les groupes que vous utilisez avec Configuration Manager. En effet, la découverte de groupes Active Directory recherche de manière récursive les utilisateurs, les ordinateurs et les groupes imbriqués dans chaque groupe qu'elle découvre. La recherche dans chaque groupe imbriqué peut élargir l’étendue de la découverte de groupes Active Directory et réduire les performances. En outre, quand vous configurez la découverte delta pour la découverte de groupes Active Directory, la méthode de découverte surveille les modifications apportées à chaque groupe. Les performances sont ainsi d'autant plus ralenties lorsque la méthode doit rechercher des groupes qui ne sont pas nécessaires.  
 
 - **Configurez les méthodes de découverte de telle sorte que l’intervalle entre les découvertes complètes soit plus long et que les découvertes delta soient plus fréquentes.**  
 
- La découverte delta consomme moins de ressources qu’un cycle de découverte complète et peut identifier les ressources nouvelles ou modifiées dans Active Directory. Ainsi, vous pouvez réduire la fréquence des cycles de découverte complète à un par semaine (ou moins). La découverte delta de la découverte de systèmes Active Directory, de la découverte d’utilisateurs Active Directory et de la découverte de groupes Active Directory identifie presque toutes les modifications apportées aux objets Active Directory, et peut conserver des données de découverte exactes concernant les ressources.  
+  La découverte delta consomme moins de ressources qu’un cycle de découverte complète et peut identifier les ressources nouvelles ou modifiées dans Active Directory. Ainsi, vous pouvez réduire la fréquence des cycles de découverte complète à un par semaine (ou moins). La découverte delta de la découverte de systèmes Active Directory, de la découverte d’utilisateurs Active Directory et de la découverte de groupes Active Directory identifie presque toutes les modifications apportées aux objets Active Directory, et peut conserver des données de découverte exactes concernant les ressources.  
 
 - **Exécutez les méthodes de découverte Active Directory sur le site principal dont l’emplacement réseau est le plus proche de votre contrôleur de domaine Active Directory.**  
 
- Pour améliorer les performances de la découverte Active Directory, nous vous recommandons de l’exécuter sur un site principal connecté aux contrôleurs de domaine via une connexion réseau rapide. Si vous exécutez la même méthode de découverte Active Directory sur plusieurs sites, configurez chaque méthode de découverte pour éviter les chevauchements. Contrairement aux versions antérieures de Configuration Manager, les données de découverte sont partagées parmi les sites. Ainsi, il n’est pas nécessaire de procéder à la découverte des mêmes informations sur plusieurs sites. Pour plus d’informations, consultez [Les données de découverte sont partagées entre les sites](../../../../core/servers/deploy/configure/select-discovery-methods-to-use.md#bkmk_shared).  
+  Pour améliorer les performances de la découverte Active Directory, nous vous recommandons de l’exécuter sur un site principal connecté aux contrôleurs de domaine via une connexion réseau rapide. Si vous exécutez la même méthode de découverte Active Directory sur plusieurs sites, configurez chaque méthode de découverte pour éviter les chevauchements. Contrairement aux versions antérieures de Configuration Manager, les données de découverte sont partagées parmi les sites. Ainsi, il n’est pas nécessaire de procéder à la découverte des mêmes informations sur plusieurs sites. Pour plus d’informations, consultez [Les données de découverte sont partagées entre les sites](../../../../core/servers/deploy/configure/select-discovery-methods-to-use.md#bkmk_shared).  
 
 - **Procédez à une découverte de forêts Active Directory sur un seul site quand vous envisagez de créer automatiquement des limites à partir des données de découverte.**  
 
- Si vous effectuez une découverte de forêts Active Directory sur plusieurs sites d’une hiérarchie, nous vous recommandons d’activer les options permettant de créer automatiquement des limites uniquement sur un site. En effet, lorsqu’une découverte de forêts Active Directory est réalisée sur chaque site et crée des limites, Configuration Manager ne peut pas fusionner ces limites en un objet de limite unique. Si vous configurez la découverte de forêts Active Directory de façon à ce qu’elle crée automatiquement des limites sur plusieurs sites, vous risquez de créer des objets de limite en double dans la console Configuration Manager.  
+  Si vous effectuez une découverte de forêts Active Directory sur plusieurs sites d’une hiérarchie, nous vous recommandons d’activer les options permettant de créer automatiquement des limites uniquement sur un site. En effet, lorsqu’une découverte de forêts Active Directory est réalisée sur chaque site et crée des limites, Configuration Manager ne peut pas fusionner ces limites en un objet de limite unique. Si vous configurez la découverte de forêts Active Directory de façon à ce qu’elle crée automatiquement des limites sur plusieurs sites, vous risquez de créer des objets de limite en double dans la console Configuration Manager.  

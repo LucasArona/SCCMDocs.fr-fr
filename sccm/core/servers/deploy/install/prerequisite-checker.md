@@ -10,16 +10,16 @@ ms.assetid: aaf13bb8-4ba2-4bd7-9fac-d36a9d88a1b6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 296ed6590c10adeab22fb274d5e6f44bc578a784
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: c28152031a540ea3fd5f2ef7233c24fb86c8b7f7
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32339959"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422026"
 ---
 # <a name="prerequisite-checker-for-system-center-configuration-manager"></a>Outil de vérification des prérequis pour System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
  Avant d’exécuter le programme d’installation pour installer ou mettre à niveau un site System Center Configuration Manager, ou avant d’installer un rôle de système de site sur un nouveau serveur, vous pouvez utiliser cette application autonome (**Prereqchk.exe**) de la version de Configuration Manager que vous voulez utiliser pour vérifier l’état de préparation du serveur. Utilisez l’Outil de vérification des prérequis pour identifier et résoudre les problèmes susceptibles de bloquer l’installation d’un site ou d’un rôle de système de site.  
 
@@ -77,119 +77,119 @@ Pour plus d’informations sur les vérifications effectuées par l’Outil de v
 
 ## <a name="run-prerequisite-checker-from-a-command-prompt-to-use-options"></a>Exécuter l’Outil de vérification des prérequis à partir d’une invite de commandes pour utiliser des options  
 
-1.  Ouvrez une fenêtre d’invite de commandes, puis accédez à l’un des répertoires suivants :  
+1. Ouvrez une fenêtre d’invite de commandes, puis accédez à l’un des répertoires suivants :  
 
-    -   **&lt;*Support d’installation de Configuration Manager*\>\SMSSETUP\BIN\X64**  
-    -   **&lt;*Répertoire d’installation de Configuration Manager*\>\BIN\X64**  
+   -   **&lt;*Support d’installation de Configuration Manager*\>\SMSSETUP\BIN\X64**  
+   -   **&lt;*Répertoire d’installation de Configuration Manager*\>\BIN\X64**  
 
-2.  Entrez **prereqchk.exe** en ajoutant une ou plusieurs des options de ligne de commande suivantes.  
+2. Entrez **prereqchk.exe** en ajoutant une ou plusieurs des options de ligne de commande suivantes.  
 
-    Par exemple, pour vérifier un site principal, vous pouvez spécifier ce qui suit :  
+   Par exemple, pour vérifier un site principal, vous pouvez spécifier ce qui suit :  
 
-       **prereqchk.exe [/NOUI] /PRI /SQL &lt;Nom de domaine complet de SQL Server\> /SDK &lt;Nom de domaine complet du fournisseur SMS\> [/JOIN &lt;Nom de domaine complet du site d’administration centrale\>] [/MP &lt;Nom de domaine complet du point de gestion\>] [/DP &lt;Nom de domaine complet du point de distribution\>]**  
+      **prereqchk.exe [/NOUI] /PRI /SQL &lt;Nom de domaine complet de SQL Server\> /SDK &lt;Nom de domaine complet du fournisseur SMS\> [/JOIN &lt;Nom de domaine complet du site d’administration centrale\>] [/MP &lt;Nom de domaine complet du point de gestion\>] [/DP &lt;Nom de domaine complet du point de distribution\>]**  
 
-    **Serveur de site d’administration centrale** :  
+   **Serveur de site d’administration centrale** :  
 
-    -   **/NOUI**  
-
-         Non obligatoire. Démarre l’Outil de vérification des prérequis sans afficher l’interface utilisateur. Vous devez spécifier cette option avant toute autre option dans la ligne de commande.  
-
-    -   **/CAS**  
-
-         Obligatoire. Vérifie que l'ordinateur local répond à la configuration requise pour le site d'administration centrale.  
-
-    -   **/SQL &lt;*FQDN de SQL Server*>**  
-
-         Obligatoire. À l’aide du nom de domaine complet, vérifie que l’ordinateur spécifié présente la configuration requise pour que SQL Server puisse héberger la base de données du site Configuration Manager.  
-
-    -   **/SDK &lt;*FQDN du fournisseur SMS*>**  
-
-         Obligatoire. Vérifie que l'ordinateur spécifié répond à la configuration requise pour le fournisseur SMS.  
-
-    -   **/Ssbport**  
-
-         Non obligatoire. Vérifie qu’une exception de pare-feu est en place pour autoriser la communication sur le port SQL Server Service Broker (SSB). Le port SSB par défaut est 4022.  
-
-    -   **InstallDir &lt;*Chemin d’installation de Configuration Manager*>**  
-
-         Non obligatoire. Vérifie l’espace disque minimal nécessaire pour l’installation du site.  
-
-    **Serveur de site principal** :  
-
-    -   **/NOUI**  
+   -   **/NOUI**  
 
         Non obligatoire. Démarre l’Outil de vérification des prérequis sans afficher l’interface utilisateur. Vous devez spécifier cette option avant toute autre option dans la ligne de commande.  
 
-    -   **/PRI**  
+   -   **/CAS**  
 
-         Obligatoire. Vérifie que l'ordinateur local répond à la configuration requise pour le site principal.  
+        Obligatoire. Vérifie que l'ordinateur local répond à la configuration requise pour le site d'administration centrale.  
 
-    -   **/SQL &lt;*FQDN de SQL Server*>**  
+   -   **/SQL &lt;*FQDN de SQL Server*>**  
 
-         Obligatoire. Vérifie que l’ordinateur spécifié présente la configuration requise pour que SQL Server puisse héberger la base de données du site Configuration Manager.  
+        Obligatoire. À l’aide du nom de domaine complet, vérifie que l’ordinateur spécifié présente la configuration requise pour que SQL Server puisse héberger la base de données du site Configuration Manager.  
 
-    -   **/SDK &lt;*FQDN du fournisseur SMS*>**  
+   -   **/SDK &lt;*FQDN du fournisseur SMS*>**  
 
-         Obligatoire. Vérifie que l'ordinateur spécifié répond à la configuration requise pour le fournisseur SMS.  
+        Obligatoire. Vérifie que l'ordinateur spécifié répond à la configuration requise pour le fournisseur SMS.  
 
-    -   **/JOIN &lt;*FQDN du site d’administration centrale*>**  
+   -   **/Ssbport**  
 
-         Non obligatoire. Vérifie que l'ordinateur local est conforme à la configuration requise pour se connecter au serveur de site d'administration centrale.  
+        Non obligatoire. Vérifie qu’une exception de pare-feu est en place pour autoriser la communication sur le port SQL Server Service Broker (SSB). Le port SSB par défaut est 4022.  
 
-    -   **/MP &lt;*FQDN du point de gestion*>**  
+   -   **InstallDir &lt;*Chemin d’installation de Configuration Manager*>**  
 
-         Non obligatoire. Vérifie que l'ordinateur spécifié répond à la configuration requise pour le rôle de système de site du point de gestion. Cette option est prise en charge uniquement avec l’option **/PRI** .  
+        Non obligatoire. Vérifie l’espace disque minimal nécessaire pour l’installation du site.  
 
-    -   **/DP &lt;*FQDN du point de distribution*>**  
+   **Serveur de site principal** :  
 
-         Non obligatoire. Vérifie que l'ordinateur spécifié répond à la configuration requise pour le rôle de système de site du point de distribution. Cette option est prise en charge uniquement avec l’option **/PRI** .  
+   -   **/NOUI**  
 
-    -   **/Ssbport**  
+       Non obligatoire. Démarre l’Outil de vérification des prérequis sans afficher l’interface utilisateur. Vous devez spécifier cette option avant toute autre option dans la ligne de commande.  
 
-         Non obligatoire. Vérifie qu'une exception de pare-feu est en place pour permettre la communication sur le port SSB. Le port SSB par défaut est 4022.  
+   -   **/PRI**  
 
-    -   **InstallDir &lt;*Chemin d’installation de Configuration Manager*>**  
+        Obligatoire. Vérifie que l'ordinateur local répond à la configuration requise pour le site principal.  
 
-         Non obligatoire. Vérifie l’espace disque minimal nécessaire pour l’installation du site.  
+   -   **/SQL &lt;*FQDN de SQL Server*>**  
 
-    **Serveur de site secondaire** :  
+        Obligatoire. Vérifie que l’ordinateur spécifié présente la configuration requise pour que SQL Server puisse héberger la base de données du site Configuration Manager.  
 
-    -   **/NOUI**  
+   -   **/SDK &lt;*FQDN du fournisseur SMS*>**  
 
-         Non obligatoire. Démarre l’Outil de vérification des prérequis sans afficher l’interface utilisateur. Vous devez spécifier cette option avant toute autre option dans la ligne de commande.  
+        Obligatoire. Vérifie que l'ordinateur spécifié répond à la configuration requise pour le fournisseur SMS.  
 
-    -   **/SEC &lt;*FQDN du serveur de site secondaire*>**  
+   -   **/JOIN &lt;*FQDN du site d’administration centrale*>**  
 
-         Obligatoire. Vérifie que l'ordinateur spécifié répond aux exigences pour le site secondaire.  
+        Non obligatoire. Vérifie que l'ordinateur local est conforme à la configuration requise pour se connecter au serveur de site d'administration centrale.  
 
-    -   **/INSTALLSQLEXPRESS**  
+   -   **/MP &lt;*FQDN du point de gestion*>**  
 
-         Non obligatoire. Vérifie que SQL Server Express peut être installé sur l'ordinateur spécifié.  
+        Non obligatoire. Vérifie que l'ordinateur spécifié répond à la configuration requise pour le rôle de système de site du point de gestion. Cette option est prise en charge uniquement avec l’option **/PRI** .  
 
-    -   **/Ssbport**  
+   -   **/DP &lt;*FQDN du point de distribution*>**  
 
-         Non obligatoire. Vérifie qu’une exception de pare-feu est en place pour permettre la communication sur le port SSB. Le port SSB par défaut est 4022.  
+        Non obligatoire. Vérifie que l'ordinateur spécifié répond à la configuration requise pour le rôle de système de site du point de distribution. Cette option est prise en charge uniquement avec l’option **/PRI** .  
 
-    -   **/Sqlport**  
+   -   **/Ssbport**  
 
-         Non obligatoire. Vérifie qu’une exception de pare-feu est en place pour permettre la communication pour le port de service SQL Server, et que le port n’est pas utilisé par une autre instance nommée de SQL Server. Le port par défaut est 1433.  
+        Non obligatoire. Vérifie qu'une exception de pare-feu est en place pour permettre la communication sur le port SSB. Le port SSB par défaut est 4022.  
 
-    -   **InstallDir &lt;*Chemin d’installation de Configuration Manager*>**  
+   -   **InstallDir &lt;*Chemin d’installation de Configuration Manager*>**  
 
-         Non obligatoire. Vérifie l’espace disque minimal nécessaire pour l’installation du site.  
+        Non obligatoire. Vérifie l’espace disque minimal nécessaire pour l’installation du site.  
 
-    -   **/SourceDir**  
+   **Serveur de site secondaire** :  
 
-         Non obligatoire. Vérifie que le compte d'ordinateur du site secondaire peut accéder au dossier qui héberge les fichiers sources d'installation.  
+   -   **/NOUI**  
+
+        Non obligatoire. Démarre l’Outil de vérification des prérequis sans afficher l’interface utilisateur. Vous devez spécifier cette option avant toute autre option dans la ligne de commande.  
+
+   -   **/SEC &lt;*FQDN du serveur de site secondaire*>**  
+
+        Obligatoire. Vérifie que l'ordinateur spécifié répond aux exigences pour le site secondaire.  
+
+   -   **/INSTALLSQLEXPRESS**  
+
+        Non obligatoire. Vérifie que SQL Server Express peut être installé sur l'ordinateur spécifié.  
+
+   -   **/Ssbport**  
+
+        Non obligatoire. Vérifie qu’une exception de pare-feu est en place pour permettre la communication sur le port SSB. Le port SSB par défaut est 4022.  
+
+   -   **/Sqlport**  
+
+        Non obligatoire. Vérifie qu’une exception de pare-feu est en place pour permettre la communication pour le port de service SQL Server, et que le port n’est pas utilisé par une autre instance nommée de SQL Server. Le port par défaut est 1433.  
+
+   -   **InstallDir &lt;*Chemin d’installation de Configuration Manager*>**  
+
+        Non obligatoire. Vérifie l’espace disque minimal nécessaire pour l’installation du site.  
+
+   -   **/SourceDir**  
+
+        Non obligatoire. Vérifie que le compte d'ordinateur du site secondaire peut accéder au dossier qui héberge les fichiers sources d'installation.  
 
    **Console Configuration Manager** :  
 
-    -   **/Adminui**  
+   -   **/Adminui**  
 
-         Obligatoire. Vérifie que l’ordinateur local présente la configuration requise pour l’installation de Configuration Manager.  
+        Obligatoire. Vérifie que l’ordinateur local présente la configuration requise pour l’installation de Configuration Manager.  
 
-3.  L’interface utilisateur de l’Outil de vérification des prérequis affiche la liste des problèmes détectés dans la section **Résultat de la vérification de configuration requise** .  
+3. L’interface utilisateur de l’Outil de vérification des prérequis affiche la liste des problèmes détectés dans la section **Résultat de la vérification de configuration requise** .  
 
-    -   Cliquez sur un élément de la liste pour obtenir plus d'informations sur la façon de résoudre le problème.  
-    -   Vous devez résoudre tous les éléments de la liste qui présentent un état **Erreur** avant d’installer le serveur de site, le système de site ou la console Configuration Manager.  
-    -   Vous pouvez également ouvrir le fichier **ConfigMgrPrereq.log** à la racine du lecteur système pour examiner les résultats de l’Outil de vérification des prérequis. Le fichier journal peut contenir des informations supplémentaires qui ne sont pas affichées dans l’interface utilisateur de l’Outil de vérification des prérequis.  
+   -   Cliquez sur un élément de la liste pour obtenir plus d'informations sur la façon de résoudre le problème.  
+   -   Vous devez résoudre tous les éléments de la liste qui présentent un état **Erreur** avant d’installer le serveur de site, le système de site ou la console Configuration Manager.  
+   -   Vous pouvez également ouvrir le fichier **ConfigMgrPrereq.log** à la racine du lecteur système pour examiner les résultats de l’Outil de vérification des prérequis. Le fichier journal peut contenir des informations supplémentaires qui ne sont pas affichées dans l’interface utilisateur de l’Outil de vérification des prérequis.  

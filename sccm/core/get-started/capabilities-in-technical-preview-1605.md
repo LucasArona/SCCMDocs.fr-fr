@@ -10,26 +10,26 @@ ms.assetid: 2bafd028-1923-4463-9e3e-ee41bc0c437b
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 05d87b253f2387dd8428f4b9fadea3fe5f3a48e8
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 4eb41ba3a55d0de026d38a673d4e5dfad8e22cd7
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342526"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416127"
 ---
 # <a name="capabilities-in-technical-preview-1605-for-system-center-configuration-manager"></a>Fonctionnalités de la version d’évaluation technique 1605 pour System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Technical Preview)*
+*S’applique à : System Center Configuration Manager (préversion technique)*
 
 Cet article présente les fonctionnalités qui sont disponibles dans la version d’évaluation technique 1605 pour System Center Configuration Manager. Vous pouvez installer cette version pour mettre à jour et ajouter de nouvelles fonctionnalités à votre site Configuration Manager Technical Preview.      Avant d’installer cette version de la version d’évaluation technique, passez en revue la rubrique de présentation, [Version d’évaluation technique pour System Center Configuration Manager](../../core/get-started/technical-preview.md), pour vous familiariser avec les conditions générales et limitations d’utilisation d’une version d’évaluation technique, la mise à jour entre les versions et l’envoi de commentaires sur les fonctionnalités dans une version d’évaluation technique.  
 
  **Problèmes connus dans cette version d’évaluation technique :**  
 
--   Avec la version d’évaluation technique 1605, si vous mettez à jour les propriétés d’un point de gestion après son installation, vous pouvez voir une erreur de console qui force la fermeture de la console.  Dans ce cas, vous pouvez désinstaller le point de gestion, puis le réinstaller en utilisant les paramètres de votre choix. Vous pouvez également modifier le point de gestion avant d’installer la version d’évaluation technique 1605.  
+- Avec la version d’évaluation technique 1605, si vous mettez à jour les propriétés d’un point de gestion après son installation, vous pouvez voir une erreur de console qui force la fermeture de la console.  Dans ce cas, vous pouvez désinstaller le point de gestion, puis le réinstaller en utilisant les paramètres de votre choix. Vous pouvez également modifier le point de gestion avant d’installer la version d’évaluation technique 1605.  
 
--   Lorsque vous utilisez la fonctionnalité Windows Store pour Entreprises avec la version d’évaluation technique 1604, puis mettez à niveau cette version vers la version d’évaluation technique 1605, vous ne pouvez plus afficher les données d’intégration. Toutes les autres fonctionnalités continuent à fonctionner. Si vous avez effectué l’intégration avec la version d’évaluation technique 1604, l’intégration demeure après l’installation de la version d’évaluation technique 1605 et vous n’avez aucune action supplémentaire à effectuer.  
+- Lorsque vous utilisez la fonctionnalité Windows Store pour Entreprises avec la version d’évaluation technique 1604, puis mettez à niveau cette version vers la version d’évaluation technique 1605, vous ne pouvez plus afficher les données d’intégration. Toutes les autres fonctionnalités continuent à fonctionner. Si vous avez effectué l’intégration avec la version d’évaluation technique 1604, l’intégration demeure après l’installation de la version d’évaluation technique 1605 et vous n’avez aucune action supplémentaire à effectuer.  
 
- **Vous trouverez ci-dessous les nouvelles fonctionnalités propres à cette version.**  
+  **Vous trouverez ci-dessous les nouvelles fonctionnalités propres à cette version.**  
 
 ##  <a name="BKMK_PerAppVPN"></a> VPN par application pour les appareils Windows 10  
  Pour les appareils Windows 10 gérés à l’aide de Configuration Manager avec Intune, vous pouvez ajouter une liste d’applications qui ouvrent automatiquement une connexion VPN que vous avez configurée via la console d’administration Configuration Manager. Vous avez la possibilité de restreindre le trafic VPN à ces applications ou vous pouvez continuer à autoriser tout le trafic via la connexion VPN.  
@@ -57,15 +57,15 @@ Cet article présente les fonctionnalités qui sont disponibles dans la version 
 
  Pour configurer la période de grâce, procédez comme suit :  
 
-1.  Dans la page **Agent ordinateur** des paramètres du client, configurez la nouvelle propriété **Période de grâce pour la mise en œuvre après l’échéance du déploiement (en heures)** avec une valeur comprise entre **1** et **120** heures.  
+1. Dans la page **Agent ordinateur** des paramètres du client, configurez la nouvelle propriété **Période de grâce pour la mise en œuvre après l’échéance du déploiement (en heures)** avec une valeur comprise entre **1** et **120** heures.  
 
-2.  Dans un nouveau déploiement d’application, ou dans les propriétés d’un déploiement existant, dans la page **Planification**, cochez la case **Différer la mise en œuvre de ce déploiement selon les préférences de l’utilisateur, dans la limite de la période de grâce définie dans les paramètres client**.  
+2. Dans un nouveau déploiement d’application, ou dans les propriétés d’un déploiement existant, dans la page **Planification**, cochez la case **Différer la mise en œuvre de ce déploiement selon les préférences de l’utilisateur, dans la limite de la période de grâce définie dans les paramètres client**.  
 
-     Tous les déploiements pour lesquels cette case à cocher est activée et qui sont destinés à des appareils sur lesquels vous avez également déployé le paramètre du client utiliseront la période de grâce.  
+    Tous les déploiements pour lesquels cette case à cocher est activée et qui sont destinés à des appareils sur lesquels vous avez également déployé le paramètre du client utiliseront la période de grâce.  
 
- Dans cette version, la période de grâce que vous configurez n’est pas utilisée par les appareils clients. Si vous configurez une période de grâce et cochez la case, l’application est installée dans la première fenêtre non professionnelle que l’utilisateur a configurée après l’échéance.  
+   Dans cette version, la période de grâce que vous configurez n’est pas utilisée par les appareils clients. Si vous configurez une période de grâce et cochez la case, l’application est installée dans la première fenêtre non professionnelle que l’utilisateur a configurée après l’échéance.  
 
- Des options similaires ont été ajoutées dans l’Assistant de déploiement de mises à jour logicielles, dans l’Assistant des règles de déploiement automatique et dans les pages de propriétés. Toutefois, celles-ci ne sont pas actuellement implémentées dans cette version d’évaluation technique.  
+   Des options similaires ont été ajoutées dans l’Assistant de déploiement de mises à jour logicielles, dans l’Assistant des règles de déploiement automatique et dans les pages de propriétés. Toutefois, celles-ci ne sont pas actuellement implémentées dans cette version d’évaluation technique.  
 
 ##  <a name="BKMK_Remote"></a> Nouvelle expérience pour les actions des appareils à distance  
  L’exécution des actions des appareils à distance à partir de la console Configuration Manager a été améliorée.  
@@ -75,24 +75,24 @@ Des actions courantes telles que **Mettre hors service/réinitialiser**, **Réin
 
  Vous pouvez rechercher l’état de chacune de ces opérations aux emplacements suivants :  
 
--   Dans le volet d’informations, lorsque vous sélectionnez un appareil à partir du nœud **Périphériques**.  
+- Dans le volet d’informations, lorsque vous sélectionnez un appareil à partir du nœud **Périphériques**.  
 
--   Dans la page **Propriétés** d’un appareil.  
+- Dans la page **Propriétés** d’un appareil.  
 
--   Dans la page principale du nœud **Périphériques** (toutes les colonnes peuvent ne pas être visibles par défaut).  
+- Dans la page principale du nœud **Périphériques** (toutes les colonnes peuvent ne pas être visibles par défaut).  
 
- Pour plus d’informations sur le contournement du verrou d’activation iOS, consultez [Aider à protéger les appareils iOS avec le contournement du verrou d’activation pour Configuration Manager](/sccm/mdm/deploy-use/manage-ios-activation-lock) et notamment la section **Problèmes connus actuels liés au contournement du verrou d’activation dans la version d’évaluation technique de Configuration Manager**.  
+  Pour plus d’informations sur le contournement du verrou d’activation iOS, consultez [Aider à protéger les appareils iOS avec le contournement du verrou d’activation pour Configuration Manager](/sccm/mdm/deploy-use/manage-ios-activation-lock) et notamment la section **Problèmes connus actuels liés au contournement du verrou d’activation dans la version d’évaluation technique de Configuration Manager**.  
 
 ##  <a name="BKMK_WSFB"></a> Applications du Windows Store pour Entreprises  
  Le [Windows Store pour Entreprises](https://www.microsoft.com/business-store) est l’emplacement où vous pouvez trouver et acheter des applications pour votre organisation, individuellement ou en volume. En connectant le Store à Configuration Manager, vous pouvez gérer les applications achetées en volume à partir de la console Configuration Manager, par exemple :  
 
--   Vous pouvez synchroniser la liste des applications achetées avec Configuration Manager.  
+- Vous pouvez synchroniser la liste des applications achetées avec Configuration Manager.  
 
--   Les applications synchronisées apparaissent dans la console Configuration Manager et vous pouvez les déployer comme les autres applications.  
+- Les applications synchronisées apparaissent dans la console Configuration Manager et vous pouvez les déployer comme les autres applications.  
 
--   Toutes les 24 heures, Configuration Manager télécharge les informations de licence d’application à partir du Windows Store, et vous pouvez les consulter dans la console Configuration Manager.  
+- Toutes les 24 heures, Configuration Manager télécharge les informations de licence d’application à partir du Windows Store, et vous pouvez les consulter dans la console Configuration Manager.  
 
- Dans la version d’évaluation technique 1604, vous pouviez synchroniser et afficher les applications provenant du Windows Store pour Entreprises dans la console Configuration Manager. Dans cette version, nous avons ajouté la possibilité de créer et de déployer des applications Configuration Manager à partir d’applications du Windows Store synchronisées.  
+  Dans la version d’évaluation technique 1604, vous pouviez synchroniser et afficher les applications provenant du Windows Store pour Entreprises dans la console Configuration Manager. Dans cette version, nous avons ajouté la possibilité de créer et de déployer des applications Configuration Manager à partir d’applications du Windows Store synchronisées.  
 
 ### <a name="set-up-windows-store-for-business-synchronization"></a>Configurer la synchronisation du Windows Store pour Entreprises  
 
@@ -143,11 +143,11 @@ Des actions courantes telles que **Mettre hors service/réinitialiser**, **Réin
 
  Créez et déployez une application Configuration Manager à partir d’une application sous licence hors connexion du Windows Store pour Entreprises.  
 
-1.  Dans l’espace de travail **Bibliothèque de logiciels** de la console Configuration Manager, développez **Gestion des applications**, puis cliquez sur **Informations de licence pour les applications du Store**.  
+1. Dans l’espace de travail **Bibliothèque de logiciels** de la console Configuration Manager, développez **Gestion des applications**, puis cliquez sur **Informations de licence pour les applications du Store**.  
 
-2.  Choisissez l’application que vous voulez déployer, puis, sous l’onglet **Accueil**, dans le groupe **Créer**, cliquez sur **Créer une application**.  
+2. Choisissez l’application que vous voulez déployer, puis, sous l’onglet **Accueil**, dans le groupe **Créer**, cliquez sur **Créer une application**.  
 
- Une application Configuration Manager contenant l’application du Windows Store pour Entreprises est alors créée. Vous pouvez ensuite déployer et surveiller cette application comme n’importe quelle autre application Configuration Manager.  
+   Une application Configuration Manager contenant l’application du Windows Store pour Entreprises est alors créée. Vous pouvez ensuite déployer et surveiller cette application comme n’importe quelle autre application Configuration Manager.  
 
 > [!IMPORTANT]  
 >  Lorsque vous créez une application Configuration Manager avec un seul type de déploiement à partir d’une application hors connexion sous licence, elle peut être déployée sur des appareils gérés via la gestion des appareils mobiles, ainsi que par le client Configuration Manager. Si vous tentez de déployer une application avec plusieurs types de déploiement, l’installation échoue.  
@@ -231,29 +231,29 @@ Dans cette version d’évaluation technique, si le portail d’entreprise reste
 
 ### <a name="deploy-the-company-portal-application-and-configuration"></a>Déployer l’application et la configuration de portail d’entreprise  
 
-1.  Utilisez le script de configuration fourni avec la version d’évaluation technique pour préparer le déploiement et la configuration du portail d’entreprise :  
+1. Utilisez le script de configuration fourni avec la version d’évaluation technique pour préparer le déploiement et la configuration du portail d’entreprise :  
 
-    1.  Ouvrez une fenêtre de commande PowerShell avec élévation des privilèges.  
+   1. Ouvrez une fenêtre de commande PowerShell avec élévation des privilèges.  
 
-    2.  Exécutez **set-executionPolicy RemoteSigned**  
+   2. Exécutez **set-executionPolicy RemoteSigned**  
 
-    3.  À partir du dossier **&lt;répertoire d’installation de SCCM\>\cd.latest\SMSSETUP\TOOLS\MDM**, exécutez **.\ConfigurationScript.ps1**  
+   3. À partir du dossier **&lt;répertoire d’installation de SCCM\>\cd.latest\SMSSETUP\TOOLS\MDM**, exécutez **.\ConfigurationScript.ps1**  
 
-     Le script de configuration effectue les opérations suivantes :  
+      Le script de configuration effectue les opérations suivantes :  
 
-    1.  Il crée une application Configuration Manager avec un type de déploiement Package d’application Windows utilisant **CompanyPortalOnPremisesMDM.appx** dans le même dossier.  
+   4. Il crée une application Configuration Manager avec un type de déploiement Package d’application Windows utilisant **CompanyPortalOnPremisesMDM.appx** dans le même dossier.  
 
-    2.  Il crée un élément de configuration et une base de référence de configuration qui configure le portail d’entreprise.  
+   5. Il crée un élément de configuration et une base de référence de configuration qui configure le portail d’entreprise.  
 
-    3.  Il déploie la base de référence de configuration et l’application, et il ajoute l’application à tous les points de distribution.  
+   6. Il déploie la base de référence de configuration et l’application, et il ajoute l’application à tous les points de distribution.  
 
-    > [!NOTE]  
-    >  Si les rôles de catalogue d’applications ne sont pas colocalisés avec le site principal, prenez les mesures suivantes :  
-    >   
-    >  -   Dans l’espace de travail **Ressources et Conformité**, recherchez l’élément de configuration **OnPremMDM Portal Configuration CI - server urls**.  
-    > -   Modifiez la valeur **Règles de compatibilité** en spécifiant le nom de domaine complet du système de site dans lequel figurent les rôles de catalogue d’applications.  
+   > [!NOTE]
+   >  Si les rôles de catalogue d’applications ne sont pas colocalisés avec le site principal, prenez les mesures suivantes :  
+   > 
+   > - Dans l’espace de travail **Ressources et Conformité**, recherchez l’élément de configuration **OnPremMDM Portal Configuration CI - server urls**.  
+   >   -   Modifiez la valeur **Règles de compatibilité** en spécifiant le nom de domaine complet du système de site dans lequel figurent les rôles de catalogue d’applications.  
 
-2.  Une fois que l’application de portail d’entreprise et sa configuration ont été déployées, vérifiez que l’application et la base de référence de configuration sont compatibles pour l’appareil donné en utilisant la section **Déploiements** de la console Configuration Manager. Le portail d’entreprise apparaît sous la forme de **Portail d’entreprise (version d’évaluation technique)** dans le menu Démarrer de l’appareil.  
+2. Une fois que l’application de portail d’entreprise et sa configuration ont été déployées, vérifiez que l’application et la base de référence de configuration sont compatibles pour l’appareil donné en utilisant la section **Déploiements** de la console Configuration Manager. Le portail d’entreprise apparaît sous la forme de **Portail d’entreprise (version d’évaluation technique)** dans le menu Démarrer de l’appareil.  
 
 ### <a name="try-it-out"></a>Essayez !  
  Essayez d’exécuter les tâches suivantes, puis indiquez-nous comment cela s’est passé en utilisant notre formulaire de commentaires à la page [Configuration Manager feedback program](https://connect.microsoft.com/ConfigurationManagervnext/ConfigMgr%20Customer%20Feedback) du site Microsoft Connect :  
@@ -293,11 +293,11 @@ Dans cette version d’évaluation technique, si le portail d’entreprise reste
 
 4.  Dans la page **Paramètres de groupe de serveurs**, spécifiez l’un des paramètres suivants :  
 
-    -   **Autorisez un pourcentage des machines à être mises à jour en même temps** : Spécifie que seul un certain pourcentage de clients sont mis à jour à un moment quelconque. Si, par exemple, le regroupement compte 10 clients, et qu’il est configuré pour mettre à jour 30 % des clients en même temps, seuls 3 clients installeront les mises à jour logicielles à un moment donné quelconque.  
+    -   **Autoriser un pourcentage de machines à être mises à jour en même temps** : Spécifie qu’un certain pourcentage de clients sont mis à jour simultanément. Si, par exemple, le regroupement compte 10 clients, et qu’il est configuré pour mettre à jour 30 % des clients en même temps, seuls 3 clients installeront les mises à jour logicielles à un moment donné quelconque.  
 
-    -   **Autorisez un nombre de machines à être mises à jour en même temps** : Spécifie que seul un certain nombre de clients sont mis à jour à un moment quelconque.  
+    -   **Autoriser un nombre de machines à être mises à jour en même temps** : Spécifie qu’un certain nombre de clients sont mis à jour simultanément.  
 
-    -   **Spécifier la séquence de maintenance** : Spécifie que les clients du regroupement seront mis à jour l’un après l’autre, dans l’ordre que vous configurez. Un client installe les mises à jour logicielles après seulement que le client qui le précède dans la liste a terminé l’installation de ses mises à jour logicielles.  
+    -   **Spécifier la séquence de maintenance** : Spécifie que les clients du regroupement seront mis à jour l’un après l’autre, dans l’ordre que vous configurez. Un client installe les mises à jour logicielles après seulement que le client qui le précède dans la liste a terminé l’installation de ses mises à jour logicielles.  
 
 5.  Indiquez s’il convient d’utiliser un script de prédéploiement (drainage de nœud) ou un script de post-déploiement (relance de nœud).  
 
@@ -342,48 +342,48 @@ Dans cette version d’évaluation technique, si le portail d’entreprise reste
 ### <a name="try-it-now"></a>Essayez maintenant !  
  Essayez d’exécuter les tâches suivantes, puis indiquez-nous comment cela s’est passé en utilisant notre formulaire de commentaires à la page [Configuration Manager feedback program](https://connect.microsoft.com/ConfigurationManagervnext/ConfigMgr%20Customer%20Feedback) du site Microsoft Connect :  
 
--   Intégrer des appareils au service en ligne Windows Defender - Protection avancée contre les menaces  
+- Intégrer des appareils au service en ligne Windows Defender - Protection avancée contre les menaces  
 
--   Surveiller le déploiement du service Protection avancée contre les menaces Windows Defender sur les appareils gérés  
+- Surveiller le déploiement du service Protection avancée contre les menaces Windows Defender sur les appareils gérés  
 
- **Conditions préalables**  
+  **Conditions préalables**  
 
--   Abonnement au service en ligne Windows Defender - Protection avancée contre les menaces  
+- Abonnement au service en ligne Windows Defender - Protection avancée contre les menaces  
 
--   Clients exécutant Windows 10 Édition anniversaire (build 14328 et supérieure)  
+- Clients exécutant Windows 10 Édition anniversaire (build 14328 et supérieure)  
 
--   Créer un fichier de configuration d’intégration de client  
+- Créer un fichier de configuration d’intégration de client  
 
-    ##### <a name="how-to-create-an-onboarding-configuration-file"></a>Guide pratique pour créer un fichier de configuration d’intégration  
+  ##### <a name="how-to-create-an-onboarding-configuration-file"></a>Guide pratique pour créer un fichier de configuration d’intégration  
 
-    1.  Connectez-vous au service en ligne Protection avancée contre les menaces Windows Defender.  
+  1.  Connectez-vous au service en ligne Protection avancée contre les menaces Windows Defender.  
 
-    2.  Cliquez sur l’élément de menu **Intégration du client**.  
+  2.  Cliquez sur l’élément de menu **Intégration du client**.  
 
-    3.  Sélectionnez **System Center Configuration Manager**, puis cliquez sur **Télécharger le package**.  
+  3.  Sélectionnez **System Center Configuration Manager**, puis cliquez sur **Télécharger le package**.  
 
-    4.  Téléchargez le fichier d’archive compressé (.zip) et extrayez son contenu.  
+  4.  Téléchargez le fichier d’archive compressé (.zip) et extrayez son contenu.  
 
 
 ##### <a name="onboard-devices-for-windows-defender-atp"></a>Intégrer des appareils pour Windows Defender ATP  
 
-1.  Dans la console Configuration Manager, accédez à **Ressources et Conformité** > **Vue d’ensemble** > **Endpoint Protection** > **Stratégies Windows Defender ATP**, puis cliquez sur **Créer une stratégie Windows Defender ATP**. L’Assistant Création d’une stratégie Windows Defender ATP s’ouvre.  
+1. Dans la console Configuration Manager, accédez à **Ressources et Conformité** > **Vue d’ensemble** > **Endpoint Protection** > **Stratégies Windows Defender ATP**, puis cliquez sur **Créer une stratégie Windows Defender ATP**. L’Assistant Création d’une stratégie Windows Defender ATP s’ouvre.  
 
-2.  Tapez un **nom** et une **description** pour la stratégie Windows Defender ATP, puis sélectionnez **Intégration**. Cliquez sur Suivant.  
+2. Tapez un **nom** et une **description** pour la stratégie Windows Defender ATP, puis sélectionnez **Intégration**. Cliquez sur Suivant.  
 
-3.  Sélectionnez **Parcourir** pour accéder au fichier de configuration fourni par le locataire du service cloud Windows Defender ATP de votre organisation. Cliquez sur **Suivant**.  
+3. Sélectionnez **Parcourir** pour accéder au fichier de configuration fourni par le locataire du service cloud Windows Defender ATP de votre organisation. Cliquez sur **Suivant**.  
 
-4.  Spécifiez les exemples de fichiers collectés et partagés à partir des appareils gérés pour les besoins d’analyse.  
+4. Spécifiez les exemples de fichiers collectés et partagés à partir des appareils gérés pour les besoins d’analyse.  
 
-    -   **Aucun**: aucun fichier d’exemple n’est collecté pour analyse.  
+   - **Aucun**: aucun fichier d’exemple n’est collecté pour analyse.  
 
-    -   **Fichiers exécutables portables** : des fichiers tels que les fichiers programme (.exe), les fichiers de bibliothèque de liens dynamiques (.dll), les fichiers de polices et des fichiers similaires qui peuvent être exploités dans des attaques informatiques sont collectés et partagés pour analyse.  
+   - **Fichiers exécutables portables** : des fichiers tels que les fichiers programme (.exe), les fichiers de bibliothèque de liens dynamiques (.dll), les fichiers de polices et des fichiers similaires qui peuvent être exploités dans des attaques informatiques sont collectés et partagés pour analyse.  
 
      Cliquez sur **Suivant**.  
 
-5.  Passez en revue les informations de résumé et terminez l’Assistant.  
+5. Passez en revue les informations de résumé et terminez l’Assistant.  
 
-6.  Vous pouvez maintenant déployer la stratégie Windows Defender ATP sur les ordinateurs clients gérés en cliquant sur **Déployer**.  
+6. Vous pouvez maintenant déployer la stratégie Windows Defender ATP sur les ordinateurs clients gérés en cliquant sur **Déployer**.  
 
 ##### <a name="monitor-windows-defender-atp"></a>Surveiller Windows Defender ATP  
 
@@ -430,38 +430,38 @@ Dans cette version d’évaluation technique, si le portail d’entreprise reste
 
 ##### <a name="pre-declare-corporate-owned-devices-with-imei-or-ios-serial-number"></a>Prédéclarer des appareils d’entreprise avec numéro IMEI ou numéro de série iOS  
 
-1.  Dans la console Configuration Manager, accédez à **Ressources et Conformité** > **Vue d’ensemble** > **Tous les appareils d’entreprise** > **Appareils prédéclarés**, puis cliquez sur **Créer des appareils prédéclarés**. L’Assistant Appareils prédéclarés s’ouvre.  
+1. Dans la console Configuration Manager, accédez à **Ressources et Conformité** > **Vue d’ensemble** > **Tous les appareils d’entreprise** > **Appareils prédéclarés**, puis cliquez sur **Créer des appareils prédéclarés**. L’Assistant Appareils prédéclarés s’ouvre.  
 
-2.  Spécifiez la façon dont vous souhaitez ajouter les informations sur les appareils :  
+2. Spécifiez la façon dont vous souhaitez ajouter les informations sur les appareils :  
 
-    -   **Charger un fichier CSV contenant des numéros IMEI et des informations détaillées** : pour charger une liste de numéros, consultez l’étape 3.  
+   -   **Charger un fichier CSV contenant des numéros IMEI et des informations détaillées** : pour charger une liste de numéros, consultez l’étape 3.  
 
-    -   **Ajouter manuellement des numéros IMEI et des informations détaillées** : pour saisir manuellement des informations, tapez le numéro IMEI ou le numéro de série iOS, ainsi que des informations détaillées sur les appareils, puis passez à l’étape 4.  
+   -   **Ajouter manuellement des numéros IMEI et des informations détaillées** : pour saisir manuellement des informations, tapez le numéro IMEI ou le numéro de série iOS, ainsi que des informations détaillées sur les appareils, puis passez à l’étape 4.  
 
-3.  Pour les fichiers chargés, accédez au fichier .csv contenant les informations à utiliser pour prédéclarer les appareils d’entreprise. Le fichier doit avoir le format suivant, à l’exception de la ligne du haut (fournie à titre indicatif uniquement) :  
+3. Pour les fichiers chargés, accédez au fichier .csv contenant les informations à utiliser pour prédéclarer les appareils d’entreprise. Le fichier doit avoir le format suivant, à l’exception de la ligne du haut (fournie à titre indicatif uniquement) :  
 
-    |**No IMEI**|**No de série iOS**|**SE**|**Détails**|
-    |---|---|---|---|
-    |123456789012345||WINDOWS|Appareil d’entreprise Windows|
-    |123456789012|A0BCD0EFGH0J|IOS|Appareils d’entreprise iOS|
-    |123456789012346||ANDROID|Appareil d’entreprise Android|
+   |**No IMEI**|**No de série iOS**|**SE**|**Détails**|
+   |---|---|---|---|
+   |123456789012345||WINDOWS|Appareil d’entreprise Windows|
+   |123456789012|A0BCD0EFGH0J|IOS|Appareils d’entreprise iOS|
+   |123456789012346||ANDROID|Appareil d’entreprise Android|
 
-     **Colonnes :**  
+    **Colonnes :**  
 
-    -   Colonne 1 : Numéro IMEI : Un numéro IMEI ou un numéro de série iOS est requis pour chaque ligne.  
+   - Colonne 1 : Numéro IMEI : Un numéro IMEI ou un numéro de série iOS est requis pour chaque ligne  
 
-    -   Colonne 2 : Numéro de série iOS : Seuls des numéros de série iOS peuvent être prédéclarés. Utilisez le numéro IMEI pour d’autres plateformes d’appareil  
+   - Colonne 2 : Numéro de série iOS : Seuls des numéros de série iOS peuvent être prédéclarés. Utilisez le numéro IMEI pour d’autres plateformes d’appareil  
 
-    -   Colonne 3 : Système d’exploitation de l’appareil (des majuscules sont requises) :  
+   - Colonne 3 : Système d’exploitation de l’appareil (des majuscules sont requises) :  
 
-        -   IOS : Tous les appareils iOS  
+     -   IOS : Tous les appareils iOS  
 
-        -   WINDOWS : Inclut les appareils Windows Phone, Windows 10 Mobile et PC Windows  
+     -   WINDOWS : Inclut les appareils Windows Phone, Windows 10 Mobile et PC Windows  
 
-        -   ANDROID : Tous les appareils Android  
+     -   ANDROID : Tous les appareils Android  
 
-    -   Colonne 4 : Détails : Informations supplémentaires sur l’appareil qui figurent dans la console Configuration Manager.  
+   - Colonne 4 : Détails : Informations supplémentaires sur l’appareil qui figurent dans la console Configuration Manager.  
 
      Cliquez sur **Suivant**.  
 
-4.  Vérifiez les résultats de l’importation du fichier. Les informations détaillées des numéros IMEI ou de série précédemment importés seront mises à jour avec de nouvelles informations.  Cliquez sur **Suivant** pour continuer ou sur **Précédent** pour conserver les détails modifiés, puis terminez l’Assistant.  
+4. Vérifiez les résultats de l’importation du fichier. Les informations détaillées des numéros IMEI ou de série précédemment importés seront mises à jour avec de nouvelles informations.  Cliquez sur **Suivant** pour continuer ou sur **Précédent** pour conserver les détails modifiés, puis terminez l’Assistant.  

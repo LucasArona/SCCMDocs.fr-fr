@@ -10,16 +10,16 @@ ms.assetid: 45affc27-aa11-4249-9493-082ac23a3a3d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4e4d380319704eda608930ac938232513800b81a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 9fac81f08f4750ab6cc133ddc3a3bb9f73780fcd
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32331639"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422536"
 ---
 # <a name="configuring-remote-control-in-system-center-configuration-manager"></a>Configuration du contrôle à distance dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
  Cette procédure décrit la configuration des paramètres client par défaut pour le contrôle à distance. Ces paramètres s’appliquent à tous les ordinateurs de votre hiérarchie. Si vous voulez que ces paramètres s’appliquent seulement à certains ordinateurs, affectez un paramètre client personnalisé à un regroupement contenant ces ordinateurs. Pour plus d’informations, consultez [Guide pratique pour configurer les paramètres client dans System Center Configuration Manager](../../../../core/clients/deploy/configure-client-settings.md). 
 
@@ -27,17 +27,17 @@ Pour utiliser l’Assistance à distance ou le Bureau à distance, vous devez le
 
 #### <a name="to-enable-remote-control-and-configure-client-settings"></a>Pour activer le contrôle à distance et configurer les paramètres client  
 
-1.  Dans la console Configuration Manager, choisissez **Administration** > **Paramètres client** > **Paramètres client par défaut**.  
+1. Dans la console Configuration Manager, choisissez **Administration** > **Paramètres client** > **Paramètres client par défaut**.  
 
-4.  Sous l’onglet **Accueil**, dans le groupe **Propriétés**, choisissez **Propriétés**.  
+2. Sous l’onglet **Accueil**, dans le groupe **Propriétés**, choisissez **Propriétés**.  
 
-5.  Dans la boîte de dialogue **Par défaut**, choisissez **Outils de contrôle à distance**.  
+3. Dans la boîte de dialogue **Par défaut**, choisissez **Outils de contrôle à distance**.  
 
-6.  Configurez les paramètres client du contrôle à distance, de l’Assistance à distance et du Bureau à distance. Pour obtenir la liste des paramètres client des outils de contrôle à distance que vous pouvez configurer, consultez [Outils de contrôle à distance](../../../../core/clients/deploy/about-client-settings.md#remote-tools).  
+4. Configurez les paramètres client du contrôle à distance, de l’Assistance à distance et du Bureau à distance. Pour obtenir la liste des paramètres client des outils de contrôle à distance que vous pouvez configurer, consultez [Outils de contrôle à distance](../../../../core/clients/deploy/about-client-settings.md#remote-tools).  
 
-    Vous pouvez modifier le nom de l'entreprise qui apparaît dans la boîte de dialogue **Contrôle à distance ConfigMgr** en configurant une valeur pour **Nom d'organisation affiché dans le Centre logiciel** dans les paramètres client **Agent ordinateur** .  
+   Vous pouvez modifier le nom de l'entreprise qui apparaît dans la boîte de dialogue **Contrôle à distance ConfigMgr** en configurant une valeur pour **Nom d'organisation affiché dans le Centre logiciel** dans les paramètres client **Agent ordinateur** .  
 
- Les ordinateurs clients sont configurés avec ces paramètres la prochaine fois qu’ils téléchargent la stratégie du client. Pour lancer la récupération de stratégie pour un client unique, consultez [Comment gérer les clients dans System Center Configuration Manager](../../../../core/clients/manage/manage-clients.md).  
+   Les ordinateurs clients sont configurés avec ces paramètres la prochaine fois qu’ils téléchargent la stratégie du client. Pour lancer la récupération de stratégie pour un client unique, consultez [Comment gérer les clients dans System Center Configuration Manager](../../../../core/clients/manage/manage-clients.md).  
 
 #### <a name="enable-keyboard-translation"></a>Activer la traduction du clavier
 

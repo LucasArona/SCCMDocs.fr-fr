@@ -10,16 +10,16 @@ ms.assetid: cb405ba0-8792-4ab7-988b-2f835f3a9550
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 375c743e1094f3b3f52090ae520ee9d8e86acbe0
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 5500b7458935c83207a5e54f8fd1d4d7f40dc333
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32336967"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421635"
 ---
 # <a name="capabilities-in-technical-preview-1707-for-system-center-configuration-manager"></a>Fonctionnalités de la version Technical Preview 1707 de System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Technical Preview)*
+*S’applique à : System Center Configuration Manager (préversion technique)*
 
 Cet article présente les fonctionnalités qui sont disponibles dans la version Technical Preview 1707 de System Center Configuration Manager. Vous pouvez installer cette version pour mettre à jour et ajouter de nouvelles fonctionnalités à votre site Configuration Manager Technical Preview. Avant d’installer cette version Technical Preview, passez en revue [Technical Preview pour System Center Configuration Manager](../../core/get-started/technical-preview.md) pour vous familiariser avec les conditions générales et les limitations d’utilisation d’une version Technical Preview, la mise à jour entre les versions et l’envoi de commentaires sur les fonctionnalités d’une version Technical Preview.     
 
@@ -31,7 +31,7 @@ Cet article présente les fonctionnalités qui sont disponibles dans la version 
 -->
 
 **Problèmes connus dans cette version d’évaluation technique :**
--   **La mise à jour vers la préversion 1707 échoue s’il existe un serveur de site en mode passif**. Si vous exécutez la préversion 1706 et que vous avez un [serveur de site principal en mode passif](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability), vous devez le désinstaller pour pouvoir mettre à jour votre site de la préversion vers la version 1707. Vous pourrez réinstaller le serveur de site en mode passif lorsque votre site sera passé à la version 1707.
+- **La mise à jour vers la préversion 1707 échoue s’il existe un serveur de site en mode passif**. Si vous exécutez la préversion 1706 et que vous avez un [serveur de site principal en mode passif](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability), vous devez le désinstaller pour pouvoir mettre à jour votre site de la préversion vers la version 1707. Vous pourrez réinstaller le serveur de site en mode passif lorsque votre site sera passé à la version 1707.
 
   Pour désinstaller le serveur de site en mode passif :
   1. Dans la console, accédez à **Administration** > **Vue d’ensemble** > **Configuration du site** > **Serveurs et rôles de système de site**, puis sélectionnez le serveur de site en mode passif.
@@ -54,12 +54,10 @@ Cet article présente les fonctionnalités qui sont disponibles dans la version 
 -->
 
 ## <a name="client-peer-cache-support-for-express-installation-files-for-windows-10-and-office-365"></a>Prise en charge du cache d’homologue client pour les fichiers d’installation rapide de Windows 10 et Office 365
-<!-- 1352486 -->
-À partir de cette version, le cache d’homologue prend en charge la distribution des fichiers d’installation rapide de Windows 10 et des fichiers de mise à jour d’Office 365. Aucune configuration supplémentaire n'est requise.
+<!-- 1352486 --> À partir de cette version, le cache d’homologue prend en charge la distribution des fichiers d’installation rapide de Windows 10 et des fichiers de mise à jour d’Office 365. Aucune configuration supplémentaire n'est requise.
 
 ## <a name="surface-device-dashboard"></a>Tableau de bord Surface
-<!--1355788-->
-Le tableau de bord de la Surface fournit des informations sur les appareils Surface trouvés dans votre environnement. Dans la console, accédez à **Surveillance** > **Appareils Surface**. Vous pouvez voir les informations suivantes :
+<!--1355788--> Le tableau de bord des appareils Surface fournit des informations sur les appareils Surface trouvés dans votre environnement. Dans la console, accédez à **Surveillance** > **Appareils Surface**. Vous pouvez voir les informations suivantes :
 - Le pourcentage de Surface
 - Le pourcentage de modèles de Surface
 - Les cinq principales versions de système d’exploitation

@@ -10,16 +10,16 @@ ms.assetid: 9f7142e1-c972-4384-853b-2da1568cb3e3
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 480f7a890e82b46e2b2d69180763f39504a47e0c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: a08162f36c247136dd346140480e2d29be0c4017
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344481"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424797"
 ---
 # <a name="best-practices-for-power-management-in-system-center-configuration-manager"></a>Meilleures pratiques de gestion de l’alimentation dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Utilisez les bonnes pratiques de gestion de l’alimentation suivantes dans System Center Configuration Manager.  
 
@@ -40,17 +40,17 @@ Utilisez les bonnes pratiques de gestion de l’alimentation suivantes dans Syst
 
  Voici quelques exemples d'ordinateurs à exclure de la gestion de l'alimentation :  
 
--   Les ordinateurs qui doivent rester allumés.  
+- Les ordinateurs qui doivent rester allumés.  
 
--   Les ordinateurs auxquels des utilisateurs ont besoin de se connecter à l'aide de la connexion Bureau à distance.  
+- Les ordinateurs auxquels des utilisateurs ont besoin de se connecter à l'aide de la connexion Bureau à distance.  
 
--   Les ordinateurs qui ne peuvent pas utiliser la gestion de l'alimentation.  
+- Les ordinateurs qui ne peuvent pas utiliser la gestion de l'alimentation.  
 
--   Ordinateurs dotés du rôle de système de site de point de distribution.  
+- Ordinateurs dotés du rôle de système de site de point de distribution.  
 
--   Ordinateurs publics tels que les bornes d'informations, les écrans d'affichage ou les consoles de surveillance pour lesquels l'ordinateur et le moniteur doivent toujours être allumés.  
+- Ordinateurs publics tels que les bornes d'informations, les écrans d'affichage ou les consoles de surveillance pour lesquels l'ordinateur et le moniteur doivent toujours être allumés.  
 
- Pour plus d’informations, consultez [Configuration de la gestion de l’alimentation dans System Center Configuration Manager](../../../../core/clients/manage/power/configuring-power-management.md).  
+  Pour plus d’informations, consultez [Configuration de la gestion de l’alimentation dans System Center Configuration Manager](../../../../core/clients/manage/power/configuring-power-management.md).  
 
 ## <a name="first-apply-power-plans-to-a-test-collection-of-computers"></a>Appliquer d’abord les modes de gestion de l’alimentation à un regroupement test d’ordinateurs  
  Testez toujours les conséquences liées à l'application d'un mode de gestion de l'alimentation à un regroupement test d'ordinateurs avant d'appliquer le mode d'alimentation à un plus grand regroupement d'ordinateurs.  
@@ -65,9 +65,9 @@ Utilisez les bonnes pratiques de gestion de l’alimentation suivantes dans Syst
 
  Si un ordinateur est membre de plusieurs regroupements, chacun appliquant des modes de gestion de l'alimentation différents, les actions suivantes sont effectuées :  
 
--   Mode de gestion de l’alimentation : si plusieurs valeurs sont appliquées à un ordinateur comme paramètres d’alimentation, la valeur la moins restrictive est utilisée.  
+-   Gestion de l'alimentation : Si plusieurs valeurs sont appliquées à un ordinateur comme paramètres d'alimentation, c'est la valeur la moins restrictive qui est utilisée.  
 
--   Heure d’éveil : si plusieurs heures d’éveil sont appliquées à un ordinateur de bureau, l’heure la plus proche de minuit est utilisée.  
+-   Heure d'éveil : si plusieurs heures d'éveil sont appliquées à un ordinateur de bureau, l'heure la plus proche de minuit sera utilisée.  
 
      Pour plus d’informations, consultez [Ordinateurs avec plusieurs modes de gestion de l’alimentation](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md#BKMK_Multiple) dans la rubrique [Guide pratique pour surveiller et planifier la gestion de l’alimentation dans System Center Configuration Manager](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md). Pour plus d’informations sur la manière dont la gestion de l’alimentation résout les conflits, consultez [Guide pratique pour créer et appliquer des modes de gestion de l’alimentation dans System Center Configuration Manager](../../../../core/clients/manage/power/create-and-apply-power-plans.md).  
 

@@ -10,16 +10,16 @@ ms.assetid: 4e345791-74db-41ad-b472-024ce6521daf
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: ed9be26417aceef3fb73f48c2a4a2f15f0ba1b52
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: de1b5343bd66cec20ba55f0aa58add9839fcb48d
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32333754"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418524"
 ---
 # <a name="common-tasks-for-managing-compliance-on-devices-with-the-system-center-configuration-manager-client"></a>Tâches courantes de gestion de la compatibilité des appareils avec le client System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Cette rubrique vous propose une introduction à l’utilisation des paramètres de compatibilité de System Center Configuration Manager à travers des exemples de scénarios courants que vous êtes susceptible de rencontrer.  
 
@@ -40,69 +40,69 @@ Cette rubrique vous propose une introduction à l’utilisation des paramètres 
 
 ## <a name="scenarios-for-windows-10-devices-managed-with-the-configuration-manager-client"></a>Scénarios pour appareils Windows 10 gérés avec le client Configuration Manager  
 
-### <a name="scenario-disable-the-use-of-bluetooth-on-windows-10-devices"></a>Scénario : désactiver l’utilisation de la fonction Bluetooth sur les appareils Windows 10  
+### <a name="scenario-disable-the-use-of-bluetooth-on-windows-10-devices"></a>Scénario : désactiver l’utilisation de la fonction Bluetooth sur les appareils Windows 10  
  Dans ce scénario, votre service de sécurité a identifié la fonctionnalité Bluetooth des appareils comme un moyen pouvant servir à transmettre des informations sensibles de l’entreprise vers l’extérieur. Vous avez dernièrement mis à niveau tous vos PC vers Windows 10 et décidez de désactiver la fonctionnalité Bluetooth sur ces appareils.  
 
-1.  Dans la page **Général** de l’Assistant Création d’élément de configuration, sélectionnez le type d’élément de configuration **Windows 10** , puis cliquez sur **Suivant**.  
+1. Dans la page **Général** de l’Assistant Création d’élément de configuration, sélectionnez le type d’élément de configuration **Windows 10** , puis cliquez sur **Suivant**.  
 
-2.  Dans la page **Plateformes prises en charge** de l’Assistant, sélectionnez toutes les plateformes Windows 10.  
+2. Dans la page **Plateformes prises en charge** de l’Assistant, sélectionnez toutes les plateformes Windows 10.  
 
-3.  Dans la page **Paramètres du périphérique** , sélectionnez **Périphérique**, puis cliquez sur **Suivant**.  
+3. Dans la page **Paramètres du périphérique** , sélectionnez **Périphérique**, puis cliquez sur **Suivant**.  
 
-4.  Dans la page **Périphérique** , sélectionnez la valeur **Interdit** pour **Bluetooth**.  
+4. Dans la page **Périphérique** , sélectionnez la valeur **Interdit** pour **Bluetooth**.  
 
-5.  Sélectionnez **Résoudre les paramètres non compatibles** pour faire en sorte que la modification s’applique à tous les appareils Windows 10.  
+5. Sélectionnez **Résoudre les paramètres non compatibles** pour faire en sorte que la modification s’applique à tous les appareils Windows 10.  
 
-6.  Terminez l’Assistant pour créer l’élément de configuration.  
+6. Terminez l’Assistant pour créer l’élément de configuration.  
 
- Vous pouvez maintenant utiliser les informations contenues dans la rubrique [Tâches courantes de création et de déploiement de bases de référence de configuration avec System Center Configuration Manager](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md) pour déployer la configuration que vous avez créée sur les appareils.  
+   Vous pouvez maintenant utiliser les informations contenues dans la rubrique [Tâches courantes de création et de déploiement de bases de référence de configuration avec System Center Configuration Manager](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md) pour déployer la configuration que vous avez créée sur les appareils.  
 
 ## <a name="scenarios-for-windows-desktop-and-server-computers-managed-with-the-configuration-manager-client"></a>Scénarios pour ordinateurs de bureau et serveurs Windows gérés avec le client Configuration Manager  
  Sur les ordinateurs Mac exécutant le client Configuration Manager, vous avez le choix entre deux options pour évaluer la compatibilité :  
 
--   Évaluer un fichier de préférences (plist) Mac OS X.  
+- Évaluer un fichier de préférences (plist) Mac OS X.  
 
--   Utiliser un script personnalisé et évaluer les résultats retournés par le script.  
+- Utiliser un script personnalisé et évaluer les résultats retournés par le script.  
 
- Pour plus d’informations, consultez [Guide pratique pour créer des éléments de configuration pour les appareils Mac OS X gérés avec le client System Center Configuration Manager](../../compliance/deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md).  
+  Pour plus d’informations, consultez [Guide pratique pour créer des éléments de configuration pour les appareils Mac OS X gérés avec le client System Center Configuration Manager](../../compliance/deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md).  
 
-### <a name="scenario-remediate-an-incorrect-registry-value-on-windows-desktop-computers"></a>Scénario : corriger une valeur de Registre incorrecte sur les ordinateurs de bureau Windows  
+### <a name="scenario-remediate-an-incorrect-registry-value-on-windows-desktop-computers"></a>Scénario : corriger une valeur de Registre incorrecte sur les ordinateurs de bureau Windows  
  Dans ce scénario, vous constatez qu’une d’applications métier importante ne fonctionne pas correctement sur certains ordinateurs que vous gérez et qui exécutent Windows 8.1. Après enquête, vous découvrez que le problème est lié à la définition de la clé de Registre **HKEY_LOCAL_MACHINE\SOFTWARE\Woodgrove\LOB App\Configuration\Configuration1** , qui a la valeur **0** sur certains ordinateurs. Pour que l’application métier s’exécute correctement, cette valeur doit être égale à **1**.  
 
  Dans cette procédure, vous allez créer un élément de configuration destiné à rechercher les valeurs de clé de Registre incorrectes et à les corriger automatiquement, le cas échéant.  
 
-1.  Dans la page **Général** de l’Assistant Création d’élément de configuration, sélectionnez le type d’élément de configuration **Ordinateurs et serveurs Windows (personnalisés)** , puis cliquez sur **Suivant**.  
+1. Dans la page **Général** de l’Assistant Création d’élément de configuration, sélectionnez le type d’élément de configuration **Ordinateurs et serveurs Windows (personnalisés)** , puis cliquez sur **Suivant**.  
 
-2.  Dans la page **Plateformes prises en charge** de l’Assistant, sélectionnez **Windows 8.1** (pour faire en sorte que l’élément de configuration ne s’applique qu’aux ordinateurs concernés).  
+2. Dans la page **Plateformes prises en charge** de l’Assistant, sélectionnez **Windows 8.1** (pour faire en sorte que l’élément de configuration ne s’applique qu’aux ordinateurs concernés).  
 
-3.  Dans la page **Paramètres** , cliquez sur **Nouveau** pour créer un paramètre.  
+3. Dans la page **Paramètres** , cliquez sur **Nouveau** pour créer un paramètre.  
 
-4.  Sous l’onglet **Général** de la boîte de dialogue **Créer un paramètre** , configurez les éléments suivants :  
+4. Sous l’onglet **Général** de la boîte de dialogue **Créer un paramètre** , configurez les éléments suivants :  
 
-    -   **Nom** > **Paramètre de l’exemple**  
+   -   **Nom** > **Paramètre de l’exemple**  
 
-    -   **Type de paramètre** > **Valeur de Registre**  
+   -   **Type de paramètre** > **Valeur de Registre**  
 
-    -   **Type de données** > **Entier** (sachant que la valeur ne peut être qu’un nombre)  
+   -   **Type de données** > **Entier** (sachant que la valeur ne peut être qu’un nombre)  
 
-    -   **Ruche** > **HKEY_LOCAL_MACHINE**  
+   -   **Ruche** > **HKEY_LOCAL_MACHINE**  
 
-    -   **Clé** > **SOFTWARE\Woodgrove\LOB App\Configuration\Configuration1**  
+   -   **Clé** > **SOFTWARE\Woodgrove\LOB App\Configuration\Configuration1**  
 
-    -   **Valeur** > **1** (valeur requise)  
+   -   **Valeur** > **1** (valeur requise)  
 
-5.  Sous l’onglet **Règles de compatibilité** de la boîte de dialogue **Créer un paramètre** , cliquez sur **Nouveau**puis, dans la boîte de dialogue **Créer une règle** , configurez les éléments suivants :  
+5. Sous l’onglet **Règles de compatibilité** de la boîte de dialogue **Créer un paramètre** , cliquez sur **Nouveau**puis, dans la boîte de dialogue **Créer une règle** , configurez les éléments suivants :  
 
-    -   **Nom** > **Règle de l’exemple**  
+   -   **Nom** > **Règle de l’exemple**  
 
-    -   **Paramètre sélectionné** : vérifiez que le paramètre sélectionné est le **paramètre de l’exemple**.  
+   -   **Paramètre sélectionné** : vérifiez que le paramètre sélectionné est le **paramètre de l’exemple**.  
 
-    -   **Type de règle** > **Valeur**  
+   -   **Type de règle** > **Valeur**  
 
-    -   **Le paramètre doit être conforme à la règle suivante** : vérifiez que le nom du paramètre est correct et configurez l’option pour spécifier que la valeur du paramètre doit être égale à **1**.  
+   -   **Le paramètre doit être conforme à la règle suivante** : vérifiez que le nom du paramètre est correct et configurez l’option pour spécifier que la valeur du paramètre doit être égale à **1**.  
 
-    -   **Résoudre les règles non compatibles lorsqu’elles sont prises en charge** – Cochez cette case pour garantir que Configuration manager rétablira la valeur correcte de la clé de Registre si sa valeur est incorrecte.  
+   -   **Résoudre les règles non compatibles lorsqu’elles sont prises en charge** – Cochez cette case pour garantir que Configuration manager rétablira la valeur correcte de la clé de Registre si sa valeur est incorrecte.  
 
-6.  Terminez l’Assistant pour créer l’élément de configuration.  
+6. Terminez l’Assistant pour créer l’élément de configuration.  
 
- Vous pouvez maintenant utiliser les informations contenues dans la rubrique [Tâches courantes de création et de déploiement de bases de référence de configuration](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md) pour déployer la configuration que vous avez créée sur les appareils.  
+   Vous pouvez maintenant utiliser les informations contenues dans la rubrique [Tâches courantes de création et de déploiement de bases de référence de configuration](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md) pour déployer la configuration que vous avez créée sur les appareils.  

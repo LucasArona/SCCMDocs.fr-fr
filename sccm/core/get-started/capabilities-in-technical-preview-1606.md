@@ -10,16 +10,16 @@ ms.assetid: 134a2f60-811e-4dc9-a8f5-1ce0018c5c12
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: f3ee48d60c46def5daef25a2f3654e8a79a0e9e1
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 14e982592491ec5e8a10cd3313f748bddac40cff
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32339857"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420072"
 ---
 # <a name="capabilities-in-technical-preview-1606-for-system-center-configuration-manager"></a>Fonctionnalités de la version d’évaluation technique 1606 pour System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Technical Preview)*
+*S’applique à : System Center Configuration Manager Technical Preview*
 
 Cet article présente les fonctionnalités qui sont disponibles dans la version d’évaluation technique 1606 pour System Center Configuration Manager. Vous pouvez installer cette version pour mettre à jour et ajouter de nouvelles fonctionnalités à votre site Configuration Manager Technical Preview.      Avant d’installer cette version de la version d’évaluation technique, passez en revue la rubrique de présentation, [Version d’évaluation technique pour System Center Configuration Manager](../../core/get-started/technical-preview.md), pour vous familiariser avec les conditions générales et limitations d’utilisation d’une version d’évaluation technique, la mise à jour entre les versions et l’envoi de commentaires sur les fonctionnalités dans une version d’évaluation technique.    
 
@@ -36,7 +36,7 @@ Cet article présente les fonctionnalités qui sont disponibles dans la version 
 ## <a name="dmp_category"></a> Classer automatiquement des appareils dans des regroupements
 Vous pouvez créer des catégories d’appareils pour classer automatiquement les appareils dans des regroupements d’appareils quand vous utilisez Configuration Manager avec Microsoft Intune. Les utilisateurs sont alors invités à choisir une catégorie d’appareils quand ils inscrivent un appareil dans Intune. Vous pouvez aussi modifier la catégorie d’un appareil à partir de la console Configuration Manager.
 
-**Important :** Cette fonctionnalité est opérationnelle avec la version de **juin 2016** de Microsoft Intune. Vérifiez que vous avez effectué la mise à jour vers cette version avant d’essayer ces procédures.
+**Important :** Cette fonctionnalité est opérationnelle avec la version de **juin 2016** de Microsoft Intune. Vérifiez que vous avez effectué la mise à jour vers cette version avant d’essayer ces procédures.
 
 ### <a name="try-it-out"></a>Essayez !
 
@@ -98,8 +98,8 @@ Articles complémentaires :
 - [Compatibilité et certification de Device Guard](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-certification-and-compliance)
 - [Guide de déploiement de Device Guard](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-deployment-guide)
 
- ##  <a name="dmp_onprem"></a> Points de gestion d’appareils multiples pour la gestion des appareils mobiles locale  
- Avec la version d’évaluation technique 1606, la gestion des appareils mobiles (MDM) locale prend en charge une nouvelle fonctionnalité de la mise à jour anniversaire de Windows 10, qui configure automatiquement un appareil inscrit pour bénéficier de plusieurs points de gestion d’appareil disponibles. Cette fonctionnalité permet à l’appareil de basculer vers un autre point de gestion d’appareil quand celui qu’il utilise normalement n’est pas disponible. Cette fonctionnalité fonctionne uniquement pour les PC dotés de la mise à jour anniversaire de Windows 10.  
+  ##  <a name="dmp_onprem"></a> Points de gestion d’appareils multiples pour la gestion des appareils mobiles locale  
+  Avec la version d’évaluation technique 1606, la gestion des appareils mobiles (MDM) locale prend en charge une nouvelle fonctionnalité de la mise à jour anniversaire de Windows 10, qui configure automatiquement un appareil inscrit pour bénéficier de plusieurs points de gestion d’appareil disponibles. Cette fonctionnalité permet à l’appareil de basculer vers un autre point de gestion d’appareil quand celui qu’il utilise normalement n’est pas disponible. Cette fonctionnalité fonctionne uniquement pour les PC dotés de la mise à jour anniversaire de Windows 10.  
 
 ### <a name="try-it-out"></a>Essayez !  
 

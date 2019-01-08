@@ -10,16 +10,16 @@ ms.assetid: ccc9f652-2953-4c38-8a90-c799484105ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bc20195824af03a361cb38837a061b68e78d098a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 980f808e4bb367948539ab74ac70d7bce7ed2e20
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32348366"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416858"
 ---
 # <a name="prestart-commands-for-task-sequence-media-in-system-center-configuration-manager"></a>Commandes de prédémarrage pour les médias de séquence de tâches dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Vous pouvez créer une commande de prédémarrage dans System Center Configuration Manager à utiliser avec un média de démarrage, un média autonome et un média préparé. La commande de prédémarrage est un script ou un exécutable qui s'exécute avant la sélection de la séquence de tâches et qui peut interagir avec l'utilisateur dans Windows PE. La commande de prédémarrage peut demander des informations à l'utilisateur et les enregistrer dans l'environnement de la séquence de tâches, ou interroger une variable de séquence de tâches pour obtenir des informations. Au démarrage de l'ordinateur de destination, la ligne de commande est exécutée avant que la stratégie ne soit téléchargée auprès du point de gestion. Suivez les procédures ci-dessous pour créer un script qui sera utilisé avec la commande de prédémarrage, distribuer le contenu associé à la commande de prédémarrage et configurer la commande de prédémarrage dans le média.  
 

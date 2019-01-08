@@ -9,16 +9,16 @@ ms.assetid: 3ae68fa6-8b30-45dd-9d12-50bb67cb4a9d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a58e5924fc34bad514ca6f01bb23aa84443705c6
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: df78f6ebfece28d01402272814e8527c3ca4a5fd
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340707"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422825"
 ---
 # <a name="what39s-changed-in-system-center-configuration-manager-from-system-center-2012-configuration-manager"></a>Changements dans System Center Configuration Manager par rapport à System Center 2012 Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 
  Current Branch de System Center Configuration Manager présente des changements importants par rapport à System Center 2012 Configuration Manager. Cette rubrique identifie les changements importants et les nouvelles fonctionnalités dans la version de base de référence 1511 de System Center Configuration Manager. Pour en savoir plus sur les changements introduits dans les mises à jour suivantes pour System Center Configuration Manager, consultez [Nouveautés dans les versions incrémentielles de System Center Configuration Manager](/sccm/core/plan-design/changes/whats-new-incremental-versions).
@@ -122,27 +122,27 @@ Tenez compte des modifications suivantes apportées aux mises à jour logicielle
 
 Tenez compte des modifications suivantes apportées aux paramètres de compatibilité :
 
--   System Center Configuration Manager améliore le flux de travail pour créer les éléments de configuration. Désormais, quand vous créez un élément de configuration et que vous sélectionnez une plateforme prise en charge, seuls les paramètres correspondant à cette plateforme vous sont proposés. Consultez [Prise en main des paramètres de compatibilité dans System Center Configuration Manager](../../../compliance/get-started/get-started-with-compliance-settings.md).  
+- System Center Configuration Manager améliore le flux de travail pour créer les éléments de configuration. Désormais, quand vous créez un élément de configuration et que vous sélectionnez une plateforme prise en charge, seuls les paramètres correspondant à cette plateforme vous sont proposés. Consultez [Prise en main des paramètres de compatibilité dans System Center Configuration Manager](../../../compliance/get-started/get-started-with-compliance-settings.md).  
 
--   L’Assistant **Création d’élément de configuration** vous permet désormais de choisir plus facilement le type d’élément de configuration à créer. De plus, les éléments de configuration nouveaux et mis à jour sont disponibles pour :  
+- L’Assistant **Création d’élément de configuration** vous permet désormais de choisir plus facilement le type d’élément de configuration à créer. De plus, les éléments de configuration nouveaux et mis à jour sont disponibles pour :  
 
-    -   les appareils Windows 10 gérés avec le client Configuration Manager ;  
+  -   les appareils Windows 10 gérés avec le client Configuration Manager ;  
 
-    -   les appareils Mac OS X gérés avec le client Configuration Manager ;  
+  -   les appareils Mac OS X gérés avec le client Configuration Manager ;  
 
-    -   les ordinateurs de bureau et serveur Windows gérés avec le client Configuration Manager ;  
+  -   les ordinateurs de bureau et serveur Windows gérés avec le client Configuration Manager ;  
 
-    -   les appareils Windows 8.1 et Windows 10 gérés sans le client Configuration Manager ;  
+  -   les appareils Windows 8.1 et Windows 10 gérés sans le client Configuration Manager ;  
 
-    -   les appareils Windows Phone gérés sans le client Configuration Manager ;  
+  -   les appareils Windows Phone gérés sans le client Configuration Manager ;  
 
-    -   les appareils iOS et Mac OS X gérés sans le client Configuration Manager ;  
+  -   les appareils iOS et Mac OS X gérés sans le client Configuration Manager ;  
 
-    -   les appareils Samsung KNOX Standard et Android gérés sans le client Configuration Manager.  
+  -   les appareils Samsung KNOX Standard et Android gérés sans le client Configuration Manager.  
 
- Consultez [Comment créer des éléments de configuration dans System Center Configuration Manager](../../../compliance/deploy-use/create-configuration-items.md).  
+  Consultez [Comment créer des éléments de configuration dans System Center Configuration Manager](../../../compliance/deploy-use/create-configuration-items.md).  
 
--   Prise en charge de la gestion des paramètres sur les ordinateurs Mac OS X inscrits avec Microsoft Intune ou gérés à l’aide du client Configuration Manager. Consultez [Comment créer des éléments de configuration pour des appareils iOS et Mac OS X gérés sans le client System Center Configuration Manager](../../../compliance/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client.md).  
+- Prise en charge de la gestion des paramètres sur les ordinateurs Mac OS X inscrits avec Microsoft Intune ou gérés à l’aide du client Configuration Manager. Consultez [Comment créer des éléments de configuration pour des appareils iOS et Mac OS X gérés sans le client System Center Configuration Manager](../../../compliance/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client.md).  
 
 ## <a name="protect-data-and-site-infrastructure"></a>Protéger l’infrastructure de site et les données  
 System Center Configuration Manager permet d’intégrer Windows Hello Entreprise (anciennement Microsoft Passport pour Windows). Windows Hello Entreprise constitue une méthode de connexion alternative qui utilise Active Directory ou un compte Azure Active Directory en remplacement d’un mot de passe, d’une carte à puce ou d’une carte à puce virtuelle sur les appareils exécutant Windows 10. Consultez [Paramètres Windows Hello Entreprise dans System Center Configuration Manager](../../../protect/deploy-use/windows-hello-for-business-settings.md).

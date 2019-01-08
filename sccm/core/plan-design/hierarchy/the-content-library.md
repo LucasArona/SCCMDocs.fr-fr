@@ -10,16 +10,16 @@ ms.assetid: 65c88e54-3574-48b0-a127-9cc914a89dca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5f063034ed7cdc22a92df8d07d8be03ece12f663
-ms.sourcegitcommit: 4e4b71227309bee7e9f1285971f8235c67a9c502
+ms.openlocfilehash: 4587549ef2f43be3dcc5e18021f60c42770f5800
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46533743"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53415515"
 ---
 # <a name="the-content-library-in-configuration-manager"></a>Bibliothèque de contenu dans Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 La bibliothèque de contenu est un stockage SIS (Single Instance Store) de contenu dans Configuration Manager. Le site l’utilise pour réduire la taille globale du corps combiné du contenu que vous distribuez. La bibliothèque de contenu stocke tous les fichiers de contenu pour les déploiements logiciels, par exemple des déploiements de mises à jour logicielles, d’applications et de systèmes d’exploitation.  
 
@@ -45,7 +45,7 @@ Configuration Manager copie les fichiers de contenu sur le lecteur avec la prior
 Pour plus d’informations sur la configuration des paramètres de lecteur pour le point de distribution, consultez [Gérer le contenu et l’infrastructure de contenu](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure).  
 
 
->  [!IMPORTANT]  
+> [!IMPORTANT]
 >  Pour déplacer la bibliothèque de contenu à un autre emplacement sur un point de distribution après l’installation, utilisez **l’outil Content Library Transfer** des outils de Configuration Manager. Pour plus d’informations, consultez [Outil Transfert de bibliothèque de contenu](/sccm/core/support/content-library-transfer).  
 
 
@@ -112,13 +112,13 @@ Cette bibliothèque de contenu distante est un prérequis pour la [haute disponi
 
 5. Notez la valeur de **État** dans la colonne Bibliothèque de contenu sur le volet Résumé du volet des informations. Elle se met à jour pour afficher la progression du site en termes de déplacement de la bibliothèque de contenu.  
 
-    - Quand **En cours** est indiqué, la valeur de **Progression du déplacement (%)** affiche le pourcentage d’achèvement.  
+   - Quand **En cours** est indiqué, la valeur de **Progression du déplacement (%)** affiche le pourcentage d’achèvement.  
 
-    - En cas d’état d’erreur, l’état affiche l’erreur. **Accès refusé** et **Disque plein** sont des erreurs courantes.  
+   - En cas d’état d’erreur, l’état affiche l’erreur. **Accès refusé** et **Disque plein** sont des erreurs courantes.  
 
-    - Quand l’opération est terminée, l’état passe à **Terminé**.  
+   - Quand l’opération est terminée, l’état passe à **Terminé**.  
     
-    Consultez **distmgr.log** pour plus d’informations. Pour plus d’informations, consultez [Journaux serveur du serveur de site et du système de site](/sccm/core/plan-design/hierarchy/log-files#BKMK_SiteSiteServerLog).  
+     Consultez **distmgr.log** pour plus d’informations. Pour plus d’informations, consultez [Journaux serveur du serveur de site et du système de site](/sccm/core/plan-design/hierarchy/log-files#BKMK_SiteSiteServerLog).  
 
 Pour plus d’informations sur ce processus, consultez [Diagramme de flux – Gérer la bibliothèque de contenu](/sccm/core/plan-design/hierarchy/manage-content-library-flowchart).
 
@@ -138,11 +138,11 @@ Si vous avez besoin de redéplacer la bibliothèque de contenu vers le serveur d
 
 Par défaut, la bibliothèque de contenu est stockée à la racine d’un lecteur dans un dossier nommé **SCCMContentLib**. Ce dossier est partagé par défaut en tant que **SCCMContentLib$**. Le dossier et le partage ont des autorisations limitées, de façon à empêcher les dommages accidentels. Toutes les modifications doivent être effectuées à partir de la console Configuration Manager. Ce dossier contient les objets suivants :  
 
-- La bibliothèque de packages (dossier **PkgLib**) : informations sur les packages qui sont présents sur le point de distribution.  
+- La bibliothèque de packages (dossier **PkgLib**) : Informations sur les packages qui sont présents sur le point de distribution.  
 
-- La bibliothèque de données (dossier **DataLib**) : informations sur la structure d’origine des packages.  
+- La bibliothèque de données (dossier **DataLib**) : Informations sur la structure d’origine des packages.  
 
-- La bibliothèque de fichiers (dossier **FileLib**) : les fichiers d’origine du package. Ce dossier est généralement ce qui utilise la majeure partie du stockage.  
+- La bibliothèque de fichiers (dossier **FileLib**) : Fichiers d’origine dans le package. Ce dossier est généralement ce qui utilise la majeure partie du stockage.  
 
 ![Diagramme donnant une vue d’ensemble de la bibliothèque de contenu de Configuration Manager](media/content-library-overview.png)
 

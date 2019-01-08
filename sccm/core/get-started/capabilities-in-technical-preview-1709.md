@@ -10,16 +10,16 @@ ms.assetid: a3ef6bdc-a204-4c4c-a02f-2bd03f35183e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 74ffd06f8b9786d627dc7fd9cecb15215228313d
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 79d7488e0554a36eb274bf4ef76cff92b48a71ba
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32341149"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418439"
 ---
 # <a name="capabilities-in-technical-preview-1709-for-system-center-configuration-manager"></a>Fonctionnalités de Technical Preview 1709 pour System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Technical Preview)*
+*S’applique à : System Center Configuration Manager (Technical Preview)*
 
 Cet article présente les fonctionnalités qui sont disponibles dans la version 1709 de Technical Preview pour System Center Configuration Manager. Vous pouvez installer cette version pour mettre à jour et ajouter de nouvelles fonctionnalités à votre site Configuration Manager Technical Preview. Avant d’installer cette version Technical Preview, passez en revue [Technical Preview pour System Center Configuration Manager](../../core/get-started/technical-preview.md) pour vous familiariser avec les conditions générales et les limitations d’utilisation d’une version Technical Preview, la mise à jour entre les versions et l’envoi de commentaires sur les fonctionnalités d’une version Technical Preview.     
 
@@ -30,7 +30,7 @@ Cet article présente les fonctionnalités qui sont disponibles dans la version�
     Workaround details.
 -->
 **Problèmes connus dans cette version d’évaluation technique :**
--   **La mise à jour vers la version 1709 de la préversion échoue s’il existe un serveur de site en mode passif**. Si vous exécutez la version 1706, 1707 ou 1708 de la préversion, et que vous avez un [serveur de site principal en mode passif](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability), vous devez le désinstaller pour pouvoir correctement mettre à jour vers la version 1709 votre site de la préversion. Vous pouvez réinstaller le serveur de site en mode passif une fois votre site passé à la version 1709.
+- **La mise à jour vers la version 1709 de la préversion échoue s’il existe un serveur de site en mode passif**. Si vous exécutez la version 1706, 1707 ou 1708 de la préversion, et que vous avez un [serveur de site principal en mode passif](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability), vous devez le désinstaller pour pouvoir correctement mettre à jour vers la version 1709 votre site de la préversion. Vous pouvez réinstaller le serveur de site en mode passif une fois votre site passé à la version 1709.
 
   Pour désinstaller le serveur de site en mode passif :
   1. Dans la console, accédez à **Administration** > **Vue d’ensemble** > **Configuration du site** > **Serveurs et rôles de système de site**, puis sélectionnez le serveur de site en mode passif.
@@ -42,8 +42,7 @@ Cet article présente les fonctionnalités qui sont disponibles dans la version�
 **Vous trouverez ci-dessous les nouvelles fonctionnalités propres à cette version.**  
 
 ## <a name="improved-vpn-profile-experience-in-configuration-manager-console"></a>Expérience de profil VPN améliorée dans la console Configuration Manager
-<!-- 1313282 -->
-Avec cette version, nous avons mis à jour l’Assistant Création d’un profil VPN et les pages de propriétés pour afficher uniquement les paramètres appropriés à la plateforme sélectionnée. Plus précisément :
+<!-- 1313282 --> Avec cette version, nous avons mis à jour l’Assistant Création d’un profil VPN et les pages de propriétés pour afficher uniquement les paramètres propres à la plateforme sélectionnée. Plus précisément :
 
 - Chaque plateforme a son propre flux de travail, ce qui signifie que les nouveaux profils VPN ne contiennent que les paramètres pris en charge par la plateforme.
 - Les pages **Plateformes prises en charge** apparaissent désormais après la page **Général**.  Maintenant, vous choisissez la plateforme avant de définir les valeurs de propriété.
@@ -77,8 +76,7 @@ Créez un profil VPN en suivant la procédure habituelle. Remarquez que les opti
 Lorsque vous sélectionnez différentes plateformes, notez que seuls les paramètres correspondant à la plateforme sélectionnée s’affichent.
 
 ## <a name="co-management-for-windows-10-devices"></a>Cogestion pour les appareils Windows 10    
-<!-- 1350871 -->
-Nombreux sont les clients qui souhaitent gérer les appareils Windows 10 comme les appareils mobiles, en recourant à une solution cloud plus simple et moins chère. Toutefois, le passage de la gestion classique à la gestion moderne peut s’avérer difficile. À partir de Windows 10 version 1607 (également appelée Mise à jour anniversaire), vous pouvez joindre à la fois un appareil Windows 10 à Active Directory (AD) localement et à Azure AD basé sur le cloud (Azure AD hybride). La cogestion tire parti de cette amélioration et vous permet de gérer simultanément plusieurs appareils Windows 10 à l’aide de Configuration Manager et d’Intune. C’est une solution qui établit une passerelle entre la gestion classique et la gestion moderne tout en vous donnant la possibilité d’opérer cette transition selon une approche en plusieurs phases. 
+<!-- 1350871 --> Nombreux sont les clients qui souhaitent gérer les appareils Windows 10 comme les appareils mobiles, en recourant à une solution cloud plus simple et moins chère. Toutefois, le passage de la gestion classique à la gestion moderne peut s’avérer difficile. À partir de Windows 10 version 1607 (également appelée Mise à jour anniversaire), vous pouvez joindre à la fois un appareil Windows 10 à Active Directory (AD) localement et à Azure AD basé sur le cloud (Azure AD hybride). La cogestion tire parti de cette amélioration et vous permet de gérer simultanément plusieurs appareils Windows 10 à l’aide de Configuration Manager et d’Intune. C’est une solution qui établit une passerelle entre la gestion classique et la gestion moderne tout en vous donnant la possibilité d’opérer cette transition selon une approche en plusieurs phases. 
 
 ### <a name="prerequisites"></a>Prérequis
 Les prérequis suivants doivent être mis en place avant de pouvoir activer la cogestion. Il existe des prérequis généraux et des prérequis distincts pour les clients Configuration Manager existants et les appareils qui ne sont pas clients.
@@ -161,11 +159,11 @@ Par exemple, si vous aviez les valeurs suivantes :
    >Utilisez la valeur **MutualAuthPath** dans la vue SQL **vProxy_Roles** pour la valeur **URL du point de terminaison de l’authentification mutuelle pour la passerelle de gestion cloud**.
 
 - **Nom de domaine complet du point de gestion** : sccmmp.corp.contoso.com    
-- **CodeSite** : PS1    
+- **Sitecode** : PS1    
 - **ID du locataire Azure AD** : 72F988BF-86F1-41AF-91AB-2D7CD011XXXX    
 - **Nom du locataire Azure AD** : contoso    
 - **ID de l’application cliente Azure AD** : bef323b3-042f-41a6-907a-f9faf0d1XXXX     
-- **URI de l’ID de la ressource AAD** : ConfigMgrServer    
+- **URI d’ID de ressource AAD** : ConfigMgrServer    
 
   > [!Note]    
   > Utilisez la valeur **IdentifierUri** trouvée dans la vue SQL **vSMS_AAD_Application_Ex** pour la valeur **URI de l’ID de la ressource AAD**.
@@ -204,7 +202,7 @@ Dans la section précédente, vous avez préparé les appareils Windows 10 pour
 3. Dans la page Abonnement, cliquez sur **Se connecter** et connectez-vous à votre locataire Intune, puis cliquez sur **Suivant**.   
 4. Dans la page Préparation, configurez les paramètres suivants et cliquez sur **Suivant** :
     - **Groupe pilote** : le groupe pilote contient un ou plusieurs regroupements que vous sélectionnez. Utilisez ce groupe dans le cadre de votre déploiement progressif de la cogestion. Vous pouvez commencer par un regroupement test peu volumineux, puis ajouter d’autres regroupements à ce groupe pilote au fur et à mesure que vous déployez la cogestion pour d’autres utilisateurs et appareils. À tout moment, vous pouvez modifier les regroupements dans le groupe pilote à partir des propriétés de cogestion.
-    - **Production** : lorsque vous sélectionnez ce paramètre, tous les appareils Windows 10 pris en charge sont activés pour la cogestion. Configurez le **Groupe d’exclusions** avec un ou plusieurs regroupements. Les appareils membres d’une des collections de ce groupe sont exclus de l’utilisation de la cogestion. 
+    - **Production** : lorsque vous sélectionnez ce paramètre, tous les appareils Windows 10 pris en charge sont activés pour la cogestion. Configurez le **Groupe d’exclusions** avec un ou plusieurs regroupements. Les appareils membres d’une des collections de ce groupe sont exclus de l’utilisation de la cogestion. 
 5. Dans la page Activation, choisissez **Pilote** ou **Tout** (selon les paramètres que vous avez configurés dans la page Préparation) pour activer l’inscription automatique dans Intune, puis cliquez sur **suivant**. Lorsque vous choisissez **Pilote**, seuls les clients Configuration Manager membres du groupe pilote sont automatiquement inscrits à Intune. Cela vous permet d’activer la cogestion sur une partie des clients pour tester initialement la cogestion et la déployer au moyen d’une approche progressive. 
 6. Dans la page Charges de travail, choisissez de basculer ou non les charges de travail de Configuration Manager devant être gérées par Intune, puis cliquez sur **suivant**. Utilisez les curseurs pour sélectionner le basculement de la charge de travail vers le groupe pilote, ou pour tous les clients Windows 10 (selon les paramètres que vous avez configurés dans la page Préparation). 
 7. Pour activer la cogestion, terminez l’Assistant.  

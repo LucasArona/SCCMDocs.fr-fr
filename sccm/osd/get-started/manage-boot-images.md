@@ -10,21 +10,21 @@ ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6a2fe20896a781d7c897bd5a827d25a7b70390b7
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: b0fa269199f7f3bf4299f90faef9e55766f775d4
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32351511"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421329"
 ---
 # <a name="manage-boot-images-with-system-center-configuration-manager"></a>Gérer les images de démarrage avec System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Une image de démarrage dans Configuration Manager est une image [Windows PE](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-intro) (WinPE) utilisée pendant un déploiement de système d’exploitation. Les images de démarrage sont utilisées pour démarrer un ordinateur dans WinPE. Ce système d’exploitation minimal contient des services et composants limités. Configuration Manager utilise WinPE pour préparer l’ordinateur de destination à l’installation de Windows. Aidez-vous des informations des sections suivantes pour gérer les images de démarrage.
 
 ## <a name="BKMK_BootImageDefault"></a> Images de démarrage par défaut
-Configuration Manager fournit deux images de démarrage par défaut : une pour la prise en charge des plateformes x86 et une autre pour la prise en charge des plateformes x64. Ces images sont stockées dans le dossier \\\\*nom_serveur*>\SMS_<*code_site*>\osd\boot\\<*x64*> ou <*i386*>. Les images de démarrage par défaut sont mises à jour ou régénérées selon l’action que vous effectuez.
+Configuration Manager propose deux images de démarrage par défaut : Une pour prendre en charge les plates-formes x86 et l'autre pour prendre en charge les plates-formes x64. Ces images sont stockées dans le dossier \\\\*nom_serveur*>\SMS_<*code_site*>\osd\boot\\<*x64*> ou <*i386*>. Les images de démarrage par défaut sont mises à jour ou régénérées selon l’action que vous effectuez.
 
 Prenez en compte les comportements suivants des actions décrites pour les images de démarrage par défaut :
 - Les objets de pilote sources doivent être valides. Ces objets sont notamment les fichiers sources du pilote. Si les objets ne sont pas valides, le site n’ajoute pas les pilotes aux images de démarrage.
@@ -62,51 +62,51 @@ Quand vous utilisez l’action **Mettre à jour les points de distribution** à 
 
  Au moment de l’installation du site, Configuration Manager ajoute automatiquement des images de démarrage qui sont basées sur une version de WinPE de la version prise en charge de Windows ADK. Dans certaines versions de Configuration Manager, vous pouvez ajouter des images de démarrage basées sur une version de WinPE différente de la version prise en charge de Windows ADK. Une erreur se produit si vous essayez d’ajouter une image de démarrage qui contient une version non prise en charge de WinPE. Voici la liste des versions de WinPE et Windows ADK actuellement prises en charge : 
 
--   **Version de Windows ADK**  
+- **Version de Windows ADK**  
 
-     Windows ADK pour Windows 10  
+   Windows ADK pour Windows 10  
 
--   **Versions de Windows PE pour les images de démarrage personnalisables à partir de la console Configuration Manager**  
+- **Versions de Windows PE pour les images de démarrage personnalisables à partir de la console Configuration Manager**  
 
-     Windows PE 10  
+   Windows PE 10  
 
--   **Versions prises en charge de Windows PE pour les images de démarrage non personnalisables à partir de la console Configuration Manager**  
+- **Versions prises en charge de Windows PE pour les images de démarrage non personnalisables à partir de la console Configuration Manager**  
 
-     Windows PE 3.1<sup>1</sup> et Windows PE 5  
+   Windows PE 3.1<sup>1</sup> et Windows PE 5  
 
-     <sup>1</sup> Vous pouvez ajouter une image de démarrage à Configuration Manager uniquement si elle est basée sur Windows PE 3.1. Mettez à niveau le Kit d’installation automatisée (Windows AIK) pour Windows 7 (basé sur Windows PE 3.0) avec le supplément Windows AIK pour Windows 7 SP1 (basé sur Windows PE 3.1). Téléchargez le supplément Windows AIK pour Windows 7 SP1 à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=5188).  
+   <sup>1</sup> Vous pouvez ajouter une image de démarrage à Configuration Manager uniquement si elle est basée sur Windows PE 3.1. Mettez à niveau le Kit d’installation automatisée (Windows AIK) pour Windows 7 (basé sur Windows PE 3.0) avec le supplément Windows AIK pour Windows 7 SP1 (basé sur Windows PE 3.1). Téléchargez le supplément Windows AIK pour Windows 7 SP1 à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=5188).  
 
-     Par exemple, utilisez la console Configuration Manager pour personnaliser les images de démarrage basées sur Windows PE 10 du Windows ADK pour Windows 10. Pour une image de démarrage basée sur Windows PE 5, personnalisez-la sur un autre ordinateur à l’aide de la version de DISM du Windows ADK pour Windows 8. Ensuite, ajoutez l’image de démarrage personnalisée à la console Configuration Manager. Pour plus d’informations, consultez [Personnaliser les images de démarrage](customize-boot-images.md).
+   Par exemple, utilisez la console Configuration Manager pour personnaliser les images de démarrage basées sur Windows PE 10 du Windows ADK pour Windows 10. Pour une image de démarrage basée sur Windows PE 5, personnalisez-la sur un autre ordinateur à l’aide de la version de DISM du Windows ADK pour Windows 8. Ensuite, ajoutez l’image de démarrage personnalisée à la console Configuration Manager. Pour plus d’informations, consultez [Personnaliser les images de démarrage](customize-boot-images.md).
 
- Pour ajouter une image de démarrage manuellement, procédez comme suit.  
+  Pour ajouter une image de démarrage manuellement, procédez comme suit.  
 
 #### <a name="to-add-a-boot-image"></a>Pour ajouter une image de démarrage  
 
-1.  Dans la console Configuration Manager, cliquez sur **Bibliothèque de logiciels**.  
+1. Dans la console Configuration Manager, cliquez sur **Bibliothèque de logiciels**.  
 
-2.  Dans l'espace de travail **Bibliothèque de logiciels** , développez **Systèmes d'exploitation**, puis cliquez sur **Images de démarrage**.  
+2. Dans l'espace de travail **Bibliothèque de logiciels** , développez **Systèmes d'exploitation**, puis cliquez sur **Images de démarrage**.  
 
-3.  Dans l'onglet **Accueil** , dans le groupe **Créer** , cliquez sur **Ajouter une image de démarrage** pour démarrer l'Assistant Ajout d'une image de démarrage.  
+3. Dans l'onglet **Accueil** , dans le groupe **Créer** , cliquez sur **Ajouter une image de démarrage** pour démarrer l'Assistant Ajout d'une image de démarrage.  
 
-4.  Sur la page **Source de données** , spécifiez les options suivantes et cliquez sur **Suivant**.  
+4. Sur la page **Source de données** , spécifiez les options suivantes et cliquez sur **Suivant**.  
 
-    -   Dans la zone **Chemin d'accès** , indiquez le chemin d'accès au fichier WIM de l'image de démarrage.  
+   -   Dans la zone **Chemin d'accès** , indiquez le chemin d'accès au fichier WIM de l'image de démarrage.  
 
-         Le chemin d'accès spécifié doit être un chemin d'accès réseau valide au format UNC. Exemple : \\\\<*nom_serveur*\\<*nom_partage*>\\<*nom_image_démarrage*>.wim.  
+        Le chemin d'accès spécifié doit être un chemin d'accès réseau valide au format UNC. Exemple : \\\\<*nom_serveur*\\<*nom_partage*>\\<*nom_image_démarrage*>.wim.  
 
-    -   Sélectionnez l'image de démarrage dans la liste déroulante **Image de démarrage** . Si le fichier WIM contient plusieurs images de démarrage, sélectionnez l’image appropriée.  
+   -   Sélectionnez l'image de démarrage dans la liste déroulante **Image de démarrage** . Si le fichier WIM contient plusieurs images de démarrage, sélectionnez l’image appropriée.  
 
-5.  Dans la page **Général**  , spécifiez les options suivantes et cliquez sur **Suivant**.  
+5. Dans la page **Général**  , spécifiez les options suivantes et cliquez sur **Suivant**.  
 
-    -   Dans la zone **Nom** , spécifiez un nom unique pour l'image de démarrage.  
+   -   Dans la zone **Nom** , spécifiez un nom unique pour l'image de démarrage.  
 
-    -   Dans la zone **Version** , spécifiez un numéro de version pour l'image de démarrage.  
+   -   Dans la zone **Version** , spécifiez un numéro de version pour l'image de démarrage.  
 
-    -   Dans la zone **Commentaire** , spécifiez une description sommaire de l'utilisation de l'image de démarrage.  
+   -   Dans la zone **Commentaire** , spécifiez une description sommaire de l'utilisation de l'image de démarrage.  
 
-6.  Effectuez toutes les étapes de l'Assistant.  
+6. Effectuez toutes les étapes de l'Assistant.  
 
- L’image de démarrage est maintenant répertoriée dans le nœud **Image de démarrage** de la console Configuration Manager. Avant d’utiliser l’image de démarrage pour déployer un système d’exploitation, distribuez l’image de démarrage aux points de distribution. 
+   L’image de démarrage est maintenant répertoriée dans le nœud **Image de démarrage** de la console Configuration Manager. Avant d’utiliser l’image de démarrage pour déployer un système d’exploitation, distribuez l’image de démarrage aux points de distribution. 
 
 > [!NOTE]  
 >  Dans le nœud **Image de démarrage** de la console, la colonne **Taille (Ko)** affiche la taille décompressée de chaque image de démarrage. Quand le site envoie une image de démarrage sur le réseau, il envoie une copie compressée. Cette copie est généralement inférieure à la taille indiquée dans la colonne **Taille (Ko)**.  
@@ -127,13 +127,13 @@ Quand vous utilisez l’action **Mettre à jour les points de distribution** à 
 ##  <a name="BKMK_ModifyBootImages"></a> Modifier une image de démarrage  
  Vous pouvez ajouter des pilotes de périphérique à l’image de démarrage, en supprimer de celle-ci ou modifier les propriétés associées à l’image. Les pilotes de périphérique que vous ajoutez ou supprimez peuvent inclure des pilotes de périphérique de stockage de masse ou de cartes réseau. Quand vous modifiez des images de démarrage, tenez compte des facteurs suivants :  
 
--   Importez et activez les pilotes de périphérique dans le catalogue de pilotes de périphérique avant de les ajouter à l’image de démarrage.  
+- Importez et activez les pilotes de périphérique dans le catalogue de pilotes de périphérique avant de les ajouter à l’image de démarrage.  
 
--   Quand vous modifiez une image de démarrage, cette image ne modifie aucun des packages associés auxquels l’image de démarrage fait référence.  
+- Quand vous modifiez une image de démarrage, cette image ne modifie aucun des packages associés auxquels l’image de démarrage fait référence.  
 
--   Quand vous modifiez une image de démarrage, **mettez-la à jour** sur les points de distribution qui l’ont déjà. Ce processus rend la version la plus récente de l’image de démarrage disponible pour les clients. Pour plus d’informations, voir [Manage content you have distributed](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_manage).  
+- Quand vous modifiez une image de démarrage, **mettez-la à jour** sur les points de distribution qui l’ont déjà. Ce processus rend la version la plus récente de l’image de démarrage disponible pour les clients. Pour plus d’informations, voir [Manage content you have distributed](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_manage).  
 
- Utilisez la procédure suivante pour modifier une image de démarrage.  
+  Utilisez la procédure suivante pour modifier une image de démarrage.  
 
 #### <a name="to-modify-the-properties-of-a-boot-image"></a>Pour modifier les propriétés d'une image de démarrage  
 
@@ -220,7 +220,7 @@ Quand vous utilisez l’action **Mettre à jour les points de distribution** à 
 
         -   Cliquez sur **Valider** pour vérifier l'intégrité du package d'images de démarrage sur le point de distribution ou le groupe de points de distribution sélectionné.  
 
-    -   Sous l’onglet **Composants facultatifs**, spécifiez les composants à ajouter à Windows PE pour être utilisés avec Configuration Manager. Pour plus d’informations sur les composants facultatifs disponibles, consultez [WinPE : Ajouter des packages (informations de référence sur les composants facultatifs)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).  
+    -   Sous l’onglet **Composants facultatifs**, spécifiez les composants à ajouter à Windows PE pour être utilisés avec Configuration Manager. Pour plus d'informations sur les composants facultatifs disponibles, consultez la page [WinPE : Ajouter des packages (informations de référence sur les composants facultatifs)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).  
 
     -   Dans l'onglet **Sécurité** , sélectionnez un utilisateur administratif et modifiez les opérations qu'il peut effectuer.  
 
@@ -249,14 +249,14 @@ Quand vous utilisez l’action **Mettre à jour les points de distribution** à 
 ##  <a name="BKMK_BootImageLanguage"></a> Configurer plusieurs langues pour le déploiement d’images de démarrage  
  Les images de démarrage sont indépendantes de la langue. Cette fonctionnalité vous permet d’utiliser une image de démarrage pour afficher le texte de la séquence de tâches dans plusieurs langues en mode WinPE. Ajoutez la prise en charge de langue appropriée à partir de l’onglet **Composants facultatifs** de l’image de démarrage. Ensuite, définissez la variable de séquence de tâches appropriée pour indiquer la langue à afficher. La langue du système d’exploitation déployé est indépendante de la langue de WinPE. La langue que WinPE affiche est déterminée comme suit :  
 
--   Quand un utilisateur exécute la séquence de tâches à partir d’un système d’exploitation existant, Configuration Manager utilise automatiquement la langue configurée pour l’utilisateur. Quand la séquence de tâches est exécutée automatiquement à une échéance de déploiement obligatoire, Configuration Manager utilise la langue du système d’exploitation.  
+- Quand un utilisateur exécute la séquence de tâches à partir d’un système d’exploitation existant, Configuration Manager utilise automatiquement la langue configurée pour l’utilisateur. Quand la séquence de tâches est exécutée automatiquement à une échéance de déploiement obligatoire, Configuration Manager utilise la langue du système d’exploitation.  
 
--   Dans le cas des déploiements de système d’exploitation qui utilisent PXE ou un support, définissez la valeur de l’ID de langue dans la variable **SMSTSLanguageFolder**, dans le cadre d'une commande de prédémarrage. Quand l’ordinateur démarre dans WinPE, les messages sont affichés dans la langue que vous avez spécifiée dans la variable. En cas d’erreur durant l’accès au fichier de ressources de langue figurant dans le dossier spécifié ou si vous ne définissez pas la variable, WinPE affiche les messages dans la langue par défaut.  
+- Dans le cas des déploiements de système d’exploitation qui utilisent PXE ou un support, définissez la valeur de l’ID de langue dans la variable **SMSTSLanguageFolder**, dans le cadre d'une commande de prédémarrage. Quand l’ordinateur démarre dans WinPE, les messages sont affichés dans la langue que vous avez spécifiée dans la variable. En cas d’erreur durant l’accès au fichier de ressources de langue figurant dans le dossier spécifié ou si vous ne définissez pas la variable, WinPE affiche les messages dans la langue par défaut.  
 
-    > [!NOTE]  
-    >  Quand le média est protégé par un mot de passe, le texte qui invite l’utilisateur à entrer le mot de passe est toujours affiché dans la langue de WinPE.  
+  > [!NOTE]  
+  >  Quand le média est protégé par un mot de passe, le texte qui invite l’utilisateur à entrer le mot de passe est toujours affiché dans la langue de WinPE.  
 
- Pour définir la langue de WinPE pour les déploiements PXE ou les déploiements de système d’exploitation établis par un média, suivez la procédure ci-dessous.  
+  Pour définir la langue de WinPE pour les déploiements PXE ou les déploiements de système d’exploitation établis par un média, suivez la procédure ci-dessous.  
 
 #### <a name="to-set-the-windows-pe-language-for-a-pxe-or-media-initiated-operating-system-deployment"></a>Pour définir la langue de Windows PE pour un déploiement PXE ou un déploiement de système d'exploitation établi par un média  
 

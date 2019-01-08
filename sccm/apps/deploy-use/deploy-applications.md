@@ -10,16 +10,16 @@ ms.assetid: 2629c376-ec43-4f0e-a78b-4223cc9302bf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5b70c651186a35e0f1c5a5da8b9c7dffe0abc7da
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 32c1aea44fb69ba667752807e9d3f73487db7c34
+ms.sourcegitcommit: c60e057075a83f07d1ca2577c3de1c7d7c8e9cec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456581"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626444"
 ---
 # <a name="deploy-applications-with-configuration-manager"></a>Déployer les applications avec Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Créez ou simulez le déploiement d’une application sur un regroupement d’appareils ou d’utilisateurs dans Configuration Manager. Ce déploiement fournit des instructions au client Configuration Manager sur la manière et le moment d’installer le logiciel. 
 
@@ -48,25 +48,25 @@ Vous pouvez aussi simuler un déploiement d’application. Cette simulation test
 > - [Planification](#bkmk_deploy-sched)
 > - [Expérience utilisateur](#bkmk_deploy-ux)
 > - [Alertes](#bkmk_deploy-alerts)
-> - [iOS : stratégies de configuration des applications](#bkmk_deploy-ios)
+> - [iOS : Stratégies de configuration d’applications](#bkmk_deploy-ios)
 
 
 ### <a name="bkmk_deploy-general"></a> Informations **générales** sur le déploiement 
 
 Dans la page **Général** de l’Assistant Déploiement logiciel, spécifiez les informations suivantes :  
 
-- **Logiciel** : cette valeur indique l’application à déployer. Cliquez sur **Parcourir** pour sélectionner une autre application.  
+- **Logiciels** : Cette valeur indique l’application à déployer. Cliquez sur **Parcourir** pour sélectionner une autre application.  
 
-- **Regroupement** : cliquez sur **Parcourir** pour sélectionner le regroupement dans lequel déployer l’application.  
+- **Regroupement** : Cliquez sur **Parcourir** pour sélectionner le regroupement sur lequel vous voulez déployer l’application.  
 
-- **Utiliser des groupes de points de distribution par défaut associés à ce regroupement** : stocke le contenu de l’application dans le groupe de points de distribution par défaut du regroupement. Si vous n’avez associé aucun groupe de points de distribution au regroupement sélectionné, cette option est grisée.  
+- **Utiliser des groupes de points de distribution par défaut associés à ce regroupement** : Stockez le contenu de l’application sur le groupe de points de distribution par défaut du regroupement. Si vous n’avez associé aucun groupe de points de distribution au regroupement sélectionné, cette option est grisée.  
 
-- **Distribuer automatiquement le contenu pour les dépendances** : si l’un des types de déploiement de l’application a des dépendances, le site envoie aussi le contenu de l’application dépendante aux points de distribution.  
+- **Distribuer automatiquement le contenu pour les dépendances** : Si l’un des types de déploiement de l’application a des dépendances, le site envoie aussi le contenu de l’application dépendante aux points de distribution.  
 
     >[!Note]  
     > Si vous mettez à jour l’application dépendante après avoir déployé l’application principale, le site ne distribue pas automatiquement le nouveau contenu pour la dépendance.  
 
-- **Commentaires (facultatif)**  : si vous le souhaitez, entrez une description de ce déploiement.  
+- **Commentaires (facultatif)** : Si vous le souhaitez, entrez une description de ce déploiement.  
 
 
 ### <a name="bkmk_deploy-content"></a> Options relatives au **contenu** du déploiement
@@ -82,31 +82,31 @@ Si le contenu de l’application est déjà distribué, il apparaît ici.
 
 Dans la page **Paramètres de déploiement**, spécifiez les informations suivantes :  
 
-- **Action** : à partir de la liste déroulante, indiquez si ce déploiement est destiné à **Installer** ou **Désinstaller** l’application.  
+- **Action** : À partir de la liste déroulante, indiquez si ce déploiement est destiné à **Installer** ou **Désinstaller** l’application.  
 
     > [!NOTE]  
     >  Si vous créez un déploiement pour **installer** une application et un autre pour **désinstaller** la même application sur le même appareil, le déploiement **d’installation** est prioritaire.  
 
     Vous ne pouvez pas changer l’action d’un déploiement une fois que vous l’avez créé.  
 
-- **Objet**: dans la liste déroulante, choisissez l’une des options suivantes :  
+- **Fonction** : Dans la liste déroulante, choisissez l'une des options suivantes :  
 
-    - **Disponible** : l’utilisateur voit l’application dans le Centre logiciel. Il peut l’installer sur demande.  
+  - **Disponible** : L’utilisateur voit l’application dans le Centre logiciel. Il peut l’installer sur demande.  
 
-    - **Obligatoire** : le client installe automatiquement l’application conformément à la planification que vous définissez. Si l’application n’est pas masquée, un utilisateur peut suivre l’état de son déploiement. Il peut également utiliser le Centre logiciel pour installer l’application avant l’échéance.  
+  - **Obligatoire** : Le client installe automatiquement l’application conformément à la planification que vous définissez. Si l’application n’est pas masquée, un utilisateur peut suivre l’état de son déploiement. Il peut également utiliser le Centre logiciel pour installer l’application avant l’échéance.  
 
     > [!NOTE]   
     >  Quand vous définissez l’action de déploiement sur **Désinstaller**, l’objet du déploiement est automatiquement défini sur **Obligatoire**. Vous ne pouvez pas modifier ce comportement.  
 
-- **Autoriser les utilisateurs finaux à tenter de réparer cette application** : depuis la version 1810, si vous avez créé l’application avec une ligne de commande de réparation, activez cette option. Les utilisateurs voient une option dans le Centre logiciel pour **Réparer** l’application.<!--1357866-->  
+- **Autoriser les utilisateurs finaux à tenter de réparer cette application** : À compter de la version 1810, si vous avez créé l’application avec une ligne de commande de réparation, activez cette option. Les utilisateurs voient une option dans le Centre logiciel pour **Réparer** l’application.<!--1357866-->  
 
-- **Prédéployer des logiciels sur le périphérique principal de l’utilisateur** : si le déploiement est destiné à un utilisateur, sélectionnez cette option pour déployer l’application sur le périphérique principal de l’utilisateur. Ce paramètre ne nécessite pas que l’utilisateur se connecte avant que le déploiement ne s’exécute. Si l’utilisateur doit interagir avec l’installation, ne sélectionnez pas cette option. Cette option est disponible uniquement quand le déploiement est **Obligatoire**.  
+- **Prédéployer des logiciels sur le périphérique principal de l’utilisateur** : Si le déploiement concerne un utilisateur, sélectionnez cette option pour déployer l’application sur l’appareil principal de l’utilisateur. Ce paramètre ne nécessite pas que l’utilisateur se connecte avant que le déploiement ne s’exécute. Si l’utilisateur doit interagir avec l’installation, ne sélectionnez pas cette option. Cette option est disponible uniquement quand le déploiement est **Obligatoire**.  
 
-- **Envoyer des paquets de mise en éveil**: si le déploiement est **Obligatoire**, Configuration Manager envoie un paquet de mise en éveil aux ordinateurs avant que le client n’exécute le déploiement. Ce paquet réveille les ordinateurs à l’échéance de l’installation. Avant d’utiliser cette option, les ordinateurs et les réseaux doivent être configurés pour Wake On LAN. Pour plus d’informations, consultez [Planifier la sortie de veille des clients](/sccm/core/clients/deploy/plan/plan-wake-up-clients).  
+- **Envoyer des paquets de mise en éveil** : Si le déploiement est **Obligatoire**, Configuration Manager envoie un paquet de mise en éveil aux ordinateurs avant que le client n’exécute le déploiement. Ce paquet réveille les ordinateurs à l’échéance de l’installation. Avant d’utiliser cette option, les ordinateurs et les réseaux doivent être configurés pour Wake On LAN. Pour plus d’informations, consultez [Planifier la sortie de veille des clients](/sccm/core/clients/deploy/plan/plan-wake-up-clients).  
 
-- **Autoriser les clients avec une connexion Internet facturée à l’usage à télécharger le contenu une fois l’échéance d’installation atteinte, ce qui peut entraîner des frais supplémentaires** : cette option est disponible uniquement pour les déploiements dont l’objet est **Obligatoire**.  
+- **Autoriser les clients avec une connexion Internet facturée à l’usage à télécharger le contenu une fois l’échéance d’installation atteinte, ce qui peut entraîner des frais supplémentaires** : Cette option est disponible uniquement pour les déploiements dont l’objectif est **Obligatoire**.  
 
-- **Mettre automatiquement à niveau toutes les versions remplacées de cette application** : le client met à niveau toute version remplacée de l’application avec l’application de remplacement. 
+- **Mettre automatiquement à niveau toutes les versions remplacées de cette application** : Le client met à jour toutes les versions remplacées de l’application avec l’application de remplacement. 
 
     > [!Note]  
     > Cette option fonctionne, quelle que soit l’approbation de l’administrateur. Si un administrateur a déjà approuvé la version obsolète, il n’a pas besoin d’approuver également la version de remplacement. L’approbation concerne les nouvelles demandes uniquement, pas les mises à niveau de remplacement.<!--515824-->  
@@ -118,9 +118,12 @@ Dans la page **Paramètres de déploiement**, spécifiez les informations suivan
 #### <a name="bkmk_approval"></a> Paramètres d’approbation
 Un des paramètres d’approbation suivants s’affiche, en fonction de votre version de Configuration Manager :
 
-- **Exiger l’approbation de l’administrateur si des utilisateurs demandent cette application** : pour les versions 1710 et antérieures, l’utilisateur ne peut pas installer l’application demandée tant que l’administrateur ne lui a pas donné son approbation. Cette option est grisée quand l’objet du déploiement est **Obligatoire** ou que vous déployez l’application sur un regroupement d’appareils.  
+- **Exiger l’approbation de l’administrateur si des utilisateurs demandent cette application** : Pour les versions 1710 et antérieures, l’administrateur approuve les demandes des utilisateurs pour une application avant qu’ils puissent l’installer. Cette option est grisée quand l’objet du déploiement est **Obligatoire** ou que vous déployez l’application sur un regroupement d’appareils.  
 
-- **Un administrateur doit approuver une demande pour cette application sur le périphérique** : depuis la version 1802, l’utilisateur ne peut pas installer l’application demandée tant que l’administrateur ne lui a pas donné son approbation. Si l’administrateur approuve la demande, l’utilisateur ne pourra installer l’application que sur cet appareil. Il devra soumettre une autre demande pour installer l’application sur un autre appareil. Cette option est grisée quand l’objet du déploiement est **Obligatoire** ou que vous déployez l’application sur un regroupement d’appareils. <!--1357015-->  
+- **Un administrateur doit approuver la demande de cette application sur l’appareil** : À compter de la version 1802, l’administrateur approuve les demandes des utilisateurs pour une application avant qu’ils puissent l’installer sur l’appareil demandé. Si l’administrateur approuve la demande, l’utilisateur ne pourra installer l’application que sur cet appareil. Il devra soumettre une autre demande pour installer l’application sur un autre appareil. Cette option est grisée quand l’objet du déploiement est **Obligatoire** ou que vous déployez l’application sur un regroupement d’appareils.
+
+ À compter de la version 1810, vous pouvez également définir une liste d’adresses e-mail qui reçoivent la demande d’approbation. 
+<!--1357015-->  
 
 Pour plus d’informations, consultez [Approuver des applications](/sccm/apps/deploy-use/app-approval).
 
@@ -159,11 +162,11 @@ Après l’échéance, le client installe l’application au cours de la premiè
 
 Dans la page **Expérience utilisateur**, spécifiez la façon dont les utilisateurs peuvent interagir avec l’installation de l’application.
 
-- **Notifications à l’utilisateur** : indiquez si vous souhaitez afficher les notifications dans le Centre logiciel à l’heure de disponibilité configurée. Ce paramètre contrôle également s’il faut avertir les utilisateurs sur les ordinateurs clients. Pour les déploiements disponibles, vous ne pouvez pas sélectionner l’option **Masquer dans le Centre logiciel et toutes les notifications**.  
+- **Notifications à l’utilisateur** : Indiquez si vous souhaitez afficher les notifications dans le Centre logiciel au temps disponible configuré. Ce paramètre permet aussi de contrôler si des notifications doivent être envoyées aux utilisateurs sur les ordinateurs clients. Pour les déploiements disponibles, vous ne pouvez pas sélectionner l’option **Masquer dans le Centre logiciel et toutes les notifications**.  
 
-- **Installation du logiciel** et **Redémarrage système** : configurez ces paramètres pour les déploiements obligatoires uniquement. Ils spécifient ce qui se passe quand le déploiement atteint l’échéance en dehors des fenêtres de maintenance définies. Pour plus d’informations sur les fenêtres de maintenance, consultez [Guide pratique pour utiliser les fenêtres de maintenance](/sccm/core/clients/manage/collections/use-maintenance-windows).  
+- **Installation du logiciel** et **Redémarrage du système** : Configurez ces paramètres uniquement pour les déploiements requis. Ils spécifient ce qui se passe quand le déploiement atteint l’échéance en dehors des fenêtres de maintenance définies. Pour plus d’informations sur les fenêtres de maintenance, consultez [Guide pratique pour utiliser les fenêtres de maintenance](/sccm/core/clients/manage/collections/use-maintenance-windows).  
 
-- **Traitement des filtres d’écriture pour les appareils Windows Embedded** : ce paramètre contrôle le comportement d’installation sur les appareils Windows Embedded qui sont activés avec un filtre d’écriture. Choisissez l’option permettant de valider les modifications à l’échéance de l’installation ou au cours d’une fenêtre de maintenance. Quand vous sélectionnez cette option, un redémarrage est nécessaire, qui conserve les modifications sur l’appareil. Sinon, l’application est installée sur l’overlay temporaire et validée ultérieurement.  
+- **Traitement des filtres d’écriture pour les appareils Windows Embedded** : Ce paramètre contrôle le comportement d’installation sur les appareils Windows Embedded qui sont activés avec un filtre d’écriture. Choisissez l’option permettant de valider les modifications à l’échéance de l’installation ou au cours d’une fenêtre de maintenance. Quand vous sélectionnez cette option, un redémarrage est nécessaire, qui conserve les modifications sur l’appareil. Sinon, l’application est installée sur l’overlay temporaire et validée ultérieurement.  
 
     - Quand vous déployez une mise à jour logicielle sur un appareil Windows Embedded, vérifiez que l’appareil est membre d’un regroupement pour lequel une fenêtre de maintenance a été configurée. Pour plus d’informations sur les fenêtres de maintenance et les appareils Windows Embedded, consultez [Créer des applications Windows Embedded](/sccm/apps/get-started/creating-windows-embedded-applications).  
 
@@ -173,7 +176,7 @@ Dans la page **Expérience utilisateur**, spécifiez la façon dont les utilisat
 Dans la page **Alertes**, configurez la manière dont Configuration Manager génère des alertes pour ce déploiement. Si vous utilisez également Operations Manager, configurez aussi ses alertes. Vous ne pouvez configurer que certaines alertes pour les déploiements obligatoires. 
 
 
-### <a name="bkmk_deploy-ios"></a> iOS : **stratégies de configuration des applications**
+### <a name="bkmk_deploy-ios"></a> iOS : **Stratégies de configuration d’applications**
 
 Quand vous déployez un type de déploiement iOS, vous voyez également la page **Stratégies de configuration des applications**. Si vous avez déjà créé une stratégie de configuration des applications iOS, cliquez sur **Nouveau** pour associer ce déploiement à la stratégie. Pour plus d’informations sur ce type de stratégie, consultez [Configurer des applications iOS avec des stratégies de configuration des applications](/sccm/apps/deploy-use/configure-ios-apps-with-app-configuration-policies).
 
@@ -208,9 +211,9 @@ Quand vous supprimez un déploiement d’application, les instances de l’appli
 
 Quand les utilisateurs reçoivent des logiciels obligatoires et qu’ils sélectionnent le paramètre **Répéter et me rappeler**, ils peuvent choisir parmi les options suivantes :  
 
-- **Ultérieurement** : indique que les notifications sont planifiées selon les paramètres de notification configurés dans les paramètres du client.  
+- **Ultérieurement** : Indique que les notifications sont planifiées selon les paramètres de notification configurés dans les paramètres du client.  
 
-- **Heure fixe** : indique que la notification est programmée pour s’afficher de nouveau après l’heure sélectionnée. Par exemple, si vous sélectionnez 30 minutes, la notification s’affiche de nouveau au bout de 30 minutes.  
+- **Heure fixe** : Indique que la notification est programmée pour s’afficher de nouveau après l’heure sélectionnée. Par exemple, si vous sélectionnez 30 minutes, la notification s’affiche de nouveau au bout de 30 minutes.  
 
 ![Groupe Agent ordinateur dans les paramètres par défaut du client](media/ComputerAgentSettings.png)
 
@@ -284,7 +287,7 @@ Une fois que les clients ont reçu le déploiement, voici le comportement qui pr
 
     - [Passerelle de gestion cloud](/sccm/core/clients/manage/plan-cloud-management-gateway)  
 
-    - Activer le paramètre client : **Autoriser les demandes de stratégies utilisateurs provenant de clients Internet** dans le groupe [Stratégie client](/sccm/core/clients/deploy/about-client-settings#client-policy)  
+    - Activez le paramètre client : **Autoriser les demandes de stratégies utilisateurs provenant de clients Internet** dans le groupe [Stratégie client](/sccm/core/clients/deploy/about-client-settings#client-policy)  
 
 - Pour prendre en charge les clients sur l’intranet :  
 

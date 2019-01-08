@@ -10,16 +10,16 @@ ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7635dce325a2612c144c6eaa9c733b7dffc7c251
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 1c1d83f6dc0de701176bbf6eeec8936afa081829
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456207"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420683"
 ---
 # <a name="install-in-console-updates-for-configuration-manager"></a>Installer des mises à jour dans la console pour Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Configuration Manager se synchronise avec le service cloud Microsoft pour obtenir les mises à jour. Installez ensuite ces mises à jour à partir de la console Configuration Manager.
 
@@ -101,7 +101,7 @@ Par défaut, la classe **Packages de mise à jour** (SMS_CM_Updatepackages) fait
 Passez en revue les étapes suivantes avant d’installer une mise à jour à partir de la console Configuration Manager.  
 
 
-###  <a name="bkmk_step1"></a> Étape 1 : consulter la liste de contrôle de mise à jour  
+###  <a name="bkmk_step1"></a> Étape 1 : Consulter la liste de contrôle de mise à jour  
 
 Passez en revue la liste de contrôle de mise à jour applicable pour connaître les actions à entreprendre avant de lancer la mise à jour :
 
@@ -112,7 +112,7 @@ Passez en revue la liste de contrôle de mise à jour applicable pour connaître
 - [Liste de contrôle pour l’installation de la mise à jour 1802](/sccm/core/servers/manage/checklist-for-installing-update-1802)
 
 
-###  <a name="bkmk_step2"></a> Étape 2 : exécuter l’outil de vérification des prérequis avant d’installer une mise à jour  
+###  <a name="bkmk_step2"></a> Étape 2 : Exécuter l’outil de vérification des prérequis avant d’installer une mise à jour  
 
 Avant d’installer une mise à jour, envisagez d’exécuter la vérification des prérequis pour cette mise à jour. Si vous effectuez cette vérification avant d’installer une mise à jour :  
 
@@ -165,18 +165,18 @@ Installez la mise à jour en dehors des heures de bureau normales pour chaque si
 #### <a name="1-when-the-update-installation-starts"></a>1. Au démarrage de l’installation de la mise à jour  
 L’Assistant Mises à jour affiche la liste des zones de produit auxquelles s’applique la mise à jour.  
 
--   Dans la page **Général** de l’Assistant, configurez les **avertissements relatifs à la configuration requise** en fonction des besoins :  
+- Dans la page **Général** de l’Assistant, configurez les **avertissements relatifs à la configuration requise** en fonction des besoins :  
 
-    -   Les erreurs de configuration requise bloquent toujours l’installation de la mise à jour. Corrigez les erreurs avant de réessayer d’installer correctement la mise à jour. Pour plus d’informations, consultez [Nouvelle tentative d’installation d’une mise à jour ayant échoué](#bkmk_retry).  
+  - Les erreurs de configuration requise bloquent toujours l’installation de la mise à jour. Corrigez les erreurs avant de réessayer d’installer correctement la mise à jour. Pour plus d’informations, consultez [Nouvelle tentative d’installation d’une mise à jour ayant échoué](#bkmk_retry).  
 
-    -   Des avertissements de configuration requise peuvent également bloquer l’installation de la mise à jour. Corrigez les avertissements avant de réessayer d’installer la mise à jour. Pour plus d’informations, consultez [Nouvelle tentative d’installation d’une mise à jour ayant échoué](#bkmk_retry).  
+  - Des avertissements de configuration requise peuvent également bloquer l’installation de la mise à jour. Corrigez les avertissements avant de réessayer d’installer la mise à jour. Pour plus d’informations, consultez [Nouvelle tentative d’installation d’une mise à jour ayant échoué](#bkmk_retry).  
 
-    -   **Ignorer les avertissements relatifs aux conditions requises et installer cette mise à jour sans tenir compte des manquements à la configuration requise** : définissez une condition pour que l’installation de la mise à jour ignore les avertissements relatifs aux prérequis. Cette option permet de poursuivre l’installation de la mise à jour. Si vous ne sélectionnez pas cette option, l’installation de la mise à jour s’arrête en cas d’avertissement. Si vous n’avez pas exécuté la vérification des prérequis et corrigé les avertissements relatifs aux prérequis pour un site, n’utilisez pas cette option.  
+  - **Ignorer les avertissements relatifs aux conditions requises et installer cette mise à jour sans tenir compte des manquements à la configuration requise** : Définissez une condition afin que l’installation de la mise à jour ignore les avertissements relatifs à la configuration requise. Cette option permet de poursuivre l’installation de la mise à jour. Si vous ne sélectionnez pas cette option, l’installation de la mise à jour s’arrête en cas d’avertissement. Si vous n’avez pas exécuté la vérification des prérequis et corrigé les avertissements relatifs aux prérequis pour un site, n’utilisez pas cette option.  
 
-      Dans les espaces de travail **Administration** et **Surveillance**, le nœud Mises à jour et maintenance affiche un bouton **Ignorer les avertissements de configuration requise** dans le ruban. Ce bouton devient disponible quand l’installation d’un package de mise à jour n’arrive pas à terme en raison d’avertissements de vérification des prérequis. Par exemple, vous installez une mise à jour sans utiliser l’option pour ignorer les avertissements de configuration requise (à partir de l’Assistant Mises à jour). L’installation de la mise à jour s’interrompt, avec un état d’avertissement de configuration requise, mais sans erreur. Vous cliquez plus tard sur **Ignorer les avertissements de configuration requise** dans le ruban. Cette action déclenche la poursuite automatique de l’installation de cette mise à jour en ignorant les avertissements de configuration requise. Quand vous utilisez cette option, l’installation de la mise à jour se poursuit automatiquement après quelques minutes.  
+    Dans les espaces de travail **Administration** et **Surveillance**, le nœud Mises à jour et maintenance affiche un bouton **Ignorer les avertissements de configuration requise** dans le ruban. Ce bouton devient disponible quand l’installation d’un package de mise à jour n’arrive pas à terme en raison d’avertissements de vérification des prérequis. Par exemple, vous installez une mise à jour sans utiliser l’option pour ignorer les avertissements de configuration requise (à partir de l’Assistant Mises à jour). L’installation de la mise à jour s’interrompt, avec un état d’avertissement de configuration requise, mais sans erreur. Vous cliquez plus tard sur **Ignorer les avertissements de configuration requise** dans le ruban. Cette action déclenche la poursuite automatique de l’installation de cette mise à jour en ignorant les avertissements de configuration requise. Quand vous utilisez cette option, l’installation de la mise à jour se poursuit automatiquement après quelques minutes.  
 
 
--   Quand une mise à jour s’applique au client Configuration Manager, choisissez de tester la mise à jour du client avec un ensemble limité de clients. Pour plus d’informations, consultez [Guide pratique pour tester les mises à niveau du client dans un regroupement de préproduction](/sccm/core/clients/manage/upgrade/test-client-upgrades).  
+- Quand une mise à jour s’applique au client Configuration Manager, choisissez de tester la mise à jour du client avec un ensemble limité de clients. Pour plus d’informations, consultez [Guide pratique pour tester les mises à niveau du client dans un regroupement de préproduction](/sccm/core/clients/manage/upgrade/test-client-upgrades).  
 
 
 #### <a name="2-during-the-update-installation"></a>2. Lors de l’installation de la mise à jour  
@@ -201,7 +201,7 @@ Utilisez les étapes suivantes pour surveiller la progression :
 
     L’installation de la mise à jour est décomposée en plusieurs phases pour faciliter la surveillance. Pour chacune des phases suivantes, des détails supplémentaires dans l’état d’installation indiquent le fichier journal à consulter pour obtenir plus d’informations :  
 
-    -   **Téléchargement** : cette phase s’applique uniquement au site de niveau supérieur avec le point de connexion de service.   
+    -   **Téléchargement** : Cette phase s’applique uniquement au site de niveau supérieur avec le point de connexion de service.   
 
     -   **Réplication**   
 
@@ -209,7 +209,7 @@ Utilisez les étapes suivantes pour surveiller la progression :
 
     -   **Installation**    
 
-    -   **Post-installation** : pour plus d’informations, consultez [Tâches de post-installation](#post-installation-tasks).  
+    -   **Post-installation** : Pour plus d’informations, consultez la page [Tâches de post-installation](#post-installation-tasks).  
 
 -   Affichez le fichier **CMUpdate.log** dans `<ConfigMgr_Installation_Directory>\Logs` sur le serveur de site.  
 
@@ -266,54 +266,54 @@ Toutes les tâches ne se terminent pas immédiatement. Certaines tâches ne dém
 
 Les tâches post-installation incluent :
 
--   **Installation du service SMS_EXECUTIVE**
+- **Installation du service SMS_EXECUTIVE**
   -   Service critique qui s’exécute sur le serveur de site.
   -   La réinstallation de ce service devrait s’exécuter rapidement.
 
 
--   **Installation du composant SMS_DATABASE_NOTIFICATION_MONITOR**
+- **Installation du composant SMS_DATABASE_NOTIFICATION_MONITOR**
   -   Thread de composant de site critique du service SMS_EXECUTIVE.
   -   La réinstallation de ce service devrait s’exécuter rapidement.
 
 
--   **Installation du composant SMS_HIERARCHY_MANAGER**
+- **Installation du composant SMS_HIERARCHY_MANAGER**
   -   Composant de site critique qui s’exécute sur le serveur de site.
   -   Responsable de la réinstallation des rôles sur les serveurs de système de site. L’état de la réinstallation d’un rôle de système de site individuel n’apparaît pas.
   -   La réinstallation de ce service devrait s’exécuter rapidement.
 
 
--   **Installation du composant SMS_REPLICATION_CONFIGURATION_MONITOR**
+- **Installation du composant SMS_REPLICATION_CONFIGURATION_MONITOR**
   -   Composant de site critique qui s’exécute sur le serveur de site.
   -   La réinstallation de ce service devrait s’exécuter rapidement.
 
 
--   **Installation du composant SMS_POLICY_PROVIDER**
+- **Installation du composant SMS_POLICY_PROVIDER**
   -   Composant de site critique qui s’exécute uniquement sur les sites principaux.
   -   La réinstallation de ce service devrait s’exécuter rapidement.
 
 
--   **Surveillance de l’initialisation de la réplication**   
+- **Surveillance de l’initialisation de la réplication**   
   -   Cette tâche s’affiche uniquement sur le site d’administration centrale et sur les sites principaux enfants.
   -   Dépend de SMS_REPLICATION_CONFIGURATION_MONITOR.
   -   Devrait s’exécuter rapidement.
 
 
--   **Mise à jour du package de préproduction du client Configuration Manager**    
+- **Mise à jour du package de préproduction du client Configuration Manager**    
   -   Cette tâche s’affiche même si le client en préproduction (également appelé pilotage du client) n’est pas activé pour être utilisé.
   -   Ne commence pas tant que tous les sites dans la hiérarchie n’ont pas terminé l’installation de la mise à jour.
 
 
--   **Mise à jour du dossier du client sur le serveur de site**
+- **Mise à jour du dossier du client sur le serveur de site**
   -   Cette tâche ne s’affiche pas si vous utilisez le client en préproduction.  
   -   Devrait s’exécuter rapidement.
 
 
--   **Mise à jour du package du client Configuration Manager**
+- **Mise à jour du package du client Configuration Manager**
   -   Cette tâche ne s’affiche pas si vous utilisez le client en préproduction.  
   -   Se termine uniquement une fois que tous les sites ont installé la mise à jour.  
 
 
--   **Activation des fonctionnalités**
+- **Activation des fonctionnalités**
   -   Cette tâche s’affiche uniquement sur le site de niveau supérieur de la hiérarchie.
   -   Ne commence pas tant que tous les sites dans la hiérarchie n’ont pas terminé l’installation de la mise à jour.
   -   Les fonctionnalités individuelles ne sont pas affichées.
@@ -342,9 +342,9 @@ Réessayez l’installation d’une mise à jour pour l’ensemble de la hiérar
 
 Accédez à l’espace de travail **Administration** et sélectionnez le nœud **Mises à jour et maintenance**. Sélectionnez la mise à jour, puis choisissez l’une des options suivantes :  
 
-  -   **Nouvelle tentative** : quand vous exécutez **Nouvelle tentative** à partir du nœud **Mises à jour et maintenance**, l’installation de la mise à jour redémarre et ignore automatiquement les avertissements relatifs aux prérequis. Si la réplication du contenu a échoué précédemment, le contenu de la mise à jour est à nouveau répliqué.  
+  -   **Nouvelle tentative** : Lorsque vous exécutez **Nouvelle tentative** à partir du nœud **Mises à jour et maintenance**, l’installation de la mise à jour redémarre et ignore automatiquement les avertissements relatifs aux prérequis. Si la réplication du contenu a échoué précédemment, le contenu de la mise à jour est à nouveau répliqué.  
 
-  - **Ignorer les avertissements de configuration requise** : si l’installation de la mise à jour s’arrête en raison d’un avertissement, vous pouvez cliquer sur **Ignorer les avertissements de configuration requise**. Cette action permet à l’installation de la mise à jour de continuer après quelques minutes et utilise l’option pour ignorer les avertissements de prérequis.   
+  - **Ignorer les avertissements de configuration requise** : Si l’installation de la mise à jour s’arrête en raison d’un avertissement, vous pouvez cliquer sur **Ignorer les avertissements de configuration requise**. Cette action permet à l’installation de la mise à jour de continuer après quelques minutes et utilise l’option pour ignorer les avertissements de prérequis.   
 
 #### <a name="retry-installation-for-the-site"></a>Réessayer l’installation pour le site  
 Réessayez l’installation d’une mise à jour sur un site spécifique quand cette mise à jour est dans l’un des états suivants :  
@@ -357,9 +357,9 @@ Réessayez l’installation d’une mise à jour sur un site spécifique quand c
 
 Accédez à l’espace de travail **Surveillance**, puis sélectionnez le nœud **État de maintenance du site**. Sélectionnez la mise à jour, puis cliquez sur l’une des options suivantes :  
 
-  - **Nouvelle tentative** : quand vous exécutez **Nouvelle tentative** à partir du nœud **État de maintenance du site**, vous redémarrez l’installation de la mise à jour uniquement sur ce site. Contrairement à l’exécution de **Nouvelle tentative** à partir du nœud **Mises à jour et maintenance**, cette nouvelle tentative n’ignore pas les avertissements relatifs aux prérequis.  
+  - **Nouvelle tentative** : Lorsque vous exécutez **Nouvelle tentative** à partir du nœud **État de maintenance du site**, vous redémarrez l’installation de la mise à jour uniquement sur ce site. Contrairement à l’exécution de **Nouvelle tentative** à partir du nœud **Mises à jour et maintenance**, cette nouvelle tentative n’ignore pas les avertissements relatifs aux prérequis.  
 
-  - **Ignorer les avertissements de configuration requise** : si l’installation de la mise à jour s’arrête en raison d’un avertissement, vous pouvez cliquer sur **Ignorer les avertissements de configuration requise**. Cette action permet à l’installation de la mise à jour de continuer après quelques minutes et utilise l’option pour ignorer les avertissements de prérequis.  
+  - **Ignorer les avertissements de configuration requise** : Si l’installation de la mise à jour s’arrête en raison d’un avertissement, vous pouvez cliquer sur **Ignorer les avertissements de configuration requise**. Cette action permet à l’installation de la mise à jour de continuer après quelques minutes et utilise l’option pour ignorer les avertissements de prérequis.  
 
 
 

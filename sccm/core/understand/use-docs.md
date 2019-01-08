@@ -11,16 +11,16 @@ ms.assetid: b3d755bd-0870-4f1f-a56d-bfd3c7b492b9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6bd4675d3b366c5f414467b76627e25b91259ef2
-ms.sourcegitcommit: 240d3199e1c6fa47af6eda499492b2527516ab18
+ms.openlocfilehash: 27eea5c93ec66207e48390e3c7a0352a3a255ceb
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44326201"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424729"
 ---
 # <a name="how-to-use-the-configuration-manager-docs"></a>Guide pratique pour utiliser la documentation de Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Cet article fournit les sections suivantes, ainsi que plusieurs ressources et conseils sur l’utilisation de la bibliothèque de documentation de Configuration Manager :  
 
@@ -45,7 +45,7 @@ Pour obtenir une aide générale sur le produit, consultez [Trouver de l’aide]
 
     - Pour concentrer davantage les résultats de la recherche sur la bibliothèque de contenu actuelle, ajoutez `site:docs.microsoft.com` afin de définir l’étendue à couvrir par le moteur de recherche.  
 
--   Utilisez des termes de recherche correspondant à la terminologie qui se trouve dans l’interface utilisateur et la documentation en ligne. Évitez les termes ou les abréviations non officiels que vous pouvez voir dans le contenu de la communauté. Par exemple, rechercher « point de gestion » plutôt que « MP », « type de déploiement » plutôt que « DT » et « mises à jour logicielles » plutôt que « SUM ».  
+-   Utilisez des termes de recherche correspondant à la terminologie qui se trouve dans l’interface utilisateur et la documentation en ligne. Évitez les termes ou les abréviations non officiels que vous pouvez voir dans le contenu de la communauté. Par exemple, rechercher « point de gestion » plutôt que « MP », « type de déploiement » plutôt que « DT » et « mises à jour logicielles » plutôt que « SUM ».  
 
 -   Pour effectuer une recherche dans un article que vous consultez, utilisez la fonctionnalité **Rechercher** de votre navigateur. Dans la plupart des navigateurs web actuels, appuyez sur **Ctrl**+**F**, puis entrez vos termes de recherche.  
 
@@ -71,13 +71,13 @@ Cette intégration permet également d’afficher tous les problèmes ouverts ou
 
 #### <a name="types-of-feedback"></a>Types de commentaire
 Utilisez la fonctionnalité Problèmes GitHub pour soumettre les types de commentaire suivants :
-- Bogue de la documentation : le contenu est obsolète, vague, confus ou fragmenté.
-- Amélioration de la documentation : suggestion d’amélioration de l’article.
-- Question sur la documentation : vous avez besoin d’aide pour trouver de la documentation existante.
-- Idée de documentation : suggestion d’un nouvel article. Utilisez cette méthode à la place de UserVoice pour les commentaires relatifs à la documentation.
-- Félicitations : commentaires positifs sur un article utile ou instructif !
-- Localisation : commentaires sur la traduction du contenu.
-- SEO (optimisation du référencement d’un site auprès d’un moteur de recherche) : commentaires sur les problèmes de recherche de contenu. Incluez le moteur de recherche, les mots clés et l’article cible dans les commentaires.
+- Bogue de documentation : le contenu est obsolète, vague, confus ou fragmenté.
+- Amélioration de la documentation : suggestion d’amélioration de l’article.
+- Question sur la documentation : vous avez besoin d’aide pour trouver de la documentation existante.
+- Idée de documentation : suggestion d’un nouvel article. Utilisez cette méthode à la place de UserVoice pour les commentaires relatifs à la documentation.
+- Félicitations : commentaires positifs sur un article utile ou instructif !
+- Localisation : commentaires sur la traduction du contenu.
+- Optimisation du référencement d’un site auprès d’un moteur de recherche (SEO) : commentaires sur les problèmes de recherche de contenu. Incluez le moteur de recherche, les mots clés et l’article cible dans les commentaires.
 
 Si des problèmes sont soumis pour des rubriques non liées à la documentation, par exemple des [commentaires sur le produit](/sccm/core/understand/find-help#product-feedback), des [questions sur le produit](https://social.technet.microsoft.com/Forums/en-US/home?category=ConfigMgrCB) ou des [demandes de support](https://aka.ms/cmcbsupport), ces problèmes sont fermés et les utilisateurs redirigés vers le canal de commentaires approprié.
 
@@ -90,7 +90,7 @@ Pour partager vos commentaires sur la plateforme docs.microsoft.com, accédez au
 Pour recevoir des notifications en cas de changement du contenu dans la bibliothèque de documentation, suivez les étapes ci-dessous :
 
 1. Utilisez la [recherche de documentation](https://docs.microsoft.com/search/index?scope=ConfigMgr) pour trouver un article ou un ensemble d’articles. Par exemple :
-    - Recherchez un article unique par son titre : [« Fichiers journaux pour la résolution des problèmes - Configuration Manager »](https://docs.microsoft.com/search/index?search=%22Log+files+for+troubleshooting+-+Configuration+Manager%22&scope=ConfigMgr).
+    - Recherchez un seul article en utilisant son titre : [« Fichiers journaux pour la résolution des problèmes – Configuration Manager »](https://docs.microsoft.com/search/index?search=%22Log+files+for+troubleshooting+-+Configuration+Manager%22&scope=ConfigMgr)
     - Recherchez un article relatif à [SQL](https://docs.microsoft.com/search/index?search=SQL&scope=ConfigMgr).
 2. Dans le coin supérieur droit, cliquez sur le lien **RSS**. 
 3. Utilisez ce flux dans une application RSS pour recevoir des notifications en cas de changement de l’un des résultats de la recherche.
@@ -122,8 +122,8 @@ La bibliothèque de documentation de Configuration Manager, comme la plupart des
 Si vous souhaitez apporter votre contribution mais que vous ne savez pas par où commencer, consultez les suggestions suivantes :  
 
 - Recherchez dans la liste des problèmes les étiquettes destinées à la communauté :  
-    - [good-first-issue](https://github.com/MicrosoftDocs/sccmdocs/issues?q=is:open+is:issue+label:good-first-issue) (problème prioritaire)   
-    - [help-wanted](https://github.com/MicrosoftDocs/sccmdocs/issues?q=is:open+is:issue+label:help-wanted) (aide souhaitée)  
+  - [good-first-issue](https://github.com/MicrosoftDocs/sccmdocs/issues?q=is:open+is:issue+label:good-first-issue) (problème prioritaire)   
+  - [help-wanted](https://github.com/MicrosoftDocs/sccmdocs/issues?q=is:open+is:issue+label:help-wanted) (aide souhaitée)  
 
     Les auteurs Microsoft affectent ces étiquettes aux problèmes qui sont de bons candidats pour une contribution à la communauté.  
 

@@ -10,16 +10,16 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 735a8da57c0225aee533568eb997dc82d9816d6b
-ms.sourcegitcommit: db6074317d5c68ebb5fc478be5bceeb441aa0737
+ms.openlocfilehash: 61b51fcf9f624f5c2e21a99add1b55f6d6812c84
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34220426"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421363"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-system-center-configuration-manager"></a>À propos des propriétés et des paramètres d’installation du client dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Utilisez la commande CCMSetup.exe pour installer le client Configuration Manager. Si des paramètres d’installation du client sont indiqués en ligne de commande, ils modifient le comportement de l’installation. Si vous fournissez des propriétés d’installation du client en ligne de commande, elles modifient la configuration initiale de l’agent client installé.
 
@@ -159,17 +159,17 @@ Exemple : `ccmsetup.exe /logon`
 
  Indique la priorité de téléchargement lorsque les fichiers d'installation du client sont téléchargés via une connexion HTTP. Les valeurs possibles sont les suivantes :  
 
--   FOREGROUND (avant-plan)  
+- FOREGROUND (avant-plan)  
 
--   HIGH (élevée)  
+- HIGH (élevée)  
 
--   NORMAL (normale)  
+- NORMAL (normale)  
 
--   LOW (faible)  
+- LOW (faible)  
 
- La valeur par défaut est NORMAL.  
+  La valeur par défaut est NORMAL.  
 
- Exemple : `ccmsetup.exe /BITSPriority:HIGH`  
+  Exemple : `ccmsetup.exe /BITSPriority:HIGH`  
 
 ### <a name="downloadtimeoutltminutes"></a>/downloadtimeout:&lt;Minutes\>
 
@@ -205,7 +205,7 @@ Spécifie le nom d’un fichier texte qui répertorie les propriétés d’insta
 
 Exemple : `CCMSetup.exe /config:&lt;Configuration File Name.txt\>`  
 
-Pour fournir le format de fichier correct, utilisez le fichier mobileclienttemplate.tcf qui se trouve dans le répertoire &lt;Configuration Manager\>\\bin\\&lt;plateforme\> sur le serveur de site . Ce fichier contient également des commentaires sur les sections et leur utilisation. Spécifiez les propriétés d'installation du client dans la section [Client Install], à la suite du texte ci-après : **Install=INSTALL=ALL**.  
+Pour fournir le format de fichier correct, utilisez le fichier mobileclienttemplate.tcf qui se trouve dans le répertoire &lt;Configuration Manager\>\\bin\\&lt;plateforme\> sur le serveur de site . Ce fichier contient également des commentaires sur les sections et leur utilisation. Spécifiez les propriétés d'installation du client dans la section [Client Install], à la suite du texte ci-après : **Install=INSTALL=ALL**.  
 
 Exemple d’entrée de section [Client Install] : `Install=INSTALL=ALL SMSSITECODE=ABC SMSCACHESIZE=100`  
 
@@ -286,8 +286,8 @@ Spécifie l’identificateur du locataire Azure AD. Ce client est lié à Config
 - Exécutez la commande suivante : `dsregcmd.exe /status`
 - Dans la section État de l’appareil, recherchez la valeur de **TenantId**. Par exemple, `TenantId : 607b7853-6f6f-4d5d-b3d4-811c33fdd49a`
 
- > [!Note]
- > Un administrateur Azure peut également obtenir cette valeur dans le portail Azure. Pour plus d’informations, consultez [Obtenir l’ID de locataire](/azure/azure-resource-manager/resource-group-create-service-principal-portal#get-tenant-id).
+  > [!Note]
+  > Un administrateur Azure peut également obtenir cette valeur dans le portail Azure. Pour plus d’informations, consultez [Obtenir l’ID de locataire](/azure/azure-resource-manager/resource-group-create-service-principal-portal#get-tenant-id).
 
 Exemple : `ccmsetup.exe AADTENANTID=607b7853-6f6f-4d5d-b3d4-811c33fdd49a`
 
@@ -356,10 +356,10 @@ Exemple : **CCMSetup.exe  CCMALLOWSILENTREBOOT**
 
  `CCMCERTSEL="SubjectAttr:OU = Computers"` recherche l’attribut d’unité organisationnelle exprimé comme nom unique et nommé Computers.  
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Si vous utilisez la zone Nom d’objet, **Subject:** respecte la casse, mais **SubjectStr:** ne la respecte pas.  
->   
->  Si vous utilisez la zone Autre nom de l’objet, **Subject:** et **SubjectStr:** respectent la casse tous les deux.  
+> 
+>  Si vous utilisez la zone Autre nom de l’objet, <strong>Subject:</strong>et **SubjectStr:** respectent la casse tous les deux.  
 
  La liste complète des attributs que vous pouvez utiliser pour la sélection de certificat figure dans [Valeurs d’attribut prises en charge pour les critères de sélection de certificat PKI](#BKMK_attributevalues).  
 
@@ -538,19 +538,19 @@ Ce paramètre est ignoré lorsque vous mettez à niveau un client existant.
 
 Propriétés :  
 
--   PERCENTDISKSPACE : indique la taille du dossier sous forme de pourcentage de l’espace disque total. Si vous indiquez cette propriété, vous devez également indiquer la propriété SMSCACHESIZE comme valeur de pourcentage à utiliser.  
+-   PERCENTDISKSPACE: Indique la taille du dossier sous forme de pourcentage de l'espace disque total. Si vous indiquez cette propriété, vous devez également indiquer la propriété SMSCACHESIZE comme valeur de pourcentage à utiliser.  
 
--   PERCENTFREEDISKSPACE : indique la taille du dossier sous forme de pourcentage de l’espace disque disponible. Si vous indiquez cette propriété, vous devez également indiquer la propriété SMSCACHESIZE comme valeur de pourcentage à utiliser. Par exemple, si le disque dispose de 10 Mo libres et que SMSCACHESIZE indique 50, cela signifie que la taille du dossier est définie sur 5 Mo. Vous ne pouvez pas utiliser cette propriété avec la propriété PERCENTDISKSPACE.  
+-   PERCENTFREEDISKSPACE: Indique la taille du dossier sous forme de pourcentage de l'espace disque disponible. Si vous indiquez cette propriété, vous devez également indiquer la propriété SMSCACHESIZE comme valeur de pourcentage à utiliser. Par exemple, si le disque dispose de 10 Mo libres et que SMSCACHESIZE indique 50, cela signifie que la taille du dossier est définie sur 5 Mo. Vous ne pouvez pas utiliser cette propriété avec la propriété PERCENTDISKSPACE.  
 
--   MAXDRIVE : indique que le dossier doit être installé sur le disque le plus volumineux disponible. Cette valeur est ignorée si un chemin a été spécifié avec la propriété SMSCACHEDIR.  
+-   MAXDRIVE: Indique que le dossier doit être installé sur le disque le plus volumineux disponible. Cette valeur est ignorée si un chemin a été spécifié avec la propriété SMSCACHEDIR.  
 
--   MAXDRIVESPACE : indique que le dossier doit être installé sur le lecteur de disque possédant l’espace disponible le plus important. Cette valeur est ignorée si un chemin a été spécifié avec la propriété SMSCACHEDIR.  
+-   MAXDRIVESPACE: Indique que le dossier doit être installé sur le lecteur de disque possédant l'espace disponible le plus important. Cette valeur est ignorée si un chemin a été spécifié avec la propriété SMSCACHEDIR.  
 
--   NTFSONLY : indique que le dossier peut être installé uniquement sur des lecteurs de disque NTFS. Cette valeur est ignorée si un chemin a été spécifié avec la propriété SMSCACHEDIR.  
+-   NTFSONLY: Indique que le dossier peut être installé uniquement sur des lecteurs de disque NTFS. Cette valeur est ignorée si un chemin a été spécifié avec la propriété SMSCACHEDIR.  
 
--   COMPRESS : spécifie que le dossier doit être conservé sous une forme compressée.  
+-   COMPRESS: Spécifie que le dossier doit être conservé sous forme compressée.  
 
--   FAILIFNOSPACE : indique que le logiciel client doit être supprimé si l’espace est insuffisant pour installer le dossier.  
+-   FAILIFNOSPACE: Indique que le logiciel client doit être supprimé si l'espace est insuffisant pour installer le dossier.  
 
 Exemple : `CCMSetup.exe SMSCACHEFLAGS=NTFSONLY;COMPRESS`  
 
@@ -576,19 +576,19 @@ Exemple : `CCMSetup.exe SMSCACHESIZE=100`
 
 Indique l’emplacement et l’ordre dans lesquels le programme d’installation de Configuration Manager vérifie les paramètres de configuration. La propriété est une chaîne d’un ou plusieurs caractères, chacun définissant une source de configuration spécifique. Utilisez les caractères R, P, M et U seuls ou en combinaison :  
 
--   R : vérification des paramètres de configuration dans le Registre.  
+- R: vérification des paramètres de configuration dans le Registre.  
 
-   Pour plus d’informations, consultez [Informations sur le stockage des propriétés d’installation du client dans le Registre](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Provision).  
+  Pour plus d’informations, consultez [Informations sur le stockage des propriétés d’installation du client dans le Registre](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Provision).  
 
--   P : vérification des paramètres de configuration dans les propriétés d’installation fournies à l’invite de commandes.  
+- P: vérification des paramètres de configuration dans les propriétés d'installation fournies à l'invite de commandes.  
 
--   M : vérification des paramètres existants à l’occasion de la mise à niveau d’un ancien client avec le logiciel client Configuration Manager.  
+- M: Vérification des paramètres existants à l’occasion de la mise à niveau d’un ancien client avec le logiciel client Configuration Manager.  
 
--   U : mise à niveau du client installé vers une version plus récente (et utilisation du code de site attribué).  
+- U: mise à niveau du client installé vers une version plus récente (et utilisation du code de site attribué).  
 
- Par défaut, l’installation du client utilise `PU` pour vérifier d’abord les propriétés d’installation, puis les paramètres existants.  
+  Par défaut, l’installation du client utilise `PU` pour vérifier d’abord les propriétés d’installation, puis les paramètres existants.  
 
- Exemple : `CCMSetup.exe SMSCONFIGSOURCE=RP`  
+  Exemple : `CCMSetup.exe SMSCONFIGSOURCE=RP`  
 
 ### <a name="smsdirectorylookup"></a>SMSDIRECTORYLOOKUP
 
@@ -598,9 +598,9 @@ Indique l’emplacement et l’ordre dans lesquels le programme d’installation
 
  Vous pouvez configurer deux modes différents pour cette propriété :  
 
--   NOWINS : cette valeur est le paramètre le plus sûr pour cette propriété et empêche les clients de rechercher un point de gestion dans WINS. Lorsque vous utilisez ce paramètre, les clients doivent disposer d'une autre méthode de localisation d'un point de gestion sur l'Intranet, telle que les services de domaine Active Directory ou en utilisant la publication DNS.  
+-   NOWINS: Cette valeur est le paramètre le plus sûr pour cette propriété et empêche les clients de rechercher un point de gestion dans WINS. Lorsque vous utilisez ce paramètre, les clients doivent disposer d'une autre méthode de localisation d'un point de gestion sur l'Intranet, telle que les services de domaine Active Directory ou en utilisant la publication DNS.  
 
--   WINSSECURE (valeur par défaut) : dans ce mode, un client qui utilise la communication HTTP peut utiliser WINS pour trouver un point de gestion. Toutefois, le client doit disposer d'une copie de la clé racine approuvée avant de pouvoir se connecter correctement au point de gestion. Pour plus d’informations, voir [Planification de la clé racine approuvée](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK).  
+-   WINSSECURE (par défaut) : Dans ce mode, un client qui utilise la communication HTTP peut utiliser WINS pour trouver un point de gestion. Toutefois, le client doit disposer d'une copie de la clé racine approuvée avant de pouvoir se connecter correctement au point de gestion. Pour plus d’informations, voir [Planification de la clé racine approuvée](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK).  
 
 
  Exemple : `CCMSetup.exe SMSDIRECTORYLOOKUP=NOWINS`  
@@ -627,7 +627,7 @@ Exemple : `CCMSetup.exe SMSMP=https://smsmp01.contoso.com`
 
  Utilisée pour réinstaller la clé racine approuvée de Configuration Manager. Indique le chemin d'accès complet et le nom de fichier d'un fichier contenant la clé racine approuvée. Cette propriété s'applique aux clients qui utilisent la communication client HTTP et HTTPS. Pour plus d’informations, voir [Planification de la clé racine approuvée](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK).  
 
- Exemple : 'CCMSetup.exe SMSROOTKEYPATH=&lt;chemin_complet_et_nom_de_fichier\>`  
+ Exemple : 'CCMSetup.exe SMSROOTKEYPATH=&lt;Chemin d’accès complet et nom de fichier\>`  
 
 ### <a name="smssigncert"></a>SMSSIGNCERT
 
@@ -635,7 +635,7 @@ Exemple : `CCMSetup.exe SMSMP=https://smsmp01.contoso.com`
 
  Ce certificat est stocké dans le magasin de certificats **SMS** et porte le nom d'objet **Serveur de site** et le nom convivial **Certificat de signature du serveur de site**.  
 
- Exemple : **CCMSetup.exe /UsePKICert SMSSIGNCERT=&lt;chemin _complet_et_nom_de_fichier\>**  
+ Exemple : **CCMSetup.exe /UsePKICert SMSSIGNCERT=&lt;Chemin d’accès complet et nom de fichier\>**  
 
 ### <a name="smssitecode"></a>SMSSITECODE
 

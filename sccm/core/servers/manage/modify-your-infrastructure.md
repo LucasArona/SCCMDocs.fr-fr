@@ -10,16 +10,16 @@ ms.assetid: a7975dc8-46ab-4dae-86b6-dc3e3cf3b2f0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 13d9e83adcdf0e125d1596ff93fbb1a0fa67c09f
-ms.sourcegitcommit: 8827ffaea108678da968a3623f072876990c830c
+ms.openlocfilehash: 0b65f5fb8790f907699a26e36c1ffe41b7e0eb03
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49411325"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418643"
 ---
 # <a name="modify-your-system-center-configuration-manager-infrastructure"></a>Modifier votre infrastructure System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Après avoir installé un ou plusieurs sites, vous pouvez être amené à modifier les configurations ou à effectuer des actions qui affectent l’infrastructure que vous avez déployée.  
 
@@ -29,36 +29,36 @@ Après avoir installé un ou plusieurs sites, vous pouvez être amené à modifi
 
  Sur chaque site Configuration Manager, vous pouvez réexécuter le programme d’installation pour :  
 
--   ajouter une instance du fournisseur SMS (chaque instance supplémentaire du fournisseur SMS doit se trouver sur un ordinateur distinct) ;  
+- ajouter une instance du fournisseur SMS (chaque instance supplémentaire du fournisseur SMS doit se trouver sur un ordinateur distinct) ;  
 
--   supprimer une instance du fournisseur SMS (pour supprimer le dernier fournisseur SMS pour un site, vous devez désinstaller le site).  
+- supprimer une instance du fournisseur SMS (pour supprimer le dernier fournisseur SMS pour un site, vous devez désinstaller le site).  
 
- Vous pouvez surveiller le processus d'installation ou de suppression du fournisseur SMS en consultant le fichier **ConfigMgrSetup.log** dans le dossier racine du serveur du site sur lequel vous exécutez le programme d'installation.  
+  Vous pouvez surveiller le processus d'installation ou de suppression du fournisseur SMS en consultant le fichier **ConfigMgrSetup.log** dans le dossier racine du serveur du site sur lequel vous exécutez le programme d'installation.  
 
- Avant de modifier le fournisseur SMS sur un site, familiarisez-vous avec les informations contenues dans [Planifier le fournisseur SMS pour System Center Configuration Manager](../../../core/plan-design/hierarchy/plan-for-the-sms-provider.md).  
+  Avant de modifier le fournisseur SMS sur un site, familiarisez-vous avec les informations contenues dans [Planifier le fournisseur SMS pour System Center Configuration Manager](../../../core/plan-design/hierarchy/plan-for-the-sms-provider.md).  
 
 #### <a name="to-manage-the-sms-provider-configuration-for-a-site"></a>Pour gérer la configuration du fournisseur SMS pour un site  
 
-1.  Exécutez **Installation de Configuration Manager** à partir de **&lt;dossier_installation_du_site_Configuration_Manager\>\BIN\X64\setup.exe**.  
+1. Exécutez **Installation de Configuration Manager** à partir de **&lt;dossier_installation_du_site_Configuration_Manager\>\BIN\X64\setup.exe**.  
 
-2.  Sur la page **Mise en route** , sélectionnez **Effectuer une maintenance de site ou réinitialiser ce site**, puis cliquez sur **Suivant**.  
+2. Sur la page **Mise en route** , sélectionnez **Effectuer une maintenance de site ou réinitialiser ce site**, puis cliquez sur **Suivant**.  
 
-3.  Sur la page **Maintenance de site** , sélectionnez **Modifier la configuration du fournisseur SMS**, puis cliquez sur **Suivant**.  
+3. Sur la page **Maintenance de site** , sélectionnez **Modifier la configuration du fournisseur SMS**, puis cliquez sur **Suivant**.  
 
-4.  Sur la page **Gérer les fournisseurs SMS** , sélectionnez l'une des options suivantes et effectuez toutes les étapes de l'Assistant comme indiqué :  
+4. Sur la page **Gérer les fournisseurs SMS** , sélectionnez l'une des options suivantes et effectuez toutes les étapes de l'Assistant comme indiqué :  
 
-    -   Pour ajouter un fournisseur SMS supplémentaires sur ce site :  
+   -   Pour ajouter un fournisseur SMS supplémentaires sur ce site :  
 
-         Sélectionnez **Ajouter un nouveau fournisseur SMS**, spécifiez le nom de domaine complet d'un ordinateur qui hébergera le fournisseur SMS mais qui n'héberge aucun fournisseur SMS actuellement, puis cliquez sur **Suivant**.  
+        Sélectionnez **Ajouter un nouveau fournisseur SMS**, spécifiez le nom de domaine complet d'un ordinateur qui hébergera le fournisseur SMS mais qui n'héberge aucun fournisseur SMS actuellement, puis cliquez sur **Suivant**.  
 
-    -   Pour supprimer un fournisseur SMS d'un serveur :  
+   -   Pour supprimer un fournisseur SMS d'un serveur :  
 
-         Sélectionnez **Désinstaller le fournisseur SMS spécifié**, sélectionnez le nom de l'ordinateur dont vous souhaitez supprimer le fournisseur SMS, cliquez sur **Suivant**, puis confirmez l'action.  
+        Sélectionnez **Désinstaller le fournisseur SMS spécifié**, sélectionnez le nom de l'ordinateur dont vous souhaitez supprimer le fournisseur SMS, cliquez sur **Suivant**, puis confirmez l'action.  
 
-        > [!TIP]  
-        >  Pour déplacer le fournisseur SMS entre deux ordinateurs, vous devez installer le fournisseur SMS sur le nouvel ordinateur et supprimer le fournisseur SMS de l'emplacement d'origine. Il n'existe aucune option spéciale pour déplacer le fournisseur SMS entre les ordinateurs en un seul processus.  
+       > [!TIP]  
+       >  Pour déplacer le fournisseur SMS entre deux ordinateurs, vous devez installer le fournisseur SMS sur le nouvel ordinateur et supprimer le fournisseur SMS de l'emplacement d'origine. Il n'existe aucune option spéciale pour déplacer le fournisseur SMS entre les ordinateurs en un seul processus.  
 
- Une fois toutes les étapes de l'Assistant Installation effectuées, la configuration du fournisseur SMS est terminée. Dans l'onglet **Général** dans la boîte de dialogue **Propriétés** du site, vous pouvez vérifier les ordinateurs disposant d'un fournisseur SMS installé pour un site.  
+   Une fois toutes les étapes de l'Assistant Installation effectuées, la configuration du fournisseur SMS est terminée. Dans l'onglet **Général** dans la boîte de dialogue **Propriétés** du site, vous pouvez vérifier les ordinateurs disposant d'un fournisseur SMS installé pour un site.  
 
 ##  <a name="bkmk_Console"></a> Gérer la console Configuration Manager  
  Voici les tâches que vous pouvez effectuer pour gérer la console Configuration Manager :  
@@ -110,11 +110,11 @@ Par exemple, considérez un scénario dans lequel vous installez la console Conf
 ##  <a name="BKMK_ConfigDCOMforRemoteConsole"></a> Configurer les autorisations DCOM pour les consoles Configuration Manager distantes  
  Le compte d’utilisateur exécutant la console Configuration Manager exige des autorisations pour accéder à la base de données de site par le biais du fournisseur SMS. Toutefois, chaque utilisateur administratif qui utilise une console Configuration Manager distante doit posséder également des autorisations DCOM d’**activation à distance** sur :  
 
--   L'ordinateur de serveur de site ;  
+- L'ordinateur de serveur de site ;  
 
--   chaque ordinateur qui héberge une instance du fournisseur SMS.  
+- chaque ordinateur qui héberge une instance du fournisseur SMS.  
 
- Le groupe de sécurité nommé **Administrateurs SMS** accorde des autorisations d’accès au fournisseur SMS sur un ordinateur et permet également d’accorder les autorisations DCOM requises. (Quand le fournisseur SMS s’exécute sur un serveur membre, il s’agit d’un groupe local dans l’ordinateur. Quand le fournisseur SMS s’exécute sur un contrôleur de domaine, il s’agit d’un groupe de domaine local.)  
+  Le groupe de sécurité nommé **Administrateurs SMS** accorde des autorisations d’accès au fournisseur SMS sur un ordinateur et permet également d’accorder les autorisations DCOM requises. (Quand le fournisseur SMS s’exécute sur un serveur membre, il s’agit d’un groupe local dans l’ordinateur. Quand le fournisseur SMS s’exécute sur un contrôleur de domaine, il s’agit d’un groupe de domaine local.)  
 
 > [!IMPORTANT]  
 >  La console Configuration Manager utilise WMI (Windows Management Instrumentation) pour se connecter au fournisseur SMS, et WMI utilise DCOM en interne. Par conséquent, lorsque la console Configuration Manager est exécutée sur un ordinateur autre que le fournisseur SMS, Configuration Manager exige des autorisations pour activer un serveur DCOM sur l’ordinateur fournisseur SMS. Par défaut, l'activation à distance est accordée uniquement aux membres du groupe Administrateurs intégré. Accorder une autorisation d'activation à distance au groupe Administrateurs SMS reviendrait à permettre à un membre de ce groupe d'effectuer des attaques DCOM à l'encontre de l'ordinateur du fournisseur SMS. La surface d'attaque de l'ordinateur s'en trouverait également augmentée. Vous pouvez réduire l'étendue de cette menace en surveillant attentivement les membres du groupe Administrateurs SMS.  
@@ -123,24 +123,24 @@ Par exemple, considérez un scénario dans lequel vous installez la console Conf
 
 #### <a name="to-configure-dcom-permissions-for-remote-configuration-manager-console-connections"></a>Pour configurer des autorisations DCOM pour les connexions à distance à la console Configuration Manager  
 
-1.  Ouvrez  **Services de composants** en exécutant **Dcomcnfg.exe**.  
+1. Ouvrez  **Services de composants** en exécutant **Dcomcnfg.exe**.  
 
-2.  Dans **Services de composants**, cliquez sur **Racine de la console** >  **Services de composants** > **Ordinateurs**, puis cliquez sur **Poste de travail**. Dans le menu **Action** , cliquez sur **Propriétés**.  
+2. Dans **Services de composants**, cliquez sur **Racine de la console** >  **Services de composants** > **Ordinateurs**, puis cliquez sur **Poste de travail**. Dans le menu **Action** , cliquez sur **Propriétés**.  
 
-3.  Dans la boîte de dialogue **Propriétés du poste de travail** , sous l'onglet **Sécurité COM** , dans la section **Autorisations d'exécution et d'activation** , cliquez sur **Modifier les limites**.  
+3. Dans la boîte de dialogue **Propriétés du poste de travail** , sous l'onglet **Sécurité COM** , dans la section **Autorisations d'exécution et d'activation** , cliquez sur **Modifier les limites**.  
 
-4.  Dans la boîte de dialogue **Autorisations d'exécution et d'activation** , cliquez sur **Ajouter**.  
+4. Dans la boîte de dialogue **Autorisations d'exécution et d'activation** , cliquez sur **Ajouter**.  
 
-5.  Dans la boîte de dialogue **Sélectionner Utilisateur, ordinateurs, comptes de service ou groupes** , dans la zone **Entrez les noms d'objets à sélectionner (exemples)** , tapez **SMS Admins**, puis cliquez sur **OK**.  
+5. Dans la boîte de dialogue **Sélectionner Utilisateur, ordinateurs, comptes de service ou groupes** , dans la zone **Entrez les noms d'objets à sélectionner (exemples)** , tapez **SMS Admins**, puis cliquez sur **OK**.  
 
-    > [!NOTE]  
-    >  Vous devrez peut-être modifier la valeur du paramètre de **À partir de cet emplacement** pour localiser le groupe Administrateurs SMS. Lorsque le fournisseur SMS s'exécute sur un serveur membre, il s'agit d'un groupe local dans l'ordinateur. Lorsque le fournisseur SMS s'exécute sur un contrôleur de domaine, il s'agit d'un groupe de domaine local.  
+   > [!NOTE]  
+   >  Vous devrez peut-être modifier la valeur du paramètre de **À partir de cet emplacement** pour localiser le groupe Administrateurs SMS. Lorsque le fournisseur SMS s'exécute sur un serveur membre, il s'agit d'un groupe local dans l'ordinateur. Lorsque le fournisseur SMS s'exécute sur un contrôleur de domaine, il s'agit d'un groupe de domaine local.  
 
-6.  Dans la section **Autorisations pour les administrateurs SMS** , sélectionnez la case à cocher **Activation à distance** pour autoriser l'activation à distance.  
+6. Dans la section **Autorisations pour les administrateurs SMS** , sélectionnez la case à cocher **Activation à distance** pour autoriser l'activation à distance.  
 
-7.  Cliquez sur **OK** , cliquez de nouveau sur **OK** , puis fermez **Gestion de l'ordinateur**. Votre ordinateur est maintenant configuré pour autoriser l’accès à distance à la console Configuration Manager aux membres du groupe Administrateurs SMS.  
+7. Cliquez sur **OK** , cliquez de nouveau sur **OK** , puis fermez **Gestion de l'ordinateur**. Votre ordinateur est maintenant configuré pour autoriser l’accès à distance à la console Configuration Manager aux membres du groupe Administrateurs SMS.  
 
- Répétez cette procédure sur chaque ordinateur de fournisseur SMS pouvant prendre en charge les consoles Configuration Manager à distance.  
+   Répétez cette procédure sur chaque ordinateur de fournisseur SMS pouvant prendre en charge les consoles Configuration Manager à distance.  
 
 ##  <a name="bkmk_dbconfig"></a> Modifier la configuration de base de données de site  
  Après avoir installé un site, vous pouvez modifier la configuration de la base de données de site et le serveur de base de données de site en exécutant l'installation sur un serveur de site d'administration centrale ou un serveur de site principal. Vous pouvez déplacer la base de données de site vers une nouvelle instance de SQL Server sur le même ordinateur ou vers un autre ordinateur exécutant une version de SQL Server prise en charge. Ces modifications et les modifications associées ne sont pas prises en charge pour la configuration de base de données sur des sites secondaires.  
@@ -164,10 +164,10 @@ Par exemple, considérez un scénario dans lequel vous installez la console Conf
 
 **Si vous déplacez la base de données de site, vous devez configurer les éléments suivants :**  
 
--   **Configurer l’accès :** quand vous déplacez la base de données de site vers un nouvel ordinateur, ajoutez le compte d’ordinateur du serveur de site au groupe **Administrateurs locaux** sur l’ordinateur exécutant SQL Server. Si vous utilisez un cluster SQL Server pour la base de données de site, vous devez ajouter le compte d'ordinateur au groupe **Administrateurs locaux** de chaque ordinateur du nœud de cluster Windows Server.  
+-   **Configurez l'accès :** Lorsque vous déplacez la base de données de site vers un nouvel ordinateur, ajoutez le compte d'ordinateur du serveur de site au groupe **Administrateurs locaux** sur l'ordinateur exécutant SQL Server. Si vous utilisez un cluster SQL Server pour la base de données de site, vous devez ajouter le compte d'ordinateur au groupe **Administrateurs locaux** de chaque ordinateur du nœud de cluster Windows Server.  
 
--   **Activer l’intégration du CLR (Common Language Runtime) :**  quand vous déplacez la base de données vers une nouvelle instance de SQL Server ou vers un nouvel ordinateur SQL Server, vous devez activer l’intégration du CLR. Pour activer le CLR, utilisez **SQL Server Management Studio** pour vous connecter à l’instance de SQL Server qui héberge la base de données de site, puis exécutez la procédure stockée suivante en tant que requête : **sp_configure ’clr enabled’,1; reconfigure**.  
--  **Garantir que le nouvel ordinateur SQL Server a accès à l’emplacement de sauvegarde :** quand vous utilisez un chemin UNC pour le stockage de la sauvegarde de la base de données de site, après avoir déplacé la base de données vers un nouveau serveur, dont un déplacement vers un groupe de disponibilité SQL Server AlwaysOn ou un cluster SQL Server, vérifiez que le compte d’ordinateur du nouvel ordinateur SQL Server a des autorisations en **écriture** sur l’emplacement UNC.  
+-   **Activez l’intégration CLR (Common Language Runtime) dans SQL Server :**  Lorsque vous déplacez la base de données vers une nouvelle instance de SQL Server ou vers un nouvel ordinateur SQL Server, vous devez activer l'intégration du CLR. Pour activer le CLR, utilisez **SQL Server Management Studio** pour vous connecter à l’instance de SQL Server qui héberge la base de données de site, puis exécutez la procédure stockée suivante en tant que requête : **sp_configure ’clr enabled’,1; reconfigure**.  
+-  **Vérifiez que le nouvel ordinateur SQL Server a accès à l’emplacement de sauvegarde :** Lorsque vous utilisez un chemin UNC pour le stockage de la sauvegarde de la base de données de site, après avoir déplacé la base de données vers un nouveau serveur, dont un déplacement vers un groupe de disponibilité SQL Server AlwaysOn ou un cluster SQL Server, vérifiez que le compte d’ordinateur du nouvel ordinateur SQL Server a des autorisations en **écriture** sur l’emplacement UNC.  
 
 
 > [!IMPORTANT]  
@@ -182,9 +182,9 @@ Vous pouvez choisir le compte exécutant les services SQL pour la base de donné
 
 La documentation de SQL Server peut vous aider à [enregistrer manuellement le SPN](https://technet.microsoft.com/library/ms191153\(v=sql.120\).aspx)et fournit des informations supplémentaires sur les SPN et les connexions Kerberos.  
 
-> [!IMPORTANT]  
->  -   Quand vous créez un SPN pour un serveur SQL Server en cluster, vous devez spécifier le nom virtuel du cluster SQL Server comme nom d’ordinateur SQL Server.  
-> -   La commande permettant d’enregistrer un SPN pour une instance nommée de SQL Server est la même que celle utilisée pour l’enregistrement du SPN d’une instance par défaut, la seule différence étant que le numéro de port doit correspondre au port utilisé par l’instance nommée.  
+> [!IMPORTANT]
+> - Quand vous créez un SPN pour un serveur SQL Server en cluster, vous devez spécifier le nom virtuel du cluster SQL Server comme nom d’ordinateur SQL Server.  
+>   -   La commande permettant d’enregistrer un SPN pour une instance nommée de SQL Server est la même que celle utilisée pour l’enregistrement du SPN d’une instance par défaut, la seule différence étant que le numéro de port doit correspondre au port utilisé par l’instance nommée.  
 
 Vous pouvez enregistrer un SPN pour le compte de service SQL Server du serveur de base de données de site à l’aide de l’outil **Setspn** . Vous devez exécuter l'outil Setspn sur un ordinateur qui réside dans le domaine de SQL Server et qui doit utiliser les informations d'identification de l'administrateur de domaine pour pouvoir l'exécuter.  
 
@@ -279,9 +279,9 @@ Le compte que vous utilisez pour effectuer une réinitialisation du site doit di
 
 -   Le compte que vous utilisez pour effectuer une réinitialisation du site doit disposer des autorisations suivantes :  
 
-    -   **Site d’administration centrale**: le compte que vous utilisez pour réinitialiser un site de ce site doit être un administrateur local situé sur le serveur de site d'administration centrale et doit disposer de privilèges équivalents au rôle de sécurité de l'administration basée sur le rôle **Administrateur complet** .  
+    -   **Site d'administration centrale** : Le compte que vous utilisez pour réinitialiser un site de ce site doit être un administrateur local situé sur le serveur de site d'administration centrale et doit disposer de privilèges équivalents au rôle de sécurité de l'administration basée sur le rôle **Administrateur complet**.  
 
-    -   **Site principal**: le compte que vous utilisez pour réinitialiser un site de ce site doit être un administrateur local situé sur le serveur de site principal et doit disposer de privilèges équivalents au rôle de sécurité de l'administration basée sur le rôle **Administrateur complet** . Si le site principal se trouve dans une hiérarchie disposant d'un site d'administration centrale, ce compte doit également être un administrateur local sur le serveur du site d'administration centrale.  
+    -   **Site principal** : Le compte que vous utilisez pour réinitialiser un site de ce site doit être un administrateur local situé sur le serveur de site principal et doit disposer de privilèges équivalents au rôle de sécurité de l'administration basée sur le rôle **Administrateur complet**. Si le site principal se trouve dans une hiérarchie disposant d'un site d'administration centrale, ce compte doit également être un administrateur local sur le serveur du site d'administration centrale.  
 
 **Limitations d’une réinitialisation de site**
   - Depuis la version 1602, vous ne pouvez pas utiliser une réinitialisation de site pour modifier les modules linguistiques serveur ou client qui ont été installés sur les sites tant que la hiérarchie est configurée pour prendre en charge les [tests des mises à niveau du client dans un regroupement de préproduction](/sccm/core/clients/manage/upgrade/test-client-upgrades).

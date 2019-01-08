@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: c552c58ca44943f1c5be6e2ffc9efc807c0cc41b
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: a50e78a65a1c41189baedf877ece24c324abad71
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32339993"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53423913"
 ---
 # <a name="content-source-location-scenarios-in-system-center-configuration-manager"></a>Scénarios d’emplacement source du contenu dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Dans les versions de System Center Configuration Manager antérieures à 1610, vous pouvez utiliser une combinaison de différents paramètres pour définir de quelle manière et à quel emplacement les clients peuvent obtenir du contenu sur un réseau lent. Les combinaisons possibles déterminent l’emplacement du contenu utilisé par les clients, et si les clients peuvent utiliser un emplacement de secours quand la source de contenu préférée n’est pas disponible.  
 
@@ -35,17 +35,17 @@ Dans les versions de System Center Configuration Manager antérieures à 1610, 
 
 **Les trois paramètres suivants définissent le comportement quand des clients demandent du contenu :**
 
--  **Autoriser un emplacement source de secours pour le contenu** (activé ou non activé) : Vous pouvez activer cette option sous l’onglet **Groupes de limites** d’un point de distribution. Elle permet au client d’utiliser un point de distribution configuré comme emplacement de secours quand le contenu n’est pas disponible sur un point de distribution préféré.  
+- **Autoriser l’emplacement source de secours pour le contenu** (activé ou non activé) : il s’agit d’une option que vous pouvez activer sous l’onglet **Groupes de limites** d’un point de distribution. Elle permet au client d’utiliser un point de distribution configuré comme emplacement de secours quand le contenu n’est pas disponible sur un point de distribution préféré.  
 
- - **Comportement du déploiement pour la vitesse de connexion du réseau** : chaque déploiement est configuré avec l’un des comportements suivants à utiliser quand la connexion au point de distribution est lente :  
+  - **Comportement du déploiement pour la vitesse de connexion du réseau** : chaque déploiement est configuré avec l’un des comportements suivants à utiliser quand la connexion au point de distribution est lente :  
 
     -   **Télécharger le contenu à partir du point de distribution et l’exécuter localement**  
 
-    -   **Ne pas télécharger de contenu** : Cette option est utilisée uniquement quand un client utilise un emplacement de secours pour obtenir du contenu.  
+    -   **Ne pas télécharger de contenu** : cette option sert uniquement quand un client utilise un emplacement de secours pour obtenir du contenu.  
 
     La vitesse de connexion pour un point de distribution est configurée sous l’onglet **Références** d’un groupe de limites, et est propre à celui-ci.  
 
- -  **Distribution de package à la demande** (vers les points de distribution préférés) : Cette option est activée quand vous sélectionnez l’option **Distribuer le contenu pour ce package vers les points de distribution préférés** sous l’onglet **Paramètres de distribution** des propriétés d’un package ou d’une application. Quand cette option est activée, elle indique à Configuration Manager de copier automatiquement le contenu vers un point de distribution préféré n’ayant pas encore le contenu après qu’un client a demandé celui-ci à un point de distribution.  
+  - **Distribution de package à la demande** (vers les points de distribution préférés) : cette option est activée quand vous sélectionnez l’option **Distribuer le contenu pour ce package vers les points de distribution préférés** sous l’onglet **Paramètres de distribution** des propriétés d’un package ou d’une application. Quand cette option est activée, elle indique à Configuration Manager de copier automatiquement le contenu vers un point de distribution préféré n’ayant pas encore le contenu après qu’un client a demandé celui-ci à un point de distribution.  
 
 
  **Les conditions préalables suivantes s’appliquent à tous les scénarios :**
@@ -61,12 +61,12 @@ Dans les versions de System Center Configuration Manager antérieures à 1610, 
 
 -   **Le contenu est disponible sur un point de distribution préféré**  
 
--   **Autoriser les actions de secours** : non activé  
+-   **Autoriser les actions de secours** : Non activé  
 
--   **Comportement du déploiement pour un réseau lent** : n’importe quelle configuration  
+-   **Comportement du déploiement pour un réseau lent** : N'importe quelle configuration  
 
 
-**Détails :** (La configuration de la distribution de package à la demande ne s’applique pas dans ce scénario.)  
+**Détails :** (la configuration de la distribution de package à la demande ne s’applique pas dans ce scénario.)  
 
 1.  Le client envoie une requête de contenu au point de gestion.  
 
@@ -79,12 +79,12 @@ Dans les versions de System Center Configuration Manager antérieures à 1610, 
 
 -   **Le contenu est disponible sur un point de distribution préféré**  
 
--   **Autoriser les actions de secours** : activé  
+-   **Autoriser les actions de secours** : Permis  
 
--   **Comportement du déploiement pour un réseau lent** : ne pas télécharger de contenu  
+-   **Comportement du déploiement pour un réseau lent** : Ne pas télécharger de contenu  
 
 
-**Détails :** (La configuration de la distribution de package à la demande ne s’applique pas dans ce scénario.)  
+**Détails :** (la configuration de la distribution de package à la demande ne s’applique pas dans ce scénario.)  
 
 1.  Le client envoie une requête de contenu au point de gestion. Le client inclut un indicateur avec la demande indiquant que les points de distribution de secours sont autorisés.  
 
@@ -97,12 +97,12 @@ Dans les versions de System Center Configuration Manager antérieures à 1610, 
 
 -   **Le contenu est disponible sur un point de distribution préféré**  
 
--   **Autoriser les actions de secours** : activé  
+-   **Autoriser les actions de secours** : Permis  
 
--   **Comportement du déploiement pour un réseau lent** : télécharger et installer le contenu  
+-   **Comportement du déploiement pour un réseau lent** : Télécharger et installer le contenu  
 
 
-**Détails :** (La configuration de la distribution de package à la demande ne s’applique pas dans ce scénario.)  
+**Détails :** (la configuration de la distribution de package à la demande ne s’applique pas dans ce scénario.)  
 
 1.  Le client envoie une requête de contenu au point de gestion. Le client inclut un indicateur avec la demande indiquant que les points de distribution de secours sont autorisés.  
 
@@ -117,9 +117,9 @@ Dans les versions de System Center Configuration Manager antérieures à 1610, 
 
 -   **Distribuer le contenu pour ce package vers les points de distribution préférés** : non activé  
 
--   **Autoriser les actions de secours** : non activé  
+-   **Autoriser les actions de secours** : Non activé  
 
--   **Comportement du déploiement pour un réseau lent** : n’importe quelle configuration  
+-   **Comportement du déploiement pour un réseau lent** : N'importe quelle configuration  
 
 
 **Détails :**  
@@ -137,9 +137,9 @@ Dans les versions de System Center Configuration Manager antérieures à 1610, 
 
 -   **Distribuer le contenu pour ce package vers les points de distribution préférés** : non activé  
 
--   **Autoriser les actions de secours** : activé  
+-   **Autoriser les actions de secours** : Permis  
 
--   **Comportement du déploiement pour un réseau lent** : ne pas télécharger de contenu  
+-   **Comportement du déploiement pour un réseau lent** : Ne pas télécharger de contenu  
 
 
 **Détails :**  
@@ -157,9 +157,9 @@ Dans les versions de System Center Configuration Manager antérieures à 1610, 
 
 -   **Distribuer le contenu pour ce package vers les points de distribution préférés** : non activé  
 
--   **Autoriser les actions de secours** : activé  
+-   **Autoriser les actions de secours** : Permis  
 
--   **Comportement du déploiement pour un réseau lent** : télécharger et installer le contenu  
+-   **Comportement du déploiement pour un réseau lent** : Télécharger et installer le contenu  
 
 
 **Détails :**  
@@ -177,9 +177,9 @@ Dans les versions de System Center Configuration Manager antérieures à 1610, 
 
 -   **Distribuer le contenu pour ce package vers les points de distribution préférés** : activé  
 
--   **Autoriser les actions de secours** : non activé  
+-   **Autoriser les actions de secours** : Non activé  
 
--   **Comportement du déploiement pour un réseau lent** : n’importe quelle configuration  
+-   **Comportement du déploiement pour un réseau lent** : N'importe quelle configuration  
 
 
 **Détails :**  
@@ -205,9 +205,9 @@ Dans les versions de System Center Configuration Manager antérieures à 1610, 
 
 -   **Distribuer le contenu pour ce package vers les points de distribution préférés** : activé  
 
--   **Autoriser les actions de secours** : activé  
+-   **Autoriser les actions de secours** : Permis  
 
--   **Comportement du déploiement pour un réseau lent** : ne pas télécharger de contenu  
+-   **Comportement du déploiement pour un réseau lent** : Ne pas télécharger de contenu  
 
 
 **Détails :**  
@@ -235,9 +235,9 @@ Dans les versions de System Center Configuration Manager antérieures à 1610, 
 
 -   **Distribuer le contenu pour ce package vers les points de distribution préférés** : activé  
 
--   **Autoriser les actions de secours** : activé  
+-   **Autoriser les actions de secours** : Permis  
 
--   **Comportement du déploiement pour un réseau lent** : télécharger et installer le contenu  
+-   **Comportement du déploiement pour un réseau lent** : Télécharger et installer le contenu  
 
 
 **Détails :**  

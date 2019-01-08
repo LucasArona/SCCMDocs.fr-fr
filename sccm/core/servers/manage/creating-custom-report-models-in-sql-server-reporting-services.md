@@ -10,23 +10,23 @@ ms.assetid: f2df88b4-c348-4dcf-854a-54fd6eedf485
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: fd606ff7068b7c14047e445d16ea78d20a5c12ea
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: d011272c42f3347f555e4fb5322464e9c5e754da
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342645"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424695"
 ---
 # <a name="creating-custom-report-models-for-system-center-configuration-manager-in-sql-server-reporting-services"></a>Création de modèles de rapport personnalisés pour System Center Configuration Manager dans SQL Server Reporting Services
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Des exemples de modèles de rapport sont inclus dans System Center Configuration Manager, mais vous pouvez également définir des modèles de rapport qui répondent aux besoins de votre activité, puis déployer le modèle de rapport sur Configuration Manager pour l’utiliser quand vous créez des rapports basés sur des modèles. Le tableau suivant indique les étapes à suivre pour créer et déployer un modèle de rapport basique.  
 
 > [!NOTE]  
 >  Pour connaître les étapes à suivre pour créer un modèle de rapport plus avancé, voir la section [Étapes de création d'un modèle de rapport avancé dans SQL Server Reporting Services](#AdvancedReportModel) dans cette rubrique.  
 
-|Étape|Description|Plus d'informations|  
+|Étape|Description|Informations complémentaires|  
 |----------|-----------------|----------------------|  
 |Vérifier que SQL Server Business Intelligence Development Studio est installé|Les modèles de rapport sont conçus et créés à l'aide de SQL Server Business Intelligence Development Studio. Vérifiez que SQL Server Business Intelligence Development Studio est installé sur l'ordinateur sur lequel vous créez le modèle de rapport personnalisé.|Pour plus d'informations sur SQL Server Business Intelligence Development Studio, consultez la documentation de SQL Server 2008.|  
 |Création d'un projet de modèle de rapport|Un projet de modèle de rapport comprend un fichier de définition de la source de données (.ds), un fichier de définition d'une vue de source de données (.dsv) et un fichier de modèle de rapport (.smdl).|Pour plus d'informations, voir la section [Pour créer le projet de modèle de rapport](#BKMK_CreateReportModelProject) de cette rubrique.|  
@@ -68,7 +68,7 @@ Des exemples de modèles de rapport sont inclus dans System Center Configuration
 
 4.  Dans la boîte de dialogue **Connection Manager** , spécifiez les propriétés de connexion suivantes pour la source de données :  
 
-    -   **Nom du serveur** : tapez le nom du serveur de base de données du site Configuration Manager ou sélectionnez-le dans la liste. Si vous utilisez une instance nommée au lieu de celle par défaut, tapez &lt;*serveur_base_de_données*>\\&lt;*nom_instance*>.  
+    -   **Nom du serveur** : tapez le nom du serveur de base de données du site Configuration Manager ou sélectionnez-le dans la liste. Si vous utilisez une instance nommée au lieu de celle par défaut, tapez &lt;*serveur_base_de_données*>\\&lt;*nom_instance*>.  
 
     -   Sélectionnez **Utiliser l'authentification Windows**.  
 
@@ -136,37 +136,37 @@ Des exemples de modèles de rapport sont inclus dans System Center Configuration
 
 ###  <a name="BKMK_DeployReportModel"></a> Pour déployer le modèle de rapport personnalisé vers Configuration Manager  
 
-1.  Localisez le dossier dans lequel vous avez créé le projet du modèle de rapport. Par exemple, %*PROFIL_UTILISATEUR*%\Documents\Visual Studio 2008\Projects\\*&lt;nom_projet\>.*  
+1. Localisez le dossier dans lequel vous avez créé le projet du modèle de rapport. Par exemple, %*PROFIL_UTILISATEUR*%\Documents\Visual Studio 2008\Projects\\*&lt;nom_projet\>.*  
 
-2.  Copiez les fichiers suivants du dossier du projet de modèle de rapport dans un dossier temporaire sur votre ordinateur :  
+2. Copiez les fichiers suivants du dossier du projet de modèle de rapport dans un dossier temporaire sur votre ordinateur :  
 
-    -   *&lt;nom_modèle\>* **.dsv**  
+   -   *&lt;nom_modèle\>* **.dsv**  
 
-    -   *&lt;nom_modèle\>* **.smdl**  
+   -   *&lt;nom_modèle\>* **.smdl**  
 
-3.  Ouvrez les fichiers mentionnés précédemment dans un éditeur de texte tel que le Bloc-notes.  
+3. Ouvrez les fichiers mentionnés précédemment dans un éditeur de texte tel que le Bloc-notes.  
 
-4.  Dans le fichier *&lt;nom_modèle\>***.dsv**, localisez la première ligne, qui est la suivante :  
+4. Dans le fichier *&lt;nom_modèle\>***.dsv**, localisez la première ligne, qui est la suivante :  
 
-     **&lt;DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine"\>**  
+    **&lt;DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine"\>**  
 
-     Modifiez cette ligne de la manière suivante :  
+    Modifiez cette ligne de la manière suivante :  
 
-     **&lt;DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine" xmlns:xsi="RelationalDataSourceView"\>**  
+    **&lt;DataSourceView xmlns="<http://schemas.microsoft.com/analysisservices/2003/engine>" xmlns:xsi="RelationalDataSourceView"\>**  
 
-5.  Copiez le contenu entier du fichier dans le Presse-papiers Windows.  
+5. Copiez le contenu entier du fichier dans le Presse-papiers Windows.  
 
-6.  Fermez le fichier *&lt;nom_modèle\>***.dsv**.  
+6. Fermez le fichier *&lt;nom_modèle\>***.dsv**.  
 
-7.  Dans le fichier *&lt;nom_modèle\>***.smdl**, localisez les trois dernières lignes, qui sont les suivantes :  
+7. Dans le fichier *&lt;nom_modèle\>***.smdl**, localisez les trois dernières lignes, qui sont les suivantes :  
 
-     `</Entity>`  
+    `</Entity>`  
 
-     `</Entities>`  
+    `</Entities>`  
 
-     `</SemanticModel>`  
+    `</SemanticModel>`  
 
-8.  Collez le contenu du fichier *&lt;nom_modèle\>***.dsv** juste avant la dernière ligne du fichier(**&lt;SemanticModel\>**).  
+8. Collez le contenu du fichier *&lt;nom_modèle\>***.dsv** juste avant la dernière ligne du fichier(**&lt;SemanticModel\>**).  
 
 9. Enregistrez et fermez le fichier *&lt;nom_modèle\>***.smdl**.  
 
@@ -178,13 +178,13 @@ Des exemples de modèles de rapport sont inclus dans System Center Configuration
 ##  <a name="AdvancedReportModel"></a> Étapes de création d'un modèle de rapport avancé dans SQL Server Reporting Services  
  Vous pouvez utiliser les procédures suivantes pour créer un modèle de rapport avancé dont les utilisateurs de votre site peuvent se servir pour générer des rapports spécifiques basés sur des modèles et sur des données de plusieurs vues de la base de données Configuration Manager. Vous allez créer un modèle de rapport destiné à l'auteur du rapport et présentant les informations relatives aux ordinateurs clients et au système d'exploitation installé sur ces derniers. Ces informations sont extraites des vues suivantes de la base de données Configuration Manager :  
 
--   **V_R_System** : contient des informations sur les ordinateurs découverts et sur le client Configuration Manager.  
+- **V_R_System** : contient des informations sur les ordinateurs découverts et sur le client Configuration Manager.  
 
--   **V_GS_OPERATING_SYSTEM**: contient des informations sur le système d’exploitation installé sur l’ordinateur client.  
+- **V_GS_OPERATING_SYSTEM** : contient des informations sur le système d'exploitation installé sur l'ordinateur client.  
 
- Les éléments sélectionnés dans les vues précédentes vont être consolidés dans une liste de noms conviviaux, puis présentés à l'auteur du rapport dans le générateur de rapports afin de pouvoir être ajoutés dans des rapports particuliers.  
+  Les éléments sélectionnés dans les vues précédentes vont être consolidés dans une liste de noms conviviaux, puis présentés à l'auteur du rapport dans le générateur de rapports afin de pouvoir être ajoutés dans des rapports particuliers.  
 
- Vérifiez que SQL Server Business Intelligence Development Studio est installé sur l'ordinateur où vous effectuez ces procédures et que cet ordinateur dispose d'une connectivité réseau avec le serveur du point de Reporting Services. Pour plus de détails sur SQL Server Business Intelligence Development Studio, consultez la documentation de SQL Server.  
+  Vérifiez que SQL Server Business Intelligence Development Studio est installé sur l'ordinateur où vous effectuez ces procédures et que cet ordinateur dispose d'une connectivité réseau avec le serveur du point de Reporting Services. Pour plus de détails sur SQL Server Business Intelligence Development Studio, consultez la documentation de SQL Server.  
 
 #### <a name="to-create-the-report-model-project"></a>To create the report model project  
 
@@ -213,7 +213,7 @@ Des exemples de modèles de rapport sont inclus dans System Center Configuration
 
 4.  Dans la boîte de dialogue **Connection Manager** , spécifiez les propriétés de connexion suivantes pour la source de données :  
 
-    -   **Nom du serveur** : tapez le nom du serveur de base de données du site Configuration Manager ou sélectionnez-le dans la liste. Si vous utilisez une instance nommée au lieu de celle par défaut, tapez &lt;*serveur_base_de_données*>\\&lt;*nom_instance*>.  
+    -   **Nom du serveur** : tapez le nom du serveur de base de données du site Configuration Manager ou sélectionnez-le dans la liste. Si vous utilisez une instance nommée au lieu de celle par défaut, tapez &lt;*serveur_base_de_données*>\\&lt;*nom_instance*>.  
 
     -   Sélectionnez **Utiliser l'authentification Windows**.  
 
@@ -234,28 +234,28 @@ Des exemples de modèles de rapport sont inclus dans System Center Configuration
 
 #### <a name="to-define-the-data-source-view-for-the-report-model"></a>Pour définir la vue de la source de données du modèle de rapport  
 
-1.  Dans le volet **Explorateur de solutions**, cliquez avec le bouton droit sur **Vues des sources de données** pour sélectionner **Ajouter une nouvelle vue de source de données**.  
+1. Dans le volet **Explorateur de solutions**, cliquez avec le bouton droit sur **Vues des sources de données** pour sélectionner **Ajouter une nouvelle vue de source de données**.  
 
-2.  Sur la page **Bienvenue dans l'Assistant Sources de données** , cliquez sur **Suivant**. La page **Sélectionner une source de données** s'affiche.  
+2. Sur la page **Bienvenue dans l'Assistant Sources de données** , cliquez sur **Suivant**. La page **Sélectionner une source de données** s'affiche.  
 
-3.  Dans la fenêtre **Sources de données relationnelles** , vérifiez que la source de données **Modèle_avancé** est sélectionnée, puis cliquez sur **Suivant**.  
+3. Dans la fenêtre **Sources de données relationnelles** , vérifiez que la source de données **Modèle_avancé** est sélectionnée, puis cliquez sur **Suivant**.  
 
-4.  Sur la page **Sélectionner des tables et des vues** , dans la liste **Objets disponibles** , sélectionnez les vues suivantes à utiliser dans le modèle de rapport :  
+4. Sur la page **Sélectionner des tables et des vues** , dans la liste **Objets disponibles** , sélectionnez les vues suivantes à utiliser dans le modèle de rapport :  
 
-    -   **v_R_System (dbo)**  
+   - **v_R_System (dbo)**  
 
-    -   **v_GS_OPERATING_SYSTEM (dbo)**  
+   - **v_GS_OPERATING_SYSTEM (dbo)**  
 
      Une fois que vous avez sélectionné chaque vue, cliquez sur **>** pour transférer l'objet dans la liste **Objets inclus** .  
 
-    > [!TIP]  
-    >  Pour localiser aisément des vues dans la liste **Objets disponibles** , cliquez sur l'en-tête **Nom** situé en haut de la liste pour trier les objets par ordre alphabétique.  
+   > [!TIP]  
+   >  Pour localiser aisément des vues dans la liste **Objets disponibles** , cliquez sur l'en-tête **Nom** situé en haut de la liste pour trier les objets par ordre alphabétique.  
 
-5.  Si la boîte de dialogue **Correspondance de noms** s'affiche, acceptez les sélections par défaut, puis cliquez sur **Suivant**.  
+5. Si la boîte de dialogue **Correspondance de noms** s'affiche, acceptez les sélections par défaut, puis cliquez sur **Suivant**.  
 
-6.  Lorsque vous avez sélectionné les objets dont vous avez besoin, cliquez sur **Suivant**, puis spécifiez un nom pour la vue de la source de données. Dans cet exemple, tapez **Modèle_avancé**.  
+6. Lorsque vous avez sélectionné les objets dont vous avez besoin, cliquez sur **Suivant**, puis spécifiez un nom pour la vue de la source de données. Dans cet exemple, tapez **Modèle_avancé**.  
 
-7.  Cliquez sur **Terminer**. La vue de la source de données **Modèle_avancé.dsv** s'affiche dans le dossier **Vues des sources de données** de l' **Explorateur de solutions**.  
+7. Cliquez sur **Terminer**. La vue de la source de données **Modèle_avancé.dsv** s'affiche dans le dossier **Vues des sources de données** de l' **Explorateur de solutions**.  
 
 #### <a name="to-define-relationships-in-the-data-source-view"></a>Pour définir des liens dans la vue de source de données  
 
@@ -379,37 +379,37 @@ Des exemples de modèles de rapport sont inclus dans System Center Configuration
 
 #### <a name="to-deploy-the-custom-report-model-to-configuration-manager"></a>Pour déployer le modèle de rapport personnalisé vers Configuration Manager  
 
-1.  Localisez le dossier dans lequel vous avez créé le projet du modèle de rapport. Par exemple, %*PROFIL_UTILISATEUR*%\Documents\Visual Studio 2008\Projects\\*&lt;nom_projet\>.*  
+1. Localisez le dossier dans lequel vous avez créé le projet du modèle de rapport. Par exemple, %*PROFIL_UTILISATEUR*%\Documents\Visual Studio 2008\Projects\\*&lt;nom_projet\>.*  
 
-2.  Copiez les fichiers suivants du dossier du projet de modèle de rapport dans un dossier temporaire sur votre ordinateur :  
+2. Copiez les fichiers suivants du dossier du projet de modèle de rapport dans un dossier temporaire sur votre ordinateur :  
 
-    -   *&lt;nom_modèle\>* **.dsv**  
+   -   *&lt;nom_modèle\>* **.dsv**  
 
-    -   *&lt;nom_modèle\>* **.smdl**  
+   -   *&lt;nom_modèle\>* **.smdl**  
 
-3.  Ouvrez les fichiers mentionnés précédemment dans un éditeur de texte tel que le Bloc-notes.  
+3. Ouvrez les fichiers mentionnés précédemment dans un éditeur de texte tel que le Bloc-notes.  
 
-4.  Dans le fichier *&lt;nom_modèle\>***.dsv**, localisez la première ligne, qui est la suivante :  
+4. Dans le fichier *&lt;nom_modèle\>***.dsv**, localisez la première ligne, qui est la suivante :  
 
-     **&lt;DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine"\>**  
+    **&lt;DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine"\>**  
 
-     Modifiez cette ligne de la manière suivante :  
+    Modifiez cette ligne de la manière suivante :  
 
-     **&lt;DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine" xmlns:xsi="RelationalDataSourceView"\>**  
+    **&lt;DataSourceView xmlns="<http://schemas.microsoft.com/analysisservices/2003/engine>" xmlns:xsi="RelationalDataSourceView"\>**  
 
-5.  Copiez le contenu entier du fichier dans le Presse-papiers Windows.  
+5. Copiez le contenu entier du fichier dans le Presse-papiers Windows.  
 
-6.  Fermez le fichier *&lt;nom_modèle\>***.dsv**.  
+6. Fermez le fichier *&lt;nom_modèle\>***.dsv**.  
 
-7.  Dans le fichier *&lt;nom_modèle\>***.smdl**, localisez les trois dernières lignes, qui sont les suivantes :  
+7. Dans le fichier *&lt;nom_modèle\>***.smdl**, localisez les trois dernières lignes, qui sont les suivantes :  
 
-     `</Entity>`  
+    `</Entity>`  
 
-     `</Entities>`  
+    `</Entities>`  
 
-     `</SemanticModel>`  
+    `</SemanticModel>`  
 
-8.  Collez le contenu du fichier *&lt;nom_modèle\>***.dsv** juste avant la dernière ligne du fichier(**&lt;SemanticModel\>**).  
+8. Collez le contenu du fichier *&lt;nom_modèle\>***.dsv** juste avant la dernière ligne du fichier(**&lt;SemanticModel\>**).  
 
 9. Enregistrez et fermez le fichier *&lt;nom_modèle\>***.smdl**.  
 

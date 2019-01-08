@@ -10,16 +10,16 @@ ms.assetid: 30170d70-489f-47f7-bebf-9ed0115db26b
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: d32a2997da45f02dfd4d2abaf3bf292295f88224
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: b42012bdd6eb0456d25f9970ed2cf18f881a1c14
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335573"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424814"
 ---
 # <a name="revise-and-supersede-applications-in-system-center-configuration-manager"></a>Modifier et remplacer des applications dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Dans cette rubrique, vous allez apprendre à utiliser des versions d’application System Center Configuration Manager et à remplacer des applications par une nouvelle version.  
 
@@ -76,13 +76,13 @@ Dans cette rubrique, vous allez apprendre à utiliser des versions d’applicati
 
  Vous pouvez créer une relation de remplacement qui met à jour l’application dépendante vers une nouvelle version.  
 
-1.  Assurez-vous que la nouvelle application dépendante et l'application dépendante d'origine sont dans le même groupe de dépendance de l'application maître.  
+1. Assurez-vous que la nouvelle application dépendante et l'application dépendante d'origine sont dans le même groupe de dépendance de l'application maître.  
 
-2.  Créez une relation de remplacement qui remplace l'application dépendante d'origine par la nouvelle application dépendante.  
+2. Créez une relation de remplacement qui remplace l'application dépendante d'origine par la nouvelle application dépendante.  
 
- Pendant les nouvelles installations de l’application maître, la nouvelle application dépendante est installée. Les installations existantes de l’application maître sont mises à jour avec la nouvelle application dépendante.  
+   Pendant les nouvelles installations de l’application maître, la nouvelle application dépendante est installée. Les installations existantes de l’application maître sont mises à jour avec la nouvelle application dépendante.  
 
- Le résultat final est que tous les déploiements de l’application maître utilisent la nouvelle application dépendante.  
+   Le résultat final est que tous les déploiements de l’application maître utilisent la nouvelle application dépendante.  
 
 ### <a name="further-considerations"></a>Autres considérations  
 

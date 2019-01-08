@@ -10,26 +10,26 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0cb94f8d14ff525687909290085e16ecd47fa39f
-ms.sourcegitcommit: 22257e35a7d7263939a6802602050190897412a8
+ms.openlocfilehash: cf5b55dddae34ac855f21e7d70967d3b9ab1c2dc
+ms.sourcegitcommit: 81e3666c41eb976cc7651854042dafe219e2e467
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51562046"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53747158"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Se préparer à l’utilisation de groupes de disponibilité SQL Server Always On avec Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Utilisez cet article pour préparer Configuration Manager à utiliser des groupes de disponibilité Always On SQL Server. Cette fonctionnalité constitue une solution de haute disponibilité et récupération d’urgence pour la base de données du site.  
 
 Configuration Manager prend en charge des groupes de disponibilité :
--     Sur les sites principaux et sur le site d’administration centrale.
--     Localement ou dans Microsoft Azure.
+- Sur les sites principaux et sur le site d’administration centrale.
+- Localement ou dans Microsoft Azure.
 
 Quand vous utilisez des groupes de disponibilité dans Microsoft Azure, vous pouvez encore augmenter la disponibilité de la base de données de votre site en utilisant des *groupes de disponibilité Azure*. Pour plus d’informations sur les groupes à haute disponibilité Azure, consultez [Gestion de la disponibilité des machines virtuelles](https://azure.microsoft.com/documentation/articles/virtual-machines-windows-manage-availability/).
 
->  [!Important]   
+> [!Important]
 >  Avant de continuer, familiarisez-vous avec la configuration de SQL Server et les groupes de disponibilité SQL Server. Les informations ci-dessous font référence à la bibliothèque de documentation et aux procédures SQL Server.
 
 
@@ -38,12 +38,12 @@ Quand vous utilisez des groupes de disponibilité dans Microsoft Azure, vous pou
 
 Les scénarios suivants sont pris en charge pour l’utilisation de groupes de disponibilité avec Configuration Manager. Pour plus d’informations sur chacun et pour connaître les procédures correspondantes, voir [Configurer des groupes de disponibilité pour Configuration Manager](/sccm/core/servers/deploy/configure/configure-aoag).
 
--      [Créer un groupe de disponibilité pour l’utiliser avec Configuration Manager](/sccm/core/servers/deploy/configure/configure-aoag#create-and-configure-an-availability-group)  
--     [Configurer un site pour utiliser un groupe de disponibilité](/sccm/core/servers/deploy/configure/configure-aoag#configure-a-site-to-use-the-database-in-the-availability-group)  
--     [Ajouter ou supprimer des membres de réplica synchrone dans un groupe de disponibilité qui héberge une base de données de site](/sccm/core/servers/deploy/configure/configure-aoag#add-and-remove-synchronous-replica-members)  
--     [Configurer des réplicas avec validation asynchrone](/sccm/core/servers/deploy/configure/configure-aoag#configure-an-asynchronous-commit-repilca)  
--     [Récupérer un site à partir d’un réplica avec validation asynchrone](/sccm/core/servers/deploy/configure/configure-aoag#use-the-asynchronous-replica-to-recover-your-site)  
--     [Déplacer une base de données de site d’un groupe de disponibilité vers une instance par défaut ou nommée d’un serveur SQL Server autonome](/sccm/core/servers/deploy/configure/configure-aoag#stop-using-an-availability-group)  
+- [Créer un groupe de disponibilité pour l’utiliser avec Configuration Manager](/sccm/core/servers/deploy/configure/configure-aoag#create-and-configure-an-availability-group)  
+- [Configurer un site pour utiliser un groupe de disponibilité](/sccm/core/servers/deploy/configure/configure-aoag#configure-a-site-to-use-the-database-in-the-availability-group)  
+- [Ajouter ou supprimer des membres de réplica synchrone dans un groupe de disponibilité qui héberge une base de données de site](/sccm/core/servers/deploy/configure/configure-aoag#add-and-remove-synchronous-replica-members)  
+- [Configurer des réplicas avec validation asynchrone](/sccm/core/servers/deploy/configure/configure-aoag#configure-an-asynchronous-commit-repilca)  
+- [Récupérer un site à partir d’un réplica avec validation asynchrone](/sccm/core/servers/deploy/configure/configure-aoag#use-the-asynchronous-replica-to-recover-your-site)  
+- [Déplacer une base de données de site d’un groupe de disponibilité vers une instance par défaut ou nommée d’un serveur SQL Server autonome](/sccm/core/servers/deploy/configure/configure-aoag#stop-using-an-availability-group)  
 
 
 
@@ -95,16 +95,16 @@ Chaque membre de réplica doit avoir la configuration suivante :
 
 - utiliser *l’instance par défaut* ou une *instance nommée* ;  
 
-- le paramètre **Connexions dans le rôle principal** défini sur **Oui** ;  
+- le paramètre **Connexions dans le rôle principal** défini sur **Autoriser toutes les connexions** ;  
 
 - le paramètre **Secondaire accessible en lecture** défini sur **Oui** ;  
 
 - le **basculement manuel** activé.     
 
-    >  [!TIP]  
-    >  Configuration Manager prend en charge l’utilisation de réplicas synchrones de groupe de disponibilité quand il est configuré pour le **Basculement automatique**. Définissez **Basculement manuel** quand :
-    >  -  Vous exécutez le programme d’installation de Configuration Manager pour spécifier l’utilisation de la base de données de site dans le groupe de disponibilité.  
-    >  -  Vous installez une mise à jour de Configuration Manager (et pas seulement des mises à jour qui s’appliquent à la base de données de site).  
+  > [!TIP]
+  >  Configuration Manager prend en charge l’utilisation de réplicas synchrones de groupe de disponibilité quand il est configuré pour le **Basculement automatique**. Définissez **Basculement manuel** quand :
+  >  -  Vous exécutez le programme d’installation de Configuration Manager pour spécifier l’utilisation de la base de données de site dans le groupe de disponibilité.  
+  >  -  Vous installez une mise à jour de Configuration Manager (et pas seulement des mises à jour qui s’appliquent à la base de données de site).  
 
 #### <a name="replica-member-location"></a>Emplacement du membre de réplica
 Hébergez tous les réplicas d’un groupe de disponibilité sur site ou sur Microsoft Azure. Les groupes incluant un membre local et un membre dans Azure ne sont pas pris en charge.     
@@ -113,16 +113,16 @@ Le programme d’installation de Configuration Manager doit se connecter à chaq
 
 - Mappeur de point de terminaison RCP : **TCP 135**   
 
-- SQL Server Service Broker : **TCP 4022**  
+- SQL Server Service Broker : **TCP 4022**  
 
-- SQL sur TCP : **TCP 1433**   
+- SQL sur TCP : **TCP 1433**   
 
 
 Une fois l’installation terminée, les ports suivants doivent rester ouverts pour Configuration Manager :  
 
-- SQL Server Service Broker : **TCP 4022**  
+- SQL Server Service Broker : **TCP 4022**  
 
-- SQL sur TCP : **TCP 1433**  
+- SQL sur TCP : **TCP 1433**  
 
 Il est possible d’utiliser des ports personnalisés pour ces configurations. Utilisez les mêmes ports personnalisés par le point de terminaison et sur tous les réplicas du groupe de disponibilité.
 
@@ -145,7 +145,7 @@ Par exemple, examinez le scénario suivant :
 
 - Vous avez mis à niveau vos deux serveurs réplicas secondaires d’une version antérieure vers SQL Server 2014. Avec la mise à niveau, ces serveurs conservent le chemin d’accès de fichier d’origine pour stocker les fichiers de base de données : `C:\Program Files\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\DATA`.  
 
-- Avant de déplacer la base de données de site dans ce groupe de disponibilité, créez le chemin d’accès de fichier suivant sur chaque serveur réplica secondaire : `C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA`. Il s’agit d’une copie du chemin d’accès utilisé sur le réplica principal, même si les réplicas secondaires n’utilisent pas cet emplacement de fichier.  
+- Avant de déplacer la base de données de site dans ce groupe de disponibilité, créez le chemin d’accès de fichier suivant sur chaque serveur réplica secondaire : `C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA`. Il s’agit d’une copie du chemin d’accès utilisé sur le réplica principal, même si les réplicas secondaires n’utilisent pas cet emplacement de fichier.  
 
 - Vous accordez ensuite au compte de service SQL Server sur chaque réplica secondaire un accès en contrôle total à l’emplacement du fichier qui vient d’être créé sur ce serveur.  
 
@@ -239,11 +239,11 @@ Les limitations suivantes s’appliquent à tous les scénarios.
 
 #### <a name="unsupported-sql-server-options-and-configurations"></a>Configurations et options SQL Server non prises en charge
 
-- **Groupes de disponibilité de base** : introduits dans l’édition standard de SQL Server 2016, les groupes de disponibilité de base ne prennent pas en charge l’accès en lecture aux réplicas secondaires. La configuration exige cet accès. Pour plus d’informations, voir [Groupes de disponibilité SQL Server de base](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups?view=sql-server-2017).  
+- **Groupes de disponibilité de base** : Introduits dans l’édition standard de SQL Server 2016, les groupes de disponibilité de base ne prennent pas en charge l’accès en lecture aux réplicas secondaires. La configuration exige cet accès. Pour plus d’informations, voir [Groupes de disponibilité SQL Server de base](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups?view=sql-server-2017).  
 
-- **Instance de cluster de basculement** : les instances de clusters de basculement ne sont pas prises en charge pour un réplica utilisé avec Configuration Manager. Pour plus d’informations, voir [Instances de clusters de basculement Always On SQL Server](https://docs.microsoft.com/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server).  
+- **Instance de cluster de basculement** : Les instances de cluster de basculement ne sont pas prises en charge pour un réplica que vous utilisez avec Configuration Manager. Pour plus d’informations, voir [Instances de clusters de basculement Always On SQL Server](https://docs.microsoft.com/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server).  
 
-- **MultiSubnetFailover** : l’utilisation d’un groupe de disponibilité avec Configuration Manager n’est pas prise en charge dans une configuration de sous-réseaux multiples. Il n’est pas non plus possible d’utiliser la chaîne de connexion du mot clé [MultiSubnetFailover](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover).  
+- **MultiSubnetFailover** : L’utilisation d’un groupe de disponibilité avec Configuration Manager n’est pas prise en charge dans une configuration de sous-réseaux multiples. Il n’est pas non plus possible d’utiliser la chaîne de connexion du mot clé [MultiSubnetFailover](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover).  
 
 #### <a name="sql-servers-that-host-additional-availability-groups"></a>Serveurs SQL Server qui hébergent des groupes de disponibilité supplémentaires
 <!--SCCMDocs issue 649-->Si le serveur SQL Server héberge un ou plusieurs groupes de disponibilité en plus du groupe utilisé pour Configuration Manager, il a besoin de paramètres spécifiques lors de l’exécution du programme d’installation de Configuration Manager. Ces paramètres sont également nécessaires pour installer une mise à jour de Configuration Manager. Chacun des réplicas des différents groupes de disponibilité doit disposer des configurations suivantes :
@@ -253,11 +253,11 @@ Les limitations suivantes s’appliquent à tous les scénarios.
 
 #### <a name="unsupported-database-use"></a>Utilisation non prise en charge de la base de données
 
-- **Configuration Manager ne prend en charge que la base de données de site dans un groupe de disponibilité :** les bases de données suivantes ne sont pas prises en charge par Configuration Manager dans un groupe de disponibilité Always On SQL Server :  
+- **Configuration Manager prend uniquement en charge la base de données de site dans un groupe de disponibilité :** Les bases de données suivantes ne sont pas prises en charge par Configuration Manager dans un groupe de disponibilité SQL Server Always On :  
     - Base de données Rapports  
     - Base de données WSUS  
 
-- **Base de données préexistante :** il n’est pas possible d’utiliser une nouvelle base de données créée sur le réplica. Lorsque vous configurez un groupe de disponibilité, restaurez une copie d’une base de données Configuration Manager existante vers le réplica principal.  
+- **Base de données préexistante :** Il n’est pas possible d’utiliser une nouvelle base de données créée sur le réplica. Lorsque vous configurez un groupe de disponibilité, restaurez une copie d’une base de données Configuration Manager existante vers le réplica principal.  
 
 #### <a name="setup-errors-in-configmgrsetuplog"></a>Erreurs d’installation dans ConfigMgrSetup.log  
 Lorsque le programme d’installation de Configuration Manager est exécuté pour déplacer une base de données de site vers un groupe de disponibilité, il tente de traiter les rôles de base de données sur les réplicas secondaires du groupe de disponibilité. Le fichier **ConfigMgrSetup.log** affiche l’erreur suivante :  

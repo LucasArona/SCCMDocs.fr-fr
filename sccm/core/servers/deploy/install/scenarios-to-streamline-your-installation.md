@@ -10,16 +10,16 @@ ms.assetid: 35586a85-4af9-4c8b-925a-0e32dc8b7346
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 77615ab53f715a5d3e5b2e21cda667e6f0a2bc0c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: d03b1be5c099692e5f0c03ff3302d014d9e9643d
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32339364"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53415600"
 ---
 # <a name="scenarios-to-streamline-your-installation-of-system-center-configuration-manager"></a>Scénarios pour simplifier votre installation de System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Avec la publication des versions de mise à jour pour la branche Current Branch de System Center Configuration Manager, de nouveaux scénarios sont apparus pour simplifier l’installation d’une nouvelle hiérarchie sur une version de mise à jour (par exemple, la mise à jour 1610), et pour opérer une mise à niveau à partir de Microsoft System Center 2012 Configuration Manager.
 
@@ -45,43 +45,43 @@ Dans cet exemple de scénario, installez le premier site d’une hiérarchie à 
 
 Suivez l’ordre ci-dessous :  
 
-1.  **Installez un site de niveau supérieur pour votre nouvelle hiérarchie** à l’aide du support de référence.  
+1. **Installez un site de niveau supérieur pour votre nouvelle hiérarchie** à l’aide du support de référence.  
 
-    -   Vous pouvez utiliser le support de référence uniquement pour installer le premier site d’une nouvelle hiérarchie.  
-    -   Par exemple, installez un site de niveau supérieur à l’aide de la version de référence 1606. Pour plus d’informations, voir [Utiliser l’Assistant Installation pour installer des sites](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites).  
+   -   Vous pouvez utiliser le support de référence uniquement pour installer le premier site d’une nouvelle hiérarchie.  
+   -   Par exemple, installez un site de niveau supérieur à l’aide de la version de référence 1606. Pour plus d’informations, voir [Utiliser l’Assistant Installation pour installer des sites](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites).  
 
-    Après cette étape, votre site de niveau supérieur exécute la version 1606.  
+   Après cette étape, votre site de niveau supérieur exécute la version 1606.  
 
-2.  **Utilisez des mises à jour dans la console pour mettre à jour votre site de niveau supérieur vers une version ultérieure.**  
+2. **Utilisez des mises à jour dans la console pour mettre à jour votre site de niveau supérieur vers une version ultérieure.**  
 
-    -   Avant d’installer des clients ou des sites enfants, mettez à jour votre site de niveau supérieur vers la version de mise à jour que vous prévoyez d’utiliser.  
-    -   Par exemple, vous pouvez mettre à jour vers la version 1610 votre site de niveau supérieur qui exécute la version 1606. Pour plus d’informations, consultez [Mises à jour pour System Center Configuration Manager](../../../../core/servers/manage/updates.md).  
+   -   Avant d’installer des clients ou des sites enfants, mettez à jour votre site de niveau supérieur vers la version de mise à jour que vous prévoyez d’utiliser.  
+   -   Par exemple, vous pouvez mettre à jour vers la version 1610 votre site de niveau supérieur qui exécute la version 1606. Pour plus d’informations, consultez [Mises à jour pour System Center Configuration Manager](../../../../core/servers/manage/updates.md).  
 
-    Après cette étape, votre site de niveau supérieur exécute la version 1610.  
+   Après cette étape, votre site de niveau supérieur exécute la version 1610.  
 
-3.  **Installez les nouveaux sites principaux enfants sous un site d’administration centrale.**  
+3. **Installez les nouveaux sites principaux enfants sous un site d’administration centrale.**  
 
-    -   Utilisez le support d’installation du dossier CD.Latest sur le serveur du site d’administration centrale pour installer les sites principaux enfants. Pour plus d’informations, voir [Dossier CD.Latest pour System Center Configuration Manager](../../../../core/servers/manage/the-cd.latest-folder.md).  
+   - Utilisez le support d’installation du dossier CD.Latest sur le serveur du site d’administration centrale pour installer les sites principaux enfants. Pour plus d’informations, voir [Dossier CD.Latest pour System Center Configuration Manager](../../../../core/servers/manage/the-cd.latest-folder.md).  
 
-      Ce support de source d’installation est requis pour s’assurer que la version des nouveaux sites principaux enfants corresponde à celle du site d’administration centrale.  
+     Ce support de source d’installation est requis pour s’assurer que la version des nouveaux sites principaux enfants corresponde à celle du site d’administration centrale.  
 
-    Après cette étape, vos nouveaux sites principaux enfants exécutent la version 1610.  
+   Après cette étape, vos nouveaux sites principaux enfants exécutent la version 1610.  
 
-4.  **Au niveau de chaque site principal, utilisez l’option d’installation dans la console pour installer de nouveaux sites secondaires.**  
+4. **Au niveau de chaque site principal, utilisez l’option d’installation dans la console pour installer de nouveaux sites secondaires.**  
 
-    -   Comme vous n’avez pas installé les sites secondaires quand les sites principaux utilisaient la version 1606, vous n’avez pas besoin de mettre à niveau les sites secondaires.  
-    -   Au lieu de cela, installez de nouveaux sites secondaires qui exécutent la version 1610. Pour plus d’informations, consultez [Installer un site secondaire](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites#bkmk_secondary) dans la rubrique [Utiliser l’Assistant Installation pour installer des sites](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites).  
+   -   Comme vous n’avez pas installé les sites secondaires quand les sites principaux utilisaient la version 1606, vous n’avez pas besoin de mettre à niveau les sites secondaires.  
+   -   Au lieu de cela, installez de nouveaux sites secondaires qui exécutent la version 1610. Pour plus d’informations, consultez [Installer un site secondaire](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites#bkmk_secondary) dans la rubrique [Utiliser l’Assistant Installation pour installer des sites](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites).  
 
-    Après cette étape, les nouveaux sites secondaires sont installés et exécutent la version 1610.  
+   Après cette étape, les nouveaux sites secondaires sont installés et exécutent la version 1610.  
 
-5.  **Installez les nouveaux clients sur le site principal.**  
+5. **Installez les nouveaux clients sur le site principal.**  
 
-    -   Comme vous n’avez pas installé de clients quand les sites principaux utilisaient la version 1606, vous n’avez pas besoin de mettre à niveau de clients de version 1606 vers la version 1610.  
-    -   Au lieu de cela, installez de nouveaux clients exécutant la version 1610. Pour plus d’informations, voir [Déployer des clients dans System Center Configuration Manager](../../../clients/deploy/deploy-clients-to-windows-computers.md).  
+   -   Comme vous n’avez pas installé de clients quand les sites principaux utilisaient la version 1606, vous n’avez pas besoin de mettre à niveau de clients de version 1606 vers la version 1610.  
+   -   Au lieu de cela, installez de nouveaux clients exécutant la version 1610. Pour plus d’informations, voir [Déployer des clients dans System Center Configuration Manager](../../../clients/deploy/deploy-clients-to-windows-computers.md).  
 
-    Après cette étape, de nouveaux clients exécutant la version 1610 sont installés.  
+   Après cette étape, de nouveaux clients exécutant la version 1610 sont installés.  
 
-## <a name="scenario-upgrade-system-center-2012-configuration-manager-to-an-update-version-of-system-center-configuration-manager-current-branch"></a>Scénario : Mettre à niveau System Center 2012 Configuration Manager vers une version de mise à jour de la branche Current Branch de System Center Configuration Manager  
+## <a name="scenario-upgrade-system-center-2012-configuration-manager-to-an-update-version-of-system-center-configuration-manager-current-branch"></a>Scénario : Mettre à niveau System Center 2012 Configuration Manager vers une version de mise à jour de la branche Current Branch de System Center Configuration Manager  
 Dans cet exemple de scénario, mettez à niveau votre infrastructure System Center 2012 Configuration Manager vers une version de mise à jour de System Center Configuration Manager, telle que la version 1610.  
 
 -   Le site d’administration centrale et chaque site principal nécessitent une mise à niveau vers la version de référence 1606 avant l’installation de la mise à jour pour la version 1610.  
@@ -89,39 +89,39 @@ Dans cet exemple de scénario, mettez à niveau votre infrastructure System Cent
 
 Suivez l’ordre ci-dessous :  
 
-1.  **Mettez à niveau votre site Microsoft System Center 2012 Configuration Manager de niveau supérieur** vers une version de référence de la branche Current Branch (comme la version 1606) à l’aide du support de source d’installation pour System Center Configuration Manager. Pour plus d’informations, consultez [Mettre à niveau vers System Center Configuration Manager](../../../../core/servers/deploy/install/upgrade-to-configuration-manager.md).  
+1. **Mettez à niveau votre site Microsoft System Center 2012 Configuration Manager de niveau supérieur** vers une version de référence de la branche Current Branch (comme la version 1606) à l’aide du support de source d’installation pour System Center Configuration Manager. Pour plus d’informations, consultez [Mettre à niveau vers System Center Configuration Manager](../../../../core/servers/deploy/install/upgrade-to-configuration-manager.md).  
 
-    -   Comme dans les scénarios de mise à niveau classiques, vous mettez toujours à niveau d’abord le site de niveau supérieur d’une hiérarchie, puis les sites enfants.  
+   -   Comme dans les scénarios de mise à niveau classiques, vous mettez toujours à niveau d’abord le site de niveau supérieur d’une hiérarchie, puis les sites enfants.  
 
-    Après cette étape, votre site de niveau supérieur exécute la version 1606.  
+   Après cette étape, votre site de niveau supérieur exécute la version 1606.  
 
-2.  **Mettez à niveau chaque site principal enfant dans votre hiérarchie** vers cette même version de référence.  
+2. **Mettez à niveau chaque site principal enfant dans votre hiérarchie** vers cette même version de référence.  
 
-    -   Quand vous effectuez la mise à niveau à partir de Microsoft System Center 2012 Configuration Manager, vous devez mettre à niveau manuellement chaque site principal vers une version de référence de Current Branch.  
-    -   Vous ne devez pas mettre à niveau les sites secondaires à ce stade.  
+   -   Quand vous effectuez la mise à niveau à partir de Microsoft System Center 2012 Configuration Manager, vous devez mettre à niveau manuellement chaque site principal vers une version de référence de Current Branch.  
+   -   Vous ne devez pas mettre à niveau les sites secondaires à ce stade.  
 
-    Après cette étape, chaque site principal exécute la version 1606.  
+   Après cette étape, chaque site principal exécute la version 1606.  
 
-3.  **Définissez des fenêtres de maintenance sur les sites principaux enfants.** Après avoir mis à niveau tous vos sites principaux vers la version de référence, envisagez de configurer des fenêtres de maintenance pour contrôler le moment où ces sites installeront les mises à jour de l’infrastructure. Pour plus d’informations, consultez [Guide pratique pour utiliser les fenêtres de maintenance dans System Center Configuration Manager](../../../../core/clients/manage/collections/use-maintenance-windows.md).  (Les fenêtres de maintenance sont appelées *fenêtres de service* dans la version 1606.)  
+3. **Définissez des fenêtres de maintenance sur les sites principaux enfants.** Après avoir mis à niveau tous vos sites principaux vers la version de référence, envisagez de configurer des fenêtres de maintenance pour contrôler le moment où ces sites installeront les mises à jour de l’infrastructure. Pour plus d’informations, consultez [Guide pratique pour utiliser les fenêtres de maintenance dans System Center Configuration Manager](../../../../core/clients/manage/collections/use-maintenance-windows.md).  (Les fenêtres de maintenance sont appelées *fenêtres de service* dans la version 1606.)  
 
-    -   Un site principal enfant installe automatiquement les mises à jour que vous installez sur un site d’administration centrale.  
-    -   Les sites secondaires n’installent pas automatiquement les nouvelles versions. Vous devez les mettre à niveau manuellement dans la console.  
+   -   Un site principal enfant installe automatiquement les mises à jour que vous installez sur un site d’administration centrale.  
+   -   Les sites secondaires n’installent pas automatiquement les nouvelles versions. Vous devez les mettre à niveau manuellement dans la console.  
 
-  Après cette étape, lorsque vous installez des mises à jour sur le site d’administration centrale, les sites principaux enfants n’installent ces mises à jour que lorsque leur fenêtre de maintenance les y autorise.  
+   Après cette étape, lorsque vous installez des mises à jour sur le site d’administration centrale, les sites principaux enfants n’installent ces mises à jour que lorsque leur fenêtre de maintenance les y autorise.  
 
-4.  **Installez la version de mise à jour sur votre site de niveau supérieur.** Cela a pour effet de mettre à jour votre site de niveau supérieur. Une fois qu’un site d’administration centrale a installé la version de mise à jour, chaque site principal enfant installe automatiquement cette mise à jour, à moins que l’installation soit bloquée par une fenêtre de maintenance.  
+4. **Installez la version de mise à jour sur votre site de niveau supérieur.** Cela a pour effet de mettre à jour votre site de niveau supérieur. Une fois qu’un site d’administration centrale a installé la version de mise à jour, chaque site principal enfant installe automatiquement cette mise à jour, à moins que l’installation soit bloquée par une fenêtre de maintenance.  
 
-    -   Par exemple, vous pouvez mettre à jour votre site de niveau supérieur de la version 1606 vers la version 1610. Pour plus d’informations, consultez [Mises à jour pour System Center Configuration Manager](../../../../core/servers/manage/updates.md).  
+   -   Par exemple, vous pouvez mettre à jour votre site de niveau supérieur de la version 1606 vers la version 1610. Pour plus d’informations, consultez [Mises à jour pour System Center Configuration Manager](../../../../core/servers/manage/updates.md).  
 
-    Après cette étape, votre site d’administration centrale et chaque site principal exécutent la version 1610.  
+   Après cette étape, votre site d’administration centrale et chaque site principal exécutent la version 1610.  
 
-5.  **Mettez à niveau les sites secondaires.** Une fois qu’un site principal a installé la mise à jour et exécute la version 1610, utilisez l’option dans la console pour mettre à niveau les sites secondaires.  
+5. **Mettez à niveau les sites secondaires.** Une fois qu’un site principal a installé la mise à jour et exécute la version 1610, utilisez l’option dans la console pour mettre à niveau les sites secondaires.  
 
-    -   Cela a pour effet de mettre à niveau les sites secondaires directement à partir de Microsoft System Center 2012 Configuration Manager vers la version de mise à jour que vous avez installée sur le site principal.  
-    -   Pour plus d’informations sur la mise à niveau d’un site secondaire, consultez la section sur la [mise à niveau des sites](../../../../core/servers/deploy/install/upgrade-to-configuration-manager.md#bkmk_upgrade) dans la rubrique [Mettre à niveau vers System Center Configuration Manager](../../../../core/servers/deploy/install/upgrade-to-configuration-manager.md).  
+   -   Cela a pour effet de mettre à niveau les sites secondaires directement à partir de Microsoft System Center 2012 Configuration Manager vers la version de mise à jour que vous avez installée sur le site principal.  
+   -   Pour plus d’informations sur la mise à niveau d’un site secondaire, consultez la section sur la [mise à niveau des sites](../../../../core/servers/deploy/install/upgrade-to-configuration-manager.md#bkmk_upgrade) dans la rubrique [Mettre à niveau vers System Center Configuration Manager](../../../../core/servers/deploy/install/upgrade-to-configuration-manager.md).  
 
-6.  **Mettez à niveau les clients.** Pour mettre à niveau les clients, utilisez les informations de la rubrique [Comment mettre à niveau les clients pour les ordinateurs Windows dans System Center Configuration Manager](../../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md).  
+6. **Mettez à niveau les clients.** Pour mettre à niveau les clients, utilisez les informations de la rubrique [Comment mettre à niveau les clients pour les ordinateurs Windows dans System Center Configuration Manager](../../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md).  
 
-    -   Cela a pour effet de mettre à niveau les clients directement à partir de Microsoft System Center 2012 Configuration Manager vers la version de mise à jour que vous avez installée sur le site principal.  
+   -   Cela a pour effet de mettre à niveau les clients directement à partir de Microsoft System Center 2012 Configuration Manager vers la version de mise à jour que vous avez installée sur le site principal.  
 
-    Après cette étape, les clients sont mis à niveau vers la version 1610 sans mise à niveau préalable vers la version 1606.
+   Après cette étape, les clients sont mis à niveau vers la version 1610 sans mise à niveau préalable vers la version 1606.

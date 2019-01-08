@@ -10,16 +10,16 @@ ms.technology: configmgr-sum
 ms.assetid: 1a997c30-8e71-4be5-89ee-41efb2c8d199
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: da6204a78ce45c72d2b8d5586d02c8692405f295
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: d3155faaa0ccad4e4f98ee72d09f67b1676dc2f4
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350423"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421856"
 ---
 # <a name="synchronize-software-updates-from-a-disconnected-software-update-point"></a>Synchroniser les mises à jour logicielles à partir d’un point de mise à jour logicielle déconnecté  
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
  Quand le point de mise à jour logicielle sur le site de niveau supérieur est déconnecté d'Internet, vous devez utiliser les fonctions d'exportation et d'importation de l'outil WSUSUtil pour synchroniser les métadonnées des mises à jour logicielles. Vous pouvez choisir un serveur WSUS existant qui ne fait pas partie de votre hiérarchie Configuration Manager en tant que source de synchronisation. Cette rubrique fournit des informations sur l’utilisation des fonctions d’exportation et d’importation de l’outil WSUSUtil.  
 
@@ -52,11 +52,11 @@ ms.locfileid: "32350423"
 
 #### <a name="to-copy-local-files-from-the-export-server-to-the-disconnected-software-update-point-server"></a>Pour copier les fichiers locaux du serveur d'exportation vers le serveur du point de mise à jour logicielle déconnecté  
 
-1.  Sur le serveur d'exportation, accédez au dossier dans lequel les mises à jour logicielles et les termes du contrat de licence des mises à jour logicielles sont stockés. Par défaut, le serveur WSUS stocke les fichiers dans <*lecteur_installation_WSUS*>\WSUS\WSUSContent\\, où *lecteur_installation_WSUS* correspond au lecteur sur lequel WSUS est installé.  
+1. Sur le serveur d'exportation, accédez au dossier dans lequel les mises à jour logicielles et les termes du contrat de licence des mises à jour logicielles sont stockés. Par défaut, le serveur WSUS stocke les fichiers dans <*lecteur_installation_WSUS*>\WSUS\WSUSContent\\, où *lecteur_installation_WSUS* correspond au lecteur sur lequel WSUS est installé.  
 
-2.  Copiez tous les fichiers et dossiers depuis cet emplacement vers le dossier WSUSContent sur le serveur du point de mise à jour logicielle déconnecté.  
+2. Copiez tous les fichiers et dossiers depuis cet emplacement vers le dossier WSUSContent sur le serveur du point de mise à jour logicielle déconnecté.  
 
- Pour exporter les métadonnées des mises à jour logicielles à partir de la base de données WSUS sur le serveur d'exportation, procédez comme suit.  
+   Pour exporter les métadonnées des mises à jour logicielles à partir de la base de données WSUS sur le serveur d'exportation, procédez comme suit.  
 
 #### <a name="to-export-software-updates-metadata-from-the-wsus-database-on-the-export-server"></a>Pour exporter les métadonnées des mises à jour logicielles à partir de la base de données WSUS sur le serveur d'exportation  
 
@@ -70,7 +70,7 @@ ms.locfileid: "32350423"
 
      **wsusutil.exe export export.cab export.log**  
 
-     Le format peut être résumé comme suit : WSUSutil.exe est suivi de l’option d’exportation, du nom du fichier .cab d’exportation créé pendant l’opération d’exportation et du nom d’un fichier journal. WSUSutil.exe exporte les métadonnées du serveur d'exportation et crée un fichier journal de l'opération.  
+     Le format peut être résumé comme suit : WSUSutil.exe est suivi de l'option d'exportation, du nom du fichier .cab d'exportation créé pendant l'opération d'exportation et du nom d'un fichier journal. WSUSutil.exe exporte les métadonnées du serveur d'exportation et crée un fichier journal de l'opération.  
 
     > [!NOTE]  
     >  Le nom du package (fichier .cab) et du fichier journal doivent être uniques dans le dossier actif.  
@@ -98,7 +98,7 @@ ms.locfileid: "32350423"
 
      **wsusutil.exe import export.cab import.log**  
 
-     Le format peut être résumé comme suit : WSUSutil.exe est suivi par la commande d’importation, le nom du fichier de package (.cab) créé pendant l’opération d’exportation, le chemin du fichier de package s’il se trouve dans un autre dossier et le nom d’un fichier journal. WSUSutil.exe importe les métadonnées du serveur d'exportation et crée un fichier journal de l'opération.  
+     Le format peut être résumé comme suit : WSUSutil.exe est suivi par la commande d'importation, le nom du fichier de package (.cab) créé pendant l'opération d'exportation, le chemin du fichier de package s'il se trouve dans un autre dossier et le nom d'un fichier journal. WSUSutil.exe importe les métadonnées du serveur d'exportation et crée un fichier journal de l'opération.  
 
 ## <a name="next-steps"></a>Étapes suivantes
 À l’issue de la première synchronisation de mises à jour logicielles ou après la mise à disposition de nouvelles classifications ou de nouveaux produits, vous devez [configurer les nouvelles classifications et les nouveaux produits](configure-classifications-and-products.md) pour synchroniser les mises à jour logicielles avec les nouveaux critères.

@@ -10,16 +10,16 @@ ms.assetid: 03cec407-0f9f-454f-a360-b005af738d29
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3735e2cc8ac2f7e4a5c05b49783cad3981a04930
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 84345e26f30c1339ad1f386606ad11f1bb127eae
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32333832"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421431"
 ---
 # <a name="how-to-configure-client-computers-to-find-management-points-by-using-dns-publishing-in-system-center-configuration-manager"></a>Comment configurer des ordinateurs clients pour trouver des points de gestion à l’aide de la publication DNS dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Les clients de System Center Configuration Manager doivent localiser un point de gestion pour terminer l’affectation de site et, dans le cadre d’un processus continu, pour continuer d’être gérés. Les services de domaine Active Directory offrent la méthode la plus sûre pour que les clients sur l'intranet trouvent leurs points de gestion. Toutefois, si les clients ne peuvent pas utiliser cette méthode d'emplacement des services (par exemple, parce que vous n'avez pas étendu le schéma Active Directory ou que les clients font partie d'un groupe de travail), utilisez la publication DNS comme alternative principale à cette méthode.  
 
@@ -38,13 +38,13 @@ Les clients de System Center Configuration Manager doivent localiser un point de
 
 #### <a name="to-configure-clients-for-a-management-point-suffix-during-client-installation"></a>Pour configurer les clients pour un suffixe de point de gestion pendant l'installation du client  
 
--   Installez le client avec la propriété CCMSetup Client.msi suivante :  
+- Installez le client avec la propriété CCMSetup Client.msi suivante :  
 
-    -   **DNSSUFFIX=** *&lt;domaine du point de gestion\>*  
+  - **DNSSUFFIX=** *&lt;domaine du point de gestion\>*  
 
-         Si le site dispose de plusieurs points de gestion et que ceux-ci se trouvent dans plusieurs domaines, ne spécifiez qu'un seul domaine. Lorsque les clients se connectent à un point de gestion dans ce domaine, ils téléchargent une liste de points de gestion disponibles, qui inclura les points de gestion des autres domaines.  
+     Si le site dispose de plusieurs points de gestion et que ceux-ci se trouvent dans plusieurs domaines, ne spécifiez qu'un seul domaine. Lorsque les clients se connectent à un point de gestion dans ce domaine, ils téléchargent une liste de points de gestion disponibles, qui inclura les points de gestion des autres domaines.  
 
-     Pour plus d’informations sur les propriétés de ligne de commande CCMSetup, consultez [À propos des propriétés d’installation du client dans System Center Configuration Manager](../../../core/clients/deploy/about-client-installation-properties.md).  
+    Pour plus d’informations sur les propriétés de ligne de commande CCMSetup, consultez [À propos des propriétés d’installation du client dans System Center Configuration Manager](../../../core/clients/deploy/about-client-installation-properties.md).  
 
 #### <a name="to-configure-clients-for-a-management-point-suffix-after-client-installation"></a>Pour configurer les clients pour un suffixe de point de gestion après l'installation du client  
 

@@ -10,16 +10,16 @@ ms.assetid: dec1e0d7-5864-43a8-9f56-413923b3914e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7cdcb6306632df79fe69edd1d526afaf2321bad0
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 0bb7ccfb2aa516a5deb712bd2ecd82f36c4f282c
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32343845"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416722"
 ---
 # <a name="boundary-groups-for-system-center-configuration-manager-version-1511-1602-and-1606"></a>Groupes de limites pour les versions 1511, 1602 et 1606 de System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 <!-- This topic drops from TOC with the release of version 1706 -->
 
 Les informations contenues dans cette rubrique sont spécifiques à l’utilisation des groupes de limites avec les versions 1511, 1602 et 1606 de System Center Configuration Manager.
@@ -109,15 +109,15 @@ Quand vous configurez des groupes de limites, vous ajoutez une ou plusieurs limi
 
 #### <a name="to-set-up-a-fallback-site-for-automatic-site-assignment"></a>Pour configurer un site de secours pour l’attribution de site automatique  
 
-1.  Dans la console Configuration Manager, choisissez **Administration** > **Configuration du site** >  **Sites**.  
+1. Dans la console Configuration Manager, choisissez **Administration** > **Configuration du site** >  **Sites**.  
 
-2.  Sous l’onglet **Accueil**, dans le groupe **Sites**, choisissez **Paramètres de hiérarchie**.  
+2. Sous l’onglet **Accueil**, dans le groupe **Sites**, choisissez **Paramètres de hiérarchie**.  
 
-3.  Sous l’onglet **Général**, cochez la case **Utiliser un site de secours**, puis choisissez un site dans la liste déroulante **Site de secours**.  
+3. Sous l’onglet **Général**, cochez la case **Utiliser un site de secours**, puis choisissez un site dans la liste déroulante **Site de secours**.  
 
-4.  Choisissez **OK** pour enregistrer la configuration.  
+4. Choisissez **OK** pour enregistrer la configuration.  
 
- Les sections suivantes fournissent des détails supplémentaires sur les configurations de groupes de limites.  
+   Les sections suivantes fournissent des détails supplémentaires sur les configurations de groupes de limites.  
 
 ###  <a name="BKMK_BoundarySiteAssignment"></a> À propos de l’attribution de site  
  Vous pouvez configurer chaque groupe de limites avec un site attribué pour les clients.  

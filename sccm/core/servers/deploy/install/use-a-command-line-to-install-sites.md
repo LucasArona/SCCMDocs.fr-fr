@@ -10,57 +10,57 @@ ms.assetid: e7cdb1a9-140a-436e-ac71-72d083110223
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4a6c989b1eabe47f3360ceec660d5eba32811d60
-ms.sourcegitcommit: ee434c53b3695a039b56298082b6f61f1006d9dd
+ms.openlocfilehash: dcf12016206fe0c4296d08ad8404b163607313e1
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49943289"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417164"
 ---
 # <a name="use-a-command-line-to-install-system-center-configuration-manager-sites"></a>Utiliser la ligne de commande pour installer des sites System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
  Vous pouvez exécuter le programme d’installation de System Center Configuration Manager à partir d’une invite de commandes pour installer divers types de site.
 
 ## <a name="supported-tasks-for-command-line-installations"></a>Tâches prises en charge pour des installations via la ligne de commande
  Cette méthode consistant à exécuter le programme d’installation prend en charge les tâches d’installation de site et de maintenance de site suivantes :
 
--   **Installer un site d’administration centrale ou un site principal à partir de la ligne de commande**  
+- **Installer un site d’administration centrale ou un site principal à partir de la ligne de commande**  
   Consultez la rubrique [Options de ligne de commande pour le programme d’installation](../../../../core/servers/deploy/install/command-line-options-for-setup.md).
 
--  **Modifier les langues utilisées sur un site d’administration centrale ou un site principal**  
-    Pour modifier les langues installées sur un site à partir de la ligne de commande (y compris les langues des appareils mobiles), effectuez les opérations suivantes :  
+- **Modifier les langues utilisées sur un site d’administration centrale ou un site principal**  
+   Pour modifier les langues installées sur un site à partir de la ligne de commande (y compris les langues des appareils mobiles), effectuez les opérations suivantes :  
 
-     -   Exécutez le programme d’installation à partir de **&lt;chemin_installation_Configuraton_Manager\>\Bin\X64** sur le serveur de site.
-     -   Utilisez l’option de ligne de commande **/MANAGELANGS**.
-     -   Spécifiez un fichier de jeu de caractères qui définit les langues à ajouter ou supprimer.  
+  - Exécutez le programme d’installation à partir de **&lt;chemin_installation_Configuraton_Manager\>\Bin\X64** sur le serveur de site.
+  - Utilisez l’option de ligne de commande **/MANAGELANGS**.
+  - Spécifiez un fichier de jeu de caractères qui définit les langues à ajouter ou supprimer.  
 
     Par exemple, utilisez la syntaxe de commande suivante : **setupwpf.exe /MANAGELANGS &lt;fichier de script de langue\>**.  
 
     Pour créer le fichier de script de langue, utilisez les informations fournies dans [Options de ligne de commande pour gérer les langues](../../../../core/servers/deploy/install/command-line-options-for-setup.md#bkmk_Lang).  
 
--  **Utiliser un fichier de script d’installation pour une installation sans assistance de site ou une récupération de site**  
-    Vous pouvez exécuter le programme d’installation à partir d’une invite de commandes en utilisant un script d’installation et en effectuant une installation sans assistance de site. Vous pouvez aussi utiliser cette option pour récupérer un site.    
+- **Utiliser un fichier de script d’installation pour une installation sans assistance de site ou une récupération de site**  
+   Vous pouvez exécuter le programme d’installation à partir d’une invite de commandes en utilisant un script d’installation et en effectuant une installation sans assistance de site. Vous pouvez aussi utiliser cette option pour récupérer un site.    
 
-    Pour utiliser un script avec le programme d’installation :  
+   Pour utiliser un script avec le programme d’installation :  
 
-    -   Exécutez le programme d’installation avec l’option de ligne de commande **/SCRIPT** et spécifiez un fichier de script.  
+  - Exécutez le programme d’installation avec l’option de ligne de commande **/SCRIPT** et spécifiez un fichier de script.  
 
-    -   Le fichier de script doit être configuré avec les clés et les valeurs requises.  
+  - Le fichier de script doit être configuré avec les clés et les valeurs requises.  
 
     Pour effectuer une installation sans assistance d’un site d’administration centrale ou d’un site principal, le fichier de script doit comporter les sections suivantes :  
 
-    -   Identification    
-    -   Options    
-    -   SQLConfigOptions    
-      -   HierarchyOptions    
-    -   CloudConnectorOptions   
+  - Identification    
+  - Options    
+  - SQLConfigOptions    
+    -   HierarchyOptions    
+  - CloudConnectorOptions   
 
     Pour récupérer un site, vous devez inclure également les sections suivantes du fichier de script :  
 
-    -   Identification  
-    -   Récupération
+  - Identification  
+  - Récupération
 
 Pour plus d’informations, consultez [Récupération de site sans assistance pour Configuration Manager](/sccm/protect/understand/unattended-recovery).  
 

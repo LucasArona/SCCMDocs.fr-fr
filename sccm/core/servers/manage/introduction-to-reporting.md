@@ -10,16 +10,16 @@ ms.assetid: 230be984-d2cd-4d53-bd7a-bc24dd93fc22
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 579e9494a4f44f41a411af88bf58df7dcc5e8075
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 3cdc4ef389e4d46ad1c572b8785cb8ea26d90fcd
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340468"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416654"
 ---
 # <a name="introduction-to-reporting-in-system-center-configuration-manager"></a>Présentation des rapports dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Dans System Center Configuration Manager, les rapports fournissent un ensemble d’outils et de ressources vous permettant d’utiliser les fonctions de rapport avancées de SQL Server Reporting Services (SSRS), ainsi que les rapports détaillés du Générateur de rapports Reporting Services. La création de rapports vous permet de recueillir, d’organiser et de présenter des informations relatives aux utilisateurs, à l’inventaire logiciel et matériel, aux mises à jour logicielles, aux applications, à l’état du site et à d’autres opérations de Configuration Manager dans votre organisation. Les rapports vous permettent de disposer de nombreux rapports prédéfinis que vous pouvez utiliser comme tel ou adapter à vos besoins, et vous pouvez créer des rapports personnalisés. Utilisez les sections suivantes pour vous aider à gérer la création de rapports dans Configuration Manager.  
 
@@ -28,17 +28,17 @@ Dans System Center Configuration Manager, les rapports fournissent un ensemble d
 
  Configuration Manager utilise SQL Server Reporting Services comme solution de création de rapports. L'intégration avec Reporting Services offre les avantages suivants :  
 
--   Utilise un système de création de rapports standard pour interroger la base de données Configuration Manager.  
+- Utilise un système de création de rapports standard pour interroger la base de données Configuration Manager.  
 
--   Affiche les rapports à l’aide de la Visionneuse de rapports Configuration Manager ou du Gestionnaire de rapports, qui est une connexion web au rapport.  
+- Affiche les rapports à l’aide de la Visionneuse de rapports Configuration Manager ou du Gestionnaire de rapports, qui est une connexion web au rapport.  
 
--   Fournit une performance, une disponibilité et une évolutivité élevées.  
+- Fournit une performance, une disponibilité et une évolutivité élevées.  
 
--   Fournit des abonnements pour les rapports auxquels les utilisateurs peuvent s'abonner. Par exemple, un directeur pourrait s'abonner à un envoi automatique par courrier électronique d'un rapport quotidien détaillant l'état du déploiement d'une mise à jour logicielle.  
+- Fournit des abonnements pour les rapports auxquels les utilisateurs peuvent s'abonner. Par exemple, un directeur pourrait s'abonner à un envoi automatique par courrier électronique d'un rapport quotidien détaillant l'état du déploiement d'une mise à jour logicielle.  
 
--   Exporte les rapports que les utilisateurs peuvent sélectionner dans différents formats souvent utilisés.  
+- Exporte les rapports que les utilisateurs peuvent sélectionner dans différents formats souvent utilisés.  
 
- Pour plus d'informations sur Reporting Services, voir [SQL Server Reporting Services](http://go.microsoft.com/fwlink/p/?LinkID=212032) dans la documentation en ligne de SQL Server 2008.  
+  Pour plus d'informations sur Reporting Services, voir [SQL Server Reporting Services](http://go.microsoft.com/fwlink/p/?LinkID=212032) dans la documentation en ligne de SQL Server 2008.  
 
 ##  <a name="BKMK_ReportingServicesPoint"></a> Point Reporting Services  
  Le point de Reporting Services est un rôle de système de site installé sur un serveur qui exécute Microsoft SQL Server Reporting Services. Le point de Reporting Services copie les définitions de rapport Configuration Manager vers Reporting Services, crée des dossiers de rapports basés sur les catégories de rapports et paramètre les stratégies de sécurité des dossiers de rapports et des rapports en fonction des autorisations basées sur les rôles pour les utilisateurs administratifs de Configuration Manager. Toutes les 10 minutes, le point de Reporting Services se connecte à Reporting Services pour réappliquer la stratégie de sécurité si elle a été modifiée, par exemple, à l'aide du Gestionnaire de rapports. Pour plus d'informations sur la planification et l'installation d'un point de Reporting Services, consultez la documentation suivante :  
@@ -80,30 +80,30 @@ Dans System Center Configuration Manager, les rapports fournissent un ensemble d
 
  L'installation du Générateur de rapports ajoute la prise en charge de plus de 20 langues. Lorsque vous exécutez le Générateur de rapports, il affiche les données dans la langue du système d'exploitation qui s'exécute sur l'ordinateur local. Si le Générateur de rapports ne supporte pas cette langue, les données sont affichées en anglais. Le Générateur de rapports prend en charge toutes les fonctionnalités de SQL Server 2008 Reporting Services, qui inclut les fonctionnalités suivantes :  
 
--   Il offre un environnement de création de rapports intuitif dont l'apparence est similaire à celle de Microsoft Office.  
+- Il offre un environnement de création de rapports intuitif dont l'apparence est similaire à celle de Microsoft Office.  
 
--   Il offre une mise en page flexible du rapport de SQL Server 2008 Report Definition Language (RDL).  
+- Il offre une mise en page flexible du rapport de SQL Server 2008 Report Definition Language (RDL).  
 
--   Il fournit divers types d'affichage des données, dont des graphiques et des jauges.  
+- Il fournit divers types d'affichage des données, dont des graphiques et des jauges.  
 
--   Il fournit des zones de texte enrichi.  
+- Il fournit des zones de texte enrichi.  
 
--   Il permet des exportations vers Microsoft Word.  
+- Il permet des exportations vers Microsoft Word.  
 
- Vous pouvez également ouvrir le Générateur de rapports depuis SQL Server Reporting Services.  
+  Vous pouvez également ouvrir le Générateur de rapports depuis SQL Server Reporting Services.  
 
 ##  <a name="BKMK_ReportModels"></a> Modèles de rapports dans SQL Server Reporting Services  
  Dans Configuration Manager, SQL Reporting Services utilise des modèles de rapport pour aider l’utilisateur administratif à sélectionner les éléments de la base de données à inclure dans les rapports basés sur un modèle. L'utilisateur administratif chargé de générer le rapport peut choisir entre les vues et éléments spécifiques exposés dans le modèle de rapport. Au moins un modèle de rapport doit être disponible pour pouvoir générer des rapports basés sur un modèle. Les modèles de rapport sont dotés des fonctions ci-après :  
 
--   Vous pouvez donner des noms plus pratiques aux champs des bases de données et aux vues pour faciliter la création de rapports. La connaissance de la structure de la base de données n'est pas nécessaire pour produire des rapports.  
+- Vous pouvez donner des noms plus pratiques aux champs des bases de données et aux vues pour faciliter la création de rapports. La connaissance de la structure de la base de données n'est pas nécessaire pour produire des rapports.  
 
--   Vous pouvez regrouper des éléments de façon logique.  
+- Vous pouvez regrouper des éléments de façon logique.  
 
--   Vous pouvez définir des relations entre les éléments.  
+- Vous pouvez définir des relations entre les éléments.  
 
--   Vous pouvez sécuriser les éléments du modèle de manière à ce que les utilisateurs administratifs ne puissent visualiser que les données auxquelles ils sont autorisés à accéder.  
+- Vous pouvez sécuriser les éléments du modèle de manière à ce que les utilisateurs administratifs ne puissent visualiser que les données auxquelles ils sont autorisés à accéder.  
 
- Même si Configuration Manager fournit des exemples de modèles de rapport, vous pouvez également définir des modèles de rapport afin de répondre aux besoins de votre entreprise. Pour plus d’informations sur la création des modèles de rapport, consultez [Création de modèles de rapport personnalisés pour System Center Configuration Manager dans SQL Server Reporting Services](creating-custom-report-models-in-sql-server-reporting-services.md).  
+  Même si Configuration Manager fournit des exemples de modèles de rapport, vous pouvez également définir des modèles de rapport afin de répondre aux besoins de votre entreprise. Pour plus d’informations sur la création des modèles de rapport, consultez [Création de modèles de rapport personnalisés pour System Center Configuration Manager dans SQL Server Reporting Services](creating-custom-report-models-in-sql-server-reporting-services.md).  
 
 ## <a name="next-steps"></a>Étapes suivantes
 [Planification de la création de rapports](planning-for-reporting.md)

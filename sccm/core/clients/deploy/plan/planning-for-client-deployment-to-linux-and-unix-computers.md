@@ -10,32 +10,32 @@ ms.assetid: 44153689-70e8-42ad-9ae8-17ae35f6a2e3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7251ac6bf623236492f0843b8562a06e547c9cb1
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: d9d9fd940c21e0fc8d20c86c51cb3443f21a9339
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32343682"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419446"
 ---
 # <a name="planning-for-client-deployment-to-linux-and-unix-computers-in-system-center-configuration-manager"></a>Planification du déploiement de clients sur des ordinateurs Linux et UNIX dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Vous pouvez installer le client System Center Configuration Manager sur des ordinateurs exécutant Linux ou UNIX. Ce client est conçu pour les serveurs qui fonctionnent en tant qu'ordinateur de groupe de travail, et le client ne prend pas en charge l'interaction avec les utilisateurs connectés. Une fois que le logiciel client est installé et que le client a établi la communication avec le site Configuration Manager, vous gérez le client à l’aide de la console et des rapports Configuration Manager.  
 
-> [!NOTE]  
+> [!NOTE]
 >  Le client Configuration Manager pour les ordinateurs Linux et UNIX ne prend pas en charge les fonctionnalités de gestion suivantes :  
->   
->  -   Installation poussée du client  
-> -   Déploiement du système d'exploitation  
-> -   Déploiement d'application ; à la place, déployez des logiciels à l'aide de packages et programmes.  
-> -   Inventaire logiciel  
-> -   Mises à jour logicielles  
-> -   Paramètres de conformité  
-> -   Contrôle à distance  
-> -   Gestion de l'alimentation  
-> -   Vérification et correction de l'état du client  
-> -   Gestion des clients basés sur Internet  
+> 
+> - Installation poussée du client  
+>   -   Déploiement du système d'exploitation  
+>   -   Déploiement d'application ; à la place, déployez des logiciels à l'aide de packages et programmes.  
+>   -   Inventaire logiciel  
+>   -   Mises à jour logicielles  
+>   -   Paramètres de conformité  
+>   -   Contrôle à distance  
+>   -   Gestion de l'alimentation  
+>   -   Vérification et correction de l'état du client  
+>   -   Gestion des clients basés sur Internet  
 
  Pour plus d’informations sur les distributions Linux et UNIX prises en charge et le matériel requis pour prendre en charge le client pour Linux et UNIX, consultez [Matériel recommandé pour System Center Configuration Manager](../../../../core/plan-design/configs/recommended-hardware.md).  
 
@@ -178,15 +178,15 @@ Vous pouvez installer le client System Center Configuration Manager sur des ordi
 |SysMgmtMin.openssl|Bibliothèque OpenSSL, protocole de communication réseau sécurisé|A.00.09.08d.002|  
 |PAM|Modules d'authentification enfichables|Sous HP-UX, PAM fait partie des composants centraux du système d’exploitation. Il n’y a pas d’autre dépendance.|  
 
- **Dépendances de Configuration Manager :** le tableau suivant répertorie les rôles de système de site qui prennent en charge des clients Linux et UNIX. Pour plus d’informations sur ces rôles de système de site, consultez [Déterminer les rôles de système de site pour les clients System Center Configuration Manager](../../../../core/clients/deploy/plan/determine-the-site-system-roles-for-clients.md).  
+ **Dépendances internes à Configuration Manager :** Le tableau suivant répertorie les rôles de système de site qui prennent en charge des clients Linux et UNIX. Pour plus d’informations sur ces rôles de système de site, consultez [Déterminer les rôles de système de site pour les clients System Center Configuration Manager](../../../../core/clients/deploy/plan/determine-the-site-system-roles-for-clients.md).  
 
-|Système de site Configuration Manager|Plus d'informations|  
+|Système de site Configuration Manager|Informations complémentaires|  
 |---------------------------------------|----------------------|  
 |Point de gestion|Bien qu’un point de gestion ne soit pas nécessaire pour installer un client Configuration Manager pour Linux et UNIX, vous devez disposer d’un point de gestion pour transférer les informations entre les ordinateurs clients et les serveurs Configuration Manager. Sans point de gestion, vous ne pouvez pas gérer les ordinateurs clients.|  
 |Point de distribution|Le point de distribution n’est pas nécessaire pour installer un client Configuration Manager pour Linux et UNIX. Toutefois, le rôle de système de site est requis si vous déployez des logiciels sur des serveurs Linux et UNIX.<br /><br /> Dans la mesure où le client Configuration Manager pour Linux et UNIX ne prend pas en charge le protocole SMB, les points de distribution que vous utilisez avec le client doivent prendre en charge la communication HTTP ou HTTPS.|  
 |Point d’état de secours|Le point d’état de secours n’est pas nécessaire pour installer un client Configuration Manager pour Linux et UNIX. Toutefois, le point d’état de secours permet aux ordinateurs du site Configuration Manager d’envoyer des messages d’état quand ils ne peuvent pas communiquer avec un point de gestion. Client peut également envoyer leur état d'installation pour le point d'état de secours.|  
 
- **Pare-feu exigences**: Assurez-vous que les pare-feu ne bloquent pas les communications sur les ports que vous spécifiez en tant que ports de demande client. Le client pour Linux et UNIX communique directement avec les points de gestion, les points de distribution et les points d’état de secours.  
+ **Configuration requise du pare-feu** : Assurez-vous que les pare-feu ne bloquent pas les communications sur les ports que vous spécifiez en tant que ports de requête client. Le client pour Linux et UNIX communique directement avec les points de gestion, les points de distribution et les points d’état de secours.  
 
  Pour plus d’informations sur les ports de demande et de communication client, consultez  [Configurer le client pour Linux et UNIX pour qu’il localise des points de gestion](../../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md#BKMK_ConfigClientMP).  
 

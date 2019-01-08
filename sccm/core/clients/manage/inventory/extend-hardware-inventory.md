@@ -10,16 +10,16 @@ ms.assetid: d5bfab4f-c55e-4545-877c-5c8db8bc1891
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 317a143ba80607bef46a371c0e93ad9f4027abe4
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: f1fa9f1bb2e036e0208a72e744f66da5c1887593
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344277"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53423301"
 ---
 # <a name="how-to-extend-hardware-inventory-in-system-center-configuration-manager"></a>Comment étendre l’inventaire matériel dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 L’inventaire matériel lit les informations sur les PC Windows en utilisant WMI (Windows Management Instrumentation). WMI est l’implémentation Microsoft de WBEM (Web-Based Enterprise Management), une norme sectorielle pour l’accès aux informations de gestion dans une entreprise. Dans les versions précédentes de Configuration Manager, vous étendiez l’inventaire matériel en modifiant le fichier sms_def.mof sur le serveur de site. Ce fichier contenait une liste de classes WMI qui pouvaient être lues par l’inventaire matériel. La modification de ce fichier vous permettait d’activer et de désactiver les classes existantes, et également de créer des classes à inventorier.  
 
@@ -36,7 +36,7 @@ Le fichier Configuration.mof permet de définir les classes de données qui doiv
 > En revanche, vous ne devez rien modifier au-dessus de cette section, car la modification de ces sections est réservée à Configuration Manager. Une sauvegarde de votre fichier Configuration.mof personnalisé se trouve dans :  
 > **<répertoire_installation_CM\>\data\hinvarchive\\**.  
 
-|Méthode|Plus d'informations|  
+|Méthode|Informations complémentaires|  
 |------------|----------------------|  
 |Activer ou désactiver les classes d'inventaire existantes|Activez ou désactivez les classes d’inventaire par défaut ou créez des paramètres client personnalisés qui vous permettent de collecter différentes classes d’inventaire matériel depuis les regroupements de clients définis. Consultez la procédure [Pour activer ou désactiver les classes existantes d’inventaire](#BKMK_Enable) de cet article.|  
 |Ajouter une nouvelle classe d'inventaire|Ajoutez une nouvelle classe d’inventaire à partir de l’espace de noms WMI d’un autre appareil. Consultez la procédure [Pour ajouter une nouvelle classe d’inventaire](#BKMK_Add) de cet article.|  
@@ -67,33 +67,33 @@ Ces procédures vous aident à configurer les paramètres client par défaut pou
 
 Vous pouvez uniquement ajouter des classes d’inventaire à partir du serveur de niveau supérieur de la hiérarchie en modifiant les paramètres client par défaut. Cette option n'est pas disponible lorsque vous créez des paramètres de périphérique personnalisés.
 
-1.  Dans la console Configuration Manager, choisissez **Administration** > **Paramètres client** > **Paramètres client par défaut**.  
+1. Dans la console Configuration Manager, choisissez **Administration** > **Paramètres client** > **Paramètres client par défaut**.  
 
-4.  Sous l’onglet **Accueil**, dans le groupe **Propriétés**, choisissez **Propriétés**.  
+2. Sous l’onglet **Accueil**, dans le groupe **Propriétés**, choisissez **Propriétés**.  
 
-5.  Dans la boîte de dialogue **Paramètres client par défaut**, choisissez **Inventaire matériel**.  
+3. Dans la boîte de dialogue **Paramètres client par défaut**, choisissez **Inventaire matériel**.  
 
-6.  Dans la liste **Paramètres de l’appareil**, choisissez **Définir des classes**.  
+4. Dans la liste **Paramètres de l’appareil**, choisissez **Définir des classes**.  
 
-7.  Dans la boîte de dialogue **Classes d’inventaire matériel**, choisissez **Ajouter**.  
+5. Dans la boîte de dialogue **Classes d’inventaire matériel**, choisissez **Ajouter**.  
 
-8.  Dans la boîte de dialogue **Ajouter une classe d'inventaire matériel** , cliquez sur **Ajouter**.  
+6. Dans la boîte de dialogue **Ajouter une classe d'inventaire matériel** , cliquez sur **Ajouter**.  
 
-9. Dans la boîte de dialogue **Connexion à Windows Management Instrumentation (WMI)** , définissez le nom de l'ordinateur depuis lequel vous allez extraire les classes WMI et l'espace de noms WMI à utiliser pour récupérer les classes. Si vous souhaitez récupérer toutes les classes sous l'espace de noms WMI spécifié, cliquez sur **Récursive**. Si l'ordinateur auquel vous vous connectez n'est pas l'ordinateur local, fournissez les informations d'identification d'un compte autorisé à accéder à WMI sur l'ordinateur distant.  
+7. Dans la boîte de dialogue **Connexion à Windows Management Instrumentation (WMI)** , définissez le nom de l'ordinateur depuis lequel vous allez extraire les classes WMI et l'espace de noms WMI à utiliser pour récupérer les classes. Si vous souhaitez récupérer toutes les classes sous l'espace de noms WMI spécifié, cliquez sur **Récursive**. Si l'ordinateur auquel vous vous connectez n'est pas l'ordinateur local, fournissez les informations d'identification d'un compte autorisé à accéder à WMI sur l'ordinateur distant.  
 
-10. Choisissez **Connexion**.  
+8. Choisissez **Connexion**.  
 
-11. Dans la boîte de dialogue **Ajouter une classe d’inventaire matériel**, dans la liste des **classes d’inventaire**, sélectionnez les classes WMI à ajouter à l’inventaire matériel Configuration Manager.  
+9. Dans la boîte de dialogue **Ajouter une classe d’inventaire matériel**, dans la liste des **classes d’inventaire**, sélectionnez les classes WMI à ajouter à l’inventaire matériel Configuration Manager.  
 
-12. Si vous souhaitez modifier des informations sur la classe WMI sélectionnée, choisissez **Modifier** et, dans la boîte de dialogue **Qualificatifs de classe**, fournissez les informations suivantes :  
+10. Si vous souhaitez modifier des informations sur la classe WMI sélectionnée, choisissez **Modifier** et, dans la boîte de dialogue **Qualificatifs de classe**, fournissez les informations suivantes :  
 
-    -   **Nom complet** : ce nom sera affiché dans l’Explorateur de ressources.  
+    - **Nom complet** : ce nom sera affiché dans l’Explorateur de ressources.  
 
-    -   **Propriétés** : définissez l’unité dans laquelle s’affiche chaque propriété de la classe WMI.  
+    - **Propriétés** : définissez l’unité dans laquelle s’affiche chaque propriété de la classe WMI.  
 
-     Vous pouvez également désigner des propriétés comme propriété de clé pour identifier de façon unique chaque instance de la classe. Si aucune clé n'est définie pour la classe et que plusieurs instances de la classe sont signalées par le client, seule la dernière instance trouvée est stockée dans la base de données.  
+      Vous pouvez également désigner des propriétés comme propriété de clé pour identifier de façon unique chaque instance de la classe. Si aucune clé n'est définie pour la classe et que plusieurs instances de la classe sont signalées par le client, seule la dernière instance trouvée est stockée dans la base de données.  
 
-     Une fois la configuration des propriétés terminée, cliquez sur **OK** pour fermer la boîte de dialogue **Qualificatifs de classe** et les autres boîtes de dialogue ouvertes. 
+      Une fois la configuration des propriétés terminée, cliquez sur **OK** pour fermer la boîte de dialogue **Qualificatifs de classe** et les autres boîtes de dialogue ouvertes. 
 
 ###  <a name="BKMK_Import"></a> Pour importer des classes d'inventaire matériel  
 

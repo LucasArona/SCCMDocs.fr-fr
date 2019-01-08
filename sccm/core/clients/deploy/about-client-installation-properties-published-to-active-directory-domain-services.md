@@ -10,16 +10,16 @@ ms.assetid: 101d7d4d-92db-419d-b2ae-3c1c1dea68e9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 46ede93e8366b4ae387f7e04b83dcb33ce854c5e
-ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
+ms.openlocfilehash: dccd893cc4a22fddf09598376bdcd05b091e6c2c
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48862513"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421550"
 ---
 # <a name="about-client-installation-properties-published-to-active-directory-domain-services"></a>À propos de la publication des propriétés d’installation du client sur les services de domaine Active Directory
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Quand vous étendez le schéma Active Directory pour System Center Configuration Manager et que le site est publié dans les services de domaine Active Directory, de nombreuses propriétés d’installation du client sont publiées dans les services de domaine Active Directory. Si un ordinateur peut localiser ces propriétés d'installation du client, il peut les utiliser au cours du déploiement du client Configuration Manager.  
 
@@ -35,29 +35,29 @@ Quand vous étendez le schéma Active Directory pour System Center Configuration
 ## <a name="client-installation-properties-published-to-active-directory-domain-services"></a>Propriétés d’installation du client publiées dans les services de domaine Active Directory  
 Voici une liste de propriétés d’installation du client. Pour plus d’informations sur chaque élément répertorié ci-dessous, consultez [À propos des propriétés d’installation du client dans System Center Configuration Manager](../../../core/clients/deploy/about-client-installation-properties.md).  
 
--   Code de site Configuration Manager.  
+- Code de site Configuration Manager.  
 
--   Certificat de signature du serveur de site.  
+- Certificat de signature du serveur de site.  
 
--   Clé racine approuvée.  
+- Clé racine approuvée.  
 
--   Ports de communication client pour HTTP et HTTPS.  
+- Ports de communication client pour HTTP et HTTPS.  
 
--   Point d'état de repli. Si le site a plusieurs points d’état de repli, seul le premier qui a été installé est publié dans les services de domaine Active Directory.  
+- Point d'état de secours. Si le site a plusieurs points d’état de secours, seul le premier qui a été installé est publié dans les services de domaine Active Directory.  
 
--   Un paramètre pour indiquer que le client doit communiquer à l'aide de HTTPS uniquement.  
+- Un paramètre pour indiquer que le client doit communiquer à l'aide de HTTPS uniquement.  
 
--   Paramètres relatifs aux certificats PKI :  
+- Paramètres relatifs aux certificats PKI :  
 
-   -   Si vous souhaitez utiliser un certificat PKI du client.  
+  -   Si vous souhaitez utiliser un certificat PKI du client.  
 
-   -   Critères de sélection des certificats. Ceci peut être nécessaire dans le cas où le client a plusieurs certificats PKI valides qui peuvent être utilisés pour Configuration Manager.  
+  -   Critères de sélection des certificats. Ceci peut être nécessaire dans le cas où le client a plusieurs certificats PKI valides qui peuvent être utilisés pour Configuration Manager.  
 
-   -   Un paramètre pour déterminer le certificat à utiliser si le client possède plusieurs certificats valides après le processus de sélection de certificat.  
+  -   Un paramètre pour déterminer le certificat à utiliser si le client possède plusieurs certificats valides après le processus de sélection de certificat.  
 
-   -   Liste d'émetteurs de certificats qui contient une liste de certificats d'autorité de certification racine de confiance.  
+  -   Liste d'émetteurs de certificats qui contient une liste de certificats d'autorité de certification racine de confiance.  
 
--   Propriétés d'installation client.msi qui sont définies sous l'onglet **Client** de la boîte de dialogue **Propriétés de l'installation poussée du client** .
+- Propriétés d'installation client.msi qui sont définies sous l'onglet **Client** de la boîte de dialogue **Propriétés de l'installation poussée du client** .
 
 L’installation du client (CCMSetup) utilise les propriétés publiées dans les services de domaine Active Directory seulement si aucune autre propriété n’est spécifiée selon une des méthodes suivantes :  
 

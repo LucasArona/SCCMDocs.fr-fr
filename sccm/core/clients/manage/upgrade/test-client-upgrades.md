@@ -10,16 +10,16 @@ ms.assetid: 49ef2ed2-2e15-4637-8b63-1d5b7f9c17e1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 019b275177e1f264a4bfc2926cfe45ebd0be8eae
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 94ef3ce54db0efb7be7e9d6d0709f48bb212f7e7
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334570"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416535"
 ---
 # <a name="how-to-test-client-upgrades-in-a-pre-production-collection-in-system-center-configuration-manager"></a>Comment tester les mises à niveau du client dans un regroupement de préproduction dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Vous pouvez tester une nouvelle version du client Configuration Manager dans un regroupement de préproduction avant de mettre à niveau le reste du site vers cette version.  Quand vous procédez ainsi, seuls les appareils qui font partie du regroupement de test sont mis à niveau. Une fois que vous avez pu tester le client, vous pouvez le promouvoir, ce qui rend la nouvelle version du logiciel client disponible pour le reste du site.
 
@@ -38,15 +38,15 @@ Vous pouvez tester une nouvelle version du client Configuration Manager dans un 
 > [!IMPORTANT]
 > Le déploiement du client de préproduction n’est pas pris en charge pour les ordinateurs de groupe de travail. Ils ne peuvent pas utiliser l’authentification nécessaire pour permettre au point de distribution d’accéder au package du client de préproduction.  Ils recevront la dernière version du client quand il sera promu client de production.
 
-1. [Configurez un regroupement](..\collections\create-collections.md) contenant les ordinateurs sur lesquels vous voulez déployer le client de préproduction.   
+1. [Configurez un regroupement](../collections/create-collections.md) contenant les ordinateurs sur lesquels vous voulez déployer le client de préproduction.   
 
-1.  Dans la console Configuration Manager, ouvrez **Administration** > **Configuration du site** > **Sites**, puis choisissez **Paramètres de hiérarchie**.  
+2. Dans la console Configuration Manager, ouvrez **Administration** > **Configuration du site** > **Sites**, puis choisissez **Paramètres de hiérarchie**.  
 
-     Sous l’onglet **Mise à niveau des clients** des **Propriétés des paramètres de hiérarchie**:  
+    Sous l’onglet **Mise à niveau des clients** des **Propriétés des paramètres de hiérarchie**:  
 
-    -   Sélectionnez **Mettre à niveau automatiquement tous les clients du regroupement de préproduction en utilisant un client de préproduction**.  
+   -   Sélectionnez **Mettre à niveau automatiquement tous les clients du regroupement de préproduction en utilisant un client de préproduction**.  
 
-    -   Entrez le nom d’un regroupement à utiliser comme regroupement de préproduction.  
+   -   Entrez le nom d’un regroupement à utiliser comme regroupement de préproduction.  
 
 ![Tester les mises à niveau du client](media/test-client-upgrades.png)
 

@@ -10,16 +10,16 @@ ms.assetid: 038e61f9-f49d-41d1-9a9f-87bec9e00d5d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6ca987411775ec3a6fbe626d4b34f83313673f5b
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 4dd547f0126fa9e77b4d49db7c0de4ec912d2b23
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334825"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421618"
 ---
 # <a name="planning-for-client-deployment-to-windows-embedded-devices-in-system-center-configuration-manager"></a>Planification du déploiement de clients sur des appareils Windows Embedded dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 <a name="BKMK_DeployClientEmbedded"></a> Si votre appareil Windows Embedded n’inclut pas le client System Center Configuration Manager, vous pouvez utiliser l’une des méthodes d’installation de ce client si l’appareil respecte les dépendances requises. Si l'appareil intégré prend en charge les filtres d'écriture, vous devez désactiver ces filtres avant d'installer le client, puis réactiver les filtres une fois le client installé et attribué à un site.  
 
@@ -46,60 +46,60 @@ ms.locfileid: "32334825"
 
  Configuration Manager prend en charge la gestion des types de filtres d’écriture suivants :  
 
--   Filtre d’écriture basé sur des fichiers (FBWF) : pour plus d’informations, consultez [Filtre d’écriture basé sur des fichiers](http://go.microsoft.com/fwlink/?LinkID=204717).  
+- Filtre d’écriture basé sur des fichiers (FBWF) : pour plus d’informations, consultez [Filtre d’écriture basé sur des fichiers](http://go.microsoft.com/fwlink/?LinkID=204717).  
 
--   RAM de filtre d’écriture amélioré (EWF) : pour plus d’informations, consultez [Filtre d’écriture amélioré](http://go.microsoft.com/fwlink/?LinkId=204718).  
+- RAM de filtre d’écriture amélioré (EWF) : pour plus d’informations, consultez [Filtre d’écriture amélioré](http://go.microsoft.com/fwlink/?LinkId=204718).  
 
--   Filtre d’écriture unifié (UWF) : pour plus d’informations, consultez [Filtre d’écriture unifié](http://go.microsoft.com/fwlink/?LinkId=309236).  
+- Filtre d’écriture unifié (UWF) : pour plus d’informations, consultez [Filtre d’écriture unifié](http://go.microsoft.com/fwlink/?LinkId=309236).  
 
- Configuration Manager ne prend pas en charge les opérations de filtre d’écriture quand l’appareil Windows Embedded est en mode de registre RAM EWF.  
+  Configuration Manager ne prend pas en charge les opérations de filtre d’écriture quand l’appareil Windows Embedded est en mode de registre RAM EWF.  
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Si vous avez le choix, utilisez des filtres d’écriture basés sur des fichiers avec Configuration Manager pour une efficacité accrue et une meilleure évolutivité.
->
-> **Pour les appareils qui utilisent des filtres d’écriture basés sur des fichiers uniquement :** configurez les exceptions suivantes pour rendre permanents l’état du client et les données d’inventaire entre les redémarrages de l’appareil :  
->   
->  -   CCMINSTALLDIR\\\*.sdf  
-> -   CCMINSTALLDIR\ServiceData  
-> -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\StateSystem  
->   
->  Les appareils qui exécutent Windows Embedded 8.0 et ses versions ultérieures ne prennent pas en charge les exclusions qui contiennent des caractères génériques. Sur ces appareils, vous devez configurer individuellement les exclusions suivantes :  
->   
->  -   Tous les fichiers dans CCMINSTALLDIR portant l'extension .sdf, généralement :  
->   
->     -   UserAffinityStore.sdf  
->     -   InventoryStore.sdf  
->     -   CcmStore.sdf  
->     -   StateMessageStore.sdf  
->     -   CertEnrollmentStore.sdf  
-> -   CCMINSTALLDIR\ServiceData  
-> -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\StateSystem  
->   
-> **Pour les appareils qui utilisent des filtres d’écriture basés sur des fichiers et des filtres d’écriture unifiés :** quand les clients d’un groupe de travail utilisent des certificats à des fins d’authentification auprès de points de gestion, vous devez également exclure la clé privée pour que les clients puissent continuer à communiquer avec les points de gestion. Sur ces appareils, configurez les exceptions suivantes :  
->   
->  -   c:\Windows\System32\Microsoft\Protect  
-> -   c:\ProgramData\Microsoft\Crypto  
-> -   HKEY_LOCAL_MACHINE\Software\Microsoft\SystemCertificates\SMS\Certificates  
+> 
+> **Pour les appareils qui utilisent des filtres d’écriture basés sur des fichiers uniquement :** Configurez les exceptions suivantes pour que l’état du client et les données d’inventaire soient persistants entre les redémarrages de l’appareil :  
+> 
+> - CCMINSTALLDIR\\\*.sdf  
+>   -   CCMINSTALLDIR\ServiceData  
+>   -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\StateSystem  
+> 
+>   Les appareils qui exécutent Windows Embedded 8.0 et ses versions ultérieures ne prennent pas en charge les exclusions qui contiennent des caractères génériques. Sur ces appareils, vous devez configurer individuellement les exclusions suivantes :  
+> 
+> - Tous les fichiers dans CCMINSTALLDIR portant l'extension .sdf, généralement :  
+> 
+>   -   UserAffinityStore.sdf  
+>   -   InventoryStore.sdf  
+>   -   CcmStore.sdf  
+>   -   StateMessageStore.sdf  
+>   -   CertEnrollmentStore.sdf  
+>   -   CCMINSTALLDIR\ServiceData  
+>   -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\StateSystem  
+> 
+> **Pour les appareils qui utilisent des filtres d’écriture basés sur des fichiers et des filtres d’écriture unifiés uniquement :** Quand les clients d’un groupe de travail utilisent des certificats à des fins d'authentification auprès de points de gestion, vous devez également exclure la clé privée pour que les clients puissent continuer à communiquer avec les points de gestion. Sur ces appareils, configurez les exceptions suivantes :  
+> 
+> - c:\Windows\System32\Microsoft\Protect  
+>   -   c:\ProgramData\Microsoft\Crypto  
+>   -   HKEY_LOCAL_MACHINE\Software\Microsoft\SystemCertificates\SMS\Certificates  
 
  Pour obtenir un exemple de scénario de déploiement et de gestion d’appareils Windows Embedded avec des filtres d’écriture activés dans Configuration Manager, consultez [Exemple de scénario de déploiement et de gestion de clients System Center Configuration Manager sur des appareils Windows Embedded](../../../../core/clients/deploy/example-scenario-for-deploying-and-managing-clients-on-windows-embedded-devices.md).  
 
  Pour plus d'informations sur la façon de créer des images pour les appareils Windows Embedded et de configurer des filtres d'écriture, reportez-vous à votre documentation Windows Embedded ou contactez votre fabricant d'ordinateurs OEM.  
 
-> [!NOTE]  
+> [!NOTE]
 >  Lorsque vous sélectionnez les plates-formes applicables aux déploiements logiciels et aux éléments de configuration, celles-ci affichent les familles Windows Embedded, plutôt que des versions spécifiques. Utilisez la liste suivante pour faire correspondre la version spécifique de Windows Embedded aux options figurant dans la zone de liste :  
->   
->  -   L'option**Systèmes d'exploitation intégrés basés sur Windows XP (32 bits)** inclut les éléments suivants :  
->   
->      -   Windows XP Embedded  
->     -   Windows Embedded for Point of Service  
->     -   Windows Embedded Standard 2009  
->     -   Windows Embedded POSReady 2009  
-> -   L'option**Systèmes d'exploitation intégrés basés sur Windows 7 (32 bits)** inclut les éléments suivants :  
->   
->      -   Windows Embedded Standard 7 (32 bits)  
->     -   Windows Embedded POSReady 7 (32 bits)  
->     -   Windows ThinPC  
-> -   L'option**Systèmes d'exploitation intégrés basés sur Windows 7 (64 bits)** inclut les éléments suivants :  
->   
->      -   Windows Embedded Standard 7 (64 bits)  
->     -   Windows Embedded POSReady 7 (64 bits)
+> 
+> - L'option**Systèmes d'exploitation intégrés basés sur Windows XP (32 bits)** inclut les éléments suivants :  
+> 
+>   -   Windows XP Embedded  
+>   -   Windows Embedded for Point of Service  
+>   -   Windows Embedded Standard 2009  
+>   -   Windows Embedded POSReady 2009  
+>   -   L'option**Systèmes d'exploitation intégrés basés sur Windows 7 (32 bits)** inclut les éléments suivants :  
+> 
+>   -   Windows Embedded Standard 7 (32 bits)  
+>   -   Windows Embedded POSReady 7 (32 bits)  
+>   -   Windows ThinPC  
+>   -   L'option**Systèmes d'exploitation intégrés basés sur Windows 7 (64 bits)** inclut les éléments suivants :  
+> 
+>   -   Windows Embedded Standard 7 (64 bits)  
+>   -   Windows Embedded POSReady 7 (64 bits)

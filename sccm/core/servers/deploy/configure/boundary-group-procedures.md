@@ -10,16 +10,16 @@ ms.assetid: a1fe22d0-4695-4de0-8bf0-e3475b03cf0e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d4aa1c044c8ea68b934a6dad4f1f85cbe43ec19b
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 56b1c0cff398f0009169ab1b02801e536e1a3343
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52458060"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418117"
 ---
 # <a name="how-to-configure-boundary-groups-for-configuration-manager"></a>Comment configurer des groupes de limites pour Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Cet article contient des procédures à suivre pour configurer des groupes de limites. Avant de commencer, assurez-vous de bien comprendre les concepts liés aux groupes de limites. Pour plus d’informations, consultez [Groupes de limites](/sccm/core/servers/deploy/configure/boundary-groups).
 
@@ -81,17 +81,17 @@ Pour configurer le comportement de secours, basculez vers l’onglet **Relations
 
 - Pour créer une relation avec un autre groupe de limites :  
 
-    - Sélectionnez **Ajouter**. Dans la fenêtre Groupes de limites de secours, sélectionnez le groupe de limites à configurer.  
+  - Sélectionnez **Ajouter**. Dans la fenêtre Groupes de limites de secours, sélectionnez le groupe de limites à configurer.  
 
-    - Définissez un délai de secours pour les rôles de système de site suivants :  
-        - Point de distribution  
-        - Point de mise à jour logicielle  
-        - Point de gestion  
+  - Définissez un délai de secours pour les rôles de système de site suivants :  
+    - Point de distribution  
+    - Point de mise à jour logicielle  
+    - Point de gestion  
 
-        > [!Note]  
-        > Par exemple, vous ouvrez la fenêtre Propriétés pour le groupe de limites Branch Office. Dans la fenêtre Groupes de limites de secours, sélectionnez le groupe de limites Main Office. Vous définissez le délai de secours du point de distribution sur `20`. Lorsque vous enregistrez cette configuration, les clients dans le groupe de limites Branch Office démarrent la recherche de contenu sur les points de distribution dans le groupe de limites Main Office après 20 minutes.  
+      > [!Note]  
+      > Par exemple, vous ouvrez la fenêtre Propriétés pour le groupe de limites Branch Office. Dans la fenêtre Groupes de limites de secours, sélectionnez le groupe de limites Main Office. Vous définissez le délai de secours du point de distribution sur `20`. Lorsque vous enregistrez cette configuration, les clients dans le groupe de limites Branch Office démarrent la recherche de contenu sur les points de distribution dans le groupe de limites Main Office après 20 minutes.  
 
-    - Pour empêcher toute action de secours sur un groupe de limites spécifique, sélectionnez le groupe de limites, puis **Jamais d’action de secours** pour le type de rôle de système de site.  Cette action peut inclure le *groupe de limites de site par défaut*.  
+  - Pour empêcher toute action de secours sur un groupe de limites spécifique, sélectionnez le groupe de limites, puis **Jamais d’action de secours** pour le type de rôle de système de site.  Cette action peut inclure le *groupe de limites de site par défaut*.  
 
 - Pour modifier la configuration d’une relation existante, sélectionnez le groupe de limites dans la liste, puis **Modifier**. Cette action ouvre la fenêtre Groupes de limites de secours uniquement pour ce groupe de limites.  
  
@@ -103,9 +103,9 @@ Pour plus d'informations, consultez [Secours](/sccm/core/servers/deploy/configur
 ### <a name="bkmk_options"></a> Configurer les options du groupe de limites
 <!--1356193--> Depuis la version 1806, pour configurer des options supplémentaires pour les clients dans ce groupe de limites, accédez à l’onglet **Options**. Pour plus d’informations, consultez [Options de groupe de limites pour les téléchargements à partir de pairs](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions).
 
-- **Autoriser les téléchargements à partir de pairs dans ce groupe de limites** : cette option est activée par défaut. Le point de gestion fournit aux clients une liste d’emplacements de contenu qui comprend des sources de pairs.  
+- **Autoriser les téléchargements à partir de pairs dans ce groupe de limites** : Cette option est activée par défaut. Le point de gestion fournit aux clients une liste d’emplacements de contenu qui comprend des sources de pairs.  
 
-    - **Lors des téléchargements à partir de pairs, utiliser seulement les pairs qui se trouvent dans le même sous-réseau** : ce paramètre dépend de celui qui est illustré ci-dessus. Lorsque cette option est activée, le point de gestion n’inclut dans la liste des emplacements de contenu que les sources de pairs qui se trouvent dans le même sous-réseau que le client.  
+    - **Durant les téléchargements à partir de pairs, utiliser uniquement des pairs situés dans le même sous-réseau** : Ce paramètre dépend de celui illustré ci-dessus. Lorsque cette option est activée, le point de gestion n’inclut dans la liste des emplacements de contenu que les sources de pairs qui se trouvent dans le même sous-réseau que le client.  
 
 
 ## <a name="bkmk_site-fallback"></a> Configurer un site de secours pour l’attribution de site automatique  

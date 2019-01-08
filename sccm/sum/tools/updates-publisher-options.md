@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 497ff025dafcdb135e466a18f2f6661ca0f21a00
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 126ac524aaea851f5203888d414f7f9b188649c2
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32349964"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424474"
 ---
 # <a name="configure-options-for-updates-publisher"></a>Configurer les options pour l’éditeur de mise à jour
 
-*S’applique à : l'éditeur de mise à jour System Center*
+*S’applique à : Éditeur de mise à jour System Center*
 
 Vérifiez et configurez les options et les paramètres associés qui affectent le fonctionnement de l’éditeur de mise à jour.
 
@@ -42,47 +42,47 @@ Les options sont réparties comme suit :
 ## <a name="update-server"></a>Serveur de mise à jour
 Vous devez configurer l’éditeur de mise à jour pour fonctionner avec un serveur de mise à jour comme Windows Server Update Services (WSUS) avant de pouvoir [publier des mises à jour](/sccm/sum/tools/manage-updates-with-updates-publisher#publish-updates-and-bundles). Cela inclut la spécification du serveur, les méthodes pour se connecter à ce serveur lorsqu’il est distant de la console, et un certificat à utiliser pour signer numériquement les mises à jour que vous publiez.
 
--   **Configurez un serveur de mise à jour**. Lorsque vous configurez un serveur de mise à jour, sélectionnez le serveur WSUS de niveau supérieur (serveur de mise à jour) dans votre hiérarchie Configuration Manager afin que tous les sites enfants aient accès aux mises à jour que vous publiez.
+- **Configurez un serveur de mise à jour**. Lorsque vous configurez un serveur de mise à jour, sélectionnez le serveur WSUS de niveau supérieur (serveur de mise à jour) dans votre hiérarchie Configuration Manager afin que tous les sites enfants aient accès aux mises à jour que vous publiez.
 
   Si votre serveur de mise à jour est distant du serveur de votre éditeur de mise à jour, spécifiez le nom de domaine complet (FQDN) du serveur, et indiquez si vous vous connectez par SSL. Si vous vous connectez par SSL, le port par défaut passe de 8530 à 8531. Assurez-vous que le port que vous définissez correspond au port en cours d’utilisation par votre serveur de mise à jour.
 
-    > [!TIP]  
-    > Si vous ne configurez aucun serveur de mise à jour, vous pouvez quand même utiliser l’éditeur de mise à jour pour créer des mises à jour logicielles.
+  > [!TIP]  
+  > Si vous ne configurez aucun serveur de mise à jour, vous pouvez quand même utiliser l’éditeur de mise à jour pour créer des mises à jour logicielles.
 
--   **Configurez le certificat de signature**. Vous devez configurer un serveur de mise à jour et vous y connecter avant de pouvoir configurer le certificat de signature.
+- **Configurez le certificat de signature**. Vous devez configurer un serveur de mise à jour et vous y connecter avant de pouvoir configurer le certificat de signature.
 
-    L’éditeur de mise à jour utilise le certificat de signature pour signer les mises à jour logicielles publiées sur le serveur de mise à jour. La publication échoue si le certificat numérique n’est pas disponible dans le magasin de certificats du serveur de mise à jour ou sur l’ordinateur qui exécute l’éditeur de mise à jour.
+  L’éditeur de mise à jour utilise le certificat de signature pour signer les mises à jour logicielles publiées sur le serveur de mise à jour. La publication échoue si le certificat numérique n’est pas disponible dans le magasin de certificats du serveur de mise à jour ou sur l’ordinateur qui exécute l’éditeur de mise à jour.
 
-    Pour plus d’informations sur l’ajout du certificat au magasin de certificats, consultez la rubrique [Certificats et sécurité de l’éditeur de mise à jour](/sccm/sum/tools/updates-publisher-security).
+  Pour plus d’informations sur l’ajout du certificat au magasin de certificats, consultez la rubrique [Certificats et sécurité de l’éditeur de mise à jour](/sccm/sum/tools/updates-publisher-security).
 
-    Si un certificat numérique n’est pas automatiquement détecté pour le serveur de mise à jour, choisissez l’une des options suivantes :
+  Si un certificat numérique n’est pas automatiquement détecté pour le serveur de mise à jour, choisissez l’une des options suivantes :
 
-    -   **Parcourir** : l’option Parcourir n’est disponible que si le serveur de mise à jour est installé sur le serveur sur lequel vous exécutez la console. Une fois que vous sélectionnez un certificat, vous devez choisir l’option **Créer** pour ajouter un certificat au magasin de certificats WSUS sur le serveur de mise à jour. Vous devez entrer le mot de passe du fichier **.pfx** pour les certificats que vous sélectionnez à l’aide de cette méthode.
+  -   **Parcourir** : L’option Parcourir n’est disponible que si le serveur de mise à jour est installé sur le serveur sur lequel vous exécutez la console. Une fois que vous sélectionnez un certificat, vous devez choisir l’option **Créer** pour ajouter un certificat au magasin de certificats WSUS sur le serveur de mise à jour. Vous devez entrer le mot de passe du fichier **.pfx** pour les certificats que vous sélectionnez à l’aide de cette méthode.
 
-    -   **Créer :** utilisez cette option pour créer un nouveau certificat. Cette option ajoute également le certificat au magasin de certificats WSUS sur le serveur de mise à jour.
+  -   **Créer :** Utilisez cette option pour créer un nouveau certificat. Cette option ajoute également le certificat au magasin de certificats WSUS sur le serveur de mise à jour.
 
-    **Si vous créez votre propre certificat de signature**, configurez les éléments suivants :
+  **Si vous créez votre propre certificat de signature**, configurez les éléments suivants :
 
-    -   Activez l’option **Autoriser l’exportation de la clé privée**.
+  -   Activez l’option **Autoriser l’exportation de la clé privée**.
 
-    -   Définissez **Utilisation de la clé** sur Signature numérique.
+  -   Définissez **Utilisation de la clé** sur Signature numérique.
 
-    -   Définissez **Taille de clé minimale** sur une valeur égale ou supérieure à 2 048 bits.
+  -   Définissez **Taille de clé minimale** sur une valeur égale ou supérieure à 2 048 bits.
 
-    Utilisez l’option **Supprimer** pour supprimer un certificat du magasin de certificats WSUS. Cette option est disponible si le serveur de mise à jour est local dans la console de l’éditeur de mise à jour que vous utilisez, ou si vous avez utilisé **SSL** pour vous connecter à un serveur de mise à jour à distance.
+  Utilisez l’option **Supprimer** pour supprimer un certificat du magasin de certificats WSUS. Cette option est disponible si le serveur de mise à jour est local dans la console de l’éditeur de mise à jour que vous utilisez, ou si vous avez utilisé **SSL** pour vous connecter à un serveur de mise à jour à distance.
 
 ## <a name="configmgr-server"></a>Serveur ConfigMgr
 Choisissez ces options lorsque vous utilisez Configuration Manager avec l’éditeur de mise à jour.
 
--   **Spécifier le serveur Configuration Manager :** après avoir activé la prise en charge pour Configuration Manager, spécifiez l’emplacement du serveur de site de niveau supérieur dans votre hiérarchie Configuration Manager. Si ce serveur est éloigné de l’installation de l’éditeur de mise à jour, spécifiez le nom de domaine complet du serveur de site. Choisissez **Tester la connexion** pour vérifier que vous pouvez vous connecter au serveur de site.
+-   **Spécifier le serveur Configuration Manager :** Après avoir activé la prise en charge pour Configuration Manager, spécifiez l’emplacement du serveur de site de niveau supérieur dans votre hiérarchie Configuration Manager. Si ce serveur est éloigné de l’installation de l’éditeur de mise à jour, spécifiez le nom de domaine complet du serveur de site. Choisissez **Tester la connexion** pour vérifier que vous pouvez vous connecter au serveur de site.
 
--   **Configurer des seuils :** les seuils sont utilisés lorsque vous publiez des mises à jour avec un type de publication automatique. Les valeurs de seuil vous aident à déterminer le moment où tout le contenu d’une mise à jour est publié au lieu des métadonnées uniquement. Pour en savoir plus de types de publication, consultez la rubrique [Affecter des mises à jour à une publication](/sccm/sum/tools/manage-updates-with-updates-publisher#assign-updates-and-bundles-to-a-publication)
+-   **Configurer des seuils :** Les seuils sont utilisés lorsque vous publiez des mises à jour avec un type de publication automatique. Les valeurs de seuil vous aident à déterminer le moment où tout le contenu d’une mise à jour est publié au lieu des métadonnées uniquement. Pour en savoir plus de types de publication, consultez la rubrique [Affecter des mises à jour à une publication](/sccm/sum/tools/manage-updates-with-updates-publisher#assign-updates-and-bundles-to-a-publication)
 
     Vous pouvez utiliser l’un des seuils suivants ou les deux :
 
-    -   **Seuil du nombre de clients demandé :** définit le nombre de clients qui doivent demander une mise à jour avant que l’éditeur de mise à jour puisse automatiquement publier tout le contenu de cette mise à jour. Tant que le nombre spécifié de clients n’a pas demandé la mise à jour, seules les métadonnées des mises à jour sont publiées.
+    -   **Seuil du nombre de clients demandé :** Définit le nombre de clients qui doivent demander une mise à jour avant que l’éditeur de mise à jour puisse automatiquement publier tout le contenu de cette mise à jour. Tant que le nombre spécifié de clients n’a pas demandé la mise à jour, seules les métadonnées des mises à jour sont publiées.
 
-    -   **Seuil de taille source du package (Mo) :** empêche la publication automatique des mises à jour qui dépassent la taille que vous spécifiez. Si la taille des mises à jour dépasse cette valeur, seules les métadonnées sont publiées. Si les mises à jour sont inférieures à la taille spécifiée, tout leur contenu peut être publié.
+    -   **Seuil de taille source du package (Mo) :** Empêche la publication automatique des mises à jour qui dépassent la taille que vous spécifiez. Si la taille des mises à jour dépasse cette valeur, seules les métadonnées sont publiées. Si les mises à jour sont inférieures à la taille spécifiée, tout leur contenu peut être publié.
 
 ## <a name="proxy-settings"></a>Paramètres proxy
 L’éditeur de mise à jour utilise les paramètres proxy lorsque vous importez des catalogues de logiciels à partir d’Internet ou publiez des mises à jour sur Internet.
@@ -101,17 +101,17 @@ Le contenu provenant d’éditeurs qui n’ont pas été approuvés peut endomma
 ## <a name="advanced"></a>Avancé
 Les options avancées incluent ce qui suit :
 
--   **Emplacement du référentiel :** affichez et modifiez l’emplacement du fichier de base de données, **scupdb.sdf**. Ce fichier représente le référentiel de l’éditeur de mise à jour.
+-   **Emplacement du référentiel :** Affichez et modifiez l’emplacement du fichier de base de données, **scupdb.sdf**. Ce fichier représente le référentiel de l’éditeur de mise à jour.
 
--   **Horodateur :** si cette option est activée, un horodatage est ajouté aux mises à jour que vous signez, indiquant la date de leur signature. Une mise à jour signée alors que le certificat était valide peut être utilisée après expiration de ce certificat de signature. Par défaut, les mises à jour logicielles ne peuvent pas être déployées après expiration de leur certificat de signature.
+-   **Horodateur :** Si cette option est activée, un horodatage est ajouté aux mises à jour que vous signez, indiquant la date de leur signature. Une mise à jour signée alors que le certificat était valide peut être utilisée après expiration de ce certificat de signature. Par défaut, les mises à jour logicielles ne peuvent pas être déployées après expiration de leur certificat de signature.
 
--   **Rechercher les mises à jour des catalogues auxquels vous êtes abonné :** chaque fois que l’éditeur de mise à jour démarre, il peut vérifier automatiquement les mises à jour des catalogues auxquels vous êtes abonné. Lorsqu’une mise à jour du catalogue est trouvée, les détails sont fournis en tant qu **’alertes récentes** dans la fenêtre **Vue d’ensemble** de l **’espace de travail Mises à jour**.
+-   **Rechercher les mises à jour des catalogues auxquels vous êtes abonné :** Chaque fois que l’éditeur de mise à jour démarre, il peut vérifier automatiquement les mises à jour des catalogues auxquels vous êtes abonné. Lorsqu’une mise à jour du catalogue est trouvée, les détails sont fournis en tant qu **’alertes récentes** dans la fenêtre **Vue d’ensemble** de l **’espace de travail Mises à jour**.
 
--   **Révocation de certificat :** choisissez cette option pour activer des vérifications de révocation de certificat.
+-   **Révocation de certificat :** Choisissez cette option pour activer des vérifications de révocation de certificat.
 
--   **Publication source locale :** l’éditeur de mise à jour peut utiliser une copie locale d’une mise à jour que vous publiez avant de télécharger cette mise à jour à partir d’Internet. L’emplacement doit être un dossier sur l’ordinateur qui exécute l’éditeur de mise à jour. Par défaut, cet emplacement est **Mes documents\LocalSourcePublishing.** Utilisez cet emplacement même si vous avez déjà téléchargé une ou plusieurs mises à jour, ou si vous avez modifié une mise à jour que vous souhaitez déployer.
+-   **Publication source locale :** L’éditeur de mise à jour peut utiliser une copie locale d’une mise à jour que vous publiez avant de télécharger cette mise à jour à partir d’Internet. L’emplacement doit être un dossier sur l’ordinateur qui exécute l’éditeur de mise à jour. Par défaut, cet emplacement est **Mes documents\LocalSourcePublishing.** Utilisez cet emplacement même si vous avez déjà téléchargé une ou plusieurs mises à jour, ou si vous avez modifié une mise à jour que vous souhaitez déployer.
 
--   **Assistant Nettoyage des mises à jour logicielles :** démarrez l’Assistant Nettoyage des mises à jour. L’Assistant fait expirer les mises à jour qui figurent sur le serveur de mise à jour mais pas dans le référentiel de l’éditeur de mise à jour. Consultez la page [Faire expirer les mises à jour non référencées](#expire-unreferenced-software-updates) pour plus de détails.
+-   **Assistant Nettoyage des mises à jour logicielles :** Démarre l’Assistant Nettoyage des mises à jour logicielles. L’Assistant fait expirer les mises à jour qui figurent sur le serveur de mise à jour mais pas dans le référentiel de l’éditeur de mise à jour. Consultez la page [Faire expirer les mises à jour non référencées](#expire-unreferenced-software-updates) pour plus de détails.
 
 ## <a name="updates"></a>Mises à jour
  L’éditeur de mise à jour peut automatiquement rechercher les nouvelles mises à jour chaque fois qu’il s’ouvre. Vous pouvez aussi choisir de recevoir des builds de version préliminaire de l’éditeur de mise à jour.

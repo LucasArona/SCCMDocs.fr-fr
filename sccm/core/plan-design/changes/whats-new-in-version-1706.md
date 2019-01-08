@@ -10,16 +10,16 @@ ms.assetid: ac034143-003e-4629-aac2-99eaffef4db1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7519971f05813edbf601c598b9281bcfdf19c83b
-ms.sourcegitcommit: fe279229a90fdc8cddbb13c7ffdbbb22af0e25ef
+ms.openlocfilehash: a9fe9c0b2f779558161e7995a01863e6415838ee
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47229328"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53423080"
 ---
 # <a name="what39s-new-in-version-1706-of-system-center-configuration-manager"></a>Nouveautés de la version 1706 de System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 La mise à jour 1706 de la version Current Branch de System Center Configuration Manager est une mise à jour dans la console des sites déjà installés qui exécutent la version 1606, 1610 ou 1702.
 
@@ -130,30 +130,30 @@ Pour plus de détails sur tous les paramètres de Windows 10, consultez [Commen
 
 ### <a name="new-device-compliance-policy-rules"></a>Nouvelles règles de stratégie de conformité d’appareil
 
-* **Type de mot de passe requis**. Spécifie si les utilisateurs doivent créer un mot de passe de type alphanumérique ou numérique. Pour les mots de passe alphanumériques, vous spécifiez également le nombre minimal de jeux de caractères que le mot de passe doit avoir. Les quatre jeux de caractères sont : lettres minuscules, lettres majuscules, symboles et chiffres.
+* **Type de mot de passe requis**. Spécifie si les utilisateurs doivent créer un mot de passe de type alphanumérique ou numérique. Pour les mots de passe alphanumériques, vous spécifiez également le nombre minimal de jeux de caractères que le mot de passe doit avoir. Les quatre jeux de caractères sont : lettres minuscules, lettres majuscules, symboles et chiffres.
 
- **Pris en charge sur :**
- * Windows Phone 8+
- * Windows 8.1+
- * iOS 6+
-<br></br>
+  **Pris en charge sur :**
+  * Windows Phone 8+
+  * Windows 8.1+
+  * iOS 6+
+  <br></br>
 * **Bloquer le débogage USB sur l’appareil**. Vous n’avez pas à configurer ce paramètre, car le débogage USB est déjà désactivé pour les appareils Android for Work.
 
- **Pris en charge sur :**
- * Android 4.0+
- * Samsung KNOX Standard 4.0+
-<br></br>
+  **Pris en charge sur :**
+  * Android 4.0+
+  * Samsung KNOX Standard 4.0+
+  <br></br>
 * **Bloquer les applications provenant de sources inconnues**. Exiger que les appareils interdisent l’installation des applications provenant de sources inconnues. Vous n’avez pas à configurer ce paramètre, car les appareils Android for Work limitent toujours l’installation à partir de sources inconnues.
 
   **Pris en charge sur :**
   * Android 4.0+
   * Samsung KNOX Standard 4.0+
-<br></br>
+  <br></br>
 * **Exiger l’analyse des menaces sur les applications**. Ce paramètre spécifie que la fonction Vérifier les applications est activée sur l’appareil.
 
- **Pris en charge sur :**
- * Android 4.2 à 4.4
- * Samsung KNOX Standard 4.0+
+  **Pris en charge sur :**
+  * Android 4.2 à 4.4
+  * Samsung KNOX Standard 4.0+
 
 Pour essayer les nouvelles règles de conformité d’appareil, consultez [Créer et déployer une stratégie de conformité d’appareil](https://docs.microsoft.com/sccm/mdm/deploy-use/create-compliance-policy).
 
@@ -175,7 +175,7 @@ Pour plus d’informations, consultez [Créer et exécuter des scripts PowerShel
 ### <a name="new-mobile-application-management-policy-settings"></a>Nouveaux paramètres de stratégie de gestion d’application mobile    
 <!--1324760--> À partir de cette version, vous pouvez utiliser trois nouveaux paramètres de stratégie de gestion des applications mobiles :
 
-- **Bloquer la capture d’écran (appareils Android uniquement)** : spécifie que les fonctionnalités de capture d'écran de l'appareil sont bloquées lors de l'utilisation de cette application.
+- **Bloquer la capture d’écran (appareils Android uniquement) :** Spécifie que les fonctionnalités de capture d'écran de l'appareil sont bloquées lors de l'utilisation de cette application.
 
 Consultez [Protéger les applications à l’aide des stratégies de protection des applications de Configuration Manager](https://docs.microsoft.com/sccm/mdm/deploy-use/protect-apps-using-mam-policies) pour essayer de nouveaux paramètres de stratégie de protection d’application.
 

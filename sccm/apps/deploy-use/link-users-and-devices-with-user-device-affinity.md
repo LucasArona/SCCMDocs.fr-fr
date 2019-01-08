@@ -10,16 +10,16 @@ ms.assetid: 5b30b0d5-722d-4d4b-9ed7-5a43de315461
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 40bab1725b074bc549eeb9e9764ab8a1dd8b83e7
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 5343f10fe1e8a7b799454801c764a43619488014
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32337715"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421737"
 ---
 # <a name="link-users-and-devices-with-user-device-affinity-in-system-center-configuration-manager"></a>Lier des utilisateurs et des appareils avec l’affinité entre utilisateur et appareil dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 L’affinité entre utilisateur et appareil dans System Center Configuration Manager (Configuration Manager) associe un utilisateur à un ou plusieurs appareils. Vous n’avez alors pas besoin de connaître les noms des appareils d’un utilisateur pour déployer une application sur cet utilisateur. Au lieu de déployer l’application sur chacun des appareils de l’utilisateur, vous déployez l’application auprès de l’utilisateur. Ensuite, l’affinité entre utilisateur et appareil entraîne l’installation automatique de l’application sur tous les appareils associés à cet utilisateur.  
 
@@ -52,10 +52,10 @@ L’affinité entre utilisateur et appareil dans System Center Configuration Man
 ## <a name="automatically-create-user-device-affinities-windows-pcs-only"></a>Créer automatiquement des affinités entre utilisateur et appareil (ordinateurs Windows uniquement)  
  Configuration Manager lit les données sur les ouvertures de session des utilisateurs dans le journal des événements Windows. Pour créer automatiquement des affinités entre des utilisateurs et des appareils, vous devez activer les deux options suivantes dans la stratégie de sécurité locale des ordinateurs clients, afin de stocker les événements d’ouverture de session dans le journal des événements Windows :  
 
--   **Auditer les événements d'ouverture de session de compte**  
--   **Auditer les événements d'ouverture de session**  
+- **Auditer les événements d'ouverture de session de compte**  
+- **Auditer les événements d'ouverture de session**  
 
- Pour configurer ces paramètres, utilisez la stratégie de groupe Windows.  
+  Pour configurer ces paramètres, utilisez la stratégie de groupe Windows.  
 
 > [!IMPORTANT]  
 > Si une erreur provoque l’ajout d’un nombre important d’entrées au journal des événements Windows, il se peut qu’un autre journal des événements soit créé. Dans ce cas, Configuration Manager risque de ne plus pouvoir accéder aux événements d'ouverture de session existants.  
@@ -80,7 +80,7 @@ L’affinité entre utilisateur et appareil dans System Center Configuration Man
     -   **Configurer automatiquement l’affinité entre utilisateur et appareil à partir des données d’utilisation**. Pour laisser le site créer automatiquement des affinités entre utilisateur et appareil, sélectionnez **True** dans la liste déroulante. Si vous sélectionnez **False**, vous devez approuver toutes les attributions d’affinité entre utilisateur et appareil.  
 
     > [!TIP]  
-    > **Exemple** : si vous affectez à **User device affinity threshold (minutes)** (Seuil de l’affinité entre utilisateur et appareil (minutes)) la valeur **60** minutes et à **User device affinity threshold (days)** (Seuil de l’affinité entre utilisateur et appareil (jours)) la valeur **5** jours, l’utilisateur doit utiliser l’appareil pendant au moins 60 minutes sur une période de 5 jours pour qu’une affinité entre utilisateur et appareil puisse être automatiquement créée.  
+    > **Exemple :** Si vous définissez **Seuil de l’affinité entre utilisateur et périphérique (minutes)** sur **60** minutes et à **Seuil de l’affinité entre utilisateur et périphérique (jours)** sur **5** jours, l’utilisateur doit utiliser le périphérique pendant au moins 60 minutes sur une période de 5 jours pour qu’une affinité entre utilisateur et périphérique puisse être automatiquement créée.  
 
 Après la création automatique d'une affinité entre utilisateur et appareil, Configuration Manager continue de surveiller les seuils d'affinité entre utilisateur et appareil. Si l’activité de l’utilisateur pour cet appareil devient inférieure aux seuils configurés, l’affinité entre utilisateur et appareil est supprimée. Affectez à **User device affinity threshold (days)** (Seuil de l’affinité entre utilisateur et appareil (jours)) une valeur d’au moins **7** jours pour éviter la suppression d’une affinité entre utilisateur et appareil automatiquement configurée quand l’utilisateur n’est pas connecté, par exemple pendant le week-end.  
 

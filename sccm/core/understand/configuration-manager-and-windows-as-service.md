@@ -10,16 +10,16 @@ ms.assetid: c8534a1e-57b8-4688-b6e6-299d82cfcec9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e2fb6b022526ce4bae1de21012ac996dbcea35cf
-ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
+ms.openlocfilehash: 329f5c2f227cbd8a51b1c9ccc21810cda9f6a2cf
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36260905"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417131"
 ---
 # <a name="configuration-manager-and-windows-as-a-service"></a>Configuration Manager et Windows as a Service
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager offre un contrôle total sur les mises à jour des fonctionnalités de Windows 10. Pour adopter le modèle Windows as a service dans son entier, vous devez également adopter le modèle Configuration Manager Current Branch. Pour rester à jour avec Windows 10, vous devez rester à jour avec Configuration Manager pour une expérience optimale. En effet, vous devez disposer des nouvelles versions de Configuration Manager pour profiter pleinement des nouvelles fonctionnalités d’entreprise de Windows 10. Cet article est destiné à être une page d’accueil d’articles phares que vous devez consulter pour adopter Configuration Manager Current Branch. Configuration Manager Current Branch vous mène tout droit à Windows as a service.
 
@@ -39,6 +39,7 @@ System Center Configuration Manager offre un contrôle total sur les mises à jo
 
 
 ## <a name="key-articles-about-adopting-windows-as-a-service"></a>Rubriques importantes sur l’adoption de Windows as a service
+
 | Article        | Description          | 
 | ------------- |-------------|
 |[Gérer Windows en tant que service](/sccm/osd/deploy-use/manage-windows-as-a-service)|Explique comment utiliser des plans de maintenance pour déployer des mises à jour de fonctionnalités de Windows 10.|

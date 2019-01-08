@@ -10,16 +10,16 @@ ms.assetid: 58a0d2ae-de76-401f-b854-7a5243949033
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 18e50806868955eac807645a5378aea53acdc899
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 9e297842a82ac3ae39f4e3a75962aaef115e35a4
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32348604"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420972"
 ---
 # <a name="use-stand-alone-media-to-deploy-windows-without-using-the-network-in-system-center-configuration-manager"></a>Utiliser un média autonome pour déployer Windows sans utiliser le réseau dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Dans System Center Configuration Manager, un média autonome contient tout ce qui est nécessaire pour permettre le déploiement d’un système d’exploitation sur un ordinateur. Cela comprend l’image de démarrage, l’image du système d’exploitation et la séquence de tâches permettant d’installer le système d’exploitation, c’est-à-dire les applications, les pilotes, etc. Les déploiements de médias autonomes vous permettent de déployer des systèmes d'exploitation dans les conditions suivantes :  
 
@@ -29,13 +29,13 @@ Dans System Center Configuration Manager, un média autonome contient tout ce qu
 
 Vous pouvez utiliser un média autonome dans les scénarios de déploiement de système d’exploitation suivants :  
 
--   [Actualiser un ordinateur existant avec une nouvelle version de Windows](refresh-an-existing-computer-with-a-new-version-of-windows.md)  
+- [Actualiser un ordinateur existant avec une nouvelle version de Windows](refresh-an-existing-computer-with-a-new-version-of-windows.md)  
 
--   [Installation d’une nouvelle version de Windows sur un nouvel ordinateur (système nu)](install-new-windows-version-new-computer-bare-metal.md)  
+- [Installation d’une nouvelle version de Windows sur un nouvel ordinateur (système nu)](install-new-windows-version-new-computer-bare-metal.md)  
 
--   [Effectuer une mise à niveau de Windows vers la dernière version](upgrade-windows-to-the-latest-version.md)  
+- [Effectuer une mise à niveau de Windows vers la dernière version](upgrade-windows-to-the-latest-version.md)  
 
- Exécutez les étapes de l’un des scénarios de déploiement de système d’exploitation, puis préparez et créez le média autonome en vous aidant des indications fournies dans les sections suivantes.  
+  Exécutez les étapes de l’un des scénarios de déploiement de système d’exploitation, puis préparez et créez le média autonome en vous aidant des indications fournies dans les sections suivantes.  
 
 ## <a name="task-sequence-actions-not-supported-when-using-stand-alone-media"></a>Actions de séquence de tâches non prises en charge lors de l’utilisation d’un média autonome  
  Si vous avez effectué les étapes de l’un des scénarios de déploiement de système d’exploitation pris en charge, la séquence de tâches permettant de déployer ou mettre à niveau le système d’exploitation a été créée et tout le contenu associé a été distribué à un point de distribution. Quand vous utilisez un média autonome, voici les actions qui ne sont pas prises en charge dans la séquence de tâches :  
@@ -59,7 +59,7 @@ Vous pouvez utiliser un média autonome dans les scénarios de déploiement de s
 >   
 >  Dans le cas d’un média autonome qui comprend une étape **Installer le package**, vous devez créer le média autonome sur un site principal sur lequel l’agent de distribution logicielle est activé ou ajoutez une étape [Exécuter la ligne de commande](../understand/task-sequence-steps.md#BKMK_RunCommandLine) après l’étape [Configurer Windows et ConfigMgr](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) et avant la première étape **Installer le package** de la séquence de tâches. L'étape **Exécuter la ligne de commande** exécute une commande de ligne de commande WMIC pour activer l'agent de distribution logicielle avant l'exécution de la première étape Installer le package. Vous pouvez utiliser la ligne de commande suivante dans l'étape **Exécuter la ligne de commande** de votre séquence de tâches :  
 >   
->  **Ligne de commande** : **WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE**  
+>  **Ligne de commande** : **WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE**  
 
 ## <a name="configure-deployment-settings"></a>Configurer les paramètres de déploiement  
  Quand vous utilisez un média autonome pour lancer le processus de déploiement de système d’exploitation, vous devez configurer le déploiement pour rendre le système d’exploitation accessible au média. Vous pouvez configurer cela dans la page **Paramètres de déploiement** de l’Assistant Déploiement logiciel ou sous l’onglet **Paramètres de déploiement** dans les propriétés du déploiement.  Pour le paramètre **Rendre disponible aux éléments suivants** , sélectionnez l’une des options suivantes :  

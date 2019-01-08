@@ -9,16 +9,16 @@ ms.assetid: bec00fb4-1ac0-4e49-b330-0871b3722459
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a6a996c4f1e00c05c0b3766b8955130529832063
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: bb48f192146a3c0d4bbbe6f005dda537db871da7
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344498"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53415481"
 ---
 # <a name="system-center-configuration-manager-privacy-statement---configuration-manager-cmdlet-library"></a>Déclaration de confidentialité de System Center Configuration Manager – Bibliothèque d’applets de commande de Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Cette déclaration de confidentialité couvre les fonctionnalités de la bibliothèque d’applets de commande de System Center Configuration Manager.  
 
@@ -42,11 +42,11 @@ Cette fonctionnalité de données d’utilisation est activée par défaut. La b
 
  Pour la désactiver complètement, définissez la valeur de ces deux clés de Registre. Ils correspondent à chacun des fournisseurs de suivi d’événements pour Windows (ETW) :  
 
--   HKLM\Software\Microsoft\ConfigMgr10\PowerShell\Microsoft.ConfigurationManagement.PowerShell.Provider:CeipLevel=0 (désactive la fonctionnalité Données d’utilisation pour le fournisseur du lecteur)  
+- HKLM\Software\Microsoft\ConfigMgr10\PowerShell\Microsoft.ConfigurationManagement.PowerShell.Provider:CeipLevel=0 (désactive la fonctionnalité Données d’utilisation pour le fournisseur du lecteur)  
 
--   HKLM\Software\Microsoft\ConfigMgr10\PowerShell\Microsoft.ConfigurationManagement.PowerShell.Cmdlets:CeipLevel=0 (désactive la fonctionnalité Données d’utilisation pour les applets de commande)  
+- HKLM\Software\Microsoft\ConfigMgr10\PowerShell\Microsoft.ConfigurationManagement.PowerShell.Cmdlets:CeipLevel=0 (désactive la fonctionnalité Données d’utilisation pour les applets de commande)  
 
- Les changements des paramètres de données d’utilisation sont spécifiques à l’ordinateur sur lequel ils sont apportés.  
+  Les changements des paramètres de données d’utilisation sont spécifiques à l’ordinateur sur lequel ils sont apportés.  
 
 
 ## <a name="next-steps"></a>Étapes suivantes

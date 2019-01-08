@@ -10,16 +10,16 @@ ms.assetid: abb696f3-a816-4f12-a9f1-0503a81e1976
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3bd64cd937bf0a90a00ea6b17664d80394dcafab
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 4168b36553dacff69fab0972011a7d4c2843d787
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32339301"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421941"
 ---
 # <a name="test-the-database-upgrade-when-installing-an-update"></a>Tester la mise à niveau d’une base de données avant d’installer une mise à jour
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Les informations de cette rubrique peuvent vous aider à tester la mise à niveau d’une base de données avant d’installer une mise à jour dans la console pour la branche active de Configuration Manager. Toutefois, le test de la mise à niveau ne constitue plus une étape requise ou recommandée si votre base de données est suspecte ou a été modifiée par des personnalisations qui ne sont pas explicitement prises en charge par Configuration Manager.
 
@@ -45,21 +45,21 @@ Le test de la mise à niveau est exécuté sur une sauvegarde de votre base de d
 Si l’installation d’une mise à jour échoue, vous n’avez pas besoin de récupérer le site. Au lieu de cela, vous pouvez essayer de réinstaller de la mise à jour depuis la console.
 
 ##  <a name="run-the-test-upgrade"></a>Tester une mise à niveau    
-1.  Utilisez le programme d’installation de Configuration Manager et les fichiers sources figurant dans le dossier **CD.Latest** d’un site qui exécute la version vers laquelle vous prévoyez d’effectuer la mise à jour.  
+1. Utilisez le programme d’installation de Configuration Manager et les fichiers sources figurant dans le dossier **CD.Latest** d’un site qui exécute la version vers laquelle vous prévoyez d’effectuer la mise à jour.  
 
-2.  Copiez le dossier **CD.Latest** vers un emplacement sur l’instance SQL Server que vous utiliserez pour tester la mise à niveau de la base de données.
+2. Copiez le dossier **CD.Latest** vers un emplacement sur l’instance SQL Server que vous utiliserez pour tester la mise à niveau de la base de données.
 
-3.  Créez une sauvegarde de la base de données du site pour laquelle vous souhaitez tester une mise à niveau. Restaurez ensuite une copie de cette base de données sur une instance de SQL Server qui n’héberge pas de site Configuration Manager. L’instance SQL Server doit utiliser la même édition de SQL Server que votre base de données de site.  
+3. Créez une sauvegarde de la base de données du site pour laquelle vous souhaitez tester une mise à niveau. Restaurez ensuite une copie de cette base de données sur une instance de SQL Server qui n’héberge pas de site Configuration Manager. L’instance SQL Server doit utiliser la même édition de SQL Server que votre base de données de site.  
 
-4.  Après avoir restauré la copie de la base de données, exécutez le fichier **Setup** dans le dossier CD.Latest contenant les fichiers sources de la version vers laquelle vous effectuez la mise à jour. Quand vous exécutez le programme d’installation, utilisez l’option de ligne de commande **/TESTDBUPGRADE** . Si l'instance SQL Server qui héberge la copie de la base de données n'est pas l'instance par défaut, fournissez les arguments de ligne de commande pour identifier l'instance qui héberge la copie de la base de données du site.   
+4. Après avoir restauré la copie de la base de données, exécutez le fichier **Setup** dans le dossier CD.Latest contenant les fichiers sources de la version vers laquelle vous effectuez la mise à jour. Quand vous exécutez le programme d’installation, utilisez l’option de ligne de commande **/TESTDBUPGRADE** . Si l'instance SQL Server qui héberge la copie de la base de données n'est pas l'instance par défaut, fournissez les arguments de ligne de commande pour identifier l'instance qui héberge la copie de la base de données du site.   
 
-  Par exemple, vous utilisez une base de données de site dont le nom de base de données est *SMS_ABC*. Vous restaurez une copie de cette base de données de site sur une instance prise en charge de SQL Server ayant pour nom d'instance *DBTest*. Pour tester une mise à niveau de cette copie de la base de données du site, utilisez la ligne de commande suivante : **Setup.exe /TESTDBUPGRADE DBtest\CM_ABC**.  
+   Par exemple, vous utilisez une base de données de site dont le nom de base de données est *SMS_ABC*. Vous restaurez une copie de cette base de données de site sur une instance prise en charge de SQL Server ayant pour nom d'instance *DBTest*. Pour tester une mise à niveau de cette copie de la base de données du site, utilisez la ligne de commande suivante : **Setup.exe /TESTDBUPGRADE DBtest\CM_ABC**.  
 
-  Vous trouverez Setup.exe à l’emplacement suivant sur le média source de System Center Configuration Manager : **SMSSETUP\BIN\X64**.  
+   Vous trouverez le fichier Setup.exe à l’emplacement suivant sur le média source de System Center Configuration Manager : **SMSSETUP\BIN\X64**.  
 
-5.  Sur l'instance de SQL Server où vous avez exécuté le test de mise à niveau, examinez *ConfigMgrSetup.log* à la racine du lecteur système pour connaître la progression et l'issue du test.  
+5. Sur l'instance de SQL Server où vous avez exécuté le test de mise à niveau, examinez *ConfigMgrSetup.log* à la racine du lecteur système pour connaître la progression et l'issue du test.  
 
-     Si le test de la mise à niveau échoue, corrigez les problèmes ayant entraîné l’échec de la mise à niveau de la base de données du site. Puis créez une nouvelle sauvegarde de la base de données du site et testez la mise à niveau de la nouvelle copie de la base de données.  
+    Si le test de la mise à niveau échoue, corrigez les problèmes ayant entraîné l’échec de la mise à niveau de la base de données du site. Puis créez une nouvelle sauvegarde de la base de données du site et testez la mise à niveau de la nouvelle copie de la base de données.  
 
 
 

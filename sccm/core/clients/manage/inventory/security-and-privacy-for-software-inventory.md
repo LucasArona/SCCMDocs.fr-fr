@@ -10,23 +10,23 @@ ms.assetid: 8e68e1fb-a8ec-4543-bb8a-cbbaf184a418
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5fef3c1892c015fcec42197c9af373506d8e426a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 5bd03980c772edf8033ddc4a8ccce336ba924c07
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32333108"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53423165"
 ---
 # <a name="security-and-privacy-for-software-inventory-in-system-center-configuration-manager"></a>Sécurité et confidentialité pour l’inventaire logiciel dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Cette rubrique contient des informations de sécurité et de confidentialité pour l’inventaire logiciel dans System Center Configuration Manager.  
 
 ##  <a name="BKMK_Security_HardwareInventory"></a> Meilleures pratiques de sécurité pour l’inventaire logiciel  
  Utilisez les meilleures pratiques de sécurité suivantes lorsque vous recueillez des données d'inventaire logiciel à partir de clients :  
 
-|Bonnes pratiques de sécurité|Plus d'informations|  
+|Bonnes pratiques de sécurité|Informations complémentaires|  
 |----------------------------|----------------------|  
 |Signer et chiffrer les données d'inventaire|Lorsque les clients communiquent avec les points de gestion à l'aide du protocole HTTPS, toutes les données qu'ils envoient sont chiffrées à l'aide du protocole SSL. Toutefois, lorsque des ordinateurs clients utilisent le protocole HTTP pour communiquer avec des points de gestion sur l'intranet, les données d'inventaire client et les fichiers collectés peuvent être envoyés non signés et non chiffrés. Assurez-vous que le site est configuré pour exiger la signature et utiliser le chiffrement. En outre, si les clients peuvent prendre en charge l'algorithme SHA-256, sélectionnez l'option pour exiger SHA-256.|  
 |N'utilisez pas le regroupement de fichiers pour collecter des fichiers critiques ou des informations sensibles|L’inventaire logiciel Configuration Manager utilise tous les droits du compte LocalSystem, qui permet de recueillir des copies de fichiers système critiques, tels que le Registre ou la base de données du compte de sécurité. Lorsque ces fichiers sont disponibles sur le serveur de site, un individu disposant des droits Lire la ressource ou de droits NTFS sur l'emplacement de stockage du fichier pourrait en analyser le contenu et probablement découvrir des informations essentielles sur le client, ce qui permettrait de compromettre sa sécurité.|  
@@ -35,17 +35,17 @@ Cette rubrique contient des informations de sécurité et de confidentialité po
 ### <a name="security-issues-for-software-inventory"></a>Problèmes de sécurité pour l’inventaire logiciel  
  La collecte d'inventaires engendre des vulnérabilités potentielles. Les intrus peuvent effectuer les opérations suivantes :  
 
--   Envoyer des données non valides qui seront acceptées par le point de gestion, même lorsque le paramètre du client d'inventaire logiciel est désactivé et le regroupement de fichiers n'est pas activé.  
+- Envoyer des données non valides qui seront acceptées par le point de gestion, même lorsque le paramètre du client d'inventaire logiciel est désactivé et le regroupement de fichiers n'est pas activé.  
 
--   Envoyer de trop grandes quantités de données dans un seul fichier et dans de nombreux fichiers, ce qui risque provoquer un déni de service.  
+- Envoyer de trop grandes quantités de données dans un seul fichier et dans de nombreux fichiers, ce qui risque provoquer un déni de service.  
 
--   Accéder aux informations d’inventaire lors de leur transfert vers Configuration Manager.  
+- Accéder aux informations d’inventaire lors de leur transfert vers Configuration Manager.  
 
- Si les utilisateurs savent qu'ils peuvent créer un fichier masqué appelé **Skpswi.dat** et le placer à la racine du disque dur d'un client pour l'exclure de l'inventaire logiciel, vous ne pourrez pas recueillir de données d'inventaire logiciel à partir de cet ordinateur.  
+  Si les utilisateurs savent qu'ils peuvent créer un fichier masqué appelé **Skpswi.dat** et le placer à la racine du disque dur d'un client pour l'exclure de l'inventaire logiciel, vous ne pourrez pas recueillir de données d'inventaire logiciel à partir de cet ordinateur.  
 
- Dans la mesure où un utilisateur bénéficiant de privilèges d’administrateur local peut envoyer n’importe quelles informations comme données d’inventaire, ne considérez pas que les données d’inventaire collectées par Configuration Manager peuvent servir de référence.  
+  Dans la mesure où un utilisateur bénéficiant de privilèges d’administrateur local peut envoyer n’importe quelles informations comme données d’inventaire, ne considérez pas que les données d’inventaire collectées par Configuration Manager peuvent servir de référence.  
 
- L'inventaire logiciel est activé par défaut comme un paramètre client.  
+  L'inventaire logiciel est activé par défaut comme un paramètre client.  
 
 ##  <a name="BKMK_Privacy_HardwareInventory"></a> Informations de confidentialité pour l’inventaire logiciel  
  L’inventaire matériel vous permet de récupérer toutes les informations stockées dans le Registre et dans WMI sur les clients Configuration Manager. L'inventaire logiciel vous permet de découvrir tous les fichiers d'un type donné ou de collecter tous les fichiers spécifiés à partir des clients. Asset Intelligence améliore les capacités de l'inventaire en étendant l'inventaire matériel et logiciel et en ajoutant la nouvelle fonctionnalité de gestion des licences.  

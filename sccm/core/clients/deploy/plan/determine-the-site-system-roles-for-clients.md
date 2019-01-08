@@ -10,16 +10,16 @@ ms.assetid: 984e8d92-7327-4b08-9228-0c955e6ac778
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: eac38757ed2147d664b3bdbf2f7e0eb11947dcac
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 8fdb7faee21904c504470c2bca86a674d59559cf
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334073"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419816"
 ---
 # <a name="determine-the-site-system-roles-for-system-center-configuration-manager-clients"></a>Déterminer les rôles de système de site pour les clients System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Cette rubrique peut vous aider à déterminer les rôles de système de site dont vous avez besoin pour déployer les clients Configuration Manager :  
 
@@ -45,15 +45,15 @@ Cette rubrique peut vous aider à déterminer les rôles de système de site don
 
  Installez un point d’état de secours si tout ce qui suit s’applique :  
 
--   Vous souhaitez que les erreurs de communication avec les clients des ordinateurs Windows soient envoyées au site, même si ces ordinateurs clients ne peuvent pas communiquer avec un point de gestion.  
+- Vous souhaitez que les erreurs de communication avec les clients des ordinateurs Windows soient envoyées au site, même si ces ordinateurs clients ne peuvent pas communiquer avec un point de gestion.  
 
--   Vous souhaitez utiliser les rapports de déploiement de client Configuration Manager, qui contiennent les données envoyées par le point d’état de secours.  
+- Vous souhaitez utiliser les rapports de déploiement de client Configuration Manager, qui contiennent les données envoyées par le point d’état de secours.  
 
--   Vous disposez d'un serveur dédié pour ce rôle de système de site et avez en outre mis en place des mesures de sécurité pour renforcer la protection du serveur contre les attaques.  
+- Vous disposez d'un serveur dédié pour ce rôle de système de site et avez en outre mis en place des mesures de sécurité pour renforcer la protection du serveur contre les attaques.  
 
--   Les avantages que présentent l'utilisation d'un point d'état de secours compensent les risques de sécurité liés aux connexions non authentifiées et aux transferts de texte en clair, sur du trafic HTTP.  
+- Les avantages que présentent l'utilisation d'un point d'état de secours compensent les risques de sécurité liés aux connexions non authentifiées et aux transferts de texte en clair, sur du trafic HTTP.  
 
- N’installez pas un point d’état de secours si les risques de sécurité liés à l’exécution d’un site web avec des connexions non authentifiées et des transferts de texte en clair dépassent les avantages de l’identification des problèmes de communication du client.  
+  N’installez pas un point d’état de secours si les risques de sécurité liés à l’exécution d’un site web avec des connexions non authentifiées et des transferts de texte en clair dépassent les avantages de l’identification des problèmes de communication du client.  
 
 ##  <a name="determine-whether-you-need-a-reporting-services-point"></a>Déterminer si un point Reporting Services est nécessaire  
  Configuration Manager fournit de nombreux rapports pour vous aider à surveiller l’installation, l’attribution et la gestion des clients sur la console Configuration Manager. Certains rapports sur le déploiement du client exigent que des clients soient attribués à un point d'état de secours.  

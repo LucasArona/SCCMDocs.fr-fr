@@ -10,28 +10,28 @@ ms.assetid: d827cf91-b18f-4ee7-b538-24ba6f003ab9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 68370a09dda49e16edd05fb545922f2e182f79a5
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 2fe6f2490b1ec527b7e6e09e9ce476e66342d7c9
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32331904"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421159"
 ---
 # <a name="how-to-monitor-clients-for-linux-and-unix-servers-in-system-center-configuration-manager"></a>Guide pratique pour surveiller les clients pour des serveurs Linux et UNIX dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Vous pouvez afficher des informations sur les serveurs Linux et UNIX dans la console System Center Configuration Manager selon les mêmes méthodes que vous employez pour afficher des informations sur des clients Windows.  
 
  Vous pouvez notamment afficher les informations suivantes :  
 
--   Détails de l’état des clients, dans les tableaux de bord de la console Configuration Manager  
+- Détails de l’état des clients, dans les tableaux de bord de la console Configuration Manager  
 
--   Détails sur les clients dans les rapports par défaut de Configuration Manager  
+- Détails sur les clients dans les rapports par défaut de Configuration Manager  
 
--   Détails de l’inventaire dans l’Explorateur de ressources  
+- Détails de l’inventaire dans l’Explorateur de ressources  
 
- Les sections suivantes décrivent comment obtenir ces informations à partir de l’Explorateur de ressources et des rapports.  
+  Les sections suivantes décrivent comment obtenir ces informations à partir de l’Explorateur de ressources et des rapports.  
 
 ##  <a name="BKMK_UseResourceExpforLnU"></a> Utiliser l’Explorateur de ressources pour afficher l’inventaire des serveurs Linux et UNIX  
 

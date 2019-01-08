@@ -10,16 +10,16 @@ ms.assetid: 738eddaa-52e2-467f-b453-821ef2884d47
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 4504f26f8f6288750d36028d8eb795ae0d839fbc
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: af1d2dd5b3075413cdc661ecc8d75c532443d2ce
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32336219"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424848"
 ---
 # <a name="how-to-create-and-apply-power-plans-in-system-center-configuration-manager"></a>Comment créer et appliquer des modes de gestion de l’alimentation dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 La gestion de l’alimentation dans System Center Configuration Manager vous permet d’appliquer les modes de gestion de l’alimentation fournis avec Configuration Manager à des regroupements d’ordinateurs de votre hiérarchie, ou de créer vos propres modes de gestion de l’alimentation personnalisés. Procédez comme indiqué dans cette rubrique pour appliquer un mode d'alimentation intégré ou personnalisé aux ordinateurs.  
 
@@ -28,11 +28,11 @@ La gestion de l’alimentation dans System Center Configuration Manager vous per
 
  Si un ordinateur est membre de plusieurs regroupements, chacun appliquant des modes de gestion de l'alimentation différents, les actions suivantes sont effectuées :  
 
--   Mode de gestion de l’alimentation : si plusieurs valeurs sont appliquées à un ordinateur en tant que paramètres d’alimentation, la valeur la moins restrictive est utilisée.  
+- Gestion de l'alimentation : Si plusieurs valeurs sont appliquées à un ordinateur comme paramètres d'alimentation, c'est la valeur la moins restrictive qui est utilisée.  
 
--   Heure de sortie de veille : si plusieurs heures d’éveil sont appliquées à un ordinateur de bureau, l’heure la plus proche de minuit est utilisée.  
+- Heure d'éveil : si plusieurs heures d'éveil sont appliquées à un ordinateur de bureau, l'heure la plus proche de minuit est utilisée.  
 
- Utilisez le rapport **Ordinateurs avec plusieurs modes de gestion de l'alimentation** pour afficher tous les ordinateurs auxquels sont appliqués plusieurs modes d'alimentation. Cela peut vous aider à détecter les ordinateurs qui présentent des conflits de l'alimentation. Pour plus d’informations sur les rapports de gestion de l’alimentation, consultez [Comment surveiller et planifier la gestion de l’alimentation dans System Center Configuration Manager](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md).  
+  Utilisez le rapport **Ordinateurs avec plusieurs modes de gestion de l'alimentation** pour afficher tous les ordinateurs auxquels sont appliqués plusieurs modes d'alimentation. Cela peut vous aider à détecter les ordinateurs qui présentent des conflits de l'alimentation. Pour plus d’informations sur les rapports de gestion de l’alimentation, consultez [Comment surveiller et planifier la gestion de l’alimentation dans System Center Configuration Manager](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md).  
 
 > [!IMPORTANT]  
 >  Les paramètres d’alimentation configurés à l’aide de la stratégie de groupe Windows remplacent les paramètres configurés par la gestion de l’alimentation Configuration Manager.  
@@ -41,48 +41,48 @@ La gestion de l’alimentation dans System Center Configuration Manager vous per
 
 ### <a name="to-create-and-apply-a-power-plan"></a>Pour créer et appliquer un mode d'alimentation  
 
-1.  Dans la console Configuration Manager, cliquez sur **Ressources et Conformité**.  
+1. Dans la console Configuration Manager, cliquez sur **Ressources et Conformité**.  
 
-2.  Dans l'espace de travail **Ressources et Conformité** , cliquez sur **Regroupements de périphériques**.  
+2. Dans l'espace de travail **Ressources et Conformité** , cliquez sur **Regroupements de périphériques**.  
 
-3.  Dans la liste **Regroupements de périphériques** , cliquez sur le regroupement auquel vous souhaitez appliquer les paramètres de gestion de l'alimentation, puis, dans l'onglet **Accueil** , dans le groupe **Propriétés** , cliquez sur **Propriétés**.  
+3. Dans la liste **Regroupements de périphériques** , cliquez sur le regroupement auquel vous souhaitez appliquer les paramètres de gestion de l'alimentation, puis, dans l'onglet **Accueil** , dans le groupe **Propriétés** , cliquez sur **Propriétés**.  
 
-4.  Sous l’onglet **Gestion de l’alimentation** de la boîte de dialogue *Propriétés de <nom_regroupement\>*, sélectionnez **Spécifier les paramètres de gestion de l’alimentation de ce regroupement**.  
+4. Sous l’onglet **Gestion de l’alimentation** de la boîte de dialogue **Propriétés de** <em><nom_regroupement\></em>, sélectionnez **Spécifier les paramètres de gestion de l’alimentation de ce regroupement**.  
 
-    > [!NOTE]  
-    >  Vous pouvez également cliquer sur **Parcourir** , puis copier les paramètres de gestion de l'alimentation à partir d'un regroupement sélectionné vers le regroupement sélectionné.  
+   > [!NOTE]  
+   >  Vous pouvez également cliquer sur **Parcourir** , puis copier les paramètres de gestion de l'alimentation à partir d'un regroupement sélectionné vers le regroupement sélectionné.  
 
-5.  Dans les champs **Début** et **Fin** , spécifiez l'heure de début et l'heure de fin des heures de pointe (ou de bureau).  
+5. Dans les champs **Début** et **Fin** , spécifiez l'heure de début et l'heure de fin des heures de pointe (ou de bureau).  
 
-6.  Activez **Heure de reprise (ordinateurs de bureau)** pour indiquer une heure de sortie du mode veille ou du mode veille prolongée d'un ordinateur de bureau afin d'installer des mises à jour planifiées ou des logiciels.  
+6. Activez **Heure de reprise (ordinateurs de bureau)** pour indiquer une heure de sortie du mode veille ou du mode veille prolongée d'un ordinateur de bureau afin d'installer des mises à jour planifiées ou des logiciels.  
 
-    > [!IMPORTANT]  
-    >  La gestion de l'alimentation utilise la fonction d'heure de reprise Windows interne pour sortir les ordinateurs du mode veille ou du mode veille prolongée. Les paramètres de l’heure de sortie de veille ne sont pas appliqués aux ordinateurs portables afin d’éviter qu’ils ne sortent de veille alors qu’ils ne sont pas branchés. L’heure de sortie de veille est aléatoire et les ordinateurs peuvent sortir de veille pendant une heure à partir de l’heure de sortie de veille spécifiée.  
+   > [!IMPORTANT]  
+   >  La gestion de l'alimentation utilise la fonction d'heure de reprise Windows interne pour sortir les ordinateurs du mode veille ou du mode veille prolongée. Les paramètres de l’heure de sortie de veille ne sont pas appliqués aux ordinateurs portables afin d’éviter qu’ils ne sortent de veille alors qu’ils ne sont pas branchés. L’heure de sortie de veille est aléatoire et les ordinateurs peuvent sortir de veille pendant une heure à partir de l’heure de sortie de veille spécifiée.  
 
-7.  Si vous souhaitez configurer un mode d'alimentation personnalisé pour les heures de pointe (ou de bureau), sélectionnez **Pic personnalisé (ConfigMgr)** dans la liste déroulante **Mode forte alimentation** , puis cliquez sur **Modifier**. Si vous souhaitez configurer un mode d'alimentation pour les heures creuses, sélectionnez **Non-pic personnalisé (ConfigMgr)** dans la liste déroulante **Faible alimentation** , puis cliquez sur **Modifier**.  
+7. Si vous souhaitez configurer un mode d'alimentation personnalisé pour les heures de pointe (ou de bureau), sélectionnez **Pic personnalisé (ConfigMgr)** dans la liste déroulante **Mode forte alimentation** , puis cliquez sur **Modifier**. Si vous souhaitez configurer un mode d'alimentation pour les heures creuses, sélectionnez **Non-pic personnalisé (ConfigMgr)** dans la liste déroulante **Faible alimentation** , puis cliquez sur **Modifier**.  
 
-    > [!NOTE]  
-    >  Vous pouvez utiliser le rapport **Activité de l'ordinateur** pour vous aider à déterminer les planifications à utiliser pour les heures de pointe et les heures creuses lorsque vous appliquez des modes d'alimentation à des regroupements d'ordinateurs. Pour plus d’informations, consultez [Guide pratique pour surveiller et planifier la gestion de l’alimentation dans System Center Configuration Manager](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md).  
+   > [!NOTE]  
+   >  Vous pouvez utiliser le rapport **Activité de l'ordinateur** pour vous aider à déterminer les planifications à utiliser pour les heures de pointe et les heures creuses lorsque vous appliquez des modes d'alimentation à des regroupements d'ordinateurs. Pour plus d’informations, consultez [Guide pratique pour surveiller et planifier la gestion de l’alimentation dans System Center Configuration Manager](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md).  
 
-     Vous pouvez également sélectionner dans les modes d'alimentation intégrés, **Équilibré (ConfigMgr)**, **Hautes performances (ConfigMgr)** ou **Économiseur d'énergie (ConfigMgr)**, puis cliquer sur **Afficher** pour afficher les propriétés de chaque mode d'alimentation.  
+    Vous pouvez également sélectionner dans les modes d'alimentation intégrés, **Équilibré (ConfigMgr)**, **Hautes performances (ConfigMgr)** ou **Économiseur d'énergie (ConfigMgr)**, puis cliquer sur **Afficher** pour afficher les propriétés de chaque mode d'alimentation.  
 
-    > [!NOTE]  
-    >  Vous ne pouvez pas modifier les modes d'alimentation intégrés.  
+   > [!NOTE]  
+   >  Vous ne pouvez pas modifier les modes d'alimentation intégrés.  
 
-8.  Dans la boîte de dialogue *Propriétés de <nom_mode_gestion_alimentation\>*, configurez les paramètres suivants :  
+8. Dans la boîte de dialogue **Propriétés de** <em><nom du mode de gestion de l’alimentation\></em>, configurez les paramètres suivants :  
 
-    -   **Nom** : spécifiez un nom pour ce mode de gestion de l’alimentation ou utilisez la valeur par défaut fournie.  
+   -   **Nom :** spécifiez un nom pour ce mode d'alimentation ou utilisez la valeur par défaut fournie.  
 
-    -   **Description**  : spécifiez une description pour ce mode de gestion de l’alimentation ou utilisez la valeur par défaut fournie.  
+   -   **Description :**  spécifiez une description pour ce mode d'alimentation ou utilisez la valeur par défaut fournie.  
 
-    -   **Spécifier les propriétés pour ce mode d’alimentation** : configurez les propriétés du mode de gestion de l’alimentation. Pour désactiver une propriété, désactivez sa case. Pour plus d’informations sur les paramètres disponibles, consultez [Paramètres du mode de gestion de l’alimentation disponibles](#BKMK_Plans) dans cette rubrique.  
+   -   **Spécifiez les propriétés de ce mode de gestion de l’alimentation :** configurez les propriétés du mode d'alimentation. Pour désactiver une propriété, désactivez sa case. Pour plus d’informations sur les paramètres disponibles, consultez [Paramètres du mode de gestion de l’alimentation disponibles](#BKMK_Plans) dans cette rubrique.  
 
-        > [!IMPORTANT]  
-        >  Les paramètres activés sont appliqués aux ordinateurs lorsque le mode d'alimentation est appliqué. Si vous désactivez une case à cocher du paramètre d'alimentation, la valeur sur l'ordinateur client n'est pas modifiée lorsque le mode d'alimentation est appliqué. Le fait de désactiver une case ne permet pas de restaurer la valeur du paramètre d'alimentation sélectionnée avant l'application d'un mode d'alimentation.  
+       > [!IMPORTANT]  
+       >  Les paramètres activés sont appliqués aux ordinateurs lorsque le mode d'alimentation est appliqué. Si vous désactivez une case à cocher du paramètre d'alimentation, la valeur sur l'ordinateur client n'est pas modifiée lorsque le mode d'alimentation est appliqué. Le fait de désactiver une case ne permet pas de restaurer la valeur du paramètre d'alimentation sélectionnée avant l'application d'un mode d'alimentation.  
 
-9. Cliquez sur **OK** pour fermer la boîte de dialogue *Propriétés de <nom_mode_gestion_alimentation\>*.  
+9. Cliquez sur **OK** pour fermer la boîte de dialogue **Propriétés de** <em><nom du mode de gestion de l’alimentation\></em>.  
 
-10. Cliquez sur **OK** pour fermer la boîte de dialogue *Paramètres de <nom_regroupement\>* et pour appliquer le mode de gestion de l’alimentation.  
+10. Cliquez sur **OK** pour fermer la boîte de dialogue **Paramètres de** <em><Nom du regroupement\></em> et pour appliquer le mode de gestion de l’alimentation.  
 
 ##  <a name="BKMK_Plans"></a> Available power management plan settings  
  Le tableau suivant répertorie les paramètres de gestion de l’alimentation disponibles dans Configuration Manager. Vous pouvez configurer d'autres paramètres pour les périodes où l'ordinateur est branché ou sur batterie. Selon la version de Windows que vous utilisez, il est possible que certains paramètres ne soient pas configurables.  

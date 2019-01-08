@@ -10,16 +10,16 @@ ms.assetid: aebafaf9-b3d5-4a0f-9ee5-685758c037a1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bca3e0857ed40d2e2b3f9d739b4c0411e0213d09
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 0ab848051d5eaa85d2b515145ff64471aee81a31
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385369"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53415039"
 ---
 # <a name="install-and-configure-distribution-points-in-configuration-manager"></a>Installer et configurer des points de distribution dans Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Installez des points de distribution Configuration Manager pour héberger les fichiers de contenu que vous déployez sur des appareils et des utilisateurs. Créez des groupes de points de distribution pour simplifier la gestion des points de distribution, ainsi que la distribution du contenu aux points de distribution.  
 
@@ -247,20 +247,20 @@ Les sections suivantes décrivent les configurations des points de distribution 
 
 Les paramètres suivants se trouvent dans la page **Point de distribution** de l’Assistant Création d’un serveur de système de site, et sous l’onglet **Général** de la fenêtre de propriétés des points de distribution :  
 
--   **Installer et configurer IIS si requis par Configuration Manager** : si IIS n’est pas déjà installé sur le serveur, Configuration Manager l’installe et le configure. Configuration Manager a besoin qu’IIS soit installé sur tous les points de distribution. Si vous ne choisissez pas ce paramètre, et qu’IIS n’est pas installé sur le serveur, installez IIS pour que Configuration Manager puisse installer correctement le point de distribution.  
+-   **Installer et configurer IIS si requis par Configuration Manager** : Si IIS n’est pas déjà installé sur le serveur, Configuration Manager l’installe et le configure. Configuration Manager a besoin qu’IIS soit installé sur tous les points de distribution. Si vous ne choisissez pas ce paramètre, et qu’IIS n’est pas installé sur le serveur, installez IIS pour que Configuration Manager puisse installer correctement le point de distribution.  
 
     > [!NOTE]  
     >  Cette option se trouve uniquement dans la page **Point de distribution** de l’Assistant Création d’un serveur de système de site. Elle n’est disponible que lorsque vous [installez un nouveau point de distribution](#bkmk_install-procedure).  
 
-- **Activer et configurer BranchCache pour ce point de distribution** : sélectionnez ce paramètre pour permettre à Configuration Manager de configurer Windows BranchCache sur le serveur de point de distribution. Pour plus d’informations, consultez [BranchCache](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#branchcache).  
+- **Activer et configurer BranchCache pour ce point de distribution** : Sélectionnez ce paramètre pour permettre à Configuration Manager de configurer Windows BranchCache sur le serveur de point de distribution. Pour plus d’informations, consultez [BranchCache](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#branchcache).  
 
-- **Régler la vitesse de téléchargement afin d’utiliser la bande passante réseau inutilisée (Windows LEDBAT)**<!--1358112--> : depuis la version 1806, vous pouvez permettre aux points de distribution d’utiliser le contrôle de surcharge du réseau. Pour plus d’informations, consultez [Windows LEDBAT](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#windows-ledbat). Le point de distribution doit exécuter Windows Server, version 1709. Il n’existe aucun prérequis concernant le client.  
+- **Régler la vitesse de téléchargement afin d’utiliser la bande passante réseau inutilisée (Windows LEDBAT)**<!--1358112--> : À compter de la version 1806, configurez les points de distribution pour utiliser le contrôle de surcharge du réseau. Pour plus d’informations, consultez [Windows LEDBAT](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#windows-ledbat). Le point de distribution doit exécuter Windows Server, version 1709. Il n’existe aucun prérequis concernant le client.  
 
-- **Description** : description facultative du rôle du point de distribution.  
+- **Description** : Description facultative du rôle du point de distribution.  
 
--   **Configurer la façon dont les appareils clients communiquent avec le point de distribution** : l’utilisation des protocoles **HTTP** et **HTTPS** présente des avantages et des inconvénients. Pour plus d’informations, voir [Bonnes pratiques de sécurité pour la gestion de contenu](/sccm/core/plan-design/hierarchy/security-and-privacy-for-content-management#BKMK_Security_ContentManagement).  
+-   **Configurez la manière dont les appareils clients communiquent avec le point de distribution** : L’utilisation du protocole **HTTP** ou **HTTPS** présente des avantages et des inconvénients. Pour plus d’informations, voir [Bonnes pratiques de sécurité pour la gestion de contenu](/sccm/core/plan-design/hierarchy/security-and-privacy-for-content-management#BKMK_Security_ContentManagement).  
 
--   **Autoriser les clients à se connecter anonymement** : ce paramètre indique si le point de distribution autorise les connexions anonymes des clients Configuration Manager à la bibliothèque de contenu.  
+-   **Autoriser les clients à se connecter anonymement** : Ce paramètre spécifie si le point de distribution autorise les connexions anonymes des clients Configuration Manager à la bibliothèque de contenu.  
 
     > [!Important]  
     > Si vous n’utilisez pas ce paramètre, appliquez les modifications décrites dans l’article de la Base de connaissances Microsoft [2619572](https://support.microsoft.com/help/2619572/) sur les clients Windows 7. Sinon, la réparation des applications Windows Installer peut échouer.  
@@ -269,7 +269,7 @@ Les paramètres suivants se trouvent dans la page **Point de distribution** de l
     >   
     >  Après l’installation de la mise à jour sur les clients et la modification de la clé de Registre documentée, MSIExec accède au chemin du contenu en utilisant le compte de l’utilisateur connecté.  
 
--   **Créer un certificat auto-signé ou importer un certificat client PKI** : Configuration Manager utilise ce certificat pour effectuer ce qui suit :  
+-   **Créer un certificat auto-signé ou importer un certificat client PKI** : Configuration Manager utilise ce certificat aux fins suivantes :  
 
     -   Il authentifie le point de distribution à un point de gestion avant que le point de distribution n'envoie des messages d'état.  
 
@@ -290,7 +290,7 @@ Les paramètres suivants se trouvent dans la page **Point de distribution** de l
 
      Pour obtenir un exemple de déploiement de ce certificat, consultez [Déploiement du certificat client pour les points de distribution](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_clientdistributionpoint2008_cm2012).  
 
--   **Activer ce point de distribution pour le contenu préparé** : ce paramètre vous permet d’ajouter du contenu sur le serveur avant de distribuer des logiciels. Comme les fichiers de contenu figurent déjà dans la bibliothèque de contenu, ils ne sont pas transférés sur le réseau quand vous distribuez les logiciels. Pour plus d’informations, consultez [Contenu préparé](/sccm/core/plan-design/hierarchy/manage-network-bandwidth#BKMK_PrestagingContent).  
+-   **Activer ce point de distribution pour le contenu préparé** : Ce paramètre vous permet d’ajouter du contenu sur le serveur avant de distribuer des logiciels. Comme les fichiers de contenu figurent déjà dans la bibliothèque de contenu, ils ne sont pas transférés sur le réseau quand vous distribuez les logiciels. Pour plus d’informations, consultez [Contenu préparé](/sccm/core/plan-design/hierarchy/manage-network-bandwidth#BKMK_PrestagingContent).  
 
 
 ### <a name="bkmk_config-drive"></a> Paramètres du lecteur  
@@ -300,9 +300,9 @@ Les paramètres suivants se trouvent dans la page **Point de distribution** de l
 
 Spécifiez les paramètres du lecteur pour le point de distribution. Vous pouvez configurer jusqu’à deux lecteurs de disque pour la bibliothèque de contenu, et deux lecteurs de disque pour le partage de package. Configuration Manager peut utiliser des lecteurs supplémentaires lorsque les deux premiers atteignent la réserve d’espace disque configurée. La page **Paramètres du lecteur** permet de configurer la priorité des lecteurs de disque et la quantité d'espace disque libre restant sur chaque lecteur de disque.  
 
--   **Réserve d’espace libre sur le lecteur (Mo)** : cette valeur détermine la quantité d’espace libre sur un lecteur avant que Configuration Manager ne choisisse un autre lecteur et poursuive le processus de copie sur ce lecteur. Les fichiers de contenu peuvent s'étendre sur plusieurs lecteurs.  
+-   **Réserve d’espace libre sur le lecteur (Mo)** : Cette valeur détermine la quantité d’espace libre sur un lecteur avant que Configuration Manager ne choisisse un autre lecteur et poursuive le processus de copie sur ce lecteur. Les fichiers de contenu peuvent s'étendre sur plusieurs lecteurs.  
 
--   **Emplacements du contenu** : spécifiez les emplacements pour la bibliothèque de contenu et le partage de package sur ce point de distribution. Par défaut, tous les emplacements du contenu sont définis sur **Automatique**. Configuration Manager copie le contenu à l’emplacement de contenu principal jusqu’à ce que la quantité d’espace libre atteigne la valeur spécifiée dans **Réserve d’espace libre sur le lecteur (Mo)**. Lorsque vous sélectionnez **Automatique**, Configuration Manager définit les emplacements de contenu principaux sur le lecteur de disque qui a le plus d’espace disque au moment de l’installation. Il définit les emplacements secondaires sur le lecteur de disque qui a l’espace disque le plus important après le premier. Quand l’emplacement principal et l’emplacement secondaire atteignent la réserve d’espace libre du lecteur, Configuration Manager sélectionne le lecteur disponible ayant le plus d’espace disque libre et poursuit le processus de copie.  
+-   **Emplacements du contenu** : Spécifiez les emplacements pour la bibliothèque de contenu et le partage de package sur ce point de distribution. Par défaut, tous les emplacements du contenu sont définis sur **Automatique**. Configuration Manager copie le contenu à l’emplacement de contenu principal jusqu’à ce que la quantité d’espace libre atteigne la valeur spécifiée dans **Réserve d’espace libre sur le lecteur (Mo)**. Lorsque vous sélectionnez **Automatique**, Configuration Manager définit les emplacements de contenu principaux sur le lecteur de disque qui a le plus d’espace disque au moment de l’installation. Il définit les emplacements secondaires sur le lecteur de disque qui a l’espace disque le plus important après le premier. Quand l’emplacement principal et l’emplacement secondaire atteignent la réserve d’espace libre du lecteur, Configuration Manager sélectionne le lecteur disponible ayant le plus d’espace disque libre et poursuit le processus de copie.  
 
 > [!Tip]  
 >  Pour empêcher l’installation de Configuration Manager sur un lecteur spécifique, créez un fichier vide intitulé **no_sms_on_drive.sms** et copiez-le dans le dossier racine du lecteur avant d’installer le point de distribution.  
@@ -336,30 +336,30 @@ Sélectionnez l’option **Activer la prise en charge PXE pour les clients**, pu
  >   
  > Si WDS et DHCP sont installés sur le même serveur, configurez WDS pour écouter sur un port différent. Par défaut, DHCP écoute sur le même port. Pour plus d’informations, consultez [Considérations quand vous avez WDS et DHCP sur le même serveur](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment#BKMK_WDSandDHCP).  
 
-- **Autoriser ce point de distribution à répondre aux requêtes PXE entrantes** : indiquez si WDS doit être activé pour répondre aux demandes de service PXE. Utilisez ce paramètre pour activer et désactiver le service sans supprimer la fonctionnalité PXE du point de distribution.  
+- **Autoriser ce point de distribution à répondre aux requêtes PXE entrantes** : Spécifiez s’il faut activer WDS pour répondre aux requêtes de service PXE. Utilisez ce paramètre pour activer et désactiver le service sans supprimer la fonctionnalité PXE du point de distribution.  
 
-- **Activer la prise en charge d’ordinateur inconnu** : indiquez si la prise en charge des ordinateurs non gérés par Configuration Manager doit être activée. Pour plus d’informations, voir [Préparer les déploiements d’ordinateurs inconnus](/sccm/osd/get-started/prepare-for-unknown-computer-deployments).  
+- **Activer la prise en charge d’ordinateur inconnu** : Indiquez si la prise en charge des ordinateurs non gérés par Configuration Manager doit être activée. Pour plus d’informations, voir [Préparer les déploiements d’ordinateurs inconnus](/sccm/osd/get-started/prepare-for-unknown-computer-deployments).  
 
-- **Activer un répondeur PXE sans service de déploiement Windows** : à compter de la version 1806, cette option active un répondeur PXE sur le point de distribution, sans nécessiter WDS. Ce répondeur PXE prend en charge les réseaux IPv6. Si vous activez cette option sur un point de distribution qui est déjà compatible PXE, Configuration Manager suspend le service WDS. Si vous la désactivez tout en choisissant **Activer la prise en charge PXE pour les clients**, le point de distribution réactive le service WDS.<!--1357580-->  
+- **Activer un répondeur PXE sans service de déploiement Windows** : À compter de la version 1806, cette option active un répondeur PXE sur le point de distribution, qui n’a pas besoin des services WDS. Ce répondeur PXE prend en charge les réseaux IPv6. Si vous activez cette option sur un point de distribution qui est déjà compatible PXE, Configuration Manager suspend le service WDS. Si vous la désactivez tout en choisissant **Activer la prise en charge PXE pour les clients**, le point de distribution réactive le service WDS.<!--1357580-->  
 
-- **Exiger un mot de passe lorsque les ordinateurs utilisent PXE**: pour renforcer la sécurité de vos déploiements PXE, spécifiez un mot de passe fort.  
+- **Exiger un mot de passe lorsque les ordinateurs utilisent PXE** : pour renforcer la sécurité de vos déploiements PXE, spécifiez un mot de passe fort.  
 
-- **Affinité entre appareil et utilisateur**: indiquez de quelle manière le point de distribution doit associer les utilisateurs à l'ordinateur de destination dans le cadre des déploiements PXE. Choisissez l'une des options suivantes :  
+- **Affinité entre appareil et utilisateur** : indiquez de quelle manière le point de distribution doit associer les utilisateurs à l'ordinateur de destination dans le cadre des déploiements PXE. Choisissez l'une des options suivantes :  
 
-    - **Autoriser une affinité entre périphérique et utilisateur avec approbation automatique** : choisissez ce paramètre pour associer automatiquement les utilisateurs à l’ordinateur de destination sans attendre l’approbation.  
+  - **Autoriser une affinité entre appareil et utilisateur avec approbation automatique** : Choisissez ce paramètre pour associer automatiquement les utilisateurs à l’ordinateur de destination sans attendre l’approbation.  
 
-    - **Autoriser une affinité entre périphérique et utilisateur en attente de l’approbation de l’administrateur** : choisissez ce paramètre pour attendre l’approbation d’un utilisateur administratif avant d’associer des utilisateurs à l’ordinateur de destination.  
+  - **Autoriser une affinité entre appareil et utilisateur en attente de l’approbation de l’administrateur** : Choisissez ce paramètre pour attendre l’approbation d’un utilisateur administratif avant d’associer des utilisateurs à l’ordinateur de destination.  
 
-    - **Ne pas autoriser d’affinité entre périphérique et utilisateur** : choisissez ce paramètre pour empêcher l’association d’utilisateurs à l’ordinateur de destination. Ce paramètre est la valeur par défaut.  
+  - **Ne pas autoriser d’affinité entre appareil et utilisateur** : Choisissez ce paramètre pour empêcher l’association d’utilisateurs à l’ordinateur de destination. Ce paramètre est la valeur par défaut.  
 
-     Pour plus d’informations sur l’affinité entre utilisateur et appareil, consultez [Lier des utilisateurs et des appareils avec l’affinité entre utilisateur et appareil](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity).  
+    Pour plus d’informations sur l’affinité entre utilisateur et appareil, consultez [Lier des utilisateurs et des appareils avec l’affinité entre utilisateur et appareil](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity).  
 
-- **Interfaces réseau**: Spécifiez que le point de distribution répond aux requêtes PXE à partir de toutes les interfaces réseau ou d'interfaces réseau spécifiques. Si le point de distribution répond à certaines interfaces réseau, vous devez fournir l’adresse MAC pour chaque interface réseau.  
+- **Interfaces réseau** : Spécifiez que le point de distribution répond aux requêtes PXE à partir de toutes les interfaces réseau ou d'interfaces réseau spécifiques. Si le point de distribution répond à certaines interfaces réseau, vous devez fournir l’adresse MAC pour chaque interface réseau.  
 
     > [!Note]  
     > Lorsque vous modifiez l’interface réseau, redémarrez le service WDS pour garantir qu’il enregistre correctement la configuration. Depuis la version 1806, lorsque vous utilisez le service de répondeur PXE, vous pouvez redémarrer le **service de répondeur PXE ConfigMgr** (SccmPxe).<!--SCCMDocs issue 642-->  
 
-- **Spécifier le délai de réponse du serveur PXE (secondes)** : lorsque vous utilisez plusieurs serveurs PXE, spécifiez la durée que doit attendre le point de distribution compatible PXE avant de répondre aux requêtes des ordinateurs. Par défaut, le point de distribution compatible PXE de Configuration Manager répond immédiatement.  
+- **Spécifier le délai de réponse du serveur PXE (secondes)** : Lorsque vous utilisez plusieurs serveurs PXE, spécifiez la durée que doit attendre le point de distribution compatible PXE avant de répondre aux requêtes des ordinateurs. Par défaut, le point de distribution compatible PXE de Configuration Manager répond immédiatement.  
 
 
 ### <a name="bkmk_config-multicast"></a> Multidiffusion  
@@ -370,25 +370,25 @@ Quand vous activez la multidiffusion, Configuration Manager installe les service
 
 Sélectionnez l’option **Activer la multidiffusion pour envoyer simultanément des données à plusieurs clients**, puis configurez les paramètres suivants :  
 
-- **Compte de connexion multidiffusion** : indiquez le compte à utiliser quand vous configurez des connexions de base de données Configuration Manager pour la multidiffusion. Pour plus d’informations, consultez [Compte de connexion multidiffusion](/sccm/core/plan-design/hierarchy/accounts#multicast-connection-account).  
+- **Compte de connexion multidiffusion** : Spécifiez le compte à utiliser lorsque vous configurez des connexions de base de données Configuration Manager pour la multidiffusion. Pour plus d’informations, consultez [Compte de connexion multidiffusion](/sccm/core/plan-design/hierarchy/accounts#multicast-connection-account).  
 
-- **Paramètres de l’adresse de multidiffusion** : spécifiez les adresses IP pour envoyer des données vers les ordinateurs de destination. Par défaut, il obtient l’adresse IP d’un serveur DHCP chargé de distribuer des adresses de multidiffusion. Selon l’environnement réseau, vous pouvez spécifier une plage d’adresses IP entre 239.0.0.0 et 239.255.255.255.  
+- **Paramètres de l’adresse de multidiffusion** : Spécifiez les adresses IP d’envoi de données aux ordinateurs de destination. Par défaut, il obtient l’adresse IP d’un serveur DHCP chargé de distribuer des adresses de multidiffusion. Selon l’environnement réseau, vous pouvez spécifier une plage d’adresses IP entre 239.0.0.0 et 239.255.255.255.  
 
     > [!IMPORTANT]  
     >  Les adresses IP que vous configurez doivent être accessibles par les ordinateurs de destination qui demandent l’image du système d’exploitation. Vérifiez que les routeurs et les pare-feu autorisent le trafic multidiffusion entre l’ordinateur de destination et le point de distribution.  
 
-- **Étendue du port UDP pour la multidiffusion** : spécifiez la plage de ports UDP utilisés pour envoyer des données aux ordinateurs de destination.  
+- **Étendue du port UDP pour la multidiffusion** : Spécifiez la plage de ports UDP utilisés pour envoyer des données aux ordinateurs de destination.  
 
     > [!IMPORTANT]  
     >  Les ports UDP doivent être accessibles par les ordinateurs de destination qui demandent l’image du système d’exploitation. Vérifiez que les routeurs et pare-feu autorisent le trafic de multidiffusion entre l'ordinateur de destination et le serveur de site.  
 
-- **Nombre maximum de clients** : spécifiez le nombre maximal d’ordinateurs de destination qui peuvent télécharger l’image du système d’exploitation à partir de ce point de distribution.  
+- **Nombre maximum de clients** : Spécifiez le nombre maximum d’ordinateurs de destination qui peuvent télécharger l’image du système d’exploitation à partir de ce point de distribution.  
 
-- **Activer la multidiffusion planifiée** : indiquez comment Configuration Manager contrôle le lancement du déploiement des systèmes d’exploitation sur les ordinateurs de destination. Configurez les options suivantes :  
+- **Activer la multidiffusion planifiée** : Indiquez comment Configuration Manager contrôle le lancement du déploiement des systèmes d’exploitation sur les ordinateurs de destination. Configurez les options suivantes :  
 
-    - **Délai de démarrage de session (en minutes)**  : indiquez le nombre de minutes écoulé avant que Configuration Manager réponde à la première demande de déploiement.  
+    - **Délai de démarrage de session (minutes)** : Indiquez le nombre de minutes écoulé avant que Configuration Manager réponde à la première requête de déploiement.  
 
-    - **Taille minimale de la session (clients)**  : indiquez le nombre de demandes qui doivent être reçues avant que Configuration Manager commence à déployer le système d’exploitation.  
+    - **Taille minimale de la session (clients)** : Indiquez le nombre de requêtes qui doivent être reçues avant que Configuration Manager commence à déployer le système d’exploitation.  
 
 
 > [!IMPORTANT]  
@@ -416,11 +416,11 @@ Pour supprimer ce point de distribution d’un groupe de points de distribution,
 
 Gérez le contenu que vous avez distribué au point de distribution. Sélectionnez un package dans la liste des packages de déploiement, puis effectuez les actions suivantes :  
 
-- **Valider** : démarrez le processus de validation de l’intégrité des fichiers de contenu pour le logiciel. Pour afficher les résultats du processus de validation du contenu, dans l’espace de travail **Surveillance**, développez **État de distribution**, puis choisissez le nœud **État du contenu**. Pour plus d’informations, consultez [Valider du contenu](/sccm/core/servers/deploy/configure/deploy-and-manage-content#validate-content).   
+- **Valider** : Démarrez le processus de validation de l’intégrité des fichiers de contenu pour le logiciel. Pour afficher les résultats du processus de validation du contenu, dans l’espace de travail **Surveillance**, développez **État de distribution**, puis choisissez le nœud **État du contenu**. Pour plus d’informations, consultez [Valider du contenu](/sccm/core/servers/deploy/configure/deploy-and-manage-content#validate-content).   
 
-- **Redistribuer** : copie tous les fichiers de contenu du logiciel sélectionné dans le point de distribution, et remplace les fichiers existants. Cette action permet généralement de réparer les fichiers de contenu. Pour plus d’informations, consultez [Redistribuer le contenu](/sccm/core/servers/deploy/configure/deploy-and-manage-content#redistribute-content).  
+- **Redistribuer** : Copie tous les fichiers de contenu du logiciel sélectionné dans le point de distribution, et remplace les fichiers existants. Cette action permet généralement de réparer les fichiers de contenu. Pour plus d’informations, consultez [Redistribuer le contenu](/sccm/core/servers/deploy/configure/deploy-and-manage-content#redistribute-content).  
 
--   **Supprimer** : supprime les fichiers de contenu du logiciel dans le point de distribution. Pour plus d’informations, consultez [Supprimer du contenu](/sccm/core/servers/deploy/configure/deploy-and-manage-content#remove-content).    
+-   **Supprimer** : Supprime les fichiers de contenu du logiciel dans le point de distribution. Pour plus d’informations, consultez [Supprimer du contenu](/sccm/core/servers/deploy/configure/deploy-and-manage-content#remove-content).    
 
 
 ### <a name="bkmk_config-valid"></a> Validation du contenu  
@@ -484,6 +484,6 @@ Configurez des limites du taux de transfert pour contrôler la bande passante r�
 
 - **Illimité lors de l’expédition de données à cette destination** : Configuration Manager envoie le contenu au point de distribution sans aucune limite de taux de transfert. Ce paramètre est la valeur par défaut.  
 
-- **Mode impulsion** : cette option spécifie la taille des blocs de données qui sont envoyés par le serveur de site au point de distribution. Vous pouvez également spécifier un délai entre l'envoi de chaque bloc de données. Utilisez cette option lorsque vous devez envoyer des données au point de distribution via une connexion réseau à très faible bande passante. Par exemple, vous pouvez être limité à l’envoi de 1 Ko de données toutes les cinq secondes, quelle que soit la vitesse de la liaison ou son utilisation.  
+- **Mode impulsion** : Cette option spécifie la taille des blocs de données qui sont envoyés par le serveur de site au point de distribution. Vous pouvez également spécifier un délai entre l'envoi de chaque bloc de données. Utilisez cette option lorsque vous devez envoyer des données au point de distribution via une connexion réseau à très faible bande passante. Par exemple, vous pouvez être limité à l’envoi de 1 Ko de données toutes les cinq secondes, quelle que soit la vitesse de la liaison ou son utilisation.  
 
-- **Limité aux taux de transfert maximaux indiqués par heure**: spécifiez ce paramètre pour qu'un site envoie des données à un point de distribution en utilisant uniquement le pourcentage de temps que vous avez configuré. Lorsque vous utilisez cette option, Configuration Manager n’identifie pas la bande passante disponible sur le réseau. Au lieu de cela, il envoie les données en plusieurs fois. Le serveur envoie des données pendant une courte période, puis n’envoie rien durant les périodes qui suivent. Par exemple, si vous avez défini **Limiter la bande passante disponible** sur **50 %**, Configuration Manager transmet les données sur une période, qui est suivie d’une période égale où aucune donnée n’est envoyée. La taille effective des données et celle des blocs de données ne sont pas gérées. Il gère uniquement la durée pendant laquelle il envoie des données.  
+- **Limité aux taux de transfert maximaux indiqués par heure** : spécifiez ce paramètre pour qu'un site envoie des données à un point de distribution en utilisant uniquement le pourcentage de temps que vous avez configuré. Lorsque vous utilisez cette option, Configuration Manager n’identifie pas la bande passante disponible sur le réseau. Au lieu de cela, il envoie les données en plusieurs fois. Le serveur envoie des données pendant une courte période, puis n’envoie rien durant les périodes qui suivent. Par exemple, si vous avez défini **Limiter la bande passante disponible** sur **50 %**, Configuration Manager transmet les données sur une période, qui est suivie d’une période égale où aucune donnée n’est envoyée. La taille effective des données et celle des blocs de données ne sont pas gérées. Il gère uniquement la durée pendant laquelle il envoie des données.  

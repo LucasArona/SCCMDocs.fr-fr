@@ -10,16 +10,16 @@ ms.assetid: 694bc29f-a7fd-4e06-815a-1a9c5e9ac563
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 20151eeac8a0a430b38ce9537748e0fef019df64
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 446a5fa47cdf55060b960d8846c913cbafc78da8
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32338072"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53415855"
 ---
 # <a name="introduction-to-the-long-term-servicing-branch-of-system-center-configuration-manager"></a>Présentation de Long-Term Servicing Branch dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Long-Term Servicing Branch)*
+*S’applique à : System Center Configuration Manager (Long-Term Servicing Branch)*
 
 Long-Term Servicing Branch (LTSB) de System Center Configuration Manager est une branche distincte de Configuration Manager, conçue comme une option d’installation disponible pour tous les clients. Mais elle n’est pas la seule option proposée aux clients qui ont laissé expirer leur Software Assurance (SA) ou leurs droits d’abonnement équivalents pour Configuration Manager.
 
@@ -49,17 +49,17 @@ Bien que la prise en charge de ces fonctionnalités ne soit pas disponible dans 
 ## <a name="find-documentation-for-the-ltsb"></a>Rechercher de la documentation sur LTSB
 LTSB est basé sur la version 1606 de Current Branch. Pour obtenir une documentation sur le produit, utilisez la [documentation Current Branch](https://docs.microsoft.com/sccm/), avec les mises en garde et limitations propres à LTSB. Ces mises en garde et limitations sont identifiées dans les rubriques en ligne suivantes :
 
--     [Présentation de Long-Term Servicing Branch](introduction-to-the-ltsb.md) : (cette rubrique)
--     [Installation de Long-Term Servicing Branch](install-the-ltsb.md)
--     [Mettre à niveau Long-Term Servicing Branch vers Current Branch](convert-to-current-branch.md)
--     [Configurations prises en charge pour Long-Term Servicing Branch](supported-configurations-for-ltsb.md)
--   [Gérer Long-Term Servicing Branch dans Configuration Manager](manage-the-ltsb.md)
+- [Présentation de Long-Term Servicing Branch](introduction-to-the-ltsb.md) : (Cette rubrique)
+- [Installation de Long-Term Servicing Branch](install-the-ltsb.md)
+- [Mettre à niveau Long-Term Servicing Branch vers Current Branch](convert-to-current-branch.md)
+- [Configurations prises en charge pour Long-Term Servicing Branch](supported-configurations-for-ltsb.md)
+- [Gérer Long-Term Servicing Branch dans Configuration Manager](manage-the-ltsb.md)
 
 Lorsque vous référencez la documentation Current Branch pour LTSB, les détails qui s’appliquent à la version 1606 s’appliquent également à LTSB. Les fonctionnalités ou les détails introduits avec la version 1610 ou version ultérieure ne sont pas pris en charge par LTSB.
 
 
 ## <a name="licensing-overview-for-the-ltsb"></a>Vue d’ensemble des licences pour LTSB   
-Les clients qui ont un contrat Software Assurance (SA) sur les licences de System Center Configuration Manager ou qui ont des droits d’abonnement équivalents à la date du 1er octobre 2016 ont le droit d’utiliser la version 1606 d’octobre 2016 de System Center Configuration Manager. Les clients qui ont des droits pour System Center Configuration Manager au 1er octobre 2016 ou après cette date ont deux options de licence lors de l’installation : CB (Current Branch) et LTSB (Long-Term Servicing Branch).
+Les clients qui ont un contrat Software Assurance (SA) sur les licences de System Center Configuration Manager ou qui ont des droits d’abonnement équivalents à la date du 1er octobre 2016 ont le droit d’utiliser la version 1606 d’octobre 2016 de System Center Configuration Manager. Les clients dotés de droits sur System Center Configuration Manager à la date du ou après le 1er octobre 2016 se voient proposer deux options de licence lors de l’installation : Current Branch et Long-Term Servicing Branch (LTSB).
 
 Les clients dotés de droits perpétuels sur System Center Configuration Manager, ou qui laissent leur contrat SA ou leur abonnement expirer après le 1er octobre, peuvent installer la version LTSB de System Center Configuration Manager qui est en vigueur au moment de l’expiration.
 

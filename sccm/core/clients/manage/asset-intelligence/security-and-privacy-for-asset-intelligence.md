@@ -10,23 +10,23 @@ ms.assetid: d0c6f7a0-dcae-4e6d-aa28-35d464d97ff7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 51bfe17980a7660ecdccfd13a11d6c7bcfd93e5f
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: cec99ab9d4e52f2a2db4aaef0de47b5abfb794b5
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344372"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417608"
 ---
 # <a name="security-and-privacy-for-asset-intelligence-in-system-center-configuration-manager"></a>Sécurité et confidentialité pour Asset Intelligence dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Cette rubrique contient des informations sur la sécurité et la confidentialité pour Asset Intelligence dans System Center Configuration Manager.  
 
 ##  <a name="BKMK_Security_AI"></a> Meilleures pratiques de sécurité pour Asset Intelligence  
  Utilisez les meilleures pratiques de sécurité suivantes dans l'optique d'utiliser Asset Intelligence.  
 
-|Bonnes pratiques de sécurité|Plus d'informations|  
+|Bonnes pratiques de sécurité|Informations complémentaires|  
 |----------------------------|----------------------|  
 |Lorsque vous importez un fichier de licence (fichier de licence en volume Microsoft ou fichier de déclaration générale de licence), sécurisez le fichier et le canal de communication.|Utilisez les autorisations du système de fichier pour vous assurer que seuls les utilisateurs autorisés peuvent accéder aux fichiers de licence et utilisez la signature SMB pour garantir l'intégrité des données lors de leur transfert au serveur de site pendant le processus d'importation.|  
 |Utilisez le principe des autorisations minimales pour importer les fichiers de licence.|Utilisez l'administration basée sur les rôles pour accorder l'autorisation Gérer Asset Intelligence à l'utilisateur administratif qui importe des fichiers de licence. Le rôle intégré d'Asset Manager inclut cette autorisation.|  
@@ -38,18 +38,18 @@ Cette rubrique contient des informations sur la sécurité et la confidentialit�
 
  Asset Intelligence n'envoie pas d'informations sur les utilisateurs, les ordinateurs ou l'utilisation des licences à Microsoft. Vous pouvez choisir d'envoyer des requêtes System Center Online en vue d'une catégorisation. Ainsi, vous pouvez inventorier un ou plusieurs noms de logiciel sans catégorie et les envoyer dans System Center Online afin de les rechercher, puis de les classer. Une fois un nom de logiciel téléchargé, les fonctions de recherche de Microsoft l'identifient, le classent, puis le mettent à la disposition de tous les clients qui utilisent le service en ligne. Vous devez être conscient des conséquences de la soumission d'informations via System Center Online en termes de confidentialité :  
 
--   Le téléchargement s'applique uniquement aux informations génériques relatives au nom du logiciel (nom, éditeur, etc.) que vous choisissez d'envoyer au System Center Online. Les informations d'inventaire ne peuvent faire l'objet d'un téléchargement.  
+- Le téléchargement s'applique uniquement aux informations génériques relatives au nom du logiciel (nom, éditeur, etc.) que vous choisissez d'envoyer au System Center Online. Les informations d'inventaire ne peuvent faire l'objet d'un téléchargement.  
 
--   Le téléchargement ne se produit jamais automatiquement et le système n'est pas conçu pour que cette tâche soit automatisée. Vous devez sélectionner et approuver manuellement le téléchargement de chaque nom de logiciel.  
+- Le téléchargement ne se produit jamais automatiquement et le système n'est pas conçu pour que cette tâche soit automatisée. Vous devez sélectionner et approuver manuellement le téléchargement de chaque nom de logiciel.  
 
--   Une boîte de dialogue vous indique exactement quelles données seront téléchargées, avant le démarrage du processus de téléchargement.  
+- Une boîte de dialogue vous indique exactement quelles données seront téléchargées, avant le démarrage du processus de téléchargement.  
 
--   Les informations de licence ne sont pas envoyées à Microsoft. Les informations de licence sont stockées dans une zone séparée de la base de données Configuration Manager et elles ne peuvent pas être envoyées à Microsoft.  
+- Les informations de licence ne sont pas envoyées à Microsoft. Les informations de licence sont stockées dans une zone séparée de la base de données Configuration Manager et elles ne peuvent pas être envoyées à Microsoft.  
 
--   Tous les noms de logiciel téléchargés deviennent dès lors publiques, car l'application correspondante ainsi que sa classification sont intégrées au catalogue System Center Online Asset Intelligence, puis seront téléchargées par d'autres utilisateurs du catalogue.  
+- Tous les noms de logiciel téléchargés deviennent dès lors publiques, car l'application correspondante ainsi que sa classification sont intégrées au catalogue System Center Online Asset Intelligence, puis seront téléchargées par d'autres utilisateurs du catalogue.  
 
--   La source du nom du logiciel n'est pas enregistrée dans le catalogue Asset Intelligence. Elle n'est donc pas disponible pour les autres utilisateurs. Vous devez toutefois toujours veiller à ne pas charger de noms d'application contenant des informations confidentielles.  
+- La source du nom du logiciel n'est pas enregistrée dans le catalogue Asset Intelligence. Elle n'est donc pas disponible pour les autres utilisateurs. Vous devez toutefois toujours veiller à ne pas charger de noms d'application contenant des informations confidentielles.  
 
--   Les données téléchargées ne peuvent pas être rappelées.  
+- Les données téléchargées ne peuvent pas être rappelées.  
 
- Avant de configurer le regroupement de données Asset Intelligence et de décider de soumettre des informations à System Center Online, pensez aux besoins de votre organisation en matière de confidentialité.  
+  Avant de configurer le regroupement de données Asset Intelligence et de décider de soumettre des informations à System Center Online, pensez aux besoins de votre organisation en matière de confidentialité.  

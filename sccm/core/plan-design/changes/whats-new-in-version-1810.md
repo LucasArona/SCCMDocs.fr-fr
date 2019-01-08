@@ -2,7 +2,7 @@
 title: Nouveautés de la version 1810
 titleSuffix: Configuration Manager
 description: Obtenez des informations détaillées sur les changements et les nouvelles fonctionnalités introduits dans la version 1810 de l’édition Current Branch de Configuration Manager.
-ms.date: 11/27/2018
+ms.date: 12/20/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 80c4798a93d2424759b85b7d8fe106b9251714a4
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: f93b9c7e96c66fd2279d8d6e42f605a763c75025
+ms.sourcegitcommit: 81e3666c41eb976cc7651854042dafe219e2e467
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52458077"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53747141"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Nouveautés de la version 1810 de l’édition Current Branch de Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 La mise à jour 1810 pour l’édition Current Branch de Configuration Manager est disponible sous forme de mise à jour dans la console. Appliquez cette mise à jour sur les sites qui exécutent la version 1710, 1802 ou 1806. <!-- baseline only statement: When installing a new site, it's also available as a baseline version.-->
 
@@ -28,9 +28,9 @@ Référez-vous toujours à la dernière liste de contrôle pour installer cette 
 > [!Note]  
 > Cet article liste toutes les fonctionnalités importantes de cette version. Toutefois, toutes les sections ne sont pas encore liées au contenu mis à jour en fonction des informations supplémentaires sur les nouvelles fonctionnalités. Continuez à consulter régulièrement cette page sur les mises à jour. Les changements apportés sont indiqués à l’aide de l’étiquette ***[Mis à jour]***. Cette indication sera supprimée quand le contenu sera finalisé.  
 
-<!--
-Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4459701).
+En plus des nouvelles fonctionnalités, cette version inclut également des modifications supplémentaires comme des corrections de bogues. Pour plus d’informations, consultez [Récapitulatif des changements dans Configuration Manager Current Branch, version 1810](https://support.microsoft.com/help/4482169).
 
+<!--
 For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell 1810 Release Notes](https://docs.microsoft.com/powershell/sccm/1810_release_notes?view=sccm-ps).
 
 The following additional updates to this release are also now available:
@@ -77,13 +77,13 @@ Pour plus d’informations, consultez [Systèmes d’exploitation pris en charge
 
 Désormais, quand vous installez la version 1810 ou effectuez une mise à jour vers celle-ci, le programme d’installation de Configuration Manager contient ou améliore les vérifications des prérequis suivants :
 
-- **Redémarrage du système en attente** : la vérification de ce prérequis est maintenant plus résiliente. Elle vérifie des clés de Registre supplémentaires pour les fonctionnalités de Windows. Pour plus d’informations, consultez [Redémarrage du système en attente](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#pending-system-restart). <!--SCCMDocs-pr issue 3010-->  
+- **Redémarrage du système en attente** : La vérification de ce prérequis est maintenant plus résiliente. Elle vérifie des clés de Registre supplémentaires pour les fonctionnalités de Windows. Pour plus d’informations, consultez [Redémarrage du système en attente](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#pending-system-restart). <!--SCCMDocs-pr issue 3010-->  
 
-- **Nettoyage du suivi des modifications SQL** : nouvelle vérification permettant de déterminer si la base de données du site a un backlog des données de suivi des modifications SQL. Pour plus d’informations, notamment une procédure pour vérifier et effacer ce backlog, consultez [Nettoyage du suivi des modifications SQL](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#bkmk_changetracking). <!--SCCMDocs-pr issue 3023-->  
+- **Nettoyage du suivi des modifications SQL** : Cette fonctionnalité vérifie si la base de données du site a un backlog des données de suivi des modifications SQL. Pour plus d’informations, notamment une procédure pour vérifier et effacer ce backlog, consultez [Nettoyage du suivi des modifications SQL](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#bkmk_changetracking). <!--SCCMDocs-pr issue 3023-->  
 
-<!-- - **SQL Native Client version**: This prerequisite check is updated for versions of SQL Native Client that support TLS 1.2. The minimum version is 11.4.7001.0. For more information, see [SQL Native Client version](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-native-client). <!--SCCMDocs-pr issue 3094->  
- -->
-- **Système de site sur le nœud de cluster Windows** : le processus d’installation de Configuration Manager ne bloque plus l’installation du rôle serveur de site sur un ordinateur ayant le rôle Windows pour le clustering de basculement. SQL Always On exige ce rôle, ce qui vous empêchait de colocaliser la base de données de site sur le serveur de site. Avec ce changement, vous pouvez créer un site à haut niveau de disponibilité avec moins de serveurs en utilisant SQL Always On et un serveur de site en mode passif. Pour plus d’informations, consultez [Cluster de basculement Windows](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#windows-failover-cluster). <!--1359132-->  
+- **Version de SQL Native Client** : La vérification de ce prérequis est mise à jour pour les versions de SQL Native Client qui prennent en charge TLS 1.2. La version minimale est [SQL 2012 SP4](https://www.microsoft.com/download/details.aspx?id=50402). Pour plus d’informations, consultez la section [Version de SQL Native Client](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-native-client). <!--SCCMDocs-pr issue 3094->  
+
+- **Système de site sur un nœud de cluster Windows** : Le processus d’installation de Configuration Manager ne bloque plus l’installation du rôle serveur de site sur un ordinateur ayant le rôle Windows pour le clustering de basculement. SQL Always On exige ce rôle, ce qui vous empêchait de colocaliser la base de données de site sur le serveur de site. Avec ce changement, vous pouvez créer un site à haut niveau de disponibilité avec moins de serveurs en utilisant SQL Always On et un serveur de site en mode passif. Pour plus d’informations, consultez [Cluster de basculement Windows](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#windows-failover-cluster). <!--1359132-->  
 
 
 
@@ -104,9 +104,9 @@ Pour plus d’informations, consultez [Notifications du client](/sccm/core/clien
 ### <a name="new-boundary-group-options"></a>Nouvelles options de groupe de limites
 <!--1358749--> Les groupes de limites intègrent désormais les paramètres supplémentaires suivants qui offrent davantage de contrôle pour la distribution de contenu dans un environnement :
 
-- **Préférer les points de distribution aux homologues avec le même sous-réseau** : par défaut, le point de gestion classe par ordre de priorité les sources de cache d’homologue en haut de la liste des emplacements de contenu. Ce paramètre inverse cette priorité pour les clients qui se trouvent dans le même sous-réseau que la source de cache d’homologue.  
+- **Préférer les points de distribution aux pairs au sein du même sous-réseau** : Par défaut, le point de gestion classe par ordre de priorité les sources de cache d’homologue au début de la liste des emplacements de contenu. Ce paramètre inverse cette priorité pour les clients qui se trouvent dans le même sous-réseau que la source de cache d’homologue.  
 
-- **Préférer les points de distribution cloud aux points de distribution** : si l’une de vos succursales dispose d’une liaison Internet plus rapide, vous pouvez désormais classer les contenus cloud par ordre de priorité.  
+- **Préférer les points de distribution cloud aux points de distribution** : Si vous avez une succursale qui utilise un lien Internet plus rapide, vous pouvez désormais classer le contenu cloud par ordre de priorité.  
 
 Pour plus d’informations, voir [Options de groupe de limites pour les téléchargements de pairs](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions).
 
@@ -213,7 +213,7 @@ Un profil PowerShell est un script qui s’exécute au démarrage de PowerShell.
 ### <a name="task-sequence-support-of-windows-autopilot-for-existing-devices"></a>Prise en charge de la séquence de tâches de Windows Autopilot pour les appareils existants
 <!--1358333-->
 
-[Windows Autopilot pour les appareils existants](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430), est désormais disponible avec Windows 10 Insider en préversion. Cette nouvelle fonctionnalité vous permet de réimager et de provisionner un appareil Windows 7 pour [Windows Autopilot en mode piloté par l’utilisateur](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) à l’aide d’une seule séquence de tâches Configuration Manager native. 
+[Windows Autopilot pour les appareils existants](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430), est désormais disponible avec Windows 10, version 1809 ou ultérieure. Cette nouvelle fonctionnalité vous permet de réimager et de provisionner un appareil Windows 7 pour [Windows Autopilot en mode piloté par l’utilisateur](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) à l’aide d’une seule séquence de tâches Configuration Manager native. 
 
 <!--For more information, see []().--> 
 
@@ -310,13 +310,13 @@ Pour plus d’informations, consultez [Centre d’aide et de support](/sccm/core
 
 Le nœud **Insights de gestion** comprend désormais un tableau de bord graphique. Ce tableau de bord présente une vue d’ensemble de l’état des règles, ce qui vous permet de montrer plus facilement votre progression. Le tableau de bord comprend les vignettes suivantes :
 
-- **Index des insights de gestion** : suit la progression globale des règles d’insights de gestion. L’index est une moyenne pondérée. Les règles critiques sont celles qui comptent le plus. Les règles facultatives sont celles qui ont le moins de poids.  
+- **Index des insights de gestion** : Suit la progression globale des règles d’insights de gestion. L’index est une moyenne pondérée. Les règles critiques sont celles qui comptent le plus. Les règles facultatives sont celles qui ont le moins de poids.  
 
-- **Groupes d’insights de gestion** : indique le pourcentage des règles dans chaque groupe.  
+- **Groupes d’insights de gestion** : Affiche le pourcentage de règles dans chaque groupe.  
 
-- **Priorité des insights de gestion** : indique le pourcentage des règles par priorité.  
+- **Priorité des insights de gestion** : Affiche le pourcentage de règles par priorité.  
 
-- **Tous les insights** : tableau des insights comprenant la priorité et l’état.  
+- **Tous les insights** : Tableau des insights comprenant la priorité et l’état.  
 
 ![Capture d’écran du tableau de bord Insights de gestion](media/1357979-management-insights-dashboard.png)
 

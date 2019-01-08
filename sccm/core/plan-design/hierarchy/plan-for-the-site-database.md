@@ -10,16 +10,16 @@ ms.assetid: 104fb4cc-6e83-40a3-8e6b-ac909fb9ec7d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f2dbdb4702a1deac4ae130e89c501e3d122f1b49
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: cee5a57b708e94d7443efeb517249c44c1323cb4
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32333339"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417929"
 ---
 # <a name="plan-for-the-site-database-for-system-center-configuration-manager"></a>Planifier la base de données du site pour System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Le serveur de base de données de site est un ordinateur qui exécute une version prise en charge de Microsoft SQL Server. SQL Server est utilisé pour stocker des informations pour les sites Configuration Manager. Chaque site d’une hiérarchie Configuration Manager contient une base de données du site et un serveur qui est attribué au rôle serveur de la base de données du site.  
 
@@ -31,7 +31,7 @@ Le serveur de base de données de site est un ordinateur qui exécute une versio
 
 -  Pour l’utilisation du groupe de disponibilité non SQL, le modèle de récupération de la base de données doit être défini sur SIMPLE  
 
-Vous trouverez plus d’informations sur les modes de récupération SQL dans [Modèles de récupération (SQL Server)] (https://docs.microsoft.com/sql/relational-databases/backup-restore/recovery-models-sql-server).
+Vous trouverez plus d’informations sur les modes de récupération SQL dans [Modèles de récupération (SQL Server)](https://docs.microsoft.com/sql/relational-databases/backup-restore/recovery-models-sql-server).
 
 Les configurations SQL Server suivantes peuvent servir à héberger la base de données du site :  
 

@@ -10,16 +10,16 @@ ms.assetid: c5a42100-2f60-4952-b495-918025ea6559
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: de8116e1fec500750e429edfb48303b8c24822f4
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 4e1ee76acca06534605e58fff27d2e7ec5e464dd
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39384835"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424712"
 ---
 # <a name="size-and-scale-numbers-for-system-center-configuration-manager"></a>Taille et échelle de System Center Configuration Manager en chiffres
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 
 
@@ -43,11 +43,11 @@ Ces nombres sont basés sur l’utilisation du matériel recommandé pour Config
 
 ### <a name="primary-site"></a>Site principal  
 
--   Chaque site principal prend en charge jusqu’à 250 sites secondaires.  
+- Chaque site principal prend en charge jusqu’à 250 sites secondaires.  
 
--   Le nombre de sites secondaires par site principal est basé sur des connexions réseau WAN continues et fiables. Pour les emplacements de moins de 500 clients, envisagez à un point de distribution au lieu d'un site secondaire.  
+- Le nombre de sites secondaires par site principal est basé sur des connexions réseau WAN continues et fiables. Pour les emplacements de moins de 500 clients, envisagez à un point de distribution au lieu d'un site secondaire.  
 
- Pour plus d’informations sur le nombre de clients et d’appareils qu’un site principal peut prendre en charge, consultez [Nombres de clients pour les hiérarchies et les sites](#bkmk_clientnumbers).  
+  Pour plus d’informations sur le nombre de clients et d’appareils qu’un site principal peut prendre en charge, consultez [Nombres de clients pour les hiérarchies et les sites](#bkmk_clientnumbers).  
 
 
 ### <a name="secondary-site"></a>Site secondaire  
@@ -135,14 +135,14 @@ Pour plus d’informations, consultez [Performances et échelle](/sccm/core/clie
 
 ### <a name="management-point"></a>Point de gestion  
 
--   Chaque site principal prend en charge jusqu’à 15 points de gestion.  
+- Chaque site principal prend en charge jusqu’à 15 points de gestion.  
 
-    > [!TIP]  
-    >  N’installez pas de point de gestion sur des serveurs qui se trouvent sur une liaison lente à partir du serveur de site principal ou du serveur de bases de données du site.  
+  > [!TIP]  
+  >  N’installez pas de point de gestion sur des serveurs qui se trouvent sur une liaison lente à partir du serveur de site principal ou du serveur de bases de données du site.  
 
--   Chaque site secondaire prend en charge un seul point de gestion qui doit être installé sur le serveur de site secondaire.  
+- Chaque site secondaire prend en charge un seul point de gestion qui doit être installé sur le serveur de site secondaire.  
 
- Pour plus d’informations sur le nombre de clients et d’appareils qu’un point de gestion peut prendre en charge, consultez la section [Points de gestion](#bkmk_mp).  
+  Pour plus d’informations sur le nombre de clients et d’appareils qu’un point de gestion peut prendre en charge, consultez la section [Points de gestion](#bkmk_mp).  
 
 
 ### <a name="software-update-point"></a>Point de mise à jour logicielle  
@@ -160,17 +160,17 @@ Pour plus d’informations, consultez [Performances et échelle](/sccm/core/clie
 ###  <a name="bkmk_cas"></a> Hiérarchie avec un site d’administration centrale  
 Un site d’administration centrale prend en charge un nombre total d’appareils pouvant atteindre le nombre d’appareils répertoriés pour les trois groupes suivants :  
 
--   700 000 ordinateurs de bureau (exécutant Windows, Linux et UNIX). Consultez également la prise en charge des [appareils embarqués](#embedded).
+- 700 000 ordinateurs de bureau (exécutant Windows, Linux et UNIX). Consultez également la prise en charge des [appareils embarqués](#embedded).
 
--   25 000 appareils exécutant Mac et Windows CE 7.0  
+- 25 000 appareils exécutant Mac et Windows CE 7.0  
 
--   L’un des nombres suivants, selon la manière dont votre déploiement prend en charge la gestion des appareils mobiles :  
+- L’un des nombres suivants, selon la manière dont votre déploiement prend en charge la gestion des appareils mobiles :  
 
-    -   100 000 appareils que vous gérez à l’aide de la gestion MDM locale  
+  -   100 000 appareils que vous gérez à l’aide de la gestion MDM locale  
 
-    -   300 000 appareils cloud  
+  -   300 000 appareils cloud  
 
- Par exemple, dans une hiérarchie, vous pouvez prendre en charge 700 000 ordinateurs de bureau, jusqu’à 25 000 appareils Mac et Windows CE 7.0, et jusqu’à 300 000 appareils cloud quand vous intégrez Microsoft Intune. Cette hiérarchie prend en charge un total de 1 025 000 appareils. Si vous prenez en charge des appareils gérés par la gestion MDM locale, cette hiérarchie totalise 825 000 appareils.  
+  Par exemple, dans une hiérarchie, vous pouvez prendre en charge 700 000 ordinateurs de bureau, jusqu’à 25 000 appareils Mac et Windows CE 7.0, et jusqu’à 300 000 appareils cloud quand vous intégrez Microsoft Intune. Cette hiérarchie prend en charge un total de 1 025 000 appareils. Si vous prenez en charge des appareils gérés par la gestion MDM locale, cette hiérarchie totalise 825 000 appareils.  
 
 > [!IMPORTANT]  
 >  Une hiérarchie où le site d’administration centrale utilise une édition Standard de SQL Server prend en charge un maximum de 50 000 ordinateurs de bureau et appareils. Pour prendre en charge plus de 50 000 postes de travail et appareils, vous devez utiliser une édition Entreprise de SQL Server. Cette exigence s’applique uniquement à un site d’administration centrale. Elle ne s’applique pas à un site principal autonome ou à un site principal enfant. L’édition de SQL Server que vous utilisez pour un site principal ne limite pas sa capacité pour prendre en charge le nombre indiqué de clients.   

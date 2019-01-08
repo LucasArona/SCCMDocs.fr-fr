@@ -10,16 +10,16 @@ ms.assetid: 00684289-d21a-45f8-b1e3-c5c787d73096
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 49205ac1d1fc2dd20cbd4a0844632c5f3d181e45
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: a9a5aeb35137a74152333a78e95781fb727eecdf
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32341897"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421601"
 ---
 # <a name="capabilities-in-technical-preview-1705-for-system-center-configuration-manager"></a>Fonctionnalités de la version Technical Preview 1705 de System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Technical Preview)*
+*S’applique à : System Center Configuration Manager (Technical Preview)*
 
 Cet article présente les fonctionnalités qui sont disponibles dans la version Technical Preview 1705 de System Center Configuration Manager. Vous pouvez installer cette version pour mettre à jour et ajouter de nouvelles fonctionnalités à votre site Configuration Manager Technical Preview. Avant d’installer cette version Technical Preview, passez en revue [Technical Preview pour System Center Configuration Manager](../../core/get-started/technical-preview.md) pour vous familiariser avec les conditions générales et les limitations d’utilisation d’une version Technical Preview, la mise à jour entre les versions et l’envoi de commentaires sur les fonctionnalités d’une version Technical Preview.    
 
@@ -81,15 +81,17 @@ Une fois que l’outil s’exécute :
 
 **Paramètres de ligne de commande :**  
 
-| Paramètre        |Description                 |  
-|------------------|----------------------------|  
-|**-S &lt;Nom de domaine complet de l’instance SQL Server de votre site de niveau supérieur >** | *Obligatoire* <br> Vous devez spécifier le nom de domaine complet de l’instance SQL Server qui héberge la base de données de site pour le site de niveau supérieur de votre hiérarchie.    |  
-| **D - &lt;Nom de la base de données>**                        | *Obligatoire* <br> Vous devez spécifier le nom de la base de données des sites de niveau supérieur.  |  
-| **-P &lt;GUID du package>**                         | *Obligatoire* <br> Vous devez spécifier le GUID pour le package de mise à jour que vous souhaitez réinitialiser.   |  
-| **-I &lt;Nom de l'instance SQL Server>**             | *Facultatif* <br> Utilisez cela pour identifier l’instance de SQL Server qui héberge la base de données du site. |
-| **-FDELETE**                              | *Facultatif* <br> Permet de forcer la suppression d’un package de mise à jour téléchargé avec succès. |  
+
+|                        Paramètre                         |                                                            Description                                                            |
+|----------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
+| **-S &lt;Nom de domaine complet de l’instance SQL Server de votre site de niveau supérieur >** | *Obligatoire* <br> Vous devez spécifier le nom de domaine complet de l’instance SQL Server qui héberge la base de données de site pour le site de niveau supérieur de votre hiérarchie. |
+|                **D - &lt;Nom de la base de données>**                 |                             *Obligatoire* <br> Vous devez spécifier le nom de la base de données des sites de niveau supérieur.                             |
+|                 **-P &lt;GUID du package>**                 |                        *Obligatoire* <br> Vous devez spécifier le GUID pour le package de mise à jour que vous souhaitez réinitialiser.                        |
+|           **-I &lt;Nom de l'instance SQL Server>**           |                   *Facultatif* <br> Utilisez cela pour identifier l’instance de SQL Server qui héberge la base de données du site.                   |
+|                       **-FDELETE**                       |                      *Facultatif* <br> Permet de forcer la suppression d’un package de mise à jour téléchargé avec succès.                      |
+
  **Exemples :**  
- Dans un scénario classique, vous souhaitez réinitialiser une mise à jour qui présente des problèmes de téléchargement. Votre nom de domaine complet SQL Server est *server1.fabrikam.com*, la base de données du site est *CM_XYZ* et le GUID du package est *61F16B3C-F1F6-4F9F-8647-2A524B0C802C*.  Vous exécutez : ***CMUpdateReset.exe -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
+ Dans un scénario classique, vous souhaitez réinitialiser une mise à jour qui présente des problèmes de téléchargement. Votre nom de domaine complet SQL Server est *server1.fabrikam.com*, la base de données du site est *CM_XYZ* et le GUID du package est *61F16B3C-F1F6-4F9F-8647-2A524B0C802C*.  Vous exécutez : ***CMUpdateReset.exe -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
 
  Dans un scénario plus extrême, vous souhaitez forcer la suppression du package de mise à jour problématique. Votre nom de domaine complet SQL Server est *server1.fabrikam.com*, la base de données du site est *CM_XYZ* et le GUID du package est *61F16B3C-F1F6-4F9F-8647-2A524B0C802C*.  Vous exécutez : ***CMUpdateReset.exe  -FDELETE -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
 
@@ -114,13 +116,13 @@ Avec cette version, les problèmes liés à la façon dont la console Configurat
 ## <a name="improvements-for-sql-server-always-on-availability-groups"></a>Améliorations pour les groupes de disponibilité Always On SQL Server  
 Avec cette version, vous pouvez maintenant utiliser les réplicas avec validation asynchrone dans les groupes de disponibilité Always On SQL Server que vous utilisez avec Configuration Manager.  Cela signifie que vous pouvez ajouter des réplicas supplémentaires à vos groupes de disponibilité à utiliser en tant que sauvegardes hors site (à distance) puis de les utiliser dans un scénario de récupération d’urgence.  
 
--   Configuration Manager prend en charge l’utilisation du réplica avec validation asynchrone pour récupérer votre réplica synchrone.  Consultez les [options de récupération de base de données de site](/sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption) dans la rubrique Sauvegarde et récupération pour plus d’informations sur la façon d’y parvenir.
+- Configuration Manager prend en charge l’utilisation du réplica avec validation asynchrone pour récupérer votre réplica synchrone.  Consultez les [options de récupération de base de données de site](/sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption) dans la rubrique Sauvegarde et récupération pour plus d’informations sur la façon d’y parvenir.
 
--   Cette version ne prend pas en charge le basculement pour utiliser le réplica avec validation asynchrone en tant que base de données de votre site.
-> [!CAUTION]  
-> Étant donné que Configuration Manager ne valide pas l’état du réplica avec validation asynchrone pour vérifier qu’il est à jour, et que, [par définition, un réplica de ce type peut être désynchronisé](https://msdn.microsoft.com/library/ff877884(SQL.120).aspx(d=robot)#Availability%20Modes), l’utilisation d’un réplica avec validation asynchrone comme base de données de site risque de compromettre l’intégrité de votre site et de ses données.  
+- Cette version ne prend pas en charge le basculement pour utiliser le réplica avec validation asynchrone en tant que base de données de votre site.
+  > [!CAUTION]  
+  > Étant donné que Configuration Manager ne valide pas l’état du réplica avec validation asynchrone pour vérifier qu’il est à jour, et que, [par définition, un réplica de ce type peut être désynchronisé](https://msdn.microsoft.com/library/ff877884(SQL.120).aspx(d=robot)#Availability%20Modes), l’utilisation d’un réplica avec validation asynchrone comme base de données de site risque de compromettre l’intégrité de votre site et de ses données.  
 
--   Vous pouvez utiliser les mêmes nombres et types de réplicas dans un groupe de disponibilité pris en charge par la version de SQL Server que vous utilisez.   (la prise en charge précédente était limitée à deux réplicas avec validation synchrone).
+- Vous pouvez utiliser les mêmes nombres et types de réplicas dans un groupe de disponibilité pris en charge par la version de SQL Server que vous utilisez.   (la prise en charge précédente était limitée à deux réplicas avec validation synchrone).
 
 ### <a name="configure-an-asynchronous-commit-replica"></a>Configurer un réplica avec validation asynchrone
 Pour ajouter un réplica asynchrone à un [groupe de disponibilité que vous utilisez avec Configuration Manager](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database), vous n’avez pas besoin d’exécuter les scripts de configuration requis pour configurer un réplica synchrone. (en effet, il n’existe aucune prise en charge pour l’utilisation de ce réplica asynchrone en tant que base de données de site.) Consultez [la documentation de SQL Server](https://msdn.microsoft.com/library/hh213247(v=sql.120).aspx(d=robot)) pour plus d’informations sur l’ajout de réplicas secondaires aux groupes de disponibilité.
@@ -128,7 +130,7 @@ Pour ajouter un réplica asynchrone à un [groupe de disponibilité que vous uti
 ### <a name="use-the-asynchronous-replica-to-recover-your-site"></a>Utiliser le réplica asynchrone pour récupérer votre site
 Avant d’utiliser un réplica asynchrone pour récupérer la base de données de votre site, vous devez arrêter le site principal actif pour empêcher les écritures supplémentaires sur la base de données de site. Après avoir arrêté le site, vous pouvez utiliser un réplica asynchrone au lieu d’utiliser une [base de données récupérée manuellement](/sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption).
 
-Pour arrêter le site, vous pouvez utiliser [l’outil de maintenance hiérarchique](/sccm/core/servers/manage/hierarchy-maintenance-tool-preinst.exe) pour arrêter les services principaux sur le serveur de site. Utilisez la ligne de commande : **Preinst.exe /stopsite**   
+Pour arrêter le site, vous pouvez utiliser [l’outil de maintenance hiérarchique](/sccm/core/servers/manage/hierarchy-maintenance-tool-preinst.exe) pour arrêter les services principaux sur le serveur de site. Utilisez la ligne de commande : **Preinst.exe /stopsite**   
 
 L’arrêt du site est équivalent à l’arrêt du service Gestionnaire de composants de site (sitecomp) suivi du service SMS_Executive sur le serveur de site.
 
@@ -156,7 +158,7 @@ Essayez d’effectuer les tâches suivantes, puis envoyez-nous vos **Commentaire
 ## <a name="configure-and-deploy-windows-defender-application-guard-policies"></a>Configurer et déployer des stratégies Windows Defender Application Guard
 
 [Windows Defender Application Guard](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97) est une nouvelle fonctionnalité de Windows qui permet de protéger vos utilisateurs en ouvrant les sites web non approuvés dans un conteneur isolé et sécurisé qui n’est pas accessible par les autres parties du système d’exploitation. Dans cette version Technical Preview, nous avons ajouté la prise en charge pour configurer cette fonctionnalité à l’aide des paramètres de conformité de Configuration Manager que vous configurez, puis déployez sur une collection.
-Cette fonctionnalité sera disponible dans la version préliminaire de la version 64 bits de mise à jour de Windows 10 Creators Update (nom de code : RS2). Pour tester cette fonctionnalité maintenant, vous devez utiliser une version préliminaire de cette mise à jour.
+Cette fonctionnalité sera disponible dans la préversion de la version 64 bits de mise à jour de Windows 10 Creators Update (nom de code : RS2). Pour tester cette fonctionnalité maintenant, vous devez utiliser une version préliminaire de cette mise à jour.
 
 
 ### <a name="before-you-start"></a>Avant de commencer
@@ -224,20 +226,20 @@ Vous trouverez de l’aide sur la procédure à suivre dans les rubriques suivan
 
 Cela connecte votre site Configuration Manager à Azure AD et est requis pour toutes les autres opérations de cette section. Pour cela :
 
-1.  Dans l’espace de travail **Administration** de la console Configuration Manager, développez **Services cloud**, puis cliquez sur **Services Azure**.
-2.  Sur l’onglet **Accueil**, sous le groupe **Services Azure**, cliquez sur **Configurer les services Azure**.
-3.  Sur la page **Services Azure** de l’assistant de services Azure, sélectionnez **Gestion cloud** pour permettre aux clients de s’authentifier auprès de la hiérarchie à l’aide d’Azure AD.
-4.  Sur la page **Général** de l’assistant, spécifiez un nom et une description pour votre service Azure.
-5.  Sur la page **Application** de l’assistant, sélectionnez votre environnement Azure dans la liste, puis cliquez sur **Parcourir** pour sélectionner les applications serveur et client qui permettent de configurer le service Azure :
-    - Dans la fenêtre **Server App**, sélectionnez l’application serveur à utiliser, puis cliquez sur **OK**. Les applications serveur sont des applications web Azure qui contiennent les configurations pour votre compte Azure, notamment l’ID de locataire, l’ID de client et une clé secrète pour les clients. Si vous ne disposez pas d’une application serveur disponible, choisissez l’une des méthodes suivantes :
-        - **Créer** : pour créer une application serveur, cliquez sur **Créer**. Fournissez un nom convivial pour l’application et le locataire. Une fois que vous êtes connecté à Azure, Configuration Manager crée l’application web dans Azure, notamment l’ID de client et la clé secrète à utiliser avec l’application web. Ces informations sont ensuite disponibles dans le portail Azure.
-        - **Importer** : pour utiliser une application web qui existe déjà dans votre abonnement Azure, cliquez sur **Importer**. Indiquez un nom convivial pour l’application et le locataire, puis spécifiez l’ID de locataire, l’ID de client et la clé secrète de l’application web Azure que Configuration Manager doit utiliser. Après avoir vérifié les informations, cliquez sur **OK** pour continuer. Cette option n’est actuellement pas disponible dans cette version Technical Preview.
-    - Répétez le même processus pour l’application cliente.
+1. Dans l’espace de travail **Administration** de la console Configuration Manager, développez **Services cloud**, puis cliquez sur **Services Azure**.
+2. Sur l’onglet **Accueil**, sous le groupe **Services Azure**, cliquez sur **Configurer les services Azure**.
+3. Sur la page **Services Azure** de l’assistant de services Azure, sélectionnez **Gestion cloud** pour permettre aux clients de s’authentifier auprès de la hiérarchie à l’aide d’Azure AD.
+4. Sur la page **Général** de l’assistant, spécifiez un nom et une description pour votre service Azure.
+5. Sur la page **Application** de l’assistant, sélectionnez votre environnement Azure dans la liste, puis cliquez sur **Parcourir** pour sélectionner les applications serveur et client qui permettent de configurer le service Azure :
+   - Dans la fenêtre **Server App**, sélectionnez l’application serveur à utiliser, puis cliquez sur **OK**. Les applications serveur sont des applications web Azure qui contiennent les configurations pour votre compte Azure, notamment l’ID de locataire, l’ID de client et une clé secrète pour les clients. Si vous ne disposez pas d’une application serveur disponible, choisissez l’une des méthodes suivantes :
+       - **Créer** : pour créer une application serveur, cliquez sur **Créer**. Fournissez un nom convivial pour l’application et le locataire. Une fois que vous êtes connecté à Azure, Configuration Manager crée l’application web dans Azure, notamment l’ID de client et la clé secrète à utiliser avec l’application web. Ces informations sont ensuite disponibles dans le portail Azure.
+       - **Importer** : pour utiliser une application web qui existe déjà dans votre abonnement Azure, cliquez sur **Importer**. Indiquez un nom convivial pour l’application et le locataire, puis spécifiez l’ID de locataire, l’ID de client et la clé secrète de l’application web Azure que Configuration Manager doit utiliser. Après avoir vérifié les informations, cliquez sur **OK** pour continuer. Cette option n’est actuellement pas disponible dans cette version Technical Preview.
+   - Répétez le même processus pour l’application cliente.
 
-  Vous devez accorder l’autorisation d’application *Lire des données d’annuaire* lors de l’importation de l’application, afin de définir les bonnes autorisations dans le portail. Si vous utilisez la création d’application, les autorisations sont automatiquement créées avec l’application, mais vous devez toujours donner votre consentement à l’application dans le portail Azure.
-6.  Sur la page **Découverte** de l’assistant, vous pouvez éventuellement **Activer la découverte d’utilisateurs Azure Active Directory**. Ensuite, cliquez sur **Paramètres**.
-Dans la boîte de dialogue **Paramètres de découverte d’utilisateurs Azure AD**, configurez une planification pour déterminer quand la détection survient. Vous pouvez également activer la découverte delta, qui vérifie uniquement les comptes nouveaux ou modifiés dans Azure AD.
-7.  Effectuez toutes les étapes de l'Assistant.
+   Vous devez accorder l’autorisation d’application *Lire des données d’annuaire* lors de l’importation de l’application, afin de définir les bonnes autorisations dans le portail. Si vous utilisez la création d’application, les autorisations sont automatiquement créées avec l’application, mais vous devez toujours donner votre consentement à l’application dans le portail Azure.
+6. Sur la page **Découverte** de l’assistant, vous pouvez éventuellement **Activer la découverte d’utilisateurs Azure Active Directory**. Ensuite, cliquez sur **Paramètres**.
+   Dans la boîte de dialogue **Paramètres de découverte d’utilisateurs Azure AD**, configurez une planification pour déterminer quand la détection survient. Vous pouvez également activer la découverte delta, qui vérifie uniquement les comptes nouveaux ou modifiés dans Azure AD.
+7. Effectuez toutes les étapes de l'Assistant.
 
 À ce stade, vous avez connecté votre site Configuration Manager à Azure AD.
 
@@ -247,16 +249,16 @@ Dans la boîte de dialogue **Paramètres de découverte d’utilisateurs Azure A
 Avant de commencer, assurez-vous que les fichiers sources d’installation client sont stockés localement sur l’appareil sur lequel vous souhaitez installer le client.
 Ensuite, suivez les instructions de [Comment déployer des clients sur des ordinateurs Windows dans System Center Configuration Manager](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#a-namebkmkmanuala-how-to-install-clients-manually) en utilisant la ligne de commande d’installation suivante (remplacez les valeurs dans l’exemple par vos propres valeurs) :
 
-**ccmsetup.exe /NoCrlCheck /Source:C:\CLIENT  CCMHOSTNAME=SCCMPROXYCONTOSO.CLOUDAPP.NET/CCM_Proxy_ServerAuth/72457598037527932 SMSSiteCode=HEC AADTENANTID=780433B5-E05E-4B7D-BFD1-E8013911E543 AADTENANTNAME=contoso  AADCLIENTAPPID=<GUID> AADRESOURCEURI=https://contososerver**
+**ccmsetup.exe /NoCrlCheck /Source:C:\CLIENT  CCMHOSTNAME=SCCMPROXYCONTOSO.CLOUDAPP.NET/CCM_Proxy_ServerAuth/72457598037527932 SMSSiteCode=HEC AADTENANTID=780433B5-E05E-4B7D-BFD1-E8013911E543 AADTENANTNAME=contoso  AADCLIENTAPPID=<GUID> AADRESOURCEURI=<https://contososerver>**
 
 - **/NoCrlCheck** : si votre point de gestion ou votre passerelle de gestion cloud utilise un certificat de serveur non public, le client peut ne pas être en mesure d’atteindre l’emplacement de la liste de révocation de certificats.
-- **/Source** : dossier local : emplacement des fichiers d’installation du client.
-- **CCMHOSTNAME** : le nom de votre point de gestion Internet. Vous pouvez le trouver en exécutant **gwmi -namespace root\ccm\locationservices -class SMS_ActiveMPCandidate** à partir d’une invite de commandes sur un client géré.
-- **SMSMP** : le nom de votre point de gestion de recherche : il peut s’agir de votre intranet.
-- **SMSSiteCode** : le code de site de votre site Configuration Manager.
-- **AADTENANTID**, **AADTENANTNAME** : l’ID et le nom du client Azure AD que vous avez lié à Configuration Manager. Vous pouvez les trouver en exécutant dsregcmd.exe /status à partir d’une invite de commandes sur un appareil à Azure AD.
-- **AADCLIENTAPPID** : l’ID d’application du client Azure AD. Pour vous aider à le trouver, consultez [Utiliser le portail pour créer une application Azure Active Directory et un principal de service pouvant accéder aux ressources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal#get-application-id-and-authentication-key).
-- **AADResourceUri** : l’URI de l’identificateur de l’application de serveur Azure AD intégré.
+- **/Source** : Dossier local :   emplacement des fichiers d’installation du client.
+- **CCMHOSTNAME** : nom de votre point de gestion Internet. Vous pouvez le trouver en exécutant **gwmi -namespace root\ccm\locationservices -class SMS_ActiveMPCandidate** à partir d’une invite de commandes sur un client géré.
+- **SMSMP** : nom de votre point de gestion de recherche : il peut s’agir de votre intranet.
+- **SMSSiteCode** : code de site de votre site Configuration Manager.
+- **AADTENANTID**, **AADTENANTNAME** : ID et nom du client Azure AD que vous avez lié à Configuration Manager. Vous pouvez les trouver en exécutant dsregcmd.exe /status à partir d’une invite de commandes sur un appareil à Azure AD.
+- **AADCLIENTAPPID** : ID d’application cliente Azure AD. Pour vous aider à le trouver, consultez [Utiliser le portail pour créer une application Azure Active Directory et un principal de service pouvant accéder aux ressources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal#get-application-id-and-authentication-key).
+- **AADResourceUri** : URI de l’identificateur de l’application de serveur Azure AD intégré.
 
 ## <a name="use-azure-services-wizard-to-configure-a-connection-to-oms"></a>Utiliser l’assistant de services Azure pour configurer une connexion à OMS
 À partir de la version de la version Technical Preview 1705, utilisez **l’assistant de services Azure** pour configurer votre connexion à partir de Configuration Manager pour le service cloud Operations Management Suite (OMS). L’assistant remplace les flux de travail précédents pour configurer cette connexion.
@@ -285,7 +287,7 @@ Les conditions préalables requises pour configurer une connexion à OMS sont id
 
 4.  Sélectionnez une application web :
 
-    -   **Importer** : pour utiliser une application web qui existe déjà dans votre abonnement Azure, cliquez sur **Importer**. Indiquez un nom convivial pour l’application et le locataire, puis spécifiez l’ID de locataire, l’ID de client et la clé secrète de l’application web Azure que Configuration Manager doit utiliser. Après avoir **vérifié** les informations, cliquez sur **OK** pour continuer.   
+    -   **Importer** : pour utiliser une application web qui existe déjà dans votre abonnement Azure, cliquez sur **Importer**. Indiquez un nom convivial pour l’application et le locataire, puis spécifiez l’ID de locataire, l’ID de client et la clé secrète de l’application web Azure que Configuration Manager doit utiliser. Après avoir **vérifié** les informations, cliquez sur **OK** pour continuer.   
 
     > [!NOTE]   
     > Lorsque vous configurez OMS avec cette version préliminaire, OMS ne prend en charge la fonction *Importer* pour une application web. La création d’une application web n’est pas prise en charge. De même, vous ne pouvez pas réutiliser une application existante pour OMS.

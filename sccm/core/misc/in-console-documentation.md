@@ -9,12 +9,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: noindex,nofollow
-ms.openlocfilehash: b9602d6641e1bb28a3af7c24c64073ba019e0f3e
-ms.sourcegitcommit: 6126dfdf5c879db7d12c3eec019a88fa44521361
+ms.openlocfilehash: a71aa0834a241332d3390e1d888d99b6e3f986f7
+ms.sourcegitcommit: d36e4c7082a5144e79035dd8847c8e741fa04667
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "52830504"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53444567"
 ---
 <!-- 
 - Feature 1357546
@@ -89,7 +89,7 @@ Articles concernant une mise à jour importante et récente.
 ## <a name="troubleshooting-articles"></a>Articles sur la résolution des problèmes
 Procédures pas à pas d’aide à la résolution des problèmes liés aux composants et fonctionnalités de Configuration Manager.
 
-- [Résolution des problèmes de démarrage PXE](https://support.microsoft.com/help/10082)
+- [Résolution des problèmes de démarrage PXE](https://support.microsoft.com/help/4468612)
 - [Résolution des problèmes de synchronisation des mises à jour logicielles](https://support.microsoft.com/help/10059)
 - [Présentation et résolution des problèmes de distribution de contenu](https://support.microsoft.com/help/4000401)
 - [Présentation et résolution des problèmes d’intégration de Microsoft Store pour Entreprises](https://support.microsoft.com/help/4010214)
@@ -101,12 +101,12 @@ Procédures pas à pas d’aide à la résolution des problèmes liés aux compo
 ## <a name="new-and-updated-support-articles"></a>Articles de support nouveaux et mis à jour
 Articles de support nouveaux ou mis à jour en novembre 2018.
 
-- [KB 4468362 : Guide pratique pour déployer un module linguistique Windows en tant qu’application dans Configuration Manager](https://support.microsoft.com/help/4468362)
-- [KB 4469580 : ConfigMgr PXE ne fonctionne pas car un certificat auto-signé n’est pas créé](https://support.microsoft.com/help/4469580/)
-- [KB 4471003 : Guide pratique pour démarrer à partir d’un serveur PXE situé sur un autre réseau](https://support.microsoft.com/help/4471003)
-- [KB 4462978 : Correctif cumulatif pour Current Branch de System Center Configuration Manager, version 1806](https://support.microsoft.com/help/4462978)
-- [KB 4471061 : Un ordinateur client peut « dérober » le GUID de Configuration Manager d’un objet Ordinateur inconnu lors de la création d’images](https://support.microsoft.com/help/4471061)
-- [KB 4471115 : Un média dynamique dans Configuration Manager ne peut pas obtenir les emplacements des points de gestion lorsque l’Assistant Séquence de tâches s’exécute dans Windows PE](https://support.microsoft.com/help/4471115)
+- [KB 4468362 : Guide pratique pour déployer un pack linguistique Windows en tant qu’application dans Configuration Manager](https://support.microsoft.com/help/4468362)
+- [KB 4469580 : ConfigMgr PXE ne fonctionne pas, car un certificat auto-signé n’est pas créé](https://support.microsoft.com/help/4469580/)
+- [KB 4471003 : Guide pratique pour démarrer à partir d’un serveur PXE situé sur un autre réseau](https://support.microsoft.com/help/4471003)
+- [KB 4462978 : Correctif cumulatif pour Current Branch de System Center Configuration Manager, version 1806](https://support.microsoft.com/help/4462978)
+- [KB 4471061 : Un ordinateur client peut « dérober » le GUID de Configuration Manager d’un objet Ordinateur inconnu lors de la création d’images](https://support.microsoft.com/help/4471061)
+- [KB 4471115 : Un média dynamique dans Configuration Manager ne peut pas obtenir les emplacements des points de gestion lorsque l’Assistant Séquence de tâches s’exécute dans Windows PE](https://support.microsoft.com/help/4471115)
 
 
 Pour vous abonner à une notification Atom ou RSS qui vous informe de la disponibilité de nouveaux articles de support Configuration Manager, consultez [Mises à jour du contenu de support](https://support.microsoft.com/help/4089498/) et sélectionnez **System Center Configuration Manager**.  

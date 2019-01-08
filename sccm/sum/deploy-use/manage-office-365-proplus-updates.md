@@ -10,28 +10,28 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-ms.openlocfilehash: 627e476ee5824eafeb9d034b64010c8677f22a85
-ms.sourcegitcommit: 1f8731ed8f0308cb2cb576722adb0821a366e9ce
+ms.openlocfilehash: 1fa5646b17646258e4863b3a53960c9c15497389
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51223753"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418184"
 ---
 # <a name="manage-office-365-proplus-with-configuration-manager"></a>Gérer Office 365 ProPlus avec Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Configuration Manager vous permet de gérer les applications Office 365 ProPlus comme suit :
 
 - [Tableau de bord Gestion des clients Office 365](#office-365-client-management-dashboard) : vous pouvez consulter les informations sur un client Office 365 dans le tableau de bord Gestion des clients Office 365. À compter de Configuration Manager version 1802, le tableau de bord Gestion des clients Office 365 affiche une liste des appareils concernés quand des sections de graphe sont sélectionnées. <!--1357281 -->
 
-- [Déployer des applications Office 365](#deploy-office-365-apps) : vous pouvez démarrer le programme d’installation d’Office 365 à partir du tableau de bord Gestion des clients Office 365 pour faciliter l’installation initiale des applications Office 365. L’Assistant vous permet de configurer les paramètres d’installation Office 365, de télécharger des fichiers à partir de réseaux de distribution de contenu Office et de créer et déployer une application de script avec le contenu.    
+- [Déployer des applications Office 365](#deploy-office-365-apps) : vous pouvez démarrer le programme d’installation d’Office 365 à partir du tableau de bord Gestion des clients Office 365 pour faciliter l’installation initiale des applications Office 365. L’Assistant vous permet de configurer les paramètres d’installation Office 365, de télécharger des fichiers à partir de réseaux de distribution de contenu Office et de créer et déployer une application de script avec le contenu.    
 
 - [Déployer les mises à jour Office 365](#deploy-office-365-updates) : vous pouvez gérer les mises à jour du client Office 365 en utilisant le flux de travail de gestion des mises à jour logicielles. Lorsque Microsoft publie une nouvelle mise à jour du client Office 365 sur le réseau de distribution contenu (CDN) d’Office, Microsoft publie également un package de mise à jour sur Windows Server Update Services (WSUS). Après que Configuration Manager a synchronisé la mise à jour du client Office 365 du catalogue WSUS vers le serveur de site, la mise à jour est disponible pour un déploiement sur les clients.    
 
 - [Ajouter des langues pour les téléchargements des mises à jour Office 365](#add-languages-for-office-365-update-downloads) : vous pouvez ajouter la prise en charge de Configuration Manager pour le téléchargement des mises à jour dans toutes les langues prises en charge par Office 365. Ainsi, Configuration Manager n’a pas à prendre en charge la langue dès lors qu’Office 365 le fait. Avant la version 1610 de Configuration Manager, il est nécessaire de télécharger et de déployer les mises à jour dans les langues configurées sur les clients Office 365. 
 
-- [Modifier le canal de mise à jour](#change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager) : vous pouvez utiliser une stratégie de groupe pour distribuer un changement de valeur de clé de registre aux clients Office 365 afin de modifier le canal de mise à jour.
+- [Modifier le canal de mise à jour](#change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager) : vous pouvez utiliser une stratégie de groupe pour distribuer un changement de valeur de clé de registre aux clients Office 365 afin de modifier le canal de mise à jour.
 
 
 ## <a name="office-365-client-management-dashboard"></a>Tableau de bord Gestion des clients Office 365  
@@ -117,7 +117,7 @@ Procédez comme suit pour déployer les mises à jour d’Office 365 avec le Ge
 2.  [Configurez les points de mise à jour logicielle](../get-started/configure-classifications-and-products.md) pour synchroniser les mises à jour du client Office 365. Définissez **Mises à jour** en guise de classification et sélectionnez **Office 365 Client** en guise de produit. Synchronisez les mises à jour logicielles après avoir configuré les points de mise à jour logicielle pour utiliser la classification **Mises à jour**.
 3.  Habilitez les clients Office 365 à recevoir des mises à jour de Configuration Manager. Utilisez les paramètres du client Configuration Manager ou la stratégie de groupe pour activer le client.   
 
-    **Méthode 1** : à compter de Configuration Manager version 1606, vous pouvez utiliser le paramètre du client Configuration Manager pour gérer l’agent client Office 365. Après avoir configuré ce paramètre et déployé les mises à jour Office 365, l’agent client Configuration Manager communique avec l’agent client Office 365 pour télécharger les mises à jour à partir d’un point de distribution et les installer. Configuration Manager dresse l’inventaire des paramètres du client Office 365 ProPlus.    
+    **Méthode 1** : à compter de Configuration Manager version 1606, vous pouvez utiliser le paramètre du client Gestionnaire de configuration pour gérer l’agent client Office 365. Après avoir configuré ce paramètre et déployé les mises à jour Office 365, l’agent client Configuration Manager communique avec l’agent client Office 365 pour télécharger les mises à jour à partir d’un point de distribution et les installer. Configuration Manager dresse l’inventaire des paramètres du client Office 365 ProPlus.    
 
       1.  Dans la console Configuration Manager, cliquez sur **Administration** > **Vue d’ensemble** > **Paramètres client**.  
 
@@ -125,7 +125,7 @@ Procédez comme suit pour déployer les mises à jour d’Office 365 avec le Ge
 
       3.  Cliquez sur **Mises à jour logicielles** et sélectionnez **Oui** pour le paramètre **Activer la gestion de l’agent Office 365 Client**.  
 
-    **Méthode 2** : [Habilitez les clients Office 365 à recevoir les mises à jour](/DeployOffice/manage-updates-to-office-365-proplus-with-system-center-configuration-manager#BKMK_EnableClient) de Configuration Manager via l’outil de déploiement Office ou la stratégie de groupe.  
+    **Méthode 2** : [Habilitez les clients Office 365 à recevoir les mises à jour](/DeployOffice/manage-updates-to-office-365-proplus-with-system-center-configuration-manager#BKMK_EnableClient) de Configuration Manager via l’outil de déploiement Office ou la stratégie de groupe.  
 
 4. [Déployez les mises à jour d’Office 365](deploy-software-updates.md) sur les clients.   
 
@@ -139,10 +139,7 @@ Quand vous déployez une mise à jour sur un client Office 365, le comportement
 
 |Version de Configuration Manager |Expérience de l’utilisateur final|  
 |----------------|---------------------|
-|Avant 1610|Un indicateur de redémarrage est défini et la mise à jour est installée après le redémarrage de l’ordinateur.|
-|1610|Les applications Office 365 sont fermées sans avertissement avant l’installation de la mise à jour.|
-|1610 avec mise à jour <br/>1702|Un indicateur de redémarrage est défini et la mise à jour est installée après le redémarrage de l’ordinateur.|
-|1706|Le client reçoit des notifications contextuelles et dans l’application, ainsi qu’une boîte de dialogue de compte à rebours avant l’installation de la mise à jour.|
+|1706, 1710|Le client reçoit des notifications contextuelles et dans l’application, ainsi qu’une boîte de dialogue de compte à rebours avant l’installation de la mise à jour.|
 |1802| Le client reçoit des notifications contextuelles et dans l’application, ainsi qu’une boîte de dialogue de compte à rebours avant l’installation de la mise à jour. </br>Si des applications Office 365 sont en cours d’exécution au moment de l’application d’une mise à jour du client Office 365, rien ne les force à se fermer. Au lieu de cela, l’installation de la mise à jour affiche un message demandant le redémarrage du système <!--510006-->|
 
 
@@ -173,20 +170,20 @@ Utilisez la procédure suivante sur le site d’administration centrale ou sur l
 1. À partir d’une invite de commande, tapez *wbemtest* avec des droits d’administration pour ouvrir le testeur WMI.
 2. Cliquez sur **Connexion**, puis tapez *root\sms\site_&lt;siteCode&gt;*.
 3. Cliquez sur **Requête**, puis exécutez la requête suivante : *select &#42; from SMS_SCI_Component where componentname ="SMS_WSUS_CONFIGURATION_MANAGER"*  
-   ![Requête WMI](..\media\1-wmiquery.png)
+   ![Requête WMI](../media/1-wmiquery.png)
 4. Dans le volet des résultats, double-cliquez sur l’objet avec le code de site pour le site d’administration centrale ou le site principal autonome.
 5. Sélectionnez la propriété **Props**, cliquez sur **Modifier la propriété**, puis cliquez sur **Vue incorporée**.
-![Éditeur de propriétés](..\media\2-propeditor.png)
+   ![Éditeur de propriétés](../media/2-propeditor.png)
 6. En commençant par le premier résultat de la requête, ouvrez chaque objet jusqu’à ce que vous trouviez celui dont la propriété **PropertyName** a la valeur **AdditionalUpdateLanguagesForO365**.
 7. Sélectionnez **Value2**, puis cliquez sur **Modifier la propriété**.  
-![Modifier la propriété Value2](..\media\3-queryresult.png)
+   ![Modifier la propriété Value2](../media/3-queryresult.png)
 8. Ajoutez des langues supplémentaires à la propriété **Value2**, puis cliquez sur **Enregistrer la propriété**. <br/> Par exemple : pt-pt (Portugais - Portugal), af-za (Afrikaans - Afrique du Sud), nn-no (Norvégien [Nynorsk] - Norvège), etc. Vous devez taper `pt-pt,af-za,nn-no` pour les langues de l’exemple. N’utilisez pas d’espaces entre les langues.
  
-   ![Ajouter des langues dans l’Éditeur de propriétés](..\media\4-props.png)  
+   ![Ajouter des langues dans l’Éditeur de propriétés](../media/4-props.png)  
 9. Cliquez sur **Fermer**, cliquez sur **Fermer**, cliquez sur **Enregistrer la propriété**, puis cliquez sur **Enregistrer l’objet** (si vous cliquez sur **Fermer** ici, les valeurs sont ignorées). Cliquez sur **Fermer**, cliquez sur **Quitter**, puis fermez le testeur WMI.
 10. Dans la console Configuration Manager, accédez à **Bibliothèque de logiciels** > **Vue d’ensemble** > **Gestion des clients Office 365** > **Mises à jour Office 365**.
 11. Désormais, quand vous téléchargez des mises à jour Office 365, celles-ci sont téléchargées dans les langues sélectionnées dans l’Assistant et dans celles configurées durant cette procédure. Pour vérifier que les mises à jour sont téléchargées dans les langues correctes, accédez à la source du package de la mise à jour et recherchez les fichiers dont le nom comprend le code de langue.  
-![Noms de fichiers avec des langues supplémentaires](..\media\5-verification.png)
+    ![Noms de fichiers avec des langues supplémentaires](../media/5-verification.png)
 
 ## <a name="updating-office-365-during-task-sequences-when-office-365-is-installed-in-the-base-image"></a>Mise à jour d’Office 365 pendant des séquences de tâches quand Office 365 est installé dans l’image de base
 Quand Office 365 est déjà installé dans l’image du système d’exploitation que vous installez, il se peut que la valeur de la clé de Registre du canal de mise à jour corresponde à l’emplacement d’installation d’origine. Dans ce cas, la recherche de mises à jour n’affiche aucune mise à jour du client Office 365 comme étant applicable. Une tâche planifiée de mises à jour automatiques d’Office s’exécute plusieurs fois par semaine. Après l’exécution de cette tâche, le canal de mise à jour pointe vers l’URL du CDN Office configurée et l’analyse affiche ces mises à jour comme étant applicables. <!--510452-->

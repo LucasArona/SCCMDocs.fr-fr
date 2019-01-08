@@ -2,7 +2,7 @@
 title: Versions Technical Preview
 titleSuffix: Configuration Manager
 description: Découvrez la branche Technical Preview qui permet de tester les nouvelles fonctionnalités de Configuration Manager.
-ms.date: 12/03/2018
+ms.date: 12/14/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9381980f490d543b3018c206359d4a68b9ca69e4
-ms.sourcegitcommit: 6126dfdf5c879db7d12c3eec019a88fa44521361
+ms.openlocfilehash: d2c1e93378711a19b10f9b67fcaad9973e53ee2e
+ms.sourcegitcommit: d36e4c7082a5144e79035dd8847c8e741fa04667
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "52830487"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53444635"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Version Technical Preview de Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Technical Preview)*
+*S’applique à : System Center Configuration Manager (préversion technique)*
 
 Cet article fournit des détails sur la branche Technical Preview mensuelle de Configuration Manager. La version Technical Preview présente les nouvelles fonctionnalités sur lesquelles travaille Microsoft. Elle introduit les nouvelles fonctionnalités qui ne sont pas encore incluses dans la version Current Branch de Configuration Manager. Ces fonctionnalités seront peut-être ajoutées dans une mise à jour de la version Current Branch. Avant de finaliser les fonctionnalités, nous souhaitons que vous les essayiez et que vous nous fassiez part de vos commentaires.  
 
@@ -104,7 +104,7 @@ Microsoft prend en charge chaque version Technical Preview jusqu’à ce que tro
    
 Vous pouvez installer une version de référence jusqu’à un an après sa sortie. Quand vous installez un nouveau site de Technical Preview, si plusieurs versions de référence sont disponibles, utilisez la dernière version de référence.
 
--  **Préversion technique 1810.2** : la préversion technique 1810.2 de Configuration Manager est disponible à la fois en tant que mise à jour dans la console et en tant que nouvelle version de référence. Téléchargez les versions de référence à partir du [Centre d’évaluation TechNet](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
+-  **Préversion technique 1810.2** : La préversion technique 1810.2 de Configuration Manager est disponible à la fois en tant que mise à jour dans la console et en tant que nouvelle version de référence. Téléchargez les versions de référence à partir du [Centre d’évaluation TechNet](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
 
 
 
@@ -124,15 +124,15 @@ Les fonctionnalités suivantes sont disponibles dans la version Technical Previe
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### <a name="technical-preview-version-1811"></a>Technical Preview version 1811
+### <a name="technical-preview-version-1812"></a>Préversion technique 1812
 
-<!--capabilities-in-technical-preview-1811.md#bkmk_anchor-->
+<!--capabilities-in-technical-preview-1812.md#bkmk_anchor-->
 
-- [Ne pas charger les profils Windows PowerShell](capabilities-in-technical-preview-1811.md#bkmk_noprofile) <!--1359239-->
-- [Une connexion Intune n’est plus nécessaire pour MDM au niveau local](capabilities-in-technical-preview-1811.md#bkmk_opmdm) <!--1359124-->
-- [Notifications de la console Configuration Manager](capabilities-in-technical-preview-1811.md#bkmk_notify) <!--1318035-->
-- [Améliorations apportées à la création d’un média de séquence de tâches](capabilities-in-technical-preview-1811.md#bkmk_tsmedia) <!--1359388-->
-- [Amélioration apportée à l’étape de séquence de tâches Exécuter le script PowerShell](capabilities-in-technical-preview-1811.md#bkmk_posh) <!--1359389-->
+- [Améliorations apportées à l’étape de séquence de tâches Exécuter le script PowerShell](capabilities-in-technical-preview-1812.md#bkmk_posh) <!--3556028 fka 1359389-->  
+- [Améliorations des approbations d'applications par e-mail](capabilities-in-technical-preview-1812.md#bkmk_email) <!--3594063-->  
+- [Configurer l'affinité entre utilisateur et périphérique dans le Centre logiciel](capabilities-in-technical-preview-1812.md#bkmk_uda) <!--3485366-->  
+- [Améliorations apportées à la console Configuration Manager](capabilities-in-technical-preview-1812.md#bkmk_console) <!--3594151-->  
+- [Télécharger des rapports depuis le Hub Communauté](capabilities-in-technical-preview-1812.md#bkmk_hub)<!--3555936-->  
 
 
 > [!Note]  
@@ -151,6 +151,11 @@ Then remove the bottom of this list and/or move individual items not in CB to th
 
  | Fonctionnalité | Version Technical Preview | Version Current Branch |  
  |---------|---------------------------|------------------------|
+ | Ne pas charger les profils Windows PowerShell <!--1359239--> | [Préversion technique 1811](capabilities-in-technical-preview-1811.md#bkmk_noprofile) | ![Non ajouté](media/Red_X.gif) | 
+ | Une connexion Intune n’est plus nécessaire pour MDM au niveau local <!--1359124--> | [Préversion technique 1811](capabilities-in-technical-preview-1811.md#bkmk_opmdm) | ![Non ajouté](media/Red_X.gif) | 
+ | Notifications de la console Configuration Manager <!--1318035--> | [Préversion technique 1811](capabilities-in-technical-preview-1811.md#bkmk_notify) | ![Non ajouté](media/Red_X.gif) | 
+ | Améliorations apportées à la création d’un média de séquence de tâches <!--1359388--> | [Préversion technique 1811](capabilities-in-technical-preview-1811.md#bkmk_tsmedia) | ![Non ajouté](media/Red_X.gif) | 
+ | Amélioration apportée à l’étape de séquence de tâches Exécuter le script PowerShell <!--1359389--> | [Préversion technique 1811](capabilities-in-technical-preview-1811.md#bkmk_posh) | ![Non ajouté](media/Red_X.gif) | 
  | Améliorations apportées à l’évaluation de regroupement <!--1358981--> | [Tech Preview 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_colleval) | Version 1810 | 
  | Authentification administrateur Configuration Manager <!--1357013--> | [Tech Preview 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_auth) | Version 1810 | 
  | Règle d’insights de gestion pour la version cliente de la source de cache d’homologue <!--1358008--> | [Tech Preview 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_insights) | Version 1810 | 
@@ -168,11 +173,7 @@ Then remove the bottom of this list and/or move individual items not in CB to th
  | Tableau de bord Management insights <!--1357979--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_insights) | Version 1810 | 
  | Tableau de bord Documentation dans la console <!--1357546--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_doc-dashboard) | ![Non ajouté](media/Red_X.gif) | 
  | Améliorations apportées à la maintenance des pilotes <!--1358270--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_drivers) | Version 1810 | 
- | Prise en charge de la séquence de tâches de Windows Autopilot pour les appareils existants <!--1358333--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_autopilot) | Version 1810 | 
- | Améliorations apportées à CMPivot <!--1359068--> | [Tech Preview 1809](capabilities-in-technical-preview-1809.md#bkmk_cmpivot) | Version 1810 | 
- | Amélioration apportée au tableau de bord Cycle de vie <!--1358702--> | [Tech Preview 1809](capabilities-in-technical-preview-1809.md#bkmk_lifecycle) | Version 1810 | 
- | Amélioration apportée à l’entrepôt de données <!--1358870--> | [Tech Preview 1809](capabilities-in-technical-preview-1809.md#bkmk_dataw) | Version 1810 | 
- | Amélioration apportée aux fenêtres de maintenance pour les mises à jour logicielles <!--vso2839307--> | [Tech Preview 1809](capabilities-in-technical-preview-1809.md#bkmk_sum-mw) | Version 1810 | 
+ | Prise en charge de la séquence de tâches de Windows Autopilot pour les appareils existants <!--1358333--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_autopilot) | Version 1810 | 
 
 
 

@@ -10,16 +10,16 @@ ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3981d454d0b007f5b057ccca4c8888da609dba97
-ms.sourcegitcommit: 2cc635835709fb8d86cdb63ea34233b36c94d4d8
+ms.openlocfilehash: d1a10f2381d6820d685ec8ff871c83c2a4c39bb1
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52259078"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53415056"
 ---
 # <a name="accounts-used-in-configuration-manager"></a>Comptes utilisés dans Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Utilisez les informations suivantes afin d’identifier les groupes Windows et les comptes utilisés dans Configuration Manager, de savoir comment ils sont utilisés et de connaître les exigences associées.  
 
@@ -223,14 +223,14 @@ Par défaut, ce groupe dispose du **contrôle intégral** pour le dossier suivan
 ### <a name="active-directory-group-discovery-account"></a>Compte de découverte de groupes Active Directory  
 
  Le site utilise le **compte de découverte de groupes Active Directory** pour découvrir les objets situés aux emplacements Active Directory Domain Services que vous spécifiez :
- - Les groupes de sécurité local, global et universel
- - L’appartenance au sein de ces groupes
- - L’appartenance au sein des groupes de distribution
-    - Les groupes de distribution ne sont pas découverts en tant que ressources de groupe
+- Les groupes de sécurité local, global et universel
+- L’appartenance au sein de ces groupes
+- L’appartenance au sein des groupes de distribution
+   - Les groupes de distribution ne sont pas découverts en tant que ressources de groupe
 
- Ce compte peut être un compte d'ordinateur du serveur de site qui exécute la découverte ou un compte d'utilisateur Windows. Il doit disposer de l’autorisation d’accès **Lecture** pour les emplacements Active Directory que vous avez spécifiés pour la découverte.  
+  Ce compte peut être un compte d'ordinateur du serveur de site qui exécute la découverte ou un compte d'utilisateur Windows. Il doit disposer de l’autorisation d’accès **Lecture** pour les emplacements Active Directory que vous avez spécifiés pour la découverte.  
 
- Pour plus d’informations, consultez [Découverte de groupes Active Directory](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutGroup).
+  Pour plus d’informations, consultez [Découverte de groupes Active Directory](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutGroup).
 
 
 ### <a name="active-directory-system-discovery-account"></a>Compte de découverte de systèmes Active Directory  
@@ -402,19 +402,19 @@ Par défaut, ce groupe dispose du **contrôle intégral** pour le dossier suivan
 
 2.  Dans l’espace de travail **Bibliothèque de logiciels**, déterminez le type de contenu dont vous souhaitez gérer les comptes d’accès et suivez les étapes indiquées :  
 
-    -   **Application** : développez **Gestion d’applications**, choisissez **Applications**, puis sélectionnez l’application dont vous souhaitez gérer les comptes d’accès.  
+    -   **Application** : Développez **Gestion d’applications**, choisissez **Applications**, puis sélectionnez l’application dont vous souhaitez gérer les comptes d’accès.  
 
-    -   **Package** : développez **Gestion d’applications**, choisissez **Packages**, puis sélectionnez le package dont vous souhaitez gérer les comptes d’accès.  
+    -   **Package** : Développez **Gestion d’applications**, choisissez **Packages**, puis sélectionnez le package dont vous souhaitez gérer les comptes d’accès.  
 
-    -   **Package de déploiement de mises à jour logicielles** : développez **Mises à jour logicielles**, choisissez **Packages de déploiement**, puis sélectionnez le package de déploiement dont vous souhaitez gérer les comptes d’accès.  
+    -   **Package de déploiement des mises à jour logicielles** : Développez **Mises à jour logicielles**, choisissez **Packages de déploiement**, puis sélectionnez le package de déploiement dont vous souhaitez gérer les comptes d'accès.  
 
-    -   **Package de pilotes** : développez **Systèmes d’exploitation**, choisissez **Packages de pilotes**, puis sélectionnez le package de pilotes dont vous souhaitez gérer les comptes d’accès.  
+    -   **Package de pilotes** : Développez **Systèmes d’exploitation**, choisissez **Packages de pilotes**, puis sélectionnez le package de pilotes dont vous souhaitez gérer les comptes d’accès.  
 
-    -   **Image de système d’exploitation** : développez **Systèmes d’exploitation**, choisissez **Images du système d’exploitation**, puis sélectionnez l’image du système d’exploitation dont vous souhaitez gérer les comptes d’accès.  
+    -   **Image de système d'exploitation** : Développez **Systèmes d’exploitation**, choisissez **Images du système d’exploitation**, puis sélectionnez l’image du système d’exploitation dont vous souhaitez gérer les comptes d’accès.  
 
-    -   **Package de mise à niveau du système d’exploitation** : développez **Systèmes d’exploitation**, choisissez **Packages de mise à niveau du système d’exploitation**, puis sélectionnez le package de mise à niveau du système d’exploitation dont vous souhaitez gérer les comptes d’accès.  
+    -   **Package de mise à niveau du système d'exploitation** : Développez **Systèmes d’exploitation**, choisissez **Packages de mise à niveau du système d’exploitation**, puis sélectionnez le package de mise à niveau du système d’exploitation dont vous souhaitez gérer les comptes d’accès.  
 
-    -   **Image de démarrage** : développez **Systèmes d’exploitation**, choisissez **Images de démarrage**, puis sélectionnez l’image de démarrage dont vous souhaitez gérer les comptes d’accès.  
+    -   **Image de démarrage** : Développez **Systèmes d’exploitation**, choisissez **Images de démarrage**, puis sélectionnez l’image de démarrage dont vous souhaitez gérer les comptes d’accès.  
 
 3.  Cliquez avec le bouton droit sur l’objet sélectionné, puis choisissez **Gérer des comptes d’accès**.  
 

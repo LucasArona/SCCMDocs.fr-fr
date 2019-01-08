@@ -10,16 +10,16 @@ ms.assetid: 409e26e1-7716-4f1d-a0ee-34feabf20792
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6abf61488a96ec3299b606b10901b0787b82edc9
-ms.sourcegitcommit: fe279229a90fdc8cddbb13c7ffdbbb22af0e25ef
+ms.openlocfilehash: bdeed74504611589b36e31eff3c1957725345b8a
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47229345"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421839"
 ---
 # <a name="what39s-new-in-version-1702-of-system-center-configuration-manager"></a>Nouveautés de la version 1702 de System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 La mise à jour 1702 de la version Current Branch de System Center Configuration Manager est une mise à jour dans la console des sites déjà installés qui exécutent la version 1602, 1606 ou 1610. Elle est également disponible sous la forme d’une version de ligne de base, que vous pouvez utiliser lors de l’installation d’un nouveau déploiement.
 
@@ -63,13 +63,13 @@ Voici des améliorations apportées à l’utilisation de la recherche dans la c
  Vous pouvez utiliser les options de commentaires dans la console pour envoyer vos commentaires directement à l’équipe de développement.
 
  L’option **Commentaires** est accessible :
- -  Dans le ruban, à l’extrême gauche de l’onglet Accueil de chaque nœud.  
-    ![Ruban](./media/feedback-home.png)
+- Dans le ruban, à l’extrême gauche de l’onglet Accueil de chaque nœud.  
+  ![Ruban](./media/feedback-home.png)
 
- -  Quand vous cliquez avec le bouton droit sur n’importe quel objet dans la console.   
-     ![Option de clic droit](./media/feedback-option.png)   
+- Quand vous cliquez avec le bouton droit sur n’importe quel objet dans la console.   
+   ![Option de clic droit](./media/feedback-option.png)   
 
- Un clic sur **Commentaires** affiche le site de commentaires [Configuration Manager UserVoice dans votre navigateur](https://go.microsoft.com/fwlink/?linkid=617029).
+  Un clic sur **Commentaires** affiche le site de commentaires [Configuration Manager UserVoice dans votre navigateur](https://go.microsoft.com/fwlink/?linkid=617029).
 
 
 ###  <a name="changes-for-updates-and-servicing"></a>Modifications pour les mises à jour et la maintenance

@@ -10,16 +10,16 @@ ms.assetid: 3bd1e487-ea18-43c1-b7c3-acbd9b86d429
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 3d34ec4abb712ce6797033a5ff490280611e1b02
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 18f51e43e223b13c01d0c6bde5a30fe08af64f61
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344389"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53415453"
 ---
 # <a name="create-and-deploy-an-application-with-system-center-configuration-manager"></a>Créer et déployer une application avec System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Cette rubrique vous montre de façon concrète comment créer une application avec System Center Configuration Manager. Dans cet exemple, vous créez et vous déployez une application qui contient une application métier pour PC Windows appelée **Contoso.msi**. Cette application doit être installée sur tous les PC exécutant Windows 10 dans votre entreprise. Au fil des étapes, vous allez découvrir de nombreuses façons de gérer efficacement les applications.  
 
@@ -48,38 +48,38 @@ Veillez à prendre connaissance des informations contenues dans la rubrique de [
 
 ### <a name="to-start-the-create-application-wizard-and-create-the-application"></a>Pour démarrer l’Assistant Création d’une application et créer l’application  
 
-1.  Dans la console Configuration Manager, choisissez **Bibliothèque de logiciels** > **Gestion des applications** > **Applications**.  
+1. Dans la console Configuration Manager, choisissez **Bibliothèque de logiciels** > **Gestion des applications** > **Applications**.  
 
-3.  Sous l’onglet **Accueil**, dans le groupe **Créer**, choisissez **Créer une application**.  
+2. Sous l’onglet **Accueil**, dans le groupe **Créer**, choisissez **Créer une application**.  
 
-4.  Dans la page **Général** de l’ **Assistant Création d’une application**, choisissez **Détecter automatiquement les informations de cette application à partir des fichiers d’installation**. Ceci permet de préremplir certaines informations dans l’Assistant avec les informations extraites du fichier d’installation .msi. Spécifiez ensuite les informations suivantes :  
+3. Dans la page **Général** de l’ **Assistant Création d’une application**, choisissez **Détecter automatiquement les informations de cette application à partir des fichiers d’installation**. Ceci permet de préremplir certaines informations dans l’Assistant avec les informations extraites du fichier d’installation .msi. Spécifiez ensuite les informations suivantes :  
 
-    -   **Type** : choisissez **Windows Installer (fichier \*.msi)**.  
+   -   **Type** : Choisissez **Windows Installer (fichier \*.msi)**.  
 
-    -   **Emplacement** : entrez l’emplacement du fichier d’installation **Contoso.msi** (ou choisissez **Parcourir** pour le sélectionner). Notez que l’emplacement doit être spécifié sous la forme *\\\Serveur\Partage\Fichier* pour permettre à Configuration Manager de trouver les fichiers d’installation.  
+   -   **Emplacement** : Entrez l’emplacement du fichier d’installation **Contoso.msi** (ou choisissez **Parcourir** pour le sélectionner). Notez que l’emplacement doit être spécifié sous la forme *\\\Serveur\Partage\Fichier* pour permettre à Configuration Manager de trouver les fichiers d’installation.  
+
+   Le résultat doit ressembler à la capture d’écran suivante :  
+
+   ![Page Général de l’Assistant Gestion des applications](/sccm/apps/get-started/media/App-management-wizard-general-page.png)  
+
+4. Choisissez **Suivant**. La page **Importer des informations** affiche des informations sur l’application et tous les fichiers associés qui ont été importés dans Configuration Manager. Quand vous avez terminé, choisissez à nouveau **Suivant**.  
+
+5. Dans la page **Informations générales**, vous pouvez fournir des informations complémentaires sur l’application pour faciliter le tri et sa localisation dans la console Configuration Manager.  
+
+    De plus, le champ **Programme d’installation** vous permet de spécifier la ligne de commande complète à utiliser pour installer l’application sur les PC. Vous pouvez modifier ce champ pour ajouter vos propres propriétés (par exemple **/q** pour effectuer une installation sans assistance).  
+
+   > [!TIP]  
+   >  Certains champs de cette page de l’Assistant peuvent avoir été renseignés automatiquement au moment où vous avez importé les fichiers d’installation de l’application.  
 
     Le résultat doit ressembler à la capture d’écran suivante :  
 
-    ![Page Général de l’Assistant Gestion des applications](/sccm/apps/get-started/media/App-management-wizard-general-page.png)  
+    ![Page Informations générales de l’Assistant Gestion des applications](/sccm/apps/get-started/media/App-management-wizard-general-information-page.png)  
 
-5.  Choisissez **Suivant**. La page **Importer des informations** affiche des informations sur l’application et tous les fichiers associés qui ont été importés dans Configuration Manager. Quand vous avez terminé, choisissez à nouveau **Suivant**.  
+6. Choisissez **Suivant**. Dans la page Résumé, vous pouvez vérifier vos paramètres d’application, puis terminer l’Assistant.  
 
-6.  Dans la page **Informations générales**, vous pouvez fournir des informations complémentaires sur l’application pour faciliter le tri et sa localisation dans la console Configuration Manager.  
+   Vous avez fini de créer l’application. Pour la trouver, dans l’espace de travail **Bibliothèque de logiciels**, développez **Gestion d’applications**, puis choisissez **Applications**. Pour cet exemple, vous verrez ceci :  
 
-     De plus, le champ **Programme d’installation** vous permet de spécifier la ligne de commande complète à utiliser pour installer l’application sur les PC. Vous pouvez modifier ce champ pour ajouter vos propres propriétés (par exemple **/q** pour effectuer une installation sans assistance).  
-
-    > [!TIP]  
-    >  Certains champs de cette page de l’Assistant peuvent avoir été renseignés automatiquement au moment où vous avez importé les fichiers d’installation de l’application.  
-
-     Le résultat doit ressembler à la capture d’écran suivante :  
-
-     ![Page Informations générales de l’Assistant Gestion des applications](/sccm/apps/get-started/media/App-management-wizard-general-information-page.png)  
-
-7.  Choisissez **Suivant**. Dans la page Résumé, vous pouvez vérifier vos paramètres d’application, puis terminer l’Assistant.  
-
- Vous avez fini de créer l’application. Pour la trouver, dans l’espace de travail **Bibliothèque de logiciels**, développez **Gestion d’applications**, puis choisissez **Applications**. Pour cet exemple, vous verrez ceci :  
-
- ![Graphique de l’application finale](/sccm/apps/get-started/media/Final-app-graphic.png)  
+   ![Graphique de l’application finale](/sccm/apps/get-started/media/Final-app-graphic.png)  
 
 ## <a name="examine-the-properties-of-the-application-and-its-deployment-type"></a>Examiner les propriétés de l’application et son type de déploiement  
 
@@ -102,13 +102,13 @@ Une boîte de dialogue similaire à celle-ci s’affiche :
 
 3.  Dans la boîte de dialogue **Créer une spécification** , indiquez les informations suivantes :  
 
-    -   **Catégorie** : **Appareil**  
+    -   **Catégorie** : **Appareil**  
 
-    -   **Condition** : **Système d’exploitation**  
+    -   **Condition** : **Système d'exploitation**  
 
-    -   **Type de règle** : **Valeur**  
+    -   **Type de règle** : **Valeur**  
 
-    -   **Opérateur** : **L’un des**  
+    -   **Opérateur** : **L’un des**  
 
     -   Dans la liste des systèmes d’exploitation, sélectionnez **Windows 10**.  
 
@@ -185,15 +185,15 @@ Utilisez les informations de la section **Surveiller l’application** ci-dessou
 
 5.  Sélectionnez un des onglets suivants pour en voir davantage sur l’état du déploiement de l’application :  
 
-    -   **Opération réussie** : l’application a bien été installée sur les PC indiqués.  
+    -   **Opération réussie** : L’application a bien été installée sur les PC indiqués.  
 
-    -   **En cours** : l’installation de l’application n’est pas encore terminée.  
+    -   **En cours** : L’installation de l’application n’est pas encore terminée.  
 
-    -   **Erreur** : une erreur s’est produite lors de l’installation de l’application sur les PC indiqués. Des informations complémentaires sur l’erreur sont aussi affichées.  
+    -   **Erreur** : Une erreur s’est produite lors de l’installation de l’application sur les PC indiqués. Des informations complémentaires sur l’erreur sont aussi affichées.  
 
-    -   **Config non satisfaite** : aucune tentative d’installation de l’application sur les appareils indiqués n’a été faite, car ils n’étaient pas conformes aux spécifications que vous avez configurées (en l’occurrence, ils n’exécutaient pas Windows 10).  
+    -   **Config non satisfaite** : Aucune tentative d’installation de l’application n’a été initiée sur les appareils indiqués, car ils n’étaient pas conformes aux spécifications que vous avez configurées (en l’occurrence, ils n’exécutaient pas Windows 10).  
 
-    -   **Inconnu** : Configuration Manager n’a pas pu signaler l’état du déploiement. Faites une nouvelle vérification ultérieurement.  
+    -   **Inconnu** : Configuration Manager n’a pas pu signaler l’état du déploiement. Faites une nouvelle vérification ultérieurement.  
 
 > [!TIP]  
 >  Il existe plusieurs façons de surveiller les déploiements d’applications. Pour plus d’informations, consultez [Surveiller les applications](/sccm/apps/deploy-use/monitor-applications-from-the-console).  

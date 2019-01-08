@@ -10,16 +10,16 @@ ms.assetid: 83a7c934-3b11-435d-ba22-cbc274951e83
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: aaa033fb64c3b525eff3ca54537df6dcdf773502
-ms.sourcegitcommit: dfb2cb01c1608b848f2f2fee7c84500e7adcb7a4
+ms.openlocfilehash: 1ce1596a6882b7756339eff3a9bf65a9420a6cec
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49101260"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424515"
 ---
 # <a name="plan-for-internet-based-client-management-in-system-center-configuration-manager"></a>Planifier la gestion des clients basée sur Internet dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 La gestion des clients basée sur Internet (ou IBCM, Internet-Based Client Management) vous permet de gérer les clients System Center Configuration Manager quand ils ne sont pas connectés à votre réseau d’entreprise, mais qu’ils disposent d’une connexion Internet standard. Cette configuration offre plusieurs avantages, notamment la réduction des coûts, car il n'est plus nécessaire d'utiliser des réseaux privés virtuels (VPN) et la possibilité de déployer les mises à jour logicielles au moment opportun.  
 
@@ -32,21 +32,21 @@ La gestion des clients basée sur Internet (ou IBCM, Internet-Based Client Manag
 
  Les fonctions ci-dessous ne sont pas prises en charge lorsque les clients sont gérés sur Internet :  
 
--   Le déploiement de client sur Internet, comme par exemple l'installation poussée du client et le déploiement de client basé sur des mises à jour. Utilisez plutôt l'installation manuelle du client.  
+- Le déploiement de client sur Internet, comme par exemple l'installation poussée du client et le déploiement de client basé sur des mises à jour. Utilisez plutôt l'installation manuelle du client.  
 
--   Attribution automatique du site.  
+- Attribution automatique du site.  
 
--   Wake-on-LAN.  
+- Wake-on-LAN.  
 
--   Le déploiement de système d'exploitation. Toutefois, vous pouvez déployer des séquences de tâches qui ne déploient pas un système d'exploitation. Par exemple, des séquences de tâches qui exécutent des scripts et des tâches de maintenance sur les clients.  
+- Le déploiement de système d'exploitation. Toutefois, vous pouvez déployer des séquences de tâches qui ne déploient pas un système d'exploitation. Par exemple, des séquences de tâches qui exécutent des scripts et des tâches de maintenance sur les clients.  
 
--   Le contrôle à distance.  
+- Le contrôle à distance.  
 
--   Le déploiement de logiciels vers des utilisateurs, sauf si le point de gestion basé sur Internet peut authentifier l'utilisateur dans les services de domaine Active Directory à l'aide de l'authentification Windows (Kerberos ou NTLM). Cela est possible lorsque le point de gestion basé sur Internet approuve la forêt dans laquelle réside le compte d'utilisateur.  
+- Le déploiement de logiciels vers des utilisateurs, sauf si le point de gestion basé sur Internet peut authentifier l'utilisateur dans les services de domaine Active Directory à l'aide de l'authentification Windows (Kerberos ou NTLM). Cela est possible lorsque le point de gestion basé sur Internet approuve la forêt dans laquelle réside le compte d'utilisateur.  
 
- En outre, la gestion des clients sur Internet ne prend pas en charge l'itinérance. L'itinérance permet aux clients de toujours trouver les points de distribution les plus proches pour télécharger du contenu. Les clients qui ne sont pas gérés sur Internet communiquent avec des systèmes de site à partir du site qui leur est affecté lorsque ces systèmes de site sont configurés pour utiliser un nom de domaine complet Internet et les rôles de système de site autorisent les connexions client à partir d'Internet. Les clients sélectionnent de manière non déterministique l'un des systèmes de site basés sur Internet, indépendamment de la bande passante ou de l'emplacement physique.  
+  En outre, la gestion des clients sur Internet ne prend pas en charge l'itinérance. L'itinérance permet aux clients de toujours trouver les points de distribution les plus proches pour télécharger du contenu. Les clients qui ne sont pas gérés sur Internet communiquent avec des systèmes de site à partir du site qui leur est affecté lorsque ces systèmes de site sont configurés pour utiliser un nom de domaine complet Internet et les rôles de système de site autorisent les connexions client à partir d'Internet. Les clients sélectionnent de manière non déterministique l'un des systèmes de site basés sur Internet, indépendamment de la bande passante ou de l'emplacement physique.  
 
- Lorsque vous disposez d'un point de mise à jour logicielle qui est configuré pour accepter les connexions à partir d'Internet, les clients Configuration Manager basés sur Internet qui se trouvent sur Internet effectuent toujours une analyse par rapport à ce point de mise à jour logicielle afin de déterminer quelles mises à jour logicielles sont requises. Toutefois, lorsque ces clients se trouvent sur Internet, ils commencent par essayer de télécharger les mises à jour logicielles à partir de Microsoft Update, plutôt qu'à partir d'un point de distribution basé sur Internet. Uniquement en cas d'échec, ils tenteront de télécharger les mises à jour logicielles requises à partir d'un point de distribution basé sur Internet. Les clients qui ne sont pas configurés pour la gestion des clients basés sur Internet n’essaient jamais de télécharger les mises à jour logicielles auprès de Microsoft Update, mais utilisent toujours des points de distribution Configuration Manager.  
+  Lorsque vous disposez d'un point de mise à jour logicielle qui est configuré pour accepter les connexions à partir d'Internet, les clients Configuration Manager basés sur Internet qui se trouvent sur Internet effectuent toujours une analyse par rapport à ce point de mise à jour logicielle afin de déterminer quelles mises à jour logicielles sont requises. Toutefois, lorsque ces clients se trouvent sur Internet, ils commencent par essayer de télécharger les mises à jour logicielles à partir de Microsoft Update, plutôt qu'à partir d'un point de distribution basé sur Internet. Uniquement en cas d'échec, ils tenteront de télécharger les mises à jour logicielles requises à partir d'un point de distribution basé sur Internet. Les clients qui ne sont pas configurés pour la gestion des clients basés sur Internet n’essaient jamais de télécharger les mises à jour logicielles auprès de Microsoft Update, mais utilisent toujours des points de distribution Configuration Manager.  
  
 [!Tip]  
 Le client Configuration Manager détermine automatiquement s’il est sur l’intranet ou sur Internet. Si le client peut contacter un contrôleur de domaine ou un point de gestion local, il définit son type de connexion sur Intranet actuellement. Sinon, il bascule vers Internet actuellement et le client utilise les points de gestion, les points de mise à jour logicielle, les points de distribution attribués à son site pour la communication.
@@ -54,30 +54,30 @@ Le client Configuration Manager détermine automatiquement s’il est sur l’in
 ##  <a name="considerations-for-client-communications-from-the-internet-or-untrusted-forest"></a>Éléments à prendre en considération pour les communications client à partir d'Internet ou d'une forêt non approuvée  
  Les rôles de système de site suivants installés sur les sites principaux prennent en charge les connexions de clients qui se trouvent dans des emplacements non approuvés, tels qu'Internet ou une forêt non approuvée (les sites secondaires ne prennent pas en charge les connexions client à partir d'emplacements non approuvés) :  
 
--   Point du site web du catalogue des applications  
+- Point du site web du catalogue des applications  
 
--   Module de stratégie de Configuration Manager  
+- Module de stratégie de Configuration Manager  
 
--   Point de distribution (HTTPS est requis par les points de distribution cloud)  
+- Point de distribution (HTTPS est requis par les points de distribution cloud)  
 
--   Point proxy d'inscription  
+- Point proxy d'inscription  
 
--   Point d’état de secours  
+- Point d’état de secours  
 
--   Point de gestion  
+- Point de gestion  
 
--   Point de mise à jour logicielle  
+- Point de mise à jour logicielle  
 
- **À propos des systèmes de site accessibles sur Internet :**   
-Même s’il n’est pas nécessaire de disposer d’une relation de confiance entre la forêt d’un client et celle d’un serveur de système de site, quand la forêt qui contient un système de site accessible sur Internet approuve la forêt qui contient les comptes d’utilisateurs, cette configuration prend en charge les stratégies utilisateur pour les appareils sur Internet quand vous activez le paramètre client **Autoriser les demandes de stratégie utilisateur depuis des clients Internet** de la **Stratégie client**.  
+  **À propos des systèmes de site accessibles sur Internet :**   
+  Même s’il n’est pas nécessaire de disposer d’une relation de confiance entre la forêt d’un client et celle d’un serveur de système de site, quand la forêt qui contient un système de site accessible sur Internet approuve la forêt qui contient les comptes d’utilisateurs, cette configuration prend en charge les stratégies utilisateur pour les appareils sur Internet quand vous activez le paramètre client **Autoriser les demandes de stratégie utilisateur depuis des clients Internet** de la **Stratégie client**.  
 
- Par exemple, les configurations suivantes illustrent la prise en charge par la gestion des clients basés sur Internet des stratégies utilisateur pour les appareils situés sur Internet :  
+  Par exemple, les configurations suivantes illustrent la prise en charge par la gestion des clients basés sur Internet des stratégies utilisateur pour les appareils situés sur Internet :  
 
--   Le point de gestion basé sur Internet est le réseau de périmètre sur lequel réside un contrôleur de domaine en lecture seule pour authentifier l'utilisateur et un pare-feu qui intervient autorise les paquets Active Directory.  
+- Le point de gestion basé sur Internet est le réseau de périmètre sur lequel réside un contrôleur de domaine en lecture seule pour authentifier l'utilisateur et un pare-feu qui intervient autorise les paquets Active Directory.  
 
--   Le compte d'utilisateur se trouve dans la forêt A (Intranet) et le point de gestion basé sur Internet dans la forêt B (le réseau de périmètre). La forêt B approuve la forêt A et un pare-feu qui intervient autorise les paquets d'authentification.  
+- Le compte d'utilisateur se trouve dans la forêt A (Intranet) et le point de gestion basé sur Internet dans la forêt B (le réseau de périmètre). La forêt B approuve la forêt A et un pare-feu qui intervient autorise les paquets d'authentification.  
 
--   Le compte d'utilisateur et le point de gestion basé sur Internet sont dans la forêt A (Intranet). Le point de gestion est publié sur Internet à l'aide d'un serveur proxy web (comme Forefront Threat Management Gateway).  
+- Le compte d'utilisateur et le point de gestion basé sur Internet sont dans la forêt A (Intranet). Le point de gestion est publié sur Internet à l'aide d'un serveur proxy web (comme Forefront Threat Management Gateway).  
 
 > [!NOTE]  
 >  Si l'authentification Kerberos échoue, l'authentification NTLM est ensuite automatiquement utilisée.  
@@ -118,82 +118,82 @@ Même s’il n’est pas nécessaire de disposer d’une relation de confiance e
 ##  <a name="prerequisites-for-internet-based-client-management"></a>Configuration requise pour la gestion des clients Internet  
  Dans Configuration, la gestion du client basée sur Internet Manager présente les dépendances externes suivantes :  
 
--   Les clients qui seront gérés sur Internet doivent être dotés d'une connexion Internet.  
+- Les clients qui seront gérés sur Internet doivent être dotés d'une connexion Internet.  
 
-     Configuration Manager utilise les connexions du fournisseur de services Internet (ISP), qu’elles soient permanentes ou temporaires. Les appareils mobiles clients doivent disposer d'une connexion directe à Internet, alors que les ordinateurs clients peuvent se connecter à Internet directement ou par le biais d'un serveur Web proxy.  
+   Configuration Manager utilise les connexions du fournisseur de services Internet (ISP), qu’elles soient permanentes ou temporaires. Les appareils mobiles clients doivent disposer d'une connexion directe à Internet, alors que les ordinateurs clients peuvent se connecter à Internet directement ou par le biais d'un serveur Web proxy.  
 
--   Les systèmes de site qui prennent en charge la gestion des clients basés sur Internet doivent être connectés à Internet et se trouver dans un domaine Active Directory.  
+- Les systèmes de site qui prennent en charge la gestion des clients basés sur Internet doivent être connectés à Internet et se trouver dans un domaine Active Directory.  
 
-     Les systèmes de site basés sur Internet n'exigent aucune relation d'approbation avec la forêt Active Directory du serveur de site. Toutefois, lorsque le point de gestion basé sur Internet peut authentifier l'utilisateur à l'aide de l'authentification Windows, les stratégies utilisateur sont prises en charge. En cas d'échec de l'authentification Windows, seules les stratégies d'ordinateur sont prises en charge.  
+   Les systèmes de site basés sur Internet n'exigent aucune relation d'approbation avec la forêt Active Directory du serveur de site. Toutefois, lorsque le point de gestion basé sur Internet peut authentifier l'utilisateur à l'aide de l'authentification Windows, les stratégies utilisateur sont prises en charge. En cas d'échec de l'authentification Windows, seules les stratégies d'ordinateur sont prises en charge.  
 
-    > [!NOTE]  
-    >  Pour prendre en charge des stratégies utilisateur, vous devez également définir sur **Vrai** les deux paramètres client **Stratégie client** :  
-    >   
-    >  -   **Activer l'interrogation de la stratégie utilisateur sur les clients**  
-    > -   **Autoriser les demandes de stratégie utilisateur depuis des clients Internet**  
+  > [!NOTE]
+  >  Pour prendre en charge des stratégies utilisateur, vous devez également définir sur **Vrai** les deux paramètres client **Stratégie client** :  
+  > 
+  > - **Activer l'interrogation de la stratégie utilisateur sur les clients**  
+  >   -   **Autoriser les demandes de stratégie utilisateur depuis des clients Internet**  
 
-     Un point de site Web du catalogue des applications basé sur Internet nécessite également l'authentification Windows pour authentifier les utilisateurs lorsque leur ordinateur est sur Internet. Cette exigence est indépendante des stratégies utilisateur.  
+   Un point de site Web du catalogue des applications basé sur Internet nécessite également l'authentification Windows pour authentifier les utilisateurs lorsque leur ordinateur est sur Internet. Cette exigence est indépendante des stratégies utilisateur.  
 
--   Vous devez posséder une infrastructure à clé publique (PKI) annexe capable de déployer et gérer les certificats requis par les clients et gérés sur Internet et les serveurs de système de site basés sur Internet.  
+- Vous devez posséder une infrastructure à clé publique (PKI) annexe capable de déployer et gérer les certificats requis par les clients et gérés sur Internet et les serveurs de système de site basés sur Internet.  
 
-     Pour plus d’informations sur les certificats PKI, consultez [Configuration requise des certificats PKI pour System Center Configuration Manager](/sccm/core/plan-design/network/pki-certificate-requirements).  
+   Pour plus d’informations sur les certificats PKI, consultez [Configuration requise des certificats PKI pour System Center Configuration Manager](/sccm/core/plan-design/network/pki-certificate-requirements).  
 
--   Le nom de domaine complet (FQDN) Internet des systèmes de site prenant en charge la gestion des clients Internet doit être enregistré sous la forme d'entrées hôtes sur les serveurs DNS publics.  
+- Le nom de domaine complet (FQDN) Internet des systèmes de site prenant en charge la gestion des clients Internet doit être enregistré sous la forme d'entrées hôtes sur les serveurs DNS publics.  
 
--   Les pare-feu ou serveurs proxy qui interviennent doivent autoriser les communications client associées aux systèmes de site basés sur Internet.  
+- Les pare-feu ou serveurs proxy qui interviennent doivent autoriser les communications client associées aux systèmes de site basés sur Internet.  
 
-     Configuration requise des communications client :  
+   Configuration requise des communications client :  
 
-    -   Prise en charge du protocole HTTP 1.1  
+  - Prise en charge du protocole HTTP 1.1  
 
-    -   Autorisation du type de contenu HTTP de pièces jointes MIME fractionnées (fractionné/mixte et application/flux d'octets)  
+  - Autorisation du type de contenu HTTP de pièces jointes MIME fractionnées (fractionné/mixte et application/flux d'octets)  
 
-    -   Autorisation des verbes suivants pour le point de gestion Internet :  
+  - Autorisation des verbes suivants pour le point de gestion Internet :  
 
-        -   HEAD  
+    -   HEAD  
 
-        -   CCM_POST  
+    -   CCM_POST  
 
-        -   BITS_POST  
+    -   BITS_POST  
 
-        -   GET  
+    -   GET  
 
-        -   PROPFIND  
+    -   PROPFIND  
 
-    -   Autorisation des verbes suivants pour le point de distribution Internet :  
+  - Autorisation des verbes suivants pour le point de distribution Internet :  
 
-        -   HEAD  
+    -   HEAD  
 
-        -   GET  
+    -   GET  
 
-        -   PROPFIND  
+    -   PROPFIND  
 
-    -   Autorisation des verbes suivants pour le point d'état de secours Internet :  
+  - Autorisation des verbes suivants pour le point d'état de secours Internet :  
 
-        -   POST  
+    -   POST  
 
-    -   Autoriser les verbes suivants pour le point du site Web du catalogue des applications basé sur Internet :  
+  - Autoriser les verbes suivants pour le point du site Web du catalogue des applications basé sur Internet :  
 
-        -   POST  
+    -   POST  
 
-        -   GET  
+    -   GET  
 
-    -   Autorisation des en-têtes HTTP suivants pour le point de gestion Internet :  
+  - Autorisation des en-têtes HTTP suivants pour le point de gestion Internet :  
 
-        -   Range:  
+    -   Range:  
 
-        -   CCMClientID:  
+    -   CCMClientID:  
 
-        -   CCMClientIDSignature:  
+    -   CCMClientIDSignature:  
 
-        -   CCMClientTimestamp:  
+    -   CCMClientTimestamp:  
 
-        -   CCMClientTimestampsSignature:  
+    -   CCMClientTimestampsSignature:  
 
-    -   Autorisation de l'en-tête HTTP suivant pour le point de distribution Internet :  
+  - Autorisation de l'en-tête HTTP suivant pour le point de distribution Internet :  
 
-        -   Range:  
+    -   Range:  
 
-     Pour obtenir des informations de configuration afin de prendre en charge cette configuration requise, reportez-vous à la documentation de votre serveur proxy ou de votre pare-feu.  
+    Pour obtenir des informations de configuration afin de prendre en charge cette configuration requise, reportez-vous à la documentation de votre serveur proxy ou de votre pare-feu.  
 
-     Pour obtenir des configurations de communication similaires lorsque vous utilisez le point de mise à jour logicielle pour les connexions client à partir d'Internet, consultez la documentation de WSUS (Windows Server Update Services). Par exemple, dans le cas de WSUS sous Windows Server 2003, voir [Annexe D : paramètres de sécurité](http://go.microsoft.com/fwlink/p/?LinkId=143368), l’annexe de déploiement pour les paramètres de sécurité.
+    Pour obtenir des configurations de communication similaires lorsque vous utilisez le point de mise à jour logicielle pour les connexions client à partir d'Internet, consultez la documentation de WSUS (Windows Server Update Services). Par exemple, pour WSUS sur Windows Server 2003, consultez [Annexe D : paramètres de sécurité](http://go.microsoft.com/fwlink/p/?LinkId=143368), l'annexe de déploiement pour les paramètres de sécurité.

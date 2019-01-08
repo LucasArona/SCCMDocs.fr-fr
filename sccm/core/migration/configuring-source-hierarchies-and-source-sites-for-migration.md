@@ -10,16 +10,16 @@ ms.assetid: ccce7cb5-e18f-4337-8adf-2018edca3c00
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d9ef1ca2dd2763cf5b96fd82031a2ef38ef64927
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 3871d0ccf7bbb368e86b9d4f10a87fd25739d360
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334689"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417589"
 ---
 # <a name="configure-source-hierarchies-and-source-sites-for-migration-to-system-center-configuration-manager"></a>Configurer des hiérarchies sources et des sites sources pour la migration vers System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Pour permettre la migration de données vers votre environnement System Center Configuration Manager, vous devez configurer une hiérarchie source Configuration Manager prise en charge et, dans cette hiérarchie, configurer un ou plusieurs sites sources contenant les données à migrer.  
 
@@ -41,27 +41,27 @@ Pour permettre la migration de données vers votre environnement System Center C
 
 ### <a name="to-configure-a-source-hierarchy"></a>Pour configurer une hiérarchie source   
 
-1.  Dans la console Configuration Manager, cliquez sur **Administration**.  
+1. Dans la console Configuration Manager, cliquez sur **Administration**.  
 
-2.  Dans l'espace de travail **Administration** , développez **Migration**, puis cliquez sur **Hiérarchie source**.  
+2. Dans l'espace de travail **Administration** , développez **Migration**, puis cliquez sur **Hiérarchie source**.  
 
-3.  Sous l'onglet **Accueil** , dans le groupe **Migration** , cliquez sur **Spécifier la hiérarchie source**.  
+3. Sous l'onglet **Accueil** , dans le groupe **Migration** , cliquez sur **Spécifier la hiérarchie source**.  
 
-4.  Dans la boîte de dialogue **Spécifier une hiérarchie source** , pour **Hiérarchie source**, sélectionnez **Nouvelle hiérarchie source**.  
+4. Dans la boîte de dialogue **Spécifier une hiérarchie source** , pour **Hiérarchie source**, sélectionnez **Nouvelle hiérarchie source**.  
 
-5.  Dans **Serveur de site Configuration Manager de niveau supérieur**, entrez le nom ou l’adresse IP du site de niveau supérieur d’une hiérarchie source prise en charge.  
+5. Dans **Serveur de site Configuration Manager de niveau supérieur**, entrez le nom ou l’adresse IP du site de niveau supérieur d’une hiérarchie source prise en charge.  
 
-6.  Spécifiez les comptes d'accès au site source qui disposent des autorisations suivantes :  
+6. Spécifiez les comptes d'accès au site source qui disposent des autorisations suivantes :  
 
-    -   Compte du site source : Autorisation **Lecture** pour le fournisseur SMS du site de niveau supérieur spécifié dans la hiérarchie source. Les mises à niveau et le partage des points de distribution nécessitent les autorisations **Modifier** et **Supprimer** sur le site dans la hiérarchie source.
+   - Compte du site source : Autorisation **Lecture** pour le fournisseur SMS du site de niveau supérieur spécifié dans la hiérarchie source. Les mises à niveau et le partage des points de distribution nécessitent les autorisations **Modifier** et **Supprimer** sur le site dans la hiérarchie source.
 
-    -   Compte de base de données du site source : Autorisation **Lecture** et **Exécution** sur la base de données SQL Server du site de niveau supérieur spécifié dans la hiérarchie source.  
+   - Compte de base de données du site source : Autorisation **Lecture** et **Exécution** sur la base de données SQL Server du site de niveau supérieur spécifié dans la hiérarchie source.  
 
      Si vous spécifiez l’utilisation du compte d’ordinateur, Configuration Manager utilise le compte d’ordinateur du site de niveau supérieur de la hiérarchie de destination. Pour cette option, assurez-vous que ce compte est membre du groupe de sécurité **Utilisateurs du modèle COM distribué** dans le domaine où réside le site de niveau supérieur de la hiérarchie source.  
 
-7.  Pour partager des points de distribution entre des hiérarchies source et de destination, activez la case à cocher **Activer le partage du point de distribution pour ce serveur de site source** . Si vous n’activez pas le partage des points de distribution maintenant, vous pouvez le faire en modifiant les informations d’identification du site source à la fin de la collecte des données.  
+7. Pour partager des points de distribution entre des hiérarchies source et de destination, activez la case à cocher **Activer le partage du point de distribution pour ce serveur de site source** . Si vous n’activez pas le partage des points de distribution maintenant, vous pouvez le faire en modifiant les informations d’identification du site source à la fin de la collecte des données.  
 
-8.  Cliquez sur **OK** pour enregistrer la configuration. La boîte de dialogue **État de la collecte de données** s'ouvre, et la collecte de données démarre automatiquement.  
+8. Cliquez sur **OK** pour enregistrer la configuration. La boîte de dialogue **État de la collecte de données** s'ouvre, et la collecte de données démarre automatiquement.  
 
 9. À la fin de la collecte des données, cliquez sur **Fermer** pour fermer la boîte de dialogue **État de la collecte de données** et terminer la configuration.  
 
@@ -88,9 +88,9 @@ Effectuez la procédure suivante pour configurer des sites sources supplémentai
 
 5.  Dans la boîte de dialogue **Informations d'identification du site source** , pour des comptes d'accès de site source, définissez les comptes qui disposent des autorisations suivantes :  
 
-    -   Compte du site source : Autorisation **Lecture** pour le fournisseur SMS du site de niveau supérieur spécifié dans la hiérarchie source. Les mises à niveau et le partage des points de distribution nécessitent les autorisations **Modifier** et **Supprimer** sur le site dans la hiérarchie source.  
+    -   Compte du site source : Autorisation **Lecture** pour le fournisseur SMS du site de niveau supérieur spécifié dans la hiérarchie source. Les mises à niveau et le partage des points de distribution nécessitent les autorisations **Modifier** et **Supprimer** sur le site dans la hiérarchie source.  
 
-    -   Compte de base de données du site source : Autorisation **Lecture** et **Exécution** sur la base de données SQL Server du site de niveau supérieur spécifié dans la hiérarchie source.  
+    -   Compte de base de données du site source : Autorisation **Lecture** et **Exécution** sur la base de données SQL Server du site de niveau supérieur spécifié dans la hiérarchie source.  
 
     Si vous spécifiez l’utilisation du compte d’ordinateur, Configuration Manager utilise le compte d’ordinateur du site de niveau supérieur de la hiérarchie de destination. Pour cette option, assurez-vous que ce compte est membre du groupe de sécurité **Utilisateurs du modèle COM distribué** dans le domaine où réside le site de niveau supérieur de la hiérarchie source.  
 

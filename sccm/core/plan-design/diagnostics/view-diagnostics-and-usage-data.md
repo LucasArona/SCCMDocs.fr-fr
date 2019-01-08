@@ -10,16 +10,16 @@ ms.assetid: 594eb284-0d93-4c5d-9ae6-f0f71203682a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 15e6f84be22d90e937c33ebd3a24520e6832a751
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: cce48cad13eaa37221e0ee9dca3b1923bb902bc4
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32333458"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416229"
 ---
 # <a name="how-to-view-diagnostics-and-usage-data-for-system-center-configuration-manager"></a>Comment afficher les données d’utilisation et de diagnostic pour System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Vous pouvez afficher les données d’utilisation et de diagnostic de votre hiérarchie System Center Configuration Manager pour vérifier qu’elle ne contient aucune information sensible ni identifiable. Les données de télémétrie sont résumées et stockées dans la table **TEL_TelemetryResults** de la base de données du site et mises en forme de manière à être utilisables et efficaces en programmation. Bien que les options suivantes vous offrent une vue des données exactes envoyées à Microsoft, celles-ci ne sont pas destinées à être utilisées à d’autres fins, comme l’analyse des données.  
 

@@ -10,26 +10,26 @@ ms.assetid: d8d5c345-1e91-410b-b8a9-0170dcfa846e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8a5f801edced78306316a63d125d9b90b37600b2
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 676131965165acda9633e7fbceaee7f25d823efe
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32349947"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420377"
 ---
 # <a name="manage-user-state-in-system-center-configuration-manager"></a>Gérer l’état utilisateur dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Vous pouvez utiliser des séquences de tâches System Center Configuration Manager pour capturer et restaurer les données d’état utilisateur dans les scénarios de déploiement de système d’exploitation où vous souhaitez conserver l’état utilisateur du système d’exploitation actuel. Par exemple :  
 
--   Déploiements dans lesquels vous voulez capturer l’état utilisateur d’un ordinateur pour le restaurer sur un autre ordinateur.  
+- Déploiements dans lesquels vous voulez capturer l’état utilisateur d’un ordinateur pour le restaurer sur un autre ordinateur.  
 
--   Déploiements de mise à jour dans lesquels vous voulez capturer et restaurer l'état utilisateur sur le même ordinateur.  
+- Déploiements de mise à jour dans lesquels vous voulez capturer et restaurer l'état utilisateur sur le même ordinateur.  
 
- Configuration Manager utilise la version 10.0 de l’outil de migration de l’état utilisateur (USMT) pour gérer la migration des données d’état utilisateur d’un ordinateur source vers un ordinateur de destination après l’installation du système d’exploitation. Pour plus d’informations sur les scénarios de migration courants pour la version 10.0 de l’outil USMT, consultez  [Scénarios de migration courants](https://technet.microsoft.com/library/mt299169\(v=vs.85\).aspx).  
+  Configuration Manager utilise la version 10.0 de l’outil de migration de l’état utilisateur (USMT) pour gérer la migration des données d’état utilisateur d’un ordinateur source vers un ordinateur de destination après l’installation du système d’exploitation. Pour plus d’informations sur les scénarios de migration courants pour la version 10.0 de l’outil USMT, consultez  [Scénarios de migration courants](https://technet.microsoft.com/library/mt299169\(v=vs.85\).aspx).  
 
- Aidez-vous des informations des sections suivantes pour capturer et restaurer les données d’état utilisateur.
+  Aidez-vous des informations des sections suivantes pour capturer et restaurer les données d’état utilisateur.
 
 
 ##  <a name="BKMK_StoringUserData"></a> Stocker les données d’état utilisateur  
@@ -81,23 +81,23 @@ Vous pouvez utiliser des séquences de tâches System Center Configuration Manag
 ##  <a name="BKMK_StateMigrationPoint"></a> Configure a state migration point  
  Le point de migration d'état stocke les données d'état utilisateur qui sont capturées sur un seul ordinateur puis restaurées sur un autre ordinateur. Toutefois, quand vous capturez des paramètres utilisateur pour un déploiement de système d’exploitation sur le même ordinateur, comme un déploiement où vous actualisez le système d’exploitation sur l’ordinateur de destination, vous pouvez stocker les données sur le même ordinateur à l’aide de liens physiques ou sur un point de migration d’état. Pour certains déploiements d’ordinateur, quand vous créez le magasin d’état, Configuration Manager crée automatiquement une association entre le magasin d’état et l’ordinateur de destination. Vous pouvez utiliser les méthodes suivantes afin de configurer un point de migration d'état pour stocker les données d'état utilisateur :  
 
--   Utilisez l' **Assistant Création d'un serveur de système de site** pour créer un nouveau serveur de système de site pour le point de migration d'état.  
+- Utilisez l' **Assistant Création d'un serveur de système de site** pour créer un nouveau serveur de système de site pour le point de migration d'état.  
 
--   Utilisez l' **Assistant Ajout des rôles de système de site** pour ajouter un point de migration d'état à un serveur existant.  
+- Utilisez l' **Assistant Ajout des rôles de système de site** pour ajouter un point de migration d'état à un serveur existant.  
 
- Lorsque vous utilisez ces Assistants, vous êtes invité à fournir les informations suivantes pour le point de migration d'état :  
+  Lorsque vous utilisez ces Assistants, vous êtes invité à fournir les informations suivantes pour le point de migration d'état :  
 
--   Les dossiers pour stocker les données d'état utilisateur.  
+- Les dossiers pour stocker les données d'état utilisateur.  
 
--   Le nombre maximal de clients pouvant stocker des données sur le point de migration d'état.  
+- Le nombre maximal de clients pouvant stocker des données sur le point de migration d'état.  
 
--   L'espace libre minimum pour le point de migration d'état pour stocker les données d'état utilisateur.  
+- L'espace libre minimum pour le point de migration d'état pour stocker les données d'état utilisateur.  
 
--   La stratégie de suppression du rôle. Vous pouvez spécifier que les données d'état utilisateur sont supprimées immédiatement après leur restauration sur un ordinateur, ou après un nombre de jours spécifique après la restauration des données utilisateur sur un ordinateur.  
+- La stratégie de suppression du rôle. Vous pouvez spécifier que les données d'état utilisateur sont supprimées immédiatement après leur restauration sur un ordinateur, ou après un nombre de jours spécifique après la restauration des données utilisateur sur un ordinateur.  
 
--   Si le point de migration d’état répond uniquement aux demandes de restauration des données d’état utilisateur. Lorsque vous activez cette option, vous ne pouvez pas utiliser le point de migration d'état pour stocker les données d'état utilisateur.  
+- Si le point de migration d’état répond uniquement aux demandes de restauration des données d’état utilisateur. Lorsque vous activez cette option, vous ne pouvez pas utiliser le point de migration d'état pour stocker les données d'état utilisateur.  
 
- Pour plus d’informations sur le point de migration d’état et les étapes nécessaires pour le configurer, consultez [Point de migration d’état](prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints).  
+  Pour plus d’informations sur le point de migration d’état et les étapes nécessaires pour le configurer, consultez [Point de migration d’état](prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints).  
 
 ##  <a name="BKMK_ComputerAssociation"></a> Create a computer association  
  Créez une association d’ordinateurs pour définir une relation entre un ordinateur source et un ordinateur de destination quand vous installez un système d’exploitation sur du nouveau matériel et que vous souhaitez capturer et restaurer les paramètres de données utilisateur. L’ordinateur source est un ordinateur existant qui est géré par Configuration Manager. Lorsque vous déployez le nouveau système d'exploitation sur l'ordinateur de destination, l'ordinateur source contient l'état utilisateur qui est migré vers l'ordinateur de destination.  
@@ -117,11 +117,11 @@ Vous pouvez utiliser des séquences de tâches System Center Configuration Manag
 
 5.  Dans l'onglet **Comptes d'utilisateur** , spécifiez les comptes d'utilisateur à migrer vers l'ordinateur de destination. Spécifiez l'un des paramètres suivants :  
 
-    -   **Capturer et restaurer tous les comptes d’utilisateur**: ce paramètre capture et restaure tous les comptes d’utilisateur. Ce paramètre permet de créer plusieurs associations sur le même ordinateur source.  
+    -   **Capturer et restaurer tous les comptes d’utilisateur :** ce paramètre capture et restaure tous les comptes d'utilisateur. Ce paramètre permet de créer plusieurs associations sur le même ordinateur source.  
 
-    -   **Capturer tous les comptes d’utilisateur et restaurer les comptes spécifiés**: ce paramètre capture tous les comptes d’utilisateur sur l’ordinateur source et restaure seulement les comptes que vous spécifiez sur l’ordinateur de destination. En outre, vous pouvez utiliser ce paramètre lorsque vous souhaitez créer plusieurs associations sur le même ordinateur source.  
+    -   **Capturer tous les comptes d’utilisateur et restaurer les comptes spécifiés :** ce paramètre capture tous les comptes d'utilisateur sur l'ordinateur source et restaure uniquement les comptes que vous spécifiez sur l'ordinateur de destination. En outre, vous pouvez utiliser ce paramètre lorsque vous souhaitez créer plusieurs associations sur le même ordinateur source.  
 
-    -   **Capturer et restaurer les comptes d’utilisateur spécifiés**: ce paramètre capture et restaure seulement les comptes que vous spécifiez. Vous ne pouvez pas créer plusieurs associations sur le même ordinateur source lorsque vous sélectionnez ce paramètre.  
+    -   **Capturer et restaurer les comptes d’utilisateur spécifiés :** ce paramètre capture et restaure uniquement les comptes que vous spécifiez. Vous ne pouvez pas créer plusieurs associations sur le même ordinateur source lorsque vous sélectionnez ce paramètre.  
 
 ##  <a name="BKMK_MigrationFails"></a> Restaurer des données d’état utilisateur en cas d’échec d’un déploiement de système d’exploitation  
  Si le déploiement de système d’exploitation échoue, utilisez la fonctionnalité LoadState de l’outil USMT 10.0 pour récupérer les données d’état utilisateur capturées pendant le processus de déploiement. Ces données incluent notamment les données stockées sur un point de migration d'état ou les données enregistrées localement sur l'ordinateur de destination. Pour plus d'informations sur cette fonctionnalité d'USMT, voir [Syntaxe LoadState](https://technet.microsoft.com/library/mt299188\(v=vs.85\).aspx).  

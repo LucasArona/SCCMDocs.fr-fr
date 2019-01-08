@@ -10,18 +10,18 @@ ms.assetid: eb20eb90-bcc0-41de-bfea-638ea470c0dd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 658d005234469d8729b515e9deeb02e20e94c748
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: b29044858bb9a9d57db1c2229c826630d0905860
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340894"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416518"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1610-of-system-center-configuration-manager"></a>Niveaux de collecte des données de diagnostic et d’utilisation pour la version 1610 de System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager version 1610 collecte trois niveaux de données d’utilisation et de diagnostic : **De base**, **Étendu** et **Complet**. Par défaut, cette fonctionnalité est définie sur le niveau Étendu. Les sections suivantes fournissent des détails supplémentaires sur les données collectées par chaque niveau.
+System Center Configuration Manager version 1610 collecte trois niveaux de données d’utilisation et de diagnostic : **De base**, **Étendu** et **Complet**. Par défaut, cette fonctionnalité est définie sur le niveau Étendu. Les sections suivantes fournissent des détails supplémentaires sur les données collectées par chaque niveau.
 
 Les modifications par rapport aux versions précédentes sont indiquées par ***[Nouveau]***, ***[Mis à jour]***, ***[Supprimé]*** ou ***[Déplacé]***.
 
@@ -40,18 +40,18 @@ Depuis la version 1610, vous pouvez changer le niveau de collecte des données 
  Pour System Center Configuration Manager version 1610, ce niveau inclut les éléments suivants :
 
 
--   Informations d’installation :
-      - Build, type d’installation, modules linguistiques, fonctionnalités que vous avez activées  
+- Informations d’installation :
+    - Build, type d’installation, modules linguistiques, fonctionnalités que vous avez activées  
 
-      - État et erreurs du déploiement du package de mise à jour, progression du téléchargement, et erreurs liées aux prérequis    
+    - État et erreurs du déploiement du package de mise à jour, progression du téléchargement, et erreurs liées aux prérequis    
 
-      - Version du script après mise à niveau
+    - Version du script après mise à niveau
 
-      - Utilisation de l’anneau rapide de mise à jour
+    - Utilisation de l’anneau rapide de mise à jour
 
-    - ***[Nouveau]*** Utilisation en préversion, type de support de configuration, type de branche
+  - ***[Nouveau]*** Utilisation en préversion, type de support de configuration, type de branche
 
-    - ***[Nouveau]*** Date d’expiration de Software Assurance
+  - ***[Nouveau]*** Date d’expiration de Software Assurance
 
 - Métriques de performances de base de données (informations sur le traitement de la réplication, procédures stockées SQL Server les plus utilisées par processeur et utilisation des disques)
 
@@ -400,7 +400,7 @@ Pour System Center Configuration Manager version 1610, ce niveau inclut les él
 -   Nombre minimal/maximal/moyen d’heures depuis la dernière analyse des mises à jour logicielles
 
 -    Produits des mises à jour logicielles synchronisés par le point de mise à jour logicielle
--    Paramètres de conformité : détails de configuration des modèles SCEP, VPN, Wi-Fi et stratégie de conformité
+-    Paramètres de conformité : détails de configuration des modèles SCEP, VPN, Wi-Fi et de stratégie de conformité
 
 -    Type de stratégies d’accès conditionnel EAS (bloquer ou mettre en quarantaine) pour les appareils gérés par Intune
 

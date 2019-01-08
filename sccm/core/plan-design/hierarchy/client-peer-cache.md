@@ -10,16 +10,16 @@ ms.assetid: 86cd5382-8b41-45db-a4f0-16265ae22657
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e5099be5ff6b34bcbc232e78056f1937a9508c4f
-ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
+ms.openlocfilehash: 0650e1aa16f0c1005748c85423c3367a727b1b9b
+ms.sourcegitcommit: 4659946369d5352234f27c7682bce65a0e86c697
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411423"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53303888"
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>Cache de pair pour les clients Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 <!--1101436--> Utilisez le cache de pair pour gérer le déploiement de contenu sur les clients à des emplacements distants. Le cache d’homologue est une solution Configuration Manager intégrée qui permet aux clients de partager du contenu avec d’autres clients directement à partir de leur cache local.   
 
@@ -32,9 +32,9 @@ ms.locfileid: "50411423"
 
 Définitions :  
 
-- **Client de cache de pair** : tout client Configuration Manager qui télécharge du contenu à partir d’un pair  
+- **Client de cache de pair** : Tout client Configuration Manager qui télécharge du contenu à partir d’un pair  
 
-- **Source de cache de pair** : un client Configuration Manager que vous activez pour le cache de pair et qui a du contenu à partager avec d’autres clients  
+- **Source de cache de pair** : Un client Configuration Manager que vous activez pour le cache de pair et qui a du contenu à partager avec d’autres clients  
 
 Utilisez des paramètres clients pour permettre à des clients d’être des sources de cache de pair. Vous n’avez pas besoin d’activer des clients de cache de pair. Quand vous autorisez des clients à être des sources de cache de pair, le point de gestion les inclut dans la liste des sources d’emplacement de contenu.<!--510397--> Pour plus d’informations sur ce processus, consultez [Opérations](#operations).  
 
@@ -64,7 +64,7 @@ Pour activer le cache de pair, déployez les [paramètres clients](#bkmk_setting
 > [!NOTE]  
 > Si le client a recours à un groupe de limites voisin pour le contenu, le point de gestion n’ajoute pas les emplacements sources de cache de pair du groupe de limites voisin à la liste des emplacements de sources de contenu potentielles.  
 
-Choisissez seulement les clients les plus appropriés comme sources de cache de pair. Évaluez l’adéquation des clients en fonction d’attributs comme le type de châssis, l’espace disque et la connectivité réseau. Pour plus d’informations vous permettant de sélectionner les meilleurs clients à utiliser pour le cache de pair, consultez [ce blog d’un consultant Microsoft](https://blogs.technet.microsoft.com/setprice/2016/06/29/pe-peer-cache-custom-reporting-examples/).
+Choisissez seulement les clients les plus appropriés comme sources de cache de pair. Évaluez l’adéquation des clients en fonction d’attributs comme le type de châssis, l’espace disque et la connectivité réseau. Pour plus d’informations vous permettant de sélectionner les meilleurs clients à utiliser pour le cache de pair, consultez [ce blog d’un consultant Microsoft](https://blogs.technet.microsoft.com/askpfeplat/2018/11/21/configuration-manager-peer-cache-custom-reporting-examples/).
 
 
 ### <a name="limited-access-to-a-peer-cache-source"></a>Accès limité à une source de cache de pair  
@@ -128,7 +128,7 @@ Sur les clients autorisés à utiliser le cache de pair et qui utilisent le pare
 
 ### <a name="example-scenario"></a>Exemple de scénario
 
-Contoso a un seul site principal avec deux groupes de limites : un siège social et une filiale. Il existe une relation de secours de 30 minutes entre les groupes de limites. Le point de gestion et le point de distribution du site se trouvent uniquement dans la limite du siège social. L’emplacement de la filiale n’a aucun point de distribution local. Deux des quatre clients au niveau de la filiale sont configurés comme sources de cache d’homologue. 
+Contoso a un seul site principal avec deux groupes de limites : Un siège social et une filiale. Il existe une relation de secours de 30 minutes entre les groupes de limites. Le point de gestion et le point de distribution du site se trouvent uniquement dans la limite du siège social. L’emplacement de la filiale n’a aucun point de distribution local. Deux des quatre clients au niveau de la filiale sont configurés comme sources de cache d’homologue. 
 
 ![Schéma de la configuration réseau comme décrite pour l’exemple de scénario](media/1357346-peer-cache-source-parts.png)
 
@@ -197,20 +197,20 @@ Pour mieux comprendre l’utilisation du cache de pair, consultez le tableau de 
 
 Utilisez également les rapports pour voir l’utilisation des caches de pair. Dans la console, accédez à l’espace de travail **Surveillance**, développez **Rapports**, puis sélectionnez **Rapports**. Tous les rapports suivants sont du type **Contenu de distribution de logiciels** :  
 
-1.  **Rejet du contenu par une source de cache de pair** : nombre de fois où les sources de cache de pair d’un groupe de limites rejettent une demande de contenu.  
+1.  **Rejet du contenu de la source de cache d’homologue** : Fréquence à laquelle les sources de cache de pair d’un groupe de limites rejettent une demande de contenu.  
 
     > [!Note]  
-    > **Problème connu**<!--486652--> : quand vous descendez dans la hiérarchie pour accéder à des résultats comme *MaxCPULoad* ou *MaxDiskIO*, il se peut que vous receviez une erreur qui indique que le rapport ou les détails sont introuvables. Pour contourner ce problème, utilisez les deux autres rapports qui montrent directement les résultats.  
+    > **Problème connu**<!--486652--> : Quand vous explorez les détails des résultats comme *MaxCPULoad* ou *MaxDiskIO*, il se peut que vous receviez une erreur qui indique que le rapport ou les détails sont introuvables. Pour contourner ce problème, utilisez les deux autres rapports qui montrent directement les résultats.  
 
-2. **Rejet du contenu d’une source de cache de pair par condition** : montre les détails du rejet pour un groupe de limites ou un type de rejet spécifié. 
-
-    > [!Note]  
-    > **Problème connu**<!--486652--> : vous ne pouvez pas choisir parmi les paramètres disponibles ; à la place, vous devez les entrer manuellement. Entrez les valeurs pour *Nom de groupe de limites* et *Type de rejet* telles qu’elles apparaissent dans le rapport **Rejet du contenu par une source de cache de pair**. Par exemple, pour *Type de rejet*, vous pouvez entrer *MaxCPULoad* ou *MaxDiskIO*.  
-
-3. **Détails du rejet du contenu d’une source de cache de pair** : montre le contenu que le client demandait lors du rejet.  
+2. **Rejet conditionnel du contenu de la source de cache d’homologue** : Affichage des détails du rejet pour un groupe de limites ou un type de rejet donné. 
 
     > [!Note]  
-    > **Problème connu**<!--486652--> : vous ne pouvez pas choisir parmi les paramètres disponibles ; à la place, vous devez les entrer manuellement. Entrez la valeur pour *Type de rejet* telle qu’elle apparaît dans le rapport **Rejet du contenu par une source de cache d’homologue**. Entrez ensuite *l’ID de ressource* pour la source de contenu sur laquelle vous voulez plus d’informations. 
+    > **Problème connu**<!--486652--> : Vous ne pouvez pas choisir parmi les paramètres disponibles ; à la place, vous devez les entrer manuellement. Entrez les valeurs pour *Nom de groupe de limites* et *Type de rejet* telles qu’elles apparaissent dans le rapport **Rejet du contenu par une source de cache de pair**. Par exemple, pour *Type de rejet*, vous pouvez entrer *MaxCPULoad* ou *MaxDiskIO*.  
+
+3. **Détails du rejet du contenu de la source de cache d’homologue** : Affichage du contenu demandé par le client au moment du rejet.  
+
+    > [!Note]  
+    > **Problème connu**<!--486652--> : Vous ne pouvez pas choisir parmi les paramètres disponibles ; à la place, vous devez les entrer manuellement. Entrez la valeur pour *Type de rejet* telle qu’elle apparaît dans le rapport **Rejet du contenu par une source de cache d’homologue**. Entrez ensuite *l’ID de ressource* pour la source de contenu sur laquelle vous voulez plus d’informations. 
     > 
     > Pour trouver l’ID de ressource de la source de contenu :  
     > 

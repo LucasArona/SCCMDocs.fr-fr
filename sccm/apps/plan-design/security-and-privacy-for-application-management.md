@@ -10,16 +10,16 @@ ms.assetid: 4d26deed-3b16-4116-b640-f618f2c20f5a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 65e4d68f05087d24bc83e8e4a3dd67489fdbaed3
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.openlocfilehash: be4f60bbc6114abc1c4537cc83ee8c2dd0aeef42
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43893581"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421924"
 ---
 # <a name="security-and-privacy-for-application-management-in-configuration-manager"></a>Sécurité et confidentialité pour la gestion des applications dans Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 
 ##  <a name="security-guidance-for-application-management"></a>Conseils en matière de sécurité pour la gestion des applications  
@@ -177,7 +177,7 @@ Si vous configurez un type de déploiement d’application web, utilisez le prot
 > [!Important]  
 > À compter de Configuration Manager version 1802, le client n’installe pas automatiquement Silverlight.
 > 
-> À compter de la version 1806, **l’expérience utilisateur Silverlight** pour le point du site Web du catalogue des applications n’est plus prise en charge. Les utilisateurs doivent utiliser le nouveau Centre logiciel. Pour plus d'informations, consultez [Configurer le Centre logiciel](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex).  
+> À compter de la version 1806, **l’expérience utilisateur Silverlight** pour le point du site Web du catalogue des applications n’est plus prise en charge. Les utilisateurs doivent utiliser le nouveau Centre logiciel. Pour plus d’informations, consultez [Configurer le Centre logiciel](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex).  
 
  Les clients Configuration Manager version 1710 et antérieures requièrent Microsoft Silverlight 5, qui doit s’exécuter en mode de confiance élevée pour permettre aux utilisateurs d’installer des logiciels à partir du catalogue d’applications. Par défaut, les applications Silverlight s'exécutent en mode de confiance partielle pour empêcher les applications d'accéder aux données utilisateur. Si ce n’est pas déjà fait, Configuration Manager installe automatiquement Microsoft Silverlight 5 sur les clients. Par défaut, Configuration Manager définit le paramètre du client **Autoriser les applications Silverlight à s’exécuter en mode de confiance élevée** de l’Agent ordinateur sur **Oui**. Ce paramètre permet aux applications Silverlight signées et approuvées de demander le mode de confiance élevée.  
 
@@ -213,11 +213,11 @@ Si vous configurez un type de déploiement d’application web, utilisez le prot
     > [!Note]  
     > À compter de Configuration Manager 1802, la fonctionnalité principale du catalogue d’applications est désormais incluse dans le Centre logiciel. Pour plus d'informations, consultez [Configurer le Centre logiciel](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex).  
 
--  Le **Centre logiciel** est installé automatiquement sur un appareil pendant l’installation du client Configuration Manager. Les utilisateurs modifient les paramètres, recherchent et installent des applications à partir du Centre logiciel.  
+- Le **Centre logiciel** est installé automatiquement sur un appareil pendant l’installation du client Configuration Manager. Les utilisateurs modifient les paramètres, recherchent et installent des applications à partir du Centre logiciel.  
 
- Consultez les sections suivantes pour obtenir des informations de confidentialité sur [l’affinité entre utilisateur et appareil](#bkmk_privacy-uda), [le Centre logiciel et le catalogue d’applications](#bkmk_privacy-userex).  
+  Consultez les sections suivantes pour obtenir des informations de confidentialité sur [l’affinité entre utilisateur et appareil](#bkmk_privacy-uda), [le Centre logiciel et le catalogue d’applications](#bkmk_privacy-userex).  
 
- Avant de configurer la gestion des applications, pensez à vos besoins en matière de confidentialité.  
+  Avant de configurer la gestion des applications, pensez à vos besoins en matière de confidentialité.  
 
 
 ### <a name="bkmk_privacy-uda"></a> Affinité entre utilisateur et appareil  

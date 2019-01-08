@@ -10,121 +10,128 @@ ms.assetid: bc2282d5-0571-465b-9528-a555855eaacd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 560fa3480f00811f325eb22dda439facac36e6e4
-ms.sourcegitcommit: 6e0e5b4b7779ce03e2b56b3b5f68f4ace1acedd8
+ms.openlocfilehash: 5bf79fa360faecc6d103a2fd209c7f7e5eb9597c
+ms.sourcegitcommit: 81e3666c41eb976cc7651854042dafe219e2e467
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467672"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53747090"
 ---
-# <a name="about-the-service-connection-point-in-system-center-configuration-manager"></a>À propos du point de connexion de service dans System Center Configuration Manager
+# <a name="about-the-service-connection-point-in-configuration-manager"></a>À propos du point de connexion de service dans Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
-Le point de connexion de service System Center Configuration Manager est un rôle système de site qui remplit plusieurs fonctions importantes pour la hiérarchie. Avant de configurer le point de connexion de service, vous devez comprendre et planifier sa plage d’utilisation.  La planification de l’utilisation peut affecter la manière dont vous configurez ce rôle de système de site :  
+Le point de connexion de service est un rôle de système de site qui remplit plusieurs fonctions importantes pour la hiérarchie. Avant de configurer le point de connexion de service, vous devez comprendre et planifier sa plage d’utilisation. La planification de l’utilisation peut affecter la manière dont vous configurez ce rôle de système de site :  
 
--   **Gérer les appareils mobiles avec Microsoft Intune** : ce rôle remplace le connecteur Windows Intune utilisé par les versions précédentes de Configuration Manager et peut être configuré avec les détails de votre abonnement Intune. Consultez [Gestion des appareils mobiles (MDM) hybride avec System Center Configuration Manager et Microsoft Intune](../../../../mdm/understand/hybrid-mobile-device-management.md).  
+- **Gérer les appareils mobiles avec Microsoft Intune** : Ce rôle remplace le connecteur Windows Intune utilisé par les versions précédentes de Configuration Manager et peut être configuré avec les détails de votre abonnement Intune. Pour plus d’informations, consultez [Gestion hybride des appareils mobiles (MDM)](/sccm/mdm/understand/hybrid-mobile-device-management).  
 
--   **Gérer les appareils mobiles avec la gestion MDM locale** : Ce rôle assure la prise en charge des appareils locaux que vous gérez et qui ne se connectent pas à Internet. Consultez [Gérer des appareils mobiles avec une infrastructure locale dans System Center Configuration Manager](../../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md).  
+- **Gérer des appareils mobiles avec une gestion des données de référence locale** : Ce rôle assure la prise en charge des appareils locaux que vous gérez et qui ne se connectent pas à Internet. Pour plus d'informations, consultez [Gérer des appareils mobiles avec une infrastructure locale](/sccm/mdm/understand/manage-mobile-devices-with-on-premises-infrastructure).  
 
--   **Charger les données d’utilisation à partir de votre infrastructure Configuration Manager** : vous pouvez contrôler le niveau ou la quantité de détails que vous chargez. Les données chargées permettent ce qui suit :  
+- **Charger les données d’utilisation à partir de votre infrastructure Configuration Manager** : Vous pouvez contrôler le niveau ou la quantité de détails que vous chargez. Les données chargées permettent ce qui suit :  
 
-    -   identifier et résoudre les problèmes de manière proactive ;  
+    - identifier et résoudre les problèmes de manière proactive ;  
 
-    -   améliorer nos produits et services ;  
+    - améliorer nos produits et services ;  
 
-    -   identifier les mises à jour pour Configuration Manager applicables à la version de Configuration Manager que vous utilisez.  
+    - identifier les mises à jour pour Configuration Manager applicables à la version de Configuration Manager que vous utilisez.  
 
-  Pour plus d’informations sur les données collectées par chaque niveau et sur la façon de changer le niveau de regroupement après l’installation du rôle, consultez [Données d’utilisation et de diagnostic](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data). Ensuite, suivez le lien correspondant à la version de Configuration Manager que vous utilisez.  
+    Pour plus d’informations sur les données collectées par chaque niveau et sur la façon de changer le niveau de regroupement après l’installation du rôle, consultez la page [Données d’utilisation et de diagnostic](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data). Ensuite, suivez le lien correspondant à la version de Configuration Manager que vous utilisez.  
 
-  Pour plus d’informations, consultez [Paramètres et niveaux de données d’utilisation](../../../../core/servers/deploy/install/setup-reference.md#bkmk_usage).  
+    Pour plus d’informations, consultez [Paramètres et niveaux de données d’utilisation](/sccm/core/servers/deploy/install/setup-reference#bkmk_usage).  
 
--   **Télécharger les mises à jour applicables à votre infrastructure Configuration Manager** : seules les mises à jour appropriées pour votre infrastructure sont disponibles, en fonction des données d’utilisation que vous chargez.  
+- **Télécharger les mises à jour applicables à votre infrastructure Configuration Manager** : Seules les mises à jour appropriées pour votre infrastructure sont disponibles, en fonction des données d’utilisation que vous chargez.  
 
-- **Chaque hiérarchie prend en charge une seule instance de ce rôle :**  
+- **Chaque hiérarchie prend en charge une seule instance de ce rôle** :  
 
- -   Ce rôle de système de site ne peut être installé que sur le site de niveau supérieur de votre hiérarchie (site d’administration centrale ou site principal autonome).  
+    - Ce rôle de système de site ne peut être installé que sur le site de niveau supérieur de votre hiérarchie (site d’administration centrale ou site principal autonome).  
 
-  -   Si vous étendez un site principal autonome à une hiérarchie plus importante, vous devez désinstaller ce rôle du site principal pour pouvoir l’installer ensuite sur le site d’administration centrale.  
+    - Si vous étendez un site principal autonome à une hiérarchie plus importante, vous devez désinstaller ce rôle du site principal pour pouvoir l’installer ensuite sur le site d’administration centrale.  
 
 
 ##  <a name="bkmk_modes"></a> Modes opératoires  
- Le point de connexion de service prend en charge deux modes de fonctionnement :  
+Le point de connexion de service prend en charge deux modes de fonctionnement :  
 
--   En **mode en ligne**, le point de connexion de service recherche automatiquement les mises à jour toutes les 24 heures. Il télécharge dans la console Configuration Manager les nouvelles mises à jour disponibles pour la version actuelle de vos infrastructure et produits.  
+- En **mode en ligne**, le point de connexion de service recherche automatiquement les mises à jour toutes les 24 heures. Il télécharge dans la console Configuration Manager les nouvelles mises à jour disponibles pour la version actuelle de vos infrastructure et produits.  
 
--   En **mode hors connexion**, le point de connexion de service ne se connecte pas au service cloud Microsoft. [Utilisez l’outil de connexion de service pour System Center Configuration Manager](../../../../core/servers/manage/use-the-service-connection-tool.md) pour importer manuellement les mises à jour disponibles.  
+- En **mode hors connexion**, le point de connexion de service ne se connecte pas au service cloud Microsoft. Pour importer manuellement les mises à jour disponibles, utilisez [l’outil de connexion de service](/sccm/core/servers/manage/use-the-service-connection-tool).  
 
 Quand vous basculez entre le mode en ligne ou hors connexion après avoir installé le point de connexion de service, vous devez redémarrer le thread SMS_DMP_DOWNLOADER du service SMS_Executive Configuration Manager pour appliquer cette modification. Vous pouvez utiliser Configuration Manager Service Manager pour redémarrer uniquement le thread SMS_DMP_DOWNLOADER du service SMS_Executive. Vous pouvez également redémarrer le service SMS_Executive pour Configuration Manager, ce qui redémarre la plupart des composants de site. Sinon, vous pouvez attendre une tâche planifiée, comme une sauvegarde de site, qui arrête puis redémarre ensuite le service SMS_Executive pour vous.  
 
 Pour utiliser le Gestionnaire de service de Configuration Manager, dans la console, accédez à **Surveillance** > **État du système** > **État du composant**, choisissez **Démarrer**, puis **Gestionnaire de service de Configuration Manager**. Dans le Gestionnaire de service :  
 
--   Dans le volet de navigation, développez le site, développez **Composants**, puis choisissez le composant à redémarrer.  
+- Dans le volet de navigation, développez le site, développez **Composants**, puis choisissez le composant à redémarrer.  
 
--   Dans le volet d’informations, cliquez avec le bouton droit sur le composant, puis choisissez **Requête**.  
+- Dans le volet d’informations, cliquez avec le bouton droit sur le composant, puis choisissez **Requête**.  
 
--   Une fois l’état du composant confirmé, recliquez avec le bouton droit sur le composant, puis choisissez **Arrêter**.  
+- Une fois l’état du composant confirmé, recliquez avec le bouton droit sur le composant, puis choisissez **Arrêter**.  
 
--   **Réinterrogez** le composant pour confirmer qu’il est arrêté. Recliquez avec le bouton droit sur le composant, puis choisissez **Démarrer**.  
+- **Réinterrogez** le composant pour confirmer qu’il est arrêté. Recliquez avec le bouton droit sur le composant, puis choisissez **Démarrer**.  
 
 > [!IMPORTANT]  
->  Le processus qui ajoute un abonnement Microsoft Intune au point de connexion de service définit automatiquement le rôle de système de site en ligne. Le point de connexion de service ne prend pas en charge le mode hors connexion en cas de configuration avec un abonnement Intune.  
+> Le processus qui ajoute un abonnement Microsoft Intune au point de connexion de service définit automatiquement le rôle de système de site en ligne. Le point de connexion de service ne prend pas en charge le mode hors connexion en cas de configuration avec un abonnement Intune.  
 
 **Quand le rôle s’installe sur un ordinateur distant du serveur de site :**  
 
--   Le compte d’ordinateur du serveur de site doit être un administrateur local sur l’ordinateur qui héberge une connexion de service distant.
+- Le compte d’ordinateur du serveur de site doit être un administrateur local sur l’ordinateur qui héberge une connexion de service distant.
 
--   Vous devez configurer le serveur de système de site qui héberge le rôle avec un compte d’installation du système de site.  
+- Vous devez configurer le serveur de système de site qui héberge le rôle avec un compte d’installation du système de site.  
 
--   Le gestionnaire de distribution sur le serveur de site le compte d’installation du système de site pour transférer les mises à jour à partir du point de connexion de service.
+- Le gestionnaire de distribution sur le serveur de site utilise le compte d’installation du système de site pour transférer les mises à jour à partir du point de connexion de service.
 
 ##  <a name="bkmk_urls"></a> Conditions requises pour l’accès Internet  
-Pour activer le fonctionnement, l’ordinateur qui héberge le point de connexion de service et les éventuels pare-feu entre cet ordinateur et Internet doivent transmettre les communications via le port sortant **TCP 443** pour HTTPS et le port sortant **TCP 80** pour HTTP aux emplacements Internet suivants. Le point de connexion de service prend également en charge l’utilisation d’un proxy web (avec ou sans authentification) pour utiliser ces emplacements.  Si vous devez configurer un compte de proxy web, consultez [Prise en charge du serveur proxy dans System Center Configuration Manager](/sccm/core/plan-design/network/proxy-server-support).
+Pour activer le fonctionnement, l’ordinateur qui héberge le point de connexion de service et les éventuels pare-feu entre cet ordinateur et Internet doivent transmettre les communications via le port sortant **TCP 443** pour HTTPS et le port sortant **TCP 80** pour HTTP aux emplacements Internet suivants. Le point de connexion de service prend également en charge l’utilisation d’un proxy web (avec ou sans authentification) pour utiliser ces emplacements. Si vous devez configurer un compte de proxy web, consultez la page [Prise en charge du serveur proxy](/sccm/core/plan-design/network/proxy-server-support).
 
-> [!TIP]
-> Le point de connexion de service utilise le service Microsoft Intune lorsqu’il se connecte à http://go.Microsoft.com ou http://manage.Microsoft.com. Il existe un problème connu, avec lequel le connecteur Intune rencontre des problèmes de connectivité si le certificat racine Baltimore CyberTrust n’est pas installé, a expiré ou est endommagé sur le système de site Configuration Manager où est installé le rôle Point de connexion de service. Pour plus d’informations, consultez [Le point de connexion de service Configuration Manager ne télécharge pas les mises à jour](https://support.microsoft.com/help/3187516).
+> [!TIP]  
+> Le point de connexion de service utilise le service Microsoft Intune lorsqu’il se connecte à go.microsoft.com ou manage.Microsoft.com. Un problème est connu sur le connecteur Intune qui rencontre une défaillance de connectivité si le certificat racine Baltimore CyberTrust n’est pas installé, a expiré ou est endommagé sur le point de connexion de service. Pour plus d’informations, consultez la page [Le point de connexion de service ne télécharge pas les mises à jour](https://support.microsoft.com/help/3187516).  
 
-**Mises à jour et maintenance**  
+#### <a name="updates-and-servicing"></a>Mises à jour et maintenance
 
--   *.akamaiedge.net  
+- `*.akamaiedge.net`  
 
--   *.akamaitechnologies.com 
+- `*.akamaitechnologies.com`  
 
--   *.manage.microsoft.com
+- `*.manage.microsoft.com`  
 
--   go.microsoft.com
+- `go.microsoft.com`  
 
--   blob.core.windows.net  
+- `blob.core.windows.net`  
 
--   download.microsoft.com  
+- `download.microsoft.com`  
 
--   download.windowsupdate.com
+- `download.windowsupdate.com`  
 
--   sccmconnected-a01.cloudapp.net  
+- `sccmconnected-a01.cloudapp.net`  
 
-- configmgrbits.azureedge.net
+- `configmgrbits.azureedge.net`  
 
-**Microsoft Intune**  
+#### <a name="microsoft-intune"></a>Microsoft Intune
 
--   *manage.microsoft.com  
--   https://bspmts.mp.microsoft.com/V
--   https://login.microsoftonline.com/{TenantID}
+- `*manage.microsoft.com`  
 
+- `https://bspmts.mp.microsoft.com/V`  
 
-**Maintenance de Windows 10**  
+- `https://login.microsoftonline.com/{TenantID}`  
 
--   download.microsoft.com  
+#### <a name="windows-10-servicing"></a>Maintenance de Windows 10
 
--   https://go.microsoft.com/fwlink/?LinkID=619849  
+- `download.microsoft.com`  
+
+- `https://go.microsoft.com/fwlink/?LinkID=619849`  
+
+#### <a name="azure-services"></a>Services Azure
+
+- `management.azure.com`  
 
 ## <a name="install-the-service-connection-point"></a>Installer le point de connexion de service
 Quand vous exécutez le **programme d’installation** pour installer le site de plus haut niveau d’une hiérarchie, vous avez la possibilité d’installer le point de connexion de service.
 
 Après l’exécution du programme d’installation ou si vous réinstallez le rôle de système de site, utilisez l’Assistant **Ajout des rôles de système de site** ou l’Assistant **Créer un serveur de système de Site** pour installer le système de site sur un serveur au plus haut niveau de votre hiérarchie (c’est-à-dire le site d’administration centrale ou un site principal autonome). Les deux Assistants se trouvent sous l’onglet **Accueil** dans la console, dans **Administration** > **Configuration du site** > **Serveurs et rôles de système de Site**.
 
+
+
 ## <a name="log-files-used-by-the-service-connection-point"></a>Fichiers journaux utilisés par le point de connexion de service
 Pour consulter des informations sur les chargements vers Microsoft, affichez **Dmpuploader.log** sur l’ordinateur qui exécute le point de connexion de service.  Pour voir les téléchargements, y compris la progression du téléchargement des mises à jour, affichez **Dmpdownloader.log**. Pour obtenir la liste complète des journaux liés au point de connexion de service, consultez [Point de connexion de service](/sccm/core/plan-design/hierarchy/log-files#BKMK_WITLog) dans l’article sur les fichiers journaux de Configuration Manager.
 
 Vous pouvez également utiliser les organigrammes suivants pour comprendre le flux des processus et les entrées du journal principales pour le téléchargement et la réplication des mises à jour vers d’autres sites :
- - [Organigramme - Téléchargement des mises à jour](/sccm/core/servers/manage/download-updates-flowchart)
- - [Organigramme - Réplication de mise à jour](/sccm/core/servers/manage/update-replication-flowchart)
+- [Organigramme - Téléchargement des mises à jour](/sccm/core/servers/manage/download-updates-flowchart)
+- [Organigramme - Réplication de mise à jour](/sccm/core/servers/manage/update-replication-flowchart)

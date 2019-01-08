@@ -10,16 +10,16 @@ ms.assetid: 9089e1b5-cba4-42bd-a2de-126ef882a3af
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9f07a321ac6f10f5287a88d0df7064920f538ae5
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 3de7b19eb7d997ef72cc7a413eb143172c4ce40e
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32341693"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424355"
 ---
 # <a name="prepare-to-install-system-center-configuration-manager-sites"></a>Préparer l’installation de sites System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Pour préparer dans les meilleures conditions le déploiement d’un ou plusieurs sites System Center Configuration Manager, prenez connaissance des informations contenues dans cet article. Ces étapes peuvent vous faire gagner du temps durant l’installation de plusieurs sites et vous éviter des faux pas qui pourraient vous contraindre à réinstaller un ou plusieurs sites.
 
@@ -35,9 +35,9 @@ Avant d’installer un site, veillez à élaborer le plan de votre hiérarchie e
 ### <a name="first-site"></a>Premier site
 Le premier site que vous installez dans une hiérarchie doit être un site principal autonome ou un site d’administration centrale.
 
-**Support d’installation** : pour installer un site d’administration centrale ou un site principal autonome comme premier site d’une nouvelle hiérarchie, vous devez [utiliser une version de base de référence](../../../../core/servers/manage/updates.md#bkmk_Baselines) de Configuration Manager. N’installez pas le premier site d’une nouvelle hiérarchie à l’aide de fichiers sources mis à jour extraits du [dossier CD.Latest](../../../../core/servers/manage/the-cd.latest-folder.md) d’un site.
+**Support d’installation** : pour installer un site d’administration centrale ou un site principal autonome comme premier site d’une nouvelle hiérarchie, vous devez [utiliser une version de référence](../../../../core/servers/manage/updates.md#bkmk_Baselines) de Configuration Manager. N’installez pas le premier site d’une nouvelle hiérarchie à l’aide de fichiers sources mis à jour extraits du [dossier CD.Latest](../../../../core/servers/manage/the-cd.latest-folder.md) d’un site.
 
-**Méthode d’installation** : vous pouvez installer l’un ou l’autre type de site en vous aidant de l’[Assistant Installation de Configuration Manager](../../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md). Vous pouvez aussi configurer un script à utiliser avec une [installation scriptée en ligne de commande](../../../../core/servers/deploy/install/use-a-command-line-to-install-sites.md).
+**Méthode d’installation** : vous pouvez installer n’importe quel type de site en vous aidant de [l’Assistant Installation de Configuration Manager](../../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md). Vous pouvez aussi configurer un script à utiliser avec une [installation scriptée en ligne de commande](../../../../core/servers/deploy/install/use-a-command-line-to-install-sites.md).
 
 
 ### <a name="additional-sites"></a>Sites supplémentaires
@@ -49,17 +49,17 @@ Après avoir installé le site initial, vous pouvez à tout moment ajouter d’a
 |Site principal enfant|Site secondaire|
 |Site principal autonome|Site secondaire (vous pouvez étendre le site principal, ce qui convertit le site principal autonome en site principal enfant)|
 
-**Support d’installation** : quand vous installez un site d’administration centrale pour étendre un site principal autonome, ou que vous installez un nouveau site principal enfant dans une hiérarchie existante, vous devez utiliser le support d’installation (qui contient les fichiers sources) qui correspond à la version du ou des sites existants.
+**Support d’installation** : quand vous installez un site d’administration centrale pour étendre un site principal autonome, ou si vous installez un nouveau site principal enfant dans une hiérarchie existante, vous devez utiliser le support d’installation (qui contient les fichiers sources) qui correspond à la version des sites existants.
 
 > [!IMPORTANT]
 > Si vous avez installé des mises à jour dans la console qui ont changé la version des sites installés précédemment, n’utilisez pas le support d’installation d’origine. Utilisez plutôt les fichiers sources du [dossier CD.Latest](../../../../core/servers/manage/the-cd.latest-folder.md) d’un site mis à jour. Configuration Manager vous impose d’utiliser des fichiers sources qui correspondent à la version du site existant auquel votre nouveau site doit se connecter.
 
 Un site secondaire doit être installé à partir de la console Configuration Manager. De cette façon, les sites secondaires sont toujours installés à l’aide des fichiers sources à partir du site principal parent.
 
-**Méthode d’installation** : la méthode que vous utilisez pour installer des sites supplémentaires dépend du type de site que vous voulez installer.
--   **Ajouter un site d’administration centrale** : vous pouvez utiliser l’Assistant Installation de Configuration Manager ou une ligne de commande scriptée pour installer le nouveau site d’administration centrale comme site parent de votre site principal autonome existant. Pour plus d’informations, consultez [Extension d’un site principal autonome](../../../../core/servers/deploy/install/prerequisites-for-installing-sites.md#bkmk_expand).
--   **Ajouter un site principal enfant** : vous pouvez utiliser l’Assistant Installation de Configuration Manager ou une installation en ligne de commande pour ajouter un site principal enfant sous un site d’administration centrale.
--   **Ajouter un site secondaire** : utilisez la console Configuration Manager pour installer un site secondaire comme site enfant sous un site principal. Les autres méthodes ne sont pas prises en charge pour l’ajout de sites secondaires.
+**Méthode d’installation** : la méthode que vous utilisez pour installer des sites supplémentaires dépend du type de site que vous voulez installer.
+-   **Ajouter un site d’administration centrale** :  vous pouvez utiliser l’Assistant Installation de Configuration Manager ou une ligne de commande scriptée pour installer le nouveau site d’administration centrale comme site parent de votre site principal autonome existant. Pour plus d’informations, consultez [Extension d’un site principal autonome](../../../../core/servers/deploy/install/prerequisites-for-installing-sites.md#bkmk_expand).
+-   **Ajouter un site principal enfant** :  vous pouvez utiliser l’Assistant Installation de Configuration Manager ou une installation en ligne de commande pour ajouter un site principal enfant sous un site d’administration centrale.
+-   **Ajouter un site secondaire** :  utilisez la console Configuration Manager pour installer un site secondaire comme site enfant sous un site principal. Les autres méthodes ne sont pas prises en charge pour l’ajout de sites secondaires.
 
 ## <a name="bkmk_tasks"></a>  Tâches courantes à effectuer avant de commencer une installation
 -   **Déterminer la topologie de la hiérarchie que vous allez utiliser pour votre déploiement**    
@@ -105,11 +105,11 @@ Les codes de site ne peuvent pas être utilisés plusieurs fois dans une hiérar
 
 ## <a name="limits-and-restrictions-for-installed-sites"></a>Limites et restrictions concernant les sites installés
 Avant d’installer un site, vous devez connaître les limitations suivantes qui s’appliquent aux sites et aux hiérarchies :
--   Après l’exécution du programme d’installation, vous ne pouvez modifier les propriétés suivantes du site qu’en désinstallant le site et en le réinstallant avec les nouvelles valeurs :  
+- Après l’exécution du programme d’installation, vous ne pouvez modifier les propriétés suivantes du site qu’en désinstallant le site et en le réinstallant avec les nouvelles valeurs :  
   -   Répertoire d’installation des fichiers programmes  
   -   Code de site  
   -   Description du site  
--   Si votre hiérarchie comprend un site d’administration centrale :  
+- Si votre hiérarchie comprend un site d’administration centrale :  
   -   Configuration Manager ne permet pas de retirer un site principal enfant d’une hiérarchie pour en faire un site principal autonome ou pour le rattacher à une autre hiérarchie. Au lieu de cela, vous devez désinstaller le site principal enfant et le réinstaller comme nouveau site principal autonome ou comme site enfant du site d’administration centrale d’une autre hiérarchie.  
 
 
@@ -130,7 +130,7 @@ Pour identifier et résoudre les problèmes avant d’exécuter le programme d�
 **Identifier des ports facultatifs**
 
 Vous pouvez identifier des ports facultatifs pouvant être utilisés par les clients et les systèmes de site. Voici des informations supplémentaires :
- -  Par défaut, les systèmes de site et les clients utilisent des ports prédéfinis pour communiquer.
- -  Pendant l’installation, vous pouvez configurer d’autres ports.
+- Par défaut, les systèmes de site et les clients utilisent des ports prédéfinis pour communiquer.
+- Pendant l’installation, vous pouvez configurer d’autres ports.
 
- Pour plus d’informations, consultez [Ports utilisés dans System Center Configuration Manager](../../../../core/plan-design/hierarchy/ports.md).
+  Pour plus d’informations, consultez [Ports utilisés dans System Center Configuration Manager](../../../../core/plan-design/hierarchy/ports.md).

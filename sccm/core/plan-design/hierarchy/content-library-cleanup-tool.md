@@ -10,16 +10,16 @@ ms.assetid: 226cbbb2-9afa-4e2e-a472-be989c0f0e11
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1e71b95642160d519f222a50a66bc8f636628d6e
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: bd347cecce0ae1317fe51a701ce67b4766fbcd10
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383521"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53423182"
 ---
 # <a name="content-library-cleanup-tool"></a>Outil de nettoyage de la bibliothèque de contenu
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Utilisez l’outil en ligne de commande de nettoyage de la bibliothèque de contenu pour supprimer du contenu qui n’est plus associé à aucun package ou application sur un point de distribution. Ce type de contenu est appelé *contenu orphelin*. Cet outil remplace les versions plus anciennes des outils similaires distribuées pour les produits Configuration Manager antérieurs.  
 
@@ -29,7 +29,7 @@ Recherchez **ContentLibraryCleanup.exe** dans `CD.Latest\SMSSETUP\TOOLS\ContentL
 
 
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>spécifications  
 
 - Exécutez l’outil sur un seul point de distribution à la fois.  
 
@@ -93,6 +93,7 @@ Pour exécuter l’outil :
 Utilisez ces paramètres de ligne de commande dans n’importe quel ordre.   
 
 ### <a name="required-parameters"></a>Paramètres obligatoires
+
 |Paramètre|Détails|
 |---------|-------|
 | `/dp <distribution point FQDN>`  | Spécifiez le nom de domaine complet du point de distribution à nettoyer. |
@@ -116,7 +117,7 @@ Utilisez ces paramètres de ligne de commande dans n’importe quel ordre.
 | `/sc <primary site code>` | Facultatif seulement lors du nettoyage du contenu d’un point de distribution sur un site principal. Spécifiez le code de site du site principal auquel appartient le point de distribution. |
 | `/log <log file directory>` | Spécifiez l’emplacement d’écriture du fichier journal par l’outil. Cet emplacement peut être un lecteur local ou un partage réseau.</br></br> Si vous n’utilisez pas ce paramètre, l’outil place le fichier journal dans le répertoire temp de l’utilisateur sur l’ordinateur où l’outil s’exécute.|
 
-#### <a name="example-delete-content"></a>Exemple : Suppression de contenu 
+#### <a name="example-delete-content"></a>Exemple : Suppression du contenu 
 `ContentLibraryCleanup.exe /dp server1.contoso.com /delete`
 
 #### <a name="example-delete-content-without-prompts"></a>Exemple : Suppression de contenu sans invite

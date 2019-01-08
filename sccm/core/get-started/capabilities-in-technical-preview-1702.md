@@ -10,16 +10,16 @@ ms.assetid: aedd608d-6db3-4ea5-851d-70f2dcda6bb5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: dc1fc6668c61f2eafe04f92fc6b9ea27520ddc43
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: d87ef098b096f1dc04bc424a3a100955b12f6f57
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342458"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419017"
 ---
 # <a name="capabilities-in-technical-preview-1702-for-system-center-configuration-manager"></a>Fonctionnalités de Technical Preview 1702 pour System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Technical Preview)*
+*S’applique à : System Center Configuration Manager (préversion technique)*
 
 Cet article présente les fonctionnalités qui sont disponibles dans la version Technical Preview 1702 pour System Center Configuration Manager. Vous pouvez installer cette version pour mettre à jour et ajouter de nouvelles fonctionnalités à votre site Configuration Manager Technical Preview. Avant d’installer cette version de la version d’évaluation technique, passez en revue la rubrique de présentation, [Version d’évaluation technique pour System Center Configuration Manager](../../core/get-started/technical-preview.md), pour vous familiariser avec les conditions générales et limitations d’utilisation d’une version d’évaluation technique, la mise à jour entre les versions et l’envoi de commentaires sur les fonctionnalités dans une version d’évaluation technique.    
 
@@ -30,9 +30,9 @@ Cet article présente les fonctionnalités qui sont disponibles dans la version 
 
 Cet aperçu présente de nouvelles options pour les commentaires dans la console Configuration Manager. Les options de commentaires vous permettent d’envoyer vos commentaires directement à l’équipe de développement, par le biais du site web de commentaires Configuration Manager UserVoice.  
 
->L’option **Commentaires** est accessible :
--  Dans le ruban, à l’extrême gauche de l’onglet Accueil de chaque nœud.  
-   ![Ruban](./media/feedback-home.png)
+> L’option **Commentaires** est accessible :
+> -  Dans le ruban, à l’extrême gauche de l’onglet Accueil de chaque nœud.  
+>    ![Ruban](./media/feedback-home.png)
 
 -  Quand vous cliquez avec le bouton droit sur n’importe quel objet dans la console.   
     ![Option de clic droit](./media/feedback-option.png)   
@@ -86,8 +86,8 @@ Après avoir configuré Configuration Manager pour qu’il s’exécute dans Azu
 Pour chaque méthode utilisée, modifiez la requête LDAP pour rechercher dans les structures d’unités d’organisation Azure Active Directory plutôt que dans les conteneurs typiques d’un annuaire Active Directory local. Vous devez pour cela diriger la requête pour qu’elle effectue des recherches dans votre annuaire Active Directory dans votre abonnement Azure.  
 
 Les exemples suivants utilisent un annuaire Azure AD nommé *contoso.onmicrosoft.com* :
- - **Découverte de systèmes**   
-Azure AD stocke les appareils sous l’unité d’organisation **AADDC Computers**.  Configurez ce qui suit :  
+- **Découverte de systèmes**   
+  Azure AD stocke les appareils sous l’unité d’organisation **AADDC Computers**.  Configurez ce qui suit :  
   - *LDAP://OU=AADDC Computers,DC=contoso,DC=onmicrosoft,DC=com*  
 
 
@@ -113,7 +113,7 @@ Cela permet également aux organisations de réduire les fuites de données via 
 
 ### <a name="try-it-out"></a>Faîtes un essai
 
-**Scénario :** Identifier les applications susceptibles de provoquer des fuites de données en envoyant des données d’entreprise hors de l’entreprise, ou les applications qui provoquent une consommation excessive de données, puis [créer une stratégie de conformité de l’appareil avec accès conditionnel](https://docs.microsoft.com/sccm/protect/deploy-use/create-compliance-policy) qui ajoute ces applications à la liste des applications non conformes. Cela bloquera l’accès aux ressources d’entreprise qui prennent en charge l’accès conditionnel, jusqu’à ce que l’utilisateur puisse supprimer l’application bloquée.
+**Scénario :** Identifier les applications susceptibles de provoquer des fuites de données en envoyant des données d’entreprise hors de l’entreprise, ou les applications qui provoquent une consommation excessive de données, puis [créer une stratégie de conformité de l’appareil avec accès conditionnel](https://docs.microsoft.com/sccm/protect/deploy-use/create-compliance-policy) qui ajoute ces applications à la liste des applications non conformes. Cela bloquera l’accès aux ressources d’entreprise qui prennent en charge l’accès conditionnel, jusqu’à ce que l’utilisateur puisse supprimer l’application bloquée.
 
 ## <a name="antimalware-client-version-alert"></a>Alerte de version du client de logiciel anti-programme malveillant
 À compter de cette préversion, Configuration Manager Endpoint Protection fournit une alerte si plus de 20 % (par défaut) des clients gérés utilisent une version du client de logiciel anti-programme malveillant (par exemple Windows Defender ou Endpoint Protection client) qui a expiré.
@@ -174,34 +174,34 @@ Appliquez la procédure suivante pour définir une séquence de tâches à fort 
 1. Dans la console Configuration Manager, accédez à **Bibliothèque de logiciels** > **Systèmes d’exploitation** > **Séquences de tâches**.
 2. Sélectionnez la séquence de tâches à modifier, puis cliquez sur **Propriétés**.
 3. Sous l’onglet **Notification utilisateur**, sélectionnez **Utiliser du texte personnalisé**.
->  [!NOTE]
->  Vous pouvez définir le texte de notification utilisateur uniquement quand **Il s’agit d’une séquence de tâches avec un impact élevé** est sélectionné.
+   > [!NOTE]
+   >  Vous pouvez définir le texte de notification utilisateur uniquement quand **Il s’agit d’une séquence de tâches avec un impact élevé** est sélectionné.
 
 4. Configurez les paramètres suivants (maximum 255 caractères pour chaque zone de texte) :
 
-   **Texte du titre de la notification utilisateur** : spécifie le texte en bleu qui s’affiche sur la notification utilisateur du Centre logiciel. Par exemple, dans la notification utilisateur par défaut, cette section contient quelque chose comme « Confirmez que vous voulez mettre à niveau le système d’exploitation sur cet ordinateur ».
+   **Texte du titre de la notification utilisateur :** Spécifie le texte en bleu qui s’affiche sur la notification utilisateur du Centre logiciel. Par exemple, dans la notification utilisateur par défaut, cette section contient quelque chose comme « Confirmez que vous voulez mettre à niveau le système d’exploitation sur cet ordinateur ».
 
-   **Texte du message de la notification utilisateur** : trois zones de texte fournissent le corps de la notification personnalisée.
-   - Première zone de texte : spécifie le corps principal du texte, contenant généralement des instructions destinées à l’utilisateur. Par exemple, dans la notification utilisateur par défaut, cette section contient quelque chose comme « La mise à niveau du système d’exploitation peut prendre un certain temps et entraîner plusieurs redémarrages de votre ordinateur ».
-   - Deuxième zone de texte : spécifie le texte en gras dans le corps principal du texte. Par exemple, dans la notification utilisateur par défaut, cette section contient quelque chose comme « Cette mise à niveau sur place installe le nouveau système d’exploitation et migre automatiquement vos applications, vos données et vos paramètres ».
-   - Troisième zone de texte : spécifie la dernière ligne de texte sous le texte en gras. Par exemple, dans la notification utilisateur par défaut, cette section contient quelque chose comme « Cliquez sur Installer pour commencer. Sinon, cliquez sur Annuler. ».   
+   **Texte du message de la notification utilisateur :** Trois zones de texte fournissent le corps de la notification personnalisée.
+   - Première zone de texte : Spécifie le corps principal du texte, contenant généralement des instructions destinées à l’utilisateur. Par exemple, dans la notification utilisateur par défaut, cette section contient quelque chose comme « La mise à niveau du système d’exploitation peut prendre un certain temps et entraîner plusieurs redémarrages de votre ordinateur ».
+   - Deuxième zone de texte : Spécifie le texte en gras dans le corps principal du texte. Par exemple, dans la notification utilisateur par défaut, cette section contient quelque chose comme « Cette mise à niveau sur place installe le nouveau système d’exploitation et migre automatiquement vos applications, vos données et vos paramètres ».
+   - Troisième zone de texte : Spécifie la dernière ligne de texte sous le texte en gras. Par exemple, dans la notification utilisateur par défaut, cette section contient quelque chose comme « Cliquez sur Installer pour commencer. Sinon, cliquez sur Annuler. ».   
 
    Supposons que vous configurez la notification personnalisée suivante dans les propriétés.
 
-   ![Notification personnalisée pour une séquence de tâches](.\media\user-notification.png)
+   ![Notification personnalisée pour une séquence de tâches](./media/user-notification.png)
 
    Le message de notification suivant s’affiche quand l’utilisateur final ouvre l’installation à partir du Centre logiciel.
 
-   ![Notification personnalisée pour une séquence de tâches](.\media\user-notification-enduser.png)
+   ![Notification personnalisée pour une séquence de tâches](./media/user-notification-enduser.png)
 
 ### <a name="configure-software-center-properties"></a>Configurer les propriétés du Centre logiciel
 Appliquez la procédure suivante pour configurer les détails de la séquence de tâches affichés dans le Centre logiciel. Ces détails sont fournis uniquement à titre d’informations.  
 1. Dans la console Configuration Manager, accédez à **Bibliothèque de logiciels** > **Systèmes d’exploitation** > **Séquences de tâches**.
 2. Sélectionnez la séquence de tâches à modifier, puis cliquez sur **Propriétés**.
 3. Sous l’onglet **Général**, les paramètres suivants du Centre logiciel sont disponibles :
-  - **Redémarrage requis** : indique à l’utilisateur si un redémarrage est nécessaire lors de l’installation.
-  - **Taille du téléchargement (Mo)**  : spécifie le nombre de mégaoctets affichés dans le Centre logiciel pour la séquence de tâches.  
-  - **Durée d’exécution estimée (minutes)**  : spécifie la durée d’exécution estimée, en minutes, affichée dans le Centre logiciel pour la séquence de tâches.
+   - **Redémarrage requis** : Indique à l’utilisateur si un redémarrage est nécessaire lors de l’installation.
+   - **Taille du téléchargement (Mo)** : Spécifie le nombre de mégaoctets affichés dans le Centre logiciel pour la séquence de tâches.  
+   - **Durée d’exécution estimée (minutes)** : Spécifie la durée d’exécution estimée, en minutes, affichée dans le Centre logiciel pour la séquence de tâches.
 
 
 ## <a name="check-for-running-executable-files-before-installing-an-application"></a>Vérifier si des fichiers exécutables sont en cours d’exécution avant d’installer une application
@@ -264,8 +264,7 @@ Nous avons ajouté de nouveaux paramètres, que vous pouvez utiliser dans les é
 - **Claviers prédictifs** (mode supervisé uniquement)
 - **Correction automatique** (mode supervisé uniquement)
 - **Vérification orthographique au clavier** (mode supervisé uniquement)
-- **Raccourcis clavier** (mode supervisé uniquement)
-<!--- - **Enterprise app trust settings modification** --->
+- **Raccourcis clavier** (mode supervisé uniquement) <!--- - **Enterprise app trust settings modification** --->
 - **Installation d’applications à l’aide d’Apple Configurator et iTunes uniquement** (mode supervisé uniquement)
 - **Téléchargements d’application automatiques** (mode supervisé uniquement)
 - **Modifier les paramètres de l’application Localiser mes amis** (mode supervisé uniquement)
@@ -298,17 +297,17 @@ Les sections suivantes décrivent la gestion Android for Work.
 #### <a name="enable-android-for-work-management"></a>Activer la gestion Android for Work
 1. Créez un compte Google sur https://accounts.google.com/SignUp, que vous utiliserez comme compte d’administrateur Android for Work. Ce compte sera associé à toutes les tâches de gestion Android for Work pour ce locataire Intune. Ce compte Google peut être partagé par les administrateurs qui gèrent des appareils Android. Il s’agit du compte Google utilisé par votre organisation pour gérer et publier des applications dans la console Play for Work. Vous utiliserez ce compte pour approuver les applications dans le magasin Play for Work. Veillez donc à prendre note du nom du compte et du mot de passe.
 2. Activez l’inscription Android en liant le compte Google au client Intune géré dans Configuration Manager :
-  1. Accédez à **Administration** > **Vue d’ensemble** > **Services Cloud** > **Abonnements Microsoft Intune** et sélectionnez votre abonnement Intune.
-  2. Dans le ruban, cliquez sur **Configurer des plateformes** > **Android** et vérifiez que l’option **Activer l’inscription Android** est activée.
-  3. Dans le ruban, cliquez sur **Configurer des plateformes** > **Android for Work**.
-  4. Dans la boîte de dialogue, cliquez sur **Configurer Android for Work dans la console Intune**. La console Intune s’ouvre dans votre navigateur web.
-  5. Utilisez vos informations d’identification d’administrateur Intune pour vous connecter au portail Intune.
-  6. Cliquez sur **Configurer** pour ouvrir le site web Android for Work de Google Play.
-  7. Dans la page de connexion de Google, entrez les informations d’identification du compte Google de l’étape 1, puis fournissez les informations relatives à votre société.
+   1. Accédez à **Administration** > **Vue d’ensemble** > **Services Cloud** > **Abonnements Microsoft Intune** et sélectionnez votre abonnement Intune.
+   2. Dans le ruban, cliquez sur **Configurer des plateformes** > **Android** et vérifiez que l’option **Activer l’inscription Android** est activée.
+   3. Dans le ruban, cliquez sur **Configurer des plateformes** > **Android for Work**.
+   4. Dans la boîte de dialogue, cliquez sur **Configurer Android for Work dans la console Intune**. La console Intune s’ouvre dans votre navigateur web.
+   5. Utilisez vos informations d’identification d’administrateur Intune pour vous connecter au portail Intune.
+   6. Cliquez sur **Configurer** pour ouvrir le site web Android for Work de Google Play.
+   7. Dans la page de connexion de Google, entrez les informations d’identification du compte Google de l’étape 1, puis fournissez les informations relatives à votre société.
 3. Quand vous revenez au portail Intune, Android for Work est activé et vous avez trois options d’inscription pour les appareils Android for Work :
-  - **Gérer tous les appareils comme Android** - (Désactivé) Tous les appareils Android, notamment ceux qui prennent en charge Android for Work, sont inscrits comme appareils Android conventionnels.
-  - **Gérer les appareils pris en charge comme Android for Work** - (Activé) Tous les appareils qui prennent en charge Android for Work sont inscrits comme appareils Android for Work. Tout appareil Android qui ne prend pas en charge Android for Work est inscrit comme appareil Android conventionnel.
-  - **Gérer les appareils pris en charge pour les utilisateurs uniquement dans ces groupes comme Android for Work** - (Test) Vous permet de cibler la gestion Android for Work à un ensemble limité d’utilisateurs. Seuls les membres des groupes sélectionnés qui inscrivent un appareil qui prend en charge Android for Work sont inscrits comme appareils Android for Work. Tous les autres sont inscrits comme appareils Android.
+   - **Gérer tous les appareils comme Android** - (Désactivé) Tous les appareils Android, notamment ceux qui prennent en charge Android for Work, sont inscrits comme appareils Android conventionnels.
+   - **Gérer les appareils pris en charge comme Android for Work** - (Activé) Tous les appareils qui prennent en charge Android for Work sont inscrits comme appareils Android for Work. Tout appareil Android qui ne prend pas en charge Android for Work est inscrit comme appareil Android conventionnel.
+   - **Gérer les appareils pris en charge pour les utilisateurs uniquement dans ces groupes comme Android for Work** - (Test) Vous permet de cibler la gestion Android for Work à un ensemble limité d’utilisateurs. Seuls les membres des groupes sélectionnés qui inscrivent un appareil qui prend en charge Android for Work sont inscrits comme appareils Android for Work. Tous les autres sont inscrits comme appareils Android.
   
 > [!NOTE]
 > Un problème connu empêche le bon fonctionnement de l’option **Gérer les appareils pris en charge pour les utilisateurs uniquement dans ces groupes comme Android for Work**. Les appareils des utilisateurs dans les groupes Azure AD spécifiés sont inscrits en tant qu’appareils Android et non en tant qu’appareils Android for Work. Pour tester Android for Work, vous devez utiliser **Gérer les appareils pris en charge comme Android for Work**.

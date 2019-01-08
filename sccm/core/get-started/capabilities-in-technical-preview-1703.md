@@ -10,16 +10,16 @@ ms.assetid: 2e801f8c-d331-41ee-8f27-908448fc0951
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4750d9e31eb41fdad7f655faa4e8058156e922a1
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: aed9ec403496b309b1b556355c955743d43b2dc4
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32337154"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420207"
 ---
 # <a name="capabilities-in-technical-preview-1703-for-system-center-configuration-manager"></a>Fonctionnalités de la version Technical Preview 1703 de System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Technical Preview)*
+*S’applique à : System Center Configuration Manager (préversion technique)*
 
 Cet article présente les fonctionnalités disponibles dans la version Technical Preview 1703 de System Center Configuration Manager. Vous pouvez installer cette version pour mettre à jour et ajouter de nouvelles fonctionnalités à votre site Configuration Manager Technical Preview. Avant d’installer cette version de la version d’évaluation technique, passez en revue la rubrique de présentation, [Version d’évaluation technique pour System Center Configuration Manager](../../core/get-started/technical-preview.md), pour vous familiariser avec les conditions générales et limitations d’utilisation d’une version d’évaluation technique, la mise à jour entre les versions et l’envoi de commentaires sur les fonctionnalités dans une version d’évaluation technique.    
 
@@ -59,9 +59,9 @@ Utilisez le format d’URL suivant pour ouvrir le Centre logiciel à une applica
 1.  Dans la console Configuration Manager, cliquez sur **Bibliothèque de logiciels**.
 2.  Dans l’espace de travail Bibliothèque de logiciels, développez **Gestion des applications**, puis cliquez sur **Applications**.
 3.  Dans l’affichage **Applications**, cliquez avec le bouton droit sur l’un des en-têtes de colonne. Ensuite, dans la liste, sélectionnez **ID unique de l’élément de configuration**. L’ID unique de chaque application s’affiche alors dans la liste.
-4.  Notez l’**ID unique de l’élément de configuration** de l’application pour laquelle vous souhaitez créer un lien. Par exemple : **ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f/2**
+4.  Notez l’**ID unique de CI** de l’application vers laquelle vous souhaitez pointer, par exemple : **ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f/2**
 5.  Ensuite, supprimez le texte situé après le GUID de l’application (dans ce cas, **/2**). Il vous reste alors l’identificateur de l’application.
-6.  Enfin, pour terminer la création du lien, faites-le précéder de **Softwarecenter:SoftwareID=**. Si vous avez suivi l’exemple ci-dessus, le lien final se présente comme suit : **Softwarecenter:SoftwareId= ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f**.
+6.  Enfin, pour terminer la création du lien, faites-le précéder de **Softwarecenter:SoftwareID=**. À l’aide de l’exemple ci-dessus, le lien final ressemble à ceci : **Softwarecenter:SoftwareId= ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f**.
 
 Les utilisateurs finaux peuvent utiliser ce lien pour ouvrir directement le Centre logiciel à l’application spécifiée.
 
@@ -106,18 +106,18 @@ Dans Azure Active Directory, inscrivez Configuration Manager comme outil de gest
 4. Dans la page **Application**, spécifiez votre environnement Azure, puis cliquez sur **Parcourir** pour ouvrir la fenêtre Server App.
 
 5. Dans la fenêtre **Server App**, sélectionnez l’application serveur à utiliser, puis cliquez sur **OK**.
-Les applications serveur sont des applications web Azure qui contiennent les configurations pour votre compte Azure, notamment l’ID de locataire, l’ID de client et une clé secrète pour les clients. Si vous ne disposez pas d’une application serveur disponible, choisissez l’une des méthodes suivantes :
-  - **Créer** : pour créer une application serveur, cliquez sur **Créer**. Fournissez un nom convivial pour l’application et le locataire. Une fois que vous êtes connecté à Azure, Configuration Manager crée l’application web dans Azure, notamment l’ID de client et la clé secrète à utiliser avec l’application web. Ces informations sont ensuite disponibles dans le portail Azure.
-  - **Importer** : pour utiliser une application web qui existe déjà dans votre abonnement Azure, cliquez sur **Importer**. Indiquez un nom convivial pour l’application et le locataire, puis spécifiez l’ID de locataire, l’ID de client et la clé secrète de l’application web Azure que Configuration Manager doit utiliser. Après avoir **vérifié** les informations, cliquez sur **OK** pour continuer.  </br></br>
+   Les applications serveur sont des applications web Azure qui contiennent les configurations pour votre compte Azure, notamment l’ID de locataire, l’ID de client et une clé secrète pour les clients. Si vous ne disposez pas d’une application serveur disponible, choisissez l’une des méthodes suivantes :
+   - **Créer** : Pour créer une application serveur, cliquez sur **Créer**. Fournissez un nom convivial pour l’application et le locataire. Une fois que vous êtes connecté à Azure, Configuration Manager crée l’application web dans Azure, notamment l’ID de client et la clé secrète à utiliser avec l’application web. Ces informations sont ensuite disponibles dans le portail Azure.
+   - **Importer** : Pour utiliser une application web qui existe déjà dans votre abonnement Azure, cliquez sur **Importer**. Indiquez un nom convivial pour l’application et le locataire, puis spécifiez l’ID de locataire, l’ID de client et la clé secrète de l’application web Azure que Configuration Manager doit utiliser. Après avoir **vérifié** les informations, cliquez sur **OK** pour continuer.  </br></br>
 
 6. Passez en revue la page **Informations**, puis effectuez les étapes et configurations supplémentaires indiquées. Ces configurations sont nécessaires pour utiliser le service avec Configuration Manager.
-Par exemple, pour configurer le Windows Store pour Entreprises :
+   Par exemple, pour configurer le Windows Store pour Entreprises :
 
-  1. Dans Azure, vous devez inscrire Configuration Manager comme application web ou API web et enregistrer l’ID de client. Vous devez aussi spécifier une clé de client que doit utiliser l’outil de gestion (c’est-à-dire, Configuration Manager).
+   1. Dans Azure, vous devez inscrire Configuration Manager comme application web ou API web et enregistrer l’ID de client. Vous devez aussi spécifier une clé de client que doit utiliser l’outil de gestion (c’est-à-dire, Configuration Manager).
 
-  2.    Dans la console Windows Store pour Entreprises, vous devez configurer Configuration Manager comme outil de gestion du magasin, activer la prise en charge pour les applications sous licence en mode hors connexion, puis acheter au moins une application.   </br>
+   2.    Dans la console Windows Store pour Entreprises, vous devez configurer Configuration Manager comme outil de gestion du magasin, activer la prise en charge pour les applications sous licence en mode hors connexion, puis acheter au moins une application.   </br>
 
-  Cliquez sur **Suivant** quand vous êtes prêt à continuer.
+   Cliquez sur **Suivant** quand vous êtes prêt à continuer.
 
 7. Dans la page **Configurations d’application**, configurez le catalogue d’applications et la langue de ce service, puis cliquez sur **Suivant**.
 8. Une fois l’Assistant terminé, la console Configuration Manager indique que vous avez configuré **Windows Store pour Entreprises** comme **Type de service cloud**.

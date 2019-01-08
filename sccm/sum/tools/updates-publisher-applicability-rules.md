@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 84705584328b09313bebd1e6c70a0063b2b0724f
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 280dd3da96b0c408f7c75fb7ef0a046ae0343765
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32351426"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421414"
 ---
 # <a name="manage-applicability-rules-in-updates-publisher"></a>Gérer les règles de mise en application dans l’éditeur de mise à jour
 
-*S’applique à : l'éditeur de mise à jour System Center*
+*S’applique à : Éditeur de mise à jour Systems Center*
 
 Avec l’éditeur de mise à jour, les règles de mise en application définissent les exigences qui doivent être remplies pour qu’un appareil puisse installer une mise à jour. Les règles sont également utilisées pour déterminer si une mise à jour a été installée sur un ordinateur. Une règle de mise en application complexe comportant plusieurs parties est appelée ensemble de règles.
 
@@ -50,30 +50,30 @@ Vous pouvez créer des règles à deux emplacements dans l’éditeur de mise à
 ## <a name="create-applicability-rule"></a>Créer une règle de mise en application
 Les informations suivantes sont similaires à la création de règles depuis l[’Assistant Création d’une mise à jour](/sccm/sum/tools/create-updates-with-updates-publisher#the-create-update-wizard). Mais contrairement à l’Assistant, vous avez la possibilité d’enregistrer vos ensembles de règles pour une utilisation ultérieure.
 
-1.  Dans l **’espace de travail Règles**, choisissez **Créer** pour ouvrir l’**Assistant Création d’une règle**.
+1. Dans l **’espace de travail Règles**, choisissez **Créer** pour ouvrir l’**Assistant Création d’une règle**.
 
-2.  Nommez la règle, puis cliquez sur ![Nouvelle règle](media/newrule.png). Cette opération ouvre la page **Règle de mise en application** dans laquelle vous pouvez configurer des règles.
+2. Nommez la règle, puis cliquez sur ![Nouvelle règle](media/newrule.png). Cette opération ouvre la page **Règle de mise en application** dans laquelle vous pouvez configurer des règles.
 
-3.  Pour le **type de règle,** sélectionnez l’un des paramètres suivants. Les options que vous devez configurer varient pour chaque type :
+3. Pour le **type de règle,** sélectionnez l’un des paramètres suivants. Les options que vous devez configurer varient pour chaque type :
 
-    -   **Fichier** : cette règle oblige un appareil à utiliser un fichier de propriétés correspondant à un ou plusieurs critères que vous spécifiez, avant de pouvoir appliquer cette mise à jour.
+   - **Fichier** : cette règle oblige un appareil à utiliser un fichier de propriétés correspondant à un ou plusieurs critères que vous spécifiez, avant de pouvoir appliquer cette mise à jour.
 
-    -   **Registre** : ce type permet de spécifier les détails de registre qui doivent être présents avant de pouvoir installer cette mise à jour sur un appareil.
+   - **Registre** : ce type permet de spécifier les détails de registre qui doivent être présents avant de pouvoir installer cette mise à jour sur un appareil.
 
-    -   **Système** : cette règle utilise les informations système pour déterminer les conditions de mise en application. Vous pouvez choisir entre la définition d’une version de Windows, une langue de Windows, l’architecture du processeur, ou spécifier une requête WMI qui identifie le système d’exploitation des appareils.
+   - **Système** : cette règle utilise les informations système pour déterminer les conditions de mise en application. Vous pouvez choisir entre la définition d’une version de Windows, une langue de Windows, l’architecture du processeur, ou spécifier une requête WMI qui identifie le système d’exploitation des appareils.
 
-    -   **Windows Installer** : utilisez ce type de règle pour déterminer les conditions de mise en application en fonction d’un correctif .MSI ou Windows Installer (.MSP) installé. Vous pouvez également déterminer si des composants ou des fonctionnalités spécifiques sont installés dans le cadre des exigences.
+   - **Windows Installer** : utilisez ce type de règle pour déterminer les conditions de mise en application en fonction d’un correctif .MSI ou Windows Installer (.MSP) installé. Vous pouvez également déterminer si des composants ou des fonctionnalités spécifiques sont installés dans le cadre des exigences.
 
-       > [!IMPORTANT]   
-       > Sur les appareils gérés, l’Agent Windows Update ne peut pas détecter les packages Windows Installer installés par l’utilisateur. Lorsque vous utilisez ce type de règle, configurez des règles de mise en application supplémentaires, notamment les versions des fichiers ou les valeurs de clé de registre, de façon à détecter correctement le package Windows Installer, que ce soit par utilisateur ou par système.
+     > [!IMPORTANT]   
+     > Sur les appareils gérés, l’Agent Windows Update ne peut pas détecter les packages Windows Installer installés par l’utilisateur. Lorsque vous utilisez ce type de règle, configurez des règles de mise en application supplémentaires, notamment les versions des fichiers ou les valeurs de clé de registre, de façon à détecter correctement le package Windows Installer, que ce soit par utilisateur ou par système.
 
-    -   **Règle enregistrée** : cette option vous permet de rechercher et d’utiliser les règles que vous avez précédemment configurées et enregistrées.
+   - **Règle enregistrée** : cette option vous permet de rechercher et d’utiliser les règles que vous avez précédemment configurées et enregistrées.
 
-4.  Continuez à ajouter et à configurer d’autres règles selon les besoins.
+4. Continuez à ajouter et à configurer d’autres règles selon les besoins.
 
-5.  Utilisez les boutons d’opération logique pour réorganiser et regrouper différentes règles afin de mettre en place une vérification plus complexe des exigences.
+5. Utilisez les boutons d’opération logique pour réorganiser et regrouper différentes règles afin de mettre en place une vérification plus complexe des exigences.
 
-6.  Lorsque l’ensemble de règles est terminé, cliquez sur **OK** pour l’enregistrer. La règle maintenant apparaît dans la liste **Mes règles enregistrées**.
+6. Lorsque l’ensemble de règles est terminé, cliquez sur **OK** pour l’enregistrer. La règle maintenant apparaît dans la liste **Mes règles enregistrées**.
 
 ## <a name="edit-applicability-rule-sets"></a>Modifier des ensembles de règles de mise en application
 Pour modifier une règle de mise en application, dans l **’espace de travail Règles**, sélectionnez une règle enregistrée dans la liste **Mes règles enregistrées**, puis choisissez **Modifier** dans le ruban. Cette opération ouvre l’Assistant **Modification d’une règle**.

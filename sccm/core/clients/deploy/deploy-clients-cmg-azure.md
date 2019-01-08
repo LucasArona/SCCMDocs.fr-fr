@@ -10,16 +10,16 @@ ms.assetid: a44006eb-8650-49f6-94e1-18fa0ca959ee
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 490e5a614a98633629df98abcd554b02cec1261a
-ms.sourcegitcommit: ae03ad403b1732a5a61dec981e3a3010a0f09188
+ms.openlocfilehash: b722187a895a71b4195200354180cdbc8b2813e6
+ms.sourcegitcommit: 12b71da551350c99c5916df3629e33e31040db15
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "51860244"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53530912"
 ---
 # <a name="install-and-assign-configuration-manager-windows-10-clients-using-azure-ad-for-authentication"></a>Installer et affecter des clients Windows 10 Configuration Manager à l’aide d’Azure AD à des fins d’authentification
 
-Pour installer le client Configuration Manager sur des appareils Windows 10 en utilisant l’authentification Azure AD, intégrez Configuration Manager à Azure Active Directory (Azure AD). Les clients peuvent être sur l’intranet, communiquant directement avec un point de gestion HTTPS. Ils peuvent aussi communiquer sur Internet via la passerelle de gestion cloud ou avec un point de gestion Internet. Ce processus utilise Azure AD pour authentifier les clients auprès du site Configuration Manager. Azure AD élimine le besoin de configurer et d’utiliser des certificats d’authentification client.
+Pour installer le client Configuration Manager sur des appareils Windows 10 en utilisant l’authentification Azure AD, intégrez Configuration Manager à Azure Active Directory (Azure AD). Les clients peuvent communiquer sur l’intranet, directement avec un point de gestion HTTPS ou un point de gestion dans un site activé pour HTTP amélioré. Ils peuvent aussi communiquer sur Internet via la passerelle de gestion cloud ou avec un point de gestion Internet. Ce processus utilise Azure AD pour authentifier les clients auprès du site Configuration Manager. Azure AD élimine le besoin de configurer et d’utiliser des certificats d’authentification client.
 
 
 
@@ -62,9 +62,9 @@ Ces paramètres client permettent de joindre des appareils Windows 10 à Azure A
 
 1.  Configurez les paramètres client suivants dans la section **Services cloud** en utilisant les informations du [Guide pratique pour configurer les paramètres client](/sccm/core/clients/deploy/configure-client-settings).  
 
-    - **Autoriser l’accès au point de distribution cloud** : activez ce paramètre afin que les appareils Internet puissent obtenir le contenu nécessaire pour installer le client Configuration Manager. Si le contenu n’est pas disponible sur le point de distribution cloud, les appareils peuvent récupérer le contenu auprès de la passerelle de gestion cloud. Le programme d’amorçage de l’installation du client réessaye le point de distribution cloud pendant 4 heures avant de passer à la passerelle de gestion cloud.<!--495533-->  
+    - **Autoriser l’accès au point de distribution cloud** : activez ce paramètre afin que les appareils Internet puissent obtenir le contenu nécessaire pour installer le client Gestionnaire de configuration. Si le contenu n’est pas disponible sur le point de distribution cloud, les appareils peuvent récupérer le contenu auprès de la passerelle de gestion cloud. Le programme d’amorçage de l’installation du client réessaye le point de distribution cloud pendant 4 heures avant de passer à la passerelle de gestion cloud.<!--495533-->  
 
-    - **Inscrire automatiquement les nouveaux appareils joints à un domaine Windows 10 avec Azure Active Directory** : définissez ce paramètre sur **Oui** ou sur **Non**. La valeur par défaut est **Oui**. Ce comportement est également celui par défaut dans Windows 10, version 1709.
+    - **Inscrire automatiquement les nouveaux appareils joints au domaine Windows 10 auprès d’Azure Active Directory** : définissez la valeur sur **Oui** ou **Non**. La valeur par défaut est **Oui**. Ce comportement est également celui par défaut dans Windows 10, version 1709.
 
     - **Permettre aux clients d’utiliser une passerelle de gestion cloud** : réglez sur **Oui** (valeur par défaut) ou **Non**.  
 

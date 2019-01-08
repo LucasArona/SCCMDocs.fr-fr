@@ -10,16 +10,16 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cf7ca86dd04d60f1ff914294a7430d9f4a7a2fb7
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 58ec927ee795624cb475b31c44d64334047f3422
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456700"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416501"
 ---
 # <a name="log-files-in-configuration-manager"></a>Fichiers journaux de Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Dans Configuration Manager, les composants des clients et des serveurs de site enregistrent les informations sur les processus dans des fichiers journaux individuels. Vous pouvez utiliser les informations contenues dans ces fichiers journaux pour résoudre les problèmes susceptibles de survenir. Par défaut, Configuration Manager active la journalisation pour les composants client et serveur.   
 
@@ -216,39 +216,39 @@ Le tableau suivant répertorie les fichiers journaux qui se trouvent sur le clie
 ###  <a name="BKMK_LogFilesforLnU"></a> Client pour Linux et UNIX  
  Le client Configuration Manager pour Linux et UNIX enregistre les informations dans les fichiers journaux suivants :  
 
-> [!TIP]  
+> [!TIP]
 >  Utilisez CMTrace pour afficher les fichiers journaux du client pour Linux et UNIX.  
-
-> [!NOTE]  
+> 
+> [!NOTE]
 >  Lorsque vous utilisez la version initiale du client pour Linux et UNIX et faites référence à la documentation de cette section, remplacez les références suivantes pour chaque fichier ou processus :  
->   
->  -   Remplacez **omiserver.bin** par **nwserver.bin**  
-> -   Remplacez **omi** par **nanowbem**  
+> 
+> - Remplacez **omiserver.bin** par **nwserver.bin**  
+>   -   Remplacez **omi** par **nanowbem**  
 
-|Nom du fichier journal|Détails|  
-|--------------|-------------|  
-|Scxcm.log|Fichier journal pour le service principal du client Configuration Manager pour Linux et UNIX (ccmexec.bin). Ce fichier journal contient des informations liées à l'installation et aux opérations en cours de ccmexec.bin.<br /><br /> Par défaut, ce fichier journal se trouve dans **/var/opt/microsoft/scxcm.log**<br /><br /> Pour définir un autre emplacement pour le fichier journal, modifiez **/opt/microsoft/configmgr/etc/scxcm.conf** et changez le champ **PATH** . Il n'est pas nécessaire de redémarrer l'ordinateur ou le service client pour appliquer la modification.<br /><br /> Vous pouvez définir le niveau de journalisation sur quatre valeurs différentes.|  
-|Scxcmprovider.log|Fichier journal pour le service CIM du client Configuration Manager pour Linux et UNIX (omiserver.bin). Ce fichier journal contient les informations liées aux opérations en cours de nwserver.bin.<br /><br /> Ce fichier journal se trouve dans **/var/opt/microsoft/configmgr/scxcmprovider.log**<br /><br /> Pour définir un autre emplacement pour le fichier journal, modifiez **/opt/microsoft/omi/etc/scxcmprovider.conf** et changez le champ **PATH** . Il n'est pas nécessaire de redémarrer l'ordinateur ou le service client pour appliquer la modification.<br /><br /> Vous pouvez définir le niveau de journalisation sur trois valeurs différentes.|  
+|     Nom du fichier journal      |                                                                                                                                                                                                                                                                                               Détails                                                                                                                                                                                                                                                                                               |
+|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     Scxcm.log     | Fichier journal pour le service principal du client Configuration Manager pour Linux et UNIX (ccmexec.bin). Ce fichier journal contient des informations liées à l'installation et aux opérations en cours de ccmexec.bin.<br /><br /> Par défaut, ce fichier journal se trouve dans **/var/opt/microsoft/scxcm.log**<br /><br /> Pour définir un autre emplacement pour le fichier journal, modifiez **/opt/microsoft/configmgr/etc/scxcm.conf** et changez le champ **PATH** . Il n'est pas nécessaire de redémarrer l'ordinateur ou le service client pour appliquer la modification.<br /><br /> Vous pouvez définir le niveau de journalisation sur quatre valeurs différentes. |
+| Scxcmprovider.log |     Fichier journal pour le service CIM du client Configuration Manager pour Linux et UNIX (omiserver.bin). Ce fichier journal contient les informations liées aux opérations en cours de nwserver.bin.<br /><br /> Ce fichier journal se trouve dans<strong>/var/opt/microsoft/configmgr/scxcmprovider.log</strong><br /><br /> Pour définir un autre emplacement pour le fichier journal, modifiez **/opt/microsoft/omi/etc/scxcmprovider.conf** et changez le champ **PATH** . Il n'est pas nécessaire de redémarrer l'ordinateur ou le service client pour appliquer la modification.<br /><br /> Vous pouvez définir le niveau de journalisation sur trois valeurs différentes.      |
 
  Les deux fichiers journaux prennent en charge plusieurs niveaux de journalisation :  
 
 -   **scxcm.log**. Pour changer le niveau de journalisation, ouvrez **/opt/microsoft/configmgr/etc/scxcm.conf** et changez chaque instance de l’étiquette **MODULE** pour le niveau de journalisation souhaité :  
 
-    -   ERROR : indique des problèmes nécessitant votre attention.  
+    -   ERROR : indique des problèmes nécessitant votre attention  
 
-    -   WARNING : indique des problèmes possibles pour les opérations du client.  
+    -   WARNING : indique des problèmes possibles pour les opérations du client  
 
-    -   INFO : une journalisation plus détaillée indiquant l’état de différents événements sur le client.  
+    -   INFO : une journalisation plus détaillée indiquant l’état de divers événements sur le client  
 
-    -   TRACE : une journalisation détaillée généralement utilisée pour diagnostiquer les problèmes.  
+    -   TRACE : une journalisation détaillée généralement utilisée pour diagnostiquer les problèmes  
 
 -   **scxcmprovider.log**. Pour définir un autre niveau de journal, modifiez **/opt/microsoft/omi/etc/scxcmprovider.conf** et changez chaque instance de la balise **MODULE** au niveau de journal souhaité :  
 
-    -   ERROR : indique des problèmes nécessitant votre attention.  
+    -   ERROR : indique des problèmes nécessitant votre attention  
 
-    -   WARNING : indique des problèmes possibles pour les opérations du client.
+    -   WARNING : indique des problèmes possibles pour les opérations du client
 
-    -   INFO : une journalisation plus détaillée indiquant l’état de différents événements sur le client.  
+    -   INFO : une journalisation plus détaillée indiquant l’état de divers événements sur le client  
 
 Dans des conditions de fonctionnement normales, utilisez le niveau de journalisation ERROR. Ce niveau de journalisation crée le fichier journal le plus petit. Au fil de l’augmentation du niveau de journalisation d’ERROR à WARNING, à INFO, puis à TRACE, un fichier journal à chaque fois plus volumineux est créé car plus de données sont écrites dans le fichier journal.  
 

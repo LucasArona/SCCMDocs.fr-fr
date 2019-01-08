@@ -10,16 +10,16 @@ ms.assetid: f4f9a5fd-f573-4b99-ad93-b2c76812e922
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7d6b957ebcc19dfe8c14dd781f71678db8e160af
-ms.sourcegitcommit: 1a1bac2d5ee0f20ce565d29798ee4dd99aaca044
+ms.openlocfilehash: c4ceec8c0d5482456d3257106ee067bf3d9ec1fb
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52281904"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418099"
 ---
 # <a name="install-and-upgrade-with-the-version-1606-baseline-media-for-system-center-configuration-manager"></a>Installer et mettre à niveau avec le support de la base de référence de la version 1606 pour System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch), (Long-Term Servicing Branch)*
+*S’applique à :  System Center Configuration Manager (Current Branch), (Long-Term Servicing Branch)*
 
 Lorsque vous exécutez le programme d’installation à partir du support de la base de référence 1606 pour Configuration Manager, vous pouvez installer Long-Term Servicing Branch ou à un site Current Branch de System Center Configuration Manager.
 
@@ -71,17 +71,17 @@ Le média de la base de référence de la version 1606 prend en charge une nouv
 Quand vous utilisez un script sans assistance pour installer une branche sous licence, vous devez ajouter la section, les noms de clés et les valeurs ci-dessous dans la section Options de votre script. Vous n’avez pas besoin d’utiliser ces valeurs pour l’installation par script d’une version d’évaluation de Current Branch :  
 
  **SABranchOptions**
--   **Nom de clé : SAActive**
-  - Valeurs : 0 ou 1.  
-  - Détails : 0 installe une édition d’évaluation sans licence de Current Branch et 1 installe une édition sous licence.   
+- **Nom de clé : SAActive**
+  - Valeurs : 0 ou 1.  
+  - Détails :  0 installe une édition d’évaluation sans licence de Current Branch et 1 installe une édition sous licence.   
 
 - **CurrentBranch**
-  - Valeurs : 0 ou 1.  
-  - Détails : 0 installe Long-Term Servicing Branch et 1 installe Current Branch.  
+  - Valeurs : 0 ou 1.  
+  - Détails :  0 installe Long-Term Servicing Branch et 1 installe Current Branch.  
 
 Par exemple, pour installer une édition de Current Branch sous licence, vous utiliseriez :
 
-  **Nom de clé : SABranchOptions**
+  **Nom de clé : SABranchOptions**
    -    **SSActive = 1**
    - **CurrentBranch = 1**
 

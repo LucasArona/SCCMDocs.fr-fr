@@ -10,16 +10,16 @@ ms.assetid: bceab2e8-2f05-4a17-9ac8-a7a558670fb7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a72f7979c38a0a8782aa41fef66b7aa00af9bc0f
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 24f1d08fedfc09a190739182d7858772745fb3fe
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342237"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53423369"
 ---
 # <a name="capabilities-in-technical-preview-1612-for-system-center-configuration-manager"></a>Fonctionnalités de la version d’évaluation technique 1612 pour System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Technical Preview)*
+*S’applique à : System Center Configuration Manager (préversion technique)*
 
 
 
@@ -59,7 +59,7 @@ Outre l’installation et la configuration de la base de données de l’entrep�
 - L’ordinateur sur lequel vous installez le rôle de système de site nécessite .NET Framework 4.5.2 ou version ultérieure.
 - Le compte d’ordinateur de l’ordinateur sur lequel vous installez le rôle de système de site doit avoir des autorisations d’administrateur local sur l’ordinateur qui hébergera la base de données de l’entrepôt de données.
 - Le compte administratif que vous utilisez pour installer le rôle de système de site doit être un propriétaire de base de données (DBO) sur l’instance de SQL Server qui hébergera la base de données de l’entrepôt de données.  
--  La base de données est prise en charge :
+- La base de données est prise en charge :
   - Avec SQL Server 2012 ou version ultérieure, Enterprise ou Datacenter Edition.
   - Sur une instance par défaut ou nommée.
   - Sur un *cluster SQL Server*. Même si cette configuration doit fonctionner, elle n’a pas été testée et une assistance est conseillée.
@@ -78,14 +78,14 @@ Utilisez les informations suivantes pour terminer l’installation du rôle de s
 Page **Sélection du rôle système** :  
 Avant que l’Assistant n’affiche une option permettant de sélectionner et d’installer le point de service de l’entrepôt de données, vous devez avoir installé un point de Reporting Services.
 
-Page **Général** : Les informations générales suivantes sont requises :
+Page **Général** : Les informations générales suivantes sont requises :
 - **Paramètres de base de données Configuration Manager :**   
-  - **Nom du serveur** : spécifiez le nom de domaine complet du serveur qui héberge la base de données de site. Si vous n’utilisez pas une instance par défaut de SQL Server, vous devez spécifier l’instance après le nom de domaine complet au format suivant : ***&lt;nom-domaine-complet_SQLServer>\&lt;nom_instance>***
+  - **Nom du serveur** : spécifiez le nom de domaine complet du serveur qui héberge la base de données de site. Si vous n’utilisez pas une instance par défaut de SQL Server, vous devez spécifier l’instance après le nom de domaine complet au format suivant : ***&lt;nom-domaine-complet_SQLServer>\&lt;nom_instance>***
   - **Nom de la base de données** : spécifiez le nom de la base de données de site.
   - **Vérifier** : cliquez sur **Vérifier** pour vous assurer que la connexion à la base de données de site est établie.
 </br></br>
 - **Paramètres de base de données de l’entrepôt de données :**
-  - **Nom du serveur** : spécifiez le nom de domaine complet du serveur qui héberge le point de service de l’entrepôt de données et la base de données. Si vous n’utilisez pas une instance par défaut de SQL Server, vous devez spécifier l’instance après le nom de domaine complet au format suivant : ***&lt;nom-domaine-complet_SQLServer>\&lt;nom_instance>***
+  - **Nom du serveur** : spécifiez le nom de domaine complet du serveur qui héberge le point de service de l’entrepôt de données et la base de données. Si vous n’utilisez pas une instance par défaut de SQL Server, vous devez spécifier l’instance après le nom de domaine complet au format suivant : ***&lt;nom-domaine-complet_SQLServer>\&lt;nom_instance>***
   - **Nom de la base de données** : spécifiez le nom de domaine complet de la base de données de l’entrepôt de données.  Configuration Manager va créer la base de données avec ce nom. Si vous spécifiez un nom de base de données qui existe déjà sur l’instance de SQL Server, Configuration Manager utilise cette base de données.
   - **Vérifier** : cliquez sur **Vérifier** pour vous assurer que la connexion à la base de données de site est établie.
 
@@ -122,21 +122,21 @@ Après avoir installé un rôle de système de site de l’entrepôt de données
 ### <a name="move-the-data-warehouse-database"></a>Déplacer la base de données de l’entrepôt de données
 Procédez comme suit pour déplacer la base de données de l’entrepôt de données vers un nouveau serveur SQL Server :
 
-  1. Passez en revue la configuration actuelle de la base de données et enregistrez les détails de configuration, notamment :  
+1. Passez en revue la configuration actuelle de la base de données et enregistrez les détails de configuration, notamment :  
    - les groupes de données que vous synchronisez ;
    - les tables que vous incluez ou excluez dans la synchronisation.       
 
    Après la restauration de la base de données sur un nouveau serveur et la réinstallation du rôle de système de site, vous allez reconfigurer ces groupes de données et tables.  
 
-  2. Utilisez SQL Server Management Studio pour sauvegarder la base de données de l’entrepôt de données, puis à nouveau pour restaurer cette base de données sur le nouvel ordinateur SQL Server qui hébergera l’entrepôt de données.
+2. Utilisez SQL Server Management Studio pour sauvegarder la base de données de l’entrepôt de données, puis à nouveau pour restaurer cette base de données sur le nouvel ordinateur SQL Server qui hébergera l’entrepôt de données.
 
-  Après avoir restauré la base de données sur le nouveau serveur, vérifiez que les autorisations d’accès à la base de données sont les mêmes sur la nouvelle base de données de l’entrepôt de données que sur la base de données de l’entrepôt de données d’origine.
+   Après avoir restauré la base de données sur le nouveau serveur, vérifiez que les autorisations d’accès à la base de données sont les mêmes sur la nouvelle base de données de l’entrepôt de données que sur la base de données de l’entrepôt de données d’origine.
 
-  3. Utilisez la console Configuration Manager pour supprimer le rôle de système de site de point de service de l’entrepôt de données du serveur actuel.
+3. Utilisez la console Configuration Manager pour supprimer le rôle de système de site de point de service de l’entrepôt de données du serveur actuel.
 
-  4. Installez un nouveau point de service de l’entrepôt de données et spécifiez le nom du nouveau serveur SQL Server et de l’instance qui héberge la base de données de l’entrepôt de données que vous avez restaurée.
+4. Installez un nouveau point de service de l’entrepôt de données et spécifiez le nom du nouveau serveur SQL Server et de l’instance qui héberge la base de données de l’entrepôt de données que vous avez restaurée.
 
-  5. Une fois le rôle de système de site installé, le déplacement est terminé.
+5. Une fois le rôle de système de site installé, le déplacement est terminé.
 
 Vous pouvez consulter les journaux de Configuration Manager suivants pour vérifier que le rôle de système de site a été correctement réinstallé :  
 - **DWSSMSI.log** et **DWSSSetup.log** : utilisez ces journaux pour examiner les erreurs lors de l’installation du point de service de l’entrepôt de données.
@@ -148,7 +148,7 @@ Vous pouvez consulter les journaux de Configuration Manager suivants pour vérif
 
 Cet outil n’affecte que le contenu sur le point de distribution que vous spécifiez quand vous exécutez l’outil et que vous ne pouvez pas supprimer le contenu de la bibliothèque de contenu sur le serveur de site.
 
-Après avoir installé la version d’évaluation technique 1612, vous pouvez trouver **ContentLibraryCleanup.exe** dans le dossier \*%CM_Installation_Path%\cd.latest\SMSSETUP\TOOLS\ContentLibraryCleanup\* sur le serveur de site de la version d’évaluation technique.
+Après avoir installé la version d’évaluation technique 1612, vous pouvez trouver **ContentLibraryCleanup.exe** dans le dossier *%CM_Installation_Path%\cd.latest\SMSSETUP\TOOLS\ContentLibraryCleanup\* sur le serveur de site de la version d’évaluation technique.
 
 L’outil fourni avec cette version d’évaluation technique est destiné à remplacer les anciennes versions des outils similaires distribués pour les produits Configuration Manager précédents. Même si cette version de l’outil cessera de fonctionner après le 1er mars 2017, de nouvelles versions accompagneront les futures versions d’évaluation technique jusqu’à ce que cet outil soit publié dans le cadre de Current Branch ou d’une version hors bande prête pour la production.
 
@@ -158,22 +158,22 @@ L’outil fourni avec cette version d’évaluation technique est destiné à re
 
 ### <a name="modes-of-operation"></a>Modes opératoires
 L’outil peut être exécuté dans deux modes :
-  1.    **Mode de simulation** :   
-      Quand vous ne spécifiez pas le commutateur **/delete**, l’outil s’exécute en mode de simulation et identifie le contenu qui serait supprimé à partir du point de distribution, mais ne supprime en réalité aucune donnée.
+1. **Mode de simulation** :   
+   Quand vous ne spécifiez pas le commutateur **/delete**, l’outil s’exécute en mode de simulation et identifie le contenu qui serait supprimé à partir du point de distribution, mais ne supprime en réalité aucune donnée.
 
-      - Quand l’outil s’exécute dans ce mode, les informations sur le contenu qui serait supprimé sont automatiquement écrites dans le fichier journal tools. L’utilisateur n’est pas invité à confirmer chaque suppression potentielle.
-      - Par défaut, le fichier journal est écrit dans le dossier temporaire users sur l’ordinateur sur lequel vous exécutez l’outil, mais vous pouvez utiliser le commutateur /log pour rediriger le fichier journal vers un autre emplacement.  
-      </br>
+   - Quand l’outil s’exécute dans ce mode, les informations sur le contenu qui serait supprimé sont automatiquement écrites dans le fichier journal tools. L’utilisateur n’est pas invité à confirmer chaque suppression potentielle.
+   - Par défaut, le fichier journal est écrit dans le dossier temporaire users sur l’ordinateur sur lequel vous exécutez l’outil, mais vous pouvez utiliser le commutateur /log pour rediriger le fichier journal vers un autre emplacement.  
+   </br>
 
-    Nous vous recommandons d’exécuter l’outil dans ce mode et de consulter le fichier journal obtenu avant d’exécuter l’outil avec le commutateur /delete.  
+   Nous vous recommandons d’exécuter l’outil dans ce mode et de consulter le fichier journal obtenu avant d’exécuter l’outil avec le commutateur /delete.  
 
-  2. **Mode de suppression** : Quand vous exécutez l’outil avec le commutateur **/delete**, l’outil s’exécute en mode de suppression.
+2. **Mode Suppression** : Quand vous exécutez l’outil avec le commutateur **/delete**, l’outil s’exécute en mode de suppression.
 
-     - Quand l’outil s’exécute dans ce mode, le contenu orphelin qui se trouve sur le point de distribution spécifié peut être supprimé à partir de la bibliothèque de contenu du point de distribution.
-     -  Avant de supprimer chaque fichier, l’utilisateur est invité à confirmer que le fichier doit être supprimé.  Vous pouvez sélectionner **Y** pour oui, **N** pour non, ou **Oui pour tout** pour ignorer les autres invites et supprimer tout le contenu orphelin.  
-     </br>
+   - Quand l’outil s’exécute dans ce mode, le contenu orphelin qui se trouve sur le point de distribution spécifié peut être supprimé à partir de la bibliothèque de contenu du point de distribution.
+   -  Avant de supprimer chaque fichier, l’utilisateur est invité à confirmer que le fichier doit être supprimé.  Vous pouvez sélectionner **Y** pour oui, **N** pour non, ou **Oui pour tout** pour ignorer les autres invites et supprimer tout le contenu orphelin.  
+   </br>
 
-     Nous vous recommandons d’exécuter l’outil en mode de simulation et de consulter le fichier journal obtenu avant d’exécuter l’outil avec le commutateur /delete.  
+   Nous vous recommandons d’exécuter l’outil en mode de simulation et de consulter le fichier journal obtenu avant d’exécuter l’outil avec le commutateur /delete.  
 
 Quand l’outil de nettoyage de la bibliothèque de contenu s’exécute dans l’un de ces modes, il crée automatiquement un journal avec un nom qui inclut le mode d’exécution de l’outil, le nom du point de distribution, la date et l’heure de l’opération. Le fichier journal s’ouvre automatiquement quand l’exécution de l’outil est terminée. Par défaut, ce journal est écrit dans le dossier **temporaire** users sur l’ordinateur sur lequel vous exécutez l’outil, mais vous pouvez utiliser un commutateur de ligne de commande pour rediriger le fichier journal vers un autre emplacement, dont un partage réseau.   
 
@@ -195,12 +195,12 @@ Les commutateurs de ligne de commande suivants peuvent être utilisés dans n’
 
 |Commutateur|Détails|
 |---------|-------|
-|**/delete**  |**Facultatif** </br> Utilisez ce commutateur quand vous souhaitez supprimer le contenu à partir du point de distribution. Vous êtes invité à confirmer que le contenu doit être supprimé. </br></br> Quand ce commutateur n’est pas utilisé, l’outil enregistre les résultats sur le contenu qui serait supprimé, mais ne supprime aucun contenu à partir du point de distribution. </br></br> Exemple : ***ContentLibraryCleanup.exe /dp server1.contoso.com /delete*** |
-| **/q**       |**Facultatif** </br> Exécutez l’outil en mode silencieux qui supprime toutes les invites (telles que les invites quand vous supprimez le contenu), et n’ouvrez pas automatiquement le fichier journal. </br></br> Exemple : ***ContentLibraryCleanup.exe /q /dp server1.contoso.com*** |
-| **/dp &lt;nom de domaine complet du point de distribution>**  | **Obligatoire** </br> Spécifiez le nom de domaine complet du point de distribution que vous souhaitez nettoyer. </br></br> Exemple : ***ContentLibraryCleanup.exe /dp server1.contoso.com***|
-| **/ps &lt;nom de domaine complet du site principal>**       | **Facultatif** lors du nettoyage du contenu à partir d’un point de distribution sur un site principal.</br>**Obligatoire** lors du nettoyage du contenu à partir d’un point de distribution sur un site secondaire. </br></br> Spécifiez le nom de domaine complet du site principal auquel le point de distribution appartient, ou du site principal parent quand le point de distribution est sur un site secondaire. </br></br> Exemple : ***ContentLibraryCleanup.exe /dp server1.contoso.com /ps siteserver1.contoso.com*** |
-| **/sc &lt;code du site principal>**  | **Facultatif** lors du nettoyage du contenu à partir d’un point de distribution sur un site principal.</br>**Obligatoire** lors du nettoyage du contenu à partir d’un point de distribution sur un site secondaire. </br></br> Spécifiez le code du site principal auquel le point de distribution appartient, ou du site principal parent quand le point de distribution est sur un site secondaire.</br></br> Exemple : ***ContentLibraryCleanup.exe /dp server1.contoso.com /sc ABC*** |
-| **/log <log file directory>**       |**Facultatif** </br> Spécifiez un répertoire dans lequel placer les fichiers journaux. Il peut s’agir d’un lecteur local ou d’un emplacement sur un partage réseau.</br></br> Quand ce commutateur n’est pas utilisé, les fichiers journaux sont automatiquement placés dans le dossier temporaire users.</br></br> Exemple de lecteur local : ***ContentLibraryCleanup.exe /dp server1.contoso.com /log C:\Users\Administrator\Desktop*** </br></br>Exemple de partage réseau : ***ContentLibraryCleanup.exe /dp server1.contoso.com /log \\&lt;partage>\&lt;dossier>***|
+|**/delete**  |**Facultatif** </br> Utilisez ce commutateur quand vous souhaitez supprimer le contenu à partir du point de distribution. Vous êtes invité à confirmer que le contenu doit être supprimé. </br></br> Quand ce commutateur n’est pas utilisé, l’outil enregistre les résultats sur le contenu qui serait supprimé, mais ne supprime aucun contenu à partir du point de distribution. </br></br> Exemple : ***ContentLibraryCleanup.exe /dp server1.contoso.com /delete*** |
+| **/q**       |**Facultatif** </br> Exécutez l’outil en mode silencieux qui supprime toutes les invites (telles que les invites quand vous supprimez le contenu), et n’ouvrez pas automatiquement le fichier journal. </br></br> Exemple : ***ContentLibraryCleanup.exe /q /dp server1.contoso.com*** |
+| **/dp &lt;nom de domaine complet du point de distribution>**  | **Obligatoire** </br> Spécifiez le nom de domaine complet du point de distribution que vous souhaitez nettoyer. </br></br> Exemple :  ***ContentLibraryCleanup.exe /dp server1.contoso.com***|
+| **/ps &lt;nom de domaine complet du site principal>**       | **Facultatif** lors du nettoyage du contenu à partir d’un point de distribution sur un site principal.</br>**Obligatoire** lors du nettoyage du contenu à partir d’un point de distribution sur un site secondaire. </br></br> Spécifiez le nom de domaine complet du site principal auquel le point de distribution appartient, ou du site principal parent quand le point de distribution est sur un site secondaire. </br></br> Exemple : ***ContentLibraryCleanup.exe /dp server1.contoso.com /ps siteserver1.contoso.com*** |
+| **/sc &lt;code du site principal>**  | **Facultatif** lors du nettoyage du contenu à partir d’un point de distribution sur un site principal.</br>**Obligatoire** lors du nettoyage du contenu à partir d’un point de distribution sur un site secondaire. </br></br> Spécifiez le code du site principal auquel le point de distribution appartient, ou du site principal parent quand le point de distribution est sur un site secondaire.</br></br> Exemple : ***ContentLibraryCleanup.exe /dp server1.contoso.com /sc ABC*** |
+| **/log <log file directory>**       |**Facultatif** </br> Spécifiez un répertoire dans lequel placer les fichiers journaux. Il peut s’agir d’un lecteur local ou d’un emplacement sur un partage réseau.</br></br> Quand ce commutateur n’est pas utilisé, les fichiers journaux sont automatiquement placés dans le dossier temporaire users.</br></br> Exemple de lecteur local : ***ContentLibraryCleanup.exe /dp server1.contoso.com /log C:\Users\Administrator\Desktop*** </br></br>Exemple de partage réseau : ***ContentLibraryCleanup.exe /dp server1.contoso.com /log \\&lt;share>\&lt;folder>***|
 
 
 ## <a name="improvements-for-in-console-search"></a>Améliorations apportées à la recherche dans la console

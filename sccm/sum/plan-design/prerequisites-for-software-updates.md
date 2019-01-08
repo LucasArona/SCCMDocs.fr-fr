@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: fdf05118-162a-411e-b72e-386b9dc9a5e1
-ms.openlocfilehash: ffe1546e3d7561a0bbda787ef6b1aaeac6e8d2e0
-ms.sourcegitcommit: 2504617dc4db90e205327d06cab32f050e88dbf2
+ms.openlocfilehash: cbaaa84b0c4b3c9b05e7ffbae565a7b6da7c7426
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51505123"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53423879"
 ---
 # <a name="prerequisites-for-software-updates-in-system-center-configuration-manager"></a>Configuration requise pour les mises à jour logicielles dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Cet article répertorie les prérequis pour les mises à jour logicielles dans System Center Configuration Manager. Pour chaque composant requis, les dépendances externes et les dépendances internes figurent dans des tableaux séparés.  
 
@@ -108,7 +108,7 @@ Si vous avez plusieurs points de mise à jour logicielle sur un même site, veil
 
 2.  Décochez la classification **Mises à niveau** dans les propriétés du composant Point de mise à jour logicielle. (Pour plus d’informations, consultez [Configurer les classifications et les produits](../get-started/configure-classifications-and-products.md).) Démarrez ensuite la synchronisation des mises à jour logicielles. (Pour plus d’informations, consultez [Synchroniser les mises à jour logicielles](../get-started/synchronize-software-updates.md).)  
 
-3.  Installez le [correctif 3095113](https://support.microsoft.com/kb/3095113) pour WSUS sur vos points de mise à jour logicielle et serveurs de site.  
+3.  Installez leez le [correctif 3095113](https://support.microsoft.com/kb/3095113) pour WSUS sur vos points de mise à jour logicielle et serveurs de site.  
 
 4.  Sélectionnez la classification **Mises à niveau** dans les propriétés du composant Point de mise à jour logicielle. (Pour plus d’informations, consultez [Configurer les classifications et les produits](../get-started/configure-classifications-and-products.md).) Démarrez ensuite la synchronisation des mises à jour logicielles. (Pour plus d’informations, consultez [Synchroniser les mises à jour logicielles](../get-started/synchronize-software-updates.md).)  
 

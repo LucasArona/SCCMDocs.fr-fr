@@ -10,16 +10,16 @@ ms.assetid: 2c8f57cf-1968-48de-87fb-4897432ed6e0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 976aeaacfadfa7d2f189f20ab001486d486b764e
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: c88907b82e0066024128985e2d31522a2ea897ee
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335879"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416773"
 ---
 # <a name="how-to-monitor-clients-in-system-center-configuration-manager"></a>Guide pratique pour surveiller des clients dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 
  Une fois l’application cliente System Center Configuration Manager installée sur les ordinateurs et appareils Windows de votre site, vous pouvez surveiller leur intégrité et leur activité dans la console Configuration Manager.  
@@ -62,20 +62,20 @@ ms.locfileid: "32335879"
 
 ##  <a name="bkmk_allStatus"></a> Surveiller le statut de tous les clients  
 
-1.  Dans la console Configuration Manager, cliquez sur **Surveillance** > **État du client**. Dans cette page de la console, vous pouvez consulter les statistiques générales relatives à l’activité du client et à l’intégrité du client sur le site.  Vous pouvez également modifier l’étendue des informations en choisissant un autre regroupement.  
+1. Dans la console Configuration Manager, cliquez sur **Surveillance** > **État du client**. Dans cette page de la console, vous pouvez consulter les statistiques générales relatives à l’activité du client et à l’intégrité du client sur le site.  Vous pouvez également modifier l’étendue des informations en choisissant un autre regroupement.  
 
-2.  Pour explorer en détail les statistiques renvoyées, cliquez sur le nom des informations communiquées (par exemple, **Clients actifs ayant réussi la vérification ou sans résultats**) et passez en revue les informations sur les différents clients.  
+2. Pour explorer en détail les statistiques renvoyées, cliquez sur le nom des informations communiquées (par exemple, **Clients actifs ayant réussi la vérification ou sans résultats**) et passez en revue les informations sur les différents clients.  
 
-3.  Cliquez sur **Activité des clients** pour afficher des graphiques illustrant l’activité des clients sur votre site Configuration Manager.  
+3. Cliquez sur **Activité des clients** pour afficher des graphiques illustrant l’activité des clients sur votre site Configuration Manager.  
 
-4.  Cliquez sur **Intégrité du client** pour afficher des graphiques illustrant l’état de vérification de l’intégrité des clients de votre site Configuration Manager.  
+4. Cliquez sur **Intégrité du client** pour afficher des graphiques illustrant l’état de vérification de l’intégrité des clients de votre site Configuration Manager.  
 
- Vous pouvez configurer des alertes pour vous avertir lorsque les résultats de l'intégrité des clients ou l'activité des clients passent au-dessous d'un pourcentage de clients spécifié dans un enregistrement ou lorsque la mise à jour échoue sur un pourcentage de clients spécifié. Pour plus d’informations sur la configuration de l’état du client, consultez [Comment configurer l’état du client dans System Center Configuration Manager](../../../core/clients/deploy/configure-client-status.md).  
+   Vous pouvez configurer des alertes pour vous avertir lorsque les résultats de l'intégrité des clients ou l'activité des clients passent au-dessous d'un pourcentage de clients spécifié dans un enregistrement ou lorsque la mise à jour échoue sur un pourcentage de clients spécifié. Pour plus d’informations sur la configuration de l’état du client, consultez [Comment configurer l’état du client dans System Center Configuration Manager](../../../core/clients/deploy/configure-client-status.md).  
 
 ##  <a name="BKMK_ClientHealth"></a> Vérifications et corrections effectuées par la fonction d'intégrité du client  
  Les vérifications et corrections suivantes peuvent être effectuées par la fonction d'intégrité du client.  
 
-|Intégrité du client|Action corrective|Plus d'informations|  
+|Intégrité du client|Action corrective|Informations complémentaires|  
 |------------------|------------------------|----------------------|  
 |Vérifier que la fonction d'intégrité du client a été exécutée récemment|Exécuter l'intégrité du client|Vérifie que l'intégrité du client a été exécutée au moins une fois au cours des trois derniers jours.|  
 |Vérifier que la configuration requise du client est installée|Installer la configuration requise du client|Vérifie que la configuration requise du client est installée. Lit le fichier ccmsetup.xml dans le dossier d'installation client pour découvrir les composants requis.|  
@@ -103,8 +103,8 @@ ms.locfileid: "32335879"
 |Vérifier que le type de démarrage du service de contrôle à distance de Configuration Manager est automatique ou manuel|Réinitialiser le type de démarrage du service sur automatique|Aucune information supplémentaire|  
 |Vérifier que le service de contrôle à distance de Configuration Manager est en cours d'exécution|Démarrer le service de contrôle à distance|Aucune information supplémentaire|  
 |Vérifier l'intégrité du fournisseur WMI du client|Redémarrer le service WMI (Windows Management Instrumentation)|La correction de cette intégrité du client est effectuée uniquement sur les ordinateurs qui exécutent Windows Server 2003, Windows XP (64 bits) ou des versions antérieures.|  
-|Vérifier que le service de proxy de mise en éveil (proxy de mise en éveil ConfigMgr) est en cours d'exécution|Démarrer le service de proxy de mise en éveil ConfigMgr|Cette vérification du client est effectuée uniquement si le paramètre client **Gestion de l’alimentation**: **Autoriser le proxy de mise en éveil** est défini sur **Oui** sur les systèmes d’exploitation clients pris en charge.|  
-|Vérifier que le type de démarrage du service de proxy de mise en éveil (proxy de mise en éveil ConfigMgr) est automatique|Réinitialiser le type de démarrage du service de proxy de mise en éveil ConfigMgr sur automatique|Cette vérification du client est effectuée uniquement si le paramètre client **Gestion de l’alimentation**: **Autoriser le proxy de mise en éveil** est défini sur **Oui** sur les systèmes d’exploitation clients pris en charge.|  
+|Vérifier que le service de proxy de mise en éveil (proxy de mise en éveil ConfigMgr) est en cours d'exécution|Démarrer le service de proxy de mise en éveil ConfigMgr|Cette vérification du client est effectuée uniquement si le paramètre client **Gestion de l’alimentation** : **Autoriser le proxy de mise en éveil** est défini sur **Oui** sur les systèmes d’exploitation client pris en charge.|  
+|Vérifier que le type de démarrage du service de proxy de mise en éveil (proxy de mise en éveil ConfigMgr) est automatique|Réinitialiser le type de démarrage du service de proxy de mise en éveil ConfigMgr sur automatique|Cette vérification du client est effectuée uniquement si le paramètre client **Gestion de l’alimentation** : **Autoriser le proxy de mise en éveil** est défini sur **Oui** sur les systèmes d’exploitation client pris en charge.|  
 
 ## <a name="client-deployment-log-files"></a>Fichiers journaux de déploiement du client
 Pour plus d’informations sur les fichiers journaux utilisés par les opérations de déploiement et de gestion du client, consultez [Fichiers journaux dans System Center Configuration Manager](/sccm/core/plan-design/hierarchy/log-files#BKMK_ClientLogs).

@@ -10,16 +10,16 @@ ms.assetid: 6c64f276-b88c-4b1e-8073-331876a03038
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 69d8db3cceff45319ed4f2fc0b2962c3bb50b0f2
-ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
+ms.openlocfilehash: 804b21733422bd654764f2199fe33d184d54cce4
+ms.sourcegitcommit: d021f82e4bc35a8e9b5d291bf779ce52b4f47eb8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42756170"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656473"
 ---
 # <a name="prepare-windows-pe-peer-cache-to-reduce-wan-traffic-in-system-center-configuration-manager"></a>Préparer le cache d’homologue Windows PE pour réduire le trafic WAN dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Quand vous déployez un nouveau système d’exploitation dans System Center Configuration Manager, les ordinateurs qui exécutent la séquence de tâches peuvent utiliser le cache d’homologue Windows PE pour obtenir du contenu à partir d’un homologue local (source de cache d’homologue) au lieu de le télécharger à partir d’un point de distribution. Cela permet de réduire le trafic du réseau étendu dans les scénarios de succursale où il n'existe aucun point de distribution local.  
 
@@ -34,19 +34,19 @@ Pour savoir comment gérer le cache d’homologue, consultez les sections suivan
 ##  <a name="BKMK_PeerCacheObjects"></a> Objets stockés dans une source de mise en cache d’homologue  
  Une séquence de tâches configurée pour utiliser la mise en cache d’homologue Windows PE peut obtenir les objets de contenu suivants en cas d’exécution dans Windows PE :  
 
--   Image du système d'exploitation  
+- Image du système d'exploitation  
 
--   Package de pilotes  
+- Package de pilotes  
 
--   Packages et des programmes (lorsque le client continue d’exécuter la séquence de tâches dans le système d’exploitation complet, le client obtient ce contenu à partir d’une source de mise en cache d’homologue si la séquence de tâches a été initialement configurée pour la mise en cache d’homologue lors de l’exécution dans Windows PE).  
+- Packages et des programmes (lorsque le client continue d’exécuter la séquence de tâches dans le système d’exploitation complet, le client obtient ce contenu à partir d’une source de mise en cache d’homologue si la séquence de tâches a été initialement configurée pour la mise en cache d’homologue lors de l’exécution dans Windows PE).  
 
--   des images de démarrage supplémentaires.  
+- des images de démarrage supplémentaires.  
 
- Les objets de contenu suivants ne sont jamais transférés à l’aide de la mise en cache d’homologue. Au lieu de cela, ils sont transférés à partir d’un point de distribution, ou par Windows BranchCache si vous avez configuré Windows BranchCache dans votre environnement :  
+  Les objets de contenu suivants ne sont jamais transférés à l’aide de la mise en cache d’homologue. Au lieu de cela, ils sont transférés à partir d’un point de distribution, ou par Windows BranchCache si vous avez configuré Windows BranchCache dans votre environnement :  
 
--   Applications  
+- Applications  
 
--   Mises à jour logicielles  
+- Mises à jour logicielles  
 
 ##  <a name="BKMK_PeerCacheWork"></a> Comment fonctionne la mise en cache d’homologue Windows PE ?  
  Imaginez un scénario avec une filiale qui ne dispose pas de point de distribution, mais qui a plusieurs clients activés pour utiliser la mise en cache d’homologue Windows PE. Vous déployez la séquence de tâches configurée pour utiliser la mise en cache d’homologue sur plusieurs clients qui sont configurés comme faisant partie de la source de mise en cache d’homologue. Le premier client à exécuter la séquence de tâches diffuse une demande pour trouver un homologue qui possède le contenu. N’en trouvant aucun, il obtient le contenu à partir d’un point de distribution sur le réseau étendu. Le client installe la nouvelle image et stocke ensuite le contenu dans son cache de client Configuration Manager pour pouvoir fonctionner en tant que source de cache d’homologue pour d’autres clients. Lorsque le client suivant exécute la séquence de tâches, il diffuse une requête sur le sous-réseau pour une source de mise en cache d'homologue et le premier client répond et rend son contenu mis en cache accessible.  
@@ -77,59 +77,59 @@ Pour savoir comment gérer le cache d’homologue, consultez les sections suivan
 ##  <a name="BKMK_PeerCacheConfigure"></a> Configurer la mise en cache d’homologue Windows PE  
  Vous pouvez appliquer les méthodes suivantes pour approvisionner un client avec du contenu de mise en cache d’homologue, pour qu’il puisse agir comme source de mise en cache d’homologue :  
 
--   Un client de mise en cache d'homologue qui ne trouve pas de source de mise en cache d'homologue avec le contenu le télécharge à partir d'un point de distribution.  Si le client reçoit des paramètres client qui activent la mise en cache d'homologue et que la séquence de tâches est configurée pour conserver le contenu mis en cache, le client devient une source de mise en cache d'homologue.  
+- Un client de mise en cache d'homologue qui ne trouve pas de source de mise en cache d'homologue avec le contenu le télécharge à partir d'un point de distribution.  Si le client reçoit des paramètres client qui activent la mise en cache d'homologue et que la séquence de tâches est configurée pour conserver le contenu mis en cache, le client devient une source de mise en cache d'homologue.  
 
--   Un client de mise en cache d'homologue peut obtenir du contenu à partir d'un autre client de mise en cache d'homologue (une source de mise en cache d'homologue).  Le client étant configuré pour la mise en cache d'homologue, quand il exécute une séquence de tâches configurée pour conserver le contenu mis en cache, il devient une source de mise en cache d'homologue.  
+- Un client de mise en cache d'homologue peut obtenir du contenu à partir d'un autre client de mise en cache d'homologue (une source de mise en cache d'homologue).  Le client étant configuré pour la mise en cache d'homologue, quand il exécute une séquence de tâches configurée pour conserver le contenu mis en cache, il devient une source de mise en cache d'homologue.  
 
--   Un client exécute une séquence de tâches qui comprend l’étape facultative [Télécharger le contenu du package](/sccm/osd/understand/task-sequence-steps#BKMK_DownloadPackageContent), qui sert à préparer le contenu pertinent inclus dans la séquence de tâches de mise en cache d’homologue Windows PE. Quand vous appliquez cette méthode :  
+- Un client exécute une séquence de tâches qui comprend l’étape facultative [Télécharger le contenu du package](/sccm/osd/understand/task-sequence-steps#BKMK_DownloadPackageContent), qui sert à préparer le contenu pertinent inclus dans la séquence de tâches de mise en cache d’homologue Windows PE. Quand vous appliquez cette méthode :  
 
-    -   Le client n'a pas besoin d'installer l'image qui est en cours de déploiement.  
+  -   Le client n'a pas besoin d'installer l'image qui est en cours de déploiement.  
 
-    -   Outre l’option **Télécharger le contenu du package**, la séquence de tâches doit également utiliser l’option **Cache du client Configuration Manager**. Cette option vous permet de stocker le contenu dans le cache des clients pour que le client puisse agir comme source de mise en cache d'homologue pour d'autres clients de mise en cache d'homologue.  
+  -   Outre l’option **Télécharger le contenu du package**, la séquence de tâches doit également utiliser l’option **Cache du client Configuration Manager**. Cette option vous permet de stocker le contenu dans le cache des clients pour que le client puisse agir comme source de mise en cache d'homologue pour d'autres clients de mise en cache d'homologue.  
 
- Les procédures suivantes vous aideront à configurer la mise en cache d'homologue Windows PE sur les clients et à configurer des séquences de tâches qui prennent en charge la mise en cache d'homologue.  
+  Les procédures suivantes vous aideront à configurer la mise en cache d'homologue Windows PE sur les clients et à configurer des séquences de tâches qui prennent en charge la mise en cache d'homologue.  
 
 ### <a name="to-configure-the-windows-pe-peer-cache-source-computers"></a>Pour configurer les ordinateurs sources de mise en cache d’homologue Windows PE  
 
-1.  Dans la console Configuration Manager, accédez à **Administration** > **Paramètres client**, puis créez des **paramètres de périphérique client personnalisés** ou modifiez un objet de paramètres existant. Vous pouvez aussi configurer cela pour l'objet **Paramètres client par défaut** .  
+1. Dans la console Configuration Manager, accédez à **Administration** > **Paramètres client**, puis créez des **paramètres de périphérique client personnalisés** ou modifiez un objet de paramètres existant. Vous pouvez aussi configurer cela pour l'objet **Paramètres client par défaut** .  
 
-    > [!TIP]  
-    >  Utilisez un objet de paramètres personnalisés pour gérer les clients qui reçoivent cette configuration. Par exemple, vous souhaiterez peut-être éviter de configurer cela sur les ordinateurs portables des utilisateurs qui sont souvent en déplacement. Un système hautement mobile peut être une source médiocre pour fournir du contenu à d'autres clients de mise en cache d'homologue.  
-    >   
-    >  Souvenez-vous aussi que lorsque vous configurez ce paramètre dans le cadre des **Paramètres client par défaut**, la configuration s'applique à tous les clients de votre environnement.  
+   > [!TIP]  
+   >  Utilisez un objet de paramètres personnalisés pour gérer les clients qui reçoivent cette configuration. Par exemple, vous souhaiterez peut-être éviter de configurer cela sur les ordinateurs portables des utilisateurs qui sont souvent en déplacement. Un système hautement mobile peut être une source médiocre pour fournir du contenu à d'autres clients de mise en cache d'homologue.  
+   >   
+   >  Souvenez-vous aussi que lorsque vous configurez ce paramètre dans le cadre des **Paramètres client par défaut**, la configuration s'applique à tous les clients de votre environnement.  
 
-2.  Sous **Mise en cache d'homologue Windows PE**, affectez la valeur **Oui** à **Permettre au client Configuration Manager exécutant le système d'exploitation complet de partager du contenu**.  
+2. Sous **Paramètres de mise en cache du client**, affectez la valeur **Oui** à **Permettre au client Configuration Manager exécutant le système d’exploitation complet de partager du contenu**.  
 
-    -   Par défaut, seul le protocole HTTP est activé. Si vous souhaitez permettre aux clients de télécharger du contenu via HTTPS, affectez la valeur **Oui** à **Activer HTTPS pour la communication d'homologues clients**.  
+   -   Par défaut, seul le protocole HTTP est activé. Si vous souhaitez permettre aux clients de télécharger du contenu via HTTPS, affectez la valeur **Oui** à **Activer HTTPS pour la communication d'homologues clients**.  
 
-    -   Par défaut, le port pour les diffusions est défini sur 8004 et le port pour les téléchargements de contenu est défini sur 8003. Vous pouvez les changer tous les deux.  
+   -   Par défaut, le port pour les diffusions est défini sur 8004 et le port pour les téléchargements de contenu est défini sur 8003. Vous pouvez les changer tous les deux.  
 
-3.  Enregistrez et déployer les paramètres client sur les clients que vous sélectionnez comme sources de mise en cache d’homologue.  
+3. Enregistrez et déployer les paramètres client sur les clients que vous sélectionnez comme sources de mise en cache d’homologue.  
 
- Une fois qu'un appareil est configuré avec cet objet de paramètres, il est configuré pour agir comme source de mise en cache d'homologue. Vous devez déployer ces paramètres sur les clients de mise en cache d'homologue potentiels pour configurer les ports et protocoles nécessaires.  
+   Une fois qu'un appareil est configuré avec cet objet de paramètres, il est configuré pour agir comme source de mise en cache d'homologue. Vous devez déployer ces paramètres sur les clients de mise en cache d'homologue potentiels pour configurer les ports et protocoles nécessaires.  
 
 ###  <a name="BKMK_PeerCacheConfigureTS"></a> Configurer une séquence de tâches pour la mise en cache d’homologue Windows PE  
  Quand vous configurez la séquence de tâches, utilisez les variables suivantes comme Variables du regroupement sur le regroupement dans lequel la séquence de tâches est déployée :  
 
--   **SMSTSPeerDownload**  
+- **SMSTSPeerDownload**  
 
-     Valeur :  TRUE  
+   Valeur :  TRUE  
 
-     Cela permet au client d'utiliser la mise en cache d'homologue Windows PE.  
+   Cela permet au client d'utiliser la mise en cache d'homologue Windows PE.  
 
--   **SMSTSPeerRequestPort**  
+- **SMSTSPeerRequestPort**  
 
-     Valeur : <Numéro de port\>  
+   Valeur : <Numéro de port\>  
 
-     Lorsque vous n’utilisez pas le port par défaut configuré dans les Paramètres client (8004), vous devez configurer cette variable avec une valeur personnalisée du port réseau à utiliser pour la diffusion initiale.  
+   Lorsque vous n’utilisez pas le port par défaut configuré dans les Paramètres client (8004), vous devez configurer cette variable avec une valeur personnalisée du port réseau à utiliser pour la diffusion initiale.  
 
--   **SMSTSPreserveContent**  
+- **SMSTSPreserveContent**  
 
-     Valeur : TRUE  
+   Valeur : TRUE  
 
-     Le contenu est ainsi marqué dans la séquence de tâches de façon à être conservé dans le cache du client Configuration Manager après le déploiement. Cette variable se distingue de SMSTSPersisContent, qui conserve uniquement le contenu pendant la durée de la séquence de tâches et utilise le cache de la séquence de tâches, et non le cache du client Configuration Manager.  
+   Le contenu est ainsi marqué dans la séquence de tâches de façon à être conservé dans le cache du client Configuration Manager après le déploiement. Cette variable se distingue de SMSTSPersisContent, qui conserve uniquement le contenu pendant la durée de la séquence de tâches et utilise le cache de la séquence de tâches, et non le cache du client Configuration Manager.  
 
- Pour plus d’informations, consultez [Variables de séquence de tâches](/sccm/osd/understand/task-sequence-variables).  
+  Pour plus d’informations, voir [Variables de séquence de tâches](/sccm/osd/understand/task-sequence-variables).  
 
 ###  <a name="BKMK_PeerCacheValidate"></a> Valider la réussite de l’utilisation de la mise en cache d’homologue Windows PE  
  Une fois que vous avez utilisé la mise en cache d’homologue Windows PE pour déployer et installer une séquence de tâches, vous pouvez vérifier que le processus a bien utilisé la mise en cache d’homologue en consultant le fichier **smsts.log** sur le client qui a exécuté la séquence de tâches.  

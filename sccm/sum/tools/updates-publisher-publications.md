@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: a6a1f8257c2a334b539499a5febbdb77729f0fb2
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: f0ec652a9fb7d4ef6bef881bfc96f1be2b4e297a
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32349913"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424338"
 ---
 # <a name="manage-publications-in-updates-publisher"></a>Gérer des publications dans l’éditeur de mises à jour
 
-*S’applique à : l'éditeur de mise à jour System Center*
+*S’applique à : System Center Updates Publisher*
 
 Vous pouvez utiliser des publications pour gérer des offres groupées de mises à jour comme un seul objet. Cela inclut la publication des mises à jour sur un serveur d’administration et l’exportation de la publication en tant que groupe pour une utilisation avec une autre installation de l’éditeur de mise à jour.
 
@@ -41,9 +41,9 @@ Dans l **’espace de travail Publications**, vous pouvez modifier le **type de 
 
 2. Puis, dans l'onglet **Accueil**, choisissez l’une des options suivantes. Les options disponibles dépendent du type de publication des mises à jour que vous avez sélectionné.
 
-  -   **Automatique**
-  -   **Tout le contenu**
-  -   **Métadonnées uniquement**
+   -   **Automatique**
+   -   **Tout le contenu**
+   -   **Métadonnées uniquement**
 
 Après avoir apporté une modification, vous devrez peut-être actualiser l’affichage de la publication pour voir les nouvelles valeurs.
 
@@ -67,13 +67,13 @@ Avant de pouvoir publier une mise à jour, vous devez configurer l’option [Ser
 
 ### <a name="to-publish-a-publication"></a>Pour publier une publication
 
-1.  Accédez à l **’espace de travail Publications**, puis sélectionnez une publication contenant le groupe de mises à jour et les offres groupées que vous souhaitez publier ou exporter. Puis choisissez **Publier** dans l’onglet **Accueil** du ruban.
+1. Accédez à l **’espace de travail Publications**, puis sélectionnez une publication contenant le groupe de mises à jour et les offres groupées que vous souhaitez publier ou exporter. Puis choisissez **Publier** dans l’onglet **Accueil** du ruban.
 
-2.  Sur la page **Sélectionner** de l’Assistant **Publication**, vous pouvez choisir de signer toutes les mises à jour avec un nouveau certificat de publication, mais vous ne pouvez pas modifier le type de publication.
+2. Sur la page **Sélectionner** de l’Assistant **Publication**, vous pouvez choisir de signer toutes les mises à jour avec un nouveau certificat de publication, mais vous ne pouvez pas modifier le type de publication.
 
-3.  Effectuez toutes les étapes de l'Assistant.
+3. Effectuez toutes les étapes de l'Assistant.
 
-  Si la publication échoue, vous recevez un lien vers le fichier UpdatesPublisher.log apparaît qui peut fournir plus d’informations.
+   Si la publication échoue, vous recevez un lien vers le fichier UpdatesPublisher.log apparaît qui peut fournir plus d’informations.
 
 ## <a name="export-a-publication"></a>Exporter une publication
 Vous pouvez exporter une publication à partir du référentiel de l’éditeur de mise à jour. Cette opération exporte les mises à jour et les offres groupées affectées à cette publication et crée un catalogue de mises à jour. Vous pouvez ensuite [ajouter](/sccm/sum/tools/updates-publisher-catalogs#add-software-update-catalogs) puis [importer](/sccm/sum/tools/updates-publisher-catalogs#mport-updates) ce catalogue vers une autre instance de l’éditeur de mise à jour. Vous pouvez également [exporter les mises à jour](/sccm/sum/tools/manage-updates-with-updates-publisher#export-updates) qui ne font pas partie d’une publication.

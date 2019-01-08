@@ -10,18 +10,18 @@ ms.assetid: 32e2d6b9-148f-45e2-8083-98c656473f82
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 29b0f577ad291899467d9c6fd305af9ef6b892eb
-ms.sourcegitcommit: 5b3ff56018cfc6bda9643c9f1bebc575173f61bc
+ms.openlocfilehash: 85bd23130826c7ca23e10125efba58bf14555fb1
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50083800"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424219"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>CMPivot pour les données en temps réel dans Configuration Manager
 
 <!--1358456-->
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Configuration Manager met à disposition un grand magasin de données d’appareils centralisé, que les clients utilisent pour générer des rapports. Le site collecte généralement ces données chaque semaine. Depuis la version 1806, CMPivot est un nouvel utilitaire de console, qui permet désormais d’accéder à l’état en temps réel des appareils de votre environnement. Il exécute immédiatement une requête sur tous les appareils actuellement connectés du regroupement cible, et retourne les résultats. Filtrez et regroupez ensuite ces données dans l’outil. En fournissant les données en temps réel des clients en ligne, vous pouvez répondre plus rapidement aux questions métier, résoudre les problèmes et corriger les incidents de sécurité.
 
@@ -99,11 +99,11 @@ La fenêtre CMPivot contient les éléments suivants :
 
     - Cliquez avec le bouton droit sur une entité pour les actions suivantes :  
 
-       - **Insérer** : permet d’ajouter l’entité à la requête à la position actuelle du curseur. La requête ne s’exécute pas automatiquement. Il s’agit de l’action par défaut quand vous double-cliquez sur une entité. Utilisez cette action quand vous créez une requête.  
+       - **Insérer** : permet d’ajouter l’entité à la requête à la position actuelle du curseur. La requête ne s’exécute pas automatiquement. Il s’agit de l’action par défaut quand vous double-cliquez sur une entité. Utilisez cette action quand vous créez une requête.  
 
-       - **Requête pour tout** : permet d’exécuter une requête pour cette entité, en incluant toutes les propriétés. Utilisez cette action pour interroger rapidement une seule entité.  
+       - **Requête pour tout** : permet d’exécuter une requête pour cette entité, en incluant toutes les propriétés. Utilisez cette action pour interroger rapidement une seule entité.  
 
-       - **Requête par appareil** : permet d’exécuter une requête pour cette entité, et de regrouper les résultats. Par exemple, `Disk | summarize dcount( Device ) by Name`  
+       - **Requête par appareil** : permet d’exécuter une requête pour cette entité, et de regrouper les résultats. Par exemple, `Disk | summarize dcount( Device ) by Name`  
 
     - Développez une entité pour voir les propriétés spécifiques disponibles pour chaque entité. Double-cliquez sur une propriété pour l’ajouter à la requête, à la position actuelle du curseur.  
 
@@ -131,51 +131,51 @@ La fenêtre CMPivot contient les éléments suivants :
 
 6. Le volet de résultats affiche les données retournées par les clients actifs pour la requête.  
 
-    - Les colonnes disponibles varient en fonction de l’entité et de la requête.  
+   - Les colonnes disponibles varient en fonction de l’entité et de la requête.  
 
-    - Cliquez sur un nom de colonne pour trier les résultats en fonction de cette propriété.  
+   - Cliquez sur un nom de colonne pour trier les résultats en fonction de cette propriété.  
 
-    - Cliquez avec le bouton droit sur un nom de colonne pour regrouper les résultats en fonction d’informations identiques, ou pour trier ces résultats.  
+   - Cliquez avec le bouton droit sur un nom de colonne pour regrouper les résultats en fonction d’informations identiques, ou pour trier ces résultats.  
 
-    - Cliquez avec le bouton droit sur un nom d’appareil pour effectuer les actions supplémentaires suivantes sur l’appareil :  
+   - Cliquez avec le bouton droit sur un nom d’appareil pour effectuer les actions supplémentaires suivantes sur l’appareil :  
 
-       - **Ajouter un tableau croisé dynamique à** : permet d’interroger une autre entité sur cet appareil.  
+      - **Ajouter un tableau croisé dynamique à** : permet d’interroger une autre entité sur cet appareil.  
 
-       - **Exécuter le script** : permet de lancer l’Assistant Exécuter le script pour exécuter un script PowerShell existant sur cet appareil. Pour plus d’informations, consultez [Exécuter un script](/sccm/apps/deploy-use/create-deploy-scripts#run-a-script).  
+      - **Exécuter le script** : permet de lancer l’Assistant Exécuter le script pour exécuter un script PowerShell existant sur cet appareil. Pour plus d’informations, consultez [Exécuter un script](/sccm/apps/deploy-use/create-deploy-scripts#run-a-script).  
 
-       - **Contrôle à distance** : permet de lancer une session de contrôle à distance Configuration Manager sur cet appareil. Pour plus d’informations, consultez [Guide pratique pour administrer à distance un ordinateur client Windows](/sccm/core/clients/manage/remote-control/remotely-administer-a-windows-client-computer).  
+      - **Contrôle à distance** : permet de lancer une session de contrôle à distance Configuration Manager sur cet appareil. Pour plus d’informations, consultez [Guide pratique pour administrer à distance un ordinateur client Windows](/sccm/core/clients/manage/remote-control/remotely-administer-a-windows-client-computer).  
 
-       - **Explorateur de ressources** : permet de lancer l’Explorateur de ressources Configuration Manager pour cet appareil. Pour plus d’informations, consultez [Afficher l’inventaire matériel](/sccm/core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory) ou [Afficher l’inventaire logiciel](/sccm/core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory).  
+      - **Explorateur de ressources** : permet de lancer l’Explorateur de ressources Configuration Manager pour cet appareil. Pour plus d’informations, consultez [Afficher l’inventaire matériel](/sccm/core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory) ou [Afficher l’inventaire logiciel](/sccm/core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory).  
 
-    - Cliquez avec le bouton droit sur une cellule qui ne contient pas d’appareil pour effectuer les actions supplémentaires suivantes :  
+   - Cliquez avec le bouton droit sur une cellule qui ne contient pas d’appareil pour effectuer les actions supplémentaires suivantes :  
 
-       - **Copier** : permet de copier le texte de la cellule dans le Presse-papiers.  
+     - **Copier** : permet de copier le texte de la cellule dans le Presse-papiers.  
 
-       - **Afficher les appareils avec** : permet d’interroger les appareils ayant cette valeur de propriété. Par exemple, à partir des résultats de la requête `OS`, sélectionnez cette option sur une cellule de la ligne Version : `OS | summarize countif( (Version == '10.0.17134') ) by Device | where (countif_ > 0)`  
+     - **Afficher les appareils avec** : permet d’interroger les appareils ayant cette valeur de propriété. Par exemple, à partir des résultats de la requête `OS`, sélectionnez cette option sur une cellule de la ligne Version : `OS | summarize countif( (Version == '10.0.17134') ) by Device | where (countif_ > 0)`  
 
-       - **Afficher les appareils sans** : permet d’interroger les appareils n’ayant pas cette valeur de propriété. Par exemple, à partir des résultats de la requête `OS`, sélectionnez cette option sur une cellule de la ligne Version : `OS | summarize countif( (Version == '10.0.17134') ) by Device | where (countif_ == 0) | project Device`  
+     - **Afficher les appareils sans** : permet d’interroger les appareils n’ayant pas cette valeur de propriété. Par exemple, à partir des résultats de la requête `OS`, sélectionnez cette option sur une cellule de la ligne Version : `OS | summarize countif( (Version == '10.0.17134') ) by Device | where (countif_ == 0) | project Device`  
 
-       - **Rechercher sur Bing** : permet de lancer le navigateur web par défaut sur www.bing.com avec cette valeur en tant que chaîne de requête.  
+     - **Rechercher sur Bing** : permet de lancer le navigateur web par défaut sur www.bing.com avec cette valeur en tant que chaîne de requête.  
 
-    - Cliquez sur un lien hypertexte pour sélectionner une vue de ces informations spécifiques.  
+   - Cliquez sur un lien hypertexte pour sélectionner une vue de ces informations spécifiques.  
 
-    - Le volet de résultats n’affiche pas plus de 20 000 lignes. Modifiez la requête pour filtrer davantage les données, ou redémarrez CMPivot sur un regroupement plus petit.  
+   - Le volet de résultats n’affiche pas plus de 20 000 lignes. Modifiez la requête pour filtrer davantage les données, ou redémarrez CMPivot sur un regroupement plus petit.  
 
 7. La barre d’état affiche les informations suivantes (de gauche à droite) :  
 
-    - État de la requête actuelle pour le regroupement cible. Cet état comprend les informations suivantes :  
-        - Nombre de clients actifs ayant effectué la requête (3)  
-        - Nombre total de clients (5)  
-        - Nombre de clients hors connexion (2)  
-        - Clients ayant retourné un échec (0)  
+   - État de la requête actuelle pour le regroupement cible. Cet état comprend les informations suivantes :  
+     - Nombre de clients actifs ayant effectué la requête (3)  
+     - Nombre total de clients (5)  
+     - Nombre de clients hors connexion (2)  
+     - Clients ayant retourné un échec (0)  
 
-        Exemple : `Query completed on 3 of 5 clients (2 clients offline and 0 failure)`  
+       Exemple : `Query completed on 3 of 5 clients (2 clients offline and 0 failure)`  
 
-    - ID de l’opération du client. Exemple : `id(16780221)`  
+   - ID de l’opération du client. Exemple : `id(16780221)`  
 
-    - Regroupement actuel. Exemple : `PM_Team_Machines`  
+   - Regroupement actuel. Exemple : `PM_Team_Machines`  
 
-    - Nombre total de lignes dans le volet de résultats. Par exemple, `1 objects`  
+   - Nombre total de lignes dans le volet de résultats. Par exemple, `1 objects`  
 
 
 
@@ -184,7 +184,7 @@ La fenêtre CMPivot contient les éléments suivants :
 Les sections suivantes fournissent des exemples d’utilisation de CMPivot dans votre environnement :
 
 
-### <a name="example-1-stop-a-running-service"></a>Exemple 1 : Arrêter un service en cours d’exécution
+### <a name="example-1-stop-a-running-service"></a>Exemple 1 : Arrêter un service en cours d’exécution
 
 Votre administrateur de la sécurité vous demande d’arrêter et de désactiver le service Explorateur d’ordinateurs aussi vite que possible sur tous les appareils du service de comptabilité. Vous démarrez CMPivot sur un regroupement de tous les appareils de la comptabilité, puis vous sélectionnez **Requête pour tout** sur l’entité **Service**. 
 
@@ -203,19 +203,19 @@ Sélectionnez plusieurs appareils, cliquez avec le bouton droit sur la sélectio
 ![Exemple CMPivot illustrant le service Explorateur et l’action Exécuter un script](media/cmpivot-example1.png)
 
 
-### <a name="example-2-proactively-resolve-application-failures"></a>Exemple 2 : Résoudre de manière proactive les défaillances des applications  
+### <a name="example-2-proactively-resolve-application-failures"></a>Exemple 2 : Résoudre de manière proactive les défaillances des applications  
 
 Pour effectuer une maintenance opérationnelle proactive, exécutez CMPivot une fois par semaine sur un regroupement de serveurs que vous gérez, puis sélectionnez **Requête pour tout** sur l’entité **AppCrash**. Cliquez avec le bouton droit sur la colonne **Nom de fichier**, puis sélectionnez **Tri croissant**. Un appareil retourne sept résultats pour sqlsqm.exe avec un horodatage à 03 h 00 environ tous les jours. Sélectionnez le nom du fichier dans l’une des lignes, cliquez avec le bouton droit sur celui-ci, puis sélectionnez **Rechercher sur Bing**. En parcourant les résultats de la recherche dans le navigateur web, vous trouvez un article du Support Microsoft sur ce problème, qui contient des informations supplémentaires et une solution. 
 
 
-### <a name="example-3-bios-version"></a>Exemple 3 : Version du BIOS
+### <a name="example-3-bios-version"></a>Exemple 3 : Version du Bios
 
 Si vous souhaitez [atténuer les vulnérabilités d’exécution spéculative côté canal](https://blogs.technet.microsoft.com/configurationmgr/2018/01/08/additional-guidance-to-mitigate-speculative-execution-side-channel-vulnerabilities/), l’une des exigences à suivre consiste à mettre à jour le BIOS système. Commencez par une requête pour l’entité **BIOS**. Utilisez ensuite **Grouper par** avec la propriété **Version**. Cliquez ensuite avec le bouton droit sur une valeur spécifique, par exemple « LENOVO - 1140 », puis sélectionnez **Afficher les appareils avec**.  
 
 `Bios | summarize countif( (Version == 'LENOVO - 1140') ) by Device | where (countif_ > 0)`
 
 
-### <a name="example-4-free-disk-space"></a>Exemple 4 : Espace disque libre
+### <a name="example-4-free-disk-space"></a>Exemple 4 : Espace disque disponible
 
 Vous devez stocker temporairement un gros fichier sur un serveur de fichiers réseau, mais vous ne savez pas quel est celui qui dispose d’une capacité suffisante. Démarrez CMPivot sur un regroupement de serveurs de fichiers, puis interrogez l’entité **Disk**. Modifiez la requête pour que CMPivot retourne rapidement une liste de serveurs actifs avec des données de stockage en temps réel :  
 

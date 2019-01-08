@@ -2,7 +2,7 @@
 title: Notes de publication
 titleSuffix: Configuration Manager
 description: Découvrez plus en détail les problèmes urgents qui ne sont pas encore résolus dans le produit ni traités dans un article de la base de connaissances Support Microsoft.
-ms.date: 11/27/2018
+ms.date: 12/21/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 41039ec31c11573424f044df009e9c364491b5f7
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 41b068da0524333ae25ea2228a71bf27344f4f58
+ms.sourcegitcommit: f5fa9e657350ceb963a7928497d2adca9caef3d4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456343"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53748491"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Notes de publication de Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Avec Configuration Manager, les notes de publication de produit se limitent aux problèmes urgents. Ces problèmes ne sont pas encore résolus dans le produit ni traités dans un article de la base de connaissances Support Microsoft.  
 
@@ -35,7 +35,7 @@ Pour plus d’informations sur les nouvelles fonctionnalités introduites dans l
 
 
 
-## <a name="setup-and-upgrade"></a>Installation et mise à niveau  
+## <a name="set-up-and-upgrade"></a>Installer et mettre à niveau  
 
 
 ### <a name="when-using-redistributable-files-from-the-cdlatest-folder-setup-fails-with-a-manifest-verification-error"></a>Lors de l’utilisation de fichiers redistribuables à partir du dossier CD.Latest, le programme d’installation échoue avec une erreur de vérification du manifeste
@@ -67,7 +67,7 @@ Alors qu’il n’a aucun effet sur le résultat du processus d’installation, 
 
 ### <a name="cloud-service-manager-component-stopped-on-site-server-in-passive-mode"></a>Composant de gestionnaire de service cloud arrêté sur le serveur de site en mode passif
 <!--VSO 2858826, SCCMDocs issue 772-->
-*S’applique à : Configuration Manager, version 1806*
+*S’applique à : Configuration Manager version 1806*
 
 Si le [point de connexion de service](/sccm/core/servers/deploy/configure/about-the-service-connection-point) coexiste avec un [serveur de site en mode passif](/sccm/core/servers/deploy/configure/site-server-high-availability), le déploiement et la surveillance d’une [passerelle de gestion cloud](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) ne démarrent pas. Le composant de gestionnaire de service cloud (SMS_CLOUD_SERVICES_MANAGER) est dans un état arrêté.
 
@@ -88,6 +88,30 @@ Déplacez le rôle de point de connexion de service vers un autre serveur.
 
 
 ## <a name="software-updates"></a>Mises à jour logicielles
+
+### <a name="security-roles-are-missing-for-phased-deployments"></a>Les rôles de sécurité sont manquants pour les déploiements par phases
+<!--3479337, SCCMDocs-pr issue 3095-->
+*S’applique à : Configuration Manager version 1810*
+
+Le rôle de sécurité intégré **Gestionnaire de déploiement de système d’exploitation** dispose des autorisations pour les [déploiements par phases](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence). Ces autorisations sont manquantes dans les rôles suivants :  
+
+- **Administrateur d’application**  
+- **Gestionnaire de déploiement d’applications**  
+- **Gestionnaire des mises à jour logicielles**  
+
+Le rôle **Auteur d’application** peut sembler disposer de quelques autorisations pour les déploiements par phases, mais ne devrait pas être en mesure de créer des déploiements. 
+
+Un utilisateur disposant de l’un de ces rôles peut démarrer l’assistant « Create Phased Deployment » (Créer un déploiement par phases), et peut afficher les déploiements par phases d’une mise à jour d’application ou de logiciel. Toutefois, il ne peut pas terminer l’assistant ni faire de modifications à un déploiement existant.
+
+#### <a name="workaround"></a>Solution de contournement
+Créez un rôle de sécurité personnalisé. Copiez un rôle de sécurité existant, et ajoutez les autorisations suivantes sur la classe d’objet **Déploiement par phases** :
+- Créer  
+- Supprimer  
+- Modifier  
+- Lecture  
+
+Pour plus d’informations, consultez [Créer des rôles de sécurité personnalisés](/sccm/core/servers/deploy/configure/configure-role-based-administration#BKMK_CreateSecRole)
+
 
 ### <a name="changing-office-365-client-setting-doesnt-apply"></a>Le changement du paramètre client Office 365 ne s’applique pas 
 <!--511551-->

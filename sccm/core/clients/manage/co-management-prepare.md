@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: 9aab4273129e6a3032d7e85d2545e6abc5b616c4
-ms.sourcegitcommit: 8dd9199bfe8e27f62e9df307f1c6ac58a3b81717
+ms.openlocfilehash: ac7f67a02602473a7635d8c70e4b1b1dc04363bc
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50237154"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417045"
 ---
 # <a name="prepare-windows-10-devices-for-co-management"></a>Préparer les appareils Windows 10 pour la cogestion
 Vous pouvez activer la cogestion sur les appareils Windows 10 qui sont joints à AD et à Azure AD, et inscrits auprès de Microsoft Intune et d’un client dans Configuration Manager. Pour les nouveaux appareils Windows 10 et pour ceux qui sont déjà inscrits à Intune, installez le client Configuration Manager avant de pouvoir les cogérer. Pour les appareils Windows 10 qui sont déjà des clients Configuration Manager, inscrivez-les à Intune et activez la cogestion dans la console Configuration Manager.
@@ -49,12 +49,13 @@ Les prérequis généraux pour activer la cogestion sont les suivants :
     - Si vous utilisez une [autorité mixte](/sccm/mdm/deploy-use/migrate-mixed-authority), effectuez d’abord la migration vers Intune autonome. Ensuite, définissez l’autorité MDM sur Intune avant de configurer la cogestion.<!--SCCMDocs issue #797-->
 
 
-> [!Note]  
+> [!NOTE]
 > Si vous avez un environnement MDM hybride (Intune intégré à Configuration Manager), vous ne pouvez pas activer la cogestion. Toutefois, vous pouvez commencer la migration d’utilisateurs vers Intune autonome, puis activer leurs appareils Windows 10 associés pour la cogestion. Pour plus d’informations sur la migration vers Intune autonome, consultez [Démarrer la migration de MDM hybride vers Intune autonome](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa).
 
 
 ### <a name="prerequisite-azure-resource-manager-roles"></a>Rôles Azure Resource Manager prérequis
 <!--SCCMDocs issue #667--> Pour plus d’informations sur les rôles Azure, consultez [Présentation des différents rôles](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles).
+
 |Action|Rôle nécessaire|
 |----|----|
 |Configurer une passerelle de gestion cloud|Gestionnaire d’abonnements Azure|
@@ -68,7 +69,7 @@ Les prérequis généraux pour activer la cogestion sont les suivants :
 
 - Windows 10, version 1709 ou ultérieure  
 
-- [Joint à Azure AD Hybride](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup) (jonction à AD et Azure AD) ou joint à Azure AD uniquement (ce type est parfois appelé « joint à un domaine cloud »).
+- [Joint à Azure AD Hybride](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan) (jonction à AD et Azure AD) ou joint à Azure AD uniquement (ce type est parfois appelé « joint à un domaine cloud »).
 
 
 ### <a name="additional-prerequisites-for-devices-without-the-configuration-manager-client"></a>Prérequis supplémentaires pour les appareils non dotés du client Configuration Manager
@@ -85,16 +86,22 @@ Les prérequis généraux pour activer la cogestion sont les suivants :
 
 ## <a name="command-line-to-install-configuration-manager-client"></a>Ligne de commande pour installer un client Configuration Manager
 
-Créez une application dans Intune pour les appareils Windows 10 qui ne sont pas encore des clients Configuration Manager. Lors de la création de l’application dans les sections suivantes, utilisez cette ligne de commande :
+Créez une application dans Intune pour les appareils Windows 10 qui ne sont pas encore des clients Configuration Manager. Pour ce faire, procédez comme suit :
+
+1. Accédez à l’adresse « portal.azure.com », puis ouvrez le panneau « Intune ».
+2. Cliquez sur **Applications clientes** > **Applications** > **Ajouter**. 
+3. Dans la section **Autre**, sélectionnez **Application métier**.
+4. Chargez le fichier de package de l’application appelé Ccmsetup.msi. (Ce fichier se trouve dans le dossier suivant sur le serveur de site : <*répertoire d’installation de ConfigMgr*>\bin\i386.) 
+5. Après la mise à jour de l’application, configurez les informations de l’application en exécutant l’argument de ligne de commande suivant :
 
 `ccmsetup.msi CCMSETUPCMD="/mp:<URL of cloud management gateway mutual auth endpoint> CCMHOSTNAME=<URL of cloud management gateway mutual auth endpoint> SMSSiteCode=<Sitecode> SMSMP=https://<FQDN of MP> AADTENANTID=<AAD tenant ID> AADCLIENTAPPID=<Server AppID for AAD Integration> AADRESOURCEURI=https://<Resource ID>"`
 
-#### <a name="example-command-line"></a>Exemple de ligne de commande
+#### <a name="example-command-line-input"></a>Exemple d’entrée de ligne de commande
 Si vous avez les valeurs suivantes :
 
 - **URL du point de terminaison d’authentification mutuelle de la passerelle de gestion cloud** : `https://contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500`    
 
-   >[!Note]    
+   >[!NOTE]    
    >Utilisez la valeur **MutualAuthPath** dans la vue SQL **vProxy_Roles** pour la valeur **URL du point de terminaison de l’authentification mutuelle pour la passerelle de gestion cloud**.  
 
 - **FQDN du point de gestion** : `mp1.contoso.com`    
@@ -103,7 +110,7 @@ Si vous avez les valeurs suivantes :
 - **ID d’application cliente Azure AD** : `51e781eb-aac6-4265-8030-4cd1ddaa9dd0`     
 - **URI d’ID de ressource AAD** : `ConfigMgrServer`    
 
-  > [!Note]    
+  > [!NOTE]    
   > Utilisez la valeur **IdentifierUri** trouvée dans la vue SQL **vSMS_AAD_Application_Ex** pour la valeur **URI de l’ID de la ressource AAD**.  
 
 Utilisez alors la ligne de commande suivante :
@@ -130,7 +137,7 @@ L’exemple suivant comprend toutes les propriétés mentionnées ci-dessus :
 Pour plus d’informations, consultez [Propriétés de l’installation du client](/sccm/core/clients/deploy/about-client-installation-properties).
 
 
-> [!Tip]
+> [!TIP]
 > Recherchez les paramètres de ligne de commande pour votre site en effectuez les étapes suivantes :     
 > 
 > 1. Dans la console Configuration Manager, accédez à l’espace de travail **Administration**, développez **Services cloud**, puis sélectionnez le nœud **Cogestion**.  
@@ -143,7 +150,7 @@ Pour plus d’informations, consultez [Propriétés de l’installation du clien
 > 
 > 5. Cliquez sur **Annuler** pour quitter l’Assistant.  
 
-> [!Important]    
+> [!IMPORTANT]    
 > Si vous personnalisez la ligne de commande pour installer le client Configuration Manager, veillez à ce qu’elle ne dépasse pas 1 024 caractères. Quand la ligne de commande fait plus de 1024 caractères, l’installation du client échoue.
 
 

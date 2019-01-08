@@ -10,16 +10,16 @@ ms.assetid: c6777fb0-0754-4abf-8a1b-7639d23e9391
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5a5ec4f699f2c122dc435bbca5c77789ea972de7
-ms.sourcegitcommit: 2badee2b63ae63687795250e298f463474063100
+ms.openlocfilehash: b074ee02ec5e50fb5e495923538535cf8765dcdb
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601226"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420938"
 ---
 # <a name="ports-used-in-configuration-manager"></a>Ports utilisés dans Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Cet article répertorie les ports réseau utilisés par Configuration Manager. Certaines connexions utilisent des ports qui ne sont pas configurables, et certaines prennent en charge des ports personnalisés que vous spécifiez. Si vous utilisez une technologie de filtrage des ports, vérifiez que les ports obligatoires sont disponibles. Ces technologies de filtrage des ports sont notamment les pare-feux, les routeurs, les serveurs proxy et la sécurité du protocole Internet (IPsec).   
 
@@ -179,9 +179,9 @@ Pour plus d’informations, consultez [Ports et flux de données](/sccm/core/cli
 
 > [!Important]  
 > Si vous activez un pare-feu basé sur l’hôte, vérifiez que les règles autorisent le serveur à envoyer et à recevoir des données sur ces ports. Lorsque vous activez un point de distribution pour PXE, Configuration Manager peut activer les règles de trafic entrant (réception) du Pare-feu Windows. Il ne configure pas les règles de trafic sortant (envoi).<!--SCCMDocs issue #744-->  
-  
 
-###  <a name="BKMK_PortsClient-FSP"></a> Client -- > Point d’état de repli  
+
+###  <a name="BKMK_PortsClient-FSP"></a> Client -- > Point d’état de secours  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -200,7 +200,7 @@ Pour plus d’informations, consultez [Ports et flux de données](/sccm/core/cli
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
-|Notification du client (communication par défaut avant le repli sur HTTP ou HTTPS)|--|10123 <sup>[Note 2](#bkmk_note2) Autre port disponible</sup>|  
+|Notification du client (communication par défaut avant le basculement en HTTP ou HTTPS)|--|10123 <sup>[Note 2](#bkmk_note2) Autre port disponible</sup>|  
 |HTTP|--|80 <sup>[Note 2](#bkmk_note2) Autre port disponible</sup>|  
 |HTTPS|--|443 <sup>[Note 2](#bkmk_note2) Autre port disponible</sup>|  
 
@@ -237,12 +237,14 @@ Configuration Manager utilise ces connexions pour créer le canal de la passerel
 
 #### <a name="version-1706-or-1710"></a>Version 1706 ou 1710
 Le port dépend de la configuration du point de gestion. 
+
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
 |HTTPS|--|443|
 |HTTP|--|80|  
 
 #### <a name="version-1802"></a>Version 1802
+
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
 |HTTPS|--|443|
@@ -253,6 +255,7 @@ Pour plus d’informations, consultez [Ports et flux de données](/sccm/core/cli
 ###  <a name="bkmk_cmgcp-sup"></a> Point de connexion de passerelle de gestion cloud -- > Point de mise à jour logicielle  
 
 Le port dépend de la configuration du point de mise à jour logicielle. 
+
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
 |HTTPS|--|443|
@@ -552,7 +555,7 @@ Pour plus d’informations, consultez [Ports et flux de données](/sccm/core/pla
 |RPC|--|DYNAMIQUE <sup>[Note 6](#bkmk_note6)</sup>|  
 
 
-###  <a name="BKMK_PortsSite-FSP"></a> Serveur de site &lt; -- > Point d’état de repli  
+###  <a name="BKMK_PortsSite-FSP"></a> Serveur de site &lt; -- > Point d’état de secours  
  <sup>[Note 5](#bkmk_note5)</sup>  
 
 |Description|UDP|TCP|  
@@ -681,10 +684,10 @@ Pour plus d’informations, consultez [Ports et flux de données](/sccm/core/pla
 
 ###  <a name="BKMY_PortNotes"></a> Notes pour les ports utilisés par les clients Configuration Manager et les systèmes de site  
 
-#### <a name="bkmk_note1"></a> Note 1 : Port de serveur proxy
+#### <a name="bkmk_note1"></a>Note 1 : Port du serveur proxy
 Ce port ne peut pas être configuré, mais il peut être routé vers un serveur proxy configuré.  
 
-#### <a name="bkmk_note2"></a> Note 2 : Autre port disponible
+#### <a name="bkmk_note2"></a> Note 2 : Port alternatif disponible
 Un autre port peut être défini dans Configuration Manager pour cette valeur. Si un port personnalisé a été défini, remplacez-le lorsque vous définissez les informations de filtre IP pour les stratégies IPsec ou pour configurer les pare-feu.  
 
 #### <a name="bkmk_note3"></a> Note 3 : Windows Server Update Services (WSUS)
@@ -702,17 +705,17 @@ Après l'installation, vous pouvez modifier le port. Il n’est pas nécessaire 
 #### <a name="bkmk_note4"></a> Note 4 : Trivial FTP (TFTP) Daemon
 Le service système Trivial FTP (TFTP) Daemon ne nécessite pas de nom d’utilisateur ou de mot de passe, et fait partie intégrante des services de déploiement Windows (WDS). Le service Trivial FTP met en œuvre la prise en charge du protocole TFTP qui est défini par les normes RFC suivantes :  
 
-- RFC 350  : TFTP  
+- RFC 350 : TFTP  
 
-- RFC 2347 : extension d’option  
+- RFC 2347 : Extension d’option  
 
-- RFC 2348 : option de taille de bloc  
+- RFC 2348 : Option de taille de bloc  
 
-- RFC 2349 : options d’intervalle de délai d’attente et de taille de transfert  
+- RFC 2349 : Options d’intervalle de délai d’attente et de taille de transfert  
 
 Le protocole TFTP est conçu pour prendre en charge les environnements de démarrage sans disque. Les services Trivial FTP écoutent au port UDP 69 mais répondent à partir d'un port à numéro élevé alloué de manière dynamique. Ainsi, l’activation de ce port permet au service TFTP de recevoir les demandes TFTP entrantes mais n’autorise pas le serveur sélectionné à répondre à ces demandes. Vous ne pouvez pas permettre au serveur sélectionné de répondre aux demandes TFTP entrantes, à moins que le serveur TFTP soit configuré de manière à répondre à partir du port 69.  
 
-#### <a name="bkmk_note5"></a> Note 5 : Communications entre le serveur de site et les systèmes de site
+#### <a name="bkmk_note5"></a> Note 5 : Communication entre le serveur de site et les systèmes de site
 par défaut, la communication entre le serveur de site et les systèmes de site est bidirectionnelle. Le serveur de site initialise la communication pour configurer le système de site, puis la plupart des systèmes de site se connectent à leur tour au serveur de site pour envoyer des informations d'état. Les points de Reporting Services et les points de distribution n’envoient pas d’informations d’état. Si vous sélectionnez **Exiger que le serveur de site démarre les connexions vers ce système de site** dans les propriétés du système de site, après l’installation du système de site, ce dernier n’établit pas la communication vers le système de site. Au lieu de cela, le serveur de site initie la communication et utilise le compte d’installation du système de site pour l’authentification auprès du serveur de système de site.  
 
 #### <a name="bkmk_note6"></a> Note 6 : Ports dynamiques
@@ -756,10 +759,10 @@ Si vous utilisez Azure alors que la base de données de site se trouve derrière
 - Règles d’équilibrage de charge 
 
 Configurez les ports suivants :
- - SQL sur TCP : TCP 1433
- - SQL Server Service Broker : TCP 4022
- - Server Message Block (SMB) : TCP 445
- - Mappeur de point de terminaison RPC : TCP 135
+ - SQL sur TCP : TCP 1433
+ - SQL Server Service Broker : TCP 4022
+ - SMB (Server Message Block) : TCP 445
+ - Mappeur de point de terminaison RPC : TCP 135
 
 > [!WARNING]  
 >  Configuration Manager ne prend pas en charge les ports dynamiques. Par défaut, les instances nommées de SQL Server utilisent des ports dynamiques pour les connexions au moteur de base de données. Lorsque vous utilisez une instance nommée, configurez manuellement le port statique pour la communication intrasite.  
@@ -792,12 +795,12 @@ Pour obtenir un exemple de configuration de SQL Server pour l’utilisation d’
 ### <a name="bkmk_discovery"> </a> Découverte et publication
 
 Configuration Manager utilise les ports suivants pour la découverte et la publication d’informations de site :
- - LDAP (Lightweight Directory Access Protocol) : 389
- - LDAP de catalogue global : 3268
- - Mappeur de point de terminaison RPC : 135
- - RPC : ports TCP à numéro élevé alloués dynamiquement
- - TCP : 1024 : 5000
- - TCP :  49152 : 65535
+ - LDAP (Lightweight Directory Access Protocol) : 389
+ - LDAP de catalogue global : 3268
+ - Mappeur de point de terminaison RPC : 135
+ - RPC : Ports TCP à numéro élevé alloués dynamiquement
+ - TCP : 1024 : 5000
+ - TCP :  49152 : 65535
 
 
 ###  <a name="BKMK_External"></a> Connexions externes effectuées par Configuration Manager  
@@ -836,17 +839,17 @@ Les clients ou les systèmes de site Configuration Manager locaux peuvent établ
 
  Les points de gestion basée sur Internet, les points de distribution qui prennent en charge les clients Internet, le point de mise à jour logicielle et le point d’état de repli utilisent les ports suivants pour l’installation et la réparation :  
 
--   Serveur de site --> Système de site : mappeur de point de terminaison RPC utilisant le port UDP et TCP 135  
+-   Serveur de site --> Système de site : Mappeur de point de terminaison RPC à l'aide du port UDP et du port TCP 135.  
 
--   Serveur de site --> Système de site : ports TCP RPC dynamiques  
+-   Serveur de site --> Système de site : Ports TCP RPC dynamiques  
 
--   Serveur de site &lt; --> Système de site : protocole SMB (Server Message Blocks) utilisant le port TCP 445
+-   Serveur de site &lt; --> système de site : Protocole SMB (Server Message Blocks) à l'aide du port TCP 445
 
 Les installations d'applications et de packages sur les points de distribution nécessitent les ports RPC suivants :  
 
--   Serveur de site --> Point de distribution : mappeur de point de terminaison RPC utilisant le port UDP et TCP 135
+-   Serveur de site -- > Point de distribution : Mappeur de point de terminaison RPC à l'aide du port UDP et du port TCP 135
 
--   Serveur de site --> Point de distribution : ports TCP RPC dynamiques  
+-   Serveur de site -- > Point de distribution : Ports TCP RPC dynamiques  
 
 Utilisez IPsec pour sécuriser le trafic entre le serveur de site et les systèmes de site. Si vous devez restreindre les ports dynamiques utilisés par RPC, vous pouvez employer l'outil de configuration Microsoft RPC (rpccfg.exe) pour configurer une plage de ports limitée à ces paquets RPC. Pour plus d'informations sur l'outil de configuration RPC, voir [Comment configurer RPC pour qu'il utilise certains ports et comment sécuriser ces ports à l'aide d'IPsec](https://support.microsoft.com/help/908472/how-to-configure-rpc-to-use-certain-ports-and-how-to-help-secure-those).  
 

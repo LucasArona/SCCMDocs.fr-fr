@@ -10,16 +10,16 @@ ms.assetid: 25e4ac68-0e78-4bbe-b8fc-3898b372c4e8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 34536114e6cb1be8f256da385b3d69d07c17f676
-ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
+ms.openlocfilehash: 974ecfdf30dd24e6addad91588fce5d223f27b1c
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48862479"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53423743"
 ---
 # <a name="create-a-task-sequence-to-capture-an-operating-system-in-system-center-configuration-manager"></a>Créer une séquence de tâches pour capturer un système d’exploitation dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Quand vous utilisez une séquence de tâches pour déployer un système d’exploitation sur un ordinateur dans System Center Configuration Manager, l’ordinateur installe l’image du système d’exploitation que vous spécifiez dans la séquence de tâches. Pour personnaliser l’image de système d’exploitation pour qu’elle comporte entre autres des pilotes, applications ou mises à jour logicielles spécifiques, vous utilisez une séquence de tâches de création et de capture pour créer un ordinateur de référence, puis vous capturez l’image du système d’exploitation à partir de cet ordinateur de référence. Si vous avez déjà un ordinateur de référence disponible pour la capture, vous pouvez créer une séquence de tâches pour capturer le système d’exploitation. Utilisez les sections suivantes pour capturer un système d’exploitation personnalisé.  
 
@@ -48,60 +48,60 @@ Quand vous utilisez une séquence de tâches pour déployer un système d’expl
 
 #### <a name="to-create-a-task-sequence-that-builds-and-captures-an-operating-system-image"></a>Pour créer une séquence de tâches qui crée et capture une image du système d'exploitation  
 
-1.  Dans la console Configuration Manager, cliquez sur **Bibliothèque de logiciels**.  
+1. Dans la console Configuration Manager, cliquez sur **Bibliothèque de logiciels**.  
 
-2.  Dans l'espace de travail **Bibliothèque de logiciels** , développez **Systèmes d'exploitation**, puis cliquez sur **Séquences de tâches**.  
+2. Dans l'espace de travail **Bibliothèque de logiciels** , développez **Systèmes d'exploitation**, puis cliquez sur **Séquences de tâches**.  
 
-3.  Sous l'onglet **Accueil** , dans le groupe **Créer** , cliquez sur **Créer une séquence de tâches** pour démarrer l'Assistant Création d'une séquence de tâches.  
+3. Sous l'onglet **Accueil** , dans le groupe **Créer** , cliquez sur **Créer une séquence de tâches** pour démarrer l'Assistant Création d'une séquence de tâches.  
 
-4.  Sur la page **Créer une séquence de tâches** , sélectionnez **Créez et capturez une image de système d'exploitation de référence**.  
+4. Sur la page **Créer une séquence de tâches** , sélectionnez **Créez et capturez une image de système d'exploitation de référence**.  
 
-5.  Sur la page **Informations sur la séquence de tâches** , spécifiez les paramètres suivants et cliquez sur **Suivant**.  
+5. Sur la page **Informations sur la séquence de tâches** , spécifiez les paramètres suivants et cliquez sur **Suivant**.  
 
-    -   **Nom de la séquence de tâches**: spécifiez un nom qui identifie la séquence de tâches.  
+   -   **Nom de la séquence de tâches** : spécifiez un nom qui identifie la séquence de tâches.  
 
-    -   **Description**: spécifiez une description de la tâche effectuée par la séquence de tâches, telle qu’une description du système d’exploitation créé par la séquence de tâches.  
+   -   **Description** : spécifiez une description de la tâche effectuée par la séquence de tâches, telle qu'une description du système d'exploitation créé par la séquence de tâches.  
 
-    -   **Images de démarrage**: spécifiez l’image de démarrage qui installe l’image du système d’exploitation.  
+   -   **Image de démarrage** : spécifiez l'image de démarrage qui installe l'image du système d'exploitation.  
 
-        > [!IMPORTANT]  
-        >  L'architecture de l'image de démarrage doit être compatible avec l'architecture matérielle de l'ordinateur de destination.  
+       > [!IMPORTANT]  
+       >  L'architecture de l'image de démarrage doit être compatible avec l'architecture matérielle de l'ordinateur de destination.  
 
-6.  Sur la page **Installer Windows** , spécifiez les paramètres suivants et cliquez sur **Suivant**.  
+6. Sur la page **Installer Windows** , spécifiez les paramètres suivants et cliquez sur **Suivant**.  
 
-    -   **Package d’images**: spécifiez le package d’images du système d’exploitation, qui contient les fichiers nécessaires à l’installation du système d'exploitation.  
+   -   **Package d’images** : spécifiez le package d’images du système d’exploitation, qui contient les fichiers nécessaires à l’installation du système d’exploitation.  
 
-    -   **Index d’images**: spécifiez le système d’exploitation à installer. Si l’image du système d’exploitation contient plusieurs versions, sélectionnez la version que vous souhaitez installer.  
+   -   **Index d’images** : spécifiez le système d’exploitation à installer. Si l’image du système d’exploitation contient plusieurs versions, sélectionnez la version que vous souhaitez installer.  
 
-    -   **Clé du produit**: spécifiez la clé de produit pour le système d’exploitation Windows à installer. Vous pouvez spécifier des clés de licence en volume codées et des clés de produit standard. Si vous utilisez une clé de produit non codée, chaque groupe de 5 caractères doit être séparé par un tiret (-). Par exemple : *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*  
+   -   **Clé du produit** : spécifiez la clé de produit pour le système d'exploitation Windows à installer. Vous pouvez spécifier des clés de licence en volume codées et des clés de produit standard. Si vous utilisez une clé de produit non codée, chaque groupe de 5 caractères doit être séparé par un tiret (-). Par exemple : *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*  
 
-    -   **Mode de licence serveur :** spécifiez que la licence serveur est **Par siège**, **Par serveur**ou qu’aucune licence n’est spécifiée. Si la licence serveur est **Par serveur**, spécifiez également le nombre maximal de connexions au serveur.  
+   -   **Mode de licence serveur** : indiquez que la licence serveur est **Par poste**, **Par serveur** ou qu’aucune licence n’est spécifiée. Si la licence serveur est **Par serveur**, spécifiez également le nombre maximal de connexions au serveur.  
 
-    -   Spécifiez comment gérer le compte administrateur qui est utilisé lors du déploiement du système d'exploitation.  
+   -   Spécifiez comment gérer le compte administrateur qui est utilisé lors du déploiement du système d'exploitation.  
 
-        -   **Générer de façon aléatoire le mot de passe de l’administrateur local et désactiver le compte sur toutes les plates-formes prises en charge** : spécifiez s’il faut que Configuration Manager crée un mot de passe aléatoire pour le compte administrateur local et désactive le compte quand le système d’exploitation est déployé.  
+       -   **Générer de façon aléatoire le mot de passe de l’administrateur local et désactiver le compte sur toutes les plateformes prises en charge** : spécifiez si Configuration Manager doit créer un mot de passe aléatoire pour le compte administrateur local et désactiver le compte lorsque le système d’exploitation est déployé.  
 
-        -   **Activer le compte et spécifier le mot de passe administrateur local**: spécifiez si le même mot de passe est utilisé pour le compte d’administrateur local sur tous les ordinateurs où est déployé le système d’exploitation.  
+       -   **Activer le compte et spécifier le mot de passe de l’administrateur local** : spécifiez si le même mot de passe est utilisé pour le compte administrateur local sur tous les ordinateurs où le système d'exploitation est déployé.  
 
-7.  Sur la page **Configurer le réseau** , spécifiez les paramètres suivants et cliquez sur **Suivant**.  
+7. Sur la page **Configurer le réseau** , spécifiez les paramètres suivants et cliquez sur **Suivant**.  
 
-    -   **Joindre un groupe de travail**: spécifiez si vous souhaitez ajouter l’ordinateur de destination à un groupe de travail lors du déploiement du système d’exploitation.  
+   -   **Rejoindre un groupe de travail** : spécifiez si vous souhaitez ajouter l'ordinateur de destination à un groupe de travail lors du déploiement du système d'exploitation.  
 
-    -   **Joindre un domaine**: spécifiez si vous souhaitez ajouter l’ordinateur de destination à un domaine lors du déploiement du système d’exploitation. Dans **Domaine**, spécifiez le nom du domaine.  
+   -   **Joindre un domaine** : spécifiez si vous souhaitez ajouter l'ordinateur de destination à un domaine lors du déploiement du système d'exploitation. Dans **Domaine**, spécifiez le nom du domaine.  
 
-        > [!IMPORTANT]  
-        >  Vous pouvez rechercher des domaines dans la forêt locale, mais vous devez spécifier le nom de domaine d'une forêt distante.  
+       > [!IMPORTANT]  
+       >  Vous pouvez rechercher des domaines dans la forêt locale, mais vous devez spécifier le nom de domaine d'une forêt distante.  
 
-         Vous pouvez également spécifier une unité d'organisation (UO). Il s'agit d'un paramètre facultatif qui spécifie le nom unique LDAP X.500 de l'UO dans laquelle vous créez le compte d'ordinateur s'il n'existe pas déjà.  
+        Vous pouvez également spécifier une unité d'organisation (UO). Il s'agit d'un paramètre facultatif qui spécifie le nom unique LDAP X.500 de l'UO dans laquelle vous créez le compte d'ordinateur s'il n'existe pas déjà.  
 
-    -   **Compte**: spécifiez le nom d’utilisateur et le mot de passe du compte qui dispose des autorisations pour joindre le domaine spécifié. Par exemple : *domaine\utilisateur* ou *%variable%*.  
+   -   **Compte** : spécifiez le nom d'utilisateur et le mot de passe du compte qui dispose des autorisations pour joindre le domaine spécifié. Par exemple : *domaine\utilisateur* ou *%variable%*.  
 
-        > [!IMPORTANT]  
-        >  Vous devez entrer les informations d'identification de domaine appropriées si vous prévoyez de migrer les paramètres du domaine ou les paramètres du groupe de travail.  
+       > [!IMPORTANT]  
+       >  Vous devez entrer les informations d'identification de domaine appropriées si vous prévoyez de migrer les paramètres du domaine ou les paramètres du groupe de travail.  
 
-8.  Dans la page **Installer Configuration Manager**, spécifiez le package client Configuration Manager qui contient les fichiers sources pour installer le client Configuration Manager, ajoutez toutes les propriétés supplémentaires nécessaires à l’installation du client, puis cliquez sur **Suivant**.  
+8. Dans la page **Installer Configuration Manager**, spécifiez le package client Configuration Manager qui contient les fichiers sources pour installer le client Configuration Manager, ajoutez toutes les propriétés supplémentaires nécessaires à l’installation du client, puis cliquez sur **Suivant**.  
 
-     Pour plus d’informations sur les propriétés qui peuvent être utilisées pour installer un client, consultez [À propos des propriétés d’installation du client](../../core/clients/deploy/about-client-installation-properties.md).  
+    Pour plus d’informations sur les propriétés qui peuvent être utilisées pour installer un client, consultez [À propos des propriétés d’installation du client](../../core/clients/deploy/about-client-installation-properties.md).  
 
 9. Sur la page **Inclure les mises à jour** , spécifiez si vous souhaitez installer les mises à jour logicielles requises, toutes les mises à jour logicielles ou aucune mise à jour logicielle, puis cliquez sur **Suivant**. Si vous spécifiez l’installation des mises à jour logicielles, Configuration Manager installe uniquement les mises à jour logicielles ciblant les regroupements auxquels l’ordinateur de destination appartient.  
 
@@ -109,29 +109,29 @@ Quand vous utilisez une séquence de tâches pour déployer un système d’expl
 
 11. Sur la page **Préparation du système** , spécifiez les paramètres suivants et cliquez sur **Suivant**.  
 
-    -   **Package** : spécifiez le package Configuration Manager qui contient la version appropriée de Sysprep à utiliser pour capturer les paramètres de l’ordinateur de référence.  
+    -   **Package** : spécifiez le package Configuration Manager qui contient la version appropriée de Sysprep à utiliser pour capturer les paramètres de l’ordinateur de référence.  
 
          Si la version du système d'exploitation que vous utilisez est Windows Vista ou version ultérieure, Sysprep est automatiquement installé sur l'ordinateur et il n'est pas nécessaire de spécifier de package.  
 
 12. Sur la page **Propriétés de l'image** , spécifiez les paramètres suivants pour l'image du système d'exploitation, puis cliquez sur **Suivant**.  
 
-    -   **Créé par**: spécifiez le nom de l’utilisateur qui a créé l’image du système d’exploitation.  
+    -   **Créé par** : spécifiez le nom de l'utilisateur qui a créé l'image du système d'exploitation.  
 
-    -   **Version**: spécifiez un numéro de version défini par l’utilisateur qui est associé à l’image du système d’exploitation.  
+    -   **Version** : spécifiez un numéro de version défini par l'utilisateur qui est associé à l'image du système d'exploitation.  
 
-    -   **Description**: spécifiez une description définie par l’utilisateur de l’image du système d’exploitation de l’ordinateur.  
+    -   **Description** : spécifiez une description définie par l'utilisateur de l'image du système d'exploitation de l'ordinateur.  
 
 13. Sur la page **Capturer l'image** , spécifiez les paramètres suivants et cliquez sur **Suivant**.  
 
-    -   **Chemin d’accès**: spécifiez un dossier réseau partagé où est stocké le fichier .WIM de sortie. Ce fichier contient l'image du système d'exploitation basée sur les paramètres que vous spécifiez à l'aide de cet Assistant. Si vous spécifiez un dossier qui contient un fichier .WIM existant, ce fichier est remplacé.  
+    -   **Chemin d’accès** : spécifiez un dossier réseau partagé dans lequel le fichier .WIM émis est stocké. Ce fichier contient l'image du système d'exploitation basée sur les paramètres que vous spécifiez à l'aide de cet Assistant. Si vous spécifiez un dossier qui contient un fichier .WIM existant, ce fichier est remplacé.  
 
-    -   **Compte**: spécifiez le compte Windows qui dispose des autorisations d’accès au partage réseau où l’image est stockée.  
+    -   **Compte** : spécifiez le compte Windows qui dispose des autorisations sur le partage réseau où l'image est stockée.  
 
 14. Effectuez toutes les étapes de l'Assistant.  
 
 15. Pour ajouter des étapes supplémentaires à la séquence de tâches, sélectionnez la séquence de tâches que vous avez créée et cliquez sur **Modifier**. Pour plus d’informations sur la modification d’une séquence de tâches, consultez [Modifier une séquence de tâches](manage-task-sequences-to-automate-tasks.md#BKMK_ModifyTaskSequence).  
 
- Déployez la séquence de tâches sur un ordinateur de référence de l’une des manières suivantes :  
+    Déployez la séquence de tâches sur un ordinateur de référence de l’une des manières suivantes :  
 
 -   Si l’ordinateur de référence est un client Configuration Manager, vous pouvez déployer la séquence de tâches de création et de capture dans le regroupement qui contient l’ordinateur de référence. Pour plus d’informations sur le déploiement de l’image du système d’exploitation, consultez [Créer une séquence de tâches pour installer un système d’exploitation](create-a-task-sequence-to-install-an-operating-system.md).  
 
@@ -147,21 +147,21 @@ Quand vous utilisez une séquence de tâches pour déployer un système d’expl
 
 #### <a name="to-capture-an-operating-system-from-an-existing-reference-computer"></a>Pour capturer un système d’exploitation à partir d’un ordinateur de référence existant  
 
-1.  Dans la console Configuration Manager, cliquez sur **Bibliothèque de logiciels**.  
+1. Dans la console Configuration Manager, cliquez sur **Bibliothèque de logiciels**.  
 
-2.  Dans l'espace de travail **Bibliothèque de logiciels** , développez **Systèmes d'exploitation**, puis cliquez sur **Séquences de tâches**.  
+2. Dans l'espace de travail **Bibliothèque de logiciels** , développez **Systèmes d'exploitation**, puis cliquez sur **Séquences de tâches**.  
 
-3.  Sous l'onglet **Accueil** , dans le groupe **Créer** , cliquez sur **Créer une séquence de tâches** pour démarrer l'Assistant Création d'une séquence de tâches.  
+3. Sous l'onglet **Accueil** , dans le groupe **Créer** , cliquez sur **Créer une séquence de tâches** pour démarrer l'Assistant Création d'une séquence de tâches.  
 
-4.  Sur la page **Créer une nouvelle séquence de tâches** , sélectionnez **Créez une séquence de tâches personnalisée**.  
+4. Sur la page **Créer une nouvelle séquence de tâches** , sélectionnez **Créez une séquence de tâches personnalisée**.  
 
-5.  Dans la page **Informations sur la séquence de tâches** , spécifiez le nom et la description de la séquence de tâches.  
+5. Dans la page **Informations sur la séquence de tâches** , spécifiez le nom et la description de la séquence de tâches.  
 
-6.  Spécifiez une image de démarrage pour la séquence de tâches. Cette image de démarrage est utilisée pour démarrer l’ordinateur de référence avec Windows PE.  Pour plus d’informations, consultez [Gérer les images de démarrage](../get-started/manage-boot-images.md).  
+6. Spécifiez une image de démarrage pour la séquence de tâches. Cette image de démarrage est utilisée pour démarrer l’ordinateur de référence avec Windows PE.  Pour plus d’informations, consultez [Gérer les images de démarrage](../get-started/manage-boot-images.md).  
 
-7.  Effectuez toutes les étapes de l'Assistant.  
+7. Effectuez toutes les étapes de l'Assistant.  
 
-8.  Dans **Séquences de tâches**, sélectionnez la séquence de tâches personnalisée puis, sous l’onglet **Accueil** , dans le groupe **Séquence de tâches** , cliquez sur **Modifier** pour ouvrir l’Éditeur de séquence de tâches.  
+8. Dans **Séquences de tâches**, sélectionnez la séquence de tâches personnalisée puis, sous l’onglet **Accueil** , dans le groupe **Séquence de tâches** , cliquez sur **Modifier** pour ouvrir l’Éditeur de séquence de tâches.  
 
 9. Effectuez cette étape uniquement si le client Configuration Manager est installé sur l’ordinateur de référence.  
 
@@ -174,17 +174,17 @@ Quand vous utilisez une séquence de tâches pour déployer un système d’expl
 
 11. Cliquez sur **Ajouter**, sur **Images**, puis sur [Capturer l’image du système d’exploitation](../understand/task-sequence-steps.md#BKMK_CaptureOperatingSystemImage).  Cette étape de séquence de tâches s’exécute uniquement à partir de Windows PE pour capturer les disques durs sur l’ordinateur de référence. Configurez les paramètres suivants pour l’étape de séquence de tâches.  
 
-    -   **Nom** et **Description**: si vous le souhaitez, vous pouvez modifier le nom de l’étape de séquence de tâches et fournir une description.  
+    - **Nom** et **Description** : si vous le souhaitez, vous pouvez modifier le nom de l’étape de séquence de tâches et fournir une description.  
 
-    -   **Destination**: spécifiez un dossier réseau partagé où est stocké le fichier .WIM. Ce fichier contient l'image du système d'exploitation basée sur les paramètres que vous spécifiez à l'aide de cet Assistant. Si vous spécifiez un dossier qui contient un fichier .WIM existant, ce fichier est remplacé.  
+    - **Destination** : spécifiez un dossier réseau partagé dans lequel le fichier .WIM émis est stocké. Ce fichier contient l'image du système d'exploitation basée sur les paramètres que vous spécifiez à l'aide de cet Assistant. Si vous spécifiez un dossier qui contient un fichier .WIM existant, ce fichier est remplacé.  
 
-    -   **Description**, **Version**et **Créé par**: si vous le souhaitez, fournissez des détails sur l’image que vous allez capturer.  
+    - **Description**, **Version**, et **Créé par** : si vous le souhaitez, fournissez des détails sur l’image que vous allez capturer.  
 
-    -   **Compte de capture de l’image du système d’exploitation**: spécifiez le compte Windows qui dispose des autorisations d’accès au partage réseau que vous avez spécifié. Cliquez sur **Définir** pour indiquer le nom de ce compte Windows.  
+    - **Compte Capturer l’image du système d’exploitation** : spécifiez le compte Windows qui dispose des droits d’accès au partage réseau que vous avez spécifié. Cliquez sur **Définir** pour indiquer le nom de ce compte Windows.  
 
-     Cliquez sur **OK** pour fermer l’Éditeur de séquence de tâches.  
+      Cliquez sur **OK** pour fermer l’Éditeur de séquence de tâches.  
 
- Déployez la séquence de tâches sur un ordinateur de référence de l’une des manières suivantes :  
+    Déployez la séquence de tâches sur un ordinateur de référence de l’une des manières suivantes :  
 
 -   Si l’ordinateur de référence est un client Configuration Manager, vous pouvez déployer la séquence de tâches dans le regroupement qui contient l’ordinateur de référence. Pour plus d’informations sur le déploiement de l’image du système d’exploitation, consultez [Créer une séquence de tâches pour installer un système d’exploitation](create-a-task-sequence-to-install-an-operating-system.md).  
 

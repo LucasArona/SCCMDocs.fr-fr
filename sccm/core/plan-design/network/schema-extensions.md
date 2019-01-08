@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: noindex
-ms.openlocfilehash: ead1eef396e643930e00d3208ed1e821c73906d5
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 3454b56e53901668c89062f0910f8ea318f22cf2
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344175"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417657"
 ---
 # <a name="schema-extensions-for-system-center-configuration-manager"></a>Extensions de schéma pour System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Vous pouvez étendre le schéma Active Directory pour prendre en charge Configuration Manager. Cette opération modifie le schéma Active Directory d’une forêt pour ajouter un nouveau conteneur et plusieurs attributs grâce auxquels les sites Configuration Manager peuvent publier dans Active Directory des informations clés utilisables par les clients de manière sécurisée. Ces informations peuvent simplifier le déploiement et la configuration des clients et aider ces derniers à localiser les ressources du site, comme les serveurs sur lesquels le contenu a été déployé ou qui fournissent différents services aux clients.  
 
@@ -65,7 +65,7 @@ Avant d’ [étendre le schéma Active Directory](https://docs.microsoft.com/scc
 ## <a name="capabilities-that-benefit-from-extending-the-schema"></a>Fonctionnalités qui bénéficient de l’extension du schéma  
 **Installation de l’ordinateur client et attribution de site** : quand un ordinateur Windows installe un nouveau client, ce dernier recherche des propriétés d’installation dans Active Directory Domain Services.  
 
--   **Solutions de contournement** : si vous n’étendez pas le schéma, utilisez l’une des options suivantes pour fournir les détails de configuration que les ordinateurs doivent installer :  
+-   **Solutions de contournement :** Si vous n’étendez pas le schéma, utilisez l’une des options suivantes pour fournir les détails de configuration que les ordinateurs doivent installer :  
 
     -   **Utiliser l’installation poussée du client**. Avant d’utiliser une méthode d’installation du client, vérifiez que tous les prérequis sont remplis. Pour plus d’informations, consultez la section « Dépendances liées aux méthodes d’installation » dans [Prérequis au déploiement de clients sur des ordinateurs Windows](/sccm/core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers).  
 
@@ -79,7 +79,7 @@ Avant d’ [étendre le schéma Active Directory](https://docs.microsoft.com/scc
 
 **Configuration du port pour la communication client à serveur** : quand un client est installé, il est configuré avec les informations du port stockées dans Active Directory. Si vous modifiez ultérieurement le port de communication client à serveur pour un site, un client peut obtenir ce nouveau paramètre de port par les services de domaine Active Directory.  
 
--   **Solutions de contournement :** si vous n’étendez pas le schéma, utilisez l’une des options suivantes pour fournir de nouvelles configurations de port aux clients existants :  
+-   **Solutions de contournement :** Si vous n’étendez pas le schéma, utilisez l’une des options suivantes pour fournir de nouvelles configurations de port aux clients existants :  
 
     -   **Réinstaller les clients** à l’aide d’options qui configurent le nouveau port.  
 
@@ -87,7 +87,7 @@ Avant d’ [étendre le schéma Active Directory](https://docs.microsoft.com/scc
 
 **Scénarios de déploiement de contenu** : quand vous créez du contenu sur un site et que vous déployez ce contenu vers un autre site de la hiérarchie, le site récepteur doit être capable de vérifier la signature des données du contenu signé. Cela nécessite un accès à la clé publique du site source dans lequel vous créez ces données. Quand vous étendez le schéma Active Directory pour Configuration Manager, la clé publique d’un site est accessible à tous les sites de la hiérarchie.  
 
--   **Solutions de contournement :** si vous n’étendez pas le schéma, utilisez l’outil de maintenance de hiérarchie, **preinst.exe**, pour échanger les informations de la clé sécurisées entre les sites.  
+-   **Solution de contournement :** Si vous n’étendez pas le schéma, utilisez l’outil de maintenance de hiérarchie, **preinst.exe**, pour échanger les informations de la clé sécurisées entre les sites.  
 
      Par exemple, si vous envisagez de créer du contenu sur un site principal et le déployer sur un site secondaire inférieur à un site principal différent, vous devez soit étendre le schéma Active Directory pour permettre au site secondaire d’obtenir la clé publique de la source des sites principaux, soit utiliser preinst.exe pour partager les clés directement entre les deux sites.  
 
@@ -135,12 +135,12 @@ Quand vous étendez le schéma pour System Center Configuration Manager, les cla
 
     -   cn=MS-SMS-Site  
 
-> [!NOTE]  
-
+> [!NOTE]
+> 
 >  Les extensions de schéma peuvent inclure des attributs et des classes issus de versions précédentes du produit, qui ne sont plus utilisés par System Center Configuration Manager. Par exemple :  
-
->   
->  -   Attribut : cn=MS-SMS-Site-Boundaries  
-> -   Classe : cn=MS-SMS-Server-Locator-Point  
+> 
+> 
+> - Attribut : cn=MS-SMS-Site-Boundaries  
+>   -   Classe : cn=MS-SMS-Server-Locator-Point  
 
 Vous pouvez vous assurer que les listes précédentes sont à jour en consultant le fichier **ConfigMgr_ad_schema.LDF**, situé dans le dossier **\SMSSETUP\BIN\x64** du support d’installation de System Center Configuration Manager.  

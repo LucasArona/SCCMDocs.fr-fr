@@ -10,16 +10,16 @@ ms.assetid: 4bb6afeb-d267-4f9b-ade2-26e5400c223b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bd76ecfcd4f5731e7fa078a00e79fdc6ab91ffa4
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: a12d2e40007a351d3718247803d8be7856e12273
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32333499"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53423335"
 ---
 # <a name="common-tasks-for-creating-and-deploying-configuration-baselines-with-system-center-configuration-manager"></a>Tâches courantes de création et de déploiement de bases de référence de configuration avec System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Cette rubrique inclut des scénarios courants pour vous permettre de vous familiariser avec la création et le déploiement de bases de référence de configuration System Center Configuration Manager.  
 
@@ -34,49 +34,49 @@ Cette rubrique inclut des scénarios courants pour vous permettre de vous famili
 
 Utilisez la procédure suivante pour apprendre à ajouter cet élément de configuration à une base de référence de configuration pour la préparer au déploiement.  
 
-1.  Dans la console Configuration Manager, cliquez sur **Ressources et Conformité** > **Paramètres de compatibilité** > **Lignes de base de configuration**.  
+1. Dans la console Configuration Manager, cliquez sur **Ressources et Conformité** > **Paramètres de compatibilité** > **Lignes de base de configuration**.  
 
-3.  Dans l'onglet **Accueil** , dans le groupe **Créer** , cliquez sur **Créer une ligne de base de configuration**.  
+2. Dans l'onglet **Accueil** , dans le groupe **Créer** , cliquez sur **Créer une ligne de base de configuration**.  
 
-4.  Dans la boîte de dialogue **Créer une base de référence de configuration**, configurez les paramètres suivants :  
+3. Dans la boîte de dialogue **Créer une base de référence de configuration**, configurez les paramètres suivants :  
 
-    -   **Nom** : entrez **Mots de passe Windows 10** (ou un autre nom de votre choix).  
+   -   **Nom** : entrez **Mots de passe Windows 10** (ou un autre nom de votre choix).  
 
-5.  Cliquez sur **Ajouter** > **Éléments de Configuration**.  
+4. Cliquez sur **Ajouter** > **Éléments de Configuration**.  
 
-6.  Dans la boîte de dialogue **Ajouter des éléments de configuration** , sélectionnez l’élément de configuration **Mise en œuvre de mot de passe Windows 10** que vous avez précédemment créé, puis cliquez sur **Ajouter**.  
+5. Dans la boîte de dialogue **Ajouter des éléments de configuration** , sélectionnez l’élément de configuration **Mise en œuvre de mot de passe Windows 10** que vous avez précédemment créé, puis cliquez sur **Ajouter**.  
 
-7.  Cliquez sur OK pour fermer la boîte de dialogue **Ajouter des éléments de configuration** et revenir à la boîte de dialogue **Créer une base de référence de configuration**.
+6. Cliquez sur OK pour fermer la boîte de dialogue **Ajouter des éléments de configuration** et revenir à la boîte de dialogue **Créer une base de référence de configuration**.
 
-8.  Cliquez sur **OK** pour fermer la boîte de dialogue **Créer une ligne de base de configuration** .  
+7. Cliquez sur **OK** pour fermer la boîte de dialogue **Créer une ligne de base de configuration** .  
 
- Vous pouvez maintenant voir la base de référence de configuration dans le nœud **Bases de référence de configuration** de la console Configuration Manager.  
+   Vous pouvez maintenant voir la base de référence de configuration dans le nœud **Bases de référence de configuration** de la console Configuration Manager.  
 
 ## <a name="deploy-the-configuration-baseline"></a>Déployer la base de référence de configuration  
  Dans cet exemple, vous déployez la base de référence de configuration que vous avez créée au cours de la procédure précédente sur un regroupement d’ordinateurs.  
 
-1.  Dans la console Configuration Manager, cliquez sur **Ressources et Conformité** > **Paramètres de compatibilité** > **Lignes de base de configuration**.  
+1. Dans la console Configuration Manager, cliquez sur **Ressources et Conformité** > **Paramètres de compatibilité** > **Lignes de base de configuration**.  
 
-3.  Dans la liste des bases de référence de configuration, sélectionnez **Mots de passe Windows 10**.  
+2. Dans la liste des bases de référence de configuration, sélectionnez **Mots de passe Windows 10**.  
 
-4.  Dans l'onglet **Accueil** , dans le groupe **Déploiement** , cliquez sur **Déployer**.  
+3. Dans l'onglet **Accueil** , dans le groupe **Déploiement** , cliquez sur **Déployer**.  
 
-5.  Dans la boîte de dialogue **Déployer des bases de référence de configuration**, configurez les paramètres suivants :  
+4. Dans la boîte de dialogue **Déployer des bases de référence de configuration**, configurez les paramètres suivants :  
 
-    -   **Lignes de base de configuration sélectionnées** : vérifiez que la base de référence de configuration **Mots de passe Windows 10** a été automatiquement ajoutée à cette liste.  
+   -   **Lignes de base de configuration sélectionnées** : vérifiez que la base de référence de configuration **Mots de passe Windows 10** a été automatiquement ajoutée à cette liste.  
 
-    -   **Résoudre les règles non conformes lorsqu’elles sont prises en charge** : cochez cette case pour veiller à ce que, si les paramètres appropriés ne sont pas présents sur les appareils ciblés, ils soient corrigés par Configuration Manager.  
+   -   **Résoudre les règles non conformes lorsqu’elles sont prises en charge** : cochez cette case pour veiller à ce que, si les paramètres appropriés ne sont pas présents sur les appareils ciblés, ils soient corrigés par Configuration Manager.  
 
-    -   **Regroupement** : cliquez sur **Parcourir** pour choisir le regroupement d’ordinateurs sur lequel la base de référence de configuration est évaluée et corrigée à des fins de compatibilité. Dans cet exemple, la base de référence de configuration a été déployée sur le regroupement **Tous les clients bureau et serveur** intégré.  
+   -   **Regroupement** : cliquez sur **Parcourir** pour choisir le regroupement d’ordinateurs sur lequel la base de référence de configuration est évaluée et corrigée à des fins de compatibilité. Dans cet exemple, la base de référence de configuration a été déployée sur le regroupement **Tous les clients bureau et serveur** intégré.  
 
-        > [!TIP]  
-        >  Ne vous inquiétez pas si le regroupement que vous choisissez contient des ordinateurs ou périphériques qui n’exécutent pas Windows 10. Tant que vous avez configuré des plateformes prises en charge dans l’élément de configuration que vous avez créé, la compatibilité des seuls ordinateurs Windows 10 est évaluée.  
+       > [!TIP]  
+       >  Ne vous inquiétez pas si le regroupement que vous choisissez contient des ordinateurs ou périphériques qui n’exécutent pas Windows 10. Tant que vous avez configuré des plateformes prises en charge dans l’élément de configuration que vous avez créé, la compatibilité des seuls ordinateurs Windows 10 est évaluée.  
 
-    -   Si nécessaire, configurez la planification selon laquelle la base de référence de configuration est évaluée. Sinon, conservez la valeur par défaut de **7 jours**.  
+   -   Si nécessaire, configurez la planification selon laquelle la base de référence de configuration est évaluée. Sinon, conservez la valeur par défaut de **7 jours**.  
 
-7.  Cliquez sur **OK** pour fermer la boîte de dialogue **Déployer des lignes de base de configuration** et créer le déploiement.  
+5. Cliquez sur **OK** pour fermer la boîte de dialogue **Déployer des lignes de base de configuration** et créer le déploiement.  
 
- Pour examiner rapidement les statistiques de compatibilité de ce déploiement, dans l’espace de travail **Surveillance** , cliquez sur **Déploiements**. Au bas de l’écran, un graphique **Statistiques de compatibilité** est visible.  
+   Pour examiner rapidement les statistiques de compatibilité de ce déploiement, dans l’espace de travail **Surveillance** , cliquez sur **Déploiements**. Au bas de l’écran, un graphique **Statistiques de compatibilité** est visible.  
 
 ## <a name="next-steps"></a>Étapes suivantes 
 

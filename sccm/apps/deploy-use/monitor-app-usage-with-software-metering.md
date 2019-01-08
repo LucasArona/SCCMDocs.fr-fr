@@ -10,16 +10,16 @@ ms.assetid: b1fdaee2-2816-4447-94cd-609f6948f215
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 66099b45fb04b18c84cd9a3973c1a4d93f0e93a6
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 862555a34d638ad9c1c5c2d0d0de6f2ce1edd3f3
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335760"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419323"
 ---
 # <a name="software-metering-in-system-center-configuration-manager"></a>Contrôle de logiciel dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Cette rubrique contient une référence pour toutes les opérations que vous pouvez effectuer lors de l’utilisation du contrôle de logiciel System Center Configuration Manager.
 
@@ -29,7 +29,7 @@ Cette rubrique contient une référence pour toutes les opérations que vous pou
 ##  <a name="prerequisites-for-software-metering"></a>Configuration requise pour le contrôle de logiciel
 Le contrôle de logiciel ne présente aucune dépendance externe, seulement des dépendances au sein du produit.
 
-|Dépendance|Plus d'informations|
+|Dépendance|Informations complémentaires|
 |----------------|----------------------|
 |Paramètres client pour le contrôle de logiciel|Pour utiliser le contrôle de logiciel, le paramètre client **Activer le contrôle de logiciel sur les clients** doit être activé et déployé sur les ordinateurs. Vous pouvez déployer les paramètres de contrôle de logiciel sur tous les ordinateurs de la hiérarchie ou déployer les paramètres personnalisés sur des groupes d’ordinateurs. Consultez **Configurer le contrôle de logiciel** dans cette rubrique.|
 |Point de Reporting Services|Vous devez configurer un point de Reporting Services pour pouvoir afficher les rapports de contrôle de logiciel. Pour plus d’informations, consultez [Génération de rapports dans System Center Configuration Manager](../../core/servers/manage/reporting.md).|
@@ -37,21 +37,21 @@ Le contrôle de logiciel ne présente aucune dépendance externe, seulement des 
 ##  <a name="configure-software-metering"></a>Configurer le contrôle de logiciel
  Cette procédure configure les paramètres client par défaut pour le contrôle de logiciel et s’applique à tous les ordinateurs de votre hiérarchie. Si vous souhaitez que ces paramètres s’appliquent uniquement à certains ordinateurs, créez un paramètre client de périphérique personnalisé et déployez-le sur un regroupement contenant les ordinateurs sur lesquels vous souhaitez utiliser le contrôle de logiciel. Pour plus d’informations sur la création de paramètres d’appareil personnalisé, consultez [Configurer les paramètres client](../../core/clients/deploy/configure-client-settings.md).
 
-1.  Dans la console Configuration Manager, cliquez sur **Administration** > **Paramètres client** > **Paramètres client par défaut**.
+1. Dans la console Configuration Manager, cliquez sur **Administration** > **Paramètres client** > **Paramètres client par défaut**.
 
-2.  Dans l'onglet **Accueil** , dans le groupe **Propriétés** , cliquez sur **Propriétés**.
+2. Dans l'onglet **Accueil** , dans le groupe **Propriétés** , cliquez sur **Propriétés**.
 
-3.  Dans la boîte de dialogue **Paramètres par défaut** , cliquez sur **Contrôle de logiciel**.
+3. Dans la boîte de dialogue **Paramètres par défaut** , cliquez sur **Contrôle de logiciel**.
 
-4.  Dans la liste **Paramètres de périphérique** , configurez les éléments suivants :
+4. Dans la liste **Paramètres de périphérique** , configurez les éléments suivants :
 
-    -   **Activer le contrôle de logiciel sur les clients**: sélectionnez **Vrai** pour activer le contrôle de logiciel.
+   -   **Activer le contrôle de logiciel sur les clients** : Sélectionnez **Vrai** pour activer le contrôle de logiciel.
 
-    -   **Planifier le regroupement de données**: configurez la fréquence à laquelle les données de contrôle de logiciel doivent être collectées à partir des ordinateurs clients. Utilisez la valeur par défaut, à savoir tous les **7 jours** ou cliquez sur **Calendrier** pour spécifier une planification personnalisée.
+   -   **Planifier la collecte de données** : Configurez la fréquence à laquelle les données de contrôle de logiciel doivent être collectées à partir des ordinateurs clients. Utilisez la valeur par défaut, à savoir tous les **7 jours** ou cliquez sur **Calendrier** pour spécifier une planification personnalisée.
 
-5.  Cliquez sur **OK** pour fermer la boîte de dialogue **Paramètres par défaut** .
+5. Cliquez sur **OK** pour fermer la boîte de dialogue **Paramètres par défaut** .
 
- Les ordinateurs clients sont configurés avec ces paramètres la prochaine fois qu’ils téléchargent la stratégie du client. Pour lancer la récupération de stratégie pour un seul client, consultez [Gérer les clients](../../core/clients/manage/manage-clients.md).
+   Les ordinateurs clients sont configurés avec ces paramètres la prochaine fois qu’ils téléchargent la stratégie du client. Pour lancer la récupération de stratégie pour un seul client, consultez [Gérer les clients](../../core/clients/manage/manage-clients.md).
 
 ##  <a name="create-software-metering-rules"></a>Créer des règles de contrôle de logiciel
  Utilisez l’Assistant Créer une règle de contrôle de logiciel pour créer une règle de contrôle de logiciel pour votre site Configuration Manager.
@@ -154,15 +154,15 @@ Le contrôle de logiciel ne présente aucune dépendance externe, seulement des 
 ## <a name="example-scenario-for-using-software-metering"></a>Exemple de scénario d’utilisation du contrôle de logiciel
  Dans cette section, vous allez créer un exemple de règle de contrôle de logiciel qui peut vous aider à répondre aux exigences métier suivantes :
 
--   Déterminer le nombre de copies d’une application particulière dans votre entreprise
+- Déterminer le nombre de copies d’une application particulière dans votre entreprise
 
--   Découvrir les copies inutilisées d’une application
+- Découvrir les copies inutilisées d’une application
 
--   Déterminer les personnes qui utilisent régulièrement une application particulière
+- Déterminer les personnes qui utilisent régulièrement une application particulière
 
- La Woodgrove Bank a déployé Microsoft Office 2010 comme suite de production standard. Toutefois, pour prendre en charge une application héritée, certains ordinateurs doivent continuer à exécuter Microsoft Office Word 2003. Le service informatique souhaite réduire les coûts de support et de licences en supprimant ces copies de Word 2003 si l’application héritée n’est plus utilisée. Le support technique souhaite également identifier les personnes qui utilisent l’application héritée.
+  La Woodgrove Bank a déployé Microsoft Office 2010 comme suite de production standard. Toutefois, pour prendre en charge une application héritée, certains ordinateurs doivent continuer à exécuter Microsoft Office Word 2003. Le service informatique souhaite réduire les coûts de support et de licences en supprimant ces copies de Word 2003 si l’application héritée n’est plus utilisée. Le support technique souhaite également identifier les personnes qui utilisent l’application héritée.
 
- Responsable des systèmes informatiques de la Woodgrove Bank, John utilise le contrôle de logiciel dans Configuration Manager pour atteindre ces objectifs métier. Il effectue les opérations suivantes :
+  Responsable des systèmes informatiques de la Woodgrove Bank, John utilise le contrôle de logiciel dans Configuration Manager pour atteindre ces objectifs métier. Il effectue les opérations suivantes :
 
 - John vérifie la configuration requise pour le contrôle de logiciel et confirme que le point de Reporting Services est installé et opérationnel.
 - John configure les paramètres client par défaut pour le contrôle de logiciel :<br>Il active le contrôle de logiciel et, par défaut, planifie le regroupement de données à raison d’une collecte tous les sept jours.<br>Il configure l’inventaire logiciel pour inventorier les fichiers portant l’extension .exe en paramétrant le paramètre client d’inventaire logiciel **Inventorier ces types de fichiers**.<br>Il ajoute une nouvelle règle de contrôle des logiciels, nommée **woodgrove.exe**, afin de surveiller l’application héritée.
@@ -172,4 +172,4 @@ Le contrôle de logiciel ne présente aucune dépendance externe, seulement des 
 - John effectue des vérifications supplémentaires pour s’assurer que l’application héritée n’est pas nécessaire sur les ordinateurs identifiés. Ensuite, il désinstalle l’application héritée et la copie de Word 2003 de ces ordinateurs.<br>John exécute le rapport **Utilisateurs ayant exécuté un programme contrôlé spécifique** pour fournir au support technique la liste des utilisateurs qui continuent d’utiliser l’application héritée.
 - John continue de vérifier les rapports de contrôle de logiciel chaque semaine et prend des mesures correctives quand cela est nécessaire.
 
- À la suite de cette action, les coûts de support et de licences sont réduits en supprimant les applications qui ne sont plus nécessaires. En outre, le support technique possède maintenant la liste souhaitée des utilisateurs qui exécutent l’application héritée.
+  À la suite de cette action, les coûts de support et de licences sont réduits en supprimant les applications qui ne sont plus nécessaires. En outre, le support technique possède maintenant la liste souhaitée des utilisateurs qui exécutent l’application héritée.

@@ -10,16 +10,16 @@ ms.assetid: f4706a58-1f11-4eab-b1eb-3d1a0da02d0f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 730d14c5985c088d964761bb83043f3a34924486
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: e8f7a8fbdbd52a8f872583cf2237a06ee8c1420e
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340333"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53414716"
 ---
 # <a name="capabilities-in-technical-preview-1710-for-system-center-configuration-manager"></a>Fonctionnalités de Technical Preview 1710 pour System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Technical Preview)*
+*S’applique à : System Center Configuration Manager (Technical Preview)*
 
 Cet article présente les fonctionnalités qui sont disponibles dans la version 1710 de Technical Preview pour System Center Configuration Manager. Vous pouvez installer cette version pour mettre à jour et ajouter de nouvelles fonctionnalités à votre site Configuration Manager Technical Preview. Avant d’installer cette version Technical Preview, passez en revue [Technical Preview pour System Center Configuration Manager](../../core/get-started/technical-preview.md) pour vous familiariser avec les conditions générales et les limitations d’utilisation d’une version Technical Preview, la mise à jour entre les versions et l’envoi de commentaires sur les fonctionnalités d’une version Technical Preview.     
 
@@ -30,8 +30,8 @@ Cet article présente les fonctionnalités qui sont disponibles dans la version�
     Workaround details.
 -->
 **Problèmes connus dans cette version d’évaluation technique :**
--   **Prise en charge de Windows 10, version 1709 (également appelée Fall Creators Update)**.  À partir de cette version de Windows, Windows Media inclut plusieurs éditions. Quand vous configurez une séquence de tâches pour utiliser un package de mise à niveau de système d’exploitation ou une image de système d’exploitation, veillez à sélectionner une [édition prise en charge par Configuration Manager](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client).
--   **La mise à jour vers une nouvelle préversion échoue s’il existe un serveur de site en mode passif**. Si vous exécutez une préversion qui a un [serveur de site principal en mode passif](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability), vous devez désinstaller ce dernier pour pouvoir correctement mettre à jour votre site de préversion vers cette nouvelle préversion. Vous pouvez réinstaller le serveur de site en mode passif une fois votre site mis à jour.
+- **Prise en charge de Windows 10, version 1709 (également appelée Fall Creators Update)**.  À partir de cette version de Windows, Windows Media inclut plusieurs éditions. Quand vous configurez une séquence de tâches pour utiliser un package de mise à niveau de système d’exploitation ou une image de système d’exploitation, veillez à sélectionner une [édition prise en charge par Configuration Manager](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client).
+- **La mise à jour vers une nouvelle préversion échoue s’il existe un serveur de site en mode passif**. Si vous exécutez une préversion qui a un [serveur de site principal en mode passif](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability), vous devez désinstaller ce dernier pour pouvoir correctement mettre à jour votre site de préversion vers cette nouvelle préversion. Vous pouvez réinstaller le serveur de site en mode passif une fois votre site mis à jour.
 
   Pour désinstaller le serveur de site en mode passif :
   1. Dans la console, accédez à **Administration** > **Vue d’ensemble** > **Configuration du site** > **Serveurs et rôles de système de site**, puis sélectionnez le serveur de site en mode passif.
@@ -86,8 +86,7 @@ Ajoutez une icône pour votre application dans le Centre logiciel. Pour ce faire
 
 
 ## <a name="check-compliance-from-software-center-for-co-managed-devices"></a>Vérifier auprès du Centre logiciel la conformité des périphériques cogérés
-<!-- 1356374 -->
-Dans cette version, les utilisateurs peuvent utiliser le Centre logiciel pour vérifier la conformité de leurs appareils Windows 10 cogérés, même quand l’accès conditionnel est géré par Intune. Pour plus d’informations, consultez [Cogestion pour les appareils Windows 10](./capabilities-in-technical-preview-1709.md#co-management-for-windows-10-devices).
+<!-- 1356374 --> Dans cette version, les utilisateurs peuvent utiliser le Centre logiciel pour vérifier la conformité de leurs appareils Windows 10 cogérés, même quand l’accès conditionnel est géré par Intune. Pour plus d’informations, consultez [Cogestion pour les appareils Windows 10](./capabilities-in-technical-preview-1709.md#co-management-for-windows-10-devices).
 
 
 ## <a name="support-for-exploit-guard"></a>Prise en charge d’Exploit Guard
@@ -112,22 +111,21 @@ Les appareils gérés doivent exécuter Windows 10 Fall Creators Update version 
 | Protection du réseau  |  La[protection en temps réel de Windows Defender AV]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) doit être activée sur les appareils.  |
 
 ### <a name="create-an-exploit-guard-policy----1355468---"></a>Créer une stratégie Exploit Guard  <!--1355468 -->
-1.  Dans la console Configuration Manager, accédez à **Ressources et Conformité** > **Endpoint Protection**, puis cliquez sur **Windows Defender Exploit Guard**.
-2.  Dans l'onglet **Accueil**, dans le groupe **Créer**, cliquez sur **Créer une stratégie Exploit**.
-3.  Dans la page **Général** de l’ **Assistant Création d’élément de configuration**, spécifiez un nom et une description éventuelle pour l’élément de configuration.
-4.  Sélectionnez ensuite les composants Exploit Guard que vous souhaitez gérer avec cette stratégie. Pour chaque composant que vous sélectionnez, vous pouvez ensuite configurer des détails supplémentaires.
-  - **Règles de réduction de la surface d’attaque :** configurez la menace Office, les menaces liées aux scripts et les menaces de messagerie électronique que vous souhaitez bloquer ou auditer. Vous pouvez également exclure certains fichiers ou dossiers à partir de cette règle.
-  - **Accès contrôlé aux dossiers :** configurez le blocage ou l’audit, puis ajoutez des applications qui peuvent contourner cette stratégie.  Vous pouvez également spécifier des dossiers supplémentaires qui ne sont pas protégés par défaut.
-  - **Exploit Protection :** spécifiez un fichier XML contenant les paramètres pour atténuer les attaques de processus système et d’applications. Vous pouvez exporter ces paramètres à partir de l’application Centre de sécurité Windows Defender sur un appareil Windows 10.
-  - **Protection du réseau :** définissez la protection du réseau pour bloquer ou auditer l’accès aux domaines suspects.
-5.  Terminez l’Assistant pour créer la stratégie, que vous pouvez déployer ultérieurement sur des appareils.
+1. Dans la console Configuration Manager, accédez à **Ressources et Conformité** > **Endpoint Protection**, puis cliquez sur **Windows Defender Exploit Guard**.
+2. Dans l'onglet **Accueil**, dans le groupe **Créer**, cliquez sur **Créer une stratégie Exploit**.
+3. Dans la page **Général** de l’ **Assistant Création d’élément de configuration**, spécifiez un nom et une description éventuelle pour l’élément de configuration.
+4. Sélectionnez ensuite les composants Exploit Guard que vous souhaitez gérer avec cette stratégie. Pour chaque composant que vous sélectionnez, vous pouvez ensuite configurer des détails supplémentaires.
+   - **Règles de réduction de la surface d’attaque :** configurez la menace Office, les menaces de script et les menaces d’e-mail que vous souhaitez bloquer ou auditer. Vous pouvez également exclure certains fichiers ou dossiers à partir de cette règle.
+   - **Accès contrôlé aux dossiers :** configurez le blocage ou l’audit, puis ajoutez des applications qui peuvent contourner cette stratégie.  Vous pouvez également spécifier des dossiers supplémentaires qui ne sont pas protégés par défaut.
+   - **Exploit Protection :**  spécifiez un fichier XML contenant les paramètres pour atténuer les attaques de processus système et d’applications. Vous pouvez exporter ces paramètres à partir de l’application Centre de sécurité Windows Defender sur un appareil Windows 10.
+   - **Protection du réseau :** définissez la protection du réseau pour bloquer ou auditer l’accès aux domaines suspects.
+5. Terminez l’Assistant pour créer la stratégie, que vous pouvez déployer ultérieurement sur des appareils.
 
 ### <a name="deploy-an-exploit-guard-policy"></a>Déployer une stratégie Exploit Guard     
 Après avoir créé des stratégies Exploit Guard, utilisez l’assistant de déploiement de stratégies Exploit Guard pour les déployer. Pour ce faire, ouvrez la console Configuration Manager, accédez à **Ressources et Conformité** > **Endpoint Protection**, puis cliquez sur **Déployer la stratégie Exploit Guard**.
 
 ## <a name="limited-support-for-cng-certificates"></a>Prise en charge limitée des certificats CNG
-<!-- 1356191 -->
-À partir de cette version, vous pouvez désormais utiliser les modèles de certificat [Cryptography API: Next Generation (CNG)](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx) pour les scénarios suivants :
+<!-- 1356191 --> À compter de cette version, vous pouvez maintenant utiliser les modèles de certificat [Cryptography API : Next Generation (CNG)](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx) pour les scénarios suivants :
 
 - L’inscription du client et la communication avec un point de gestion HTTPS.   
 - La distribution de logiciels et le déploiement d’applications avec un point de distribution HTTPS.   
@@ -193,7 +191,7 @@ Pour permettre à un appareil exécutant Windows Defender SmartScreen d’exécu
 
 ## <a name="configure-and-deploy-windows-defender-application-guard-policies----1351960---"></a>Configurer et déployer des stratégies Windows Defender Application Guard <!-- 1351960 -->
 
-[Windows Defender Application Guard](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97) est une nouvelle fonctionnalité de Windows qui permet de protéger vos utilisateurs en ouvrant les sites web non approuvés dans un conteneur isolé et sécurisé qui n’est pas accessible par les autres parties du système d’exploitation. Dans cette version Technical Preview, nous avons ajouté la prise en charge pour configurer cette fonctionnalité à l’aide des paramètres de conformité de Configuration Manager que vous configurez, puis déployez sur une collection. Cette fonctionnalité sera disponible dans la version préliminaire de la version 64 bits de mise à jour de Windows 10 Creators Update (nom de code : RS2). Pour tester cette fonctionnalité maintenant, vous devez utiliser une version préliminaire de cette mise à jour.
+[Windows Defender Application Guard](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97) est une nouvelle fonctionnalité de Windows qui permet de protéger vos utilisateurs en ouvrant les sites web non approuvés dans un conteneur isolé et sécurisé qui n’est pas accessible par les autres parties du système d’exploitation. Dans cette version Technical Preview, nous avons ajouté la prise en charge pour configurer cette fonctionnalité à l’aide des paramètres de conformité de Configuration Manager que vous configurez, puis déployez sur une collection. Cette fonctionnalité sera disponible dans la préversion de la version 64 bits de mise à jour de Windows 10 Creators Update (nom de code : RS2). Pour tester cette fonctionnalité maintenant, vous devez utiliser une version préliminaire de cette mise à jour.
 
 ### <a name="before-you-start"></a>Avant de commencer
 Pour créer et déployer des stratégies Windows Defender Application Guard, les appareils Windows 10 sur lesquels vous déployez la stratégie doivent être configurés avec une stratégie d’isolation de réseau. Pour plus d’informations, consultez le billet de blog référencé plus loin. Cette fonctionnalité fonctionne uniquement avec les versions actuelles de Windows 10 Insider. Pour la tester, vos clients doivent exécuter une version récente de Windows 10 Insider.

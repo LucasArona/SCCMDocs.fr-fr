@@ -11,18 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: noindex,nofollow
-ms.openlocfilehash: b399be1a0e0eeea76ac87b8724f3c9f04902d533
-ms.sourcegitcommit: 2cc635835709fb8d86cdb63ea34233b36c94d4d8
+ms.openlocfilehash: cac4e555ece110ede0ccddb59d947a6068ef38ff
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52259027"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53423318"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1602-of-system-center-configuration-manager"></a>Niveaux de la collecte de données des données de diagnostic et d’utilisation pour la version 1602 de System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager version 1602 collecte trois niveaux de données d’utilisation et de diagnostic : **De base**, **Étendu** et **Complet**. Par défaut, cette fonctionnalité est définie sur le niveau Étendu. Les sections suivantes fournissent des détails supplémentaires sur les données collectées à chaque niveau.
+System Center Configuration Manager version 1602 collecte trois niveaux de données d’utilisation et de diagnostic : **De base**, **Étendu** et **Complet**. Par défaut, cette fonctionnalité est définie sur le niveau Étendu. Les sections suivantes fournissent des détails supplémentaires sur les données collectées à chaque niveau.
 
 Les modifications par rapport aux versions précédentes sont indiquées par ***[Nouveau]*** ou ***[Mis à jour]***.
 
@@ -41,14 +41,14 @@ Les modifications par rapport aux versions précédentes sont indiquées par ***
  À compter de System Center Configuration Manager version 1602, ce niveau inclut les éléments suivants :
 
 
- -   Informations d’installation :
-    - Build, type d’installation, modules linguistiques, fonctionnalités que vous avez activées  
+- Informations d’installation :
+  - Build, type d’installation, modules linguistiques, fonctionnalités que vous avez activées  
 
-    - ***[Mis à jour]*** État et erreurs du déploiement du package de mise à jour, progression du téléchargement, et erreurs au niveau des conditions préalables     
+  - ***[Mis à jour]*** État et erreurs du déploiement du package de mise à jour, progression du téléchargement, et erreurs au niveau des conditions préalables     
 
-    - ***[Nouveau]*** Version du script après mise à niveau
+  - ***[Nouveau]*** Version du script après mise à niveau
 
-    - ***[Nouveau]*** Utilisation de l’anneau rapide de mise à jour
+  - ***[Nouveau]*** Utilisation de l’anneau rapide de mise à jour
 
 -   Métriques de performances de base de données (informations sur le traitement de la réplication, procédures stockées SQL Server les plus utilisées par processeur et utilisation des disques)
 
@@ -94,7 +94,7 @@ Ce niveau est recommandé, car il fournit à Microsoft les données minimales n�
 
 À compter de System Center Configuration Manager version 1602, ce niveau inclut les éléments suivants :
 
--   **Gestion des applications :**
+- **Gestion des applications :**
 
   -   ***[Mis à jour]*** Informations de base d’utilisation/de ciblage pour les types de déploiement utilisés au sein de l’organisation (ciblé utilisateur ou appareil, nécessaire ou disponible et applications universelles)  
 
@@ -118,145 +118,145 @@ Ce niveau est recommandé, car il fournit à Microsoft les données minimales n�
 
   -  ***[Nouveau]*** Statistiques de taille et de complexité des stratégies d’applications
 
--   **Client :**
+- **Client :**
 
-    -   Liste/nombre d’agents clients activés
+  -   Liste/nombre d’agents clients activés
 
-    -   Nombre d’installations de client à partir de chaque type d’emplacement source
+  -   Nombre d’installations de client à partir de chaque type d’emplacement source
 
-    -   Nombre d’échecs d’installation de client
+  -   Nombre d’échecs d’installation de client
 
--   **Paramètres de compatibilité :**
+- **Paramètres de compatibilité :**
 
-    -   Nombre d’éléments de configuration par type
+  -   Nombre d’éléments de configuration par type
 
-    -   Informations de la ligne de base de configuration de base (nombre, nombre de déploiements et nombre de références)
+  -   Informations de la ligne de base de configuration de base (nombre, nombre de déploiements et nombre de références)
 
-    -   Nombre de déploiements qui font référence à des paramètres intégrés (la valeur du paramètre n’est pas capturée)
+  -   Nombre de déploiements qui font référence à des paramètres intégrés (la valeur du paramètre n’est pas capturée)
 
-    -   Nombre de règles et de déploiements qui sont créés pour les paramètres personnalisés
+  -   Nombre de règles et de déploiements qui sont créés pour les paramètres personnalisés
 
-    -   ***[Mis à jour]*** Nombre de modèles Simple Certificate Enrollment Protocol, VPN, Wi-Fi, de certificat (.pfx) et de stratégie de conformité déployés   
+  -   ***[Mis à jour]*** Nombre de modèles Simple Certificate Enrollment Protocol, VPN, Wi-Fi, de certificat (.pfx) et de stratégie de conformité déployés   
 
-    -  ***[Nouveau]*** Nombre de déploiements de certificat Simple Certificate Enrollment Protocol (SCEP), VPN, Wi-Fi, certificat (.pfx) et stratégie de conformité par plateforme
+  -  ***[Nouveau]*** Nombre de déploiements de certificat Simple Certificate Enrollment Protocol (SCEP), VPN, Wi-Fi, certificat (.pfx) et stratégie de conformité par plateforme
 
--   **Contenu :**
+- **Contenu :**
 
-    -   Nombre de limites par type
+  -   Nombre de limites par type
 
-    -   Informations sur les groupes de limites (nombre de limites et de systèmes de site qui sont attribués à chaque groupe de limites)
+  -   Informations sur les groupes de limites (nombre de limites et de systèmes de site qui sont attribués à chaque groupe de limites)
 
-    -   Informations sur les groupes de points de distribution (nombre de packages et de points de distribution qui sont attribués à chaque groupe de points de distribution)
+  -   Informations sur les groupes de points de distribution (nombre de packages et de points de distribution qui sont attribués à chaque groupe de points de distribution)
 
-    -   Informations sur la configuration des points de distribution (utilisation de BranchCache et surveillance des points de distribution)
+  -   Informations sur la configuration des points de distribution (utilisation de BranchCache et surveillance des points de distribution)
 
-    -   Informations sur la configuration du gestionnaire de distribution (threads, délai de nouvelle tentative, nombre de nouvelles tentatives et paramètres de point de distribution d’extraction)
+  -   Informations sur la configuration du gestionnaire de distribution (threads, délai de nouvelle tentative, nombre de nouvelles tentatives et paramètres de point de distribution d’extraction)
 
--   **Endpoint Protection :**
+- **Endpoint Protection :**
 
-    -   Utilisation des stratégies du Pare-feu Windows et de logiciel anti-programme malveillant Endpoint Protection (nombre de stratégies uniques attribuées au groupe)<br /><br />Cela ne comprend pas les informations sur les paramètres inclus dans la stratégie.
+  -   Utilisation des stratégies du Pare-feu Windows et de logiciel anti-programme malveillant Endpoint Protection (nombre de stratégies uniques attribuées au groupe)<br /><br />Cela ne comprend pas les informations sur les paramètres inclus dans la stratégie.
 
-    -   Erreurs de déploiement Endpoint Protection (nombre de codes d’erreur de déploiement de stratégie Endpoint Protection)
+  -   Erreurs de déploiement Endpoint Protection (nombre de codes d’erreur de déploiement de stratégie Endpoint Protection)
 
-    -   Nombre de regroupements sélectionnés pour être affichés dans le tableau de bord Endpoint Protection
+  -   Nombre de regroupements sélectionnés pour être affichés dans le tableau de bord Endpoint Protection
 
-    -   Nombre d’alertes configurées pour la fonctionnalité Endpoint Protection
+  -   Nombre d’alertes configurées pour la fonctionnalité Endpoint Protection
 
--   **Gestion des applications mobiles (MAM) :**
+- **Gestion des applications mobiles (MAM) :**
 
-    -   Nombre d’applications métier et d’applications Office compatibles MAM, et stratégies par système d’exploitation
+  -   Nombre d’applications métier et d’applications Office compatibles GAM, et stratégies par système d’exploitation
 
-    -   Nombre de déploiements de stratégie/application MAM
+  -   Nombre de déploiements de stratégie/application MAM
 
-    -   Nombre de règles créées par paramètre MAM
+  -   Nombre de règles créées par paramètre GAM
 
--   **Gestion des appareils mobiles (MDM) :**
+- **Gestion des appareils mobiles (MDM) :**
 
-    -   Nombre de commandes (verrouiller, réinitialiser, mettre hors service) d’actions d’appareil mobile émises
+  -   Nombre de commandes (verrouiller, réinitialiser, mettre hors service) d’actions d’appareil mobile émises
 
-    -   Nombre d’appareils mobiles gérés par Configuration Manager et Microsoft Intune, et méthode d’inscription (en bloc ou basée sur l’utilisateur)
+  -   Nombre d’appareils mobiles gérés par Configuration Manager et Microsoft Intune, et méthode d’inscription (en bloc ou basée sur l’utilisateur)
 
-    -   Statistiques et calendrier d’interrogation des appareils mobiles pour la vérification dans la durée des appareils mobiles
+  -   Statistiques et calendrier d’interrogation des appareils mobiles pour la vérification dans la durée des appareils mobiles
 
-    -   Nombre de stratégies d’appareil mobile
+  -   Nombre de stratégies d’appareil mobile
 
-    -   Nombre d’utilisateurs qui ont plusieurs appareils mobiles inscrits
+  -   Nombre d’utilisateurs qui ont plusieurs appareils mobiles inscrits
 
--   **Dépannage de Microsoft Intune :**
+- **Dépannage de Microsoft Intune :**
 
-    -   Nombre et taille des messages d’état, de statut, d’inventaire, RDR, DDR, UDX, d’état de locataire, POL, LOG, de certificat, CRP, de resynchronisation, CFD, RDO, BEX, ISM et de conformité qui sont téléchargés à partir de Microsoft Intune
+  -   Nombre et taille des messages d’état, de statut, d’inventaire, RDR, DDR, UDX, d’état de locataire, POL, LOG, de certificat, CRP, de resynchronisation, CFD, RDO, BEX, ISM et de conformité qui sont téléchargés à partir de Microsoft Intune
 
-    -   Nombre et taille des messages d’actions d’appareil (réinitialiser, mettre hors service, verrouiller), de télémétrie et de données qui sont répliqués vers Microsoft Intune
+  -   Nombre et taille des messages d’actions d’appareil (réinitialiser, mettre hors service, verrouiller), de télémétrie et de données qui sont répliqués vers Microsoft Intune
 
-    -   Statistiques de synchronisation utilisateur complète et différentielle pour Microsoft Intune
+  -   Statistiques de synchronisation utilisateur complète et différentielle pour Microsoft Intune
 
--   **Gestion des appareils mobiles (MDM) locale :**
+- **Gestion des appareils mobiles (MDM) locale :**
 
-    -   Statistiques de réussite/échec de déploiement pour les déploiements d’applications de gestion MDM locale
+  -   Statistiques de réussite/échec de déploiement pour les déploiements d’applications de gestion MDM locale
 
-    -   Nombre de profils et de packages d’inscription en bloc Windows 10
+  -   Nombre de profils et de packages d’inscription en bloc Windows 10
 
--   **Déploiement du système d’exploitation :**
+- **Déploiement du système d’exploitation :**
 
-    -   Nombre d’images de démarrage, de pilotes, de packages de pilotes, de points de distribution en multidiffusion, de points de distribution compatibles PXE et de séquences de tâches
+  -   Nombre d’images de démarrage, de pilotes, de packages de pilotes, de points de distribution en multidiffusion, de points de distribution compatibles PXE et de séquences de tâches
 
--   **Mises à jour logicielles :**
+- **Mises à jour logicielles :**
 
-    -   Nombre total/moyen de regroupements comportant des déploiements de mises à jour logicielles et nombre maximal/moyen de mises à jour déployées
+  -   Nombre total/moyen de regroupements comportant des déploiements de mises à jour logicielles et nombre maximal/moyen de mises à jour déployées
 
-    -   Nombre de règles de déploiement automatique qui sont liées à la synchronisation
+  -   Nombre de règles de déploiement automatique qui sont liées à la synchronisation
 
-    -   Nombre de règles de déploiement automatique qui créent de nouvelles mises à jour ou ajoutent des mises à jour à un groupe existant
+  -   Nombre de règles de déploiement automatique qui créent de nouvelles mises à jour ou ajoutent des mises à jour à un groupe existant
 
-    -   Différentiels de disponibilité et d’échéance qui sont utilisés dans les règles de déploiement automatique
+  -   Différentiels de disponibilité et d’échéance qui sont utilisés dans les règles de déploiement automatique
 
-    -   Nombre moyen et maximal d’attributions par mise à jour
+  -   Nombre moyen et maximal d’attributions par mise à jour
 
-    -   Nombre de mises à jour créées et déployées avec System Center Update Publisher
+  -   Nombre de mises à jour créées et déployées avec System Center Update Publisher
 
-    -   Nombre de groupes et d’attributions de mises à jour
+  -   Nombre de groupes et d’attributions de mises à jour
 
-    -   Nombre de packages de mises à jour et nombre maximal/minimal/moyen de points de distribution qui sont ciblés par les packages
+  -   Nombre de packages de mises à jour et nombre maximal/minimal/moyen de points de distribution qui sont ciblés par les packages
 
-    -   Nombre de groupes de mises à jour et nombre minimal/maximal/moyen de mises à jour par groupe
+  -   Nombre de groupes de mises à jour et nombre minimal/maximal/moyen de mises à jour par groupe
 
-    -   Nombre de mises à jour et pourcentage de mises à jour qui sont déployées, expirées, remplacées, téléchargées et qui contiennent des CLUF
+  -   Nombre de mises à jour et pourcentage de mises à jour qui sont déployées, expirées, remplacées, téléchargées et qui contiennent des CLUF
 
-    -   Codes d’erreur d’analyse des mises à jour et nombre d’ordinateurs
+  -   Codes d’erreur d’analyse des mises à jour et nombre d’ordinateurs
 
-    -   Calendriers d’analyse et d’évaluation des mises à jour client
+  -   Calendriers d’analyse et d’évaluation des mises à jour client
 
-    -   Planification de la synchronisation du point de mise à jour logicielle
+  -   Planification de la synchronisation du point de mise à jour logicielle
 
-    -   Nombre de règles de déploiement automatique avec plusieurs déploiements
+  -   Nombre de règles de déploiement automatique avec plusieurs déploiements
 
-    -   Configurations qui sont utilisées pour les plans de maintenance actifs de Windows 10
+  -   Configurations qui sont utilisées pour les plans de maintenance actifs de Windows 10
 
-    -   Versions de contenu du tableau de bord Windows 10
+  -   Versions de contenu du tableau de bord Windows 10
 
-    -   Nombre de clients Windows 10 qui utilisent Windows Update for Business
+  -   Nombre de clients Windows 10 qui utilisent Windows Update for Business
 
-    -   Statistiques d’application de correctifs logiciels au cluster
+  -   Statistiques d’application de correctifs logiciels au cluster
 
-    -   Nombre de mises à jour Office 365 déployées
+  -   Nombre de mises à jour Office 365 déployées
 
-    -   ***[Nouveau]*** Classifications qui sont synchronisées par le point de mise à jour logicielle
+  -   ***[Nouveau]*** Classifications qui sont synchronisées par le point de mise à jour logicielle
 
--   **Données de performances/SQL :**
+- **Données de performances/SQL :**
 
-    -   Nombre des plus grandes tables de base de données
+  -   Nombre des plus grandes tables de base de données
 
-    -   Informations sur les réplicas SQL Always-On
+  -   Informations sur les réplicas SQL Always-On
 
-    -   Nombre de regroupements par type
+  -   Nombre de regroupements par type
 
-    -   ***[Mis à jour]*** Statistiques d’évaluation des regroupements (temps de requête, nombre de regroupements attribués et non attribués, nombres par type, substitution d’ID et utilisation des règles)
+  -   ***[Mis à jour]*** Statistiques d’évaluation des regroupements (temps de requête, nombre de regroupements attribués et non attribués, nombres par type, substitution d’ID et utilisation des règles)
 
-    - ***[Nouveau]*** Période de rétention du suivi des modifications SQL
+  - ***[Nouveau]*** Période de rétention du suivi des modifications SQL
 
--   ***[Nouveau]*** Mises à jour du site
+- ***[Nouveau]*** Mises à jour du site
 
-    - ***[Nouveau]*** Versions des correctifs logiciels de Configuration Manager installés
+  - ***[Nouveau]*** Versions des correctifs logiciels de Configuration Manager installés
 
 ##  <a name="bkmk_level3"></a> Niveau 3 – Complet
 Le niveau Complet inclut toutes les données des niveaux De base et Étendu. Il inclut également des informations supplémentaires sur Endpoint Protection, les pourcentages de compatibilité des mises à jour et les informations de mise à jour logicielle. Ce niveau peut également inclure des informations de diagnostic avancées telles que des fichiers système et des instantanés de la mémoire, qui peuvent inclure des informations personnelles qui existaient dans la mémoire ou les fichiers journaux au moment de la capture.
@@ -290,6 +290,6 @@ Le niveau Complet inclut toutes les données des niveaux De base et Étendu. Il 
 -   Nombre minimal/maximal/moyen d’heures depuis la dernière analyse des mises à jour logicielles
 
 -   ***[Nouveau]*** Produits des mises à jour logicielles synchronisés par le point de mise à jour logicielle
--   ***[Nouveau]*** Paramètres de compatibilité : détails de configuration des modèles SCEP, VPN, Wi-Fi et stratégie de conformité
+-   ***[Nouveau]*** Paramètres de conformité : détails de configuration des modèles SCEP, VPN, Wi-Fi et de stratégie de conformité
 
--   ***[Nouveau]*** Type de stratégies d’accès conditionnel EAS (bloquer ou mettre en quarantaine) pour les appareils gérés par Intune
+-   ***[Nouveau]*** Type de stratégies d’accès conditionnel EAS (bloquer ou mettre en quarantaine) pour les périphériques gérés par Intune

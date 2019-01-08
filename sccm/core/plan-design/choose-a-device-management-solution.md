@@ -10,16 +10,16 @@ ms.assetid: 24633725-791a-4df7-8dce-2c24c1a19a03
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 616bf5549c80c94b1dd5d27dc15ea693c86e2ca2
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: a520e4e43ca2d7de080272c213c5768cbd284501
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335073"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53415838"
 ---
 # <a name="choose-a-device-management-solution-for-system-center-configuration-manager"></a>Choisir une solution de gestion d’appareils pour System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager (également appelé ConfgMgr or SCCM) offre différentes solutions pour la gestion des PC, des serveurs et des appareils. Choisissez la solution qui vous convient, en fonction des plateformes d’appareils que vous devez gérer et des fonctionnalités de gestion dont vous avez besoin.  
 
@@ -68,7 +68,7 @@ Vous pouvez utiliser ces solutions de gestion des appareils par elles-mêmes ou 
 |Windows Phone||Oui||Oui|  
 |Windows Server|Oui|||Oui|  
 
- Pour obtenir la liste complète des plateformes prises en charge, consultez [Systèmes d’exploitation pris en charge pour les clients et les appareils pour System Center Configuration Manager](configs\supported-operating-systems-for-clients-and-devices.md).
+ Pour obtenir la liste complète des plateformes prises en charge, consultez [Systèmes d’exploitation pris en charge pour les clients et les appareils pour System Center Configuration Manager](configs/supported-operating-systems-for-clients-and-devices.md).
 
 ##  <a name="bkmk_comp2"></a> Comparer les solutions de gestion des appareils mobiles en fonction des fonctionnalités de gestion  
 

@@ -10,16 +10,16 @@ ms.assetid: 2e68dc12-6776-437a-9138-45cd7d4bf9cf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6353b765f769dfa57ea57926d12bf2b254ba8f68
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 4a28f05e813a375f72d15113a01092924eb2245e
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32343869"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424899"
 ---
 # <a name="capabilities-in-technical-preview-1711-for-system-center-configuration-manager"></a>Fonctionnalités de la version Technical Preview 1711 de System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Technical Preview)*
+*S’applique à : System Center Configuration Manager (Technical Preview)*
 
 Cet article présente les fonctionnalités qui sont disponibles dans la version 1711 de Technical Preview pour System Center Configuration Manager. Vous pouvez installer cette version pour mettre à jour et ajouter de nouvelles fonctionnalités à votre site Configuration Manager Technical Preview. Avant d’installer cette version Technical Preview, passez en revue [Technical Preview pour System Center Configuration Manager](../../core/get-started/technical-preview.md) pour vous familiariser avec les conditions générales et les limitations d’utilisation d’une version Technical Preview, la mise à jour entre les versions et l’envoi de commentaires sur les fonctionnalités d’une version Technical Preview.     
 
@@ -30,8 +30,8 @@ Cet article présente les fonctionnalités qui sont disponibles dans la version�
     Workaround details.
 -->
 **Problèmes connus dans cette version d’évaluation technique :**
--   **Prise en charge de Windows 10, version 1709 (également appelée Fall Creators Update)**.  À partir de cette version de Windows, Windows Media inclut plusieurs éditions. Quand vous configurez une séquence de tâches pour utiliser un package de mise à niveau de système d’exploitation ou une image de système d’exploitation, veillez à sélectionner une [édition prise en charge par Configuration Manager](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client).
--   **La mise à jour vers une nouvelle préversion échoue s’il existe un serveur de site en mode passif**. Si vous exécutez une préversion qui a un [serveur de site principal en mode passif](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability), vous devez désinstaller ce dernier pour pouvoir correctement mettre à jour votre site de préversion vers cette nouvelle préversion. Vous pouvez réinstaller le serveur de site en mode passif une fois votre site mis à jour.
+- **Prise en charge de Windows 10, version 1709 (également appelée Fall Creators Update)**.  À partir de cette version de Windows, Windows Media inclut plusieurs éditions. Quand vous configurez une séquence de tâches pour utiliser un package de mise à niveau de système d’exploitation ou une image de système d’exploitation, veillez à sélectionner une [édition prise en charge par Configuration Manager](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client).
+- **La mise à jour vers une nouvelle préversion échoue s’il existe un serveur de site en mode passif**. Si vous exécutez une préversion qui a un [serveur de site principal en mode passif](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability), vous devez désinstaller ce dernier pour pouvoir correctement mettre à jour votre site de préversion vers cette nouvelle préversion. Vous pouvez réinstaller le serveur de site en mode passif une fois votre site mis à jour.
 
   Pour désinstaller le serveur de site en mode passif :
   1. Dans la console, accédez à **Administration** > **Vue d’ensemble** > **Configuration du site** > **Serveurs et rôles de système de site**, puis sélectionnez le serveur de site en mode passif.
@@ -84,7 +84,7 @@ Essayez d’effectuer les tâches suivantes, puis envoyez vos **Commentaires** �
 
     c. Sélectionnez **Qu’un utilisateur ait ouvert une session ou non** pour **Condition d’ouverture de session**.
 
-    d. Sélectionnez **Normale** pour **Visibilité du programme d’installation**. Vous avez le choix entre trois options : **Réduite**, **Normale** ou **Agrandie**.
+    d. Sélectionnez **Normale** pour **Visibilité du programme d’installation**. Vous pouvez choisir parmi les trois options suivantes : **Réduite**, **Normale** ou **Agrandie**.
 
     e. Cochez la case **Autoriser les utilisateurs à interagir avec l’installation du programme**.
 
