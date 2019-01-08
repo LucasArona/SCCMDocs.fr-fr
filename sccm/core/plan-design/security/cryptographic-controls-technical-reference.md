@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6d25c6a11821b73f34c8a3cd6aa95d4a78c86587
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 033f0fc3dd86c074f89804f6d9e70c173e9cf0b8
+ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53418393"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817951"
 ---
 # <a name="cryptographic-controls-technical-reference"></a>Informations techniques de référence sur les contrôles de chiffrement
 
@@ -108,8 +108,6 @@ System Center Configuration Manager utilise la signature et le chiffrement pour 
 
 - Lorsque vous utilisez des points de distribution cloud.  
 
-- Lorsque vous gérez des ordinateurs Intel AMT hors bande.  
-
   Pour la plupart des autres communications Configuration Manager nécessitant des certificats pour l’authentification, la signature ou le chiffrement, Configuration Manager utilise automatiquement les certificats PKI disponibles. S’il n’y a pas de certificats PKI disponibles, Configuration Manager génère des certificats auto-signés.  
 
   Configuration Manager n’utilise pas de certificats PKI quand il gère des appareils mobiles à l’aide du connecteur Exchange Server.  
@@ -162,7 +160,7 @@ System Center Configuration Manager utilise la signature et le chiffrement pour 
 
  La vérification de la liste de révocation des certificats est activée par défaut dans les services Internet. Par conséquent, si vous utilisez une liste de révocation des certificats avec votre déploiement PKI, aucune configuration supplémentaire n'est requise sur la majorité des systèmes de site Configuration Manager qui exécutent les services Internet. L'exception concerne les mises à jour logicielles, qui nécessitent une étape manuelle pour activer la vérification de la liste de révocation des certificats afin de vérifier les signatures des fichiers de mises à jour logicielles.  
 
- La vérification de la liste de révocation des certificats est activée par défaut pour les ordinateurs client lorsqu'ils utilisent des connexions client HTTPS. La vérification de la liste de révocation des certificats n'est pas activée par défaut lorsque vous exécutez la console de gestion hors bande pour vous connecter à un ordinateur AMT, et vous pouvez activer cette option. Dans Configuration Manager SP1 ou version ultérieure, vous ne pouvez pas désactiver la vérification de la liste de révocation des certificats pour les clients installés sur des ordinateurs Mac.  
+ La vérification de la liste de révocation des certificats est activée par défaut pour les ordinateurs client lorsqu'ils utilisent des connexions client HTTPS. Dans Configuration Manager SP1 ou version ultérieure, vous ne pouvez pas désactiver la vérification de la liste de révocation des certificats pour les clients installés sur des ordinateurs Mac.  
 
  La vérification de la liste de révocation des certificats n’est pas prise en charge pour les connexions suivantes dans Configuration Manager :  
 

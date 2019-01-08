@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cf5b55dddae34ac855f21e7d70967d3b9ab1c2dc
-ms.sourcegitcommit: 81e3666c41eb976cc7651854042dafe219e2e467
+ms.openlocfilehash: 2d6dc236381606b72dcb3603e269161dcdd5d6b9
+ms.sourcegitcommit: f2a1fa59fb3870a6bebca61daf15c0c157e9fdd6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53747158"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54031003"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Se préparer à l’utilisation de groupes de disponibilité SQL Server Always On avec Configuration Manager
 
@@ -111,7 +111,7 @@ Hébergez tous les réplicas d’un groupe de disponibilité sur site ou sur Mic
 
 Le programme d’installation de Configuration Manager doit se connecter à chaque réplica. Lorsque vous configurez dans Azure un groupe de disponibilité qui se situe derrière un équilibrage de charge interne ou externe, ouvrez les ports par défaut suivant :   
 
-- Mappeur de point de terminaison RCP : **TCP 135**   
+- Mappeur de point de terminaison RPC : **TCP 135**   
 
 - SQL Server Service Broker : **TCP 4022**  
 

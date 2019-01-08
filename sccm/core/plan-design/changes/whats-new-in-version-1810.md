@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f93b9c7e96c66fd2279d8d6e42f605a763c75025
-ms.sourcegitcommit: 81e3666c41eb976cc7651854042dafe219e2e467
+ms.openlocfilehash: 050cf81a99f29d24cad6eb13e691e332174627c3
+ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53747141"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53818019"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Nouveautés de la version 1810 de l’édition Current Branch de Configuration Manager
 
@@ -81,7 +81,7 @@ Désormais, quand vous installez la version 1810 ou effectuez une mise à jour 
 
 - **Nettoyage du suivi des modifications SQL** : Cette fonctionnalité vérifie si la base de données du site a un backlog des données de suivi des modifications SQL. Pour plus d’informations, notamment une procédure pour vérifier et effacer ce backlog, consultez [Nettoyage du suivi des modifications SQL](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#bkmk_changetracking). <!--SCCMDocs-pr issue 3023-->  
 
-- **Version de SQL Native Client** : La vérification de ce prérequis est mise à jour pour les versions de SQL Native Client qui prennent en charge TLS 1.2. La version minimale est [SQL 2012 SP4](https://www.microsoft.com/download/details.aspx?id=50402). Pour plus d’informations, consultez la section [Version de SQL Native Client](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-native-client). <!--SCCMDocs-pr issue 3094->  
+- **Version de SQL Native Client** : La vérification de ce prérequis est mise à jour pour les versions de SQL Native Client qui prennent en charge TLS 1.2. La version minimale est [SQL 2012 SP4](https://www.microsoft.com/download/details.aspx?id=50402). Pour plus d’informations, consultez la section [Version de SQL Native Client](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-native-client). <!--SCCMDocs-pr issue 3094-->  
 
 - **Système de site sur un nœud de cluster Windows** : Le processus d’installation de Configuration Manager ne bloque plus l’installation du rôle serveur de site sur un ordinateur ayant le rôle Windows pour le clustering de basculement. SQL Always On exige ce rôle, ce qui vous empêchait de colocaliser la base de données de site sur le serveur de site. Avec ce changement, vous pouvez créer un site à haut niveau de disponibilité avec moins de serveurs en utilisant SQL Always On et un serveur de site en mode passif. Pour plus d’informations, consultez [Cluster de basculement Windows](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#windows-failover-cluster). <!--1359132-->  
 
