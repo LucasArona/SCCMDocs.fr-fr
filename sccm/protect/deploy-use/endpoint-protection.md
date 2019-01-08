@@ -10,16 +10,16 @@ ms.assetid: 76c90f64-d729-456b-8304-01852cd66fb6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3e8c6cb33032b0c4283f3e35cbfa7b68535751ea
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 160713fe480b0a47c2ad57376c4a1dccdbfb00b1
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456105"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418949"
 ---
 # <a name="endpoint-protection"></a>Endpoint Protection
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Endpoint Protection gère les stratégies anti-programme malveillant et la sécurité du Pare-feu Windows pour les ordinateurs clients de votre hiérarchie Configuration Manager.  
 
@@ -90,7 +90,7 @@ Endpoint Protection gère et surveille le service Windows Defender - Protection 
 ## <a name="endpoint-protection-client-for-mac-computers-and-linux-servers"></a>Client Endpoint Protection pour les ordinateurs Mac et les serveurs Linux  
 
 > [!Important]  
-> Le support de System Center Endpoint Protection (SCEP) pour Mac et Linux (toutes les versions) prend fin le 31 décembre 2018. La disponibilité de nouvelles définitions de virus pour SCEP pour Mac et SCEP pour Linux sera supprimée une fois que le support aura pris fin. Pour plus d’informations, consultez le [billet de blog sur la fin du support](https://go.microsoft.com/fwlink/?linkid=870182).  
+> Le support de System Center Endpoint Protection (SCEP) pour Mac et Linux (toutes les versions) prend fin le 31 décembre 2018. La disponibilité de nouvelles définitions de virus pour SCEP pour Mac et SCEP pour Linux sera peut-être supprimée une fois que le support aura pris fin. Pour plus d’informations, consultez le [billet de blog sur la fin du support](https://go.microsoft.com/fwlink/?linkid=870182).  
 
  System Center Endpoint Protection comprend un client Endpoint Protection pour Linux et pour les ordinateurs Mac. Ces clients ne sont pas fournis avec Configuration Manager. Téléchargez les produits suivants à partir du [Centre de gestion des licences en volume Microsoft](https://www.microsoft.com/licensing/servicecenter/default.aspx) :  
 
@@ -111,7 +111,7 @@ Procédez comme suit pour télécharger le fichier image contenant le logiciel c
 2. Sélectionnez l’onglet **Téléchargements et clés** situé en haut du site web.
 3. Filtrez sur le produit **System Center Endpoint Protection (Current Branch)**.
 4. Cliquez sur le lien vers **Télécharger**
-5. Cliquez sur **Continuer**. Vous devez voir plusieurs fichiers, dont un nommé **System Center Endpoint Protection (current branch - version 1606) for Linux OS and Macintosh OS Multilanguage   32/64 bit   1878 MB ISO**.
+5. Cliquez sur **Continuer**. Vous devez voir plusieurs fichiers, dont un nommé : **System Center Endpoint Protection (current branch - de la version 1606) pour Linux OS and Macintosh OS Multilanguage 32/64 bit 1878 MB ISO**.
 6. Pour télécharger le fichier, cliquez sur l’icône de flèche. Le nom de fichier est **SW_DVD5_Sys_Ctr_Endpnt_Prtctn_1606_MultiLang_-3_EptProt_Lin_Mac_MLF_X21-67050.ISO**.
 
 La mise à jour de janvier 2018 (X21-67050) inclut les versions suivantes :
@@ -119,4 +119,4 @@ La mise à jour de janvier 2018 (X21-67050) inclut les versions suivantes :
 - System Center Endpoint Protection pour Mac 4.5.32.0 (prise en charge de macOS 10.13 High Sierra)
 - System Center Endpoint Protection pour Linux 4.5.20.0 
 
- Pour plus d’informations sur la façon d’installer et de gérer les clients Endpoint Protection pour les ordinateurs Mac et Linux, utilisez la documentation qui accompagne ces produits. Cette documentation de produit se trouve dans le dossier **Documentation** du fichier .ISO.
+  Pour plus d’informations sur la façon d’installer et de gérer les clients Endpoint Protection pour les ordinateurs Mac et Linux, utilisez la documentation qui accompagne ces produits. Cette documentation de produit se trouve dans le dossier **Documentation** du fichier .ISO.

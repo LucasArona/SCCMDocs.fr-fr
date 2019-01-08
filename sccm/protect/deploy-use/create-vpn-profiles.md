@@ -10,16 +10,16 @@ ms.assetid: f338e4db-73b5-45ff-92f4-1b89a8ded989
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d2969a0df23f7e8b74708a4aee03c3ea7f689a99
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: bb5814860389de28294c44f367920a2da9b72fbe
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32349896"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419425"
 ---
 # <a name="how-to-create-vpn-profiles-in-system-center-configuration-manager"></a>Comment créer des profils VPN dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Les types de connexion disponibles pour les différentes plateformes d’appareils sont décrits dans [Profils VPN dans System Center Configuration Manager](../../protect/deploy-use/vpn-profiles.md).  
 
@@ -27,32 +27,32 @@ Pour les connexions VPN tierces, distribuez l’application VPN avant de déploy
 
 ### <a name="create-a-vpn-profile"></a>Créer un profil VPN   
 
-1.  Dans la console Configuration Manager, choisissez **Ressources et Conformité** > **Paramètres de compatibilité** > **Accès aux ressources de l’entreprise**  > **Profils VPN**.  
+1. Dans la console Configuration Manager, choisissez **Ressources et Conformité** > **Paramètres de compatibilité** > **Accès aux ressources de l’entreprise**  > **Profils VPN**.  
 
-2.  Sous l’onglet **Accueil**, dans le groupe **Créer**, choisissez **Créer un profil VPN**.  
-
-
-3.  Renseignez la page **Général**. Notez ce qui suit :  
-
-    - Sélectionnez la **plateforme** appropriée.
-
-       - Si vous sélectionnez la plateforme Windows 8.1, vous avez la possibilité de sélectionner **Importer un profil VPN existant à partir d’un fichier** pour importer les informations de profil VPN qui ont été exportées vers un fichier XML.
-
-    - N’utilisez pas les caractères \\/:*?&lt;>&#124;, ou le caractère espace dans le nom du profil VPN. Ces caractères ne sont pas pris en charge par le profil VPN de Windows Server.  
+2. Sous l’onglet **Accueil**, dans le groupe **Créer**, choisissez **Créer un profil VPN**.  
 
 
-4.  Dans la page **Connexion**, spécifiez les informations suivantes :  
+3. Renseignez la page **Général**. Notez ce qui suit :  
 
-    -   **Type de connexion** : choisissez le type de connexion VPN. Vous pouvez choisir parmi les types de connexion dans le tableau suivant.  
+   - Sélectionnez la **plateforme** appropriée.
 
-    -   **Liste de serveurs** : ajoutez un nouveau serveur à utiliser pour la connexion VPN. Selon le type de connexion, vous pouvez ajouter un ou plusieurs serveurs VPN et indiquer le serveur par défaut.  
+      - Si vous sélectionnez la plateforme Windows 8.1, vous avez la possibilité de sélectionner **Importer un profil VPN existant à partir d’un fichier** pour importer les informations de profil VPN qui ont été exportées vers un fichier XML.
 
-        > [!NOTE]  
-        >  Les appareils qui exécutent iOS ne prennent pas en charge l'utilisation de plusieurs serveurs VPN. Si vous configurez plusieurs serveurs VPN et que vous déployez le profil VPN sur un appareil iOS, seul le serveur par défaut sera utilisé.  
+   - N’utilisez pas les caractères \\/:*?&lt;>&#124;, ou le caractère espace dans le nom du profil VPN. Ces caractères ne sont pas pris en charge par le profil VPN de Windows Server.  
+
+
+4. Dans la page **Connexion**, spécifiez les informations suivantes :  
+
+   - Type de connexion Choisissez le type de connexion VPN. Vous pouvez choisir parmi les types de connexion dans le tableau suivant.  
+
+   - **Liste de serveurs** : ajoutez un nouveau serveur à utiliser pour la connexion VPN. Selon le type de connexion, vous pouvez ajouter un ou plusieurs serveurs VPN et indiquer le serveur par défaut.  
+
+     > [!NOTE]  
+     >  Les appareils qui exécutent iOS ne prennent pas en charge l'utilisation de plusieurs serveurs VPN. Si vous configurez plusieurs serveurs VPN et que vous déployez le profil VPN sur un appareil iOS, seul le serveur par défaut sera utilisé.  
 
      Ce tableau fournit des options pour les types de connexion. Pour plus d'informations, consultez la documentation de votre serveur VPN.
 
-| &nbsp;&nbsp;Option&nbsp;&nbsp; | Plus d'informations | &nbsp;&nbsp;Type de&nbsp;connexion&nbsp;&nbsp; |  
+| &nbsp;&nbsp;Option&nbsp;&nbsp; | Informations complémentaires | &nbsp;&nbsp;Type de&nbsp;connexion&nbsp;&nbsp; |  
 |----------------|----------------------|---------------------|  
 |**Domaine**     |Domaine d’authentification que vous souhaitez utiliser. Un domaine d'authentification est un regroupement de ressources d'authentification utilisé par le type de connexion Pulse Secure.|Pulse Secure|    
 |**Rôle**        |Rôle d’utilisateur qui a accès à cette connexion. |Pulse Secure|  

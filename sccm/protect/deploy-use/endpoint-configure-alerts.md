@@ -10,16 +10,16 @@ ms.assetid: f504de3e-4caf-455c-80d7-a63f13f4c5d9
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 626c52b827e38a53ed3b8982963496f29f11acb5
-ms.sourcegitcommit: 5b3ff56018cfc6bda9643c9f1bebc575173f61bc
-ms.translationtype: HT
+ms.openlocfilehash: dbebdde88a5031eec91a2383e105d06cbc7541e5
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50083766"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420445"
 ---
 #  <a name="configure-alerts-for-endpoint-protection-in-configuration-manager"></a>Configurer des alertes pour Endpoint Protection dans Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
  Vous pouvez configurer des alertes Endpoint Protection dans Microsoft System Center Configuration Manager pour avertir les utilisateurs administratifs quand des événements spécifiques, comme une infection par un logiciel malveillant, se produisent dans votre hiérarchie. Les notifications s’affichent dans le tableau de bord Endpoint Protection, dans la console Configuration Manager, dans le nœud **Alertes** de l’espace de travail **Surveillance**. Elles peuvent aussi être envoyées par e-mail à des utilisateurs spécifiés.
 
@@ -75,13 +75,13 @@ ms.locfileid: "50083766"
 
         -   **Nombre de fois où un programme malveillant a été détecté :** l’alerte est générée quand le nombre de détections d’un même programme malveillant sur les ordinateurs du regroupement est supérieur au nombre d’occurrences spécifié. Spécifiez un nombre compris entre **2** et **32**.
 
-        -   **Intervalle de détection (heures) :** spécifiez l’intervalle de détection (en heures) au cours duquel le nombre de détections de programme malveillant doit être exécuté. Spécifiez un nombre compris entre **1** et **168**.
+        -   **Intervalle de détection (heures) :** spécifiez l'intervalle de détection (en heures) au cours duquel le nombre de détections de programme malveillant doit être exécuté. Spécifiez un nombre compris entre **1** et **168**.
 
     -   **Détection de plusieurs logiciels malveillants** : cette alerte est générée si le nombre de types de programmes malveillants détectés pendant un nombre d’heures donné sur les ordinateurs du regroupement que vous surveillez est supérieur au nombre défini. Spécifiez les informations suivantes pour configurer cette alerte :
 
-        -   **Nombre de types de programmes malveillants détectés :** l’alerte est générée quand le nombre spécifié de types différents de programmes malveillants sur les ordinateurs du regroupement est détecté. Spécifiez un nombre compris entre **2** et **32**.
+        -   **Nombre de types de programmes malveillants détectés :** l'alerte est générée lorsque le nombre spécifié de types différents de programmes malveillants sur les ordinateurs du regroupement est détecté. Spécifiez un nombre compris entre **2** et **32**.
 
-        -   **Intervalle de détection (heures) :** spécifiez l’intervalle de détection, en heures, au cours duquel le nombre de détections de programme malveillant doit être exécuté. Spécifiez un nombre compris entre **1** et **168**.
+        -   **Intervalle de détection (heures) :** spécifiez l'intervalle de détection (en heures) au cours duquel le nombre de détections de programme malveillant doit être exécuté. Spécifiez un nombre compris entre **1** et **168**.
 
 9. Cliquez sur **OK** pour fermer la boîte de dialogue _Propriétés de\>_ **nom_regroupement**.  
 
@@ -92,7 +92,7 @@ Depuis la version 1702 de Configuration Manager, vous pouvez configurer une aler
 Pour configurer le pourcentage auquel l’alerte est générée, développez **Surveillance** > **Alertes** > **Toutes les alertes**, double-cliquez sur **Clients de logiciel anti-programme malveillant obsolètes** et modifiez l’option **Générez une alerte si le pourcentage de clients gérés avec une version obsolète du client de logiciel anti-programme malveillant est supérieur à**.
 
 > [!div class="button"]
-[Étape suivante >](endpoint-definition-updates.md)
-
+> [Étape suivante >](endpoint-definition-updates.md)
+> 
 > [!div class="button"]
-[Retour >](endpoint-protection-site-role.md)
+> [Retour >](endpoint-protection-site-role.md)

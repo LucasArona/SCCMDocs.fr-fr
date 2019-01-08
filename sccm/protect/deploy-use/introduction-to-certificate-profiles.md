@@ -10,16 +10,16 @@ ms.assetid: 41dcc259-f147-4420-bff2-b65bdf8cff77
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c4230b935b7fabc44743d57fcb2315348edb4274
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 27a615a412bca7e30ab5f5a3dc5f794961d13d2c
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32349685"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424491"
 ---
 # <a name="introduction-to-certificate-profiles-in-system-center-configuration-manager"></a>Présentation des profils de certificat dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 
 Les profils de certificat fonctionnent avec les services de certificats Active Directory et le rôle Service d’inscription de périphérique réseau. Créez et déployez des certificats d’authentification pour les appareils gérés afin que les utilisateurs puissent accéder facilement aux ressources de l’entreprise. Par exemple, vous pouvez créer et déployer des profils de certificat pour fournir les certificats nécessaires aux utilisateurs afin d’établir des connexions VPN et sans fil.
@@ -34,9 +34,9 @@ Les profils de certificat fournissent les fonctionnalités de gestion suivantes�
 
 -   Analyse et rapport sur les certificats installés.  
 
-**Exemple :** Tous les employés doivent pouvoir se connecter à des points d'accès Wi-Fi répartis à différents endroits dans l'entreprise. Pour faciliter les connexions utilisateurs, vous devez d’abord déployer les certificats nécessaires aux connexions Wi-Fi. Ensuite, vous devez déployer les profils Wi-Fi qui référencent le certificat.  
+**Exemple :** Tous les employés doivent être en mesure de se connecter à des points d'accès Wi-Fi répartis en plusieurs endroits dans l'entreprise. Pour faciliter les connexions utilisateurs, vous devez d’abord déployer les certificats nécessaires aux connexions Wi-Fi. Ensuite, vous devez déployer les profils Wi-Fi qui référencent le certificat.  
 
-**Exemple :** Vous avez mis en place une infrastructure à clé publique (PKI). Vous souhaitez passer à une méthode plus souple et plus sécurisée pour le déploiement de vos certificats. Les utilisateurs doivent pouvoir accéder aux ressources de l’entreprise à partir de leurs appareils personnels, sans compromettre la sécurité. Configurez des profils de certificat avec les paramètres et protocoles pris en charge par la plateforme d’appareil spécifique. Les appareils peuvent ensuite demander automatiquement ces certificats depuis un serveur d'inscription via Internet. Ensuite, configurez des profils VPN pour utiliser ces certificats afin que l’appareil puisse accéder aux ressources d’entreprise.  
+Exemple : Vous disposez d’une PKI en place. Vous souhaitez passer à une méthode plus souple et plus sécurisée pour le déploiement de vos certificats. Les utilisateurs doivent pouvoir accéder aux ressources de l’entreprise à partir de leurs appareils personnels, sans compromettre la sécurité. Configurez des profils de certificat avec les paramètres et protocoles pris en charge par la plateforme d’appareil spécifique. Les appareils peuvent ensuite demander automatiquement ces certificats depuis un serveur d'inscription via Internet. Ensuite, configurez des profils VPN pour utiliser ces certificats afin que l’appareil puisse accéder aux ressources d’entreprise.  
 
 
 
@@ -100,10 +100,10 @@ Vous pouvez surveiller les déploiements de profil de certificat en affichant le
 ## <a name="automatic-revocation-of-certificates"></a>Révocation automatique de certificats  
  System Center Configuration Manager révoque automatiquement les certificats utilisateur et ordinateur qui ont été déployés à l’aide de profils de certificat dans les circonstances suivantes :  
 
--   L’appareil est mis hors service depuis la gestion de System Center Configuration Manager.  
+- L’appareil est mis hors service depuis la gestion de System Center Configuration Manager.  
 
--   Une réinitialisation sélective est appliquée à l'appareil.  
+- Une réinitialisation sélective est appliquée à l'appareil.  
 
--   L’appareil est bloqué depuis la hiérarchie System Center Configuration Manager.  
+- L’appareil est bloqué depuis la hiérarchie System Center Configuration Manager.  
 
- Pour révoquer les certificats, le serveur de site envoie une commande de révocation à l'autorité de certification émettrice. Le motif de révocation est la **cessation de fonctionnement**.  
+  Pour révoquer les certificats, le serveur de site envoie une commande de révocation à l'autorité de certification émettrice. Le motif de révocation est la **cessation de fonctionnement**.  
