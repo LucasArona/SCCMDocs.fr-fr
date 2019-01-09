@@ -10,28 +10,28 @@ ms.assetid: 0a2d6c3f-a4e4-4c19-b087-3caada480de9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3b7916b386cb22f2d1869eface009bd10ff17d18
-ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
+ms.openlocfilehash: 1103b9e977f3bbef3e07d545b6b3762f6cf59fdd
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48862547"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53414971"
 ---
 # <a name="fundamentals-of-role-based-administration-for-system-center-configuration-manager"></a>Principes de base de l’administration basée sur des rôles pour System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Avec System Center Configuration Manager, l’administration basée sur des rôles vous permet de sécuriser l’accès nécessaire à l’administration de Configuration Manager. Vous sécurisez également l’accès aux objets que vous gérez, tels que les regroupements, les déploiements et les sites. À présent que vous comprenez les concepts présentés dans cette rubrique, vous pouvez [configurer l’administration basée sur des rôles pour System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).  
 
  Le modèle d’administration basée sur des rôles définit et gère de façon centralisée les paramètres d’accès de sécurité à l’échelle de la hiérarchie pour tous les sites ainsi que les paramètres de site à l’aide des éléments suivants :  
 
--   Les *rôles de sécurité* sont attribués aux utilisateurs administratifs pour octroyer à ceux-ci (ou à des groupes d’utilisateurs) des autorisations relatives à différents objets Configuration Manager, par exemple, celles de créer ou modifier des paramètres client.  
+- Les *rôles de sécurité* sont attribués aux utilisateurs administratifs pour octroyer à ceux-ci (ou à des groupes d’utilisateurs) des autorisations relatives à différents objets Configuration Manager, par exemple, celles de créer ou modifier des paramètres client.  
 
--   Les *étendues de sécurité* permettent de regrouper des instances d’objets spécifiques qu’un utilisateur administratif est chargé de gérer, par exemple une application qui installe Microsoft Office 2010.  
+- Les *étendues de sécurité* permettent de regrouper des instances d’objets spécifiques qu’un utilisateur administratif est chargé de gérer, par exemple une application qui installe Microsoft Office 2010.  
 
--   Les *regroupements* permettent de spécifier des groupes de ressources d’utilisateurs et d’appareils que l’utilisateur administratif peut gérer.  
+- Les *regroupements* permettent de spécifier des groupes de ressources d’utilisateurs et d’appareils que l’utilisateur administratif peut gérer.  
 
- L’utilisation combinée de rôles de sécurité, d’étendues de sécurité et de regroupements permet de séparer les attributions administratives répondant aux besoins de votre organisation, ainsi que de définir l’étendue administrative d’un utilisateur, autrement dit ce qu’il peut afficher et gérer dans votre déploiement de Configuration Manager.  
+  L’utilisation combinée de rôles de sécurité, d’étendues de sécurité et de regroupements permet de séparer les attributions administratives répondant aux besoins de votre organisation, ainsi que de définir l’étendue administrative d’un utilisateur, autrement dit ce qu’il peut afficher et gérer dans votre déploiement de Configuration Manager.  
 
 ## <a name="benefits-of-role-based-administration"></a>Avantages de l’administration basée sur des rôles  
 
@@ -75,7 +75,7 @@ Quand vous concevez et implémentez la sécurité administrative pour Configurat
 > [!TIP]  
 >  Vous pouvez afficher la liste des rôles de sécurité intégrés et les rôles de sécurité personnalisés que vous créez, ainsi que leurs descriptions, dans la console Configuration Manager. Pour afficher les rôles, dans l’espace de travail **Administration**, développez **Sécurité**, puis sélectionnez **Rôles de sécurité**.  
 
- Chaque rôle de sécurité dispose d'autorisations spécifiques à différents types d'objets. Par exemple, le rôle de sécurité *Auteur d’application* a les autorisations suivantes pour les applications : Approuver, Créer, Supprimer, Modifier, Modifier un dossier, Déplacer un objet, Lire, Exécuter un rapport et Définir l’étendue de sécurité.
+ Chaque rôle de sécurité dispose d'autorisations spécifiques à différents types d'objets. Par exemple, le rôle de sécurité *Auteur d’application* dispose des autorisations suivantes pour les applications : Approuver, Créer, Supprimer, Modifier, Modifier un dossier, Déplacer un objet, Lecture, Exécuter le rapport, Définir l’étendue de sécurité.
 
  Vous ne pouvez pas modifier les autorisations pour les rôles de sécurité intégrés, mais vous pouvez copier le rôle, y apporter des modifications, puis enregistrer ces modifications sous un nouveau rôle de sécurité personnalisé. Vous pouvez également importer des rôles de sécurité que vous avez exportés depuis une autre hiérarchie, par exemple depuis un réseau de test. Passez en revue les rôles de sécurité et leurs autorisations pour déterminer si vous allez utiliser les rôles de sécurité intégrés ou devoir créer vos propres rôles de sécurité personnalisés.  
 

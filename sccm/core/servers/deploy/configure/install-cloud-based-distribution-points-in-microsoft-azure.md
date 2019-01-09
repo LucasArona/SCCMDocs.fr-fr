@@ -10,16 +10,16 @@ ms.assetid: bb83ac87-9914-4a35-b633-ad070031aa6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a2d39617db7f2ea9a61e73a3c21cc2509fed2f07
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 3d6b4215615b6401a9163edfa33893d866e0c2ce
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456615"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424763"
 ---
 # <a name="install-a-cloud-distribution-point-for-configuration-manager"></a>Installer un point de distribution cloud pour Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Cet article décrit les étapes pour installer un point de distribution cloud Configuration Manager dans Microsoft Azure. Il comprend les sections suivantes :
 - [Avant de commencer](#bkmk_before) 
@@ -55,7 +55,7 @@ Utilisez la liste de vérification suivante pour vérifier que vous disposez des
 
 - Si vous prévoyez d’utiliser le **déploiement de service classique** Azure, vous aurez besoin des éléments suivants :  
     > [!Important]  
-    > Depuis la version 1810, les déploiements de services Classic dans Azure sont dépréciés dans Configuration Manager. Commencez à utiliser des déploiements Azure Resource Manager pour la passerelle de gestion cloud. Pour plus d’informations, consultez [Planifier la passerelle de gestion cloud](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager).  
+    > Depuis la version 1810, les déploiements de services Classic dans Azure sont dépréciés dans Configuration Manager. Commencez par utiliser des déploiements Azure Resource Manager pour la passerelle de gestion cloud. Pour plus d’informations, consultez [Planifier la passerelle de gestion cloud](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager).  
 
     - **L’ID d’abonnement** Azure  
 
@@ -103,10 +103,10 @@ Suivez cette procédure sur le site qui doit héberger ce point de distribution 
 
     - **Site principal** : sélectionnez le site principal qui doit distribuer du contenu à ce point de distribution.
 
-    - **Fichier de certificat** : sélectionnez **Parcourir**, puis le fichier .PFX du certificat d’authentification serveur de ce point de distribution cloud. Le nom commun de ce certificat remplit les champs obligatoires **FQDN du service** et **Nom du service**.  
+    - **Fichier de certificat** : sélectionnez **Parcourir**, puis le fichier .PFX du certificat d’authentification serveur de ce point de distribution cloud. Le nom commun de ce certificat remplit les champs obligatoires **FQDN du service** et **Nom du service**.  
 
         > [!NOTE]  
-        > Le certificat d’authentification serveur du point de distribution cloud prend en charge les caractères génériques. Si vous utilisez un certificat avec caractères génériques, remplacez l’astérisque (*) dans le champ **FQDN du service** par le nom d’hôte souhaité pour le service.  
+        > Le certificat d’authentification serveur du point de distribution cloud prend en charge les caractères génériques. Si vous utilisez un certificat avec caractères génériques, remplacez l’astérisque (\*) dans le champ **FQDN du service** par le nom d’hôte souhaité pour le service.  
 
 5. Dans la page **Alertes**, configurez les quotas de stockage, les quotas de transfert, ainsi que le pourcentage de ces quotas auquel Configuration Manager doit générer des alertes. Puis sélectionnez **Suivant**.  
 
@@ -204,9 +204,9 @@ Configuration Manager vérifie régulièrement le service Azure. Si le service n
 
 Configurez des seuils pour la quantité de données que vous souhaitez stocker sur le point de distribution cloud et la quantité de données que vous souhaitez que les clients téléchargent à partir du point de distribution. Utilisez des alertes pour ces seuils, afin de savoir quand arrêter ou supprimer un service cloud, quand ajuster le contenu que vous stockez sur le point de distribution et quand modifier les clients qui peuvent utiliser le service. 
 
-- **Seuil d’alerte de stockage** : un seuil d’alerte de stockage définit la limite supérieure de la quantité de données ou de contenu (en Go) que vous souhaitez stocker sur le point de distribution cloud. Par défaut, ce seuil est défini sur 2 000 Go. Configuration Manager génère des avertissements et des alertes critiques lorsque l’espace disponible atteint les seuils définis. Par défaut, ces alertes sont déclenchées lorsque le niveau atteint 50 % et 90 % du seuil.  
+- **Seuil d’alerte de stockage** : un seuil d’alerte de stockage définit la limite supérieure de la quantité de données ou de contenu que vous souhaitez stocker sur le point de distribution cloud. Par défaut, ce seuil est défini sur 2 000 Go. Configuration Manager génère des avertissements et des alertes critiques lorsque l’espace disponible atteint les seuils définis. Par défaut, ces alertes sont déclenchées lorsque le niveau atteint 50 % et 90 % du seuil.  
 
-- **Seuil d’alerte de transfert mensuel** : un seuil d’alerte de transfert mensuel permet de surveiller la quantité de contenu transférée du point de distribution vers les clients, au cours d’une période de 30 jours. Par défaut, ce seuil est défini sur 10 000 Go. Le site déclenche des avertissements et des alertes critiques lorsque les transferts atteignent les valeurs que vous avez définies. Par défaut, ces alertes sont déclenchées lorsque le niveau atteint 50 % et 90 % du seuil.  
+- **Seuil d’alerte de transfert mensuel** : un seuil d’alerte de transfert permet de surveiller la quantité de contenu transféré à partir du point de distribution vers les clients pendant une période de 30 jours. Par défaut, ce seuil est défini sur 10 000 Go. Le site déclenche des avertissements et des alertes critiques lorsque les transferts atteignent les valeurs que vous avez définies. Par défaut, ces alertes sont déclenchées lorsque le niveau atteint 50 % et 90 % du seuil.  
 
     > [!IMPORTANT]  
     >  Configuration Manager surveille le transfert de données, mais n'interrompt pas ce transfert au-delà du seuil d'alerte de transfert défini.  

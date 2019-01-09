@@ -10,16 +10,16 @@ ms.assetid: 19539f4d-1667-4b4c-99a1-9995f12cf5f7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4737acb34de3aebc8560f54d77b6b341c82ebf65
-ms.sourcegitcommit: 6e0e5b4b7779ce03e2b56b3b5f68f4ace1acedd8
+ms.openlocfilehash: b56dd830e2550a14d6b1e44d2aa7fdda7c56bc9b
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467655"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420496"
 ---
 #  <a name="recover-a-configuration-manager-site"></a>Récupération d'un site Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Lancez la récupération d’un site Configuration Manager à chaque défaillance d’un site ou perte de données dans la base de données d’un site. La réparation et la resynchronisation des données constituent les principales tâches de récupération d'un site et elles sont nécessaires pour éviter l'interruption des opérations.
 
@@ -102,9 +102,9 @@ Utilisez cette option quand vous avez déjà récupéré la base de données de 
 
 - Configuration Manager peut récupérer la base de données de site à partir des processus suivants :  
 
-    - Tâche de maintenance de sauvegarde Configuration Manager  
-    - Sauvegarde de base de données de site avec DPM (Data Protection Manager)  
-    - Autre processus de sauvegarde   
+  - Tâche de maintenance de sauvegarde Configuration Manager  
+  - Sauvegarde de base de données de site avec DPM (Data Protection Manager)  
+  - Autre processus de sauvegarde   
 
     Après avoir restauré la base de données de site à l’aide d’une méthode en dehors de Configuration Manager, exécutez le programme d’installation et sélectionnez cette option pour effectuer la récupération de la base de données de site.  
 
@@ -145,27 +145,27 @@ Suite à la restauration d’une base de données de site à partir d’une sauv
 #### <a name="recovered-site-is-a-central-administration-site"></a>Le site récupéré est un site d’administration centrale
 - Sauvegarde de base de données pendant la période de rétention du suivi des modifications  
 
-     - **Données globales :** les modifications des données globales après la sauvegarde sont répliquées à partir de tous les sites principaux.  
+     - **Données globales** : Les modifications des données globales après la sauvegarde sont répliquées à partir de tous les sites principaux.  
 
-     - **Données de site :** les modifications des données de site après la sauvegarde sont répliquées à partir de tous les sites principaux.  
+     - **Données de site** : Les modifications des données du site après la sauvegarde sont répliquées à partir de tous les sites principaux.  
 
 - Sauvegarde de base de données antérieure à la période de rétention du suivi des modifications  
 
-     - **Données globales :** le site d’administration centrale réinitialise les données globales à partir du site principal de référence, si vous le spécifiez. Ensuite, tous les autres sites principaux réinitialisent les données globales à partir du site d'administration centrale. Si vous ne spécifiez pas de site de référence, tous les sites principaux réinitialisent les données globales à partir du site d’administration centrale. Il s’agit des données qui ont été restaurées à partir de la sauvegarde.  
+     - **Données globales** : Le site d’administration centrale réinitialise les données globales à partir du site principal de référence, si vous le spécifiez. Ensuite, tous les autres sites principaux réinitialisent les données globales à partir du site d'administration centrale. Si vous ne spécifiez pas de site de référence, tous les sites principaux réinitialisent les données globales à partir du site d’administration centrale. Il s’agit des données qui ont été restaurées à partir de la sauvegarde.  
 
-     - **Données de site :** le site d’administration centrale réinitialise les données de site à partir de chaque site principal.  
+     - **Données de site** : Le site d'administration centrale réinitialise les données du site à partir de chaque site principal.  
 
 #### <a name="recovered-site-is-a-primary-site"></a>Le site récupéré est un site principal
 - Sauvegarde de base de données pendant la période de rétention du suivi des modifications  
 
-     - **Données globales :** les modifications apportées aux données globales après la sauvegarde sont répliquées à partir du site d’administration centrale.  
+     - **Données globales** : Les modifications apportées aux données globales après la sauvegarde sont répliquées à partir du site d'administration centrale.  
 
-     - **Données de site :** le site d’administration centrale réinitialise les données de site à partir du site principal. Les modifications après la sauvegarde sont perdues. Les clients regénèrent la plupart des données quand ils envoient des informations au site principal.  
+     - **Données de site** : Le site d'administration centrale réinitialise les données du site à partir du site principal. Les modifications après la sauvegarde sont perdues. Les clients regénèrent la plupart des données quand ils envoient des informations au site principal.  
 
 - Sauvegarde de base de données antérieure à la période de rétention du suivi des modifications  
-     - **Données globales :** le site principal réinitialise les données globales à partir du site d’administration centrale.  
+     - **Données globales** : Le site principal réinitialise les données globales à partir du site d'administration centrale.  
 
-     - **Données de site :** le site d’administration centrale réinitialise les données de site à partir du site principal. Les modifications après la sauvegarde sont perdues. Les clients regénèrent la plupart des données quand ils envoient des informations au site principal.  
+     - **Données de site** : Le site d'administration centrale réinitialise les données du site à partir du site principal. Les modifications après la sauvegarde sont perdues. Les clients regénèrent la plupart des données quand ils envoient des informations au site principal.  
 
 
 
@@ -271,7 +271,7 @@ Si vous ne disposez pas d’une sauvegarde du système de fichiers pour les fich
 
 Si vous ne disposez pas d’une sauvegarde du système de fichiers qui inclut la bibliothèque de contenu, vous pouvez utiliser les options de restauration suivantes :  
 
-- **Importer un fichier de contenu préparé** : dans une hiérarchie Configuration Manager, vous pouvez créer un fichier de contenu préparé avec tous les packages et applications d’un autre emplacement. Importez ensuite le fichier de contenu préparé pour récupérer la bibliothèque de contenu sur le serveur de site.  
+- **Importer un fichier de contenu préparé** : Dans une hiérarchie Configuration Manager, vous pouvez créer un fichier de contenu préparé avec tous les packages et applications d’un autre emplacement. Importez ensuite le fichier de contenu préparé pour récupérer la bibliothèque de contenu sur le serveur de site.  
 
 - **Mettre à jour le contenu** : Configuration Manager copie le contenu de la source du package vers la bibliothèque de contenu. Pour que cette action soit correctement effectuée, les fichiers sources du package doivent être disponibles à l’emplacement d’origine. Effectuez cette action sur chaque package et chaque application.
 
