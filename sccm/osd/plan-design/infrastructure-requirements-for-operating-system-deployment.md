@@ -10,16 +10,16 @@ ms.assetid: 1dc74219-7ff5-4e3b-b4f6-5aad663bb75b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 03ec9c046e1b32f137777f15393b5d26b49e5520
-ms.sourcegitcommit: 265d38d55ca0db043e3a7131a56f123e1d98aa5b
+ms.openlocfilehash: cfaa50b941697b19f2d4d029ed7990f2d39eecbc
+ms.sourcegitcommit: f2a1fa59fb3870a6bebca61daf15c0c157e9fdd6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48236155"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030969"
 ---
 # <a name="infrastructure-requirements-for-os-deployment-in-configuration-manager"></a>Configuration de l’infrastructure requise pour un déploiement de système d’exploitation dans Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Les déploiements de système d’exploitation dans Configuration Manager présentent des dépendances externes et des dépendances au sein du produit. Utilisez cet article pour vous aider à préparer l’infrastructure d’un déploiement de système d’exploitation.  
 
@@ -186,17 +186,17 @@ Si vous voulez utiliser des rapports Configuration Manager pour les déploiement
 
 Le rôle de sécurité **Gestionnaire de déploiement de systèmes d’exploitation** est un rôle prédéfini que vous ne pouvez pas changer. Toutefois, vous pouvez copier le rôle, y apporter des modifications et les enregistrer sous un nouveau rôle de sécurité personnalisé. Voici quelques-unes des autorisations qui s’appliquent directement aux déploiements de système d’exploitation :  
 
-- **Package d’images de démarrage**: Créer, Supprimer, Modifier, Modifier un dossier, Déplacer un objet, Lire, Définir l’étendue de sécurité  
+- **Package d'image de démarrage** : Créer, Supprimer, Modifier, Modifier un dossier, Déplacer un objet, Lecture, Définir l'étendue de sécurité  
 
-- **Pilotes de périphériques**: Créer, Supprimer, Modifier, Modifier un dossier, Modifier le rapport, Déplacer un objet, Lire, Exécuter le rapport  
+- **Pilotes d'appareils** : Créer, Supprimer, Modifier, Modifier un dossier, Modifier le rapport, Déplacer un objet, Lecture, Exécuter le rapport  
 
-- **Package de pilotes**: Créer, Supprimer, Modifier, Modifier un dossier, Déplacer un objet, Lire, Définir l’étendue de sécurité  
+- **Package de pilotes** : Créer, Supprimer, Modifier, Modifier un dossier, Déplacer un objet, Lecture, Définir l'étendue de sécurité  
 
-- **Image de système d’exploitation**: Créer, Supprimer, Modifier, Modifier un dossier, Déplacer un objet, Lire, Définir l’étendue de sécurité  
+- **Image du système d'exploitation** : Créer, Supprimer, Modifier, Modifier un dossier, Déplacer un objet, Lecture, Définir l'étendue de sécurité  
 
-- **Package de mise à niveau de système d’exploitation** : Créer, Supprimer, Modifier, Modifier un dossier, Déplacer un objet, Lire, Définir l’étendue de sécurité  
+- **Package de mise à niveau du système d'exploitation** : Créer, Supprimer, Modifier, Modifier un dossier, Déplacer un objet, Lecture, Définir l'étendue de sécurité  
 
-- **Package de séquences de tâches**: Créer, Créer un média de séquence de tâches, Supprimer, Modifier, Modifier un dossier, Modifier le rapport, Déplacer un objet, Lire, Exécuter le rapport, Définir l’étendue de sécurité  
+- **Package de séquence de tâches** : Créer, Créer un média de séquence de tâches, Supprimer, Modifier, Modifier un dossier, Modifier le rapport, Déplacer un objet, Lecture, Exécuter le rapport, Définir l'étendue de sécurité  
 
 Pour plus d’informations, consultez [Créer des rôles de sécurité personnalisés](/sccm/core/servers/deploy/configure/configure-role-based-administration#BKMK_CreateSecRole).  
 
@@ -260,6 +260,8 @@ Si vous envisagez de cohéberger le point de distribution sur un serveur exécut
 
      `WDSUTIL /Set-Server /UseDHCPPorts:No /DHCPOption60:Yes`  
 
+> [!NOTE]
+> Si vous utilisez le répondeur PXE sans WDS au lieu de WDS, vous ne pouvez pas exécuter DHCP sur le même serveur.
 
 
 ##  <a name="BKMK_SupportedOS"></a> Systèmes d’exploitation pris en charge  

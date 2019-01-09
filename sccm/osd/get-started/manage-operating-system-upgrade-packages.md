@@ -10,19 +10,21 @@ ms.assetid: b9b22655-b8c1-461f-8047-3a7e906f647a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f7b8b18cbec5a3b5972a448e8a70339533dc11fb
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 46e948a215535bf57153e5a97dbdc9cad2e35e3b
+ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456004"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817849"
 ---
 # <a name="manage-os-upgrade-packages-with-configuration-manager"></a>Gérer des packages de mise à niveau de système d’exploitation avec Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Dans Configuration Manager, un package de mise à niveau de système d’exploitation contient les fichiers sources d’installation de Windows qui permettent de mettre à niveau un système d’exploitation existant sur un ordinateur. Cet article explique comment ajouter, distribuer et gérer un package de mise à niveau du système d’exploitation.
 
+>[!NOTE]
+>Des packages de mise à niveau du système d’exploitation peuvent également servir pour les nouvelles installations de Windows. Mais les pilotes doivent être compatibles avec cette méthode. Lorsque vous effectuez de nouvelles installations de Windows à partir d’un package de mise à niveau du système d’exploitation, les pilotes sont installés dans Windows PE au lieu d’être simplement injectés dans Windows PE. Certains pilotes ne peuvent pas être installés dans Windows PE. Si des pilotes ne peuvent pas être installés dans Windows PE, utilisez dans ce cas une [image de système d’exploitation](/sccm/osd/get-started/manage-operating-system-images) comme **install.wim**.
 
 
 ##  <a name="BKMK_AddOSUpgradePkgs"></a> Ajouter un package de mise à niveau du système d’exploitation  
@@ -47,7 +49,7 @@ Avant de pouvoir utiliser un package de mise à niveau de système d’exploitat
 
 4.  Dans la page **Général**, spécifiez les informations suivantes. Ces informations sont utiles à des fins d’identification lorsque vous avez plusieurs packages de mise à niveau du système d’exploitation.  
 
-    -   **Nom** : nom unique du package de mise à niveau du système d’exploitation.  
+    -   **Nom** : nom unique du package de mise à niveau du système d’exploitation.  
 
     -   **Version** : identificateur de version facultatif. Il n’est pas nécessaire que cette propriété corresponde à la version du package de mise à niveau. Il s’agit souvent de la version du package de votre organisation.  
 

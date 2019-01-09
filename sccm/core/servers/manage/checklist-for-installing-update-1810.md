@@ -10,16 +10,16 @@ ms.assetid: b87ac054-9b37-4725-a3f3-2340cfb10bff
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: efce5242c5de148d6922144af27f47a267b3c6c3
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 6ea093b71d19c2cee35caa748ae60f76a95b078c
+ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52458083"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817764"
 ---
 # <a name="checklist-for-installing-update-1810-for-configuration-manager"></a>Liste de contrôle pour l’installation de la mise à jour 1810 de Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Quand vous utilisez l’édition Current Branch de Configuration Manager, vous pouvez installer la mise à jour dans la console de la version 1810 pour mettre à jour votre hiérarchie à partir d’une version antérieure. <!-- baseline only statement: (Because version 1802 is also available as [baseline media](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions), you can use the installation media to install the first site of a new hierarchy.)-->
 
@@ -89,6 +89,9 @@ Pour plus d’informations, consultez  [Prérequis des sites et systèmes de si
 La version de Windows ADK (Kit de déploiement et d’évaluation Windows) pour Windows 10 doit être prise en charge pour Configuration Manager version 1810. Pour plus d’informations sur les versions prises en charge de Windows ADK, consultez [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk). Si vous devez mettre à jour Windows ADK, faites-le avant de commencer la mise à jour de Configuration Manager. En procédant dans cet ordre, vous avez la garantie que les images de démarrage par défaut sont automatiquement mises à jour vers la dernière version de Windows PE. Mettez à jour manuellement les images de démarrage personnalisées après la mise à jour du site.
 
 Si vous mettez à jour le site avant de mettre à jour Windows ADK, consultez [Mettre à jour les points de distribution avec l’image de démarrage](/sccm/osd/get-started/manage-boot-images#update-distribution-points-with-the-boot-image).
+
+#### <a name="review-sql-server-native-client-version"></a>Vérification de la version SQL Server Native Client
+Une version minimale de SQL Server 2012 Native Client prenant en charge TLS 1.2 doit être installée. Pour plus d'informations, consultez la [Liste des vérifications de la configuration requise](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-native-client).
 
 #### <a name="review-the-site-and-hierarchy-status-for-unresolved-issues"></a>Examiner l’état du site et de la hiérarchie pour rechercher les problèmes non résolus 
 Une mise à niveau de site peut échouer en raison de l’existence de problèmes opérationnels. Avant de mettre un site à jour, résolvez tous les problèmes opérationnels sur les systèmes suivants :  

@@ -10,16 +10,16 @@ ms.assetid: 4deac022-e397-4f1f-bc0a-cea6c6c6368d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7b7cb4a6a7ec6738bdf045b75bf88c8b4d8c4650
-ms.sourcegitcommit: 1439817f1309658b31008d7bafaab32fc5ef8789
+ms.openlocfilehash: 7f2fab639082e6871e5df8dcebe0d1b3a440624c
+ms.sourcegitcommit: 1bf26b83fa7da637d299a21e1d3bc61f2d7d8c10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52820099"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54060363"
 ---
 # <a name="enhanced-http"></a>HTTP amélioré
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 <!--1356889,1358460-->
 
@@ -46,7 +46,7 @@ La version 1806 de Configuration Manager contient des améliorations concernant 
 Les scénarios suivants bénéficient de ces améliorations :  
 
 
-### <a name="bkmk_scenario1"></a> Scénario 1 : Client vers point de gestion
+### <a name="bkmk_scenario1"></a> Scénario 1 : Client vers point de gestion
 <!--1356889-->
 
 Les [appareils joints à Azure AD](https://docs.microsoft.com/azure/active-directory/device-management-introduction#azure-ad-joined-devices) peuvent communiquer avec un point de gestion configuré pour HTTP. Le serveur de site génère un certificat pour le point de gestion afin de lui permettre de communiquer via un canal sécurisé.   
@@ -55,7 +55,7 @@ Les [appareils joints à Azure AD](https://docs.microsoft.com/azure/active-direc
 > Ce comportement est différent de celui observé dans Configuration Manager Current Branch version 1802, où l’utilisation d’un point de gestion HTTPS est nécessaire pour que les appareils joints à Azure AD puissent communiquer par le biais d’une passerelle de gestion cloud. Pour plus d’informations, consultez [Activer le point de gestion pour HTTPS](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_mphttps).  
 
 
-### <a name="bkmk_scenario2"></a> Scénario 2 : Client vers point de distribution
+### <a name="bkmk_scenario2"></a> Scénario 2 : Client vers point de distribution
 <!--1358228-->
 
 Un groupe de travail ou un client joint à Azure AD peut s’authentifier et télécharger du contenu via un canal sécurisé à partir d’un point de distribution configuré pour HTTP. Ces types d’appareils peuvent également s’authentifier et télécharger du contenu à partir d’un point de distribution configuré pour HTTPS sans avoir besoin d’un certificat PKI sur le client. L’ajout d’un certificat d’authentification client à un groupe de travail ou à un client joint à Azure AD est un processus compliqué.
@@ -63,7 +63,7 @@ Un groupe de travail ou un client joint à Azure AD peut s’authentifier et té
 Ce comportement inclut des scénarios de déploiement de système d’exploitation avec une séquence de tâches exécutée à partir d’un support de démarrage, d’un environnement PXE (Preboot Execution Environment) ou du Centre logiciel. Pour plus d’informations, consultez [Compte d’accès réseau](/sccm/core/plan-design/hierarchy/accounts#network-access-account).<!--1358278-->
 
 
-### <a name="bkmk_scenario3"></a> Scénario 3 : Identité d’appareil Azure AD 
+### <a name="bkmk_scenario3"></a> Scénario 3 : Identité d’appareil Azure AD 
 <!--1358460-->
 
 Un appareil joint à Azure AD ou un [appareil Azure AD hybride](https://docs.microsoft.com/azure/active-directory/device-management-introduction#hybrid-azure-ad-joined-devices) peut communiquer de manière sécurisée avec son site attribué, sans qu’un utilisateur Azure AD soit connecté. L’identité d’appareil cloud est désormais suffisante pour s’authentifier auprès du point de gestion et de la passerelle de gestion cloud dans les scénarios orientés appareil. (Un jeton d’utilisateur est toujours requis dans les scénarios orientés utilisateur.)  
@@ -79,7 +79,7 @@ Un appareil joint à Azure AD ou un [appareil Azure AD hybride](https://docs.mic
 
     - Si vous avez déjà effectué cette intégration pour votre site, mettez à jour l’application Azure AD. Dans la console Configuration Manager, accédez à l’espace de travail **Administration**, développez **Services cloud**, puis sélectionnez **Locataires Azure Active Directory**. Sélectionnez le locataire Azure AD, sélectionnez l’application web dans le volet **Applications**, puis sélectionnez **Mettre à jour les paramètres d’application** dans le ruban.  
 
-- *[Scénario 3](#bkmk_scenario3) uniquement* : Client exécutant Windows 10 version 1803 et joint à Azure AD. 
+- *Pour [Scénario 3](#bkmk_scenario3) uniquement* : Un client exécutant Windows 10 version 1803 ou ultérieure et joint à Azure AD. 
 
 
 

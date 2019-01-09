@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: a387a7c5a466dc2f44ad114788ff7d56dd468195
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 03c325f2bd6aa6ea6c39d7994a78b900653e62a1
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32352191"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53415434"
 ---
 # <a name="manage-software-update-catalogs-in-updates-publisher"></a>Gérer des catalogues de mises à jour logicielles dans l’éditeur de mise à jour
 
-*S’applique à : l'éditeur de mise à jour System Center*
+*S’applique à : System Center Updates Publisher*
 
 Utilisez l’**espace de travail** **Catalogues** pour gérer les catalogues de mises à jour logicielles. Cela inclut l’ajout de nouveaux catalogues, la gestion d’abonnements à des catalogues existants et l’importation d’informations sur les mises à jour d’un catalogue vers le référentiel de l’éditeur de mise à jour.
 
@@ -48,53 +48,53 @@ Outre l’ajout de catalogues et l’affichage des informations sur les catalogu
 ## <a name="manage-update-catalogs"></a>Gérer des catalogues de mises à jour
 Vous pouvez afficher la liste des catalogues que vous avez importés dans la fenêtre **Mes catalogues de mises à jour logiciels** de l **’espace de travail Catalogues**. À partir de cet espace de travail, vous pouvez :
 
--   **Ajouter un catalogue partenaire :** utilisez l’une des opérations suivantes pour rechercher des catalogues partenaires :
+-   **Ajouter un catalogue de partenaires :** Utilisez l’une des opérations suivantes pour rechercher des catalogues partenaires :
 
     -   Dans la console, accédez à l **’espace de travail Mises à jour** > **Vue d’ensemble**. Dans la fenêtre **Prise en main**, choisissez **Ajouter des catalogues de mises à jour logicielles partenaires**.
 
     -   Dans la console, accédez à l **’espace de travail Catalogues** > **Mes catalogues**. Puis, dans le ruban, choisissez **Ajouter des catalogues**.
 
--   **Ajouter un catalogue utilisateur :** dans la console, accédez à l **’espace de travail Catalogues** > **Mes catalogues**. Puis, dans le ruban, choisissez **Ajouter des catalogues**. Outre l’emplacement du fichier .cab, vous devez spécifier un éditeur, un nom et une description pour identifier le catalogue.
+-   **Ajouter un catalogue des utilisateurs :** Dans la console, accédez à l **’espace de travail Catalogues** > **Mes catalogues**. Puis, dans le ruban, choisissez **Ajouter des catalogues**. Outre l’emplacement du fichier .cab, vous devez spécifier un éditeur, un nom et une description pour identifier le catalogue.
 
 
--   **Rechercher les mises à jour des catalogues :** sélectionnez un ou plusieurs catalogues, puis choisissez **Actualiser** dans le ruban.
+-   **Rechercher des mises à jour pour les catalogues :** Sélectionnez un ou plusieurs catalogues, puis choisissez **Actualiser** dans le ruban.
 
--   **Modifier un catalogue utilisateur :** sélectionnez un catalogue *utilisateur*, puis choisissez **Modifier** dans le ruban. Vous pouvez ensuite modifier les propriétés définies par l’utilisateur.
+-   **Modifier le catalogue des utilisateurs :** Sélectionnez un catalogue des *utilisateurs*, puis choisissez **Modifier** dans le ruban. Vous pouvez ensuite modifier les propriétés définies par l’utilisateur.
 
--   **Supprimer des catalogues :** sélectionnez un ou plusieurs catalogues, puis choisissez **Supprimer** dans le ruban. Cette opération supprime le catalogue, votre abonnement et les mises à jour de ces catalogues du référentiel de votre éditeur de mise à jour.
+-   **Supprimer des catalogues :** Sélectionnez un ou plusieurs catalogues, puis choisissez **Supprimer** dans le ruban. Cette opération supprime le catalogue, votre abonnement et les mises à jour de ces catalogues du référentiel de votre éditeur de mise à jour.
 
--   **Ajouter des mises à jour d’un catalogue à votre référentiel**: choisissez **Importer** dans le ruban pour démarrer l’Assistant **Importation de catalogue**. Pour plus d’informations, consultez la rubrique [Importer des mises à jour](#import-updates)
+-   **Ajouter des mises à jour d’un catalogue à votre référentiel** : Choisissez **Importer** dans le ruban pour démarrer l’assistant **Importation de catalogue**. Pour plus d’informations, consultez la rubrique [Importer des mises à jour](#import-updates)
 
 ## <a name="import-updates"></a>Importer des mises à jour
 Lorsque vous importez un catalogue, Updates Manager ajoute les mises à jour de ce catalogue vers le référentiel de l’éditeur de mise à jour. Une fois les mises à jour importées, vous pouvez les publier sur votre serveur de mise à jour pour les mettre à disposition des appareils gérés.
 
 ### <a name="to-import-updates"></a>Pour importer des mises à jour
-1.  Pour démarrer l’Assistant **Importation de catalogue**, choisissez **Importer** dans le ruban des espaces de travail suivants :
+1. Pour démarrer l’Assistant **Importation de catalogue**, choisissez **Importer** dans le ruban des espaces de travail suivants :
 
-    -   Espace de travail Catalogues
+   -   Espace de travail Catalogues
 
-    -   Espace de travail Mises à jour
+   -   Espace de travail Mises à jour
 
-2.  Sur la page **Type d’importation**, sélectionnez un ou plusieurs catalogues que vous avez ajoutés à l’éditeur de mise à jour, ou spécifiez un chemin d’accès à un catalogue que vous n’avez pas encore ajouté comme abonnement. Choisissez **Suivant** pour afficher l’écran de résumé puis, lorsque vous êtes prêt, cliquez sur **Suivant** pour démarrer l’importation.
+2. Sur la page **Type d’importation**, sélectionnez un ou plusieurs catalogues que vous avez ajoutés à l’éditeur de mise à jour, ou spécifiez un chemin d’accès à un catalogue que vous n’avez pas encore ajouté comme abonnement. Choisissez **Suivant** pour afficher l’écran de résumé puis, lorsque vous êtes prêt, cliquez sur **Suivant** pour démarrer l’importation.
 
-3.  Dans la fenêtre **Avertissement de sécurité : validation du catalogue**, examinez le certificat du catalogue puis, lorsque vous êtes prêt, choisissez **Accepter** pour importer les mises à jour.
+3. Dans la fenêtre **Avertissement de sécurité : validation du catalogue**, examinez le certificat du catalogue puis, lorsque vous êtes prêt, choisissez **Accepter** pour importer les mises à jour.
 
-    > [!CAUTION]    
-    > Acceptez uniquement les mises à jour d’éditeurs de confiance. Les mises à jour logicielles provenant d’éditeurs qui n’ont pas été approuvés peuvent endommager les ordinateurs clients lors de la recherche de mises à jour.
+   > [!CAUTION]
+   > Acceptez uniquement les mises à jour d’éditeurs de confiance. Les mises à jour logicielles provenant d’éditeurs qui n’ont pas été approuvés peuvent endommager les ordinateurs clients lors de la recherche de mises à jour.
+   > 
+   >  Si vous n’approuvez plus un éditeur, supprimez-le de la liste des éditeurs approuvés. Pour plus d’informations sur l’acceptation de catalogues, cliquez sur **En savoir plus** dans la boîte de dialogue **Avertissement de sécurité : validation du catalogue**.
 
-    >  Si vous n’approuvez plus un éditeur, supprimez-le de la liste des éditeurs approuvés. Pour plus d’informations sur l’acceptation de catalogues, cliquez sur **En savoir plus** dans la boîte de dialogue **Avertissement de sécurité : validation du catalogue**.
+   Si vous souhaitez toujours accepter les catalogues provenant d’un éditeur, cet éditeur est ajouté à la [liste des éditeurs approuvés](/sccm/sum/tools/updates-publisher-options#trusted-publishers). Vous pouvez consulter et modifier cette liste comme une option de l’éditeur de mise à jour.
 
-    Si vous souhaitez toujours accepter les catalogues provenant d’un éditeur, cet éditeur est ajouté à la [liste des éditeurs approuvés](/sccm/sum/tools/updates-publisher-options#trusted-publishers). Vous pouvez consulter et modifier cette liste comme une option de l’éditeur de mise à jour.
+4. L’importation ignore les mises à jour qui figurent déjà dans le référentiel et si l’une des opérations suivantes est vraie :
 
-4.  L’importation ignore les mises à jour qui figurent déjà dans le référentiel et si l’une des opérations suivantes est vraie :
+   -   La mise à jour n’a pas été modifiée depuis qu’elle a été importée.
 
-    -   La mise à jour n’a pas été modifiée depuis qu’elle a été importée.
+   -   La mise à jour a été modifiée et contient un nouveau hachage numérique. La modification d’une mise à jour empêche le remplacement d’une nouvelle mise à jour car cela entraînerait la suppression des modifications que vous auriez déployées.
 
-    -   La mise à jour a été modifiée et contient un nouveau hachage numérique. La modification d’une mise à jour empêche le remplacement d’une nouvelle mise à jour car cela entraînerait la suppression des modifications que vous auriez déployées.
+5. Sur la page **Confirmation**, examinez les résultats de l’importation.
 
-5.  Sur la page **Confirmation**, examinez les résultats de l’importation.
-
-6.  Cliquez sur **Fermer** pour terminer l’Assistant. Vous pouvez désormais afficher les mises à jour de ce catalogue dans l’espace de travail Mises à jour.
+6. Cliquez sur **Fermer** pour terminer l’Assistant. Vous pouvez désormais afficher les mises à jour de ce catalogue dans l’espace de travail Mises à jour.
 
 ## <a name="next-steps"></a>Étapes suivantes
 Après avoir importé les mises à jour, les actions courantes sont les suivantes :

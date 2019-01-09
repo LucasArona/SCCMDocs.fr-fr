@@ -10,16 +10,16 @@ ms.assetid: 3fe32aa2-d594-4ad0-a291-b8f5395ac50b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b4174c68d5a6ccd31355d976b7830b6d09f39d91
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 38b59e520baf9fddb09f71f459de409f38adad2b
+ms.sourcegitcommit: 32a257fafbb29aece8b4f435dd5614fcef305328
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32339874"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "54005447"
 ---
 # <a name="frequently-asked-questions-about-diagnostics-and-usage-data-for-system-center-configuration-manager"></a>Questions fréquemment posées sur les données d’utilisation et de diagnostic pour System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Cet article fournit les réponses aux questions fréquemment posées sur les données de diagnostic et d’utilisation dans Configuration Manager.
 
@@ -50,7 +50,7 @@ La version Current Branch de Configuration Manager doit être mise à jour régu
  Non. Les procédures stockées pour la collecte des données sont limités à la base de données du site.  
 
 ### <a name="bkmk_gdpr"></a> Configuration Manager est-il soumis au règlement général sur la protection des données (RGPD) ?
- Non. Configuration Manager n’est pas soumis au règlement général sur la protection des données. Il s’agit d’un produit installé en local que vous déployez, gérez et exécutez directement. Les données d’utilisation et de diagnostic collectées par Microsoft sont destinées à améliorer l’expérience d’installation, ainsi que la qualité et la sécurité des futures versions. Ces données sont soumises au règlement général sur la protection des données. Aucune information d’identification de l’utilisateur final et aucun identificateur de pseudonyme de l’utilisateur final ne sont collectés et transmis à Microsoft. Pour plus d’informations sur le règlement général sur la protection des données, consultez le [Centre de confidentialité Microsoft sur le règlement général sur la protection des données](https://microsoft.com/gdpr). Pour plus d’informations sur les données Configuration Manager, consultez [Données d’utilisation et de diagnostic](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data).
+ Non. Configuration Manager n’est pas soumis au règlement général sur la protection des données. Il s’agit d’un produit installé en local que vous déployez, gérez et exécutez directement. Les données d’utilisation et de diagnostic collectées par Microsoft sont destinées à améliorer l’expérience d’installation, ainsi que la qualité et la sécurité des futures versions. Ces données d’utilisation et de diagnostic sont soumises au règlement général sur la protection des données. Cependant, aucune information d’identification de l’utilisateur final et aucun identificateur de pseudonyme de l’utilisateur final ne sont collectés et transmis à Microsoft. Pour plus d’informations sur le règlement général sur la protection des données, consultez le [Centre de confidentialité Microsoft sur le règlement général sur la protection des données](https://microsoft.com/gdpr). Pour plus d’informations sur les données Configuration Manager, consultez [Données d’utilisation et de diagnostic](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data).
 
 
 ## <a name="see-also"></a>Voir aussi  

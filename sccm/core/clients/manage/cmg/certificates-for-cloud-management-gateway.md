@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
-ms.openlocfilehash: 4ef9746b9a1eb90beeec6a477ad1d406acebbb05
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 60fa4176d44b530b2cab6c2b9b4b35c968fae3c1
+ms.sourcegitcommit: 32a257fafbb29aece8b4f435dd5614fcef305328
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456564"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "54005481"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>Certificats pour la passerelle de gestion cloud
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Selon le scénario que vous utilisez pour gérer des clients sur Internet avec la passerelle de gestion cloud, vous avez besoin d’un ou de plusieurs des certificats numériques suivants :  
 
@@ -45,7 +45,7 @@ Pour plus d’informations sur les différents scénarios, consultez [Planifier 
 
 - À compter de la version 1710, les fournisseurs de stockage de clés sont pris en charge pour les clés privées de certificat. Pour plus d’informations, consultez [Vue d’ensemble des certificats CNG](/sccm/core/plan-design/network/cng-certificates-overview).  
 
-- À compter de la version 1802, quand vous configurez Windows avec la stratégie suivante : **Chiffrement système : utilisez des algorithmes compatibles FIPS pour le chiffrement, le hachage et la signature**  
+- À compter de la version 1802, lorsque vous configurez Windows avec la stratégie suivante : **Chiffrement système : utilisez des algorithmes compatibles FIPS pour le chiffrement, le hachage et la signature**  
 
 - À compter de la version 1802, prise en charge de **TLS 1.2**. Pour plus d’informations, consultez [Informations techniques de référence sur les contrôles de chiffrement](/sccm/core/plan-design/security/cryptographic-controls-technical-reference#about-ssl-vulnerabilities).  
 
@@ -62,8 +62,11 @@ La passerelle de gestion cloud crée un service HTTPS auquel les clients Interne
  > [!TIP]
  > Ce certificat nécessite un nom global unique pour identifier le service dans Azure. Avant de demander un certificat, vérifiez que le nom de domaine Azure souhaité est unique. Par exemple, *GraniteFalls.CloudApp.Net*. Connectez-vous au [portail Microsoft Azure](https://portal.azure.com). Sélectionnez **Créer une ressource**, choisissez la catégorie **Calcul**, puis sélectionnez **Service cloud**. Dans le champ **Nom DNS**, tapez le préfixe souhaité, par exemple *GraniteFalls*. L’interface indique si le nom de domaine est disponible ou déjà utilisé par un autre service. Ne créez pas le service dans le portail ; utilisez ce processus seulement pour vérifier la disponibilité du nom. 
   
+ > [!TIP]
+ > Si la passerelle de gestion cloud sera également activée comme point de distribution cloud, vérifiez que le nom du service de passerelle de gestion cloud que vous avez choisi est également un nom de compte de stockage Azure unique. Par exemple, *GraniteFalls*. Connectez-vous au [portail Microsoft Azure] (https://portal.azure.com). Sélectionnez **Create a resource** (Créer une ressource), choisissez la catégorie **Storage** (Stockage), puis sélectionnez **Storage account - blob, file, table, queue** (Compte de stockage - blob, fichier, table, file d'attente). Cliquez sur **Create** (Créer), puis, sous **Instance Details** (Détails de l’instance), entrez le même nom que celui choisi pour le service de passerelle de gestion cloud, par exemple *GraniteFalls*. L’interface indique si le nom du compte de stockage est disponible ou déjà utilisé par un autre service. Ne créez pas le compte de stockage dans le portail ; utilisez ce processus seulement pour vérifier la disponibilité du nom. Si le nom du service de passerelle de gestion cloud est unique, mais que le nom du compte de stockage ne l’est pas, la configuration échouera.
+ 
  > [!NOTE]
- > À compter de la version 1802, le certificat d’authentification du serveur de passerelle de gestion cloud prend en charge les caractères génériques. Certaines autorités de certification émettent des certificats en utilisant un caractère générique pour le nom d’hôte. Par exemple, **\*.contoso.com**. Certaines organisations utilisent des certificats génériques pour simplifier leur infrastructure à clé publique et réduire les coûts de maintenance.<!--491233-->  
+ > À compter de la version 1802, le certificat d’authentification serveur de la passerelle de gestion cloud prend en charge les caractères génériques. Certaines autorités de certification émettent des certificats en utilisant un caractère générique pour le nom d’hôte. Par exemple, **\*.contoso.com**. Certaines organisations utilisent des certificats génériques pour simplifier leur infrastructure à clé publique et réduire les coûts de maintenance.<!--491233-->  
  > 
  > Pour plus d’informations sur l’utilisation d’un certificat générique avec une passerelle de gestion cloud, consultez [Configurer une passerelle de gestion cloud](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#set-up-a-cmg).<!--SCCMDocs issue #565-->  
 
@@ -103,7 +106,7 @@ Par exemple, Contoso utilise **GraniteFalls.Contoso.com** comme nom commun du ce
 
     - Par exemple, quand Contoso crée la passerelle de gestion cloud, Configuration Manager extrait le nom d’hôte **GraniteFalls** du nom commun du certificat. Azure crée le service proprement dit sous le nom **GraniteFalls.CloudApp.net**.  
 
-Quand vous créez l’instance de la passerelle de gestion cloud dans Configuration Manager, alors que le certificat comporte GraniteFalls.Contoso.com, Configuration Manager extrait seulement le nom d’hôte, par exemple GraniteFalls. Il ajoute ce nom d’hôte à CloudApp.net, ce qui est exigé par Azure lors de la création d’un service cloud. L’alias CNAME dans l’espace de noms DNS pour votre domaine, Contoso.com, mappe ces deux noms de domaine complets. Configuration Manager donne aux clients une stratégie pour accéder à cette passerelle de gestion cloud et le mappage DNS les lie ensemble pour qu’ils puissent accéder de façon sécurisée au service dans Azure.<!--SCCMDocs issue #565-->  
+Quand vous créez l’instance de la passerelle de gestion cloud dans Configuration Manager, alors que le certificat comporte GraniteFalls.Contoso.com, Configuration Manager extrait seulement le nom d’hôte, par exemple : GraniteFalls. Il ajoute ce nom d’hôte à CloudApp.net, ce qui est exigé par Azure lors de la création d’un service cloud. L’alias CNAME dans l’espace de noms DNS pour votre domaine, Contoso.com, mappe ces deux noms de domaine complets. Configuration Manager donne aux clients une stratégie pour accéder à cette passerelle de gestion cloud et le mappage DNS les lie ensemble pour qu’ils puissent accéder de façon sécurisée au service dans Azure.<!--SCCMDocs issue #565-->  
 
 
 ### <a name="bkmk_serverauthpki"></a> Certificat d’authentification serveur émis par l’infrastructure à clé publique (PKI) d’entreprise
@@ -225,7 +228,7 @@ Configurez un point de gestion local pour autoriser les connexions à partir de 
 <a name="bkmk_note1"></a> 
 
 > [!Note]  
-> **Remarque 1** : Avec cette configuration, le client doit avoir un [certificat d’authentification client](#bkmk_clientauth) et prendre uniquement en charge des scénarios centrés sur les appareils.  
+> **Remarque 1** : avec cette configuration, le client doit avoir un [certificat d’authentification client](#bkmk_clientauth) et prendre uniquement en charge des scénarios centrés sur les appareils.  
 
 #### <a name="for-on-premises-clients-communicating-with-the-on-premises-management-point"></a>Pour les clients locaux qui communiquent avec le point de gestion local
 Configurez un point de gestion local avec le mode de connexion client suivant :
@@ -244,13 +247,13 @@ Configurez un point de gestion local avec le mode de connexion client suivant :
 
 
 #### <a name="legend-of-terms"></a>Légende des termes
-- *Groupe de travail* : l’appareil n’est pas joint à un domaine ou à Azure AD, mais il dispose d’un [certificat d’authentification client](#bkmk_clientauth)  
+- *Groupe de travail*: l’appareil n’est pas joint à un domaine ou à Azure AD, mais il dispose d’un [certificat d’authentification client](#bkmk_clientauth)  
 - *Joint à un domaine AD* : vous joignez l’appareil à un domaine Active Directory local  
 - *Joint à Azure AD* : (également appelé « joint à un domaine cloud ») vous joignez l’appareil à un locataire Azure Active Directory  
 - *Joint à une version hybride* : vous joignez l’appareil à un domaine Active Directory et à un locataire Azure AD  
 - *HTTP* : dans les propriétés du point de gestion, vous définissez les connexions clientes sur **HTTP**  
 - *HTTPS* : dans les propriétés du point de gestion, vous définissez les connexions clientes sur **HTTPS**  
-- *E-HTTP* : dans les propriétés du site, sous l’onglet Communication de l’ordinateur client, vous définissez les paramètres du système de site sur **HTTPS ou HTTP**, puis vous activez l’option sur **Utiliser les certificats générés par Configuration Manager pour les systèmes de site HTTP**. Vous configurez le point de gestion pour HTTP ou HTTPS.  
+- *E-HTTP* : dans les propriétés du site, sous l’onglet Communication de l’ordinateur client, vous définissez les paramètres du système de site sur **HTTPS ou HTTP**, puis vous activez l’option sur **Utiliser les certificats générés par Configuration Manager pour les systèmes de site HTTP**. Vous configurez le point de gestion pour le protocole HTTP : le point de gestion HTTP est prêt pour la communication HTTP et HTTPS (scénarios d’authentification du jeton).   
 
 
 

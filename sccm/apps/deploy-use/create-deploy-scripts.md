@@ -10,16 +10,16 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c9f3bc1b85ee9b8fbd8af47e22a826fe8d88377d
-ms.sourcegitcommit: c2c44329f1f9a2e6c14095360b4fc4aafabc27f0
+ms.openlocfilehash: 882af6e50a8619684225de53ce700fcc23923a06
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694958"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418394"
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Créer et exécuter des scripts PowerShell à partir de la console Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 <!--1236459--> System Center Configuration Manager a la capacité intégrée d’exécuter des scripts PowerShell. Powershell a l’avantage de créer des scripts automatisés et sophistiqués, qui sont compris et partagés par une large communauté. Les scripts simplifient la création d’outils personnalisés pour administrer des logiciels et vous permettent d’accomplir des tâches courantes rapidement, plus facilement et de façon plus cohérente.  
 
@@ -60,7 +60,7 @@ Pour plus d’informations sur les rôles de sécurité Configuration Manager :<
 
 La fonctionnalité Exécuter les scripts prend actuellement en charge :
 
-- Langages de script : PowerShell
+- Langages de script : PowerShell
 - Types de paramètres : entier, chaîne et liste
 
 
@@ -113,9 +113,9 @@ Les trois rôles de sécurité utilisés pour exécuter des scripts ne sont pas 
 
 ### <a name="security-role-permissions"></a>Autorisations du rôle de sécurité  
 
-**Nom du rôle** : Exécuteurs de scripts  
-- **Description** : ces autorisations permettent à ce rôle d’exécuter seulement des scripts qui ont été précédemment créés et approuvés par d’autres rôles.  
-- **Autorisations :** vérifiez que les éléments suivants sont définis sur **Oui**.  
+**Nom du rôle** : Exécuteurs de script  
+- **Description** : Ces autorisations permettent à ce rôle d’exécuter seulement des scripts qui ont été précédemment créés et approuvés par d’autres rôles.  
+- **Autorisations :** Vérifiez que les éléments suivants sont définis sur **Oui**.  
 
 |Catégorie|Autorisation|État|
 |---|---|---|
@@ -125,9 +125,9 @@ Les trois rôles de sécurité utilisés pour exécuter des scripts ne sont pas 
 |Scripts SMS|Lecture|Oui|
 
 
-**Nom du rôle** : Créateurs de scripts  
-- **Description** : ces autorisations permettent à ce rôle de créer des scripts, mais pas de les approuver ou de les exécuter.  
-- **Autorisations** : vérifiez que les autorisations suivantes sont définies.
+**Nom du rôle** : Créateurs de script  
+- **Description** : Ces autorisations permettent à ce rôle de créer des scripts, mais pas de les approuver ou de les exécuter.  
+- **Autorisations** : Vérifiez que les autorisations suivantes sont définies.
  
 |Catégorie|Autorisation|État|
 |---|---|---|
@@ -139,9 +139,9 @@ Les trois rôles de sécurité utilisés pour exécuter des scripts ne sont pas 
 |Scripts SMS|Modifier|Oui|
 
 
-**Nom du rôle** : Approbateurs de scripts  
-- **Description** : ces autorisations permettent à ce rôle d’approuver des scripts, mais pas de les créer ou de les exécuter.  
-- **Autorisations :** vérifiez que les autorisations suivantes sont définies.  
+**Nom du rôle** : Approbateurs de script  
+- **Description** : Ces autorisations permettent à ce rôle d’approuver des scripts, mais pas de les créer ou de les exécuter.  
+- **Autorisations :** Vérifiez que les autorisations suivantes sont définies.  
 
 |Catégorie|Autorisation|État|
 |---|---|---|
@@ -172,8 +172,8 @@ Les trois rôles de sécurité utilisés pour exécuter des scripts ne sont pas 
 5. Effectuez toutes les étapes de l'Assistant. Le nouveau script s’affiche dans la liste **Script** avec l’état **En attente d’approbation**. Avant de pouvoir exécuter ce script sur les appareils clients, vous devez l’approuver. 
 
 > [!IMPORTANT]
-    >Évitez de créer un script pour une réinitialisation de l’appareil ou un redémarrage de l’agent Configuration Manager lors de l’utilisation de la fonctionnalité Exécuter les scripts. Cela peut entraîner un état de redémarrage continu. Si nécessaire, il existe des améliorations apportées à la fonctionnalité de notification au client qui permettent de redémarrer les appareils, à compter de Configuration Manager version 1710. La [colonne en attente de redémarrage](/sccm/core/clients/manage/manage-clients#Restart-clients) peut aider à identifier les appareils qui nécessitent un redémarrage. 
-<!--SMS503978  -->
+> Évitez de créer un script pour une réinitialisation de l’appareil ou un redémarrage de l’agent Configuration Manager lors de l’utilisation de la fonctionnalité Exécuter les scripts. Cela peut entraîner un état de redémarrage continu. Si nécessaire, il existe des améliorations apportées à la fonctionnalité de notification au client qui permettent de redémarrer les appareils, à compter de Configuration Manager version 1710. La [colonne en attente de redémarrage](/sccm/core/clients/manage/manage-clients#Restart-clients) peut aider à identifier les appareils qui nécessitent un redémarrage. 
+> <!--SMS503978  -->
 
 ## <a name="script-parameters"></a>Paramètres de script
 *(Fonctionnalité introduite avec la version 1710)*  
@@ -192,7 +192,7 @@ Chacun des paramètres de votre script a sa propre boîte de dialogue pour l’a
 
 Chaque paramètre inclus dans votre script a une boîte de dialogue **Propriétés du paramètre de script** qui vous permet d’ajouter la validation de ce paramètre. Après avoir ajouté la validation, vous devez obtenir des erreurs si vous entrez une valeur pour un paramètre qui ne satisfait pas à sa validation.
 
-#### <a name="example-firstname"></a>Exemple : *FirstName*
+#### <a name="example-firstname"></a>Exemple : *FirstName*
 
 Dans cet exemple, vous êtes en mesure de définir les propriétés du paramètre de chaîne *FirstName*.
 

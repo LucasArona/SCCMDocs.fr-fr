@@ -10,16 +10,16 @@ ms.assetid: f5ad22d5-7df1-49c6-8a0f-db1c3f0cda19
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 41ce74ee0978f561a855c5d3952071f68568dee0
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 23c3a8b379accac0e514cfb8a88197baa6463fee
+ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32347635"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817730"
 ---
 # <a name="install-a-new-version-of-windows-on-a-new-computer-bare-metal-with-system-center-configuration-manager"></a>Installer une nouvelle version de Windows sur un nouvel ordinateur (système nu) avec System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Cette rubrique indique les étapes générales à suivre dans System Center Configuration Manager pour installer un système d’exploitation sur un nouvel ordinateur. Pour ce scénario, vous pouvez choisir parmi de nombreuses méthodes de déploiement différentes, telles que PXE, OEM ou média autonome. Pour vous aider à déterminer si ce scénario de déploiement de système d’exploitation est adapté à votre cas, consultez [Scénarios de déploiement de systèmes d’exploitation d’entreprise](scenarios-to-deploy-enterprise-operating-systems.md).  
 
@@ -41,7 +41,7 @@ Utilisez les sections suivantes pour actualiser un ordinateur existant avec une 
 
     -   Pour plus d’informations sur la personnalisation d’une image de démarrage, consultez [Personnaliser des images de démarrage](../get-started/customize-boot-images.md).  
 
-    -   Distribuez l’image de démarrage à des points de distribution. Pour plus d’informations, consultez [Distribuer du contenu](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).  
+    -   Distribuez l’image de démarrage à des points de distribution. Pour plus d'informations, voir [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).  
 
 2.  **Préparer une image de système d’exploitation**  
 
@@ -49,7 +49,12 @@ Utilisez les sections suivantes pour actualiser un ordinateur existant avec une 
 
     -   Pour en savoir plus sur la création d’une image de système d’exploitation, consultez [Gérer les images de système d’exploitation](../get-started/manage-operating-system-images.md).
 
-    -   Distribuez l’image du système d’exploitation à des points de distribution. Pour plus d’informations, consultez [Distribuer du contenu](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).
+    -   Distribuez l’image du système d’exploitation à des points de distribution. Pour plus d’informations, consultez [Distribuer du contenu](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).  
+
+    > [!NOTE]
+    > De nouvelles installations de Windows peuvent également être effectuées à partir des fichiers d’installation sources via des packages de mise à niveau du système d’exploitation, mais utilisez plutôt des images de système d’exploitation comme **install.wim**.
+    >
+    > Le déploiement de nouvelles installations de Windows via des packages de mise à niveau du système d’exploitation est toujours pris en charge, mais il nécessite des pilotes compatibles avec cette méthode. Lorsque vous installez Windows à partir d’un package de mise à niveau du système d’exploitation, les pilotes sont installés dans Windows PE au lieu d’être simplement injectés dans Windows PE. Certains pilotes ne peuvent pas être installés dans Windows PE. Si des pilotes ne peuvent pas être installés dans Windows PE, utilisez dans ce cas une image de système d’exploitation.  
 
 3.  **Créer une séquence de tâches pour déployer des systèmes d’exploitation sur le réseau**  
 
