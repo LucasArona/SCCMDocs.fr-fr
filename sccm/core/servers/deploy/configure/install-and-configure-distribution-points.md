@@ -10,12 +10,12 @@ ms.assetid: aebafaf9-b3d5-4a0f-9ee5-685758c037a1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0ab848051d5eaa85d2b515145ff64471aee81a31
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 430931e8bfba3f40a8d970b7ae7b97e24d3381ec
+ms.sourcegitcommit: f2a1fa59fb3870a6bebca61daf15c0c157e9fdd6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53415039"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54031020"
 ---
 # <a name="install-and-configure-distribution-points-in-configuration-manager"></a>Installer et configurer des points de distribution dans Configuration Manager
 
@@ -341,6 +341,9 @@ Sélectionnez l’option **Activer la prise en charge PXE pour les clients**, pu
 - **Activer la prise en charge d’ordinateur inconnu** : Indiquez si la prise en charge des ordinateurs non gérés par Configuration Manager doit être activée. Pour plus d’informations, voir [Préparer les déploiements d’ordinateurs inconnus](/sccm/osd/get-started/prepare-for-unknown-computer-deployments).  
 
 - **Activer un répondeur PXE sans service de déploiement Windows** : À compter de la version 1806, cette option active un répondeur PXE sur le point de distribution, qui n’a pas besoin des services WDS. Ce répondeur PXE prend en charge les réseaux IPv6. Si vous activez cette option sur un point de distribution qui est déjà compatible PXE, Configuration Manager suspend le service WDS. Si vous la désactivez tout en choisissant **Activer la prise en charge PXE pour les clients**, le point de distribution réactive le service WDS.<!--1357580-->  
+
+    > [!Note]
+    >Vous ne pouvez pas utiliser le répondeur PXE sans WDS sur des serveurs qui exécutent également un serveur DHCP.
 
 - **Exiger un mot de passe lorsque les ordinateurs utilisent PXE** : pour renforcer la sécurité de vos déploiements PXE, spécifiez un mot de passe fort.  
 

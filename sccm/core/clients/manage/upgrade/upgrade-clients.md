@@ -10,12 +10,12 @@ ms.assetid: 446c83b5-c292-4e74-ba19-0792ac6b3472
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d63100e5525b24ffd8deba447a10325c8209ea00
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 3d7f142752f2d3ce97986455fe516748b0d6fb72
+ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53416688"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817696"
 ---
 # <a name="upgrade-clients-in-system-center-configuration-manager"></a>Mettre à niveau les clients dans System Center Configuration Manager
 
@@ -29,7 +29,7 @@ Vous pouvez utiliser différentes méthodes pour mettre à niveau le logiciel cl
 ## <a name="group-policy-installation"></a>Installation via la stratégie de groupe  
  **Plateforme cliente prise en charge** : Windows  
 
- **Avantages**  
+#### <a name="advantages"></a>Avantages  
 
 - N’exige pas la découverte des ordinateurs préalablement à la mise à niveau du client.  
 
@@ -39,7 +39,7 @@ Vous pouvez utiliser différentes méthodes pour mettre à niveau le logiciel cl
 
 - Ne nécessite pas de configuration ni la présence d'un compte d'installation pour l'ordinateur client choisi.  
 
-  **Inconvénients**  
+#### <a name="disadvantages"></a>Inconvénients  
 
 - Peut occasionner un trafic réseau intense si vous effectuez la mise à niveau d’un grand nombre de clients.  
 
@@ -49,7 +49,7 @@ Vous pouvez utiliser différentes méthodes pour mettre à niveau le logiciel cl
 ## <a name="logon-script-installation"></a>Installation via un script d'ouverture de session  
  **Plateforme cliente prise en charge** : Windows  
 
- **Avantages**  
+#### <a name="advantages"></a>Avantages  
 
 - N'exige pas la découverte des ordinateurs avant l'installation du client.  
 
@@ -57,7 +57,7 @@ Vous pouvez utiliser différentes méthodes pour mettre à niveau le logiciel cl
 
 - Prend en charge les propriétés de ligne de commande de CCMSetup.  
 
-  **Inconvénients**  
+#### <a name="disadvantages"></a>Inconvénients  
 
 - Peut occasionner un trafic réseau intense si vous effectuez la mise à niveau d’un grand nombre de clients sur une courte période.  
 
@@ -68,7 +68,7 @@ Vous pouvez utiliser différentes méthodes pour mettre à niveau le logiciel cl
 ## <a name="manual-installation"></a>Installation manuelle  
  **Plateforme cliente prise en charge** : Windows, UNIX/Linux, Mac OS X  
 
- **Avantages**  
+#### <a name="advantages"></a>Avantages  
 
 - N’exige pas la découverte des ordinateurs préalablement à la mise à niveau du client.  
 
@@ -76,7 +76,7 @@ Vous pouvez utiliser différentes méthodes pour mettre à niveau le logiciel cl
 
 - Prend en charge les propriétés de ligne de commande de CCMSetup.  
 
-  **Inconvénients**  
+#### <a name="disadvantages"></a>Inconvénients  
 
 - Aucune automatisation, peut prendre du temps.  
 
@@ -94,11 +94,11 @@ Vous pouvez utiliser différentes méthodes pour mettre à niveau le logiciel cl
 > [!NOTE]  
 >  Vous ne pouvez pas mettre à niveau des clients Configuration Manager 2007 avec cette méthode. Dans ces circonstances, vous pouvez déployer le client Configuration Manager comme un package à partir du site Configuration Manager 2007 ou vous pouvez utiliser la mise à niveau automatique du client, qui crée et déploie automatiquement un package contenant la dernière version du client.  
 
- **Avantages**  
+#### <a name="advantages"></a>Avantages  
 
 - Prend en charge les propriétés de ligne de commande de CCMSetup.  
 
-  **Inconvénients**  
+#### <a name="disadvantages"></a>Inconvénients  
 
 - Peut occasionner un trafic réseau intense si vous distribuez le client vers des regroupements volumineux.  
 
@@ -113,17 +113,19 @@ Vous pouvez utiliser différentes méthodes pour mettre à niveau le logiciel cl
 
  **Plateforme cliente prise en charge** : Windows  
 
- **Avantages**  
+#### <a name="advantages"></a>Avantages  
 
+- En raison de la randomisation sur la période spécifiée, seule la mise à niveau automatique est adaptée aux mises à niveau clientes à grande échelle. Les autres méthodes sont soit trop lentes à grande échelle, ou ne disposent pas de la randomisation. 
+
+    > [!Note]
+    > Le pilotage du client n’est pas adapté à grande échelle car il n’effectue aucune randomisation.  
 - Peut être utilisée pour que les clients du site disposent automatiquement de la dernière version.  
 
 - Nécessite une administration minimale.  
 
-  **Inconvénients**  
+#### <a name="disadvantages"></a>Inconvénients  
 
 - Ne peut être utilisée que pour mettre le logiciel client à niveau et ne peut pas être utilisée pour installer un nouveau client.  
-
-- N'est pas compatible avec la mise à niveau simultanée de plusieurs clients.  
 
 - S'applique à tous les clients de la hiérarchie affectés à un site. Ne peut pas être étendue par regroupement.  
 
@@ -134,13 +136,13 @@ Vous pouvez utiliser différentes méthodes pour mettre à niveau le logiciel cl
 ## <a name="client-testing"></a>Test du client  
  **Plateforme cliente prise en charge** : Windows  
 
- **Avantages**  
+#### <a name="advantages"></a>Avantages  
 
 - Permet de tester les nouvelles versions du client dans un regroupement de préproduction plus petit.  
 
 - Une fois le test terminé, les clients en préproduction sont promus en production et automatiquement mis à niveau à l’échelle du site Configuration Manager.  
 
-  **Inconvénients**  
+#### <a name="disadvantages"></a>Inconvénients  
 
 - Ne peut être utilisée que pour mettre le logiciel client à niveau et ne peut pas être utilisée pour installer un nouveau client.  
 

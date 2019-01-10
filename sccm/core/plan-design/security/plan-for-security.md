@@ -10,12 +10,12 @@ ms.assetid: 2a216814-ca8c-4d2e-bcef-dc00966a3c9f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 88fa98de0f9f0a113adeef3a30536628706484ab
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 5f7cb374859d2605021a3f1ec98d6a6b6081bfc4
+ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53424678"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817900"
 ---
 # <a name="plan-for-security-in-configuration-manager"></a>Planifier la sécurité dans Configuration Manager
 
@@ -109,7 +109,7 @@ Quand vous utilisez des certificats PKI avec Configuration Manager, planifiez l�
 
 IIS vérifie toujours la liste de révocation des certificats pour les certificats clients. Cette configuration n’est pas modifiable dans Configuration Manager. Par défaut, les clients Configuration Manager vérifient toujours la liste de révocation des certificats pour les systèmes de site. Désactivez ce paramètre en spécifiant une propriété de site et une propriété CCMSetup.  
 
-Les ordinateurs qui utilisent la vérification de la révocation des certificats, mais qui ne parviennent pas à localiser la liste de révocation des certificats, se comportent comme si tous les certificats de la chaîne de certification étaient révoqués. La raison de ce comportement est qu’ils ne peuvent pas vérifier si les certificats sont dans la liste. Dans ce scénario, toutes les connexions nécessitant des certificats et utilisant une liste de révocation des certificats échouent.  
+Les ordinateurs qui utilisent la vérification de la révocation des certificats, mais qui ne parviennent pas à localiser la liste de révocation des certificats, se comportent comme si tous les certificats de la chaîne de certification étaient révoqués. Ce comportement est dû au fait qu’ils ne peut pas vérifier si les certificats sont dans la liste de révocation des certificats. Dans ce scénario, toutes les connexions nécessitant des certificats et incluant la vérification de la liste de révocation de certificats échouent. Lorsque vous validez que votre liste de révocation de certificats est accessible via son emplacement http, il est important de noter que le client Configuration Manager s’exécute en tant que SYSTÈME LOCAL. Par conséquent, le test d’accessibilité de la liste de révocation de certificats avec un navigateur web s’exécutant sous le contexte l’utilisateur peut réussir, cependant le compte ordinateur peut être bloqué lorsque vous tentez d’établir une connexion http à la même URL CRL en raison de la solution de filtrage web interne. La mise sur liste verte de l’URL CRL dans les solutions de filtrage web peut être nécessaire dans ce cas.
 
 La vérification de la liste de révocation des certificats chaque fois qu’un certificat est utilisé offre plus de sécurité que l’utilisation d’un certificat qui est révoqué, même si cela introduit un délai de connexion et un traitement supplémentaire sur le client. Votre organisation peut exiger cette vérification de sécurité supplémentaire pour les clients sur Internet ou sur un réseau non approuvé.  
 

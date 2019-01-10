@@ -10,12 +10,12 @@ ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5e62983f76b0f2a4277edfab08d4321da5d4a258
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 9d3cd85d4c0bd3a996bd6ec18fc24a02423fab62
+ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53416484"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53818053"
 ---
 # <a name="task-sequence-steps-in-configuration-manager"></a>Étapes de séquence de tâches dans Configuration Manager
 
@@ -235,7 +235,14 @@ ms.locfileid: "53416484"
  Installe une image du système d’exploitation que vous avez capturée. Cliquez sur **Parcourir** pour ouvrir la boîte de dialogue **Sélectionner un package**. Sélectionnez ensuite le package d’images existant à installer. Si plusieurs images sont associées au **Package d’images** spécifié, utilisez la liste déroulante pour spécifier l’image associée à utiliser pour ce déploiement. Vous pouvez afficher des informations de base sur chaque image existante en cliquant dessus.  
 
 #### <a name="apply-operating-system-image-from-an-original-installation-source"></a>Appliquer le système d'exploitation à partir d'une source d'installation d'origine
- Installe un système d’exploitation à l’aide d’un package de mise à niveau du système d’exploitation, qui est également une source d’installation d’origine. Cliquez sur **Parcourir** pour ouvrir la boîte de dialogue **Sélectionnez un package d’installation de système d’exploitation**. Sélectionnez ensuite le package de mise à niveau du système d’exploitation existant à utiliser. Vous pouvez afficher des informations de base sur chaque source d’image existante en cliquant dessus. Les propriétés de la source d'image associée s'affichent dans le volet des résultats dans la partie inférieure de la boîte de dialogue. Si plusieurs éditions sont associées au package spécifié, utilisez la liste déroulante pour sélectionner **l’Édition** à utiliser.  
+ Installe un système d’exploitation à l’aide d’un package de mise à niveau du système d’exploitation, qui est également une source d’installation d’origine. Cliquez sur **Parcourir** pour ouvrir la boîte de dialogue **Sélectionnez un package de mise à niveau du système d’exploitation**. Sélectionnez ensuite le package de mise à niveau du système d’exploitation existant à utiliser. Vous pouvez afficher des informations de base sur chaque source d’image existante en cliquant dessus. Les propriétés de la source d'image associée s'affichent dans le volet des résultats dans la partie inférieure de la boîte de dialogue. Si plusieurs éditions sont associées au package spécifié, utilisez la liste déroulante pour sélectionner **l’Édition** à utiliser.  
+
+>[!NOTE]
+>Les **packages de mise à niveau du système d’exploitation** s’adressent principalement à une utilisation avec les mises à niveau sur place et pas pour les nouvelles installations de Windows. Lors du déploiement de nouvelles installations de Windows, utilisez l’option **Appliquer le système d'exploitation à partir d'une image capturée** et **install.wim** à partir des fichiers source d’installation.
+>
+>Le déploiement de nouvelles installations de Windows via des **packages de mise à niveau du système d’exploitation** est toujours pris en charge, mais il nécessite des pilotes compatibles avec cette méthode. Lorsque vous installez Windows à partir de **packages de mise à niveau du système d’exploitation**, les pilotes sont installés dans Windows PE au lieu d’être simplement injectés dans Windows PE. Certains pilotes ne peuvent pas être installés dans Windows PE.
+>
+>Si les pilotes ne peuvent pas être installés dans Windows PE, empaquetez **install.wim** à partir des fichiers source d’installation d’origine sous forme **d’image du système d’exploitation**. Puis, déployez via l’option **Appliquer le système d'exploitation à partir d'une image capturée** à la place.
 
 #### <a name="use-an-unattended-or-sysprep-answer-file-for-a-custom-installation"></a>Utiliser un fichier de réponse Sysprep ou autonome pour une installation personnalisée
  Utilisez cette option pour fournir un fichier de réponses d'installation Windows (**unattend.xml**, **unattend.txt**ou **sysprep.inf**) selon la version du système d'exploitation et la méthode d'installation. Le fichier que vous spécifiez peut inclure toutes les options de configuration standard prises en charge par les fichiers de réponse. Par exemple, vous pouvez l'utiliser pour spécifier la page d'accueil par défaut d'Internet Explorer. Spécifiez le package qui contient le fichier de réponses et le chemin associé au fichier dans le package.  
@@ -977,7 +984,7 @@ ms.locfileid: "53416484"
 
  Pour installer trois packages logiciels, vous indiqueriez les variables suivantes :  
 
- |Nom de la variable :|Valeur de la variable|  
+ |Nom de la variable :|Valeur de la variable|  
  |-------------------|--------------------|  
  |AA001|CEN00054:Install|  
  |AA002|CEN00107:Install Silent|  

@@ -2,7 +2,7 @@
 title: Préversion UUP
 titleSuffix: Configuration Manager
 description: Instructions pour la préversion d’intégration UUP
-ms.date: 12/21/2018
+ms.date: 01/04/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: noindex,nofollow
-ms.openlocfilehash: d2aac5945d4b7678acf78d215c557a34aaef9c72
-ms.sourcegitcommit: f5fa9e657350ceb963a7928497d2adca9caef3d4
+ms.openlocfilehash: cfc83f4d076a05ea1847c0d073bd824ad10aa731
+ms.sourcegitcommit: 1bf26b83fa7da637d299a21e1d3bc61f2d7d8c10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53748559"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54060380"
 ---
 # <a name="uup-private-preview-instructions"></a>Instructions de préversion privée UUP
 
@@ -27,13 +27,16 @@ ms.locfileid: "53748559"
 
 ### <a name="feature-updates"></a>Mises à jour des fonctionnalités
 
-Les mises à jour des fonctionnalités avec UUP sont conçues pour corriger plusieurs problèmes pour lesquels les clients demandent actuellement une maintenance. Essayez les mises à jour des fonctionnalités UUP, notamment :
+Les mises à jour des fonctionnalités avec Windows 10 Unified Update Platform (UUP) sont conçues pour corriger plusieurs problèmes pour lesquels les clients demandent actuellement une maintenance. Essayez les mises à jour des fonctionnalités UUP, notamment :
 
 - Mise à niveau directe vers le dernier niveau de conformité de sécurité. Vous n’avez plus besoin d’installer les mises à jour de sécurité immédiatement après la mise à niveau pour garantir la conformité. Chaque mois, une nouvelle mise à jour des fonctionnalités sera publiée pour inclure dernière mise à jour de sécurité cumulative. Vous n’aurez pas besoin de télécharger à nouveau ou de distribuer la majorité du contenu de mise à jour des fonctionnalités chaque mois, uniquement le composant de mise à jour de sécurité, qui est également partagé avec la mise à jour cumulative.
 
-- Tous les FOD et modules linguistiques doivent être conservés et ne sont pas perdus pendant le processus de mise à niveau.
+- L’ensemble des fonctionnalités à la demande (FOD) et des modules linguistiques doivent être conservés et ne sont pas perdus pendant le processus de mise à niveau.
 
 - Les mises à jour des fonctionnalités avec UUP prennent en charge les fichiers d’installation rapide, permettant ainsi aux clients de réduire la quantité de contenu que chaque client doit télécharger.
+
+Pour plus d’informations sur UUP, consultez le billet de blog Windows [Une mise à jour sur notre Unified Update Platform (UUP)](https://blogs.windows.com/windowsexperience/2017/03/02/an-update-on-our-unified-update-platform-uup/).
+
 
 ### <a name="cumulative-updates"></a>Mises à jour cumulatives
 
@@ -55,42 +58,33 @@ $config = $server.GetConfiguration()
 $config.ServerId
 ```
 
-### <a name="2-upgrade-configmgr-to-a-supported-version"></a>2. Mettre à niveau ConfigMgr vers une version prise en charge
+### <a name="2-update-configmgr-to-a-supported-version"></a>2. Mettre à jour ConfigMgr vers une version prise en charge
 
-Si vous synchronisez des fichiers d’installation rapide dans votre environnement, ConfigMgr 1810 (builds TAP, anneau Rapide ou GA acceptables) est requis pour les environnements de production, ou 1812 Technical Preview pour les environnements Technical Preview.
+Si vous synchronisez des fichiers d’installation rapide dans votre environnement, alors ConfigMgr 1810 Current Branch est requis pour les environnements de production, ou 1812 Technical Preview Branch pour les environnements de laboratoire.
 
-Si vous ne synchronisez pas des fichiers d’installation rapide dans votre environnement, le correctif logiciel ConfigMgr 1810 UUP au-dessus de 1810 GA est requis pour les environnements de production, ou 1812 Technical Preview pour les environnements Technical Preview.
+Si vous ne synchronisez pas des fichiers d’installation rapide dans votre environnement, alors le correctif ConfigMgr 1810 KB4482615 est également requis pour les environnements de production, ou 1812 Technical Preview Branch pour les environnements de laboratoire.
 
 
-#### <a name="configmgr-1810-uup-hotfix-kb4482615-from-1810-ga-slow-ring"></a>Correctif logiciel ConfigMgr 1810 (KB4482615) à partir de 1810 GA (anneau Lent)
-Si vous utilisez actuellement ConfigMgr 1810 GA (anneau Lent), vous devez mettre à niveau ConfigMgr vers le correctif cumulatif UUP.
+#### <a name="configmgr-1810-uup-hotfix-kb4482615"></a>Correctif logiciel ConfigMgr 1810 (KB4482615)
 
-1. Appliquez la GUI du package « Correctif logiciel Configuration Manager 1810 (KB4482615) » (86450B7D-3574-4CF7-8B11-486A2C1F62A6) : ce correctif logiciel activera UUP pour les scénarios non express.  
+> [!Important]  
+> La procédure suivante concerne les sites Current Branch mise à jour vers la version 1810 lors de sa mise à disposition générale après le 19 décembre 2018.
+>
+> Si vous avez choisi la mise à jour 1810 en exécutant un script PowerShell fin novembre ou début décembre 2018, ce correctif logiciel n’est pas encore disponible. 
 
-    1. Télécharger le correctif logiciel Microsoft Download Center (le lien sera fourni une fois publié)  
 
-    2. Après avoir téléchargé ce correctif logiciel, consultez la page web Microsoft Docs suivante pour obtenir des instructions d’installation : [Utiliser l’outil Inscription de la mise à jour pour importer des correctifs logiciels](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes)  
+1. Mettre à jour le site
 
-    3. Pour obtenir des informations sur le télécharge des fichiers de support Microsoft, cliquez sur le numéro d’article suivant pour afficher l’article de la Base de connaissances Microsoft : [Comment obtenir des fichiers de support Microsoft à partir de services en ligne](https://support.microsoft.com/help/119591/how-to-obtain-microsoft-support-files-from-online-services)  
+    1. Téléchargez le correctif logiciel KB4482615 à partir du [Centre de téléchargement Microsoft]<!--(https://download.microsoft.com/download/0/9/0/09081E12-A2CF-40B6-82D8-9B8914A1C2D3/KB4482615/CM1810-KB4482615.ConfigMgr.Update.exe)-->. Ce correctif permet d’activer UUP pour les scénarios non rapides.  
 
-2. Une fois la mise à niveau vers le correctif logiciel UUP effectuée, mettez à niveau vos clients ConfigMgr pour faire correspondre. Tous les clients sur lesquels vous ciblez des mises à jour UUP doivent être mis à niveau pour éviter **un téléchargement inutile d’environ 6 Go** de contenu inutilisé sur le client.
+    2. [Importer des correctifs logiciels avec l’outil Inscription de la mise à jour](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes)  
 
-#### <a name="configmgr-1810-uup-hotfix-kb4482615-from-1810-fast-ring"></a>Correctif logiciel ConfigMgr 1810 (KB4482615) à partir de 1810 anneau Rapide
-Si vous utilisez actuellement ConfigMgr 1810 anneau Rapide, vous devrez alors mettre à niveau ConfigMgr avec deux mises à jour de maintenance mais retarder le déploiement des mises à niveau du client jusqu’à ce que vous ayez effectué les deux pour n’avoir à mettre à niveau les clients qu’une seule fois.
+2. Mettre à jour des clients.  
 
-1. Un correctif de regroupement avec 1810 GA sera bientôt mis à votre disposition (début janvier). Différez jusqu’à ce que vous voyiez la mise à jour apparaître dans les mises à jour et la maintenance.  
+    - Pour simplifier ce processus, envisagez d’utiliser la mise à niveau automatique des clients. Pour plus d’informations, consultez [Mettre à niveau les clients](/sccm/core/clients/manage/upgrade/upgrade-clients#automatic-client-upgrade).  
 
-2. Mise à niveau (serveurs de site uniquement, pas les clients) vers « Correctif logiciel Configuration Manager 1810 (KB4479288) » (GUID de package 930FA45E-530F-4B08-B1BF-DE3F5267B03C)  
+    - Tous les clients sur lesquels vous ciblez des mises à jour UUP doivent être mis à niveau pour éviter **un téléchargement inutile d’environ 6 Go** de contenu inutilisé sur le client.
 
-3. Mettez à nouveau à niveau vers « Correctif logiciel Configuration Manager 1810 (KB4482615) » (GUID de package 86450B7D-3574-4CF7-8B11-486A2C1F62A6) : ce correctif logiciel activera UUP pour les scénarios non express.  
-
-    1. Télécharger le correctif logiciel Microsoft Download Center (le lien sera fourni une fois publié)  
-
-    2. Après avoir téléchargé ce correctif logiciel, consultez la page web Microsoft Docs suivante pour obtenir des instructions d’installation : [Utiliser l’outil Inscription de la mise à jour pour importer des correctifs logiciels](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes)  
-
-    3. Pour obtenir des informations sur le télécharge des fichiers de support Microsoft, cliquez sur le numéro d’article suivant pour afficher l’article de la Base de connaissances Microsoft : [Comment obtenir des fichiers de support Microsoft à partir de services en ligne](https://support.microsoft.com/help/119591/how-to-obtain-microsoft-support-files-from-online-services)  
-
-4. Une fois la mise à niveau vers le correctif logiciel UUP effectuée, mettez à niveau vos clients ConfigMgr pour faire correspondre. Tous les clients sur lesquels vous ciblez des mises à jour UUP doivent être mis à niveau pour éviter **un téléchargement inutile d’environ 6 Go** de contenu inutilisé sur le client.
 
 #### <a name="1812-technical-preview"></a>1812 Technical Preview 1812
 1812 Technical Preview est équivalente dans les scénarios UUP pris en charge pour le correctif logiciel ConfigMgr 1810 UUP (KB4482615).
@@ -127,7 +121,7 @@ Pour le contenu non express, un correctif supplémentaire doit être appliqué. 
 
 ### <a name="4-enable-express-installation-on-clients-in-client-settings"></a>4. Activer l’installation express sur les clients dans les paramètres du client
 
-Le paramètre du client pour activer l’installation express doit être défini pour les mises à jour UUP, que le contenu express soit synchronisé ou non. Ce paramètre configure ConfigMgr pour laisser le soin à WUA de déterminer le contenu nécessaire pour télécharger sur les clients, plutôt que ConfigMgr télécharge tout le contenu associé à la mise à jour UUP. Ce paramètre est requis même pour les scénarios non express en raison du contenu FOD et de module linguistique facultatif, ce qui entraîne une quantité non significative de données supplémentaire non requises par tous les clients associés à la mise à jour.
+Le paramètre du client pour activer l’installation express doit être défini pour les mises à jour UUP, que le contenu express soit synchronisé ou non. Ce paramètre configure ConfigMgr pour laisser le soin à Windows Update Agent (WUA) de déterminer le contenu nécessaire pour télécharger sur les clients, plutôt que ConfigMgr télécharge tout le contenu associé à la mise à jour UUP. Ce paramètre est requis même pour les scénarios non express en raison du contenu FOD et de module linguistique facultatif, ce qui entraîne une quantité non significative de données supplémentaire non requises par tous les clients associés à la mise à jour.
 
 L’activation de ce paramètre n’affecte pas les téléchargements de contenu de serveur, uniquement les comportements de téléchargement du client. Il est important que vous disposiez des versions de client ConfigMgr et Windows ci-dessus avant d’activer ce paramètre si vous ne l’avez pas déjà activé, car ces versions résolvent certains problèmes de compatibilité grâce à l’approbation des mises à jour directement dans WSUS et configurent ConfigMgr pour utiliser ce canal pour les mises à jour UUP même si le contenu express n’est pas synchronisé.
 
@@ -144,7 +138,7 @@ Pour activer l’installation express sur les clients :
 
 ### <a name="5-make-sure-your-adrs-are-set-as-desired"></a>5. Assurez-vous que vos ADR sont définies comme vous le souhaitez 
 
-Avant d’activer la synchronisation des mises à jour UUP, évaluez vos ADR et toute autre infrastructure de mise à jour appliquée. Si vous ne souhaitez pas que ces mises à jour soient automatiquement déployées dans le cadre de vos ADR et plans de maintenance existants, veillez à mettre à jour vos ADR pour les filtrer. Consultez [Comment rechercher des mises à jour UUP synchronisées](#how-to-find-synced-uup-updates). Par défaut, les plans de maintenance existants déploient des mises à jour non UUP uniquement, mais vous pouvez les mettre à jour pour modifier ce comportement.
+Avant d’activer la synchronisation des mises à jour UUP, évaluez vos règles de déploiement automatique (ADR) et toute autre infrastructure de mise à jour appliquée. Si vous ne souhaitez pas que ces mises à jour soient automatiquement déployées dans le cadre de vos ADR et plans de maintenance existants, veillez à mettre à jour vos ADR pour les filtrer. Consultez [Comment rechercher des mises à jour UUP synchronisées](#how-to-find-synced-uup-updates). Par défaut, les plans de maintenance existants déploient des mises à jour non UUP uniquement, mais vous pouvez les mettre à jour pour modifier ce comportement.
 
 Évaluez également si ces mises à jour affecteront vos rapports de conformité ou toute autre infrastructure simplement en les synchronisant, et apportez les modifications souhaitées à l’avance. Par exemple, si vous mesurez la conformité sur tous les produits, vous verrez maintenant la mise à jour Windows 10 cumulative UUP et non UUP comme non conforme ou conforme, faussant ainsi vos résultats.
 
@@ -160,7 +154,7 @@ Lorsque vous êtes prêt à commencer la synchronisation des mises à jour UUP, 
 
 2. Dans la console Configuration Manager, accédez à **Administration** \ **Configuration de site** \ **Sites**  
 
-3. Sélectionnez votre site de niveau supérieur (CAS ou autonome principal)  
+3. Sélectionnez votre site de niveau supérieur, qui est soit un site d'administration centrale (CAS), soit un site principal autonome  
 
 4. Ouvrez **Configurer les composants de site** \ **Point de mise à jour logicielle**  
 
@@ -243,7 +237,7 @@ Pour la préversion, testez avec ce que vous utilisez dans vos environnements d�
 - Optimisation de la distribution de Windows
 - Cache entre pairs Configuration Manager
 - Windows BranchCache
-- Déployer sans téléchargement sur le serveur (aucun package de déploiement) pour télécharger directement à partir de MU pour lequel, si vous l’utilisez, nous recommandons d’utiliser DO avec
+- Déployer sans téléchargement sur le serveur (aucun package de déploiement) pour télécharger directement à partir de Microsoft Update pour lequel, si vous l’utilisez, nous recommandons d’utiliser l’optimisation de la distribution avec
 - Autres fournisseurs de contenu tiers
 
 Pour plus d’informations, consultez [Optimiser la distribution de Windows Update pour Windows 10](/sccm/sum/deploy-use/optimize-windows-10-update-delivery).

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: 8f743514af8b89212b10073c07b24990ffedcb1a
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 0ad348c47ff7e97d8d9b3bfba91bd8a0c0ae48ff
+ms.sourcegitcommit: 32a257fafbb29aece8b4f435dd5614fcef305328
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53420394"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "54005413"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Configurer la passerelle de gestion cloud pour Configuration Manager
 
@@ -41,6 +41,8 @@ Utilisez la liste de vérification suivante pour vous assurer que vous disposez 
 - À compter de la version 1802, sélectionnez le **déploiement Azure Resource Manager**. Pour plus d’informations, consultez [Azure Resource Manager](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager). Vous devez respecter les exigences suivantes pour un déploiement Azure Resource Manager de la passerelle de gestion cloud :  
 
     - Intégration à [Azure AD](/sccm/core/servers/deploy/configure/azure-services-wizard) pour la **gestion cloud**. La découverte des utilisateurs Azure AD n’est pas nécessaire.  
+    
+    - Le fournisseur de ressources **Microsoft.ClassicCompute** doit être enregistré dans l’abonnement Azure. Pour plus d’informations, consultez [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-supported-services).
 
     - Un administrateur de l’abonnement doit se connecter.  
 
@@ -54,6 +56,8 @@ Utilisez la liste de vérification suivante pour vous assurer que vous disposez 
     - Certificat de gestion Azure  
 
 - Un nom global unique pour le service. Ce nom provient du [ certificat d’authentification serveur de la passerelle de gestion cloud](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#cmg-server-authentication-certificate).  
+
+- En cas d’activation de la passerelle de gestion cloud en tant que Point de distribution cloud, le nom de service général unique de la passerelle de gestion cloud choisi doit également être disponible en tant que nom de compte de stockage général unique. Ce nom provient du [ certificat d’authentification serveur de la passerelle de gestion cloud](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#cmg-server-authentication-certificate).
 
 - La région Azure pour le déploiement de cette passerelle de gestion cloud.  
 
@@ -91,7 +95,7 @@ Effectuez cette procédure sur le site de plus haut niveau. Ce site est soit un 
 7. Sélectionnez la liste déroulante **Région** pour choisir la région Azure pour cette passerelle de gestion cloud.  
 
 8. Dans la version 1802 et si vous utilisez un déploiement Azure Resource Manager, sélectionnez une option**Groupe de ressources**. 
-   1. Si vous choisissez **Utiliser le fichier existant**, sélectionnez un groupe de ressources existant dans la liste déroulante.
+   1. Si vous choisissez **Utiliser le fichier existant**, sélectionnez un groupe de ressources existant dans la liste déroulante. Le groupe de ressources sélectionné doit déjà exister dans la région que vous avez sélectionnée à l’étape 7. Si vous sélectionnez un groupe de ressources existant et qu’il se trouve dans une région différente de celle de la région sélectionnée précédemment, le provisionnement de la passerelle de gestion cloud échoue.
    2. Si vous choisissez **Créer**, entrez le nom du nouveau groupe de ressources.
 
 9. Dans le champ **Instance de machine virtuelle**, entrez le nombre de machines virtuelles pour ce service. La valeur par défaut est 1, mais vous pouvez définir jusqu’à 16 machines virtuelles par passerelle de gestion cloud.  
