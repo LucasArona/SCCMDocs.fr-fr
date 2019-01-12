@@ -2,7 +2,7 @@
 title: Nouveautés de la gestion MDM hybride
 titleSuffix: Configuration Manager
 description: Découvrez les nouvelles fonctionnalités de gestion des appareils mobiles disponibles pour les déploiements hybrides avec Configuration Manager et Intune.
-ms.date: 12/14/2018
+ms.date: 01/10/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7cf1adf7d73e60fba0d748022ab7c241d60ffed7
-ms.sourcegitcommit: c60e057075a83f07d1ca2577c3de1c7d7c8e9cec
+ms.openlocfilehash: 610dfb7391347663fd92c0839d20eb7a4a703438
+ms.sourcegitcommit: c80abe7e4b7b2f80e957e45ff205f67d1b715688
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626495"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226221"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Nouveautés de la gestion hybride des appareils mobiles avec Configuration Manager et Microsoft Intune
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Cet article fournit des informations sur les nouvelles fonctionnalités de gestion des appareils mobiles disponibles pour les déploiements hybrides avec System Center Configuration Manager et Microsoft Intune.     
 
@@ -44,6 +44,33 @@ Chaque section de cet article répertorie les fonctionnalités hybrides sous tro
 |**Nouveautés de Microsoft Intune** | En règle générale, toutes les fonctionnalités listées dans cette catégorie fonctionnent avec chacune des versions de Configuration Manager. Sont notamment comprises les versions de System Center 2012 R2 Configuration Manager, dans la mesure où ces fonctionnalités ont seulement besoin du service Intune, sans aucune fonctionnalité supplémentaire dans Configuration Manager.|
 |**Nouveautés de Configuration Manager Technical Preview**| Toutes les fonctionnalités répertoriées dans cette catégorie fonctionnent uniquement avec la branche Technical Preview spécifiée. Pour tester ces fonctionnalités, vous devez installer la version Technical Preview spécifiée dans la description de la fonctionnalité. Pour plus d’informations, consultez [Technical Preview pour Configuration Manager](/sccm/core/get-started/technical-preview).|
 |**Nouveautés de Configuration Manager (Current Branch)**| Toutes les fonctionnalités répertoriées dans cette catégorie fonctionnent uniquement avec la version spécifiée de Configuration Manager (Current Branch). Si vous utilisez une version antérieure de Configuration Manager pour votre déploiement hybride, effectuez la mise à niveau vers la version de Configuration Manager (Current Branch) spécifiée dans la description de la fonctionnalité. Pour plus d’informations, consultez [Mettre à niveau vers Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager).|
+
+
+
+## <a name="january-2019"></a>Janvier 2019
+
+### <a name="new-in-microsoft-intune"></a>Nouveautés de Microsoft Intune
+
+#### <a name="tenant-status-dashboard"></a>Tableau de bord statut du client
+<!--1124854--> La nouvelle [page d’état du client](https://docs.microsoft.com/intune/tenant-status) fournit un emplacement unique où vous pouvez afficher un état et les détails connexes pour votre client. Le tableau de bord est divisé en quatre domaines :
+
+- **Détails des locataires**: Affiche des informations qui incluent votre nom de client et l’emplacement, votre autorité MDM, le total inscrits dans votre client et votre licence est comptabilisé. Cette section répertorie également la version actuelle du service pour votre client.  
+
+- **État du connecteur**: Affiche des informations sur les connecteurs disponibles, vous avez configuré et que vous pouvez également répertorier ceux dont vous n’avez pas encore activé.  
+
+    Selon l’état actuel de chaque connecteur, elles sont marquées comme intègre, avertissement ou défectueux. Sélectionnez un connecteur pour extraire et afficher les détails ou configurer des données supplémentaires.  
+
+- **Contrôle d’intégrité du Service Intune**: Affiche des détails sur les incidents actifs ou de pannes pour votre client. Les informations contenues dans cette section sera récupérés directement sur le centre de messages Office.  
+
+- **Actualités de Intune**: Affiche des messages actifs pour votre client. Les messages incluent les éléments tels que des notifications lorsque votre client reçoit les dernières fonctionnalités d’Intune.  Les informations contenues dans cette section sera récupérés directement sur le centre de messages Office.  
+
+#### <a name="new-help-and-support-experience-in-company-portal-for-windows-10"></a>Nouvelle aide et prise en charge de l’expérience dans le portail d’entreprise pour Windows 10 
+<!--1488939--> La nouvelle page de Support et d’aide du portail entreprise permet aux utilisateurs de résoudre les problèmes et demander de l’aide pour les problèmes d’application et des accès. À partir de la nouvelle page, ils peuvent envoyer par courrier électronique à l’erreur et les détails du journal de diagnostic et d’informations du support technique de leur organisation. Ils y trouverez également une section de FAQ avec des liens vers la documentation Intune. Pour plus d’informations et des captures d’écran, consultez [obtenir de l’aide et de prendre en charge dans le portail d’entreprise pour Windows 10](https://docs.microsoft.com/intune-user-help/help-and-support-windows-cpapp).
+
+#### <a name="some-bitlocker-settings-support-windows-10-pro-edition"></a>Certains paramètres de BitLocker prend en charge Windows 10 Édition professionnelle
+<!--2727036--> Vous pouvez créer un élément de configuration qui définit les paramètres de protection de point de terminaison sur les appareils Windows 10, y compris de BitLocker. Cette mise à jour ajoute la prise en charge pour Windows 10 Édition professionnelle pour certains paramètres de BitLocker.
+
+Pour plus d’informations, consultez [paramètres de chiffrement pour Windows 10](/sccm/mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client#encryption).
 
 
 
@@ -408,8 +435,8 @@ Demandez aux utilisateurs finaux sur Windows 10 versions 1607 ou ultérieures d�
 
 - **Nouveaux paramètres de stratégie de gestion des applications mobiles**     
   Les paramètres suivants ont été ajoutés aux paramètres de stratégie de gestion des applications mobiles :
-  - **Désactiver la synchronisation des contacts**: Empêche l’application d’enregistrer des données à l’application Contacts native sur l’appareil.
-  - **Désactiver l’impression**: Empêche l’application d’impression des données scolaires ou.
+  - **Désactiver la synchronisation des contacts**: Empêche l’application d’enregistrer des données sur l’application Contacts native de l’appareil.
+  - **Désactiver l’impression**: Empêche l’application d’imprimer des données scolaires ou de travail.
   <!-- 1324760 -->    
 
   Consultez [Protéger les applications à l’aide des stratégies de protection des applications de Configuration Manager](/sccm/mdm/deploy-use/protect-apps-using-mam-policies) pour essayer de nouveaux paramètres de stratégie de protection d’application.
