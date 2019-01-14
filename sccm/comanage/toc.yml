@@ -1,0 +1,56 @@
+items:
+- name: Cogestion
+  items:
+  - name: Qu’est-ce que la cogestion ?
+    href: overview.md
+  - name: Démarrages rapides
+    href: quickstarts.md
+    items:
+    - name: Valeur immédiate
+      items:
+      - name: Accès conditionnel
+        href: quickstart-conditional-access.md
+      - name: Actions à distance à partir d’Intune
+        href: quickstart-remote-actions.md
+      - name: Intégrité du client
+        href: quickstart-client-health.md
+      - name: Azure AD hybride
+        href: quickstart-hybrid-aad.md
+      - name: Windows Autopilot
+        href: quickstart-autopilot.md
+    - name: Prise en main
+      items:
+      - name: Chemins vers la cogestion
+        href: quickstart-paths.md
+      - name: Configurer Azure AD hybride
+        href: quickstart-setup-hybrid-aad.md
+      - name: Mettre à niveau vers Windows 10
+        href: quickstart-upgrade-win10.md
+      - name: Migrer à partir de MDM hybride
+        href: quickstart-migrate-hybrid-mdm.md
+      - name: Obtenir l’aide de FastTrack
+        href: quickstart-fasttrack.md
+  - name: Didacticiels
+    items:
+    - name: Activer la cogestion pour les clients Configuration Manager
+      href: tutorial-co-manage-clients.md
+  - name: Concepts
+    items:
+    - name: Charges de travail
+      href: workloads.md
+  - name: Guides pratiques
+    items:
+    - name: Activer la cogestion
+      href: how-to-enable.md
+    - name: Préparer les appareils basés sur Internet
+      href: how-to-prepare-Win10.md
+    - name: Basculer les charges de travail vers Intune
+      href: how-to-switch-workloads.md
+    - name: Surveiller la cogestion
+      href: how-to-monitor.md
+ms.openlocfilehash: bd369fa1393d42e70776d644d055b31eee2a208c
+ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54251247"
