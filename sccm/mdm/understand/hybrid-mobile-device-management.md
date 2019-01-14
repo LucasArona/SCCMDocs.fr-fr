@@ -10,16 +10,16 @@ ms.assetid: bb95154b-f63e-4491-896e-41d732c802f8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f3d25120701c12b547727259002fc58a8f8f0780
-ms.sourcegitcommit: 97083c51057e2c4e0fe12c3b1f1b512250874c6a
-ms.translationtype: HT
+ms.openlocfilehash: a84dfc33fe79f5eb4d5397505a12052b8e92aebf
+ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50968133"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54250610"
 ---
 # <a name="hybrid-mdm-with-configuration-manager-and-microsoft-intune"></a>MDM hybride avec Configuration Manager et Microsoft Intune
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 > [!Important]  
 > Depuis le 14 août 2018, la gestion hybride des appareils mobiles est une [fonctionnalité déconseillée](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).
@@ -28,7 +28,7 @@ ms.locfileid: "50968133"
 > 
 > Par conséquent, la plupart des clients choisissent Intune sur Azure de préférence à la gestion MDM hybride. Le nombre de clients qui utilisent la gestion MDM hybride continue de diminuer au fur et à mesure des migrations vers le cloud. C’est pourquoi, le 1er septembre 2019, Microsoft retirera l’offre de service de gestion MDM hybride. Prévoyez une [migration vers Intune sur Azure](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa) pour vos besoins de gestion MDM. 
 > 
-> Cette modification n’affecte ni Configuration Manager sur site ni la [cogestion pour les appareils Windows 10](/sccm/core/clients/manage/co-management-overview). Si vous ne savez pas si vous utilisez la gestion MDM hybride, accédez à l’espace de travail **Administration** de la console Configuration Manager, développez **Services cloud**, puis cliquez sur **Abonnements Microsoft Intune**. Si un abonnement Microsoft Intune est configuré, c’est le signe que votre locataire est configuré pour la gestion MDM hybride.
+> Cette modification n’affecte ni Configuration Manager sur site ni la [cogestion pour les appareils Windows 10](/sccm/comanage/overview). Si vous ne savez pas si vous utilisez la gestion MDM hybride, accédez à l’espace de travail **Administration** de la console Configuration Manager, développez **Services cloud**, puis cliquez sur **Abonnements Microsoft Intune**. Si un abonnement Microsoft Intune est configuré, c’est le signe que votre locataire est configuré pour la gestion MDM hybride.
 > 
 > **Comment cela m’affecte-t-il ?**
 > 
@@ -86,8 +86,8 @@ Pour en savoir plus sur les nouvelles fonctionnalités disponibles pour la gesti
 
 Les appareils peuvent être gérés à l’aide de la gestion hybride s’ils ont été préalablement inscrits auprès du service. Le processus d’inscription des appareils dépend du type et de la propriété de l’appareil, ainsi que du niveau de gestion souhaité.
 
-- **« Apportez votre propre appareil » (BYOD)** : les utilisateurs inscrivent leurs téléphones, tablettes ou PC personnels.  
+- **« Apportez votre propre appareil » (BYOD)**: Les utilisateurs inscrivent leurs téléphones personnels, tablettes ou PC  
 
-- **Appareils détenus par l’entreprise (COD)** : des scénarios de gestion comme la réinitialisation à distance, le partage d’appareils ou l’affinité utilisateur sont appliqués aux appareils.  
+- **Appareil d’entreprise (COD)**: Scénarios de gestion telles que la réinitialisation à distance, les appareils partagés ou affinité utilisateur pour un appareil  
 
 - Si vous utilisez [Exchange ActiveSync](/sccm/mdm/plan-design/device-enrollment-methods#mobile-device-management-with-exchange-activesync-and-configuration-manager) (localement ou hébergé dans le cloud), vous pouvez choisir la gestion Intune simple sans inscription. Vous pouvez également gérer des PC Windows à l’aide du [logiciel client Intune](/intune/deploy-use/manage-windows-pcs-with-microsoft-intune).
