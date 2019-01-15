@@ -10,12 +10,12 @@ ms.assetid: c8534a1e-57b8-4688-b6e6-299d82cfcec9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 329f5c2f227cbd8a51b1c9ccc21810cda9f6a2cf
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 26b6d68f634a230f56a93b6cc1691ce98fa77852
+ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53417131"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54250683"
 ---
 # <a name="configuration-manager-and-windows-as-a-service"></a>Configuration Manager et Windows as a Service
 
@@ -48,7 +48,7 @@ System Center Configuration Manager offre un contrôle total sur les mises à jo
 |[Optimiser la distribution des mises à jour Windows 10](/sccm/sum/deploy-use/optimize-windows-10-update-delivery)|Utilisez Configuration Manager pour gérer le contenu de mise à jour pour rester à jour avec Windows 10.|
 |[Intégrer avec Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics)|Upgrade Readiness vous permet d’évaluer et d’analyser l’état de préparation des appareils de votre environnement en vue d’une mise à niveau vers Windows 10.| 
 |[Intégration de Windows Update pour Entreprise (facultatif)](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10)|Explique comment définir et déployer des stratégies Windows Update pour Entreprise avec Configuration Manager.|
-|[Utiliser la cogestion avec Microsoft Intune et Windows Update pour Entreprise (facultatif)](/sccm/core/clients/manage/co-management-overview)|Fournit une vue d’ensemble de la cogestion.| 
+|[Utiliser la cogestion avec Microsoft Intune et Windows Update pour Entreprise (facultatif)](/sccm/comanage/overview)|Fournit une vue d’ensemble de la cogestion.| 
 
 
 ## <a name="related-articles"></a>Articles connexes

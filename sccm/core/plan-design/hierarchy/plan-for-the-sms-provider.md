@@ -10,16 +10,16 @@ ms.assetid: 5d5d6273-0d8a-43c7-865a-cdb1736dcae3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 024714c564036cd61a6c1340724aa3b9cad782d2
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: d59e5e5bc1dfdf962517b4c364b74aa0df6b650a
+ms.sourcegitcommit: 94bf7d5b5beb9628cc1fdfe75451d33b5de26f8a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456394"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152449"
 ---
 # <a name="plan-for-the-sms-provider"></a>Planifier le fournisseur SMS 
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Pour gérer Configuration Manager, vous devez utiliser une console Configuration Manager qui se connecte à une instance du **fournisseur SMS**. Par défaut, un fournisseur SMS est installé sur le serveur de site durant l’installation d’un site d’administration centrale ou d’un site principal. 
 
@@ -46,7 +46,7 @@ Le fournisseur SMS contribue à l’application de la sécurité de Configuratio
 
 
 
-## <a name="installation-prerequisites"></a>Prérequis de l’installation  
+## <a name="installation-prerequisites"></a>Conditions préalables d'installation  
 
  Pour prendre en charge le fournisseur SMS, le serveur cible doit satisfaire aux prérequis suivants :  
 
@@ -165,11 +165,11 @@ Pour configurer ce paramètre, utilisez les étapes suivantes :
 
 Les niveaux ci-dessous sont disponibles :
 
-- **Authentification Windows** : exige une authentification avec les informations d'identification du domaine Active Directory. Ce paramètre correspond au comportement précédent et constitue le paramètre par défaut actuel. Lorsque vous mettez à jour le site, le niveau d’authentification n’est pas modifié.  
+- **Authentification Windows** : exige une authentification avec les informations d’identification du domaine Active Directory. Ce paramètre correspond au comportement précédent et constitue le paramètre par défaut actuel. Lorsque vous mettez à jour le site, le niveau d’authentification n’est pas modifié.  
 
 - **Authentification par certificat** : exige l’authentification avec un certificat valide émis par une autorité de certification PKI approuvée. Vous ne configurez pas ce certificat dans Configuration Manager. Configuration Manager requiert que l’administrateur soit connecté à Windows à l’aide de PKI.  
 
-- **Authentification Windows Hello Entreprise** : exige une authentification forte à deux facteurs liée à un appareil et utilisant la biométrie ou un code PIN. Vous pouvez utiliser Configuration Manager pour gérer et déployer des stratégies Windows Hello Entreprise. Pour plus d’informations, consultez [Paramètres Windows Hello Entreprise](/sccm/protect/deploy-use/windows-hello-for-business-settings).  
+- **Authentification Windows Hello Entreprise** : exige une authentification forte à deux facteurs liée à un appareil et utilisant la biométrie ou un code PIN. Pour plus d’informations, consultez [Windows Hello Entreprise](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-identity-verification).   
 
 
 ### <a name="exclusions"></a>Exclusions
