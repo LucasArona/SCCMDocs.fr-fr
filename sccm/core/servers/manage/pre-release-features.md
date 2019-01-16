@@ -10,16 +10,16 @@ ms.assetid: 6bce416b-761d-4b23-bd33-5b7c30edb10d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6fb24c3e262f3d1f3991ab549592e3f21631b32d
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 4d892e8d194f61fece977c91ce36ba46cf9dd53d
+ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456126"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54250712"
 ---
 # <a name="pre-release-features-in-configuration-manager"></a>Fonctionnalités en préversion dans Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Les fonctionnalités en préversion sont des fonctions incluses dans l’édition Current Branch à des fins de test préalable dans un environnement de production. Ces fonctionnalités sont entièrement prises en charge, mais sont toujours en cours de développement. Elles peuvent donc être modifiées jusqu’à ce qu’elles quittent la préversion.
 
@@ -77,7 +77,7 @@ Quand vous activez une fonctionnalité en préversion, le Gestionnaire de hiéra
 |------------------|----------------------|-------------------------|
 | API Fournisseur SMS <!--1359052--> | Version 1810 | ![Pas encore](media/red_x.png) |
 | [Système de site HTTP amélioré](/sccm/core/plan-design/hierarchy/enhanced-http) <!--1356889,1358228--> | Version 1806 | Version 1810 |
-| [Applications mobiles pour les appareils cogérés](/sccm/core/clients/manage/co-management-switch-workloads#workloads-able-to-be-transitioned-to-intune) <!--1357892--> | Version 1806 | ![Pas encore](media/red_x.png) |
+| [Applications clientes pour les appareils cogérés](/sccm/comanage/workloads#client-apps) <!--1357892--> | Version 1806 | ![Pas encore](media/red_x.png) |
 | [Package Conversion Manager](/sccm/apps/pcm/package-conversion-manager) <!--1357861--> | Version 1806 | Version 1810 |
 | [Prise en charge de Cisco AnyConnect 4.0.07x et version supérieure pour iOS](/sccm/mdm/deploy-use/create-vpn-profiles)<!--1357393--> | Version 1802 | Version 1802 <br>avec mise à jour 4163547 |
 | [Déploiements par phases](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence) <!--1356837--> | Version 1802 | Version 1806 |

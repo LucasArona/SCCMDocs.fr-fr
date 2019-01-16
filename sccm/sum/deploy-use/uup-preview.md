@@ -2,7 +2,7 @@
 title: Préversion UUP
 titleSuffix: Configuration Manager
 description: Instructions pour la préversion d’intégration UUP
-ms.date: 01/04/2018
+ms.date: 01/14/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: noindex,nofollow
-ms.openlocfilehash: cfc83f4d076a05ea1847c0d073bd824ad10aa731
-ms.sourcegitcommit: 1bf26b83fa7da637d299a21e1d3bc61f2d7d8c10
+ms.openlocfilehash: 17a9abf2f20f53ba69ad160db421be51471cc311
+ms.sourcegitcommit: 27b2594087e8c54062db6b2a30ab843bab17f8cc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54060380"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54270458"
 ---
 # <a name="uup-private-preview-instructions"></a>Instructions de préversion privée UUP
 
@@ -160,8 +160,8 @@ Lorsque vous êtes prêt à commencer la synchronisation des mises à jour UUP, 
 
 5. Sur l’onglet **Produits**, lorsque votre serveur WSUS est ajouté à la préversion, deux nouveaux produits doivent apparaître. Ces produits contiennent le contenu UUP de préversion.  
 
-    - **Windows 10 UUP pilote** : Mises à jour UUP de station de travail Windows  
-    - **Windows Server 2016 UUP** : Mises à jour UUP de Windows Server  
+    - **Windows 10 UUP Préversion**  
+    - **Windows Server UUP Préversion**  
 
 6. Sur l’onglet **Classifications**, veillez à sélectionner :  
 

@@ -10,16 +10,16 @@ ms.assetid: bc6c3e5f-b9e2-400e-9d9d-446ff93c520c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 821c7f32799020948630cd873fead144ae21e39e
-ms.sourcegitcommit: fe279229a90fdc8cddbb13c7ffdbbb22af0e25ef
+ms.openlocfilehash: 4dcf5ce0c31f72db1e6af3ac9e024c83afe92337
+ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47229260"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54250661"
 ---
 # <a name="what39s-new-in-version-1710-of-system-center-configuration-manager"></a>Nouveautés de la version 1710 de System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 La mise à jour 1710 de la version Current Branch de System Center Configuration Manager est une mise à jour dans la console des sites déjà installés qui exécutent la version 1610, 1702 ou 1706.
 
@@ -64,7 +64,7 @@ Les appareils étant désormais équipés de disques durs avec des tailles de pl
 ## <a name="client-management"></a>Gestion des clients
 
 ### <a name="co-management-for-windows-10-devices"></a>Cogestion pour les appareils Windows 10    
-<!-- 1350871 --> Dans les mises à jour précédentes de Windows 10, vous pouvez déjà joindre un appareil Windows 10 simultanément à une instance locale d’Active Directory (AD) et à Azure AD sur le cloud (Azure AD hybride). À compter de Configuration Manager version 1710, la cogestion tire parti de cette amélioration et vous permet de gérer simultanément plusieurs appareils Windows 10, version 1709 (également appelée Fall Creators Update) à l’aide de Configuration Manager et d’Intune. C’est une solution qui établit une passerelle entre la gestion classique et la gestion moderne tout en vous donnant la possibilité d’opérer cette transition selon une approche en plusieurs phases. Pour plus d’informations, consultez [Cogestion pour les appareils Windows 10](/sccm/core/clients/manage/co-management-overview).
+<!-- 1350871 --> Dans les mises à jour précédentes de Windows 10, vous pouvez déjà joindre un appareil Windows 10 simultanément à une instance locale d’Active Directory (AD) et à Azure AD sur le cloud (Azure AD hybride). À compter de Configuration Manager version 1710, la cogestion tire parti de cette amélioration et vous permet de gérer simultanément plusieurs appareils Windows 10, version 1709 (également appelée Fall Creators Update) à l’aide de Configuration Manager et d’Intune. C’est une solution qui établit une passerelle entre la gestion classique et la gestion moderne tout en vous donnant la possibilité d’opérer cette transition selon une approche en plusieurs phases. Pour plus d’informations, consultez [Cogestion pour les appareils Windows 10](/sccm/comanage/overview).
 
 ### <a name="restart-computers-from-the-configuration-manager-console-----1356283---"></a>Redémarrer les ordinateurs à partir de la console Configuration Manager <!-- 1356283 -->
 À compter de cette version, vous pouvez utiliser la console Configuration Manager pour identifier les périphériques clients qui nécessitent un redémarrage, puis utiliser une action de notification de client pour les redémarrer.
@@ -88,8 +88,8 @@ Pour plus d’informations sur l’utilisation de la fonctionnalité Exécuter l
 
 ### <a name="new-mobile-application-management-policy-settings"></a>Nouveaux paramètres de stratégie de gestion d’application mobile
 <!-- 1324760 --> Les paramètres suivants ont été ajoutés aux paramètres de stratégie de gestion des applications mobiles :
-- **Désactiver la synchronisation des contacts :** empêche l’application d’enregistrer des données sur l’application Contacts native de l’appareil.
-- **Désactiver l’impression :** empêche l’application d’imprimer des données scolaires ou de travail.
+- **Désactiver la synchronisation des contacts** : Empêche l’application d’enregistrer des données sur l’application Contacts native de l’appareil.
+- **Désactiver l’impression** : Empêche l’application d’imprimer des données scolaires ou de travail.
 
 ### <a name="software-center-no-longer-distorts-icons-larger-than-250x250"></a>Le Centre logiciel ne déforme plus les grandes icônes aux dimensions supérieures à 250 x 250  
 <!-- 1356194 -->
@@ -179,9 +179,9 @@ Pour réduire les problèmes de compatibilité, les profils VPN existants resten
 
 Pour plus d’informations, consultez [Profils VPN sur des appareils mobiles dans System Center Configuration Manager](../../../mdm/deploy-use/create-vpn-profiles.md).
 
-### <a name="limited-support-for-cryptography-next-generation-cng-certificates----1356191---"></a>Prise en charge limitée des certificats Cryptography : Next Generation (CNG) <!-- 1356191 -->
+### <a name="limited-support-for-cryptography-next-generation-cng-certificates----1356191---"></a>Prise en charge limitée des certificats Cryptography: Next Generation (CNG) <!-- 1356191 -->
 
-Configuration Manager prend en charge les certificats Cryptography : Next Generation (CNG) de manière limitée. Les clients Configuration Manager peuvent utiliser un certificat d’authentification client PKI avec une clé privée dans le fournisseur de stockage de clés (KSP) CNG. La prise en charge du KSP permet aux clients Configuration Manager de prendre en charge une clé privée matérielle, comme TPM KSP pour les certificats d’authentification client PKI.
+Configuration Manager prend en charge de manière limitée les certificats Cryptography: Cryptography: Next Generation (CNG). Les clients Configuration Manager peuvent utiliser un certificat d’authentification client PKI avec une clé privée dans le fournisseur de stockage de clés (KSP) CNG. La prise en charge du KSP permet aux clients Configuration Manager de prendre en charge une clé privée matérielle, comme TPM KSP pour les certificats d’authentification client PKI.
 
 Pour plus d’informations, consultez [Vue d’ensemble des certificats CNG](../network/cng-certificates-overview.md).
 

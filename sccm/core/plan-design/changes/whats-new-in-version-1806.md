@@ -10,16 +10,16 @@ ms.assetid: 0249dbd3-1e85-4d05-a9e5-420fbe44d850
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e5fd7c26c190407ba5e497068582704b03c71f00
-ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
+ms.openlocfilehash: fe8fb2a8138433d00686530f76916a1ee4e88dac
+ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411508"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54250797"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Nouveautés de la version 1806 de l’édition Current Branch de Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 La mise à jour 1806 pour l’édition Current Branch de Configuration Manager est disponible sous forme de mise à jour dans la console. Appliquez cette mise à jour sur les sites qui exécutent la version 1706, 1710 ou 1802. <!-- baseline only statement: When installing a new site, it's also available as a baseline version.-->
 
@@ -134,9 +134,9 @@ Pour plus d’informations, consultez [Prise en charge du téléchargement parti
 ### <a name="boundary-group-options-for-peer-downloads"></a>Options de groupe de limites pour les téléchargements à partir de pairs
 <!--1356193--> Les groupes de limites intègrent maintenant des paramètres supplémentaires qui offrent davantage de contrôle sur la distribution du contenu dans l’environnement. Cette version ajoute les options suivantes :  
 
-- **Autoriser les téléchargements de pairs dans ce groupe de limites** : le point de gestion fournit aux clients une liste d’emplacements de contenu qui comprend des sources de pairs. Ce paramètre affecte également l’application des ID de groupes pour l’optimisation de la distribution.  
+- **Autoriser les téléchargements à partir de pairs dans ce groupe de limites** : Le point de gestion fournit aux clients une liste d’emplacements de contenu qui comprend des sources de pairs. Ce paramètre affecte également l’application des ID de groupes pour l’optimisation de la distribution.  
 
-- **Lors des téléchargements de pairs, utiliser uniquement les pairs du même sous-réseau** : le point de gestion n’inclut dans la liste des emplacements de contenu que les sources de pairs qui se trouvent dans le même sous-réseau que le client.  
+- **Durant les téléchargements à partir de pairs, utiliser uniquement des pairs situés dans le même sous-réseau** : Le point de gestion n’inclut dans la liste des emplacements de contenu que les sources de pairs qui se trouvent dans le même sous-réseau que le client.  
 
 Pour plus d’informations, voir [Options de groupe de limites pour les téléchargements de pairs](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions).
 
@@ -197,7 +197,7 @@ La version 1806 comprend les améliorations suivantes pour la Passerelle de ges
 #### <a name="simplified-client-bootstrap-command-line"></a>Ligne de commande de démarrage du client simplifiée
 <!--1358215--> Durant l’installation du client Configuration Manager sur Internet via une passerelle de gestion cloud, le nombre de propriétés nécessaires sur la ligne de commande est désormais réduit. Cette amélioration réduit la taille de la ligne de commande utilisée dans Microsoft Intune pour la préparation de la cogestion. 
 
-Pour plus d’informations, consultez [Préparer les appareils Windows 10 pour la cogestion](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client).
+Pour plus d’informations, consultez [Préparer des appareils basés sur Internet à la cogestion](/sccm/comanage/how-to-prepare-win10#install-the-configuration-manager-client).
 
 #### <a name="download-content-from-a-cmg"></a>Télécharger du contenu à partir d’une passerelle de gestion cloud
 <!--1358651--> Auparavant, vous deviez déployer un point de distribution cloud et une passerelle de gestion cloud sous forme de rôles distincts. À présent, une passerelle de gestion cloud peut également proposer du contenu aux clients. Cette fonctionnalité réduit le nombre de certificats nécessaires, ainsi que les coûts associés aux machines virtuelles Azure. 
@@ -214,27 +214,27 @@ Pour plus d’informations, consultez [Modifier une passerelle de gestion cloud]
 ### <a name="sync-mdm-policy-from-microsoft-intune-for-a-co-managed-device"></a>Synchroniser la stratégie MDM de Microsoft Intune pour un appareil cogéré
 <!--1357377--> Quand vous passez à une charge de travail en cogestion, les appareils cogérés se synchronisent automatiquement avec la stratégie MDM de Microsoft Intune. Cette synchronisation est effectuée lorsque vous lancez l’action **Télécharger la stratégie d’ordinateur** à partir de Notification du client, dans la console Configuration Manager. 
 
-Pour plus d’informations, consultez [Basculer les charges de travail de Configuration Manager sur Intune](/sccm/core/clients/manage/co-management-switch-workloads).
+Pour plus d’informations, consultez [Basculer les charges de travail de Configuration Manager sur Intune](/sccm/comanage/how-to-switch-workloads).
 
 
 ### <a name="transition-new-workloads-to-intune-using-co-management"></a>Effectuer la transition de nouvelles charges de travail vers Intune à l’aide de la cogestion
 Vous pouvez désormais effectuer la transition des charges de travail suivantes de Configuration Manager à Intune après avoir activé la cogestion :  
 
-- **Configuration de l’appareil**<!--1357903--> : cette charge de travail vous permet d’utiliser Intune pour déployer des stratégies MDM, tout en continuant à utiliser Configuration Manager pour déployer des applications.  
+- **Configuration de l’appareil**<!--1357903--> : Cette charge de travail vous permet d’utiliser Intune pour déployer des stratégies MDM, tout en continuant à utiliser Configuration Manager pour déployer les applications.  
 
-- **Office 365**<!--1357841--> : les appareils n’installent pas les déploiements Office 365 à partir de Configuration Manager.  
+- **Office 365**<!--1357841--> : Les appareils n’installent pas les déploiements Office 365 à partir de Configuration Manager.  
 
-- **Applications mobiles**<!--1357892--> : toutes les applications disponibles déployées à partir d’Intune sont disponibles sur le Portail d’entreprise. Les applications déployées à partir de Configuration Manager sont disponibles dans le centre logiciel. Il s’agit d’une [fonctionnalité en préversion](/sccm/core/servers/manage/pre-release-features).  
+- **Applications mobiles**<!--1357892--> : Toutes les applications disponibles déployées à partir d’Intune sont disponibles sur le Portail d’entreprise. Les applications déployées à partir de Configuration Manager sont disponibles dans le centre logiciel. Il s’agit d’une [fonctionnalité en préversion](/sccm/core/servers/manage/pre-release-features).  
 
 Pour effectuer la transition de ces charges de travail, accédez à la page de propriétés de cogestion, puis déplacez le curseur de charge de travail de Configuration Manager vers **Pilote** ou **Tout**. 
 
-Pour plus d’informations, consultez [Cogestion pour les appareils Windows 10](/sccm/core/clients/manage/co-management-overview).
+Pour plus d’informations, consultez [Cogestion pour les appareils Windows 10](/sccm/comanage/overview).
 
 
 ### <a name="support-for-multiple-hierarchies-to-one-intune-tenant"></a>Prise en charge de la consolidation de plusieurs hiérarchies en un seul locataire Intune
 <!--1357944--> Certains clients ont plusieurs hiérarchies Configuration Manager qu’ils souhaitent consolider plus tard en tant que locataire unique pour Azure Active Directory et Microsoft Intune. La cogestion prend désormais en charge la connexion de plusieurs environnements Configuration Manager au même locataire Intune.
 
-Pour plus d’informations, consultez [Préparer les appareils Windows 10 pour la cogestion](/sccm/core/clients/manage/co-management-prepare).
+Pour plus d’informations, consultez [Prérequis de la cogestion](/sccm/comanage/overview#prerequisites).
  
 
 
@@ -269,7 +269,7 @@ Pour plus d’informations, consultez les articles suivants :
 
 
 ### <a name="provision-windows-app-packages-for-all-users-on-a-device"></a>Provisionner les packages d’application Windows pour tous les utilisateurs sur un appareil
-<!--1358310--> Provisionnez une application avec un package d’application Windows pour tous les utilisateurs de l’appareil. Un exemple courant de ce scénario est le provisionnement d’une application telle que « Minecraft : Education Edition » à partir de Microsoft Store pour Entreprises et Éducation, pour tous les appareils utilisés par les élèves d’une école. Auparavant, Configuration Manager ne prenait en charge l’installation de ces applications que pour un seul utilisateur. Quand il se connectait à un nouvel appareil, l’élève devait attendre pour accéder à une application. À présent que l’application est provisionnée pour tous les utilisateurs d’un appareil, ceux-ci peuvent l’utiliser plus rapidement. 
+<!--1358310--> Provisionnez une application avec un package d’application Windows pour tous les utilisateurs de l’appareil. Un exemple courant de ce scénario est l’approvisionnement d’une application telle que « Minecraft : Education Edition » à partir de Microsoft Store pour Entreprises et Éducation, pour tous les appareils utilisés par les étudiants d’une école. Auparavant, Configuration Manager ne prenait en charge l’installation de ces applications que pour un seul utilisateur. Quand il se connectait à un nouvel appareil, l’élève devait attendre pour accéder à une application. À présent que l’application est provisionnée pour tous les utilisateurs d’un appareil, ceux-ci peuvent l’utiliser plus rapidement. 
 
 Pour plus d’informations, consultez [Créer des applications Windows](/sccm/apps/get-started/creating-windows-applications#bkmk_provision).
 
@@ -411,7 +411,7 @@ Pour plus d’informations, consultez [Paramètres clients du Centre logiciel](/
 
 - Contacter le service informatique : informations sur la façon de contacter le service informatique de votre organisation  
 
-- Centre de support informatique : actions informatiques en libre-service telles que la recherche dans une base de connaissances ou l’ouverture d’un ticket de support.  
+- Centre de support informatique : Actions informatiques en libre-service telles que la recherche dans une base de connaissances ou l’ouverture d’un ticket de support.  
 
 - Documentation pour les utilisateurs finaux : articles destinés aux utilisateurs de votre organisation sur différents sujets informatiques comme l’utilisation d’applications ou la mise à niveau vers Windows 10.  
 

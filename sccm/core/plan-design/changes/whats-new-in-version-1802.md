@@ -10,12 +10,12 @@ ms.assetid: 5bd637b1-d7a1-411b-877a-c7aae9741173
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a0e16c137604480ab23e15b52723692491d1816d
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 763826a1a308130415fb972f7f3dc3e577b8e573
+ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53414852"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54250729"
 ---
 # <a name="whats-new-in-version-1802-of-system-center-configuration-manager"></a>Nouveautés de la version 1802 de System Center Configuration Manager
 
@@ -144,7 +144,7 @@ Pour plus d’informations, consultez l’article [Tableau de bord Surface](/scc
 ## <a name="co-management"></a>Cogestion
 
 ### <a name="transition-endpoint-protection-workload-to-intune-using-co-management"></a>Transférer la charge de travail Endpoint Protection vers Intune à l’aide de la cogestion
-<!-- 1357365 --> La charge de travail Endpoint Protection peut être transférée à Intune après activation de la cogestion. Pour cela, accédez à la page des propriétés de cogestion et déplacez le curseur de Configuration Manager sur **Pilote** ou **Tout**. Pour plus d’informations sur les charges de travail, consultez [Charges de travail pouvant être transférées à Intune](/sccm/core/clients/manage/co-management-switch-workloads#Workloads-able-to-be-transitioned-to-Intune). Pour plus d’informations sur la cogestion, consultez [Cogestion pour les appareils Windows 10](/sccm/core/clients/manage/co-management-overview).
+<!-- 1357365 --> La charge de travail Endpoint Protection peut être transférée à Intune après activation de la cogestion. Pour cela, accédez à la page des propriétés de cogestion et déplacez le curseur de Configuration Manager sur **Pilote** ou **Tout**. Pour plus d’informations sur les charges de travail, consultez [Charges de travail de cogestion](/sccm/comanage/workloads). Pour plus d’informations sur la cogestion, consultez [Cogestion pour les appareils Windows 10](/sccm/comanage/overview).
  
 ### <a name="co-management-dashboard-in-system-center-configuration-manager"></a>Tableau de bord de cogestion dans System Center Configuration Manager
 <!--1356648--> À compter de cette version, vous pouvez consulter un tableau de bord avec des informations sur la cogestion. Le tableau de bord vous permet d’examiner les machines qui sont cogérées dans votre environnement. Les graphes peuvent vous aider à identifier les appareils qui demandent une attention particulière. Pour plus d’informations, consultez l’article [Tableau de bord de cogestion](/sccm/core/clients/manage/client-management-dashboard). 
@@ -234,8 +234,8 @@ Cette version inclut les améliorations suivantes pour le déploiement de systè
 ### <a name="report-for-default-browser-counts"></a>Rapports pour le nombre de navigateurs par défaut
 <!-- 1357830 --> Il existe maintenant un nouveau rapport qui affiche le nombre de clients ayant spécifié un certain navigateur web par défaut sous Windows. Consultez le rapport **Nombre de navigateurs par défaut** dans le groupe de rapports **Logiciel - Sociétés et produits**. Pour plus d’informations, consultez [Liste des rapports](/sccm/core/servers/manage/list-of-reports#software---companies-and-products).
 
-### <a name="report-on-windows-autopilot-device-information"></a>Générer un rapport sur les informations d’appareil Windows AutoPilot
-<!-- 1351442 --> Windows AutoPilot est une solution permettant d’intégrer et de configurer de nouveaux appareils Windows 10 d’une manière moderne. Pour plus d’informations, consultez [Vue d’ensemble de Windows AutoPilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot). Pour inscrire un appareil existant auprès de Windows AutoPilot, vous pouvez charger les informations de l’appareil dans Microsoft Store pour Entreprises et Éducation : numéro de série, identificateur de produit Windows et identificateur matériel. Utilisez Configuration Manager pour collecter et communiquer ces informations sur les appareils avec le nouveau rapport, **Informations d’appareil Windows AutoPilot**, dans le nœud de rapports **Matériel - Général**. Pour plus d’informations, consultez [Nouveaux appareils Windows 10](/sccm/core/clients/manage/co-management-prepare#new-windows-10-devices) en préparation à la cogestion.
+### <a name="report-on-windows-autopilot-device-information"></a>Générer un rapport sur les informations d’appareil Windows Autopilot
+<!-- 1351442 --> Windows Autopilot est une solution permettant d’intégrer et de configurer de nouveaux appareils Windows 10 d’une manière moderne. Pour plus d’informations, consultez [Vue d’ensemble de Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot). Pour inscrire un appareil existant auprès de Windows Autopilot, vous pouvez charger les informations de l’appareil dans Microsoft Store pour Entreprises et Éducation. numéro de série, identificateur de produit Windows et identificateur matériel. Utilisez Configuration Manager pour collecter et communiquer ces informations sur les appareils avec le nouveau rapport, **Informations d’appareil Windows Autopilot**, dans le nœud de rapports **Matériel - Général**. Pour plus d’informations, consultez [Préparer des appareils basés sur Internet à la cogestion](/sccm/comanage/how-to-prepare-win10#windows-autopilot) lors de la préparation à la cogestion.
 
 ### <a name="report-on-windows-10-servicing-details-for-a-specific-collection"></a>Rapport sur les détails de la maintenance de Windows 10 pour un regroupement spécifique
 <!--1357653--> Le **rapport Détails de la maintenance de Windows 10 pour un regroupement spécifique** montre des informations générales sur la maintenance de Windows 10 pour un regroupement spécifique. Il affiche l’ID de la ressource, le nom NetBIOS, le nom du système d’exploitation et de sa version, la build, la branche du système d’exploitation et l’état du service de maintenance pour les appareils Windows 10. Pour plus d’informations, consultez [Liste des rapports](/sccm/core/servers/manage/list-of-reports#operating-system).

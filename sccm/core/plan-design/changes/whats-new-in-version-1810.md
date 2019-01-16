@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 050cf81a99f29d24cad6eb13e691e332174627c3
-ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
+ms.openlocfilehash: 60d1c93acc2fcc2c04d09cd8f0ec0c083089a8ec
+ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53818019"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54250593"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Nouveautés de la version 1810 de l’édition Current Branch de Configuration Manager
 
@@ -123,7 +123,10 @@ Pour plus d’informations, consultez [Insights de gestion](/sccm/core/servers/m
 ### <a name="new-client-notification-action-to-wake-up-device"></a>Nouvelle action de notification du client pour sortir un appareil du mode veille
 <!--1317364--> Vous pouvez désormais sortir un client du mode veille à partir de la console Configuration Manager, même si le client ne se trouve pas sur le même sous-réseau que le serveur de site. Si vous avez besoin de procéder à une maintenance ou d’interroger des appareils, vous n’êtes pas limité par les clients distants qui sont en veille. Le serveur de site emprunte le canal de notification des clients pour identifier un autre client éveillé sur le même sous-réseau distant. Le client éveillé envoie alors une requête Wake On LAN (paquet magique).
 
-<!--For more information, see [Plan how to wake up clients](/sccm/core/clients/deploy/plan/plan-wake-up-clients).-->
+### <a name="new-option-to-perform-client-notification-from-devices-node"></a>Nouvelle option pour effectuer la notification du client à partir du nœud Appareils
+<!--1317364--> Jusqu’à la version 1810, l’option **Notification du client** était uniquement disponible à partir du nœud Regroupement d’appareils ou lors de l’affichage de l’appartenance à un regroupement d’appareils. Il est désormais possible d’effectuer une **Notification du client** à partir du nœud **Appareils** directement. Il n’est plus nécessaire de se trouver dans une vue de l’appartenance au regroupement. 
+
+Pour plus d’informations, consultez [Notifications du client](/sccm/core/clients/manage/client-notification).
 
 
 ### <a name="improvements-to-collection-evaluation"></a>Améliorations apportées à l’évaluation de regroupement
@@ -169,7 +172,7 @@ Pour plus d’informations, consultez [Configurer des groupes de limites](/sccm/
 
 ![Capture d’écran du tableau de bord Cogestion montrant les quatre vignettes principales](media/1358980-comgmt-dashboard.png)
 
-Pour plus d’informations, consultez [Tableau de bord de cogestion](/sccm/core/clients/manage/co-management-dashboard).
+Pour plus d’informations, consultez [Tableau de bord de cogestion](/sccm/comanage/how-to-monitor#co-management-dashboard).
 
 
 
