@@ -10,12 +10,12 @@ ms.assetid: 613a48ac-c55d-4c4a-94ea-d3747a1b10cb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bf5f580d10c48bb44b3c202832ffff3a06c5c37f
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 708a9fc1f3a2f10a602dc5d926cd8b8df0cbc7cf
+ms.sourcegitcommit: 2687489aa409a050dcacd67f17b3dad3ab7f1804
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53416178"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54316573"
 ---
 # <a name="how-to-create-configuration-items-for-ios-and-mac-os-x-devices-managed-with-intune"></a>Comment créer des éléments de configuration pour les appareils iOS et Mac OS X gérés via Microsoft Intune
 Utilisez l’élément de configuration System Center Configuration Manager **iOS et Mac OS X** pour gérer les paramètres des appareils iOS et Mac OS X qui sont inscrits dans Microsoft Intune ou gérés localement par Configuration Manager.  
@@ -275,7 +275,7 @@ Utilisez l’élément de configuration System Center Configuration Manager **iO
      >  Pour rechercher l’ID d’offre groupée d’une application, effectuez les étapes suivantes sur un ordinateur Mac où l’application est installée :  
      > 
      > 1. Ouvrez le dossier dans lequel l’application est installée (par exemple, **/Applications**)  
-     >    2.  Sélectionnez le bundle *<Nom de l’application\>***.app** et choisissez **Afficher le contenu du package**  
+     >    2.  Sélectionnez l’offre groupée _<Nom de l’application\>_**.app** et choisissez **Afficher le contenu du package**.  
      >    3.  Ouvrez le fichier **Info.plist**  
      >    4.  Vérifiez la valeur associée à la clé **CFBundleIdentifier**  
      > 
