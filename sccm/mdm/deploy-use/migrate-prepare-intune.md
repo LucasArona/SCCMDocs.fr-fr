@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: db97ae9e-34f4-4e10-a282-cd211f612bb4
-ms.openlocfilehash: f7c0f0d9dc52c39e0ec33abb8df565d4918471f7
-ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
+ms.openlocfilehash: 3f7d880f7e220966a9baa71ac6ad9286a398ffaa
+ms.sourcegitcommit: d5c013a29f53b975fe3a6cb0a41f1e817bd7b235
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53818036"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54342854"
 ---
 # <a name="prepare-intune-for-user-migration"></a>Préparer Intune à la migration des utilisateurs 
 
-*S’applique à : System Center Configuration Manager (Current Branch)*    
+*S’applique à : System Center Configuration Manager (Current Branch)*    
 Avant de migrer les utilisateurs de MDM hybride vers Intune autonome, effectuez les étapes pour préparer Intune. Ces étapes permettent de s’assurer que vos utilisateurs migrés et leurs appareils continuent d’être gérés. Lorsque vous effectuez ces étapes et démarrez la migration vers Intune, il n’existe aucun impact considérable sur les utilisateurs.  
 
 ## <a name="fix-issues-found-during-data-collection-and-import"></a>Résoudre les problèmes détectés pendant la collecte et l’importation de données
@@ -50,7 +50,7 @@ Si vous [importé des données de Configuration Manager à Microsoft Intune](mig
 - [Affecter des stratégies](https://docs.microsoft.com/intune/get-started-policies)  
 - [Affecter des profils](https://docs.microsoft.com/intune/device-profile-assign)  
     > [!NOTE]  
-    > Quand Intune déploie le nouveau profil de messagerie, les utilisateurs reçoivent une invite à entrer à nouveau son mot de passe.  
+    > Quand Intune déploie le nouveau profil de messagerie, les utilisateurs reçoivent une invite à entrer à nouveau son mot de passe. Ce comportement entraîne des e-mails en cours à télécharger à nouveau sur les appareils des utilisateurs. Toutes les modifications personnalisées effectuées par l’utilisateur doit être effectuée à nouveau. 
 - [Affecter des applications](https://docs.microsoft.com/intune/get-started-apps) 
 
 ## <a name="terms-and-conditions-policy"></a>Stratégie de conditions générales

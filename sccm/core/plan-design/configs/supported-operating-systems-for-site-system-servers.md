@@ -2,7 +2,7 @@
 title: Serveurs de système de site pris en charge
 titleSuffix: Configuration Manager
 description: Déterminez les versions de Windows que vous pouvez utiliser pour héberger un site ou un rôle de système de site Configuration Manager.
-ms.date: 11/27/2018
+ms.date: 01/15/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.assetid: 17905b4c-3895-4ad4-a69c-5e0d0fc5a8c3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4aba91b232a187a72bbc2ea10f32a14a377a3870
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: b43c8d08fe1655aea175bbec3ceb7877be96f42e
+ms.sourcegitcommit: d5c013a29f53b975fe3a6cb0a41f1e817bd7b235
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456853"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54342820"
 ---
 # <a name="supported-operating-systems-for-configuration-manager-site-system-servers"></a>Systèmes d’exploitation pris en charge pour les serveurs de système Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 
 Cet article explique en détail les versions de Windows que vous pouvez utiliser pour héberger un site ou un rôle de système de site Configuration Manager.
@@ -112,7 +112,7 @@ Cette version du système d’exploitation est prise en charge pour les rôles s
 
 ## <a name="bkmk_2012r2"></a> Windows Server 2012 R2 
 
-*S’applique à Windows Server 2012 R2 : Standard et Datacenter*
+*S’applique à Windows Server 2012 R2 : Standard et Datacenter*
 
 #### <a name="site-servers"></a>Serveurs de site
 
@@ -178,9 +178,12 @@ Cette version du système d’exploitation est prise en charge pour les rôles s
 
 ## <a name="bkmk_2008r2sp1"></a> Windows Server 2008 R2 avec SP1   
 
-*S’applique à Windows Server 2008 R2 avec Service Pack 1 : Standard, Enterprise et Datacenter*
+*S’applique à Windows Server 2008 R2 avec Service Pack 1 : Standard, Entreprise et Datacenter*
 
 Windows Server 2008 R2 bénéficie désormais du support étendu au lieu du support standard, comme indiqué dans la [Politique de support Microsoft](https://support.microsoft.com/lifecycle). Pour plus d’informations sur la prise en charge à venir de ces systèmes d’exploitation utilisés comme serveurs de système de site avec Configuration Manager, consultez [Systèmes d’exploitation serveur dépréciés](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems).  
+
+> [!Important]  
+> La date de fin du support étendu pour Windows Server 2008 R2 est le 14 janvier 2020. Après cette date, Configuration Manager ne prendra plus en charge ce système d’exploitation comme rôle de système de site. 
 
 Ce système d’exploitation n’est pas pris en charge pour les serveurs de site ou la plupart des rôles de système de site. Il est toujours pris en charge pour le rôle de système de site du point de distribution, dont les points de distribution d’extraction, et pour PXE et la multidiffusion.
 
@@ -193,9 +196,12 @@ Ce système d’exploitation n’est pas pris en charge pour les serveurs de sit
 
 ## <a name="bkmk_2008sp2"></a> Windows Server 2008 avec SP2  
 
-*S’applique à Windows Server 2008 avec Service Pack 2 (x86, x64) : Standard, Enterprise et Datacenter*
+*S’applique à Windows Server 2008 avec Service Pack 2 (x86, x64) : Standard, Entreprise et Datacenter*
 
 Windows Server 2008 avec Service Pack 2 (SP2) bénéficie désormais du support étendu au lieu du support standard, comme indiqué dans la [Politique de support Microsoft](https://support.microsoft.com/lifecycle). Pour plus d’informations sur la prise en charge à venir de ces systèmes d’exploitation utilisés comme serveurs de système de site avec Configuration Manager, consultez [Systèmes d’exploitation serveur dépréciés](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems).  
+
+> [!Important]  
+> La date de fin du support étendu pour Windows Server 2008 R2 est le 14 janvier 2020. Après cette date, Configuration Manager ne prendra plus en charge ce système d’exploitation comme rôle de système de site. 
 
 Ce système d’exploitation n’est pas pris en charge pour les serveurs de site ou les rôles de système de site, à l’exception du point de distribution et du point de distribution d’extraction. Continuez à utiliser ce système d’exploitation comme point de distribution jusqu’à l’annonce de la dépréciation de ce support ou jusqu’à l’expiration de la période du support étendu de ce système d’exploitation. Pour plus d’informations, consultez [Échec de l’installation de Configuration Manager CB et LTSB sur Windows Server 2008](https://support.microsoft.com/help/4015095).
 
@@ -214,7 +220,7 @@ Les versions du système d’exploitation client suivantes sont prises en charge
 
 - Windows 10 (x86, x64) : Professionnel et Entreprise
 - Windows 8.1 (x86, x64) : Professionnel et Entreprise
-- Windows 7 avec SP1 (x86, x64) : Professionnel, Entreprise et Édition Intégrale
+- Windows 7 avec SP1 (x86, x64) : Professionnel, Entreprise et Édition intégrale
 
 Cette prise en charge présente la limitation suivante :  
 
@@ -241,10 +247,10 @@ Cette prise en charge présente la limitation suivante :
 
 ## <a name="general-notes"></a>Remarques générales
 
-#### <a name="bkmk_note1"></a> Remarque 1 : Points de distribution
+#### <a name="bkmk_note1"></a>Remarque 1 : Points de distribution
 Les points de distribution prennent en charge plusieurs configurations différentes ayant chacune des exigences différentes. Dans certains cas, ces configurations prennent en charge l’installation sur des serveurs, mais aussi sur des systèmes d’exploitation clients. Pour plus d’informations, consultez [Gérer le contenu et l’infrastructure de contenu](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure).  
 
-#### <a name="bkmk_note2"></a> Remarque 2 : Serveurs de base de données de site
-Les serveurs de bases de données du site ne sont pas pris en charge sur un contrôleur de domaine en lecture seule (RODC). Pour plus d’informations, consultez l’article du support Microsoft : [Problèmes lors de l’installation de SQL Server sur un contrôleur de domaine](https://support.microsoft.com/help/2032911). 
+#### <a name="bkmk_note2"></a> Remarque 2 : Serveurs de base de données du site
+Les serveurs de bases de données du site ne sont pas pris en charge sur un contrôleur de domaine en lecture seule (RODC). Pour plus d’informations, consultez l’article du support Microsoft : [Vous pouvez rencontrer des problèmes lors de l’installation de SQL Server sur un contrôleur de domaine](https://support.microsoft.com/help/2032911). 
 
 De plus, les serveurs de site secondaire ne sont pris en charge sur aucun contrôleur de domaine.  
