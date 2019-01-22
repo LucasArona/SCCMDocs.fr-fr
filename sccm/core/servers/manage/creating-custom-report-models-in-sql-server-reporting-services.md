@@ -10,12 +10,12 @@ ms.assetid: f2df88b4-c348-4dcf-854a-54fd6eedf485
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: d011272c42f3347f555e4fb5322464e9c5e754da
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: b28a5be9a494d2568bbdfdee29f9e757ef97f940
+ms.sourcegitcommit: 2687489aa409a050dcacd67f17b3dad3ab7f1804
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53424695"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54316556"
 ---
 # <a name="creating-custom-report-models-for-system-center-configuration-manager-in-sql-server-reporting-services"></a>Création de modèles de rapport personnalisés pour System Center Configuration Manager dans SQL Server Reporting Services
 
@@ -146,7 +146,7 @@ Des exemples de modèles de rapport sont inclus dans System Center Configuration
 
 3. Ouvrez les fichiers mentionnés précédemment dans un éditeur de texte tel que le Bloc-notes.  
 
-4. Dans le fichier *&lt;nom_modèle\>***.dsv**, localisez la première ligne, qui est la suivante :  
+4. Dans le fichier _&lt;nom_modèle\>_**.dsv**, localisez la première ligne, qui est la suivante :  
 
     **&lt;DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine"\>**  
 
@@ -156,9 +156,9 @@ Des exemples de modèles de rapport sont inclus dans System Center Configuration
 
 5. Copiez le contenu entier du fichier dans le Presse-papiers Windows.  
 
-6. Fermez le fichier *&lt;nom_modèle\>***.dsv**.  
+6. Fermez le fichier _&lt;nom_modèle\>_**.dsv**.  
 
-7. Dans le fichier *&lt;nom_modèle\>***.smdl**, localisez les trois dernières lignes, qui sont les suivantes :  
+7. Dans le fichier _&lt;nom_modèle\>_**.smdl**, localisez les trois dernières lignes, qui sont les suivantes :  
 
     `</Entity>`  
 
@@ -166,11 +166,11 @@ Des exemples de modèles de rapport sont inclus dans System Center Configuration
 
     `</SemanticModel>`  
 
-8. Collez le contenu du fichier *&lt;nom_modèle\>***.dsv** juste avant la dernière ligne du fichier(**&lt;SemanticModel\>**).  
+8. Collez le contenu du fichier _&lt;nom_modèle\>_**.dsv** juste avant la dernière ligne du fichier(**&lt;SemanticModel\>**).  
 
-9. Enregistrez et fermez le fichier *&lt;nom_modèle\>***.smdl**.  
+9. Enregistrez et fermez le fichier _&lt;nom_modèle\>_**.smdl**.  
 
-10. Copiez le fichier *&lt;nom_modèle\>***.smdl** dans le dossier *%programfiles%* \Microsoft Configuration Manager\AdminConsole\XmlStorage\Other du serveur de site Configuration Manager.  
+10. Copiez le fichier _&lt;nom_modèle\>_**.smdl** dans le dossier *%programfiles%* \Microsoft Configuration Manager \AdminConsole\XmlStorage\Other du serveur de site Configuration Manager.  
 
     > [!IMPORTANT]  
     >  Après avoir copié le fichier du modèle de rapport sur le serveur de site Configuration Manager, vous devez quitter et redémarrer la console Configuration Manager avant de pouvoir utiliser le modèle de rapport à partir de l’**Assistant Création de rapport**.  
@@ -389,7 +389,7 @@ Des exemples de modèles de rapport sont inclus dans System Center Configuration
 
 3. Ouvrez les fichiers mentionnés précédemment dans un éditeur de texte tel que le Bloc-notes.  
 
-4. Dans le fichier *&lt;nom_modèle\>***.dsv**, localisez la première ligne, qui est la suivante :  
+4. Dans le fichier _&lt;nom_modèle\>_**.dsv**, localisez la première ligne, qui est la suivante :  
 
     **&lt;DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine"\>**  
 
@@ -399,9 +399,9 @@ Des exemples de modèles de rapport sont inclus dans System Center Configuration
 
 5. Copiez le contenu entier du fichier dans le Presse-papiers Windows.  
 
-6. Fermez le fichier *&lt;nom_modèle\>***.dsv**.  
+6. Fermez le fichier _&lt;nom_modèle\>_**.dsv**.  
 
-7. Dans le fichier *&lt;nom_modèle\>***.smdl**, localisez les trois dernières lignes, qui sont les suivantes :  
+7. Dans le fichier _&lt;nom_modèle\>_**.smdl**, localisez les trois dernières lignes, qui sont les suivantes :  
 
     `</Entity>`  
 
@@ -409,11 +409,11 @@ Des exemples de modèles de rapport sont inclus dans System Center Configuration
 
     `</SemanticModel>`  
 
-8. Collez le contenu du fichier *&lt;nom_modèle\>***.dsv** juste avant la dernière ligne du fichier(**&lt;SemanticModel\>**).  
+8. Collez le contenu du fichier _&lt;nom_modèle\>_**.dsv** juste avant la dernière ligne du fichier(**&lt;SemanticModel\>**).  
 
-9. Enregistrez et fermez le fichier *&lt;nom_modèle\>***.smdl**.  
+9. Enregistrez et fermez le fichier _&lt;nom_modèle\>_**.smdl**.  
 
-10. Copiez le fichier *&lt;nom_modèle\>***.smdl** dans le dossier *%programfiles%* \Microsoft Configuration Manager\AdminConsole\XmlStorage\Other du serveur de site Configuration Manager.  
+10. Copiez le fichier _&lt;nom_modèle\>_**.smdl** dans le dossier *%programfiles%* \Microsoft Configuration Manager\AdminConsole\XmlStorage\Other du serveur de site Configuration Manager.  
 
     > [!IMPORTANT]  
     >  Après avoir copié le fichier du modèle de rapport sur le serveur de site Configuration Manager, vous devez quitter et redémarrer la console Configuration Manager avant de pouvoir utiliser le modèle de rapport à partir de l’**Assistant Création de rapport**.  
