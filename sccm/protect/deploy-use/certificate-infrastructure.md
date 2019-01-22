@@ -10,12 +10,12 @@ ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ff32a35ccfe3ca51183497197622408c1a28a99d
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 783512841b61d6fa10e3f2832100e9000576e65a
+ms.sourcegitcommit: 2687489aa409a050dcacd67f17b3dad3ab7f1804
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53416297"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54316522"
 ---
 # <a name="configure-certificate-infrastructure"></a>Configurer l’infrastructure de certificats
 
@@ -52,7 +52,7 @@ Suivez ces étapes pour configurer votre infrastructure pour les certificats SCE
    > [!NOTE]  
    >  Ces autorisations de sécurité sont les valeurs par défaut appropriées pour la plupart des environnements. Toutefois, vous pouvez utiliser une autre configuration de sécurité. Pour plus d’informations, consultez [Planification d’autorisations de modèles de certificat pour les profils de certificat dans System Center Configuration Manager](../../protect/plan-design/planning-for-certificate-template-permissions.md).  
 
-3. Déployez vers ce serveur un certificat PKI prenant en charge l'authentification du client. Vous disposez peut-être déjà d'un certificat adapté installé sur l'ordinateur, que vous pouvez utiliser, ou vous devez (ou préférez) déployer un certificat spécifique. Pour plus d’informations sur la configuration requise de ce certificat, consultez « Serveurs exécutant le module de stratégie de Configuration Manager avec le service de rôle du service d’inscription d’appareils réseau » dans la section **Certificats PKI pour serveurs** de la rubrique [Configuration requise des certificats PKI pour System Center Configuration Manager](../../core/plan-design/network/pki-certificate-requirements.md).  
+3. Déployez vers ce serveur un certificat PKI prenant en charge l'authentification du client. Vous disposez peut-être déjà d'un certificat adapté installé sur l'ordinateur, que vous pouvez utiliser, ou vous devez (ou préférez) déployer un certificat spécifique. Pour plus d’informations sur la configuration requise de ce certificat, consultez « Serveurs exécutant le module de stratégie de Configuration Manager avec le service de rôle du service d’inscription de périphériques réseau » dans la section **Certificats PKI pour serveurs** de la rubrique [Configuration requise des certificats PKI pour System Center Configuration Manager](../../core/plan-design/network/pki-certificate-requirements.md).  
 
    > [!TIP]
    >  Pour obtenir de l’aide pour le déploiement de ce certificat, suivez les instructions dans la section [Déploiement du certificat client pour les points de distribution](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_clientdistributionpoint2008_cm2012), car les exigences relatives au certificat sont identiques, à une exception près :  
@@ -125,7 +125,7 @@ Vous devez installer et configurer au moins un point d’enregistrement de certi
    - Si vous avez sélectionné **Traiter les demandes de certificat SCEP**, configurez les éléments suivants :
      -   **Nom du site web**, **Numéro de port HTTPS** et **Nom de l’application virtuelle** du point d’enregistrement de certificat. Ces champs sont automatiquement renseignés avec les valeurs par défaut. 
      -   **URL du service d’inscription de périphérique réseau et certificat d’autorité de certification racine** : cliquez sur **Ajouter**, puis, dans la boîte de dialogue **Ajouter l’URL et le certificat d’autorité de certification racine**, spécifiez les éléments suivants :
-         - URL du service d'inscription d'appareils réseau** : Spécifiez l’URL au format suivant : https://*< FQDN_serveur >*/certsrv/mscep/mscep.dll. Par exemple, si le nom de domaine complet de votre serveur exécutant le service d’inscription de périphérique réseau est server1.contoso.com, tapez **https://server1.contoso.com/certsrv/mscep/mscep.dll**.
+         - **URL du service d’inscription de périphériques réseau** : spécifiez l’URL au format suivant : https://*<FQDN_serveur>*/certsrv/mscep/mscep.dll. Par exemple, si le nom de domaine complet de votre serveur exécutant le service d’inscription de périphérique réseau est server1.contoso.com, tapez **https://server1.contoso.com/certsrv/mscep/mscep.dll**.
          - **Certificat d’autorité de certification racine** : Recherchez et sélectionnez le fichier de certificat (.cer) que vous avez créé et enregistré à l'**étape 1 : Installer et configurer le service d'inscription d'appareils réseau et les dépendances**. Ce certificat d’autorité de certification racine permet au point d’enregistrement de certificat de valider le certificat d’authentification client que le module de stratégie de System Center Configuration Manager va utiliser.  
 
    - Si vous avez sélectionné **Traiter les demandes de certificats PFX**, vous configurez les détails de la connexion et les informations d’identification pour l’autorité de certification sélectionnée.
@@ -167,7 +167,7 @@ Vous devez installer et configurer au moins un point d’enregistrement de certi
 
 ## <a name="step-3----install-the-system-center-configuration-manager-policy-module-for-scep-certificates-only"></a>Étape 3 : Installer le module de stratégie de System Center Configuration Manager (pour les certificats SCEP uniquement)
 
-Vous devez installer et configurer le Module de stratégie de System Center Configuration Manager sur chaque serveur que vous avez spécifié dans **étape 2 : Installer et configurer le point d'enregistrement de certificat comme URL pour le service d'inscription d'appareils réseau** dans les propriétés du point d'enregistrement de certificat.  
+Vous devez installer et configurer le module de stratégie de System Center Configuration Manager sur chaque serveur que vous avez spécifié à l’**étape 2 : Installer et configurer le point d’enregistrement de certificat** en tant qu’**URL du service d’inscription d’appareils réseau** dans les propriétés du point d’enregistrement de certificat.  
 
 ##### <a name="to-install-the-policy-module"></a>Pour installer le module de stratégie  
 
