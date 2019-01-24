@@ -10,12 +10,12 @@ ms.assetid: a1f099f1-e9b5-4189-88b3-f53e3b4e4add
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d0db075f652dd77a833f7a3a00f478bae5a5e54f
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 0a2ee528c8b38acbc18aa051dd84a7634b66713b
+ms.sourcegitcommit: 2687489aa409a050dcacd67f17b3dad3ab7f1804
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53415192"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54316590"
 ---
 # <a name="manage-task-sequences-to-automate-tasks-in-configuration-manager"></a>Gérer des séquences de tâches pour automatiser des tâches dans Configuration Manager
 
@@ -120,6 +120,8 @@ Vous pouvez revenir à une page précédente en cas d’échec de l’exécution
 
        > [!NOTE]    
        > Si l’exécution du programme sélectionné échoue sur un client, la séquence de tâches n’est pas exécutée. Si le programme sélectionné s’exécute correctement, il n’est pas réexécuté, même si la séquence de tâches est réexécutée sur le même client.  
+   
+   - **Supprimer les notifications de séquences de tâches** Sélectionnez cette option pour masquer la notification toast « Un nouveau logiciel est disponible ». L’icône « nouveau logiciel » est toujours visible dans la zone de notification du Centre logiciel. Par défaut, cette case à cocher est désactivée.  
  
    - **Désactiver cette séquence de tâches sur les ordinateurs sur lesquels elle est publiée** : Si vous sélectionnez cette option, Configuration Manager désactive temporairement tous les déploiements qui contiennent cette séquence de tâches. Il supprime également la séquence de tâches de la liste des déploiements exécutables disponibles. La séquence de tâches ne s’exécute pas tant qu’elle n’est pas activée. Par défaut, cette option est désactivée.  
 

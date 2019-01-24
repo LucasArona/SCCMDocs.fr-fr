@@ -10,16 +10,16 @@ ms.assetid: cd74e5f5-33f6-4566-8c9d-d6a93bfe71ed
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 54034ec94ad2a0ea2b7ce095d9da669aea02f0b3
-ms.sourcegitcommit: 702e6017b6dee4629b67bb9f3bd5d9b5a889ebee
+ms.openlocfilehash: 9f6b10706638a476242051757145f725b262a7fc
+ms.sourcegitcommit: 2687489aa409a050dcacd67f17b3dad3ab7f1804
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37340224"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54316437"
 ---
 # <a name="language-packs-in-configuration-manager"></a>Modules linguistiques dans Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Cet article fournit des détails techniques sur la prise en charge linguistique dans Configuration Manager. Les clients et serveurs du site Configuration Manager sont considérés comme étant indépendants de la langue. Ajoutez la prise en charge des langues d’affichage en installant les **modules linguistiques du serveur** ou les **modules linguistiques du client** sur le site d’administration centrale et sur les sites principaux. Vous sélectionnez les langues de serveur et de client à prendre en charge sur ce site parmi les fichiers de modules linguistiques disponibles au cours du processus d’installation.
  
@@ -31,9 +31,9 @@ Installez plusieurs langues sur chaque site. Il vous suffit d’installer les la
 
 Lorsque vous installez la prise en charge pour une langue qui correspond aux composants suivants :  
 
-- Langue d’affichage d’un ordinateur : les consoles Configuration Manager et l’interface utilisateur client qui s’exécutent sur cet ordinateur affichent les informations dans cette langue.  
+- Langue d’affichage d’un ordinateur : les consoles Configuration Manager et l’interface utilisateur client qui s’exécutent sur cet ordinateur affichent les informations dans cette langue.  
 
-- Langue qui correspond aux préférences linguistiques en vigueur sur le navigateur Web d’un ordinateur : les connexions aux informations Web, notamment le catalogue d’applications et SQL Server Reporting Services, s’affichent dans cette langue.  
+- La préférence de langue qui est en cours d’utilisation par le navigateur web d’un ordinateur : les connexions aux informations Web, notamment le catalogue d’applications et SQL Server Reporting Services, s’affichent dans cette langue.  
 
 
 Lorsque vous exécutez le programme d’installation de Configuration Manager, les fichiers de modules linguistiques sont téléchargés dans le cadre des fichiers prérequis et redistribuables. Vous pouvez également utiliser le [Téléchargeur d’installation](setup-downloader.md) pour télécharger ces fichiers avant d’exécuter le programme d’installation.   
@@ -47,7 +47,6 @@ Aidez-vous du tableau suivant pour mapper un ID de paramètres régionaux à la 
 |Langue du serveur|ID de paramètres régionaux (LCID)|Code en trois lettres|  
 |---------------------|------------------------|-----------------------|  
 |Anglais (par défaut)|0409|ENU|  
-|Chinois (traditionnel, Hong Kong R.A.S.)|0c04|ZHH|  
 |Chinois (simplifié)|0804|CHS|  
 |Chinois (traditionnel, Taïwan)|0404|CHT|  
 |Tchèque|0405|CSY|  
@@ -75,7 +74,6 @@ Aidez-vous du tableau suivant pour mapper un ID de paramètres régionaux à la 
 |Langue du client|ID de paramètres régionaux (LCID)|Code en trois lettres|  
 |---------------------|------------------------|-----------------------|  
 |Anglais (par défaut)|0409|ENG|  
-|Chinois (traditionnel, Hong Kong R.A.S.)|0c04|ZHH|  
 |Chinois simplifié|0804|CHS|  
 |Chinois (traditionnel, Taïwan)|0404|CHT|  
 |Tchèque|0405|CSY|  

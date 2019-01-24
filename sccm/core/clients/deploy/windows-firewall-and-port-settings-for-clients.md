@@ -10,16 +10,16 @@ ms.assetid: dce4b640-c92f-401a-9873-ce9aa9262014
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 193ee803fd0a6bacf043dbabc6550ef68a4a629a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 94af249b91735a535ea4056f8a5f19d120632770
+ms.sourcegitcommit: 818f98187d377a90263d1b1c89d4c1fdbf8c908b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32337392"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54398487"
 ---
 # <a name="windows-firewall-and-port-settings-for-clients-in-system-center-configuration-manager"></a>Paramètres de port et de pare-feu Windows pour les clients dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Dans System Center Configuration Manager, les ordinateurs clients qui exécutent le Pare-feu Windows exigent souvent que des exceptions soient configurées pour permettre la communication avec leur site. Les exceptions que vous devez configurer dépendent des fonctionnalités de gestion que vous utilisez avec le client Configuration Manager.  
 
@@ -45,9 +45,9 @@ Dans System Center Configuration Manager, les ordinateurs clients qui exécutent
 ### <a name="client-push-installation"></a>Installation poussée du client  
  Pour procéder à une installation Push du client Configuration Manager, ajoutez les éléments suivants en tant qu’exceptions au Pare-feu Windows :  
 
--   Entrant et sortant : **Partage de fichiers et d’imprimantes**  
+-   Éléments sortants et entrants : **Partage de fichiers et d’imprimantes**  
 
--   Entrant : **Windows Management Instrumentation (WMI)**  
+-   Entrant : **Windows Management Instrumentation (WMI)**  
 
 ### <a name="client-installation-by-using-group-policy"></a>Installation du client à l'aide de la stratégie de groupe  
  Pour installer le client Configuration Manager à l’aide de la stratégie de groupe, ajoutez **Partage de fichiers et d’imprimantes** en tant qu’exception au Pare-feu Windows.  
@@ -55,9 +55,9 @@ Dans System Center Configuration Manager, les ordinateurs clients qui exécutent
 ### <a name="client-requests"></a>Requêtes client  
  Pour permettre aux ordinateurs clients de communiquer avec les systèmes de site Configuration Manager, ajoutez les éléments suivants en tant qu’exceptions au Pare-feu Windows :  
 
- Sortant : Port TCP **80** (pour communications HTTP)  
+ Sortant : Port TCP **80** (pour les communications HTTP)  
 
- Sortant : Port TCP **443** (pour communications HTTPS)  
+ Sortant : Port TCP **443** (pour les communications HTTPS)  
 
 > [!IMPORTANT]  
 >  Ces numéros de port sont les valeurs par défaut. Elles peuvent être modifiées dans Configuration Manager. Pour plus d’informations, consultez [Guide pratique pour configurer les ports de communication des clients dans System Center Configuration Manager](../../../core/clients/deploy/configure-client-communication-ports.md). Si ces ports ont été modifiés par rapport aux valeurs par défaut, vous devez également configurer des exceptions correspondantes pour le Pare-feu Windows.  
@@ -65,13 +65,13 @@ Dans System Center Configuration Manager, les ordinateurs clients qui exécutent
 ### <a name="client-notification"></a>Notification du client  
  Pour que le point de gestion signale aux ordinateurs clients les actions qu’ils doivent entreprendre quand un utilisateur administratif sélectionne une action de client dans la console Configuration Manager (téléchargement d’une stratégie d’ordinateur, démarrage d’une recherche de programmes malveillants, etc.), ajoutez l’exception suivante au Pare-feu Windows :  
 
- Sortant : Port TCP **10123**  
+ Sortant : Port TCP **10123**  
 
  Si la communication n’aboutit pas, Configuration Manager recommence automatiquement à utiliser le port de communication HTTP ou HTTPS existant entre le client et le point de gestion :  
 
- Sortant : Port TCP **80** (pour communications HTTP)  
+ Sortant : Port TCP **80** (pour les communications HTTP)  
 
- Sortant : Port TCP **443** (pour communications HTTPS)  
+ Sortant : Port TCP **443** (pour les communications HTTPS)  
 
 > [!IMPORTANT]  
 >  Ces numéros de port sont les valeurs par défaut. Elles peuvent être modifiées dans Configuration Manager. Pour plus d’informations, consultez [Guide pratique pour configurer les ports de communication des clients dans System Center Configuration Manager](../../../core/clients/deploy/configure-client-communication-ports.md). Si ces ports ont été modifiés par rapport aux valeurs par défaut, vous devez également configurer des exceptions correspondantes pour le Pare-feu Windows.  
@@ -79,7 +79,7 @@ Dans System Center Configuration Manager, les ordinateurs clients qui exécutent
 ### <a name="remote-control"></a>Contrôle à distance  
  Pour utiliser la fonctionnalité de contrôle à distance de Configuration Manager, autorisez le port suivant :  
 
--   Entrant : Port TCP**2701**  
+-   Entrant : Port TCP **2701**  
 
 ### <a name="remote-assistance-and-remote-desktop"></a>Assistance à distance et Bureau à distance  
  Pour lancer l’assistance à distance à partir de la console Configuration Manager, ajoutez le programme personnalisé **Helpsvc.exe** et le port personnalisé entrant TCP **135** à la liste des programmes et services autorisés dans le Pare-feu Windows de l’ordinateur client. Vous devez également autoriser l' **Assistance à distance** et le **Bureau à distance**. Si vous lancez l'assistance à distance depuis l'ordinateur client, le Pare-feu Windows configure et autorise automatiquement l' **Assistance à distance** et le **Bureau à distance**.  
@@ -87,11 +87,11 @@ Dans System Center Configuration Manager, les ordinateurs clients qui exécutent
 ### <a name="wake-up-proxy"></a>Proxy de mise en éveil  
  Si vous activez le paramètre client du proxy de mise en éveil, un nouveau service appelé ConfigMgr Wake-up Proxy utilise un protocole pair à pair pour savoir si d'autres ordinateurs du sous-réseau sont en éveil et pour les mettre en éveil, le cas échéant. Cette communication utilise les ports suivants :  
 
- Sortant : Port UDP **25536**  
+ Sortant : Port UDP **25536**  
 
- Sortant : Port UDP **9**  
+ Sortant : Port UDP **9**  
 
- Ces numéros correspondent aux ports par défaut qui peuvent être modifiés dans Configuration Manager en utilisant les paramètres client de **Gestion de l’alimentation** appelés **Numéro de port du proxy de mise en éveil (UDP)** et **Numéro de port Wake On LAN (UDP)**. Si vous spécifiez le paramètre client **Gestion de l’alimentation**: **Exception du Pare-feu Windows pour le proxy de mise en éveil** , ces ports sont configurés automatiquement dans le Pare-feu Windows des clients. Toutefois, si les clients exécutent un autre pare-feu, vous devez configurer manuellement les exceptions pour ces numéros de port.  
+ Ces numéros correspondent aux ports par défaut qui peuvent être modifiés dans Configuration Manager en utilisant les paramètres client de **Gestion de l’alimentation** appelés **Numéro de port du proxy de mise en éveil (UDP)** et **Numéro de port Wake On LAN (UDP)**. Si vous spécifiez le paramètre client **Gestion de l’alimentation** : **Exception du Pare-feu Windows pour le proxy de mise en éveil**, ces ports sont configurés automatiquement dans le Pare-feu Windows des clients. Toutefois, si les clients exécutent un autre pare-feu, vous devez configurer manuellement les exceptions pour ces numéros de port.  
 
  En plus de ces ports, le proxy de mise en éveil utilise également des messages de demande d'écho ICMP (Internet Control Message Protocol) entre un ordinateur client et un autre ordinateur client. Cette communication permet de savoir si l'autre ordinateur client est en éveil sur le réseau. ICMP est parfois appelé commandes ping TCP/IP.  
 

@@ -1,8 +1,8 @@
 ---
-title: Déprécié pour les serveurs de site Configuration Manager
+title: Éléments dépréciés pour les serveurs de site
 titleSuffix: Configuration Manager
-description: Découvrez les produits et systèmes d’exploitation que System Center Configuration Manager ne prend plus en charge pour les serveurs de site.
-ms.date: 01/25/2018
+description: Découvrez les produits et systèmes d’exploitation que Configuration Manager ne prend plus en charge pour les serveurs de site.
+ms.date: 01/15/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,37 +10,48 @@ ms.assetid: d53ac075-438b-41da-ab85-42f33982da0c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b92eb8083ce886fcab4d9957b2a79999d72a1a5a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: c8ea24e141d0e01512ed81ca96e88f2f0f2d07bc
+ms.sourcegitcommit: d5c013a29f53b975fe3a6cb0a41f1e817bd7b235
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32332761"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54342718"
 ---
-# <a name="removed-and-deprecated-for-system-center-configuration-manager-site-servers"></a>Supprimé et déprécié pour les serveurs de site System Center Configuration Manager
+# <a name="removed-and-deprecated-for-configuration-manager-site-servers"></a>Éléments supprimés et dépréciés pour les serveurs de site Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
-Cet article décrit les produits et systèmes d’exploitation supprimés de la prise en charge dans les serveurs de site System Center Configuration Manager ou qui seront supprimés dans une prochaine mise à jour (dépréciés). Il annonce les changements à venir qui pourraient affecter votre utilisation de Configuration Manager.  
+Cet article décrit les produits et systèmes d’exploitation supprimés de la prise en charge dans les serveurs de site Configuration Manager ou qui seront supprimés dans une prochaine mise à jour (dépréciés). Il annonce les changements à venir qui pourraient affecter votre utilisation de Configuration Manager.  
 
-Ces informations peuvent faire l’objet de modifications dans les futures versions et ne pas inclure chaque fonctionnalité, produit ou système d’exploitation déprécié.  
+Ces informations sont susceptibles de changer à l’avenir. Elles peuvent ne pas inclure chaque fonctionnalité, produit ou système d’exploitation déprécié.  
 
 
-## <a name="deprecated-server-operating-systems"></a>Systèmes d’exploitation serveur dépréciés  
+
+## <a name="server-os"></a>Système d’exploitation serveur  
 
 |**Systèmes d’exploitation**|**Première annonce de dépréciation**|**Support supprimé** |  
 |-|-|-| 
-|Windows Server 2008 R2|10 juillet 2015| Version 1702  (voir la remarque 1)| 
-|Windows Server 2008|10 juillet 2015|Version 1511 </br></br>Le support prend fin quand un système de site est supprimé (Voir la remarque 2).|  
+|Windows Server 2008 R2 avec SP1|10 juillet 2015| Version 1702 <sup>[Remarque 1](#bkmk_note1)</sup>| 
+|Windows Server 2008 avec SP2|10 juillet 2015|Version 1511 <sup>[Remarque 2](#bkmk_note2)</sup>|  
 
->[!NOTE]
->-   À compter de la version 1702, Windows Server 2008 R2 n’est pas pris en charge pour les serveurs de site ou la plupart des rôles de système de site. Toutefois, les versions antérieures à 1702 continuent de prendre en charge son utilisation. Ce système d’exploitation reste pris en charge pour le rôle de système de site de point de distribution (y compris les points de distribution d’extraction, ainsi que pour PXE et la multidiffusion) jusqu’à l’annonce de la dépréciation de cette prise en charge ou jusqu’à l’expiration du support étendu de ce système d’exploitation. À compter de la version 1602, vous pouvez mettre à niveau sur place le système d’exploitation d’un serveur de site de Windows Server 2008 R2 vers Windows Server 2012 R2.  
->- Pour plus d’informations sur la mise à niveau sur place d’un système d’exploitation de serveurs de site, consultez la section [Mise à niveau sur place du système d’exploitation des serveurs de site qui exécutent Windows Server 2008 R2](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#bkmk_from2008r2) dans [Mettre à niveau l’infrastructure locale qui prend en charge System Center Configuration Manager](/sccm/core/servers/manage/upgrade-on-premises-infrastructure).
+#### <a name="bkmk_note1"></a>Remarque 1 : Windows Server 2008 R2 avec SP1
+Windows Server 2008 R2 avec Service Pack 1 n’est pas pris en charge pour les serveurs de site ou la plupart des rôles de système de site. Ce système d’exploitation est toujours pris en charge pour le rôle de point de distribution. Cette prise en charge inclut les points de distribution d’extraction, PXE et la multidiffusion. 
 
->[!NOTE]
->-   Windows Server 2008 n’est pas pris en charge pour les serveurs de site ou les rôles de système de site, à l’exception du point de distribution et du point de distribution d’extraction. Vous pouvez continuer à utiliser ce système d’exploitation comme point de distribution jusqu’à l’annonce de la dépréciation de la prise en charge ou jusqu’à l’expiration du support étendu de ce système d’exploitation. Pour plus d’informations, consultez [Échec de l’installation de System Center Configuration Manager CB et LTSB sur Windows Server 2008](https://support.microsoft.com/help/4015095).
+> [!Important]  
+> La date de fin du support étendu pour Windows Server 2008 R2 avec SP1 est le 14 janvier 2020. Après cette date, Configuration Manager ne prendra plus en charge ce système d’exploitation comme rôle de système de site. 
 
-## <a name="deprecated-support-for-sql-server-versions-as-a-site-database"></a>Support déprécié pour les versions de SQL Server en tant que base de données de site  
+Vous pouvez mettre à niveau le système d’exploitation du serveur de site de Windows Server 2008 R2 à Windows Server 2012 R2. Pour plus d’informations, consultez [Mettre à niveau sur place le système d’exploitation de serveurs de site exécutant Windows Server 2008 R2](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#bkmk_from2008r2).  
+
+
+#### <a name="bkmk_note2"></a> Remarque 2 : Windows Server 2008 avec SP2
+Windows Server 2008 avec Service Pack 2 n’est pas pris en charge pour les serveurs de site ou la plupart des rôles de système de site. Ce système d’exploitation est toujours pris en charge pour le rôle de point de distribution. Cette prise en charge inclut les points de distribution d’extraction, PXE et la multidiffusion. 
+
+> [!Important]  
+> La date de fin du support étendu pour Windows Server 2008 avec SP2 est le 14 janvier 2020. Après cette date, Configuration Manager ne prendra plus en charge ce système d’exploitation comme rôle de système de site.  
+
+
+
+## <a name="sql-server"></a>SQL Server   
 
 |**Versions de SQL Server**|**Première annonce de dépréciation**|**Support supprimé**|   
 |-|-|-| 
@@ -48,14 +59,23 @@ Ces informations peuvent faire l’objet de modifications dans les futures versi
 |SQL Server 2008|10 juillet 2015|Version 1511|  
 
 
-Si vous devez mettre à niveau votre version de SQL Server, nous vous recommandons les méthodes suivantes, de la plus simple à la plus complexe.
-1. [Mise à niveau de SQL Server sur place](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#a-namebkmksupconfigupgradedbsrva-upgrade-sql-server-on-the-site-database-server) (recommandé).
-2. Installez une nouvelle version de SQL Server sur un nouvel ordinateur. Ensuite, [utilisez l’option de déplacement de la base de données](/sccm/core/servers/manage/modify-your-infrastructure#a-namebkmkdbconfiga-modify-the-site-database-configuration) du programme d’installation de Configuration Manager pour pointer votre serveur de site vers la nouvelle version de SQL Server.
-3. Utilisez la [sauvegarde et la récupération](/sccm/protect/understand/backup-and-recovery).
+Si vous devez mettre à niveau votre version de SQL Server, nous vous recommandons les méthodes suivantes, de la plus simple à la plus complexe :
+
+1. [Mise à niveau de SQL Server sur place](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#a-namebkmksupconfigupgradedbsrva-upgrade-sql-server-on-the-site-database-server) (recommandé).  
+
+2. Installez une nouvelle version de SQL Server sur un nouvel ordinateur. Ensuite, pour pointer votre serveur de site vers la nouvelle version de SQL Server, [utilisez l’option de déplacement de la base de données](/sccm/core/servers/manage/modify-your-infrastructure#a-namebkmkdbconfiga-modify-the-site-database-configuration) du programme d’installation de Configuration Manager.  
+
+3. Utilisez la [sauvegarde et la récupération](/sccm/protect/understand/backup-and-recovery).  
 
 
-## <a name="more-information"></a>Plus d'informations
-Pour plus d'informations, voir :
- - [Supprimé et déprécié](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated)
- - Le site web [Politique de support Microsoft](https://support.microsoft.com/lifecycle).
- - [Prise en charge des versions Current Branch de System Center Configuration Manager](/sccm/core/servers/manage/current-branch-versions-supported).
+
+## <a name="more-information"></a>Informations complémentaires
+
+Pour plus d’informations, consultez les articles suivants : 
+
+- [Supprimé et déprécié](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated)  
+
+- [Politique de support Microsoft](https://support.microsoft.com/lifecycle)  
+
+- [Prise en charge des versions Current Branch de Configuration Manager](/sccm/core/servers/manage/current-branch-versions-supported)  
+

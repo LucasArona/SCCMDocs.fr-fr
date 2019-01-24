@@ -10,16 +10,16 @@ ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cde62242fc4db99d762d670037aad22bd25d6c00
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: e7a2801b7efa513b2b15a58a7a89eee5d4727a21
+ms.sourcegitcommit: d5c013a29f53b975fe3a6cb0a41f1e817bd7b235
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456734"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54342895"
 ---
 # <a name="task-sequence-variables-in-configuration-manager"></a>Variables de séquence de tâches dans Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Cet article constitue une référence pour toutes les variables disponibles dans l’ordre alphabétique. Utilisez la fonction **Rechercher** du navigateur (en général **CTRL** + **F**) pour rechercher une variable spécifique. La variable indique si elle est spécifique à une étape particulière. L’article sur les [étapes de séquence de tâches](/sccm/osd/understand/task-sequence-steps) inclut la liste des variables spécifiques à chaque étape. 
 
@@ -153,13 +153,13 @@ Pour plus d'informations, consultez [Utilisation des variables de séquence de t
 
  Spécifie que la séquence de tâches a démarré via l’une des méthodes suivantes :  
 
- - **SMS** : le client Configuration Manager, comme lorsqu’un utilisateur le démarre à partir du Centre logiciel
- - **UFD** : support USB hérité
- - **UFD+FORMAT** : support USB plus récent
- - **CD** : CD démarrable
- - **DVD** : DVD démarrable
- - **PXE** : démarrage réseau avec PXE
- - **HD** : média préparé sur un disque dur
+ - **SMS** : le client Configuration Manager, comme quand un utilisateur le démarre à partir du Centre logiciel
+ - **UFD** : média USB hérité
+ - **UFD+FORMAT** : média USB plus récent
+ - **CD** : CD démarrable
+ - **DVD** : DVD démarrable
+ - **PXE** : démarrage réseau avec PXE
+ - **HD** : média préparé sur un disque dur
 
 
 ### <a name="SMSTSLogPath"></a> _SMSTSLogPath
@@ -289,8 +289,8 @@ Pour plus d'informations, consultez [Utilisation des variables de séquence de t
 
  Spécifie le type de séquence de tâches en cours d'exécution. Elle peut avoir l’une des valeurs suivantes :  
 
- - **1** : séquence de tâches générique
- - **2** : séquence de tâches du déploiement de système d’exploitation
+ - **1** : séquence de tâches générique
+ - **2** : séquence de tâches du déploiement de système d’exploitation
 
 
 ### <a name="SMSTSUseCRL"></a> _SMSTSUseCRL
@@ -304,7 +304,7 @@ Pour plus d'informations, consultez [Utilisation des variables de séquence de t
 
  Cette variable peut avoir les valeurs suivantes :  
 
- - `true` : spécifie que la séquence de tâches est démarrée manuellement par un utilisateur depuis le Centre logiciel.  
+ - `true` : spécifie que la séquence de tâches est démarrée manuellement par un utilisateur à partir du Centre logiciel.  
 
  - `false` : spécifie que la séquence de tâches est lancée automatiquement par le planificateur Configuration Manager.
 
@@ -330,13 +330,13 @@ Pour plus d'informations, consultez [Utilisation des variables de séquence de t
 
  La séquence de tâches définit cette variable avec l’état d’installation de l’application lors de l’étape [Installer l’application](task-sequence-steps.md#BKMK_InstallApplication). Elle définit l’une des valeurs suivantes :  
 
- - **Non défini** : l’étape Installer l’application n’a pas été exécutée.  
+ - **Non défini** : l’étape Installer l’application n’a pas été exécutée.  
 
- - **Erreur** : au moins une application a échoué en raison d’une erreur lors de l’étape Installer l’application.  
+ - **Erreur** : au moins une application a échoué en raison d’une erreur au cours de l’étape Installer l’application.  
 
  - **Avertissement** : aucune erreur ne s’est produite pendant l’étape Installer l’application. Une ou plusieurs applications, ou une dépendance nécessaire, n’ont pas été installées car une exigence n’était pas satisfaite.  
 
- - **Réussite** : aucune erreur ou avertissement n’a été détecté pendant l’étape Installer l’application.  
+ - **Opération réussie** : aucune erreur ou avertissement n’a été détecté pendant l’étape Installer l’application.  
 
 
 ### <a name="OSDAdapter"></a> OSDAdapter
@@ -393,8 +393,8 @@ Pour plus d'informations, consultez [Utilisation des variables de séquence de t
  Options pour NetBIOS sur TCP/IP. Les valeurs possibles sont les suivantes :  
 
  - `0` : utiliser des paramètres NetBIOS du serveur DHCP  
- - `1` : activer NetBIOS avec TCP/IP  
- - `2` : désactiver NetBIOS avec TCP/IP  
+ - `1` : Activer NetBIOS avec TCP/IP  
+ - `2` : Désactiver NetBIOS avec TCP/IP  
 
 #### <a name="osdadapter0enablewins"></a>OSDAdapter0EnableWINS
  Définir sur `true` afin d’utiliser WINS pour la résolution de noms.
@@ -485,7 +485,7 @@ Pour plus d'informations, consultez [Utilisation des variables de séquence de t
  #### <a name="valid-values"></a>Valeurs valides
  - `true` (valeur par défaut) : installer uniquement le meilleur pilote de périphérique  
 
- - `false` : installe tous les pilotes de périphériques compatibles, et Windows choisit le meilleur pilote à utiliser  
+ - `false` : installe tous les pilotes de périphériques compatibles, et Windows choisit le meilleur pilote à utiliser  
 
 
 ### <a name="OSDAutoApplyDriverCategoryList"></a> OSDAutoApplyDriverCategoryList
@@ -780,8 +780,8 @@ Pour plus d'informations, consultez [Utilisation des variables de séquence de t
  Spécifie si l'ordinateur de destination se joint à un domaine Windows ou un groupe de travail. 
 
  #### <a name="valid-values"></a>Valeurs valides
- - `0` : joindre l’ordinateur de destination à un domaine Windows  
- - `1` : joindre l’ordinateur de destination à un groupe de travail  
+ - `0` : joindre l’ordinateur de destination à un domaine Windows  
+ - `1` : joindre l’ordinateur de destination à un groupe de travail  
 
 
 ### <a name="OSDJoinWorkgroupName"></a> OSDJoinWorkgroupName
@@ -952,9 +952,9 @@ Pour plus d'informations, consultez [Utilisation des variables de séquence de t
  Permet de personnaliser les fichiers capturés par USMT. 
 
  #### <a name="valid-values"></a>Valeurs valides
- - `Simple` : la séquence de tâches utilise seulement les fichiers de configuration USMT standard  
+ - `Simple` : la séquence de tâches utilise seulement les fichiers de configuration USMT standard  
 
- - `Advanced` : la variable de séquence de tâches [OSDMigrateConfigFiles](#OSDMigrateConfigFiles) spécifie les fichiers de configuration utilisés par USTM  
+ - `Advanced` : la variable de séquence de tâches [OSDMigrateConfigFiles](#OSDMigrateConfigFiles) spécifie les fichiers de configuration utilisés par USTM  
 
 
 ### <a name="OSDMigrateNetworkMembership"></a> OSDMigrateNetworkMembership
@@ -1018,8 +1018,8 @@ Pour plus d'informations, consultez [Utilisation des variables de séquence de t
  Spécifie si l'ordinateur de destination se joint à un domaine Active Directory ou un groupe de travail.
 
  #### <a name="value-values"></a>Valeurs
- - `0` : rejoindre un domaine Active Directory  
- - `1` : rejoindre un groupe de travail
+ - `0` : rejoindre un domaine Active Directory  
+ - `1` : Joindre un groupe de travail
 
 
 ### <a name="OSDPartitions"></a> OSDPartitions
@@ -1056,7 +1056,7 @@ Utilisez les noms de variables suivants pour définir les propriétés de la *pr
  #### <a name="osdpartitions0volumelettervariable"></a>OSDPartitions0VolumeLetterVariable
  Quand cette étape crée des partitions, elle utilise toujours la lettre de lecteur disponible suivante dans Windows PE. Utilisez cette propriété facultative pour spécifier le nom d’une autre variable de séquence de tâches. L’étape utilise cette variable afin d’enregistrer la nouvelle lettre de lecteur pour référence ultérieure.
 
- Si vous définissez plusieurs partitions avec cette étape de séquence de tâches, les propriétés de la *deuxième* partition sont définies en utilisant l’index **1** dans le nom de variable. Par exemple : **OSDPartitions1Type**, **OSDPartitions1FileSystem**, **OSDPartitions1Bootable**, **OSDPartitions1QuickFormat** et **OSDPartitions1VolumeName**.
+ Si vous définissez plusieurs partitions avec cette étape de séquence de tâches, les propriétés de la *deuxième* partition sont définies en utilisant l’index **1** dans le nom de variable. Par exemple : **OSDPartitions1Type**, **OSDPartitions1FileSystem**, **OSDPartitions1Bootable**, **OSDPartitions1QuickFormat** et **OSDPartitions1VolumeName**.
 
 
 ### <a name="OSDPartitionStyle"></a> OSDPartitionStyle
@@ -1068,8 +1068,8 @@ Utilisez les noms de variables suivants pour définir les propriétés de la *pr
  Spécifie le style de partition à utiliser lors du partitionnement du disque. 
 
  #### <a name="valid-values"></a>Valeurs valides
- - `GPT` : utiliser le style de la table de partition GUID
- - `MBR`: utiliser le style de partition à enregistrement de démarrage principal
+ - `GPT` : utiliser le style de la table de partition GUID
+ - `MBR` : utiliser le style de partition à enregistrement de démarrage principal
 
 
 ### <a name="OSDProductKey"></a> OSDProductKey
@@ -1090,9 +1090,9 @@ Utilisez les noms de variables suivants pour définir les propriétés de la *pr
  Spécifie un mot de passe généré de manière aléatoire pour le compte de l'administrateur local dans le nouveau système d'exploitation. 
 
  #### <a name="valid-values"></a>Valeurs valides
- - `true` (par défaut) : le programme d’installation de Windows désactive le compte d’administrateur local sur l’ordinateur cible  
+ - `true` (valeur par défaut) : le programme d’installation de Windows désactive le compte d’administrateur local sur l’ordinateur cible  
 
- - `false` : le programme d’installation de Windows active le compte d’administrateur local sur l’ordinateur cible et affecte comme mot de passe la valeur de [OSDLocalAdminPassword](#OSDLocalAdminPassword)  
+ - `false` : le programme d’installation de Windows active le compte d’administrateur local sur l’ordinateur cible et affecte comme mot de passe la valeur de [OSDLocalAdminPassword](#OSDLocalAdminPassword)  
 
 
 ### <a name="OSDRegisteredOrgName-input"></a> OSDRegisteredOrgName (entrée)
@@ -1350,7 +1350,7 @@ Utilisez les noms de variables suivants pour définir les propriétés de la *pr
 
  #### <a name="examples"></a>Exemples
  - `0` (valeur par défaut) : ne pas afficher un message de redémarrage  
- - `60` : afficher l’avertissement pendant une minute  
+ - `60` : afficher l’avertissement pendant une minute  
 
 
 ### <a name="SMSTSAssignmentsDownloadInterval"></a> SMSTSAssignmentsDownloadInterval
@@ -1371,11 +1371,11 @@ Utilisez les noms de variables suivants pour définir les propriétés de la *pr
 
  Spécifie la façon dont une séquence de tâches associe des utilisateurs à l'ordinateur de destination. Définissez la variable sur l'une des valeurs suivantes :  
 
- - **Auto** : lorsque la séquence de tâches déploie le système d’exploitation sur l’ordinateur de destination, elle crée une relation entre les utilisateurs spécifiés et l'ordinateur de destination.  
+ - **Auto** : quand la séquence de tâches déploie le système d’exploitation sur l’ordinateur de destination, elle crée une relation entre les utilisateurs spécifiés et l’ordinateur de destination.  
 
  - **En attente** : la séquence de tâches crée une relation entre les utilisateurs spécifiés et l’ordinateur de destination. Un administrateur doit approuver la relation pour la définir.  
 
- - **Désactivé** : la séquence de tâches n’associe pas d’utilisateurs à l’ordinateur de destination pendant le déploiement du système d’exploitation.
+ - **Disabled** : la séquence de tâches n’associe pas d’utilisateurs à l’ordinateur de destination pendant le déploiement du système d’exploitation.
 
 
 ### <a name="SMSTSDisableStatusRetry"></a> SMSTSDisableStatusRetry
@@ -1580,6 +1580,8 @@ Utilisez les noms de variables suivants pour définir les propriétés de la *pr
 
  Contrôlez le délai d’attente pour l’analyse des mises à jour logicielles pendant cette étape. Par exemple, augmentez la valeur si vous vous attendez à de nombreuses mises à jour lors de l’analyse. La valeur par défaut est `1800` secondes (30 minutes). La valeur de la variable est définie en secondes.
 
+> [!NOTE] 
+> À compter de la version 1802, la valeur par défaut est `3600` secondes (60 minutes).
 
 ### <a name="SMSTSUDAUsers"></a> SMSTSUDAUsers
 
@@ -1605,9 +1607,9 @@ Par exemple, si vous définissez SMSTSWaitForSecondReboot sur `600`, la séquenc
 ### <a name="TSDisableProgressUI"></a> TSDisableProgressUI
  <!-- 1354291 --> Utilisez cette variable pour contrôler quand la séquence de tâches affiche la progression aux utilisateurs finaux. Pour masquer ou afficher la progression à des moments différents, définissez cette variable plusieurs fois dans une séquence de tâches.  
 
- - `true` : masquer la progression de la séquence de tâches  
+ - `true` : Masquer la progression de la séquence de tâches  
 
- - `false` : afficher la progression de la séquence de tâches  
+ - `false` : afficher la progression de la séquence de tâches  
 
 
 ### <a name="TSErrorOnWarning"></a> TSErrorOnWarning 
@@ -1637,11 +1639,11 @@ Par exemple, si vous définissez SMSTSWaitForSecondReboot sur `600`, la séquenc
 
 Les variables suivantes sont déconseillées :
 
-- **OSDAllowUnsignedDriver** : n'est pas utilisée au cours du déploiement de Windows Vista et des systèmes d'exploitation ultérieurs
-- **OSDBuildStorageDriverList** : s’applique uniquement à Windows XP et Windows Server 2003
-- **OSDDiskpartBiosCompatibilityMode** : nécessaire uniquement lors du déploiement de Windows XP ou Windows Server 2003
-- **OSDInstallEditionIndex** : inutile après Windows Vista
-- **OSDPreserveDriveLetter**: pour plus d’informations, consultez [OSDPreserveDriveLetter](#OSDPreserveDriveLetter)
+- **OSDAllowUnsignedDriver** : n’est pas utilisée au cours du déploiement de Windows Vista et des systèmes d’exploitation ultérieurs
+- **OSDBuildStorageDriverList** : s’applique uniquement à Windows XP et à Windows Server 2003
+- **OSDDiskpartBiosCompatibilityMode** : nécessaire uniquement lors du déploiement de Windows XP ou Windows Server 2003
+- **OSDInstallEditionIndex** : inutile après Windows Vista
+- **OSDPreserveDriveLetter** : pour plus d’informations, consultez [OSDPreserveDriveLetter](#OSDPreserveDriveLetter)
 
 ### <a name="osdpreservedriveletter"></a>OSDPreserveDriveLetter
 

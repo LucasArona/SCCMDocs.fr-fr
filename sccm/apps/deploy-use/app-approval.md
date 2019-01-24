@@ -10,12 +10,12 @@ ms.assetid: 20493c86-6454-4b35-8f22-0d049b68b8bb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 666df71b32ea0dc95411b8ffd58d18f7666d7b23
-ms.sourcegitcommit: d36e4c7082a5144e79035dd8847c8e741fa04667
+ms.openlocfilehash: 776d0a477d56a178927fb2d09866eacf63b4895a
+ms.sourcegitcommit: d5c013a29f53b975fe3a6cb0a41f1e817bd7b235
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53444584"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54342786"
 ---
 # <a name="approve-applications-in-configuration-manager"></a>Approuver des applications dans Configuration Manager
 
@@ -69,6 +69,10 @@ Après avoir approuvé l’installation d’une application, vous pouvez **Refus
 <!--1321550-->
 
 Depuis la version 1810, configurez les notifications par e-mail pour les demandes d’approbation d’applications. Quand un utilisateur demande une application, vous recevez un e-mail. Cliquez sur les liens de l’e-mail pour approuver ou refuser la demande, sans avoir besoin d’utiliser la console Configuration Manager.
+
+Vous pouvez définir les adresses e-mail des utilisateurs qui peuvent approuver ou refuser la demande lors de la création d’un déploiement pour l’application. Pour changer par la suite la liste des adresses e-mail, accédez à l’espace de travail **Supervision**, développez **Alertes**, puis sélectionnez le nœud **Abonnements**. Sélectionnez **Propriétés** dans l’un des abonnements **Approuver l’application par e-mail** associés au déploiement de votre application. 
+
+Si plusieurs alertes existent, vous pouvez déterminer quelle alerte va avec quel déploiement. Ouvrez les propriétés de l’alerte et affichez la liste **Alertes sélectionnées** sous l’onglet Général. Le déploiement est activé comme alerte pour cet abonnement. 
 
 
 ### <a name="prerequisites"></a>Prérequis

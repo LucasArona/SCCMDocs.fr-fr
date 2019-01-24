@@ -10,16 +10,16 @@ ms.assetid: 1392797b-76cb-46b4-a3e4-8f349ccaa078
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 00789c0c469e7de5ccd0b4dcac4130fdb14bb485
-ms.sourcegitcommit: 1439817f1309658b31008d7bafaab32fc5ef8789
+ms.openlocfilehash: e8f575fc609dea662688ed10a76733467784a5b9
+ms.sourcegitcommit: d5c013a29f53b975fe3a6cb0a41f1e817bd7b235
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52820116"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54342803"
 ---
 # <a name="site-and-site-system-prerequisites-for-configuration-manager"></a>Prérequis des sites et systèmes de site pour Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Les ordinateurs Windows nécessitent des configurations spécifiques qui prennent en charge leur utilisation en tant que serveurs de système de site Configuration Manager. 
 
@@ -327,6 +327,8 @@ Pour plus d'informations, consultez [Installer et configurer des points de distr
 #### <a name="windows-server-roles-and-features"></a>Rôles et fonctionnalités Windows Server  
 
 -   .NET Framework 3.5 SP1 (ou version ultérieure)  
+
+-   Fonctionnalités de Windows Defender (Windows Server 2016 ou ultérieur)  
 
 
 

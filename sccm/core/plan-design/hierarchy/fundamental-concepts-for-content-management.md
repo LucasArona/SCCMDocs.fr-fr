@@ -10,16 +10,16 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b73ead1492b143260d327f428db5a6183f84434c
-ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
+ms.openlocfilehash: 4a777ec74fb4006df056b4e69d7cbdfb380bcf72
+ms.sourcegitcommit: d5c013a29f53b975fe3a6cb0a41f1e817bd7b235
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411338"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54342752"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Principes de base de la gestion de contenu dans Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Configuration Manager prend en charge un puissant système d’outils et d’options pour gérer les contenus logiciels. Les déploiements de logiciels, comme les applications, les packages, les mises à jour logicielles et les déploiements de système d’exploitation, nécessitent tous des contenus. Configuration Manager stocke le contenu à la fois sur les serveurs de site et sur les points de distribution. Le transfert de ce contenu d’un emplacement à un autre nécessite une large bande passante réseau. Pour planifier et utiliser efficacement l’infrastructure de gestion de contenu, il est nécessaire de bien comprendre les options et les configurations disponibles. Déterminez ensuite comment les utiliser au mieux en fonction de votre environnement réseau et de vos besoins en matière de déploiement de contenu.  
 
@@ -57,7 +57,7 @@ Pour plus d’informations, consultez [Compte d’accès au package](/sccm/core/
 
 
 ## <a name="binary-differential-replication"></a>Réplication différentielle binaire  
- La réplication différentielle binaire est un prérequis pour les points de distribution. Elle est parfois appelée « réplication différentielle ». Lors de la distribution de mises à jour à un contenu que vous avez précédemment déployé sur d’autres sites ou sur des points de distribution distants, la réplication différentielle binaire est automatiquement utilisée pour réduire la bande passante utilisée.  
+ La réplication différentielle binaire est parfois appelée « réplication delta ». Elle est utilisée pour distribuer des mises à jour à un contenu que vous avez précédemment déployé sur d’autres sites ou sur des points de distribution distants. Pour permettre à la réplication différentielle binaire de réduire la bande passante utilisée, installez la fonctionnalité **Compression différentielle à distance** sur les points de distribution. Pour plus d’informations, consultez [Prérequis des points de distribution](/sccm/core/plan-design/configs/site-and-site-system-prerequisites#bkmk_2012dppreq).
 
  Cette fonctionnalité réduit la bande passante réseau utilisée lors de l’envoi des mises à jour du contenu distribué. Elle renvoie uniquement le contenu nouveau ou modifié au lieu d’envoyer l’ensemble complet des fichiers sources de contenu chaque fois qu’un changement est apporté à ces fichiers.  
 
@@ -175,7 +175,7 @@ Quand un client a besoin de contenu, il envoie au point de gestion une demande q
 
 -   **Point de distribution d’extraction** : variation d’un point de distribution où le point de distribution obtient le contenu à partir d’un autre point de distribution (point de distribution source). Ce processus est similaire à la façon dont les clients téléchargent le contenu à partir de points de distribution. Les points de distribution d’extraction peuvent vous permettre d’éviter les goulots d’étranglement de bande passante réseau qui surviennent quand le serveur de site doit distribuer directement le contenu à chaque point de distribution. [Utilisez un point de distribution d’extraction](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point).
 
--   **Point de distribution cloud** : variante d’un point de distribution qui est installé dans Microsoft Azure. [Découvrez comment utiliser un point de distribution cloud](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point).  
+-   **Point de distribution cloud** : variation d’un point de distribution qui est installé sur Microsoft Azure. [Découvrez comment utiliser un point de distribution cloud](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point).  
 
 
 Les points de distribution standard prennent en charge diverses configurations et fonctionnalités :  
@@ -236,7 +236,7 @@ Pour plus d’informations, consultez [Groupes de limites](/sccm/core/servers/de
 ## <a name="network-bandwidth"></a>Bande passante du réseau  
  Pour mieux gérer la largeur de la bande passante réseau utilisée quand vous distribuez du contenu, vous pouvez utiliser les options suivantes :  
 
--   **Contenu préparé** : transfert de contenu vers un point de distribution sans distribuer le contenu sur le réseau.  
+-   **Contenu préparé** : transfert de contenu vers un point de distribution sans distribuer le contenu sur le réseau.  
 
 -   **Planification et limitation** : configurations qui vous aident à contrôler quand et comment le contenu est distribué aux points de distribution.  
 
@@ -256,7 +256,7 @@ Pour plus d’informations, consultez [Groupes de limites](/sccm/core/servers/de
 ## <a name="on-demand-content-distribution"></a>Distribution de contenu à la demande  
  La distribution de contenu à la demande est une option pour les déploiements d’applications et de packages individuels. Cette option permet la distribution de contenu à la demande vers des serveurs préférés.  
 
--   Pour activer ce paramètre pour un déploiement, activez **Distribuer le contenu pour ce package vers les points de distribution préférés**.  
+-   Pour activer ce paramètre pour un déploiement, activez : **Distribuer le contenu pour ce package vers les points de distribution préférés**.  
 
 -   Quand vous activez cette option pour un déploiement et si un client demande du contenu qui n’est disponible sur aucun de ses points de distribution préférés, Configuration Manager distribue automatiquement ce contenu aux points de distribution préférés du client.  
 

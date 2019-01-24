@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.openlocfilehash: 01c6de94fd4cb0d05b482c1c05df2f09780db7fd
-ms.sourcegitcommit: 8827ffaea108678da968a3623f072876990c830c
+ms.openlocfilehash: 9d8c74968e808877fb903be424eff594210189e1
+ms.sourcegitcommit: d5c013a29f53b975fe3a6cb0a41f1e817bd7b235
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49411291"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54342769"
 ---
 #  <a name="automatically-deploy-software-updates"></a>Déployer automatiquement des mises à jour logicielles  
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Utilisez une règle de déploiement automatique (ADR) au lieu d’ajouter de nouvelles mises à jour à un groupe de mises à jour logicielles existant. D’une manière générale, vous utilisez des règles ADR pour déployer les mises à jour logicielles mensuelles (également appelées mises à jour « Patch Tuesday ») et pour gérer les mises à jour de définitions Endpoint Protection. Si vous avez besoin d’aide pour déterminer la méthode de déploiement qui vous convient, consultez [Déployer des mises à jour logicielles](deploy-software-updates.md).
 
@@ -39,9 +39,9 @@ Approuvez et déployez automatiquement des mises à jour logicielles en utilisan
 
 3.  Dans la page **Général** de l’Assistant Création d’une règle de déploiement automatique, configurez les paramètres suivants :  
 
-    -   **Nom :** spécifiez le nom de la règle ADR. Le nom doit être unique, permettre de décrire l’objectif de la règle et être identifiable parmi d’autres dans le site Configuration Manager.  
+    -   **Nom** : spécifiez le nom de la règle ADR. Le nom doit être unique, permettre de décrire l’objectif de la règle et être identifiable parmi d’autres dans le site Configuration Manager.  
 
-    -   **Description :** spécifiez une description pour la règle ADR. La description doit fournir une présentation de la règle de déploiement et autres informations pertinentes permettant de la différencier des autres. Le champ de description facultatif est limité à 256 caractères et est vierge par défaut.  
+    -   **Description** : spécifiez la description de la règle ADR. La description doit fournir une présentation de la règle de déploiement et autres informations pertinentes permettant de la différencier des autres. Le champ de description facultatif est limité à 256 caractères et est vierge par défaut.  
 
     -   **Modèle** : sélectionnez un modèle de déploiement pour spécifier s’il faut appliquer des configurations ADR enregistrées précédemment. Configurez un modèle de déploiement contenant plusieurs propriétés de déploiement de mise à jour communes, utilisables pour créer des règles ADR supplémentaires. Ces modèles permettent de gagner du temps et de garantir la cohérence entre des déploiements similaires. Sélectionnez l’un des modèles de déploiement de mises à jour logicielles prédéfinis suivants :  
 
@@ -51,26 +51,26 @@ Approuvez et déployez automatiquement des mises à jour logicielles en utilisan
 
          - Le modèle **Mises à jour de SCEP et de l’antivirus Windows Defender** fournit des paramètres communs à utiliser quand vous déployez des mises à jour de définitions Endpoint Protection.  
 
-    -   **Regroupement**: indique le regroupement cible à utiliser pour le déploiement. Les membres du regroupement reçoivent les mises à jour logicielles définies dans le déploiement.  
+    -   **Regroupement** : indique le regroupement cible à utiliser pour le déploiement. Les membres du regroupement reçoivent les mises à jour logicielles définies dans le déploiement.  
 
     -   déterminer si des mises à jour logicielles seront ajoutées à un groupe de mises à jour logicielles nouveau ou existant. Dans la plupart des cas, choisissez de créer un nouveau groupe de mises à jour logicielles au moment d’exécuter la règle ADR. Si la règle s’exécute selon une planification plus agressive, vous pouvez choisir d’utiliser un groupe existant. Par exemple, si vous exécutez la règle quotidiennement pour des mises à jour de définitions, vous pouvez ajouter les mises à jour logicielles à un groupe de mises à jour logicielles existant.  
 
-    -   **Activer le déploiement après l’exécution de cette règle**: indiquez si le déploiement des mises à jour logicielles doit être activé après l’exécution de la règle ADR. Examinez les options suivantes pour ce paramètre :  
+    -   **Activer le déploiement après l’exécution de cette règle** : indiquez si le déploiement des mises à jour logicielles doit être activé après l’exécution de la règle ADR. Examinez les options suivantes pour ce paramètre :  
 
         -   Quand vous activez le déploiement, les mises à jour qui répondent aux critères définis dans la règle sont ajoutées à un groupe de mises à jour logicielles. Le contenu des mises à jour logicielles est téléchargé en fonction. Le contenu est copié vers les points de distribution spécifiés, et les mises à jour sont déployées sur les clients du regroupement cible.  
 
         -   Quand vous n’activez pas le déploiement, les mises à jour qui répondent aux critères définis dans la règle sont ajoutées à un groupe de mises à jour logicielles. Le contenu du déploiement de mises à jour logicielles est téléchargé, en fonction des besoins, et distribué aux points de distribution spécifiés. Le site crée un déploiement désactivé sur le groupe de mises à jour logicielles afin d’empêcher le déploiement des mises à jour sur les clients. Cette option vous laisse le temps de préparer le déploiement des mises à jour, de vérifier que les mises à jour répondant aux critères sont adéquates, puis d’activer le déploiement.  
 
-4.  Dans la page **Paramètres de déploiement**, configurez les paramètres suivants :  
+4.  Dans la page **Paramètres de déploiement**, configurez les paramètres suivants :  
 
-    -   **Utiliser Wake On LAN pour réveiller les clients pour les déploiements requis** : spécifie s’il faut activer Wake On LAN à l’échéance. Wake On LAN envoie des paquets de mise en éveil aux ordinateurs qui nécessitent une ou plusieurs mises à jour logicielles dans le déploiement. Le site réveille tous les ordinateurs qui sont en mode veille à l’heure d’échéance de l’installation pour que l’installation puisse démarrer. Les clients en mode veille qui n’ont besoin d’aucune des mises à jour logicielle incluses dans le déploiement ne sont pas démarrés. Par défaut, ce paramètre n’est pas activé. Avant d’utiliser cette option, configurez les ordinateurs et les réseaux pour Wake On LAN. Pour plus d’informations, consultez [Guide pratique pour configurer Wake On LAN](/sccm/core/clients/deploy/configure-wake-on-lan).  
+    -   **Utiliser Wake-on-LAN pour sortir de veille des clients pour les déploiements requis** : spécifie s’il faut activer Wake On LAN à la date d’échéance. Wake On LAN envoie des paquets de mise en éveil aux ordinateurs qui nécessitent une ou plusieurs mises à jour logicielles incluses dans le déploiement. Le site réveille tous les ordinateurs qui sont en mode veille à l’heure d’échéance de l’installation pour que l’installation puisse démarrer. Les clients en mode veille qui n’ont besoin d’aucune des mises à jour logicielle incluses dans le déploiement ne sont pas démarrés. Par défaut, ce paramètre n’est pas activé. Avant d’utiliser cette option, configurez les ordinateurs et les réseaux pour Wake On LAN. Pour plus d’informations, consultez [Guide pratique pour configurer Wake On LAN](/sccm/core/clients/deploy/configure-wake-on-lan).  
 
-    -   **Niveau de détail** : indiquez le niveau de détail pour les messages d’état qui sont signalés par les clients.  
+    -   **Niveau de détail** : indiquer le niveau de détail pour les messages d’état qui sont signalés par les clients.  
 
         > [!IMPORTANT]  
         >  Quand vous déployez des mises à jour de définitions, définissez le niveau de détails sur **Erreur uniquement** pour que le client envoie un message d'état uniquement si une mise à jour de définition échoue. Sinon, le client envoie un grand nombre de messages d’état pouvant avoir un effet sur les performances du serveur de site.  
 
-    -   **Paramètre du contrat de licence**: indiquez si les mises à jour logicielles doivent être déployées automatiquement avec un contrat de licence associé. Certaines mises à jour logicielles comprennent un contrat de licence. Quand vous déployez automatiquement des mises à jour logicielles, le contrat de licence ne s’affiche pas et il n’est pas possible de l’accepter. Choisissez de déployer automatiquement toutes les mises à jour logicielles indépendamment d’un contrat de licence associé, ou déployez uniquement les mises à jour qui ne sont associées à aucun contrat de licence.  
+    -   **Paramètre du contrat de licence** : indiquer si les mises à jour logicielles doivent être déployées automatiquement avec un contrat de licence associé. Certaines mises à jour logicielles comprennent un contrat de licence. Quand vous déployez automatiquement des mises à jour logicielles, le contrat de licence ne s’affiche pas et il n’est pas possible de l’accepter. Choisissez de déployer automatiquement toutes les mises à jour logicielles indépendamment d’un contrat de licence associé, ou déployez uniquement les mises à jour qui ne sont associées à aucun contrat de licence.  
 
          - Pour consulter le contrat de licence d’une mise à jour logicielle, sélectionnez la mise à jour logicielle dans le nœud **Toutes les mises à jour logicielles** de l’espace de travail **Bibliothèque de logiciels**. Dans le ruban, cliquez sur **Consulter la licence**.    
 
@@ -105,27 +105,27 @@ Approuvez et déployez automatiquement des mises à jour logicielles en utilisan
    
 7.  Dans la page **Calendrier de déploiement**, configurez les paramètres suivants :  
 
-    -   **Calendrier d’évaluation** : spécifiez le moment où Configuration Manager évalue la durée disponible et l’échéance de l’installation. Choisissez d’utiliser le temps universel coordonné (UTC) ou l’heure locale de l’ordinateur qui exécute la console Configuration Manager.  
+    -   **Calendrier d’évaluation** : spécifier le moment où Configuration Manager évalue le temps de mise à disposition et les heures d’échéance de l’installation. Choisissez d’utiliser le temps universel coordonné (UTC) ou l’heure locale de l’ordinateur qui exécute la console Configuration Manager.  
 
           - Quand vous sélectionnez ici **Heure locale du client**, puis **Dès que possible** pour le **Temps disponible du logiciel**, l’heure actuelle de l’ordinateur exécutant la console Configuration Manager est utilisée pour évaluer à quel moment les mises à jour sont disponibles. Ce comportement est le même avec l’**Échéance de l’installation** et l’heure à laquelle les mises à jour sont installées sur un client. Si le client se trouve dans un autre fuseau horaire, ces actions se produisent quand l’heure du client correspond à l’heure de l’évaluation.  
 
-    -   **Temps disponible du logiciel**: sélectionnez l’un des paramètres suivants pour spécifier le moment où les mises à jour logicielles sont disponibles pour les clients :  
+    -   **Temps disponible du logiciel** : sélectionner l'un des paramètres suivants pour spécifier le moment où les mises à jour logicielles seront disponibles pour les clients :  
 
-        -   **Dès que possible** : permet aux clients d’accéder dès que possible aux mises à jour logicielles incluses dans le déploiement. Quand vous créez le déploiement avec ce paramètre sélectionné, Configuration Manager met à jour la stratégie client. Ensuite, au prochain cycle d’interrogation de la stratégie client, les clients prennent connaissance du déploiement et les mises à jour sont disponibles pour l’installation.  
+        -   **Dès que possible** : permettre aux clients d’accéder dès que possible aux mises à jour logicielles incluses dans le déploiement. Quand vous créez le déploiement avec ce paramètre sélectionné, Configuration Manager met à jour la stratégie client. Ensuite, au prochain cycle d’interrogation de la stratégie client, les clients prennent connaissance du déploiement et les mises à jour sont disponibles pour l’installation.  
 
-        -   **Heure spécifique** : permet aux clients d’accéder aux mises à jour logicielles incluses dans le déploiement à une date et une heure spécifiques. Quand vous créez le déploiement avec ce paramètre activé, Configuration Manager met à jour la stratégie client. Au prochain cycle d’interrogation de la stratégie client, les clients prennent connaissance du déploiement. Cependant, les mises à jour logicielles incluses dans le déploiement ne sont pas disponibles pour l’installation avant la date et l’heure configurées.  
+        -   **Heure spécifique** : permettre aux clients d’accéder aux mises à jour logicielles incluses dans le déploiement à une date et une heure spécifiques. Quand vous créez le déploiement avec ce paramètre activé, Configuration Manager met à jour la stratégie client. Au prochain cycle d’interrogation de la stratégie client, les clients prennent connaissance du déploiement. Cependant, les mises à jour logicielles incluses dans le déploiement ne sont pas disponibles pour l’installation avant la date et l’heure configurées.  
 
-    -   **Échéance d’installation**: sélectionnez l’un des paramètres suivants pour spécifier l’échéance d’installation des mises à jour logicielles incluses dans le déploiement :  
+    -   **Échéance de l’installation** : sélectionner l'un des paramètres suivants pour spécifier l'échéance d'installation des mises à jour logicielles incluses dans le déploiement :  
 
-        -   **Dès que possible**: sélectionnez ce paramètre pour installer automatiquement les mises à jour logicielles incluses dans le déploiement dès que possible.  
+        -   **Dès que possible** : sélectionner ce paramètre de manière à installer automatiquement les mises à jour logicielles dans le déploiement dès que possible.  
 
-        -   **Heure spécifique**: sélectionnez ce paramètre pour installer automatiquement les mises à jour logicielles incluses dans le déploiement à une date et une heure spécifiques. Configuration Manager détermine l’échéance d’installation des mises à jour logicielles en ajoutant l’intervalle **Heure spécifique** configuré au **Temps disponible du logiciel**.  
+        -   **Heure spécifique** : sélectionner ce paramètre pour installer automatiquement les mises à jour logicielles dans le déploiement à une date et une heure spécifiques. Configuration Manager détermine l’échéance d’installation des mises à jour logicielles en ajoutant l’intervalle **Heure spécifique** configuré au **Temps disponible du logiciel**.  
 
              - L’heure d’échéance de l’installation réelle est l’heure d'échéance affichée plus un laps de temps aléatoire pouvant atteindre deux heures. La randomisation réduit l’impact potentiel lié à l’installation simultanée, par les clients du regroupement, des mises à jour incluses dans le déploiement.  
 
              - Pour désactiver le délai de randomisation de l’installation pour les mises à jour logicielles requises, configurez le paramètre client sur **Désactiver la randomisation des échéances** dans le groupe **Agent ordinateur**. Pour plus d’informations, consultez [Paramètres client de l’Agent ordinateur](/sccm/core/clients/deploy/about-client-settings#computer-agent).  
 
-    -  **Différer la mise en œuvre de ce déploiement selon les préférences de l’utilisateur, dans la limite de la période de grâce définie dans les paramètres client** : activez ce paramètre pour accorder aux utilisateurs plus de temps pour installer les mises à jour logicielles requises au-delà de l’échéance.  
+    -  **Différer la mise en œuvre de ce déploiement selon les préférences de l'utilisateur, dans la limite de la période de grâce définie dans les paramètres client** : activer ce paramètre pour accorder plus de temps aux utilisateurs pour installer les mises à jour au-delà de l’échéance.  
 
         - Ce comportement est généralement obligatoire quand un ordinateur reste longuement inactif et qu’il nécessite l’installation de nombreuses applications ou mises à jour logicielles. Par exemple, quand un utilisateur rentre de congés, il peut être amené à patienter longuement, le temps que le client installe les déploiements en retard.  
 
@@ -135,20 +135,23 @@ Approuvez et déployez automatiquement des mises à jour logicielles en utilisan
 
 8. Dans la page **Expérience utilisateur**, configurez les paramètres suivants :  
 
-    -   **Notifications à l’utilisateur** : indiquez si vous souhaitez afficher les notifications dans le Centre logiciel au **Temps disponible du logiciel** configuré. Ce paramètre contrôle également s’il faut avertir les utilisateurs sur les clients.  
+    -   **Notifications à l'utilisateur** : indiquer si vous souhaitez afficher les notifications dans le Centre logiciel au **Temps disponible du logiciel** configuré. Ce paramètre contrôle également s’il faut avertir les utilisateurs sur les clients.  
 
-    -   **Comportement à l’échéance** : spécifiez ce qui se passe quand le déploiement de mises à jour logicielles atteint l’échéance en dehors des fenêtres de maintenance définies. Vous pouvez entre autres choisir d’installer les mises à jour logicielles et d’exécuter un redémarrage du système après l’installation. Pour plus d’informations sur les fenêtres de maintenance, consultez [Guide pratique pour utiliser les fenêtres de maintenance](/sccm/core/clients/manage/collections/use-maintenance-windows).  
+    -   **Comportement à l’échéance** : Spécifiez ce qui se passe quand le déploiement de mises à jour logicielles arrive à échéance en dehors des fenêtres de maintenance définies. Vous pouvez entre autres choisir d’installer les mises à jour logicielles et d’exécuter un redémarrage du système après l’installation. Pour plus d’informations sur les fenêtres de maintenance, consultez [Guide pratique pour utiliser les fenêtres de maintenance](/sccm/core/clients/manage/collections/use-maintenance-windows).  
+        
+        > [!Note]
+        > Cela ne s’applique que si la fenêtre de maintenance est configurée pour l’appareil client. Si aucune fenêtre de maintenance n’est définie sur l’appareil, la mise à jour de l’installation et le redémarrage se produisent toujours après l’échéance.
 
-    -   **Comportement de redémarrage du périphérique** : indiquez si le redémarrage du système sur les serveurs et stations de travail doit être supprimé si un redémarrage est nécessaire pour terminer l’installation des mises à jour.  
+    -   **Comportement de redémarrage de l’appareil** : Indiquez si le redémarrage du système sur les serveurs et stations de travail doit être supprimé si un redémarrage est nécessaire pour terminer l’installation des mises à jour.  
 
         > [!WARNING]  
         >  La suppression du redémarrage du système peut être utile dans les environnements de serveur ou quand vous ne souhaitez pas que les ordinateurs cibles redémarrent par défaut. Cependant, cela peut laisser les ordinateurs dans un état non sécurisé. Autoriser un redémarrage forcé aide à garantir l’exécution immédiate de l’installation des mises à jour logicielles.  
 
-    -   **Traitement des filtres d’écriture pour les appareils Windows Embedded** : ce paramètre contrôle le comportement d’installation sur les appareils Windows Embedded qui sont activés avec un filtre d’écriture. Choisissez l’option permettant de valider les modifications à l’échéance de l’installation ou au cours d’une fenêtre de maintenance. Quand vous sélectionnez cette option, un redémarrage est nécessaire et les modifications sont conservées sur l’appareil. Sinon, la mise à jour est installée, appliquée sur l’overlay temporaire et validée ultérieurement.  
+    -   **Traitement des filtres d'écriture pour les appareils Windows Embedded** : Ce paramètre contrôle le comportement d’installation sur les appareils Windows Embedded qui sont activés avec un filtre d’écriture. Choisissez l’option permettant de valider les modifications à l’échéance de l’installation ou au cours d’une fenêtre de maintenance. Quand vous sélectionnez cette option, un redémarrage est nécessaire et les modifications sont conservées sur l’appareil. Sinon, la mise à jour est installée, appliquée sur l’overlay temporaire et validée ultérieurement.  
 
            -  Quand vous déployez une mise à jour logicielle sur un appareil Windows Embedded, vérifiez que l’appareil est membre d’un regroupement pour lequel une fenêtre de maintenance a été configurée.  
 
-    - **Comportement de réévaluation du déploiement des mises à jour logicielles après le redémarrage** : sélectionnez ce paramètre pour configurer les déploiements de mises à jour logicielles de façon à ce que les clients exécutent une analyse de conformité des mises à jour logicielles immédiatement après avoir installé celles-ci et redémarré. Ce paramètre permet au client de rechercher d’autres mises à jour devenues applicables après son redémarrage, puis de les installer au cours d’une même fenêtre de maintenance.  
+    - **Comportement de réévaluation du déploiement des mises à jour logicielles après le redémarrage** : sélectionner ce paramètre pour configurer les déploiements de mises à jour logicielles de façon à ce que les clients exécutent une analyse de conformité des mises à jour logicielles immédiatement après avoir installé celles-ci et redémarré. Ce paramètre permet au client de rechercher d’autres mises à jour devenues applicables après son redémarrage, puis de les installer au cours d’une même fenêtre de maintenance.  
 
 9. Dans la page **Alertes**, configurez la manière dont Configuration Manager génère des alertes pour ce déploiement. Examinez les alertes de mises à jour logicielles récentes de Configuration Manager dans le nœud **Mises à jour logicielles** de l’espace de travail **Bibliothèque de logiciels**. Si vous utilisez également System Center Operations Manager, configurez aussi ses alertes.  
 
@@ -158,9 +161,9 @@ Approuvez et déployez automatiquement des mises à jour logicielles en utilisan
 
     - Indiquez si les clients doivent télécharger et installer les mises à jour logicielles à partir d’un point de distribution dans le groupe de limites de site par défaut quand le contenu des mises à jour logicielles n’est pas disponible à partir d’un point de distribution dans les groupes de limites actuels ou voisins.  
 
-    - **Autoriser les clients à partager du contenu avec d’autres clients sur le même sous-réseau**: indiquez si vous souhaitez activer l’utilisation de BranchCache pour les téléchargements du contenu. Pour plus d’informations, consultez [BranchCache](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#branchcache). Depuis la version 1802, BranchCache est toujours activé sur les clients. Ce paramètre est supprimé, car les clients utilisent BranchCache si le point de distribution le prend en charge.  
+    - **Autoriser les clients à partager du contenu avec d’autres clients sur le même sous-réseau** : indiquer si l'utilisation de BranchCache doit être activée pour les téléchargements de contenu. Pour plus d’informations, consultez [BranchCache](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#branchcache). Depuis la version 1802, BranchCache est toujours activé sur les clients. Ce paramètre est supprimé, car les clients utilisent BranchCache si le point de distribution le prend en charge.  
 
-    - **Si les mises à jour logicielles ne sont pas disponibles sur le point de distribution des groupes de limites actifs, voisins ou de site, télécharger le contenu à partir de Microsoft Updates** : sélectionnez ce paramètre pour que les clients connectés à l’intranet téléchargent les mises à jour logicielles à partir de Microsoft Update si les mises à jour ne sont pas disponibles sur les points de distribution. Les clients Internet accèdent toujours à Microsoft Update pour obtenir le contenu des mises à jour logicielles.  
+    - **Si les mises à jour logicielles ne sont pas disponibles sur le point de distribution des groupes de limites actifs, voisins ou de site, télécharger le contenu à partir de Microsoft Updates** : sélectionner ce paramètre afin de faire télécharger les mises à jour logicielles à partir de Microsoft Update aux clients connectés à l’intranet si elles ne sont pas disponibles sur des points de distribution. Les clients Internet accèdent toujours à Microsoft Update pour obtenir le contenu des mises à jour logicielles.  
 
     - Indiquez si les clients peuvent procéder au téléchargement une fois l’échéance de l’installation dépassée dans le cas où ils utilisent des connexions Internet facturées à l’usage. Les fournisseurs Internet facturent parfois en fonction de la quantité de données que vous envoyez et recevez quand vous utilisez une connexion facturée à l’usage.  
 
@@ -169,15 +172,15 @@ Approuvez et déployez automatiquement des mises à jour logicielles en utilisan
 
 11. Dans la page **Package de déploiement**, sélectionnez l’une des options suivantes :  
 
-    - **Sélectionner un package de déploiement** : ajouter ces mises à jour à un package de déploiement existant.  
+    - **Sélectionner un package de déploiement** : ajouter ces mises à jour à un package de déploiement existant.  
 
-    - **Créer un package de déploiement** : ajoute ces mises à jour à un nouveau package de déploiement. Configurez les paramètres supplémentaires suivants :  
+    - **Créer un package de déploiement** : ajouter ces mises à jour à un nouveau package de déploiement. Configurez les paramètres supplémentaires suivants :  
 
-        -  **Nom**: spécifiez le nom du package de déploiement. Utilisez un nom unique qui décrit le contenu du package. Il est limité à 50 caractères.  
+        -  **Nom** : spécifiez le nom du package de déploiement. Utilisez un nom unique qui décrit le contenu du package. Il est limité à 50 caractères.  
 
-        -  **Description**: spécifiez une description qui fournit des informations sur le package de déploiement. La description facultative est limitée à 127 caractères.  
+        -  **Description** : spécifiez une description qui fournit des informations sur le package de déploiement. La description facultative est limitée à 127 caractères.  
 
-        -  **Source du package**: spécifie l’emplacement des fichiers sources des mises à jour logicielles. Tapez un chemin réseau pour l’emplacement source, par exemple `\\server\sharename\path`, ou cliquez sur **Parcourir** pour rechercher l’emplacement réseau. Créez le dossier partagé pour les fichiers sources du package de déploiement avant de passer à la page suivante.  
+        -  **Source du package** : Spécifie l'emplacement des fichiers sources des mises à jour logicielles. Tapez un chemin réseau pour l’emplacement source, par exemple `\\server\sharename\path`, ou cliquez sur **Parcourir** pour rechercher l’emplacement réseau. Créez le dossier partagé pour les fichiers sources du package de déploiement avant de passer à la page suivante.  
 
             - Vous ne pouvez pas utiliser l’emplacement spécifié comme source d’un autre package de déploiement logiciel.  
 
@@ -185,11 +188,11 @@ Approuvez et déployez automatiquement des mises à jour logicielles en utilisan
 
             -  Le compte d’ordinateur du fournisseur SMS et l’utilisateur qui exécute l’Assistant Téléchargement des mises à jour logicielles nécessitent des autorisations d’**Écriture** sur l’emplacement de téléchargement. Limitez l’accès à l’emplacement de téléchargement. Cette restriction réduit le risque que des personnes malveillantes falsifient les fichiers sources des mises à jour logicielles.  
 
-        -  **Priorité d’expédition**: spécifiez la priorité d’envoi pour le package de déploiement. Configuration Manager utilise cette priorité quand il envoie le package aux points de distribution. Les packages de déploiement sont envoyés par ordre de priorité : haute, moyenne ou faible. Les packages disposant de priorités identiques sont transmis dans l'ordre dans lequel ils ont été créés. S’il n’y a pas de backlog, le package est traité immédiatement, quelle que soit sa priorité.  
+        -  **Priorité d'expédition** : spécifiez la priorité d'envoi pour le package de déploiement. Configuration Manager utilise cette priorité quand il envoie le package aux points de distribution. Les packages de déploiement sont envoyés par ordre de priorité : haute, moyenne ou faible. Les packages disposant de priorités identiques sont transmis dans l'ordre dans lequel ils ont été créés. S’il n’y a pas de backlog, le package est traité immédiatement, quelle que soit sa priorité.  
 
-        - **Activer la réplication différentielle binaire** : activez ce paramètre pour limiter le trafic réseau entre les sites. La réplication différentielle binaire met à jour uniquement le contenu qui a changé dans le package, au lieu de mettre à jour l’ensemble du contenu du package. Pour plus d’informations, consultez [Réplication différentielle binaire](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#binary-differential-replication).  
+        - **Activer la réplication différentielle binaire** : activer ce paramètre afin de réduire le trafic réseau entre les sites. La réplication différentielle binaire met à jour uniquement le contenu qui a changé dans le package, au lieu de mettre à jour l’ensemble du contenu du package. Pour plus d’informations, consultez [Réplication différentielle binaire](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#binary-differential-replication).  
 
-    - **Aucun package de déploiement** : depuis la version 1806, les mises à jour logicielles sont déployées sur les appareils sans que le contenu soit préalablement téléchargé et distribué aux points de distribution. Ce paramètre est particulièrement utile quand le contenu des mises à jour à traiter est extrêmement volumineux. Vous pouvez aussi l’utiliser quand vous voulez que les clients reçoivent systématiquement le contenu à partir du service cloud Microsoft Update. Dans ce cas, les clients peuvent également télécharger le contenu auprès d’homologues qui disposent déjà du contenu nécessaire. Le client Configuration Manager continue de gérer le téléchargement de contenu. Vous pouvez donc utiliser la fonctionnalité de cache d’homologue Configuration Manager ou d’autres technologies telles que l’optimisation de la distribution. Cette fonctionnalité prend en charge tous les types de mises à jour pris en charge par la gestion des mises à jour logicielles Configuration Manager, notamment les mises à jour Windows et Office.<!--1357933-->  
+    - **Aucun package de déploiement** : depuis la version 1806, les mises à jour logicielles sont déployées sur les appareils sans que le contenu soit préalablement téléchargé et distribué aux points de distribution. Ce paramètre est particulièrement utile quand le contenu des mises à jour à traiter est extrêmement volumineux. Vous pouvez aussi l’utiliser quand vous voulez que les clients reçoivent systématiquement le contenu à partir du service cloud Microsoft Update. Dans ce cas, les clients peuvent également télécharger le contenu auprès d’homologues qui disposent déjà du contenu nécessaire. Le client Configuration Manager continue de gérer le téléchargement de contenu. Vous pouvez donc utiliser la fonctionnalité de cache d’homologue Configuration Manager ou d’autres technologies telles que l’optimisation de la distribution. Cette fonctionnalité prend en charge tous les types de mises à jour pris en charge par la gestion des mises à jour logicielles Configuration Manager, notamment les mises à jour Windows et Office.<!--1357933-->  
 
         > [!Note]  
         > Cette option concerne uniquement les nouvelles règles de déploiement automatique. Vous ne pouvez pas modifier les règles existantes avec ce paramètre.<!--SCCMDocs issue 741-->  
@@ -199,9 +202,9 @@ Approuvez et déployez automatiquement des mises à jour logicielles en utilisan
 
 13. Dans la page **Emplacement de téléchargement**, indiquez si les fichiers de mise à jour logicielle doivent être téléchargés à partir d’Internet ou de votre réseau local. Configurez les paramètres suivants :  
 
-    -   **Télécharger les mises à jour logicielles depuis Internet** : sélectionnez ce paramètre pour télécharger les mises à jour logicielles à partir d’un emplacement spécifié sur Internet. Ce paramètre est activé par défaut.  
+    -   **Télécharger les mises à jour logicielles à partir d'Internet** : sélectionner ce paramètre pour télécharger les mises à jour logicielles à partir de l'emplacement spécifié sur Internet. Ce paramètre est activé par défaut.  
 
-    -   **Télécharger les mises à jour logicielles à partir d’un emplacement sur le réseau local**: sélectionnez ce paramètre pour télécharger les mises à jour logicielles à partir d’un répertoire local ou d’un dossier partagé. Ce paramètre est utile quand l’ordinateur exécutant l’Assistant ne dispose d’aucun accès Internet. Tout ordinateur connecté à Internet peut télécharger préalablement les mises à jour logicielles, puis les stocker à un emplacement sur le réseau local auquel l’ordinateur exécutant l’Assistant peut accéder.  
+    -   **Télécharger les mises à jour logicielles à partir d'un emplacement sur le réseau local** : Sélectionnez ce paramètre pour télécharger les mises à jour logicielles à partir d'un répertoire local ou d'un dossier partagé. Ce paramètre est utile quand l’ordinateur exécutant l’Assistant ne dispose d’aucun accès Internet. Tout ordinateur connecté à Internet peut télécharger préalablement les mises à jour logicielles, puis les stocker à un emplacement sur le réseau local auquel l’ordinateur exécutant l’Assistant peut accéder.  
 
 14. Dans la page **Sélection de la langue**, sélectionnez les langues pour lesquelles le site télécharge les mises à jour logicielles sélectionnées. Le site télécharge uniquement ces mises à jour si elles sont disponibles dans les langues sélectionnées. Les mises à jour logicielles qui ne sont pas propres à une langue sont toujours téléchargées. Par défaut, l’Assistant sélectionne les langues que vous avez configurées dans les propriétés du point de mise à jour logicielle. Au moins une langue doit être sélectionnée avant de passer à la page suivante. Quand vous sélectionnez uniquement des langues qu’une mise à jour logicielle ne prend pas en charge, le téléchargement de cette mise à jour échoue.  
 

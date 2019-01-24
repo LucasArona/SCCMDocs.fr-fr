@@ -10,12 +10,12 @@ ms.assetid: 32e2d6b9-148f-45e2-8083-98c656473f82
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 85bd23130826c7ca23e10125efba58bf14555fb1
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 2027bf271a39dbe577580fa547ff09a4bd3483a8
+ms.sourcegitcommit: d5c013a29f53b975fe3a6cb0a41f1e817bd7b235
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53424219"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54342735"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>CMPivot pour les données en temps réel dans Configuration Manager
 
@@ -35,7 +35,7 @@ Les composants suivants sont obligatoires pour l’utilisation de CMPivot :
 
 - Mettez à niveau les appareils cibles vers la dernière version du client Configuration Manager.  
 
-- L’administrateur Configuration Manager doit disposer de l’autorisation **Lecture** sur l’objet **Scripts SMS**, de l’autorisation **Exécuter les scripts** sur l’objet **Regroupement** et de l’étendue par défaut. Le rôle d’**exécuteur de scripts** dispose de ces autorisations. Pour plus d’informations, consultez [Créer des rôles de sécurité pour les scripts](/sccm/apps/deploy-use/create-deploy-scripts#bkmk_ScriptRoles).  
+- L’administrateur Configuration Manager doit disposer de l’autorisation **Lecture** sur l’objet **Scripts SMS**, de l’autorisation **Exécuter les scripts** sur l’objet **Regroupement** et de l’étendue par défaut. Le rôle d’**exécuteur de scripts** dispose de ces autorisations (ce rôle n’étant pas créé par défaut). Pour plus d’informations sur la création de ce rôle de sécurité personnalisé, consultez [Rôles de sécurité pour les scripts](/sccm/apps/deploy-use/create-deploy-scripts#bkmk_ScriptRoles).  
 
 - Pour collecter des données pour les entités suivantes, les clients cibles nécessitent PowerShell version 5.0 :  
     - Administrateurs

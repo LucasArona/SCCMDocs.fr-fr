@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 57184274-5fea-4d79-a2b4-22e08ed26daf
-ms.openlocfilehash: aae0951ddf32ce1d58a29b034acef96b55ab85a0
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 8c0752506e410f752f49795470215c30b0928e4e
+ms.sourcegitcommit: d5c013a29f53b975fe3a6cb0a41f1e817bd7b235
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53414801"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54342837"
 ---
 # <a name="manually-deploy-software-updates"></a>Déployer manuellement des mises à jour logicielles  
 
@@ -161,14 +161,17 @@ Après avoir identifié les mises à jour logicielles que vous souhaitez déploy
 
    -   **Notifications à l'utilisateur** : indiquer si vous souhaitez afficher les notifications dans le Centre logiciel au **Temps disponible du logiciel** configuré. Ce paramètre permet aussi de contrôler si des notifications doivent être envoyées aux utilisateurs sur les ordinateurs clients. Pour les déploiements **disponibles**, vous ne pouvez pas sélectionner l’option **Masquer dans le Centre logiciel et toutes les notifications**.  
 
-   -   **Comportement à l'échéance** : ce paramètre peut être configuré uniquement pour les déploiements **Requis**. Spécifiez ce qui se passe quand le déploiement de mises à jour logicielles arrive à échéance en dehors des fenêtres de maintenance définies. Vous pouvez entre autres choisir d’installer les mises à jour logicielles et d’exécuter un redémarrage du système après l’installation. Pour plus d’informations sur les fenêtres de maintenance, consultez [Guide pratique pour utiliser les fenêtres de maintenance](/sccm/core/clients/manage/collections/use-maintenance-windows).  
+   -   **Comportement à l'échéance** : ce paramètre peut être configuré uniquement pour les déploiements **Requis**. Spécifiez ce qui se passe quand le déploiement de mises à jour logicielles arrive à échéance en dehors des fenêtres de maintenance définies. Vous pouvez entre autres choisir d’installer les mises à jour logicielles et d’exécuter un redémarrage du système après l’installation. Pour plus d’informations sur les fenêtres de maintenance, consultez [Guide pratique pour utiliser les fenêtres de maintenance](/sccm/core/clients/manage/collections/use-maintenance-windows). 
+  
+       > [!Note]
+       > Cela ne s’applique que si la fenêtre de maintenance est configurée pour l’appareil client. Si aucune fenêtre de maintenance n’est définie sur l’appareil, la mise à jour de l’installation et le redémarrage se produisent toujours après l’échéance.
 
-   -   **Comportement de redémarrage de l'appareil** : ce paramètre peut être configuré uniquement pour les déploiements **Requis**. Indiquez si le redémarrage du système sur les serveurs et stations de travail doit être supprimé si un redémarrage est nécessaire pour terminer l’installation des mises à jour.  
+   -   **Comportement de redémarrage de l’appareil** : ce paramètre peut être configuré uniquement pour les déploiements **Requis**. Indiquez si le redémarrage du système sur les serveurs et stations de travail doit être supprimé si un redémarrage est nécessaire pour terminer l’installation des mises à jour.  
 
        > [!WARNING]  
        >  La suppression du redémarrage du système peut être utile dans les environnements de serveur ou quand vous ne souhaitez pas que les ordinateurs cibles redémarrent par défaut. Cependant, cela peut laisser les ordinateurs dans un état non sécurisé. Autoriser un redémarrage forcé aide à garantir l’exécution immédiate de l’installation des mises à jour logicielles.  
 
-   -   **Traitement des filtres d'écriture pour les appareils Windows Embedded** : ce paramètre contrôle le comportement d’installation sur les appareils Windows Embedded qui sont activés avec un filtre d’écriture. Choisissez l’option permettant de valider les modifications à l’échéance de l’installation ou au cours d’une fenêtre de maintenance. Quand vous sélectionnez cette option, un redémarrage est nécessaire et les modifications sont conservées sur l’appareil. Sinon, la mise à jour est installée, appliquée sur l’overlay temporaire et validée ultérieurement.  
+   -   **Traitement des filtres d'écriture pour les appareils Windows Embedded** : Ce paramètre contrôle le comportement d’installation sur les appareils Windows Embedded qui sont activés avec un filtre d’écriture. Choisissez l’option permettant de valider les modifications à l’échéance de l’installation ou au cours d’une fenêtre de maintenance. Quand vous sélectionnez cette option, un redémarrage est nécessaire et les modifications sont conservées sur l’appareil. Sinon, la mise à jour est installée, appliquée sur l’overlay temporaire et validée ultérieurement.  
 
        -  Quand vous déployez une mise à jour logicielle sur un appareil Windows Embedded, vérifiez que l’appareil est membre d’un regroupement pour lequel une fenêtre de maintenance a été configurée.  
 
