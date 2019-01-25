@@ -10,17 +10,16 @@ ms.assetid: 0fd76043-d7ee-423d-8c5f-aa7e9ed58ce0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex
-ms.openlocfilehash: 67cc82bdd114c9d525e5a9dacc1e5775d52150dd
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: b0179de8cc96f885236178c70b7e834672ee1d5b
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53414920"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898577"
 ---
 # <a name="create-and-deploy-a-device-compliance-policy"></a>Créer et déployer une stratégie de conformité d’appareil
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 
 ## <a name="create-a-compliance-policy"></a>Créer une stratégie de conformité
@@ -33,7 +32,7 @@ ms.locfileid: "53414920"
 
 4. Dans la page **Général** de l'Assistant Création d'élément de configuration, spécifiez les informations suivantes :  
 
-    - **Nom**: Affectez un nom unique à la stratégie de conformité. Vous pouvez entrer jusqu’à 256 caractères.  
+    - **Nom** : Affectez un nom unique à la stratégie de conformité. Vous pouvez entrer jusqu’à 256 caractères.  
 
     - **Description** : Entrez une description qui donne un aperçu du profil VPN et permette son identification dans la console Configuration Manager. Vous pouvez entrer jusqu’à 256 caractères.  
 
@@ -43,15 +42,15 @@ ms.locfileid: "53414920"
 
     - **Gravité de non-conformité pour les rapports** : Spécifiez le niveau de gravité signalé si cette stratégie de conformité est évaluée comme non conforme. Les degrés de gravité disponibles sont les suivants :  
 
-        - **Aucun**: Les appareils qui ne respectent pas cette règle de conformité ne signalent une gravité d’échec pour les rapports Configuration Manager.  
+        - **Aucun** : Les appareils qui ne respectent pas cette règle de conformité ne signalent une gravité d’échec pour les rapports Configuration Manager.  
 
-        - **Informations**: Les appareils qui ne respectent pas cette règle de conformité signalent la gravité d’un échec de niveau **Informations** pour les rapports Configuration Manager.  
+        - **Informations** : Les appareils qui ne respectent pas cette règle de conformité signalent la gravité d’un échec de niveau **Informations** pour les rapports Configuration Manager.  
 
-        - **Avertissement**: Les appareils qui ne respectent pas cette règle de conformité signalent la gravité d’un échec de niveau **Avertissement** pour les rapports Configuration Manager.  
+        - **Avertissement** : Les appareils qui ne respectent pas cette règle de conformité signalent la gravité d’un échec de niveau **Avertissement** pour les rapports Configuration Manager.  
 
-        - **Critique**: Les appareils qui ne respectent pas cette règle de conformité signalent la gravité d’un échec de niveau **Critique** pour les rapports Configuration Manager.  
+        - **Critique** : Les appareils qui ne respectent pas cette règle de conformité signalent la gravité d’un échec de niveau **Critique** pour les rapports Configuration Manager.  
 
-        - **Critique avec événement**: Les appareils qui ne respectent pas cette règle de conformité signalent la gravité d’un échec de niveau **Critique** pour les rapports Configuration Manager. Le niveau de gravité **critique avec événement** est également enregistré comme événement Windows dans le journal des événements des applications.  
+        - **Critique avec événement** : Les appareils qui ne respectent pas cette règle de conformité signalent la gravité d’un échec de niveau **Critique** pour les rapports Configuration Manager. Le niveau de gravité **critique avec événement** est également enregistré comme événement Windows dans le journal des événements des applications.  
 
 5. Dans la page **Plateformes prises en charge**, choisissez les plateformes d’appareil à évaluer par cette stratégie de conformité. Vous pouvez également **Tout sélectionner** pour choisir toutes les plateformes d’appareil. Les plateformes prises en charge sont : Windows 7, Windows 8.1 et Windows 10 ; Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2 et Windows Server 2016.  
 
@@ -97,13 +96,13 @@ ms.locfileid: "53414920"
 
     La page **État du déploiement** contient les onglets suivants :  
 
-    - **Conforme**: Affiche la conformité de la stratégie en fonction du nombre de biens affectés. Vous pouvez choisir une règle pour créer un nœud temporaire sous le nœud **Utilisateurs** ou **Périphériques** de l'espace de travail **Biens et conformité**, qui contient tous les utilisateurs ou périphériques conformes à cette règle. Le volet **Détails du bien** affiche les utilisateurs ou les appareils conformes à la stratégie. Pour afficher plus d’informations, double-cliquez sur un utilisateur ou un appareil de la liste.  
+    - **Conforme** : Affiche la conformité de la stratégie en fonction du nombre de biens affectés. Vous pouvez choisir une règle pour créer un nœud temporaire sous le nœud **Utilisateurs** ou **Périphériques** de l'espace de travail **Biens et conformité**, qui contient tous les utilisateurs ou périphériques conformes à cette règle. Le volet **Détails du bien** affiche les utilisateurs ou les appareils conformes à la stratégie. Pour afficher plus d’informations, double-cliquez sur un utilisateur ou un appareil de la liste.  
 
-    - **Erreur**: Affiche une liste de toutes les erreurs pour le déploiement de stratégie sélectionné en fonction du nombre de ressources concernées. Vous pouvez choisir une règle pour créer un nœud temporaire sous le nœud **Utilisateurs** ou **Périphériques** de l'espace de travail **Biens et conformité**, qui contient tous les utilisateurs ou appareils qui ont généré des erreurs avec cette règle. Lorsque vous sélectionnez un utilisateur ou un appareil, le volet **Détails du bien** affiche les utilisateurs ou les appareils affectés par un problème. Pour afficher plus d’informations sur le problème, double-cliquez sur un utilisateur ou un appareil de la liste.  
+    - **Erreur** : Affiche une liste de toutes les erreurs pour le déploiement de stratégie sélectionné en fonction du nombre de ressources concernées. Vous pouvez choisir une règle pour créer un nœud temporaire sous le nœud **Utilisateurs** ou **Périphériques** de l'espace de travail **Biens et conformité**, qui contient tous les utilisateurs ou appareils qui ont généré des erreurs avec cette règle. Lorsque vous sélectionnez un utilisateur ou un appareil, le volet **Détails du bien** affiche les utilisateurs ou les appareils affectés par un problème. Pour afficher plus d’informations sur le problème, double-cliquez sur un utilisateur ou un appareil de la liste.  
 
-    - **Non conforme**: Affiche une liste de toutes les règles non conformes au sein de la stratégie en fonction du nombre de ressources affectées. Vous pouvez choisir une règle pour créer un nœud temporaire sous le nœud **Utilisateurs** ou **Périphériques** de l'espace de travail **Biens et conformité**, qui contient tous les utilisateurs ou périphériques non conformes à cette règle. Lorsque vous sélectionnez un utilisateur ou un appareil, le volet **Détails du bien** affiche les utilisateurs ou les appareils affectés par un problème. Pour afficher plus d’informations sur le problème, double-cliquez sur un utilisateur ou un appareil de la liste.  
+    - **Non conforme** : Affiche une liste de toutes les règles non conformes au sein de la stratégie en fonction du nombre de ressources affectées. Vous pouvez choisir une règle pour créer un nœud temporaire sous le nœud **Utilisateurs** ou **Périphériques** de l'espace de travail **Biens et conformité**, qui contient tous les utilisateurs ou périphériques non conformes à cette règle. Lorsque vous sélectionnez un utilisateur ou un appareil, le volet **Détails du bien** affiche les utilisateurs ou les appareils affectés par un problème. Pour afficher plus d’informations sur le problème, double-cliquez sur un utilisateur ou un appareil de la liste.  
 
-    - **Inconnu**: Affiche une liste de tous les utilisateurs et appareils qui n’ont pas signalé leur conformité pour le déploiement de stratégie sélectionné, ainsi que l’état du client actuel des appareils.  
+    - **Inconnu** : Affiche une liste de tous les utilisateurs et appareils qui n’ont pas signalé leur conformité pour le déploiement de stratégie sélectionné, ainsi que l’état du client actuel des appareils.  
 
 #### <a name="to-monitor-the-compliance-status-of-an-individual-device"></a>Pour surveiller l’état de conformité d’un appareil individuel
 
@@ -233,7 +232,7 @@ ms.locfileid: "53414920"
     **Prise en charge sur**:  
     - iOS 6+  
 
-- **Profil de messagerie**: Si l'option Le compte de messagerie doit être géré par Intune est sélectionnée, choisissez **Sélectionner** pour choisir le profil de messagerie qui doit gérer les appareils. Le profil de messagerie doit être présent sur l'appareil.  
+- **Profil de messagerie**: Si l'option **Le compte de messagerie doit être géré par Intune** est sélectionnée, choisissez **Sélectionner** pour choisir le profil de messagerie qui doit gérer les appareils. Le profil de messagerie doit être présent sur l'appareil.  
 
     **Prise en charge sur**:  
     - iOS 6+  
