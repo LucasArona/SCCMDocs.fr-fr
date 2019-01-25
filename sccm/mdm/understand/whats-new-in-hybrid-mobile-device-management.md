@@ -10,12 +10,12 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 610dfb7391347663fd92c0839d20eb7a4a703438
-ms.sourcegitcommit: c80abe7e4b7b2f80e957e45ff205f67d1b715688
+ms.openlocfilehash: 1ec1155ec578e0eab957baa991628ed18eef6c62
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226221"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898645"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Nouveautés de la gestion hybride des appareils mobiles avec Configuration Manager et Microsoft Intune
 
@@ -104,7 +104,7 @@ Pour plus d’informations, consultez [modification planifiée : Intune prend e
 - Stream (iOS)  
 - À faire (Android, iOS)  
 - PowerApps (Android, iOS)  
-- Flux (Android, iOS)  
+- Flow (Android, iOS)  
 
 Utilisez des stratégies de protection d’application pour protéger le transfert d’entreprise des données de données et de contrôle pour ces applications, telles que les autres applications gérées par la stratégie de Intune. 
 
@@ -435,8 +435,8 @@ Demandez aux utilisateurs finaux sur Windows 10 versions 1607 ou ultérieures d�
 
 - **Nouveaux paramètres de stratégie de gestion des applications mobiles**     
   Les paramètres suivants ont été ajoutés aux paramètres de stratégie de gestion des applications mobiles :
-  - **Désactiver la synchronisation des contacts**: Empêche l’application d’enregistrer des données sur l’application Contacts native de l’appareil.
-  - **Désactiver l’impression**: Empêche l’application d’imprimer des données scolaires ou de travail.
+  - **Désactiver la synchronisation des contacts** : Empêche l’application d’enregistrer des données sur l’application Contacts native de l’appareil.
+  - **Désactiver l’impression** : Empêche l’application d’imprimer des données scolaires ou de travail.
   <!-- 1324760 -->    
 
   Consultez [Protéger les applications à l’aide des stratégies de protection des applications de Configuration Manager](/sccm/mdm/deploy-use/protect-apps-using-mam-policies) pour essayer de nouveaux paramètres de stratégie de protection d’application.
@@ -592,24 +592,24 @@ Après décembre, les utilisateurs finaux qui disposent d’appareils autres que
 Pour plus d’informations, consultez [Inscrire votre appareil macOS dans Intune avec l’application Portail d’entreprise](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos-cp).
 
 
-### <a name="plan-for-change-new-intune-support-experience-for-premier-customers"></a>Modification planifiée : Nouvelle prise en charge Intune expérience pour Premier clients 
+### <a name="intune-support-experience-for-premier-customers-now-in-azure-instead-of-mpo"></a>Expérience de support Intune pour le Premier clients désormais dans Azure au lieu de MPO  
 <!--2828727-->
 
-mise à jour 4/12/2018 : Nous essayons d’améliorer ce processus pour vous. Prise en charge la création de demande dans MPO ne sont pas désactivée le 3 décembre. Nous vous informerons via le centre de messages et de mettre à jour de ce billet rapidement pour partager des chronologies pour que cette modification.
-
-En tant que Microsoft Premier client, vous pouvez actuellement utiliser la [portal d’en ligne Premier Microsoft (MPO)](https://premier.microsoft.com) et [Intune sur Azure](https://portal.azure.com) pour créer des demandes de support pour Intune. À compter du 3 décembre 2018, dans le cadre de l’amélioration du support Premier, vous pourrez créer des demandes de support uniquement dans Intune sur Azure.
+Nous avons indiqué dans MC147649 en septembre, que nous supprimons la possibilité de créer des demandes de support Intune à partir du portail en ligne Premier Microsoft (MPO) (premier.microsoft.com) en décembre. Maintenant, après un léger délai, à la fin du mois de janvier, vous allez être redirigé pour créer des demandes de prise en charge uniquement dans Intune sur Azure.
 
 #### <a name="how-does-this-affect-me"></a>Dans quelle mesure suis-je affecté ?
-Après le 3 décembre, vous ne pourrez plus créer de demandes de support dans MPO. Si vous tentez de le faire, un message impossible à ignorer s’affichera, et vous serez redirigé vers Intune sur Azure. Lorsque vous créez une demande de support dans le portail Azure, celle-ci est acheminée vers le support Microsoft dédié à Intune. Il se charge de diagnostiquer et de résoudre votre problème le plus rapidement possible. Si vous créez une demande de support dans le portail MPO, vous ne pourrez pas la voir dans le portail Azure. À partir de maintenant, vous ne devez créer des demandes de support que dans Intune sur Azure.  
+Après la fin du mois de janvier, pour continuer à améliorer le Premier prennent en charge l’expérience, vous ne pourrez pas créer des demandes de support dans MPO. Lorsque vous essayez d’effectuer cette action, vous verrez une invite de commandes que vous ne pouvez pas ignorer redirection vers Intune sur Azure. Ici, vous pouvez créer une demande de support, ce qui est acheminée vers le Support de Microsoft Intune-dédié. Ces prise en charge ingénieurs seront diagnostiquer et résoudre votre problème en temps voulu. Vous ne pouvez pas afficher les demandes de support dans le portail Azure que vous avez créé dans le portail MPO.
 
-Si vous utilisez la cogestion ou la gestion hybride des appareils mobiles, vous pouvez continuer à utiliser MPO pour créer des demandes de support concernant Configuration Manager, mais vous devez utiliser le portail Azure pour créer des demandes de support concernant Intune. Pour rappel, la gestion hybride des appareils mobiles est désormais dépréciée. Vous devez donc prévoir de passer à Intune sur Azure dès que possible. Pour plus d’informations, consultez [Move from Hybrid Mobile Device Management to Intune on Azure](https://aka.ms/hybrid_notification).
+Le portail Azure a une nouvelle expérience de prise en charge que nous avons récemment annoncé dans MC171941. Pour plus d’informations, consultez [comment obtenir un support technique pour Microsoft Intune](https://aka.ms/new_support_experience).
 
-Notez que seuls les utilisateurs disposant d’un rôle Administrateur général, Administrateur de service Intune et Administrateur du support du service peuvent créer des tickets de support dans le portail Azure.
+Si vous utilisez MDM hybride ou la cogestion, continuer à utiliser MPO pour créer des demandes de support pour Configuration Manager. Utiliser le portail Azure pour créer des demandes de support pour Intune. Pour rappel, la gestion hybride des appareils mobiles est désormais dépréciée. Vous devez donc prévoir de passer à Intune sur Azure dès que possible. Pour plus d’informations, consultez [Move from Hybrid Mobile Device Management to Intune on Azure](https://aka.ms/hybrid_notification).
+
+Seuls les utilisateurs avec des rôles d’administrateur général, administrateur de Service Intune et administrateur de prendre en charge de Service peuvent créer des tickets de support dans le portail Azure.
 
 #### <a name="what-can-i-do-to-prepare-for-this-change"></a>Que faire pour me préparer à ce changement ?
 - Vous devez cesser d’utiliser MPO pour les demandes de support relatives à Intune. Vous devez utiliser Intune sur Azure pour créer et gérer toutes vos demandes de support Intune.  
 - Vous devez notifier votre support technique et mettre à jour votre documentation, si nécessaire.  
-- Si certains de vos utilisateurs créent des demandes de support dans MPO sans disposer d’un rôle Administrateur général ou Administrateur de service Intune, attribuez-leur le rôle Administrateur du support du service dans Azure Active Directory. Pour créer des tickets de support dans le portail Azure, les utilisateurs ont besoin de l’un de ces rôles.  
+- Si vous avez des utilisateurs sans les rôles d’administrateur général ou administrateur de Service Intune crée actuellement des demandes de support dans MPO, leur assigner le rôle d’administrateur de Service prend en charge dans Azure Active Directory. Pour créer des tickets de support dans le portail Azure, les utilisateurs ont besoin de l’un de ces rôles.  
 
 #### <a name="additional-information"></a>Informations supplémentaires
 Pour plus d’informations, consultez ce [billet de blog de l’équipe de support Microsoft Intune](https://aka.ms/IntuneSupport_MPO_to_Azure).
