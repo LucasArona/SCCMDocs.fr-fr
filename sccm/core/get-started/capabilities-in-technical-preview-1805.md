@@ -10,16 +10,17 @@ ms.assetid: 7996b3eb-5259-483b-af40-adae2943d123
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ebd51b397e37c69e8f6e8d1e154fc369347bd63a
-ms.sourcegitcommit: fe279229a90fdc8cddbb13c7ffdbbb22af0e25ef
+ROBOTS: NOINDEX
+ms.openlocfilehash: 6108a6d90a18277275e50ba980a9d81099ba116a
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47229362"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898492"
 ---
 # <a name="capabilities-in-technical-preview-1805-for-system-center-configuration-manager"></a>Fonctionnalités de la version Technical Preview 1805 de System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Technical Preview)*
+*S’applique à : System Center Configuration Manager (Technical Preview)*
 
 Cet article présente les fonctionnalités disponibles dans Configuration Manager Technical Preview version 1805. Vous pouvez installer cette version pour mettre à jour et ajouter de nouvelles fonctionnalités au site de votre préversion technique. 
 
@@ -65,15 +66,15 @@ Suivez les instructions pour créer un déploiement en plusieurs phases que vous
 6. Sous l’onglet **Paramètres de phase**, choisissez une option pour chacun des paramètres de planification, puis sélectionnez **Suivant** quand vous avez terminé.  
 
     - Critères de réussite de la phase précédente (cette option est désactivée pour la première phase).
-        - **Pourcentage de réussite du déploiement** : spécifiez le pourcentage d’appareils qui exécutent le déploiement conformément aux critères de réussite de la phase précédente.  
+        - **Pourcentage de réussite du déploiement** : spécifiez le pourcentage d’appareils sur lesquels le déploiement est effectué conformément aux critères de réussite de la phase précédente.  
 
     - Conditions pour commencer cette phase de déploiement après la réussite de la phase précédente  
-        - **Commencer automatiquement cette phase après une période de report (en jours)** : choisissez le nombre de jours à attendre avant de passer à la phase suivante après la réussite de la phase précédente. 
-        - **Commencer manuellement le déploiement de la deuxième phase** : vous ne devez pas commencer cette phase automatiquement après la réussite de la précédente.  
+        - **Commencer automatiquement cette phase après une période de report (en jours)** : choisissez le nombre de jours d’attente avant de passer à la phase suivante après la réussite de la phase précédente. 
+        - **Commencer manuellement cette phase de déploiement** : choisissez cette option pour ne pas commencer cette phase automatiquement après la réussite de la précédente.  
 
     - Dès qu’un appareil est ciblé, installer le logiciel
         - **Dès que possible** : l’échéance d’installation sur l’appareil correspond au moment où celui-ci est ciblé.
-        - **Échéance (par rapport à la durée pendant laquelle l’appareil est ciblé)** : définit l’échéance d’installation sur un certain nombre de jours après le ciblage de l’appareil.  
+        - **Date d’échéance (par rapport au moment où l’appareil est ciblé)** : l’échéance d’installation correspond à un certain nombre de jours après que l’appareil a été ciblé.  
      
 7. Exécutez l’Assistant Paramètres de phase.
 
@@ -275,14 +276,14 @@ Cette version comprend des améliorations concernant la façon dont les clients 
 ### <a name="bkmk_token"></a> Scénarios
 Les scénarios suivants bénéficient de ces améliorations :  
 
-#### <a name="bkmk_token1"></a> Scénario 1 : Client vers point de gestion
+#### <a name="bkmk_token1"></a> Scénario 1 : Client vers point de gestion
 <!--1356889-->
 [Les appareils joints à Azure AD](/azure/active-directory/device-management-introduction#azure-ad-joined-devices) peuvent communiquer via une passerelle de gestion cloud avec un point de gestion configuré pour HTTP. Le serveur de site génère un certificat pour le point de gestion afin de lui permettre de communiquer via un canal sécurisé.   
 
 > [!Note]  
 > Ce comportement est différent de celui trouvé dans Configuration Manager Current Branch version 1802, qui nécessite un point de gestion HTTPS pour ce scénario. Pour plus d’informations, consultez [Activer le point de gestion pour HTTPS](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#enable-management-point-for-https).  
 
-#### <a name="bkmk_token2"></a> Scénario 2 : Client vers point de distribution
+#### <a name="bkmk_token2"></a> Scénario 2 : Client vers point de distribution
 <!--1358228--> Un groupe de travail ou un client joint à Azure AD peut télécharger du contenu via un canal sécurisé à partir d’un point de distribution configuré pour HTTP.   
 
 #### <a name="bkmk_token3"></a> Scénario 3 : Identité des appareils Azure AD 
@@ -369,7 +370,7 @@ Le modèle de séquence de tâches par défaut pour la mise à niveau sur place 
     - Pour plus d’informations sur les journaux du client Configuration Manager, consultez [Journaux du client Configuration Manager](/sccm/core/plan-design/hierarchy/log-files#BKMK_ClientLogs).
     - Pour plus d’informations sur _SMSTSLogPath et sur d’autres variables utiles, consultez [Variables intégrées de séquence de tâches](/sccm/osd/understand/task-sequence-built-in-variables).
 
-- **Exécuter les outils de diagnostic** : pour exécuter d’autres outils de diagnostic, ajoutez des étapes dans ce groupe. Ces outils doivent être automatisés pour collecter des informations supplémentaires à partir du système, dès que possible après un échec.
+- **Exécuter des outils de diagnostic** : pour exécuter d’autres outils de diagnostic, ajoutez des étapes dans ce groupe. Ces outils doivent être automatisés pour collecter des informations supplémentaires à partir du système, dès que possible après un échec.
     - Un exemple est l’outil Windows [SetupDiag](/windows/deployment/upgrade/setupdiag). Il s’agit d’un outil de diagnostic autonome que vous pouvez utiliser pour obtenir des informations détaillées sur la raison de l’échec d’une mise à niveau Windows 10.
          - Dans Configuration Manager, [créez un package](/sccm/apps/deploy-use/packages-and-programs#create-a-package-and-program) pour l’outil.
          - Ajoutez l’étape [Exécuter la ligne de commande](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) au groupe de votre séquence de tâches. Utilisez l’option **Package** pour référencer l’outil. La chaîne suivante est un exemple de **ligne de commande** :  
@@ -405,7 +406,7 @@ La valeur de l’utilisateur actuellement connecté est vide dans le nœud Appar
 - Les commentaires hors connexion sont maintenant pris en charge. Enregistrez vos commentaires dans la console, puis chargez-les vers Microsoft à partir d’un système connecté à Internet. Utilisez le nouvel outil de chargement des commentaires hors connexion qui se trouve ici : `cd.latest\SMSSETUP\Tools\UploadOfflineFeedback\UploadOfflineFeedback.exe`. Pour afficher les options de ligne de commande disponibles et nécessaires, exécutez l’outil avec l’option `--help`. Le système connecté a besoin d’accéder à **petrol.office.microsoft.com**.
 
 ### <a name="known-issues"></a>Problèmes connus
-Lorsque vous utilisez la commande **Envoyer un sourire** ou **Envoyer un smiley mécontent** à partir de la console sur un ordinateur connecté à Internet, le message suivant « Erreur lors de l’envoi des commentaires » peut s’afficher. Si vous cliquez sur **Plus de détails**, le texte suivant apparaît : `{"Message":""}`. Cette erreur est due à un problème connu au niveau de la réponse provenant du système de commentaires back-end. Vous pouvez ignorer cette erreur. Microsoft a bien reçu vos commentaires. (Si les détails affichent un autre message, utilisez l’option de commentaires hors connexion pour réessayer d’envoyer vos commentaires à une date ultérieure.)
+Lorsque vous utilisez la commande **Envoyer un sourire** ou **Envoyer un smiley mécontent** dans la console sur un ordinateur connecté à Internet, il peut arriver que le message suivant s’affiche : « Erreur lors de l'envoi des commentaires ». Si vous cliquez sur **Plus de détails**, le texte suivant apparaît : `{"Message":""}`. Cette erreur est due à un problème connu au niveau de la réponse provenant du système de commentaires back-end. Vous pouvez ignorer cette erreur. Microsoft a bien reçu vos commentaires. (Si les détails affichent un autre message, utilisez l’option de commentaires hors connexion pour réessayer d’envoyer vos commentaires à une date ultérieure.)
 
 
 

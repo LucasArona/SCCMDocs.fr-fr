@@ -1,0 +1,51 @@
+items:
+- name: Analyses du bureau
+  items:
+  - name: Vue d'ensemble
+    href: overview.md
+  - name: Didacticiels
+    items:
+    - name: Office 365 Pilote
+      href: tutorial-office-365.md
+  - name: Concepts
+    items:
+    - name: Plans de déploiement
+      href: about-deployment-plans.md
+    - name: Actifs
+      href: about-assets.md
+    - name: Mises à jour des fonctionnalités et mises à jour qualité
+      href: about-updates.md
+    - name: Risque pour la compatibilité des applications Windows
+      href: compat-risk.md
+    - name: Analyse du fonctionnement
+      href: health-status-monitoring.md
+  - name: Guides pratiques
+    items:
+    - name: Configurer les Analyses du bureau
+      href: set-up.md
+    - name: Connecter le Gestionnaire de configuration
+      href: connect-configmgr.md
+    - name: Inscrire des appareils
+      href: enroll-devices.md
+    - name: Créer des plans de déploiement
+      href: create-deployment-plans.md
+    - name: Déployer en version pilote
+      href: deploy-pilot.md
+    - name: Déployer en production
+      href: deploy-prod.md
+    - name: Évaluation de la compatibilité avec l’application Analyseur d’intégrité
+      href: app-health-analyzer.md
+  - name: Référence
+    items:
+    - name: Activer le partage de données
+      href: enable-data-sharing.md
+    - name: Résolution des problèmes
+      href: troubleshooting.md
+    - name: Confidentialité
+      href: privacy.md
+ms.openlocfilehash: 473ddb150610af13b099bc601e05e8c50be6aac8
+ms.sourcegitcommit: ad25a7bdd983c5a0e4c95bffdc61c9a1ebcbb765
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55073181"

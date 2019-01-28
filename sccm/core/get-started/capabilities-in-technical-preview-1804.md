@@ -10,16 +10,17 @@ ms.assetid: 8af43618-ec60-4c3e-a007-12399d1335b9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a796c8cc23ab15e3fbeb09fca6ffa6f1dbd45bc3
-ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
+ROBOTS: NOINDEX
+ms.openlocfilehash: 80f16244c10899ed264b83f6c7a9a050fba7a224
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "34474341"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898305"
 ---
 # <a name="capabilities-in-technical-preview-1804-for-system-center-configuration-manager"></a>Fonctionnalités de Technical Preview 1804 pour System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Technical Preview)*
+*S’applique à : System Center Configuration Manager (Technical Preview)*
 
 Cet article présente les fonctionnalités disponibles dans Technical Preview version 1804 pour Configuration Manager. Vous pouvez installer cette version pour mettre à jour et ajouter de nouvelles fonctionnalités au site de votre préversion technique. 
 
@@ -97,9 +98,9 @@ Envoyer un sourire ! Vous pouvez maintenant communiquer directement avec l’éq
 
 2. Sélectionnez l'une des options disponibles  dans la liste déroulante :  
 
-   - **Envoyer un sourire** : vous avez beaucoup apprécié quelque chose ! Pour cette option, entrez des commentaires détaillés. Puis, incluez éventuellement une capture d’écran et votre adresse e-mail.  
+   - **Envoyer un sourire** : vous avez beaucoup apprécié ! Pour cette option, entrez des commentaires détaillés. Puis, incluez éventuellement une capture d’écran et votre adresse e-mail.  
 
-   - **Envoyer un smiley mécontent** : vous avez rencontré un problème dans la console ou quelque chose n’a pas fonctionné comme prévu. Pour cette option, entrez des informations détaillées sur le problème produit potentiel. Puis, incluez éventuellement une capture d’écran, votre adresse e-mail et les données de diagnostic.  
+   - **Envoyer un smiley mécontent** : vous avez rencontré un problème dans la console ; quelque chose n’a pas fonctionné comme prévu. Pour cette option, entrez des informations détaillées sur le problème produit potentiel. Puis, incluez éventuellement une capture d’écran, votre adresse e-mail et les données de diagnostic.  
 
    - **Envoyer une suggestion** : vous avez une idée pour modifier et améliorer Configuration Manager. Cette option ouvre notre site [UserVoice](https://configurationmanager.uservoice.com) dans votre navigateur web.  
 
@@ -150,27 +151,27 @@ Les outils du serveur et du client Configuration Manager sont désormais inclus 
 
  - **Gestionnaire de travaux DP** : permet de résoudre les problèmes relatifs aux travaux de distribution de contenu aux points de distribution  
 
- - **Visionneuse d’évaluation de collection** : afficher les détails d’évaluation de la collection  
+ - **Visionneuse de l’évaluation de regroupement** : permet d’afficher des informations sur l’évaluation de regroupement  
 
- - **Explorateur de la bibliothèque de contenu** : afficher le contenu du magasin d’instances unique de la bibliothèque de contenu  
+ - **Explorateur de la bibliothèque de contenu** : permet d’afficher le contenu du magasin SIS (Single-Instance-Store) de la bibliothèque de contenu  
 
- - **Transfert de la bibliothèque de contenu** : transfère la bibliothèque de contenu entre des disques  
+ - **Transfert de la bibliothèque de contenu** : permet de transférer la bibliothèque de contenu entre des disques  
 
- - **Outil de propriété du contenu** : modifie la propriété des packages orphelins. Ces packages existent dans le site sans serveur de site propriétaire.  
+ - **Outil de propriété du contenu** : permet de modifier la propriété des packages orphelins. Ces packages existent dans le site sans serveur de site propriétaire.  
 
- - **Outil d’administration et d’audit en fonction du rôle** : permet aux administrateurs d’auditer la configuration des rôles  
+ - **Outil d’administration et d’audit basés sur des rôles** : permet aux administrateurs d’auditer la configuration des rôles  
 
 #### <a name="client-tools"></a>Outils clients
 
- - **CMTrace** : afficher les journaux  
+ - **CMTrace** : permet d’afficher les journaux  
 
- - **Outil de monitoring de déploiement** : résoudre les problèmes liés aux applications, mises à jour et déploiements de ligne de base  
+ - **Outil de monitoring des déploiements** : permet de résoudre les problèmes liés aux applications, aux mises à jour et aux déploiements de référence  
 
- - **Policy Spy** : afficher les affectations de stratégies  
+ - **Policy Spy** : permet d’afficher les affectations de stratégies  
 
- - **Outil Power Viewer** : afficher l’état de la fonctionnalité de gestion de l’alimentation  
+ - **Outil Power Viewer** : permet d’afficher l’état de la fonctionnalité de gestion de l’alimentation  
 
- - **Outil Send Schedule** : déclencher des planifications et des évaluations des lignes de base DCM  
+ - **Outil Envoyer un plan** : permet de déclencher des opérations planifiées et des évaluations de bases de référence DCM  
 
 > [!Important]  
 > Le [Centre d’aide et de support](#support-center) est recommandé dans la plupart des cas d’utilisation, car il inclut des fonctionnalités identiques ou améliorée pour les outils suivants :  
@@ -288,7 +289,7 @@ Après avoir ajouté les critères de l’architecture, la page des propriétés
 ## <a name="improvements-to-os-deployment"></a>Améliorations apportées au déploiement de système d’exploitation
 Les améliorations suivantes, inspirées notamment par vos commentaires User Voice, ont été apportées au déploiement des systèmes d’exploitation.  
 
- - [Masquer les données sensibles stockées dans des variables de séquence de tâches](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/15282795-secret-task-sequence-variable-value-exposed) : dans l’étape [Définir la variable de séquence de tâches](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable), sélectionnez la nouvelle option **Ne pas afficher cette valeur**. Par exemple, lorsque vous spécifiez un mot de passe.<!--1358330--> Les comportements suivants s’appliquent lorsque vous activez cette option :
+ - [Masquer les données sensibles stockées dans des variables de séquence de tâches](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/15282795-secret-task-sequence-variable-value-exposed) : à l’étape [Définir la variable de séquence de tâches](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable), sélectionnez la nouvelle option **Ne pas afficher cette valeur**. Par exemple, lorsque vous spécifiez un mot de passe.<!--1358330--> Les comportements suivants s’appliquent lorsque vous activez cette option :
    - La valeur de la variable n’est pas affichée dans le fichier smsts.log.
    - La console Configuration Manager et le fournisseur SMS traitent cette valeur de la même façon que d’autres secrets comme les mots de passe.
    - La valeur n’est pas incluse lorsque vous exportez la séquence de tâches.
@@ -298,7 +299,7 @@ Les améliorations suivantes, inspirées notamment par vos commentaires User Voi
    > Les variables et leurs valeurs sont enregistrées avec la séquence de tâches en tant que XML et obscurcies dans la base de données. Lorsque le client demande une stratégie de séquence de tâches à partir du point de gestion, elle est chiffrée en transit et lorsqu’elle est stockée sur le client. Toutefois, toutes les valeurs des variables sont en texte brut dans l’environnement de la séquence de tâches dans la mémoire pendant l’exécution sur le client. Si la séquence de tâches inclut une étape pour extraire la valeur de la variable, cette sortie est au format texte brut. Ce comportement nécessite une action explicite par l’administrateur afin d’inclure une étape de ce type dans la séquence de tâches. 
 
 
- - [Masquer le nom du programme pendant l’étape Exécuter la commande d’une séquence de tâches](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/15282795-secret-task-sequence-variable-value-exposed) : pour empêcher l’affichage ou la consignation de données potentiellement sensibles, définissez la variable de la séquence de tâches **OSDDoNotLogCommand** sur `TRUE`. Cette variable masque le nom du programme dans le fichier smsts.log au cours de l’étape [Exécuter la ligne de commande](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) d’une séquence de tâches. <!--1358493-->  
+ - [Masquer le nom du programme à l’étape Exécuter la commande d’une séquence de tâches](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/15282795-secret-task-sequence-variable-value-exposed) : pour empêcher l’affichage ou la journalisation de données potentiellement sensibles, affectez la valeur `TRUE` à la variable de séquence de tâches **OSDDoNotLogCommand**. Cette variable masque le nom du programme dans le fichier smsts.log au cours de l’étape [Exécuter la ligne de commande](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) d’une séquence de tâches. <!--1358493-->  
 
 
 
