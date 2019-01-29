@@ -10,16 +10,17 @@ ms.assetid: 3687ac39-0fc4-4ea8-a4d2-cacc43acc655
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c859cf11dbf26019863cfbc6343393b5b10e3c22
-ms.sourcegitcommit: 7eebd112a9862bf98359c1914bb0c86affc5dbc0
+ROBOTS: NOINDEX
+ms.openlocfilehash: ec2c765dd751ada5c75e86229f5b156bb4d964d9
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594171"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54897523"
 ---
 # <a name="capabilities-in-configuration-manager-technical-preview-version-1808"></a>Fonctionnalités Technical Preview version 1808 de Configuration Manager 
 
-*S’applique à : System Center Configuration Manager (Technical Preview)*
+*S’applique à : System Center Configuration Manager (Technical Preview)*
 
 Cet article présente les fonctionnalités disponibles dans Technical Preview version 1808 de Configuration Manager. Installez cette version pour mettre à jour le site de votre version Technical Preview et lui ajouter de nouvelles fonctionnalités. 
 

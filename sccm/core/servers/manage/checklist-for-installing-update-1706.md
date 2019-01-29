@@ -10,12 +10,13 @@ ms.assetid: 7def067e-845c-4db3-9d56-fa1dcf2fd7c7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c6d544b0bdc087a8d78bb677ed519711131c5a0d
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ROBOTS: NOINDEX
+ms.openlocfilehash: 004ac9fa331b4e698ae9ad3699c8d717b1d95a3e
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53414835"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54897659"
 ---
 # <a name="checklist-for-installing-update-1706-for-system-center-configuration-manager"></a>Liste de contrôle de l’installation de la mise à jour 1706 pour System Center Configuration Manager
 
@@ -88,7 +89,7 @@ Si vous mettez à jour le site avant de mettre à jour Windows ADK, consultez [M
 
 **Examinez l’état des sites et de la hiérarchie et vérifiez qu’il ne reste aucun problème non résolu :**  Avant de mettre à jour un site, résolvez tous les problèmes de fonctionnement du serveur de site, du serveur de base de données du site et des rôles de système de site installés sur les ordinateurs distants. Une mise à niveau de site peut échouer en raison de l’existence de problèmes opérationnels.
 
-Pour plus d'informations, consultez la page  [Utiliser les alertes et le système d’état pour System Center Configuration Manager](/sccm/core/servers/manage/use-alerts-and-the-status-system).
+Pour plus d’informations, consultez la page  [Utiliser les alertes et le système d’état pour System Center Configuration Manager](/sccm/core/servers/manage/use-alerts-and-the-status-system).
 
 **Examinez la réplication des fichiers et données entre sites :**   
 vérifiez que la réplication des fichiers et bases de données entre les sites est opérationnelle et active. Des retards ou backlogs dans ces domaines peuvent perturber ou empêcher la mise à jour.
@@ -104,13 +105,13 @@ Configuration Manager ne peut pas réussir la mise à jour d’un site principal
 Pour plus d’informations, consultez [Réplicas de base de données pour les points de gestion de System Center Configuration Manager](/sccm/core/servers/deploy/configure/database-replicas-for-management-points).
 
 **Définissez un basculement manuel pour les groupes de disponibilité SQL Server AlwaysOn :**   
-Si vous utilisez un groupe de disponibilité, vérifiez qu’il est défini sur le basculement manuel avant de commencer l’installation de la mise à jour. Une fois le site mis à jour, vous pouvez restaurer le basculement automatique. Pour plus d’informations, consultez la page  [SQL Server AlwaysOn pour une base de données de site](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database).
+Si vous utilisez un groupe de disponibilité, vérifiez qu’il est défini sur le basculement manuel avant de commencer l’installation de la mise à jour. Une fois le site mis à jour, vous pouvez restaurer le basculement automatique. Pour plus d’informations, consultez  [Se préparer à l’utilisation de groupes de disponibilité SQL Server Always On avec Configuration Manager](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database).
 
 **Reconfigurez les points de mise à jour logicielle qui utilisent l’équilibrage de la charge réseau (NLB) :**   
 Configuration Manager ne peut pas mettre à jour un site qui utilise un cluster d’équilibrage de la charge réseau (NLB) pour héberger des points de mise à jour logicielle.
 
 Si vous utilisez des clusters NLB pour les points de mise à jour logicielle, utilisez Windows PowerShell pour supprimer le cluster NLB.
-Pour plus d’informations, consultez la page  [Planifier les mises à jour logicielles dans System Center Configuration Manager](/sccm/sum/plan-design/plan-for-software-updates).
+Pour plus d’informations, consultez  [Planifier les mises à jour logicielles dans Configuration Manager](/sccm/sum/plan-design/plan-for-software-updates).
 
 **Désactivez toutes les tâches de maintenance de site sur chaque site pendant la durée de l’installation de la mise à jour sur ce site :**   
 Avant d’installer la mise à jour, désactivez toutes les tâches de maintenance de site qui peuvent s’exécuter pendant le processus de mise à jour. Cela inclut, sans toutefois s'y limiter, les tâches suivantes :
@@ -121,20 +122,20 @@ Avant d’installer la mise à jour, désactivez toutes les tâches de maintenan
 
 Si une tâche de maintenance de base de données du site s’exécute pendant l’installation de la mise à jour, celle-ci peut échouer. Avant de désactiver une tâche, enregistrez sa planification pour pouvoir restaurer sa configuration une fois la mise à jour installée.
 
-Pour plus d’informations, consultez les pages  [Tâches de maintenance pour System Center Configuration Manager](/sccm/core/servers/manage/maintenance-tasks)  et [Référence des tâches de maintenance pour System Center Configuration Manager](/sccm/core/servers/manage/reference-for-maintenance-tasks).
+Pour plus d’informations, consultez  [Tâches de maintenance pour System Center Configuration Manager](/sccm/core/servers/manage/maintenance-tasks)  et [Référence des tâches de maintenance pour System Center Configuration Manager](/sccm/core/servers/manage/reference-for-maintenance-tasks).
 
 **Arrêtez temporairement tous les logiciels antivirus sur les serveurs System Center Configuration Manager :** Avant de mettre à jour un site, assurez-vous que vous avez arrêté les logiciels antivirus sur les serveurs Configuration Manager. <!--SMS.503481--> 
 
-**Créez une sauvegarde de la base de données du site au niveau du site d’administration centrale et des sites principaux :**  Avant de mettre à jour un site, sauvegardez la base de données de site pour être certain de disposer d'une sauvegarde utilisable dans le cadre d'une récupération d'urgence.
+**Créez une sauvegarde de la base de données du site au niveau du site d’administration centrale et des sites principaux :**  Avant de mettre à jour un site, sauvegardez la base de données de site pour être certain de disposer d’une sauvegarde utilisable dans le cadre d’une récupération d’urgence.
 
-Pour plus d’informations, consultez la page  [Sauvegarde et récupération pour System Center Configuration Manager](/sccm/protect/understand/backup-and-recovery).
+Pour plus d’informations, consultez  [Sauvegarde d’un site Configuration Manager](/sccm/protect/understand/backup-and-recovery).
 
 **Planifiez un test du client :**   
 Quand vous installez une mise à jour qui affecte le client, vous pouvez la tester en mode préproduction avant de procéder au déploiement et à la mise à niveau de votre client actif.
 
 Pour tirer parti de cette option, vous devez configurer votre site pour qu’il prenne en charge les mises à niveau automatiques pour la préproduction avant de commencer l’installation de la mise à jour.
 
-Pour plus d’informations, consultez les pages  [Mettre à niveau les clients dans System Center Configuration Manager](/sccm/core/clients/manage/upgrade/upgrade-clients)  et [Comment tester les mises à niveau du client dans un regroupement de préproduction dans System Center Configuration Manager](/sccm/core/clients/manage/upgrade/test-client-upgrades).
+Pour plus d’informations, consultez  [Mettre à niveau les clients dans System Center Configuration Manager](/sccm/core/clients/manage/upgrade/upgrade-clients)  et [Comment tester les mises à niveau du client dans un regroupement de préproduction dans System Center Configuration Manager](/sccm/core/clients/manage/upgrade/test-client-upgrades).
 
 **Planifiez l’utilisation des fenêtres de service pour contrôler le moment auquel les serveurs de site installent les mises à jour :**   
 Utilisez les fenêtres de service pour définir une période au cours de laquelle les mises à jour à un serveur de site peuvent être installées.
@@ -146,7 +147,7 @@ Quand la mise à jour est répertoriée dans la console comme **Disponible**, vo
 
 Pour exécuter une vérification des prérequis à partir de la console, accédez à **Administration > Vue d’ensemble > Services cloud > Mises à jour et maintenance**. Ensuite, cliquez avec le bouton droit sur **Package de mise à jour 1706 de Configuration Manager**, puis choisissez **Exécuter la vérification des prérequis**.
 
-Pour plus d’informations sur le démarrage et la surveillance de la vérification des prérequis, consultez la page  **Étape 3 : Exécuter l’outil de vérification des conditions préalables avant d’installer une mise à jour**  dans la rubrique [Installer les mises à jour dans la console pour System Center Configuration Manager](/sccm/core/servers/manage/install-in-console-updates).
+Pour plus d’informations sur le démarrage et la surveillance de la vérification des prérequis, consultez la page  **Étape 3 : exécuter l’outil de vérification des prérequis avant d’installer une mise à jour**  dans la rubrique [Installer des mises à jour dans la console pour Configuration Manager](/sccm/core/servers/manage/install-in-console-updates).
 
 > [!IMPORTANT]  
 > Quand l’outil de vérification des prérequis s’exécute indépendamment ou dans le cadre de l’installation d’une mise à jour, le processus met à jour certains fichiers sources du produit qui sont utilisés pour les tâches de maintenance de site. Par conséquent, après l’exécution de l’outil de vérification des prérequis, mais avant l’installation de la mise à jour, si vous devez effectuer une tâche de maintenance de site, exécutez  **Setupwfe.exe**  (programme d’installation de Configuration Manager) à partir du dossier CD.Latest sur le serveur de site.
@@ -156,7 +157,7 @@ Vous êtes maintenant prêt à commencer l’installation de la mise à jour pou
 
 Nous vous recommandons de planifier l’installation de la mise à jour en dehors des heures de bureau normales pour chaque site, quand le processus d’installation de la mise à jour et ses actions pour réinstaller les composants du site et les rôles de système de site auront le moins d’effet sur les opérations de votre entreprise.
 
-Pour plus d’informations, consultez la page  [Mises à jour pour System Center Configuration Manager](/sccm/core/servers/manage/updates).
+Pour plus d’informations, consultez  [Mises à jour et maintenance pour Configuration Manager](/sccm/core/servers/manage/updates).
 
 ## <a name="post-update-checklist"></a>Liste de contrôle post-mise à jour
 Vérifiez et effectuez les actions suivantes après la fin de l’installation de la mise à jour.

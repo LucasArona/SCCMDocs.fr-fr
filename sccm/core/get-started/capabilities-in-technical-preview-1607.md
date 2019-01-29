@@ -10,16 +10,17 @@ ms.assetid: 2bb69547-3370-4860-96b0-7fb600c56482
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 3bc18a9d061100e63d241c5078ea7dbac75db3f8
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ROBOTS: NOINDEX
+ms.openlocfilehash: b3fb33191f8ae5a33876603e1a3d94ee2ac80860
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344447"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54896564"
 ---
 # <a name="capabilities-in-technical-preview-1607-for-system-center-configuration-manager"></a>Fonctionnalités de la version d’évaluation technique 1607 pour System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Technical Preview)*
+*S’applique à : System Center Configuration Manager (Technical Preview)*
 
 Cet article présente les fonctionnalités qui sont disponibles dans la version d’évaluation technique 1607 pour System Center Configuration Manager. Vous pouvez installer cette version pour mettre à jour et ajouter de nouvelles fonctionnalités à votre site Configuration Manager Technical Preview.      Avant d’installer cette version de la version d’évaluation technique, passez en revue la rubrique de présentation, [Version d’évaluation technique pour System Center Configuration Manager](../../core/get-started/technical-preview.md), pour vous familiariser avec les conditions générales et limitations d’utilisation d’une version d’évaluation technique, la mise à jour entre les versions et l’envoi de commentaires sur les fonctionnalités dans une version d’évaluation technique.    
 

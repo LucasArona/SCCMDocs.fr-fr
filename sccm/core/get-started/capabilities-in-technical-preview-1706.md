@@ -10,12 +10,13 @@ ms.assetid: ca3b4714-2a16-495e-8a17-1d87991d5556
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 97d356ee4c9a763732b6e49ef6135a99dccf4c26
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ROBOTS: NOINDEX
+ms.openlocfilehash: 29abb3b671e402eb29833a54bcf59eed1ff9fb2b
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53416739"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898628"
 ---
 # <a name="capabilities-in-technical-preview-1706-for-system-center-configuration-manager"></a>Fonctionnalités de la version d’évaluation technique 1706 pour System Center Configuration Manager
 
@@ -492,7 +493,7 @@ Pour plus d'informations sur les paramètres de compatibilité, consultez [Garan
 
 ## <a name="new-device-compliance-policy-rules"></a>Nouvelles règles de stratégie de conformité d’appareil
 
-* **Type de mot de passe requis**. Spécifie si les utilisateurs doivent créer un mot de passe de type alphanumérique ou numérique. Pour les mots de passe alphanumériques, vous spécifiez également le nombre minimal de jeux de caractères que le mot de passe doit avoir. Les quatre jeux de caractères sont : Lettres minuscules, lettres majuscules, symboles et chiffres.
+* **Type de mot de passe requis**. Spécifie si les utilisateurs doivent créer un mot de passe de type alphanumérique ou numérique. Pour les mots de passe alphanumériques, vous spécifiez également le nombre minimal de jeux de caractères que le mot de passe doit avoir. Les quatre jeux de caractères sont : lettres minuscules, lettres majuscules, symboles et chiffres.
 
     **Pris en charge sur :**
     * Windows Phone 8+

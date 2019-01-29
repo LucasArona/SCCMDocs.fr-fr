@@ -8,15 +8,15 @@ ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 69473706-21b3-498b-a67e-670fdc988f0d
 author: aczechowski
-robots: noindex,nofollow
+ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: d58a780ecf6232bd8ef6e7f0d9851ead34486177
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 22174e19379e2f7344ca6139a7036a4730dda4d1
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53414750"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54897999"
 ---
 # <a name="capabilities-in-technical-preview-1511-for-system-center-configuration-manager"></a>Fonctionnalités de la version d’évaluation technique 1511 pour System Center Configuration Manager
 
@@ -137,7 +137,7 @@ Pour installer un site qui utilise un groupe de disponibilité SQL Server
 
     -   **Base de données** : entrez le nom de la base de données que vous avez créée sur le réplica principal du groupe de disponibilité.  
 
-2.  Ensuite, vous devez fournir un emplacement réseau accessible par chaque serveur SQL Server du groupe :  
+2.  Ensuite, vous devez fournir un emplacement réseau accessible par chaque serveur SQL Server du groupe :  
 
     -   Le compte d'ordinateur et le compte de service de chaque serveur SQL Server nécessitent un accès en contrôle total à cet emplacement.  
 

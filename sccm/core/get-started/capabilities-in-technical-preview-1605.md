@@ -10,12 +10,13 @@ ms.assetid: 2bafd028-1923-4463-9e3e-ee41bc0c437b
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 4eb41ba3a55d0de026d38a673d4e5dfad8e22cd7
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ROBOTS: NOINDEX
+ms.openlocfilehash: 2f8843a5d4e3b49126e2d0898a5bd006422957d2
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53416127"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898152"
 ---
 # <a name="capabilities-in-technical-preview-1605-for-system-center-configuration-manager"></a>Fonctionnalités de la version d’évaluation technique 1605 pour System Center Configuration Manager
 

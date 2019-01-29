@@ -10,16 +10,17 @@ ms.assetid: df2e57b9-6445-4067-98e7-ace85d4e6aa6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0dcd2db7543d68a97e00244536d2aac218d440e7
-ms.sourcegitcommit: 2cc635835709fb8d86cdb63ea34233b36c94d4d8
+ROBOTS: NOINDEX
+ms.openlocfilehash: 0d45586267e06185752f597549f798be19d4d47b
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52259061"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54897047"
 ---
 # <a name="what39s-new-in-version-1606-of-system-center-configuration-manager"></a>Nouveautés dans la version 1606 de System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 La mise à jour 1606 pour System Center Configuration Manager est disponible sous la forme d’une mise à jour dans la console pour les sites précédemment installés qui exécutent la version 1511 ou 1602. La version 1511 est la version de référence initiale qui permet d’installer de nouveaux sites Configuration Manager.
 > [!TIP]  
@@ -146,7 +147,7 @@ Vous pouvez désormais exécuter l’analyse de conformité immédiatement aprè
 
 ## <a name="operating-system-deployment"></a>Déploiement du système d'exploitation
 
-### <a name="improvements-to-the-task-sequence-step-install-software-updates"></a>Améliorations apportées à l’étape de séquence de tâches : Installer les mises à jour logicielles
+### <a name="improvements-to-the-task-sequence-step-install-software-updates"></a>Améliorations apportées à l’étape de séquence de tâches : Installer les mises à jour logicielles
 Un nouveau paramètre, **Évaluer les mises à jour logicielles à partir des résultats d’analyse mis en cache**, vous permet d’effectuer une analyse complète des mises à jour logicielles au lieu d’utiliser les résultats d’analyse mis en cache. Pour plus d’informations, consultez [Étapes de séquence de tâches dans System Center Configuration Manager](../../../osd/understand/task-sequence-steps.md#BKMK_InstallSoftwareUpdates).
 
 En outre, une nouvelle variable de séquence de tâches, **SMSTSSoftwareUpdateScanTimeout**, est disponible. Cette variable vous permet de contrôler le délai d’attente pour l’analyse des mises à jour logicielles à l’étape de la séquence de tâches Installer les mises à jour logicielles. La valeur par défaut est de 30 minutes. Pour plus d’informations, consultez [Variables intégrées de séquence de tâches dans System Center Configuration Manager](../../../osd/understand/task-sequence-built-in-variables.md).
