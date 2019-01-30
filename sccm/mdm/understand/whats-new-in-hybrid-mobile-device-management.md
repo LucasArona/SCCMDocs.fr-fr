@@ -2,7 +2,7 @@
 title: Nouveautés de la gestion MDM hybride
 titleSuffix: Configuration Manager
 description: Découvrez les nouvelles fonctionnalités de gestion des appareils mobiles disponibles pour les déploiements hybrides avec Configuration Manager et Intune.
-ms.date: 01/10/2019
+ms.date: 01/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1ec1155ec578e0eab957baa991628ed18eef6c62
-ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
+ms.openlocfilehash: 84c244a959bb9a087d33410fe0605bc6ddcadfbc
+ms.sourcegitcommit: a2ecd84d93f431ee77848134386fec14031aed6a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54898645"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55230900"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Nouveautés de la gestion hybride des appareils mobiles avec Configuration Manager et Microsoft Intune
 
@@ -50,6 +50,15 @@ Chaque section de cet article répertorie les fonctionnalités hybrides sous tro
 ## <a name="january-2019"></a>Janvier 2019
 
 ### <a name="new-in-microsoft-intune"></a>Nouveautés de Microsoft Intune
+
+#### <a name="intune-app-protection-policies-ui-update"></a>Mise à jour de l’interface utilisateur des stratégies application protection Intune 
+<!--3251427--> Nous avons modifié les étiquettes pour les paramètres et les boutons pour la protection d’application Intune rendre chaque plus facile à comprendre. Les modifications sont les suivantes :  
+
+- Les contrôles sont modifiés à partir de **Oui** / **aucun** principalement de contrôles à **bloc** / **autoriser** et **désactiver** / **activer** contrôles. Les étiquettes sont également mises à jour.  
+
+- Les paramètres sont remis en forme, par conséquent, le paramètre et son étiquette sont côte à côte dans le contrôle, pour fournir une meilleure navigation.   
+
+Les paramètres par défaut et le nombre de paramètres restent les mêmes, mais cette modification permet à l’utilisateur à comprendre, de parcourir et d’utiliser les paramètres plus facilement pour appliquer des stratégies de protection d’application sélectionnée. Pour plus d’informations, consultez [paramètres iOS](https://docs.microsoft.com/intune/app-protection-policy-settings-ios#access-requirements) et [paramètres Android](https://docs.microsoft.com/intune/app-protection-policy-settings-android#access-requirements).
 
 #### <a name="tenant-status-dashboard"></a>Tableau de bord statut du client
 <!--1124854--> La nouvelle [page d’état du client](https://docs.microsoft.com/intune/tenant-status) fournit un emplacement unique où vous pouvez afficher un état et les détails connexes pour votre client. Le tableau de bord est divisé en quatre domaines :
