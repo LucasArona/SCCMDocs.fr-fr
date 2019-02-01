@@ -8,19 +8,19 @@ ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 684a5559-9e6e-469b-86ae-e768e9f0c9ac
 author: aczechowski
-robots: noindex,nofollow
+ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 113e22c33e9e8545c382373f3ba093dba3969939
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 9aecb8f744185116b85232bd9b2893cdf20a3b6d
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340690"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54897540"
 ---
 # <a name="capabilities-in-technical-preview-1604-for-system-center-configuration-manager"></a>Fonctionnalités de la version d’évaluation technique 1604 pour System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Technical Preview)*
+*S’applique à : System Center Configuration Manager (Technical Preview)*
 
 Cet article présente les fonctionnalités qui sont disponibles dans la version d’évaluation technique 1604 pour System Center Configuration Manager. Vous pouvez installer cette version pour mettre à jour et ajouter de nouvelles fonctionnalités à votre site Configuration Manager Technical Preview.      Avant d’installer cette version de la version d’évaluation technique, passez en revue la rubrique de présentation, [Version d’évaluation technique pour System Center Configuration Manager](../../core/get-started/technical-preview.md), pour vous familiariser avec les conditions générales et limitations d’utilisation d’une version d’évaluation technique, la mise à jour entre les versions et l’envoi de commentaires sur les fonctionnalités dans une version d’évaluation technique.  
 
@@ -37,7 +37,7 @@ Cet article présente les fonctionnalités qui sont disponibles dans la version 
 
 ### <a name="try-it-out"></a>Essayez !  
 
-##### <a name="scenario-1-set-up-windows-store-for-business-synchronization"></a>Scénario 1 : configurer la synchronisation du Windows Store pour Entreprises  
+##### <a name="scenario-1-set-up-windows-store-for-business-synchronization"></a>Scénario 1 : Configurer la synchronisation du Windows Store pour Entreprises  
 
 1.  Dans Azure Active Directory, inscrivez Configuration Manager en tant qu’outil de gestion « Application web et/ou API web ». Vous obtenez ainsi un ID de client dont vous aurez besoin ultérieurement.  
 
@@ -81,7 +81,7 @@ Cet article présente les fonctionnalités qui sont disponibles dans la version 
 
 8.  Une fois que vous avez terminé, le compte que vous avez configuré figure dans la liste **Windows Store for Business Accounts** (Comptes Windows Store pour Entreprises) de la console Configuration Manager.  
 
-##### <a name="scenario-2-create-and-deploy-a-configuration-manager-application-from-a-windows-store-for-business-offline-licensed-app"></a>Scénario 2 : créer et déployer une application Configuration Manager à partir d’une application sous licence hors connexion du Windows Store pour Entreprises  
+##### <a name="scenario-2-create-and-deploy-a-configuration-manager-application-from-a-windows-store-for-business-offline-licensed-app"></a>Scénario 2 : Créer et déployer une application Configuration Manager à partir d’une application sous licence hors connexion du Windows Store pour Entreprises  
 
 1.  Dans l’espace de travail **Bibliothèque de logiciels** de la console Configuration Manager, développez **Gestion des applications**, puis cliquez sur **Informations de licence pour les applications du Store**.  
 

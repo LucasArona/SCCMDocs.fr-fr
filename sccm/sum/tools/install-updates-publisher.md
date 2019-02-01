@@ -10,17 +10,16 @@ ms.assetid: ab5cda93-b67c-4aa5-904d-7b63ce790aa0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: f74d7925528e48c691ce7ca61b6dc0b5136f1df7
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: f97decbe40293ee45cdc75c3fb36f4c57662ac06
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32349474"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54896775"
 ---
 # <a name="install-updates-publisher"></a>Installer l'éditeur de mise à jour
 
-*S’applique à : l'éditeur de mise à jour System Center*
+*S’applique à : Éditeur de mise à jour System Center*
 
 Les informations de cette rubrique peuvent vous aider à obtenir, installer et configurer l’éditeur de mise à jour pour une utilisation avec votre environnement.
 
@@ -39,19 +38,19 @@ Installez et exécutez l’éditeur de mise à jour sur des éditions 64 bits de
 ### <a name="prerequisites"></a>Prérequis
 Les éléments suivants sont requis sur l’ordinateur qui exécute l’éditeur de mise à jour.
 
--   **Système d’exploitation 64 bits**: l’ordinateur sur lequel vous installez l’éditeur de mise à jour doit exécuter un système d’exploitation 64 bits.
+-   **Système d’exploitation 64 bits** : l’ordinateur sur lequel vous installez l’éditeur de mise à jour doit exécuter un système d’exploitation 64 bits.
 -   **WSUS 4.0 ou version ultérieure** :
     -   Sur Windows Server, installez la console d’administration par défaut pour répondre à cette exigence.
     -   Pour Windows 10 et Windows 8.1, installez [Remote Server Administration Tools (RSAT) pour les systèmes d’exploitation Windows](https://support.microsoft.com/help/2693643/remote-server-administration-tools-rsat-for-windows-operating-systems). Cette opération installe la prise en charge nécessaire pour utiliser l’éditeur de mise à jour (*applets de commande PowerShell et API*, et *Console de gestion de l’interface utilisateur*).
 -   **Autorisations** :
-    -   Installation : administrateur local
+    -   Installation : Administrateur local
     -   La plupart des opérations : utilisateur local
-    -   Publication ou opérations impliquant WSUS : membre du groupe Administrateurs WSUS sur le serveur WSUS.
+    -   Publication ou autres opérations impliquant WSUS : Membre du groupe Administrateurs WSUS sur le serveur WSUS.
 
 ### <a name="supported-languages"></a>Langues prises en charge
 L’éditeur de mise à jour est disponible uniquement en anglais mais peut gérer les mises à jour pour d’autres langues. La prise en charge de la langue dépend de la tâche, par exemple la publication, la création ou la modification de mises à jour.
 
-Lors de l’exportation ou de la publication de mises à jour, l’éditeur de mise à jour affiche le titre et la description de la mise à jour en fonction des paramètres régionaux de l’ordinateur sur lequel l’éditeur de mise à jour est installé.
+Lors de l’exportation ou de la publication de mises à jour, l’éditeur de mise à jour affiche le titre et la description de la mise à jour en fonction des paramètres régionaux de l’ordinateur sur lequel l’éditeur est installé.
 
 Par exemple, vous créez une mise à jour logicielle avec un titre en anglais et en espagnol.
 
@@ -62,7 +61,7 @@ Par exemple, vous créez une mise à jour logicielle avec un titre en anglais et
 Lorsque vous publiez des mises à jour logicielles, vous pouvez spécifier la langue du fichier binaire de la mise à jour logicielle. Vous pouvez également spécifier que le fichier binaire est indépendant de la langue. Les langues suivantes sont prises en charge :
 
 -   Arabe
--   Hong Kong (R.A.S.)
+-   Chinois (Hong Kong)
 -   Chinois (traditionnel)
 -   Chinois (simplifié)
 -   Tchèque

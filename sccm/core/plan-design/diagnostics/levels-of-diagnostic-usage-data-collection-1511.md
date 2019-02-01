@@ -10,19 +10,19 @@ ms.assetid: 9e614ae1-47d2-4a93-ba0a-89dc50d1e266
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
-ms.openlocfilehash: fbd3a84a81fae4ec9197368ff3eca0c027ae9d90
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ROBOTS: NOINDEX
+ms.openlocfilehash: 128ba61e75bfdbbaf6a3051317b9554253b96e87
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32336984"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898237"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1511-of-system-center-configuration-manager"></a>Niveaux de collecte des données de diagnostic et d’utilisation pour la version 1511 de System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager version 1511 collecte trois niveaux de données d’utilisation et de diagnostic : **De base**, **Étendu** et **Complet**. Par défaut, cette fonctionnalité est définie sur le niveau Étendu. Les sections suivantes fournissent des détails supplémentaires sur les données collectées par chaque niveau.  
+System Center Configuration Manager version 1511 collecte trois niveaux de données d’utilisation et de diagnostic : **De base**, **Étendu** et **Complet**. Par défaut, cette fonctionnalité est définie sur le niveau Étendu. Les sections suivantes fournissent des détails supplémentaires sur les données collectées par chaque niveau.  
 
 > [!IMPORTANT]  
 >  Configuration Manager ne collecte pas les codes des sites, les noms des sites, les adresses IP, les noms d’utilisateur ou d’ordinateur, les adresses physiques ni les adresses e-mail aux niveaux De base et Étendu. Toute collecte de ces informations au niveau Complet n’est pas intentionnelle : elles peuvent être incluses dans des informations de diagnostic avancées comme des fichiers journaux ou des instantanés de la mémoire. Microsoft n’utilisera pas ces informations pour vous identifier ou vous contacter, ni à des fins publicitaires.  
@@ -97,7 +97,7 @@ Ce niveau est recommandé, car il fournit à Microsoft les données minimales re
 
     -   Nombre d’environnements App-V et propriétés de déploiement  
 
-    -   Nombre de licences d’application Windows 10 concédées  
+    -   Nombre de licences d’application Windows 10 concédées  
 
     -   Nombre minimal/maximal/moyen de déploiements d’application par utilisateur/appareil  
 

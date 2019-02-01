@@ -10,17 +10,17 @@ ms.assetid: 422aa328-7d9c-47d9-ab54-49668085881b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
-ms.openlocfilehash: 04679fc70ffa326066f5755646193c8d0072f989
-ms.sourcegitcommit: 1f8731ed8f0308cb2cb576722adb0821a366e9ce
+ROBOTS: NOINDEX
+ms.openlocfilehash: dd13ef6d3ab9f2085bd73f02a0208bbb97bd582d
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51223617"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54896411"
 ---
 # <a name="product-end-of-support"></a>Fin du support du produit
 
-*S’applique à : Microsoft System Center Configuration Manager 2007*
+*S’applique à : System Center Configuration Manager 2007*
 
 Le support pour **System Center Configuration Manager 2007** et **Forefront Endpoint Protection 2010** se termine le 9 juillet 2019. Après cette date, Microsoft cessera de fournir les services suivants pour ces produits : 
 - Mises à jour de sécurité

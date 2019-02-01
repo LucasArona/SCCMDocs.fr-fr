@@ -10,17 +10,16 @@ ms.assetid: cd64994c-b426-4465-96cd-54b0edc2778d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: d0d69990fe99f9b08c9c14222a2d1a9c6ec06b4c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 4de365b7df3a18abdfc5a92e9516bad84818ac35
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32351834"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54896734"
 ---
 # <a name="manage-software-updates-in-updates-publisher"></a>Gérer les mises à jour logicielles dans l’éditeur de mise à jour
 
-*S’applique à : l'éditeur de mise à jour System Center*     
+*S’applique à : Éditeur de mise à jour System Center*     
 
 Dans l’éditeur de mise à jour System Center, vous utilisez l **’espace de travail Mises à jour** pour gérer les mises à jour logicielles et offres groupées que vous avez importées dans le référentiel.  
 
@@ -90,7 +89,7 @@ Il existe deux façons de publier des mises à jour et des offres groupées :
 ### <a name="to-publish-updates-and-bundles"></a>Pour publier des mises à jour et des offres groupées
 1.  Accédez à l **’espace de travail Mises à jour**, puis sélectionnez une ou plusieurs mises à jour et offres groupées que vous souhaitez publier. Puis choisissez **Publier** dans l’onglet **Accueil** du ruban.
 
-2.  Sur la page **Sélectionner** de l’Assistant **Publication**, indiquez comment vous voulez publier les mises à jour. Les options sont les mêmes que pour l[’attribution des mises à jour](#assign-updates-and-bundles-to-a-publication) : **Tout le contenu**, **Uniquement les métadonnées** ou **Automatique**.
+2.  Sur la page **Sélectionner** de l’Assistant **Publication**, indiquez comment vous voulez publier les mises à jour. Les options sont les mêmes que pour l’[affectation de mises à jour](#assign-updates-and-bundles-to-a-publication) : **Tous les contenus**, **Métadonnées uniquement** ou **Automatique**.
 
     Vous pouvez également choisir de signer toutes les mises à jour avec un nouveau certificat de publication.
 

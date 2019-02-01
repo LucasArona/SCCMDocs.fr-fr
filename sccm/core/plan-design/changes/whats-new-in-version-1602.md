@@ -10,17 +10,17 @@ ms.assetid: 4021eca1-adfb-4e5a-adee-159263c29637
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
-ms.openlocfilehash: c6d085fd33513a32207a3b9acfdfe6fe91657a88
-ms.sourcegitcommit: 2cc635835709fb8d86cdb63ea34233b36c94d4d8
+ROBOTS: NOINDEX
+ms.openlocfilehash: 86d36921939b611fa6647d4a0bf3af6d11f27ee7
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52259044"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54897625"
 ---
 # <a name="what39s-new-in-version-1602-of-system-center-configuration-manager"></a>Nouveautés dans la version 1602 de System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 
 La mise à jour 1602 pour System Center Configuration Manager est disponible seulement sous la forme d’une mise à jour dans la console pour les sites précédemment installés qui exécutent la version 1511. La version 1511 est la version de référence initiale qui permet d’installer de nouveaux sites Configuration Manager.  
@@ -122,7 +122,7 @@ Vous trouverez ces applications dans le nœud **Applications** de la console Con
  Pour plus d’informations, consultez [Gérer l’accès aux services O365 des PC gérés par System Center Configuration Manager](../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md).  
 
 ### <a name="restricting-access-based-on-the-health-of-devices"></a>Restriction des accès en fonction de l’intégrité des appareils  
- Vous pouvez désormais restreindre l’accès aux services de messagerie et Office 365 en fonction de l’intégrité des appareils, qui est indiquée par le service d’attestation d’intégrité. De plus, les appareils gérés par Intune sont inclus dans les rapports d’intégrité des appareils.  
+ Vous pouvez désormais restreindre l’accès aux services de messagerie et Office 365 en fonction de l’intégrité des appareils, qui est indiquée par le service d’attestation d’intégrité. De plus, les périphériques gérés par Intune sont inclus dans les rapports d’intégrité des périphériques.  
 
  La console Configuration Manager a une nouvelle règle de conformité qui vous permet de spécifier si l’accès doit être autorisé ou refusé aux appareils en fonction de leur état d’intégrité. Pour plus d’informations sur le service d’attestation d’intégrité et la manière dont l’intégrité des appareils est indiquée dans Intune, consultez [Attestation d’intégrité pour System Center Configuration Manager](../../../core/servers/manage/health-attestation.md).  
 
@@ -132,9 +132,9 @@ Vous trouverez ces applications dans le nœud **Applications** de la console Con
  Pour plus de détails, consultez [Gérer des stratégies de conformité d’appareils dans System Center Configuration Manager](../../../protect/deploy-use/device-compliance-policies.md).  
 
 ### <a name="make-sure-enrolled-and-compliant-devices-always-have-access-to-exchange-on-premises"></a>Vérifier que les appareils inscrits et conformes ont toujours accès à Exchange sur site  
- Quand vous sélectionnez l’option **Remplacer la règle par défaut : toujours autoriser les appareils inscrits et conformes à Intune à accéder à Exchange sur site :**, les appareils inscrits dans Intune et qui sont conformes aux stratégies de conformité sont autorisés à accéder à Exchange sur site. Cette règle est disponible dans la page **Général** de l’**Assistant Configuration de la stratégie d’accès conditionnel** pour Exchange sur site.
+ Quand vous activez l’option suivante, les appareils inscrits dans Intune et conformes aux stratégies de conformité sont autorisés à accéder à Exchange sur site : **Remplacer la règle par défaut : toujours autoriser les appareils inscrits et conformes à Intune à accéder à Exchange sur site :** Cette règle est disponible dans la page **Général** de l’**Assistant Configuration de la stratégie d’accès conditionnel** pour Exchange sur site.
 
- Cette règle remplace la règle par défaut, ce qui signifie que même si vous définissez la règle par défaut de façon à mettre en quarantaine ou à bloquer l’accès, les appareils inscrits et conformes peuvent néanmoins toujours accéder à Exchange sur site. Utilisez ce paramètre quand vous voulez que les appareils inscrits et conformes aient toujours accès à la messagerie via Exchange sur site.   
+ Cette règle remplace la règle par défaut, ce qui signifie que même si vous définissez la règle par défaut de façon à mettre en quarantaine ou à bloquer l’accès, les appareils inscrits et conformes peuvent néanmoins toujours accéder à Exchange sur site. Utilisez ce paramètre quand vous voulez que les périphériques inscrits et conformes aient toujours accès à la messagerie via Exchange sur site.   
 
  Pour la procédure détaillée, consultez [Gérer l’accès à la messagerie dans System Center Configuration Manager](../../../protect/deploy-use/manage-email-access.md).  
 
@@ -173,17 +173,17 @@ Pour plus d’informations, consultez [Attestation d’intégrité pour System C
 ### <a name="improvements-to-endpoint-protection-antimalware-settings"></a>Améliorations apportées aux paramètres d’anti-programme malveillant d’Endpoint Protection  
  La mise à jour 1602 ajoute de nouveaux paramètres à la stratégie anti-programme malveillant d’Endpoint Protection pour Windows Defender :  
 
--   Protection en temps réel : bloquer les applications potentiellement indésirables au téléchargement et avant l’installation.  
+-   Protection en temps réel : bloquez les applications potentiellement indésirables au moment du téléchargement, avant l’installation.  
 
--   Paramètres d’analyse : analyser les lecteurs réseau mappés lors d’une analyse complète.  
+-   Paramètres d’analyse : analysez les lecteurs réseau mappés lors d’une analyse complète.  
 
 -   Paramètres d’envoi automatique d’exemples de fichiers :  
 
      Le moteur du logiciel anti-programme malveillant peut demander à ce que des exemples de fichiers soient envoyés à Microsoft pour une analyse plus approfondie. Par défaut, il affiche toujours une invite avant d’envoyer ces exemples. Les administrateurs peuvent désormais gérer les paramètres suivants pour configurer ce comportement :  
 
-    -   Avancé : activer l’envoi automatique d’exemples de fichiers pour aider Microsoft à déterminer si certains éléments détectés sont malveillants.  
+    -   Avancé : activez l’envoi automatique d’échantillons de fichiers pour aider Microsoft à déterminer si certains éléments détectés sont malveillants.  
 
-    -   Avancé : permettre aux utilisateurs de modifier les paramètres l’envoi automatique d’exemples de fichiers.  
+    -   Avancé : permettez aux utilisateurs de modifier les paramètres d’envoi automatique des échantillons de fichiers.  
 
     En outre, dans la section « Paramètres d’exclusions » de la stratégie de logiciel anti-programme malveillant d’Endpoint Protection, le paramètre **Exclure des fichiers et des dossiers** existant a été amélioré pour permettre les exclusions d’appareils.  
 
@@ -209,10 +209,10 @@ Configuration Manager peut demander l’état du verrou d’activation des appar
 
  Sélectionnez le déploiement des conditions générales dans la liste des déploiements. La zone récapitulative affiche les statistiques suivantes :  
 
--   **Conforme** : Les utilisateurs ont accepté la dernière version des conditions générales.  
+-   **Conforme** : les utilisateurs ont accepté la dernière version des conditions générales.  
 
 -   **Erreur**  
 
--   **Non conforme** : Les utilisateurs ont accepté une version des conditions générales, mais pas la dernière version.  
+-   **Non conforme** : les utilisateurs ont accepté une version des conditions générales, mais pas la dernière.  
 
--   **Inconnu** : Les utilisateurs n’ont jamais accepté les conditions générales, notamment celles sans un appareil inscrit.  
+-   **Inconnu** : les utilisateurs n’ont jamais accepté les conditions générales, y compris celles concernant un appareil non inscrit.  

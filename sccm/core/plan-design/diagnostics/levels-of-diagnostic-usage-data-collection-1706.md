@@ -10,16 +10,17 @@ ms.assetid: 14ee4fb0-7790-45a6-906e-6e55627d4079
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8ed8aed38f20adb3558b61dd32a36f88fbac3b00
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ROBOTS: NOINDEX
+ms.openlocfilehash: a45f48ef16e0d204cfe347c3e024cd0b36403405
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43893506"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898186"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1706-of-system-center-configuration-manager"></a>Niveaux de la collecte de données des données de diagnostic et d’utilisation pour la version 1706 de System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager version 1706 collecte trois niveaux de données d’utilisation et de diagnostic : **De base**, **Étendu** et **Complet**. Par défaut, cette fonctionnalité est définie sur le niveau Étendu. Les sections suivantes fournissent des détails supplémentaires sur les données collectées par chaque niveau.
 
@@ -449,7 +450,7 @@ Pour System Center Configuration Manager version 1706, ce niveau inclut les él
 
 - ***[Nouveau]*** Statistiques de stratégie de conformité pour les erreurs et la conformité
 
-- Paramètres de conformité : détails de configuration des modèles SCEP, VPN, Wi-Fi et stratégie de conformité, nombre de groupes avec des mises à jour logicielles expirées
+- Paramètres de conformité : détails de configuration des modèles SCEP, VPN, Wi-Fi et stratégie de conformité, nombre de groupes avec des mises à jour logicielles ayant expiré
 
 - Pack de configuration DCM pour l’utilisation de System Center Configuration Manager
 

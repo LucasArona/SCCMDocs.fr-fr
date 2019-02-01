@@ -10,16 +10,17 @@ ms.assetid: e318e705-20f2-417d-8cde-7dfe661b2fa7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b86b1a4b8400be29f9b4c468c280fdd0a47385c3
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ROBOTS: NOINDEX
+ms.openlocfilehash: 0b47d64a350a9cf0a8838809604d1a38b55ea3b1
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32343488"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54896728"
 ---
 # <a name="capabilities-in-technical-preview-1704-for-system-center-configuration-manager"></a>Fonctionnalités de la version d’évaluation technique 1704 de System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (version d’évaluation technique)*
+*S’applique à : System Center Configuration Manager (Technical Preview)*
 
 Cet article présente les fonctionnalités disponibles dans la version d’évaluation technique 1704 de System Center Configuration Manager. Vous pouvez installer cette version pour mettre à jour et ajouter de nouvelles fonctionnalités à votre site de version d’évaluation technique Configuration Manager. Avant d’installer cette version de la version d’évaluation technique, passez en revue la rubrique de présentation, [Version d’évaluation technique pour System Center Configuration Manager](../../core/get-started/technical-preview.md), pour vous familiariser avec les conditions générales et limitations d’utilisation d’une version d’évaluation technique, la mise à jour entre les versions et l’envoi de commentaires sur les fonctionnalités dans une version d’évaluation technique.    
 
@@ -31,7 +32,7 @@ Vous pouvez utiliser des stratégies de configuration des applications disponibl
 
 ### <a name="try-it-out"></a>Faîtes un essai                 
 
-Dans la console Configuration Manager, choisissez **Bibliothèque de logiciels** > **Gestion des applications** > **Stratégies de configuration des applications** puis **Créer une stratégie de configuration d'application**. Sur la page **Général** de l’Assistant, vous pouvez à présent **sélectionner un type de stratégie de configuration**. Spécifiez la plateforme ciblée par la stratégie de configuration des applications : **stratégie de configuration pour les applications Android for Work**. Vous pouvez ensuite **spécifier des paires nom/valeur** ou **accéder à un fichier JSON de liste de propriétés**. La nouvelle stratégie de configuration des applications s’affiche dans le nœud **Stratégies de configuration des applications** de l’espace de travail **Bibliothèque de logiciels**. Pour associer une stratégie de configuration des applications au déploiement d’une application Android for Work, déployez l’application comme vous le faites habituellement, en suivant la procédure décrite dans la rubrique [Déployer des applications](/sccm/apps/deploy-use/deploy-applications).
+Dans la console Configuration Manager, choisissez **Bibliothèque de logiciels** > **Gestion des applications** > **Stratégies de configuration des applications** puis **Créer une stratégie de configuration d'application**. Sur la page **Général** de l’Assistant, vous pouvez à présent **sélectionner un type de stratégie de configuration**. Spécifiez la plateforme ciblée par la stratégie de configuration d’application : **Stratégie de configuration pour les applications Android for Work**. Vous pouvez ensuite **spécifier des paires nom/valeur** ou **accéder à un fichier JSON de liste de propriétés**. La nouvelle stratégie de configuration des applications s’affiche dans le nœud **Stratégies de configuration des applications** de l’espace de travail **Bibliothèque de logiciels**. Pour associer une stratégie de configuration des applications au déploiement d’une application Android for Work, déployez l’application comme vous le faites habituellement, en suivant la procédure décrite dans la rubrique [Déployer des applications](/sccm/apps/deploy-use/deploy-applications).
 
 ## <a name="hardware-inventory-collects-secure-boot-information"></a>L’inventaire matériel collecte des informations sur le démarrage sécurisé
 L’inventaire matériel collecte désormais des informations indiquant si le démarrage sécurisé est activé sur les clients. Ces informations sont stockées dans la classe **SMS_Firmware** (introduite dans la version 1702) et activées dans l’inventaire matériel par défaut. Pour plus d’informations sur l’inventaire matériel, consultez [Guide pratique pour configurer l’inventaire matériel](/sccm/core/clients/manage/inventory/configure-hardware-inventory).
@@ -66,6 +67,6 @@ Lorsque vous exécutez l’option **Mise à jour des points de distribution** su
 ## <a name="improvements-to-operating-system-deployment"></a>Améliorations apportées au déploiement des systèmes d’exploitation
 Les améliorations suivantes, inspirées par vos commentaires, ont été apportées au déploiement des systèmes d’exploitation.
 
-- [Nouvelle colonne **Version du système d’exploitation** pour les images de système d’exploitation](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/17558407-add-a-column-to-the-operating-system-images-node-f) : nous avons ajouté une nouvelle colonne nommée **Version du système d’exploitation** pour afficher la version du système d’exploitation de l’image lorsque vous affichez des informations dans les nœuds **Images du système d’exploitation** et **Packages de mise à niveau du système d’exploitation**. Seule la version du premier index du fichier .WIM s’affiche. Accédez à l’onglet **Détails** de l’image pour vérifier les versions du système d’exploitation des autres index.
+- [Nouvelle colonne **Version du système d’exploitation** pour les images de système d’exploitation](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/17558407-add-a-column-to-the-operating-system-images-node-f) : Nous avons ajouté une nouvelle colonne nommée **Version du système d’exploitation** pour montrer la version du système d’exploitation de l’image quand vous affichez des informations dans les nœuds **Images du système d’exploitation** et **Packages de mise à niveau du système d’exploitation**. Seule la version du premier index du fichier .WIM s’affiche. Accédez à l’onglet **Détails** de l’image pour vérifier les versions du système d’exploitation des autres index.
 
-- [Journalisation plus efficace dans Smsts.log](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/16791919-stop-filling-smsts-log-with-useless) : à compter de cette version, les entrées ne sont plus inscrites dans le fichier smsts.log pour les informations CCM_CIVersionInfo.PolicyID. Avant cette version, un grand nombre d’entrées pouvaient contenir ces informations, ce qui compliquait la recherche d’informations plus pertinentes dans le fichier journal.
+- [Journalisation plus efficace dans Smsts.log](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/16791919-stop-filling-smsts-log-with-useless) : À compter de cette version, les entrées ne sont plus inscrites dans le fichier smsts.log pour les informations CCM_CIVersionInfo.PolicyID. Avant cette version, un grand nombre d’entrées pouvaient contenir ces informations, ce qui compliquait la recherche d’informations plus pertinentes dans le fichier journal.

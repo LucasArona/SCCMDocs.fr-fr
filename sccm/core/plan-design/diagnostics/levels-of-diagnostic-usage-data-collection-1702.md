@@ -10,18 +10,19 @@ ms.assetid: d43ab033-2902-4681-8716-b4b17a6df372
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b77f2d38cb24b681aec4123621ffbbf8ba1be579
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ROBOTS: NOINDEX
+ms.openlocfilehash: 575611f8267d4ba10f5c471e63713e121abfc252
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32341710"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54897846"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1702-of-system-center-configuration-manager"></a>Niveaux de collecte des données de diagnostic et d’utilisation pour la version 1702 de System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager version 1702 collecte trois niveaux de données d’utilisation et de diagnostic : **De base**, **Étendu** et **Complet**. Par défaut, cette fonctionnalité est définie sur le niveau Étendu. Les sections suivantes fournissent des détails supplémentaires sur les données collectées par chaque niveau.
+System Center Configuration Manager version 1702 collecte trois niveaux de données d’utilisation et de diagnostic : **De base**, **Étendu** et **Complet**. Par défaut, cette fonctionnalité est définie sur le niveau Étendu. Les sections suivantes fournissent des détails supplémentaires sur les données collectées par chaque niveau.
 
 Les modifications par rapport aux versions précédentes sont indiquées par ***[Nouveau]***, ***[Mis à jour]***, ***[Supprimé]*** ou ***[Déplacé]***.
 
@@ -411,7 +412,7 @@ Pour System Center Configuration Manager version 1702, ce niveau inclut les él
 
 - Statistiques d’évaluation et d’actualisation des regroupements
 
-- Paramètres de conformité : détails de configuration des modèles SCEP, VPN, Wi-Fi et stratégie de conformité, nombre de groupes avec des mises à jour logicielles expirées
+- Paramètres de conformité : détails de configuration des modèles SCEP, VPN, Wi-Fi et stratégie de conformité, nombre de groupes avec des mises à jour logicielles ayant expiré
 
 - Pack de configuration DCM pour l’utilisation de System Center Configuration Manager
 

@@ -10,12 +10,12 @@ ms.assetid: aaf43e69-68b4-469a-ad58-9b66deb29057
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0c04ee9a62b6c629060f79df2f4b104fe78ca794
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: a4d95495f2f200eaff39699c65cc391a2a81b009
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53418983"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54897557"
 ---
 #  <a name="the-data-warehouse-service-point-for-configuration-manager"></a>Point de service de l’entrepôt de données pour Configuration Manager
 
@@ -237,7 +237,7 @@ Effectuez les étapes suivantes pour configurer les certificats :
 
     2. Ouvrez le **Gestionnaire de configuration SQL Server**. Sous **Configuration du réseau SQL Server**, cliquez avec le bouton droit pour sélectionner **Propriétés** sous **Protocoles pour MSSQLSERVER**. Passez à l’onglet **Certificat**, sélectionnez le certificat intitulé **Certificat d’identification SQL Server de l’entrepôt de données**, puis enregistrez les modifications.  
 
-    3. Dans le **Gestionnaire de configuration SQL Server**, sous **Services SQL Server**, redémarrez les services **Service SQL Server** et **Service de rapports**.  
+    3. Dans le **Gestionnaire de configuration SQL Server**, sous **Services SQL Server**, redémarrez le **Service SQL Server**. Si SQL Reporting Services est également installé sur le serveur qui héberge la base de données de l’entrepôt de données, redémarrez également **Reporting Services**.  
 
     4. Ouvrez la console Microsoft Management Console (MMC), puis ajoutez le composant logiciel enfichable **Certificats**. Sélectionnez le **compte d’ordinateur** de l’ordinateur local. Développez le dossier **Personnel**, puis sélectionnez **Certificats**. Exportez **Certificat d’identification SQL Server de l’entrepôt de données** sous forme de fichier **Binaire encodé DER X.509 (.cer)**.  
 

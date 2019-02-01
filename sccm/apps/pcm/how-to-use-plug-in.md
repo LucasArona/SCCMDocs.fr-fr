@@ -10,17 +10,17 @@ ms.assetid: 83cf156c-36de-483f-a9e6-2e06158f3b20
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
-ms.openlocfilehash: 9e670cb6afd7186d7dc248bedd6e2ce7d7746b02
-ms.sourcegitcommit: 759098de944b8f7d5eedfc2bae2cb9a6ba15276f
+ROBOTS: NOINDEX
+ms.openlocfilehash: 5ed885ba459a584939881235e44d632515138cdf
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43297173"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54896360"
 ---
 # <a name="how-to-use-the-package-conversion-manager-plug-in"></a>Comment utiliser le plug-in Package Conversion Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 <!--1357861-->
 
@@ -45,9 +45,9 @@ Par défaut, Package Conversion Manager effectue les actions suivantes :
 
 4.  Effectuer l'une des actions suivantes, selon l'opération Package Conversion Manager :  
 
-    - **Analyser** : afficher l’état de préparation du package dans la console Configuration Manager.  
+    - **Analyser** : Afficher l’état de préparation du package dans la console Configuration Manager.  
 
-    - **Convertir** : écrire l’application dans la base de données Configuration Manager.  
+    - **Convertir** : Écrire l’application dans la base de données Configuration Manager.  
 
 
 ## <a name="plug-in-based-process"></a>Processus basé sur plug-in 
@@ -66,11 +66,11 @@ Lorsque vous utilisez le plug-in, Package Conversion Manager effectue les action
 
 6.  Analyser l'application et déterminer l’état de préparation du package.  
 
-7.  Effectuer l'une des actions suivantes, selon l'opération Package Conversion Manager :  
+7.  Effectuez une des actions suivantes, selon l’opération de Package Conversion Manager :  
 
-    - **Analyser** : afficher l’état de préparation du package dans la console Configuration Manager.  
+    - **Analyser** : Afficher l’état de préparation du package dans la console Configuration Manager.  
 
-    - **Convertir** : écrire l’application dans la base de données Configuration Manager.  
+    - **Convertir** : Écrire l’application dans la base de données Configuration Manager.  
 
 
 

@@ -10,17 +10,16 @@ ms.assetid: a70bfbd4-757a-4468-9312-1c3b373ef9fc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex
-ms.openlocfilehash: 0481abfb1ed881355a489b99b0c3f7ec9c595e69
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 0e77225fb378a5851dbba9718dd3810463255cf7
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342322"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898424"
 ---
 # <a name="plan-a-migration-job-strategy-in-system-center-configuration-manager"></a>Planifier une stratégie pour les tâches de migration dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Utilisez des tâches de migration pour configurer les données spécifiques que vous souhaitez migrer vers votre environnement System Center Configuration Manager. Les tâches de migration identifient les objets que vous envisagez de migrer, et elles s'exécutent sur le site de niveau supérieur dans votre hiérarchie de destination. Vous pouvez configurer une ou plusieurs tâches de migration par site source. Ceci vous permet de migrer tous les objets simultanément ou des sous-ensembles limités de données avec chaque tâche.  
 
@@ -45,11 +44,11 @@ Utilisez des tâches de migration pour configurer les données spécifiques que 
 ##  <a name="Types_of_Migration"></a> Types de tâches de migration  
  Configuration Manager prend en charge les types de tâche de migration suivants. Chaque type de tâche est conçu pour vous aider à définir les objets que vous pouvez inclure dans cette tâche.  
 
- **Migration de regroupements** (prise en charge uniquement pour la migration depuis Configuration Manager 2007 SP2) : Migre les objets liés aux regroupements de votre choix. Par défaut, la migration d’un regroupement inclut tous les objets qui sont associés aux membres du regroupement. Vous pouvez exclure des instances d'objet spécifiques lors de l'utilisation d'une tâche de migration de regroupement.  
+ **Migration du regroupement** (disponible uniquement lorsque vous effectuez une migration à partir de Configuration Manager 2007 SP2) : Migration des objets associés vers des regroupements que vous sélectionnez. Par défaut, la migration d’un regroupement inclut tous les objets qui sont associés aux membres du regroupement. Vous pouvez exclure des instances d'objet spécifiques lors de l'utilisation d'une tâche de migration de regroupement.  
 
- **Migration d’objets** : Migre des objets individuels de votre choix. Vous sélectionnez uniquement les données à migrer.  
+ **Migration de l’objet** : Migration des objets individuels que vous sélectionnez. Vous sélectionnez uniquement les données à migrer.  
 
- **Migration d’objets déjà migrés** : Migre les objets que vous avez déjà migrés, quand ces objets ont été mis à jour dans la hiérarchie source après leur dernière migration.  
+ **Migration d’objets migrés précédemment** : migration des objets que vous avez précédemment migrés, lors de leur mise à jour dans la hiérarchie source après leur dernière migration.  
 
 ###  <a name="Objects_that_can_migrate"></a> Objets que vous pouvez migrer  
  Tous les objets ne peuvent pas migrer en fonction du type de tâche de migration. La liste suivant indique le type des objets que vous pouvez migrer à l’aide de chaque type de tâche de migration.  
@@ -285,7 +284,7 @@ Utilisez des tâches de migration pour configurer les données spécifiques que 
 ### <a name="collection-dependencies-and-include-objects"></a>Dépendances de regroupements et inclusion d’objets  
  Quand vous spécifiez un regroupement à migrer dans l’Assistant Création de tâche de migration, tous les regroupements qui en dépendent sont automatiquement sélectionnés pour être inclus dans la tâche. Ce comportement garantit que toutes les ressources nécessaires sont disponibles après la migration.  
 
- Par exemple, vous sélectionnez un regroupement pour les appareils qui exécutent Windows 7 et qui est nommé **Win_7**. Ce regroupement est limité à un regroupement contenant tous vos systèmes d’exploitation clients, nommé **All_Clients**. Le regroupement **All_Clients** sera automatiquement sélectionné pour la migration.  
+ Par exemple : Vous sélectionnez un regroupement pour les appareils qui exécutent Windows 7 et qui se nomme **Win_7**. Ce regroupement est limité à un regroupement contenant tous vos systèmes d’exploitation clients, nommé **All_Clients**. Le regroupement **All_Clients** sera automatiquement sélectionné pour la migration.  
 
 ### <a name="collection-limiting"></a>Limitation au regroupement  
  Avec System Center Configuration Manager, les regroupements sont des données globales et sont évalués au niveau de chaque site de la hiérarchie. Par conséquent, pensez à limiter l’étendue d’un regroupement après sa migration. Pendant la migration, vous pouvez identifier un regroupement à partir de la hiérarchie de destination à utiliser pour limiter l'étendue du regroupement que vous migrez, de sorte que le regroupement migré n'inclut pas de membres imprévus.  

@@ -10,16 +10,17 @@ ms.assetid: 56dc4b07-5aa4-43e2-9be8-d26ae5ff5613
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: dc4dc88b2a8fa9ba075fee51e187e02ae55c2cce
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ROBOTS: NOINDEX
+ms.openlocfilehash: 672257141c0672a76b89ee9d78184d2a4230280f
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344515"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898356"
 ---
 # <a name="capabilities-in-technical-preview-1803-for-system-center-configuration-manager"></a>Fonctionnalités de Technical Preview 1803 pour System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Technical Preview)*
+*S’applique à : System Center Configuration Manager (Technical Preview)*
 
 Cet article présente les fonctionnalités disponibles dans Technical Preview version 1803 pour Configuration Manager. Vous pouvez installer cette version pour mettre à jour et ajouter de nouvelles fonctionnalités au site de votre préversion technique. 
 
@@ -41,8 +42,7 @@ Consultez l’article [Technical Preview](/sccm/core/get-started/technical-previ
 
  
 ## <a name="pull-distribution-points-support-cloud-distribution-points-as-source"></a>Prise en charge des points de distribution cloud comme source par les points de distribution d’extraction  
-<!--1321554-->
-De nombreux clients utilisent des [points de distribution d’extraction](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point) dans des bureaux distants ou des filiales pour télécharger du contenu à partir d’un point de distribution source sur le réseau WAN. Si vos bureaux distants ont une meilleure connexion à Internet, ou pour réduire la charge sur vos liaisons WAN, vous pouvez désormais utiliser un [point de distribution cloud](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point) dans Microsoft Azure comme source. Quand vous ajoutez une source sous l’onglet **Point de distribution d’extraction** des propriétés de point de distribution, tout point de distribution cloud du site est maintenant répertorié comme point de distribution disponible. Le comportement des deux rôles système de site reste inchangé par ailleurs. 
+<!--1321554--> De nombreux clients utilisent des [points de distribution d’extraction](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point) dans des bureaux distants ou des filiales pour télécharger du contenu à partir d’un point de distribution source sur le réseau WAN. Si vos bureaux distants ont une meilleure connexion à Internet, ou pour réduire la charge sur vos liaisons WAN, vous pouvez désormais utiliser un [point de distribution cloud](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point) dans Microsoft Azure comme source. Quand vous ajoutez une source sous l’onglet **Point de distribution d’extraction** des propriétés de point de distribution, tout point de distribution cloud du site est maintenant répertorié comme point de distribution disponible. Le comportement des deux rôles système de site reste inchangé par ailleurs. 
 
 ### <a name="prerequisites"></a>Prérequis
 - Le point de distribution d’extraction a besoin d’un accès Internet pour communiquer avec Microsoft Azure.
@@ -54,11 +54,10 @@ De nombreux clients utilisent des [points de distribution d’extraction](/sccm/
 
 
 ## <a name="partial-download-support-in-client-peer-cache-to-reduce-wan-utilization"></a>Prise en charge du téléchargement partiel dans le cache d’homologue client pour réduire l’utilisation du réseau WAN
-<!--1357346-->
-Les sources de cache d’homologue client peuvent désormais diviser le contenu en plusieurs parties. Ces parties diminuent le transfert de réseau afin de réduire l’utilisation du réseau WAN. Le point de gestion fournit un suivi plus détaillé des parties du contenu. Il essaie de supprimer plusieurs téléchargements du même contenu par groupe de limites. 
+<!--1357346--> Les sources de cache d’homologue client peuvent désormais diviser le contenu en plusieurs parties. Ces parties diminuent le transfert de réseau afin de réduire l’utilisation du réseau WAN. Le point de gestion fournit un suivi plus détaillé des parties du contenu. Il essaie de supprimer plusieurs téléchargements du même contenu par groupe de limites. 
 
 ### <a name="example-scenario"></a>Exemple de scénario
-Contoso a un seul site principal avec deux groupes de limites : un siège social et une filiale. Il existe une relation de repli de 30 minutes entre les groupes de limites. Le point de gestion et le point de distribution du site se trouvent uniquement dans la limite du siège social. L’emplacement de la filiale n’a aucun point de distribution local. Deux des quatre clients au niveau de la filiale sont configurés comme sources de cache d’homologue. 
+Contoso a un seul site principal avec deux groupes de limites : Un siège social et une filiale. Il existe une relation de repli de 30 minutes entre les groupes de limites. Le point de gestion et le point de distribution du site se trouvent uniquement dans la limite du siège social. L’emplacement de la filiale n’a aucun point de distribution local. Deux des quatre clients au niveau de la filiale sont configurés comme sources de cache d’homologue. 
 
 ![Schéma de la configuration réseau comme décrite pour l’exemple de scénario](media/1357346-peer-cache-source-parts.png)
 
@@ -93,17 +92,15 @@ Contoso a un seul site principal avec deux groupes de limites : un siège social
 
 
 ## <a name="maintenance-windows-in-software-center"></a>Fenêtres de maintenance dans le Centre logiciel
-<!--1358131-->
-Le Centre logiciel affiche maintenant la fenêtre de maintenance planifiée suivante. Sous l’onglet État de l’installation, passez de la vue Tous à la vue À venir. Elle affiche la période et la liste des déploiements qui sont planifiés. La liste est vide s’il n’existe aucune fenêtre de maintenance future. 
+<!--1358131--> Le Centre logiciel affiche désormais la prochaine fenêtre de maintenance planifiée. Sous l’onglet État de l’installation, passez de la vue Tous à la vue À venir. Elle affiche la période et la liste des déploiements qui sont planifiés. La liste est vide s’il n’existe aucune fenêtre de maintenance future. 
 
 ![Le Centre logiciel affichant la liste des déploiements à venir sous l’onglet État de l’installation](media/1358131-software-center-maintenance-windows.png)
 
 
 ## <a name="custom-tab-for-webpage-in-software-center"></a>Onglet personnalisé pour une page web du Centre logiciel
-<!--1358132-->
-Vous pouvez maintenant créer un onglet personnalisé pour ouvrir une page web dans le Centre logiciel. Cette fonctionnalité vous permet d’afficher du contenu à vos utilisateurs finaux d’une façon cohérente et fiable. La liste suivante comprend quelques exemples :
+<!--1358132--> Vous pouvez maintenant créer un onglet personnalisé pour ouvrir une page web dans le Centre logiciel. Cette fonctionnalité vous permet d’afficher du contenu à vos utilisateurs finaux d’une façon cohérente et fiable. La liste suivante comprend quelques exemples :
 - Contacter le service informatique : informations sur la façon de contacter le service informatique de votre organisation
-- Centre de support informatique : actions informatiques en libre-service telles que la recherche dans une base de connaissances ou l’ouverture d’un ticket de support.
+- Centre de support informatique : Actions informatiques en libre-service telles que la recherche dans une base de connaissances ou l’ouverture d’un ticket de support.
 - Documentation pour les utilisateurs finaux : articles destinés aux utilisateurs de votre organisation sur différents sujets informatiques comme l’utilisation d’applications ou la mise à niveau vers Windows 10.
 
 

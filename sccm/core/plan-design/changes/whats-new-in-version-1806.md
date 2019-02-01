@@ -10,12 +10,12 @@ ms.assetid: 0249dbd3-1e85-4d05-a9e5-420fbe44d850
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fe8fb2a8138433d00686530f76916a1ee4e88dac
-ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
+ms.openlocfilehash: cb0d5d1982bb0b109b83f30f1101ddd50316d53e
+ms.sourcegitcommit: ad25a7bdd983c5a0e4c95bffdc61c9a1ebcbb765
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54250797"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55073031"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Nouveautés de la version 1806 de l’édition Current Branch de Configuration Manager
 
@@ -29,14 +29,6 @@ Référez-vous toujours à la dernière liste de contrôle pour installer cette 
 > [!Important]  
 > This article currently lists all significant features in this version. However, not all sections yet link to updated content with further information on the new features. Keep checking this page regularly for updates. Changes are noted with the ***[Updated]*** tag. This note will be removed when the content is finalized.  
 -->
-
-En plus des nouvelles fonctionnalités, cette version inclut également des modifications supplémentaires comme des corrections de bogues. Pour plus d’informations, consultez [Récapitulatif des changements dans Configuration Manager Current Branch, version 1806](https://support.microsoft.com/help/4459701).
-
-Pour plus d’informations sur les modifications apportées aux applets de commande Windows PowerShell pour Configuration Manager, consultez [Notes de publication pour PowerShell version 1806](https://docs.microsoft.com/powershell/sccm/1806_release_notes?view=sccm-ps).
-
-Les mises à jour supplémentaires suivantes pour cette version sont également disponibles :
-- [Correctif cumulatif pour Configuration Manager Current Branch, version 1806](https://support.microsoft.com/help/4462978)
-
 
 Les sections suivantes fournissent des détails sur les changements et les nouvelles fonctionnalités de la version 1806 de l’édition Current Branch de Configuration Manager.  
 
@@ -529,6 +521,27 @@ Pour plus d’informations, consultez [Améliorations apportées à la console d
 Envoyer un sourire ! Vous pouvez maintenant communiquer directement avec l’équipe Configuration Manager sur vos expériences. L’envoi de commentaires est facile à partir de la console Configuration Manager. Nous voulons recevoir tous vos commentaires : les éloges, les problèmes et les suggestions. Dans la console Configuration Manager, cliquez sur le bouton en forme de sourire dans l’angle supérieur droit au-dessus du ruban. Ces commentaires sont envoyés directement à l’équipe produit Microsoft pour Configuration Manager. Bien que l’utilisation du concentrateur de commentaires de Windows 10 soit toujours prise en charge, nous vous encourageons à utiliser la fonction de commentaires dans la console.  
 
 Pour plus d’informations, consultez [Améliorations apportées à la console dans la version 1806](/sccm/core/servers/manage/admin-console#console-improvements-in-version-1806) et [Commentaires sur le produit](/sccm/core/understand/find-help#BKMK_1806Feedback).
+
+
+
+## <a name="other-updates"></a>Autres mises à jour
+
+En plus des nouvelles fonctionnalités, cette version inclut également des modifications supplémentaires comme des corrections de bogues. Pour plus d’informations, consultez [Récapitulatif des changements dans Configuration Manager Current Branch, version 1806](https://support.microsoft.com/help/4459701).
+
+Pour plus d’informations sur les modifications apportées aux applets de commande Windows PowerShell pour Configuration Manager, consultez [Notes de publication pour PowerShell version 1806](https://docs.microsoft.com/powershell/sccm/1806_release_notes?view=sccm-ps).
+
+Le correctif cumulatif suivant (4462978) sera disponible dans la console à partir du 24 octobre 2018 : [Correctif cumulatif pour Configuration Manager Current Branch, version 1806](https://support.microsoft.com/help/4462978).
+
+
+### <a name="hotfixes"></a>Correctifs
+
+Les correctifs logiciels suivants permettent de résoudre des problèmes spécifiques :
+
+| ID | Titre | Date | Dans la console |
+|---------|---------|---------|---------|
+| [4346645](https://support.microsoft.com/help/4346645) | Mise à jour de System Center Configuration Manager version 1806, First Wave | 31 août 2018 | Oui |
+| [4465865](https://support.microsoft.com/help/4465865) | Les mises à jour logicielles ne sont pas téléchargées dans l’environnement Configuration Manager si WSUS est déconnecté<br><br>Cette mise à jour est également comprise dans le correctif cumulatif (4462978) | 01 octobre 2018 | Oui |
+| [4471892](https://support.microsoft.com/help/4471892) | Le répondeur PXE ne fonctionne pas sur plusieurs sous-réseaux dans Configuration Manager 1806 | 23 novembre 2018 | Non |
 
 
 

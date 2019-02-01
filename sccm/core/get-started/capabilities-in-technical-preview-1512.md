@@ -8,19 +8,19 @@ ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: e4d9e414-1346-4ed4-85d0-64d602b68731
 author: aczechowski
-robots: noindex,nofollow
+ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 939a767820983c1fe2d575d7a745d6dabb45f25c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 970f86849572d6b360c5b92a42a3d131a38fe1d7
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335658"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54896462"
 ---
 # <a name="capabilities-in-technical-preview-1512-for-system-center-configuration-manager"></a>Fonctionnalités dans la version d’évaluation technique 1512 de System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Technical Preview)*
+*S’applique à : System Center Configuration Manager (Technical Preview)*
 
 Cet article présente les fonctionnalités qui sont disponibles dans la version d’évaluation technique de System Center Configuration Manager, version 1512. Vous pouvez installer cette version pour mettre à jour et ajouter de nouvelles fonctionnalités à votre site Configuration Manager Technical Preview. Avant d’installer cette version de la version d’évaluation technique, passez en revue la rubrique de présentation, [Version d’évaluation technique pour System Center Configuration Manager](technical-preview.md), pour vous familiariser avec les conditions générales et limitations d’utilisation d’une version d’évaluation technique, la mise à jour entre les versions et l’envoi de commentaires sur les fonctionnalités dans une version d’évaluation technique.  
 
@@ -75,9 +75,9 @@ Dans Technical Preview 1512, nous avons ajouté les nouveaux paramètres de str
 
      Le moteur du logiciel anti-programme malveillant peut demander à ce que des exemples de fichiers soient envoyés à Microsoft pour une analyse plus approfondie. Par défaut, il affiche toujours une invite avant d’envoyer ces exemples. Les administrateurs peuvent désormais gérer les paramètres suivants pour configurer ce comportement :  
 
-    -   Avancé : **Activer l’envoi automatique de fichier d’exemple pour aider Microsoft à déterminer si certains éléments détectés sont malveillants** : affectez à ce paramètre la valeur « Oui » pour activer l’envoi automatique d’exemple de fichier. Par défaut, ce paramètre a la valeur « Non », ce qui signifie que l’envoi automatique d’exemple de fichier est désactivé et que les utilisateurs sont invités à donner leur accord avant l’envoi des fichiers.   (Ce paramètre a été introduit pour la première fois dans System Center 2012 R2 Configuration Manager SP1.)  
+    -   Avancé : **Activer l’envoi automatique de fichier d’exemple pour aider Microsoft à déterminer si certains éléments détectés sont malveillants** :  Changez ce paramètre en « Oui » pour activer l’envoi automatique de fichier d’exemple. Par défaut, ce paramètre a la valeur « Non », ce qui signifie que l’envoi automatique d’exemple de fichier est désactivé et que les utilisateurs sont invités à donner leur accord avant l’envoi des fichiers.   (Ce paramètre a été introduit pour la première fois dans System Center 2012 R2 Configuration Manager SP1.)  
 
-    -   Avancé : **Autoriser les utilisateurs à modifier les paramètres d’envoi automatique du fichier d’exemple** : ce paramètre détermine si un utilisateur disposant de droits d’administrateur local sur un appareil peut modifier le paramètre d’envoi automatique du fichier d’exemple dans l’interface du client. Par défaut, ce paramètre a la valeur « Non », ce qui signifie que les paramètres ne peuvent être modifiés que dans la console Configuration Manager, et les administrateurs locaux d’un appareil ne peuvent pas modifier cette configuration.  
+    -   Avancé : **Autoriser les utilisateurs à modifier les paramètres d’envoi automatique du fichier d’exemple** : Ce paramètre détermine si un utilisateur disposant de droits d’administrateur local sur un périphérique peut modifier le paramètre d’envoi automatique des fichiers d’exemple dans l’interface du client. Par défaut, ce paramètre a la valeur « Non », ce qui signifie que les paramètres ne peuvent être modifiés que dans la console Configuration Manager, et les administrateurs locaux d’un appareil ne peuvent pas modifier cette configuration.  
 
          L’exemple suivant montre le paramètre Windows Defender dans Windows 10 défini par l’administrateur comme activé, l’utilisateur n’étant pas autorisé à le modifier :  
 

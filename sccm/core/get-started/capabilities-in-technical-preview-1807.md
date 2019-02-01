@@ -10,16 +10,17 @@ ms.assetid: bcde47a7-433e-4944-964b-539b17d15d64
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9095bdf431525a66a570267c4fff07a382a16fe4
-ms.sourcegitcommit: af4f8bd8dffe6fb05f51322ea9e94d335a2cc0c0
+ROBOTS: NOINDEX
+ms.openlocfilehash: c443f561392f95d875a681319ebb9db4ff3fb66b
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39360765"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898475"
 ---
 # <a name="capabilities-in-configuration-manager-technical-preview-version-1807"></a>Fonctionnalités Technical Preview de Configuration Manager version 1807 
 
-*S’applique à : System Center Configuration Manager (Technical Preview)*
+*S’applique à : System Center Configuration Manager (Technical Preview)*
 
 Cet article présente les fonctionnalités disponibles dans la version Technical Preview de Configuration Manager, version 1807. Installez cette version pour mettre à jour le site de votre version Technical Preview et lui ajouter de nouvelles fonctionnalités. 
 
@@ -60,7 +61,7 @@ Steps to workaround, if any.
 <!--1357766-->
 
 Le hub Communauté est un emplacement centralisé qui permet de partager des objets Configuration Manager utiles avec d’autres personnes. Consultez le nouvel espace de travail **Communauté** dans la console Configuration Manager, puis sélectionnez le nœud **Hub**. Utilisez le hub Communauté pour télécharger les types d’objet Configuration Manager suivants : 
-- Scripts
+- scripts ;
 - Éléments de configuration
 
 ![Console Configuration Manager, espace de travail Communauté, nœud Hub](media/1357766-hub.png)
@@ -71,16 +72,16 @@ Pour plus d’informations sur un élément disponible, cliquez sur ce dernier d
 
 L’espace de travail **Communauté** inclut également les nœuds suivants :
 
-- **Documentation** : affiche la [bibliothèque de documentation](https://docs.microsoft.com/sccm/) de Configuration Manager  
+- **Documentation** : Affiche la [bibliothèque de documentation](https://docs.microsoft.com/sccm/) de Configuration Manager  
 
-- **Commentaires** : affiche le [site UserVoice](https://configurationmanager.uservoice.com/) de Configuration Manager  
+- **Commentaires** : Affiche le [site UserVoice](https://configurationmanager.uservoice.com/) de Configuration Manager  
 
 
 ### <a name="prerequisites"></a>Prérequis
 
 - Utilisez la console Configuration Manager sur un système d’exploitation client.  
 
-    - Sinon, mais cela n’est pas recommandé, sur un système d’exploitation serveur, désactivez la [Configuration de sécurité renforcée d’Internet Explorer](https://go.microsoft.com/fwlink/?LinkId=253461).  
+    - Sinon, mais cela n’est pas recommandé, sur un système d’exploitation serveur, désactivez [Internet Explorer : Configuration de sécurité renforcée](https://go.microsoft.com/fwlink/?LinkId=253461).  
 
 - L’ordinateur où se trouve la console nécessite un accès Internet et une connectivité aux sites suivants :  
     - `https://aka.ms`  
@@ -219,7 +220,7 @@ Essayez d’effectuer les tâches. Envoyez ensuite des [commentaires](capabiliti
 
 Vous pouvez désormais afficher la sortie de script détaillée au format JSON brut ou structuré. Cette mise en forme rend la sortie plus facile à lire et à analyser. Si le script retourne du texte dans un format JSON valide, affichez la sortie détaillée en tant que **sortie JSON** ou en tant que **sortie brute**. Sinon, la seule option est la **sortie de script**. 
 
-#### <a name="example-script-output-is-valid-json"></a>Exemple : la sortie de script correspond à un format JSON valide
+#### <a name="example-script-output-is-valid-json"></a>Exemple : La sortie du script est un fichier JSON valide
 Commande : `$PSVersionTable.PSVersion`  
 
 Sortie :  
@@ -229,7 +230,7 @@ Major  Minor  Build  Revision
 5      1      16299  551
 ```
 
-#### <a name="example-script-output-isnt-valid-json"></a>Exemple : la sortie de script ne correspond pas à un format JSON valide
+#### <a name="example-script-output-isnt-valid-json"></a>Exemple : La sortie du script n’est pas un fichier JSON valide
 Commande : `Write-Output (Get-WmiObject -Class Win32_OperatingSystem).Caption`  
 
 Sortie :  

@@ -10,12 +10,12 @@ ms.assetid: c6777fb0-0754-4abf-8a1b-7639d23e9391
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b074ee02ec5e50fb5e495923538535cf8765dcdb
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 8338e08ffb6d09299123e363f27e586b650452fe
+ms.sourcegitcommit: 231111a704777789629911369f4d9593d2053fc0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53420938"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065097"
 ---
 # <a name="ports-used-in-configuration-manager"></a>Ports utilisés dans Configuration Manager
 
@@ -714,6 +714,11 @@ Le service système Trivial FTP (TFTP) Daemon ne nécessite pas de nom d’utili
 - RFC 2349 : Options d’intervalle de délai d’attente et de taille de transfert  
 
 Le protocole TFTP est conçu pour prendre en charge les environnements de démarrage sans disque. Les services Trivial FTP écoutent au port UDP 69 mais répondent à partir d'un port à numéro élevé alloué de manière dynamique. Ainsi, l’activation de ce port permet au service TFTP de recevoir les demandes TFTP entrantes mais n’autorise pas le serveur sélectionné à répondre à ces demandes. Vous ne pouvez pas permettre au serveur sélectionné de répondre aux demandes TFTP entrantes, à moins que le serveur TFTP soit configuré de manière à répondre à partir du port 69.  
+
+Le point de distribution compatible PXE et le client présent dans Windows PE sélectionnent des ports à numéro élevé alloués dynamiquement pour les transferts TFTP. Ces ports sont définis par Microsoft entre 49152 et 65535. Pour plus d’informations, consultez [Vue d’ensemble des services et exigences de ports réseau pour le système Windows Server](https://support.microsoft.com/help/832017/service-overview-and-network-port-requirements-for-windows).
+
+Toutefois, lors du démarrage PXE, la carte réseau de l’appareil sélectionne le port à numéro élevé alloué dynamiquement qu’elle utilise durant le transfert TFTP. La carte réseau de l’appareil n’est pas liée aux ports à numéro élevé qui sont alloués dynamiquement et définis par Microsoft. Elle est uniquement liée aux ports définis par la RFC 350. Ce port est compris dans la plage allant de 0 à 65535. Pour plus d’informations sur les ports à numéro élevé et alloués dynamiquement qui sont utilisés par la carte réseau, contactez le fabricant de l’appareil.
+
 
 #### <a name="bkmk_note5"></a> Note 5 : Communication entre le serveur de site et les systèmes de site
 par défaut, la communication entre le serveur de site et les systèmes de site est bidirectionnelle. Le serveur de site initialise la communication pour configurer le système de site, puis la plupart des systèmes de site se connectent à leur tour au serveur de site pour envoyer des informations d'état. Les points de Reporting Services et les points de distribution n’envoient pas d’informations d’état. Si vous sélectionnez **Exiger que le serveur de site démarre les connexions vers ce système de site** dans les propriétés du système de site, après l’installation du système de site, ce dernier n’établit pas la communication vers le système de site. Au lieu de cela, le serveur de site initie la communication et utilise le compte d’installation du système de site pour l’authentification auprès du serveur de système de site.  

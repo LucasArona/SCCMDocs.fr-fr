@@ -10,16 +10,17 @@ ms.assetid: f7350d03-f440-4744-82d4-75f8c6c25028
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 902e5e91b64cf3061862deeb98b0d9bf427e4598
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ROBOTS: NOINDEX
+ms.openlocfilehash: af82e3b5d0f555494705a28fba291253c83b00ea
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340911"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898016"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1606-of-system-center-configuration-manager"></a>Niveaux de collecte des données de diagnostic et d’utilisation pour la version 1606 de System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager version 1606 collecte trois niveaux de données d’utilisation et de diagnostic : **De base**, **Étendu** et **Complet**. Par défaut, cette fonctionnalité est définie sur le niveau Étendu. Les sections suivantes fournissent des détails supplémentaires sur les données collectées par chaque niveau.
 
@@ -385,7 +386,7 @@ Le niveau Complet inclut toutes les données des niveaux De base et Étendu. Il 
 -   Nombre minimal/maximal/moyen d’heures depuis la dernière analyse des mises à jour logicielles
 
 -    Produits des mises à jour logicielles synchronisés par le point de mise à jour logicielle
--    Paramètres de compatibilité : détails de configuration des modèles SCEP, VPN, Wi-Fi et stratégie de conformité
+-    Paramètres de conformité : détails de configuration des modèles SCEP, VPN, Wi-Fi et de stratégie de conformité
 
 -    Type de stratégies d’accès conditionnel EAS (bloquer ou mettre en quarantaine) pour les appareils gérés par Intune
 
