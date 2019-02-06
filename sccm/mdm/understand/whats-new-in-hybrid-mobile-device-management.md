@@ -2,7 +2,7 @@
 title: Nouveautés de la gestion MDM hybride
 titleSuffix: Configuration Manager
 description: Découvrez les nouvelles fonctionnalités de gestion des appareils mobiles disponibles pour les déploiements hybrides avec Configuration Manager et Intune.
-ms.date: 01/28/2019
+ms.date: 02/04/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 84c244a959bb9a087d33410fe0605bc6ddcadfbc
-ms.sourcegitcommit: a2ecd84d93f431ee77848134386fec14031aed6a
+ms.openlocfilehash: d6b54466f72c56d830954f8641b9f06f5f6e76e7
+ms.sourcegitcommit: 7e020ce097360e8703ac8cd6bd871c33f72a441e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55230900"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55742054"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Nouveautés de la gestion hybride des appareils mobiles avec Configuration Manager et Microsoft Intune
 
@@ -44,6 +44,15 @@ Chaque section de cet article répertorie les fonctionnalités hybrides sous tro
 |**Nouveautés de Microsoft Intune** | En règle générale, toutes les fonctionnalités listées dans cette catégorie fonctionnent avec chacune des versions de Configuration Manager. Sont notamment comprises les versions de System Center 2012 R2 Configuration Manager, dans la mesure où ces fonctionnalités ont seulement besoin du service Intune, sans aucune fonctionnalité supplémentaire dans Configuration Manager.|
 |**Nouveautés de Configuration Manager Technical Preview**| Toutes les fonctionnalités répertoriées dans cette catégorie fonctionnent uniquement avec la branche Technical Preview spécifiée. Pour tester ces fonctionnalités, vous devez installer la version Technical Preview spécifiée dans la description de la fonctionnalité. Pour plus d’informations, consultez [Technical Preview pour Configuration Manager](/sccm/core/get-started/technical-preview).|
 |**Nouveautés de Configuration Manager (Current Branch)**| Toutes les fonctionnalités répertoriées dans cette catégorie fonctionnent uniquement avec la version spécifiée de Configuration Manager (Current Branch). Si vous utilisez une version antérieure de Configuration Manager pour votre déploiement hybride, effectuez la mise à niveau vers la version de Configuration Manager (Current Branch) spécifiée dans la description de la fonctionnalité. Pour plus d’informations, consultez [Mettre à niveau vers Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager).|
+
+
+
+## <a name="february-2019"></a>Février 2019
+
+### <a name="new-in-microsoft-intune"></a>Nouveautés de Microsoft Intune
+
+#### <a name="intune-macos-company-portal-dark-mode"></a>MacOS Intune en Mode foncé de portail d’entreprise
+<!--3300524--> Le portail d’entreprise de macOS Intune prend désormais en charge le Mode foncé pour macOS. Lorsque vous activez le Mode sombre sur un appareil macOS 10.14 +, le portail d’entreprise ajuste son apparence aux couleurs qui reflètent ce mode.
 
 
 
