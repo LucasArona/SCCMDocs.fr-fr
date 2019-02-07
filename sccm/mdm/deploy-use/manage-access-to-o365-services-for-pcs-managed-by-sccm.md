@@ -10,24 +10,30 @@ ms.assetid: 34024741-edfa-4088-8599-d6bafc331e62
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f4e67050740b9d05dd33f2f79b7820b6dc8d9093
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 8bd926535f56e32430ae41c883623b80d142aebc
+ms.sourcegitcommit: 33e066aceaf321add1031df00e552e942c8351a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53415804"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55764427"
 ---
 # <a name="manage-access-to-o365-services-for-pcs-managed-by-system-center-configuration-manager"></a>Gérer l’accès aux services O365 pour les PC gérés par System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 <!--1191496--> Configurer l’accès conditionnel aux services Office 365 pour les PC gérés par Configuration Manager.  
+
+> [!Important]  
+> Y compris la gestion des appareils mobiles hybride sur site l’accès conditionnel sont [fonctionnalités déconseillées](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). Pour plus d’informations, voir [Présentation de la gestion MDM hybride](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->  
+> 
+> Si vous utilisez l’accès conditionnel sur des appareils gérés avec le client Configuration Manager, pour vous assurer qu’ils sont toujours protégées, tout d’abord activer l’accès conditionnel dans Intune pour ces appareils avant de migrer. Activer la cogestion dans Configuration Manager, déplacer la charge de travail de stratégie de conformité dans Intune, puis terminez votre migration à partir d’Intune hybride vers Intune autonome. Pour plus d’informations, consultez [d’accès conditionnel avec la cogestion](https://docs.microsoft.com/sccm/comanage/quickstart-conditional-access). 
+
+
+Pour plus d’informations sur la configuration de l’accès conditionnel pour les appareils inscrits et gérés par Microsoft Intune, consultez [Gérer l’accès aux services dans System Center Configuration Manager](../../protect/deploy-use/manage-access-to-services.md). Cet article aborde également les appareils qui sont joints à un domaine et dont la conformité n’est pas évaluée.
 
 > [!Note]  
 > Par défaut, Configuration Manager n’active pas cette fonctionnalité facultative. Vous devez activer cette fonctionnalité avant de l’utiliser. Pour plus d’informations, consultez [Activer les fonctionnalités facultatives des mises à jour](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
 
-
-Pour plus d’informations sur la configuration de l’accès conditionnel pour les appareils inscrits et gérés par Microsoft Intune, consultez [Gérer l’accès aux services dans System Center Configuration Manager](../../protect/deploy-use/manage-access-to-services.md). Cet article aborde également les appareils qui sont joints à un domaine et dont la conformité n’est pas évaluée.
 
 ## <a name="supported-services"></a>Services pris en charge  
 
@@ -78,7 +84,7 @@ Pour plus d’informations sur la configuration de l’accès conditionnel pour 
 
 -   **Exiger l’inscription dans Azure Active Directory :** Cette règle vérifie si l’appareil de l’utilisateur est l’espace de travail joints à Azure AD et dans le cas contraire, l’appareil est automatiquement inscrit dans Azure AD. L’inscription automatique est prise en charge seulement sur Windows 8.1. Pour les PC Windows 7, déployez un fichier MSI pour effectuer l’inscription automatique. Pour plus d’informations, consultez [Inscription automatique d’appareils auprès d’Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup).  
 
--   **Toutes les mises à jour installées avec une échéance d’un certain nombre de jours :** Spécifiez la valeur pour la période de grâce à partir de l’échéance du déploiement des mises à jour requises sur l’appareil de l’utilisateur. L’ajout de cette règle installe aussi automatiquement les mises à jour obligatoires en attente. Spécifiez les mises à jour obligatoires dans la règle **Mises à jour automatiques requises**.   
+-   **Toutes les mises à jour requises installées avec une échéance supérieure à un certain nombre de jours :** Spécifiez la valeur pour la période de grâce à partir de l’échéance du déploiement des mises à jour requises sur l’appareil de l’utilisateur. L’ajout de cette règle installe aussi automatiquement les mises à jour obligatoires en attente. Spécifiez les mises à jour obligatoires dans la règle **Mises à jour automatiques requises**.   
 
 -   **Exiger le chiffrement de lecteur BitLocker :** Cette règle vérifie si le lecteur principal (par exemple, C:\\) sur l’appareil est chiffré avec BitLocker. Si le chiffrement BitLocker n’est pas activé sur le lecteur principal, l’accès aux services de messagerie et SharePoint est bloqué.  
 

@@ -2,7 +2,7 @@
 title: MDM hybride avec Microsoft Intune
 titleSuffix: Configuration Manager
 description: Découvrez la gestion des appareils mobiles (MDM) hybride avec Configuration Manager et Microsoft Intune.
-ms.date: 11/02/2018
+ms.date: 01/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: bb95154b-f63e-4491-896e-41d732c802f8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a84dfc33fe79f5eb4d5397505a12052b8e92aebf
-ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
+ms.openlocfilehash: a744463aa82951d68125c0d17d88ba5e8a1f2703
+ms.sourcegitcommit: 33e066aceaf321add1031df00e552e942c8351a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54250610"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55764410"
 ---
 # <a name="hybrid-mdm-with-configuration-manager-and-microsoft-intune"></a>MDM hybride avec Configuration Manager et Microsoft Intune
 
@@ -38,7 +38,9 @@ ms.locfileid: "54250610"
 > 
 > - La gestion des licences reste inchangée. Les licences Intune sur Azure sont incluses avec la gestion MDM hybride.  
 > 
-> - Les fonctionnalités liées à l’accès conditionnel et à la gestion MDM locale dans Configuration Manager ne sont pas dépréciées. Les changements qui seront prochainement apportés à Configuration Manager permettront à ces fonctionnalités de fonctionner sans gestion MDM hybride. 
+> - La fonctionnalité de gestion des appareils mobiles locale dans Configuration Manager n’est pas déconseillée. À compter de Configuration Manager version 1810, vous pouvez utiliser la gestion MDM locale sans connexion à Intune. Pour plus d’informations, consultez [Intune une connexion n’est plus nécessaire pour les nouveaux déploiements de gestion des appareils mobiles locale](/sccm/core/plan-design/changes/whats-new-in-version-1810#bkmk_opmdm). 
+> 
+> - La fonctionnalité d’accès conditionnel en local de Configuration Manager est également déconseillée dans des appareils mobiles hybride Si vous utilisez l’accès conditionnel sur des appareils gérés avec le client Configuration Manager, pour vous assurer qu’ils sont toujours protégées, tout d’abord activer l’accès conditionnel dans Intune pour ces appareils avant de migrer. Activer la cogestion dans Configuration Manager, déplacer la charge de travail de stratégie de conformité dans Intune, puis terminez votre migration à partir d’Intune hybride vers Intune autonome. Pour plus d’informations, consultez [d’accès conditionnel avec la cogestion](https://docs.microsoft.com/sccm/comanage/quickstart-conditional-access). 
 > 
 > - Le 1er septembre 2019, les appareils MDM hybride restants ne recevront plus ni mises à jour des stratégies et des applications ni mises à jour de sécurité.  
 > 
