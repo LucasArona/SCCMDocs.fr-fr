@@ -10,19 +10,19 @@ ms.assetid: bb95154b-f63e-4491-896e-41d732c802f8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a744463aa82951d68125c0d17d88ba5e8a1f2703
-ms.sourcegitcommit: 33e066aceaf321add1031df00e552e942c8351a7
+ms.openlocfilehash: dd91d8afb092f855179edaa07163d5fcaa2ac350
+ms.sourcegitcommit: 38f56f1d5803370f4262931c2dc4a532bfcf0594
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55764410"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55905588"
 ---
 # <a name="hybrid-mdm-with-configuration-manager-and-microsoft-intune"></a>MDM hybride avec Configuration Manager et Microsoft Intune
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
 > [!Important]  
-> Depuis le 14 août 2018, la gestion hybride des appareils mobiles est une [fonctionnalité déconseillée](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).
+> Depuis le 14 août 2018, la gestion hybride des appareils mobiles est une [fonctionnalité déconseillée](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). En commençant par la version du service Intune 1902, attendue à la fin de février 2019, les nouveaux clients ne peut pas créer une nouvelle connexion hybride. 
 > <!--Intune feature 2683117-->  
 > Depuis son lancement sur Azure il y a plus d’un an, Intune a ajouté des centaines de nouvelles fonctionnalités demandées par les clients et de services de premier plan. Il propose à présent bien plus de fonctionnalités que celles de la gestion des appareils mobiles (MDM) hybride. Intune sur Azure offre une expérience d’administration simplifiée et mieux intégrée pour répondre à vos besoins de mobilité d’entreprise.
 > 
@@ -36,13 +36,20 @@ ms.locfileid: "55764410"
 > 
 > - Si vous migrez vers Intune sur Azure avant la fin de l’offre de gestion MDM hybride, il ne devrait y avoir aucun impact sur l’utilisateur final.  
 > 
+> - Le 1er septembre 2019, les appareils MDM hybride restants ne recevront plus ni mises à jour des stratégies et des applications ni mises à jour de sécurité.  
+> 
 > - La gestion des licences reste inchangée. Les licences Intune sur Azure sont incluses avec la gestion MDM hybride.  
 > 
 > - La fonctionnalité de gestion des appareils mobiles locale dans Configuration Manager n’est pas déconseillée. À compter de Configuration Manager version 1810, vous pouvez utiliser la gestion MDM locale sans connexion à Intune. Pour plus d’informations, consultez [Intune une connexion n’est plus nécessaire pour les nouveaux déploiements de gestion des appareils mobiles locale](/sccm/core/plan-design/changes/whats-new-in-version-1810#bkmk_opmdm). 
 > 
-> - La fonctionnalité d’accès conditionnel en local de Configuration Manager est également déconseillée dans des appareils mobiles hybride Si vous utilisez l’accès conditionnel sur des appareils gérés avec le client Configuration Manager, pour vous assurer qu’ils sont toujours protégées, tout d’abord activer l’accès conditionnel dans Intune pour ces appareils avant de migrer. Activer la cogestion dans Configuration Manager, déplacer la charge de travail de stratégie de conformité dans Intune, puis terminez votre migration à partir d’Intune hybride vers Intune autonome. Pour plus d’informations, consultez [d’accès conditionnel avec la cogestion](https://docs.microsoft.com/sccm/comanage/quickstart-conditional-access). 
-> 
-> - Le 1er septembre 2019, les appareils MDM hybride restants ne recevront plus ni mises à jour des stratégies et des applications ni mises à jour de sécurité.  
+> - La fonctionnalité d’accès conditionnel en local de Configuration Manager est également déconseillée dans des appareils mobiles hybride Si vous utilisez l’accès conditionnel sur des appareils gérés avec le client Configuration Manager, assurez-vous qu’ils sont protégés avant de migrer. 
+>     1. Configurer des stratégies d’accès conditionnel dans Azure
+>     2. Configurer des stratégies de conformité dans le portail Intune 
+>     3. Terminer la migration de hybride et définir l’autorité MDM sur Intune
+>     4. Activer la cogestion
+>     5. Déplacer la charge de cogestion de stratégies de conformité dans Intune 
+>
+>     Pour plus d’informations, consultez [d’accès conditionnel avec la cogestion](https://docs.microsoft.com/sccm/comanage/quickstart-conditional-access). 
 > 
 > **Que faire pour se préparer à ce changement ?**
 > 
