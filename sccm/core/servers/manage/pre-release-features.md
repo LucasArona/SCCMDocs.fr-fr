@@ -10,12 +10,12 @@ ms.assetid: 6bce416b-761d-4b23-bd33-5b7c30edb10d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4d892e8d194f61fece977c91ce36ba46cf9dd53d
-ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
+ms.openlocfilehash: e1becb8cc719466edabfb55ce82f9aa5e3345e3f
+ms.sourcegitcommit: 013ca76d5a3c07306de7b5bfd985b0289d1be599
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54250712"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55482433"
 ---
 # <a name="pre-release-features-in-configuration-manager"></a>Fonctionnalités en préversion dans Configuration Manager
 
@@ -78,6 +78,7 @@ Quand vous activez une fonctionnalité en préversion, le Gestionnaire de hiéra
 | API Fournisseur SMS <!--1359052--> | Version 1810 | ![Pas encore](media/red_x.png) |
 | [Système de site HTTP amélioré](/sccm/core/plan-design/hierarchy/enhanced-http) <!--1356889,1358228--> | Version 1806 | Version 1810 |
 | [Applications clientes pour les appareils cogérés](/sccm/comanage/workloads#client-apps) <!--1357892--> | Version 1806 | ![Pas encore](media/red_x.png) |
+| [Extensions SCAP](/sccm/compliance/plan-design/scap/about-scap) <!--3607889--> | Version 1806 | ![Pas encore](media/red_x.png) |
 | [Package Conversion Manager](/sccm/apps/pcm/package-conversion-manager) <!--1357861--> | Version 1806 | Version 1810 |
 | [Prise en charge de Cisco AnyConnect 4.0.07x et version supérieure pour iOS](/sccm/mdm/deploy-use/create-vpn-profiles)<!--1357393--> | Version 1802 | Version 1802 <br>avec mise à jour 4163547 |
 | [Déploiements par phases](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence) <!--1356837--> | Version 1802 | Version 1806 |

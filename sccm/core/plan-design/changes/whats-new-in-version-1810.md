@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: be1bbc8319a67b4aa2b4c27be9e9bbe6e935d087
-ms.sourcegitcommit: ad25a7bdd983c5a0e4c95bffdc61c9a1ebcbb765
+ms.openlocfilehash: 6870f5100ad4ed929adad3f376b6c2e1bbda15de
+ms.sourcegitcommit: 30c608339dd1fc3ddb4bde01210f8eaeebee400c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55072966"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689557"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Nouveautés de la version 1810 de l’édition Current Branch de Configuration Manager
 
@@ -368,17 +368,14 @@ For more information on changes to the Windows PowerShell cmdlets for Configurat
 
 Le correctif cumulatif suivant (4486457) sera disponible dans la console à partir du 25 janvier 2019 : [Correctif cumulatif pour Configuration Manager Current Branch, version 1810](https://support.microsoft.com/help/4486457).
 
-<!-- 
-### Hotfixes
 
-The following additional hotfixes are available to address specific issues:
+### <a name="hotfixes"></a>Correctifs
 
-| ID | Title | Date | In-console |
+Les correctifs logiciels suivants permettent de résoudre des problèmes spécifiques :
+
+| ID | Titre | Date | Dans la console |
 |---------|---------|---------|---------|
-| [4346645](https://support.microsoft.com/help/4346645) | Update for System Center Configuration Manager version 1806, first wave | 31 August 2018 | Yes | 
-
--->
-
+| [4487960](https://support.microsoft.com/help/4487960) | Le certificat du connecteur Microsoft Intune ne se renouvelle pas dans Configuration Manager | 18 janvier 2019 | Oui |
 
 
 ## <a name="next-steps"></a>Étapes suivantes

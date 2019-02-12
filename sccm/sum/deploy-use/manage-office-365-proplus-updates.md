@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-ms.openlocfilehash: 1fa5646b17646258e4863b3a53960c9c15497389
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 7ef9c7d734c74d578c188576b3b03d66fcb1de06
+ms.sourcegitcommit: f7b2fe522134cf102a3447505841cee315d3680c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53418184"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570232"
 ---
 # <a name="manage-office-365-proplus-with-configuration-manager"></a>Gérer Office 365 ProPlus avec Configuration Manager
 
@@ -108,7 +108,6 @@ Après avoir déployé des applications Office 365, vous pouvez créer des règ
 
 
 ## <a name="deploy-office-365-updates"></a>Déploiement des mises à jour Office 365
-Une tâche planifiée [Mises à jour automatiques dans Office 365](https://docs.microsoft.com/deployoffice/overview-of-the-update-process-for-office-365-proplus) s’exécute plusieurs fois par semaine. Si votre installation d’Office 365 est récente, il se peut que le canal de mise à jour n’a pas encore été défini et que la recherche de mises à jour ne trouve pas de mises à jour applicables. À titre d’essai, vous pouvez démarrer la tâche de mise à jour manuellement. 
 
 Procédez comme suit pour déployer les mises à jour d’Office 365 avec le Gestionnaire de Configuration :
 
@@ -133,6 +132,11 @@ Procédez comme suit pour déployer les mises à jour d’Office 365 avec le Ge
 > - Depuis la version 1706 de Configuration Manager, les mises à jour clients Office 365 ont été déplacées vers le nœud **Gestion des clients Office 365** >**Mises à jour Office 365**. Ce déplacement est sans effet sur la configuration actuelle des règles de déploiement automatique. 
 > - Avant la version 1610 de Configuration Manager, il est nécessaire de télécharger et de déployer les mises à jour dans les langues configurées sur les clients Office 365. Par exemple, supposons que vous disposiez d’un client Office 365 configuré avec les langues en-us et fr-fr. Sur le serveur de site, vous téléchargez et déployez uniquement le contenu en-us pour une mise à jour Office 365 applicable. Lorsque l’utilisateur commence l’installation de cette mise à jour à partir du Centre logiciel, celle-ci se bloque pendant le téléchargement du contenu de-de.   
 
+> [!NOTE]  
+>
+> Si Office 365 ProPlus a été installé récemment et, selon la façon dont il a été installé, il est possible que le canal de mise à jour n’ait pas encore été défini. Dans ce cas, les mises à jour déployées seront détectées comme non applicables. Il existe une [tâche Mises à jour automatiques planifiée](https://docs.microsoft.com/deployoffice/overview-of-the-update-process-for-office-365-proplus) créée lors de l’installation d’Office 365 ProPlus. Dans ce cas, cette tâche doit s’exécuter au moins une fois pour le canal de mise à jour soit défini et les mises à jour détectées comme applicables.
+>
+> Si Office 365 ProPlus a été récemment installé et que les mises à jour déployées ne sont pas détectées, à des fins de test, vous pouvez démarrer la tâche Mises à jour automatiques Office manuellement, puis démarrer le [Cycle d’évaluation du déploiement des mises à jour logicielles](https://docs.microsoft.com/sccm/sum/understand/software-updates-introduction#scan-for-software-updates-compliance-process) sur le client. Pour obtenir des instructions sur la façon d’exécuter cette séquence de tâches, consultez [Mise à jour d’Office 365 ProPlus dans une séquence de tâches](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates#updating-office-365-ProPlus-in-a-task-sequence).
 
 ## <a name="restart-behavior-and-client-notifications-for-office-365-updates"></a>Comportement de redémarrage et notifications des clients pour les mises à jour d’Office 365
 Quand vous déployez une mise à jour sur un client Office 365, le comportement de redémarrage et les notifications des clients diffèrent en fonction de la version de Configuration Manager. Le tableau suivant fournit des informations sur l’expérience utilisateur quand le client reçoit une mise à jour d’Office 365 :
@@ -185,17 +189,28 @@ Utilisez la procédure suivante sur le site d’administration centrale ou sur l
 11. Désormais, quand vous téléchargez des mises à jour Office 365, celles-ci sont téléchargées dans les langues sélectionnées dans l’Assistant et dans celles configurées durant cette procédure. Pour vérifier que les mises à jour sont téléchargées dans les langues correctes, accédez à la source du package de la mise à jour et recherchez les fichiers dont le nom comprend le code de langue.  
     ![Noms de fichiers avec des langues supplémentaires](../media/5-verification.png)
 
-## <a name="updating-office-365-during-task-sequences-when-office-365-is-installed-in-the-base-image"></a>Mise à jour d’Office 365 pendant des séquences de tâches quand Office 365 est installé dans l’image de base
-Quand Office 365 est déjà installé dans l’image du système d’exploitation que vous installez, il se peut que la valeur de la clé de Registre du canal de mise à jour corresponde à l’emplacement d’installation d’origine. Dans ce cas, la recherche de mises à jour n’affiche aucune mise à jour du client Office 365 comme étant applicable. Une tâche planifiée de mises à jour automatiques d’Office s’exécute plusieurs fois par semaine. Après l’exécution de cette tâche, le canal de mise à jour pointe vers l’URL du CDN Office configurée et l’analyse affiche ces mises à jour comme étant applicables. <!--510452-->
+## <a name="updating-office-365-proplus-in-a-task-sequence"></a>Mise à jour d’Office 365 ProPlus dans une séquence de tâches
+Lorsque vous utilisez l’étape de la séquence de tâches [Installer les mises à jour logicielles](https://docs.microsoft.com/sccm/osd/understand/task-sequence-steps#BKMK_InstallSoftwareUpdates) pour installer les mises à jour d’Office 365, il est possible que les mises à jour déployées soient détectées comme non applicables.  Cela peut se produire si la tâche planifiée Mises à jour automatiques d’Office n’a pas été exécutée au moins une fois (voir la remarque dans [Déployer des mises à jour Office 365](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates#deploy-office-365-updates)). Par exemple, cela peut se produire si Office 365 ProPlus a été installé immédiatement avant d’exécuter cette étape.
 
-Afin de vérifier que le canal de mise à jour est défini pour trouver les mises à jour applicables, effectuez les étapes suivantes :
-1. Sur une machine avec la même version d’Office 365 que celle de l’image de base de système d’exploitation, ouvrez le Planificateur de tâches (taskschd.msc) et identifiez la tâche de mise à jour automatique d’Office 365. En règle générale, elle se trouve sous **Bibliothèque du Planificateur de tâches** >**Microsoft**>**Office**.
+Pour vous assurer que le canal de mise à jour est défini afin que les mises à jour déployées soient détectées correctement, utilisez l’une des méthodes suivantes :
+
+**Méthode 1 :**
+1. Sur une machine avec la même version d’Office 365 ProPlus, ouvrez le Planificateur de tâches (taskschd.msc) et identifiez la tâche de mise à jour automatique d’Office 365. En règle générale, elle se trouve sous **Bibliothèque du Planificateur de tâches** >**Microsoft**>**Office**.
 2. Cliquez avec le bouton droit sur la tâche des mises à jour automatiques et sélectionnez **Propriétés**.
 3. Accédez à l’onglet **Actions** et cliquez sur **Modifier**. Copiez la commande et les arguments. 
 4. Dans la console Configuration Manager, modifiez votre séquence de tâches.
-5. Ajoutez une nouvelle étape **Exécuter la ligne de commande** avant l’étape **Installer les mises à jour** dans la séquence de tâches. 
+5. Ajoutez une nouvelle étape **Exécuter la ligne de commande** avant l’étape **Installer les mises à jour logicielles** dans la séquence de tâches. Si Office 365 ProPlus est installé dans le cadre de la même séquence de tâches, assurez-vous que cette étape s’exécute après l’installation d’Office.
 6. Copiez la commande et les arguments que vous avez regroupés à partir de la tâche planifiée de mises à jour automatiques d’Office. 
 7. Cliquez sur **OK**. 
+
+**Méthode 2 :**
+1. Sur une machine avec la même version d’Office 365 ProPlus, ouvrez le Planificateur de tâches (taskschd.msc) et identifiez la tâche de mise à jour automatique d’Office 365. En règle générale, elle se trouve sous **Bibliothèque du Planificateur de tâches** >**Microsoft**>**Office**.
+2. Dans la console Configuration Manager, modifiez votre séquence de tâches.
+3. Ajoutez une nouvelle étape **Exécuter la ligne de commande** avant l’étape **Installer les mises à jour logicielles** dans la séquence de tâches. Si Office 365 ProPlus est installé dans le cadre de la même séquence de tâches, assurez-vous que cette étape s’exécute après l’installation d’Office.
+4. Dans le champ de la ligne de commande, entrez la ligne de commande qui exécutera la tâche planifiée. Consultez l’exemple ci-dessous pour vous assurer que la chaîne entre guillemets correspond au chemin d’accès et au nom de la tâche identifiée à l’étape 1.  
+
+    Exemple : `schtasks /run /tn "\Microsoft\Office\Office Automatic Updates"`
+5. Cliquez sur **OK**. 
 
 ## <a name="change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager"></a>Modifier le canal de mise à jour une fois les clients Office 365 habilités à recevoir des mises à jour de Configuration Manager
 Pour modifier le canal de mise à jour une fois que les clients Office 365 sont habilités à recevoir des mises à jour de Configuration Manager, utilisez une stratégie de groupe pour distribuer un changement de valeur de clé de registre aux clients Office 365. Modifiez la clé de Registre **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration\CDNBaseUrl** pour qu’elle utilise l’une des valeurs suivantes :

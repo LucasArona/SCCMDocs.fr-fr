@@ -2,7 +2,7 @@
 title: Centre d’aide et de support
 titleSuffix: Configuration Manager
 description: Résoudre les problèmes des clients Configuration Manager avec le Centre d’aide et de support.
-ms.date: 11/27/2018
+ms.date: 01/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.assetid: c631197d-7daa-4faa-9e22-980cd6d604c2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6d9a4df006619278504d3a4967b813aa2989ebf7
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 828edc3c90b4dd93f4d86772b863816bbc8c9130
+ms.sourcegitcommit: 013ca76d5a3c07306de7b5bfd985b0289d1be599
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52458052"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55482416"
 ---
 # <a name="support-center-for-configuration-manager"></a>Centre d’aide et de support pour Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 <!--1357489--> À compter de la version 1810, utilisez le Centre d’aide et de support pour la résolution des problèmes clients, l’affichage des journaux en temps réel ou la capture de l’état d’un ordinateur client Configuration Manager pour l’analyser ultérieurement. Le Centre d’aide et de support est un outil unique permettant de consolider de nombreux outils administrateur de résolution des problèmes. 
 
@@ -64,7 +64,7 @@ Installez les composants suivants sur l’ordinateur serveur ou client où vous 
 
 
 
-## <a name="install"></a>Installation
+## <a name="install"></a>Installez
 
 Recherchez le programme d’installation du Centre d’aide et de support sur le serveur de site à l’emplacement suivant : `cd.latest\SMSSETUP\Tools\SupportCenter\SupportCenterInstaller.msi`.
 
@@ -88,6 +88,8 @@ Pour éviter ce problème, utilisez les formats de nom d’utilisateur suivants 
 Lors d’une connexion à des clients distants à l’aide de l’applet de commande PowerShell [New-CMMachineConnection](https://go.microsoft.com/fwlink/p/?linkid=390542), le Centre d’aide et de support crée une connexion SMB (Server Message Block) avec chaque client distant. Il conserve ces connexions une fois la collecte de données terminée. Pour éviter de dépasser le nombre maximal de connexions à distance pour Windows, utilisez la commande `net use` pour voir l’ensemble des connexions à distance actives. Désactivez ensuite les connexions inutiles à l’aide de la commande suivante : `net use <connection_name> /d` 
 où `<connection_name>` est le nom de la connexion à distance.
 
+#### <a name="application-deployment-evaluation-cycle-request-isnt-sent-correctly-to-remote-machines"></a>La demande de cycle d’évaluation de déploiement d’application n’est pas transmise correctement aux ordinateurs à distance
+<!--2849356--> Dans le Centre d’aide et de support, si vous sélectionnez **Évaluation du déploiement d’application** dans l’action **Appeler le déclencheur** de l’onglet **Contenu**, cette action démarre une tâche qui évalue les applications déployées. Si vous êtes connecté à un client local, elle évalue les déploiements d’application machine et utilisateur. Toutefois, si vous êtes connecté à un client à distance, elle évalue uniquement les déploiements d’application machine.
 
 
 ## <a name="next-steps"></a>Étapes suivantes

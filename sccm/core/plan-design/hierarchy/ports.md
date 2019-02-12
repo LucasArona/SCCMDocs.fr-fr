@@ -2,7 +2,7 @@
 title: Ports utilisés pour les connexions
 titleSuffix: Configuration Manager
 description: Découvrez les ports réseau obligatoires et personnalisables qu’utilise Configuration Manager pour les connexions.
-ms.date: 09/10/2018
+ms.date: 01/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c6777fb0-0754-4abf-8a1b-7639d23e9391
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8338e08ffb6d09299123e363f27e586b650452fe
-ms.sourcegitcommit: 231111a704777789629911369f4d9593d2053fc0
+ms.openlocfilehash: a65b1f30815eca411a64a72b1a35acc9d7dad34c
+ms.sourcegitcommit: 013ca76d5a3c07306de7b5bfd985b0289d1be599
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065097"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55482535"
 ---
 # <a name="ports-used-in-configuration-manager"></a>Ports utilisés dans Configuration Manager
 
@@ -126,6 +126,10 @@ En plus des ports qui sont répertoriés dans ce tableau, le proxy de mise en é
 |-----------------|---------|---------|  
 |Éveil par appel réseau|9 <sup>[Note 2](#bkmk_note2) Autre port disponible</sup>|--|  
 |Proxy de mise en éveil|25536 <sup>[Note 2](#bkmk_note2) Autre port disponible</sup>|--|  
+|Diffusion de mise en cache d’homologue Windows PE|8004|--|  
+|Téléchargement de mise en cache d’homologue Windows PE|--|8003|  
+
+Pour plus d’informations, consultez [Mise en cache d’homologue Windows PE](/sccm/osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md#-requirements-for-a-client-to-use-a--windows-pe-peer-cache-source).
 
 
 ###  <a name="BKMK_PortsClient-PolicyModule"></a> Client -- > Module de stratégie SCEP (protocole d’inscription de certificats simple) de Configuration Manager   

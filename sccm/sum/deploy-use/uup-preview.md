@@ -2,7 +2,7 @@
 title: Préversion UUP
 titleSuffix: Configuration Manager
 description: Instructions pour la préversion d’intégration UUP
-ms.date: 01/25/2019
+ms.date: 01/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 27a960758d8d3939798ae270404d5dd1afbea62d
-ms.sourcegitcommit: ad25a7bdd983c5a0e4c95bffdc61c9a1ebcbb765
+ms.openlocfilehash: fde592b02d78c0a2ab29d77f7e55273c143b09ee
+ms.sourcegitcommit: f7b2fe522134cf102a3447505841cee315d3680c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55072983"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570130"
 ---
 # <a name="uup-private-preview-instructions"></a>Instructions de préversion privée UUP
 
@@ -40,7 +40,9 @@ Pour plus d’informations sur UUP, consultez le billet de blog Windows [Une mis
 
 ### <a name="cumulative-updates"></a>Mises à jour cumulatives
 
-Les mises à jour cumulatives avec UUP permettent de distribuer hors connexion les FOD et modules linguistiques, permettant ainsi aux utilisateurs finaux de les obtenir à la demande sans accéder à Internet ni tâches fastidieuses de mise en lots pour les administrateurs.
+- Les mises à jour cumulatives avec UUP permettent de distribuer hors connexion les FOD et modules linguistiques, permettant ainsi aux utilisateurs finaux de les obtenir à la demande sans accéder à Internet ni tâches fastidieuses de mise en lots pour les administrateurs.
+
+- Les mises à jour cumulatives avec UUP incluent les mises à jour de la pile de maintenance avec les mises à jour de sécurité cumulatives mensuelles. Ce comportement permet de résoudre des problèmes d’orchestration de ces deux mises à jour. Il permet de s’assurer que les mises à jour de la pile de maintenance sont en place pour installer les mises à jour cumulatives sans que vous n’ayez à gérer et orchestrer les relations.
 
 
 
@@ -66,9 +68,7 @@ La propriété **MUUrl** doit être `https://sws.update.microsoft.com`. Pour mod
 
 ### <a name="2-update-configmgr"></a>2. Mettre à jour ConfigMgr
 
-Si vous synchronisez des fichiers d’installation rapide dans votre environnement, alors ConfigMgr 1810 Current Branch est requis pour les environnements de production, ou 1812 Technical Preview Branch pour les environnements de laboratoire.
-
-Si vous ne synchronisez pas des fichiers d’installation rapide dans votre environnement, alors le correctif ConfigMgr 1810 KB4482615 est également requis pour les environnements de production, ou 1812 Technical Preview Branch pour les environnements de laboratoire.
+Apportez les modifications suivantes à votre site Configuration Manager pour prendre en charge cette préversion d’UUP :
 
 
 #### <a name="diagnostics-and-usage-data-level"></a>Niveaux de collecte des données de diagnostic et d’utilisation

@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 68407ab8-c205-44ed-9deb-ff5714451624
-ms.openlocfilehash: ad084aabca6f3b0fd920fd2c9b406efff36005a1
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.openlocfilehash: 0ba5a484fe11185b46125de0d8764bce153f577d
+ms.sourcegitcommit: a2ecd84d93f431ee77848134386fec14031aed6a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43995345"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55230849"
 ---
 # <a name="integrate-upgrade-readiness-with-configuration-manager"></a>Intégrer Upgrade Readiness à Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Upgrade Readiness fait partie de [Windows Analytics](https://docs.microsoft.com/windows/deployment/upgrade/manage-windows-upgrades-with-upgrade-readiness). Il vous permet d’évaluer et d’analyser l’état de préparation des appareils de votre environnement en vue d’une mise à niveau vers Windows 10. Intégrez Upgrade Readiness à Configuration Manager pour accéder aux données de compatibilité de mise à niveau du client dans la console Configuration Manager. Utilisez ensuite ces données pour créer des regroupements et cibler des appareils à des fins de mise à niveau ou de correction.
 
@@ -50,10 +50,14 @@ Configurez ces paramètres à l’aide des paramètres client Configuration Mana
 
 Utilisez [l’Assistant des services Azure](/sccm/core/servers/deploy/configure/azure-services-wizard) pour simplifier le processus de configuration des services Azure que vous utilisez avec Configuration Manager. Pour connecter Configuration Manager à Upgrade Readiness, créez une inscription d’application Azure Active Directory (Azure AD) de type *application web/API* dans le [portail Azure](https://portal.azure.com). Pour plus d’informations sur la création d’une inscription d’application, consultez [Inscrire votre application avec votre locataire Azure AD](/azure/active-directory/active-directory-app-registration). 
 
-Dans le portail Azure, attribuez à votre application web nouvellement inscrite les autorisations de *contributeur*. Définissez ces autorisations sur le groupe de ressources qui contient l’espace de travail Log Analytics qui héberge vos données Upgrade Readiness. L’Assistant des services Azure utilise cette inscription d’application pour permettre à Configuration Manager de communiquer en toute sécurité avec Azure AD et de connecter votre infrastructure à vos données Upgrade Readiness.
+Dans le portail Azure, attribuez à votre application web nouvellement inscrite les autorisations suivantes :
+- Autorisations *Lecteur* sur le groupe de ressources qui contient l’espace de travail Log Analytics avec vos données Upgrade Readiness
+- Autorisations *Contributeur* à l’espace de travail Log Analytics qui héberge vos données Upgrade Readiness
+
+L’Assistant des services Azure utilise cette inscription d’application pour permettre à Configuration Manager de communiquer en toute sécurité avec Azure AD et de connecter votre infrastructure à vos données Upgrade Readiness.
 
 > [!IMPORTANT]  
-> Attribuez les autorisations de *contributeur* à l’application elle-même, pas à une identité d’utilisateur Azure AD. C’est l’application inscrite qui accède aux données au nom de votre infrastructure Configuration Manager. Pour accorder les autorisations, recherchez le nom de l’inscription d’application dans la zone **Ajouter des utilisateurs** au moment d’attribuer l’autorisation. 
+> Attribuez les autorisations à l’application elle-même, pas à une identité d’utilisateur Azure AD. C’est l’application inscrite qui accède aux données au nom de votre infrastructure Configuration Manager. Pour accorder les autorisations, recherchez le nom de l’inscription d’application dans la zone **Ajouter des utilisateurs** au moment d’attribuer l’autorisation. 
 > 
 > Ce processus est le même que lors de la fourniture à Configuration Manager d’autorisations sur Log Analytics. Ces étapes doivent être effectuées avant d’importer l’inscription d’application dans Configuration Manager avec l’*Assistant Services Azure*.
 > 
