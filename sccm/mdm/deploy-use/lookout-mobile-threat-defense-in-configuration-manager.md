@@ -10,23 +10,24 @@ ms.assetid: 9083c571-f4fc-4a78-adc5-8aec84dabcbd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c8e984c6eb76716e031ed793a7753840842f0ea7
-ms.sourcegitcommit: 98c3f7848dc9014de05541aefa09f36d49174784
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 62db216d2047ee0272c6b3fa226493b5e8af5f84
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42584558"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56128719"
 ---
 # <a name="manage-access-to-company-resource-based-on-device-network-and-application-risk"></a>Gérer l’accès aux ressources d’entreprise en fonction du risque évalué pour l’appareil, le réseau et l’application
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
-Contrôlez l’accès depuis les appareils mobiles aux ressources d’entreprise en fonction de l’évaluation des risques effectuée par Lookout. Lookout est une solution de protection contre les menaces sur les appareils, intégrée à Microsoft Intune. Le risque est basé sur les données collectées par le service Lookout. A partir des appareils, le service recueille les données relatives aux vulnérabilités du système d’exploitation, aux applications malveillantes installées et aux profils réseau malveillants. 
+Contrôlez l’accès depuis les appareils mobiles aux ressources d’entreprise en fonction de l’évaluation des risques effectuée par Lookout. Lookout est une solution de protection contre les menaces sur les appareils, intégrée à Microsoft Intune. Le risque est basé sur les données collectées par le service Lookout. A partir des appareils, le service recueille les données relatives aux vulnérabilités du système d’exploitation, aux applications malveillantes installées et aux profils réseau malveillants. 
 
 En fonction de l’évaluation des risques effectuée par Lookout et activée par le biais des stratégies de conformité Configuration Manager, vous configurez les stratégies d’accès conditionnel. Ces stratégies autorisent ou bloquent les appareils que Configuration Manager détermine comme étant non conformes en raison des menaces détectées sur ces appareils.
 
 > [!Important]  
-> Depuis le 14 août 2018, la gestion des appareils mobiles hybride est une [fonctionnalité déconseillée](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). Pour plus d’informations, consultez [Qu’est-ce que la gestion MDM hybride ?](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->  
+> Depuis le 14 août 2018, la gestion des appareils mobiles hybride est une [fonctionnalité déconseillée](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). Pour plus d’informations, voir [Présentation de la gestion MDM hybride](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->  
 
 
 

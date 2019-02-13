@@ -10,16 +10,17 @@ ms.assetid: d1b4337f-85e8-45e6-8bbe-9f18b49041c7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8aba9fb658072ce4eaa2e4b2a364cf2b52f9c51b
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: f0288b88187ead39f1cf584ebf88e3943549b01f
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53414648"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56124010"
 ---
 # <a name="create-an-mdm-collection-with-system-center-configuration-manager-and-microsoft-intune"></a>Créer un regroupement MDM via System Center Configuration Manager et Microsoft Intune
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Un regroupement d’utilisateurs Configuration Manager est obligatoire pour spécifier les utilisateurs qui peuvent inscrire des appareils dans la gestion. Vous pouvez utiliser seulement des regroupements d’utilisateurs (au lieu de regroupements d’appareils ) car les licences Intune sont affectées par utilisateur.
 

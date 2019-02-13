@@ -10,16 +10,17 @@ ms.assetid: 9126d188-7780-45a4-b21d-7fcf4fad7da2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6f83f26f746c54e3d1defe31df47b3c7c8a7e117
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 7d6f8c25902be857e0eec3cd4b969d1fb5bda136
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53417946"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56136328"
 ---
 # <a name="apply-settings-to-android-for-work-apps-with-app-configuration-policies-in-system-center-configuration-manager"></a>Appliquer des paramètres à des applications Android for Work avec des stratégies de configuration des applications dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Vous pouvez utiliser des stratégies de configuration des applications dans System Center Configuration Manager pour distribuer les paramètres susceptibles de se révéler nécessaires lorsqu’un utilisateur exécute une application. Par exemple, une application peut exiger qu’un utilisateur spécifie les détails suivants :
 - Un numéro de port personnalisé
@@ -41,7 +42,7 @@ Pour plus d’informations sur les types d’installation d’application, consu
 3. Dans la page **Général** de l’Assistant Création d’une stratégie de configuration d’applications, définissez les informations de cette stratégie :
    - **Nom**. Entrez un nom unique pour la stratégie.
    - **Description**. (Facultatif) Pour identifier plus facilement la stratégie, vous pouvez ajouter une description.
-   -  **Sélectionnez un type de stratégie de configuration**. Spécifier la plateforme ciblée par la stratégie de configuration d’application : **Stratégie de configuration pour Android pour les applications professionnelles**.
+   -  **Sélectionnez un type de stratégie de configuration**. Spécifiez la plateforme ciblée par la stratégie de configuration d’application : **Stratégie de configuration pour les applications Android for Work**.
    -  **Catégories attribuées pour améliorer la recherche et le filtrage**. (Facultatif) Pour créer et attribuer des catégories à la stratégie, choisissez **Catégories**. L’utilisation de catégories facilite le tri et la recherche d’éléments dans la console Configuration Manager.
 4. Sur la page **Stratégie Android for Work**, choisissez de quelle façon les informations sur la stratégie de configuration sont définies :
    - **Spécifier des paires nom/valeur**. Vous pouvez utiliser cette option pour les fichiers de liste de propriétés simples sans imbrication. Pour spécifier une paire nom/valeur :

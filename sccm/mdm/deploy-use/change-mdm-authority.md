@@ -10,23 +10,24 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: cc397ab5-125f-4f17-905b-fab980194f49
-ms.openlocfilehash: 692ffb04546da4f65b2198e582999582c996fdb2
-ms.sourcegitcommit: 98c3f7848dc9014de05541aefa09f36d49174784
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: c0420113feaaf9c9485b8d1e3d488b07878c61b5
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42584474"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56131963"
 ---
 # <a name="change-your-mdm-authority"></a>Changer d’autorité MDM
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Vous pouvez modifier votre autorité MDM sans avoir à contacter le Support Microsoft, et sans devoir annuler l’inscription de vos appareils gérés existants et les réinscrire. Cet article décrit les étapes à suivre pour modifier un client Microsoft Intune déjà configuré et le faire passer de la console Configuration Manager (hybride) à la version autonome d’Intune. Lorsque vous effectuez les étapes décrites dans cet article, les appareils sont gérés par Microsoft Intune dans le [portail Azure](https://portal.azure.com). 
 
 Cet article concerne le changement d’autorité de gestion des appareils mobiles (MDM) dans le cas où aucun utilisateur n’a fait l’objet d’une migration. Pour la changer après avoir [migré un sous-ensemble d’utilisateurs](migrate-hybridmdm-to-intunesa.md), consultez la page [Changer d’autorité MDM](migrate-change-mdm-authority.md).
 
 > [!Important]  
-> Depuis le 13 août 2018, la gestion hybride des appareils mobiles est une [fonctionnalité déconseillée](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). Pour plus d’informations, consultez [Qu’est-ce que la gestion hybride des appareils mobiles ?](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->  
+> Depuis le 13 août 2018, la gestion hybride des appareils mobiles est une [fonctionnalité déconseillée](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). Pour plus d’informations, voir [Présentation de la gestion MDM hybride](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->  
 
 
 
