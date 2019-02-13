@@ -9,16 +9,17 @@ ms.assetid: 7e4ada34-63bf-4b9f-8246-31816aa44196
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 179aae5fdbd8d6c09a34dca6dd01437d5f61f7b8
-ms.sourcegitcommit: 0a4556820fabe004d45a82b0ee1176f6891ac9f0
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b36e98edfffcc26b7fb2670cbfdc31c165331f0f
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37949592"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56139389"
 ---
 # <a name="enable-lookout-mtd-connection-in-the-intune-admin-console"></a>Activer la connexion à Lookout MTD dans la console d’administration Intune
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Cet article explique comment activer la connexion à Lookout Mobile Threat Defense (MTD) dans Microsoft Intune. Vous devez déjà avoir configuré le connecteur Intune dans la console Lookout avant d’effectuer cette étape. Si ce n’est déjà fait, procédez aux étapes décrites dans [Configurer votre abonnement avec Mobile Threat Protection de Lookout](set-up-your-subscription-with-lookout.md).
 
@@ -46,11 +47,11 @@ Cet article explique comment activer la connexion à Lookout Mobile Threat Defen
 
 Vous pouvez décider des options MTD que vous devez activer en fonction des besoins de votre entreprise. Voici des informations détaillées concernant ces options :
 
-- **Connecter des appareils Android 4.1+ à Lookout for Work MTD** : lorsque vous activez cette option, les appareils Android 4.1+ signalent les risques de sécurité à Intune.  
-    - **Marquer comme non conforme si aucune donnée n’est reçue** : si Intune ne reçoit pas de données de la part de Lookout concernant un appareil de cette plateforme, l’appareil est considéré comme non conforme.  
+- **Se connecter Android 4.1 + appareils Lookout for Work MTD**: Lorsque vous activez cette option, vous pouvez avoir Android 4.1 + sauvegarder de signaler des risques de sécurité des appareils à Intune.  
+    - **Marquer comme non conforme si aucune donnée n’est reçue**: Si Intune ne reçoit pas les données sur un appareil sur cette plateforme à partir de Lookout, considère l’appareil non conforme.  
 
-- **Connecter des appareils iOS 8.0+ à Lookout for Work MTD** : quand vous activez cette option, les appareils iOS 8.0+ signalent les risques de sécurité à Intune.
-    - **Marquer comme non conforme si aucune donnée n’est reçue** : si Intune ne reçoit pas de données de la part de Lookout concernant un appareil de cette plateforme, l’appareil est considéré comme non conforme.  
+- **Connectez des appareils iOS 8.0 + à Lookout for Work MTD**: Lorsque vous activez cette option, vous pouvez avoir des appareils iOS 8.0 + rapportant risque de sécurité à Intune.
+    - **Marquer comme non conforme si aucune donnée n’est reçue**: Si Intune ne reçoit pas les données sur un appareil sur cette plateforme à partir de Lookout, considère l’appareil non conforme.  
 
 > [!TIP]  
 > Dans le volet Mobile Threat Defense, vous pouvez voir **l’état de la connexion** et la date de **dernière synchronisation** entre Intune et Lookout.

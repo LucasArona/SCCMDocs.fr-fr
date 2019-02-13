@@ -10,16 +10,17 @@ ms.assetid: 5267f0af-34d3-47a0-9ab8-986c41276e6c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 51d3a537fd7aa874fb2662bb6ec15fcfaa2124e5
-ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b773696d5967d9ed1779ee822168d7177f10f585
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "34474324"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56130443"
 ---
 # <a name="recommended-hardware-for-system-center-configuration-manager"></a>Matériel recommandé pour System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Les recommandations suivantes sont des indications destinées à vous aider à adapter votre environnement System Center Configuration Manager pour qu’il prenne en charge un déploiement plus complexe de sites, de systèmes de site et de clients. Elles ne sont pas prévues pour couvrir toutes les configurations possibles de site et de hiérarchie.  
 
@@ -81,7 +82,7 @@ Pour des performances optimales, utilisez des configurations RAID 10 pour tous 
 |----------------|------------------------|--------------------|--------------------|---------------------|---------------------|-----------------------------------------------------|  
 |Système d'exploitation|Consultez les conseils pour le système d'exploitation.|Consultez les conseils pour le système d'exploitation.|Consultez les conseils pour le système d'exploitation.|Consultez les conseils pour le système d'exploitation.|Consultez les conseils pour le système d'exploitation.|Consultez les conseils pour le système d'exploitation.|  
 |Fichiers journaux et d’application de Configuration Manager|25 Go|50 Go|100 Go|200 Go|300 Go|200 Go|  
-|Fichier .mdf de base de données du site|75 Go par tranche de 25 000 clients|75 Go|150 Go|300 Go|500 Go|2 To|  
+|Fichier .mdf de base de données du site|75 Go par tranche de 25 000 clients|75 Go|150 Go|300 Go|500 Go|2 To|  
 |Fichier .ldf de base de données du site|25 Go par tranche de 25 000 clients|25 Go|50 Go|100 Go|150 Go|100 Go|  
 |Fichiers de base de données temporaires (.mdf et .ldf)|En fonction des besoins|En fonction des besoins|En fonction des besoins|En fonction des besoins|En fonction des besoins|En fonction des besoins|  
 |Contenu (partages de point de distribution)|En fonction des besoins<sup>1</sup>|En fonction des besoins<sup>1</sup>|En fonction des besoins<sup>1</sup>|En fonction des besoins<sup>1</sup>|En fonction des besoins<sup>1</sup>|En fonction des besoins<sup>1</sup>|  
@@ -103,7 +104,7 @@ Pour des performances optimales, utilisez des configurations RAID 10 pour tous 
 
     -   SQL Server 2012 Express : 10 Go  
 
-    -   SQL Server 2014 Express : 10 Go  
+    -   SQL Server 2014 Express : 10 Go  
 
 ##  <a name="bkmk_ScaleClient"></a> Clients  
  Cette section présente les configurations matérielles recommandées pour les ordinateurs que vous gérez à l’aide du logiciel client Configuration Manager.  
@@ -111,13 +112,13 @@ Pour des performances optimales, utilisez des configurations RAID 10 pour tous 
 ### <a name="client-for-windows-computers"></a>Client pour les ordinateurs Windows  
  Le tableau suivant indique la configuration minimale requise pour les ordinateurs Windows gérés à l’aide de Configuration Manager, y compris les systèmes d’exploitation embarqués :  
 
--   **Processeur et mémoire :** reportez-vous à la configuration de processeur et mémoire RAM requise pour le système d’exploitation de l’ordinateur.  
+-   **Processeur et mémoire :** reportez-vous à la configuration processeur et RAM requise pour le système d'exploitation de l'ordinateur.  
 
--   **Espace disque :** 500 Mo d’espace disque disponible, avec 5 Go recommandés pour le cache du client Configuration Manager. L’espace disque requis est moindre si vous utilisez des paramètres personnalisés pour installer le client Configuration Manager :  
+-   **Espace disque :** 500 Mo d’espace disque disponible, avec 5 Go recommandés pour le cache du client Configuration Manager. L’espace disque requis est moindre si vous utilisez des paramètres personnalisés pour installer le client Configuration Manager :  
 
     -   Utilisez la propriété /skipprereq de la ligne de commande de CCMSetup pour éviter d’installer des fichiers dont le client n’a pas besoin. Par exemple, exécutez `CCMSetup.exe /skipprereq:silverlight.exe` si le client n’utilise pas le catalogue d’applications. À compter de Configuration Manager 1802, Silverlight n’est plus installé automatiquement.  
 
-    -   Utilisez la propriété SMSCACHESIZE de Client.msi pour définir un fichier de cache d'une taille inférieure à la taille par défaut de 5 120 Mo. La taille minimale est de 1 Mo. Par exemple, `CCMSetup.exe SMSCachesize=2` crée un cache d’une taille de 2 Mo.  
+    -   Utilisez la propriété SMSCACHESIZE de Client.msi pour définir un fichier de cache d'une taille inférieure à la taille par défaut de 5 120 Mo. La taille minimale est de 1 Mo. Par exemple, `CCMSetup.exe SMSCachesize=2` crée un cache d’une taille de 2 Mo.  
 
     Pour plus d'informations sur ces paramètres d'installation du client, consultez [À propos des propriétés d'installation du client](../../../core/clients/deploy/about-client-installation-properties.md).  
 
@@ -130,9 +131,9 @@ Pour des performances optimales, utilisez des configurations RAID 10 pour tous 
 
 -   **Déploiement du système d’exploitation :** 384 Mo de RAM  
 
--   **Centre logiciel :** processeur 500 MHz  
+-   **Centre logiciel :** Processeur 500 MHz  
 
--   **Contrôle à distance :** Pentium 4 Hyper-Threaded 3 GHz (simple cœur) ou processeur comparable, avec au moins 1 Go de RAM pour une expérience optimale  
+-   **Contrôle à distance** : Pentium 4 Hyper-Threaded 3 GHz (simple cœur) ou processeur comparable, avec au moins 1 Go de RAM pour une expérience optimale.  
 
 ### <a name="client-for-linux-and-unix"></a>Client pour Linux et UNIX  
  Le tableau suivant indique la configuration minimale requise pour les ordinateurs Linux et UNIX que vous gérez avec Configuration Manager.  
