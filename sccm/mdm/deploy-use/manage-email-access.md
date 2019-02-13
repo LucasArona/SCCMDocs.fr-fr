@@ -10,16 +10,17 @@ ms.assetid: fa648e73-5fb8-4818-ab57-7466ffaf888e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f1dbe514e8beca7250b7bfa62a9af7997bf5246c
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: f976b63b4580b5df9c6e609ff6b361538860c41c
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53417233"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56137641"
 ---
 # <a name="manage-email-access-in-configuration-manager"></a>Gérer l’accès à la messagerie dans Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Utilisez le Gestionnaire de Configuration accès conditionnel pour gérer l’accès à la messagerie Exchange selon des conditions que vous spécifiez.  
 
@@ -124,7 +125,7 @@ Après avoir exécuté le rapport, examinez ces quatre colonnes pour déterminer
 
 - **Inscrit auprès d’AAD**: L’appareil est inscrit avec Azure Active Directory (appelé jonction).  
 
-- **Conforme**: L’appareil est conforme aux stratégies de conformité que vous avez déployé.  
+- **Conforme** : L’appareil est conforme aux stratégies de conformité que vous avez déployé.  
 
 - **EAS activé**: appareils iOS et Android doit être l’ID ActiveSync Exchange associé à l’enregistrement de l’inscription d’appareil dans Azure Active Directory. Ceci se produit quand l'utilisateur clique sur le lien **Activer la messagerie** dans l'e-mail de mise en quarantaine.  
 

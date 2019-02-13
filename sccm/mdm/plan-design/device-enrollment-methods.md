@@ -10,16 +10,17 @@ ms.assetid: b81d06dc-3844-4117-9937-16732a227994
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 89501e22c855f31264fbf94fe093d8ebde08708f
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: be1221b3448c8a2818f7fd02b5ff2d14218bbeed
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32349311"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56134025"
 ---
 # <a name="overview-of-device-enrollment-methods"></a>Présentation des méthodes d’inscription des appareils
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Après avoir étendu Configuration Manager avec Intune, vous pouvez inscrire et gérer des appareils appartenant à l’entreprise ou autoriser les utilisateurs à inscrire leurs appareils personnels. Vous pouvez également gérer des appareils d’entreprise avec Intune à partir de Configuration Manager.
 

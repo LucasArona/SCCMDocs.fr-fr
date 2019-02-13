@@ -10,16 +10,17 @@ ms.assetid: e025c48c-1514-4ab7-836c-e0635aaa993a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a95a7735cc7f7afb6a16b030de6925926335e403
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: ef070186112642d204aade24039da87c0e3a22f0
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385216"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56139668"
 ---
 # <a name="create-android-applications-in-configuration-manager"></a>Créer des applications Android dans Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Une application Configuration Manager propose un ou plusieurs types de déploiement. Les types de déploiement comprennent les fichiers d’installation et les informations nécessaires pour déployer des logiciels sur un appareil. Le type de déploiement contient également des règles spécifiant à quel moment et selon quelle méthode le logiciel est déployé.  
 
@@ -37,7 +38,7 @@ Il prend en charge les actions de déploiement suivantes :
 
 |Type d'appareil|Actions prises en charge|
 |-|-|
-|Android|**Disponible**, **Obligatoire** : L’utilisateur doit donner son consentement pour l’installation et la désinstallation.|
+|Android|**Disponible**, **requis**: L’utilisateur doit donner son consentement pour l’installation et la désinstallation.|
 |Android for Work |**Disponible**, **Obligatoire** |
 
 

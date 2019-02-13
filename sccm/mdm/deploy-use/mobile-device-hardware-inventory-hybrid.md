@@ -10,16 +10,17 @@ ms.assetid: 78a0aecc-f775-451e-aa05-56377ec91b1f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5a616d20c71b76571e34a9147d0408a98c235e97
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: d1a208b3bac5d0b12a9fd395506f02d283a0b55f
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350168"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56125083"
 ---
 # <a name="how-to-configure-hardware-inventory-for-mobile-devices-enrolled-by-microsoft-intune-and-system-center-configuration-manager"></a>Comment configurer l’inventaire matériel pour les appareils mobiles inscrits par Microsoft Intune et System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Dans Configuration Manager, vous pouvez collecter l’inventaire matériel sur des appareils iOS, Android et Windows à l’aide du connecteur Microsoft Intune. Pour plus d’informations sur la manière de configurer l’inventaire matériel, consultez [Guide pratique pour étendre l’inventaire matériel dans System Center Configuration Manager](../../core/clients/manage/inventory/extend-hardware-inventory.md).  
 
@@ -56,7 +57,7 @@ Dans Configuration Manager, vous pouvez collecter l’inventaire matériel sur d
  **Android**  
 
 > [!NOTE]  
->  **REMARQUE :** les classes d’inventaire Android sont disponibles lors de l’utilisation de l’application Portail d’entreprise Android.  
+>  **REMARQUE :** Classes d’inventaire Android sont disponibles lors de l’utilisation de l’application portail d’entreprise Android.  
 
 |Classe d'inventaire matériel|Android|  
 |------------------------------|-------------|  

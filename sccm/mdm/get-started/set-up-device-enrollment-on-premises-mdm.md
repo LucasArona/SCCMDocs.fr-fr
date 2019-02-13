@@ -10,16 +10,17 @@ ms.assetid: 9ffaea91-1379-4b86-9953-b25e152f56a9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7d0424b662df4baba7374685dd7631347501352c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: d3b761eac32daf591789a790209e25e62f1ea81d
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32349080"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56121480"
 ---
 # <a name="set-up-device-enrollment-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>Configurer l’inscription d’appareils pour la gestion des appareils mobiles locale dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Pour permettre aux utilisateurs d’inscrire leurs appareils pour la gestion des appareils mobiles locale dans System Center Configuration Manager, vous devez leur accorder l’autorisation de le faire. Pour accorder aux utilisateurs l’autorisation d’inscrire des appareils, effectuez les tâches ci-dessous.
 
@@ -45,7 +46,7 @@ Pour permettre aux utilisateurs d’inscrire leurs appareils pour la gestion des
 5.  Dans Créer un profil d’inscription, tapez un nom pour le profil d’inscription et choisissez le code de site de gestion que vous souhaitez que les utilisateurs ayant le profil d’inscription utilisent. Cliquez sur **OK** plusieurs fois pour quitter la page Paramètres par défaut.  
 
 > [!NOTE]  
->  Si vous souhaitez déployer le profil d’inscription vers une partie des utilisateurs découverts, vous pouvez utiliser un regroupement d’utilisateurs et créer des paramètres client personnalisés à déployer dans ce regroupement. Pour plus d’informations sur la création de paramètres client personnalisés, consultez [Guide pratique pour configurer les paramètres client dans System Center Configuration Manager](../../core/clients/deploy/configure-client-settings.md).  
+>  Si vous souhaitez déployer le profil d’inscription vers une partie des utilisateurs découverts, vous pouvez utiliser un regroupement d’utilisateurs et créer des paramètres client personnalisés à déployer dans ce regroupement. Pour plus d’informations sur la création de paramètres client personnalisés, consultez [How to configure client settings in System Center Configuration Manager](../../core/clients/deploy/configure-client-settings.md).  
 
 ##  <a name="bkmk_addClient"></a> Définir des paramètres du client supplémentaires pour des périphériques inscrits  
  En plus de définir le profil d’inscription pour des périphériques modernes, vous pouvez définir des paramètres du client supplémentaires pour la configuration de périphériques quand ils sont inscrits.  Pour plus d’informations sur la configuration des paramètres client, consultez [Guide pratique pour configurer les paramètres client dans System Center Configuration Manager](../../core/clients/deploy/configure-client-settings.md).  
@@ -62,7 +63,7 @@ Pour permettre aux utilisateurs d’inscrire leurs appareils pour la gestion des
     >  Pour la gestion des appareils mobiles locale, les paramètres de déploiement de logiciels peuvent uniquement servir comme paramètres client par défaut. Vous ne pouvez pas utiliser les paramètres de déploiement de logiciels avec des paramètres client personnalisés dans la version Current Branch de Configuration Manager.  
 
 ##  <a name="bkmk_enableUsers"></a> Permettre aux utilisateurs de recevoir le profil d’inscription des appareils récents  
- Pour que les utilisateurs reçoivent les paramètres client modifiés avec le profil d’inscription pour la gestion des appareils mobiles locale, ils doivent être découverts par le biais de la méthode de découverte Active Directory. Pour vous assurer que toute personne ayant besoin du profil d’inscription l’obtient, exécutez la découverte des utilisateurs Active Directory. Pour obtenir des instructions sur la façon de découvrir des utilisateurs, consultez [Exécuter la découverte pour System Center Configuration Manager](../../core/servers/deploy/configure/run-discovery.md).  
+ Pour que les utilisateurs reçoivent les paramètres client modifiés avec le profil d’inscription pour la gestion des appareils mobiles locale, ils doivent être découverts par le biais de la méthode de découverte Active Directory. Pour vous assurer que toute personne ayant besoin du profil d’inscription l’obtient, exécutez la découverte des utilisateurs Active Directory. Pour obtenir des instructions sur la façon de découvrir des utilisateurs, consultez [Run discovery for System Center Configuration Manager](../../core/servers/deploy/configure/run-discovery.md).  
 
 ##  <a name="bkmk_storeCert"></a> Stocker le certificat racine sur les appareils à inscrire  
  Les utilisateurs d’appareils appartenant à un domaine auront probablement déjà le certificat racine requis pour établir des communications fiables avec les serveurs hébergeant les rôles de système de site, car la racine a été émise dans le cadre du processus de jonction de domaine Active Directory. Vous devez installer manuellement le certificat racine sur les ordinateurs et les appareils mobiles qui ne sont pas joints à un domaine pour que l’inscription ait lieu. Ces appareils n’auront pas automatiquement le certificat racine nécessaire.  

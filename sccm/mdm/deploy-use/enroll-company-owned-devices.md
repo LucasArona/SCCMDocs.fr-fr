@@ -10,16 +10,17 @@ ms.assetid: e2754ce6-1460-4ddd-9050-2cc87e7964f4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 36b4169f3bed1957f8ea14159902f408ba642944
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: a3586f51b7112f8667b7e120ea278ceb9adbbe89
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32346547"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56129440"
 ---
 # <a name="enroll-company-owned-devices-for-hybrid-deployments-with-configuration-manager"></a>Inscrire des appareils d’entreprise pour les déploiements hybrides avec Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Les appareils d’entreprise ou d’organisation peuvent être gérés de différentes façons en fonction du type de l’appareil et de la méthode utilisée pour son achat.  
 

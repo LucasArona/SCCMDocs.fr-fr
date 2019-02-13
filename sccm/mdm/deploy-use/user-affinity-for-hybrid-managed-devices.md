@@ -10,16 +10,17 @@ ms.assetid: b5d520a7-e9e5-40ee-91f9-f2684214beb6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 11b448d27dbf639eaccf0f41ed97b7961a01adb6
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 54ca57956db37a26e2edad27c6cf6b92aecd1645
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32347431"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56138906"
 ---
 # <a name="user-affinity-for-hybrid-managed-devices-in-configuration-manager"></a>Affinité utilisateur pour les appareils gérés hybrides dans Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Quand vous configurez des profils pour des appareils d’entreprise, l’administrateur peut spécifier si les appareils gérés peuvent avoir une *affinité utilisateur* qui identifie un utilisateur spécifique avec l’appareil.  
 
@@ -40,7 +41,7 @@ Quand vous configurez des profils pour des appareils d’entreprise, l’adminis
 
      Si cet appareil n’est pas encore inscrit par l’entreprise, sélectionnez « Nouveau périphérique » pour poursuivre le flux d’inscription standard.  
 
-6.  Sur l’écran suivant, l’utilisateur doit confirmer le numéro de série du nouvel appareil. L’utilisateur peut appuyer sur le lien « Confirmez le numéro de série » pour lancer l’application Paramètres afin de vérifier le numéro de série. L’utilisateur doit ensuite entrer les 4 derniers caractères du numéro de série dans l’application Portail d’entreprise.  
+6.  Sur l’écran suivant, l’utilisateur doit confirmer le numéro de série du nouvel appareil. L’utilisateur peut appuyer sur le lien « Confirmez le numéro de série » pour lancer l’application Paramètres afin de vérifier le numéro de série. L’utilisateur doit ensuite entrer les 4 derniers caractères du numéro de série dans l’application Portail d’entreprise.  
 
      Cette étape vérifie que l’appareil est l’appareil d’entreprise inscrit dans Intune. Si le numéro de série de l’appareil ne correspond pas, l’appareil sélectionné est incorrect. Revenez à l’écran précédent et sélectionnez un autre appareil.  
 

@@ -10,16 +10,17 @@ ms.assetid: 8adbe2e2-de26-4a80-8bbd-a5f34b8bac79
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 26aff6a374da4c6822943083b24c1a7ac04ee91d
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 4ff166d93812b07c37c31228ca395f0cfcf94de6
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32346496"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56156955"
 ---
 # <a name="manage-applications-in-system-center-configuration-manager"></a>Gérer des applications dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Lorsque vous administrez des appareils par le biais de la gestion des appareils locaux Microsoft Intune ou de Configuration Manager, vous pouvez gérer ces types d’application supplémentaires :
 - Package d'application Windows Phone (fichier *.xap)

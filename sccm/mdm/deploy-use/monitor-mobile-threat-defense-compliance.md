@@ -10,16 +10,17 @@ ms.assetid: 408190da-bea6-4122-9dd6-f90155040e88
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 24a066b30d6c220ecb5be8455a3150bd27936da7
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: cc5b38894155df35812d14397fb0d3aaea79c585
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32347533"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56122489"
 ---
 # <a name="monitor-mobile-threat-defense-compliance"></a>**Surveiller la conformité de la protection contre les menaces mobiles**
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 ## <a name="to-monitor-the-overall-compliance-status"></a>Pour surveiller l’état de conformité général
 
@@ -58,11 +59,11 @@ En outre, sur l’écran **Appareils**, vous pouvez sélectionner des appareils 
 |-|-|-|
 |**Description**| Oui | Plus d’informations sur les menaces fournies par le partenaire de protection contre les menaces mobiles. |
 |**Heure de la dernière mise à jour**| Oui | Dernière fois où le partenaire de protection contre les menaces mobiles a envoyé des détails mis à jour sur la menace à Intune. |
-|**Gravité de la menace**| Oui | La gravité de la menace est la définition d’une menace individuelle en fonction de la configuration de l’administrateur dans la console du partenaire de protection contre les menaces mobiles. Trois valeurs sont possibles : **Faible**, **Moyenne** ou **Élevée** |
-|**État de la menace**| Oui | L’état actuel de la menace sur l’appareil. États possibles : **Actif**, **Résolu** ou **Ignoré :** indique que l’utilisateur a ignoré la menace sur son appareil, mais que la menace est toujours présente. |
-|**Type de menace**| Oui | Type de menace pour le partenaire de protection contre les menaces mobiles. Valeurs possibles : **Application**, **Fichier** ou **OS** |
+|**Gravité de la menace**| Oui | La gravité de la menace est la définition d’une menace individuelle en fonction de la configuration de l’administrateur dans la console du partenaire de protection contre les menaces mobiles. Il possède une des trois valeurs : **Faible**, **support** ou **élevé** |
+|**État de la menace**| Oui | L’état actuel de la menace sur l’appareil. États possibles : **Active**, **résolu** ou **ignoré :** Indique que l’utilisateur a ignoré la menace sur son appareil, mais que la menace est toujours présente. |
+|**Type de menace**| Oui | Type de menace pour le partenaire de protection contre les menaces mobiles. Valeurs possibles : **Application**, **fichier** ou **système d’exploitation** |
 |**ID de compte AAD**| Non | L’identificateur unique Azure Active Directory. |
-|**Classification**| Oui | Classification des menaces fourni par le partenaire de protection contre les menaces mobiles. Valeurs possibles : **Root Enabler, Riskware, Adware, Chargeware, DataLeak, Trojan, Worm, Virus, Exploit, Backdoor, Bot, AppDropper, ClickFraud, Spam, Spyware, SurveillanceWare, Vulnerability, Unknown, Root Jailbrake, Connectivity, TollFraud, SideloadedApp** |
+|**Classification**| Oui | Classification des menaces fourni par le partenaire de protection contre les menaces mobiles. Valeurs possibles : **Root Enabler, Riskware, Adware, Chargeware, DataLeak, cheval de Troie, ver, Virus, Exploit, Backdoor, Bot, AppDropper, ClickFraud, Spam, Spyware, SurveillanceWare, une vulnérabilité, inconnu, Root Jailbrake, Connectivity, TollFraud, SideloadedApp** |
 |**ID d’appareil**| Non | L’ID d’objet Azure Active Directory qui représente l’appareil associé à un espace de travail avec des informations sur les menaces. |
 |**ID de la menace**| Non | Identificateur unique de la menace généré par le partenaire de protection contre les menaces mobiles. L’ID de la menace est utilisé pour le suivi de la résolution. |
 |**URL de la menace**| Non | Lorsqu’elle est présente, l’URL de la menace pointe vers la vue de cette menace spécifique sur la console de gestion du partenaire de protection contre les menaces mobiles. |

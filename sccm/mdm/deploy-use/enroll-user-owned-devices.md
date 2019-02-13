@@ -10,16 +10,17 @@ ms.assetid: 2bdaa8a7-6a64-4b0e-b617-309dcd912c45
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 198e5b65b85e10a1aa64f06361f1ba425e156662
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 8b6d56309238acc2889ac39ab39d5982fb8d535c
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32345719"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56124436"
 ---
 # <a name="enroll-user-owned-devices-for-hybrid-deployments-with-configuration-manager"></a>Inscrire des appareils appartenant aux utilisateurs pour les déploiements hybrides avec Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Les appareils appartenant à l’utilisateur peuvent être soumis à la gestion en les inscrivant, un processus souvent appelé « BYOD » ou « Apportez votre propre appareil ». Les utilisateurs effectuent ceci en installant l’application Portail d’entreprise et en se connectant sur l’appareil (iOS, Mac OS et Android), ou en ajoutant un compte professionnel ou scolaire à l’appareil et en se joignant à un domaine (Windows). Ce processus inscrit l’appareil auprès d’Intune, ce qui donne à l’utilisateur l’accès aux ressources gérées par Intune et laisse Intune gérer certains paramètres de l’appareil, comme demander un code PIN.
 

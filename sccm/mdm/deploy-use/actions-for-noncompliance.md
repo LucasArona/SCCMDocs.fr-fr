@@ -10,12 +10,13 @@ ms.assetid: ad8fa94d-45bb-4c94-8d86-31234c5cf21c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b6a974d1cca4f97cbcf41a0cf644f545cec4b37d
-ms.sourcegitcommit: 7eebd112a9862bf98359c1914bb0c86affc5dbc0
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: cbd996629d3b312febd271757aff69faf5371c64
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589499"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56127420"
 ---
 # <a name="set-up-actions-for-non-compliance"></a>Configurer des actions en cas de non-conformité
 
@@ -59,14 +60,14 @@ Configuration Manager fournit des modèles d’e-mail, mais vous pouvez égaleme
 
 4. Entrez les informations suivantes :  
 
-    a. **Nom** : nom du modèle d’e-mail  
+    a. **Nom** : Nom de modèle de courrier électronique  
 
     > [!Note]  
     > Le champ **De** champ est rempli automatiquement avec une adresse de messagerie no-reply de Microsoft.<!--SCCMDocs issue 652-->  
 
-    c. **Objet** : objet qui explique la notification par e-mail envoyée  
+    c. **Objet** : Un objet qui explique la notification par courrier électronique envoyée  
 
-    d. **Corps du message** : autres détails sur la notification par e-mail  
+    d. **Corps du message**: Plus d’informations sur la notification par courrier électronique  
 
     > [!TIP]  
     > Vous pouvez également inclure un **en-tête d’e-mail** avec le logo de votre entreprise, ainsi qu’un **pied de page d’e-mail** pouvant inclure le nom de votre organisation et ses informations de contact. Modifiez également ces informations dans les propriétés de votre abonnement Intune.  
@@ -91,22 +92,22 @@ Configuration Manager fournit des modèles d’e-mail, mais vous pouvez égaleme
 
 5. Dans la page **Actions pour la non-conformité**, pour définir ce qui se passe quand un appareil n’est plus conforme, cliquez sur **Nouveau**.  
 
-6. Vous pouvez choisir deux options : **Envoyer un e-mail à l’utilisateur final** ou **Marquer l’appareil comme non conforme**.  
+6. Vous pouvez choisir deux options : **Envoyer un e-mail à l’utilisateur final** ou **marquer l’appareil non conforme**.  
 
 7. Si vous sélectionnez **Envoyer un e-mail à l’utilisateur final**, entrez les informations suivantes :  
 
-    a. **Période de grâce (en jours) :** entrez un nombre de jours de 0 à 365  
+    a. **Période de grâce (en jours) :** Entrez le nombre de jours à partir de 0 à 365  
 
     b. **Destinataires supplémentaires (via e-mail)**  
 
-    c. **Sélectionnez le modèle de message :** choisissez un modèle d’e-mail par défaut ou un modèle personnalisé que vous avez créé.  
+    c. **Sélectionnez le modèle de message :** Choisissez un modèle de courrier électronique par défaut ou d’un modèle personnalisé que vous avez créé.  
     
     > [!TIP]   
     > Vous pouvez également ajouter un nouveau modèle d’e-mail quand vous ajoutez l’action **Envoyer un e-mail à l’utilisateur final** en cliquant sur **Nouveau** dans la page **Ajouter une action**.  
 
 8. Si vous sélectionnez **Marquer l’appareil comme non conforme**, vous devez entrer les informations suivantes :  
 
-    a. **Période de grâce (en jours) :** entrez un nombre de jours de 0 à 365  
+    a. **Période de grâce (en jours) :** Entrez le nombre de jours à partir de 0 à 365  
 
 9. Effectuez toutes les étapes de l'Assistant.  
 

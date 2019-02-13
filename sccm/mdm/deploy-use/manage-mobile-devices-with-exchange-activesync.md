@@ -10,16 +10,17 @@ ms.assetid: aba688d9-fd5b-4c42-8cb4-f7e1b161ef50
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 98b573dcf72f4bbf3cde73cb9a5cd7905b8a0248
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: a157e8696a9b4b24acb722be037185351f94ccdc
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53417317"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56127879"
 ---
 # <a name="manage-mobile-devices-with-system-center-configuration-manager-and-exchange"></a>Gérer des appareils mobiles à l’aide de System Center Configuration Manager et d’Exchange
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Utilisez le connecteur Exchange Server dans System Center Configuration Manager pour gérer les appareils mobiles qui se connectent à Exchange Server (en local ou en ligne) en utilisant le protocole Microsoft Exchange ActiveSync, mais que vous ne pouvez pas inscrire à l’aide de Configuration Manager. Vous pouvez configurer les fonctionnalités de gestion des appareils mobiles d’Exchange, telles que la réinitialisation à distance de l’appareil et le contrôle des paramètres de plusieurs serveurs Exchange, dans la console Configuration Manager.  
 
@@ -44,7 +45,7 @@ Utilisez le connecteur Exchange Server dans System Center Configuration Manager 
 ## <a name="required-security-permissions"></a>Autorisations de sécurité requises  
  Vous devez disposer des autorisations de sécurité suivantes pour configurer le connecteur Exchange Server :  
 
-- Pour ajouter, modifier et supprimer le connecteur Exchange Server : **Modifier** autorisation pour le **Site** objet.  
+- Pour ajouter, modifier et supprimer le connecteur Exchange Server : Autorisation **Modifier** pour l’objet **Site**.  
 
 - Pour configurer les paramètres de périphérique mobile : **ModifyConnectorPolicy** autorisation pour le **Site** objet.  
 
@@ -52,11 +53,11 @@ Utilisez le connecteur Exchange Server dans System Center Configuration Manager 
 
   Vous devez disposer des autorisations de sécurité suivantes pour gérer des appareils mobiles :  
 
-- Pour réinitialiser un appareil mobile : **Supprimer la ressource** pour le **Collection** objet.  
+- Pour réinitialiser un appareil mobile : **Supprimer la ressource** pour l’objet **Regroupement**.  
 
-- Pour annuler une commande de réinitialisation : **Modifier la ressource** pour le **Collection** objet.  
+- Pour annuler une commande de réinitialisation : **Modifier la ressource** pour l’objet **Regroupement**.  
 
-- Pour autoriser et bloquer des appareils mobiles : **Modifier la ressource** pour le **Collection** objet.  
+- Pour autoriser et bloquer des appareils mobiles : **Modifier la ressource** pour l’objet **Regroupement**.  
 
   Le rôle de sécurité **Administrateur d'opérations** comprend les autorisations nécessaires pour la gestion des appareils mobiles à l'aide du connecteur Exchange Server.  
 

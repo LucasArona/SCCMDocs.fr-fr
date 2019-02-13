@@ -10,16 +10,17 @@ ms.assetid: 2a7d7170-1933-40e9-96d6-74a6eb7278e2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 391ecbd4ff9f863f41454786e8f8232b31a112a5
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 8443430b55ee61e9ad5eeac1e70342dfa6e85851
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53418320"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56122370"
 ---
 # <a name="set-up-certificates-for-trusted-communications-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>Configurer des certificats pour les communications approuvées pour la gestion des appareils mobiles locale dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 La gestion des appareils mobiles locale System Center Configuration Manager exige de configurer des rôles de système de site de point d’inscription, de point proxy d’inscription, de point de distribution et de point de gestion d’appareil pour assurer des communications fiables avec les appareils gérés. Tout serveur de système de site hébergeant un ou plusieurs de ces rôles doit avoir un certificat PKI unique lié au serveur web sur ce système. Un certificat avec la même racine que le certificat sur les serveurs doit également être stocké sur les appareils gérés afin d’établir une communication fiable avec ceux-ci.  
 
@@ -88,9 +89,9 @@ La gestion des appareils mobiles locale System Center Configuration Manager exig
     > [!NOTE]  
     >  Si l’autorité de certification que vous utilisez est sur Windows Server 2012, vous n’êtes pas invité à spécifier la version du modèle de certificat quand vous cliquez sur **Dupliquer le modèle**. Spécifiez-la plutôt sous l'onglet **Compatibilité** des propriétés du modèle, comme suit :  
     >   
-    >  **Autorité de certification**: **Windows Server 2003**  
+    >  **Autorité de certification** : **Windows Server 2003**  
     >   
-    >  **Destinataire du certificat**: **Windows XP / Server 2003**  
+    >  **Destinataire du certificat** : **Windows XP/Server 2003**  
 
 5.  Dans la boîte de dialogue **Propriétés du nouveau modèle**, sous l’onglet **Général**, entrez un nom de modèle pour générer les certificats web à utiliser sur les systèmes de site Configuration Manager, par exemple **Serveur web ConfigMgr MDM**.  
 

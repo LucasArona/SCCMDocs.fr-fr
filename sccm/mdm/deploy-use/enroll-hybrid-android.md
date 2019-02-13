@@ -10,16 +10,17 @@ ms.assetid: c517fe34-0130-465b-a020-bdb555878778
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fb488ccfc186fcc56ea91c30b6c0319aead5208e
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 00907d200bf54a4a1eb13863cf5bb529aa2f9656
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53416977"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56127505"
 ---
 # <a name="set-up-android-hybrid-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>Configurer la gestion hybride des appareils mobiles Android avec System Center Configuration Manager et Microsoft Intune
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Cet article explique comment activer l’inscription hybride des appareils Android et Android for Work. Vous pouvez ensuite utiliser Configuration Manager pour gérer les appareils dans le cadre d’un abonnement Microsoft Intune configuré. À partir de Google Play, les utilisateurs peuvent télécharger l’application de portail d’entreprise Android qui leur permet d’inscrire des appareils Android (notamment Samsung KNOX Standard) et Android for Work.
 

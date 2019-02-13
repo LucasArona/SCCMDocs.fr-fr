@@ -10,16 +10,17 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: be503ec9-5324-4f7c-bcf5-77204328e99c
-ms.openlocfilehash: 4ded99c2084f274d519680e78fdc54825b3857cb
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: bcd70b708208e2c49a1a7b6fff12d0a1cf5f16f0
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53419510"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56132933"
 ---
 # <a name="change-your-mdm-authority-to-intune-standalone"></a>Utiliser la version autonome d’Intune comme autorité MDM
 
-*S’applique à : System Center Configuration Manager (Current Branch)*    
+*S’applique à : System Center Configuration Manager (Current Branch)*    
 
 Vous pouvez faire passer un client Microsoft Intune déjà configuré de la console Configuration Manager (MDM hybride) à la version autonome d’Intune. Le changement d’autorité MDM côté client avec passage à Intune est la dernière phase du processus de [migration des appareils et des utilisateurs MDM hybrides vers la version autonome d’Intune](migrate-hybridmdm-to-intunesa.md) dans la configuration cloud seul.    
 

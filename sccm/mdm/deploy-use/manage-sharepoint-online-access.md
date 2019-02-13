@@ -10,16 +10,17 @@ ms.assetid: 49cec466-1676-4fe2-a2fe-5004f01d735e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4d00973704ce49a949c89a37e89ed2d39064cbec
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 755be3231c00eabf9562256e62061fbad70633e7
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53422910"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56140947"
 ---
 # <a name="manage-sharepoint-online-access-in-system-center-configuration-manager"></a>Gérer l’accès à SharePoint Online dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 
 La stratégie d’accès conditionnel de Configuration Manager pour **SharePoint Online** gère l’accès aux fichiers OneDrive Entreprise, qui sont stockés sur SharePoint Online. L’accès est basé sur les conditions que vous spécifiez.
@@ -128,7 +129,7 @@ Vous pouvez bloquer l'accès à SharePoint Online dans les applications suivante
 
    
 
-###  <a name="BKMK_OneDrive"></a> Étape 3 : Configurer la stratégie SharePoint Online  
+###  <a name="BKMK_OneDrive"></a> Étape 3 : Configurer la stratégie SharePoint Online  
 
  Ensuite, configurez la stratégie de manière à restreindre l'accès à SharePoint Online aux appareils gérés et conformes. Cette stratégie est stockée dans Azure AD.
 

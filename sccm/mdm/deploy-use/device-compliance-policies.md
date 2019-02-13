@@ -10,16 +10,17 @@ ms.assetid: ad8fa94d-45bb-4c94-8d86-31234c5cf21c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8c27c945b384a9769d008667f124d414275a3c11
-ms.sourcegitcommit: e54e9d4a735e72b84095e0017c5bec50af480207
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 2544d2b61c3d92555d0bc1abc908003f1c982bab
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/14/2018
-ms.locfileid: "39039588"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56136515"
 ---
 # <a name="device-compliance-policies-in-system-center-configuration-manager"></a>Stratégies de conformité des appareils dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Les stratégies de conformité dans Configuration Manager définissent les règles et les paramètres auxquels un appareil doit se conformer pour être considéré comme conforme au vu des stratégies d’accès conditionnel. Vous pouvez également utiliser des stratégies de conformité pour surveiller et corriger les problèmes de conformité avec les appareils indépendamment de l'accès conditionnel.  
 

@@ -10,16 +10,17 @@ ms.assetid: 61a19d95-83ff-4ad8-9a67-f304d2ba54f2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: de83706e92150a654967ec5cf38c5b18508d4e2b
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 04b67b324927f4918ff5c0835896cb0d63a9e48c
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53416909"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56126655"
 ---
 # <a name="ios-hybrid-enrollment-using-apple-configurator-with-configuration-manager"></a>Inscription d’appareils iOS à l’aide d’Apple Configurator pour les déploiements hybrides avec Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Les entreprises qui achètent des appareils iOS pour leurs employés peuvent les gérer à l’aide de Microsoft Intune. Pour préparer des appareils iOS d’entreprise pour l’inscription, configurez un profil d’inscription dans la console Configuration Manager, puis exportez l’URL du profil pour qu’elle soit utilisée par Apple Configurator. Préparez ensuite l’appareil iOS pour l’inscription. Pour cela, connectez-le à un ordinateur Mac à l’aide d’un câble USB et utilisez Apple Configurator pour le configurer. Apple Configurator rétablit les paramètres d’usine de l’appareil et ajoute le profil d’inscription. L’utilisateur peut ainsi inscrire l’appareil quand il le met en marche pour la première fois dans le cadre de l’Assistant Configuration.
 

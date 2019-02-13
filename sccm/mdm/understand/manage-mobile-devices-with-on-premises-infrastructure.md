@@ -10,16 +10,17 @@ ms.assetid: 497c05c7-fe9f-4b88-983b-1c5b3d59308e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ac0e4426b2025a88f126f9cc0b2e57f5a5313740
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 63a82c6b81d5a2e09c6f73b79c39372c96ed4e07
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32347397"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56143654"
 ---
 # <a name="on-premises-mobile-device-management-mdm-in-system-center-configuration-manager"></a>Gestion des appareils mobiles (MDM) locale dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 La gestion des appareils mobiles (MDM) locale est une solution de gestion d’appareils disponible dans System Center Configuration Manager. Elle s’appuie sur les fonctionnalités de gestion intégrées aux systèmes d’exploitation des appareils (basées sur la norme de gestion d’appareils mobiles OMA DM) quand la gestion et la maintenance des appareils s’effectue via l’infrastructure Configuration Manager d’une entreprise. La gestion d’appareils mobiles locale a besoin de Microsoft Intune pour configurer les fonctions de gestion, mais uniquement pour les abonnements (et parfois pour envoyer des notifications aux appareils leur demandant de s’enregistrer quand des stratégies sont modifiées). Par contre, elle n’en a pas besoin pour gérer les appareils ni pour stocker les données les concernant.  
 

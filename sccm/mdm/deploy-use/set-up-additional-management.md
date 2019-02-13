@@ -10,16 +10,17 @@ ms.assetid: 4877d674-6bbc-4e16-810c-daad70c74daa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8c2ded7509c8097ae219aa594e56fda3f0c35ccd
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: d866ce901640b6e7fafb13a6c24318f26c5d5feb
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53417137"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56131793"
 ---
 # <a name="set-up-additional-management-with-system-center-configuration-manager"></a>Configurer des solutions de gestion supplémentaires grâce à System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 (Facultatif) Vous pouvez configurer une gestion supplémentaire avant l’inscription des appareils. Ces solutions de gestion peuvent être créées et déployées après l’inscription des appareils, même si de nombreuses organisations préfèrent les déployer au fur et à mesure que les appareils sont intégrés à la gestion.
 

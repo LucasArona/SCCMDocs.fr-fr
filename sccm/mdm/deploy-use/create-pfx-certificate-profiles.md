@@ -10,16 +10,17 @@ ms.assetid: d240a836-c49b-49ab-a920-784c062d6748
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a186e0b2c4b355cabcaaeb3b3124b65d3588fbc8
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 6bbe52a282db016077cb96144938a0d443955f6c
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350960"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56127437"
 ---
 # <a name="how-to-create-pfx-certificate-profiles-using-a-certificate-authority"></a>Guide pratique pour créer des profils de certificat PFX à l’aide d’une autorité de certification
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Ce document vous explique comment créer un profil de certificat qui utilise une autorité de certification pour les informations d’identification.
 
@@ -41,9 +42,9 @@ Pour importer les informations d’identification de certificat à partir de fic
 
 4.  Dans la page **Général** de l'Assistant **Créer un profil de certificat** , spécifiez les informations suivantes :  
 
-    -   **Nom**: entrez un nom unique pour le profil de certificat. Vous pouvez utiliser jusqu'à 256 caractères.  
+    -   **Nom** : Entrez un nom unique pour le profil de certificat. Vous pouvez utiliser jusqu'à 256 caractères.  
 
-    -   **Description** : entrez une description qui donne un aperçu du profil de certificat et d’autres informations utiles pour identifier facilement ce profil dans la console System Center Configuration Manager. Vous pouvez utiliser jusqu'à 256 caractères.  
+    -   **Description** : Entrez une description qui donne un aperçu du profil de certificat et d’autres informations utiles pour identifier facilement ce profil dans la console System Center Configuration Manager. Vous pouvez utiliser jusqu'à 256 caractères.  
 
     -   Dans **Spécifiez le type de profil de certificat que vous voulez créer**, choisissez **Échange d’informations personnelles -- Paramètres PKCS #12 (PFX) -- Créer**, puis choisissez votre autorité de certification dans la liste déroulante.  Depuis la version 1706, vous pouvez choisir **Microsoft** ou **Entrust**.
 

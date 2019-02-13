@@ -10,16 +10,17 @@ ms.assetid: 692b86d5-dea7-4414-9e1f-043d2cadfd3b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ac369b7797258f847772548c49f5613566ef3d49
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 37a1b1bf6ca1b14933ce03005a5b6b8681ef4db0
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353492"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56139355"
 ---
 # <a name="protect-data-and-devices-in-on-premises-mobile-device-management"></a>Protéger des données et des appareils dans le cadre de la gestion des appareils mobiles locale
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Vous souhaitez que vos utilisateurs puissent accéder en toute sécurité aux ressources de votre organisation, pour que votre infrastructure et vos données soient protégées contre toute exposition ou attaque malveillante.
 

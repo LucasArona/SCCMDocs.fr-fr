@@ -10,16 +10,17 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: b552391d-abc0-48a2-a429-93605a13a66a
-ms.openlocfilehash: 26d6f9b928a7acdfbeb6baac3c3ce1c29cc127d9
-ms.sourcegitcommit: d021f82e4bc35a8e9b5d291bf779ce52b4f47eb8
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 46b5034cb95193a07421fe79a445dac0f5b28503
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656456"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56124259"
 ---
 # <a name="import-configuration-manager-data-to-microsoft-intune"></a>Importer des données Configuration Manager dans Microsoft Intune 
 
-*S’applique à : System Center Configuration Manager (Current Branch)*    
+*S’applique à : System Center Configuration Manager (Current Branch)*    
 
 La première phase recommandée du processus de [migration des appareils et des utilisateurs MDM hybrides vers la version autonome d’Intune](migrate-hybridmdm-to-intunesa.md) dans la configuration cloud seul consiste à utiliser l’outil d’importation de données Intune. Si vous le souhaitez, vous pouvez ignorer cette phase et passer à la phase de [préparation d’Intune à la migration des utilisateurs](migrate-prepare-intune.md). Cependant, cet outil exécute les fonctions suivantes qui peuvent vous permettre d’économiser beaucoup de temps dans la phase suivante :  
 
@@ -181,9 +182,9 @@ Dans la phase 1, vous sélectionnez les objets à découvrir et demander à l�
 
     - **Sélectionnez les types d’objets à importer**: Fournir les informations suivantes sur votre site et les objets que vous souhaitez importer :  
 
-        - **Nom du serveur site**: Fournir le nom de domaine complet du serveur de site pour importer des objets. L’outil découvre uniquement les objets accessibles par l’utilisateur qui exécute l’outil. En général, vous spécifiez le site de niveau supérieur et exécutez l’outil avec un utilisateur qui a accès à tous les objets dans la hiérarchie du site.  
+        - **Nom de serveur de site** : Fournir le nom de domaine complet du serveur de site pour importer des objets. L’outil découvre uniquement les objets accessibles par l’utilisateur qui exécute l’outil. En général, vous spécifiez le site de niveau supérieur et exécutez l’outil avec un utilisateur qui a accès à tous les objets dans la hiérarchie du site.  
 
-        - **Code de site**: Fournir le code de site pour le serveur de site. Ce code à trois lettres se trouve en haut de la console Configuration Manager.  
+        - **Code de site** : Fournir le code de site pour le serveur de site. Ce code à trois lettres se trouve en haut de la console Configuration Manager.  
 
         - **Types d’objets à importer**: Choisissez les objets que vous souhaitez que l’outil de collecter. Vous pouvez choisir **Sélectionner tout** pour choisir tous les objets ou sélectionner des types d’objets individuels.  
 
@@ -196,7 +197,7 @@ Dans la phase 1, vous sélectionnez les objets à découvrir et demander à l�
     - Vous pouvez exécuter l’outil pour les objets qui n’ont pas été collectés ou que vous avez annulés pendant le processus de collecte.  
 
 
-### <a name="phase-2-resolve-issues-and-select-the-objects-to-import"></a>Phase 2 : Résoudre les problèmes et sélectionner les objets à importer  
+### <a name="phase-2-resolve-issues-and-select-the-objects-to-import"></a>Phase 2 : Résoudre les problèmes et sélectionner les objets à importer  
 
 Dans la phase 2, vous passez en revue les objets détectés par l’outil, vous résolvez les problèmes qui empêchent l’importation d’objets dans Intune et vous sélectionnez les objets à importer. Si vous corrigez des problèmes, revenez à la **découverte de l’environnement** page de l’Assistant pour redécouvrir les objets. 
 
@@ -212,7 +213,7 @@ Dans la phase 2, vous passez en revue les objets détectés par l’outil, vous
 
 4. Dans chaque page de sélection d’éléments, sélectionnez les objets que vous voulez importer. Les colonnes suivantes sont listées :  
 
-    - **Nom**: Nom de l’objet de Configuration Manager.  
+    - **Nom** : Nom de l’objet de Configuration Manager.  
 
     - **Importable**: Spécifie si un objet peut être importé. Vous pouvez uniquement choisir des objets qui ont Oui dans la colonne Importable.  
 
@@ -235,7 +236,7 @@ Dans la phase 2, vous passez en revue les objets détectés par l’outil, vous
     - **Exporter des données de l’erreur**: Exporte un fichier compressé qui contient des informations sur les données que l’outil n’a pas été en mesure de convertir ou une importation.  
 
 
-### <a name="phase-3-import-selected-objects-to-intune"></a>Phase 3 : Importer des objets sélectionnés dans Intune
+### <a name="phase-3-import-selected-objects-to-intune"></a>Phase 3 : Importer des objets sélectionnés dans Intune
 
 Dans la phase 3, vous connectez à Intune et importez les objets sélectionnés. 
 

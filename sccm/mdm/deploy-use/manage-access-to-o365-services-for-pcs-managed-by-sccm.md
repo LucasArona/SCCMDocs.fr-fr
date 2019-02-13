@@ -10,12 +10,13 @@ ms.assetid: 34024741-edfa-4088-8599-d6bafc331e62
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8bd926535f56e32430ae41c883623b80d142aebc
-ms.sourcegitcommit: 33e066aceaf321add1031df00e552e942c8351a7
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b45e9f586616a1f620864a6e6dc8d0777a118251
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55764427"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56122285"
 ---
 # <a name="manage-access-to-o365-services-for-pcs-managed-by-system-center-configuration-manager"></a>Gérer l’accès aux services O365 pour les PC gérés par System Center Configuration Manager
 
@@ -86,7 +87,7 @@ Pour plus d’informations sur la configuration de l’accès conditionnel pour 
 
 -   **Toutes les mises à jour requises installées avec une échéance supérieure à un certain nombre de jours :** Spécifiez la valeur pour la période de grâce à partir de l’échéance du déploiement des mises à jour requises sur l’appareil de l’utilisateur. L’ajout de cette règle installe aussi automatiquement les mises à jour obligatoires en attente. Spécifiez les mises à jour obligatoires dans la règle **Mises à jour automatiques requises**.   
 
--   **Exiger le chiffrement de lecteur BitLocker :** Cette règle vérifie si le lecteur principal (par exemple, C:\\) sur l’appareil est chiffré avec BitLocker. Si le chiffrement BitLocker n’est pas activé sur le lecteur principal, l’accès aux services de messagerie et SharePoint est bloqué.  
+-   **Exiger le chiffrement de lecteur BitLocker :** Cette règle vérifie si le lecteur principal (par exemple, C:\\) sur l’appareil est chiffré avec BitLocker. Si BitLocker chiffrement n’est pas activé sur le périphérique principal, l’accès aux services de messagerie et SharePoint est bloqué.  
 
 -   **Exiger un logiciel anti-programme malveillant :** Cette règle vérifie si System Center Endpoint Protection ou Windows Defender est activé et en cours d’exécution. S’il n’est pas activé, l’accès aux services de messagerie et SharePoint est bloqué.  
 

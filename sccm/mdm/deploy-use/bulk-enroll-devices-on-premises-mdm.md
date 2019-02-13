@@ -10,16 +10,17 @@ ms.assetid: b36f5e4a-2b57-4d18-83f6-197081ac2a0a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 437f6e6068fb56f1a906cbb8bea24cd3c707f0e3
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e0c007a2414a68701584967ee21e3cf046e42be3
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350236"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56130620"
 ---
 # <a name="how-to-bulk-enroll-devices-with-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>Comment inscrire en bloc des appareils avec la gestion des appareils mobiles (MDM) locale dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 
 L’inscription en bloc dans la gestion des appareils mobiles locale dans System Center Configuration Manager est un mécanisme d’inscription d’appareils plus automatisé que l’inscription d’utilisateur, qui nécessite que les utilisateurs entrent leurs informations d’identification pour inscrire l’appareil.  L’inscription en bloc utilise un package d’inscription pour authentifier l’appareil lors de l’inscription. Le package (un fichier .ppkg) contient un profil de certificat et éventuellement un profil Wi-Fi si l’appareil a besoin d’une connectivité intranet pour prendre en charge l’inscription.  
@@ -65,9 +66,9 @@ Les tâches suivantes expliquent comment inscrire en bloc des ordinateurs et des
 >
 > - La branche CB (Current Branch) de Configuration Manager prend uniquement en charge les configurations de sécurité Wi-Fi suivantes pour la gestion des appareils mobiles locale :  
 >   
->   - Types de sécurité : **WPA2-Entreprise** ou **WPA2-Personnel**  
->   - Types de chiffrement : **AES** ou **TKIP**  
->   - Types EAP : **Carte à puce ou autre certificat** ou **PEAP**  
+>   - Types de sécurité : **WPA2 Entreprise** ou **WPA2 personnel**  
+>   - Types de chiffrement : **AES** ou **TKIP**  
+>   - Type EAP : **Carte à puce ou autre certificat** ou **PEAP**  
 >
 >
 > - Bien que Configuration Manager dispose d’un paramètre pour les informations du serveur proxy dans le profil Wi-Fi, il ne configure pas le serveur proxy quand l’appareil est inscrit. Si vous devez configurer un serveur proxy avec vos appareils inscrits, vous pouvez déployer les paramètres à l’aide des éléments de configuration une fois que les appareils sont inscrits ou créer le deuxième package à l’aide du Concepteur de configuration et d’acquisition d’images Windows pour un déploiement à côté du package d’inscription en bloc.
