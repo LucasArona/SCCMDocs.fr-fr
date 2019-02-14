@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c4cd6c45d21c58459fcd23ee02db4b5900996939
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: b272a8988a3e8d2e09b4043c087207e62c59b274
+ms.sourcegitcommit: 5e7c4d36f4cdb3390ad3b381d31a3e1e4bf3c6e1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53421992"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "55986584"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>À propos des paramètres client dans Configuration Manager
 
@@ -624,7 +624,7 @@ Par exemple, si votre organisation n’utilise pas de stratégies de conformité
 Configurez une planification pour la réévaluation des règles de spécifications par Configuration Manager pour tous les déploiements. La valeur par défaut est tous les sept jours.  
 
 > [!IMPORTANT]  
->  Ne choisissez pas une valeur inférieure à la valeur par défaut. Une planification de réévaluation plus agressive affecte négativement les performances de votre réseau et des ordinateurs clients.  
+> Ce paramètre est plus invasif sur le client local que sur le serveur réseau ou de site. Une planification de réévaluation plus agressive affecte négativement les performances de votre réseau et des ordinateurs clients. Microsoft déconseille de définir une valeur inférieure à la valeur par défaut. Si vous changez cette valeur, supervisez attentivement les performances.  
 
 Lancez cette action à partir du client en procédant comme suit : dans le panneau de configuration de **Configuration Manager**, dans l’onglet **Actions**, sélectionnez **Cycle d’évaluation du déploiement de l’application**.  
 

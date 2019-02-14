@@ -10,12 +10,12 @@ ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4fdc882d63e7bf7d3189e770f230412f17ca0b63
-ms.sourcegitcommit: d36e4c7082a5144e79035dd8847c8e741fa04667
+ms.openlocfilehash: ffcb60ff355a67304b057ef2d1b632fb9e0c21dc
+ms.sourcegitcommit: 5e7c4d36f4cdb3390ad3b381d31a3e1e4bf3c6e1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53444652"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "55986533"
 ---
 # <a name="list-of-prerequisite-checks-for-configuration-manager"></a>Liste de vérifications des prérequis pour Configuration Manager
 
@@ -526,7 +526,7 @@ Configuration Manager n’exige pas d’extensions de schéma Active Directory p
 
 Depuis la version 1810, vérifiez si la base de données du site a un backlog des données de suivi des modifications SQL.<!--SCCMDocs-pr issue 3023-->  
 
-Faites cette vérification manuellement en exécutant une procédure stockée de diagnostic dans la base de données du site. Commencez par créer une [connexion de diagnostic](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-2017) à la base de données du site. La méthode la plus simple consiste à utiliser l’éditeur de requête de SQL Server Management Studio et à vous connecter à `admin:<instance name>`. 
+Faites cette vérification manuellement en exécutant une procédure stockée de diagnostic dans la base de données du site. Commencez par créer une [connexion de diagnostic](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-2017) à la base de données du site. La méthode la plus simple consiste à utiliser l’éditeur de requête de moteur de base de données de SQL Server Management Studio et à vous connecter à `admin:<instance name>`. 
 
 Dans une fenêtre de requête de connexion administrateur dédiée, exécutez les commandes suivantes :
 

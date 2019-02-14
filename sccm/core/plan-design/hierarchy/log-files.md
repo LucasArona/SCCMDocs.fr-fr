@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 58ec927ee795624cb475b31c44d64334047f3422
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 96673c0b299e45111c7d9a2bedf55282de50132e
+ms.sourcegitcommit: 5e7c4d36f4cdb3390ad3b381d31a3e1e4bf3c6e1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53416501"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "55986618"
 ---
 # <a name="log-files-in-configuration-manager"></a>Fichiers journaux de Configuration Manager
 
@@ -701,7 +701,7 @@ Le tableau suivant répertorie les fichiers journaux qui contiennent des informa
 |MP_ClientIDManager.log|Enregistre les réponses du point de gestion aux demandes d’ID client que les séquences de tâches lancent à partir de PXE ou du support de démarrage.|Serveur de système de site|  
 |MP_DriverManager.log|Enregistre les réponses du point de gestion aux demandes d'actions de la séquence de tâches Appliquer automatiquement les pilotes.|Serveur de système de site|  
 |OfflineServicingMgr.log|Enregistre les détails de la planification de la maintenance hors connexion et des actions d’application de mises à jour sur les fichiers WIM.|Serveur de système de site|  
-|Setupact.log|Enregistre des détails sur Windows Sysprep et les journaux d'installation.|Client|  
+|Setupact.log|Enregistre des détails sur Windows Sysprep et les journaux d'installation. Pour plus d’informations, consultez [Fichiers journaux](https://docs.microsoft.com/windows/deployment/upgrade/log-files).|Client|  
 |Setupapi.log|Enregistre des détails sur Windows Sysprep et les journaux d'installation.|Client|  
 |Setuperr.log|Enregistre des détails sur Windows Sysprep et les journaux d'installation.|Client|  
 |smpisapi.log|Enregistre des détails concernant les actions de capture de l'état du client et de restauration, et les informations de seuil.|Client|  
@@ -808,28 +808,14 @@ Le tableau suivant répertorie les fichiers journaux qui contiennent des informa
 
 ###  <a name="BKMK_WindowsServicingLog"></a>Maintenance de Windows 10  
  Le tableau suivant répertorie les fichiers journaux qui contiennent des informations relatives à la maintenance de Windows 10.  
-
+La maintenance utilise la même infrastructure et le même processus que les mises à jour logicielles. Pour les autres journaux applicables au scénario de maintenance, consultez [Mises à jour logicielles](#BKMK_SU_NAPLog).
 |Nom du fichier journal|Description|Ordinateur sur lequel se trouve le fichier journal|  
 |--------------|-----------------|----------------------------|  
-|Ccmperf.log|Enregistre les activités liées à la maintenance et la capture de données relatives aux compteurs de performances du client.|Client|  
-|CcmRepair.log|Enregistre les activités de réparation de l'agent du client.|Client|
-|PatchDownloader.log|Enregistre des détails concernant le processus de téléchargement des mises à jour logicielles vers la destination de téléchargement, sur le serveur de site.|Ordinateur qui héberge la console Configuration Manager à partir de laquelle les téléchargements sont lancés|  
-|PolicyEvaluator.log|Enregistre des détails concernant l'évaluation des stratégies sur les ordinateurs clients, dont les stratégies de mises à jour logicielles.|Client|  
-|RebootCoordinator.log|Enregistre des détails concernant la coordination des redémarrages du système sur des ordinateurs clients après l'installation de mises à jour logicielles.|Client|  
-|ScanAgent.log|Enregistre des détails concernant les demandes d'analyse pour les mises à jour logicielles, l'emplacement de WSUS et des actions connexes.|Client|  
-|SdmAgent.log|Enregistre les détails concernant le suivi des corrections et de la conformité. Cependant, le fichier journal des mises à jour logicielles, Updateshandler.log, fournit plus d’informations sur l’installation des mises à jour logicielles nécessaires pour la conformité.<br /><br /> Ce fichier journal est partagé avec les paramètres de compatibilité.|Client|  
-|ServiceWindowManager.log|Enregistre des détails concernant l'évaluation des fenêtres de maintenance.|Client|  
+|CBS.log|Enregistre les échecs de maintenance liés aux changements concernant Windows Updates ou les rôles et les fonctionnalités.|Client|  
+|DISM.log|Enregistre toutes les actions à l’aide de DISM. Si nécessaire, DISM.log pointe vers CBS.log pour plus d’informations.|Client|
 |setupact.log|Fichier journal principal pour la plupart des erreurs qui se produisent pendant le processus d’installation de Windows. Le fichier journal se trouve dans le dossier %windir%\$Windows.~BT\sources\panther.|Client|
-|SmsWusHandler.log|Enregistre des détails concernant le processus d'analyse pour l'outil d'inventaire de Microsoft Updates.|Client|  
-|StateMessage.log|Enregistre des détails sur les messages d'état des mises à jour logicielles créés et envoyés au point de gestion.|Client|  
-|SUPSetup.log|Enregistre des détails concernant l'installation du point de mise à jour logicielle. Lorsque l'installation d'un point de mise à jour logicielle se termine, la mention **Installation was successful** est consignée dans ce fichier journal.|Serveur de système de site|  
-|UpdatesDeployment.log|Enregistre des détails concernant les déploiements sur le client, y compris l'activation, l'évaluation et l'application des mises à jour logicielles. La journalisation documentée contient des informations supplémentaires sur l'interaction avec l'interface utilisateur du client.|Client|  
-|Updateshandler.log|Enregistre des détails concernant l'analyse de la compatibilité des mises à jour logicielles, ainsi que le téléchargement et l'installation des mises à jour logicielles sur le client.|Client|  
-|UpdatesStore.log|Enregistre des détails concernant l'état de compatibilité des mises à jour logicielles qui ont été évaluées au cours du cycle d'analyse de la compatibilité.|Client|  
-|WCM.log|Enregistre les détails concernant la configuration du point de mise à jour logicielle et les connexions au serveur WSUS pour les catégories, les classifications et les langues des mises à jour avec abonnement.|Serveur de site|  
-|WSUSCtrl.log|Enregistre des détails concernant la configuration, la connectivité de la base de données et l'intégrité du serveur WSUS du site.|Serveur de système de site|  
-|wsyncmgr.log|Enregistre les détails concernant le processus de synchronisation des mises à jour logicielles.|Serveur de site|  
-|WUAHandler.log|Enregistre des détails concernant l'agent Windows Update sur le client, lors de la recherche des mises à jour logicielles.|Client|  
+
+Pour plus d’informations, consultez [Fichiers journaux liés à la maintenance en ligne](https://docs.microsoft.com/windows-hardware/manufacture/desktop/deployment-troubleshooting-and-log-files#online-servicing-related-log-files).
 
 ###  <a name="BKMK_WULog"></a> Agent Windows Update  
  Le tableau suivant répertorie les fichiers journaux qui contiennent des informations relatives à l'agent Windows Update.  
@@ -838,6 +824,8 @@ Le tableau suivant répertorie les fichiers journaux qui contiennent des informa
 |--------------|-----------------|----------------------------|  
 |WindowsUpdate.log|Enregistre les détails concernant les connexions de l’agent Windows Update au serveur WSUS et la récupération des mises à jour logicielles pour l’évaluation de la conformité, et s’il existe des mises à jour pour les composants de l’agent.|Client|  
 
+Pour plus d'informations, consultez [Fichiers journaux de Windows Update](https://docs.microsoft.com/windows/deployment/update/windows-update-logs).
+
 ###  <a name="BKMK_WSUSLog"></a> Serveur WSUS  
  Le tableau suivant répertorie les fichiers journaux qui contiennent des informations relatives au serveur WSUS.  
 
@@ -845,3 +833,5 @@ Le tableau suivant répertorie les fichiers journaux qui contiennent des informa
 |--------------|-----------------|----------------------------|  
 |Change.log|Enregistre les détails concernant les informations de la base de données du serveur WSUS qui ont été modifiées.|Serveur WSUS|  
 |SoftwareDistribution.log|Enregistre les détails concernant les mises à jour logicielles qui sont synchronisées depuis la source de mise à jour configurée vers la base de données du serveur WSUS.|Serveur WSUS|  
+
+Ces fichiers journaux se trouvent dans le dossier %ProgramFiles%\Update Services\LogFiles.
