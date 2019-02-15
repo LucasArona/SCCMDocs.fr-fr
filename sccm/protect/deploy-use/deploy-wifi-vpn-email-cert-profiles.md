@@ -10,16 +10,17 @@ ms.assetid: 3753608d-b539-44dc-8e3f-b631319e7687
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: abae42358e6baba660841eab9443410c0b818428
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 63b52b42a9957ed8728d0942988067fef2be6271
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53419255"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56129712"
 ---
 # <a name="deploy-profiles-in-system-center-configuration-manager"></a>Déployer des profils dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Les profils doivent être déployés dans un ou plusieurs regroupements avant de pouvoir être utilisés.  
 
@@ -54,7 +55,7 @@ Les profils doivent être déployés dans un ou plusieurs regroupements avant de
 
     -   **Générer une alerte** : activez cette option pour configurer une alerte qui est générée si la conformité du profil est inférieure à un pourcentage spécifié à une date et une heure spécifiques. Vous pouvez également spécifier si vous souhaitez qu'une alerte soit envoyée à System Center Operations Manager.  
 
-    -   -   **Délai aléatoire (heures)**  : (uniquement pour les profils de certificat contenant des paramètres du protocole SCEP) spécifie un délai pour éviter un traitement excessif sur le service d’inscription d’appareils réseau. La valeur par défaut est **64** heures.  
+    -   -   **Délai aléatoire (heure)**  : (uniquement pour les profils de certificat contenant des paramètres de protocole d’inscription de certificats simple) spécifie un délai pour éviter un traitement excessif sur le service d’inscription de périphérique réseau. La valeur par défaut est **64** heures.  
 
     -   **Spécifier le calendrier d’évaluation de la compatibilité pour ce profil <type>**  : spécifie le calendrier par rapport auquel le profil déployé est évalué sur les ordinateurs clients. Il peut s'agir d'un calendrier simple ou d'un calendrier personnalisé.  
 

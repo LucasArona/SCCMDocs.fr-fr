@@ -10,16 +10,17 @@ ms.assetid: e3aaa9d2-a40e-42b1-ad75-5a115351729e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 74bcd026dff0b67ae91276c63ba85597008dfd70
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: ba364ce222ae5e07cc1a0e9d25eb3ae525f2cbbf
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53422475"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56142389"
 ---
 # <a name="endpoint-protection-client-frequently-asked-questions"></a>Forum aux questions sur le client Endpoint Protection
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 
 Ce forum aux questions est destiné aux utilisateurs dont l’administrateur informatique a déployé Windows Defender ou Endpoint Protection sur leur ordinateur. Les informations fournies ci-après peuvent ne pas s’appliquer aux autres logiciels anti-programme malveillant. Microsoft System Center Endpoint Protection gère Windows Defender sur Windows 10. Il peut également déployer et gérer le client Endpoint Protection sur des ordinateurs exécutant une version antérieure à Windows 10. Windows Defender est décrit dans cet article, mais les informations qui le concernent s’appliquent également à Endpoint Protection.  

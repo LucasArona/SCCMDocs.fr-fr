@@ -10,16 +10,17 @@ ms.assetid: 2117f786-d521-4790-9e8d-ec096c63c9d7
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 5214723b5679f4a44110329b96d4d5ec3d660673
-ms.sourcegitcommit: 94bf7d5b5beb9628cc1fdfe75451d33b5de26f8a
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 60e8121e62a9d82f29d9a5011b197b2929390178
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54152381"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56127607"
 ---
 # <a name="protect-data-and-site-infrastructure-with-configuration-manager"></a>Protéger les données et l’infrastructure des sites avec Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Vous souhaitez que vos utilisateurs puissent accéder en toute sécurité aux ressources de votre organisation, pour que votre infrastructure et vos données soient protégées contre toute exposition ou attaque malveillante. Les informations dans ces articles décrivent comment utiliser Configuration Manager pour activer cet accès et aider à protéger les ressources de votre organisation.  
 

@@ -10,16 +10,17 @@ ms.assetid: 41dcc259-f147-4420-bff2-b65bdf8cff77
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 27a615a412bca7e30ab5f5a3dc5f794961d13d2c
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 5872a6a8ee69e50d0abfe5840a087aaf83ab7aa5
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53424491"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56156608"
 ---
 # <a name="introduction-to-certificate-profiles-in-system-center-configuration-manager"></a>Présentation des profils de certificat dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 
 Les profils de certificat fonctionnent avec les services de certificats Active Directory et le rôle Service d’inscription de périphérique réseau. Créez et déployez des certificats d’authentification pour les appareils gérés afin que les utilisateurs puissent accéder facilement aux ressources de l’entreprise. Par exemple, vous pouvez créer et déployer des profils de certificat pour fournir les certificats nécessaires aux utilisateurs afin d’établir des connexions VPN et sans fil.
@@ -34,9 +35,9 @@ Les profils de certificat fournissent les fonctionnalités de gestion suivantes�
 
 -   Analyse et rapport sur les certificats installés.  
 
-**Exemple :** Tous les employés doivent être en mesure de se connecter à des points d'accès Wi-Fi répartis en plusieurs endroits dans l'entreprise. Pour faciliter les connexions utilisateurs, vous devez d’abord déployer les certificats nécessaires aux connexions Wi-Fi. Ensuite, vous devez déployer les profils Wi-Fi qui référencent le certificat.  
+**Exemple :** Tous les employés doivent pouvoir se connecter à des points d'accès Wi-Fi répartis à différents endroits dans l'entreprise. Pour faciliter les connexions utilisateurs, vous devez d’abord déployer les certificats nécessaires aux connexions Wi-Fi. Ensuite, vous devez déployer les profils Wi-Fi qui référencent le certificat.  
 
-Exemple : Vous disposez d’une PKI en place. Vous souhaitez passer à une méthode plus souple et plus sécurisée pour le déploiement de vos certificats. Les utilisateurs doivent pouvoir accéder aux ressources de l’entreprise à partir de leurs appareils personnels, sans compromettre la sécurité. Configurez des profils de certificat avec les paramètres et protocoles pris en charge par la plateforme d’appareil spécifique. Les appareils peuvent ensuite demander automatiquement ces certificats depuis un serveur d'inscription via Internet. Ensuite, configurez des profils VPN pour utiliser ces certificats afin que l’appareil puisse accéder aux ressources d’entreprise.  
+**Exemple :** Vous avez mis en place une infrastructure à clé publique (PKI). Vous souhaitez passer à une méthode plus souple et plus sécurisée pour le déploiement de vos certificats. Les utilisateurs doivent pouvoir accéder aux ressources de l’entreprise à partir de leurs appareils personnels, sans compromettre la sécurité. Configurez des profils de certificat avec les paramètres et protocoles pris en charge par la plateforme d’appareil spécifique. Les appareils peuvent ensuite demander automatiquement ces certificats depuis un serveur d'inscription via Internet. Ensuite, configurez des profils VPN pour utiliser ces certificats afin que l’appareil puisse accéder aux ressources d’entreprise.  
 
 
 

@@ -10,16 +10,17 @@ author: aczechowski
 description: Découvrez comment configurer Windows Server Update Services pour approuver automatiquement les mises à jour de définition.
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: b66c55da65f65c219b5c961949244f105885ba8f
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 74a1dc94a30f56e22b181446422a8b5f99790ffc
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53424271"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56127624"
 ---
 # <a name="enable-endpoint-protection-malware-definitions-to-download-from-windows-server-update-services-wsus-for-configuration-manager"></a>Activer le téléchargement des définitions de programmes malveillants pour Endpoint Protection à partir de Windows Server Update Services (WSUS) pour Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
  Si vous utilisez WSUS pour tenir à jour vos définitions de logiciels anti-programmes malveillants, vous pouvez le configurer pour approuver automatiquement les mises à jour de définition. Bien que l’utilisation des mises à jour logicielles Configuration Manager soit la méthode recommandée pour tenir à jour les définitions, vous pouvez aussi configurer WSUS en tant que méthode pour autoriser les utilisateurs à lancer manuellement des mises à jour de définitions. Utilisez les procédures suivantes pour configurer WSUS comme source de mise à jour de définition.
 
@@ -74,19 +75,19 @@ ms.locfileid: "53424271"
 
 2.  Sous l’onglet **Règles de mise à jour** , cliquez sur **Nouvelle règle**.
 
-3.  Dans le **ajouter une règle** boîte de dialogue **étape 1 : Sélectionnez les propriétés**, sélectionnez le **quand une mise à jour est dans une classification précise** case à cocher.
+3.  Dans la boîte de dialogue **Ajouter une règle** , sous **Étape 1 : Sélectionnez des propriétés**, cochez la case **Lorsqu’une mise à jour se trouve dans une classification précise** .
 
-4.  Sous **étape 2 : Sous Étape 2 : Modifiez les propriétés**, cliquez sur **toutes les classifications**.
+4.  Sous **Étape 2 : Modifiez les propriétés**, cliquez sur **toutes les classifications**.
 
 5.  Décochez toutes les cases sauf **Mises à jour de définitions**, puis cliquez sur **OK**.
 
-6.  Dans le **ajouter une règle** boîte de dialogue **étape 1 : Sélectionnez les propriétés**, sélectionnez le **quand une mise à jour se trouve dans un produit spécifique** case à cocher.
+6.  Dans la boîte de dialogue **Ajouter une règle** , sous **Étape 1 : Sélectionnez des propriétés**, cochez la case **Lorsqu’une mise à jour se trouve dans un produit précis** .
 
-7.  Sous **étape 2 : Sous Étape 2 : Modifiez les propriétés**, cliquez sur **tous les produits**.
+7.  Sous **Étape 2 : Modifiez les propriétés**, cliquez sur **tous les produits**.
 
 8.  Décochez toutes les cases sauf **Forefront Endpoint Protection** pour Windows 8.1 et les versions antérieures, ou **Windows Defender** pour Windows 10 et les versions ultérieures, puis cliquez sur **OK**.
 
-9. Sous **étape 3 : Sous Étape 3 : Indiquez un nom**, entrez un nom pour la règle, puis cliquez sur **OK**.
+9. Sous **Étape 3 : Indiquez un nom**, entrez un nom pour la règle, puis cliquez sur **OK**.
 
 10. Dans la boîte de dialogue **Approbations automatiques** , cochez la case correspondant à la règle nouvellement créée, puis cliquez sur **Exécuter la règle**.
 

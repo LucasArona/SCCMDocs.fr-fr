@@ -10,16 +10,17 @@ ms.assetid: 98feaa06-64b1-4e86-a122-93017c97cd4f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d061649744d7a2da37e67d55f3c8b655d18c0aa4
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 86485a1a54acb122e1b56118de9e72d840e01809
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53416790"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56137658"
 ---
 # <a name="how-to-monitor-certificate-profiles-in-system-center-configuration-manager"></a>Comment surveiller des profils de certificat dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 
 ##  <a name="view-compliance-results-in-the-configuration-manager-console"></a>Afficher les résultats de compatibilité dans la console Configuration Manager  
@@ -34,16 +35,16 @@ Pour surveiller la compatibilité des certificats SCEP, n’utilisez pas la cons
 
     La page **État du déploiement** contient les onglets suivants :  
 
-   -   **Conforme** : affiche la compatibilité du profil de certificat en fonction du nombre de ressources concernées. Vous pouvez double-cliquer sur une règle pour créer un nœud temporaire sous le nœud **Utilisateurs** de l'espace de travail **Ressources et Conformité** . Ce nœud contient tous les utilisateurs qui sont compatibles avec le profil de certificat. Le volet **Détails du bien** affiche également les utilisateurs compatibles avec ce profil. Double-cliquez sur un utilisateur dans la liste pour afficher des informations supplémentaires.  
+   -   **Compatible**: affiche la compatibilité du profil de certificat en fonction du nombre de ressources concernées. Vous pouvez double-cliquer sur une règle pour créer un nœud temporaire sous le nœud **Utilisateurs** de l'espace de travail **Ressources et Conformité** . Ce nœud contient tous les utilisateurs qui sont compatibles avec le profil de certificat. Le volet **Détails du bien** affiche également les utilisateurs compatibles avec ce profil. Double-cliquez sur un utilisateur dans la liste pour afficher des informations supplémentaires.  
 
        > [!IMPORTANT]  
        >  Un profil de certificat n'est pas évalué s'il n'est pas applicable sur un périphérique client. Toutefois, il est retourné comme conforme.  
 
-   -   **Erreur** : affiche une liste de toutes les erreurs pour le déploiement du profil de certificat sélectionné en fonction du nombre de biens concernés. Vous pouvez double-cliquer sur une règle pour créer un nœud temporaire sous le nœud **Utilisateurs** de l'espace de travail **Ressources et Conformité** . Ce nœud contient tous les utilisateurs qui ont généré des erreurs avec ce profil. Lorsque vous sélectionnez un utilisateur, le volet **Détails du bien** affiche les utilisateurs qui sont concernés par le problème sélectionné. Double-cliquez sur un utilisateur dans la liste pour afficher des informations supplémentaires.  
+   -   **Erreur**: affiche une liste de toutes les erreurs pour le déploiement du profil de certificat sélectionné en fonction du nombre de biens concernés. Vous pouvez double-cliquer sur une règle pour créer un nœud temporaire sous le nœud **Utilisateurs** de l'espace de travail **Ressources et Conformité** . Ce nœud contient tous les utilisateurs qui ont généré des erreurs avec ce profil. Lorsque vous sélectionnez un utilisateur, le volet **Détails du bien** affiche les utilisateurs qui sont concernés par le problème sélectionné. Double-cliquez sur un utilisateur dans la liste pour afficher des informations supplémentaires.  
 
-   -   **Non conforme** : affiche une liste de toutes les règles non compatibles au sein du profil de certificat en fonction du nombre de biens concernés. Vous pouvez double-cliquer sur une règle pour créer un nœud temporaire sous le nœud **Utilisateurs** de l'espace de travail **Ressources et Conformité** . Ce nœud contient tous les utilisateurs qui ne sont pas compatibles avec ce profil. Lorsque vous sélectionnez un utilisateur, le volet **Détails du bien** affiche les utilisateurs qui sont concernés par le problème sélectionné. Double-cliquez sur un utilisateur de la liste pour afficher des informations supplémentaires sur le problème.  
+   -   **Non compatible**: affiche une liste de toutes les règles non compatibles au sein du profil de certificat en fonction du nombre de biens concernés. Vous pouvez double-cliquer sur une règle pour créer un nœud temporaire sous le nœud **Utilisateurs** de l'espace de travail **Ressources et Conformité** . Ce nœud contient tous les utilisateurs qui ne sont pas compatibles avec ce profil. Lorsque vous sélectionnez un utilisateur, le volet **Détails du bien** affiche les utilisateurs qui sont concernés par le problème sélectionné. Double-cliquez sur un utilisateur de la liste pour afficher des informations supplémentaires sur le problème.  
 
-   -   **Inconnu** : affiche une liste de tous les utilisateurs qui n'ont pas signalé de compatibilité pour le déploiement du profil de certificat sélectionné avec l'état du client actuel des périphériques.  
+   -   **Inconnu**: affiche une liste de tous les utilisateurs qui n'ont pas signalé de compatibilité pour le déploiement du profil de certificat sélectionné avec l'état du client actuel des appareils.  
 
 4. Dans la page **État du déploiement**, examinez les informations détaillées sur la compatibilité du profil de certificat déployé. Un nœud temporaire est créé sous le nœud **Déploiements** qui vous aide à retrouver rapidement ces informations.  
 

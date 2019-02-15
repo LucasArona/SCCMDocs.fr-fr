@@ -10,12 +10,13 @@ ms.assetid: 3393db41-900a-44c5-b950-2d46a35a198c
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: d5e9d10844a344ea56eaebb315c92675a760c983
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 6a0df16ba673acf39aa4861d3a46f1e185ec4589
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350474"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56132385"
 ---
 # <a name="security-and-privacy-for-certificate-profiles-in-system-center-configuration-manager"></a>Sécurité et confidentialité pour les profils de certificat dans System Center Configuration Manager
 
@@ -25,7 +26,7 @@ ms.locfileid: "32350474"
 ##  <a name="security-best-practices-for-certificate-profiles"></a>Bonnes pratiques pour la sécurité des profils de certificat  
  Utilisez les bonnes pratiques de sécurité suivantes lorsque vous gérez des profils de certificat pour des appareils.  
 
-|Bonnes pratiques de sécurité|Plus d'informations|  
+|Bonnes pratiques de sécurité|Informations complémentaires|  
 |----------------------------|----------------------|  
 |Identifiez et suivez les bonnes pratiques de sécurité pour le service d'inscription de périphériques réseau, ce qui comprend la configuration du site web Service d'inscription de périphériques réseau dans IIS (Internet Information Services) pour exiger le protocole SSL et ignorer les certificats clients.|Pour plus d'informations, voir [Guide du service d'inscription de périphérique réseau](http://go.microsoft.com/fwlink/p/?LinkId=309016) dans la bibliothèque des services de certificats Microsoft Active Directory sur TechNet.|  
 |Lorsque vous configurez des profils de certificat SCEP, choisissez les options les plus sécurisées prises en charge par vos périphériques et votre infrastructure.|Identifiez, implémentez et suivez les bonnes pratiques de sécurité recommandées pour vos appareils et votre infrastructure.|  

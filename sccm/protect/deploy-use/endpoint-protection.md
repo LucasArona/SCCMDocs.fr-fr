@@ -10,16 +10,17 @@ ms.assetid: 76c90f64-d729-456b-8304-01852cd66fb6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 160713fe480b0a47c2ad57376c4a1dccdbfb00b1
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 1048b24dba0658610471d37f12f75fd1d06b8d03
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53418949"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56123871"
 ---
 # <a name="endpoint-protection"></a>Endpoint Protection
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Endpoint Protection gère les stratégies anti-programme malveillant et la sécurité du Pare-feu Windows pour les ordinateurs clients de votre hiérarchie Configuration Manager.  
 
@@ -111,7 +112,7 @@ Procédez comme suit pour télécharger le fichier image contenant le logiciel c
 2. Sélectionnez l’onglet **Téléchargements et clés** situé en haut du site web.
 3. Filtrez sur le produit **System Center Endpoint Protection (Current Branch)**.
 4. Cliquez sur le lien vers **Télécharger**
-5. Cliquez sur **Continuer**. Vous devez voir plusieurs fichiers, dont un nommé : **System Center Endpoint Protection (current branch - de la version 1606) pour Linux OS and Macintosh OS Multilanguage 32/64 bit 1878 MB ISO**.
+5. Cliquez sur **Continuer**. Vous devez voir plusieurs fichiers, dont un nommé **System Center Endpoint Protection (current branch - version 1606) for Linux OS and Macintosh OS Multilanguage   32/64 bit   1878 MB ISO**.
 6. Pour télécharger le fichier, cliquez sur l’icône de flèche. Le nom de fichier est **SW_DVD5_Sys_Ctr_Endpnt_Prtctn_1606_MultiLang_-3_EptProt_Lin_Mac_MLF_X21-67050.ISO**.
 
 La mise à jour de janvier 2018 (X21-67050) inclut les versions suivantes :

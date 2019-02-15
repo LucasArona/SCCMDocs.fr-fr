@@ -10,16 +10,17 @@ ms.assetid: 3b9c4027-a98b-406b-935c-ccabcfe713df
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 86452d628d025aea2b797d0ade92a3c2e2fff933
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: c16487bc59a7e067aac5554213e2be750729078f
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53418575"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56120144"
 ---
 #  <a name="using-configuration-manager-software-updates-to-deliver-definition-updates"></a>Utilisation des mises à jour logicielles Configuration Manager pour remettre des mises à jour de définitions
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 
  Vous pouvez configurer des mises à jour logicielles Configuration Manager pour remettre des mises à jour de définitions aux ordinateurs clients. Pour cela, vous devez configurer des règles de déploiement automatique. Avant de commencer à créer des règles de déploiement automatique, vérifiez que vous avez configuré des mises à jour logicielles Configuration Manager. Pour plus d’informations, consultez [Présentation des mises à jour logicielles dans System Center Configuration Manager](/sccm/sum/understand/software-updates-introduction).
@@ -37,9 +38,9 @@ ms.locfileid: "53418575"
 
 4. Sur la page **Général** de l' **Assistant Création d'une règle de déploiement automatique**, spécifiez les informations suivantes :
 
-   -   **Nom** : entrez un nom unique pour la règle de déploiement automatique.
+   -   **Nom**: entrez un nom unique pour la règle de déploiement automatique.
 
-   -   **Regroupement** : sélectionnez le regroupement d'ordinateurs clients sur lesquels vous voulez déployer les mises à jour de définitions.
+   -   **Regroupement**: sélectionnez le regroupement d’ordinateurs clients sur lesquels vous voulez déployer les mises à jour de définition.
 
        > [!NOTE]
        >  Vous ne pouvez pas déployer des mises à jour de définition dans un regroupement d'utilisateurs.
@@ -75,11 +76,11 @@ ms.locfileid: "53418575"
 
 17. Sur la page **Calendrier de déploiement** de l'Assistant, configurez les paramètres suivants :
 
-    -   **Heure basée sur** : sélectionnez **UTC** si vous souhaitez que tous les clients de la hiérarchie installent les dernières définitions en même temps. L’heure d’installation réelle varie dans une plage de deux heures. Il est recommandé de définir ce paramètre.
+    -   **Heure basée sur**: sélectionnez **UTC** si vous voulez que tous les clients de la hiérarchie installent les dernières définitions simultanément. L’heure d’installation réelle varie dans une plage de deux heures. Il est recommandé de définir ce paramètre.
 
-    -   **Temps disponible du logiciel** : spécifiez le temps disponible pour le déploiement qui est créé par cette règle. L’heure spécifiée doit être au moins une heure après l’exécution de la règle de déploiement automatique. Cela permet de garantir que le contenu a suffisamment de temps pour être répliqué sur les points de distribution de votre hiérarchie. Certaines mises à jour de définition peuvent également inclure des mises à jour du moteur anti-programme malveillant et peuvent nécessiter plus de temps pour atteindre les points de distribution.
+    -   **Temps disponible du logiciel**: spécifiez le temps disponible pour le déploiement qui est créé par cette règle. L’heure spécifiée doit être au moins une heure après l’exécution de la règle de déploiement automatique. Cela permet de garantir que le contenu a suffisamment de temps pour être répliqué sur les points de distribution de votre hiérarchie. Certaines mises à jour de définition peuvent également inclure des mises à jour du moteur anti-programme malveillant et peuvent nécessiter plus de temps pour atteindre les points de distribution.
 
-    -   **Échéance de l’installation** : Sélectionnez **dès que possible**.
+    -   **Échéance d’installation**: sélectionnez **Dès que possible**.
 
         > [!NOTE]
         >  Les échéances des mises à jour logicielles varient sur une période de deux heures pour empêcher que tous les clients demandent une mise à jour en même temps.

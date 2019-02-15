@@ -10,16 +10,17 @@ ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 783512841b61d6fa10e3f2832100e9000576e65a
-ms.sourcegitcommit: 2687489aa409a050dcacd67f17b3dad3ab7f1804
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 95a5166433ef35b3c2ab7108bfc83a2d403558e0
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54316522"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56128168"
 ---
 # <a name="configure-certificate-infrastructure"></a>Configurer l’infrastructure de certificats
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Découvrez comment configurer une infrastructure de certificats dans System Center Configuration Manager. Avant de commencer, examinez les conditions requises répertoriées dans [Configuration requise pour les profils de certificat dans System Center Configuration Manager](../../protect/plan-design/prerequisites-for-certificate-profiles.md).  
 
@@ -38,16 +39,16 @@ Suivez ces étapes pour configurer votre infrastructure pour les certificats SCE
 
 2. Vérifiez et, si nécessaire, modifiez les autorisations de sécurité des modèles de certificat utilisés par le service d'inscription d'appareils réseau :  
 
-   -   Pour le compte qui exécute la console System Center Configuration Manager : Autorisation **Lecture**.  
+   -   Pour le compte qui exécute la console System Center Configuration Manager : droit d’accès en **lecture**.  
 
         Cette autorisation est requise afin que vous puissiez rechercher et sélectionner le modèle de certificat à utiliser pour créer un profil de paramètres SCEP lorsque vous exécutez l'Assistant de création d'un profil de certificat. La sélection d'un modèle de certificat signifie que certains paramètres dans l'Assistant sont automatiquement renseignés pour vous. Les tâches de configuration sont réduites, ainsi que les risques de sélection de paramètres non compatibles avec les modèles de certificat utilisés par le service d'inscription d'appareils réseau.  
 
-   -   Pour le compte de service SCEP que le pool d'applications du service d'inscription d'appareils réseau utilise : Autorisations **Lecture** et **Inscription**.  
+   -   Pour le compte de service SCEP que le pool d'applications du service d'inscription d'appareils réseau utilise : Autorisations **Lecture** et **Inscription** .  
 
         Cette exigence n’est pas spécifique à System Center Configuration Manager, mais elle fait partie de la configuration du service d’inscription d’appareils réseau. Pour plus d'informations, voir [Network Device Enrollment Service Guidance (Guide du service d'inscription d'appareils réseau)](http://go.microsoft.com/fwlink/p/?LinkId=309016) dans la bibliothèque des services de certificats Microsoft Active Directory sur TechNet.  
 
    > [!TIP]  
-   >  Pour identifier les modèles de certificat utilisés par le service d'inscription d'appareils réseau, affichez la clé de registre suivante sur le serveur exécutant le service d'inscription d'appareils réseau : HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP.  
+   >  Pour identifier les modèles de certificat utilisés par le service d’inscription de périphérique réseau, affichez la clé de Registre suivante sur le serveur exécutant le service d’inscription de périphérique réseau : HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP.  
 
    > [!NOTE]  
    >  Ces autorisations de sécurité sont les valeurs par défaut appropriées pour la plupart des environnements. Toutefois, vous pouvez utiliser une autre configuration de sécurité. Pour plus d’informations, consultez [Planification d’autorisations de modèles de certificat pour les profils de certificat dans System Center Configuration Manager](../../protect/plan-design/planning-for-certificate-template-permissions.md).  
@@ -69,19 +70,19 @@ Suivez ces étapes pour configurer votre infrastructure pour les certificats SCE
 
    - Définissez la clé **MaxRequestBytes** à **16777216**.  
 
-     Pour plus d’informations, consultez l’article [820129 : Paramètres de Registre Http.sys pour Windows](http://go.microsoft.com/fwlink/?LinkId=309013) dans la Base de connaissances Microsoft.  
+     Pour plus d'informations, consultez l'article [820129 : Paramètres de Registre Http.sys pour Windows](http://go.microsoft.com/fwlink/?LinkId=309013) dans la Base de connaissances Microsoft.  
 
 6. Sur le même serveur, dans le Gestionnaire des services Internet (IIS), modifiez les paramètres de filtrage des demandes pour l'application /certsrv/mscep, puis redémarrez le serveur. Dans la boîte de dialogue **Modifier les paramètres de filtrage des demandes** , les paramètres **Limites des demandes** doivent se présenter comme suit :  
 
-   - **Longueur maximale autorisée du contenu (octets)**  : **30000000**  
+   - **Longueur maximale autorisée du contenu (octets)**: **30 000 000**  
 
-   - **Longueur maximale des URL (octets)**  : **65534**  
+   - **Longueur maximale des URL (octets)**: **65 534**  
 
-   - **Longueur maximale des chaînes de requête (octets)**  : **65534**  
+   - **Longueur maximale des chaînes de requête (octets)**: **65 534**  
 
      Pour plus d'informations sur ces paramètres et sur la façon de les configurer, voir [Limites des demandes](http://go.microsoft.com/fwlink/?LinkId=309014) dans la bibliothèque de référence IIS.  
 
-7. Si vous souhaitez pouvoir demander un certificat avec une durée de validité inférieure à celle du modèle de certificat que vous utilisez : Cette configuration est désactivée par défaut pour une Autorité de certification d'entreprise. Pour activer cette option pour une Autorité de certification d'entreprise, utilisez l'outil de ligne de commande Certutil, puis arrêtez et redémarrez le service de certificats à l'aide des commandes suivantes :  
+7. Si vous souhaitez pouvoir demander un certificat avec une durée de validité inférieure à celle du modèle de certificat que vous utilisez : Cette configuration est désactivée par défaut pour une Autorité de certification d'entreprise. Pour activer cette option pour une Autorité de certification d'entreprise, utilisez l'outil de ligne de commande Certutil, puis arrêtez et redémarrez le service de certificats à l'aide des commandes suivantes :  
 
    1. **certutil - setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE**  
 
@@ -126,7 +127,7 @@ Vous devez installer et configurer au moins un point d’enregistrement de certi
      -   **Nom du site web**, **Numéro de port HTTPS** et **Nom de l’application virtuelle** du point d’enregistrement de certificat. Ces champs sont automatiquement renseignés avec les valeurs par défaut. 
      -   **URL du service d’inscription de périphérique réseau et certificat d’autorité de certification racine** : cliquez sur **Ajouter**, puis, dans la boîte de dialogue **Ajouter l’URL et le certificat d’autorité de certification racine**, spécifiez les éléments suivants :
          - **URL du service d’inscription de périphériques réseau** : spécifiez l’URL au format suivant : https://*<FQDN_serveur>*/certsrv/mscep/mscep.dll. Par exemple, si le nom de domaine complet de votre serveur exécutant le service d’inscription de périphérique réseau est server1.contoso.com, tapez **https://server1.contoso.com/certsrv/mscep/mscep.dll**.
-         - **Certificat d’autorité de certification racine** : Recherchez et sélectionnez le fichier de certificat (.cer) que vous avez créé et enregistré à l'**étape 1 : Installer et configurer le service d'inscription d'appareils réseau et les dépendances**. Ce certificat d’autorité de certification racine permet au point d’enregistrement de certificat de valider le certificat d’authentification client que le module de stratégie de System Center Configuration Manager va utiliser.  
+         - **Certificat d'Autorité de certification racine**: Recherchez et sélectionnez le fichier de certificat (.cer) que vous avez créé et enregistré à l' **Étape 1 : Installer et configurer le service d'inscription d'appareils réseau et les dépendances**. Ce certificat d’autorité de certification racine permet au point d’enregistrement de certificat de valider le certificat d’authentification client que le module de stratégie de System Center Configuration Manager va utiliser.  
 
    - Si vous avez sélectionné **Traiter les demandes de certificats PFX**, vous configurez les détails de la connexion et les informations d’identification pour l’autorité de certification sélectionnée.
 
@@ -189,9 +190,9 @@ Vous devez installer et configurer le module de stratégie de System Center Conf
 
 6. Acceptez le port par défaut **443** ou spécifiez l'autre numéro de port utilisé par le point d'enregistrement de certificat, puis cliquez sur **Suivant**.  
 
-7. Dans la page **Certificat client du module de stratégie**, recherchez et spécifiez le certificat d’authentification client que vous avez déployé à l’**étape 1 : Installer et configurer le service d’inscription d'appareils réseau et les dépendances**, puis cliquez sur **Suivant**.  
+7. Dans la page **Certificat client du module de stratégie**, recherchez et spécifiez le certificat d'authentification client que vous avez déployé à l' **Étape 1 : Installer et configurer le service d'inscription d'appareils réseau et les dépendances**, puis cliquez sur **Suivant**.  
 
-8. Dans la page **Certificat du point d’enregistrement de certificat**, cliquez sur **Parcourir** pour sélectionner le fichier de certificat exporté de l’autorité de certification racine que vous avez localisé et enregistré à la fin de l’**étape 2 : Installer et configurer le point d'enregistrement de certificat**.  
+8. Dans la page **Certificat du point d'enregistrement de certificat** , cliquez sur **Parcourir** pour sélectionner le fichier de certificat exporté pour l'autorité de certification racine que vous avez localisé et enregistré à la fin de l' **Étape 2 : Installer et configurer le point d'enregistrement de certificat**.  
 
    > [!NOTE]  
    >  Si vous n’avez pas enregistré ce fichier de certificat précédemment, il se trouve dans <chemin_installation_ConfigMgr\>\inboxes\certmgr.box sur l’ordinateur du serveur de site.  

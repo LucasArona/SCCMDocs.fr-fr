@@ -10,16 +10,17 @@ ms.assetid: 537dd2a7-4e44-4877-b8dd-5e1499407f8d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e83f999ccd3e7625b2f83372464569771520632a
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: f87f6c439a7f42144553406081e0b21bcef84c9b
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53419205"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56123860"
 ---
 #  <a name="configure-definition-updates-for-endpoint-protection"></a>Configurer les mises à jour des définitions pour Endpoint Protection  
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
  Avec Endpoint Protection dans System Center Configuration Manager, vous pouvez utiliser une des diverses méthodes disponibles pour tenir à jour les définitions du logiciel anti-programme malveillant sur les ordinateurs clients de votre hiérarchie. Les informations contenues dans cette rubrique peuvent vous aider à sélectionner et à configurer ces méthodes.
 

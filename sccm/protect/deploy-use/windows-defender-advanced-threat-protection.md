@@ -10,16 +10,17 @@ ms.assetid: a5fc033e-828e-4e45-9097-bbbd0697ebdf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f474db6768204403978eb188c3dbd138e34035d4
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: cf48b4602245750071ad60e2f42cb9afa66c40aa
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53422791"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56123557"
 ---
 # <a name="windows-defender-advanced-threat-protection"></a>Windows Defender - Protection avancée contre les menaces
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 À compter de la version 1606 de Configuration Manager (Current Branch), Endpoint Protection facilite la gestion et le monitoring du service [Windows Defender - Protection avancée contre les menaces (ATP)](http://aka.ms/technet-wdatp). Windows Defender ATP permet aux entreprises de détecter, d’investiguer et de répondre aux attaques avancées sur leur réseau.  Les stratégies Configuration Manager ou Microsoft Intune facilitent l’intégration et le monitoring des appareils gérés qui exécutent Windows 10 version 1607 (build 14328) ou ultérieure.
 

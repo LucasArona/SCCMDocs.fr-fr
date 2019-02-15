@@ -10,12 +10,13 @@ ms.assetid: 601e3a8d-e9e7-456f-a844-f19c3dae12a9
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 6fd12ac08e7adfd683347065064c2a5dd006a43d
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b0386f507ef131a38438fd0d76bfdc223a841245
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32346955"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56140760"
 ---
 # <a name="security-and-privacy-for-email-profiles-in-system-center-configuration-manager"></a>Sécurité et confidentialité pour les profils de messagerie dans System Center Configuration Manager
 
@@ -24,7 +25,7 @@ ms.locfileid: "32346955"
 ## <a name="security-best-practices-for-email-profiles"></a>Bonnes pratiques de sécurité pour les profils de messagerie  
  Utilisez les bonnes pratiques de sécurité suivantes quand vous gérez les profils de messagerie sur les appareils.  
 
-|Bonnes pratiques de sécurité|Plus d'informations|  
+|Bonnes pratiques de sécurité|Informations complémentaires|  
 |----------------------------|----------------------|  
 |Dans la mesure du possible, choisissez les options les plus sécurisées prises en charge par votre infrastructure de messagerie et les systèmes d'exploitation client.|Les profils de messagerie fournissent une méthode pratique pour distribuer et gérer des paramètres de messagerie que vos appareils prennent déjà en charge de manière centralisée. Configuration Manager n’ajoute pas de fonctionnalité de messagerie.<br /><br /> Identifiez, implémentez et appliquez les bonnes pratiques de sécurité recommandées pour vos appareils et votre infrastructure de messagerie.|  
 

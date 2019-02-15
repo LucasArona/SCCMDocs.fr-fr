@@ -10,16 +10,17 @@ ms.assetid: 321b19b2-a093-4b8f-995f-41f74b886eb5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f294bd3e6c8043149e7f5af8b07eb11288751601
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: dba1107dd8cd8d39be555b3b77ff828152513eb8
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53416263"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56122234"
 ---
 # <a name="create-wi-fi-profiles"></a>Créer des profils Wi-Fi
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 
 Utilisez des profils Wi-Fi dans System Center Configuration Manager pour déployer des paramètres de réseau sans fil pour les utilisateurs de votre organisation. En déployant ces paramètres, il est plus facile pour les utilisateurs de se connecter au Wi-Fi.  
@@ -56,15 +57,15 @@ La section relative à la [création de profils Wi-Fi pour les appareils mobile
 
 4. Dans **Gravité de non-compatibilité pour les rapports** spécifiez le niveau de gravité signalé en cas de non-compatibilité du profil Wi-Fi sur des appareils clients (par exemple, en cas d’échec de l’installation du profil). Les niveaux de gravité disponibles sont les suivants :  
 
-   -   **Aucun** : les ordinateurs qui ne respectent pas cette règle de conformité ne signalent pas la gravité d’un échec pour les rapports Configuration Manager.  
+   -   **Aucun**: les ordinateurs qui ne respectent pas cette règle de conformité ne signalent pas la gravité d’un échec pour les rapports Configuration Manager.  
 
-   -   **Informations** : Les ordinateurs qui ne respectent pas cette règle de conformité signalent la gravité d’un échec de niveau **Informations** pour les rapports Configuration Manager.  
+   -   **Informations**: les ordinateurs qui ne respectent pas cette règle de conformité signalent la gravité d’un échec de niveau **Informations** pour les rapports Configuration Manager.  
 
-   -   **Avertissement** : les ordinateurs qui ne respectent pas cette règle de conformité signalent la gravité d’un échec de niveau **Avertissement** pour les rapports Configuration Manager.  
+   -   **Avertissement**: les ordinateurs qui ne respectent pas cette règle de conformité signalent la gravité d’un échec de niveau **Avertissement** pour les rapports Configuration Manager.  
 
-   -   **Critique** : les ordinateurs qui ne respectent pas cette règle de conformité signalent la gravité d’un échec de niveau **Critique** pour les rapports Configuration Manager.  
+   -   **Critique**: les ordinateurs qui ne respectent pas cette règle de conformité signalent la gravité d’un échec de niveau **Critique** pour les rapports Configuration Manager.  
 
-   -   **Critique avec événement** : les ordinateurs qui ne respectent pas cette règle de conformité signalent la gravité d’un échec de niveau **Critique** pour les rapports Configuration Manager. Ce niveau de gravité est également enregistré comme un événement Windows dans le journal des événements des applications.  
+   -   **Critique avec événement**: les ordinateurs qui ne respectent pas cette règle de conformité signalent la gravité d’un échec de niveau **Critique** pour les rapports Configuration Manager. Ce niveau de gravité est également enregistré comme un événement Windows dans le journal des événements des applications.  
 
 5. Dans la page **Profil Wi-Fi**, indiquez le nom qui sera affiché sur les appareils comme nom de réseau.  
 
@@ -78,9 +79,9 @@ La section relative à la [création de profils Wi-Fi pour les appareils mobile
    > [!IMPORTANT]
    >  Si vous créez un profil Wi-Fi pour la gestion des appareils mobiles locale, la branche CB (Current Branch) de Configuration Manager prend uniquement en charge les configurations de sécurité Wi-Fi suivantes :  
    > 
-   >  Type de sécurité **WPA2 Entreprise** ou **WPA2 personnel**  
-   > Type de chiffrement **AES** ou **TKIP**  
-   > Type EAP : **Carte à puce ou autre certificat** ou **PEAP**  
+   >  Types de sécurité : **WPA2-Entreprise** ou **WPA2-Personnel**  
+   > Types de chiffrement : **AES** ou **TKIP**  
+   > Types EAP : **Carte à puce ou autre certificat** ou **PEAP**  
    > 
    > Pour les appareils Android, les types de sécurité **WPA - Personnel**, **WPA2 - Personnel** et **WEP** ne sont pas pris en charge.  
 
@@ -102,14 +103,14 @@ La section relative à la [création de profils Wi-Fi pour les appareils mobile
 13. **Pour les appareils iOS uniquement:**  
     configurez les informations pour tous les certificats qui sont requis pour la connexion Wi-Fi. Vous devez configurer le certificat client et le nom du certificat de serveur approuvé ou le certificat racine comme suit :  
 
-    - **Noms de certificat de serveur approuvé** : si le serveur auquel se connecte l’appareil utilise un certificat d’authentification de serveur pour identifier le serveur et sécuriser le canal de communication, entrez le ou les noms sous le nom d’objet de ce certificat ou l’autre nom d’objet de ce certificat. Le ou les noms sont généralement le nom de domaine complet du serveur. Par exemple, si le certificat de serveur est identifié par le nom commun srv1.contoso.com dans l'objet du certificat, entrez **srv1.contoso.com**. Si le certificat de serveur est identifié par plusieurs noms spécifiés dans l'autre nom d'objet, entrez chaque nom, séparé par un point-virgule.  
+    - **Noms de certificat de serveur approuvé**: si le serveur auquel se connecte l’appareil utilise un certificat d’authentification de serveur pour identifier le serveur et sécuriser le canal de communication, entrez le ou les noms sous le nom d’objet de ce certificat ou l’autre nom d’objet de ce certificat. Le ou les noms sont généralement le nom de domaine complet du serveur. Par exemple, si le certificat de serveur est identifié par le nom commun srv1.contoso.com dans l'objet du certificat, entrez **srv1.contoso.com**. Si le certificat de serveur est identifié par plusieurs noms spécifiés dans l'autre nom d'objet, entrez chaque nom, séparé par un point-virgule.  
 
       > [!TIP]  
       >  Si le certificat client sélectionné pour le protocole EAP ou pour l'authentification client d'un appareil iOS est utilisé à des fins d'authentification sur un serveur RADIUS, tel qu'un serveur exécutant NPS, l'autre nom de l'objet doit être défini sur le nom d'utilisateur principal.  
 
-    - **Sélectionner les certificats racines pour la validation du serveur** : si le serveur auquel se connecte l'appareil utilise un certificat d'authentification de serveur non approuvé par l'appareil, sélectionnez un profil de certificat contenant le certificat racine pour le certificat de serveur pour créer une chaîne de certificats de confiance sur l'appareil.  
+    - **Sélectionner des certificats racines pour la validation du serveur**: si le serveur auquel se connecte l’appareil utilise un certificat d’authentification de serveur non approuvé par l’appareil, sélectionnez le profil de certificat qui contient le certificat racine pour le certificat de serveur pour créer une chaîne de certificats de confiance sur l’appareil.  
 
-    - **Sélectionner un certificat client pour l'authentification du client** : si le serveur ou l'appareil réseau requiert un certificat client pour authentifier l'appareil de connexion, sélectionnez le profil de certificat qui contient le certificat d'authentification du client.  
+    - **Sélectionner un certificat client pour l'authentification du client**: si le serveur ou l'appareil réseau requiert un certificat client pour authentifier l'appareil de connexion, sélectionnez le profil de certificat qui contient le certificat d'authentification du client.  
 
       > [!NOTE]  
       >  Pour pouvoir sélectionner le certificat racine et le certificat client, vous devez tout d'abord les configurer et les déployer comme un profil de certificat. Pour plus d’informations sur les profils de certificat, consultez [Profils de certificat dans System Center Configuration Manager](introduction-to-certificate-profiles.md).  
