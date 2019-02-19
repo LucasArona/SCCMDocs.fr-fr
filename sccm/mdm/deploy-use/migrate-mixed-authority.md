@@ -11,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: 6f0201d7-5714-4ba0-b2bf-d1acd0203e9a
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7ede0049847eda2b87731f4cfbce0bda8984f158
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: b7f2875852b49ab8af9b1f34c4747f12a6620896
+ms.sourcegitcommit: fd16fc2b681608fd6def5bad2cedffbcd1f2423a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56120246"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56405673"
 ---
 # <a name="change-the-mdm-authority-for-specific-users-mixed-mdm-authority"></a>Changer l’autorité MDM pour des utilisateurs spécifiques (autorité MDM mixte) 
 
@@ -140,17 +140,7 @@ Après avoir vérifié que la version autonome d’Intune fonctionne comme prév
 
 ## <a name="migrate-devices-without-user-affinity"></a>Migrer des appareils sans affinité utilisateur
 
-Les appareils inscrits à l’aide d’un gestionnaire d’inscription d’appareil et les appareils sans [affinité utilisateur](/sccm/mdm/deploy-use/user-affinity-for-hybrid-managed-devices) ne migrent pas automatiquement vers la nouvelle autorité de gestion des appareils mobiles. Vous pouvez utiliser la cmdlet PowerShell *Switch-MdmDeviceAuthority* pour basculer entre les autorités de gestion Intune et Configuration Manager dans les scénarios suivants : 
-
--   Scénario 1 : Utilisez le *Switch-MdmDeviceAuthority* pour migrer les appareils sélectionnés et valider qu’ils peuvent être gérés à l’aide d’Intune dans Azure. Puis, lorsque vous êtes prêt, [faites passer l’autorité de gestion des appareils mobiles à Intune pour le locataire](migrate-change-mdm-authority.md) afin de terminer la migration des appareils.  
-
--   Scénario 2 : Lorsque vous êtes prêt à modifier l’autorité de gestion des appareils mobiles à Intune pour le client, procédez comme suit pour migrer vos appareils sans affinité utilisateur :  
-
-    - Utilisez la cmdlet pour changer l’autorité MDM pour vos appareils sans affinité utilisateur avant [d’utiliser Intune comme autorité MDM pour le locataire](migrate-change-mdm-authority.md).     
-
-    - Contactez le support technique pour commuter les appareils sans affinité utilisateur après avoir choisi d’utiliser Intune comme autorité MDM pour le locataire.  
-
-Pour changer l’autorité de gestion pour ces appareils MDM, vous pouvez utiliser la cmdlet *Switch-MdmDeviceAuthority* pour basculer entre les autorités de gestion Intune et Configuration Manager. 
+Pour migrer des appareils individuels formulaire Configuration Manager vers Intune qui ont été inscrits sans affinité utilisateur, utilisez l’applet de commande Switch-MdmDeviceAuthority PowerShell.  Une fois la migration des appareils sélectionnés à l’aide de l’applet de commande, valider dans Intune dans Azure qui s’est produite lors de la migration en tant que prévu pour les appareils sélectionnés. Puis, lorsque vous êtes prêt, vous pouvez changer l’autorité MDM sur Intune pour le client effectuer la migration pour tous les appareils restants que Configuration Manager comme leur autorité de gestion des appareils mobiles.
 
 ### <a name="cmdlet-switch-mdmdeviceauthority"></a>Cmdlet *Switch-MdmDeviceAuthority*
 
