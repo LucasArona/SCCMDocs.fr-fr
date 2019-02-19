@@ -10,16 +10,17 @@ ms.assetid: c28e3492-851a-40fc-ba13-67ebc2d8b41a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a038377e4b29852157fd0d92836f26f1b5e18433
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b59ff47ace87e4c7e8a345402616de44342ea9c1
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344141"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56121411"
 ---
 # <a name="operations-for-migrating-to-system-center-configuration-manager"></a>Opérations de migration vers System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Pour la migration dans System Center Configuration Manager, vous pouvez migrer des données et des clients une fois que vous avez collecté des données à partir d’un site source dans une hiérarchie source prise en charge. Utilisez les informations des sections suivantes pour créer et exécuter des tâches de migration pour migrer des données et des clients, puis terminer le processus de migration.  
 

@@ -10,12 +10,13 @@ ms.assetid: 25e4ac68-0e78-4bbe-b8fc-3898b372c4e8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 974ecfdf30dd24e6addad91588fce5d223f27b1c
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 5a8c3ee0a9d524a640ab8439ee83f8df269f07c7
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53423743"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56131759"
 ---
 # <a name="create-a-task-sequence-to-capture-an-operating-system-in-system-center-configuration-manager"></a>Créer une séquence de tâches pour capturer un système d’exploitation dans System Center Configuration Manager
 
@@ -75,7 +76,7 @@ Quand vous utilisez une séquence de tâches pour déployer un système d’expl
 
    -   **Clé du produit** : spécifiez la clé de produit pour le système d'exploitation Windows à installer. Vous pouvez spécifier des clés de licence en volume codées et des clés de produit standard. Si vous utilisez une clé de produit non codée, chaque groupe de 5 caractères doit être séparé par un tiret (-). Par exemple : *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*  
 
-   -   **Mode de licence serveur** : indiquez que la licence serveur est **Par poste**, **Par serveur** ou qu’aucune licence n’est spécifiée. Si la licence serveur est **Par serveur**, spécifiez également le nombre maximal de connexions au serveur.  
+   -   **Mode de licence serveur** : Indiquez que la licence serveur est **Par poste**, **Par serveur** ou qu’aucune licence n’est spécifiée. Si la licence serveur est **Par serveur**, spécifiez également le nombre maximal de connexions au serveur.  
 
    -   Spécifiez comment gérer le compte administrateur qui est utilisé lors du déploiement du système d'exploitation.  
 

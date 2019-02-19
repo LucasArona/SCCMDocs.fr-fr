@@ -8,16 +8,17 @@ ms.assetid: 32609a30-465c-4406-b227-aca5c276e015
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ac9178c5962b778aa4464d1d6ff8b901429ba77e
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 1cabd75b26f282c737d80e831a735984580c6fe5
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32338089"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56122897"
 ---
 # <a name="start-using-system-center-configuration-manager"></a>Commencer à utiliser System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Une fois que vous avez planifié votre topologie de site et de hiérarchie System Center Configuration Manager et que vous êtes prêt à installer ou à mettre à niveau des sites, utilisez les informations fournies dans les rubriques suivantes :  
 

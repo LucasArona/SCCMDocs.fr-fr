@@ -10,16 +10,17 @@ ms.assetid: 5f38b726-dc00-433a-ba05-5b7dbb0d8e99
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f24760e11dd3972c43600225eec405523988696c
-ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 5f665ea8315266e89e5ed94918823fc1b97becea
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411058"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56136430"
 ---
 # <a name="security-and-privacy-for-content-management-in-configuration-manager"></a>Sécurité et confidentialité pour la gestion de contenu dans Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Cet article contient des informations de sécurité et de confidentialité pour la gestion de contenu dans Configuration Manager. 
 

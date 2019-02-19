@@ -10,16 +10,17 @@ ms.assetid: 6f0e08f8-f2e1-4823-90f6-7b1f4341eb46
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ef51a1193e6227bfb6738f1a550128bbba983773
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: eebd1aaf72cbd7932a919c0a8ffdef6d6af8389f
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385850"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56132014"
 ---
 # <a name="site-failure-impacts-in-configuration-manager"></a>Impacts des défaillances du site dans Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Le serveur de site et les autres systèmes de site peuvent échouer et entraîner une perte des services qu’ils fournissent régulièrement. Si vous installez plusieurs systèmes de site sur le même ordinateur et si cet ordinateur échoue, tous les services normalement dispensés par ces systèmes de site ne sont plus disponibles.
 

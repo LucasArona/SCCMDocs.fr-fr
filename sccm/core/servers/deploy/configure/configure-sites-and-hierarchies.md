@@ -10,16 +10,17 @@ ms.assetid: 9efb4061-f642-48bd-8332-3357ff5b3118
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 051958c5fa524c97de0e42784cdab73288a24b82
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: f9b56f408dc76b3b9bf48fbdab64a50eed14f0f2
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383709"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56133610"
 ---
 # <a name="configure-sites-and-hierarchies-for-configuration-manager"></a>Configurer des sites et des hiérarchies pour Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Après avoir installé votre premier site Configuration Manager ou ajouté des sites supplémentaires à votre hiérarchie, utilisez la liste de vérification suivante relative aux configurations les plus courantes qui affectent les sites et les hiérarchies.  
 

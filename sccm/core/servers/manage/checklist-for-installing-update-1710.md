@@ -10,12 +10,13 @@ ms.assetid: 7e8ab8ca-41ef-467a-943b-a115d88cafe0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 91c16c556914a6edd97fbe2d00c469ea51173680
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 188d2ffdb3ad6f908a0ea25a6966bd0dcf5db807
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53419306"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56122999"
 ---
 # <a name="checklist-for-installing-update-1710-for-system-center-configuration-manager"></a>Liste de contrôle pour l’installation de la mise à jour 1710 pour System Center Configuration Manager
 
@@ -71,7 +72,7 @@ Il s’agit d’une valeur facultative que vous pouvez spécifier pour des raiso
 
 Pour plus d’informations, consultez [Licences et branches pour System Center Configuration Manager](/sccm/core/understand/learn-more-editions).
 
-**Examinez les versions de Microsoft .NET installées sur les serveurs de système de site :**  lorsqu’un site installe cette mise à jour, Configuration Manager installe automatiquement .NET Framework 4.5.2 sur chaque ordinateur hébergeant un des rôles de système de site suivants (si .NET Framework 4.5 ou ultérieur n’est pas déjà installé) :
+**Examinez les versions de Microsoft .NET installées sur les serveurs de système de site :**  Lorsqu’un site installe cette mise à jour, Configuration Manager installe automatiquement le .NET Framework 4.5.2 sur chaque ordinateur hébergeant un des rôles de système de site suivants (si le .NET Framework 4.5 ou ultérieur n’est pas déjà installé) :
 
 -   Point proxy d'inscription
 -   Point d'inscription
@@ -88,7 +89,7 @@ Si vous mettez à jour le site avant de mettre à jour Windows ADK, consultez [M
 
 **Examinez l’état des sites et de la hiérarchie et vérifiez qu’il ne reste aucun problème non résolu :**  Avant de mettre à jour un site, résolvez tous les problèmes de fonctionnement du serveur de site, du serveur de base de données du site et des rôles de système de site installés sur les ordinateurs distants. Une mise à niveau de site peut échouer en raison de l’existence de problèmes opérationnels.
 
-Pour plus d’informations, consultez  [Utiliser des alertes et le système d’état pour System Center Configuration Manager](/sccm/core/servers/manage/use-alerts-and-the-status-system).
+Pour plus d’informations, consultez la page  [Utiliser les alertes et le système d’état pour System Center Configuration Manager](/sccm/core/servers/manage/use-alerts-and-the-status-system).
 
 **Examinez la réplication des fichiers et données entre sites :**   
 vérifiez que la réplication des fichiers et bases de données entre les sites est opérationnelle et active. Des retards ou backlogs dans ces domaines peuvent perturber ou empêcher la mise à jour.
@@ -125,7 +126,7 @@ Pour plus d’informations, consultez  [Tâches de maintenance pour System Cent
 
 **Arrêtez temporairement tous les logiciels antivirus sur les serveurs System Center Configuration Manager :** Avant de mettre à jour un site, assurez-vous que vous avez arrêté les logiciels antivirus sur les serveurs Configuration Manager. <!--SMS.503481--> 
 
-**Créez une sauvegarde de la base de données du site au niveau du site d’administration centrale et des sites principaux :**  Avant de mettre à jour un site, sauvegardez la base de données du site pour être certain de disposer d’une sauvegarde utilisable dans le cadre d’une récupération d’urgence.
+**Créez une sauvegarde de la base de données du site au niveau du site d’administration centrale et des sites principaux :**  Avant de mettre à jour un site, sauvegardez la base de données de site pour être certain de disposer d’une sauvegarde utilisable dans le cadre d’une récupération d’urgence.
 
 Pour plus d’informations, consultez  [Sauvegarde d’un site Configuration Manager](/sccm/protect/understand/backup-and-recovery).
 

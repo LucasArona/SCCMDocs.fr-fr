@@ -10,16 +10,17 @@ ms.assetid: 23ab4f94-7bfe-436e-8a6a-029409a2730c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b8e7477f8a5b837327640f78656070579fad23a8
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b47f2f06af45282349fec60ea9c7288a42c7e845
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335304"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56124511"
 ---
 # <a name="prerequisites-for-asset-intelligence-in-system-center-configuration-manager"></a>Conditions préalables pour Asset Intelligence dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Dans System Center Configuration Manager, Asset Intelligence est soumis à des dépendances externes et à des dépendances au sein du produit.  
 

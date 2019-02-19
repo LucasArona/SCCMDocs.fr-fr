@@ -10,16 +10,17 @@ ms.assetid: 90498b4b-6a9b-43cd-b465-1d6c9a52df1c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 69c2f3620ed618711534366121aa1267efe6a8a5
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e3aa7a1acdd6378e41afe24c869a8ffa898a916b
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32348808"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56122609"
 ---
 # <a name="create-task-sequence-media-with-system-center-configuration-manager"></a>Créer un média de séquence de tâches avec System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Vous pouvez utiliser un média pour capturer une image de système d’exploitation à partir d’un ordinateur de référence ou pour déployer un système d’exploitation sur un ordinateur de destination dans votre environnement System Center Configuration Manager. Le média que vous créez peut être un CD, un ensemble DVD, ou un disque mémoire flash USB.  
 

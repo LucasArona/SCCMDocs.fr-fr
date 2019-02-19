@@ -10,16 +10,17 @@ ms.assetid: 5c975e69-0cc0-4afd-b7fb-b7182162a933
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b216df726ed46c54bcb4778f0f93b2d19f0f9321
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: d7c24692b88571e56c877c8529fe84b7441c6696
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32332931"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56127641"
 ---
 # <a name="how-to-audit-remote-control-usage-in-system-center-configuration-manager"></a>Comment auditer l’utilisation du contrôle à distance dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Vous pouvez utiliser les rapports System Center Configuration Manager pour afficher les informations d’audit du contrôle à distance.  
 

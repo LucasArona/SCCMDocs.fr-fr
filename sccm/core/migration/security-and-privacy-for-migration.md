@@ -10,23 +10,24 @@ ms.assetid: 6893fce1-7ad5-4151-9ba9-3096871e8e4a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8cc6c1cee04e815c8a34f24236333fb927ed44fc
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 277ed98ee4c77acda809affcdc61c56f0eb4c636
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32337905"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56126016"
 ---
 # <a name="security-and-privacy-for-migration-to-system-center-configuration-manager"></a>Sécurité et confidentialité pour la migration vers System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Cette rubrique contient les bonnes pratiques en matière de sécurité et les informations de confidentialité pour la migration vers votre environnement System Center Configuration Manager.  
 
 ## <a name="security-best-practices-for-migration"></a>Meilleures pratiques de sécurité pour la migration  
  Utilisez les meilleures pratiques de sécurité suivantes pour la migration.  
 
-|Bonnes pratiques de sécurité|Plus d'informations|  
+|Bonnes pratiques de sécurité|Informations complémentaires|  
 |----------------------------|----------------------|  
 |Utilisez le compte d'ordinateur pour le compte du fournisseur SMS du site source et le compte SQL Server du site source plutôt qu'un compte d'utilisateur.|Si vous devez utiliser un compte d'utilisateur pour la migration, supprimez les détails du compte une fois la migration terminée.|  
 |Lorsque vous migrez le contenu d'un point de distribution d'un site source vers un point de distribution d'un site de destination, utilisez IPsec.|Bien que le contenu migré soit haché pour détecter la falsification, si les données sont modifiées pendant leur transfert, la migration échoue.|  

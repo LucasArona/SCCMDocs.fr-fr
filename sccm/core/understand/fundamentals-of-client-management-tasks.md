@@ -10,16 +10,17 @@ ms.assetid: 8d4e5641-354e-4439-8b4f-620a760e233d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e517b345340619055b03df22638ec0b491c13d40
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 468d21123e6a4166957b7dcc8cda614a78d2366e
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32339092"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56136396"
 ---
 # <a name="fundamentals-of-client-management-tasks-for-system-center-configuration-manager"></a>Principes de base des tâches de gestion des clients pour System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Après avoir installé les clients System Center Configuration Manager, vous les gérez en exécutant plusieurs tâches.  Certaines tâches sont exécutées à partir de la console Configuration Manager. D’autres sont exécutées à partir de l’application cliente Configuration Manager. L’application cliente Configuration Manager est installée avec le logiciel client Configuration Manager.
 

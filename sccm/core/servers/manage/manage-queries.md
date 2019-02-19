@@ -10,16 +10,17 @@ ms.assetid: e562e2a0-8df8-4952-952f-e8c38461c612
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 9d538106f2cc30a9eca5be51c4174af531bbbda9
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 87b92bb857f6a39a99e3aee1e4bc862904bcc4ef
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32337783"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56126910"
 ---
 # <a name="how-to-manage-queries-in-system-center-configuration-manager"></a>Guide pratique pour gérer les requêtes dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Aidez-vous des informations contenues dans cette rubrique pour gérer les requêtes dans System Center Configuration Manager.  
 
@@ -30,7 +31,7 @@ Aidez-vous des informations contenues dans cette rubrique pour gérer les requê
 
  Utilisez le tableau suivant pour obtenir plus d'informations sur les tâches de gestion qui pourraient nécessiter certaines informations avant de les sélectionner.  
 
-|Tâche de gestion|Détails|Plus d'informations|  
+|Tâche de gestion|Détails|Informations complémentaires|  
 |---------------------|-------------|----------------------|  
 |**Exécuter**|Exécute la requête sélectionnée et affiche les résultats dans la console Configuration Manager.|Aucune information supplémentaire.|  
 |**Installer le client**|Ouvre l’**Assistant Installation du client** qui permet d’installer le client Configuration Manager sur les ordinateurs retournés par la requête sélectionnée.<br /><br /> Cette option n'est pas disponible pour les requêtes qui retournent des appareils mobiles, des utilisateurs ou des groupes d'utilisateurs.|Pour plus d’informations sur la façon d’installer des clients Configuration Manager à l’aide de l’installation push du client, consultez [Guide pratique pour déployer des clients sur des ordinateurs Windows](/sccm/core/clients/deploy/deploy-clients-to-windows-computers).|  

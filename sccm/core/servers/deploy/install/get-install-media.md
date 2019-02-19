@@ -10,16 +10,17 @@ ms.assetid: 76c220b6-1824-4e2e-8c61-a719f0b056f1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 25e0cef11b3524a4337745e7c32593d080fe6640
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 5a8033c148241e597ec7dd32366dbd977d0b51f2
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32337018"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56125066"
 ---
 # <a name="where-to-get-installation-media-for-system-center-configuration-manager"></a>Où trouver le support d’installation pour System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Si vous disposez de licences en volume pour System Center Configuration Manager avec Software Assurance, ou si vous avez acheté des licences pour des licences en volume pour System Center Configuration Manager, vous pouvez télécharger le support source de base pour installer System Center Configuration Manager à partir du [Centre de gestion des licences en volume](https://www.microsoft.com/Licensing/servicecenter/default.aspx).   
 

@@ -10,16 +10,17 @@ ms.assetid: b6b86078-fcc4-46cf-87d6-4b52b914b712
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e04b1d5662bb67ddb14310cd136abd6fdf29855d
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 2becf31d807f0854bf6ab9d4eb58adf84d8ab7e6
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32331826"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56135760"
 ---
 # <a name="create-app-v-virtual-environments-in-system-center-configuration-manager"></a>Créer des environnements virtuels App-V dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Dans un environnement virtuel Microsoft Application Virtualization (App-V) dans System Center Configuration Manager (Configuration Manager), les applications virtuelles déployées peuvent partager le même système de fichiers et le même Registre sur les PC Windows clients. Contrairement aux applications virtuelles conventionnelles, ces applications peuvent partager des données entre elles. Les environnements virtuels sont créés ou modifiés sur les PC clients pendant l’installation de l’application ou ultérieurement quand les clients évaluent les applications installées. Vous pouvez contrôler ces applications de telle sorte que lorsque plusieurs applications essaient de modifier un système de fichiers ou une valeur de Registre, l'application d'ordre le plus élevé est prioritaire.  
 

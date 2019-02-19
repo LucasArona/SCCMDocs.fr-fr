@@ -10,16 +10,17 @@ ms.assetid: 915f866e-7559-4c9c-aee2-f9ca92e637b3
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 87d9209624441d571bf01e56717134115540b3fb
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 55960af3afb3d1b7ba6cf8960923b1d9a16359f7
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32331996"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56135566"
 ---
 # <a name="common-tasks-for-managing-compliance-with-system-center-configuration-manager"></a>Tâches courantes pour gérer la compatibilité avec System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Cette section décrit quelques scénarios courants qui vous aideront à vous familiariser avec l’utilisation des paramètres de compatibilité dans System Center Configuration Manager.  
 

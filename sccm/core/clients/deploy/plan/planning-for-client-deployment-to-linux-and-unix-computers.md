@@ -10,12 +10,13 @@ ms.assetid: 44153689-70e8-42ad-9ae8-17ae35f6a2e3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d9d9fd940c21e0fc8d20c86c51cb3443f21a9339
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 60811ad0556be4d59caab346d20fbb2c40024206
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53419446"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56128236"
 ---
 # <a name="planning-for-client-deployment-to-linux-and-unix-computers-in-system-center-configuration-manager"></a>Planification du déploiement de clients sur des ordinateurs Linux et UNIX dans System Center Configuration Manager
 
@@ -124,7 +125,7 @@ Vous pouvez installer le client System Center Configuration Manager sur des ordi
 |Package requis|Description|Version minimale|  
 |----------------------|-----------------|---------------------|  
 |glibc-2,4-31,30|Bibliothèque standard partagée C|2.4-31.30|  
-|OpenSSL|Bibliothèque OpenSSL, protocole de communication réseau sécurisé|0.9.8a-18.15|  
+|Openssl|Bibliothèque OpenSSL, protocole de communication réseau sécurisé|0.9.8a-18.15|  
 |PAM|Modules d'authentification enfichables|0.99.6.3-28.8|  
 
  **SUSE Linux Enterprise Server 11 (i586)**  

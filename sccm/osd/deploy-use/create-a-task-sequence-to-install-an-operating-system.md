@@ -10,12 +10,13 @@ ms.assetid: 217c8a0e-5112-420e-a325-2a6d75326290
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 604cf10c660cd1f26513a6a34b370d380635504b
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 4c18d6320397281156e39624ea8dc50e6d0539ed
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53421074"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56139906"
 ---
 # <a name="create-a-task-sequence-to-install-an-operating-system-in-system-center-configuration-manager"></a>Créer une séquence de tâches pour installer un système d’exploitation dans System Center Configuration Manager
 
@@ -117,7 +118,7 @@ Dans System Center Configuration Manager, utilisez des séquences de tâches pou
 > [!IMPORTANT]  
 >  Vous devez toujours utiliser l'Assistant Création d'une séquence de tâches pour créer cette séquence de tâches.  
 
- Lorsque vous utilisez l'Assistant Création d'une séquence de tâches pour créer cette nouvelle séquence de tâches, certains noms d'étapes de séquence de tâches sont différents des noms indiqués dans le cadre d'un ajout manuel de ces étapes de séquence de tâches à une séquence de tâches existante. Le tableau suivant présente les différences de dénomination :  
+ Lorsque vous utilisez l'Assistant Création d'une séquence de tâches pour créer cette nouvelle séquence de tâches, certains noms d'étapes de séquence de tâches sont différents des noms indiqués dans le cadre d'un ajout manuel de ces étapes de séquence de tâches à une séquence de tâches existante. Le tableau suivant présente les différences de dénomination :  
 
 |Nom de l'étape de séquence de tâches de l'Assistant Création d'une séquence de tâches|Nom équivalent de l'étape dans l'Éditeur de séquence de tâches|  
 |---------------------------------------------------------|-----------------------------------------------|  

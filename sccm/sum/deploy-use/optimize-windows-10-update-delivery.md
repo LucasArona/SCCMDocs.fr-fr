@@ -10,16 +10,17 @@ ms.assetid: b670cfaf-96a4-4fcb-9caa-0f2e8c2c6198
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6fb655ae6094d7c764f2c3d0b84a505e9dfda3d2
-ms.sourcegitcommit: 9f02f21fbd4324ee8cc1af2d56db67c9c2fce969
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 92ac9cbfd8b4c68a818a3988c0ce1f3ec26a2215
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52709931"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56139168"
 ---
 # <a name="optimize-windows-10-update-delivery-with-configuration-manager"></a>Optimiser la distribution de Windows Update pour Windows 10 avec Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (current branch)*
 
 Pour la plupart des clients, suivre le rythme des mises à jour mensuelles de Windows 10 implique en premier lieu une bonne stratégie de distribution de contenu avec Configuration Manager. L’ampleur de ces mises à jour qualité peut constituer une source de préoccupation pour les grandes organisations. Il existe des technologies conçues pour réduire la bande passante et la charge réseau afin d’optimiser la distribution des mises à jour. Cet article décrit ces technologies, les compare et donne des recommandations pour vous aider à choisir.  
  

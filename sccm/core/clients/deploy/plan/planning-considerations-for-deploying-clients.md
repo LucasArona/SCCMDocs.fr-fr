@@ -10,16 +10,17 @@ ms.assetid: 518f9882-ce71-48c3-9f47-cd968cfb658d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cd5488f6ed1a52b35197fa7ef0eb775eafd33e01
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 63a3025411f8c355b4070937f4f29814346f16f4
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32331731"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56156659"
 ---
 # <a name="planning-considerations-for-deploying-clients-in-system-center-configuration-manager"></a>Éléments à prendre en considération au moment de planifier le déploiement de clients dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Avant d’installer des clients sur les ordinateurs, serveurs et autres appareils dans System Center Configuration Manager, vous devez appréhender la manière de déployer le logiciel client et préparer l’infrastructure Configuration Manager en conséquence.  
 

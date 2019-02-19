@@ -10,12 +10,13 @@ ms.assetid: c631197d-7daa-4faa-9e22-980cd6d604c2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 828edc3c90b4dd93f4d86772b863816bbc8c9130
-ms.sourcegitcommit: 013ca76d5a3c07306de7b5bfd985b0289d1be599
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 5942f60ea15ad83f5debdf8dd3d53e72770744c6
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55482416"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56122863"
 ---
 # <a name="support-center-for-configuration-manager"></a>Centre d’aide et de support pour Configuration Manager
 

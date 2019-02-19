@@ -10,16 +10,17 @@ ms.assetid: 8da2887a-fd8e-438c-b926-849c121f7fdf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3c1b813104f2c43ee4c0d7d519e02bb880433b3b
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 34e0ae19fc7bb3680a148fd5e4ac52feb294963f
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32338820"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56121309"
 ---
 # <a name="manage-the-long-term-servicing-branch-of-configuration-manager"></a>Gérer Long-Term Servicing Branch dans Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Long-Term Servicing Branch)*
+*S’applique à : System Center Configuration Manager (Long-Term Servicing Branch)*
 
 Lorsque vous utilisez Long-Term Servicing Branch (LTSB) dans System Center Configuration Manager, les éléments suivants peuvent vous aider à comprendre les importantes modifications qui affectent la façon dont vous gérez votre infrastructure.
 

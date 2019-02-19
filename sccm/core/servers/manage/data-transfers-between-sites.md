@@ -10,16 +10,17 @@ ms.assetid: dc526e8d-fac3-4bb5-b206-03ad29b0ae11
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 45fb1bc31a7e888ca4caa21a710e74ec0fde422c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 39ae7c931b2d69199dc2c24cbb1bf9ae804a04b4
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32341865"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56123186"
 ---
 # <a name="data-transfers-between-sites-in-system-center-configuration-manager"></a>Transfert de données entre sites dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager utilise la **réplication basée sur les fichiers** et la **réplication de base de données** pour transférer différents types d’informations entre les sites. Découvrez comment Configuration Manager déplace les données entre les sites et comment vous pouvez gérer le transfert des données sur votre réseau.  
 

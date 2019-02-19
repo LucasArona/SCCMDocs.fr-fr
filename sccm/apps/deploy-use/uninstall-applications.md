@@ -10,16 +10,17 @@ ms.assetid: 0ea3edaa-27c6-4391-9896-cd97d9c5d06d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e5b0ee5cb677cff5e57f24a20122fb017aea056c
-ms.sourcegitcommit: 493cc42f05b9388ef872e466e5a75d569642b9fc
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: c0626b94d4ffe97b34a6c8376d6ebaa621d91d44
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34569661"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56142066"
 ---
 # <a name="uninstall-applications-with-system-center-configuration-manager"></a>Désinstaller des applications avec System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 
 Effectuez les actions suivantes pour désinstaller une application que vous avez déjà déployée.

@@ -10,16 +10,17 @@ ms.assetid: 999b5409-7e72-48d2-8554-4d44427ce383
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4f7ec06d5bd5f23ac2b8afa2a288dfb8c971f950
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 9ebe239687489ce14cd77c23b59ec5f01c2e6609
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32346795"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56128117"
 ---
 # <a name="use-bootable-media-to-deploy-windows-over-the-network-with-system-center-configuration-manager"></a>Utiliser un média de démarrage pour déployer Windows sur le réseau avec System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Vous pouvez déployer le système d’exploitation au démarrage de l’ordinateur de destination avec un déploiement de média de démarrage. Le média contient un pointeur vers la séquence de tâches, l’image de système d’exploitation et les autres contenus requis à partir du réseau. Lorsque l’ordinateur de destination démarre, il récupère les éléments référencés dans le pointeur. Avec le média de démarrage vide de contenu, vous pouvez mettre à jour la cible sans avoir à la remplacer sur le média.
 

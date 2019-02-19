@@ -10,16 +10,17 @@ ms.assetid: 64f9d931-33f1-456f-a4e4-0ec077465bd0
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 87ed3a0591107695a1f418b38f2e3f5cb9168c63
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: f24873410feebd8a7c96cc588c63f84314e26b96
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32337589"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56121037"
 ---
 # <a name="best-practices-for-reporting-in-system-center-configuration-manager"></a>Pratiques recommandées pour la création de rapports dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Utilisez les bonnes pratiques suivantes pour les rapports dans System Center Configuration Manager :  
 

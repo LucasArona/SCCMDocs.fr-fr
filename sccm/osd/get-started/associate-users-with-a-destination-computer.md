@@ -10,16 +10,17 @@ ms.assetid: 07c3c6d9-f056-4c4d-bc70-ede5ca933807
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 325b571adbcb2750eaa0b3a856dda753c43634f0
-ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: bb271aa0ea5733e956d7ba244374af9437db3d6c
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42755898"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56131878"
 ---
 # <a name="associate-users-with-a-destination-computer-in-configuration-manager"></a>Associer des utilisateurs à un ordinateur de destination dans Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
  Lorsque vous utilisez Configuration Manager pour déployer des systèmes d'exploitation, vous pouvez associer des utilisateurs à l'ordinateur de destination. Cette option fonctionne qu’un seul ou plusieurs utilisateurs soient les principaux utilisateurs de l'ordinateur de destination.  
 
@@ -34,7 +35,7 @@ ms.locfileid: "42755898"
 
  Ajoutez la variable **SMSTSAssignUsersMode** au début de votre séquence de tâches en suivant l’étape [Définir la variable de séquence de tâches](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable). Cette variable spécifie comment la séquence de tâches gère les informations utilisateur.
 
- Pour plus d’informations, consultez [Variables de séquence de tâches](/sccm/osd/understand/task-sequence-variables#SMSTSAssignUsersMode).
+ Pour plus d’informations, voir [Variables de séquence de tâches](/sccm/osd/understand/task-sequence-variables#SMSTSAssignUsersMode).
 
 
 ### <a name="create-a-prestart-command-that-gathers-the-user-information"></a>Créer une commande de prédémarrage qui collecte les informations utilisateur
@@ -43,7 +44,7 @@ ms.locfileid: "42755898"
 
  Cette commande de prédémarrage doit définir la variable **SMSTSUDAUsers** qui est utilisée lors de l'exécution de la séquence de tâches. Cette variable peut être définie sur un ordinateur, un regroupement ou une variable de séquence de tâches.
 
- Pour plus d’informations, consultez [Variables de séquence de tâches](/sccm/osd/understand/task-sequence-variables#SMSTSUDAUsers).
+ Pour plus d’informations, voir [Variables de séquence de tâches](/sccm/osd/understand/task-sequence-variables#SMSTSUDAUsers).
 
 
 ### <a name="configure-how-distribution-points-and-media-associate-the-user-with-the-destination-computer"></a>Configurer comment les points de distribution et les médias associent l'utilisateur à l'ordinateur de destination

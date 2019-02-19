@@ -10,12 +10,13 @@ ms.assetid: bd3df04a-902f-4e91-89eb-5584b47d9efa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bd1181bd14779a6ac659927979185aa174203206
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 7dd789f03d5547bdc695370ac28c7f9b81219e58
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53420173"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56128219"
 ---
 # <a name="task-sequence-steps-to-manage-bios-to-uefi-conversion"></a>Étapes de séquence de tâches pour gérer la conversion du BIOS en UEFI
 Windows 10 fournit de nombreuses nouvelles fonctionnalités de sécurité qui requièrent des appareils compatibles UEFI. Certains PC Windows modernes prennent en charge UEFI tout en utilisant un BIOS hérité. Pour convertir un appareil en UEFI, vous devez repartitionner le disque dur et reconfigurer le microprogramme de chaque PC. À l’aide des séquences de tâches de Configuration Manager, vous pouvez préparer un disque dur en vue de conversion du BIOS en UEFI, convertir du BIOS en UEFI dans le cadre de la mise à niveau sur place et collecter des informations UEFI dans le cadre de l’inventaire matériel.

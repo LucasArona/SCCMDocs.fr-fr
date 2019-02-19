@@ -10,12 +10,13 @@ ms.assetid: f86559de-092a-4ce8-9b43-5d7530e0b763
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0e3b6e1ab2962cec7891501ec6b19f081631e187
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 1f6b346b9b3737e29268de67f65bbf1b96a670e5
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53421125"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56132521"
 ---
 # <a name="how-to-configure-software-inventory-in-system-center-configuration-manager"></a>Guide pratique pour configurer l’inventaire logiciel dans System Center Configuration Manager
 

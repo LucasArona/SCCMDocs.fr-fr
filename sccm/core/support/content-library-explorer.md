@@ -10,16 +10,17 @@ ms.assetid: 691896d9-ec0f-461f-a3f2-40378ebd3121
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7950447776c5c2dd756d6632a65d74d91adfba01
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b9fb8c5c189407fdc6fc742ebcd0b7d9730d4289
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385810"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56142202"
 ---
 # <a name="content-library-explorer"></a>Content Library Explorer
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Content Library Explorer fait partie des [outils de Configuration Manager](/sccm/core/support/tools). Utilisez l’outil pour les activités suivantes :  
 
@@ -35,7 +36,7 @@ Content Library Explorer fait partie des [outils de Configuration Manager](/sccm
 
 
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>spécifications
 
 - Exécutez l’outil en utilisant un compte qui dispose d’un accès administrateur au :  
 
@@ -70,7 +71,7 @@ Lorsque vous démarrez **ContentLibraryExplorer.exe**, entrez le nom de domaine 
 Dans le volet gauche, affichez les packages qui sont distribués sur ce point de distribution. Développez les packages et explorez leur structure de dossiers. Cette structure correspond à la structure de dossiers à partir de laquelle vous avez créé le package.
 
 Lorsque vous sélectionnez un dossier, l’outil affiche tous les fichiers du dossier dans le volet droit. Cette vue comprend les informations suivantes : 
-- Nom du fichier
+- Nom de fichier
 - Taille du fichier
 - Lecteur sur lequel il se trouve
 - Autres packages qui utilisent le même fichier sur le lecteur

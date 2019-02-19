@@ -10,16 +10,17 @@ ms.assetid: 0e9f0fbd-e442-4509-a021-bfdedf2d04dd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 379fa3637d1634caf4797b1f1b7029e3531158cc
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 209e09ba11de851a1275211364af3cee930737d0
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43893523"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56131538"
 ---
 # <a name="configuration-options-for-site-system-roles-in-configuration-manager"></a>Options de configuration pour les rôles de système de site dans Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 La plupart des options de configuration pour les rôles de système de site Configuration Manager sont explicites ou décrites dans l’Assistant ou des boîtes de dialogue lors de la configuration. Les sections suivantes expliquent les rôles de système de site dont les paramètres peuvent nécessiter des informations supplémentaires.  
 
@@ -28,7 +29,7 @@ La plupart des options de configuration pour les rôles de système de site Conf
 ##  <a name="BKMK_ApplicationCatalog_Website"></a> Point du site web du catalogue des applications  
 
 > [!Note]  
-> À compter de la version 1806, le point du site Web du catalogue des applications n’est plus *requis*, mais il est toujours *pris en charge*. Pour plus d'informations, consultez [Configurer le Centre logiciel](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex).  
+> À compter de la version 1806, le point du site Web du catalogue des applications n’est plus *requis*, mais il est toujours *pris en charge*. Pour plus d’informations, consultez [Configurer le Centre logiciel](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex).  
 > 
 > L’**expérience utilisateur Silverlight** pour le point du site web du catalogue des applications n’est plus prise en charge. Pour plus d’informations, consultez [Fonctionnalités supprimées et déconseillées](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
 
@@ -83,7 +84,7 @@ La plupart des options de configuration pour les rôles de système de site Conf
  Sélectionnez cette option pour permettre à Configuration Manager d’installer et de configurer IIS sur le système de site s’il n’est pas déjà installé. IIS doit être installé sur tous les points de distribution, et vous devez sélectionner ce paramètre pour continuer dans l'Assistant.  
 
  #### <a name="site-system-installation-account"></a>Compte d'installation du système de site
- Pour les points de distribution qui sont installés sur un serveur de site, seul le compte d'ordinateur du serveur du site est pris en charge pour être utilisé comme compte d'installation de système de site. Pour plus d’informations, consultez [Comptes](/sccm/core/plan-design/hierarchy/accounts#site-system-installation-account).  
+ Pour les points de distribution qui sont installés sur un serveur de site, seul le compte d'ordinateur du serveur du site est pris en charge pour être utilisé comme compte d'installation de système de site. Pour plus d’informations, voir [Comptes](/sccm/core/plan-design/hierarchy/accounts#site-system-installation-account).  
 
  #### <a name="create-a-self-signed-certificate-or-import-a-pki-client-certificate"></a>Créer un certificat auto-signé ou importer un certificat client PKI
  Ce certificat a deux objectifs :  

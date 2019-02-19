@@ -10,16 +10,17 @@ ms.assetid: 45a10878-ff48-4318-9c6d-c014b38a4039
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: de769a24b44c5ab5e28035e96fef341aecd78006
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: c56d9a17e48ff62dfae9b54b84909f1eebb3ccd0
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32332982"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56129729"
 ---
 # <a name="supported-configurations-for-system-center-configuration-manager"></a>Configurations prises en charge pour System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Comme solution locale, System Center Configuration Manager utilise vos serveurs, clients, configurations réseau et autres produits tels que Microsoft Intune, SQL Server et Azure.
 

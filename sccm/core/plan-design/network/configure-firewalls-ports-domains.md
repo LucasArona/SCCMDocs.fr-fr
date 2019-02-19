@@ -10,16 +10,17 @@ ms.assetid: d6993bba-f6bd-4639-adbf-efc1c638b2f3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 43c63ff85b86dd95a5eda2998a21b9b52f12b126
-ms.sourcegitcommit: 06d490d526070e17d77e86bc6c200899ded911cb
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 1cc3a1532a326019db3517c70723831f309be76b
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38967121"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56127131"
 ---
 # <a name="set-up-firewalls-ports-and-domains-for-system-center-configuration-manager"></a>Configurer les pare-feu, les ports et les domaines pour System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Pour préparer votre réseau à prendre en charge System Center Configuration Manager, prévoyez de configurer l’infrastructure, notamment les pare-feu, pour autoriser les communications Configuration Manager.  
 

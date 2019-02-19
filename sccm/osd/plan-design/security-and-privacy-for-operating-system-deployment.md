@@ -10,16 +10,17 @@ ms.assetid: 5ee5928f-3d72-4b00-8156-1e0d1030a96c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0e2bb7992854f8743efa45f924e3d3d0718a3efe
-ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 8ad92f3857c1303bf3f4a7c171b0de98f75e56ee
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411389"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56135168"
 ---
 # <a name="security-and-privacy-for-os-deployment-in-configuration-manager"></a>Sécurité et confidentialité pour le déploiement de système d’exploitation dans Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Cet article contient des informations de sécurité et de confidentialité pour la fonctionnalité de déploiement de système d’exploitation dans Configuration Manager.  
 

@@ -10,12 +10,13 @@ ms.assetid: 6c64f276-b88c-4b1e-8073-331876a03038
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 804b21733422bd654764f2199fe33d184d54cce4
-ms.sourcegitcommit: d021f82e4bc35a8e9b5d291bf779ce52b4f47eb8
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: bedaeed065121e18089cb6b1847397ba5cfdb35a
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656473"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56128753"
 ---
 # <a name="prepare-windows-pe-peer-cache-to-reduce-wan-traffic-in-system-center-configuration-manager"></a>Préparer le cache d’homologue Windows PE pour réduire le trafic WAN dans System Center Configuration Manager
 
@@ -63,9 +64,9 @@ Pour savoir comment gérer le cache d’homologue, consultez les sections suivan
 
 -   Le client Configuration Manager doit pouvoir communiquer via les ports suivants sur votre réseau :  
 
-    -   Port pour la diffusion réseau initiale, pour rechercher une source de mise en cache d’homologue. Par défaut, il s’agit du port 8004.  
+    -   Port pour la diffusion réseau initiale, pour rechercher une source de mise en cache d’homologue. Par défaut, il s’agit du port 8004.  
 
-    -   Port pour le téléchargement de contenu à partir d’une source de mise en cache d’homologue (HTTP et HTTPS). Par défaut, il s’agit du port 8003.  
+    -   Port pour le téléchargement de contenu à partir d’une source de mise en cache d’homologue (HTTP et HTTPS). Par défaut, il s’agit du port 8003.  
 
         > [!TIP]  
         >  Les clients utilisent le protocole HTTPS pour télécharger le contenu quand il est disponible. Toutefois, le même numéro de port est utilisé pour HTTP ou HTTPS.  

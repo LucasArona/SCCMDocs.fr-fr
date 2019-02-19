@@ -10,16 +10,17 @@ ms.assetid: ca4886d4-7173-46be-8dcd-1657d5b0deb9
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 8b81efc7f31339bd7b19530ef603855f0ee8fad6
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 495d109d73a32617f58383b78d11a10bf05edf75
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32343903"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56134535"
 ---
 #  <a name="service-windows-for-site-servers"></a>Fenêtres de maintenance pour les serveurs de site
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Vous pouvez configurer les fenêtres de maintenance sur les sites d’administration centrale et les sites principaux pour contrôler l’installation des mises à jour dans la console.  Vous pouvez configurer plusieurs fenêtres, avec la fenêtre autorisée pour l’installation des mises à jour déterminée par une combinaison de toutes les fenêtres de maintenance pour ce serveur de site.
 

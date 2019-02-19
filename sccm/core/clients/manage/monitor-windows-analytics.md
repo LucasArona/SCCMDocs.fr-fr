@@ -10,16 +10,17 @@ ms.assetid: CF35CE87-3BA8-4A84-9BC8-ABCEA4666212
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8405a212f9e4cd845ac7591767eb27e5425f404e
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 194a26a4fee7a8a7c97a91db4b579c9db03c1787
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43893649"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56129780"
 ---
 # <a name="use-windows-analytics-with-configuration-manager"></a>Utiliser Windows Analytics avec Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 [Windows Analytics](https://docs.microsoft.com/windows/deployment/update/windows-analytics-overview) est un ensemble de solutions qui vous permettent d’obtenir des insights sur l’état actuel de votre environnement. Les appareils Windows dans votre environnement envoient des données à Microsoft. Vous pouvez accéder à ces données et les analyser par le biais de ces solutions. Par exemple, connectez [Upgrade Readiness](/sccm/core/clients/manage/upgrade-readiness) à Configuration Manager pour accéder directement aux données dans l’espace de travail **Surveillance** de la console Configuration Manager.
 

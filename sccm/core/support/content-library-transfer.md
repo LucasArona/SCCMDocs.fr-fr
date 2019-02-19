@@ -10,16 +10,17 @@ ms.assetid: 7d07bd0a-7012-47f7-8bc5-509a402915b7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0196ce1fd3561e63fc3445758d90b535ac9bc8ab
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 6f7375a62349aba30ee239aa34fa594650f5a844
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39386440"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56121979"
 ---
 # <a name="content-library-transfer-tool"></a>Content Library Transfer Tool
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Content Library Transfer Tool fait partie des [outils de Configuration Manager](/sccm/core/support/tools). Il transfère le contenu d’un lecteur de disque à un autre. L’outil est conçu pour s’exécuter sur les systèmes de site de points de distribution. Il prend en charge les points de distribution colocalisés avec un site ou des systèmes de site distants.  
 

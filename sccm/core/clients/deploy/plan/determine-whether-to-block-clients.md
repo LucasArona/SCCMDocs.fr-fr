@@ -10,16 +10,17 @@ ms.assetid: 54ef5fbb-521d-4ca5-a1c5-61e6f538d71e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4371e9ede643d794058520cf001f30f01b47fe94
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: a90e100c242514eb2526e16bb68e379a2326572f
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32331928"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56136913"
 ---
 # <a name="determine-whether-to-block-clients-in-system-center-configuration-manager"></a>Déterminer si des clients doivent être bloqués dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Si un ordinateur client ou un appareil mobile client n’est plus approuvé, vous pouvez bloquer ce client dans la console System Center 2012 Configuration Manager. L’infrastructure Configuration Manager rejette les clients bloqués afin qu’ils ne puissent pas communiquer avec les systèmes de site pour télécharger la stratégie, charger les données d’inventaire ou envoyer des messages d’état.  
 

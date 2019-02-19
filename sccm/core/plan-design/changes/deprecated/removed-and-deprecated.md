@@ -10,16 +10,17 @@ ms.assetid: b0adf873-2ff4-4a7b-b5e7-6047f146511f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3381c28ef050d40fdb56ca381e47e6bccb4c638b
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b8bd442c527c5f09fb6704a9e2ec8d7c4cbfd0f0
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32333261"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56119940"
 ---
 # <a name="removed-and-deprecated-items-for-system-center-configuration-manager"></a>Éléments supprimés et dépréciés dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Cet article décrit comment utiliser les informations des fonctionnalités, produits et systèmes d’exploitation supprimés de la prise en charge dans System Center Configuration Manager, ou qui seront supprimés dans une prochaine mise à jour (dépréciés). Il annonce les changements à venir qui pourraient affecter votre utilisation de Configuration Manager.  
 
@@ -43,7 +44,7 @@ Les éléments supprimés ou dépréciés sont répartis en trois catégories.
 ### <a name="removed-and-deprecated-items-for-configuration-manager-clientssccmcoreplan-designchangesdeprecatedremoved-and-deprecated-client"></a>[Éléments supprimés et dépréciés pour les clients Configuration Manager](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-client)
 
 
-## <a name="more-information"></a>Plus d'informations
+## <a name="more-information"></a>Informations complémentaires
 
 Pour plus d'informations, voir :
  - Le site web [Politique de support Microsoft](https://support.microsoft.com/lifecycle).

@@ -10,16 +10,17 @@ ms.assetid: 9a32f5a3-9917-434f-9811-106170f404be
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b1bbce9f3ca7a1a6cf9c199677b33e34d9be109c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: f9cb58d1a697cd26bfefc8081d8705f09e818194
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335913"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56128913"
 ---
 # <a name="upgrade-an-evaluation-installation-of-system-center-configuration-manager-to-a-full-installation"></a>Mettre à niveau une installation d’évaluation de System Center Configuration Manager vers une installation complète
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Si vous avez installé une version d’évaluation de System Center Configuration Manager, après 180 jours, la console Configuration Manager passe en lecture seule jusqu’à ce que vous activiez le produit dans la page **Maintenance de site** du programme d’installation. À tout moment avant ou après la période de 180 jours, vous pouvez mettre à niveau l’installation d’évaluation vers une installation complète.  
 

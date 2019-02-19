@@ -10,16 +10,17 @@ ms.assetid: 110b65b3-2202-466f-bb5d-e5ee282506fc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 56ee10370807f016dfadf521a20ffc9722500a30
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 63f1216d19b82ad3e39680150736908b4f9762de
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32332693"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56128770"
 ---
 # <a name="monitor-and-manage-clients-in-system-center-configuration-manager"></a>Surveiller et gérer les clients dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager (également appelé ConfigMgr ou SCCM) propose plusieurs manières de surveiller et de gérer le logiciel client une fois celui-ci déployé sur les ordinateurs et les appareils de votre organisation.  Vous pouvez surveiller les clients pour vérifier leur état et, dans certains cas, Configuration Manager peut effectuer des corrections automatiques en fonction du problème détecté. La console Configuration Manager offre aussi différentes manières de gérer les clients pour chaque appareil ou regroupement d’appareils.  
 

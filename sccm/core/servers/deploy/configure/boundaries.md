@@ -10,16 +10,17 @@ ms.assetid: 4a9dc4d9-e114-42ec-ae2b-73bee14ab04f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 060d15ce396a8d062164c7971d1c90ee583414bb
-ms.sourcegitcommit: aa610a806f9680753f4d0c0c385357fad51f5fd3
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 9c28163f20e1cf99679c7c740ee62884af4bc2f2
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39401159"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56127590"
 ---
 # <a name="define-network-locations-as-boundaries-for-system-center-configuration-manager"></a>Définir des emplacements réseau comme limites pour System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Les limites de Configuration Manager sont des emplacements sur votre réseau contenant des appareils que vous souhaitez gérer. La limite sur laquelle se trouve un appareil est équivalente au site Active Directory ou à l’adresse IP réseau identifiée par le client Configuration Manager installé sur l’appareil.
  - Vous pouvez créer manuellement des limites individuelles. Cependant, Configuration Manager ne prend pas en charge l’entrée directe d’un sur-réseau en tant que limite. À la place, utilisez le type de limite de la plage d'adresses IP.

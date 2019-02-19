@@ -10,21 +10,22 @@ ms.assetid: 1c409244-6778-4970-a99c-d2508c9cf62b
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 3a8b7a98746649d430388804194e0b847788c86a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 3dca22dde775be00a1a9b15acc4977f582cc1579
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32343743"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56156506"
 ---
 # <a name="security-and-privacy-for-compliance-settings-in-system-center-configuration-manager"></a>Sécurité et confidentialité des paramètres de compatibilité dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 
 ## <a name="security-best-practices-for-compliance-settings"></a>Meilleures pratiques de sécurité pour les paramètres de compatibilité  
 
-|Bonnes pratiques de sécurité|Plus d'informations|  
+|Bonnes pratiques de sécurité|Informations complémentaires|  
 |----------------------------|----------------------|  
 |Ne surveillez pas les données sensibles.|Afin d'éviter la divulgation d'informations, ne configurez pas les éléments de configuration pour surveiller les informations potentiellement sensibles.|  
 |Ne configurez pas les règles de compatibilité qui utilisent des données pouvant être modifiées par les utilisateurs finaux.|Si vous créez une règle de compatibilité en fonction des données que les utilisateurs peuvent modifier, telles que les paramètres de Registre pour les choix de configuration, les résultats ne sont pas fiables.|  

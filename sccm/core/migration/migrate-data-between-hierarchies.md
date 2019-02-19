@@ -10,16 +10,17 @@ ms.assetid: cf014eb0-f8c2-4d37-b8d7-368d63a10b89
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4c33c0f2c3b4848d67a09b77247fa53284b02882
-ms.sourcegitcommit: 1f8731ed8f0308cb2cb576722adb0821a366e9ce
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: f6f0b7f67c1b25fc28f82956a43f9a503ad3d190
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51223685"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56123499"
 ---
 # <a name="migrate-data-between-hierarchies-in-configuration-manager"></a>Migrer des données entre hiérarchies dans Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 La migration vous permet de transférer des données d’une hiérarchie source prise en charge vers une hiérarchie de destination Configuration Manager (Current Branch). Quand vous migrez des données d’une hiérarchie source :  
 

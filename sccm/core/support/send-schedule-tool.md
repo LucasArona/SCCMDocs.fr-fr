@@ -1,5 +1,5 @@
 ---
-title: Send Schedule Tool
+title: Outil Send Schedule
 titleSuffix: Configuration Manager
 description: Utilisez Send Schedule Tool pour déclencher une planification sur un client Configuration Manager.
 ms.date: 07/30/2018
@@ -10,16 +10,17 @@ ms.assetid: d5ce547d-3b3b-47d3-bcd7-6ff94692c046
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7fd90b613fa7e52b4bc83e6c0d0f593d585fdd48
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 38829a249ca87ca87f9c5005ed7ae73e1500e2ab
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385840"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56131198"
 ---
-# <a name="send-schedule-tool"></a>Send Schedule Tool
+# <a name="send-schedule-tool"></a>Outil Send Schedule
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Send Schedule Tool fait partie des [outils de Configuration Manager](/sccm/core/support/tools). Utilisez-le pour déclencher une planification sur un client ou déclencher l’évaluation d’une base de référence de configuration spécifiée. Il fonctionne aussi bien sur l’ordinateur local que sur un client distant.  
 
@@ -71,10 +72,10 @@ Listez tous les GUID ou DCM UID de message disponibles pour les envoyer. Affiche
 
 |ID de message  |Nom d'affichage  |
 |---------|---------|
-|{00000000-0000-0000-0000-000000000001}|Hardware Inventory|
-|{00000000-0000-0000-0000-000000000002}|Software Inventory|
+|{00000000-0000-0000-0000-000000000001}|Inventaire matériel|
+|{00000000-0000-0000-0000-000000000002}|Inventaire logiciel|
 |{00000000-0000-0000-0000-000000000003}|Discovery Inventory|
-|{00000000-0000-0000-0000-000000000010}|File Collection|
+|{00000000-0000-0000-0000-000000000010}|Regroupement de fichiers|
 |{00000000-0000-0000-0000-000000000011}|IDMIF Collection|
 |{00000000-0000-0000-0000-000000000021}|Request Machine Assignments|
 |{00000000-0000-0000-0000-000000000022}|Evaluate Machine Policies|

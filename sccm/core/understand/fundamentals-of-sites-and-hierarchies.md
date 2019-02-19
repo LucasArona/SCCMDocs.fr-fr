@@ -10,16 +10,17 @@ ms.assetid: 4db1e15f-e832-4cf9-be33-d3971e635a55
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: dbd87268c1572f53fcc86d5f2dc93537ad759260
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 00465c431ded49c3833b19a3efd1da05ad1c388d
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32339279"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56124634"
 ---
 # <a name="fundamentals-of-sites-and-hierarchies-for-system-center-configuration-manager"></a>Notions de base des sites et des hiérarchies pour System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Un déploiement de System Center Configuration Manager doit être installé dans un domaine Active Directory. La base de ce déploiement inclut un ou plusieurs sites Configuration Manager qui forment une hiérarchie de sites. Qu’il s’agisse d’un site unique ou d’une hiérarchie à plusieurs sites, le type et l’emplacement des sites que vous installez permettent de faire monter en puissance (développer) votre déploiement si nécessaire et d’offrir des services clés aux appareils et utilisateurs gérés.
 
@@ -47,7 +48,7 @@ Quand vous installez System Center Configuration Manager pour la première fois,
 
 -   [Concevoir une hiérarchie de sites pour System Center Configuration Manager](../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md)  
 
--   [Installer des sites System Center Configuration Manager](/sccm/core/servers/deploy/install/installing-sites)  
+-   [Installation de sites System Center Configuration Manager](/sccm/core/servers/deploy/install/installing-sites)  
 
 ## <a name="site-system-servers-and-site-system-roles"></a>Serveurs de système de site et rôles de système de site  
  Chaque site Configuration Manager installe des *rôles de système de site* qui prennent en charge les opérations de gestion. Les rôles suivants sont installés par défaut quand vous installez un site :

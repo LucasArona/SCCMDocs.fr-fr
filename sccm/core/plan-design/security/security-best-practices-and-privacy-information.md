@@ -10,16 +10,17 @@ ms.assetid: b7bff8a0-fe76-4d3b-aac6-065290888bea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 83a06e2b43166f80532fbcc45e4f7199c890adcc
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: daa59087ef30ccbaad1332e33934e728fa793b3d
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334342"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56132729"
 ---
 # <a name="security-best-practices-and-privacy-information-for-system-center-configuration-manager"></a>Bonnes pratiques de sécurité et informations de confidentialité de System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Utilisez les informations suivantes pour rechercher de bonnes pratiques de sécurité et des informations de confidentialité pour System Center Configuration Manager.  
 

@@ -10,16 +10,17 @@ ms.assetid: 113984fa-6150-41a1-89ed-d2a83b979732
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 358f2d67a5a4689927632bb1492ace1a33490451
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 42b6bceacf8d8ecd733e4d13b882fe3b5c0500e7
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32331714"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56135743"
 ---
 # <a name="how-to-create-child-configuration-items-in-system-center-configuration-manager"></a>Guide pratique pour créer des éléments de configuration enfants dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Dans System Center Configuration Manager, les éléments de configuration enfants sont des copies d’éléments de configuration qui maintiennent une relation avec l’élément de configuration d’origine dans le sens où ils héritent de la configuration d’origine de l’élément de configuration parent.  
 

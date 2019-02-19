@@ -10,16 +10,17 @@ ms.assetid: 8109d0fe-a8d8-4cf2-92a1-94afa5299719
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ab2f9ce34367e5042a4c02a3b7e2af3a73dc25dc
-ms.sourcegitcommit: dd785ad7146b8491c98ccd7804d0959a5c1fb034
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: d6fd090d9478b36bfdb64cf9f6058a3224b2706c
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49382978"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56120921"
 ---
 # <a name="capabilities-in-configuration-manager-technical-preview-version-1810"></a>Fonctionnalités Technical Preview version 1810 de Configuration Manager 
 
-*S’applique à : System Center Configuration Manager (Technical Preview)*
+*S’applique à : System Center Configuration Manager (Technical Preview)*
 
 Cet article présente les fonctionnalités disponibles dans Technical Preview version 1810 pour Configuration Manager. Installez cette version pour mettre à jour le site de votre version Technical Preview et lui ajouter de nouvelles fonctionnalités. 
 

@@ -10,12 +10,13 @@ ms.assetid: 8eed50f5-80a4-422e-8aa6-a7ccb2171475
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 162fbdeb08e345ecea20a58b3f5a95a8da193898
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 494824f80c03e05535ca73d38974a8fc68489ee5
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53415107"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56122659"
 ---
 # <a name="deploy-windows-to-go-with-system-center-configuration-manager"></a>Déployer Windows To Go avec System Center Configuration Manager
 
@@ -427,7 +428,7 @@ Cette rubrique fournit les étapes permettant de mettre en service Windows To Go
 
 8.  Sur la page **Expérience utilisateur** , spécifiez les informations suivantes :  
 
-    -   **Afficher la progression de la séquence de tâches** : spécifiez si le client Configuration Manager affiche la progression de la séquence de tâches.  
+    -   **Afficher la progression de la séquence de tâches** : Spécifiez si le client Configuration Manager affiche la progression de la séquence de tâches.  
 
     -   **Installation du logiciel** : spécifiez si l'utilisateur est autorisé à installer le logiciel en dehors de fenêtres de maintenance configurées après l'heure prévue.  
 

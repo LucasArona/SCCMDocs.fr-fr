@@ -10,16 +10,17 @@ ms.assetid: e6258333-a783-440b-b1af-f8023b782fbc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d4ce90c28a8af0714f07ad5450d82202a7d5a543
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b830efbdf2abdfddd7bbe1d7ac4ac13010399cad
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335396"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56142219"
 ---
 # <a name="example-asset-intelligence-general-license-import-file-in-system-center-configuration-manager"></a>Exemple de fichier d’importation de licence générale Asset Intelligence dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Les informations données à titre d'exemple dans cette rubrique peuvent être utilisées pour créer un exemple de fichier de licence logicielle générale afin d'importer des licences logicielles dans le catalogue Asset Intelligence à l'aide de l'Assistant Importer des licences logicielles. Vous pouvez copier et coller le tableau suivant dans une nouvelle feuille de calcul Microsoft Excel et l'enregistrer avec l'extension .csv afin de pouvoir l'utiliser en tant qu'exemple de fichier d'importation de licence générale à des fins de test. Lors de la création d'un fichier d'importation de licence, tous les champs d'en-tête sont requis alors que seules les valeurs de données Nom, Éditeur, Version et Quantité effective sont requises dans la feuille de calcul. Pour plus d’informations sur l’importation de licences logicielles dans le catalogue Asset Intelligence, consultez [Configuration d’Asset Intelligence dans System Center Configuration Manager](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md).  
 

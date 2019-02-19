@@ -10,12 +10,13 @@ ms.assetid: 68ac8a07-8e54-4a3c-91e3-e50dc1cabf5d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8a58e16819a9f207bea98ed799e709268c3b5d37
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 767d6b54d19158a33b582dc3ab605d780914b18e
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53423352"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56132814"
 ---
 # <a name="update-and-retire-applications-with-system-center-configuration-manager"></a>Mettre à jour et mettre hors service des applications avec System Center Configuration Manager
 

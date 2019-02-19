@@ -10,16 +10,17 @@ ms.assetid: 29350919-6a25-446b-a0da-05e8914fbb26
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6a6f6ea0d68a8ba8d2db20bd8a77d5e480314150
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b2f9744db8722686d10ad098b186c3972b570cfc
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32331962"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56129287"
 ---
 # <a name="introduction-to-remote-control-in-system-center-configuration-manager"></a>Présentation du contrôle à distance dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Utilisez le contrôle à distance pour administrer, fournir une assistance ou afficher à distance n’importe quel ordinateur client de la hiérarchie. Vous pouvez l’utiliser également pour résoudre les problèmes de configuration matérielle et logicielle sur les ordinateurs clients et pour fournir une assistance. Le Gestionnaire de configuration prend en charge le contrôle à distance de tous les ordinateurs du groupe de travail et de tous les ordinateurs joints à un domaine qui fonctionnent sous des systèmes d’exploitation pris en charge pour le client Gestionnaire de configuration. Pour plus d’informations, consultez l’article [Systèmes d’exploitation pris en charge pour les clients et les appareils pour System Center Configuration Manager](../../../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md).
 

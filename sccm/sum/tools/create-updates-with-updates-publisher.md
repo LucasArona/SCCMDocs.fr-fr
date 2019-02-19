@@ -10,12 +10,13 @@ ms.assetid: 46a1a8ac-126c-4ee6-ae09-32dfbdb83368
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4f98e06bac3f396ab9dad29c95861cd225c1d6ec
-ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 0cf0665e3302181370b3d2d08b4071be3527852a
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54898407"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56141134"
 ---
 # <a name="create--software-updates-and-update-bundles-with-updates-publisher"></a>Créer des mises à jour logicielles et des offres groupées de mises à jour avec l’éditeur de mise à jour
 

@@ -10,16 +10,17 @@ ms.assetid: d0e4ddc3-d9c4-4f5c-8b1f-af098e54f5c8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2ae77e7bf34e77ecadfad1e0e3c16722588599b0
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: ccaf6afd25d74e030d3a4cf9e09b2783418f3fd6
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334733"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56134518"
 ---
 # <a name="resources-for-installing-system-center-configuration-manager-sites"></a>Ressources d’installation de sites System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Les rubriques suivantes peuvent vous aider à installer System Center Configuration Manager ou à ajouter des sites à votre hiérarchie Configuration Manager existante.
 

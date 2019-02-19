@@ -10,16 +10,17 @@ ms.assetid: 295fdf07-93cc-490c-acdd-ce3ee88cb36f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 06e85a0b372aea34a041f050d311178967dc18b5
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 3136c8add4256a646409c4a540da783a04a5b71d
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32336338"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56128287"
 ---
 # <a name="administrator-checklists-for-migration-planning-in-system-center-configuration-manager"></a>Listes de vérifications de l’administrateur pour la planification de la migration dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Utilisez les listes de contrôle de l’administrateur suivantes pour vous aider à planifier votre stratégie de migration vers System Center Configuration Manager.
 
@@ -39,7 +40,7 @@ Utilisez les listes de contrôle de l’administrateur suivantes pour vous aider
 
     Pour plus d’informations, consultez [Principes de base de l’administration basée sur des rôles pour System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md).  
 
--   **Évaluez la topologie de votre réseau et d’Active Directory :** Examinez la structure de votre domaine et la topologie de votre réseau et réfléchissez à la façon dont ceci influence vos tâches de conception et de migration des hiérarchies.  
+-   **Évaluez votre réseau et la topologie Active Directory :** Examinez votre structure de domaine et la topologie de réseau existantes et réfléchissez à leur influence sur vos tâches de conception et de migration de hiérarchie.  
 
 -   **Finalisez la conception de votre hiérarchie de destination :**  
 
@@ -158,4 +159,4 @@ Utilisez la liste de vérification suivante pour migrer les données de la hiér
 
 -   **Terminez la migration :**  
 
-    Une fois que vous avez migré les données et les clients de tous les sites de la hiérarchie source et que vous avez mis à niveau les points de distribution concernés, vous pouvez terminer la migration. Pour cela, vous arrêtez la collecte de données pour tous les sites source de la hiérarchie source. Vous pouvez ensuite supprimer toutes les informations de migration dont vous n'avez pas besoin et retirer l'infrastructure de votre hiérarchie source. Pour plus d’informations, voir [Planification d’une migration complète vers System Center 2012 Configuration Manager](../../core/migration/planning-to-complete-migration.md).  
+    Une fois que vous avez migré les données et les clients de tous les sites de la hiérarchie source et que vous avez mis à niveau les points de distribution concernés, vous pouvez terminer la migration. Pour cela, vous arrêtez la collecte de données pour tous les sites source de la hiérarchie source. Vous pouvez ensuite supprimer toutes les informations de migration dont vous n'avez pas besoin et retirer l'infrastructure de votre hiérarchie source. Pour plus d’informations, voir [Planning to complete migration in System Center Configuration Manager](../../core/migration/planning-to-complete-migration.md).  

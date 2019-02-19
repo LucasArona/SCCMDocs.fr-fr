@@ -10,23 +10,24 @@ ms.assetid: 9c062f13-3c1f-4621-9cae-de0e322aa03f
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: c6630ef07c0b7947875ea2adac4e6612143aaee8
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 4e965c9abede80bac488cfba0759d4f9e33974fb
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344430"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56125804"
 ---
 # <a name="prerequisites-for-power-management-in-system-center-configuration-manager"></a>Configuration requise pour la gestion de l’alimentation dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 La gestion de l’alimentation dans System Center Configuration Manager comporte des dépendances externes et des dépendances au sein du produit.  
 
 ## <a name="dependencies-external-to-configuration-manager"></a>Dépendances externes à Configuration Manager  
  Le tableau suivant répertorie les dépendances externes à Configuration Manager pour l’utilisation de la gestion de l’alimentation.  
 
-|Dépendance|Plus d'informations|  
+|Dépendance|Informations complémentaires|  
 |----------------|----------------------|  
 |Les ordinateurs client doivent être en mesure de prendre en charge les états requis de l'alimentation|Pour utiliser toutes les fonctionnalités de la gestion de l'alimentation, les ordinateurs client doivent être en mesure de prendre en charge la mise en veille, la mise en veille prolongée, la sortie du mode veille et la sortie du mode veille prolongée. Vous pouvez utiliser le rapport **Fonctions de gestion de l'alimentation** afin de déterminer si les ordinateurs peuvent prendre en charge ces actions. Pour plus d’informations, consultez le rapport [Fonctions de gestion de l’alimentation](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md#BKMK_Capabilites) dans la rubrique [Guide pratique pour surveiller et planifier la gestion de l’alimentation dans System Center Configuration Manager](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md).|  
 

@@ -10,16 +10,17 @@ ms.assetid: d39c201f-d364-4e7b-bde4-faa76d747f33
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a8d1d0a727f0a4ad4a2bfc25141f7e2982494080
-ms.sourcegitcommit: b596d944e49f3c4912c6ca91915ed1418c17a1a2
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 35bfd908864ee77c19821ce02ab62c03523fae37
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42584941"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56126944"
 ---
 # <a name="install-the-system-center-configuration-manager-console"></a>Installer la console System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Les administrateurs se servent de la console Configuration Manager pour gérer l’environnement Configuration Manager. Chaque console Configuration Manager peut se connecter à un site d’administration centrale ou à un site principal, Vous ne pouvez pas connecter une console Configuration Manager à un site secondaire.
 
@@ -85,7 +86,7 @@ Les administrateurs se servent de la console Configuration Manager pour gérer l
   |/uninstall|Désinstalle la console Configuration Manager. Spécifiez cette option en premier quand vous l’utilisez avec l’option **/q**.|  
   |LangPackDir|Spécifie le chemin d'accès au dossier qui contient les fichiers de langue. Vous pouvez utiliser le **téléchargeur d’installation** pour télécharger les fichiers de langue. Si vous n'utilisez pas cette option, le programme d'installation recherche le dossier de langue dans le dossier actuel. Si le dossier de langue n'est pas trouvé, le programme d'installation poursuit l'installation en anglais uniquement. Pour plus d’informations, consultez [Téléchargeur d’installation](setup-downloader.md).|  
   |TargetDir|Spécifie le dossier où installer la console Configuration Manager. Vous devez spécifier cette option lorsque vous utilisez l’option **/q** .|  
-  |EnableSQM|Permet de préciser si vous souhaitez vous joindre au programme d'amélioration de l'expérience utilisateur. Utilisez la valeur **1** pour participer au programme d’amélioration des services et la valeur **0** pour ne pas participer au programme. Vous devez spécifier cette option lorsque vous utilisez l’option **/q** .</br></br>Remarque : Depuis Configuration Manager version 1802, la fonctionnalité CEIP ne figure plus dans le produit.  L’utilisation du paramètre entraînera l’échec de l’installation.|  
+  |EnableSQM|Permet de préciser si vous souhaitez vous joindre au programme d'amélioration de l'expérience utilisateur. Utilisez la valeur **1** pour participer au programme d’amélioration des services et la valeur **0** pour ne pas participer au programme. Vous devez spécifier cette option lorsque vous utilisez l’option **/q** .</br></br>Remarque : À compter de Configuration Manager version 1802, la fonctionnalité CEIP ne figure plus dans le produit.  L’utilisation du paramètre entraînera l’échec de l’installation.|  
   |DefaultSiteServerName|Spécifie le nom de domaine complet du serveur de site auquel la console se connecte à son ouverture. Vous devez spécifier cette option lorsque vous utilisez l’option **/q** .|  
 
 
