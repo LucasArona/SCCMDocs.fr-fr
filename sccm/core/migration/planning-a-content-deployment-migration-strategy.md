@@ -10,16 +10,17 @@ ms.assetid: 66f7759c-6272-4116-aad7-0d05db1d46cd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d261b246c0718777be56425c7783d05f767575df
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 1df57ef2d51a9cd525dbd9b8d99a909baf47ef95
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342611"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56127539"
 ---
 # <a name="plan-a-content-deployment-migration-strategy-in-system-center-configuration-manager"></a>Planifier une stratégie de migration de déploiement de contenu dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Durant le processus de migration des données vers une hiérarchie de destination System Center Configuration Manager, les clients Configuration Manager des hiérarchies source et de destination peuvent conserver l’accès au contenu que vous avez déployé dans la hiérarchie source. Vous pouvez aussi utiliser la migration pour mettre à niveau ou réaffecter des points de distribution de la hiérarchie source afin qu’ils deviennent des points de distribution dans la hiérarchie de destination. Lorsque vous partagez et mettez à niveau ou réaffectez des points de distribution, cette stratégie permet d'éviter d'avoir à redéployer du contenu vers de nouveaux serveurs dans la hiérarchie de destination pour les clients dont vous effectuez la migration.  
 

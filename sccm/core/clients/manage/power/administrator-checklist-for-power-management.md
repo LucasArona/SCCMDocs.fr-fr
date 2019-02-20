@@ -10,16 +10,17 @@ ms.assetid: 94e42cbe-9df8-4228-a04e-0ad7626180ca
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: c556cb51ff071d40fcf5e4bb24c0b6b5f85c512a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 8198669fdf7d0acf3273af2d8a2e83f5b89f520c
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32337222"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56156989"
 ---
 # <a name="administrator-checklist-for-power-management-in-system-center-configuration-manager"></a>Liste de contrôle de l’administrateur de gestion de l’alimentation dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Cette liste de vérification de l'administrateur fournit les étapes recommandées pour l'utilisation de la gestion de l'alimentation System Center Configuration Manager au sein de votre organisation.  
 
