@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba364ce222ae5e07cc1a0e9d25eb3ae525f2cbbf
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 2f19fee37ab817670bd754d6da1ad1ebe9ccb452
+ms.sourcegitcommit: 369db96ee84299b5ab6d74b177e6366b3017fc54
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56142389"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56589932"
 ---
 # <a name="endpoint-protection-client-frequently-asked-questions"></a>Forum aux questions sur le client Endpoint Protection
 
@@ -51,16 +51,7 @@ Ce forum aux questions est destiné aux utilisateurs dont l’administrateur inf
 
  Windows Defender ou Endpoint Protection offre trois méthodes permettant d’empêcher les programmes malveillants d’infecter votre ordinateur :  
 
--   **Utilisation de la protection en temps réel** : la protection en temps réel permet à Windows Defender de surveiller en permanence votre ordinateur et de vous alerter quand des logiciels malveillants ‍‍tentent de s’installer ou de s’exécuter sur votre ordinateur. Windows Defender suspend alors l’exécution du logiciel et vous invite à suivre sa recommandation concernant le logiciel, ou à entreprendre une autre action.  
-
-    |**Option de protection en temps réel** |**Fonction** |
-
-    |-|-|  
-    |Analyser tous les téléchargements|Cette option surveille les fichiers et programmes qui sont téléchargés, y compris les fichiers qui sont téléchargés automatiquement via Windows Internet Explorer et Microsoft Outlook® Express, comme les contrôles ActiveX® et les programmes d’installation de logiciel. Ces fichiers peuvent être téléchargés, installés ou exécutés par le navigateur lui-même. Des logiciels malveillants, notamment des virus, des logiciels espions et des autres logiciels potentiellement indésirables, peuvent être inclus dans ces fichiers et installés à votre insu.<br /><br /> Avec l’option de protection en temps réel, Windows Defender surveille votre ordinateur en permanence, et recherche les fichiers ou les programmes malveillants que vous pourriez avoir téléchargés. Avec cette fonctionnalité de surveillance, Windows Defender n’a pas besoin de ralentir votre navigation ou votre utilisation de la messagerie électronique en imposant une vérification des fichiers ou des programmes que vous voulez télécharger.|  
-    |Surveiller l’activité des programmes et des fichiers sur votre ordinateur|Cette option surveille le démarrage de l’exécution des fichiers ou programmes sur votre ordinateur, et vous avertit des actions effectuées par ou sur ces fichiers et programmes. Ceci est important, car les logiciels malveillants peuvent exploiter les vulnérabilités des programmes que vous avez installés pour exécuter à votre insu des logiciels malveillants ou indésirables. Par exemple, un logiciel espion peut s’exécuter lui-même en arrière-plan quand vous démarrez un programme que vous utilisez fréquemment. Windows Defender surveille vos programmes et vous avertit s’il détecte une activité suspecte.|  
-    |Activer la surveillance du comportement|Cette option surveille les ensembles de comportements de types suspects qui peuvent ne pas être détectés par les méthodes de détection antivirus traditionnelles.|  
-
-    |Activer le système d’inspection du réseau|Cette option permet de protéger votre ordinateur contre les attaques « zero-day » de vulnérabilités connues, en réduisant le délai entre la découverte d’une vulnérabilité et l’application d’une mise à jour.|  
+-   **Utilisation de la protection en temps réel** : la protection en temps réel permet à Windows Defender de surveiller en permanence votre ordinateur et de vous alerter quand des logiciels malveillants ‍‍tentent de s’installer ou de s’exécuter sur votre ordinateur. Windows Defender suspend alors l’exécution du logiciel et vous invite à suivre sa recommandation concernant le logiciel, ou à entreprendre une autre action.
 
 -   **Options d’analyse** : vous pouvez utiliser Windows Defender pour rechercher les menaces potentielles, notamment des virus, des logiciels espions et d’autres logiciels malveillants susceptibles de mettre votre ordinateur en danger. Il vous permet également de planifier des analyses régulières et de supprimer les logiciels malveillants qu'il détecte au cours d'une analyse.  
 
@@ -216,7 +207,7 @@ Pour supprimer rapidement et facilement tous les éléments indésirables ou pot
 |Analyser tous les téléchargements|Cette option surveille les fichiers et programmes qui sont téléchargés, y compris les fichiers qui sont téléchargés automatiquement via Windows Internet Explorer et Microsoft Outlook® Express, comme les contrôles ActiveX® et les programmes d’installation de logiciel. Ces fichiers peuvent être téléchargés, installés ou exécutés par le navigateur lui-même. Des logiciels malveillants, notamment des virus, des logiciels espions et des autres logiciels potentiellement indésirables, peuvent être inclus dans ces fichiers et installés à votre insu.<br /><br /> Avec l’option de protection en temps réel, Windows Defender surveille votre ordinateur en permanence, et recherche les fichiers ou les programmes malveillants que vous pourriez avoir téléchargés. Cette fonctionnalité de surveillance signifie que Windows Defender n’a pas besoin de ralentir votre navigation ou votre utilisation de la messagerie électronique en imposant une vérification des fichiers ou des programmes que vous voulez télécharger.|  
 |Surveiller l'activité des programmes et des fichiers sur votre ordinateur|Cette option surveille le démarrage de l’exécution des fichiers ou des programmes, puis vous avertit des actions qu’ils effectuent et des actions entreprises sur ces fichiers et programmes. Ceci est important, car les logiciels malveillants peuvent exploiter les vulnérabilités des programmes que vous avez installés pour exécuter à votre insu des logiciels malveillants ou indésirables. Par exemple, un logiciel espion peut s’exécuter lui-même en arrière-plan quand vous démarrez un programme que vous utilisez fréquemment. Windows Defender surveille vos programmes et vous avertit s’il détecte une activité suspecte.|  
 |Activer l'analyse du comportement|Cette option surveille les ensembles de comportements de types suspects qui peuvent ne pas être détectés par les méthodes de détection antivirus traditionnelles.|  
-|Activer le système NIS (Network Inspection System)|Cette option permet de protéger votre ordinateur contre les attaques « zero day » sur des vulnérabilités connues, en réduisant le délai entre la découverte d’une vulnérabilité et l’application d’une mise à jour.|  
+|Activer le système NIS (Network Inspection System)|Cette option permet de protéger votre ordinateur contre les attaques zero-day de failles connues, en réduisant la fenêtre de temps entre la découverte d’une vulnérabilité et l’application d’une mise à jour.|  
 
 ### <a name="to-turn-off-real-time-protection"></a>Pour désactiver la protection en temps réel  
 

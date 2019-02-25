@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c16487bc59a7e067aac5554213e2be750729078f
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 411811c4047cd781d0edcd5cc345ff82acc80f91
+ms.sourcegitcommit: 0a23cde6112cbb5987f433bffcf6f223b994ba72
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56120144"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56667441"
 ---
 #  <a name="using-configuration-manager-software-updates-to-deliver-definition-updates"></a>Utilisation des mises à jour logicielles Configuration Manager pour remettre des mises à jour de définitions
 
@@ -49,10 +49,10 @@ ms.locfileid: "56120144"
 
 6. Vérifiez que la case  **Activer le déploiement après l’exécution de cette règle** est cochée, puis cliquez sur **Suivant**.
 
-7. Sur la page **Paramètres de déploiement** de l'Assistant, dans la liste **Niveau de détail** , sélectionnez **Minimal**, puis cliquez sur **Suivant**.
+7. Sur la page **Paramètres de déploiement** de l’Assistant, sélectionnez **Seulement les messages d’erreur** dans la liste **Niveau de détail**, puis cliquez sur **Suivant**.
 
    > [!NOTE]
-   >  Dans la liste **Niveau de détail**, sélectionnez **Minimale** (Configuration Manager sans Service Pack) ou **Seulement les messages d’erreur** (Configuration Manager). Cette opération réduit le nombre de messages d’état retournés par le déploiement de définitions. Cette configuration permet de réduire les traitements du processeur sur les serveurs Configuration Manager.
+   >  En sélectionnant **uniquement les messages d’erreur** réduira le nombre de messages d’état retournés par le déploiement de définition. Cette configuration permet de réduire les traitements du processeur sur les serveurs Configuration Manager.
 
 8. Dans la liste **Filtres de propriétés** , sélectionnez la case à cocher **Classification des mises à jour** .
 
@@ -91,18 +91,20 @@ ms.locfileid: "56120144"
 
 20. Dans la page **Alertes** de l’Assistant, vous n’avez pas à configurer d’alertes. Dans Configuration Manager, Endpoint Protection génère les alertes qui peuvent être nécessaires. Cliquez sur **Suivant**.
 
-21. Dans la page **Paramètres de téléchargement** de l’Assistant, sélectionnez le comportement de téléchargement des mises à jour approprié, puis cliquez sur **Suivant**.
-
-22. Sur la page **Package de déploiement** de l'Assistant, sélectionnez un package de déploiement existant ou créez un package de déploiement contenant les fichiers de mise à jour logicielle associés à la règle.
+21. Sur la page **Package de déploiement** de l'Assistant, sélectionnez un package de déploiement existant ou créez un package de déploiement contenant les fichiers de mise à jour logicielle associés à la règle.
 
     > [!NOTE]
     >  Envisagez de placer les mises à jour de définition dans un package qui ne contient pas d’autres mises à jour logicielles. Cette stratégie garantit une taille réduite du package de mise à jour de définition, ce qui permet de le répliquer plus rapidement sur les points de distribution.
 
-23. Dans la page **Points de distribution** de l’Assistant, sélectionnez un ou plusieurs points de distribution vers lesquels le contenu de ce package sera copié, puis cliquez sur **Suivant**.
+22. Pour la création d’un package, sur la page **Points de distribution** de l’Assistant, sélectionnez un ou plusieurs points de distribution vers lesquels le contenu de ce package sera copié, puis cliquez sur **Suivant**.
 
-24. Dans la page **Emplacement de téléchargement** de l’Assistant, sélectionnez **Télécharger les mises à jour logicielles depuis Internet**, puis cliquez sur **Suivant**.
+23. Dans la page **Emplacement de téléchargement** de l’Assistant, sélectionnez **Télécharger les mises à jour logicielles depuis Internet**, puis cliquez sur **Suivant**.
 
-25. Dans la page **Sélection de la langue** de l’Assistant, sélectionnez chaque version linguistique des mises à jour à télécharger, puis cliquez sur **Suivant**.
+24. Dans la page **Sélection de la langue** de l’Assistant, sélectionnez chaque version linguistique des mises à jour à télécharger, puis cliquez sur **Suivant**.
+
+25. Dans la page **Paramètres de téléchargement** de l’Assistant, sélectionnez le comportement de téléchargement des mises à jour approprié, puis cliquez sur **Suivant**.
+
+26. Sur la page **Résumé** de l’Assistant, vérifiez les paramètres, puis cliquez sur **Suivant**.
 
 26. Terminez l'Assistant Création d'une règle de déploiement automatique.
 
