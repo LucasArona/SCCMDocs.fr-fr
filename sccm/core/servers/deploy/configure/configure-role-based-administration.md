@@ -9,16 +9,17 @@ ms.assetid: 57413dd3-b2f8-4a5f-b27f-8464d357caff
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f5a0601af46d4d5f835822d3e5c551096512ceb3
-ms.sourcegitcommit: 7eebd112a9862bf98359c1914bb0c86affc5dbc0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 554e67e171fe5b800d231d257105531dcd633baf
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590874"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56131572"
 ---
 # <a name="configure-role-based-administration-for-configuration-manager"></a>Configurer l’administration basée sur des rôles pour Configuration Manager   
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Dans Configuration Manager, l’administration basée sur des rôles combine des rôles de sécurité, des étendues de sécurité et des regroupements attribués pour définir l’étendue administrative de chaque utilisateur administratif. Une étendue administrative inclut les objets qu’un utilisateur administratif peut afficher dans la console Configuration Manager et les tâches associées à ces objets que cet administrateur est autorisé à exécuter. Les configurations d'administration basée sur des rôles s'appliquent à chaque site dans une hiérarchie.  
 
@@ -154,9 +155,9 @@ Dans Configuration Manager, l’administration basée sur des rôles combine des
 
 6.  Sélectionnez l’une des deux options suivantes pour définir le comportement de l’objet sécurisable pour le nouvel utilisateur :  
 
-    -   **Toutes les instances d’objets liés aux rôles de sécurité attribués** : cette option associe l’utilisateur administratif à l’étendue de sécurité **Tout** ainsi qu’aux regroupements **Tous les systèmes** et **Tous les utilisateurs et groupes d’utilisateurs**. Les rôles de sécurité attribués à l'utilisateur définissent l'accès aux objets. Les nouveaux objets créés par cet utilisateur administratif sont attribués à l'étendue de sécurité **Par défaut** .  
+    -   **Toutes les instances des objets liés aux rôles de sécurité assignés** : Cette option associe l’utilisateur administratif avec l’étendue de sécurité **Tous** et les regroupements **Tous les systèmes** et **Tous les utilisateurs et groupes d’utilisateurs**. Les rôles de sécurité attribués à l'utilisateur définissent l'accès aux objets. Les nouveaux objets créés par cet utilisateur administratif sont attribués à l'étendue de sécurité **Par défaut** .  
 
-    -   **Seulement les instances d’objets attribués aux étendues de sécurité et aux regroupements spécifiés** : par défaut, cette option associe l’utilisateur administratif à l’étendue de sécurité **Par défaut** ainsi qu’aux regroupements **Tous les systèmes** et **Tous les utilisateurs et groupes d’utilisateurs**. Toutefois, les étendues de sécurité et les regroupements réels sont limités à ceux qui sont associés au compte que vous avez utilisé pour créer le nouvel utilisateur administratif. Cette option prend en charge l'ajout ou la suppression d'étendues de sécurité et de regroupements pour personnaliser l'étendue administrative de l'utilisateur administratif.  
+    -   **Uniquement les instances d’objets assignées aux étendues de sécurité et regroupements spécifiés** : Par défaut, cette option associe l’utilisateur administratif avec l’étendue de sécurité **Par défaut** et les regroupements **Tous les systèmes** et **Tous les utilisateurs et groupes d’utilisateurs**. Toutefois, les étendues de sécurité et les regroupements réels sont limités à ceux qui sont associés au compte que vous avez utilisé pour créer le nouvel utilisateur administratif. Cette option prend en charge l'ajout ou la suppression d'étendues de sécurité et de regroupements pour personnaliser l'étendue administrative de l'utilisateur administratif.  
 
     > [!IMPORTANT]  
     >  Les options précédentes associent chaque étendue de sécurité et chaque regroupement attribués, à chaque rôle de sécurité attribué à l’utilisateur administratif. Vous pouvez utiliser une troisième option, **Associer des rôles de sécurité attribués à des étendues de sécurité et à des regroupements spécifiques** pour associer des rôles de sécurité individuels à des étendues de sécurité à des regroupements spécifiques. Cette troisième option est disponible après la création du nouvel utilisateur administratif, lorsque vous modifiez l'utilisateur administratif.  
@@ -172,11 +173,11 @@ Dans Configuration Manager, l’administration basée sur des rôles combine des
 
  Lorsque vous modifiez un utilisateur administratif, vous pouvez modifier le comportement des objets sécurisables au niveau de leur association avec les rôles de sécurité attribués. Les trois comportements que vous pouvez sélectionner sont les suivants :  
 
--   **Toutes les instances d’objets liés aux rôles de sécurité attribués** : cette option associe l’utilisateur administratif à l’étendue **Tout** ainsi qu’aux regroupements **Tous les systèmes** et **Tous les utilisateurs et groupes d’utilisateurs**. Les rôles de sécurité attribués à l'utilisateur définissent l'accès aux objets.  
+-   **Toutes les instances des objets liés aux rôles de sécurité assignés** : Cette option associe l’utilisateur administratif avec l’étendue **Tous** et les regroupements **Tous les systèmes** et **Tous les utilisateurs et groupes d’utilisateurs**. Les rôles de sécurité attribués à l'utilisateur définissent l'accès aux objets.  
 
--   **Uniquement les instances d’objets attribués aux étendues de sécurité et aux regroupements spécifiés** : cette option associe l’utilisateur administratif aux mêmes étendues de sécurité et regroupements qui sont associés au compte que vous utilisez pour configurer l’utilisateur administratif. Cette option prend en charge l'ajout ou la suppression de rôles de sécurité et de regroupements pour personnaliser l'étendue administrative de l'utilisateur administratif.  
+-   **Uniquement les instances d’objets assignées aux étendues de sécurité et regroupements spécifiés** : cette option associe l'utilisateur administratif aux mêmes étendues de sécurité et regroupements qui sont associés au compte que vous utilisez pour configurer l'utilisateur administratif. Cette option prend en charge l'ajout ou la suppression de rôles de sécurité et de regroupements pour personnaliser l'étendue administrative de l'utilisateur administratif.  
 
--   **Associer des rôles de sécurité à des étendues de sécurité et à des regroupements spécifiques** : cette option vous permet de créer des associations spécifiques entre des rôles de sécurité individuels et des étendues de sécurité et regroupements spécifiques pour l’utilisateur.  
+-   **Associer des rôles de sécurité assignés à des étendues de sécurité et des regroupements spécifiques** : cette option vous permet de créer des associations spécifiques entre des rôles de sécurité individuels et des étendues de sécurité et des regroupements spécifiques pour l'utilisateur.  
 
     > [!NOTE]  
     >  Cette option est disponible uniquement lorsque vous modifiez les propriétés d'un utilisateur administratif.  
@@ -203,7 +204,7 @@ Utilisez la procédure suivante pour afficher et gérer la configuration des obj
 
 Utilisez la procédure suivante pour modifier un utilisateur administratif dont le comportement d’objet sécurisable est **Toutes les instances d’objets liés aux rôles de sécurité attribués**.  
 
-#### <a name="for-option-all-instances-of-the-objects-that-are-related-to-the-assigned-security-roles"></a>Pour l’option : toutes les instances d’objets liés aux rôles de sécurité attribués  
+#### <a name="for-option-all-instances-of-the-objects-that-are-related-to-the-assigned-security-roles"></a>Concernant l’option : Toutes les instances des objets liés aux rôles de sécurité assignés  
 
 1.  Dans la console Configuration Manager, choisissez **Administration**.  
 
@@ -230,7 +231,7 @@ Utilisez la procédure suivante pour modifier un utilisateur administratif dont 
 
 Utilisez la procédure suivante pour modifier un utilisateur administratif dont le comportement de l'objet sécurisable est paramétré sur **Uniquement les instances d’objets attribués aux étendues de sécurité et aux regroupements spécifiés**.  
 
-#### <a name="for-option-only-the-instances-of-objects-that-are-assigned-to-the-specified-security-scopes-and-collections"></a>Pour l’option : uniquement les instances d'objets attribués aux regroupements et étendues de sécurité spécifiés  
+#### <a name="for-option-only-the-instances-of-objects-that-are-assigned-to-the-specified-security-scopes-and-collections"></a>Concernant l’option : Uniquement les instances d’objets assignées aux étendues de sécurité et regroupements spécifiés  
 
 1.  Dans la console Configuration Manager, choisissez **Administration**.  
 
@@ -258,7 +259,7 @@ Utilisez la procédure suivante pour modifier un utilisateur administratif dont 
 
 Utilisez la procédure suivante pour modifier un utilisateur administratif pour lequel le comportement de l'objet sécurisable est paramétré sur **Associer des rôles de sécurité attribués à des étendues de sécurité et à des regroupements spécifiques**.  
 
-#### <a name="for-option-associate-assigned-security-roles-with-specific-security-scopes-and-collections"></a>Pour l’option : associer des rôles de sécurité attribués à des étendues de sécurité et à des regroupements spécifiques  
+#### <a name="for-option-associate-assigned-security-roles-with-specific-security-scopes-and-collections"></a>Concernant l’option : Associer des rôles de sécurité assignés à des étendues de sécurité et des regroupements spécifiques  
 
 1.  Dans la console Configuration Manager, choisissez **Administration**.  
 

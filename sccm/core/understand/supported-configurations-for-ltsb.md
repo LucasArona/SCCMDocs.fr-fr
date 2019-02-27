@@ -10,16 +10,17 @@ ms.assetid: f0f818d4-7f45-402f-8758-dc88bc024953
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2da1ff9f8a45ba33f6546dcab8df423d9064e650
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e185244bda88c317e0157618f066056a817a1a82
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344634"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56141889"
 ---
 # <a name="supported-configurations-for-the-long-term-servicing-branch-of-system-center-configuration-manager"></a>Configurations prises en charge pour la branche Long-Term Servicing Branch de System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Long-Term Servicing Branch)*
+*S’applique à : System Center Configuration Manager (Long-Term Servicing Branch)*
 
 Utilisez les informations de cette rubrique pour découvrir les systèmes d’exploitation et dépendances de produits pris en charge par la branche Long-Term Servicing Branch (LTSB) de Configuration Manager.
 Sauf indication contraire dans cette rubrique (ou les rubriques spécifiques à LTSB), les configurations et limitations qui s’appliquent à la branche Current Branch version 1606 s’appliquent également à la branche LTSB.  En cas de conflits, utilisez les informations qui s’appliquent à l’édition dont vous vous servez. En règle générale, LTSB est plus limité que Current Branch.
@@ -29,7 +30,7 @@ Les produits et technologies suivants sont pris en charge par cette branche de C
 
 En outre, les produits et versions de produits non répertoriés dans les rubriques suivantes ne sont pas pris en charge, sauf s’ils ont été annoncés dans le [Blog Enterprise Mobility + Security](https://blogs.technet.microsoft.com/enterprisemobility/).
 
-**Limitations de la prise en charge future :** LTSB offre une prise en charge limitée pour les futures versions des systèmes d’exploitation client/serveur et dépendances de produits. La liste des plateformes pour LTSB est fixée pour la durée de vie de la version :
+**Limitations de prise en charge future :** LTSB offre une prise en charge limitée pour les futures versions de systèmes d’exploitation client et serveur ainsi que des dépendances de produits. La liste des plateformes pour LTSB est fixée pour la durée de vie de la version :
 
 **Windows :**
 - Seules les mises à jour de qualité et de sécurité pour Windows sont prises en charge.
@@ -45,10 +46,10 @@ LTSB prend en charge l’utilisation des systèmes d’exploitation Windows suiv
 
 **Systèmes d’exploitation pris en charge :**
 - Windows Server 2016
-- Windows Server 2012 R2 (x64) : Standard, Datacenter
-- Windows Server 2012 (x64) : Standard, Datacenter
-- Windows Server 2008 R2 avec SP1 (x64) : Standard, Entreprise, Datacenter
-- Windows Server 2008 avec SP2 (x86, x64) : Standard, Enterprise, Datacenter *(voir la remarque 1)*
+- Windows Server 2012 R2 (x64) : Standard, Datacenter
+- Windows Server 2012 (x64) : Standard, Datacenter
+- Windows Server 2008 R2 avec SP1 (x64) : Standard, Entreprise, Datacenter
+- Windows Server 2008 avec SP2 (x86, x64) : Standard, Entreprise, Centre de données *(voir la note 1)*
 - Windows 10 Entreprise 2015 LTSB (x86, x64)
 - Windows 10 Entreprise 2016 LTSB (x86, x64)
 - Windows 8.1 (x86, x64) : Professionnel, Entreprise
@@ -56,7 +57,7 @@ LTSB prend en charge l’utilisation des systèmes d’exploitation Windows suiv
 - Installation minimale de Windows Server 2012
 - Installation minimale de Windows Server 2012 R2    
 
-*Remarque 1* : Ce système d’exploitation n’est pas pris en charge pour les serveurs de site ou les rôles de système de site, à l’exception du point de distribution et du point de distribution d’extraction. Vous pouvez continuer à utiliser ce système d’exploitation comme point de distribution jusqu’à l’annonce de la dépréciation de ce support ou jusqu’à l’expiration du support étendu de ce système d’exploitation. Pour plus d’informations, consultez [Échec de l’installation de System Center Configuration Manager CB et LTSB sur Windows Server 2008](https://support.microsoft.com/help/4015095).
+*Remarque 1* : Ce système d’exploitation n’est pas pris en charge pour les serveurs de site ou les rôles de système de site, à l’exception du point de distribution et du point de distribution d’extraction. Vous pouvez continuer à utiliser ce système d’exploitation comme point de distribution jusqu’à l’annonce de la dépréciation de ce support ou jusqu’à l’expiration du support étendu de ce système d’exploitation. Pour plus d’informations, consultez [Échec de l’installation de System Center Configuration Manager CB et LTSB sur Windows Server 2008](https://support.microsoft.com/help/4015095).
 
 ## <a name="client-management"></a>Gestion des clients
 Les sections suivantes identifient les systèmes d’exploitation clients que vous pouvez gérer à l’aide de LTSB. LTSB ne prend pas en charge l’ajout de nouveaux systèmes d’exploitation comme clients pris en charge.
@@ -66,13 +67,13 @@ Vous pouvez utiliser LTSB pour gérer les systèmes d’exploitation Windows sui
 
 **Systèmes d’exploitation pris en charge :**
 - Windows Server 2016
-- Windows Server 2012 R2 (x64) : Standard, Datacenter (Remarque 1)
-- Windows Server 2012 (x64) : Standard, Datacenter (Remarque 1)
+- Windows Server 2012 R2 (x64) : Standard, Centre de données (Note 1)
+- Windows Server 2012 (x64) : Standard, Centre de données (Note 1)
 - Windows Storage Server 2012 R2 (x64)
 - Windows Storage Server 2012 (x64)
-- Windows Server 2008 R2 avec SP1 (x64) : Standard, Enterprise, Datacenter (Remarque 1)
-- Windows Storage Server 2008 R2 (x86, x64) : Workgroup, Standard, Enterprise
-- Windows Server 2008 avec SP2 (x86, x64) : Standard, Enterprise, Datacenter (Remarque 1)
+- Windows Server 2008 R2 avec SP1 (x64) : Standard, Entreprise, Centre de données (Note 1)
+- Windows Storage Server 2008 R2 (x86, x64) : Workgroup, Standard, Enterprise
+- Windows Server 2008 avec SP2 (x86, x64) : Standard, Entreprise, Centre de données (Note 1)
 - Windows 10 Entreprise 2015 LTSB (x86, x64)
 - Windows 10 Entreprise 2016 LTSB (x86, x64)
 - Windows 8.1 (x86, x64) : Professionnel, Entreprise
@@ -287,10 +288,10 @@ LTSB prend en charge les systèmes d’exploitation suivants pour l’exécution
 
 **Systèmes d’exploitation pris en charge :**
 - Windows Server 2016
-- Windows Server 2012 R2 (x64) : Standard, Datacenter
-- Windows Server 2012 (x64) : Standard, Datacenter
-- Windows Server 2008 R2 avec SP1 (x64) : Standard, Entreprise, Datacenter
-- Windows Server 2008 avec SP2 (x86, x64) : Standard, Entreprise, Datacenter
+- Windows Server 2012 R2 (x64) : Standard, Datacenter
+- Windows Server 2012 (x64) : Standard, Datacenter
+- Windows Server 2008 R2 avec SP1 (x64) : Standard, Entreprise, Datacenter
+- Windows Server 2008 avec SP2 (x86, x64) : Standard, Entreprise, Datacenter
 - Windows 10 Entreprise 2016 LTSB (x86, x64)
 - Windows 10 Entreprise 2015 LTSB (x86, x64)
 - Windows 8.1 (x86, x64) : Professionnel, Entreprise
@@ -302,11 +303,11 @@ LTSB prend en charge les versions suivantes de SQL Server pour héberger la base
 
 **Versions prises en charge :**
 
-- SQL Server 2016 : Standard, Enterprise
-- SQL Server 2014 SP2 : Standard, Enterprise
-- SQL Server 2014 SP1 : Standard, Enterprise
-- SQL Server 2012 SP3 : Standard, Enterprise
-- SQL Server 2008 R2 SP3 : Standard, Enterprise, Datacenter
+- SQL Server 2016 : Standard, Entreprise
+- SQL Server 2014 SP2 : Standard, Entreprise
+- SQL Server 2014 SP1 : Standard, Entreprise
+- SQL Server 2012 SP3 : Standard, Entreprise
+- SQL Server 2008 R2 SP3 : Standard, Entreprise, Datacenter
 - SQL Server 2016 Express
 - SQL Server 2014 Express SP2
 - SQL Server 2014 Express SP1

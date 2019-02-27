@@ -10,17 +10,18 @@ ms.assetid: 5db2926f-f03e-49c7-b44b-e89b1a5a6779
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e9b2eaaf3581bdb951b23541c96532c5b049aac1
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: a1062cd5983c3eb0d1353b6387b7d9ee507df3b4
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456360"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56132637"
 ---
 # <a name="configure-boundary-groups-for-configuration-manager"></a>Configurer des groupes de limites pour Configuration Manager
 
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Utilisez des groupes de limites dans Configuration Manager afin d’organiser de façon logique des emplacements réseau associés ([limites](/sccm/core/servers/deploy/configure/boundaries)) pour faciliter la gestion de votre infrastructure. Attribuez des limites aux groupes de limites avant d’utiliser le groupe de limites.
 
@@ -54,7 +55,7 @@ Pour chaque groupe de limites de votre hiérarchie, vous pouvez affecter :
 
 Pour chaque groupe de limites créé, vous pouvez configurer un lien à sens unique vers un autre groupe de limites. Ce lien est appelé **relation**. Les groupes de limites vers lequel pointent ces liens sont appelés groupes de limites **voisins**. Un groupe de limites peut avoir plusieurs relations, chacune avec un groupe de limites voisin spécifique.
 
-Quand un client ne parvient pas à trouver un système de site disponible dans son groupe de limites actif, la configuration de chaque relation détermine le moment où il commence à effectuer des recherches dans un groupe de limites voisin. Cette recherche dans des groupes supplémentaires est appelée **repli**.
+Quand un client ne parvient pas à trouver un système de site disponible dans son groupe de limites actif, la configuration de chaque relation détermine le moment où il commence à effectuer des recherches dans un groupe de limites voisin. Cette recherche dans des groupes supplémentaires est appelée **secours**.
 
 Pour plus d'informations, consultez les procédures suivantes :  
 - [Créer un groupe de limites](/sccm/core/servers/deploy/configure/boundary-group-procedures#bkmk_create)  
@@ -62,21 +63,21 @@ Pour plus d'informations, consultez les procédures suivantes :
 
 
 
-## <a name="fallback"></a>Repli
+## <a name="fallback"></a>Secours
 
-Pour éviter des problèmes quand les clients ne trouvent pas de système de site disponible dans leur groupe de limites actif, définissez la relation entre les groupes de limites pour le comportement de repli. Le repli permet à un client d’étendre sa recherche à des groupes de limites supplémentaires pour trouver un système de site disponible.
+Pour éviter des problèmes quand les clients ne trouvent pas de système de site disponible dans leur groupe de limites actif, définissez la relation entre les groupes de limites pour le comportement de secours. Le secours permet à un client d’étendre sa recherche à des groupes de limites supplémentaires pour trouver un système de site disponible.
 
-Les relations sont configurées dans l’onglet **Relations** des propriétés du groupe de limites. Lorsque vous configurez une relation, vous définissez un lien vers un groupe de limites voisin. Pour chaque type de rôle de système de site pris en charge, configurez des paramètres indépendants pour le recours au groupe de limites voisin. Pour plus d’informations, consultez [Configurer le comportement de repli](/sccm/core/servers/deploy/configure/boundary-group-procedures#bkmk_bg-fallback).
+Les relations sont configurées dans l’onglet **Relations** des propriétés du groupe de limites. Lorsque vous configurez une relation, vous définissez un lien vers un groupe de limites voisin. Pour chaque type de rôle de système de site pris en charge, configurez des paramètres indépendants pour le recours au groupe de limites voisin. Pour plus d’informations, consultez [Configurer le comportement de secours](/sccm/core/servers/deploy/configure/boundary-group-procedures#bkmk_bg-fallback).
 
-Par exemple, quand vous configurez une relation vers un groupe de limites donné, définissez le déclenchement du repli après 20 minutes. La valeur par défaut est de 120 minutes Pour obtenir un exemple plus complet, consultez [Exemple d’utilisation des groupes de limites](#example-of-using-boundary-groups).
+Par exemple, quand vous configurez une relation vers un groupe de limites donné, définissez le déclenchement du secours après 20 minutes. La valeur par défaut est de 120 minutes Pour obtenir un exemple plus complet, consultez [Exemple d’utilisation des groupes de limites](#example-of-using-boundary-groups).
 
-Si un client ne trouve pas un rôle de système de site disponible dans son groupe de limites actif, il utilise le délai de repli en minutes. Ce délai détermine le moment où le client commence à rechercher un système de site disponible associé au groupe de limites voisin.  
+Si un client ne trouve pas un rôle de système de site disponible dans son groupe de limites actif, il utilise le délai de secours en minutes. Ce délai détermine le moment où le client commence à rechercher un système de site disponible associé au groupe de limites voisin.  
 
 Quand un client ne peut pas trouver de système de site disponible, il commence à effectuer des recherches à des emplacements de groupes de limites voisins. Ce comportement augmente le pool de systèmes de site disponibles. La configuration des groupes de limites et de leurs relations définit l’utilisation de ce pool par le client.
 
 - Un groupe de limites peut avoir plusieurs relations. Avec cette configuration, vous pouvez configurer un repli pour chaque type de système de site sur différents voisins après différents délais.    
 
-- Les clients utilisent uniquement le repli sur un groupe de limites qui est un voisin direct de leur groupe de limites actuel.  
+- Les clients utilisent uniquement en secours un groupe de limites qui est un voisin direct de leur groupe de limites actuel.  
 
 - Quand un client est membre de plusieurs groupes de limites, le groupe de limites actif est défini en tant qu’union de tous les groupes de limites du client. Le client peut ensuite recourir à des voisins de n’importe lequel de ces groupes de limites d’origine.  
 
@@ -87,7 +88,7 @@ Vous pouvez créer vos propres groupes de limites, en sachant que chaque site pr
 
 Pour chaque groupe de limites que vous créez, Configuration Manager crée automatiquement un lien implicite vers chacun des groupes de limites de site par défaut de la hiérarchie.  
 
-- Le lien implicite est une option de repli par défaut d’un groupe de limites actif sur le groupe de limites de site par défaut. Le délai de repli par défaut est de 120 minutes.  
+- Le lien implicite est une option de secours par défaut d’un groupe de limites actif vers le groupe de limites de site par défaut. Le délai de secours par défaut est de 120 minutes.  
 
 - Pour les clients qui ne sont pas sur une limite associée à un groupe de limites : pour identifier les rôles de système de site valides, ils doivent utiliser le groupe de limites par défaut du site qui leur a été affecté.  
 
@@ -96,7 +97,7 @@ Pour gérer le recours au groupe de limites de site par défaut :
 
 - Ouvrez les propriétés du groupe de limites par défaut du site et modifiez les valeurs de l’onglet **Comportement par défaut**. Les modifications apportées ici s’appliquent à *tous* les liens implicites vers ce groupe de limites. Ces paramètres par défaut peuvent être remplacés lorsque vous configurez un lien explicite vers ce groupe de limites de site par défaut à partir d’un autre groupe de limites.  
 
-- Ouvrez les propriétés d’un groupe de limites personnalisé. Modifiez les valeurs du lien explicite vers un groupe de limites de site par défaut. Lorsque vous définissez un nouveau délai de repli ou de repli en bloc en minutes, ce changement affecte uniquement le lien que vous configurez. La configuration du lien explicite remplace les paramètres de l’onglet **Comportement par défaut** d’un groupe de limites de site par défaut.  
+- Ouvrez les propriétés d’un groupe de limites personnalisé. Modifiez les valeurs du lien explicite vers un groupe de limites de site par défaut. Lorsque vous définissez un nouveau délai de secours ou de secours en bloc en minutes, cette modification affecte uniquement le lien que vous configurez. La configuration du lien explicite remplace les paramètres de l’onglet **Comportement par défaut** d’un groupe de limites de site par défaut.  
 
 
 
@@ -118,7 +119,7 @@ Pour plus d’informations sur l’attribution d’un site au client, consultez 
 
 Pour plus d’informations sur la façon de configurer l’attribution de site, consultez les procédures suivantes :
 - [Configurer l’attribution de site et sélectionner des serveurs de système de site](/sccm/core/servers/deploy/configure/boundary-group-procedures#bkmk_references)
-- [Configurer un site de repli pour l’attribution de site automatique](/sccm/core/servers/deploy/configure/boundary-group-procedures#bkmk_site-fallback)
+- [Configurer un site de secours pour l’attribution de site automatique](/sccm/core/servers/deploy/configure/boundary-group-procedures#bkmk_site-fallback)
 
 
 
@@ -134,7 +135,7 @@ Quand un client demande l’emplacement d’un point de distribution, Configurat
 
 Lors du déploiement de contenu, si un client demande du contenu qui n’est pas disponible à partir d’une source de son groupe de limites actif, le client continue de demander ce contenu. Il essaie différentes sources de contenu dans son groupe de limites actif, jusqu’à ce que la période de repli d’un groupe de limites voisin ou du groupe de limites de site par défaut soit atteinte. Si le client n’a pas encore trouvé de contenu, il étend ensuite sa recherche de sources de contenu aux groupes de limites voisins.
 
-Si vous configurez le contenu de sorte à le distribuer à la demande et qu’il n’est pas disponible sur un point de distribution quand un client le demande, le site commence à le transférer vers ce point de distribution. Il est possible que le client trouve ce serveur comme source de contenu avant d’utiliser un groupe de limites voisin en repli.
+Si vous configurez le contenu de sorte à le distribuer à la demande et qu’il n’est pas disponible sur un point de distribution quand un client le demande, le site commence à le transférer vers ce point de distribution. Il est possible que le client trouve ce serveur comme source de contenu avant d’utiliser un groupe de limites voisin en secours.
 
 
 ### <a name="bkmk_ccmsetup"></a> Installation du client
@@ -158,9 +159,9 @@ Depuis la version 1810, quand un appareil exécute une séquence de tâches et 
 
 Configurez ce comportement à l’aide des paramètres suivants dans la page **Points de distribution** du déploiement de la séquence de tâches : 
 
-- **Utiliser un point de distribution distant quand aucun point de distribution local n’est disponible** : pour ce déploiement, la séquence de tâches peut se replier sur les points de distribution d’un groupe de limites voisin.  
+- **Lorsqu’aucun point de distribution local n’est disponible, utilisez un point de distribution distant** : Dans le cadre de ce déploiement, la séquence de tâches peut revenir aux points de distribution d’un groupe de limites voisin.  
 
-- **Autoriser les clients à utiliser les points de distribution du groupe de limites de site par défaut** : pour ce déploiement, la séquence de tâches peut se replier sur les points de distribution du groupe de limites de site par défaut.  
+- **Autoriser les clients à utiliser les points de distribution du groupe de limites de site par défaut** : Dans le cadre de ce déploiement, la séquence de tâches peut revenir aux points de distribution d’un groupe de limites de site par défaut.  
 
 Pour utiliser ce nouveau comportement, veillez à mettre à jour les clients vers la dernière version.
 
@@ -229,32 +230,32 @@ Si vous avez une succursale qui utilise un lien Internet plus rapide, vous pouve
 
 Les clients utilisent des groupes de limites pour rechercher un nouveau point de mise à jour logicielle. Pour contrôler les serveurs qu’un client peut trouver, ajoutez des points de mise à jour logicielle individuels à différents groupes de limites.
 
-Si vous effectuez la mise à jour à partir d’une version antérieure à la version 1702, chaque site ajoute tous les points de mise à jour logicielle existants au groupe de limites de site par défaut. Ce comportement de mise à jour du site garde le comportement du client précédent pour sélectionner un point de mise à jour logicielle dans le pool de serveurs disponibles. Ce comportement est conservé tant que vous ne choisissez pas d’ajouter des points de mise à jour logicielle propres à chaque groupe de limites pour une sélection contrôlée et un comportement de repli.
+Si vous effectuez la mise à jour à partir d’une version antérieure à la version 1702, chaque site ajoute tous les points de mise à jour logicielle existants au groupe de limites de site par défaut. Ce comportement de mise à jour du site garde le comportement du client précédent pour sélectionner un point de mise à jour logicielle dans le pool de serveurs disponibles. Ce comportement est conservé tant que vous ne choisissez pas d’ajouter des points de mise à jour logicielle propres à chaque groupe de limites pour une sélection contrôlée et un comportement de secours.
 
 Si vous installez un nouveau site, des points de mise à jour logicielle ne sont pas ajoutés au groupe de limites de site par défaut. Attribuez des points de mise à jour logicielle à un groupe de limites afin que les clients puissent les trouver et les utiliser.
 
 
-### <a name="fallback-for-software-update-points"></a>Action de repli pour les points de mise à jour logicielle
+### <a name="fallback-for-software-update-points"></a>Action de secours pour les points de mise à jour logicielle
 
-Pour les points de mise à jour logicielle, le repli est configuré comme les autres rôles de système de site, mais avec les restrictions suivantes :  
+Pour les points de mise à jour logicielle, le secours est configuré comme les autres rôles de système de site, mais avec les restrictions suivantes :  
 
 #### <a name="new-clients-use-boundary-groups-to-select-software-update-points"></a>Les nouveaux clients utilisent des groupes de limites pour sélectionner les points de mise à jour logicielle.
 Lorsque vous installez de nouveaux clients, ils sélectionnent un point de mise à jour logicielle parmi les serveurs associés aux groupes de limites que vous configurez. Ce comportement vient remplacer celui qui consistait, pour les clients, à sélectionner un point de mise à jour logicielle de manière aléatoire dans une liste des serveurs partageant la forêt du client.
 
-#### <a name="clients-continue-to-use-a-last-known-good-software-update-point-until-they-fallback-to-find-a-new-one"></a>Les clients continuent d’utiliser un dernier point de mise à jour logicielle correct connu jusqu’à ce qu’ils en recherchent un nouveau une fois l’action de repli lancée.
+#### <a name="clients-continue-to-use-a-last-known-good-software-update-point-until-they-fallback-to-find-a-new-one"></a>Les clients continuent d’utiliser un dernier point de mise à jour logicielle correct connu jusqu’à ce qu’ils en recherchent un nouveau une fois l’action de secours lancée.
 Les clients qui disposent déjà d’un point de mise à jour logicielle continuent de l’utiliser jusqu’à ce qu’il ne soit plus accessible. Ce comportement comprend la poursuite de l’utilisation d’un point de mise à jour logicielle non associé au groupe de limites actif du client.
 
 Ce comportement est intentionnel. Le client continue d’utiliser un point de mise à jour logicielle existant, même s’il ne s’agit pas du groupe de limites actif du client. Quand le point de mise à jour logicielle change, le client synchronise ses données avec le nouveau serveur, ce qui peut entraîner une utilisation importante du réseau. Si tous les clients basculent vers un nouveau serveur en même temps, le délai de transition peut permettre d’éviter la saturation du réseau.
 
-#### <a name="a-client-always-tries-to-reach-its-last-known-good-software-update-point-for-120-minutes-before-starting-fallback"></a>Un client tente toujours d’atteindre son dernier point de mise à jour logicielle correct connu pendant 120 minutes avant de démarrer l’action de repli.
-Après 120 minutes, si le client n’a pas établi de contact, il enclenche un repli. Quand le repli démarre, le client reçoit la liste de tous les points de mise à jour logicielle dans son groupe de limites actif. Des points de mise à jour logicielle supplémentaires dans des groupes de limites voisins et de site par défaut sont disponibles en fonction des configurations de repli.
+#### <a name="a-client-always-tries-to-reach-its-last-known-good-software-update-point-for-120-minutes-before-starting-fallback"></a>Un client tente toujours d’atteindre son dernier point de mise à jour logicielle correct connu pendant 120 minutes avant de démarrer l’action de secours.
+Après 120 minutes, si le client n’a pas établi de contact, il démarre l’action de secours. Quand l’action de secours démarre, le client reçoit la liste de tous les points de mise à jour logicielle dans son groupe de limites actif. Des points de mise à jour logicielle supplémentaires dans des groupes de limites voisins et de site par défaut sont disponibles en fonction des configurations de secours.
 
 
-### <a name="fallback-configurations-for-software-update-points"></a>Configurations de repli pour les points de mise à jour logicielle
+### <a name="fallback-configurations-for-software-update-points"></a>Configurations de l’action de secours pour les points de mise à jour logicielle
 
-Vous pouvez configurer des **durées avant repli (en minutes)** inférieures à 120 minutes pour les points de mise à jour logicielle. Toutefois, le client tente toujours d’atteindre son point de mise à jour logicielle d’origine pendant 120 minutes. Il étend ensuite sa recherche à des serveurs supplémentaires. Les délais de repli des groupes de limites démarrent dès que le client ne parvient pas à atteindre le serveur d’origine. Quand le client étend sa recherche, le site fournit tous les groupes de limites configurés depuis moins de 120 minutes.
+Vous pouvez configurer des **durées avant repli (en minutes)** inférieures à 120 minutes pour les points de mise à jour logicielle. Toutefois, le client tente toujours d’atteindre son point de mise à jour logicielle d’origine pendant 120 minutes. Il étend ensuite sa recherche à des serveurs supplémentaires. Les délais de secours des groupes de limites démarrent dès que le client ne parvient pas à atteindre le serveur d’origine. Quand le client étend sa recherche, le site fournit tous les groupes de limites configurés depuis moins de 120 minutes.
 
-Pour bloquer le repli d’un point de mise à jour logicielle sur un groupe de limites voisin, affectez au paramètre la valeur **Jamais de repli**.
+Pour bloquer l’action de secours pour un point de mise à jour logicielle vers un groupe de limites voisin, affectez au paramètre la valeur **Jamais d’action de secours**.
 
 Après avoir échoué pendant deux heures à atteindre le serveur d’origine, le client utilise un cycle plus court pour établir une connexion à un nouveau point de mise à jour logicielle. Ce comportement permet au client d’explorer rapidement la liste croissante des points de mise à jour logicielle potentiels.
 
@@ -270,27 +271,27 @@ Vous configurez des points de mise à jour logicielle dans le groupe de limites 
 
 ### <a name="manually-switch-to-a-new-software-update-point"></a>Basculer manuellement vers un nouveau point de mise à jour logicielle
 
-En plus du repli, utilisez la notification du client pour forcer manuellement un appareil à basculer vers un nouveau point de mise à jour logicielle.
+Outre l’action de secours, utilisez la notification du client pour forcer manuellement un appareil à basculer vers un nouveau point de mise à jour logicielle.
 
-Quand vous basculez vers un nouveau serveur, les appareils utilisent le repli pour rechercher ce serveur. Passez en revue vos configurations de groupes de limites. Vérifiez que vos points de mise à jour logicielle sont dans les groupes de limites appropriés avant de procéder à ce changement.
+Quand vous basculez vers un nouveau serveur, les appareils utilisent l’action de secours pour rechercher ce serveur. Passez en revue vos configurations de groupes de limites. Vérifiez que vos points de mise à jour logicielle sont dans les groupes de limites appropriés avant de procéder à ce changement.
 
 Pour plus d’informations, consultez [Basculer manuellement les clients vers un nouveau point de mise à jour logicielle](/sccm/sum/plan-design/plan-for-software-updates#manually-switch-clients-to-a-new-software-update-point).
 
 
 
 ## <a name="management-points"></a>Points de gestion
-<!-- 1324594 --> Depuis la version 1802, configurez des relations de repli pour les points de gestion entre les groupes de limites. Ce comportement offre un meilleur contrôle des points de gestion que les clients utilisent. L’onglet **Relations** des propriétés du groupe de limites comporte une colonne pour le point de gestion. Lors de l’ajout d’un nouveau groupe de limites de repli, le temps de repli du point de gestion est actuellement toujours égal à zéro (0). Ce comportement est identique pour le **Comportement par défaut** dans le groupe de limites de site par défaut.
+<!-- 1324594 --> Depuis la version 1802, configurez des relations de secours pour les points de gestion entre les groupes de limites. Ce comportement offre un meilleur contrôle des points de gestion que les clients utilisent. L’onglet **Relations** des propriétés du groupe de limites comporte une colonne pour le point de gestion. Lors de l’ajout d’un nouveau groupe de limites de secours, le temps de secours du point de gestion est actuellement toujours égal à zéro (0). Ce comportement est identique pour le **Comportement par défaut** dans le groupe de limites de site par défaut.
 
-Auparavant, un problème se produisait souvent pour les points de gestion protégés présents dans un réseau sécurisé. Les clients du réseau d’entreprise principal recevaient une stratégie comprenant ce point de gestion protégé, même s’ils ne pouvaient pas communiquer avec lui à travers un pare-feu. Pour résoudre ce problème, utilisez l’option **Jamais de repli** pour que les clients ne se replient que sur les points de gestion avec lesquels ils peuvent communiquer.
+Auparavant, un problème se produisait souvent pour les points de gestion protégés présents dans un réseau sécurisé. Les clients du réseau d’entreprise principal recevaient une stratégie comprenant ce point de gestion protégé, même s’ils ne pouvaient pas communiquer avec lui à travers un pare-feu. Pour résoudre ce problème, utilisez l’option **Jamais d’action de secours** pour que les clients n’utilisent en secours que les points de gestion avec lesquels ils peuvent communiquer.
 
 Lors de la mise à niveau du site vers la version 1802, Configuration Manager ajoute tous les points de gestion intranet au groupe de limites de site par défaut. (Ce groupe de serveurs n’inclut pas les points de gestion qui sont uniquement accessibles sur Internet.) Ce comportement de mise à niveau permet de s’assurer que les versions antérieures des clients continuent de communiquer avec les points de gestion. Pour tirer pleinement parti de cette fonctionnalité, déplacez vos points de gestion vers les groupes de limites de votre choix.
 
 > [!Note]  
-> Si vous activez un repli sur les points de distribution dans le groupe de limites par défaut de site, et qu’un point de gestion est colocalisé sur un point de distribution, le site ajoute également le point de gestion au groupe de limites par défaut de site.<!--VSO 2841292-->  
+> Si vous activez l’action de secours sur les points de distribution dans le groupe de limites par défaut de site, et qu’un point de gestion est colocalisé sur un point de distribution, le site ajoute également le point de gestion au groupe de limites par défaut de site.<!--VSO 2841292-->  
 
 Si un client se trouve dans un groupe de limites sans point de gestion attribué, le site donne au client la liste complète des points de gestion. Ce comportement permet de s’assurer qu’un client reçoit toujours une liste de points de gestion.
 
-Le repli du groupe de limites de point de gestion ne change pas le comportement lors de l’installation du client (ccmsetup.exe). Si la ligne de commande ne spécifie pas le point de gestion initial avec le paramètre/MP, le nouveau client reçoit la liste complète des points de gestion disponibles. Pour son processus d’amorçage initial, le client utilise le premier point de gestion auquel il peut accéder. Une fois inscrit auprès du site, il recevra la liste des points de gestion convenablement triée avec ce nouveau comportement. 
+L’action de secours du groupe de limites de point de gestion ne modifie pas le comportement lors de l’installation du client (ccmsetup.exe). Si la ligne de commande ne spécifie pas le point de gestion initial avec le paramètre/MP, le nouveau client reçoit la liste complète des points de gestion disponibles. Pour son processus d’amorçage initial, le client utilise le premier point de gestion auquel il peut accéder. Une fois inscrit auprès du site, il recevra la liste des points de gestion convenablement triée avec ce nouveau comportement. 
 
 Pour plus d’informations sur le comportement du client pour acquérir du contenu lors de l’installation, consultez [Installation du client](#bkmk_ccmsetup).
 
@@ -306,15 +307,15 @@ Pour que les clients utilisent cette fonctionnalité, activez le paramètre suiv
 
 De nouvelles entrées apparaissent dans **LocationServices.log**. L’attribut **Localité** identifie l’un des états suivants :
 
-- **0** : Inconnu  
+- **0** : Inconnu.  
 
-- **1** : le point de gestion spécifié se trouve uniquement dans le groupe de limites de site par défaut pour le repli  
+- **1** : Le point de gestion spécifié se trouve uniquement dans le groupe de limites de site par défaut pour l’action de secours.  
 
-- **2** : le point de gestion spécifié se trouve dans un groupe de limites voisin ou distant. S’il est à la fois dans le groupe de limites de site par défaut et dans un groupe voisin, la localité est 2.  
+- **2** : Le point de gestion spécifié se trouve dans un groupe de limites voisin ou distant. S’il est à la fois dans le groupe de limites de site par défaut et dans un groupe voisin, la localité est 2.  
 
-- **3** : le point de gestion spécifié se trouve dans le groupe de limites local ou actif. S’il est à la fois dans le groupe de limites actif et dans un groupe voisin ou le groupe de limites de site par défaut, la localité est 3. Si vous n’activez pas le paramètre des points de gestion préférés dans les Paramètres de hiérarchie, la localité est toujours 3, quel que soit le groupe de limites du point de gestion.  
+- **3** : Le point de gestion spécifié se trouve dans le groupe de limites local ou actif. S’il est à la fois dans le groupe de limites actif et dans un groupe voisin ou le groupe de limites de site par défaut, la localité est 3. Si vous n’activez pas le paramètre des points de gestion préférés dans les Paramètres de hiérarchie, la localité est toujours 3, quel que soit le groupe de limites du point de gestion.  
 
-Les clients utilisent en premier les points de gestion locaux (localité 3), puis distants (localité 2) et enfin de repli (localité 1). 
+Les clients utilisent en premier les points de gestion locaux (localité 3), puis distants (localité 2) et enfin de secours (localité 1). 
 
 Quand un client reçoit cinq erreurs en 10 minutes et ne parvient pas à communiquer avec l’un des points de gestion de son groupe de limites actif, il tente de contacter un point de gestion d’un groupe de limites voisin ou du groupe de limites de site par défaut. Si le point de gestion du groupe de limites actif revient en ligne par la suite, le client retourne au point de gestion local lors du prochain cycle d’actualisation. Ce cycle a une durée de 24 heures, ou se termine au redémarrage du service de l’agent Configuration Manager.
 
@@ -370,9 +371,9 @@ Ajoutez les emplacements réseau de vos clients en tant que limites uniquement a
 
 - Ajoutez également un point de distribution supplémentaire qui se trouve sur le serveur de site au groupe de limites de site par défaut. Ce serveur est l’emplacement source de contenu que vous préférez le moins, mais il se trouve au milieu de tous les groupes de limites.
 
-    Exemple de groupes de limites et de durées de repli :
+    Exemple de groupes de limites et de durées de secours :
 
-     ![Exemple de groupes de limites et de durées de repli](media/BG_Fallback.png)
+     ![Exemple de groupes de limites et de durées de secours](media/BG_Fallback.png)
 
 
 Avec cette configuration :  
@@ -381,11 +382,11 @@ Avec cette configuration :
 
 - Si le client ne parvient pas à trouver le contenu dans son groupe de limites *actuel* après une recherche de 10 minutes, il ajoute alors les points de distribution du groupe de limites BG_B à sa recherche. Il continue ensuite à rechercher le contenu dans un point de distribution de son pool combiné de serveurs. Ce pool inclut maintenant ceux des groupes de limites BG_A et BG_B. Le client continue de contacter chaque point de distribution pendant deux minutes avant de passer au serveur suivant de son pool. Le pool des emplacements sources de contenu valides du client inclut DP_A1, DP_A2, DP_B1 et DP_B2.  
 
-- Après 10 minutes supplémentaires (20 minutes au total), si le client n’a toujours pas trouvé un point de distribution avec du contenu, il étend son pool de serveurs disponibles pour inclure ceux du deuxième groupe *voisin*, le groupe de limites BG_C. Le client dispose désormais de six points de distribution pour sa recherche : DP_A1, DP_A2, DP_B2, DP_B2, DP_C1 et DP_C2. Il continue de changer de point de distribution toutes les deux minutes jusqu’à ce qu’il trouve le contenu.  
+- Après 10 minutes supplémentaires (20 minutes au total), si le client n’a toujours pas trouvé un point de distribution avec du contenu, il étend son pool de serveurs disponibles pour inclure ceux du deuxième groupe *voisin*, le groupe de limites BG_C. Le client dispose désormais de six points de distribution à rechercher : DP_A1, DP_A2, DP_B2, DP_B2, DP_C1 et DP_C2. Il continue de changer de point de distribution toutes les deux minutes jusqu’à ce qu’il trouve le contenu.  
 
 - Si le client n’a pas trouvé le contenu après un total de 120 minutes, il revient en arrière pour inclure le *groupe de limites de site par défaut* dans le cadre de sa recherche continue. Le pool inclut désormais tous les points de distribution des trois groupes de limites configurés et le point de distribution final situé sur le serveur de site. Le client continue alors sa recherche de contenu, en changeant de point de distribution toutes les deux minutes jusqu’à ce qu’il trouve le contenu.  
 
-En configurant les différents groupes voisins pour être disponibles à différents moments, vous contrôlez quand des points de distribution spécifiques sont ajoutés en tant qu’emplacement source de contenu. Le client utilise le repli sur le groupe de limites de site par défaut comme filet de protection pour le contenu qui n’est pas disponible à partir de tout autre emplacement.
+En configurant les différents groupes voisins pour être disponibles à différents moments, vous contrôlez quand des points de distribution spécifiques sont ajoutés en tant qu’emplacement source de contenu. Le client utilise le secours sur le groupe de limites de site par défaut comme filet de protection pour le contenu qui n’est pas disponible à partir de tout autre emplacement.
 
 
 
@@ -401,12 +402,12 @@ Vous ne configurez plus des points de distribution individuels pour qu’ils soi
 
 ### <a name="new-default-boundary-group-at-each-site"></a>Nouveau groupe de limites par défaut sur chaque site
 
-Chaque site principal possède un nouveau groupe de limites par défaut nommé **Groupe-limites-site-défaut&lt;code_site>**. Quand un client n’est pas à un emplacement réseau affecté à un groupe de limites, il utilise les systèmes de site associés au groupe par défaut à partir de son site affecté. Envisagez d’utiliser ce groupe de limites en remplacement de la notion d’emplacement de repli pour le contenu.     
+Chaque site principal possède un nouveau groupe de limites par défaut nommé **Groupe-limites-site-défaut&lt;code_site>**. Quand un client n’est pas à un emplacement réseau affecté à un groupe de limites, il utilise les systèmes de site associés au groupe par défaut à partir de son site affecté. Envisagez d’utiliser ce groupe de limites en remplacement de la notion d’emplacement de secours pour le contenu.     
 
 #### <a name="allow-fallback-source-locations-for-content-is-removed"></a>**Autoriser l'emplacement source de secours pour le contenu** est supprimé
-Vous ne configurez plus explicitement un point de distribution à utiliser pour le repli. Les options de configuration de ce paramètre sont supprimées de la console.
+Vous ne configurez plus explicitement un point de distribution à utiliser pour le secours. Les options de configuration de ce paramètre sont supprimées de la console.
 
-De plus, le résultat de la définition du paramètre **Autoriser les clients à utiliser un emplacement source de secours pour le contenu** sur un type de déploiement pour les applications a changé. Ce paramètre sur un type de déploiement permet maintenant à un client d’utiliser le groupe de limites de site par défaut comme emplacement source de contenu.
+En outre, le résultat de la définition du paramètre **Autoriser les clients à utiliser un emplacement source de secours pour le contenu** sur un type de déploiement pour les applications a changé. Ce paramètre sur un type de déploiement permet maintenant à un client d’utiliser le groupe de limites de site par défaut comme emplacement source de contenu.
 
 #### <a name="boundary-groups-relationships"></a>Relations des groupes de limites
 Vous pouvez lier chaque groupe de limites à un ou plusieurs groupes de limites supplémentaires. Ces liens forment des relations que vous configurez sous le nouvel onglet des propriétés du groupe de limites nommé **Relations** :  
@@ -415,15 +416,15 @@ Vous pouvez lier chaque groupe de limites à un ou plusieurs groupes de limites 
 
 - Tout groupe de limites qu’un client peut utiliser en raison d’une association entre le groupe de limites *actif* de ce client et un autre groupe est appelé groupe de limites **voisin**.  
 
-- Sous l’onglet **Relations**, ajoutez des groupes de limites à utiliser comme groupe de limites *voisin*. Configurez également un délai en minutes de repli. Quand un client ne parvient pas à trouver le contenu à partir d’un point de distribution dans le groupe *actif*, ce délai détermine quand il doit commencer à effectuer des recherches dans les emplacements de contenu de ces groupes de limites *voisins*.  
+- Sous l’onglet **Relations**, ajoutez des groupes de limites à utiliser comme groupe de limites *voisin*. Configurez également un délai en minutes de secours. Quand un client ne parvient pas à trouver le contenu à partir d’un point de distribution dans le groupe *actif*, ce délai détermine quand il doit commencer à effectuer des recherches dans les emplacements de contenu de ces groupes de limites *voisins*.  
 
-    Quand vous ajoutez ou modifiez la configuration d’un groupe de limites, vous pouvez bloquer le repli sur ce groupe de limites spécifique à partir du groupe actif que vous configurez.  
+    Quand vous ajoutez ou modifiez la configuration d’un groupe de limites, vous pouvez bloquer le secours sur ce groupe de limites spécifique à partir du groupe actif que vous configurez.  
 
 Pour utiliser la nouvelle configuration, définissez des associations explicites (liens) entre un groupe de limites et un autre. Configurez tous les points de distribution de ce groupe associé avec le même délai en minutes. Quand un client ne parvient pas à trouver une source de contenu dans son groupe de limites *actif*, la durée que vous configurez détermine quand il doit commencer à rechercher des sources de contenu dans son groupe de limites voisin.
 
 En plus des groupes de limites que vous configurez explicitement, chaque groupe de limites a un lien implicite vers le groupe de limites de site par défaut. Ce lien devient actif après 120 minutes. Ensuite, le groupe de limites de site par défaut devient un groupe de limites voisin. Ce comportement permet aux clients d’utiliser les points de distribution associés à ce groupe de limites comme emplacements sources de contenu.
 
-Ce comportement remplace ce qui était précédemment désigné sous le nom de repli pour le contenu. Remplacez ce comportement par défaut de 120 minutes en associant explicitement le groupe de limites de site par défaut à un groupe *actif*. Définissez une durée spécifique en minutes ou bloquez totalement le repli pour empêcher son utilisation.
+Ce comportement remplace ce qui était précédemment désigné sous le nom de secours pour le contenu. Remplacez ce comportement par défaut de 120 minutes en associant explicitement le groupe de limites de site par défaut à un groupe *actif*. Définissez une durée spécifique en minutes ou bloquez totalement le secours pour empêcher son utilisation.
 
 
 ### <a name="clients-try-to-get-content-from-each-distribution-point-for-up-to-two-minutes"></a>Les clients tentent d’obtenir le contenu à partir de chaque point de distribution pendant deux minutes au maximum
@@ -434,10 +435,10 @@ Quand un client recherche un emplacement source de contenu, il tente d’accéde
 
 - Après deux minutes, si le client n’a pas trouvé le contenu, il bascule vers un nouveau point de distribution et tente d’obtenir le contenu de ce serveur. Ce processus se répète toutes les deux minutes jusqu’à ce que le client trouve le contenu ou atteigne le dernier serveur dans son pool.  
 
-- Si un client ne peut pas trouver un emplacement source de contenu valide dans son pool *actif* avant la période de repli sur un groupe de limites *voisin*, le client ajoute alors les points de distribution de ce groupe *voisin* à la fin de sa liste actuelle. Il effectue ensuite des recherches dans le groupe étendu d’emplacements sources qui inclut les points de distribution des deux groupes de limites.  
+- Si un client ne peut pas trouver un emplacement source de contenu valide dans son pool *actif* avant la période de secours sur un groupe de limites *voisin*, le client ajoute alors les points de distribution de ce groupe *voisin* à la fin de sa liste actuelle. Il effectue ensuite des recherches dans le groupe étendu d’emplacements sources qui inclut les points de distribution des deux groupes de limites.  
 
     > [!TIP]  
-    > Quand vous créez un lien explicite entre le groupe de limites actif et le groupe de limites de site par défaut, puis définissez une durée de repli inférieure à celle d’un lien vers un groupe de limites voisin, les clients commencent à effectuer des recherches dans les emplacements sources du groupe de limites de site par défaut avant d’inclure le groupe voisin.  
+    > Quand vous créez un lien explicite entre le groupe de limites actif et le groupe de limites de site par défaut, puis définissez une durée de secours inférieure à celle d’un lien vers un groupe de limites voisin, les clients commencent à effectuer des recherches dans les emplacements sources du groupe de limites de site par défaut avant d’inclure le groupe voisin.  
 
 - Quand le client ne parvient pas à obtenir le contenu du dernier serveur dans le pool, il recommence le processus.  
 

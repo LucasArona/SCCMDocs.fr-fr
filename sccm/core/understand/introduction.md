@@ -10,16 +10,17 @@ ms.assetid: 3343eccf-bf09-41cd-9e68-03e893c7f904
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f0986d713b47d15dc0298e413216a1e33fe2e937
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 10e30b2446d1b2f51d2de8d97c4d8b084357ae32
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342475"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56133383"
 ---
 # <a name="introduction-to-system-center-configuration-manager"></a>Présentation de System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Produit de la suite Microsoft System Center de solutions de gestion, System Center Configuration Manager peut vous aider à gérer les appareils et les utilisateurs localement et dans le cloud.  
 
@@ -110,7 +111,7 @@ Pour plus d’informations, consultez [Présentation de la gestion d’applicati
 
 Dans tous les scénarios, Adam est l'administrateur principal de Configuration Manager.  
 
-###  <a name="BKMK_ScenarioEmpower"></a> Exemple de scénario : donner aux utilisateurs plus d’autonomie en permettant l’accès aux applications à partir de tous les appareils  
+###  <a name="BKMK_ScenarioEmpower"></a> Exemple de scénario : Donner une plus grande autonomie aux utilisateurs en assurant l’accès aux applications à partir de n’importe quel appareil  
  Trey Research veut s’assurer que les employés peuvent accéder aux applications dont ils ont besoin, et aussi efficacement que possible. Adam applique ces spécifications de l'entreprise aux scénarios suivants :  
 
 |Exigence|État actuel de la gestion du client|État futur de la gestion du client|  
@@ -133,12 +134,12 @@ Il implémente ces fonctionnalités en effectuant les étapes de configuration d
 |Adam vérifie que les nouveaux utilisateurs ont des comptes d’utilisateur dans Active Directory, puis il crée un regroupement basé sur des requêtes dans Configuration Manager pour ces utilisateurs. Il définit ensuite l'affinité entre appareil et utilisateur pour ces utilisateurs en créant un fichier de mappage des comptes d'utilisateur aux ordinateurs principaux qui seront utilisés, et il importe ce fichier dans Configuration Manager.<br /><br /> Les applications dont les nouveaux utilisateurs ont besoin sont déjà créées dans Configuration Manager. Adam déploie ensuite les applications ayant l’objectif Obligatoire dans le regroupement qui contient les nouveaux utilisateurs.|En raison des informations relatives à l’affinité entre appareil et utilisateur, les applications sont installées sur l’ordinateur principal ou les ordinateurs de chaque utilisateur avant l’ouverture d’une session utilisateur.<br /><br /> L’utilisateur peut utiliser les applications aussitôt après avoir ouvert une session.|  
 |Adam installe et configure les rôles de système de site du catalogue des applications pour permettre aux utilisateurs de rechercher les applications à installer. Il crée des déploiements d'applications dont l'objet est Disponible, puis il déploie ces applications sur le regroupement qui contient les nouveaux utilisateurs.<br /><br /> Dans le cas d'applications dont le nombre de licences est limité, Adam les configure pour en demander l'approbation.|Les utilisateurs peuvent maintenant accéder au catalogue des applications pour rechercher les applications qu’ils sont autorisés à installer. Ils peuvent ensuite installer les applications immédiatement, ou envoyer une demande d’approbation et revenir au catalogue des applications pour les installer une fois que le support technique a approuvé leur demande.|  
 |Adam crée un connecteur Exchange Server dans Configuration Manager pour gérer les appareils mobiles qui se connectent au serveur Exchange Server local de l'entreprise. Il configure ce connecteur avec les paramètres de sécurité qui exigent de définir un mot de passe fort et de verrouiller l’appareil mobile après une période d’inactivité.<br /><br /> Pour gérer en plus les appareils exécutant Windows Phone 8, Windows RT et iOS, Adam prend un abonnement à Microsoft Intune. Il installe ensuite le rôle de système de site de point de connexion de service. Cette solution de gestion d'appareil mobile fournit à l'entreprise une meilleure prise en charge de la gestion de ces appareils. Cela inclut la mise des applications à la disposition des utilisateurs pour l’installation sur ces appareils, ainsi que la gestion étendue des paramètres. De plus, les connexions d'appareils mobiles sont sécurisées à l'aide de certificats PKI qui sont automatiquement créés et déployés par Intune.<br /><br /> Après avoir configuré le point de connexion de service et l’abonnement à utiliser avec Configuration Manager, Adam envoie un e-mail aux utilisateurs de ces appareils mobiles, avec un lien leur permettant de démarrer le processus d’inscription.<br /><br /> Pour inscrire les appareils mobiles auprès de Microsoft Intune, Adam utilise des paramètres de compatibilité afin de configurer des paramètres de sécurité pour ces appareils mobiles. Ces paramètres exigent la définition d’un mot de passe fort et le verrouillage de l’appareil mobile après une période d’inactivité.|Ces deux solutions de gestion des appareils mobiles permettent maintenant au service informatique de fournir des informations de rapport relatives aux appareils mobiles qui sont utilisés sur le réseau de l'entreprise et à leur compatibilité avec les paramètres de sécurité configurés.<br /><br /> Les utilisateurs apprennent à réinitialiser leur appareil mobile à distance à partir du catalogue des applications ou du portail d’entreprise s’ils perdent ou se font voler leur appareil mobile. Les membres du support technique apprennent également à réinitialiser à distance les appareils mobiles des utilisateurs à l'aide de la console Configuration Manager.<br /><br /> De plus, pour les appareils mobiles inscrits auprès de Microsoft Intune, Adam peut maintenant déployer des applications mobiles que les utilisateurs peuvent installer, collecter plus de données d'inventaire à partir de ces appareils et mieux contrôler la gestion des appareils en accédant à d'autres paramètres.|  
-|Trey Research dispose de plusieurs ordinateurs publics, utilisés par les employés visitant les bureaux. Les employés veulent pouvoir utiliser leurs applications de n’importe quel endroit. Toutefois, Adam ne souhaite pas installer localement toutes les applications sur chaque ordinateur.<br /><br /> Pour ce faire, Adam crée les applications requises avec deux types de déploiement :<br /><br /> **Le premier :** une installation complète et locale de l’application qui ne peut être installée que sur l’appareil principal d’un utilisateur.<br /><br /> **Le second :** une version virtuelle de l’application qui ne doit pas être installée sur l’appareil principal de l’utilisateur.|Quand des visiteurs ouvrent une session sur un ordinateur public, ils retrouvent leurs applications affichées sous forme d’icônes sur le bureau de l’ordinateur public. Les applications qu’ils exécutent sont diffusées en continu comme des applications virtuelles. Ainsi, les utilisateurs sont aussi productifs que s’ils étaient assis à leur bureau.|  
+|Trey Research dispose de plusieurs ordinateurs publics, utilisés par les employés visitant les bureaux. Les employés veulent pouvoir utiliser leurs applications de n’importe quel endroit. Toutefois, Adam ne souhaite pas installer localement toutes les applications sur chaque ordinateur.<br /><br /> Pour ce faire, Adam crée les applications requises avec deux types de déploiement :<br /><br /> **Premier type :** une installation complète et locale de l’application, qui ne peut être installée que sur l’appareil principal d’un utilisateur.<br /><br /> **Deuxième type :** une version virtuelle de l’application, qui ne doit pas être installée sur l’appareil principal de l’utilisateur.|Quand des visiteurs ouvrent une session sur un ordinateur public, ils retrouvent leurs applications affichées sous forme d’icônes sur le bureau de l’ordinateur public. Les applications qu’ils exécutent sont diffusées en continu comme des applications virtuelles. Ainsi, les utilisateurs sont aussi productifs que s’ils étaient assis à leur bureau.|  
 |Adam informe les utilisateurs qu’ils peuvent définir leurs heures de travail dans le Centre logiciel, et sélectionner des options pour empêcher les activités de déploiement de logiciel pendant cette période et quand l’ordinateur se trouve en mode présentation.|Les utilisateurs sont plus productifs pendant leur journée de travail car ils peuvent contrôler le moment du déploiement des logiciels par Configuration Manager sur leurs ordinateurs.|  
 
  Ces étapes et résultats de configuration permettent à Trey Research de donner plus d'autonomie à ses employés en assurant leur accès aux applications à partir de n'importe quel appareil.  
 
-###  <a name="BKMK_ScenarioUnify"></a> Exemple de scénario : unifier la gestion de la conformité pour les appareils  
+###  <a name="BKMK_ScenarioUnify"></a> Exemple de scénario : Unifier la gestion de la conformité pour les appareils  
  Trey Research souhaite appliquer une solution de gestion client unifiée pour assurer que les ordinateurs exécutent un logiciel antivirus automatiquement mis à jour. Plus précisément :  
 
 -   Le Pare-feu Windows est activé.  
@@ -148,7 +149,7 @@ Il implémente ces fonctionnalités en effectuant les étapes de configuration d
 
 L'entreprise souhaite également étendre cette protection à Internet pour les ordinateurs portables qui se déplacent de l'intranet à Internet.  
 
-Adam applique ces spécifications de l'entreprise aux scénarios suivants :  
+Adam applique ces spécifications de l'entreprise aux scénarios suivants :  
 
 |Exigence|État actuel de la gestion du client|État futur de la gestion du client|  
 |-----------------|-------------------------------------|------------------------------------|  
@@ -178,7 +179,7 @@ Il implémente ces fonctionnalités en effectuant les étapes de configuration d
 
  Ces étapes et résultats de configuration permettent à Trey Research d'unifier la gestion de la compatibilité des appareils.  
 
-###  <a name="BKMK_ScenarioSimplify"></a> Exemple de scénario : simplifier la gestion des clients pour les appareils  
+###  <a name="BKMK_ScenarioSimplify"></a> Exemple de scénario : Simplifier la gestion des clients pour les appareils  
  Trey Research souhaite que tous les nouveaux ordinateurs installent automatiquement l'image d'ordinateur de base de l'entreprise qui exécute Windows 7. Une fois l’image du système d’exploitation installée sur ces ordinateurs, ceux-ci doivent être gérés et surveillés pour détecter tout autre logiciel que les utilisateurs installent. Les ordinateurs qui stockent des informations hautement confidentielles nécessitent des stratégies de gestion plus limitées que les autres ordinateurs. Par exemple, les ingénieurs du support technique ne doivent pas établir une connexion à distance à ces ordinateurs, un code confidentiel BitLocker doit être utilisé pour les redémarrages et uniquement les administrateurs locaux sont autorisés à installer un logiciel.  
 
  Adam applique ces spécifications de l'entreprise aux scénarios suivants :  

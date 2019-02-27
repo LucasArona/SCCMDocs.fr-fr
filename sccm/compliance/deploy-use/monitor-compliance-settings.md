@@ -10,16 +10,17 @@ ms.assetid: 92c1ccca-a748-44cd-a52e-e41d34bf981d
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 9920bd48ad7b953469261602c21a6664580143a2
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 07b766db6b80f92eba8d401b3c751ca1d4766b38
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335777"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56130858"
 ---
 # <a name="monitor-compliance-settings-in-system-center-configuration-manager"></a>Surveiller les paramètres de compatibilité dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Une fois que vous avez déployé les bases de référence de configuration de System Center Configuration Manager sur les appareils de votre hiérarchie, vous pouvez utiliser une ou plusieurs des procédures de cette rubrique pour afficher l’état de compatibilité d’une base de référence de configuration :
 
@@ -39,16 +40,16 @@ Une fois que vous avez déployé les bases de référence de configuration de Sy
 
      La page **État du déploiement** contient les onglets suivants :  
 
-    -   **Compatible**: affiche la compatibilité de la ligne de base de configuration en fonction du nombre de biens affectés. Vous pouvez cliquer sur une règle pour créer un nœud temporaire sous le nœud **Utilisateurs** ou **Périphériques** de l'espace de travail **Ressources et Conformité** , qui contient tous les utilisateurs ou appareils conformes à cette règle. Le volet **Détails du bien** affiche les utilisateurs ou les appareils qui sont compatibles avec la base de référence de configuration. Double-cliquez sur un utilisateur ou un appareil de la liste pour afficher des informations supplémentaires.  
+    -   **Conforme** : Affiche la conformité de la base de référence de configuration en fonction du nombre de ressources affectées. Vous pouvez cliquer sur une règle pour créer un nœud temporaire sous le nœud **Utilisateurs** ou **Périphériques** de l'espace de travail **Ressources et Conformité** , qui contient tous les utilisateurs ou appareils conformes à cette règle. Le volet **Détails du bien** affiche les utilisateurs ou les appareils qui sont compatibles avec la base de référence de configuration. Double-cliquez sur un utilisateur ou un appareil de la liste pour afficher des informations supplémentaires.  
 
         > [!IMPORTANT]  
         >  Une règle d’élément de configuration n’est pas évaluée si elle n’est pas détectée ou si elle n’est pas applicable sur un appareil client. Cependant, la règle est renvoyée comme étant compatible.  
 
-    -   **Erreur**: affiche la liste de toutes les erreurs pour le déploiement de la ligne de base de configuration sélectionné en fonction du nombre de biens affectés. Vous pouvez cliquer sur une règle pour créer un nœud temporaire sous le nœud **Utilisateurs** ou **Périphériques** de l'espace de travail **Biens et conformité** , qui contient tous les utilisateurs ou appareils qui ont généré des erreurs avec cette règle. Lorsque vous sélectionnez un utilisateur ou un appareil, le volet **Détails du bien** affiche les utilisateurs ou les appareils qui sont affectés par le problème sélectionné. Double-cliquez sur un utilisateur ou un appareil de la liste pour afficher des informations supplémentaires sur le problème.  
+    -   **Erreur** : Affiche une liste de toutes les erreurs pour le déploiement de la ligne de base de configuration sélectionnée en fonction du nombre de biens affectés. Vous pouvez cliquer sur une règle pour créer un nœud temporaire sous le nœud **Utilisateurs** ou **Périphériques** de l'espace de travail **Biens et conformité** , qui contient tous les utilisateurs ou appareils qui ont généré des erreurs avec cette règle. Lorsque vous sélectionnez un utilisateur ou un appareil, le volet **Détails du bien** affiche les utilisateurs ou les appareils qui sont affectés par le problème sélectionné. Double-cliquez sur un utilisateur ou un appareil de la liste pour afficher des informations supplémentaires sur le problème.  
 
-    -   **Non compatible**: affiche la liste de toutes les règles non compatibles au sein de la ligne de base de configuration en fonction du nombre de biens affectés. Vous pouvez cliquer sur une règle pour créer un nœud temporaire sous le nœud **Utilisateurs** ou **Périphériques** de l'espace de travail **Biens et conformité** , qui contient tous les utilisateurs ou périphériques qui ne sont pas compatibles avec cette règle. Lorsque vous sélectionnez un utilisateur ou un appareil, le volet **Détails du bien** affiche les utilisateurs ou les appareils qui sont affectés par le problème sélectionné. Double-cliquez sur un utilisateur ou un appareil de la liste pour afficher d'autres informations sur le problème.  
+    -   **Non conforme** : Affiche la liste de toutes les règles non conformes au sein de la base de référence de configuration en fonction du nombre de ressources affectées. Vous pouvez cliquer sur une règle pour créer un nœud temporaire sous le nœud **Utilisateurs** ou **Périphériques** de l'espace de travail **Biens et conformité** , qui contient tous les utilisateurs ou appareils qui ne sont pas compatibles avec cette règle. Lorsque vous sélectionnez un utilisateur ou un appareil, le volet **Détails du bien** affiche les utilisateurs ou les appareils qui sont affectés par le problème sélectionné. Double-cliquez sur un utilisateur ou un appareil de la liste pour afficher d'autres informations sur le problème.  
 
-    -   **Inconnu**: affiche la liste de tous les utilisateurs et appareils qui n’ont pas signalé de compatibilité pour le déploiement de la ligne de base de configuration sélectionné avec l’état du client actuel des appareils.  
+    -   **Inconnu** : Affiche la liste de tous les utilisateurs et périphériques qui n’ont pas signalé de conformité pour le déploiement de la base de référence de configuration sélectionnée avec l’état du client actuel des périphériques.  
 
 5.  Sur la page **État du déploiement** , vous pouvez consulter des informations détaillées sur la compatibilité de la ligne de base de configuration déployée. Un nœud temporaire est créé sous le nœud **Déploiements** qui vous aide à retrouver rapidement ces informations.  
 
@@ -74,11 +75,11 @@ Une fois que vous avez déployé les bases de référence de configuration de Sy
     > [!IMPORTANT]  
     >  Les résultats de l'évaluation sont mis en cache sur le client pendant 15 minutes. Si vous procédez à une ré-évaluation au cours de cette période de 15 minutes, les résultats de compatibilité sont renvoyés à partir de ce cache mais pas en tant que résultats d’une nouvelle évaluation. Par conséquent, toute modification que vous apportez au client peut avoir une incidence sur les résultats de l'évaluation de la conformité. Patientez jusqu'à ce que les 15 minutes s'écoulent avant de procéder à une ré-évaluation.  
 
-    -   **Compatible**: l’ordinateur client est compatible avec la ligne de base de configuration évaluée.  
+    -   **Conforme** : l'ordinateur client est compatible avec la ligne de base de configuration évaluée.  
 
-    -   **Non compatible**: l’ordinateur client est non conforme à la ligne de base de configuration évaluée.  
+    -   **Non conforme** : l'ordinateur client n'est pas compatible avec la ligne de base de configuration évaluée.  
 
-    -   **Inconnu**: l’ordinateur client n’a pas encore évalué la ligne de base de configuration. Si vous souhaitez initier une évaluation en dehors du calendrier d'évaluation de la compatibilité, sélectionnez les lignes de base de configuration à évaluer, puis cliquez sur **Évaluer**.  
+    -   **Inconnu** : l'ordinateur client n'a pas encore évalué la ligne de base de configuration. Si vous souhaitez initier une évaluation en dehors du calendrier d'évaluation de la compatibilité, sélectionnez les lignes de base de configuration à évaluer, puis cliquez sur **Évaluer**.  
 
         > [!NOTE]  
         >  Si vous disposez d’informations d’identification d’administrateur local sur l’ordinateur client, vous pouvez afficher les détails de chaque ligne de base de configuration évaluée pour déterminer quel élément de configuration signale un état de non-compatibilité. À cet effet, sélectionnez la ligne de base de configuration, puis cliquez sur **Afficher le rapport**.  

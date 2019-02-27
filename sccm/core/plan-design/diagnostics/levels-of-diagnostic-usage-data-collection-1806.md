@@ -10,18 +10,19 @@ ms.assetid: a0287beb-70a9-4b57-a627-e7bfba27fd3b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d964295134538cf281af214830a5bc416484be51
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 4bfd2a4cef78b6674e6f288483190ca7c48542fe
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43893669"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56131912"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1806"></a>Niveaux de collecte des données de diagnostic et d’utilisation pour la version 1806
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
-La version 1806 de Configuration Manager collecte trois niveaux de données de diagnostic et d’utilisation : **De base**, **Étendu** et **Complet**. Par défaut, cette fonctionnalité est définie sur le niveau Étendu. Les sections suivantes fournissent des détails supplémentaires sur les données collectées à chaque niveau.
+La version 1806 de Configuration Manager collecte trois niveaux de diagnostics et d’utilisation des données : **De base**, **Étendu** et **Complet**. Par défaut, cette fonctionnalité est définie sur le niveau Étendu. Les sections suivantes fournissent des détails supplémentaires sur les données collectées à chaque niveau.
 
 Les modifications par rapport aux versions précédentes sont indiquées par ***[Nouveau]***, ***[Mis à jour]***, ***[Supprimé]*** ou ***[Déplacé]***.
 
@@ -43,7 +44,7 @@ Le niveau De base comprend les données relatives à votre hiérarchie, qui sont
 
 Pour Configuration Manager version 1806, ce niveau comprend les données suivantes :
 
-- Statistiques sur les connexions de la console Configuration Manager : version du système d’exploitation, langue, référence (SKU) et architecture, mémoire système, nombre de processeurs logiques, ID du site de connexion, versions .NET installées et modules linguistiques de la console
+- Statistiques à propos des connexions de la console Configuration Manager : Version, langue, référence SKU et architecture du système d’exploitation, mémoire système, nombre de processeurs logiques, ID du site de connexion, versions .NET installées et packs linguistiques de la console
 
 - Nombres de types d’application et de déploiement de base : nombre total d’applications, nombre total d’applications avec plusieurs types de déploiement, nombre total d’applications avec des dépendances, nombre total d’applications remplacées, nombre de technologies de déploiement en cours d’utilisation
 
@@ -516,7 +517,7 @@ Pour Configuration Manager version 1806, ce niveau comprend les données suivan
 
 - Statistiques de stratégie de conformité pour les erreurs et la conformité
 
-- Paramètres de conformité : détails de configuration des modèles SCEP, VPN, Wi-Fi et de stratégie de conformité
+- Paramètres de conformité : Détails de configuration des modèles SCEP, VPN, Wi-Fi et de stratégie de conformité
 
 - Pack de configuration DCM pour l’utilisation de System Center Configuration Manager
 

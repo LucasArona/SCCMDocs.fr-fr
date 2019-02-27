@@ -10,16 +10,17 @@ ms.assetid: 29dd51b8-6576-4010-81ba-3129ed2c3421
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d630c5d02b6c7729e5f26ce3915f48bf20aef7e2
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 0925a4cc4e4db0a178a4ccf1c7e959a76910f6e8
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43893751"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56142168"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1802-of-system-center-configuration-manager"></a>Niveaux de collecte des données de diagnostic et d’utilisation pour la version 1802 de System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Configuration Manager version 1802 collecte trois niveaux de données d’utilisation et de diagnostic : **De base**, **Étendu** et **Complet**. Par défaut, cette fonctionnalité est définie sur le niveau Étendu. Les sections suivantes fournissent des détails supplémentaires sur les données collectées à chaque niveau.
 
@@ -43,7 +44,7 @@ Le niveau De base comprend les données relatives à votre hiérarchie, qui sont
 
 Pour Configuration Manager version 1802, ce niveau inclut les données suivantes :
 
-- Statistiques sur les connexions de la console Configuration Manager : version du système d’exploitation, langue, référence (SKU) et architecture, mémoire système, nombre de processeurs logiques, ID du site de connexion, versions .NET installées et modules linguistiques de la console
+- Statistiques à propos des connexions de la console Configuration Manager : version, langue, référence SKU et architecture du système d’exploitation ; mémoire système, nombre de processeurs logiques, ID du site de connexion, versions .NET installées et modules linguistiques de la console
 
 - Nombres de types d’application et de déploiement de base : nombre total d’applications, nombre total d’applications avec plusieurs types de déploiement, nombre total d’applications avec des dépendances, nombre total d’applications remplacées, nombre de technologies de déploiement en cours d’utilisation
 
@@ -467,7 +468,7 @@ Pour Configuration Manager version 1802, ce niveau inclut les données suivantes
 
 - Statistiques de stratégie de conformité pour les erreurs et la conformité
 
-- Paramètres de conformité : détails de configuration des modèles SCEP, VPN, Wi-Fi et de stratégie de conformité
+- Paramètres de conformité : détails de configuration des modèles SCEP, VPN, Wi-Fi et de stratégie de conformité
 
 - Pack de configuration DCM pour l’utilisation de System Center Configuration Manager
 

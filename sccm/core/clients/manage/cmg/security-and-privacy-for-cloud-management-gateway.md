@@ -9,16 +9,17 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 7304730b-b517-4c76-aadd-4cbd157dc971
-ms.openlocfilehash: d07c30d6a1e4fd1314b6e69ac157577ae0163696
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 013d00fd7c207df45b0f6b7910283c3e8b60b44d
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32333737"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56137168"
 ---
 # <a name="security-and-privacy-for-the-cloud-management-gateway"></a>Sécurité et confidentialité de la passerelle de gestion cloud
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Cet article inclut des informations sur la sécurité et la confidentialité pour la passerelle de gestion cloud (CMG) Configuration Manager. Pour plus d’informations, consultez [Planifier la passerelle de gestion cloud](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway).
 
@@ -67,8 +68,7 @@ Publiez la liste de révocation de certificats de votre infrastructure à clé p
 <a name="bkmk_ctl"></a>
 
 ### <a name="review-entries-in-the-sites-certificate-trust-list"></a>Examiner les entrées de la liste de certificats de confiance du site
-<!--503739-->
-Chaque site Configuration Manager inclut une liste d’autorités de certification racines de confiance, la liste de certificats de confiance (CTL, Certificate Trust List). Pour consulter et modifier cette liste, accédez à l’espace de travail Administration, développez Configuration du site, puis sélectionnez Sites. Sélectionnez un site, puis cliquez sur Propriétés dans le ruban. Basculez vers l’onglet Communication de l’ordinateur client, puis cliquez sur **Définir** sous Autorités de certification racines de confiance.
+<!--503739--> Chaque site Configuration Manager comprend une liste d’autorités de certification racines de confiance, la liste de certificats de confiance (CTL). Pour consulter et modifier cette liste, accédez à l’espace de travail Administration, développez Configuration du site, puis sélectionnez Sites. Sélectionnez un site, puis cliquez sur Propriétés dans le ruban. Basculez vers l’onglet Communication de l’ordinateur client, puis cliquez sur **Définir** sous Autorités de certification racines de confiance.
  
 Utilisez une liste de certificats de confiance plus restrictive pour un site avec une passerelle de gestion cloud à l’aide de l’authentification client PKI. Sinon, les clients disposant de certificats d’authentification client émis par toute racine de confiance qui existe déjà sur le point de gestion sont automatiquement acceptés pour l’inscription du client.
 

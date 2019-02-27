@@ -10,16 +10,17 @@ ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 38732081ce27fde764f7d47a565ce1211cef1f54
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 1fa26147539abc611b86791f6dd9a4be0bc89c59
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383552"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56156472"
 ---
 # <a name="create-windows-applications-in-configuration-manager"></a>Créer des applications Windows dans Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Outre les autres exigences et procédures Configuration Manager à observer pour [créer une application](/sccm/apps/deploy-use/create-applications), prenez en compte les éléments suivants au moment de créer et déployer des applications pour des appareils Windows.  
 
@@ -43,7 +44,7 @@ Quand vous créez une application dans la console Configuration Manager, sélect
 
 
 ## <a name="bkmk_provision"></a> Provisionner les packages d’application Windows pour tous les utilisateurs sur un appareil
-<!--1358310--> Depuis la version 1806, provisionnez une application avec un package d’application Windows pour tous les utilisateurs d’un appareil. Un exemple courant de ce scénario est le provisionnement d’une application telle que « Minecraft : Education Edition » à partir de Microsoft Store pour Entreprises et Éducation, pour tous les appareils utilisés par les élèves d’une école. Auparavant, Configuration Manager ne prenait en charge l’installation de ces applications que pour un seul utilisateur. Quand il se connectait à un nouvel appareil, l’élève devait attendre pour accéder à une application. À présent que l’application est provisionnée pour tous les utilisateurs d’un appareil, ceux-ci peuvent l’utiliser plus rapidement.
+<!--1358310--> Depuis la version 1806, provisionnez une application avec un package d’application Windows pour tous les utilisateurs d’un appareil. Un exemple courant de ce scénario est l’approvisionnement d’une application telle que « Minecraft : Education Edition » à partir de Microsoft Store pour Entreprises et Éducation, pour tous les appareils utilisés par les étudiants d’une école. Auparavant, Configuration Manager ne prenait en charge l’installation de ces applications que pour un seul utilisateur. Quand il se connectait à un nouvel appareil, l’élève devait attendre pour accéder à une application. À présent que l’application est provisionnée pour tous les utilisateurs d’un appareil, ceux-ci peuvent l’utiliser plus rapidement.
 
 > [!Important]  
 > Sachez que l’installation, le provisionnement et la mise à jour de plusieurs versions d’un même package d’application Windows sur un appareil peut entraîner des résultats inattendus. De tels résultats peuvent être obtenus lorsque vous utilisez Configuration Manager pour provisionner l’application, et que vous permettez aux utilisateurs de mettre à jour l’application à partir de Microsoft Store. Pour plus d’informations, consultez les instructions de la section Étapes suivantes pour [gérer les applications à partir du Microsoft Store pour Entreprises](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#next-steps).  
@@ -51,8 +52,8 @@ Quand vous créez une application dans la console Configuration Manager, sélect
 Lorsque vous provisionnez une application sous licence hors connexion, Configuration Manager ne permet pas à Windows de la mettre automatiquement à jour à partir de Microsoft Store.  
 
 Configuration Manager prend en charge le provisionnement des applications sur les versions suivantes de Windows :<!--SCCMDocs-pr issue 2762-->
-- Action d’installation : Windows 10, versions 1607 et ultérieures
-- Action de désinstallation : Windows 10, versions 1703 et ultérieures
+- Action d’installation : Windows 10, version 1607 et ultérieure
+- Action de désinstallation : Windows 10, version 1703 et ultérieure
 
 Pour configurer un type de déploiement d’application Windows pour cette fonctionnalité, activez l’option **Provisionner cette application pour tous les utilisateurs de l’appareil**. Pour plus d’informations, consultez [Créer des applications](/sccm/apps/deploy-use/create-applications).
 

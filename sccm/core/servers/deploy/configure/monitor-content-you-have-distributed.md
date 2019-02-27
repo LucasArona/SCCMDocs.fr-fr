@@ -10,16 +10,17 @@ ms.assetid: 82e8a693-9adf-4ca3-8484-7e101c34c7c1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 44ddf230d33759787636e88f6edcdd79744fd7b2
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: f6bc81a1aa6d8464094195c33faeecfeaf2d46f0
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32338922"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56123928"
 ---
 # <a name="monitor-content-you-have-distributed-with-system-center-configuration-manager"></a>Surveiller le contenu que vous avez distribué avec System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Utilisez la console System Center Configuration Manager pour surveiller le contenu distribué, à savoir :  
 
@@ -157,11 +158,11 @@ Pour afficher l'état de configuration du point de distribution, procédez comme
 Dans la console, accédez à **Surveillance** > **État de distribution** > **Sources de données du client**. Vous pouvez sélectionner ici une période à appliquer au tableau de bord. Ensuite, dans l’affichage, vous pouvez sélectionner le groupe de limites ou le package sur lesquels vous souhaitez afficher des informations. Lors de la consultation de celles-ci, vous pouvez pointer le curseur de la souris sur la surface pour afficher plus de détails sur les différentes sources de contenu ou de stratégie.
 
 Ces détails incluent :  
-- **Sources de contenu pour les clients** : affiche les sources à partir desquelles les clients ont obtenu du contenu.
-- **Points de distribution** : affiche le nombre de points de distribution qui font partie du groupe de limites sélectionné.
-- **Clients ayant utilisé un point de distribution** : affiche le nombre de clients membres du groupe de limites sélectionné qui ont utilisé un point de distribution pour obtenir du contenu.
-- **Sources de mise en cache d’homologue** : pour le groupe de limites sélectionné, affiche le nombre de sources de mise en cache d’homologue qui ont fourni un historique de téléchargement.
-- **Clients ayant utilisé un homologue** : affiche le nombre de clients membres du groupe de limites sélectionné qui ont utilisé une source de mise en cache d’homologue pour obtenir du contenu.
+- **Sources de contenu client** : Affiche la source à partir de laquelle les clients ont obtenu du contenu.
+- **Points de distribution** : Affiche le nombre de points de distribution qui font partie du groupe de limites sélectionné.
+- **Clients ayant utilisé un point de distribution** : Affiche le nombre de clients membres du groupe de limites sélectionné qui ont utilisé un point de distribution pour obtenir du contenu.
+- **Sources de cache de pair** : Affiche, pour le groupe de limites sélectionné, le nombre de sources de cache de pair ayant fourni un historique de téléchargement.
+- **Clients ayant utilisé un pair** : Affiche le nombre de clients membres du groupe de limites sélectionné qui ont utilisé une source de cache de pair pour obtenir du contenu.
 
 
 

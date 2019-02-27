@@ -10,22 +10,23 @@ ms.assetid: 61f5c774-7667-44ae-b8e4-a4951318b183
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7edfc72195b289488242adcbd1903dbacf26bfe2
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 8d9028077d2d8fdae624ae7c10bfb7bf307f97a2
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32336474"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56128311"
 ---
 # <a name="install-site-system-roles-for-system-center-configuration-manager"></a>Installer des rôles de système de site pour System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 La console System Center Configuration Manager comporte deux Assistants, que vous pouvez utiliser pour installer des rôles système de site :  
 
--   **Assistant Ajout de rôles de système de site**: utilisez cet Assistant pour ajouter des rôles de système de site à un serveur de système de site existant dans le site.  
+-   **Assistant Ajout de rôles de système de site** : utilisez cet Assistant pour ajouter des rôles de système de site à un serveur de système de site existant dans le site.  
 
--   **Assistant Création d'un serveur de système de site**: utilisez cet Assistant pour spécifier un nouveau serveur comme un serveur de système de site, puis installez un ou plusieurs rôles de système de site sur le serveur. Cet Assistant est le même que l' **Assistant Ajout de rôles de système de site**, sauf que sur la première page, vous devez spécifier le nom du serveur à utiliser et le site dans lequel vous souhaitez l'installer.  
+-   **Assistant Création d’un serveur de système de site** : utilisez cet Assistant pour spécifier un nouveau serveur comme un serveur de système de site, puis installez un ou plusieurs rôles de système de site sur le serveur. Cet Assistant est le même que l' **Assistant Ajout de rôles de système de site**, sauf que sur la première page, vous devez spécifier le nom du serveur à utiliser et le site dans lequel vous souhaitez l'installer.  
 
 Lorsque vous installez un rôle de système de site sur un ordinateur distant (y compris une instance du fournisseur SMS), le compte d'ordinateur de l'ordinateur distant est ajouté à un groupe local du serveur de site. Quand le site est installé sur un contrôleur de domaine, le groupe sur le serveur de site est un groupe de domaine au lieu d’un groupe local. Dans ce cas, le rôle de système de site distant est uniquement opérationnel après le redémarrage de l’ordinateur de rôle de système de site ou après l’actualisation du ticket Kerberos pour le compte de l’ordinateur distant. Pour plus d’informations, consultez [Comptes utilisés dans System Center Configuration Manager](../../../../core/plan-design/hierarchy/accounts.md).  
 

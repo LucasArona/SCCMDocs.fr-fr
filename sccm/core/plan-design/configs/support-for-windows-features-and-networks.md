@@ -10,16 +10,17 @@ ms.assetid: 0cf4bacb-6b6d-4d4f-8640-b13fe15873de
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 915a8ac1d20ca288b2b830791c8a3b79c65ffbce
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: ae1ac3262acff35e23de4faa1e80c796f5ee4e4b
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383637"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56156693"
 ---
 # <a name="support-for-windows-features-and-networks-in-configuration-manager"></a>Prise en charge des fonctionnalités Windows et des réseaux dans Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Cet article identifie la prise en charge par Configuration Manager des fonctionnalités courantes de Windows et des réseaux.  
 
@@ -60,7 +61,7 @@ Pour plus d’informations, consultez [Configurer les clients pour BranchCache](
 |Windows 8|Pris en charge par défaut|  
 |Windows 8.1|Pris en charge par défaut|  
 |Windows 10|Pris en charge par défaut|  
-|Windows Server 2008 avec SP2|**Nécessite BITS 4.0** : installez BITS 4.0 sur les clients Configuration Manager à l’aide des mises à jour logicielles ou de la distribution de logiciels. Pour plus d’informations, consultez [Windows Management Framework](https://support.microsoft.com/help/968929/windows-management-framework-windows-powershell-2-0-winrm-2-0-and-bits).<br /><br /> Sur ce système d’exploitation, la fonctionnalité de client BranchCache n’est pas prise en charge pour la distribution de logiciels exécutée à partir du réseau ou pour les transferts de fichiers SMB. De plus, ce système d’exploitation ne peut pas utiliser la fonctionnalité BranchCache avec des points de distribution cloud.|  
+|Windows Server 2008 avec SP2|**Logiciel BITS 4.0 requis** : installez BITS 4.0 sur les clients Configuration Manager à l’aide des mises à jour logicielles ou de la distribution de logiciels. Pour plus d’informations, consultez [Windows Management Framework](https://support.microsoft.com/help/968929/windows-management-framework-windows-powershell-2-0-winrm-2-0-and-bits).<br /><br /> Sur ce système d’exploitation, la fonctionnalité de client BranchCache n’est pas prise en charge pour la distribution de logiciels exécutée à partir du réseau ou pour les transferts de fichiers SMB. De plus, ce système d’exploitation ne peut pas utiliser la fonctionnalité BranchCache avec des points de distribution cloud.|  
 |Windows Server 2008 R2|Pris en charge par défaut|  
 |Windows Server 2012|Pris en charge par défaut|  
 |Windows Server 2012 R2|Pris en charge par défaut|  
@@ -151,10 +152,10 @@ Les rôles de serveur de site exigent NTFS afin que Configuration Manager puisse
 
 ### <a name="support-considerations"></a>Considérations relatives à la prise en charge
 
-- **Réseau de zone de stockage** : un SAN (réseau de zone de stockage) est pris en charge quand un serveur Windows pris en charge est attaché directement au volume hébergé par le SAN.  
+- **Réseau de zone de stockage** : l’utilisation d’un réseau de zone de stockage (SAN) est prise en charge lorsqu’un serveur Windows pris en charge est directement associé au volume hébergé par le SAN.  
 
-- **SIS (Single-Instance-Store)**  : Configuration Manager ne prend pas en charge la configuration des dossiers de signatures et de packages de points de distribution sur un volume SIS.  
+- **Stockage SIS** : Configuration Manager ne prend pas en charge la configuration des dossiers de signatures et des packages de points de distribution sur un volume SIS (Single Instance Storage).  
 
      De plus, le cache d’un client Configuration Manager n’est pas pris en charge sur un volume SIS.  
 
-- **Lecteur de disque amovible** : Configuration Manager ne prend pas en charge l’installation de systèmes de site ou de clients Configuration Manager sur un lecteur de disque amovible.  
+- **Lecteur de disque amovible** : Configuration Manager ne prend pas en charge l’installation de systèmes de site ou de clients Configuration Manager sur un lecteur de disque amovible.  

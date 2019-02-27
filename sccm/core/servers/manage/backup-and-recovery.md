@@ -10,16 +10,17 @@ ms.assetid: f7832d83-9ae2-4530-8a77-790e0845e12f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 85ce1c4b5201c29ffa3543357f50a379c1b11e7f
-ms.sourcegitcommit: 84afecee44200e27d1d5bb5ed2d54fd6a8c51617
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e876e34929479654240ff220c3cad91043da0f83
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43053879"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56123135"
 ---
 # <a name="back-up-a-configuration-manager-site"></a>Sauvegarde d'un site Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Préparez les approches de sauvegarde et de récupération pour éviter la perte de données. Pour les sites Configuration Manager, une approche de sauvegarde et de récupération peut vous permettre de récupérer des sites et des hiérarchies plus rapidement avec une moindre perte de données.  
 
@@ -29,7 +30,7 @@ Les sections de cet article peuvent vous aider à sauvegarder vos sites. Pour r�
 
 ## <a name="considerations-before-creating-a-backup"></a>Éléments à prendre en considération avant de créer une sauvegarde  
 
--   Si vous utilisez un groupe de disponibilité SQL Server Always On pour héberger la base de données du site : modifiez vos plans de sauvegarde et de récupération comme indiqué dans [Se préparer à utiliser SQL Server Always On](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database#changes-for-site-backup).  
+-   Si vous utilisez un groupe de disponibilité SQL Server Always On pour héberger la base de données de site : Modifiez vos plans de sauvegarde et de récupération comme décrit dans [Préparer pour l’utilisation de SQL Server Always On](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database#changes-for-site-backup).  
 
 -   Configuration Manager peut récupérer la base de données du site à partir de la tâche de sauvegarde de Configuration Manager. Il peut également utiliser une sauvegarde de la base de données du site que vous créez avec un autre processus.   
 
@@ -83,11 +84,11 @@ Les informations sur l’état de la sauvegarde du site sont enregistrées dans 
     > [!IMPORTANT]  
     >  Pour empêcher la falsification des fichiers de sauvegarde, stockez les fichiers dans un emplacement sécurisé. Le chemin de sauvegarde le plus sûr est un lecteur local, vous pouvez donc définir des autorisations de fichiers NTFS sur le dossier. Configuration Manager ne chiffre pas les données de sauvegarde stockées dans le chemin de sauvegarde.  
 
-    -   **Lecteur local sur le serveur de site pour les données de site et la base de données** : spécifie que la tâche stocke les fichiers de sauvegarde du site et de la base de données du site dans le chemin spécifié sur le lecteur de disque local du serveur de site. Créez le dossier local avant l’exécution de la tâche de sauvegarde. Le compte système local sur le serveur de site doit disposer des autorisations de fichiers NTFS d’accès en **écriture** sur le dossier local pour la sauvegarde du serveur de site. Le compte système local sur l’ordinateur qui exécute SQL Server doit disposer des autorisations NTFS d’accès en **écriture** sur le dossier pour la sauvegarde de la base de données du site.  
+    -   **Lecteur local sur le serveur de site pour les données et la base de données du site** : Spécifie que la tâche stocke les fichiers de sauvegarde du site et de la base de données de site dans le chemin d’accès spécifié sur le lecteur de disque local du serveur de site. Créez le dossier local avant l’exécution de la tâche de sauvegarde. Le compte système local sur le serveur de site doit disposer des autorisations de fichiers NTFS d’accès en **écriture** sur le dossier local pour la sauvegarde du serveur de site. Le compte système local sur l’ordinateur qui exécute SQL Server doit disposer des autorisations NTFS d’accès en **écriture** sur le dossier pour la sauvegarde de la base de données du site.  
 
-    -   **Chemin d’accès réseau (nom UNC) aux données de site et à la base de données** : spécifie que la tâche stocke les fichiers de sauvegarde du site et de la base de données du site dans le chemin réseau spécifié. Créez le partage avant l’exécution de la tâche de sauvegarde. Le compte d’ordinateur du serveur de site doit disposer des autorisations de partage et des autorisations NTFS d’accès en **écriture** pour le dossier réseau partagé. Si SQL Server est installé sur un autre ordinateur, le compte d’ordinateur du serveur SQL Server doit avoir les mêmes autorisations.  
+    -   **Chemin d’accès réseau (nom UNC) des données et de la base de données du site** : Spécifie que la tâche stocke les fichiers de sauvegarde du site et de la base de données de site dans le chemin d’accès réseau spécifié. Créez le partage avant l’exécution de la tâche de sauvegarde. Le compte d’ordinateur du serveur de site doit disposer des autorisations de partage et des autorisations NTFS d’accès en **écriture** pour le dossier réseau partagé. Si SQL Server est installé sur un autre ordinateur, le compte d’ordinateur du serveur SQL Server doit avoir les mêmes autorisations.  
 
-    -   **Lecteurs locaux sur le serveur de site et SQL Server** : spécifie que la tâche stocke les fichiers de sauvegarde du site dans le chemin spécifié sur le lecteur local du serveur de site. La tâche stocke les fichiers de sauvegarde de la base de données du site dans le chemin spécifié sur le lecteur local du serveur de base de données du site. Créez les dossiers locaux avant l’exécution de la tâche de sauvegarde. Le compte d'ordinateur du serveur de site doit disposer des autorisations NTFS en **écriture** sur le dossier créé sur le serveur de site. Le compte d'ordinateur de SQL Server doit disposer des autorisations NTFS en **écriture** sur le dossier créé sur le serveur de base de données de site. Cette option est disponible uniquement quand la base de données du site n’est pas installée sur le serveur de site.  
+    -   **Lecteurs locaux sur le serveur de site et SQL Server** : Spécifie que la tâche stocke les fichiers de sauvegarde du site dans le chemin d’accès spécifié sur le lecteur local du serveur de site. La tâche stocke les fichiers de sauvegarde de la base de données du site dans le chemin spécifié sur le lecteur local du serveur de base de données du site. Créez les dossiers locaux avant l’exécution de la tâche de sauvegarde. Le compte d'ordinateur du serveur de site doit disposer des autorisations NTFS en **écriture** sur le dossier créé sur le serveur de site. Le compte d'ordinateur de SQL Server doit disposer des autorisations NTFS en **écriture** sur le dossier créé sur le serveur de base de données de site. Cette option est disponible uniquement quand la base de données du site n’est pas installée sur le serveur de site.  
 
     > [!NOTE]  
     >   L’option permettant d’accéder à la destination de sauvegarde est uniquement disponible quand vous spécifiez le chemin réseau de la destination de sauvegarde.  

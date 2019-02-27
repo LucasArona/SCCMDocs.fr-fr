@@ -10,16 +10,17 @@ ms.assetid: b7332ed3-8003-454b-bb12-1fdf8721425c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 01112dac89ba0fe9e18dabe186353506d9476213
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: cb208bdb360f726a59585d567c239074717acf66
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456768"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56120008"
 ---
 # <a name="list-of-reports-in-configuration-manager"></a>Liste des rapports dans Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Configuration Manager fournit de nombreux rapports intégrés couvrant une grande partie des tâches de création de rapports que vous pourriez souhaiter effectuer. Vous pouvez également utiliser les instructions SQL dans ces rapports pour vous aider à rédiger vos propres rapports.   
 
@@ -207,13 +208,13 @@ Les sept rapports suivants sont répertoriés sous la catégorie **Entrepôt de
 
 |Nom du rapport|Description|  
 |-----------------|-----------------|  
-|**Déploiement d’applications**|Historique : affiche les détails du déploiement d’application pour une application et une machine spécifiques.|
-|**Compatibilité des mises à jour logicielles et Endpoint Protection**|Historique : affiche les ordinateurs auxquels il manque des mises à jour logicielles.|
-|**Inventaire matériel général**|Historique : affiche tout l’inventaire matériel pour une machine spécifique.|
-|**Inventaire logiciel général**|Historique : affiche tout l’inventaire logiciel pour une machine spécifique.|
-|**Vue d’ensemble de l’intégrité de l’infrastructure**|Historique : affiche une vue d’ensemble de l’intégrité de votre infrastructure Configuration Manager.|
-|**Liste des programmes malveillants détectés**|Historique : affiche les programmes malveillants qui ont été détectés dans l’organisation.|
-|**Résumé de la distribution de logiciels**|Historique : un résumé de la distribution de logiciels pour une publication et une machine spécifiques.|
+|**Déploiement d’applications**|Historique : Affiche les détails du déploiement d’application pour une application et un ordinateur spécifiques.|
+|**Compatibilité des mises à jour logicielles et Endpoint Protection**|Historique : Affiche les ordinateurs auxquels il manque des mises à jour logicielles.|
+|**Inventaire matériel général**|Historique : Affiche tout l’inventaire matériel pour un ordinateur spécifique.|
+|**Inventaire logiciel général**|Historique : Affiche tout l’inventaire logiciel pour un ordinateur spécifique.|
+|**Vue d’ensemble de l’intégrité de l’infrastructure**|Historique : Affiche une vue d’ensemble de l’intégrité de votre infrastructure Configuration Manager.|
+|**Liste des programmes malveillants détectés**|Historique : Affiche les programmes malveillants qui ont été détectés dans l’organisation.|
+|**Résumé de la distribution de logiciels**|Historique : Synthèse de la distribution de logiciels pour une publication et un ordinateur spécifiques.|
 
 
 ## <a name="device-management"></a>Gestion des périphériques  
@@ -555,10 +556,10 @@ Les 19 rapports suivants sont répertoriés sous la catégorie **Site - Informat
 |**Nombre de clients compatibles avec une communication HTTPS**|Affiche des informations détaillées sur chaque client exécutant l’outil HTTPS Communication Readiness et signalé comme étant en mesure ou non de communiquer via HTTPS.|  
 |**Nombre de clients pour chaque site**|Affiche le nombre de clients de Configuration Manager installés par code de site.|  
 |**Nombre de clients de Configuration Manager par versions de client**|Affiche le nombre d’ordinateurs découverts par la version de client Configuration Manager.|  
-|**Détail des problèmes signalés jusqu'au point d'état de repli pour un regroupement spécifié**|Affiche des informations détaillées pour les problèmes signalés par les clients dans un regroupement spécifié. Un point d’état de repli doit avoir été attribué à ces clients.|  
-|**Détails des problèmes signalés jusqu'au point d'état de repli pour un site spécifié**|Affiche des informations détaillées sur les problèmes signalés par les clients dans un site spécifié. Un point d’état de repli doit avoir été attribué à ces clients.|  
-|**Récapitulatif des problèmes signalés jusqu'au point d'état de repli**|Affiche des informations sur tous les problèmes signalés par les clients. Un point d’état de repli doit avoir été attribué à ces clients.|  
-|**Récapitulatif des problèmes signalés jusqu'au point d'état de repli pour un regroupement spécifique**|Affiche des informations de synthèse pour les problèmes signalés par les clients dans un regroupement spécifié. Un point d’état de repli doit avoir été attribué à ces clients.|  
+|**Détail des problèmes signalés jusqu'au point d'état de secours pour un regroupement spécifié**|Affiche des informations détaillées pour les problèmes signalés par les clients dans un regroupement spécifié. Un point d’état de secours doit avoir été attribué à ces clients.|  
+|**Détails des problèmes signalés jusqu'au point d'état de secours pour un site spécifié**|Affiche des informations détaillées sur les problèmes signalés par les clients dans un site spécifié. Un point d’état de secours doit avoir été attribué à ces clients.|  
+|**Récapitulatif des problèmes signalés jusqu'au point d'état de secours**|Affiche des informations sur tous les problèmes signalés par les clients. Un point d’état de secours doit avoir été attribué à ces clients.|  
+|**Récapitulatif des problèmes signalés jusqu'au point d'état de secours pour un regroupement spécifique**|Affiche des informations de synthèse pour les problèmes signalés par les clients dans un regroupement spécifié. Un point d’état de secours doit avoir été attribué à ces clients.|  
 
 
 

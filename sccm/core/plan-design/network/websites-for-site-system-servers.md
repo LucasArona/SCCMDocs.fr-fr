@@ -10,16 +10,17 @@ ms.assetid: 681f0893-e83b-476e-9ec0-a5dc7c9deeb6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5614317639c12813acf61f17de844c8304bed70f
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: fd2e358a93ff91c79f0f4716a596a9f7026c5daa
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344345"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56123448"
 ---
 # <a name="websites-for-site-system-servers-in-system-center-configuration-manager"></a>Sites web pour les serveurs de système de site dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Plusieurs rôles de système de site Configuration Manager nécessitent l’utilisation de Microsoft Internet Information Services (IIS) et utilisent le site web IIS par défaut pour héberger les services du système de site. Si vous devez exécuter d’autres applications web sur le même serveur et que les paramètres ne sont pas compatibles avec Configuration Manager, utilisez plutôt un site web personnalisé pour Configuration Manager.  
 
@@ -93,7 +94,7 @@ Les rôles suivants sont **réinstallés automatiquement**:
 
 -   Point de mise à jour logicielle  
 
--   Point d'état de secours  
+-   Point d’état de secours  
 
 -   Point de migration d’état  
 
@@ -116,7 +117,7 @@ En outre :
 ## <a name="set-up-custom-websites"></a>Configurer des sites web personnalisés  
 Du fait que les procédures de création d’un site web personnalisé varient selon la version du système d’exploitation, reportez-vous à la documentation de votre version de système d’exploitation pour connaître les procédures exactes à suivre. Toutefois, suivez les indications ci-dessous, le cas échéant :  
 
--   Le site web doit être appelé **SMSWEB**.  
+-   Le nom du site web doit être : **SMSWEB**.  
 
 -   Si vous configurez le protocole HTTPS, vous devez spécifier un certificat SSL pour pouvoir enregistrer la configuration.  
 

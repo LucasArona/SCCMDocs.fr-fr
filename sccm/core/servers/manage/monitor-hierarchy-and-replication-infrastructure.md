@@ -10,16 +10,17 @@ ms.assetid: 3fab4d67-8d2a-45ce-8b06-471280102cf6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 04faf92545f84fdf53c522ad9aa0c74bbd5c4aa1
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: d7a9fcf06630c76fc3e1123fa56861c4de224521
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342271"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56129372"
 ---
 # <a name="monitor-hierarchy-and-replication-infrastructure-in-system-center-configuration-manager"></a>Surveiller l’infrastructure de la hiérarchie et de la réplication dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Pour surveiller l’infrastructure et les opérations dans System Center Configuration Manager, utilisez l’espace de travail **Surveillance** dans la console Configuration Manager.  
 
@@ -88,9 +89,9 @@ Configuration Manager fournit plusieurs méthodes pour surveiller l’état et l
 ###  <a name="BKMK_SH_Node"></a> À propos du nœud Hiérarchie de site  
 Le nœud **Hiérarchie de site** de l’espace de travail **Surveillance** fournit une vue d’ensemble de votre hiérarchie Configuration Manager et des liens intersites. Vous pouvez utiliser deux vues :  
 
--   **Diagramme hiérarchique**: Cette vue affiche votre hiérarchie comme une carte topologique qui a été simplifiée pour afficher uniquement les informations vitales.  
+-   **Diagramme hiérarchique** : Cette vue affiche votre hiérarchie comme une carte topologique qui a été simplifiée pour afficher uniquement les informations vitales.  
 
--   **Vue géographique**: Cette vue affiche vos sites sur une carte géographique présentant les emplacements des sites que vous configurez.  
+-   **Vue géographique** : Cette vue affiche vos sites sur une carte géographique présentant les emplacements des sites que vous configurez.  
 
 Utilisez le nœud **Hiérarchie de site** pour surveiller l'intégrité de chaque site ainsi que les liens de réplication intersites et leur relation à des facteurs externes, comme un emplacement géographique.  
 
@@ -105,9 +106,9 @@ Utilisez le nœud **Hiérarchie de site** pour surveiller l'intégrité de chaqu
 
  Les options suivantes modifient le diagramme hiérarchique :  
 
--   **Groupes**: vous pouvez configurer le nombre de sites principaux et de sites secondaires qui déclenchent un changement de l'affichage du diagramme hiérarchique, celui-ci combinant les sites dans un seul objet. Lorsque des sites sont combinés dans un seul objet, vous voyez le nombre total de sites et un cumul de niveau élevé des messages d'état et de l'état du site. Les configurations de groupe n'affectent pas la vue géographique.  
+-   **Groupes** : vous pouvez configurer le nombre de sites principaux et de sites secondaires qui déclenchent un changement de l'affichage du diagramme hiérarchique, celui-ci combinant les sites dans un seul objet. Lorsque des sites sont combinés dans un seul objet, vous voyez le nombre total de sites et un cumul de niveau élevé des messages d'état et de l'état du site. Les configurations de groupe n'affectent pas la vue géographique.  
 
--   **Sites favoris**: Vous pouvez spécifier des sites individuels comme sites favoris. Une icône en forme d'étoile identifie un site favori dans le diagramme hiérarchique. Les sites favoris ne sont pas combinés à d'autres sites lorsque vous avez utilisé des groupes et ils sont toujours affichés individuellement.  
+-   **Sites favoris** : Vous pouvez spécifier des sites individuels comme sites favoris. Une icône en forme d'étoile identifie un site favori dans le diagramme hiérarchique. Les sites favoris ne sont pas combinés à d'autres sites lorsque vous avez utilisé des groupes et ils sont toujours affichés individuellement.  
 
 #### <a name="geographical-view"></a>Vue géographique  
  La vue géographique affiche l'emplacement de chaque site sur une carte géographique. Seuls les sites que vous configurez avec un emplacement sont affichés. Lorsque vous sélectionnez un site dans cette vue, les liens de réplication vers des sites parents ou enfants sont affichés. Contrairement à l'affichage du diagramme hiérarchique, vous ne pouvez pas afficher les détails du lien de réplication ou du message d'état de site dans cette vue.  
@@ -117,7 +118,7 @@ Utilisez le nœud **Hiérarchie de site** pour surveiller l'intégrité de chaqu
 
 L'option suivante modifie la vue géographique.  
 
--   **Emplacement de site**: vous pouvez spécifier un emplacement géographique pour chaque site. L'emplacement peut être spécifié sous forme de nom de rue, de lieu, par exemple un nom de ville, ou par des coordonnées de latitude et de longitude. Par exemple, pour indiquer la latitude et la longitude de Redmond Washington, vous devez spécifier **47 40 26.3572 Nord 122 7 17.4432 Ouest** pour l'emplacement du site. Il n'est pas nécessaire de spécifier le symbole des degrés, minutes ou secondes de longitude ou de latitude. Configuration Manager utilise Bing Maps pour afficher l’emplacement de la vue géographique. Cela vous permet d'afficher votre hiérarchie par rapport à un emplacement géographique, ce qui peut fournir des informations sur des problèmes régionaux susceptibles d'affecter des sites spécifiques ou la réplication intersite.  
+-   **Emplacement de site** : vous pouvez spécifier un emplacement géographique pour chaque site. L'emplacement peut être spécifié sous forme de nom de rue, de lieu, par exemple un nom de ville, ou par des coordonnées de latitude et de longitude. Par exemple, pour indiquer la latitude et la longitude de Redmond Washington, vous devez spécifier **47 40 26.3572 Nord 122 7 17.4432 Ouest** pour l'emplacement du site. Il n'est pas nécessaire de spécifier le symbole des degrés, minutes ou secondes de longitude ou de latitude. Configuration Manager utilise Bing Maps pour afficher l’emplacement de la vue géographique. Cela vous permet d'afficher votre hiérarchie par rapport à un emplacement géographique, ce qui peut fournir des informations sur des problèmes régionaux susceptibles d'affecter des sites spécifiques ou la réplication intersite.  
 
      Lorsque vous spécifiez un emplacement, vous pouvez utiliser la zone **Emplacement** pour rechercher un site spécifique dans votre hiérarchie. Après avoir sélectionné le site, entrez l'emplacement sous forme de nom de ville ou d'adresse postale dans la colonne **Emplacement** . Configuration Manager utilise Bing Maps pour résoudre l’emplacement.  
 
@@ -136,7 +137,7 @@ La réplication de base de données entre sites implique la réplication de plus
 
  Utilisez les informations dans le tableau suivant pour comprendre l'état des liens de réplication susceptibles de nécessiter davantage de recherches.  
 
-|Description du lien|Plus d'informations|  
+|Description du lien|Informations complémentaires|  
 |----------------------|----------------------|  
 |**Le lien est actif**|Aucun problème n'a été détecté et la communication dans le lien est en cours.|  
 |**Le lien est dégradé**|La réplication est fonctionnelle, mais au moins un objet ou groupe de réplication a été retardé. Surveillez les liens dans cet état et consultez les informations depuis les deux sites sur le lien pour obtenir des indications sur l'éventualité d'un échec du lien.<br /><br /> Un lien peut également afficher un état dégradé lorsque le site qui reçoit les données répliquées ne peut pas valider rapidement les données dans la base de données. Cela peut se produire lors de la réplication de volumes importants de données. Par exemple, si vous déployez une mise à jour logicielle sur un grand nombre d'ordinateurs, le site parent sur le lien peut prendre un certain temps pour traiter le volume de données répliquées. Un délai de traitement sur le site parent peut entraîner la dégradation de l'état du lien jusqu'à ce que le site parent puisse traiter correctement les données en attente.|  
@@ -194,7 +195,7 @@ La réplication de base de données entre sites implique la réplication de plus
 
 Vous pouvez exécuter l’analyseur de lien de réplication dans la console Configuration Manager ou à partir d’une invite de commandes :  
 
--   Pour l’exécuter dans la console Configuration Manager : dans l’espace de travail **Surveillance**, cliquez sur le nœud **Réplication de la base de données**, sélectionnez le lien de réplication à analyser, puis, dans le groupe **Réplication de la base de données**, sous l’onglet **Accueil**, sélectionnez **Analyseur de lien de réplication**.  
+-   Pour exécuter la console Configuration Manager : dans l’espace de travail **Surveillance**, cliquez sur le nœud **Réplication de la base de données**, sélectionnez le lien de réplication que vous souhaitez analyser, puis, dans le groupe **Réplication de la base de données**, dans l’onglet **Accueil**, sélectionnez **Analyseur de lien de réplication**.  
 
 -   Pour l’exécuter à l’invite de commandes, entrez la commande suivante : **%chemin%\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManager.ReplicationLinkAnalyzer.Wizard.exe &lt;nom de domaine complet du serveur de site source\> &lt;nom de domaine complet du serveur de site de destination\>**  
 
@@ -204,7 +205,7 @@ Lorsque vous exécutez l'analyseur de lien de réplication, celui-ci détecte le
 
 -   ReplicationLinkAnalysis.log  
 
-Lorsque l'analyseur de lien de réplication s'exécute, il arrête les services suivants pendant la correction des problèmes, puis il redémarre ces services une fois la correction terminée :  
+Lorsque l'analyseur de lien de réplication s'exécute, il arrête les services suivants pendant la correction des problèmes, puis il redémarre ces services une fois la correction terminée :  
 
 -   SMS_SITE_COMPONENT_MANAGER  
 

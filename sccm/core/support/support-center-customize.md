@@ -10,24 +10,25 @@ ms.assetid: a6f7f6b7-9ef3-4ffa-a3cf-d877ac55983b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ca7dfce7b96747e46247cb290b4fc0d7e0df41ff
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b100daf91b8bb7c5d4dd5f041c57e7dc9dac390e
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52458067"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56156778"
 ---
 # <a name="customize-support-center"></a>Personnaliser le Centre d’aide et de support
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 L’outil [Centre d’aide et de support](/sccm/core/support/support-center) fournit un fichier de configuration que vous pouvez personnaliser. Par défaut, lorsque vous installez le Centre d’aide et de support, ce fichier figure à l’emplacement suivant : `C:\Program Files (x86)\Configuration Manager Support Center\ConfigMgrSupportCenter.exe.config`. Le fichier de configuration modifie le comportement du programme :
 
-  - [Personnaliser la collecte des données](#bkmk_datacoll) : Modifiez les jeux de clés de Registre et les espaces de noms WMI inclus pendant la collecte de données.  
+  - [Personnaliser la collecte des données](#bkmk_datacoll) : Modifie les ensembles de clés de Registre et les espaces de noms Windows Management Instrumentation inclus pendant la collecte de données  
 
-  - [Personnaliser les groupes de journaux](#bkmk_loggroups) : Définissez de nouveaux groupes de fichiers journaux à l’aide d’expressions régulières. Ajoutez également d’autres fichiers journaux aux groupes de journaux.  
+  - [Personnaliser les groupes de journaux](#bkmk_loggroups) : Définis de nouveaux groupes de fichiers journaux à l’aide d’expressions régulières. Ajoutez également d’autres fichiers journaux aux groupes de journaux.  
 
-  - [Collecter des fichiers journaux supplémentaires à l’aide de caractères génériques](#bkmk_wildcards) : Utilisez les recherches par caractères génériques pour collecter des fichiers journaux supplémentaires.  
+  - [Collecter les fichiers journaux supplémentaires à l’aide de caractères génériques](#bkmk_wildcards) : Utiliser les recherches de caractères génériques pour collecter des fichiers journaux supplémentaires  
 
 Pour apporter ces modifications, vous devez disposer d’autorisations administratives sur le client où vous avez installé le Centre d’aide et de support. Effectuez ces personnalisations à l’aide d’un éditeur de texte ou XML, tel que le Bloc-notes ou Visual Studio.
 
@@ -96,9 +97,9 @@ Pour collecter les clés de Registre pour les programmes standard installés sur
 
 Pour personnaliser quels fichiers journaux le Centre d’aide et de support doit collecter, et comment il doit les présenter dans la liste **Groupes de journaux**, utilisez des éléments dans l’élément `<logGroups>`. Lorsque vous démarrez le Centre d’aide et de support, il analyse cette section du fichier de configuration. Il crée ensuite un groupe sur la liste **Groupes de journaux** pour chaque valeur d’attribut de clé unique figurant dans les éléments `<add/>` contenus dans l’élément `<logGroups>`.
 
-  - **Groupe de journaux de composant** : l’élément `<componentLogGroup>` utilise un attribut de clé pour définir le nom du groupe de journaux qui apparaît dans la liste. Il utilise également un attribut de valeur qui contient une expression régulière (regex). Il utilise cette expression régulière pour collecter un ensemble de fichiers journaux associés.  
+  - **Groupe de journaux de composants** : L’élément `<componentLogGroup>` utilise un attribut de clé pour définir le nom du groupe de journaux qui apparaît dans la liste. Il utilise également un attribut de valeur qui contient une expression régulière (regex). Il utilise cette expression régulière pour collecter un ensemble de fichiers journaux associés.  
 
-  - **Groupe de journaux statiques** : l’élément `<staticLogGroup>` utilise un attribut de clé pour définir le nom du groupe de journaux qui apparaît dans la liste. Il utilise également un attribut de valeur qui définit un nom de fichier journal.  
+  - **Groupe de journaux statique :** L’élément `<staticLogGroup>` utilise un attribut de clé pour définir le nom du groupe de journaux qui apparaît dans la liste. Il utilise également un attribut de valeur qui définit un nom de fichier journal.  
 
 Si la même valeur d’attribut de clé est utilisée dans un élément `<add/>` au sein de l’élément `<componentLogGroup>` et de l’élément `<staticLogGroup>`, le Centre d’aide et de support crée un groupe unique. Ce groupe inclut les fichiers journaux définis par les deux éléments qui utilisent la même clé.
 
@@ -131,12 +132,12 @@ Pour collecter des fichiers journaux supplémentaires, utilisez des caractères 
 
 Ces exemples montrent comment le Centre d’aide et de support utilise cette fonctionnalité dans le fichier de configuration par défaut.
 
-#### <a name="example-1-collect-all-windows-update-log-files-in-the-windows-directory"></a>Exemple 1 : Collecter tous les fichiers journaux de Windows Update dans le répertoire Windows
+#### <a name="example-1-collect-all-windows-update-log-files-in-the-windows-directory"></a>Exemple 1 : Collecter tous les fichiers journaux de Windows Update dans le répertoire Windows
 L’élément suivant collecte tous les fichiers nommés `WindowsUpdate.log` trouvés dans le répertoire Windows : 
 
 `<add key="%WINDIR%\WindowsUpdate.log" />`
 
-#### <a name="example-2-collect-all-log-files-in-the-windows-logs-directory"></a>Exemple 2 : Collecter tous les fichiers journaux figurant dans le répertoire des journaux Windows
+#### <a name="example-2-collect-all-log-files-in-the-windows-logs-directory"></a>Exemple 2 : Collecter tous les fichiers journaux figurant dans le répertoire des journaux Windows
 L’élément suivant collecte tous les fichiers qui se terminent par `.log` dans le répertoire des journaux Windows : 
 
 `<add key="%WINDIR%\logs\*.log" />`

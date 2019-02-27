@@ -10,16 +10,17 @@ ms.assetid: 7d8f530b-1a39-4a9d-a2f0-675b516da7e4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 008da23a6fedf1666a29754dc41a47c61f8bfbda
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: a5336db0bd16d4845650bae775f2eff895e617fb
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39384230"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56142270"
 ---
 # <a name="use-a-pull-distribution-point-with-configuration-manager"></a>Utiliser un point de distribution d’extraction avec Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 
 Quand vous distribuez du contenu à un point de distribution standard dans la console Configuration Manager, le serveur de site envoie (push) le contenu au point de distribution. Un point de distribution d’extraction obtient du contenu en le téléchargeant à partir d’un emplacement source, comme un client.  
@@ -71,13 +72,13 @@ Quand vous utilisez un point de distribution d’extraction, passez en revue et 
 
 4.  Dans le groupe **Paramètres de nouvelle tentative**, examinez les valeurs suivantes :  
 
-    -   **Nombre de nouvelles tentatives** : nombre de fois où Package Transfer Manager tente de notifier le point de distribution d’extraction pour télécharger le contenu. Après avoir essayé ce nombre de fois, Package Transfer Manager annule le transfert. Par défaut, cette valeur est de 30.  
+    -   **Nombre de tentatives** : nombre de fois où Package Transfer Manager tente de notifier le point de distribution d’extraction pour télécharger le contenu. Après avoir essayé ce nombre de fois, Package Transfer Manager annule le transfert. Par défaut, cette valeur est de 30.  
 
     -   **Délai avant une nouvelle tentative (en minutes)** : nombre de minutes qu’attend Package Transfer Manager entre des tentatives. Par défaut, cette valeur est de 20.  
 
 5.  Dans le groupe **Paramètres d’interrogation de l’état**, examinez les valeurs suivantes :  
 
-    -   **Nombre d’interrogations** : nombre de fois que Package Transfer Manager contacte le point de distribution d’extraction pour récupérer l’état de la tâche. S’il atteint ce nombre de fois avant la fin de la tâche, Package Transfer Manager annule le transfert. Par défaut, cette valeur est de 72.   
+    -   **Nombre d’interrogations** : nombre de fois que Package Transfer Manager contacte le point de distribution d’extraction pour récupérer l’état du travail. S’il atteint ce nombre de fois avant la fin de la tâche, Package Transfer Manager annule le transfert. Par défaut, cette valeur est de 72.   
 
     -   **Délai avant une nouvelle tentative (en minutes)** : nombre de minutes qu’attend Package Transfer Manager entre des tentatives. Par défaut, cette valeur est de 60.   
     

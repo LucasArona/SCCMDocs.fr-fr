@@ -10,16 +10,17 @@ ms.assetid: a2742d52-851e-4abc-b623-d12d91684c0b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ec350bdb6b3b421d95bf13eafc562919bccc3c38
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: f4e85b6886947fe0ac720f5840dcefd91a441d3e
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335607"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56130943"
 ---
 # <a name="get-started-with-compliance-settings-in-system-center-configuration-manager"></a>Prise en main des paramètres de compatibilité dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Avant de créer des paramètres de conformité Configuration Manager, commencez par vous familiariser avec les concepts de base et avec leur fonctionnement.  
 
@@ -38,7 +39,7 @@ Avant de créer des paramètres de conformité Configuration Manager, commencez 
 
 ## <a name="what-devices-are-supported"></a>Quels sont les appareils pris en charge ?  
 
-| Type d'appareil | Plus d'informations |  
+| Type d'appareil | Informations complémentaires |  
 |------------|----------------------|  
 | Ordinateurs Windows (avec le client Configuration Manager) | Créez des éléments de configuration personnalisés pour évaluer certains objets, notamment les clés et les fichiers de Registre ou encore les attributs Active Directory.<br /><br /> Quand vous utilisez le type d’élément de configuration Windows 10, sélectionnez les paramètres dans une liste prédéfinie. |  
 | Ordinateurs Windows (inscrits auprès de Microsoft Intune) | Sélectionnez les paramètres dans une liste prédéfinie. |  
@@ -109,8 +110,7 @@ Pour plus d’informations, consultez [Mettre à niveau des appareils Windows av
 
 
 ## <a name="microsoft-edge-browser-profiles"></a>Profils du navigateur Microsoft Edge
-<!-- 1357310 -->
-Depuis la version 1802, pour les clients qui utilisent le navigateur web [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) sur des clients Windows 10, créez une stratégie de paramètres de conformité pour configurer plusieurs paramètres Microsoft Edge. 
+<!-- 1357310 --> Depuis la version 1802, pour les clients qui utilisent le navigateur web [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) sur des clients Windows 10, créez une stratégie de paramètres de conformité pour configurer plusieurs paramètres Microsoft Edge. 
 
 Pour plus d’informations, consultez [Profils du navigateur Microsoft Edge](/sccm/compliance/deploy-use/browser-profiles).
 

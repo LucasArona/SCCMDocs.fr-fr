@@ -10,16 +10,17 @@ ms.assetid: 86810629-cf2a-43e8-86a2-847444119fc1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e6be541a1b26961684f0577f2540132b81f50b7a
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: f9c4b9bdbd67e26962a4de3ff66643f071339795
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385471"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56139474"
 ---
 # <a name="find-help-for-using-configuration-manager"></a>Trouver de l’aide pour utiliser Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Cet article contient les sections suivantes avec plusieurs ressources permettant de trouver de l’aide pour utiliser Configuration Manager :  
 
@@ -51,9 +52,9 @@ Pour des conseils sur la recherche, l’ajout de commentaires et plus d’inform
 
 À compter de Configuration Manager version 1806, vous pouvez envoyer des commentaires sur le produit directement de la console. Si vous avez besoin de joindre des journaux, utilisez [Hub de commentaires](#BKMK_FeedbackHub). Voici les options dont vous disposez :<!--1357542-->
 
-  - **Envoyer un sourire** : envoyez des commentaires sur ce qui vous plaît.
-  - **Envoyer un smiley mécontent** : envoyez des commentaires sur ce qui ne vous plaît pas.
-  - **Envoyer une suggestion** : vous amène sur le [site web UserVoice](https://configurationmanager.uservoice.com/) pour partager vos idées.
+  - **Envoyer un sourire** : permet d’envoyer des commentaires sur ce qui vous plaît.
+  - **Envoyer un smiley mécontent** : permet d’envoyer des commentaires sur ce qui ne vous plaît pas.
+  - **Envoyer une suggestion** : vous amène sur le [site web UserVoice](https://configurationmanager.uservoice.com/) pour partager vos idées.
 
 ![Envoyer des commentaires dans Configuration Manager 1806](media/1806-send-a-smile.png)
 
@@ -133,7 +134,7 @@ Les liens suivants fournissent des informations sur les options de support et le
 
 -   [Support Microsoft](https://aka.ms/cmcbsupport)  
 
--   [Communauté Configuration Manager : Guide de survie de System Center Configuration Manager (Current Branch)](https://social.technet.microsoft.com/wiki/contents/articles/33035.system-center-configuration-manager-current-branch-survival-guide.aspx )  
+-   [Communauté de Configuration Manager : Guide de survie de System Center Configuration Manager (Current Branch)](https://social.technet.microsoft.com/wiki/contents/articles/33035.system-center-configuration-manager-current-branch-survival-guide.aspx )  
 
 -   [Page Forums de Configuration Manager](https://social.technet.microsoft.com/Forums/en-US/home?category=ConfigMgrCB)  
     <!-- NOTE: the above URL requires "en-US" for the category to work -->

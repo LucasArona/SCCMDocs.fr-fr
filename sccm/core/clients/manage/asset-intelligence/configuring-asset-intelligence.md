@@ -10,16 +10,17 @@ ms.assetid: 08e0382d-de05-4a76-ba5c-7223173f7066
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 182006f0e4fcaf2304570ef4110527a61180c290
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 3a96f9292256227da6a216a913c7a0be1be5c60d
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32341013"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56156710"
 ---
 # <a name="configure-asset-intelligence-in-system-center-configuration-manager"></a>Configurer Asset Intelligence dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Asset Intelligence permet d’inventorier et de gérer l’utilisation des licences logicielles.   
 
@@ -27,11 +28,11 @@ Asset Intelligence permet d’inventorier et de gérer l’utilisation des licen
    
 
 - **Étape 1** : Pour collecter les données d’inventaire pour les rapports Asset Intelligence, vous devez activer l’agent d’inventaire matériel, comme cela est expliqué dans [Comment étendre l’inventaire matériel dans System Center Configuration Manager](../../../../core/clients/manage/inventory/extend-hardware-inventory.md).
-- **Étape 2** : [Activer les classes de création de rapports d’inventaire matériel Asset Intelligence](#BKMK_EnableAssetIntelligence).  
-- **Étape 3** : [Installer un point de synchronisation Asset Intelligence](#BKMK_InstallAssetIntelligenceSynchronizationPoint)
-- **Étape 4** : [Activer l’audit des événements de connexion réussie](#BKMK_EnableSuccessLogonEvents)  
-- **Étape 5** : [Importer les informations de licence logicielle](#BKMK_ImportSoftwareLicenseInformation)  
-- **Étape 6** : [Configurer les tâches de maintenance Asset Intelligence](#BKMK_ConfigureMaintenanceTasks) 
+- **Étape 2** : [Activer les classes de création de rapports d’inventaire matériel Asset Intelligence](#BKMK_EnableAssetIntelligence).  
+- **Étape 3** : [Installer un point de synchronisation Asset Intelligence](#BKMK_InstallAssetIntelligenceSynchronizationPoint)
+- **Étape 4** : [Activer l’audit des événements de connexion réussie](#BKMK_EnableSuccessLogonEvents)  
+- **Étape 5** : [Importer les informations de licence logicielle](#BKMK_ImportSoftwareLicenseInformation)  
+- **Étape 6** : [Configurer les tâches de maintenance Asset Intelligence](#BKMK_ConfigureMaintenanceTasks) 
 
 
 ###  <a name="BKMK_EnableAssetIntelligence"></a> Activer les classes de création de rapports d’inventaire matériel Asset Intelligence  
@@ -77,12 +78,12 @@ Outre le téléchargement des nouvelles informations du catalogue Asset Intellig
 
 3.  Ajoutez le rôle de système de site du point de synchronisation Asset Intelligence à un serveur de système de site nouveau ou existant :  
 
-    -  Pour un **nouveau serveur de système de site** : sous l’onglet **Accueil**, dans le groupe **Créer**, choisissez **Créer un serveur de système de site** pour démarrer l’Assistant.   
+    -  Pour un **Nouveau serveur de système de site** : Dans l’onglet **Accueil**, dans le groupe **Créer**, choisissez **Créer un serveur de système de site** pour démarrer l’Assistant.   
 
         > [!NOTE]  
         >  Par défaut, quand Configuration Manager installe un rôle système de site, les fichiers d’installation sont installés sur le premier disque dur formaté NTFS disponible qui a le plus d’espace disque libre. Pour empêcher Configuration Manager d’effectuer l’installation sur des disques particuliers, créez un fichier vide « No_sms_on_drive.sms » et copiez-le dans le dossier racine du disque avant d’installer le serveur de système de site.  
 
-    -  Pour un **serveur de système de site existant** : choisissez le serveur sur lequel vous souhaitez installer le rôle de système de site du point de synchronisation Asset Intelligence. Quand vous choisissez un serveur, la liste des rôles de système de site déjà installés sur le serveur s’affiche dans le volet Détails.  
+    -  Pour un **Serveur de système de site existant** : Choisissez le serveur sur lequel vous souhaitez installer le rôle de système de site du point de synchronisation Asset Intelligence. Quand vous choisissez un serveur, la liste des rôles de système de site déjà installés sur le serveur s’affiche dans le volet Détails.  
 
          Sous l’onglet **Accueil**, dans le groupe **Serveur**, choisissez **Ajouter des rôles de système de site** pour démarrer l’Assistant.  
 
@@ -152,20 +153,20 @@ Outre le téléchargement des nouvelles informations du catalogue Asset Intellig
  Une déclaration de licence générale peut également être importée vers le catalogue Asset Intelligence en utilisant un fichier d'importation de licence de format .csv (délimité par des virgules) créé manuellement.  
 
 > [!NOTE]  
->  Seuls les champs **Nom**, **Éditeur**, **Version**et **Quantité effective** sont requis, mais ils doivent tous être entrés sur la première ligne du fichier d'importation de licence. Tous les champs de date doivent être affichés dans le format suivant : mois/jour/année, par exemple, 08/04/2008.  
+>  Seuls les champs **Nom**, **Éditeur**, **Version**et **Quantité effective** sont requis, mais ils doivent tous être entrés sur la première ligne du fichier d'importation de licence. Tous les champs de date doivent également être affichés dans le format suivant : Jour/mois/année, par exemple, 04/08/2008.  
 
 Asset Intelligence fait correspondre les produits que vous spécifiez dans la déclaration de licence générale en utilisant le nom du produit et la version du produit, mais pas le nom de l'éditeur. Vous devez utiliser un nom de produit dans la déclaration de licence générale qui correspond exactement au nom de produit stocké dans la base de données du site. Asset Intelligence utilise le nombre **Quantité effective** donné dans la déclaration de licence générale et le compare au nombre de produits installés trouvés dans l’inventaire Configuration Manager.  
 
 > [!TIP]  
->  Pour obtenir la liste complète des noms de produits stockés dans la base de données du site Configuration Manager, exécutez la requête suivante sur la base de données du site : SELECT ProductName0 FROM v_GS_INSTALLED_SOFTWARE.  
+>  Pour obtenir la liste complète des noms de produits stockés dans la base de données du site Configuration Manager, vous pouvez exécuter la requête suivante sur la base de données du site : SELECT ProductName0 FROM v_GS_INSTALLED_SOFTWARE.  
 
  Vous pouvez spécifier les versions exactes pour un produit ou spécifier une partie de la version, comme par exemple uniquement la version principale. Les exemples suivants présentent les correspondances de version obtenues pour une entrée de version de déclaration générale de licence pour un produit spécifique.  
 
 |Entrée de déclaration de licence générale|Correspondance avec les entrées de la base de données de site|  
 |-------------------------------------|------------------------------------|  
-|Name: "MySoftware", ProductVersion0:"2"|ProductName0: "Mysoftware", ProductVersion0: "2.01.1234"<br /><br /> ProductName0: "MySoftware", ProductVersion0: "2.02.5678"<br /><br /> ProductName0: "MySoftware", ProductVersion0: "2.05.1234"<br /><br /> ProductName0: "MySoftware", ProductVersion0: "2.05.5678"<br /><br /> ProductName0: "MySoftware", ProductVersion0: "2.05.3579.000"<br /><br /> ProductName0: "MySoftware", ProductVersion0: "2.10.1234"|  
-|Name: "MySoftware", Version "2.05"|ProductName0: "MySoftware", ProductVersion0: "2.05.1234"<br /><br /> ProductName0: "MySoftware", ProductVersion0: "2.05.5678"<br /><br /> ProductName0: "MySoftware", ProductVersion0: "2.05.3579.000"|  
-|Name: "Mysoftware", Version "2"<br /><br /> Name: "Mysoftware", Version "2.05"|Erreur lors de l'importation. L'importation échoue lorsque plusieurs entrées correspondent à la même version du produit.|  
+|Nom : « MySoftware », ProductVersion0 : « 2 »|ProductName0 : « Mysoftware », ProductVersion0 : « 2.01.1234 »<br /><br /> ProductName0 : « MySoftware », ProductVersion0 : « 2.02.5678 »<br /><br /> ProductName0 : « MySoftware », ProductVersion0 : « 2.05.1234 »<br /><br /> ProductName0 : « MySoftware », ProductVersion0 : « 2.05.5678 »<br /><br /> ProductName0 : « MySoftware », ProductVersion0 : « 2.05.3579.000 »<br /><br /> ProductName0 : « MySoftware », ProductVersion0 : « 2.10.1234 »|  
+|Nom : « MySoftware », Version « 2.05 »|ProductName0 : « MySoftware », ProductVersion0 : « 2.05.1234 »<br /><br /> ProductName0 : « MySoftware », ProductVersion0 : « 2.05.5678 »<br /><br /> ProductName0 : « MySoftware », ProductVersion0 : « 2.05.3579.000 »|  
+|Nom : « Mysoftware », Version « 2 »<br /><br /> Nom : « MySoftware », Version « 2.05 »|Erreur lors de l'importation. L'importation échoue lorsque plusieurs entrées correspondent à la même version du produit.|  
   
 
 ##### <a name="to-create-a-general-license-statement-import-file-by-using-microsoft-excel"></a>Pour créer un fichier d'importation de déclaration de licence générale à l'aide de Microsoft Excel  
@@ -195,21 +196,21 @@ Asset Intelligence fait correspondre les produits que vous spécifiez dans la d�
 |Nom|Jusqu'à 255 caractères|Oui|Nom du logiciel|  
 |Éditeur|Jusqu'à 255 caractères|Oui|Éditeur du logiciel|  
 |Version|Jusqu'à 255 caractères|Oui|Version du logiciel|  
-|Langage|Jusqu'à 255 caractères|Oui|Langue du logiciel|  
+|Langage|Jusqu'à 255 caractères|Oui|Langue du logiciel|  
 |Quantité effective|Valeur entière|Oui|Nombre de licences achetées|  
 |Numéro BC|Jusqu'à 255 caractères|Non|Informations sur les BC|  
 |Nom du revendeur|Jusqu'à 255 caractères|Non|Informations sur le revendeur|  
-|Date d'achat|Date au format suivant : MM/JJ/AAAA|Non|Date d'achat de la licence|  
-|Achat de la prise en charge|Valeur en bits|Non|0 ou 1 (0 pour Oui, 1 pour Non)|  
+|Date d'achat|Date au format suivant : MM/JJ/AAAA|Non|Date d'achat de la licence|  
+|Achat de la prise en charge|Valeur en bits|Non|0 ou 1 : Entrez 0 pour Oui ou 1 pour Non|  
 |Date d'expiration de la prise en charge|Date au format suivant : MM/JJ/AAAA|Non|Date de fin de la prise en charge achetée|  
 |Commentaires|Jusqu'à 255 caractères|Non|Commentaires facultatifs|  
 
 ###  <a name="BKMK_ConfigureMaintenanceTasks"></a> Configurer les tâches de maintenance Asset Intelligence  
  Les tâches de maintenance suivantes sont disponibles pour Asset Intelligence :  
 
--   **Vérifier le titre de l’application à l’aide des informations d’inventaire** : vérifie si le nom du logiciel indiqué dans l’inventaire logiciel correspond au nom du logiciel figurant dans le catalogue Asset Intelligence. Par défaut, cette tâche est activée et planifiée pour être exécutée le samedi entre 00 h 00 et 5 h 00. Cette tâche de maintenance est uniquement disponible sur le site de niveau supérieur de la hiérarchie Configuration Manager.  
+-   **Vérifier le titre de l’application à l’aide des informations d’inventaire** : Vérifie que le titre du logiciel indiqué dans l’inventaire logiciel est rapproché du titre du logiciel dans le catalogue Asset Intelligence. Par défaut, cette tâche est activée et planifiée pour être exécutée le samedi entre 00 h 00 et 5 h 00. Cette tâche de maintenance est uniquement disponible sur le site de niveau supérieur de la hiérarchie Configuration Manager.  
 
--   **Résumer les données du logiciel installé** : fournit les informations affichées dans l’espace de travail **Ressources et Conformité**, dans le nœud **Logiciels inventoriés**, sous le nœud **Asset Intelligence**. Quand la tâche s’exécute, Configuration Manager compte les titres de logiciels inventoriés sur le site principal. Par défaut, cette tâche est activée et planifiée pour être exécutée tous les jours entre 00 h 00 et 5 h 00. Cette tâche de maintenance est disponible uniquement sur les sites principaux.  
+-   **Résumer les données du logiciel installé** : Fournit les informations affichées dans l’espace de travail**Ressources et conformité**, dans le nœud **Logiciels inventoriés**, sous le nœud **Asset Intelligence**. Quand la tâche s’exécute, Configuration Manager compte les titres de logiciels inventoriés sur le site principal. Par défaut, cette tâche est activée et planifiée pour être exécutée tous les jours entre 00 h 00 et 5 h 00. Cette tâche de maintenance est disponible uniquement sur les sites principaux.  
 
 ##### <a name="to-configure-asset-intelligence-maintenance-tasks"></a>Pour configurer les tâches de maintenance Asset Intelligence  
 

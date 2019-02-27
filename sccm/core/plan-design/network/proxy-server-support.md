@@ -10,16 +10,17 @@ ms.assetid: 9123a87a-0b6f-43c7-b5c2-fac5d09686b1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 78694282dae7408e1f9e01fd75585f87aef41da7
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 5123bd51de9678666b28ec464e811dafdd91a30d
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383549"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56156557"
 ---
 # <a name="proxy-server-support-in-configuration-manager"></a>Prise en charge de serveur proxy dans Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Certains serveurs de système de site Configuration Manager nécessitent des connexions à Internet. Si votre environnement nécessite l’utilisation d’un serveur proxy pour communiquer avec Internet, configurez ces rôles de système de site pour qu’ils utilisent le proxy.  
 
@@ -75,7 +76,7 @@ Ce rôle de système de site utilise le proxy quand il se connecte à Microsoft 
 Ces paramètres se trouvent sous l’onglet **Paramètres de compte et proxy** des propriétés du point de mise à jour logicielle.  
 
 > [!NOTE]  
->  Par défaut, le compte **Système** du serveur sur lequel une règle de déploiement automatique a été créée est utilisé pour se connecter à Internet et télécharger les mises à jour logicielles durant l’exécution des règles de déploiement automatique. Vous pouvez également configurer et utiliser le compte de serveur proxy du système de site. 
+>  Par défaut, lorsque les règles de déploiement automatique sont exécutées, le compte **Système** du serveur de site du site sur lequel une règle de déploiement automatique a été créée est utilisé pour se connecter à Internet et télécharger les mises à jour de logiciel. Vous pouvez également configurer et utiliser le compte de serveur proxy du système de site. 
 >   
 >  Quand ce compte ne peut pas accéder à Internet, les mises à jour logicielles ne peuvent pas être téléchargées. L’entrée suivante est journalisée dans **ruleengine.log** :  
 > `Failed to download the update from internet. Error = 12007.`  
@@ -90,12 +91,12 @@ Ces paramètres se trouvent sous l’onglet **Paramètres de compte et proxy** d
 
 3.  Dans Propriétés du système de site, accédez à l’onglet **Proxy**. Configurez les paramètres de proxy suivants :  
 
-    - **Utiliser un serveur proxy lors de la synchronisation d’informations provenant d’Internet** : sélectionnez cette option pour permettre au serveur de système de site d’utiliser un serveur proxy.  
+    - **Utiliser un serveur proxy lors de la synchronisation d’informations provenant d’Internet** : Sélectionnez cette option pour activer l’utilisation d’un serveur proxy sur le serveur de système de site.  
 
-    - **Nom du serveur proxy** : spécifiez le nom d’hôte ou le FQDN (nom de domaine complet) du serveur proxy de votre environnement.  
+    - **Nom du serveur proxy** : Spécifiez le nom d’hôte ou le nom de domaine complet du serveur proxy de votre environnement.  
 
-    - **Port** : spécifiez le port réseau sur lequel communiquer avec le serveur proxy. Par défaut, il utilise le port **80**.  
+    - **Port** : Spécifiez le port réseau sur lequel communiquer avec le serveur proxy. Par défaut, il utilise le port **80**.  
 
-    - **Utiliser les informations d’identification pour la connexion au serveur proxy** : de nombreux serveurs proxy imposent à l’utilisateur de s’authentifier. Par défaut, le serveur de système de site utilise son compte d’ordinateur pour se connecter au serveur proxy. Si nécessaire, activez cette option, cliquez sur **Définir**, puis choisissez un **Compte existant** ou spécifiez un **Nouveau compte**. Ces informations d’identification sont celles du **compte de serveur proxy du système de site**.  Pour plus d’informations, consultez [Comptes utilisés dans Configuration Manager](/sccm/core/plan-design/hierarchy/accounts).  
+    - **Utiliser les informations d’identification pour se connecter au serveur proxy** : Plusieurs serveurs proxy demandent aux utilisateurs de s’authentifier. Par défaut, le serveur de système de site utilise son compte d’ordinateur pour se connecter au serveur proxy. Si nécessaire, activez cette option, cliquez sur **Définir**, puis choisissez un **Compte existant** ou spécifiez un **Nouveau compte**. Ces informations d’identification sont celles du **compte de serveur proxy du système de site**.  Pour plus d’informations, consultez [Comptes utilisés dans Configuration Manager](/sccm/core/plan-design/hierarchy/accounts).  
 
 4.  Cliquez sur **OK** pour enregistrer la nouvelle configuration de serveur proxy.  

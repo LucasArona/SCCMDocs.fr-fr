@@ -10,16 +10,17 @@ ms.assetid: bda87fc5-2e4c-4992-98a4-01770365038c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1b29fb48d8d8abc2e0c6693725b65c90a0cf1cd1
-ms.sourcegitcommit: a849dab9333ebac799812624d6155f2a96b523ca
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: abfad38e0c02ff6c0af8d4c9c47bdeed7598e513
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42584556"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56129746"
 ---
 # <a name="setup-downloader-for-system-center-configuration-manager"></a>Téléchargeur d’installation pour System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Avant d’exécuter le programme d’installation pour installer ou mettre à niveau un site System Center Configuration Manager, vous pouvez utiliser l’application autonome Téléchargeur d’installation correspondant à la version de Configuration Manager que vous souhaitez installer pour télécharger les fichiers d’installation mis à jour.  
 
@@ -57,15 +58,15 @@ Vous avez deux options pour exécuter le téléchargeur d’installation :
 
     Vous pouvez utiliser les options de ligne de commande suivantes avec **Setupdl.exe** :   
 
-    -   **/VERIFY**: utilisez cette option pour vérifier les fichiers dans le dossier de téléchargement, notamment les fichiers de langues. Examinez la liste des fichiers obsolètes dans le fichier ConfigMgrSetup.log situé dans le répertoire racine du lecteur C. Aucun fichier n'est téléchargé lorsque vous utilisez cette option.  
+    -   **/VERIFY** : Utilisez cette option pour vérifier les fichiers dans le dossier de téléchargement, y compris les fichiers de langues. Examinez la liste des fichiers obsolètes dans le fichier ConfigMgrSetup.log situé dans le répertoire racine du lecteur C. Aucun fichier n'est téléchargé lorsque vous utilisez cette option.  
 
-    -   **/VERIFYLANG**: utilisez cette option pour vérifier les fichiers de langues dans le dossier de téléchargement. Examinez la liste des fichiers de langue obsolètes dans le fichier ConfigMgrSetup.log situé dans le répertoire racine du lecteur C.
+    -   **/VERIFYLANG** : Utilisez cette option pour vérifier les fichiers de langues dans le dossier de téléchargement. Examinez la liste des fichiers de langue obsolètes dans le fichier ConfigMgrSetup.log situé dans le répertoire racine du lecteur C.
 
-    -   **/LANG**: utilisez cette option pour télécharger uniquement les fichiers de langues dans le dossier de téléchargement.  
+    -   **/LANG** : Utilisez cette option pour télécharger uniquement les fichiers de langues dans le dossier de téléchargement.  
 
-    -   **/NOUI**: utilisez cette option pour démarrer le téléchargeur d’installation sans afficher l’interface utilisateur. Quand vous utilisez cette option, vous devez spécifier le **chemin de téléchargement** dans le cadre de la commande, à l’invite de commandes.  
+    -   **/NOUI** : Utilisez cette option pour démarrer le téléchargeur d'installation sans afficher l'interface utilisateur. Quand vous utilisez cette option, vous devez spécifier le **chemin de téléchargement** dans le cadre de la commande, à l’invite de commandes.  
 
-    -   **&lt;chemin_téléchargement\>**: vous pouvez spécifier le chemin du dossier de téléchargement pour démarrer automatiquement la vérification ou le processus de téléchargement. Vous devez spécifier le chemin de téléchargement quand vous utilisez l’option **/NOUI**. Si vous ne spécifiez pas un chemin de téléchargement, vous devez le faire à l’ouverture du téléchargeur d’installation. Le téléchargeur d’installation crée le dossier si celui-ci n’existe pas.  
+    -   **&lt;Chemin de téléchargement\>** : Vous pouvez spécifier le chemin d'accès au dossier de téléchargement pour démarrer la vérification ou le processus de téléchargement automatiquement. Vous devez spécifier le chemin de téléchargement quand vous utilisez l’option **/NOUI**. Si vous ne spécifiez pas un chemin de téléchargement, vous devez le faire à l’ouverture du téléchargeur d’installation. Le téléchargeur d’installation crée le dossier si celui-ci n’existe pas.  
 
     Exemples de commandes :
 

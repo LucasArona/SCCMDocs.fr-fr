@@ -10,16 +10,17 @@ ms.assetid: e102fd1a-76df-4d8e-b1b0-10ee18318f67
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 03b34c09a5fef63316bb1d9d1a94dbbfc3ccf69f
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 93a502e9c77e05eedba1c2989cbae69e4080832f
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456258"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56133729"
 ---
 # <a name="how-to-manage-collections-in-configuration-manager"></a>Comment gérer des regroupements dans Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Aidez-vous des informations générales de cet article pour effectuer les tâches de gestion des regroupements dans Configuration Manager.  
 
@@ -40,9 +41,9 @@ Aidez-vous des informations générales de cet article pour effectuer les tâche
 #### <a name="add-selected-items"></a>Ajouter les éléments sélectionnés
  Fournit les options suivantes : 
 
- - **Ajouter des éléments sélectionnés à un regroupement d’appareils existant** : ouvre la boîte de dialogue **Sélectionner un regroupement**. Sélectionner le regroupement auquel vous souhaitez ajouter les membres du regroupement sélectionné. Le regroupement sélectionné est inclus dans ce regroupement grâce à la règle d'adhésion **Inclure des regroupements** .  
+ - **Ajouter les éléments sélectionnés à un regroupement de périphériques existant** : Ouvre la boîte de dialogue **Sélectionner un regroupement** . Sélectionner le regroupement auquel vous souhaitez ajouter les membres du regroupement sélectionné. Le regroupement sélectionné est inclus dans ce regroupement grâce à la règle d'adhésion **Inclure des regroupements** .  
 
- - **Ajouter des éléments sélectionnés au nouveau regroupement d’appareils** : ouvre l’**Assistant Création d’un regroupement d’appareils** là où vous créez un regroupement. Le regroupement sélectionné est inclus dans ce regroupement grâce à la règle d'adhésion **Inclure des regroupements** .  
+ - **Ajouter les éléments sélectionnés au nouveau regroupement de périphériques** : Ouvre l’**Assistant Création d’un regroupement de périphériques** à l’endroit où vous pouvez créer un nouveau regroupement. Le regroupement sélectionné est inclus dans ce regroupement grâce à la règle d'adhésion **Inclure des regroupements** .  
 
 
  Pour plus d’informations, consultez [Guide pratique pour créer des regroupements](/sccm/core/clients/manage/collections/create-collections).
@@ -105,15 +106,15 @@ Aidez-vous des informations générales de cet article pour effectuer les tâche
 #### <a name="deploy"></a>Déployer
  Affiche les options suivantes :  
 
- - **Application** : ouvre l’**Assistant Déploiement logiciel**. Sélectionnez et configurez un déploiement d’application vers le regroupement sélectionné. Pour plus d’informations, consultez [Comment déployer des applications](/sccm/apps/deploy-use/deploy-applications).  
+ - **Application** : Ouvre l’**Assistant Déploiement logiciel**. Sélectionnez et configurez un déploiement d’application vers le regroupement sélectionné. Pour plus d’informations, consultez [Comment déployer des applications](/sccm/apps/deploy-use/deploy-applications).  
 
- - **Programme** : ouvre l’**Assistant Déploiement logiciel**. Sélectionnez et configurez un déploiement de package et de programme vers le regroupement sélectionné. Pour plus d’informations, consultez [Packages et programmes](/sccm/apps/deploy-use/packages-and-programs).  
+ - **Programme** : Ouvre l’**Assistant Déploiement logiciel**. Sélectionnez et configurez un déploiement de package et de programme vers le regroupement sélectionné. Pour plus d’informations, consultez [Packages et programmes](/sccm/apps/deploy-use/packages-and-programs).  
 
- - **Base de référence de configuration** : ouvre la boîte de dialogue **Déployer des bases de référence de configuration**. Configurer le déploiement d’une ou de plusieurs bases de référence de configuration vers le regroupement sélectionné. Pour plus d’informations, consultez [Guide pratique pour déployer des bases de référence de configuration](/sccm/compliance/deploy-use/deploy-configuration-baselines).  
+ - **Base de référence de configuration** : Ouvre la boîte de dialogue **Déployer des bases de référence de configuration**. Configurer le déploiement d’une ou de plusieurs bases de référence de configuration vers le regroupement sélectionné. Pour plus d’informations, consultez [Guide pratique pour déployer des bases de référence de configuration](/sccm/compliance/deploy-use/deploy-configuration-baselines).  
 
- - **Séquence de tâches** : ouvre l’**Assistant Déploiement logiciel**. Sélectionner et configurer un déploiement de séquence de tâches vers le regroupement sélectionné. Pour plus d’informations, consultez [Gérer les séquences de tâches pour automatiser des tâches](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS).  
+ - **Séquence de tâches** : Ouvre l’**Assistant Déploiement logiciel**. Sélectionner et configurer un déploiement de séquence de tâches vers le regroupement sélectionné. Pour plus d’informations, consultez [Gérer les séquences de tâches pour automatiser des tâches](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS).  
 
- - **Mises à jour logicielles** : ouvre l’**Assistant Déploiement des mises à jour logicielles**. Configurer le déploiement des mises à jour logicielles vers les ressources du regroupement sélectionné. Pour plus d’informations, consultez [Gérer les mises à jour logicielles](/sccm/sum/understand/software-updates-introduction).  
+ - **Mise à jour de logiciel** : Ouvre l’**Assistant Déploiement de mises à jour de logiciel**. Configurer le déploiement des mises à jour logicielles vers les ressources du regroupement sélectionné. Pour plus d’informations, consultez [Gérer les mises à jour logicielles](/sccm/sum/understand/software-updates-introduction).  
 
 
 #### <a name="clear-server-group-deployment-locks"></a>Supprimer les verrous de déploiement du groupe de serveurs

@@ -10,16 +10,17 @@ ms.assetid: cead6825-6113-4ba5-a381-ac3598dfee86
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4dd1bf9b4085b6e1591d5841bfc307398505f5d1
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 87819530c5a37885c66611da0ba66c1a8872ac57
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340775"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56156625"
 ---
 # <a name="hierarchy-maintenance-tool-preinstexe-for-system-center-configuration-manager"></a>Outil de maintenance hiérarchique (Preinst.exe) pour System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 L’outil de maintenance hiérarchique (Preinst.exe) transfère des commandes au service Gestionnaire de hiérarchie de System Center Configuration Manager, si ce service est en cours d’exécution. Quand vous installez un site Configuration Manager, l’outil de maintenance hiérarchique est automatiquement installé. Preinst.exe se trouve dans le dossier partagé \\&lt;*nom_serveur_site*>\SMS_&lt;*code_site*\bin\X64\00000409 sur le serveur de site.  
 
@@ -104,7 +105,7 @@ Vous pouvez utiliser l'outil de maintenance hiérarchique pour exporter les clé
 
 1.  Lorsque vous êtes connecté au site enfant, ouvrez une invite de commande et naviguez jusqu'à l'emplacement de **Preinst.exe**.  
 
-2.  Tapez la commande suivante pour exporter la clé publique du site enfant : **Preinst /keyforparent**  
+2.  Saisissez ce qui suit pour exporter la clé publique du site enfant : **Preinst/keyforparent**  
 
 3.  L’option /keyforparent copie la clé publique du site enfant dans le fichier **&lt;code_site\>.CT4** situé à la racine du lecteur système.  
 
@@ -114,7 +115,7 @@ Vous pouvez utiliser l'outil de maintenance hiérarchique pour exporter les clé
 
 1.  Lorsque vous êtes connecté au site parent, ouvrez une invite de commande et naviguez jusqu'à l'emplacement de **Preinst.exe**.  
 
-2.  Tapez la commande suivante pour exporter la clé publique du site parent : **Preinst /keyforchild**.  
+2.  Saisissez ce qui suit pour exporter la clé publique du site parent : **Preinst/keyforchild**.  
 
 3.  L’option /keyforchild copie la clé publique du site parent dans le fichier **&lt;code_site\>.CT5** situé à la racine du lecteur système.  
 

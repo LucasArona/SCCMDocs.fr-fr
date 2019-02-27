@@ -10,20 +10,21 @@ ms.assetid: dba904ae-7c44-46db-ae63-999b9821cb46
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8b85961c14c3db69c3e02e776798588fadd0fc89
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 2fb57705079072e6a656464f5b7252b2ce05ad9d
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383151"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56123244"
 ---
 # <a name="cng-certificates-overview"></a>Vue d’ensemble des certificats CNG
 <!-- 1356191 --> 
 
-Configuration Manager prend en charge les certificats Cryptography : Next Generation (CNG) de manière limitée. Les clients Configuration Manager peuvent utiliser un certificat d’authentification client PKI avec une clé privée dans le fournisseur de stockage de clés (KSP) CNG. La prise en charge du KSP permet aux clients Configuration Manager de prendre en charge une clé privée matérielle, comme TPM KSP pour les certificats d’authentification client PKI.
+Configuration Manager prend en charge de manière limitée les certificats Cryptography: Cryptography: Next Generation (CNG). Les clients Configuration Manager peuvent utiliser un certificat d’authentification client PKI avec une clé privée dans le fournisseur de stockage de clés (KSP) CNG. La prise en charge du KSP permet aux clients Configuration Manager de prendre en charge une clé privée matérielle, comme TPM KSP pour les certificats d’authentification client PKI.
 
 ## <a name="supported-scenarios"></a>Scénarios pris en charge
-Vous pouvez utiliser les modèles de certificat [Cryptography API : Next Generation (CNG)](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx) pour les scénarios suivants :
+Vous pouvez utiliser l’[interface de programmation d’applications de chiffrement : Next Generation (CNG)](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx) pour les scénarios suivants :
 
 - Inscription du client et communication avec un point de gestion HTTPS   
 - Distribution de logiciels et déploiement d’applications avec un point de distribution HTTPS   

@@ -10,16 +10,17 @@ ms.assetid: 99222dc8-0e1e-4513-8302-7a1acf671e9b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 071c8cc45d81ceeee0ac97934a747c2fcc79821b
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 5b260a9e3deeb8668d736c3ed5ec2c2519e3ed50
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335046"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56138974"
 ---
 # <a name="determine-whether-to-migrate-data-to-system-center-configuration-manager"></a>Déterminer s’il faut migrer des données vers System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Dans System Center Configuration Manager, la migration offre un moyen de transférer des données et des configurations créées dans des versions de Configuration Manager prises en charge vers votre nouvelle hiérarchie.  La migration vous permet d’effectuer les opérations suivantes :  
 
@@ -62,7 +63,7 @@ Ces modifications n’affectent pas les données contenues dans la base de donn�
 
 -   Limites  
 
--   Regroupements : pour migrer des regroupements à partir d’une version prise en charge de System Center 2012 Configuration Manager ou de System Center Configuration Manager, vous utilisez une tâche de migration d’objets.  
+-   Regroupements : Pour migrer des regroupements à partir d’une version prise en charge de System Center 2012 Configuration Manager ou de System Center Configuration Manager, vous utilisez une tâche de migration d’objets.  
 
 -   Paramètres de compatibilité :  
 
@@ -86,7 +87,7 @@ Ces modifications n’affectent pas les données contenues dans la base de donn�
 
     -   Séquences de tâches  
 
--   Résultats de la recherche : critères de recherche enregistrés  
+-   Résultats de la recherche : Critères de recherche enregistrés  
 
 -   Mises à jour logicielles :  
 
@@ -116,7 +117,7 @@ Ces modifications n’affectent pas les données contenues dans la base de donn�
 
 -   Limites  
 
--   Regroupements : vous migrez des regroupements à partir d’une version prise en charge de Configuration Manager 2007 en utilisant une tâche de migration du regroupement.  
+-   Regroupements : Vous migrez des regroupements à partir d’une version prise en charge de Configuration Manager 2007 en utilisant une tâche de migration de regroupements.  
 
 -   Paramètres de compatibilité (désignés par l’expression « gestion de la configuration souhaitée » dans Configuration Manager 2007) :  
 
@@ -124,7 +125,7 @@ Ces modifications n’affectent pas les données contenues dans la base de donn�
 
     -   Éléments de configuration  
 
--   Déploiement de système d'exploitation :  
+-   Déploiement de système d'exploitation :  
 
     -   Images de démarrage  
 
@@ -138,7 +139,7 @@ Ces modifications n’affectent pas les données contenues dans la base de donn�
 
     -   Séquences de tâches  
 
--   Résultats de la recherche : dossiers de recherche  
+-   Résultats de la recherche : Dossiers de recherche  
 
 -   Mises à jour logicielles :  
 

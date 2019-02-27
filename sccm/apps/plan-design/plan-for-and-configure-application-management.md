@@ -10,16 +10,17 @@ ms.assetid: 2be84a1d-ebb9-47ae-8982-c66d5b92a52a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: df936f3ab5567840560497edd60a32f3bbb9c74d
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 62d750a6ff711afc06ddbcec9b9ad98ecfab758e
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43893599"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56124153"
 ---
 # <a name="plan-for-and-configure-application-management-in-configuration-manager"></a>Planifier et configurer la gestion des applications dans Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (current branch)*
 
 Utilisez les informations de cet article pour savoir comment implémenter les dépendances nécessaires au déploiement d’applications dans Configuration Manager.  
 
@@ -228,7 +229,7 @@ Pour plus d’informations, consultez les articles suivants :
 > - [Dépendances de Configuration Manager](#configuration-manager-dependencies)
 
 
-### <a name="step-1-web-server-certificate-for-https"></a>Étape 1 : Certificat de serveur web pour le protocole HTTPS
+### <a name="step-1-web-server-certificate-for-https"></a>Étape 1 : Certificat de serveur web du protocole HTTPS
 
 Si vous utilisez des connexions HTTPS, déployez un certificat de serveur web sur les serveurs de système de site pour le point du site Web du catalogue des applications et le point de service Web du catalogue des applications. 
 
@@ -237,7 +238,7 @@ Si vous souhaitez que les clients utilisent le catalogue d’applications à par
 Pour plus d’informations sur la configuration requise des certificats, consultez [Configuration requise des certificats PKI](/sccm/core/plan-design/network/pki-certificate-requirements).  
 
 
-### <a name="step-2-client-authentication-certificate-for-https"></a>Étape 2 : Certificat d’authentification client pour le protocole HTTPS
+### <a name="step-2-client-authentication-certificate-for-https"></a>Étape 2 : Certificat d’authentification client du protocole HTTPS
 
 Si vous utilisez un certificat client PKI pour les connexions à des points de gestion, déployez un certificat d’authentification client sur les ordinateurs clients. Même si les clients n’utilisent pas un certificat PKI client pour se connecter au catalogue d’applications, ils doivent se connecter à un point de gestion afin de l’utiliser. 
 
@@ -248,7 +249,7 @@ Déployez un certificat d’authentification client sur les ordinateurs clients 
 Pour plus d’informations sur la configuration requise des certificats, consultez [Configuration requise des certificats PKI](/sccm/core/plan-design/network/pki-certificate-requirements).  
 
 
-### <a name="step-3-install-and-configure-the-application-catalog-roles"></a>Étape 3 : Installer et configurer les rôles du catalogue d’applications
+### <a name="step-3-install-and-configure-the-application-catalog-roles"></a>Étape 3 : Installer et configurer les rôles du catalogue d’applications
 
 Installez les rôles du point de service Web du catalogue des applications et du site Web du catalogue des applications sur le même site. Vous n’êtes pas obligé de les installer sur le même serveur ni dans la même forêt Active Directory. Cependant, le point de service web du catalogue des applications doit se trouver dans la même forêt que la base de données du site.
 
@@ -266,16 +267,16 @@ Installez le catalogue d’applications sur un nouveau serveur de système de si
 
 #### <a name="verify-the-installation-of-these-site-system-roles"></a>Vérifier l’installation de ces rôles de système de site  
 
-- Messages d'état : Utiliser les composants **SMS_PORTALWEB_CONTROL_MANAGER** et **SMS_AWEBSVC_CONTROL_MANAGER**.  
+- Messages d'état : Utiliser les composants **SMS_PORTALWEB_CONTROL_MANAGER** et**SMS_AWEBSVC_CONTROL_MANAGER**.  
 
     Par exemple, l'ID d'état **1015** pour **SMS_PORTALWEB_CONTROL_MANAGER** confirme que le Gestionnaire de composants de site a correctement installé le point de site web du catalogue d'applications.  
 
-- Fichiers journaux : Rechercher **SMSAWEBSVCSetup.log** et **SMSPORTALWEBSetup.log**.  
+- Fichiers journaux : Recherchez **SMSAWEBSVCSetup.log** et **SMSPORTALWEBSetup.log**.  
 
     Pour plus d’informations, recherchez les fichiers journaux **awebsvcMSI.log** et **portlwebMSI.log**.  
 
 
-### <a name="step-4-configure-client-settings"></a>Étape 4 : Configurer les paramètres client
+### <a name="step-4-configure-client-settings"></a>Étape 4 : Configurer les paramètres client
 
 Configurez les paramètres client par défaut si vous souhaitez que tous les utilisateurs aient les mêmes paramètres. Vous pouvez aussi configurer des paramètres client personnalisés pour des regroupements spécifiques.
 
@@ -291,7 +292,7 @@ Pour plus d’informations, consultez les articles suivants :
 Le client Configuration Manager configure les appareils avec ces paramètres lorsqu'il téléchargera ensuite la stratégie client. Pour lancer la récupération de stratégie pour un seul client, consultez [Guide pratique pour gérer les clients](/sccm/core/clients/manage/manage-clients).
 
 
-### <a name="step-5-verify-that-the-application-catalog-is-operational"></a>Étape 5 : vérifier que le catalogue des applications est opérationnel
+### <a name="step-5-verify-that-the-application-catalog-is-operational"></a>Étape 5 : Vérifier que le catalogue d’applications est opérationnel
 
 Utilisez les procédures suivantes pour vérifier que le catalogue d'applications est opérationnel. 
 
@@ -301,7 +302,7 @@ Utilisez les procédures suivantes pour vérifier que le catalogue d'application
 > [!TIP]  
 >  L’absence des prérequis fait partie des causes les plus fréquentes des dysfonctionnements du catalogue des applications après l’installation. Vérifiez la configuration requise en matière de rôles pour les rôles de système de site du catalogue d’applications. Pour plus d’informations, consultez [Prérequis des sites et systèmes de site](/sccm/core/plan-design/configs/site-and-site-system-prerequisites).  
 
-Dans un navigateur, entrez l’adresse du site web du catalogue d’applications. Vérifiez que la page web affiche les trois onglets : **catalogue d’applications**, **Mes demandes d’application**et **Mes appareils**.  
+Dans un navigateur, entrez l’adresse du site web du catalogue d’applications. Vérifier que la page web affiche les trois onglets suivants : **Catalogue d’applications**, **Mes demandes d’application** et **Mes périphériques**.  
 
 Utilisez l’adresse appropriée dans la liste suivante pour le catalogue d’applications, où &lt;serveur&gt; est le nom de l’ordinateur, le nom de domaine complet de l’intranet ou le nom de domaine complet Internet :  
 

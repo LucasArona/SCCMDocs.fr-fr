@@ -10,16 +10,17 @@ ms.assetid: b0c9db74-841e-46eb-8924-957cde968bf7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0c15e919978ae8458f426511dd9a0e6d7c311b4b
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 3cda70e7a5f1b2cf7dec079a7e933af48f0bf8ad
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32333274"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56128396"
 ---
 # <a name="upgrade-windows-devices-with-the-edition-upgrade-policy-in-system-center-configuration-manager"></a>Mettre à niveau des appareils Windows avec la stratégie de mise à niveau d’édition dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 
 La **stratégie de mise à niveau d’édition** vous permet de mettre automatiquement à niveau les appareils qui exécutent une des versions suivantes de Windows 10 vers une autre édition :
@@ -38,9 +39,9 @@ Les appareils doivent être inscrit dans Microsoft Intune ou exécuter le logici
 ## <a name="before-you-start"></a>Avant de commencer  
  Avant de commencer à mettre à niveau des appareils vers la dernière version, passez en revue les prérequis suivants :  
 
--   Pour les éditions Desktop de Windows 10 : une clé de produit valide pour installer la nouvelle version de Windows sur tous les appareils que vous ciblez avec la stratégie. Cette clé de produit peut être une clé d’activation multiple (MAK) ou une clé de licence en volume générique (GVLK). La clé GVLK est aussi connue sous le nom de clé d’installation de client de service de gestion de clés (KMS). Pour plus d’informations, consultez [Planifier l’activation en volume](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client). Pour obtenir la liste des clés d’installation de client KMS, consultez [l’Annexe A](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys) du guide d’activation de Windows Server. <!--496871-->  
+-   Pour les éditions Bureau de Windows 10 : Une clé de produit valide pour installer la nouvelle version de Windows sur tous les périphériques que vous ciblez avec la stratégie. Cette clé de produit peut être une clé d’activation multiple (MAK) ou une clé de licence en volume générique (GVLK). La clé GVLK est aussi connue sous le nom de clé d’installation de client de service de gestion de clés (KMS). Pour plus d’informations, consultez [Planifier l’activation en volume](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client). Pour obtenir la liste des clés d’installation de client KMS, consultez [l’Annexe A](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys) du guide d’activation de Windows Server. <!--496871-->  
 
--   Pour Windows 10 Mobile : un fichier de licence XML du Centre de gestion des licences en volume (VLSC). Ce fichier contient les informations de licence de la nouvelle version de Windows sur tous les appareils que vous ciblez avec la stratégie.
+-   Concernant Windows 10 Mobile : Un fichier de licence XML du Centre VLSC (Microsoft Volume Licensing Service Center). Ce fichier contient les informations de licence de la nouvelle version de Windows sur tous les appareils que vous ciblez avec la stratégie.
 
 - Pour gérer ce type de stratégie, vous devez avoir le rôle de sécurité **Administrateur complet** de Configuration Manager.
 

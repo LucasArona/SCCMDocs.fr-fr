@@ -10,16 +10,17 @@ ms.assetid: 24fca61e-9cdb-447a-ad7a-f4d2e4fd6704
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 07eb6ec88a5f9b9f7985c317813b2ef7dd5534ff
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: fe4e1c83f4079e0df959563ac8209a98983b8d90
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344702"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56132453"
 ---
 # <a name="use-cloud-services-with-system-center-configuration-manager"></a>Utiliser des services cloud avec System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager prend en charge plusieurs options de cloud. Celles-ci peuvent compléter votre infrastructure locale et vous aider à résoudre certains problèmes d’entreprise comme :  
 
@@ -41,11 +42,11 @@ La configuration de ressources cloud n’est pas indispensable avant de déploye
 ### <a name="azure-virtual-machines-for-cloud-based-infrastructure"></a>Machines virtuelles Azure (pour infrastructure cloud)  
  Configuration Manager prend en charge l’utilisation d’ordinateurs qui s’exécutent en tant que machines virtuelles Azure, de la même manière que les ordinateurs qui s’exécutent localement dans votre réseau physique d’entreprise. Vous pouvez utiliser des machines virtuelles Azure dans les scénarios suivants :  
 
--   **Scénario 1** : vous pouvez exécuter Configuration Manager sur une machine virtuelle et l’utiliser pour gérer des clients installés sur d’autres machines virtuelles.  
+-   **Scénario 1 :** Vous pouvez exécuter Configuration Manager sur une machine virtuelle et l’utiliser pour gérer des clients installés sur d’autres machines virtuelles.  
 
--   **Scénario 2** : vous pouvez exécuter Configuration Manager sur une machine virtuelle et l’utiliser pour gérer des clients qui ne s’exécutent pas dans Azure.  
+-   **Scénario 2 :** Vous pouvez exécuter Configuration Manager sur une machine virtuelle et l’utiliser pour gérer des clients qui ne s’exécutent pas dans Azure.  
 
--   **Scénario 3** : vous pouvez exécuter différents rôles de système de site Configuration Manager sur des machines virtuelles, tout en exécutant d’autres rôles sur votre réseau physique d’entreprise (avec une connectivité réseau appropriée pour les communications).  
+-   **Scénario 3 :** Vous pouvez exécuter différents rôles de système de site Configuration Manager sur des machines virtuelles, tout en exécutant d’autres rôles sur votre réseau physique d’entreprise (avec une connectivité réseau appropriée pour les communications).  
 
 Les exigences en matière de réseaux, de systèmes d’exploitation et de matériel qui s’appliquent à l’installation de Configuration Manager sur votre réseau physique d’entreprise s’appliquent également à l’installation de Configuration Manager dans Azure.  
 
@@ -91,7 +92,7 @@ Ces fonctions supplémentaires ne nécessitent pas d’avoir un abonnement Azure
 
  Pour plus d’informations, consultez les détails des différents scénarios de ressources cloud. Vous pouvez également consulter les rubriques suivantes sur la sécurité dans Azure :  
 
--   [Azure : Présentation de la gestion des comptes de sécurité dans Azure](http://go.microsoft.com/fwlink/p/?LinkId=262968)  
+-   [Azure : Comprendre la gestion des comptes de sécurité dans Azure](http://go.microsoft.com/fwlink/p/?LinkId=262968)  
 
 -   [Azure Security Overview (Présentation des fonctionnalités de sécurité Azure)](http://go.microsoft.com/fwlink/p/?LinkId=262970)  
 

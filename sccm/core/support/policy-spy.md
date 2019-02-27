@@ -10,16 +10,17 @@ ms.assetid: 1012ec24-27d9-4193-8236-918d283c7448
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 66a9949723e6555ddb72ebfdb845a523fb29bfe5
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 740dda5c41c28e1648eb24e75fe24a2e22784f3b
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385990"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56129101"
 ---
 # <a name="policy-spy"></a>Policy Spy
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Policy Spy fait partie des [outils de Configuration Manager](/sccm/core/support/tools). Cet outil sert à voir et à dépanner le système de stratégies sur les clients Configuration Manager. Exécutez **PolicySpy.exe** pour ouvrir l’interface utilisateur. Pour plus d’informations sur l’utilisation de la ligne de commande, consultez [Syntaxe de la ligne de commande](#bkmk_policyspy-syntax).
 
@@ -47,41 +48,41 @@ Cette option exporte en mode silencieux la stratégie de l’ordinateur local ou
 
 Les actions suivantes sont disponibles dans le menu **Tools** (Outils) :  
 
-- **Open Remote** : Se connecte à la stratégie du client Configuration Manager sur un ordinateur distant. Utilisez la boîte de dialogue de connexion pour récupérer le nom de l’ordinateur distant et les informations d’identification utilisateur facultatives. Si la connexion échoue, il affiche des informations sur l’erreur dans le volet des informations du client. Si la connexion échoue encore, essayez de vous connecter en sélectionnant **Refresh** dans le menu **Edit**, ou en appuyant sur F5.  
+- **Ouvrir l’ordinateur distant** : Se connecte à la stratégie de configuration du client Gestionnaire de configuration sur un ordinateur distant. Utilisez la boîte de dialogue de connexion pour récupérer le nom de l’ordinateur distant et les informations d’identification utilisateur facultatives. Si la connexion échoue, il affiche des informations sur l’erreur dans le volet des informations du client. Si la connexion échoue encore, essayez de vous connecter en sélectionnant **Refresh** dans le menu **Edit**, ou en appuyant sur F5.  
 
-- **Open File** : Ouvre un fichier d’exportation de stratégie (XML) créé par l’option **Export Policy**. L’outil affiche la stratégie exportée exactement comme une stratégie en direct. Il désactive certaines fonctionnalités qui s’appliquent uniquement quand vous vous connectez véritablement à un client.  
+- **Ouvrir le fichier** : Ouvre un fichier d’exportation de stratégie (XML) créé par l’option **Exporter la stratégie**. L’outil affiche la stratégie exportée exactement comme une stratégie en direct. Il désactive certaines fonctionnalités qui s’appliquent uniquement quand vous vous connectez véritablement à un client.  
 
-- **Request Machine Assignments** : Déclenche une demande pour des affectations de stratégie ordinateur sur l’ordinateur cible. Cette fonctionnalité est désactivée lors de l’affichage de la stratégie exportée.  
+- **Demander des affectations de machines** : Déclenche une requête pour des affectations de stratégie machine sur l’ordinateur cible. Cette fonctionnalité est désactivée lors de l’affichage de la stratégie exportée.  
 
-- **Evaluate Machine Policy** : Déclenche une évaluation de la stratégie ordinateur sur l’ordinateur cible. Cette fonctionnalité est désactivée lors de l’affichage d’une stratégie exportée.  
+- **Évaluer la stratégie machine** : Déclenche une évaluation de la stratégie machine sur l’ordinateur cible. Cette fonctionnalité est désactivée lors de l’affichage d’une stratégie exportée.  
 
-- **Request User Assignments** : Déclenche une demande pour des affectations de stratégie utilisateur pour l’utilisateur actuellement connecté. Cette fonctionnalité est uniquement disponible lors de l’affichage d’une stratégie sur l’ordinateur local.  
+- **Demander des affectations d’utilisateurs** : Déclenche une requête pour des affectations de stratégie utilisateur pour l’utilisateur actuellement connecté. Cette fonctionnalité est uniquement disponible lors de l’affichage d’une stratégie sur l’ordinateur local.  
 
-- **Evaluate User Policy** : Déclenche une évaluation de la stratégie utilisateur pour l’utilisateur actuellement connecté. Cette fonctionnalité est uniquement disponible lors de l’affichage d’une stratégie sur l’ordinateur local.  
+- **Évaluer la stratégie utilisateur** : Déclenche une évaluation de la stratégie utilisateur pour l’utilisateur actuellement connecté. Cette fonctionnalité est uniquement disponible lors de l’affichage d’une stratégie sur l’ordinateur local.  
 
-- **Reset Policy** : Supprime toutes les stratégies qui ne sont pas celles par défaut et réinitialise les cookies de stratégie pour le site. Il déclenche ensuite une demande pour des affectations de stratégie ordinateur. Cette fonctionnalité est désactivée lors de l’affichage d’une stratégie exportée.  
+- **Stratégie de réinitialisation** : Supprime toutes les stratégies différentes de celles par défaut et réinitialise les cookies de stratégie pour le site. Il déclenche ensuite une demande pour des affectations de stratégie ordinateur. Cette fonctionnalité est désactivée lors de l’affichage d’une stratégie exportée.  
 
-- **Export Policy** : Exporte la stratégie de l’ordinateur cible dans un fichier XML. Affichez ce fichier sur n’importe quel ordinateur avec Policy Spy. Pour ouvrir le fichier d’exportation, sélectionnez **Open File** dans le menu **Tools**. Cette fonctionnalité est désactivée lors de l’affichage d’une stratégie exportée.  
+- **Exporter la stratégie** : Exporte la stratégie de l’ordinateur cible dans un fichier XML. Affichez ce fichier sur n’importe quel ordinateur avec Policy Spy. Pour ouvrir le fichier d’exportation, sélectionnez **Open File** dans le menu **Tools**. Cette fonctionnalité est désactivée lors de l’affichage d’une stratégie exportée.  
 
 
 ### <a name="edit-menu"></a>Menu Edit
 
 Les actions suivantes sont disponibles dans le menu **Edit** (Edition) :  
 
-- **Delete** : Supprime l’instance sélectionnée du volet des résultats. Cette action est uniquement prise en charge pour les instances de stratégie. Si vous essayez de supprimer autre chose que des instances de stratégie, l’outil affiche un message d’erreur. Cette fonctionnalité est désactivée lors de l’affichage d’une stratégie exportée.  
+- **Supprimer** : Supprime l’instance sélectionnée du volet de résultats. Cette action est uniquement prise en charge pour les instances de stratégie. Si vous essayez de supprimer autre chose que des instances de stratégie, l’outil affiche un message d’erreur. Cette fonctionnalité est désactivée lors de l’affichage d’une stratégie exportée.  
 
-- **Refresh** : Actualise tous les résultats pour voir les dernières informations. Tous les nœuds de l’arborescence qui sont développés avant l’actualisation sont automatiquement développés par la suite. Si Policy Spy n’arrive pas à se connecter à la stratégie de l’ordinateur cible, il réessaie. Cette fonctionnalité est désactivée lors de l’affichage d’une stratégie exportée.  
+- **Actualiser** : Actualise tous les résultats pour afficher les dernières informations. Tous les nœuds de l’arborescence qui sont développés avant l’actualisation sont automatiquement développés par la suite. Si Policy Spy n’arrive pas à se connecter à la stratégie de l’ordinateur cible, il réessaie. Cette fonctionnalité est désactivée lors de l’affichage d’une stratégie exportée.  
 
-- **Clear Event** : Efface tous les éléments de l’onglet des événements.  
+- **Effacer les événements** : Efface tous les éléments de l’onglet Événements.  
 
 
 
-## <a name="results-pane"></a>Volet des résultats
+## <a name="results-pane"></a>Volet Résultats
 
 Le volet des résultats affiche différentes vues du système de stratégies sur l’ordinateur cible. Accédez à ces vues en cliquant sur l’un des quatre onglets suivants : 
 - [Actual](#bkmk_policyspy-actual)
 - [Requested](#bkmk_policyspy-requested)
-- [Defaut](#bkmk_policyspy-default)
+- [Par défaut](#bkmk_policyspy-default)
 - [Events](#bkmk_policyspy-events)
 
 
@@ -94,9 +95,9 @@ Cet onglet affiche la stratégie actuelle du client. La stratégie actuelle dét
 
 Cet onglet affiche les affectations de stratégie que le client a récupérées de son site attribué. L’onglet affiche les résultats sous la forme d’une arborescence avec un nœud racine pour l’espace de noms de l’ordinateur et chaque espace de noms spécifique à l’utilisateur. Le développement d’un nœud d’espace de noms affiche les nœuds suivants :  
 
-- **Configuration** : Affiche une liste de classes de configuration dérivées de CCM_Policy_Config, qui inclut l’objet de stratégie, les affectations et autre.  
+- **Configuration** : Affiche une liste de classes de configuration dérivées de CCM_Policy_Config, comprenant l’objet de la stratégie, les affectations etc.  
 
-- **Settings** : Affiche tous les paramètres actifs générés par les stratégies. Les paramètres sont affichés sous le nœud Configuration. 
+- **Paramètres** : Affiche tous les paramètres actifs générés par les stratégies. Les paramètres sont affichés sous le nœud Configuration. 
 
 > [!Note]   
 > Plusieurs instances peuvent exister avec le même nom, car le client n’a pas fusionné ces paramètres dans un jeu résultant final. Policy Spy affiche les instances sous ce nœud en utilisant les propriétés RealKey au lieu de leurs véritables clés de stratégie. Mettez en corrélation ces instances avec le jeu résultant affiché sous l’onglet Actual.  

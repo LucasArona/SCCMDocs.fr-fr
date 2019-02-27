@@ -10,16 +10,17 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b059fd3b8511a3cbbf308ea7a3ee21a4ec9dbfaa
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: d8eff4154f5799ef0d6411b077f50753d203310e
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456717"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56126774"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Planifier la passerelle de gestion cloud dans Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
  
 <!--1101764--> La passerelle de gestion cloud fournit un moyen simple de gérer les clients Configuration Manager sur Internet. En déployant la passerelle de gestion cloud comme un service cloud dans Microsoft Azure, vous pouvez gérer les clients traditionnels qui sont itinérants sur Internet sans infrastructure supplémentaire. De même, vous n’avez pas besoin d’exposer votre infrastructure locale sur Internet. 
 
@@ -315,7 +316,7 @@ Les recommandations suivantes peuvent vous aider à améliorer les performances 
 
 Vous n’avez pas besoin d’ouvrir des ports entrants sur votre réseau local. Le point de connexion du service et le point de connexion de la passerelle de gestion cloud lancent toutes les communications avec Azure et la passerelle de gestion cloud. Ces deux rôles de système de site doivent être en mesure de créer des connexions sortantes vers le cloud Microsoft. Le point de connexion du service déploie et surveille le service dans Azure : il doit donc être en mode en ligne. Le point de connexion de la passerelle de gestion cloud se connecte à la passerelle de gestion cloud pour gérer les communications entre la passerelle et les rôles de système de site locaux.
 
-Le diagramme suivant est un flux de données conceptuel de base pour la passerelle de gestion cloud : ![Flux de données de passerelle de gestion cloud](media/cmg-data-flow.png)
+Le diagramme suivant est un flux de données conceptuel de base pour la passerelle de gestion cloud : ![Flux de données de la passerelle de gestion cloud](media/cmg-data-flow.png)
    1. Le point de connexion du service se connecte à Azure via le port HTTPS 443. Il s’authentifie avec Azure AD ou avec le certificat de gestion Azure. Le point de connexion du service déploie la passerelle de gestion cloud dans Azure. La passerelle de gestion cloud crée le service cloud HTTPS en utilisant le certificat d’authentification serveur.  
 
    2. Le point de connexion de la passerelle de gestion cloud se connecte à la passerelle dans Azure via TCP-TLS ou HTTPS. Il laisse la connexion ouverte et crée le canal pour la communication bidirectionnelle à venir.   
@@ -357,9 +358,9 @@ Le système de site du point de connexion de la passerelle de gestion cloud pren
 
 - StorageEndpoint (core.windows.net)  
 
-- Pour la récupération du jeton Azure AD par la console Configuration Manager et le client : ActiveDirectoryEndpoint ()https://login.microsoftonline.com/)  
+- Pour la récupération du jeton Azure Active Directory par la console Configuration Manager et le client : ActiveDirectoryEndpoint (https://login.microsoftonline.com/)  
 
-- Pour la découverte des utilisateurs Azure AD : point de terminaison du graphe AAD (https://graph.windows.net/)  
+- Pour la découverte d’utilisateurs Azure Active Directory : Point de terminaison du graphe Azure Active Directory (https://graph.windows.net/)  
 
 
 

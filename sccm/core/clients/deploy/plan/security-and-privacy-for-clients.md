@@ -10,16 +10,17 @@ ms.assetid: c1d71899-308f-49d5-adfa-3a3ec0163ed8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3dfb749695ffb7a8ecdeab5e4fbed764023eb6e2
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 9671ccad42fc9135193cf41e058b472b52a412e1
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385590"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56142304"
 ---
 # <a name="security-and-privacy-for-configuration-manager-clients"></a>Sécurité et confidentialité pour les clients Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Cet article décrit les informations de sécurité et de confidentialité pour les clients Configuration Manager. Il inclut également des informations concernant les appareils mobiles qui sont gérés par le [connecteur Exchange Server](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync).  
 
@@ -201,27 +202,27 @@ Pour les appareils mobiles Internet que vous inscrivez à l’aide de Configurat
 
 #### <a name="configure-the-password-settings-to-help-protect-mobile-devices-from-unauthorized-access"></a>Configurer les paramètres de mot de passe pour protéger les appareils mobiles contre les accès non autorisés  
 
-*Pour les appareils mobiles qui sont inscrits par Configuration Manager* : utilisez un élément de configuration d’appareil mobile pour configurer la complexité du mot de passe comme le code confidentiel. Spécifiez au moins la longueur de mot de passe minimale par défaut.  
+*Pour les appareils mobiles inscrits par Configuration Manager* : Utilisez un élément de configuration d’appareil mobile pour configurer la complexité du mot de passe en tant que code PIN. Spécifiez au moins la longueur de mot de passe minimale par défaut.  
 
-*Pour les appareils mobiles sur lesquels le client Configuration Manager n’est pas installé mais qui sont gérés par le connecteur Exchange Server* : configurez les **Paramètres du mot de passe** pour le connecteur Exchange Server, de sorte que la complexité du mot de passe soit le code confidentiel. Spécifiez au moins la longueur de mot de passe minimale par défaut.  
+*Pour les appareils mobiles sur lesquels le client Gestionnaire de configuration n’est pas installé mais qui sont managés par le connecteur du serveur Exchange Server* : Configurez les **Paramètres de mot de passe** pour le connecteur du serveur Exchange Server, de sorte que la complexité du mot de passe corresponde au code PIN. Spécifiez au moins la longueur de mot de passe minimale par défaut.  
 
 
 #### <a name="only-allow-applications-to-run-that-are-signed-by-companies-that-you-trust"></a>Autoriser l’exécution des applications uniquement quand elles sont signées par des entreprises approuvées  
 
 Empêchez la falsification des informations d’inventaire et des informations d’état en autorisant l’exécution des applications uniquement quand elles sont signées par des entreprises que vous approuvez. N’autorisez pas les appareils à installer des fichiers non signés.  
 
-*Pour les appareils mobiles qui sont inscrits par Configuration Manager* : utilisez un élément de configuration d’appareil mobile pour configurer le paramètre de sécurité **Applications non signées** sur **Interdites**. Configurez les **Installations de fichiers non signés** comme une source approuvée.  
+*Pour les appareils mobiles inscrits par Configuration Manager* : Utilisez un élément de configuration d’appareil mobile pour configurer le paramètre de sécurité **Applications non signées** sur **Interdit**. Configurez les **Installations de fichiers non signés** comme une source approuvée.  
 
-*Pour les appareils mobiles sur lesquels le client Configuration Manager n’est pas installé mais qui sont gérés par le connecteur Exchange Server* : configurez les **Paramètres d’application** pour le connecteur Exchange Server, de sorte que l’**Installation de fichiers non signés** et les **Applications non signées** soient **Interdites**.  
+*Pour les appareils mobiles sur lesquels le client Gestionnaire de configuration n’est pas installé mais qui sont managés par le connecteur du serveur Exchange Server* : Configurez les **Paramètres d’application** pour le connecteur du serveur Exchange Server, de sorte que l’**Installation de fichiers non signés** et les **Applications non signées** soient configurées comme **Interdites**.  
 
 
 #### <a name="lock-mobile-devices-when-not-in-use"></a>Verrouiller les appareils mobiles quand ils ne sont pas en cours d’utilisation  
 
 Empêchez les attaques par élévation de privilèges en verrouillant l’appareil mobile quand il n’est pas en cours d’utilisation.
 
-*Pour les appareils mobiles qui sont inscrits par Configuration Manager* : utilisez un élément de configuration d’appareil mobile pour configurer le paramètre de mot de passe **Durée d’inactivité en minutes avant le verrouillage de l’appareil mobile**.  
+*Pour les appareils mobiles inscrits par Configuration Manager* : Utilisez un élément de configuration d’appareil mobile pour configurer le paramètre de mot de passe **Durée d’inactivité en minutes avant que l’appareil mobile soit verrouillé**.  
 
-*Pour les appareils mobiles sur lesquels le client Configuration Manager n’est pas installé mais qui sont gérés par le connecteur Exchange Server* : configurez les **Paramètres du mot de passe** pour le connecteur Exchange Server afin de configurer la **Durée d’inactivité en minutes avant le verrouillage de l’appareil mobile**.  
+*Pour les appareils mobiles sur lesquels le client Gestionnaire de configuration n’est pas installé mais qui sont managés par le connecteur du serveur Exchange Server* : Configurez les **Paramètres de mot de passe** pour le connecteur du serveur Exchange Server afin de configurer la **Durée d’inactivité en minutes avant que l’appareil mobile soit verrouillé**.  
 
 
 #### <a name="restrict-the-users-who-can-enroll-their-mobile-devices"></a>Limiter les utilisateurs pouvant inscrire leurs appareils mobiles  
@@ -256,7 +257,7 @@ Une relation d’affinité entre utilisateur et appareil est créée lors de l�
 Si le serveur Exchange Server est sur site, utilisez IPsec. Exchange hébergé sécurise automatiquement la connexion à l’aide de SSL.  
 
 
-#### <a name="use-the-principle-of-least-privileges-for-the-connector"></a>Utiliser le principe des privilèges minimum pour le connecteur  
+#### <a name="use-the-principle-of-least-privileges-for-the-connector"></a>utiliser le principe des privilèges minimum pour le connecteur  
 
 Pour obtenir la liste des applets de commande minimales qu’exige le connecteur Exchange Server, consultez [Gérer les appareils mobiles avec Configuration Manager et Exchange](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync).  
 
@@ -293,9 +294,9 @@ Quand vous inscrivez des ordinateurs Mac, un certificat utilisateur destiné à 
 
 5.  Dans la boîte de dialogue du certificat d'autorité de certification racine, développez la zone **Confiance** , puis apportez les modifications suivantes :  
 
-    1.  **Lors de l’utilisation de ce certificat** : remplacez le paramètre **Toujours faire confiance** par **Utiliser les valeurs système par défaut**.  
+    1.  **Lors de l’utilisation de ce certificat** : Remplacez le paramètre **Toujours faire confiance** par **Utiliser les valeurs système par défaut**.  
 
-    2.  **SSL (Secure Sockets Layer)**  : remplacez **aucune valeur spécifiée** par **Toujours faire confiance**.  
+    2.  **Protocole SSL** : Remplacez **aucune valeur spécifiée** par **Toujours faire confiance**.  
 
 6.  Fermez la boîte de dialogue. Quand vous y êtes invité, entrez le mot de passe de l’administrateur, puis cliquez sur **Mettre à jour les paramètres**.  
 

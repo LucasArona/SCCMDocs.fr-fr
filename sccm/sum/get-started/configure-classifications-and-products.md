@@ -5,21 +5,22 @@ description: Suivez ces étapes pour configurer les classifications et les produ
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 04/10/2018
+ms.date: 02/15/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
-ms.openlocfilehash: a9af39cd5f57e8b2741facde269ea81bc1b10728
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: f1d984598288434aa1e81c6bd2c51a315edfa551
+ms.sourcegitcommit: fd16fc2b681608fd6def5bad2cedffbcd1f2423a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350678"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56405690"
 ---
 #  <a name="configure-classifications-and-products-to-synchronize"></a>Configurer les classifications et les produits à synchroniser  
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 
 > [!NOTE]  
@@ -40,15 +41,15 @@ ms.locfileid: "32350678"
     > [!NOTE]  
     >  Chaque mise à jour logicielle fait partie d'une classification particulière qui permet d'organiser les différents types de mises à jour. Pendant le processus de synchronisation, les métadonnées des mises à jour logicielles pour les classifications spécifiées sont synchronisées. Configuration Manager vous permet de synchroniser les mises à jour logicielles avec les classifications de mise à jour suivantes :  
     >   
-    > - **Mises à jour critiques** : spécifie des mises à jour distribuées en grand nombre, répondant à un problème spécifique qui concerne un bogue critique non lié à la sécurité.  
-    > - **Mises à jour de définitions** : spécifie des mises à jour pour des virus ou d’autres fichiers de définition.  
-    > - **Feature Packs** : spécifie de nouvelles fonctionnalités de produit, distribuées en dehors d’une version de produit et incluses généralement dans la version complète suivante du produit.  
-    > - **Mises à jour de sécurité** : spécifie des mises à jour distribuées en grand nombre, répondant à un problème de sécurité spécifique à un produit.  
-    > - **Service Packs** : spécifie des ensembles cumulés de correctifs rattachés à une application. Ces correctifs sont notamment des mises à jour de sécurité, des mises à jour critiques, des mises à jour logicielles, etc.  
-    > - **Outils** : spécifie des utilitaires ou des fonctionnalités permettant d’effectuer une ou plusieurs tâches.  
-    > - **Correctifs cumulatifs** : spécifie des ensembles cumulés de correctifs, assemblés pour faciliter leur déploiement. Ces correctifs peuvent comprendre des mises à jour de sécurité, des mises à jour critiques, des mises à jour, etc. Les correctifs cumulatifs concernent généralement un domaine particulier, tel que la sécurité ou un composant de produit.  
-    > - **Mises à jour** : spécifie des mises à jour d’une application ou d’un fichier déjà installé.  
-    > - **Mises à niveau** : spécifie des mises à niveau de fonctions et fonctionnalités Windows 10. Vos sites et points de mise à jour logicielle doivent exécuter au moins WSUS 4.0 avec le [correctif 3095113](https://support.microsoft.com/kb/3095113) pour obtenir la classification de **mise à niveau**.    
+    > - **Mises à jour critiques** : Spécifie un correctif largement distribué, répondant à un problème spécifique qui concerne un bogue critique non lié à la sécurité.  
+    > - **Mises à jour de définitions** : Spécifie une mise à jour de logiciel largement distribuée et fréquente qui contient des ajouts à la base de données de la définition d’un produit.  
+    > - **Packs de fonctionnalités** : Spécifie de nouvelles fonctionnalités de produit, distribuées en premier en dehors d’une mise en production de produit et incluses généralement dans la mise en production suivante du produit.  
+    > - **Mises à jour de sécurité** : Spécifie un correctif largement distribué, répondant à un problème de vulnérabilité liée à la sécurité et spécifique au produit.  
+    > - **Service Packs** : Spécifie un ensemble cumulé et testé de tous les correctifs logiciels, mises à jour de sécurité, mises à jour critiques et mises à jour appliquées à un produit. En outre, les Service Packs peuvent contenir des correctifs supplémentaires pour des problèmes trouvés en interne depuis la mise en production du produit.  
+    > - **Outils** : Spécifie des utilitaires ou des fonctionnalités permettant d'effectuer une ou plusieurs tâches.  
+    > - **Correctifs cumulatifs** : Spécifie un ensemble cumulé et testé de correctifs logiciels, de mises à jour de sécurité, de mises à jour critiques et de mises à jour packagés ensemble de façon à en faciliter le déploiement. Les correctifs cumulatifs concernent généralement un domaine particulier, tel que la sécurité ou un composant de produit.  
+    > - **Mises à jour** : Spécifie un correctif largement distribué pour un problème spécifique. Une mise à jour concerne un bogue non critique qui n’est pas lié à la sécurité.  
+    > - **Mise à niveau** : Spécifie une mise à niveau de fonctions et fonctionnalités Windows 10. Vos sites et points de mise à jour logicielle doivent exécuter au moins WSUS 4.0 avec le [correctif 3095113](https://support.microsoft.com/kb/3095113) pour obtenir la classification de **mise à niveau**.    
     >       
 
     > [!NOTE]    

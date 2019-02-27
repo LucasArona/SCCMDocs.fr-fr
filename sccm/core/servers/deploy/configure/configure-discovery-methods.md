@@ -10,16 +10,17 @@ ms.assetid: 49505eb1-d44d-4121-8712-e0f3d8b15bf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e232875aab086dea04261abc4d83df8d5d03e6c8
-ms.sourcegitcommit: aca62bd3d267b1dbea46d4db6f32d797c5f6263c
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 6524fb7715c9bc3040996a16b4204464e0505123
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43347968"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56139185"
 ---
 # <a name="configure-discovery-methods-for-configuration-manager"></a>Configurer les méthodes de découverte de Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 
 Configurez des méthodes de découverte pour trouver des ressources à gérer à partir de votre réseau, d’Active Directory et d’Azure Active Directory (Azure AD). Commencez par activer et configurer chaque méthode à utiliser pour explorer votre environnement. Vous pouvez aussi désactiver une méthode en suivant la même procédure que pour l’activer. La découverte par pulsations d’inventaire et la découverte de serveurs constituent les seules exceptions à ce processus :  
@@ -173,9 +174,9 @@ Appuyez-vous ensuite sur les informations des sections suivantes pour configurer
 
     2.  Spécifiez des options qui modifient le comportement de recherche :  
 
-        - **Découvrir des objets au sein des groupes Active Directory** : le site examine également l’appartenance aux groupes dans ce chemin d’accès.  
+        - **Découvrir des objets dans les groupes Active Directory** : Le site examine également l’appartenance aux groupes dans ce chemin d’accès.  
 
-        - **Rechercher de manière récursive dans les conteneurs enfants Active Directory** : si cette option est activée, le site examine des conteneurs ou des unités d’organisation supplémentaires dans le chemin d’accès ci-dessus. Sinon, le site ne recherche des ressources que dans le chemin d’accès proprement dit.  
+        - **Rechercher les conteneurs enfants Active Directory de manière récursive** : si cette option est activée, le site examine des conteneurs ou des unités d’organisation supplémentaires dans le chemin d’accès ci-dessus. Sinon, le site ne recherche des ressources que dans le chemin d’accès proprement dit.  
 
             Depuis la version 1806, vous pouvez sélectionner des sous-conteneurs à exclure de cette recherche récursive. Cette option permet de réduire le nombre d’objets découverts. Sélectionnez **Ajouter** pour choisir les conteneurs sous le chemin d’accès ci-dessus. Dans la boîte de dialogue Sélectionner un nouveau conteneur, sélectionnez un conteneur enfant à exclure. Sélectionnez **OK** pour fermer la boîte de dialogue Sélectionner un nouveau conteneur.<!--1358143-->
 
@@ -492,20 +493,20 @@ La découverte du réseau ne crée pas de messages pour vous avertir lorsqu’el
 
 5.  Pour valider que la découverte du réseau est terminée, recherchez un message d'état contenant les détails suivants :  
 
-    -   ID de message : **502**  
+    -   ID de message : **502**  
 
-    -   Composant : **SMS_NETWORK_DISCOVERY**  
+    -   Composant : **SMS_NETWORK_DISCOVERY**  
 
-    -   Description : **Ce composant s'est arrêté.**  
+    -   Description : **Ce composant s’est arrêté**  
 
     Si ce message d’état ne s’affiche pas, la découverte de réseau n’est pas terminée.  
 
 7.  Pour valider le moment de démarrage de la découverte du réseau, recherchez un message d'état contenant les détails suivants :  
 
-    -   ID de message : **500**  
+    -   ID de message : **500**  
 
-    -   Composant : **SMS_NETWORK_DISCOVERY**  
+    -   Composant : **SMS_NETWORK_DISCOVERY**  
 
-    -   Description : **Ce composant a démarré.**  
+    -   Description : **Ce composant a démarré**  
 
     Ces informations vérifient que la découverte du réseau a démarré. Si ces informations ne s’affichent pas, replanifiez une découverte du réseau.  

@@ -10,12 +10,13 @@ ms.assetid: dc245916-bc11-4983-9c4d-015f655007c1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5324e00f17770feca25d40c645d8e344df797f21
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 5ebf89e46b33649f12ea5770d6e771e811a66094
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456326"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56125729"
 ---
 # <a name="manage-and-monitor-phased-deployments"></a>Gérer et surveiller les déploiements par phases
 
@@ -34,16 +35,16 @@ Lorsque vous sélectionnez le paramètre **Commencer manuellement la deuxième p
 
 1. La méthode de lancement de cette action varie en fonction du type de logiciel que vous déployez :  
 
-    - **Application** (uniquement dans la version 1806 ou ultérieure) : accédez à l’espace de travail **Bibliothèque de logiciels**, développez **Gestion des applications** et sélectionnez **Applications**.   
+    - **Application** (uniquement dans la version 1806 ou ultérieure) : Accédez à l’espace de travail **Bibliothèque de logiciels**, développez **Gestion d’applications** et sélectionnez **Applications**.   
 
-    - **Mise à jour logicielle** (uniquement dans la version 1810 ou ultérieure) : accédez à l’espace de travail **Bibliothèque de logiciels**, puis sélectionnez un des nœuds suivants :    
+    - **Mise à jour de logiciel** (uniquement dans la version 1810 ou ultérieure) : Accédez à l’espace de travail **Bibliothèque de logiciels**, puis sélectionnez un des nœuds suivants :    
         - mises à jour logicielles  
             - **Toutes les mises à jour logicielles**  
             - **Groupes de mises à jour logicielles**   
         - Maintenance de Windows 10, **toutes les mises à jour Windows 10**  
         - Gestion des clients Office 365, **mises à jour Office 365**  
 
-    - **Séquence de tâches** : accédez à l’espace de travail **Bibliothèque de logiciels**, développez **Systèmes d’exploitation**, puis sélectionnez **Séquences de tâches**.   
+    - **Séquence de tâches** : Accédez à l’espace de travail **Bibliothèque de logiciels**, développez **Systèmes d’exploitation**, puis sélectionnez **Séquences de tâches**.   
 
 2. Sélectionnez le logiciel pour le déploiement par phases.  
 
@@ -61,16 +62,16 @@ Vous pouvez interrompre ou reprendre manuellement un déploiement par phases. Pa
 
 1. La méthode de lancement de cette action varie en fonction du type de logiciel que vous déployez :  
 
-    - **Application** (uniquement dans la version 1806 ou ultérieure) : accédez à l’espace de travail **Bibliothèque de logiciels**, développez **Gestion des applications** et sélectionnez **Applications**.   
+    - **Application** (uniquement dans la version 1806 ou ultérieure) : Accédez à l’espace de travail **Bibliothèque de logiciels**, développez **Gestion d’applications** et sélectionnez **Applications**.   
 
-    - **Mise à jour logicielle** (uniquement dans la version 1810 ou ultérieure) : accédez à l’espace de travail **Bibliothèque de logiciels**, puis sélectionnez un des nœuds suivants :    
+    - **Mise à jour de logiciel** (uniquement dans la version 1810 ou ultérieure) : Accédez à l’espace de travail **Bibliothèque de logiciels**, puis sélectionnez un des nœuds suivants :    
         - mises à jour logicielles  
             - **Toutes les mises à jour logicielles**  
             - **Groupes de mises à jour logicielles**   
         - Maintenance de Windows 10, **toutes les mises à jour Windows 10**  
         - Gestion des clients Office 365, **mises à jour Office 365**  
 
-    - **Séquence de tâches** : accédez à l’espace de travail **Bibliothèque de logiciels**, développez **Systèmes d’exploitation**, puis sélectionnez **Séquences de tâches**. Sélectionnez une séquence de tâches existante, puis cliquez sur **Créer un déploiement par phases** dans le ruban.  
+    - **Séquence de tâches** : Accédez à l’espace de travail **Bibliothèque de logiciels**, développez **Systèmes d’exploitation**, puis sélectionnez **Séquences de tâches**. Sélectionnez une séquence de tâches existante, puis cliquez sur **Créer un déploiement par phases** dans le ruban.  
 
 2. Sélectionnez le logiciel pour le déploiement par phases.  
 
@@ -92,17 +93,17 @@ Depuis la version 1806, les déploiements par phases incluent une fonction de su
 
 Ce tableau de bord montre les informations suivantes pour chaque phase du déploiement :  
 
-- **Nombre total d’appareils** : nombre d’appareils ciblés par cette phase.  
+- **Nombre total d’appareils** : Nombre d’appareils ciblés par cette phase.  
 
-- **État** : état actuel de cette phase. Chaque phase peut se trouver dans l’un des états suivants :  
+- **État** : État actuel de cette phase. Chaque phase peut se trouver dans l’un des états suivants :  
 
-    - **Déploiement créé** : le déploiement par phases a créé un déploiement du logiciel sur la collection de cette phase. Les clients sont activement ciblés avec ce logiciel.  
+    - **Déploiement créé** : Le déploiement par phases a créé un déploiement du logiciel sur le regroupement pour cette phase. Les clients sont activement ciblés avec ce logiciel.  
 
-    - **En attente** : la phase précédente n’a pas encore rempli les critères de réussite pour que le déploiement passe à cette phase.  
+    - **En attente** : La phase précédente n’a pas encore rempli les critères de réussite pour que le déploiement passe à cette phase.  
 
-    - **Suspendu** : un administrateur a suspendu le déploiement.  
+    - **Suspendu** : Un administrateur a suspendu le déploiement.  
 
-- **Progression** : états de déploiement à partir des clients selon un code de couleurs. Par exemple : Réussite, En cours, Erreur, Exigences non remplies et Inconnu. 
+- **Progression** : États de déploiement à partir des clients selon un code de couleurs. Par exemple : Réussite, En cours, Erreur, Exigences non remplies et Inconnu. 
 
 #### <a name="success-criteria-tile"></a>Vignette Critères de réussite
 

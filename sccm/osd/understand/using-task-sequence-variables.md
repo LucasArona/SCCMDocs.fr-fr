@@ -10,16 +10,17 @@ ms.assetid: bc7de742-9e5c-4a70-945c-df4153a61cc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 18305b26937c87cbdb4d5726bded571699416793
-ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 3e8ebea21b735e6b93d73bf6ff5eb842243ef42d
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42756252"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56121860"
 ---
 # <a name="how-to-use-task-sequence-variables-in-configuration-manager"></a>Guide pratique pour utiliser des variables de séquence de tâches dans Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
  Le moteur de séquence de tâches dans la fonctionnalité de déploiement de système d’exploitation de Configuration Manager utilise de nombreuses variables pour contrôler ses comportements. Utilisez ces variables pour : 
  - fixer des conditions sur les étapes ;  
@@ -225,11 +226,11 @@ ms.locfileid: "42756252"
 
  3. Dans la boîte de dialogue **Variable de séquence de tâches**, spécifiez les paramètres suivants :  
 
-    - **Variable** : nom de la variable. Par exemple, `_SMSTSInWinPE`.  
+    - **Variable** : Le nom de la variable. Par exemple, `_SMSTSInWinPE`.  
 
-    - **Condition** : condition permettant d’évaluer la valeur de la variable. Par exemple, **equals**.  
+    - **Condition** : La condition permettant d’évaluer la valeur de la variable. Par exemple, **equals**.  
 
-    - **Valeur** : valeur de la variable à vérifier. Par exemple, `false`.  
+    - **Valeur** : La valeur de la variable à vérifier. Par exemple, `false`.  
 
 
  Les trois exemples ci-dessus forment une condition commune pour tester si la séquence de tâches s’exécute à partir d’une image de démarrage dans Windows PE : 

@@ -10,16 +10,17 @@ ms.assetid: 1d58176e-abc0-4087-8583-ce70deb4dcf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 515385c6c6855e63dc32b522edff9cd2047331bd
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: a41b2c0931fc3deb72ff92d8b12b433ef5651aa1
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32343032"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56129593"
 ---
 # <a name="security-and-privacy-for-site-administration-in-system-center-configuration-manager"></a>Sécurité et confidentialité pour l’administration de site dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Cette rubrique contient des informations de sécurité et de confidentialité pour les sites System Center Configuration Manager et la hiérarchie.
 
@@ -98,7 +99,7 @@ L’isolation de chaque rôle de système de site sur un serveur différent réd
 
 L'Assistant Configuration de la sécurité (SCW) vous aide à créer une stratégie de sécurité que vous pouvez appliquer à n'importe quel serveur de votre réseau. Une fois que vous avez installé le modèle System Center Configuration Manager, l’Assistant Configuration de la sécurité reconnaît les applications, les services, les ports et les rôles de système de site Configuration Manager. Il autorise ensuite les communications requises pour Configuration Manager et bloque les communications non requises.  
 
-L’Assistant Configuration de la sécurité est inclus dans le kit de ressources pour System Center 2012 Configuration Manager, que vous pouvez télécharger dans le Centre de téléchargement Microsoft : [System Center 2012 – Composants additionnels et extensions du composant Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkId=251931).  
+L’Assistant Configuration de sécurité est inclus dans le kit de ressources de System Center 2012 Configuration Manager, que vous pouvez télécharger sur le Centre de téléchargement Microsoft : [System Center 2012 - Configuration Manager Component Add-ons and Extensions](http://go.microsoft.com/fwlink/p/?LinkId=251931) (Composants additionnels et extensions du composant Configuration Manager).  
 
 **Configurez des adresses IP statiques pour les systèmes de site.**  
 

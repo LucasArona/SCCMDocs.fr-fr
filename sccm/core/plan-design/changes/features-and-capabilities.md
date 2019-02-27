@@ -10,16 +10,17 @@ ms.assetid: 5d388399-07ca-431c-a9b2-56c69771aa87
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fadc93d1977d5d066a6c4c3884bdbaeefb2a0c90
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 235355dff634bab09ef7be65645dbb32c5b86cf9
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32343772"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56133712"
 ---
 # <a name="features-and-capabilities-of-system-center-configuration-manager"></a>Fonctions et fonctionnalités de System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Les principales fonctionnalités de gestion de System Center Configuration Manager sont exposées ci-après. Chaque fonctionnalité possède ses propres prérequis, et les fonctionnalités que vous souhaitez utiliser peuvent influencer la conception et l’implémentation de votre hiérarchie Configuration Manager. Par exemple, si vous souhaitez déployer des logiciels sur des appareils de votre hiérarchie, vous devez installer le rôle de système de site du point de distribution.  
 
@@ -45,11 +46,11 @@ Les principales fonctionnalités de gestion de System Center Configuration Manag
 
  Fournit un ensemble d'outils pour aider à identifier et surveiller les actifs :  
 
--   **Inventaire matériel**: collecte des informations détaillées sur le matériel des appareils de votre entreprise. Consultez [Présentation de l’inventaire matériel dans System Center Configuration Manager](../../../core/clients/manage/inventory/introduction-to-hardware-inventory.md).  
+-   **Inventaire matériel** : collecte des informations détaillées sur le matériel des appareils de votre entreprise. Consultez [Présentation de l’inventaire matériel dans System Center Configuration Manager](../../../core/clients/manage/inventory/introduction-to-hardware-inventory.md).  
 
--   **Inventaire logiciel**: collecte et rapporte des informations sur les fichiers qui sont stockés sur des ordinateurs clients de votre organisation. Consultez [Présentation de l’inventaire logiciel dans System Center Configuration Manager](../../../core/clients/manage/inventory/introduction-to-software-inventory.md).  
+-   **Inventaire logiciel** : collecte et rapporte des informations sur les fichiers qui sont stockés sur des ordinateurs clients de votre organisation. Consultez [Présentation de l’inventaire logiciel dans System Center Configuration Manager](../../../core/clients/manage/inventory/introduction-to-software-inventory.md).  
 
--   **Asset Intelligence**: fournit des outils pour collecter les données d'inventaire et surveiller l'utilisation des licences de logiciels dans votre entreprise. Consultez [Présentation d’Asset Intelligence dans System Center Configuration Manager](../../../core/clients/manage/asset-intelligence/introduction-to-asset-intelligence.md).  
+-   **Asset Intelligence** : fournit des outils pour collecter les données d'inventaire et surveiller l'utilisation des licences de logiciels dans votre entreprise. Consultez [Présentation d’Asset Intelligence dans System Center Configuration Manager](../../../core/clients/manage/asset-intelligence/introduction-to-asset-intelligence.md).  
 
 **Gestion des appareils mobiles avec Microsoft Intune**  
 

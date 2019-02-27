@@ -10,16 +10,17 @@ ms.assetid: 8b5b144a-0e5f-4fcc-87b2-33b9bcdb5655
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bda6e266c6be8897de87a2a30fb0198a4b4c8446
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 716c5218eafaf6297292fdd852589b7327e2ecaa
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456021"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56120025"
 ---
 # <a name="manage-microsoft-lifecycle-policy-with-configuration-manager"></a>Gérer la stratégie de cycle de vie Microsoft avec Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 À compter de la version 1806, vous pouvez utiliser le tableau de bord Cycle de vie des produits de Configuration Manager pour afficher la stratégie de cycle de vie Microsoft. Ce tableau de bord affiche l’état de la stratégie de cycle de vie Microsoft des produits Microsoft installés sur des appareils gérés avec Configuration Manager. Il vous fournit également des informations sur les produits Microsoft de votre environnement, leur état de support et leur date de fin de support. Utilisez le tableau de bord pour comprendre la disponibilité du support de chaque produit. Ces informations vous aident à planifier quand mettre à jour les produits Microsoft que vous utilisez avant la fin actuelle de leur prise en charge.  
 
@@ -62,19 +63,19 @@ Pour accéder au tableau de bord de cycle de vie dans la console Configuration M
 ![Capture d’écran du tableau de bord de cycle de vie des produits dans la console](media/product-lifecycle-dashboard.png)
 
 Modifiez l’affichage en sélectionnant l’une des options suivantes dans la liste **Catégorie de produit** :  
-- **Tous** : affiche tous les produits  
-- **Client Windows** : affiche les versions du système d’exploitation de client Windows  
-- **Windows Server** : affiche les versions du système d’exploitation de serveur Windows Server  
-- **Base de données** : affiche les versions de SQL Server  
-- **Configuration Manager** : depuis la version 1810, affiche les versions de Configuration Manager  
+- **Tous** : affiche tous les produits  
+- **Client Windows** : affiche les versions du système d’exploitation de client Windows  
+- **Windows Server** : affiche les versions du système d’exploitation de serveur Windows  
+- **Base de données** : affiche les versions de SQL Server  
+- **Configuration Manager** : depuis la version 1810, affiche les versions de Configuration Manager  
 
 Le tableau de bord comporte les vignettes suivantes :  
 
-- **Cinq produits principaux dont la fin de vie est dépassée :** cette vignette est une vue de données consolidée des produits de votre environnement dont la fin de vie est dépassée. Lors de la comparaison avec le cycle de vie du support pour les systèmes d’exploitation et les produits SQL Server, le graphe affiche les logiciels installés qui ont expiré.  
+- **Cinq produits principaux dont la fin de vie est dépassée** : cette mosaïque est une vue de données consolidée des produits de votre environnement dont la fin de vie est dépassée. Lors de la comparaison avec le cycle de vie du support pour les systèmes d’exploitation et les produits SQL Server, le graphe affiche les logiciels installés qui ont expiré.  
 
-- **Cinq produits principaux dont la fin de vie est proche :** cette vignette est une vue de données consolidée des produits de votre environnement dont la fin de vie est prévue dans les dix-huit prochains mois. Lors de la comparaison avec le cycle de vie du support pour les systèmes d’exploitation et les produits SQL Server, le graphe affiche les logiciels installés dont la fin de vie est prévue dans les dix-huit prochains mois.  
+- **Cinq produits principaux dont la fin de vie est proche** : cette mosaïque est une vue de données consolidée des produits de votre environnement dont la fin de vie est prévue dans les dix-huit prochains mois. Lors de la comparaison avec le cycle de vie du support pour les systèmes d’exploitation et les produits SQL Server, le graphe affiche les logiciels installés dont la fin de vie est prévue dans les dix-huit prochains mois.  
 
-- **Données de cycle de vie des produits installés :** cette vignette vous donne une idée générale du moment de la transition d’un produit de l’état pris en charge à l’état expiré. Le graphe fournit une répartition du nombre de clients où le produit est installé, l’état de disponibilité du support, ainsi qu’un lien pour en savoir plus sur les étapes à suivre. Les informations suivantes sont incluses dans le graphe :     
+- **Données de cycle de vie des produits installés** : cette mosaïque vous donne une idée générale du moment de la transition d’un produit de l’état pris en charge à l’état expiré. Le graphe fournit une répartition du nombre de clients où le produit est installé, l’état de disponibilité du support, ainsi qu’un lien pour en savoir plus sur les étapes à suivre. Les informations suivantes sont incluses dans le graphe :     
     - Temps de prise en charge restant
     - Nombre dans l’environnement 
     - Date de fin de la prise en charge grand public
@@ -90,14 +91,14 @@ Le tableau de bord comporte les vignettes suivantes :
 
 Des rapports supplémentaires sont également disponibles. Dans l’espace de travail **Analyse** de la console Configuration Manager, développez le nœud **Création de rapports**, puis **Rapports**. Les nouveaux rapports ci-dessous sont ajoutés sous la catégorie **Asset Intelligence** :  
 
-- **Cycle de vie 01A - Ordinateurs avec un produit logiciel spécifique** : affiche la liste des ordinateurs sur lesquels un produit spécifique est détecté.  
+- **Cycle de vie 01A : ordinateurs avec un produit logiciel spécifique** : Afficher une liste des ordinateurs sur lesquels un produit spécifique est détecté.  
 
-- **Cycle de vie 02A - Liste des ordinateurs avec des produits expirés dans l’organisation** : affiche les ordinateurs sur lesquels des produits ont expiré. Vous pouvez filtrer ce rapport par nom de produit.
+- **Cycle de vie 02A : liste des machines avec des produits arrivés à expiration dans l’organisation** : Afficher les ordinateurs sur lesquels des produits arrivés à expiration sont installés. Vous pouvez filtrer ce rapport par nom de produit.
 
-- **Cycle de vie 03A - Liste des produits expirés trouvés dans l’organisation** : affiche les détails sur les produits de votre environnement dont les dates du cycle de vie ont expiré.  
+- **Cycle de vie 03A : liste des produits arrivés à expiration dans l’organisation** : Afficher les détails sur les produits de votre environnement dont les dates du cycle de vie ont expiré.  
 
-- **Cycle de vie 04A - Vue d’ensemble du cycle de vie des produits** : affiche la liste des cycles de vie des produits. Filtrez la liste par nom de produit et par nombre de jours avant l’expiration.  
+- **Cycle de vie 04A : vue d’ensemble du cycle de vie des produits** : Afficher une liste des cycles de vie des produits. Filtrez la liste par nom de produit et par nombre de jours avant l’expiration.  
 
-- **Cycle de vie 05A - Tableau de bord Cycle de vie du produit** : depuis la version 1810, ce rapport comporte des informations comparables à celles du tableau de bord de la console. Sélectionnez une catégorie pour afficher le nombre de produits présents dans votre environnement ainsi que le nombre de jours de support restants.  
+- **Cycle de vie 05A : tableau de bord Cycle de vie du produit** : À compter de la version 1810, ce rapport comporte des informations comparables à celles du tableau de bord de la console. Sélectionnez une catégorie pour afficher le nombre de produits présents dans votre environnement ainsi que le nombre de jours de support restants.  
 
 Pour plus d’informations, consultez [Liste des rapports](/sccm/core/servers/manage/list-of-reports#asset-intelligence).<!--SCCMDocs issue 997-->  

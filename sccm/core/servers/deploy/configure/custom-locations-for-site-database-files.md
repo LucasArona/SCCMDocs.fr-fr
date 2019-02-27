@@ -10,16 +10,17 @@ ms.assetid: 500a9aa6-68aa-44eb-bf49-350c1314a697
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 597ce060dc1fb37f1cc827da3e1c059958a91163
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 6f094e2e6eab0067f51cb7fcd193a4acc914fc5c
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32332727"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56134950"
 ---
 # <a name="custom-locations-for-system-center-configuration-manager-site-database-files"></a>Emplacements personnalisés pour les fichiers de base de données du site System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
  System Center Configuration Manager prend en charge les emplacements personnalisés pour les fichiers de base de données SQL Server.  
 
@@ -28,9 +29,9 @@ ms.locfileid: "32332727"
 
  **Durant l’installation** d’un nouveau site principal ou d’un site d’administration centrale, vous pouvez :  
 
--   **Spécifier des emplacements de fichiers autres que ceux par défaut pour la base de données du site** : le programme d’installation de Configuration Manager crée alors la base de données du site en utilisant ces emplacements.  
+-   **Spécifier des emplacements de fichier différents de ceux par défaut pour la base de données du site** : Configuration Manager installe puis crée la base de données du site à l’aide de ces emplacements.  
 
--   **Spécifier l’utilisation d’une base de données SQL Server déjà créée qui utilise des emplacements de fichiers personnalisés** : le programme d’installation de Configuration Manager utilise alors cette base de données déjà créée et ses emplacements de fichiers préconfigurés.  
+-   **Spécifier l’utilisation d’une base de données SQL Server créée au préalable qui utilise des emplacements de fichiers personnalisés** :  Configuration Manager installe puis utilise cette base de données créée au préalable ainsi que ses emplacements de fichiers préconfigurés.  
 
 **Après l’installation**, vous pouvez modifier l’emplacement des fichiers de base de données du site. Pour ce faire, vous devez arrêter le site et modifier l’emplacement du fichier dans SQL Server :  
 

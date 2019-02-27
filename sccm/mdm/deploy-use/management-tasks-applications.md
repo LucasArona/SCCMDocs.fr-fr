@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4ff166d93812b07c37c31228ca395f0cfcf94de6
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: a57beb79bf7e4dc51e72d7254ff0f190c6ca32c4
+ms.sourcegitcommit: ef2960bd91655c741450774e512dd0a9be610625
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56156955"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56838954"
 ---
 # <a name="manage-applications-in-system-center-configuration-manager"></a>Gérer des applications dans System Center Configuration Manager
 
@@ -45,6 +45,8 @@ Dans System Center Configuration Manager, les processus de déploiement et de
 Lors du déploiement et de la surveillance des applications, voici quelques considérations à prendre en compte, spécifiques à la gestion des appareils mobiles.
 
 - Les appareils inscrits auprès de la fonction de gestion des appareils mobiles ne prennent pas en charge les déploiements simulés, l’expérience utilisateur ou les paramètres de planification.
+
+- N’ajoutez pas plus de 100 paramètres régionaux à une seule application. Ajout de paramètres régionaux de plus de 100 empêche l’application de se synchroniser avec Intune. Cette action empêche également l’application en cours d’installation ou disponible pour les installer sur l’appareil.
 
 - Vous pouvez associer le déploiement avec une stratégie de configuration d’application iOS, si vous en avez configuré une. Voir [Appliquer des paramètres aux applications iOS à l’aide de stratégies de configuration d’application dans System Center Configuration Manager](configure-ios-apps-with-app-configuration-policies.md).
 

@@ -10,16 +10,17 @@ ms.assetid: ddcad9f2-a542-4079-83ca-007d7cb44995
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 42cd1011b3d077a21cd481d5c88b6c9c53765f0e
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b151b93bf0dfa067c2b85860e2c0119922a17cd2
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340622"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56130290"
 ---
 # <a name="deploy-app-v-virtual-applications-with-system-center-configuration-manager"></a>Déployer des applications virtuelles App-V avec System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (current branch)*
 
 Lorsque vous utilisez Configuration Manager pour gérer des applications virtuelles, vous bénéficiez des avantages suivants :  
 
@@ -56,12 +57,12 @@ En plus des autres exigences et procédures System Center Configuration Manager 
 ##  <a name="supported-app-v-versions"></a>Versions d’App-V prises en charge  
  Configuration Manager prend en charge les versions suivantes d’App-V :  
 
--   **App-V 4.6** : pour utiliser des applications virtuelles dans Configuration Manager, le client App-V 4.6 SP1, App-V 4.6 SP2 ou App-V 4.6 SP3 doit être installé sur les ordinateurs clients.  
+-   **App-V 4.6** : pour utiliser des applications virtuelles dans Configuration Manager, vous devez installer le client App-V 4.6 SP1, App-V 4.6 SP2 ou App-V 4.6 SP3 sur les ordinateurs clients.  
 
      Pour pouvoir déployer correctement des applications virtuelles, vous devez également mettre à jour le client App-V 4.6 SP1 avec le correctif décrit dans l’article [2645225](http://go.microsoft.com/fwlink/p/?LinkId=237322) de la Base de connaissances.  
 
--   **App-V 5, App-V 5.0 SP1, App-V 5.0 SP2, App-V 5.0 SP3 et App-V 5.1** : pour App-V 5.0 SP2, vous devez installer le [correctif logiciel 5](https://support.microsoft.com/en-us/kb/2963211) ou utiliser App-V 5.0 SP3.  
--   **App-V 5.2** : intégré à Windows 10 Éducation (1607 et ultérieur), Windows 10 Entreprise (1607 et ultérieur) et Windows Server 2016.
+-   **App-V 5, App-V 5.0 SP1, App-V 5.0 SP2, App-V 5.0 SP3 et App-V 5.1** : pour App-V 5.0 SP2, vous devez installer le [correctif logiciel 5](https://support.microsoft.com/en-us/kb/2963211) ou utiliser App-V 5.0 SP3.  
+-   **App-V 5.2** : intégré à Windows 10 Éducation (versions 1607 et ultérieures), Windows 10 Entreprise (versions 1607 et ultérieures) et Windows Server 2016.
 
 Pour plus d’informations sur App-V dans Windows 10, consultez les rubriques suivantes :
 
@@ -72,11 +73,11 @@ Pour plus d’informations sur App-V dans Windows 10, consultez les rubriques s
 ##  <a name="steps-to-manage-app-v-virtual-applications"></a>Étapes de gestion des applications virtuelles App-V  
  Pour gérer les applications virtuelles App-V, procédez comme suit :  
 
-1.   **Séquencer** : le séquencement est le processus qui consiste à convertir une application en application virtuelle à l’aide du séquenceur App-V.
+1.   **Séquence** : le séquencement est le processus qui consiste à convertir une application en application virtuelle à l’aide du séquenceur App-V.
 
-2.   **Créer** : utilisez l’Assistant Création d’un type de déploiement pour importer l’application séquencée dans un type de déploiement Configuration Manager que vous pouvez ensuite ajouter à une application. Vous pouvez également créer des environnements virtuels qui permettent à plusieurs applications virtuelles de partager des paramètres.
+2.   **Créer** : utilisez l’Assistant Création d’un type de déploiement pour importer l’application séquencée dans un type de déploiement Configuration Manager que vous pouvez ensuite ajouter à une application. Vous pouvez également créer des environnements virtuels qui permettent à plusieurs applications virtuelles de partager des paramètres.
 
-3.   **Distribuer** : la distribution est le processus qui consiste à mettre à disposition des applications App-V sur des points de distribution Configuration Manager.
+3.   **Distribuer** : la distribution est le processus qui consiste à mettre à disposition des applications App-V sur des points de distribution Configuration Manager.
 
 4.   **Déployer** : le déploiement est le processus qui consiste à mettre à disposition l’application sur des ordinateurs clients. C’est ce qu’on appelle la publication et le streaming dans l’infrastructure complète App-V.  
 
@@ -110,7 +111,7 @@ Vous pouvez aussi préinstaller des applications virtuelles sur un ordinateur po
 ##  <a name="migrating-from-an-app-v-infrastructure-to-a-configuration-manager-and-app-v-infrastructure"></a>Migration d’une infrastructure App-V vers une infrastructure Configuration Manager et App-V  
 Pour planifier la migration d’une infrastructure App-V existante vers une gestion des applications virtuelles avec Configuration Manager, aidez-vous du tableau suivant.  
 
-|Étape|Plus d'informations|  
+|Étape|Informations complémentaires|  
 |----------|----------------------|  
 |Examinez vos applications virtuelles actuelles pour choisir celles que vous souhaitez migrer dans votre infrastructure Configuration Manager.|Aucune information supplémentaire.|  
 |Déterminez vers quels utilisateurs et appareils les applications virtuelles seront déployées.|Créez des regroupements Configuration Manager afin de regrouper les utilisateurs et les appareils vers lesquels vous souhaitez déployer les applications virtuelles. Consultez [Présentation des regroupements](/sccm/core/clients/manage/collections/introduction-to-collections).|  
@@ -120,7 +121,7 @@ Pour planifier la migration d’une infrastructure App-V existante vers une gest
 |Configuration Manager commence à gérer les applications virtuelles sur un client après le premier déploiement d’une application virtuelle. Après quoi, Configuration Manager doit gérer toutes les applications App-V présentes sur l’ordinateur.|Aucune information supplémentaire.|  
 |Distribuez le contenu aux points de distribution appropriés pour permettre la remise locale des applications.|Consultez [Gérer le contenu et l’infrastructure de contenu](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).|  
 |Déployez l’application sur les clients Configuration Manager.<br /><br /> Si l'application App-V a été créée avec une version antérieure du séquenceur qui ne crée pas de fichier manifeste XML, vous pouvez l'ouvrir et l'enregistrer dans une version plus récente du séquenceur afin de créer le fichier. Ce fichier est nécessaire au déploiement d’applications virtuelles avec Configuration Manager.<br /><br /> App-V prend en charge les packages d’applications virtuelles créés avec le séquenceur SoftGrid version 4.1 SP1 ou 4.2.<br /><br /> Si les applications étaient déjà installées en local, vous devez les désinstaller avant de déployer une version virtuelle de l'application.|Consultez [Déployer des applications](../../apps/deploy-use/deploy-applications.md).|  
-|System Center Configuration Manager ne prend plus en charge l’utilisation de packages et de programmes contenant des applications virtuelles. Lorsque vous migrez de Configuration Manager 2007 à System Center Configuration Manager, Configuration Manager convertit ces packages en applications.<br /><br /> Les publications Configuration Manager 2007 sont converties vers les types de déploiement suivants :<br /><br /> - Migration de packages App-V sans publication : un type de déploiement utilisant les paramètres du type de déploiement par défaut.<br /><br /> - Migration de packages App-V avec une publication : un type de déploiement utilisant les mêmes paramètres que la <br />                publication de Configuration Manager 2007.<br /><br /> - Migration de packages App-V avec plusieurs publications : un type de déploiement pour chaque <br />                publication de Configuration Manager 2007, qui utilise les paramètres de cette publication.|Consultez [Planification de la migration d’objets Configuration Manager vers System Center Configuration Manager](../../core/migration/planning-for-the-migration-of-objects.md).|  
+|System Center Configuration Manager ne prend plus en charge l’utilisation de packages et de programmes contenant des applications virtuelles. Lorsque vous migrez de Configuration Manager 2007 à System Center Configuration Manager, Configuration Manager convertit ces packages en applications.<br /><br /> Les publications Configuration Manager 2007 sont converties vers les types de déploiement suivants :<br /><br /> - Migration de packages App-V sans publication :  type de déploiement qui utilise les paramètres du type de déploiement par défaut.<br /><br /> - Migration de packages App-V avec une publication : type de déploiement qui utilise les mêmes paramètres que la <br />                publication de Configuration Manager 2007.<br /><br /> - Migration de packages App-V avec plusieurs publications : type de déploiement pour chaque <br />                publication de Configuration Manager 2007, qui utilise les paramètres de cette publication.|Consultez [Planification de la migration d’objets Configuration Manager vers System Center Configuration Manager](../../core/migration/planning-for-the-migration-of-objects.md).|  
 
 ##  <a name="migrating-app-v-5-connection-groups-to-configuration-manager-virtual-environments"></a>Migration de groupes de connexion App-V 5 en environnements virtuels Configuration Manager  
 Dans Configuration Manager, les environnements virtuels App-V permettent aux applications virtuelles que vous avez déployées de partager les mêmes systèmes de fichiers et Registre sur les ordinateurs clients. Par conséquent, contrairement aux applications virtuelles conventionnelles, ces applications peuvent partager des données entre elles. Les environnements virtuels sont créés ou modifiés sur les ordinateurs clients au moment de l'installation de l'application ou lorsque les clients réalisent ensuite une évaluation des applications installées. Les environnements virtuels sont similaires aux groupes de connexions d'App-V 5 en mode autonome.  

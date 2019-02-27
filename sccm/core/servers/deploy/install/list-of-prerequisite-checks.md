@@ -10,12 +10,13 @@ ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ffcb60ff355a67304b057ef2d1b632fb9e0c21dc
-ms.sourcegitcommit: 5e7c4d36f4cdb3390ad3b381d31a3e1e4bf3c6e1
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 6bea2d7fc41bdec96fbdfe3508d13eea0a59d514
+ms.sourcegitcommit: ceec0e20bf801071f2a05233f984cf17acc3fd29
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "55986533"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265034"
 ---
 # <a name="list-of-prerequisite-checks-for-configuration-manager"></a>Liste de vérifications des prérequis pour Configuration Manager
 
@@ -554,7 +555,7 @@ SELECT * FROM vLogs WHERE ProcedureName = 'spDiagChangeTracking'
 <!--SCCMDocs-pr issue 3094-->
 *S’applique à : site d’administration centrale, site principal, site secondaire*
 
-Lorsque vous installez un nouveau site, Configuration Manager installe automatiquement SQL Native Client en tant que composant redistribuable. Configuration Manager ne prend pas en charge la mise à niveau de SQL Native Client. Cette vérification permet de vous assurer que le site a une version prise en charge de SQL Native Client. À compter de la version 1810, la version minimale est SQL 2012 SP4 (`11.*.7001.0`). 
+Lorsque vous installez un nouveau site, Configuration Manager installe automatiquement SQL Server Native Client en tant que composant redistribuable. Une fois l’installation du site terminée, Configuration Manager ne met pas à niveau SQL Server Native Client. Cette vérification permet de vous assurer que le site a une version prise en charge de SQL Native Client. À compter de la version 1810, la version minimale est SQL 2012 SP4 (`11.*.7001.0`). 
 
 Cette version de SQL Native Client prend en charge TLS 1.2. Pour plus d’informations, consultez les articles suivants :
 - [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server) (Prise en charge TLS 1.2 pour Microsoft SQL Server)  

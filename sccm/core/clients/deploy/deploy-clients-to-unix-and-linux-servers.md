@@ -10,16 +10,17 @@ ms.assetid: 15a4e323-9f42-4fea-bb14-f2b905d1f77c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7caffbbccfa53ef4e502685263cb0d81c6e83535
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: a94cb1338e010bfbd9ed1e2ecf7bdb5ba2418390
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32336637"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56120689"
 ---
 # <a name="how-to-deploy-clients-to-unix-and-linux-servers-in-system-center-configuration-manager"></a>Comment déployer des clients sur des serveurs UNIX et Linux dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Avant de pouvoir gérer un serveur Linux ou UNIX avec System Center Configuration Manager, vous devez installer le client Configuration Manager pour Linux et UNIX sur chaque serveur Linux ou UNIX. Vous pouvez soit installer manuellement le client sur chaque ordinateur, soit utiliser un script Shell qui installe le client à distance. Configuration Manager ne prend pas en charge l’installation Push du client pour les serveurs Linux ou UNIX. Vous pouvez éventuellement configurer un Runbook pour System Center Orchestrator pour automatiser l’installation du client sur le serveur Linux ou UNIX.  
 
@@ -145,7 +146,7 @@ Chaque package d'installation du client contient tous les fichiers nécessaires 
 
      Si vous n'utilisez pas cette propriété pour spécifier un certificat PKI, le client utilise un certificat auto-signé et sont des systèmes de site de toutes les communications via HTTP.  
 
-     Si vous spécifiez un certificat non valide sur le client installation de ligne de commande, aucune erreur n'est retournée. Il s'agit, car la validation de certificat se produit après l'installation du client. Lorsque le client démarre, les certificats sont validés avec le point de gestion et si un certificat de validation échoue le message suivant apparaît dans **scxcm.log**, le fichier journal du client Unix et Linux Configuration Manager : **Échec de valider le certificat de Point de gestion**. L’emplacement par défaut du fichier journal est :  **/var/opt/microsoft/scxcm.log**.  
+     Si vous spécifiez un certificat non valide sur le client installation de ligne de commande, aucune erreur n'est retournée. Il s'agit, car la validation de certificat se produit après l'installation du client. Lorsque le client démarre, les certificats sont validés avec le point de gestion et si un certificat n’est pas validé, le message suivant apparaît dans **scxcm.log**, le fichier journal du client Unix et Linux Configuration Manager : **Échec de la validation du certificat de point de gestion**. L’emplacement par défaut du fichier journal est :  **/var/opt/microsoft/scxcm.log**.  
 
     > [!NOTE]  
     >  Vous devez spécifier cette propriété quand vous installez un client et utiliser la propriété **-mp** pour indiquer un point de gestion qui est configuré pour accepter uniquement les connexions client HTTPS.  

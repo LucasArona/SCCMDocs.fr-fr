@@ -10,16 +10,17 @@ ms.assetid: 552e7e3d-e584-4a7c-9155-0f796a14b678
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d1aaf6db583d9749dda3be14cfd06acbff19b093
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 4d58f8566f80efa2700f5947f4144623b10eb6ad
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456088"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56140590"
 ---
 # <a name="configure-security-in-configuration-manager"></a>Configurer la sécurité dans Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Utilisez les informations de cet article pour configurer les options de sécurité pour Configuration Manager. Il décrit les options de sécurité suivantes :
 - [Communication de l’ordinateur client](#BKMK_ConfigureClientPKI) pour les certificats clients PKI  
@@ -49,17 +50,17 @@ Si vous souhaitez utiliser des certificats PKI (infrastructure à clés publique
 
     - **HTTPS ou HTTP** : vous n’exigez pas que les clients utilisent des certificats PKI.  
 
-    - **Utiliser les certificats générés par Configuration Manager pour les systèmes de site HTTP** : pour plus d’informations sur ce paramètre, consultez [HTTP amélioré](/sccm/core/plan-design/hierarchy/enhanced-http).  
+    - **Utiliser les certificats générés par Configuration Manager pour les systèmes de site HTTP** : pour plus d’informations sur ce paramètre, consultez [TTP amélioré](/sccm/core/plan-design/hierarchy/enhanced-http).  
 
 4.  Sélectionnez les paramètres pour les ordinateurs clients.  
 
-    - **Utiliser le certificat client PKI (fonctionnalité d’authentification client)** : si vous choisissez le paramètre de serveur de site **HTTPS or HTTP**, choisissez cette option pour utiliser un certificat client PKI pour les connexions HTTP. Le client utilise ce certificat au lieu d'un certificat auto-signé pour s'authentifier auprès des systèmes de site. Si vous choisissez **HTTPS uniquement**, cette option est automatiquement sélectionnée.  
+    - **Utiliser le certificat client PKI (fonctionnalité d’authentification du client) lorsqu’il est disponible** : si vous choisissez le paramètre de serveur de site **HTTPS or HTTP**, choisissez cette option pour utiliser un certificat client PKI pour les connexions HTTP. Le client utilise ce certificat au lieu d'un certificat auto-signé pour s'authentifier auprès des systèmes de site. Si vous choisissez **HTTPS uniquement**, cette option est automatiquement sélectionnée.  
 
     Quand plusieurs certificats clients PKI valides sont disponibles sur un client, choisissez **Modifier** pour configurer les méthodes de sélection de certificat client.  
 
     Pour plus d’informations sur la méthode de sélection des certificats clients, consultez [Planification de la sélection des certificats clients PKI](/sccm/core/plan-design/security/plan-for-security#BKMK_PlanningForClientCertificateSelection).  
 
-    - **Les clients vérifient la liste de révocation des certificats (CRL) pour les systèmes de site** : activez ce paramètre pour que les clients vérifient les certificats révoqués dans la liste de révocation des certificats de votre organisation.  
+    - **Les clients vérifient la liste de révocation des certificats (CRL) pour les systèmes de site** : activez ce paramètre pour que les clients recherchent dans la liste de révocation des certificats de votre organisation les certificats révoqués.  
 
     Pour plus d’informations sur la vérification de la liste de révocation de certificats pour les clients, consultez [Planification de la révocation de certificats PKI](/sccm/core/plan-design/security/plan-for-security#BKMK_PlanningForCRLs).  
 
@@ -88,14 +89,14 @@ Configurez les paramètres de signature et de chiffrement les plus sécurisés p
 
     - **Exiger la signature** : les clients signent les données avant de les envoyer au point de gestion.  
 
-    - **Exiger SHA-256** : les clients utilisent l’algorithme SHA-256 pour signer les données.  
+    - **Demander SHA-256** : les clients utilisent l’algorithme SHA-256 pour signer les données.  
 
     > [!WARNING]  
     >  N’activez pas **Exiger SHA-256** sans d’abord vérifier que tous les clients prennent en charge cet algorithme de hachage. Ces clients incluent ceux qui peuvent être affectés au site dans le futur.  
     >   
     >  Si vous choisissez cette option et que des clients avec des certificats auto-signés ne prennent pas en charge SHA-256, Configuration Manager les rejette. Le composant SMS_MP_CONTROL_MANAGER consigne l’ID de message 5443.  
 
-    - **Utiliser le chiffrement** : les clients chiffrent les données d’inventaire et les messages d’état du client avant l’envoi au point de gestion. Ils utilisent l’algorithme 3DES.  
+    - **Utiliser le chiffrement** : les clients chiffrent les données d’inventaire et les messages d’état du client avant de les envoyer au point de gestion. Ils utilisent l’algorithme 3DES.  
 
 Répétez cette procédure pour tous les sites principaux de la hiérarchie.  
 

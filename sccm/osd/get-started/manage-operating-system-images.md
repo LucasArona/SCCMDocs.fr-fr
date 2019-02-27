@@ -10,16 +10,17 @@ ms.assetid: fab13949-371c-4a4c-978e-471db1e54966
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 700a9d8f88c64e11449349ace8c431b4ad6611cf
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: ea320b42bfb08ec0023598d010375042d143c220
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456173"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56124068"
 ---
 # <a name="manage-os-images-with-configuration-manager"></a>Gérer les images de système d’exploitation avec Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Dans Configuration Manager, les images de système d’exploitation sont stockées dans des fichiers image Windows (WIM). Ces images sont une collection compressée de fichiers de référence et de dossiers, qui est utilisée pour installer et configurer un nouveau système d’exploitation sur un ordinateur. De nombreux scénarios de déploiement de système d’exploitation nécessitent une image de système d’exploitation. 
 
@@ -68,7 +69,7 @@ Avant de pouvoir utiliser une image de système d’exploitation, vous devez l�
 
 4.  Dans la page **Général**, spécifiez les informations suivantes. Ces informations sont utiles à des fins d’identification lorsque vous avez plusieurs images de système d’exploitation.  
 
-    -   **Nom** : nom unique de l’image. Par défaut, le nom est tiré de celui du fichier WIM.  
+    -   **Nom** : Un nom unique de l’image. Par défaut, le nom est tiré de celui du fichier WIM.  
 
     -   **Version** : identificateur de version facultatif. Il n’est pas nécessaire que cette propriété corresponde à la version du système d’exploitation de l’image. Il s’agit souvent de la version du package de votre organisation.   
 
@@ -103,11 +104,11 @@ Utilisez des déploiements en multidiffusion pour permettre à plusieurs ordinat
 
 4.  Passez à l’onglet **Paramètres de distribution**, puis configurez les options suivantes :  
 
-    -   **Autoriser ce package à être transféré par multidiffusion (WinPE uniquement)**  : sélectionnez cette option pour permettre à Configuration Manager de déployer simultanément plusieurs images de système d’exploitation à l’aide de la multidiffusion.  
+    -   **Autoriser ce package à être transféré par multidiffusion (WinPE uniquement)** : Sélectionnez cette option pour permettre à Configuration Manager de déployer simultanément plusieurs images de système d’exploitation à l’aide de la multidiffusion.  
 
-    -   **Chiffrer les packages de multidiffusion** : spécifiez si le site doit chiffrer l’image avant de l’envoyer au point de distribution. Si l’image contient des informations sensibles, utilisez cette option. Si l’image n’est pas chiffrée, son contenu s’affiche sous forme de texte en clair sur le réseau. Dans ce cas, un utilisateur non autorisé peut intercepter et voir le contenu de l’image.  
+    -   **Chiffrer les packages de multidiffusion** : Spécifiez si le site doit chiffrer l’image avant de l’envoyer au point de distribution. Si l’image contient des informations sensibles, utilisez cette option. Si l’image n’est pas chiffrée, son contenu s’affiche sous forme de texte en clair sur le réseau. Dans ce cas, un utilisateur non autorisé peut intercepter et voir le contenu de l’image.  
 
-    -   **Transférer ce package uniquement par multidiffusion** : spécifiez si vous souhaitez que le point de distribution déploie l’image uniquement pendant une session de multidiffusion.  
+    -   **Transférer ce package uniquement par multidiffusion** : spécifiez si vous souhaitez que le point de distribution déploie l'image uniquement pendant une session de multidiffusion.  
 
          Si vous sélectionnez **Transférer ce package uniquement par multidiffusion**, vous devez également spécifier **Télécharger le contenu localement si nécessaire, en exécutant la séquence de tâches** comme option de déploiement pour l’image du système d’exploitation. Pour plus d'informations, voir [Déployer une séquence de tâches](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS).   
 

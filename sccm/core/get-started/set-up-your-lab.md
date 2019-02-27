@@ -10,16 +10,17 @@ ms.assetid: b1970688-0cd2-404f-a17f-9e2aa4a78758
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 14251bb062423a31bcf74d2079b2e1b667f61ba9
-ms.sourcegitcommit: 06d490d526070e17d77e86bc6c200899ded911cb
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: d096681c044b794b849d05c48fa17171344b8a64
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38967162"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56129865"
 ---
 # <a name="set-up-your-system-center-configuration-manager-lab"></a>Configurer votre laboratoire de System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 En suivant les recommandations de cette rubrique, vous pourrez mettre en place un laboratoire pour évaluer Configuration Manager en simulant des activités réelles.  
 
@@ -30,7 +31,7 @@ En suivant les recommandations de cette rubrique, vous pourrez mettre en place u
 
      Vous pouvez télécharger une version d’évaluation de Windows Server 2012 R2 à partir du [Centre d’évaluation TechNet](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012).  
 
-     Envisagez de modifier ou de désactiver la configuration de sécurité renforcée d’Internet Explorer pour accéder plus facilement à certains téléchargements référencés tout au long de ces exercices. Consultez [Internet Explorer : Configuration de sécurité renforcée](https://technet.microsoft.com/library/dd883248\(v=ws.10\).aspx) .  
+     Envisagez de modifier ou de désactiver la configuration de sécurité renforcée d’Internet Explorer pour accéder plus facilement à certains téléchargements référencés tout au long de ces exercices. Pour plus d’informations, consultez [Internet Explorer : configuration de sécurité renforcée](https://technet.microsoft.com/library/dd883248\(v=ws.10\).aspx).  
 
 -   **L’environnement lab utilise SQL Server 2012 SP2** pour la base de données de site.  
 
@@ -79,9 +80,9 @@ Une fois que vous avez installé tous ces composants, des étapes supplémentair
 ##  <a name="BKMK_LabADPrep"></a> Préparer le contenu d’Active Directory pour le laboratoire  
  Pour ce laboratoire, vous allez créer un groupe de sécurité, puis lui ajouter un utilisateur de domaine.  
 
--   Groupe de sécurité : **Evaluation**  
+-   Groupe de sécurité : **Évaluation**  
 
-    -   Étendue du groupe : **Universal**  
+    -   Étendue du groupe : **Universelle**  
 
     -   Type de groupe : **Security**  
 
@@ -356,14 +357,14 @@ Avant de commencer l’installation, lancez l’[outil de vérification des pré
     |Étape de la procédure d’installation de site|Sélection|  
     |-----------------------------------------|---------------|  
     |Étape 4 : la page **Clé du produit**|Sélectionnez **Évaluation**.|  
-    |Étape 7 :  **Téléchargements requis**|Sélectionnez **Télécharger les fichiers requis** et spécifier votre emplacement prédéfini.|  
-    |Étape 10 : **Paramètres d’installation et du site**|-   **Code du site :LAB**<br />-   **Nom du site :Evaluation**<br />-   **Dossier d’installation :** spécifiez votre emplacement prédéfini.|  
-    |Étape 11 : **Installation du site principal**|Sélectionnez **Installer le site principal en tant que site autonome**, puis cliquez sur **Suivant**.|  
+    |Étape 7 :  **Téléchargements requis**|Sélectionnez **Télécharger les fichiers requis** et spécifier votre emplacement prédéfini.|  
+    |Étape 10 : **Paramètres d’installation et du site**|-   **Code du site :LAB**<br />-   **Nom du site :Evaluation**<br />-   **Dossier d’installation :** spécifiez votre emplacement prédéfini.|  
+    |Étape 11 : **Installation du site principal**|Sélectionnez **Installer le site principal en tant que site autonome**, puis cliquez sur **Suivant**.|  
     |Étape 12 : **Installation de la base de données**|-   **Nom du serveur SQL Server (nom de domaine complet) :** entrez ici votre nom de domaine complet.<br />-   **Nom de l’instance :** laissez ce champ vide, car vous utiliserez l’instance par défaut de SQL que vous avez installée précédemment.<br />-   **Port Service Broker :** conservez le port par défaut 4022.|  
     |Étape 13 : **Installation de la base de données**|Conservez ces paramètres par défaut.|  
-    |Étape 14 : **Fournisseur SMS**|Conservez ces paramètres par défaut.|  
+    |Étape 14 : **Fournisseur SMS**|Conservez ces paramètres par défaut.|  
     |Étape 15 : **Paramètres de communication client**|Assurez-vous que l’option **Tous les rôles de système de site acceptent uniquement les communications HTTPS depuis les clients** n’est pas sélectionnée.|  
-    |Étape 16 : **Rôles système de site**|Entrez votre nom de domaine complet et assurez-vous que l’option **Tous les rôles de système de site acceptent uniquement les communications HTTPS depuis les clients** est toujours désactivée.|  
+    |Étape 16 : **Rôles de système de site**|Entrez votre nom de domaine complet et assurez-vous que l’option **Tous les rôles de système de site acceptent uniquement les communications HTTPS depuis les clients** est toujours désactivée.|  
 
 ##  <a name="BKMK_EnablePubLab"></a> Activer la publication pour le site Configuration Manager  
 Chaque site Configuration Manager publie ses propres informations de site sur le conteneur System Management, au sein de sa partition de domaine dans le schéma Active Directory. Des canaux bidirectionnels pour la communication entre Active Directory et Configuration Manager doivent être ouverts pour gérer ce trafic. Vous devez également activer la fonctionnalité Découverte de forêts pour déterminer certains composants de votre infrastructure réseau et Active Directory.  

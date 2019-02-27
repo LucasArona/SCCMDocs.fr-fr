@@ -10,22 +10,23 @@ ms.assetid: 51b5964b-374d-4abc-8619-414a9fffad2d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6e437709ec1b721cf9ca597bdc944bcce6da9b0f
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: c206a8045429551f361f640febbcda4a39ef9698
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334247"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56139940"
 ---
 # <a name="client-installation-methods-in-system-center-configuration-manager"></a>Méthodes d’installation du client dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Vous pouvez utiliser différentes méthodes pour installer le logiciel client Configuration Manager. Utilisez une ou plusieurs méthodes combinées. Cet article décrit chaque méthode de sorte que vous puissiez vous approprier celle qui convient le mieux à votre organisation.  
 
 ## <a name="client-push-installation"></a>Installation poussée du client  
 
-**Plateforme cliente prise en charge :** Windows  
+**Plateforme cliente prise en charge** : Windows  
 
 #### <a name="advantages"></a>Avantages  
 
@@ -55,7 +56,7 @@ Pour plus d’informations, consultez [Comment installer des clients selon la m�
 
 ## <a name="software-update-point-based-installation"></a>Installation basée sur un point de mise à jour logicielle  
 
-**Plateforme cliente prise en charge :** Windows  
+**Plateforme cliente prise en charge** : Windows  
 
 #### <a name="advantages"></a>Avantages  
 
@@ -87,7 +88,7 @@ Pour plus d’informations, consultez [Comment installer des clients via une ins
 
 ## <a name="group-policy-installation"></a>Installation via la stratégie de groupe  
 
-**Plateforme cliente prise en charge :** Windows  
+**Plateforme cliente prise en charge** : Windows  
 
 #### <a name="advantages"></a>Avantages  
 
@@ -111,7 +112,7 @@ Pour plus d’informations, consultez [Comment installer des clients à l’aide
 
 ## <a name="logon-script-installation"></a>Installation via un script d'ouverture de session  
 
-**Plateforme cliente prise en charge :** Windows  
+**Plateforme cliente prise en charge** : Windows  
 
 #### <a name="advantages"></a>Avantages  
 
@@ -131,7 +132,7 @@ Pour plus d’informations, consultez [Comment installer des clients à l’aide
 
 ## <a name="manual-installation"></a>Installation manuelle  
 
-**Plateformes clientes prises en charge :** Windows, UNIX/Linux, Mac OS X  
+**Plateforme cliente prise en charge** : Windows, UNIX/Linux, Mac OS X  
 
 #### <a name="advantages"></a>Avantages  
 
@@ -157,7 +158,7 @@ Pour plus d’informations sur la façon d’installer manuellement le client su
 
 ## <a name="microsoft-intune-mdm-installation"></a>Installation de Microsoft Intune MDM
 
-**Plateformes clientes prises en charge :** Windows 10
+**Plates-formes clientes prises en charge** : Windows 10
 
 #### <a name="advantages"></a>Avantages  
 

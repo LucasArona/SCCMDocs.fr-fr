@@ -10,16 +10,17 @@ ms.assetid: 60575413-44fe-43bb-bcfb-39ec5ed5055b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e798c11bbbd6c6d69ea8455ecb7b0252a408659d
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b90628e4f1e4a1405c90d17fc43628df00070978
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385930"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56123380"
 ---
 # <a name="client-spy"></a>Client Spy
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Client Spy fait partie des [outils de Configuration Manager](/sccm/core/support/tools). Il s’agit d’un outil permettant de résoudre les problèmes de distribution de logiciels, d’inventaire et de contrôle de logiciel sur les clients Configuration Manager. 
 
@@ -54,7 +55,7 @@ Les règles de contrôle de logiciel sont également affichées.
 
 Les actions suivantes sont disponibles dans le menu **Tools** (Outils) :  
 
-#### <a name="connect"></a>Connect
+#### <a name="connect"></a>Connexion
 Récupérez les informations d’un autre ordinateur.  
 
 - Par défaut, l’outil affiche les informations de l’ordinateur actuel. 
@@ -67,13 +68,13 @@ Récupérez les informations d’un autre ordinateur.
 
 - Lorsque vous vous connectez à un ordinateur distant, tous les onglets qui sont affichés montrent les informations de l’ordinateur distant.
 
-#### <a name="software-distribution"></a>Software Distribution
+#### <a name="software-distribution"></a>Distribution de logiciels
 Affiche les onglets [Software Distribution](#software-distribution) (Distribution de logiciels) et masque les autres. Par défaut, Spy Client affiche les onglets de distribution de logiciels.
 
-#### <a name="inventory"></a>Inventory
+#### <a name="inventory"></a>Inventaire
 Affiche l’onglet Inventory (Inventaire) et masque les autres.
 
-#### <a name="software-metering"></a>Software Metering
+#### <a name="software-metering"></a>Contrôle de logiciel
 Affiche l’onglet Software Metering (Contrôle de logiciel) et masque les autres.
 
 #### <a name="save-current-tab-to-file"></a>Save current tab to file
@@ -99,16 +100,16 @@ Cet onglet affiche tous les déploiements existants, notamment les déploiements
 
 Chaque élément de l’arborescence de l’onglet Software Distribution Execution Requests contient les quatre attributs suivants :
 - Advertisement ID. Cette valeur peut être vide dans le cas d’un déploiement disponible. 
-- Package ID 
-- Program Name 
+- ID du package 
+- Nom du programme 
 - User. Il peut s’agir du SID de l’utilisateur ciblé ou du SID de l’utilisateur qui a initié la demande. Si les deux sont des demandes système, l’utilisateur affiché est System. 
 
 Pour chaque demande d’exécution, il affiche également les informations suivantes dans une structure de sous-arborescence :
-- Program Name 
-- Package ID 
-- Package Name 
+- Nom du programme 
+- ID du package 
+- Nom du package 
 - Request Creation Time 
-- State 
+- État 
 - Running State, if State is Running 
 - Execution Context (User or Admin) 
 - History State (Success, Failure, or NotRun) 
@@ -133,7 +134,7 @@ Cet onglet contient des informations sur tous les programmes exécutés précéd
 Les branches principales de cette arborescence représentent les historiques des différents utilisateurs, y compris System. Il affiche une sous-arborescence contenant la liste des packages à partir de laquelle les programmes ont été exécutés pour chaque utilisateur. 
 
 Le nom de package et l’ID de package de chaque sous-arborescence de package affiche une liste des programmes qui ont été exécutés. Il affiche les attributs suivants pour chacun d’eux : 
-- Nom de programme
+- Nom du programme
 - État d’exécution
 - Heure de la dernière exécution
 - Code d’échec
@@ -184,19 +185,19 @@ Il s’agit d’une liste de publications qui existent sur le client pour lesque
 
 
 
-## <a name="inventory-tab"></a>Onglet Inventory
+## <a name="inventory-tab"></a>Onglet Inventaire
 
 Un seul onglet contient les informations d’inventaire. L’arborescence principale présente les cinq éléments suivants :  
 
-- **Software Inventory** (Inventaire logiciel) : Contient la date à laquelle le dernier cycle a commencé, la date du dernier rapport et les versions majeures et mineures du dernier rapport.  
+- **Inventaire logiciel** : contient la date à laquelle le dernier cycle a commencé, la date du dernier rapport et les versions principale et mineure du dernier rapport.  
 
-- **File Collection** (Regroupement de fichiers) : Contient la date à laquelle le dernier cycle a commencé, la date du dernier rapport et les versions majeures et mineures du dernier rapport.  
+- **Regroupement de fichiers** : contient la date à laquelle le dernier cycle a commencé, la date du dernier rapport et les versions principale et mineure du dernier rapport.  
 
-- **Hardware Inventory** (Inventaire matériel) : Contient la date à laquelle le dernier cycle a commencé, la date du dernier rapport et les versions majeures et mineures du dernier rapport.  
+- **Inventaire matériel** : contient la date à laquelle le dernier cycle a commencé, la date du dernier rapport et les versions principale et mineure du dernier rapport.  
 
-- **IDMIF Collection** (Regroupement IDMIF) : Contient la date à laquelle le dernier cycle a commencé, la date du dernier rapport et les versions majeures et mineures du dernier rapport.  
+- **Regroupement IDMIF** : contient la date à laquelle le dernier cycle a commencé, la date du dernier rapport et les versions principale et mineure du dernier rapport.  
 
-- **DDR** (Enregistrement de données de découverte) : Contient la date à laquelle le dernier cycle a commencé, la date du dernier rapport et les versions majeures et mineures du dernier rapport. Les informations DDR apparaissent également dans une sous-arborescence.
+- **DDR** : contient la date à laquelle le dernier cycle a commencé, la date du dernier rapport et les versions principale et mineure du dernier rapport. Les informations DDR apparaissent également dans une sous-arborescence.
 
 
 
@@ -204,9 +205,9 @@ Un seul onglet contient les informations d’inventaire. L’arborescence princi
 
 Cet onglet affiche des informations sous forme d’une sous-arborescence et inclut toutes les règles de contrôle de logiciel. Il affiche chaque règle sous forme de nœud, qu’il identifie par le nom de fichier et l’ID de règle. Développez chaque nœud dans l’arborescence et affichez les informations suivantes :
 - Nom du fichier Explorer 
-- Nom du fichier d’origine
+- Nom du fichier d'origine
 - ID de la règle
 - Version du fichier
-- Langue
+- Langage
 
 

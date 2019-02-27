@@ -10,16 +10,17 @@ ms.assetid: f3bf1737-827d-48fa-8bb1-f48fe71afe0c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9c58e12d906606acc0015d38e543616570d61520
-ms.sourcegitcommit: 759098de944b8f7d5eedfc2bae2cb9a6ba15276f
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 50ec232c9f5b007ef7a139cbe7894c333b6eed63
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43297217"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56137879"
 ---
 # <a name="how-to-analyze-and-convert-packages-with-package-conversion-manager"></a>Comment analyser et convertir des packages avec Package Conversion Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 <!--1357861-->
 
@@ -43,13 +44,13 @@ Avant de convertir un package, analysez-le. Selon les résultats de l'analyse, v
 
 3. Pour voir l’état de préparation du package, ajoutez la colonne **Préparation** à la liste des packages. L’état de préparation du package détermine votre prochaine action :  
 
-    - **Automatique** : [comment convertir des packages](#bkmk_convert)  
+    - **Automatique** : [Convertir des packages](#bkmk_convert)  
 
         Pour attacher également des regroupements et créer des conditions globales avec un état de préparation **Automatique**, consultez [Comment corriger et convertir des packages](#bkmk_fix).  
 
-    - **Manuel** : [Comment corriger et convertir des packages](#bkmk_fix)
+    - **Manuel** : [Corriger et convertir des packages](#bkmk_fix)
 
-    - **Non Applicable** : correspond à un package auquel il manque du contenu ou un programme requis. Ajoutez le contenu ou les programmes manquants puis relancez l’analyse. Ou laissez le package dans un état non converti et continuez à le déployer en tant que package.  
+    - **Non applicable** : Il manque du contenu ou un programme requis à ce package. Ajoutez le contenu ou les programmes manquants puis relancez l’analyse. Ou laissez le package dans un état non converti et continuez à le déployer en tant que package.  
 
 
 

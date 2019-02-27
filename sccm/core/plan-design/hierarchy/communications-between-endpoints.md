@@ -10,16 +10,17 @@ ms.assetid: 68fe0e7e-351e-4222-853a-877475adb589
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ce3353d9cc139da53a655f50144c3816b1a4a355
-ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 5ebe37bb97c4a1e231bfaf94f420f7f0471f30f6
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411372"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56141957"
 ---
 # <a name="communications-between-endpoints-in-configuration-manager"></a>Communications entre points de terminaison dans Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Cet article explique la façon dont les clients et les systèmes de site Configuration Manager communiquent sur votre réseau. Il comprend les sections suivantes :  
 
@@ -82,8 +83,8 @@ Quand vous déployez un rôle de système de site qui utilise Internet Informati
 ### <a name="bkmk_client2mp"></a> Communication du client vers un point de gestion
 
 Quand un client communique avec un point de gestion, il y a deux étapes : l’authentification (transport) et l’autorisation (message). Ce processus varie en fonction des facteurs suivants : 
-- La configuration du site : HTTP, HTTPS ou HTTP amélioré
-- La configuration du point de gestion : HTTPS uniquement, ou HTTP ou HTTPS autorisé
+- Configuration de site : HTTP, HTTPS ou HTTP amélioré
+- Configuration des points de gestion : HTTPS uniquement, ou HTTP ou HTTPS autorisé
 - L’identité de l’appareil dans les scénarios orientés appareil
 - L’identité de l’utilisateur dans les scénarios orientés utilisateur
 
@@ -91,8 +92,8 @@ Le tableau suivant permet de mieux comprendre le déroulement de ce processus :
 
 | Type du point de gestion  | Authentification du client  | Autorisation du client<br>Identité de l’appareil  | Autorisation du client<br>Identité de l’utilisateur  |
 |----------|---------|---------|---------|
-| HTTP     | Authentification anonyme<br>Avec l’HTTP amélioré, le site vérifie le jeton *d’utilisateur* ou *d’appareil* Azure AD. | Demande de l’emplacement : anonyme<br>Package client : inscription<br>anonyme, avec une des méthodes suivantes pour prouver l’identité de l’appareil :<br> - Anonyme (approbation manuelle)<br> - Authentification intégrée de Windows<br> - Jeton *d’appareil* Azure AD (HTTP amélioré)<br>Après l’inscription, le client utilise la signature des messages pour prouver l’identité de l’appareil | Dans les scénarios orientés utilisateur, utilisez une des méthodes suivantes pour prouver l’identité de l’utilisateur :<br> - Authentification intégrée de Windows<br> - Jeton *d’utilisateur* Azure AD (HTTP amélioré) |
-| HTTPS    | Utilisation d’une des méthodes suivantes :<br> - Certificat PKI<br> - Authentification intégrée de Windows<br> - Jeton *d’utilisateur* ou *d’appareil* Azure AD | Demande de l’emplacement : anonyme<br>Package client : inscription<br>anonyme, avec une des méthodes suivantes pour prouver l’identité de l’appareil :<br> - Anonyme (approbation manuelle)<br> - Authentification intégrée de Windows<br> - Certificat PKI<br> - Jeton *d’utilisateur* ou *d’appareil* Azure AD<br>Après l’inscription, le client utilise la signature des messages pour prouver l’identité de l’appareil | Dans les scénarios orientés utilisateur, utilisez une des méthodes suivantes pour prouver l’identité de l’utilisateur :<br> - Authentification intégrée de Windows<br> - Jeton *d’utilisateur* Azure AD |
+| HTTP     | Authentification anonyme<br>Avec l’HTTP amélioré, le site vérifie le jeton *d’utilisateur* ou *d’appareil* Azure AD. | Demande de l’emplacement : Authentification anonyme<br>Package client : Authentification anonyme<br>anonyme, avec une des méthodes suivantes pour prouver l’identité de l’appareil :<br> - Anonyme (approbation manuelle)<br> - Authentification intégrée de Windows<br> - Jeton *d’appareil* Azure AD (HTTP amélioré)<br>Après l’inscription, le client utilise la signature des messages pour prouver l’identité de l’appareil | Dans les scénarios orientés utilisateur, utilisez une des méthodes suivantes pour prouver l’identité de l’utilisateur :<br> - Authentification intégrée de Windows<br> - Jeton *d’utilisateur* Azure AD (HTTP amélioré) |
+| HTTPS    | Utilisation d’une des méthodes suivantes :<br> - Certificat PKI<br> - Authentification intégrée de Windows<br> - Jeton *d’utilisateur* ou *d’appareil* Azure AD | Demande d’emplacement : Authentification anonyme<br>Package client : Authentification anonyme<br>anonyme, avec une des méthodes suivantes pour prouver l’identité de l’appareil :<br> - Anonyme (approbation manuelle)<br> - Authentification intégrée de Windows<br> - Certificat PKI<br> - Jeton *d’utilisateur* ou *d’appareil* Azure AD<br>Après l’inscription, le client utilise la signature des messages pour prouver l’identité de l’appareil | Dans les scénarios orientés utilisateur, utilisez une des méthodes suivantes pour prouver l’identité de l’utilisateur :<br> - Authentification intégrée de Windows<br> - Jeton *d’utilisateur* Azure AD |
 
 > [!Tip]  
 > Pour plus d’informations sur la configuration du point de gestion selon le type d’identité d’appareil et avec la passerelle de gestion cloud, consultez [Activer le point de gestion pour HTTPS](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_mphttps).  
@@ -198,7 +199,7 @@ Pour plus d’informations, consultez les articles suivants :
 
 ###  <a name="bkmk_span"></a> Scénarios de prise en charge d’un site ou d’une hiérarchie qui s’étend sur plusieurs domaines et forêts  
 
-#### <a name="scenario-1-communication-between-sites-in-a-hierarchy-that-spans-forests"></a>Scénario 1 : Communication entre les sites d’une hiérarchie qui s’étend sur plusieurs forêts  
+#### <a name="scenario-1-communication-between-sites-in-a-hierarchy-that-spans-forests"></a>Scénario 1 : Communication entre les sites d’une hiérarchie qui s’étend sur des forêts  
 Ce scénario nécessite une approbation de forêt bidirectionnelle prenant en charge l’authentification Kerberos.  Si vous n’avez pas d’approbation de forêt bidirectionnelle prenant en charge l’authentification Kerberos, Configuration Manager ne prend pas en charge de site enfant dans la forêt distante.  
 
 Configuration Manager prend en charge l’installation d’un site enfant dans une forêt distante qui possède l’approbation bidirectionnelle requise avec la forêt du site parent. Par exemple, vous pouvez placer un site secondaire dans une autre forêt de son site parent principal tant que l’approbation nécessaire existe.  
@@ -224,7 +225,7 @@ Définissez également les configurations suivantes :
 
 -   Pour installer un site ou un rôle de système de site, vous devez spécifier un compte qui dispose des autorisations d'administrateur local sur l'ordinateur spécifié.  
 
-#### <a name="scenario-2-communication-in-a-site-that-spans-forests"></a>Scénario 2 : Communication dans un site qui s’étend sur plusieurs forêts  
+#### <a name="scenario-2-communication-in-a-site-that-spans-forests"></a>Scénario 2 : Communication dans un site qui s’étend sur des forêts  
 Ce scénario ne nécessite pas d’approbation de forêt bidirectionnelle.  
 
 Les sites principaux prennent en charge l’installation de rôles de système de site sur des ordinateurs situés dans des forêts distantes.  
@@ -265,9 +266,9 @@ Vous pouvez avoir besoin de configurer l’accès du point de gestion et du poin
 
 Si vous configurez un compte d’utilisateur de domaine comme compte de connexion pour ces rôles de système de site, assurez-vous que le compte d’utilisateur de domaine dispose de l’accès approprié à la base de données SQL Server sur ce site :  
 
--   Point de gestion : **compte de connexion à la base de données du point de gestion**.  
+-   Point de gestion : **Compte de connexion à la base de données du point de gestion**  
 
--   Point d'inscription : **compte de connexion du point d'inscription**.  
+-   Point d'inscription : **Compte de connexion du point d’inscription**  
 
 Lorsque vous planifiez des rôles de système de site dans d'autres forêts, tenez compte des informations supplémentaires suivantes :  
 
@@ -275,7 +276,7 @@ Lorsque vous planifiez des rôles de système de site dans d'autres forêts, ten
 
 -   Quand le point de gestion Internet approuve la forêt contenant les comptes d’utilisateur, les stratégies utilisateur sont prises en charge. Lorsqu'il n'existe aucune relation d'approbation, seules les stratégies d'ordinateur sont prises en charge.  
 
-#### <a name="scenario-3-communication-between-clients-and-site-system-roles-when-the-clients-arent-in-the-same-active-directory-forest-as-their-site-server"></a>Scénario 3 : Communication entre les clients et les rôles de système de site quand les clients ne se trouvent pas dans la même forêt Active Directory que leur serveur de site  
+#### <a name="scenario-3-communication-between-clients-and-site-system-roles-when-the-clients-arent-in-the-same-active-directory-forest-as-their-site-server"></a>Scénario 3 : Communication entre les clients et les rôles de système de site quand les clients ne se trouvent pas dans la même forêt Active Directory que leur serveur de site  
 Configuration Manager prend en charge les scénarios suivants pour les clients qui ne se trouvent pas dans la même forêt que le serveur de leur site :  
 
 -   Il y a une relation d’approbation de forêt bidirectionnelle entre la forêt du client et celle du serveur du site.  

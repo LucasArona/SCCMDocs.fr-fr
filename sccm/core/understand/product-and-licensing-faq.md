@@ -10,16 +10,17 @@ ms.assetid: ee8d611f-aa0c-4efd-b0ad-dbd14d0a0623
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9e58e11bec9441f73bff021c8a6a24d150777cbe
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 57770c35b3a824aa285185e3031ed2fc9b9dd82d
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385539"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56135444"
 ---
 # <a name="frequently-asked-questions-for-configuration-manager-branches-and-licensing"></a>Foire aux questions sur les branches et la gestion des licences de Configuration Manager
 
- *S’applique à : System Center Configuration Manager (Current Branch), System Center Configuration Manager (Long-Term Servicing Branch)*
+ *S’applique à : System Center Configuration Manager (Current Branch), System Center Configuration Manager (Long-Term Servicing Branch)*
 
 ## <a name="summary"></a>Résumé
 Cette FAQ répond à des questions courantes sur la gestion des licences des versions System Center Configuration Manager Current Branch et Long Term Servicing Branch (LTSB), disponibles par le biais des programmes de gestion des licences en volume Microsoft. Cet article n’a qu’une fonction informative. Il ne remplace ni n’annule aucune documentation sur la gestion des licences de System Center Configuration Manager. Pour plus d’informations, consultez la gestion des licences des produits [System Center 2016](https://www.microsoft.com/en-us/licensing/product-licensing/system-center-2016.aspx)<!-- this link doesn't work without some language code --> et les [Conditions des produits](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53). Les Conditions des Produits décrivent les conditions d’utilisation de tous les produits Microsoft dans la gestion des licences en volume.
@@ -41,11 +42,11 @@ Long-Term Servicing Branch est une version de production de System Center Config
 
 ### <a name="bkmk_licensing-acronyms"></a> J’ai vu les termes SA et L&SA dans le texte sur les licences. Que veulent dire ces acronymes dans System Center Configuration Manager ?    
 SA (Software Assurance) et L&SA (Licence et Software Assurance) sont des options de licence qui accordent des droits d’utilisation de System Center Configuration Manager. SA est une option qui s’adresse à un client qui renouvelle la SA suite à un contrat précédent. L&SA est une option qui s’adresse à un client qui achète une nouvelle licence et la SA.
-  - **Software Assurance (SA)**  : Les clients doivent avoir une SA active dans leurs licences System Center Configuration Manager, ou des droits d’abonnement équivalents, pour pouvoir installer et utiliser l’option Current Branch de System Center Configuration Manager.    
+  - **Software Assurance (SA)** : les clients doivent avoir une SA active dans leurs licences System Center Configuration Manager, ou des droits d’abonnement équivalents, pour pouvoir installer et utiliser l’option Current Branch de System Center Configuration Manager.    
 
     - Même si la SA est facultative pour certains produits Microsoft, la seule façon d’obtenir les droits d’utiliser System Center Configuration Manager Current Branch est avec la SA *(ou des droits d’abonnement équivalents)*. Pour plus d’informations, consultez les [questions fréquentes (FAQ) sur la Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/FAQ-Software-Assurance.aspx).<!--this link doesn't work without some language code-->
 
-  - **Microsoft License and Software Assurance (L&SA)**  : Les clients qui achètent de nouvelles licences pour System Center Configuration Manager doivent acquérir une L&SA (Licence et SA).   
+  - **Microsoft License and Software Assurance (L&SA)** : les clients qui achètent de nouvelles licences pour System Center Configuration Manager doivent acquérir une L&SA (Licence et SA).   
 
     - La SA accorde les droits d’utilisation de Current Branch.
 

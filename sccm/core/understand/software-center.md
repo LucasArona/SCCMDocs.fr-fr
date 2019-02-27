@@ -10,16 +10,17 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.assetid: 9e68de6e-2b33-442b-b674-a382728d9529
-ms.openlocfilehash: bcdc6298a7b1c429888acf2b7257cec072e9b878
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: da01c741107d4eb4a707f7f0d8ada5d82706f292
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383418"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56119889"
 ---
 # <a name="software-center-user-guide"></a>Guide de l’utilisateur du Centre logiciel
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 L’administrateur informatique de votre organisation utilise le Centre logiciel pour installer des applications, des mises à jour logicielles et mettre à niveau Windows. Ce guide de l’utilisateur décrit les fonctionnalités du Centre logiciel pour les utilisateurs de l’ordinateur.
 
@@ -41,14 +42,14 @@ Si vous naviguez dans le menu Démarrer, recherchez sous le groupe **Microsoft S
 ## <a name="applications"></a>Applications
 
 Cliquez sur l’onglet **Applications** pour rechercher et installer les applications que votre administrateur informatique déploie pour vous ou sur cet ordinateur.
-- **Tout** : Affiche toutes les applications que vous pouvez installer
-- **Obligatoire** : Votre administrateur informatique impose ces applications. Si vous désinstallez l’une de ces applications, le Centre logiciel la réinstalle.
-- **Filtres** : Votre administrateur informatique peut créer des catégories d’applications. Si elle est disponible, cliquez sur la liste déroulante pour filtrer l’affichage sur ces applications uniquement dans une catégorie spécifique. Sélectionnez **Tout** pour afficher toutes les applications.
-- **Trier par** : Réorganisez la liste d’applications. Par défaut cette liste est triée selon **Le plus récent**.
-- **Rechercher** : Vous ne trouvez toujours pas ce que vous cherchez ? Entrez des mots clés dans la zone de recherche pour le trouver.
--  **Basculer la vue** : cliquez sur les icônes pour basculer entre le mode Liste et le mode Mosaïque. Par défaut, la liste d’applications s’affiche sous forme de vignettes de graphique. 
-    - Mode Mosaïque : Votre administrateur informatique peut personnaliser les icônes. Sous chaque vignette s’affiche le nom de l’application, l’éditeur et la version. 
-    - Mode Liste : Cette vue affiche l’icône, le nom, l’éditeur, la version et l’état de l’application. 
+- **Tout** : affiche toutes les applications que vous pouvez installer.
+- **Obligatoire** : votre administrateur informatique impose ces applications. Si vous désinstallez l’une de ces applications, le Centre logiciel la réinstalle.
+- **Filtres** : votre administrateur informatique peut créer des catégories d’applications. Si elle est disponible, cliquez sur la liste déroulante pour filtrer l’affichage sur ces applications uniquement dans une catégorie spécifique. Sélectionnez **Tout** pour afficher toutes les applications.
+- **Trier par** : permet de réorganiser la liste d’applications. Par défaut cette liste est triée selon **Le plus récent**.
+- **Rechercher** : vous ne trouvez toujours pas ce que vous cherchez ? Entrez des mots clés dans la zone de recherche pour le trouver.
+-  **Changer de vue** : cliquez sur les icônes pour basculer entre le mode Liste et le mode Mosaïque. Par défaut, la liste d’applications s’affiche sous forme de vignettes de graphique. 
+    - Mode Mosaïque : votre administrateur informatique peut personnaliser les icônes. Sous chaque vignette s’affiche le nom de l’application, l’éditeur et la version. 
+    - Mode Liste : cette vue affiche l’icône, le nom, l’éditeur, la version et l’état de l’application. 
 
 
 ### <a name="install-multiple-applications"></a>Installer plusieurs applications 
@@ -70,9 +71,9 @@ Les applications s’installent normalement, l’une après l’autre.
 ## <a name="updates"></a>Mises à jour
 
 Cliquez sur l’onglet **Mises à jour** pour afficher et installer les mises à jour logicielles que votre administrateur informatique déploie sur cet ordinateur.  
-- **Tout** : Affiche toutes les mises à jour que vous pouvez installer
-- **Obligatoire** : Votre administrateur informatique impose ces mises à jour.
-- **Trier par** : Réorganisez la liste de mises à jour. Par défaut cette liste est triée par **Nom d’application : A-Z**.
+- **Tout** : affiche toutes les mises à jour que vous pouvez installer
+- **Obligatoire** : votre administrateur informatique impose ces mises à jour.
+- **Trier par** : permet de réorganiser la liste des mises à jour. Par défaut, cette liste est triée par **Nom d’application : A-Z**.
 
 Pour installer les mises à jour, cliquez sur **Tout installer**.
 
@@ -83,19 +84,19 @@ Pour installer uniquement des mises à jour spécifiques, cliquez sur l’icône
 ## <a name="operating-systems"></a>Systèmes d'exploitation
 
 Cliquez sur l’onglet **Systèmes d’exploitation** pour afficher et installer les versions de Windows que votre administrateur informatique déploie sur cet ordinateur.  
-- **Tout** : Affiche toutes les versions de Windows que vous pouvez installer
-- **Obligatoire** : Votre administrateur informatique impose ces mises à niveau.
-- **Trier par** : Réorganisez la liste de mises à jour. Par défaut cette liste est triée par **Nom d’application : A-Z**.
+- **Tout** : affiche toutes les versions de Windows que vous pouvez installer
+- **Obligatoire** : votre administrateur informatique impose ces mises à niveau.
+- **Trier par** : permet de réorganiser la liste des mises à jour. Par défaut, cette liste est triée par **Nom d’application : A-Z**.
 
 
 
 ## <a name="installation-status"></a>État de l’installation
 
 Cliquez sur l’onglet **État d’installation** pour afficher l’état des applications. Vous pouvez voir les états suivants :
-- **Installé**: Le Centre logiciel a déjà installé cette application sur cet ordinateur.
-- **Téléchargement** : Le Centre logiciel télécharge le logiciel à installer sur cet ordinateur.
-- **Échec** : Le Centre logiciel a rencontré une erreur en essayant d’installer le logiciel.
-- **Installation planifiée après** : affiche la date et l’heure de la prochaine fenêtre de maintenance de l’appareil qui installera les logiciels à venir. Les fenêtres de maintenance sont définies par votre administrateur informatique.<!--1358131-->
+- **Installé** : le Centre logiciel a déjà installé cette application sur cet ordinateur.
+- **Téléchargement** : le Centre logiciel télécharge le logiciel à installer sur cet ordinateur.
+- **Échec** : le Centre logiciel a rencontré une erreur lors de la tentative d’installation du logiciel.
+- **Installation planifiée après** : affiche la date et l’heure de la prochaine fenêtre de maintenance de l’appareil pour installer les logiciels à venir. Les fenêtres de maintenance sont définies par votre administrateur informatique.<!--1358131-->
     - L’état peut être consulté sous l’onglet **Tous** et **À venir**. 
     - Vous pouvez effectuer l’installation avant l’heure de la fenêtre de maintenance en cliquant sur le bouton **Installer maintenant**. 
 
@@ -132,8 +133,8 @@ Pour exempter cet ordinateur de ces stratégies, cochez la case **Ne pas appliqu
 ### <a name="computer-maintenance"></a>Maintenance de l’ordinateur
 
 Spécifier la façon dont le Centre logiciel applique les modifications de logiciel avant l’échéance
-- **Installer ou désinstaller automatiquement les logiciels obligatoires et redémarrer l’ordinateur uniquement en dehors des heures de bureau spécifiées** : Ce paramètre est désactivé par défaut.
-- **Suspendre les activités du Centre logiciel quand mon ordinateur est en mode présentation** : Ce paramètre est activé par défaut.
+- **Installer ou désinstaller automatiquement les logiciels requis et redémarrer l’ordinateur uniquement en dehors des heures de bureau spécifiées** : Ce paramètre est désactivé par défaut.
+- **Interrompre les activités du Centre logiciel lorsque mon ordinateur est en mode présentation** : Ce paramètre est activé par défaut.
 - **Stratégie de synchronisation** : Cliquez sur ce bouton quand votre administrateur informatique vous l’indique. Cet ordinateur recherche sur les serveurs toutes les nouveautés en termes d’applications, de mises à jour logicielles ou de systèmes d’exploitation.
 
 ## <a name="custom-tab-in-software-center"></a>Onglet Personnalisé dans le Centre logiciel

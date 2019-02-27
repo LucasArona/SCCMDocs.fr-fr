@@ -10,16 +10,17 @@ ms.assetid: 4b72922a-d11e-4aef-b309-19f5f0716f32
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5218d47ae8699ee0feb0cf59405833ec4cc49569
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 1365c3951a829d92cbdb2f6a4a87c8496f9ada3c
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385830"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56136345"
 ---
 # <a name="dp-job-queue-manager"></a>DP Job Queue Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Distribution Point (DP) Job Queue Manager fait partie des [outils de Configuration Manager](/sccm/core/support/tools). Utilisez-le pour dépanner et gérer les travaux de distribution de contenu en cours sur les points de distribution Configuration Manager. 
 
@@ -33,13 +34,13 @@ Il obtient également des informations du serveur de site sur lequel le point de
 
 Exécutez **DPJobMgr.exe**. Le menu principal de l’outil contient les onglets suivants : 
 
-- [Connect](#bkmk_connect) (Se connecter) : Établit la connexion initiale au serveur de site principal  
+- [Connexion](#bkmk_connect) : Établit la connexion initiale au serveur de site principal  
 
-- [Overview](#bkmk_overview) (Vue d’ensemble) : Récapitule dans une vue unique tous les travaux qui s’exécutent sur tous les points de distribution  
+- [Vue d’ensemble](#bkmk_overview) : résume en un affichage unique tous les travaux qui s’exécutent sur tous les points de distribution  
 
-- [Distribution Point Info](#bkmk_dp-info) (Infos sur les points de distribution) : Sélection de plusieurs points de distribution pour les suivre et gérer un seul travail d’intérêt  
+- [Informations sur les points de distribution](#bkmk_dp-info) : sélection de plusieurs points de distribution pour les suivre et gérer un seul travail d’intérêt  
 
-- [Manage jobs](#bkmk_manage-jobs) (Gérer les travaux) : Affiche dans une seule vue plate une liste de tous les travaux et de leurs états. Manipulez les travaux, déplacez-les en haut de la liste, annulez-les ou démarrez-les manuellement.  
+- [Gérer les travaux](#bkmk_manage-jobs) : Affiche dans une seule vue plate une liste de tous les travaux et de leurs états. Manipulez les travaux, déplacez-les en haut de la liste, annulez-les ou démarrez-les manuellement.  
 
 
 ### <a name="bkmk_connect"></a> Onglet Connect (Se connecter)
@@ -53,16 +54,16 @@ Une fois que l’outil réussit à établir une connexion, une notification au b
 
 Affiche un récapitulatif de tous les travaux sur tous les points de distribution. Consultez les colonnes suivantes :  
 
-- **Distribution Point** (Point de distribution) : Liste les noms des points de distribution  
+- **Point de distribution** : répertorie les noms des points de distribution  
 
-- **Running Jobs** (Travaux en cours d’exécution) : Affiche le nombre de travaux simultanés qui s’exécutent sur un point de distribution spécifique.  
+- **Travaux en cours d’exécution** : affiche le nombre de travaux simultanés qui s’exécutent sur un point de distribution spécifique.  
 
     > [!Tip]  
     > Le nombre de distributions de logiciels simultanées est un paramètre de site. Modifiez ce paramètre dans les Propriétés du composant de distribution de logiciels.  
 
-- **Total Jobs** (Total des travaux) : Affiche le nombre de tous les travaux destinés à un point de distribution particulier. Ce nombre comprend les travaux qui s’exécutent, qui font l’objet d’une nouvelle tentative ou qui attendent d’être exécutés.  
+- **Nombre total de travaux** : affiche le nombre de tous les travaux ciblés pour un point de distribution spécifique. Ce nombre comprend les travaux qui s’exécutent, qui font l’objet d’une nouvelle tentative ou qui attendent d’être exécutés.  
 
-- **Total Retries** (Total de nouvelles tentatives) : Indique le nombre de nouvelles tentatives sur les travaux d’un point de distribution spécifique. Un nombre plus élevé peut représenter un problème général avec ce point de distribution spécifique.  
+- **Nombre total de nouvelles tentatives** : affiche le nombre de fois où des travaux ont fait l’objet d’une nouvelle tentative sur un point de distribution spécifique. Un nombre plus élevé peut représenter un problème général avec ce point de distribution spécifique.  
 
 
 > [!Tip]  
@@ -79,27 +80,27 @@ Affiche la liste de tous les points de distribution sous le site connecté. Le v
 
 Il existe huit colonnes :  
 
-- **Status Icon** (Icône d’état) : Il existe trois icônes d’état possibles :  
+- **Icône d’état** : Il existe trois icônes d’état possibles :  
 
-    - **Ready** (Prêt) : Indique qu’un travail particulier a terminé toutes les étapes de vérification. Il est prêt à être ajouté aux travaux simultanés en cours d’exécution. Les travaux avec cet état sont généralement dans une phase d’attente. En effet, ils attendent la fin des processus en cours d’exécution pour libérer de l’espace pour eux.  
+    - **Prêt** : indique qu’un travail spécifique a terminé toutes les étapes de vérification. Il est prêt à être ajouté aux travaux simultanés en cours d’exécution. Les travaux avec cet état sont généralement dans une phase d’attente. En effet, ils attendent la fin des processus en cours d’exécution pour libérer de l’espace pour eux.  
 
-    - **Running** (En cours d’exécution) : Indique qu’un travail particulier est en cours d’exécution sur un point de distribution. Pour les travaux en cours d’exécution longs (gros paquets), il y a généralement une progression (%) jusqu’à la fin. Il montre ce pourcentage dans la colonne **Progress** de cette vue. Pour les petits paquets, la colonne **Progress** peut rester vide. Le travail peut être déjà fini avant qu’il ne reçoive l’état du point de distribution distant.  
+    - **En cours d’exécution** : indique qu’un travail spécifique est actuellement en cours d’exécution sur un point de distribution. Pour les travaux en cours d’exécution longs (gros paquets), il y a généralement une progression (%) jusqu’à la fin. Il montre ce pourcentage dans la colonne **Progress** de cette vue. Pour les petits paquets, la colonne **Progress** peut rester vide. Le travail peut être déjà fini avant qu’il ne reçoive l’état du point de distribution distant.  
 
-    - **Retry** (Nouvelle tentative) : Indique qu’un travail particulier a échoué et est désormais dans un état de nouvelle tentative. Ce travail est retenté après l’intervalle de nouvelle tentative. Cet intervalle est configurable et défini sur 30 minutes par défaut.  
+    - **Nouvelle tentative** : indique qu’un travail spécifique a échoué et est désormais dans un état de nouvelle tentative. Ce travail est retenté après l’intervalle de nouvelle tentative. Cet intervalle est configurable et défini sur 30 minutes par défaut.  
 
-- **Software** (Logiciel) : Nom du paquet qui est destiné à un point de distribution spécifique  
+- **Logiciels** : nom du package ciblé pour un point de distribution spécifique  
 
-- **Package ID** (ID de paquet) : ID du paquet qui est destiné à un point de distribution spécifique  
+- **ID du package** : ID du package ciblé pour un point de distribution spécifique  
 
-- **Size** (Taille) : Taille du paquet en Ko  
+- **Taille** : taille du package mesurée en Ko  
 
-- **Progress** (Progression) : Pourcentage d’achèvement du travail. Pour plus d’informations, consultez la description de l’icône d’état **Running**.  
+- **Progression** : pourcentage d’achèvement du travail. Pour plus d’informations, consultez la description de l’icône d’état **Running**.  
 
-- **Start/Restart Time** (Heure de démarrage/redémarrage) : Pour un travail en cours d’exécution, cette valeur est l’heure de démarrage (vert). Pour un travail de nouvelle tentative, cette valeur est l’heure de nouvelle tentative du travail.  
+- **Heure de démarrage/redémarrage** : pour un travail en cours d’exécution, cette valeur est l’heure de démarrage (vert). Pour un travail de nouvelle tentative, cette valeur est l’heure de nouvelle tentative du travail.  
 
-- **Retries** (Nouvelles tentatives) : Nombre de nouvelles tentatives sur ce paquet.  
+- **Nouvelles tentatives** : nombre de nouvelles tentatives effectuées pour ce package.  
 
-- **Distribution Point Name** (Nom du point de distribution) : Nom de domaine complet (FQDN) du point de distribution  
+- **Nom du point de distribution** : le nom de domaine complet (FQDN) du point de distribution  
 
 > [!Tip]  
 > - Pour trier chaque colonne sous cet onglet, cliquez sur le nom de la colonne.  
@@ -115,20 +116,20 @@ Il existe huit colonnes :
 
 Affiche dans une seule vue plate une liste de tous les travaux et de leurs états. Il contient les mêmes huit colonnes que l’[onglet Distribution Point Info](#bkmk_dp-info). Dans cette vue, cliquez avec le bouton droit sur les travaux pour les actions suivantes :  
 
-- **Run** (Exécuter) : Démarre un travail qui se trouve dans un état autre que l’état Running  
+- **Exécuter**: démarre un travail dont l’état n’est pas en cours d’exécution  
 
-- **Move to Top** (Déplacer en haut) : Déplace un ou plusieurs travaux en haut de la file d’attente. Cette action peut entraîner l’exécution immédiate des travaux. Un travail de priorité inférieure peut être interrompu en raison de cette action.  
+- **Déplacer en haut** : déplace un ou plusieurs travaux en haut de la file d’attente. Cette action peut entraîner l’exécution immédiate des travaux. Un travail de priorité inférieure peut être interrompu en raison de cette action.  
 
-- **Move Up** (Monter) : Déplace un travail particulier une ligne au-dessus. Un travail de priorité inférieure peut interrompre son exécution en raison de cette action.  
+- **Monter** : déplace un travail spécifique une ligne au-dessus. Un travail de priorité inférieure peut interrompre son exécution en raison de cette action.  
 
-- **Move Down** (Descendre) : Déplace un travail particulier une ligne en dessous.  
+- **Descendre** : déplace un travail spécifique une ligne en dessous.  
 
-- **Move to Bottom** (Déplacer en bas) : Déplace un ou plusieurs travaux en bas de la file d’attente.  
+- **Déplacer en bas** : déplace un ou plusieurs travaux en bas de la file d’attente.  
 
     > [!Tip]  
     > Faites glisser les travaux dans la liste pour les déplacer.  
 
-- **Cancel** (Annuler) : Tente d’annuler un ou plusieurs travaux.  
+- **Annuler** : essaie d’annuler un ou plusieurs travaux.  
 
     > [!Note]  
     > Vous ne pouvez pas annuler les travaux quand ils touchent à leur fin. Si le serveur de site est également un point de distribution, vous ne pouvez pas annuler les travaux sur le serveur de site.  

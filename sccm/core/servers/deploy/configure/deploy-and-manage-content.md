@@ -10,16 +10,17 @@ ms.assetid: d50dcca0-4419-449d-a487-73abcadf328f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c6a2a69047a8fee5ab0c1f4f0f13197178334f05
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e27dd4479b4bb575cfc5c4a5e03c4252535f835b
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342186"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56136964"
 ---
 # <a name="deploy-and-manage-content-for-system-center-configuration-manager"></a>Déployer et gérer du contenu pour System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Après avoir installé des points de distribution pour System Center Configuration Manager, vous pouvez commencer à y déployer du contenu. En règle générale, le contenu est transféré aux points de distribution via le réseau, mais il existe d’autres options pour placer du contenu aux points de distribution. Une fois le contenu transféré vers un point de distribution, vous pouvez mettre à jour, redistribuer, supprimer et valider ce contenu sur les points de distribution.  
 
@@ -52,21 +53,21 @@ Pour distribuer du contenu vers les points de distribution, procédez comme suit
 
 2.  Dans l'espace de travail **Bibliothèque de logiciels** , sélectionnez l'une des étapes suivantes pour le type de contenu que vous souhaitez distribuer :  
 
-    -   **Applications** : Développez **Gestion d’applications** > **Applications**, puis sélectionnez les applications à distribuer.  
+    -   **Applications** : Développez **Gestion d’applications** > **Applications**, puis sélectionnez les applications que vous souhaitez distribuer.  
 
-    -   **Packages** : Développez **Gestion d’applications** >  **Packages**, puis sélectionnez les packages à distribuer.  
+    -   **Packages** : Développez **Gestion d’applications** >  **Packages**, puis sélectionnez les packages que vous souhaitez distribuer.  
 
-    -   **Packages de déploiement** : Développez **Mises à jour logicielles** >  **Packages de déploiement**, puis sélectionnez les packages de déploiement à distribuer.  
+    -   **Packages de déploiement** : Développez **Mises à jour de logiciel** >  **Packages de déploiement**, puis sélectionnez les packages de déploiement que vous souhaitez distribuer.  
 
-    -   **Packages de pilotes** : Développez **Systèmes d’exploitation** >  **Packages de pilotes**, puis sélectionnez les packages de pilotes à distribuer.  
+    -   **Packages de pilotes** : Développez **Systèmes d’exploitation** >  **Packages de pilotes**, puis sélectionnez les packages de pilotes que vous souhaitez distribuer.  
 
-    -   **Images de système d’exploitation** : Développez **Systèmes d’exploitation** >  **Images du système d’exploitation**, puis sélectionnez les images de système d’exploitation à distribuer.  
+    -   **Images du système d’exploitation** : Développez **Systèmes d’exploitation** >  **Images du système d’exploitation**, puis sélectionnez les images du système d’exploitation que vous souhaitez distribuer.  
 
-    -   **Programmes de système d’exploitation** : Développez **Systèmes d’exploitation** > **Programmes d’installation de système d’exploitation**, puis sélectionnez les programmes d’installation de système d’exploitation à distribuer.  
+    -   **Programmes d’installation de système d’exploitation** : Développez **Systèmes d’exploitation** > **Programmes d’installation de système d’exploitation**, puis sélectionnez les programmes d’installation de système d’exploitation que vous souhaitez distribuer.  
 
-    -   **Images de démarrage** : Développez **Systèmes d’exploitation** >  **Images de démarrage**, puis sélectionnez les images de démarrage à distribuer.  
+    -   **Images de démarrage** : Développez **Systèmes d’exploitation** >  **Images de démarrage**, puis sélectionnez les images de démarrage à distribuer.  
 
-    -   **Séquences de tâches** : Développez **Systèmes d’exploitation** >  **Séquences de tâches**, puis sélectionnez la séquence de tâches à distribuer. Les séquences de tâches ne contiennent pas de contenu, mais elles comportent des dépendances de contenu associées qui sont distribuées.  
+    -   **Séquences de tâches** : Développez **Systèmes d’exploitation** >  **Séquences de tâches**, puis sélectionnez la séquence de tâches que vous souhaitez distribuer. Les séquences de tâches ne contiennent pas de contenu, mais elles comportent des dépendances de contenu associées qui sont distribuées.  
 
         > [!NOTE]  
         >  Si vous modifiez la séquence de tâches, vous devez redistribuer le contenu.  
@@ -85,14 +86,14 @@ Pour distribuer du contenu vers les points de distribution, procédez comme suit
 
 6.  Sur la page **Destination du contenu** , cliquez sur **Ajouter**, choisissez l'une des opérations suivantes, puis suivez l'étape associée :  
 
-    -   **Regroupements**: sélectionnez **Regroupements d'utilisateurs** ou **Regroupements d'appareils**, cliquez sur le regroupement associé à un ou plusieurs groupes de points de distribution, puis sur **OK**.  
+    -   **Regroupements** : Sélectionnez **Regroupements d’utilisateurs** ou **Regroupements de périphériques**, cliquez sur le regroupement associé à un ou plusieurs groupes de points de distribution, puis sur **OK**.  
 
         > [!NOTE]  
         >  Seuls les regroupements qui sont associés à un groupe de points de distribution sont affichés. Pour plus d’informations sur l’association des regroupements et des groupes de points de distribution, consultez [Gérer les groupes de points de distribution](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_manage) dans la rubrique [Installer et configurer des points de distribution pour System Center Configuration Manager](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md).  
 
-    -   **Point de distribution**: sélectionnez un point de distribution existant, puis cliquez sur **OK**. Les points de distribution ayant précédemment reçu le contenu ne sont pas affichés.  
+    -   **Point de distribution** : Sélectionnez un point de distribution existant, puis cliquez sur **OK**. Les points de distribution ayant précédemment reçu le contenu ne sont pas affichés.  
 
-    -   **Groupe de points de distribution**: sélectionnez un groupe de points de distribution existant, puis cliquez sur **OK**. Les groupes de points de distribution ayant précédemment reçu le contenu ne sont pas affichés.  
+    -   **Groupe de points de distribution** : Sélectionnez un groupe de points de distribution existant, puis cliquez sur **OK**. Les groupes de points de distribution ayant précédemment reçu le contenu ne sont pas affichés.  
 
     Lorsque vous avez terminé d'ajouter des destinations de contenu, cliquez sur **Suivant**.  
 
@@ -127,7 +128,7 @@ Pour plus d’informations sur le moment propice à la préparation des fichiers
 
 Utilisez les sections suivantes pour préparer du contenu.  
 
-###  <a name="BKMK_CreatePrestagedContentFile"></a> Étape 1 : Créer un fichier de contenu préparé  
+###  <a name="BKMK_CreatePrestagedContentFile"></a> Étape 1 : Créer un fichier de contenu préparé  
  Vous pouvez créer un fichier de contenu préparé et compressé qui contient les fichiers et les métadonnées associées pour le contenu que vous sélectionnez dans la console Configuration Manager. Pour créer un fichier de contenu préparé, procédez comme suit.  
 
 ##### <a name="to-create-a-prestaged-content-file"></a>Pour créer un fichier de contenu préparé  
@@ -136,26 +137,26 @@ Utilisez les sections suivantes pour préparer du contenu.
 
 2.  Dans l'espace de travail **Bibliothèque de logiciels** , sélectionnez l'une des étapes suivantes pour le type de contenu que vous souhaitez préparer :  
 
-    -   **Applications**: développez **Gestion d'applications**, cliquez sur **Applications**, puis sélectionnez les applications que vous souhaitez préparer.  
+    -   **Applications** : Développez **Gestion d’applications**, cliquez sur **Applications**, puis sélectionnez les applications que vous souhaitez préparer.  
 
-    -   **Packages**: développez **Gestion d'applications**, cliquez sur **Packages**, puis sélectionnez les packages que vous souhaitez préparer.  
+    -   **Packages** : Développez **Gestion d’applications**, cliquez sur **Packages**, puis sélectionnez les packages que vous souhaitez préparer.  
 
-    -   **Packages de pilotes**: développez **Systèmes d'exploitation**, cliquez sur **Packages de pilotes**, puis sélectionnez les packages de pilotes que vous souhaitez préparer.  
+    -   **Packages de pilotes** : Développez **Systèmes d’exploitation**, cliquez sur **Packages de pilotes**, puis sélectionnez les packages de pilotes que vous souhaitez préparer.  
 
-    -   **Images du système d'exploitation**: développez **Systèmes d'exploitation**, cliquez sur **Images du système d'exploitation**, puis sélectionnez les images du système d'exploitation que vous souhaitez préparer.  
+    -   **Images du système d’exploitation** : Développez **Systèmes d’exploitation**, cliquez sur **Images du système d’exploitation**, puis sélectionnez les images du système d’exploitation que vous souhaitez préparer.  
 
-    -   **Programmes d'installation de système d'exploitation**: développez **Systèmes d'exploitation**, cliquez sur **Programmes d'installation de système d'exploitation**, puis sélectionnez les programmes d'installation de système d'exploitation que vous souhaitez préparer.  
+    -   **Programmes d’installation de système d’exploitation** : Développez **Systèmes d’exploitation**, cliquez sur **Programmes d’installation de système d’exploitation**, puis sélectionnez les programmes d’installation de système d’exploitation que vous souhaitez préparer.  
 
-    -   **Images de démarrage**: développez **Systèmes d'exploitation**, cliquez sur **Images de démarrage**, puis sélectionnez les images de démarrage que vous souhaitez préparer.  
+    -   **Images de démarrage** : Développez **Systèmes d’exploitation**, cliquez sur **Images de démarrage**, puis sélectionnez les images de démarrage que vous souhaitez préparer.  
 
-    -   **Séquences de tâches**: Développez **Systèmes d'exploitation**, cliquez sur **Séquences de tâches**, puis sélectionnez les séquences de tâches que vous souhaitez préparer.  
+    -   **Séquences de tâches** : Développez **Systèmes d’exploitation**, cliquez sur **Séquences de tâches**, puis sélectionnez la séquence de tâches que vous souhaitez préparer.  
 
 3.  Dans l'onglet **Accueil** , dans le groupe **Déploiement** , cliquez sur **Créer un fichier de contenu préparé**. L'Assistant Création du fichier de contenu préparé s'ouvre.  
 
     > [!NOTE]  
-    >  **Pour les applications :** Sous l’onglet **Accueil**, dans le groupe **Application**, cliquez sur **Créer un fichier de contenu préparé**.  
+    >  **Pour les applications :** Dans l’onglet **Accueil**, dans le groupe **Application**, cliquez sur **Créer un fichier de contenu préparé**.  
     >   
-    >  **Pour les packages :** Sous l’onglet **Accueil**, dans le groupe &lt;*nom_package*>, cliquez sur **Créer un fichier de contenu préparé**.  
+    >  **Pour les packages :** Dans l’onglet **Accueil**, dans le groupe &lt;*PackageName*>, cliquez sur **Créer un fichier de contenu préparé**.  
 
 4.  Sur la page **Général** , cliquez sur **Parcourir**, choisissez l'emplacement pour le fichier de contenu préparé, spécifiez un nom pour le fichier, puis cliquez sur **Enregistrer**. Vous utilisez ce fichier de contenu préparé sur des serveurs de site principaux, des serveurs de site secondaires ou des points de distribution afin d'importer le contenu et les métadonnées.  
 
@@ -173,7 +174,7 @@ Utilisez les sections suivantes pour préparer du contenu.
 
 11. Sur la page **Dernière étape** , vérifiez que le fichier de contenu préparé a été créé correctement, puis cliquez sur **Fermer**.  
 
-###  <a name="BKMK_AssignContentToDistributionPoint"></a> Étape 2 : Affecter le contenu aux points de distribution  
+###  <a name="BKMK_AssignContentToDistributionPoint"></a> Étape 2 : Affecter le contenu aux points de distribution  
  Après avoir préparé le fichier de contenu, attribuez le contenu aux points de distribution.  
 
 > [!NOTE]  
@@ -190,19 +191,19 @@ Utilisez les sections suivantes pour préparer du contenu.
 
 2.  Dans l'espace de travail **Bibliothèque de logiciels** , sélectionnez l'une des étapes suivantes pour le type de contenu que vous avez sélectionné lorsque vous avez créé le fichier de contenu préparé :  
 
-    -   **Applications**: développez **Gestion d'applications**, cliquez sur **Applications**, puis sélectionnez les applications que vous avez préparées.  
+    -   **Applications** : Développez **Gestion d’applications**, cliquez sur **Applications**, puis sélectionnez les applications que vous avez préparées.  
 
-    -   **Packages**: développez **Gestion d'applications**, cliquez sur **Packages**, puis sélectionnez les Packages que vous avez préparés.  
+    -   **Packages** : Développez **Gestion d’applications**, cliquez sur **Packages**, puis sélectionnez les packages que vous avez préparés.  
 
-    -   **Packages de déploiement**: développez **Mises à jour logicielles**, cliquez sur **Packages de déploiement**, puis sélectionnez les packages de déploiement que vous avez préparés.  
+    -   **Packages de déploiement** : Développez **Mises à jour de logiciel**, cliquez sur **Packages de déploiement**, puis sélectionnez les packages de déploiement que vous avez préparés.  
 
-    -   **Packages de pilotes**: développez **Systèmes d'exploitation**, cliquez sur **Packages de pilotes**, puis sélectionnez les packages de pilotes que vous avez préparés.  
+    -   **Packages de pilotes** : Développez **Systèmes d’exploitation**, cliquez sur **Packages de pilotes**, puis sélectionnez les packages de pilotes que vous avez préparés.  
 
-    -   **Images du système d'exploitation**: développez **Systèmes d'exploitation**, cliquez sur **Images du système d'exploitation**, puis sélectionnez les images du système d'exploitation que vous avez préparées.  
+    -   **Images du système d’exploitation** : Développez **Systèmes d’exploitation**, cliquez sur **Images du système d’exploitation**, puis sélectionnez les images du système d’exploitation que vous avez préparées.  
 
-    -   **Programmes d'installation de système d'exploitation**: développez **Systèmes d'exploitation**, cliquez sur **Programmes d'installation de système d'exploitation**, puis sélectionnez les programmes d'installation de système d'exploitation que vous avez préparés.  
+    -   **Programmes d’installation de système d’exploitation** : Développez **Systèmes d’exploitation**, cliquez sur **Programmes d’installation de système d’exploitation**, puis sélectionnez les programmes d’installation de système d’exploitation que vous avez préparés.  
 
-    -   **Images de démarrage**: développez **Systèmes d'exploitation**, cliquez sur **Images de démarrage**, puis sélectionnez les images de démarrage que vous avez préparées.  
+    -   **Images de démarrage** : Développez **Systèmes d’exploitation**, cliquez sur **Images de démarrage**, puis sélectionnez les images de démarrage que vous avez préparées.  
 
 3.  Dans l'onglet **Accueil** , dans le groupe **Déploiement** , cliquez sur **Distribuer du contenu**. L'Assistant Distribuer du contenu s'ouvre.  
 
@@ -218,14 +219,14 @@ Utilisez les sections suivantes pour préparer du contenu.
 
 6.  Sur la page **Destination du contenu** , cliquez sur **Ajouter**, choisissez l'une des opérations suivantes qui inclut les points de distribution à préinstaller, puis suivez l'étape associée :  
 
-    -   **Regroupements**: sélectionnez **Regroupements d'utilisateurs** ou **Regroupements d'appareils**, cliquez sur le regroupement associé à un ou plusieurs groupes de points de distribution, puis sur **OK**.  
+    -   **Regroupements** : Sélectionnez **Regroupements d’utilisateurs** ou **Regroupements de périphériques**, cliquez sur le regroupement associé à un ou plusieurs groupes de points de distribution, puis sur **OK**.  
 
         > [!NOTE]  
         >  Seuls les regroupements qui sont associés à un groupe de points de distribution sont affichés.  Pour plus d’informations, consultez [Gérer les groupes de points de distribution](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_manage) dans la rubrique [Installer et configurer des points de distribution pour System Center Configuration Manager](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md).  
 
-    -   **Point de distribution**: sélectionnez un point de distribution existant, puis cliquez sur **OK**. Les points de distribution ayant précédemment reçu le contenu ne sont pas affichés.  
+    -   **Point de distribution** : Sélectionnez un point de distribution existant, puis cliquez sur **OK**. Les points de distribution ayant précédemment reçu le contenu ne sont pas affichés.  
 
-    -   **Groupe de points de distribution**: sélectionnez un groupe de points de distribution existant, puis cliquez sur **OK**. Les groupes de points de distribution ayant précédemment reçu le contenu ne sont pas affichés.  
+    -   **Groupe de points de distribution** : Sélectionnez un groupe de points de distribution existant, puis cliquez sur **OK**. Les groupes de points de distribution ayant précédemment reçu le contenu ne sont pas affichés.  
 
     Lorsque vous avez terminé d'ajouter des destinations de contenu, cliquez sur **Suivant**.  
 
@@ -235,7 +236,7 @@ Utilisez les sections suivantes pour préparer du contenu.
 
 9. La page **Confirmation** affiche si le contenu a été bien attribué avec succès aux points de distribution. Pour surveiller la distribution de contenu, consultez [Surveiller le contenu que vous avez distribué avec System Center Configuration Manager](../../../../core/servers/deploy/configure/monitor-content-you-have-distributed.md).  
 
-###  <a name="BKMK_ExportContentFromPrestagedContentFile"></a> Étape 3 : Extraire le contenu du fichier de contenu préparé  
+###  <a name="BKMK_ExportContentFromPrestagedContentFile"></a> Étape 3 : Extraire le contenu du fichier de contenu préparé  
  Une fois que vous avez créé le fichier de contenu préparé et que vous avez attribué le contenu aux points de distribution, vous pouvez extraire les fichiers de contenu vers la bibliothèque de contenu d'un serveur de site ou d'un point de distribution. Généralement, vous avez copié le fichier de contenu préparé vers un lecteur portable, tel qu’un lecteur USB, ou gravé le contenu sur un support, tel qu’un DVD, puis vous l’avez mis à disposition à l’emplacement du serveur de site ou du point de distribution qui demande le contenu.  
 
  Pour exporter manuellement les fichiers de contenu à partir du fichier de contenu préparé à l'aide de l'outil de ligne de commande Extraire le contenu, procédez comme suit.  
@@ -293,11 +294,11 @@ Utilisez les sections suivantes pour préparer du contenu.
 
     4.  Dans l'onglet **Général** , vérifiez que la case **Activer ce point de distribution pour le contenu préparé** est décochée.  
 
-2.  Créez le fichier de contenu préparé en suivant la section [Étape 1 : Créer un fichier de contenu préparé](#BKMK_CreatePrestagedContentFile) dans cette rubrique.  
+2.  Créez le fichier de contenu préparé en suivant la section [Étape 1 : créer une section de fichier de contenu préparé](#BKMK_CreatePrestagedContentFile) dans cette rubrique.  
 
-3.  Affectez le contenu au point de distribution en suivant la section [Étape 2 : Affecter le contenu aux points de distribution](#BKMK_AssignContentToDistributionPoint) dans cette rubrique.  
+3.  Assignez le contenu au point de distribution en suivant la section [Étape 2 : assigner la section de contenu au point de distribution](#BKMK_AssignContentToDistributionPoint) dans cette rubrique.  
 
-4.  Sur le serveur de site, extrayez le contenu du fichier de contenu préparé en suivant la section [Étape 3 : Extraire le contenu du fichier de contenu préparé](#BKMK_ExportContentFromPrestagedContentFile) dans cette rubrique.  
+4.  Sur le serveur de site, extrayez le contenu du fichier de contenu préparé en suivant la section [Étape 3 : extraire le contenu de la section du fichier de contenu préparé](#BKMK_ExportContentFromPrestagedContentFile) dans cette rubrique.  
 
     > [!NOTE]  
     >  Lorsque le point de distribution est situé sur un site secondaire, patientez au moins 10 minutes, puis utilisez une console Configuration Manager connectée au site principal parent pour affecter le contenu au point de distribution sur le site secondaire.  
@@ -324,19 +325,19 @@ Si l’emplacement du fichier source d’un déploiement est mis à jour par l�
 
 2.  Dans l'espace de travail **Bibliothèque de logiciels** , sélectionnez l'une des étapes suivantes pour le type de contenu que vous souhaitez distribuer :  
 
-    -   **Applications** : Développez **Gestion d’applications** > **Applications**, puis sélectionnez les applications à distribuer. Cliquez sur l'onglet **Types de déploiement** , puis sélectionnez le type de déploiement à mettre à jour.  
+    -   **Applications** : Développez **Gestion d’applications** > **Applications**, puis sélectionnez les applications que vous souhaitez distribuer. Cliquez sur l'onglet **Types de déploiement** , puis sélectionnez le type de déploiement à mettre à jour.  
 
-    -   **Packages** : Développez **Gestion d’applications** > **Packages**, puis sélectionnez les packages à mettre à jour.  
+    -   **Packages** : Développez **Gestion d’applications** > **Packages**, puis sélectionnez les packages à mettre à jour.  
 
-    -   **Packages de déploiement** : Développez **Mises à jour logicielles** > **Packages de déploiement**, puis sélectionnez les packages de déploiement à mettre à jour.  
+    -   **Packages de déploiement** : Développez **Mises à jour de logiciel** > **Packages de déploiement**, puis sélectionnez les packages de déploiement que vous souhaitez mettre à jour.  
 
-    -   **Packages de pilotes** : Développez **Systèmes d’exploitation** > **Packages de pilotes**, puis sélectionnez les packages de pilotes à mettre à jour.  
+    -   **Packages de pilotes** : Développez **Systèmes d’exploitation** > **Packages de pilotes**, puis sélectionnez les packages de pilotes que vous souhaitez mettre à jour.  
 
-    -   **Images de système d’exploitation** : Développez **Systèmes d’exploitation** > **Images du système d’exploitation**, puis sélectionnez les images de système d’exploitation à mettre à jour.  
+    -   **Images du système d’exploitation** : Développez **Systèmes d’exploitation** > **Images du système d’exploitation**, puis sélectionnez les images du système d’exploitation que vous souhaitez mettre à jour.  
 
-    -   **Programmes de système d’exploitation** : Développez **Systèmes d’exploitation** > **Programmes d’installation de système d’exploitation**, puis sélectionnez les programmes d’installation de système d’exploitation à mettre à jour.  
+    -   **Programmes d’installation de système d’exploitation** : Développez **Systèmes d’exploitation** > **Programmes d’installation du système d’exploitation**, puis sélectionnez les programmes d’installation du système d’exploitation que vous souhaitez mettre à jour.  
 
-    -   **Images de démarrage** : Développez **Systèmes d’exploitation** >  **Images de démarrage**, puis sélectionnez les images de démarrage à mettre à jour.  
+    -   **Images de démarrage** : Développez **Systèmes d’exploitation** >  **Images de démarrage**, puis sélectionnez les images de démarrage que vous souhaitez mettre à jour.  
 
 3.  Dans l'onglet **Accueil** , cliquez sur le groupe **Déploiement** , cliquez sur **Mettre à jour les points de distribution**, puis cliquez sur **OK** pour confirmer la mise à jour du contenu.  
 
@@ -362,19 +363,19 @@ Vous pouvez redistribuer un package pour copier tous les fichiers de contenu dan
 
 2.  Dans l'espace de travail **Bibliothèque de logiciels** , sélectionnez l'une des étapes suivantes pour le type de contenu que vous souhaitez distribuer :  
 
-    -   **Applications** : Développez **Gestion d’applications** >  **Applications**, puis sélectionnez l’application à redistribuer.  
+    -   **Applications** : Développez **Gestion d’applications** >  **Applications**, puis sélectionnez l’application que vous souhaitez redistribuer.  
 
-    -   **Packages** : Développez **Gestion d’applications** > **Packages**, puis sélectionnez le package à redistribuer.  
+    -   **Packages** : Développez **Gestion d’applications** > **Packages**, puis sélectionnez le package que vous souhaitez redistribuer.  
 
-    -   **Packages de déploiement** : Développez **Mises à jour logicielles** >  **Packages de déploiement**, puis sélectionnez le package de déploiement à redistribuer.  
+    -   **Packages de déploiement** : Développez **Mises à jour de logiciel** >  **Packages de déploiement**, puis sélectionnez le package de déploiement que vous souhaitez redistribuer.  
 
-    -   **Packages de pilotes** : Développez **Systèmes d’exploitation** > **Packages de pilotes**, puis sélectionnez le package de pilote à redistribuer.  
+    -   **Packages de pilotes** : Développez **Systèmes d’exploitation** > **Packages de pilotes**, puis sélectionnez le package de pilotes que vous souhaitez redistribuer.  
 
-    -   **Images de système d’exploitation** : Développez **Systèmes d’exploitation** > **Images du système d’exploitation**, puis sélectionnez l’image du système d’exploitation à redistribuer.  
+    -   **Images du système d’exploitation** : Développez **Systèmes d’exploitation** > **Images du système d’exploitation**, puis sélectionnez l’image du système d’exploitation que vous souhaitez redistribuer.  
 
-    -   **Programmes de système d’exploitation** : Développez **Systèmes d’exploitation** > **Programmes d’installation de système d’exploitation**, puis sélectionnez le programme d’installation de système d’exploitation à redistribuer.  
+    -   **Programmes d’installation de système d’exploitation** : Développez **Systèmes d’exploitation** > **Programmes d’installation du système d’exploitation**, puis sélectionnez le programme d’installation du système d’exploitation que vous souhaitez redistribuer.  
 
-    -   **Images de démarrage** : Développez **Systèmes d’exploitation** >  **Images de démarrage**, puis sélectionnez l’image de démarrage à redistribuer.  
+    -   **Images de démarrage** : Développez **Systèmes d’exploitation** >  **Images de démarrage**, puis sélectionnez l’image de démarrage que vous souhaitez redistribuer.  
 
 3.  Dans l'onglet **Accueil** , dans le groupe **Propriétés** , cliquez sur **Propriétés**.  
 
@@ -426,19 +427,19 @@ Cependant, si le contenu est associé à un autre package qui a été distribué
 
 2.  Dans l'espace de travail **Bibliothèque de logiciels** , sélectionnez l'une de ces étapes pour le type de contenu que vous souhaitez supprimer :  
 
-    -   **Applications** : Développez **Gestion d’applications** > **Applications**, puis sélectionnez l’application à supprimer.  
+    -   **Applications** : Développez **Gestion d’applications** > **Applications**, puis sélectionnez l’application que vous souhaitez supprimer.  
 
-    -   **Packages** : Développez **Gestion d’applications** > **Packages**, puis sélectionnez le package à supprimer.  
+    -   **Packages** : Développez **Gestion d’applications** > **Packages**, puis sélectionnez le package que vous souhaitez supprimer.  
 
-    -   **Packages de déploiement** : Développez **Mises à jour logicielles** > **Packages de déploiement**, puis sélectionnez le package de déploiement à supprimer.  
+    -   **Packages de déploiement** : Développez **Mises à jour de logiciel** > **Packages de déploiement**, puis sélectionnez le package de déploiement que vous souhaitez supprimer.  
 
-    -   **Packages de pilotes** : Développez **Systèmes d’exploitation** > **Packages de pilotes**, puis sélectionnez le package de pilotes à supprimer.  
+    -   **Packages de pilotes** : Développez **Systèmes d’exploitation** > **Packages de pilotes**, puis sélectionnez le package de pilotes que vous souhaitez supprimer.  
 
-    -   **Images de système d’exploitation** : Développez **Systèmes d’exploitation** > **Images du système d’exploitation**, puis sélectionnez l’image du système d’exploitation à supprimer.  
+    -   **Images du système d’exploitation** : Développez **Systèmes d’exploitation** > **Images du système d’exploitation**, puis sélectionnez l’image du système d’exploitation que vous souhaitez supprimer.  
 
-    -   **Programmes de système d’exploitation** : Développez **Systèmes d’exploitation** > **Programmes d’installation de système d’exploitation**, puis sélectionnez le programme d’installation de système d’exploitation à supprimer.  
+    -   **Programmes d’installation de système d’exploitation** : Développez **Systèmes d’exploitation** > **Programmes d’installation du système d’exploitation**, puis sélectionnez le programme d’installation du système d’exploitation que vous souhaitez supprimer.  
 
-    -   **Images de démarrage** : Développez **Systèmes d’exploitation** > **Images de démarrage**, puis sélectionnez l’image de démarrage à supprimer.  
+    -   **Images de démarrage** : Développez **Systèmes d’exploitation** > **Images de démarrage**, puis sélectionnez l’image de démarrage que vous souhaitez supprimer.  
 
 3.  Dans l'onglet **Accueil** , dans le groupe **Propriétés** , cliquez sur **Propriétés**.  
 
@@ -491,19 +492,19 @@ Le processus de validation du contenu vérifie l'intégrité des fichiers de con
 
 2.  Dans l'espace de travail **Bibliothèque de logiciels** , sélectionnez l'une de ces étapes pour le type de contenu que vous souhaitez valider :  
 
-    -   **Applications** : Développez **Gestion d’applications** > **Applications**, puis sélectionnez l’application à valider.  
+    -   **Applications** : Développez **Gestion d’applications** > **Applications**, puis sélectionnez l’application que vous souhaitez valider.  
 
-    -   **Packages** : Développez **Gestion d’applications** > **Packages**, puis sélectionnez le package à valider.  
+    -   **Packages** : Développez **Gestion d’applications** > **Packages**, puis sélectionnez le package que vous souhaitez valider.  
 
-    -   **Packages de déploiement** : Développez **Mises à jour logicielles** > **Packages de déploiement**, puis sélectionnez le package de déploiement à valider.  
+    -   **Packages de déploiement** : Développez **Mises à jour de logiciel** > **Packages de déploiement**, puis sélectionnez le package de déploiement que vous souhaitez valider.  
 
-    -   **Packages de pilotes** : Développez **Systèmes d’exploitation** > **Packages de pilotes**, puis sélectionnez le package de pilotes à valider.  
+    -   **Packages de pilotes** : Développez **Systèmes d’exploitation** > **Packages de pilotes**, puis sélectionnez le package de pilotes que vous souhaitez valider.  
 
-    -   **Images de système d’exploitation** : Développez **Systèmes d’exploitation** > **Images du système d’exploitation**, puis sélectionnez l’image du système d’exploitation à valider.  
+    -   **Images du système d’exploitation** : Développez **Systèmes d’exploitation** > **Images du système d’exploitation**, puis sélectionnez l’image du système d’exploitation que vous souhaitez valider.  
 
-    -   **Programmes de système d’exploitation** : Développez **Systèmes d’exploitation** >  **Programmes d’installation de système d’exploitation**, puis sélectionnez le programme d’installation de système d’exploitation à valider.  
+    -   **Programmes d’installation de système d’exploitation** : Développez **Systèmes d’exploitation** >  **Programmes d’installation du système d’exploitation**, puis sélectionnez le programme d’installation du système d’exploitation que vous souhaitez valider.  
 
-    -   **Images de démarrage** : Développez **Systèmes d’exploitation** > **Images de démarrage**, puis sélectionnez l’image de démarrage à préparer.  
+    -   **Images de démarrage** : Développez **Systèmes d’exploitation** > **Images de démarrage**, puis sélectionnez l’image de démarrage que vous souhaitez valider.  
 
 3.  Dans l'onglet **Accueil** , dans le groupe **Propriétés** , cliquez sur **Propriétés**.  
 

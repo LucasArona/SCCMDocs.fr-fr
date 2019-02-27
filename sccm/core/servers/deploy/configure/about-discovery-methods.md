@@ -10,25 +10,26 @@ ms.assetid: ed931751-18f2-4230-a09e-a0a329fbfa1c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 51823b2e424450352d55402f16a8c05211eb77c5
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 59376c5b9846e32cc8b63666956424a11211f1c0
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342118"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56130790"
 ---
 # <a name="about-discovery-methods-for-system-center-configuration-manager"></a>À propos des méthodes de découverte pour System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Les méthodes de découverte de Configuration Manager permettent de rechercher différents appareils sur votre réseau, des appareils et des utilisateurs dans Active Directory, ou des utilisateurs dans Azure AD (Azure Active Directory). Pour utiliser efficacement une méthode de découverte, vous devez en comprendre les configurations disponibles et les limitations.  
 
 
 
 ##  <a name="bkmk_aboutForest"></a> Découverte de forêts Active Directory  
- **Configurable :** Oui  
+ **Configurable :** Oui  
 
- **Activée par défaut :** Non  
+ **Activé par défaut :** Non  
 
  **Comptes** que vous pouvez utiliser pour exécuter cette méthode :  
 
@@ -50,7 +51,7 @@ Utilisez la découverte de forêts Active Directory pour :
 
 Vous pouvez gérer la découverte de forêts Active Directory dans la console Active Directory. Accédez à l’espace de travail **Administration** et développez **Configuration de la hiérarchie**.   
 
--   **Méthodes de découverte** : Activez la découverte de forêts Active Directory pour l’exécution sur le site de niveau supérieur de votre hiérarchie. Vous pouvez également spécifier un calendrier simple pour exécuter la découverte. Configurez-la pour créer automatiquement des limites à partir des sous-réseaux IP et des sites Active Directory qui sont découverts. La découverte de forêts Active Directory ne peut pas s'exécuter sur un site principal enfant ou un site secondaire.  
+-   **Méthodes de découverte** : Active l’exécution de la découverte de forêts Active Directory au site de niveau supérieur de votre hiérarchie. Vous pouvez également spécifier un calendrier simple pour exécuter la découverte. Configurez-la pour créer automatiquement des limites à partir des sous-réseaux IP et des sites Active Directory qui sont découverts. La découverte de forêts Active Directory ne peut pas s'exécuter sur un site principal enfant ou un site secondaire.  
 
 -   **Forêts Active Directory** : Configurez les forêts supplémentaires à découvrir, spécifiez chaque compte de forêt Active Directory et configurez la publication de chaque forêt. Surveillez le processus de découverte. Ajoutez des sous-réseaux IP ainsi que des sites Active Directory à Configuration Manager en tant que limites et membres des groupes de limites.  
 
@@ -81,9 +82,9 @@ Pour plus d’informations sur la configuration de cette méthode de découverte
 
 
 ##  <a name="bkmk_aboutGroup"></a> Découverte de groupes Active Directory  
-**Configurable :** Oui  
+**Configurable :** Oui  
 
-**Activée par défaut :** Non  
+**Activé par défaut :** Non  
 
 **Comptes** que vous pouvez utiliser pour exécuter cette méthode :  
 
@@ -108,9 +109,9 @@ La découverte de groupes Active Directory ne prend pas en charge les attributs 
 
 Vous pouvez configurer les étendues de découverte suivantes, qui contrôlent la manière dont cette méthode recherche des informations :  
 
--   **Emplacement**: Utilisez un emplacement si vous souhaitez rechercher un ou plusieurs conteneurs Active Directory. Cette option d’étendue prend en charge une recherche récursive des conteneurs Active Directory spécifiés. Ce processus recherche également dans chaque conteneur enfant sous le conteneur que vous spécifiez. Il continue jusqu’à ne plus trouver de conteneur enfant.  
+-   **Emplacement** : Utilisez un emplacement si vous souhaitez rechercher un ou plusieurs conteneurs Active Directory. Cette option d’étendue prend en charge une recherche récursive des conteneurs Active Directory spécifiés. Ce processus recherche également dans chaque conteneur enfant sous le conteneur que vous spécifiez. Il continue jusqu’à ne plus trouver de conteneur enfant.  
 
--   **Groupes**: Utilisez les groupes si vous souhaitez rechercher un ou plusieurs groupes Active Directory spécifiques. Vous pouvez configurer **Domaine Active Directory** de manière à utiliser le domaine et la forêt par défaut ou limiter la recherche à un contrôleur de domaine individuel. En outre, vous pouvez spécifier un ou plusieurs groupes à rechercher. Si vous ne spécifiez pas au moins un groupe, tous les groupes trouvés à l'emplacement **Domaine Active Directory** spécifié sont recherchés.  
+-   **Groupes** : Utilisez les groupes si vous souhaitez rechercher un ou plusieurs groupes Active Directory spécifiques. Vous pouvez configurer **Domaine Active Directory** de manière à utiliser le domaine et la forêt par défaut ou limiter la recherche à un contrôleur de domaine individuel. En outre, vous pouvez spécifier un ou plusieurs groupes à rechercher. Si vous ne spécifiez pas au moins un groupe, tous les groupes trouvés à l'emplacement **Domaine Active Directory** spécifié sont recherchés.  
 
 > [!CAUTION]  
 >  Quand vous configurez une étendue de découverte, choisissez uniquement les groupes que vous devez découvrir. En effet, la découverte de groupes Active Directory tente de découvrir chaque membre de chaque groupe dans l’étendue de découverte. La découverte de grands groupes peut demander l'utilisation extensive de bande passante et de ressources Active Directory.  
@@ -125,9 +126,9 @@ Pour plus d’informations sur la configuration de cette méthode de découverte
 
 
 ##  <a name="bkmk_aboutSystem"></a> Découverte de systèmes Active Directory  
-**Configurable :** Oui  
+**Configurable :** Oui  
 
-**Activée par défaut :** Non  
+**Activé par défaut :** Non  
 
 **Comptes** que vous pouvez utiliser pour exécuter cette méthode :  
 
@@ -165,9 +166,9 @@ Pour plus d’informations sur la configuration de cette méthode de découverte
 
 
 ##  <a name="bkmk_aboutUser"></a> Découverte d’utilisateurs Active Directory  
-**Configurable :** Oui  
+**Configurable :** Oui  
 
-**Activée par défaut :** Non  
+**Activé par défaut :** Non  
 
 **Comptes** que vous pouvez utiliser pour exécuter cette méthode :  
 
@@ -215,9 +216,9 @@ Pour configurer la découverte d’utilisateurs Azure AD, consultez [Configurer 
 
 
 ##  <a name="bkmk_aboutHeartbeat"></a> Découverte par pulsations d’inventaire  
-**Configurable :** Oui  
+**Configurable :** Oui  
 
-**Activée par défaut :** Oui  
+**Activé par défaut :** Oui  
 
 **Comptes** que vous pouvez utiliser pour exécuter cette méthode :  
 
@@ -255,9 +256,9 @@ Pour plus d’informations sur la configuration de cette méthode de découverte
 
 
 ##  <a name="bkmk_aboutNetwork"></a> Découverte du réseau  
-**Configurable :** Oui  
+**Configurable :** Oui  
 
-**Activée par défaut :** Non  
+**Activé par défaut :** Non  
 
 **Comptes** que vous pouvez utiliser pour exécuter cette méthode :  
 
@@ -273,11 +274,11 @@ Pour utiliser la découverte du réseau, vous devez spécifier le *niveau* de d�
 
 Pour que cette méthode découvre une ressource, elle doit identifier l’adresse IP et le masque de sous-réseau de la ressource. Les méthodes suivantes sont utilisées pour identifier le masque de sous-réseau d'un objet :  
 
--   **Mémoire cache ARP de routeur :** La découverte du réseau interroge la mémoire cache ARP d'un routeur pour rechercher des informations de sous-réseau. En règle générale, les données situées dans la mémoire cache ARP d'un routeur ont une courte durée de vie. Par conséquent, quand la découverte du réseau interroge la mémoire cache ARP, celle-ci peut ne plus avoir d’informations sur l’objet demandé.  
+-   **Cache ARP du routeur :** La découverte du réseau interroge la mémoire cache ARP d'un routeur pour rechercher des informations de sous-réseau. En règle générale, les données situées dans la mémoire cache ARP d'un routeur ont une courte durée de vie. Par conséquent, quand la découverte du réseau interroge la mémoire cache ARP, celle-ci peut ne plus avoir d’informations sur l’objet demandé.  
 
--   **DHCP :** La découverte du réseau interroge chaque serveur DHCP que vous spécifiez pour découvrir les appareils pour lesquels le serveur DHCP a fourni un bail. La découverte du réseau prend en charge uniquement les serveurs DHCP qui exécutent l'implémentation Microsoft du protocole DHCP.  
+-   **DHCP :** La découverte du réseau interroge chaque serveur DHCP que vous spécifiez pour découvrir les périphériques pour lesquels le serveur DHCP a fourni un bail. La découverte du réseau prend en charge uniquement les serveurs DHCP qui exécutent l'implémentation Microsoft du protocole DHCP.  
 
--   **Unité SNMP :** La découverte du réseau peut interroger directement une unité SNMP. Pour que la découverte du réseau puisse interroger un périphérique, celui-ci doit avoir un agent SNMP local installé. Configurez également la découverte du réseau pour utiliser le nom de communauté utilisé par l’agent SNMP.  
+-   **Périphérique SNMP :** La découverte du réseau peut interroger directement un périphérique SNMP. Pour que la découverte du réseau puisse interroger un périphérique, celui-ci doit avoir un agent SNMP local installé. Configurez également la découverte du réseau pour utiliser le nom de communauté utilisé par l’agent SNMP.  
 
 Quand la découverte identifie un objet IP et peut déterminer le masque de sous-réseau des objets, elle crée un DDR pour cet objet. Étant donné que différents types d’appareils se connectent au réseau, la découverte du réseau découvre des ressources qui ne prennent pas en charge le client Configuration Manager. Par exemple, parmi les périphériques qui peuvent être découverts mais qui ne peuvent pas être gérés, citons les imprimantes et les routeurs.  
 
@@ -412,7 +413,7 @@ Le diagramme suivant illustre le résultat d’une requête de découverte du r�
 
 
 ##  <a name="bkmk_aboutServer"></a> Découverte de serveurs  
-**Configurable :** Non  
+**Configurable :** Non  
 
 Outre ces méthodes de découverte pouvant être configurées par l’utilisateur, Configuration Manager utilise un processus appelé **découverte de serveurs** (SMS_WINNT_SERVER_DISCOVERY_AGENT). Cette méthode de découverte crée des enregistrements de ressources pour les ordinateurs qui sont des systèmes de site, par exemple un ordinateur configuré comme point de gestion.  
 

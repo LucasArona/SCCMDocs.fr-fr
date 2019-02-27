@@ -10,12 +10,13 @@ ms.assetid: e80d1151-91db-4a27-8411-a957297b67d0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2d8587c0640d831a723b9ff7c3a6402d47ee2405
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 03d85a55e51125e40e1df766382b0a074d865a51
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32337239"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56141617"
 ---
 # <a name="manage-network-bandwidth-for-content"></a>Gérer la bande passante réseau pour le contenu
 Pour mieux gérer la bande passante réseau utilisée pour le processus de gestion du contenu de System Center Configuration Manager, vous pouvez utiliser les commandes Configuration Manager intégrées de planification et de limitation de bande passante. Vous pouvez également utiliser le contenu préparé. Les sections suivantes décrivent ces options plus en détail.
@@ -59,11 +60,11 @@ Vous pouvez éventuellement configurer le point de distribution comme **prépar�
 
     Les paramètres suivants sont disponibles dans les propriétés relatives à une application, un package, un package de pilotes, une image de démarrage, un programme d’installation de système d’exploitation et une image. Ils vous permettent de choisir le mode de gestion de la distribution du contenu sur les points de distribution distants qui sont identifiés comme préparés :  
 
-    -   **Télécharger automatiquement le contenu lorsque des packages sont affectés à des points de distribution** : utilisez cette option quand vous disposez de packages plus petits, et que les paramètres de planification et de limitation de bande passante offrent suffisamment de contrôle pour la distribution de contenu.  
+    -   **Télécharger automatiquement le contenu lorsque des packages sont attribués à des points de distribution** : utilisez cette option lorsque vous disposez de packages plus petits et lorsque les paramètres de planification et de limitation offrent suffisamment de contrôle pour la distribution de contenu.  
 
-    -   **Télécharger uniquement les modifications de contenu vers le point de distribution** : utilisez cette option si vous prévoyez que la taille des futures mises à jour du contenu du package sera normalement inférieure à celle du package initial. Par exemple, vous pouvez préparer une application telle que Microsoft Office, car la taille du package initial est supérieure à 700 Mo et trop volumineuse pour être envoyée sur le réseau. Toutefois, les mises à jour du contenu pour ce package peuvent être inférieures à 10 Mo et distribuables sur le réseau. Citons aussi l’exemple d’un package de pilotes : sa taille initiale peut être importante, mais les ajouts de pilotes incrémentiels au package peuvent être de petite taille.  
+    -   **Télécharger uniquement les modifications de contenu vers le point de distribution** : utilisez cette option si vous prévoyez que les futures mises à jour du contenu du package seront généralement plus petites que le package initial. Par exemple, vous pouvez préparer une application telle que Microsoft Office, car la taille du package initial est supérieure à 700 Mo et trop volumineuse pour être envoyée sur le réseau. Toutefois, les mises à jour du contenu pour ce package peuvent être inférieures à 10 Mo et distribuables sur le réseau. Citons aussi l’exemple d’un package de pilotes : sa taille initiale peut être importante, mais les ajouts de pilotes incrémentiels au package peuvent être de petite taille.  
 
-    -   **Copier manuellement le contenu de ce package vers le point de distribution** : utilisez cette option quand vous disposez de packages volumineux, avec du contenu tel qu’un système d’exploitation et n’utilisez jamais le réseau pour distribuer le contenu sur le point de distribution. Lorsque vous sélectionnez cette option, vous devez préparer le contenu sur le point de distribution.  
+    -   **Copier manuellement le contenu de ce package vers le point de distribution** : utilisez cette option lorsque vous disposez de packages volumineux, avec du contenu tel qu’un système d’exploitation, et n’utilisez jamais le réseau pour distribuer le contenu vers le point de distribution. Lorsque vous sélectionnez cette option, vous devez préparer le contenu sur le point de distribution.  
 
     > [!IMPORTANT]  
     >  Les options précédentes sont applicables pour chaque package et ne sont utilisées que si un point de distribution est identifié comme préparé. Les points de distribution qui n'ont pas été identifiés comme préparés ignorent ces paramètres. Dans ce cas, le contenu est toujours distribué via le réseau à partir du serveur de site vers les points de distribution.  

@@ -10,16 +10,17 @@ ms.assetid: bc15ee7e-4d0a-4463-ae2c-f72d8d45d65d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6f0590a626cf75ed78e42235768a0d97a9fc3026
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 39227689c484bfcf0df7f49365b196d59b5cfac4
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32336950"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56138345"
 ---
 # <a name="prepare-active-directory-for-site-publishing"></a>Préparer Active Directory pour la publication de site
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Quand vous étendez le schéma Active Directory pour System Center Configuration Manager, les nouvelles structures que vous introduisez dans Active Directory sont utilisées par les sites System Center Configuration Manager pour publier des informations importantes, à un emplacement sécurisé facilement accessible par les clients.  
 
@@ -42,7 +43,7 @@ Pour étendre le schéma pour Configuration Manager, vous devez :
 
 -   Exécuter l’outil **Extadsch.exe** , ou utiliser l’utilitaire de ligne de commande LDIFDE avec le fichier **ConfigMgr_ad_schema.ldf** . L’outil et le fichier se trouvent dans le dossier **SMSSETUP\BIN\X64** sur le média d’installation de Configuration Manager.  
 
-#### <a name="option-a-use-extadschexe"></a>Option A : utiliser Extadsch.exe  
+#### <a name="option-a-use-extadschexe"></a>Option A : Utiliser Extadsch.exe  
 
 1.  Exécutez le fichier **extadsch.exe** pour ajouter les nouvelles classes et les nouveaux attributs au schéma Active Directory.  
 
@@ -51,7 +52,7 @@ Pour étendre le schéma pour Configuration Manager, vous devez :
 
 2.  Pour vérifier que l’extension du schéma a réussi, examinez extadsch.log à la racine du lecteur du système.  
 
-#### <a name="option-b-use-the-ldif-file"></a>Option B : utiliser le fichier LDIF  
+#### <a name="option-b-use-the-ldif-file"></a>Option B : Utiliser le fichier LDIF  
 
 1.  Modifiez le fichier **ConfigMgr_ad_schema.ldf** pour définir le domaine racine Active Directory à étendre :  
 

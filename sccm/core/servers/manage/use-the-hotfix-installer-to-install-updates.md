@@ -10,16 +10,17 @@ ms.assetid: f3058277-c597-4dac-86d1-41b6f7e62b36
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5c90889861db55a27da897e709b16b66edece08a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 67d2fc976b08e438c6f19a7fecca03761bb099f6
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342424"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56124728"
 ---
 # <a name="use-the-hotfix-installer-to-install-updates-for-system-center-configuration-manager"></a>Utiliser le programme d’installation de correctif logiciel pour installer les mises à jour de System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Certaines mises à jour de System Center Configuration Manager indisponibles sur le service cloud Microsoft ne peuvent être obtenues que hors bande. C’est le cas, par exemple, d’un correctif logiciel en édition limitée destiné à résoudre un problème spécifique.   
 Si vous devez installer une mise à jour (ou un correctif logiciel) reçu de Microsoft et que le fichier de cette mise à jour porte un nom se terminant par l’extension **.exe** (pas **update.exe**), vous utilisez le programme d’installation du correctif logiciel inclus dans le téléchargement de celui-ci pour installer la mise à jour directement sur le serveur de site Configuration Manager.  
@@ -78,7 +79,7 @@ L’Assistant crée également des déploiements que vous pouvez utiliser pour i
 |&lt;Version_produit\>-QFE-KB&lt;ID_article_Base_connaissances\>-&lt;plateforme\>-&lt;langue\>.exe|Correspond au fichier de mise à jour. La ligne de commande pour ce fichier est gérée par Updatesetup.exe.<br /><br /> Par exemple :<br />CM1511RTM-QFE-KB123456-X64-ENU.exe|  
 |Updatesetup.exe|Ce wrapper .msi gère l'installation du groupe de mises à jour.<br /><br /> Lorsque vous exécutez la mise à jour, Updatesetup.exe détecte la langue d'affichage de l'ordinateur sur lequel elle s'exécute. Par défaut, l'interface utilisateur de la mise à jour est l'anglais. Toutefois, si la langue d'affichage est prise en charge, l'interface utilisateur s'affiche dans la langue locale de l'ordinateur.|  
 |Licence_&lt;langue\>.rtf|Le cas échéant, chaque mise à jour contient un ou plusieurs fichiers de licence en fonction des langues prises en charge.|  
-|&lt;Produit&type_MàJ>-&lt;version_produit\>-&lt;ID_article_Base_connaissances\>-&lt;plateforme\>.msp|Quand la mise à jour concerne la console ou les clients Configuration Manager, le groupe de mises à jour inclut des fichiers correctifs Windows Installer (.msp) distincts.<br /><br /> Par exemple :<br /><br /> **Mise à jour de la console Configuration Manager :** ConfigMgr1511-AdminUI-KB1234567-i386.msp<br /><br /> **Mise à jour du client :** ConfigMgr1511-client-KB1234567-i386.msp<br />ConfigMgr1511-client-KB1234567-x64.msp|  
+|&lt;Produit&type_MàJ>-&lt;version_produit\>-&lt;ID_article_Base_connaissances\>-&lt;plateforme\>.msp|Quand la mise à jour concerne la console ou les clients Configuration Manager, le groupe de mises à jour inclut des fichiers correctifs Windows Installer (.msp) distincts.<br /><br /> Par exemple :<br /><br /> **Mises à jour de la console Configuration Manager :** ConfigMgr1511-AdminUI-KB1234567-i386.msp<br /><br /> **Mise à jour du client :** ConfigMgr1511-client-KB1234567-i386.msp<br />ConfigMgr1511-client-KB1234567-x64.msp|  
 
  Par défaut, le groupe de mises à jour enregistre ses actions dans un fichier .log sur le serveur de site. Le fichier journal possède le même nom que le groupe de mises à jour et est écrit dans le dossier **%SystemRoot%/Temp** .  
 
@@ -89,12 +90,12 @@ L’Assistant crée également des déploiements que vous pouvez utiliser pour i
 
  Le tableau suivant fournit des détails sur les dossiers figurant dans la structure de dossiers :  
 
-|Nom de dossier|Plus d'informations|  
+|Nom de dossier|Informations complémentaires|  
 |-----------------|----------------------|  
 |&lt;Nom_serveur\>|Nom du serveur de site sur lequel vous exécutez le groupe de mises à jour.|  
 |SMS_&lt;code_site\>|Nom de partage du dossier d’installation de Configuration Manager.|  
 |&lt;Numéro_article_Base_connaissances\>|Numéro d'identification de l'article de la Base de connaissances pour ce groupe de mises à jour.|  
-|&lt;Type_MàJ\>|Type de mise à jour de Configuration Manager. L'Assistant crée un dossier distinct pour chaque type de mise à jour contenu dans le groupe de mises à jour. Les noms de dossier représentent les types de mise à jour. Il s'agit des dossiers suivants :<br /><br /> **Serveur**: comprend les mises à jour des serveurs de site, des serveurs de base de données de site et des ordinateurs qui exécutent le fournisseur SMS.<br /><br /> **Client** : inclut les mises à jour du client Configuration Manager.<br /><br /> **AdminConsole** : comprend les mises à jour de la console Configuration Manager.<br /><br /> Outre les types de mise à jour précédents, l'Assistant crée un dossier nommé **SCUP**. Ce dossier ne représente pas un type de mise à jour. Par contre, il contient le fichier .cab pour Updates Publisher.|  
+|&lt;Type_MàJ\>|Type de mise à jour de Configuration Manager. L'Assistant crée un dossier distinct pour chaque type de mise à jour contenu dans le groupe de mises à jour. Les noms de dossier représentent les types de mise à jour. Il s'agit des dossiers suivants :<br /><br /> **Serveur** : comprend les mises à jour des serveurs de site, des serveurs de base de données de site et des ordinateurs qui exécutent le fournisseur SMS.<br /><br /> **Client** : Inclut les mises à jour du client Gestionnaire de configuration.<br /><br /> **AdminConsole** : Inclut les mises à jour de la console Configuration Manager<br /><br /> Outre les types de mise à jour précédents, l'Assistant crée un dossier nommé **SCUP**. Ce dossier ne représente pas un type de mise à jour. Par contre, il contient le fichier .cab pour Updates Publisher.|  
 |&lt;Plateforme\>|Dossier propre à la plate-forme. Il contient les fichiers de mise à jour propres à un type de processeur.  Ces dossiers sont les suivants :<br /><br />- x64<br /><br /> - I386|  
 
 ##  <a name="bkmk_Install"></a> Comment installer des mises à jour  
@@ -161,10 +162,10 @@ Après avoir installé le groupe de mises à jour sur un serveur de site, vous p
 
 4.  Redémarrez les services que vous avez arrêtés lors des étapes précédentes.  
 
-5.  Pendant son installation, le groupe de mises à niveau extrait **update.sql** à l'emplacement suivant sur le serveur de site : **\\\\&lt;Nom_serveur\>\SMS_&lt;code_site\>\Hotfix\\&lt;Numéro_article_Base_connaissances\>\update.sql**  
+5.  Pendant son installation, le groupe de mises à niveau extrait **update.sql** à l'emplacement suivant sur le serveur de site :  **\\\\&lt;Nom du serveur\>\SMS_&lt;Code de site\>\Correctif logiciel\\&lt;Numéro d’article de la Base de connaissances\>\update.sql**  
 
 ####  <a name="bkmk_provider"></a> Mettre à jour un ordinateur exécutant le fournisseur SMS  
- Après avoir installé un groupe de mises à jour incluant des mises à jour pour le fournisseur SMS, vous devez déployer la mise à jour sur chaque ordinateur qui exécute le fournisseur SMS. La seule exception est l’instance du fournisseur SMS précédemment installée sur le serveur de site sur lequel vous installez le groupe de mises à jour. L'instance locale du fournisseur SMS sur le serveur de site est mise à jour lorsque vous installez le groupe de mises à jour.  
+ Après avoir installé un groupe de mises à jour incluant des mises à jour pour le fournisseur SMS, vous devez déployer la mise à jour sur chaque ordinateur qui exécute le fournisseur SMS. La seule exception est l'instance du fournisseur SMS déjà installée sur le serveur de site sur lequel vous installez le groupe de mises à jour. L'instance locale du fournisseur SMS sur le serveur de site est mise à jour lorsque vous installez le groupe de mises à jour.  
 
  Si vous supprimez puis réinstallez le fournisseur SMS sur un ordinateur, vous devez alors réinstaller la mise à jour pour le fournisseur SMS sur cet ordinateur.  
 
@@ -202,7 +203,7 @@ Par exemple, vous pouvez utiliser la ligne de commande suivante pour mettre à j
 ###  <a name="BKMK_DeploySCUP"></a> Utiliser Updates Publisher 2011 pour installer des mises à jour  
  Lorsque vous installez le groupe de mises à jour sur un serveur de site, l’Assistant Installation crée un fichier catalogue pour l’éditeur de mise à jour, que vous pouvez utiliser pour déployer les mises à jour sur les ordinateurs concernés. L’Assistant crée toujours ce catalogue, même quand vous sélectionnez l’option **Use package and program to deploy this update**.  
 
- Le catalogue de l’éditeur de mise à jour est nommé **SCUPCatalog.cab** et se trouve sur l’ordinateur sur lequel s’exécute le groupe de mises à jour logicielles à l’emplacement suivant : **\\\\&lt;nom_serveur\>\SMS_&lt;code_site\>\Hotfix\\\&lt;Numéro_article_Base_connaissances\>\SCUP\SCUPCatalog.cab**  
+ Le catalogue pour l’éditeur de mise à jour se nomme **SCUPCatalog.cab**, il est disponible à l’emplacement suivant sur l’ordinateur où s’exécute l’offre groupée de mises à jour : **\\\\&lt;Nom du serveur\>\SMS_&lt;Code du site\>\Correctif_logiciel\\&lt;Numéro d’article de la Base de connaissances\>\SCUP\SCUPCatalog.cab**  
 
 > [!IMPORTANT]  
 >  Dans la mesure où le fichier SCUPCatalog.cab est créé à l'aide de chemins spécifiques du serveur de site sur lequel le groupe de mises à jour est installé, il ne peut pas être utilisé sur d'autres serveurs de site.  

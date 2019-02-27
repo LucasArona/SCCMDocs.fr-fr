@@ -10,16 +10,17 @@ ms.assetid: f053fa73-c553-4522-a6b9-f885f23fe57c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 41dd6ad6f8a0292fdb16a0d727665b17e038f87b
-ms.sourcegitcommit: 1439817f1309658b31008d7bafaab32fc5ef8789
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: ba73d215b9a672f4843c2f1e4a63dfc6bd13ea74
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52820039"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56132882"
 ---
 # <a name="package-conversion-manager"></a>Package Conversion Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 <!--1357861-->
 
@@ -61,9 +62,9 @@ Avant de commencer la conversion des packages en applications, développez d’a
 
 Cette section décrit deux exemples de plans de conversion de packages :  
 
-- [Un environnement de test avec ressources nombreuses](#bkmk_define-high) : vous disposez d'un environnement de test avec les ressources, les autorisations et l'architecture nécessaires pour répliquer entièrement votre environnement de production.  
+- [Environnement de test avec ressources nombreuses](#bkmk_define-high) : vous disposez d’un environnement de test avec les ressources, les autorisations et l’architecture nécessaires pour répliquer entièrement votre environnement de production.  
 
-- [Un environnement de test avec ressources limitées](#bkmk_define-limited) : vous ne disposez pas d’un environnement de test qui réplique entièrement votre environnement de production.  
+- [Environnement de test avec ressources limitées](#bkmk_define-limited) : vous ne disposez pas d’un environnement de test qui réplique entièrement votre environnement de production.  
 
 Ajustez ces plans en fonction d’autres problèmes spécifiques à votre environnement.
 

@@ -10,12 +10,13 @@ ms.assetid: 8cdb22a6-72d7-41f5-9bed-c098b1bcf675
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ae137cae29d49413ca11668ff0cc744168e91e21
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: d0a32357001f37f537f13fe85e71a41f9cb658ac
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383675"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56122438"
 ---
 # <a name="manage-apps-from-the-microsoft-store-for-business-with-configuration-manager"></a>Gérer des applications à partir du Microsoft Store pour Entreprises avec Configuration Manager
 
@@ -26,7 +27,7 @@ Le [Microsoft Store pour Entreprises](https://www.microsoft.com/business-store) 
 
 Le Microsoft Store pour Entreprises prend en charge deux types d’applications :
 
-- **En ligne** : ce type de licence exige que les utilisateurs et les appareils se connectent au Store pour obtenir une application et sa licence. Les appareils Windows 10 doivent être joints au domaine Azure Active Directory (Azure AD).  
+- **En ligne** : ce type de licence requiert que les utilisateurs et les appareils se connectent au Store pour obtenir une application et sa licence. Les appareils Windows 10 doivent être joints au domaine Azure Active Directory (Azure AD).  
 
 - **Hors connexion** : ce type vous permet de mettre en cache les applications et les licences à déployer directement sur votre réseau local. Les appareils n’ont pas besoin de se connecter au Store ou de disposer d’une connexion à Internet.
 
@@ -82,7 +83,7 @@ Les comportements suivants se produisent :
 
 - L’utilisateur doit effectuer l’installation à partir du Store  
 
-- Dans la console Configuration Manager, l’état du déploiement indique un échec avec l’erreur suivante : « L’application Microsoft Store a été ouverte sur le PC client et attend que l’utilisateur termine l’installation. »  
+- Dans la console Configuration Manager, l’état de déploiement de l’application signale un échec avec l’erreur suivante : « L’application Microsoft Store a été ouverte sur le PC client et attend que l’utilisateur termine l’installation. »  
 
 Au prochain cycle d’évaluation de l’application :  
 
@@ -124,7 +125,7 @@ Dans la page **Application** de l’Assistant Services Azure, configurez d’abo
 
 Dans la page **Configurations** de l’Assistant Services Azure, spécifiez les informations suivantes :  
 
-- **Chemin de stockage du contenu de l’application Microsoft Store pour Entreprises** : spécifiez un chemin réseau partagé, dossier compris. Par exemple, `\\server\share\folder`. Quand le serveur de site se synchronise avec le Store, il met en cache le contenu à cet emplacement. Quand vous créez une application dans Configuration Manager, le serveur de site copie le contenu de l’application depuis ce cache local vers la bibliothèque de contenu du site.  
+- **Chemin de stockage du contenu de l’application Microsoft Store pour Entreprises** : spécifiez un chemin d’accès réseau partagé en incluant un dossier. Par exemple, `\\server\share\folder`. Quand le serveur de site se synchronise avec le Store, il met en cache le contenu à cet emplacement. Quand vous créez une application dans Configuration Manager, le serveur de site copie le contenu de l’application depuis ce cache local vers la bibliothèque de contenu du site.  
 
 - **Langues sélectionnées** : sélectionnez les langues à synchroniser à partir du Store et à présenter aux utilisateurs dans le Centre logiciel. Par exemple, si l’utilisateur configure Windows pour l’allemand, le Centre logiciel affiche des chaînes en allemand pour l’application du Store. Ce comportement nécessite que cette langue soit synchronisée et qu’elle existe pour l’application concernée.    
 

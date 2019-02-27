@@ -4,12 +4,12 @@ ms.author: aaroncz
 ms.prod: configuration-manager
 ms.topic: include
 ms.date: 11/27/2018
-ms.openlocfilehash: c91cf0abb8cb79fe92e34b6b234a4c8264af75ab
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: f6e46f8b0bf985eae87cd5157f8a82af5fa0b849
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456938"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56142576"
 ---
 ##  <a name="BKMK_OSImagesApplyUpdates"></a> Appliquer des mises à jour logicielles à une image  
 
@@ -41,11 +41,11 @@ La base de données du site stocke les informations sur l’image, y compris les
 
 5.  Sur la page **Définir le calendrier** , spécifiez les paramètres suivants, puis cliquez sur **Suivant**.  
 
-    a.  **Calendrier** : spécifiez le calendrier d’application des mises à jour logicielles à l’image par le site.  
+    a.  **Calendrier** : spécifiez le calendrier d’application des mises à jour logicielles à l’image par le site.  
 
-    b.  **Continuer en cas d’erreur** : sélectionnez cette option pour continuer à appliquer les mises à jour logicielles à l’image même si une erreur survient.  
+    b.  **Continuer en cas d'erreur** :  sélectionnez cette option pour continuer à appliquer les mises à jour logicielles à l’image même si une erreur survient.  
 
-    c.  **Mettre à jour les points de distribution avec l’image** : sélectionnez cette option pour mettre à jour l’image sur les points de distribution après l’application des mises à jour logicielles par le site.  
+    c.  **Mettre à jour les points de distribution avec l’image** : sélectionnez cette option pour mettre à jour l’image sur les points de distribution après l’application des mises à jour logicielles par le site.  
 
 6.  Exécutez l’Assistant Planification des mises à jour.  
 
@@ -56,8 +56,8 @@ La base de données du site stocke les informations sur l’image, y compris les
 ### <a name="servicing-operations"></a>Opérations de maintenance
 
 Dans la console Configuration Manager, dans le nœud **Images du système d’exploitation** ou **Packages de mise à niveau du système d’exploitation**, ajoutez les colonnes suivantes dans la vue :
-- **Date des mises à jour planifiées** : cette propriété indique la planification suivante que vous avez définie.  
-- **État des mises à jour planifiées** : cette propriété indique l’état. Par exemple, **Réussi** ou **En cours**.  
+- **Date des mises à jour planifiées** : cette propriété indique la planification suivante que vous avez définie.  
+- **État des mises à jour planifiées** : cette propriété indique l’état. Par exemple, **Réussi** ou **En cours**.  
 
 Sélectionnez un objet image spécifique, puis passez à l’onglet **État des mises à jour** dans le volet d’informations. Cet onglet affiche la liste des mises à jour dans l’image. 
 
@@ -82,4 +82,5 @@ Par défaut, ce paramètre a la valeur **Automatique**. Avec cette valeur, Confi
 Si vous sélectionnez un lecteur qui n’existe pas sur le serveur de site, Configuration Manager se comporte comme si vous sélectionnez **Automatique**. 
 
 Durant l’installation hors connexion, Configuration Manager stocke les fichiers temporaires dans le dossier `<drive>:\ConfigMgr_OfflineImageServicing`. Il monte également l’image du système d’exploitation dans ce dossier. 
+
 

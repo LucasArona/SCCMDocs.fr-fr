@@ -10,16 +10,17 @@ ms.assetid: a0bd093d-67a5-4f74-bf79-dd604889f5ba
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b5f7ac3125b099a764604b3338a92f3f45b10afe
-ms.sourcegitcommit: 2cc635835709fb8d86cdb63ea34233b36c94d4d8
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 5adc8809edc0a069269dfce71f302452a0e01b45
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52258976"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56124027"
 ---
 # <a name="learn-more-about-powershell-script-security"></a>En savoir plus sur la sécurité des scripts PowerShell
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Il est de la responsabilité de l’administrateur de valider l’utilisation des paramètres PowerShell et PowerShell proposés dans son environnement. Les ressources fournies dans ce document visent à sensibiliser les administrateurs à la puissance de PowerShell, mais aussi aux risques potentiels associés. Elles donnent des indications sur la façon de limiter ces risques potentiels et d’utiliser les scripts en toute sécurité.
 
@@ -28,7 +29,7 @@ Intégrée à l’exécution de scripts, une fonctionnalité permet d’examiner
 
 ## <a name="recommendations"></a>Recommandations
 - Prenez-connaissance des bonnes pratiques de sécurité PowerShell en utilisant les différents liens présentés ci-dessous en référence.
-- **Signez vos scripts** : pour sécuriser les scripts dans la durée, une autre méthode consiste à les examiner minutieusement et à les signer avant de les importer pour les utiliser.
+- **Signez vos scripts** : Une autre méthode pour sécuriser les scripts consiste à les faire examiner minutieusement, puis signer, avant de les importer pour les utiliser.
 - Évitez de stocker les secrets (tels que les mots de passe) dans les scripts PowerShell et apprenez à mieux les gérer.
 
 
@@ -59,12 +60,12 @@ Passer les paramètres est un moyen de bénéficier d’une certaine souplesse a
 
 - Autorisez uniquement l’utilisation de paramètres prédéfinis.
 - Utilisez la fonctionnalité d’expression régulière pour valider les paramètres autorisés.
-    - Exemple : si seulement une certaine plage de valeurs est autorisée, utilisez une expression régulière pour rechercher uniquement les caractères ou les valeurs qui figurent dans la plage.
+    - Exemple : Si seulement une certaine plage de valeurs est autorisée, utilisez une expression régulière pour vérifier uniquement les caractères ou les valeurs qui figurent dans la plage.
     - La validation des paramètres peut contribuer à dissuader les utilisateurs d’essayer d’utiliser certains caractères qui peuvent être des caractères d’échappement, comme les guillemets. Sachant qu’il existe plusieurs types de guillemets, il est souvent plus facile d’utiliser des expressions régulières pour valider les caractères que vous avez décidé d’autoriser que d’essayer de définir toutes les entrées non autorisées.
 - Tirez parti du module PowerShell [« InjectionHunter »](https://www.powershellgallery.com/packages/InjectionHunter/1.0.0) dans PowerShell Gallery.
     - Sachant qu’il peut renvoyer des faux positifs, examinez l’intention des éléments signalés comme étant suspects pour déterminer s’il s’agit de problèmes réels. 
 - Microsoft Visual Studio intègre un analyseur de script qui peut vous aider à vérifier la syntaxe PowerShell.
-- Cette vidéo intitulée : « DEF CON 25 - Lee Holmes - Get $pwnd: Attacking Battle Hardened Windows Server » offre une vue d’ensemble des différents types de problèmes contre lesquels vous pouvez vous protéger (en particulier la passage de 12:20 à 17:50) :     <iframe width="560" height="315" src="https://www.youtube.com/embed/ahxMOAAani8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+- Cette vidéo est intitulée : « DEF CON 25 - Lee Holmes - Get $pwnd : Attacking Battle Hardened Windows Server » offre une vue d’ensemble des différents types de problèmes contre lesquels vous pouvez vous protéger (en particulier la passage de 12:20 à 17:50) :     <iframe width="560" height="315" src="https://www.youtube.com/embed/ahxMOAAani8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## <a name="environment-recommendations"></a>Recommendations concernant l’environnement
 Recommandations générales pour les administrateurs de PowerShell.

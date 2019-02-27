@@ -10,16 +10,17 @@ ms.assetid: 6a4a3290-5228-4871-918a-554aa1c20834
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3ad96cedf1170f8563fdafe3922f6ad2e7c67b5a
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 87552016d1cd17e79abf01a9de9109195d3d2a70
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39386010"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56125302"
 ---
 # <a name="cmtrace"></a>CMTrace
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 CMTrace fait partie des [outils de Configuration Manager](/sccm/core/support/tools). Il vous permet d’afficher et de surveiller les fichiers journaux, notamment les types suivants :  
 
@@ -45,7 +46,7 @@ Vous effectuez la plupart des actions dans CMTrace à partir des menus suivants 
 - [Tools](#tools-menu)
 
 
-### <a name="file-menu"></a>Menu File
+### <a name="file-menu"></a>Menu Fichier
 
 Les actions suivantes sont disponibles dans le menu **File** :  
 - [Open](#open)
@@ -55,7 +56,7 @@ Les actions suivantes sont disponibles dans le menu **File** :
 
 Le menu File liste également les huit fichiers les plus récents. Rouvrez rapidement l’un de ces journaux en le sélectionnant dans le menu File. 
 
-#### <a name="open"></a>Open
+#### <a name="open"></a>Ouvrir
 Affiche la boîte de dialogue Open pour rechercher un fichier journal. 
 
 Filtrez l’affichage pour les fichiers des types suivants : 
@@ -65,7 +66,7 @@ Filtrez l’affichage pour les fichiers des types suivants :
 
 Les deux options suivantes ne sont pas sélectionnées par défaut :  
 
-- **Ignore existing lines** : quand l’option est sélectionnée, CMTrace ignore le contenu existant du fichier journal sélectionné et n’affiche les nouvelles lignes qu’au moment où elles sont ajoutées. Utilisez cette option pour superviser uniquement les nouvelles actions quand vous n’avez pas besoin de l’historique complet du fichier journal.  
+- **Ignore existing lines** : lorsque cette option est sélectionnée, CMTrace ignore le contenu existant du fichier journal sélectionné et n’affiche les nouvelles lignes qu’au moment où elles sont ajoutées. Utilisez cette option pour superviser uniquement les nouvelles actions quand vous n’avez pas besoin de l’historique complet du fichier journal.  
 
 - **Merge selected files** : si vous activez cette option et que vous sélectionnez plusieurs fichiers journaux, CMTrace fusionne les journaux sélectionnés dans la vue. Il les affiche comme s’il s’agissait d’un fichier journal unique. Le journal fusionné est mis à jour de la même façon et prend en charge toutes les autres fonctionnalités de CMTrace comme s’il s’agissait d’un fichier journal unique.  
 
@@ -77,7 +78,7 @@ Quand vous sélectionnez un ordinateur distant à parcourir, CMTrace recherche l
 
 Pour vous connecter directement à un ordinateur connu sans navigation, utilisez l’action [Open](#open). Entrez un nom de serveur et un partage en utilisant le format UNC.
 
-#### <a name="print"></a>Print
+#### <a name="print"></a>Imprimer
 Affichez la boîte de dialogue Imprimer Windows standard. Cette action envoie le fichier journal actuel à une imprimante. Elle met en forme la sortie en fonction des paramètres sous l’onglet Printing de Preferences CMTrace.
 
 #### <a name="preferences"></a>Preferences
@@ -117,10 +118,10 @@ Les actions suivantes sont disponibles dans le menu **Tools** :
 - [Show/Hide Details](#show-hide-details)
 - [Show/Hide Info Pane](#show-hide-info-pane)
 
-#### <a name="find"></a>Find
+#### <a name="find"></a>Trouver
 Recherchez une chaîne de texte spécifiée dans le fichier journal ouvert.  
 
-#### <a name="find-next"></a>Find Next
+#### <a name="find-next"></a>Suivant
 Recherche la chaîne correspondante suivante, que vous avez spécifiée précédemment dans la boîte de dialogue Find.  
 
 #### <a name="copy-to-clipboard"></a>Copy to Clipboard
@@ -146,7 +147,7 @@ Exemples : <!--SCCMDocs issue #603-->
 
 
 #### <a name="error-lookup"></a>Error Lookup
-Tapez ou collez un code d’erreur au format décimal ou hexadécimal pour afficher une description. Les sources d’erreur possibles sont : Windows, WMI ou Winhttp.
+Tapez ou collez un code d’erreur au format décimal ou hexadécimal pour afficher une description. Les sources d’erreur possibles sont les suivantes : Windows, WMI ou Winhttp.
 
 #### <a name="pause"></a>Suspendre
 Suspendez ou redémarrez la surveillance du journal. Les cas d’usage suivants représentent certaines des raisons possibles pour utiliser cette action :  

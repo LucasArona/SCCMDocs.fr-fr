@@ -10,16 +10,17 @@ ms.assetid: 27261853-1641-4826-98c6-afbb73a1209d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bb3bcd0e7301ff2ef7baeff29de038cbd8476525
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 58a3c69e6206aa651e55f96286f98f64f748de70
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383277"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56137134"
 ---
 # <a name="troubleshoot-the-scap-extensions-for-configuration-manager"></a>Résoudre les problèmes liés aux extensions SCAP pour Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Les extensions SCAP pour Configuration Manager sont conçues pour fonctionner avec les flux de données SCAP destinés à l’outil SCAP validé, doté d’une fonctionnalité ACS pour prendre en charge USGCB. Normalement, vous ne rencontrerez aucun problème avec ces flux de données USGCB SCAP, téléchargés à partir du site web de l’institut NIST.
 
@@ -68,7 +69,7 @@ Voici certains problèmes courants et les solutions qui vont vous aider à les r
 
      - Il est plus probable que les nouveaux paramètres ne soient pas encore effectifs. Par défaut, les clients Active Directory recherchent les mises à jour de stratégie de groupe toutes les 90 minutes. Ce cycle peut être l’une des raisons pour laquelle les paramètres semblent ne pas être appliqués, même si vous avez correctement configuré les stratégies.  
 
-     - Pour que plusieurs paramètres d’ordinateur prennent effet, un redémarrage est nécessaire. Par exemple, le paramètre pour **Chiffrement système : utilisez des algorithmes compatibles FIPS pour le chiffrement, le hachage et la signature** nécessite le redémarrage de l’ordinateur avant que Windows puisse utiliser les algorithmes de chiffrement spécifiés. Ignorez l’intervalle d’actualisation de la stratégie de groupe en entrant la commande suivante à une invite de commandes avec des privilèges d’administrateur : `gpupdate /force`. Une fois l'actualisation de la stratégie de groupe terminée, redémarrez l'ordinateur pour vous assurer que tous les paramètres sont effectifs. Pour plus d’informations, consultez [Description de l’utilitaire de mise à jour de Stratégie de groupe](https://support.microsoft.com/help/298444).
+     - Pour que plusieurs paramètres d’ordinateur prennent effet, un redémarrage est nécessaire. Par exemple, le paramètre de **Chiffrement système : Utilisez des algorithmes conformes aux normes FIPS (Federal Information Processing Standard) pour le chiffrement, le hachage et la signature** nécessite le redémarrage de l’ordinateur avant que Windows puisse utiliser les algorithmes de chiffrement spécifiés. Ignorez l’intervalle d’actualisation de la stratégie de groupe en entrant la commande suivante à une invite de commandes avec des privilèges d’administrateur : `gpupdate /force`. Une fois l'actualisation de la stratégie de groupe terminée, redémarrez l'ordinateur pour vous assurer que tous les paramètres sont effectifs. Pour plus d’informations, consultez [Description de l’utilitaire de mise à jour de Stratégie de groupe](https://support.microsoft.com/help/298444).
 
 - Je ne parviens pas à établir une connexion avec la base de données à l’aide de mes informations d’organisation.  
 

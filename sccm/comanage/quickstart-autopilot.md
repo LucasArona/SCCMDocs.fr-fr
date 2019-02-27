@@ -2,7 +2,7 @@
 title: Autopilot Windows avec la cogestion
 titleSuffix: Configuration Manager
 description: Utiliser Windows Autopilot avec la cogestion dans Configuration Manager pour simplifier le jeu de configuration de nouveaux appareils Windows 10.
-ms.date: 01/14/2019
+ms.date: 02/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4c9867b7ea59b435bd1fd344dd0bf4aa67a2be21
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 28710b925444d681a161eff184b845a1cdd430b1
+ms.sourcegitcommit: ef2960bd91655c741450774e512dd0a9be610625
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56754919"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56838750"
 ---
 # <a name="windows-autopilot-with-co-management"></a>Autopilot Windows avec la cogestion
 
@@ -94,5 +94,9 @@ Créez la satisfaction de votre organisation en créant une meilleure expérienc
 
 ## <a name="configure"></a>Configurer
 
-Pour plus d’informations, consultez [appareils Windows de s’inscrire dans Intune à l’aide de Windows Autopilot](https://docs.microsoft.com/intune/enrollment-autopilot).
+Pour plus d’informations, consultez les articles suivants :
+
+[Utiliser Intune pour créer des profils Windows Autopilot](https://docs.microsoft.com/intune/enrollment-autopilot)
+
+[Autopilot Windows pour les périphériques existants](/sccm/osd/deploy-use/windows-autopilot-for-existing-devices) séquence de tâches
 

@@ -1,5 +1,5 @@
 ---
-title: Deployment Monitoring Tool
+title: Outil de monitoring de déploiement
 titleSuffix: Configuration Manager
 description: Utilisez Deployment Monitoring Tool pour résoudre les problèmes de déploiements de logiciels sur un client Configuration Manager.
 ms.date: 07/30/2018
@@ -10,16 +10,17 @@ ms.assetid: 9edc214f-f405-456d-80df-8adcc2a5428d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 67a052fffcaf6ad105f417649aa9f3826922ce80
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 2188ce295f999b392166c99133822ad8fc1e441e
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385890"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56125236"
 ---
-# <a name="deployment-monitoring-tool"></a>Deployment Monitoring Tool
+# <a name="deployment-monitoring-tool"></a>Outil de monitoring de déploiement
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Deployment Monitoring Tool fait partie des [outils de Configuration Manager](/sccm/core/support/tools). Il s’agit d’une interface graphique utilisateur conçue pour vous aider à dépanner les déploiements d’applications, de mises à jour logicielles et de bases de référence de configuration sur un client Configuration Manager. L’outil est en lecture seule et ne change aucun état sur le client. Vous pouvez l’utiliser en toute confiance pour diagnostiquer les scénarios de déploiement courants.
 
@@ -39,11 +40,11 @@ Deployment Monitoring Tool fait partie des [outils de Configuration Manager](/sc
 
 Deployment Monitoring Tool prend en charge l’interface graphique utilisateur uniquement. Pour lancer l’outil, exécutez **DeploymentMonitoringTool.exe** en tant qu’administrateur. Il se compose de trois vues :  
 
-- **Client Properties** (Propriétés du client) : liste des attributs utiles sur l’appareil et le client Configuration Manager. Il s’agit de la vue par défaut.   
+- **Propriétés du client** : Une liste des attributs utiles à propos du périphérique et du client Configuration Manager. Il s’agit de la vue par défaut.   
 
-- **Deployments** (Déploiements) : affichage de tous les déploiements actuellement ciblés. Sélectionnez un déploiement dans le volet de résultats pour voir plus d’informations dans le volet des détails.  
+- **Déploiements** : Affiche tous les déploiements actuellement ciblés. Sélectionnez un déploiement dans le volet de résultats pour voir plus d’informations dans le volet des détails.  
 
-- **All Updates** (Toutes les mises à jour) : affichage de toutes les mises à jour logicielles et leur état.  
+- **Toutes les mises à jour** : Affiche toutes les mises à jour de logiciel et leur état.  
 
 Pour copier des données dans une des vues, sélectionnez une cellule et appuyez sur **CTRL** + **C**.
 
@@ -52,13 +53,13 @@ Pour copier des données dans une des vues, sélectionnez une cellule et appuyez
 
 Les actions suivantes sont disponibles dans le menu **Actions** :  
 
-- **Connect to remote machine** (Se connecter à l’ordinateur distant) : sélectionnez un ordinateur auquel se connecter. Si vous ne spécifiez pas un nom d’utilisateur et un mot de passe, l’outil utilise les informations d’identification actuelles. Cliquez sur **Save** (Enregistrer) pour vous connecter à un ordinateur distant.  
+- **Se connecter à l’ordinateur distant** : Sélectionnez un ordinateur auquel se connecter. Si vous ne spécifiez pas un nom d’utilisateur et un mot de passe, l’outil utilise les informations d’identification actuelles. Cliquez sur **Save** (Enregistrer) pour vous connecter à un ordinateur distant.  
 
-- **Exporter des données** : sélectionnez le fichier dans lequel écrire des données et cliquez sur **Save** (Enregistrer). Utilisez le fichier XML exporté pour le dépannage à distance sur un autre ordinateur.  
+- **Exporter les données** : Sélectionnez le fichier dans lequel écrire des données et cliquez sur **Enregistrer**. Utilisez le fichier XML exporté pour le dépannage à distance sur un autre ordinateur.  
 
-- **Import Data** (Importer les données) : sélectionnez un fichier à importer dans l’outil.  
+- **Importer les données** : Sélectionnez un fichier à importer dans l’outil.  
 
-- **View Log** (Voir le journal) : ouvre un fichier journal associé, en fonction de la vue :  
+- **Afficher le journal** : Ouvre un fichier journal associé, en fonction de l’affichage :  
     - Client Properties (Propriétés du client) : `\\<hostname>\c$\Windows\CCM\Logs\PolicyAgent.log`
     - Deployments (Déploiements) : `\\<hostname>\c$\Windows\CCM\Logs\PolicyAgent.log`
     - All Updates (Toutes les mises à jour) : `C:\Windows\WindowsUpdate.log`

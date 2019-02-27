@@ -10,16 +10,17 @@ ms.assetid: ae72df4b-5f5d-4e19-9052-bda28edfbace
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ae82e17f5a0e7d32c3f5838edc3dfbf00b6f396b
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 9cf206bfb0774ee1d45c70e2a0c890a2f157ad65
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342101"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56127182"
 ---
 # <a name="learn-how-clients-find-site-resources-and-services-for-system-center-configuration-manager"></a>Comprendre comment les clients recherchent des services et des ressources de site pour System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Les clients System Center Configuration Manager utilisent un processus appelé *emplacement du service* pour trouver les serveurs de système de site avec lesquels ils peuvent communiquer et qui leur fournissent les services dont ils ont besoin. Bien comprendre comment et quand les clients utilisent l’emplacement du service pour rechercher des ressources de site peut vous aider à configurer vos sites de manière appropriée pour prendre en charge les tâches des clients. Ces configurations peuvent nécessiter que le site interagisse avec des configurations de domaine et de réseau telles que AD DS et DNS. Elles peuvent également nécessiter la configuration d’alternatives plus complexes.  
 
@@ -93,13 +94,13 @@ Lors de l’installation du client, les règles suivantes sont utilisées pour g
 ### <a name="organizing-the-mp-list"></a>Organisation de la liste PG  
 Les clients organisent leur liste de points de gestion selon les classifications suivantes :  
 
--   **Proxy** : un point de gestion proxy sur un site secondaire.  
--   **Local** : tout point de gestion associé à l’emplacement réseau actuel du client tel qu’il est défini par les limites de site. Gardez à l’esprit les informations suivantes sur les limites :
+-   **Proxy** : Un point de gestion sur un site secondaire.  
+-   **Local** : Tout point de gestion associé à l’emplacement réseau actuel du client, tel que défini par les limites du site. Gardez à l’esprit les informations suivantes sur les limites :
     -   Quand un client appartient à plusieurs groupes de limites, la liste des points de gestion locaux est déterminée en réunissant toutes les limites qui incluent l'emplacement réseau actuel du client.  
     -   En règle générale, les points de gestion locaux sont un sous-ensemble des points de gestion attribués d’un client, sauf si ce dernier se trouve à un emplacement réseau associé à un autre site avec des points de gestion desservant ses groupes de limites.   
 
 
--   **Attribué** : tout point de gestion représentant un système de site pour le site attribué du client.  
+-   **Attribué** : Tout point de gestion représentant un système de site pour le site attribué du client.  
 
 Vous pouvez utiliser des points de gestion préférés. Les points de gestion d’un site qui ne sont pas associés à un groupe de limites ou qui ne figurent pas dans un groupe de limites associé à un emplacement réseau actuel du client ne sont pas considérés comme préférés. Ils seront utilisés si le client ne peut pas identifier un point de gestion par défaut disponible.  
 
@@ -183,19 +184,19 @@ Configuration Manager prend en charge la norme RFC 2782 pour les enregistrements
 
 Pour publier un point de gestion sur Configuration Manager, spécifiez les valeurs suivantes :  
 
--   **_Service** : entrez **_mssms_mp**_&lt;code_site\>, où &lt;code_site\> est le code du site du point de gestion.  
--   **._Proto**: spécifiez **._tcp**.  
--   **.Name**: entrez le suffixe DNS du point de gestion, par exemple **contoso.com**.  
--   **TTL**: entrez **14400**, ce qui correspond à quatre heures.  
--   **Class**: spécifiez **IN** (conformément à la norme RFC 1035).  
+-   **_Service** : Entrez **_mssms_mp**_&lt;sitecode\>, où &lt;sitecode\> est le code de site du point de gestion.  
+-   **._Proto** : Spécifiez **._tcp**.  
+-   **.Nom** : Entrez le suffixe DNS du point de gestion, par exemple **contoso.com**.  
+-   **TTL** : Entrez **14400**, ce qui correspond à quatre heures.  
+-   **Classe** : Spécifiez **IN** (en conformité avec la norme RFC 1035).  
 -   **Priorité** : Configuration Manager n’utilise pas ce champ.
 -   **Poids** : Configuration Manager n’utilise pas ce champ.  
--   **Port**: entrez le numéro de port que le point de gestion utilise, par exemple **80** pour HTTP et **443** pour HTTPS.  
+-   **Port** : Entrez le numéro de port que le point de gestion utilise, par exemple **80** pour HTTP et **443** pour HTTPS.  
 
     > [!NOTE]  
     >  Le port de l’enregistrement SRV doit correspondre au port de communication utilisé par le point de gestion. Par défaut, le port **80** est utilisé pour les communications HTTP et le port **443** pour les communications HTTPS.  
 
--   **Cible**: entrez le nom de domaine complet de l'intranet spécifié pour le système de site configuré avec le rôle de site de point de gestion.  
+-   **Cible** : Entrez le nom de domaine complet de l'intranet qui est spécifié pour le système de site configuré avec le rôle de site de point de gestion.  
 
 Si vous utilisez le DNS Windows Server, vous pouvez utiliser la procédure suivante pour entrer cet enregistrement DNS pour les points de gestion intranet. Si vous utilisez une autre implémentation de DNS, utilisez les informations de cette section sur les valeurs de champ et consultez la documentation de ce DNS pour adapter cette procédure.  
 
@@ -225,17 +226,17 @@ Si vous utilisez le DNS Windows Server, vous pouvez utiliser la procédure suiva
 
 4.  À l’aide de l’option **New Other Records (Autres nouveaux enregistrements)**, cliquez sur **Emplacement du service (SRV)** dans la boîte de dialogue **Type d’enregistrement de ressource**, cliquez sur **Créer un enregistrement**, entrez les informations suivantes, puis choisissez **Terminé** :  
 
-    -   **Domain**: si nécessaire, entrez le suffixe DNS du point de gestion, par exemple **contoso.com**.  
-    -   **Service** : tapez **_mssms_mp**_&lt;code_site\>, où &lt;code_site\> est le code de site du point de gestion.  
-    -   **Protocol**: entrez **_tcp**.  
+    -   **Domaine** : Si nécessaire, entrez le suffixe DNS du point de gestion, par exemple **contoso.com**.  
+    -   **Service** : Saisissez **_mssms_mp**_&lt;sitecode\>, où &lt;sitecode\> est le code de site du point de gestion.  
+    -   **Protocole** : Saisissez **_tcp**.  
     -   **Priorité** : Configuration Manager n’utilise pas ce champ.  
     -   **Poids** : Configuration Manager n’utilise pas ce champ.  
-    -   **Port**: entrez le numéro de port que le point de gestion utilise, par exemple **80** pour HTTP et **443** pour HTTPS.  
+    -   **Port** : Entrez le numéro de port que le point de gestion utilise, par exemple **80** pour HTTP et **443** pour HTTPS.  
 
         > [!NOTE]  
         >  Le port de l’enregistrement SRV doit correspondre au port de communication utilisé par le point de gestion. Par défaut, le port **80** est utilisé pour les communications HTTP et le port **443** pour les communications HTTPS.  
 
-    -   **Hôte offrant ce service** : entrez le nom de domaine complet de l’intranet, spécifié pour le système de site configuré avec le rôle de site du point de gestion.  
+    -   **Hôte offrant ce service** : Entrez le nom de domaine complet de l'intranet qui est spécifié pour le système de site configuré avec le rôle de site de point de gestion.  
 
 Répétez ces étapes pour chaque point de gestion de l'intranet que vous souhaitez publier dans DNS.  
 

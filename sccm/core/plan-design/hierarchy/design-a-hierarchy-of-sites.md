@@ -10,16 +10,17 @@ ms.assetid: 07ce872e-1558-42ad-b5ad-582c5b1bdbb4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: eb7e4a6645514cedee382932adff76da14d0ba16
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 74b8f7b099e906856300f5cc76b807daf894e060
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385522"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56120076"
 ---
 # <a name="design-a-hierarchy-of-sites-for-configuration-manager"></a>Concevoir une hiérarchie de sites pour Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Avant d’installer le premier site d’une nouvelle hiérarchie Configuration Manager, il est judicieux de bien comprendre :  
 
@@ -53,9 +54,9 @@ Lors de la planification, gardez à l’esprit les limitations qui s’appliquen
 
 Les topologies de hiérarchie vont :  
 
-- Des plus simples : un seul site principal autonome  
+- Du plus simple : Un seul site principal autonome  
 
-- Aux plus complexes : un groupe des sites principaux et secondaires connectés avec un site d’administration centrale sur le site de plus niveau de la hiérarchie  
+- Au plus complexe : Un groupe des sites principaux et secondaires connectés avec un site d’administration centrale sur le site de niveau supérieur de la hiérarchie  
 
 Le principal facteur qui détermine le type et le nombre de sites que vous utilisez dans une hiérarchie est généralement le nombre et le type d’appareils que vous devez prendre en charge.   
 

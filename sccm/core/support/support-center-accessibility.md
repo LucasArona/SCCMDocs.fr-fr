@@ -10,16 +10,17 @@ ms.assetid: 1b931c9d-ffae-4d8e-baa7-c330a152674f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 424ab2a1ca7ed81ccdb5c0607edd74ec8ccb7484
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 4d759ada36184ac8a6d1ac59c94c96cdaf234d56
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52458064"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56139372"
 ---
 # <a name="accessibility-features-in-support-center"></a>Fonctionnalités d’accessibilité dans le Centre d’aide et de support
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Le Centre d’aide et de support propose de nombreuses fonctionnalités d’accessibilité utiles qui facilitent son utilisation. 
 
@@ -59,15 +60,15 @@ Vous pouvez également utiliser un clavier pour effectuer les tâches courantes 
 |Ouvrir des fichiers journaux dans la vue actuelle<br>(sous l’onglet **Journaux** du Centre d’aide et de support et dans la fenêtre de la visionneuse du journal)|**Ctrl** + **Maj** + **O** |
 |Ouvrir des fichiers journaux dans une nouvelle fenêtre de la visionneuse du journal<br>(sous l’onglet **Journaux** du Centre d’aide et de support et dans la fenêtre de la visionneuse du journal)|**Ctrl** + **N** |
 |Fermer tous les fichiers journaux<br>(sous l’onglet **Journaux** du Centre d’aide et de support et dans la fenêtre **Visionneuse du journal**)|**Ctrl** + **W** |
-|Rechercher dans les fichiers journaux| - **Ctrl** + **F** : Ouvre la boîte de dialogue **Rechercher** où entrer la chaîne de recherche<br> - **F3** : Rechercher la correspondance suivante<br> - **Maj** + **F3** : Rechercher la correspondance précédente|
+|Rechercher dans les fichiers journaux| - **Ctrl** + **F** : ouvre la boîte de dialogue **Rechercher**, dans laquelle vous pouvez entrer la chaîne de recherche<br> - **F3** : permet de rechercher la correspondance suivante<br> - **Maj** + **F3** : permet de rechercher la correspondance précédente|
 |Rechercher un code d'erreur<br>(sous l’onglet **Journaux** et dans la fenêtre **Visionneuse du journal**)|**Ctrl** + **L** |
-|Copier à partir d'un fichier journal| - **Ctrl** + **C** : Copie le texte du fichier journal<br> - **Ctrl** + **Maj** + **C** : Copie l’entrée du journal sans mise en forme|
+|Copier à partir d'un fichier journal| - **Ctrl** + **C** : Copie le texte du fichier journal<br> - **Ctrl** + **Maj** + **C** : Copie l'entrée du journal sans mise en forme|
 |Filtre rapide sur le texte du fichier journal<br>(sous l’onglet **Journaux** et dans la fenêtre **Visionneuse du journal**)|**Ctrl** + **Maj** + **C** |
 |Annoter un fichier journal<br>(sous l’onglet **Journaux** et dans la fenêtre **Visionneuse du journal**)|**Ctrl** + **Maj** + **N** <sup>[Remarque 1](#bkmk_note1)</sup>|
 |Ouvrir l'aide|**F1**|
 
 
-#### <a name="bkmk_note1"></a> Remarque 1 : Annoter un fichier journal
+#### <a name="bkmk_note1"></a>Remarque 1 : Annoter un fichier journal
 Le Centre d’aide et de support stocke les annotations en mémoire. Vous pouvez les utiliser uniquement dans une session de consultation du journal. Pour conserver une annotation en vue de l’utiliser ultérieurement, effectuez une capture d’écran et enregistrez l’image obtenue.
 
 

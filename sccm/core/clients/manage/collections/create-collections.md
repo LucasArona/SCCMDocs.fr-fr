@@ -10,16 +10,17 @@ ms.assetid: 1401a35e-4312-4d3b-8ceb-0abbb10d4f05
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c314cba909929ee49355eab59dfc813aab7e393e
-ms.sourcegitcommit: a849dab9333ebac799812624d6155f2a96b523ca
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 6235f3f58d8688d9ceee11e1b4be05a2df21a509
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42584634"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56141117"
 ---
 # <a name="how-to-create-collections-in-system-center-configuration-manager"></a>Guide pratique pour créer des regroupements dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Les regroupements sont des groupes d’utilisateurs ou d’appareils. Utilisez les regroupements pour effectuer des tâches comme la gestion d’applications, le déploiement de paramètres de compatibilité ou l’installation de mises à jour logicielles. Vous pouvez également utiliser des regroupements pour gérer des groupes de paramètres client ou les utiliser avec l’administration basée sur les rôles pour définir les ressources auxquelles un utilisateur administratif peut accéder. Configuration Manager contient plusieurs regroupements intégrés. Pour plus d’informations, consultez [Présentation des regroupements dans System Center Configuration Manager](../../../../core/clients/manage/collections/introduction-to-collections.md).  
 
@@ -33,7 +34,7 @@ Les regroupements sont des groupes d’utilisateurs ou d’appareils. Utilisez l
 |Règle directe|Utilisez les règles directes pour choisir les utilisateurs ou les ordinateurs à ajouter à un regroupement. Cette appartenance ne change pas, à moins qu’une ressource soit supprimée de Configuration Manager. Configuration Manager doit avoir découvert les ressources ou vous devez les avoir importées pour pouvoir les ajouter à un regroupement à règle directe. Les regroupements avec règle directe ont une surcharge administrative plus élevée que celle des regroupements avec règle de requête, car ils nécessitent des modifications manuelles.|  
 |Règle de requête|Les règles de requête mettent à jour dynamiquement l’appartenance à un regroupement en fonction d’une requête que Configuration Manager exécute selon une planification. Par exemple, vous pouvez créer un regroupement d'utilisateurs membres de l'unité d'organisation Ressources Humaines dans les services de domaine Active Directory. Ce regroupement est automatiquement mis à jour quand de nouveaux utilisateurs sont ajoutés ou supprimés dans l’unité d’organisation Ressources Humaines.<br /><br /> Pour examiner des exemples de requêtes que vous pouvez utiliser pour créer des regroupements, consultez [Guide pratique pour créer des requêtes dans System Center Configuration Manager](../../../../core/servers/manage/create-queries.md).|  
 |Règle Inclure des regroupements|Cette règle inclut les membres d’un autre regroupement dans un regroupement Configuration Manager. L’appartenance au regroupement actif est mise à jour selon une planification si le regroupement inclus est modifié.<br /><br /> Vous pouvez ajouter plusieurs règles d’inclusion de regroupement à un regroupement.<br /> |  
-|Règle Exclure des regroupements|La règle Exclure des regroupements permet d’exclure les membres d’un autre regroupement d’un regroupement Configuration Manager. L’appartenance du regroupement actuel est mise à jour selon une planification si le regroupement exclu est modifié.<br /><br /> Vous pouvez ajouter plusieurs règles d’exclusion de regroupement à un regroupement. Si un regroupement inclut des règles d’inclusion et d’exclusion de regroupement et qu’il existe un conflit, la règle d’exclusion de regroupement est prioritaire.<br />              **Exemple :** vous créez un regroupement qui comporte une seule règle d’inclusion de regroupement et une seule règle d’exclusion de regroupement. La règle d’inclusion concerne un regroupement d’ordinateurs de bureau Dell. La règle d’exclusion concerne un regroupement d’ordinateurs qui possèdent moins de 4 Go de RAM. Le nouveau regroupement contient les ordinateurs de bureau Dell qui ont au moins 4 Go de RAM.|  
+|Règle Exclure des regroupements|La règle Exclure des regroupements permet d’exclure les membres d’un autre regroupement d’un regroupement Configuration Manager. L’appartenance du regroupement actuel est mise à jour selon une planification si le regroupement exclu est modifié.<br /><br /> Vous pouvez ajouter plusieurs règles d’exclusion de regroupement à un regroupement. Si un regroupement inclut des règles d’inclusion et d’exclusion de regroupement et qu’il existe un conflit, la règle d’exclusion de regroupement est prioritaire.<br />              **Exemple :** vous créez un regroupement qui comporte une seule règle d’inclusion de regroupement et une seule règle d’exclusion de regroupement. La règle d’inclusion concerne un regroupement d’ordinateurs de bureau Dell. La règle d’exclusion concerne un regroupement d’ordinateurs qui possèdent moins de 4 Go de RAM. Le nouveau regroupement contient les ordinateurs de bureau Dell qui ont au moins 4 Go de RAM.|  
 
  Utilisez les procédures suivantes pour créer des regroupements dans Configuration Manager. Vous pouvez aussi importer des regroupements créés sur ce site ou sur un autre site Configuration Manager. Pour plus d’informations sur l’exportation et l’importation des regroupements, consultez [Guide pratique pour gérer des regroupements dans System Center Configuration Manager](../../../../core/clients/manage/collections/manage-collections.md).  
 
@@ -54,15 +55,15 @@ Les regroupements sont des groupes d’utilisateurs ou d’appareils. Utilisez l
 
 1.  Sur la page **Rechercher des ressources** de l' **Assistant Création d'une règle d'adhésion directe**, spécifiez les informations suivantes :  
 
--   **Classe de ressource** : Sélectionnez le type de ressource à rechercher et ajouter au regroupement. Sélectionnez dans les valeurs **Ressource Système** pour rechercher des données d'inventaire renvoyées par les ordinateurs clients ou **Ordinateur inconnu** pour sélectionner dans les valeurs renvoyées par les ordinateurs inconnus.  
+-   **Classe de ressource** : sélectionnez le type de ressource à rechercher et à ajouter au regroupement. Sélectionnez dans les valeurs **Ressource Système** pour rechercher des données d'inventaire renvoyées par les ordinateurs clients ou **Ordinateur inconnu** pour sélectionner dans les valeurs renvoyées par les ordinateurs inconnus.  
 
--   **Nom d’attribut** : Sélectionnez l’attribut associé à la classe de ressource sélectionnée que vous voulez rechercher. Par exemple, si vous souhaitez sélectionner des ordinateurs par leur nom NetBIOS, sélectionnez **Ressource Système** dans la liste **Classe de ressource** et **NetBIOS nom** dans la liste **Nom d'attribut** .  
+-   **Nom d’attribut** : sélectionnez l’attribut associé à la classe de ressource sélectionnée à rechercher. Par exemple, si vous souhaitez sélectionner des ordinateurs par leur nom NetBIOS, sélectionnez **Ressource Système** dans la liste **Classe de ressource** et **NetBIOS nom** dans la liste **Nom d'attribut** .  
 
 -   **Exclure les ressources signalées comme obsolètes** : si un ordinateur client est signalé comme obsolète, n’incluez pas cette valeur dans les résultats de recherche.  
 
 -   **Exclure les ressources sur lesquelles le client Configuration Manager n’est pas installé** : Elles ne seront pas affichées dans les résultats de recherche.  
 
--   **Valeur :** entrez une valeur pour laquelle vous voulez rechercher le nom d’attribut sélectionné. Vous pouvez utiliser le caractère de pourcentage ( **%** ) comme caractère générique. Par exemple, pour rechercher les ordinateurs dont le nom NetBIOS commence par « M », entrez **M%** dans ce champ.  
+-   **Valeur :** entrez une valeur pour laquelle vous souhaitez rechercher le nom d'attribut sélectionné. Vous pouvez utiliser le caractère de pourcentage ( **%** ) comme caractère générique. Par exemple, pour rechercher les ordinateurs dont le nom NetBIOS commence par « M », entrez **M%** dans ce champ.  
 
 2.  Dans la page **Sélectionner les ressources**, sélectionnez les ressources à ajouter au regroupement dans la liste **Ressources**, puis choisissez **Suivant**.  
 
@@ -71,11 +72,11 @@ Les regroupements sont des groupes d’utilisateurs ou d’appareils. Utilisez l
 
 1.  Dans la boîte de dialogue **Propriétés de la règle de requête** , définissez les options suivantes :  
 
--   **Nom** : Spécifiez un nom unique.  
+-   **Nom** : spécifiez un nom unique.  
 
 -   **Importer l’instruction de requête** : Ouvre la boîte de dialogue **Parcourir la requête** dans laquelle vous pouvez sélectionner une [requête Configuration Manager](../../../../core/servers/manage/create-queries.md) à utiliser comme règle de requête pour le regroupement.   
 
--   **Classe de ressource :** Sélectionnez le type de ressource à rechercher et ajouter au regroupement. Sélectionnez dans les valeurs **Ressource système** pour rechercher des données d'inventaire renvoyées par les ordinateurs clients ou **Ordinateur inconnu** pour sélectionner dans les valeurs renvoyées par les ordinateurs inconnus.  
+-   **Classe de ressource** : sélectionnez le type de ressource à rechercher et à ajouter au regroupement. Sélectionnez dans les valeurs **Ressource système** pour rechercher des données d'inventaire renvoyées par les ordinateurs clients ou **Ordinateur inconnu** pour sélectionner dans les valeurs renvoyées par les ordinateurs inconnus.  
 
 -   **Modifier l’instruction de requête** : ouvre la boîte de dialogue **Propriétés de l’instruction de requête** dans laquelle vous pouvez créer une requête à utiliser comme règle pour le regroupement. Pour plus d’informations sur les requêtes, consultez [Informations techniques de référence sur les requêtes pour System Center Configuration Manager](../../../../core/servers/manage/queries-technical-reference.md).  
 
@@ -131,11 +132,11 @@ Dans la boîte de dialogue **Sélectionner des regroupements**, sélectionnez le
 
 1.  Dans la page **Rechercher des ressources** de l’**Assistant Création d’une règle d’adhésion directe**, spécifiez les informations suivantes :  
 
--   **Classe de ressource** : Sélectionnez le type de ressource à rechercher et ajouter au regroupement. Sélectionnez des valeurs **Ressource utilisateur** pour rechercher les informations utilisateur collectées par Configuration Manager ou **Ressource groupe d’utilisateurs** pour rechercher les informations sur les groupes d’utilisateurs collectées par Configuration Manager.  
+-   **Classe de ressource** : sélectionnez le type de ressource à rechercher et à ajouter au regroupement. Sélectionnez des valeurs **Ressource utilisateur** pour rechercher les informations utilisateur collectées par Configuration Manager ou **Ressource groupe d’utilisateurs** pour rechercher les informations sur les groupes d’utilisateurs collectées par Configuration Manager.  
 
--   **Nom d’attribut** : Sélectionnez l’attribut associé à la classe de ressource que vous voulez rechercher. Par exemple, si vous voulez sélectionner des utilisateurs par leur nom d’unité d’organisation (UO), sélectionnez **Ressource utilisateur** dans la liste **Classe de ressource** et **Nom de l’unité d’organisation utilisateur** dans la liste **Nom d’attribut** .  
+-   **Nom d’attribut** : sélectionnez l’attribut associé à la classe de ressource que vous voulez rechercher. Par exemple, si vous voulez sélectionner des utilisateurs par leur nom d’unité d’organisation (UO), sélectionnez **Ressource utilisateur** dans la liste **Classe de ressource** et **Nom de l’unité d’organisation utilisateur** dans la liste **Nom d’attribut** .  
 
--   **Valeur :** Entrez une valeur à rechercher. Vous pouvez utiliser le caractère de pourcentage ( **%** ) comme caractère générique. Par exemple, pour rechercher des utilisateurs dans l’unité d’organisation Contoso, entrez **Contoso** dans ce champ.  
+-   **Valeur :** entrez une valeur à rechercher. Vous pouvez utiliser le caractère de pourcentage ( **%** ) comme caractère générique. Par exemple, pour rechercher des utilisateurs dans l’unité d’organisation Contoso, entrez **Contoso** dans ce champ.  
 
 2.  Dans la page **Sélectionner les ressources**, sélectionnez les ressources à ajouter au regroupement dans la liste **Ressources**.  
 
@@ -143,11 +144,11 @@ Dans la boîte de dialogue **Sélectionner des regroupements**, sélectionnez le
 
 1.  Dans la boîte de dialogue **Propriétés de la règle de requête**, fournissez les informations suivantes :  
 
--   **Nom** : Un nom unique.  
+-   **Nom** : nom unique.  
 
 -   **Importer l’instruction de requête** : Ouvre la boîte de dialogue **Parcourir la requête** dans laquelle vous pouvez sélectionner une [requête Configuration Manager](../../../../core/servers/manage/queries-technical-reference.md) à utiliser comme règle de requête pour le regroupement.  
 
--   **Classe de ressource** : Sélectionnez le type de ressource à rechercher et ajouter au regroupement. Sélectionnez des valeurs **Ressource utilisateur** pour rechercher les informations utilisateur collectées par Configuration Manager ou **Ressource groupe d’utilisateurs** pour rechercher les informations sur les groupes d’utilisateurs collectées par Configuration Manager.  
+-   **Classe de ressource** : sélectionnez le type de ressource à rechercher et à ajouter au regroupement. Sélectionnez des valeurs **Ressource utilisateur** pour rechercher les informations utilisateur collectées par Configuration Manager ou **Ressource groupe d’utilisateurs** pour rechercher les informations sur les groupes d’utilisateurs collectées par Configuration Manager.  
 
 -   **Modifier l’instruction de requête** : Ouvre la boîte de dialogue **Propriétés de l’instruction de requête** dans laquelle vous pouvez [créer une requête](../../../../core/servers/manage/queries-technical-reference.md) à utiliser comme règle pour le regroupement.  
 

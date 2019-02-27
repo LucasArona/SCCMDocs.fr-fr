@@ -10,16 +10,17 @@ ms.assetid: 0ef5f3ce-b0e4-4775-b5c2-b245e45b4194
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cbfa49dddb19d588a3fe16f042b50af590cf39e8
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 6c7f54ccda217ebbae543b70aeead37f6c55cf0f
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383726"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56125684"
 ---
 # <a name="prepare-site-system-roles-for-os-deployments-with-configuration-manager"></a>Préparer des rôles de système de site pour les déploiements de système d’exploitation avec Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Pour déployer des systèmes d’exploitation dans Configuration Manager, commencez par préparer les rôles de système de site suivants qui nécessitent des configurations et des considérations spécifiques.
 
@@ -67,9 +68,9 @@ Pour déployer des systèmes d’exploitation sur des clients Configuration Mana
 
 Vous pouvez personnaliser les tailles de bloc et de fenêtre TFTP RamDisk pour des points de distribution compatibles PXE. Si vous avez personnalisé votre réseau, une taille importante de bloc ou de fenêtre peut entraîner l’échec du téléchargement de l’image de démarrage avec une erreur d’expiration de délai. La personnalisation des tailles de bloc et de fenêtre TFTP RamDisk permet d’optimiser le trafic TFTP quand vous utilisez PXE pour répondre aux besoins spécifiques de votre réseau. Pour déterminer la configuration la plus efficace, testez les paramètres personnalisés dans votre environnement.  
 
--   **Taille de bloc TFTP** : La taille de bloc est la taille des paquets de données que le serveur envoie au client qui télécharge le fichier. Plus la taille de bloc est importante, moins le serveur envoie de paquets. Il y a donc moins de délais d’aller et retour entre le serveur et le client. Toutefois, une taille de bloc importante entraîne la fragmentation des paquets, ce qui n’est pas pris en charge par la plupart des implémentations du client PXE.  
+-   **Taille de bloc TFTP** : il s’agit de la taille des paquets de données que le serveur envoie au client qui télécharge le fichier. Plus la taille de bloc est importante, moins le serveur envoie de paquets. Il y a donc moins de délais d’aller et retour entre le serveur et le client. Toutefois, une taille de bloc importante entraîne la fragmentation des paquets, ce qui n’est pas pris en charge par la plupart des implémentations du client PXE.  
 
--   **Taille de fenêtre TFTP**: le protocole TFTP nécessite le renvoi d’un paquet d’accusé de réception (ACK) pour chaque bloc de données envoyé. Le serveur n’envoie pas le bloc suivant dans la séquence tant qu’il n’a pas reçu le paquet ACK pour le bloc précédent. Le fenêtrage TFTP vous permet de définir le nombre de blocs de données nécessaires pour remplir une fenêtre. Le serveur envoie les blocs de données dos à dos jusqu’à ce que la fenêtre soit remplie, et le client renvoie un paquet ACK. Si vous augmentez cette taille de fenêtre, vous réduisez aussi bien le nombre de délais d’aller et retour entre le client et le serveur que le temps global nécessaire au téléchargement d’une image de démarrage.  
+-   **Taille de fenêtre TFTP** : le protocole TFTP nécessite le renvoi d’un paquet d’accusé de réception (ACK) pour chaque bloc de données envoyé. Le serveur n’envoie pas le bloc suivant dans la séquence tant qu’il n’a pas reçu le paquet ACK pour le bloc précédent. Le fenêtrage TFTP vous permet de définir le nombre de blocs de données nécessaires pour remplir une fenêtre. Le serveur envoie les blocs de données dos à dos jusqu’à ce que la fenêtre soit remplie, et le client renvoie un paquet ACK. Si vous augmentez cette taille de fenêtre, vous réduisez aussi bien le nombre de délais d’aller et retour entre le client et le serveur que le temps global nécessaire au téléchargement d’une image de démarrage.  
   
 
 #### <a name="modify-the-ramdisk-tftp-window-size"></a>Modifier la taille de fenêtre TFTP RamDisk  
@@ -77,7 +78,7 @@ Pour personnaliser la taille de fenêtre TFTP RamDisk, ajoutez la clé de Regist
 
 - **Emplacement** : `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\DP`  
 - **Nom** : RamDiskTFTPWindowSize  
-- **Type**: REG_DWORD  
+- **Type** : REG_DWORD  
 - **Valeur** : (taille de fenêtre personnalisée)  
     - La valeur par défaut est **1** (un bloc de données remplit la fenêtre).  
 
@@ -86,7 +87,7 @@ Pour personnaliser la taille de fenêtre TFTP RamDisk, ajoutez la clé de Regist
 
 - **Emplacement** : `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\DP`  
 - **Nom** : RamDiskTFTPBlockSize  
-- **Type**: REG_DWORD  
+- **Type** : REG_DWORD  
 - **Valeur** : (taille de bloc personnalisée)  
     - La valeur par défaut est **4096**.  
 

@@ -10,16 +10,17 @@ ms.assetid: 6dcef836-c0d1-40af-ad30-cd8d864b09a9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 912bdb93db05091ff756c51ee9f951a17a76ff5d
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: be12cfe29ff470f2f577bab2c685695ae5770bae
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385970"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56131419"
 ---
 # <a name="site-server-high-availability-in-configuration-manager"></a>Haute disponibilité du serveur de site dans Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 <!--1128774-->
 
@@ -121,9 +122,9 @@ Pour plus d’informations sur le processus général d’ajout de rôles, consu
 
          - **Copier les fichiers sources d’installation sur le réseau à partir du serveur de site en mode actif** : cette option permet de créer un package compressé et de l’envoyer vers le nouveau serveur de site.  
 
-         - **Utiliser les fichiers sources de l’emplacement suivant sur le serveur de site en mode passif** : par exemple, le chemin d’un emplacement local auquel vous avez déjà copié les fichiers sources. Vérifiez que la version de ce contenu est la même que celle du serveur de site en mode actif.  
+         - **Utiliser les fichiers sources de l’emplacement suivant sur le serveur de site en mode passif** : il peut s’agir par exemple d’un chemin d’accès local dans lequel vous avez déjà copié les fichiers sources. Vérifiez que la version de ce contenu est la même que celle du serveur de site en mode actif.  
 
-         - (*Recommandé*) **Utiliser les fichiers sources dans l’emplacement réseau suivant** : spécifiez le chemin direct du contenu du dossier **CD.Latest** situé sur le serveur de site en mode actif. Par exemple, `\\Server\SMS_ABC\CD.Latest` où « *Server* » correspond au nom du serveur de site en mode actif, et «*ABC*» au code de site.  
+         - (*Recommandé*) **Utiliser les fichiers sources dans l’emplacement réseau suivant** : spécifiez le chemin d’accès direct du contenu du dossier **CD.Latest** situé sur le serveur de site en mode actif. Par exemple, `\\Server\SMS_ABC\CD.Latest` où « *Server* » correspond au nom du serveur de site en mode actif, et «*ABC*» au code de site.  
 
      - Spécifiez le chemin de l’emplacement local auquel installer Configuration Manager sur le nouveau serveur de site. Exemple : `C:\Program Files\Configuration Manager`  
 

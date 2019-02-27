@@ -2,7 +2,7 @@
 title: Fichiers journaux pour la résolution des problèmes
 titleSuffix: Configuration Manager
 description: Utilisez des fichiers journaux pour résoudre des problèmes liés aux systèmes de site et aux clients Configuration Manager.
-ms.date: 11/27/2018
+ms.date: 02/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 96673c0b299e45111c7d9a2bedf55282de50132e
-ms.sourcegitcommit: 5e7c4d36f4cdb3390ad3b381d31a3e1e4bf3c6e1
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: a5c6cee6422d3fc8777f54bd42716748410c9323
+ms.sourcegitcommit: ceec0e20bf801071f2a05233f984cf17acc3fd29
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "55986618"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265068"
 ---
 # <a name="log-files-in-configuration-manager"></a>Fichiers journaux de Configuration Manager
 
@@ -809,9 +810,10 @@ Le tableau suivant répertorie les fichiers journaux qui contiennent des informa
 ###  <a name="BKMK_WindowsServicingLog"></a>Maintenance de Windows 10  
  Le tableau suivant répertorie les fichiers journaux qui contiennent des informations relatives à la maintenance de Windows 10.  
 La maintenance utilise la même infrastructure et le même processus que les mises à jour logicielles. Pour les autres journaux applicables au scénario de maintenance, consultez [Mises à jour logicielles](#BKMK_SU_NAPLog).
+
 |Nom du fichier journal|Description|Ordinateur sur lequel se trouve le fichier journal|  
 |--------------|-----------------|----------------------------|  
-|CBS.log|Enregistre les échecs de maintenance liés aux changements concernant Windows Updates ou les rôles et les fonctionnalités.|Client|  
+|CBS.log|Enregistre les échecs de maintenance liés aux changements concernant Windows Updates ou les rôles et les fonctionnalités.|Client|
 |DISM.log|Enregistre toutes les actions à l’aide de DISM. Si nécessaire, DISM.log pointe vers CBS.log pour plus d’informations.|Client|
 |setupact.log|Fichier journal principal pour la plupart des erreurs qui se produisent pendant le processus d’installation de Windows. Le fichier journal se trouve dans le dossier %windir%\$Windows.~BT\sources\panther.|Client|
 

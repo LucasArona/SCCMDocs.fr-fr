@@ -10,16 +10,17 @@ ms.assetid: b634ff68-b909-48d2-9e2c-0933486673c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7d103f7f7b92003605d92d34d6294ed06009118c
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 9107e3bf851ddbcec061eeeac064f31e7392ee9f
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456513"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56142440"
 ---
 # <a name="create-phased-deployments-with-configuration-manager"></a>Créer des déploiements par phases avec Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Les déploiements par phases permettent d’automatiser le déploiement coordonné et séquencé de logiciels sur plusieurs regroupements. Par exemple, déployez un logiciel sur un regroupement pilote, puis continuez automatiquement le processus de déploiement en fonction des critères de réussite définis. Créez des déploiements par phases avec deux phases par défaut ou configurer manuellement plusieurs phases. 
 
@@ -43,9 +44,9 @@ Les déploiements créés par phases ne sont pas visibles pour les utilisateurs 
 #### <a name="distribute-content"></a>Distribuer du contenu
 Avant de créer un déploiement par phases, distribuez le contenu associé à un point de distribution.<!--518293-->  
 
-- **Application** : sélectionnez l’application cible dans la console et utilisez l’action **Distribuer du contenu** dans le ruban. Pour plus d’informations, consultez [Déployer et gérer du contenu](/sccm/core/servers/deploy/configure/deploy-and-manage-content).   
+- **Application** : sélectionnez l’application cible dans la console et utilisez l’action **Distribuer du contenu** dans le ruban. Pour plus d’informations, consultez [Déployer et gérer du contenu](/sccm/core/servers/deploy/configure/deploy-and-manage-content).   
 
-- **Séquence de tâches** : vous devez créer des objets référencés tels que le package de mise à niveau du système d’exploitation avant de créer la séquence de tâches. Distribuez ces objets avant de créer un déploiement. Utilisez l’action **Distribuer du contenu** sur chaque objet, ou la séquence de tâches. Pour afficher l’état de tout le contenu référencé, sélectionnez la séquence de tâches et passez à l’onglet **Références** dans le volet d’informations. Pour plus d’informations, consultez le type d’objet spécifique dans [Préparer un déploiement de système d’exploitation](/sccm/osd/get-started/prepare-for-operating-system-deployment).   
+- **Séquence de tâches** : vous devez créer des objets référencés tels que le package de mise à niveau du système d’exploitation avant de créer la séquence de tâches. Distribuez ces objets avant de créer un déploiement. Utilisez l’action **Distribuer du contenu** sur chaque objet, ou la séquence de tâches. Pour afficher l’état de tout le contenu référencé, sélectionnez la séquence de tâches et passez à l’onglet **Références** dans le volet d’informations. Pour plus d’informations, consultez le type d’objet spécifique dans [Préparer un déploiement de système d’exploitation](/sccm/osd/get-started/prepare-for-operating-system-deployment).   
 
 - **Mise à jour logicielle** : créez le package de déploiement et distribuez-le. Utilisez l’Assistant Téléchargement des mises à jour logicielles. Pour plus d’informations, consultez [Télécharger les mises à jour logicielles](/sccm/sum/deploy-use/download-software-updates).  
 
@@ -58,12 +59,12 @@ Ces paramètres sont propres aux déploiements par phases. Configurez ces param�
 
 #### <a name="criteria-for-success-of-the-first-phase"></a>Critères de réussite de la première phase  
 
-- **Pourcentage de réussite du déploiement** : spécifiez le pourcentage d’appareils devant réussir le déploiement pour valider la première phase. Par défaut, cette valeur est de 95 %. En d’autres termes, le site considère que la première phase a réussi lorsque l’état de conformité de 95 % des appareils affiche **Réussite** pour ce déploiement. Le site passe alors à la deuxième phase, et crée un déploiement du logiciel sur le regroupement suivant.  
+- **Pourcentage de réussite du déploiement** : spécifiez le pourcentage d’appareils devant réussir le déploiement pour valider la première phase. Par défaut, cette valeur est de 95 %. En d’autres termes, le site considère que la première phase a réussi lorsque l’état de conformité de 95 % des appareils affiche **Réussite** pour ce déploiement. Le site passe alors à la deuxième phase, et crée un déploiement du logiciel sur le regroupement suivant.  
 
 
 #### <a name="conditions-for-beginning-second-phase-of-deployment-after-success-of-the-first-phase"></a>Conditions pour commencer la deuxième phase du déploiement après la réussite de la première phase  
 
-- **Commencer automatiquement cette phase après une période de report (en jours)** : choisissez le nombre de jours à attendre avant de commencer la deuxième phase après la réussite de la première. Par défaut, ce délai est d’un jour.  
+- **Commencer automatiquement cette phase après une période de report (en jours)** : choisissez le nombre de jours d’attente avant de passer à la deuxième phase après la réussite de la première phase. Par défaut, ce délai est d’un jour.  
 
 - **Commencer manuellement la deuxième phase de déploiement** : le site ne commence pas automatiquement la deuxième phase à l’issue de la réussite de la première phase. Si vous choisissez cette option, vous devez démarrer manuellement la deuxième phase. Pour plus d’informations, consultez [Passer à la phase suivante](/sccm/osd/deploy-use/manage-monitor-phased-deployments#bkmk_move).  
 
@@ -77,9 +78,9 @@ Ces paramètres sont propres aux déploiements par phases. Configurez ces param�
 
 #### <a name="configure-the-deadline-behavior-relative-to-when-the-software-is-made-available"></a>Configurer le comportement à l’échéance par rapport à la date de disponibilité du logiciel  
 
-- **Installation is required as soon as possible** (Installation requise dès que possible) : définissez l’échéance d’installation sur l’appareil au moment où celui-ci est ciblé.  
+- **L’installation est nécessaire dès que possible** : l’échéance d’installation sur l’appareil correspond au moment où celui-ci est ciblé.  
 
-- **Installation is required after this period of time** (Installation requise au terme de cette période) : définissez l’échéance d’installation à un certain nombre de jours après le ciblage de l’appareil. Par défaut, ce délai est de sept jours.   
+- **L’installation est nécessaire après cette période de temps** : l’échéance d’installation correspond à un certain nombre de jours après que l’appareil a été ciblé. Par défaut, ce délai est de sept jours.   
 
 
 <!--### Examples
@@ -92,9 +93,9 @@ Include a timeline diagram
 
 1. Dans la console Configuration Manager, démarrez l’Assistant Créer un déploiement par phases. Cette action varie en fonction du type de logiciel que vous déployez :  
 
-    - **Application** (uniquement dans la version 1806 ou ultérieure) : accédez à **Bibliothèque de logiciels**, développez **Gestion des applications** et sélectionnez **Applications**. Sélectionnez une application existante, puis choisissez **Créer un déploiement par phases** dans le ruban.  
+    - **Application** (uniquement dans les versions 1806 ou ultérieures) : accédez à l’espace de travail **Bibliothèque de logiciels**, développez **Gestion d’applications** et sélectionnez **Applications**. Sélectionnez une application existante, puis choisissez **Créer un déploiement par phases** dans le ruban.  
 
-    - **Mise à jour logicielle** (seulement dans la version 1810 ou ultérieure) : accédez à la **Bibliothèque de logiciels**, développez **Mises à jour logicielles**, puis sélectionnez **Toutes les mises à jour logicielles**. Sélectionnez une ou plusieurs mises à jour, puis choisissez **Créer un déploiement par phases** dans le ruban.  
+    - **Mise à jour logicielle** (uniquement dans les versions 1810 ou ultérieures) : accédez à l’espace de travail **Bibliothèque de logiciels**, développez **Mises à jour logicielles** et sélectionnez **Toutes les mises à jour logicielles**. Sélectionnez une ou plusieurs mises à jour, puis choisissez **Créer un déploiement par phases** dans le ruban.  
 
         Cette action est disponible pour les mises à jour logicielles à partir des nœuds suivants :  
         - mises à jour logicielles  
@@ -153,9 +154,9 @@ Include a timeline diagram
 
         4. Vérifiez les paramètres définis dans la page **Résumé**, puis continuez l’Assistant Ajout de phases.  
 
-    - **Modifier** : cette action ouvre la fenêtre Propriétés de la phase sélectionnée, qui affiche les mêmes onglets que les pages de l’Assistant Ajout de phases.  
+    - **Modifier** : cette action ouvre la fenêtre Propriétés de la phase sélectionnée, qui affiche les mêmes onglets que les pages de l’Assistant Ajout de phases.  
 
-    - **Supprimer** : cette action supprime la phase sélectionnée.  
+    - **Supprimer** : cette action supprime la phase sélectionnée.  
 
        > [!Warning]  
        > Il n’y a pas de message de confirmation, et vous ne pouvez pas annuler cette action.  
