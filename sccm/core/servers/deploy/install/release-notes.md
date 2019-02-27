@@ -2,7 +2,7 @@
 title: Notes de publication
 titleSuffix: Configuration Manager
 description: Découvrez plus en détail les problèmes urgents qui ne sont pas encore résolus dans le produit ni traités dans un article de la base de connaissances Support Microsoft.
-ms.date: 12/21/2018
+ms.date: 02/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4ba088be689808139a977073dd5b111d1fa46b7b
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: bc19092f1272611ea3e05d708bf89bda1a4ba3b9
+ms.sourcegitcommit: 0a23cde6112cbb5987f433bffcf6f223b994ba72
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56121554"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56667458"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Notes de publication de Configuration Manager
 
@@ -84,7 +84,16 @@ Déplacez le rôle de point de connexion de service vers un autre serveur.
 
 
 
-<!-- ## Operating system deployment  -->
+## <a name="os-deployment"></a>Déploiement de système d’exploitation
+
+### <a name="after-passive-site-server-is-promoted-the-default-boot-image-packages-still-have-package-source-on-the-previous-active-server"></a>Une fois que le serveur de site en mode passif est promu, les packages d’images de démarrage par défaut conservent la source du package sur le serveur actif précédent
+<!--3453224, SCCMDocs-pr issue 3097-->
+*S’applique à : Configuration Manager version 1810*
+
+Si vous avez un serveur de site en mode passif (serveur B) et que vous le promouvez à l’état actif, l’emplacement du contenu des images de démarrage par défaut continue à référencer le serveur précédemment actif (serveur A). Si le serveur A subit une défaillance matérielle, vous ne pouvez pas mettre à jour ni changer les images de démarrage par défaut.
+
+#### <a name="workaround"></a>Solution de contournement
+Aucun
 
 
 

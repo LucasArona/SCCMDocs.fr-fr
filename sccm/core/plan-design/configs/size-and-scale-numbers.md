@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 304fe88dd5ed8a37bf17dca390d95158d005bae3
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 8850d849066c97b8cb07719f229ebec1d4748403
+ms.sourcegitcommit: 369db96ee84299b5ab6d74b177e6366b3017fc54
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56125366"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56589881"
 ---
 # <a name="size-and-scale-numbers-for-system-center-configuration-manager"></a>Taille et échelle de System Center Configuration Manager en chiffres
 
@@ -208,7 +208,7 @@ Par exemple, un site principal autonome prenant en charge 150 000 ordinateurs 
 
 
 ### <a name="embedded"></a>Sites principaux et appareils Windows Embedded
-Les sites principaux prennent en charge les appareils embarqués Windows Embedded où les filtres d'écriture basés sur des fichiers (FBWF) sont activés. Quand des appareils embarqués ne disposent pas de filtres d’écriture activés, un site principal peut prendre en charge un nombre d’appareils embarqués pouvant atteindre le nombre autorisé d’appareils pour ce site. Du nombre total des appareils qu’un site principal prend en charge, un maximum de 10 000 de ceux-ci peuvent être des appareils Windows Embedded. Ces appareils doivent être configurés pour les exceptions listées dans la Remarque importante se trouvant dans [Planification du déploiement de clients sur des appareils Windows Embedded](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices). Un site principal prend en charge seulement 3 000 appareils Windows Embedded où EWF est activé et qui ne sont pas configurés pour les exceptions.
+Les sites principaux prennent en charge les appareils embarqués Windows Embedded où les filtres d'écriture basés sur des fichiers (FBWF) sont activés. Quand des appareils embarqués ne disposent pas de filtres d’écriture activés, un site principal peut prendre en charge un nombre d’appareils embarqués pouvant atteindre le nombre autorisé d’appareils pour ce site. Lorsque les appareils embarqués ont FBWF ou UWF (Unified Write Filters) activé, un site principal peut prendre en charge un maximum de 10 000 appareils embarqués Windows. Ces appareils doivent être configurés avec les exceptions listées dans la remarque importante se trouvant dans [Planification du déploiement de clients sur des appareils Windows Embedded](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices). Un site principal prend en charge seulement 3 000 appareils Windows Embedded où EWF est activé et qui ne sont pas configurés pour les exceptions.
 
 
 ###  <a name="bkmk_sec"></a> Sites secondaires  

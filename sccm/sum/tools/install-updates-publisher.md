@@ -2,31 +2,32 @@
 title: Installer l'éditeur de mise à jour
 titleSuffix: Configuration Manager
 description: Installer l'éditeur de mise à jour System Center
-ms.date: 07/03/2017
+ms.date: 02/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
 ms.assetid: ab5cda93-b67c-4aa5-904d-7b63ce790aa0
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2cd48e40f594ced5a62e3a65beb43e6dc74e090b
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 37a468a2b9727d66f7d3fe0cafd1aae044585b2a
+ms.sourcegitcommit: e18853c214c95e4d21b2f032aba6d17c21e97027
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56122472"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56443951"
 ---
 # <a name="install-updates-publisher"></a>Installer l'éditeur de mise à jour
 
 *S’applique à : Éditeur de mise à jour System Center*
 
-Les informations de cette rubrique peuvent vous aider à obtenir, installer et configurer l’éditeur de mise à jour pour une utilisation avec votre environnement.
-
+Les informations contenues dans ces articles peuvent vous aider à télécharger, installer et configurer l’éditeur de mise à jour pour l’utiliser dans votre environnement System Center Configuration Manager.
 
 ## <a name="prerequisites-and-limitations"></a>Conditions préalables et limitations
-Les sections suivantes détaillent la configuration requise pour installer et utiliser l’éditeur de mise à jour ainsi que limitations ou problèmes connus liés à son utilisation.
+L’éditeur de mise à jour System Center peut être utilisé avec System Center Configuration Manager uniquement. Il n’est pas destiné aux hiérarchies WSUS autonomes.
+
+Les sections suivantes détaillent la configuration requise pour installer et utiliser l’éditeur de mise à jour ainsi que limitations ou problèmes connus liés à son utilisation.  
 
 ### <a name="operating-systems"></a>Systèmes d'exploitation
 Installez et exécutez l’éditeur de mise à jour sur des éditions 64 bits des systèmes d’exploitation suivants. Il n’existe aucune condition préalable minimale pour les mises à jour cumulatives ou les Service Pack.

@@ -2,7 +2,7 @@
 title: Nouveautés de la version 1810
 titleSuffix: Configuration Manager
 description: Obtenez des informations détaillées sur les changements et les nouvelles fonctionnalités introduits dans la version 1810 de l’édition Current Branch de Configuration Manager.
-ms.date: 01/25/2019
+ms.date: 02/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0f29dabe9c29ad69278ac52253a81a0172643f84
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 703b8be554f0a7ed1601703d381e4ed7c317af77
+ms.sourcegitcommit: 369db96ee84299b5ab6d74b177e6366b3017fc54
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56142525"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56589864"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Nouveautés de la version 1810 de l’édition Current Branch de Configuration Manager
 
@@ -258,7 +258,10 @@ Par défaut, cette option est définie sur **Non** pour rester dans la lignée d
 
 <!--For more information, see []().-->
 
+### <a name="improvement-to-software-updates-maintenance"></a>Amélioration apportée à la maintenance des mises à jour logicielles
+<!--2839349--> Les tâches de nettoyage WSUS s’exécutent désormais sur les sites secondaires. Le nettoyage WSUS pour les mises à jour expirées est exécuté et les mises à jour remplacées sont refusées dans WSUS pour les sites secondaires.
 
+Pour plus d’informations, consultez [Comportement de nettoyage WSUS à partir de la version 1810](/sccm/sum/deploy-use/software-updates-maintenance#wsus-cleanup-behavior-starting-in-version-1810)
 
 ## <a name="bkmk_report"></a> Rapports
 
@@ -363,9 +366,7 @@ Les améliorations suivantes en matière de performances et de dépannage s’ap
 
 En plus des nouvelles fonctionnalités, cette version inclut également des modifications supplémentaires comme des corrections de bogues. Pour plus d’informations, consultez [Récapitulatif des changements dans Configuration Manager Current Branch, version 1810](https://support.microsoft.com/help/4482169).
 
-<!--
-For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell 1810 Release Notes](https://docs.microsoft.com/powershell/sccm/1810_release_notes?view=sccm-ps).
---> 
+Pour plus d’informations sur les modifications apportées aux applets de commande Windows PowerShell pour Configuration Manager, consultez [Notes de publication pour PowerShell version 1810](https://docs.microsoft.com/powershell/sccm/1810-release-notes?view=sccm-ps).
 
 Le correctif cumulatif suivant (4486457) sera disponible dans la console à partir du 25 janvier 2019 : [Correctif cumulatif pour Configuration Manager Current Branch, version 1810](https://support.microsoft.com/help/4486457).
 

@@ -2,7 +2,7 @@
 title: Console Configuration Manager
 titleSuffix: Configuration Manager
 description: Découvrez comment naviguer dans la console Configuration Manager.
-ms.date: 11/27/2018
+ms.date: 2/20/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf617a579108f58723f267a065338ab857832d8f
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 30db8b061f41e8a9255b5a308df6a98ef8c0d81b
+ms.sourcegitcommit: 369db96ee84299b5ab6d74b177e6366b3017fc54
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56134569"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56589898"
 ---
 # <a name="using-the-configuration-manager-console"></a>Utilisation de la console Configuration Manager
 
@@ -156,6 +156,8 @@ Dans la version 1806, le nœud **Appareils** comprend les colonnes suivantes :
 - **Utilisateurs principaux** <!--1357280-->  
 
 - **Utilisateur actuellement connecté** <!--1358202-->  
+    > [!NOTE]  
+    > Pour voir l’utilisateur actuellement connecté, la [découverte des utilisateurs](/sccm/core/servers/deploy/configure/configure-discovery-methods#bkmk_config-adud) et l’[affinité entre utilisateur et appareil](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity) sont nécessaires.  
 
 Pour plus d’informations sur l’affichage d’une colonne non définie par défaut, consultez [Colonnes](#columns).
 
