@@ -5,18 +5,18 @@ description: En savoir plus sur les fonctionnalités du Centre logiciel
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 07/30/2018
+ms.date: 02/20/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.assetid: 9e68de6e-2b33-442b-b674-a382728d9529
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da01c741107d4eb4a707f7f0d8ada5d82706f292
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: eacd1d1be2564b718423b9d0db8d24b60aac1adb
+ms.sourcegitcommit: 369db96ee84299b5ab6d74b177e6366b3017fc54
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56119889"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56589915"
 ---
 # <a name="software-center-user-guide"></a>Guide de l’utilisateur du Centre logiciel
 
@@ -45,7 +45,7 @@ Cliquez sur l’onglet **Applications** pour rechercher et installer les applica
 - **Tout** : affiche toutes les applications que vous pouvez installer.
 - **Obligatoire** : votre administrateur informatique impose ces applications. Si vous désinstallez l’une de ces applications, le Centre logiciel la réinstalle.
 - **Filtres** : votre administrateur informatique peut créer des catégories d’applications. Si elle est disponible, cliquez sur la liste déroulante pour filtrer l’affichage sur ces applications uniquement dans une catégorie spécifique. Sélectionnez **Tout** pour afficher toutes les applications.
-- **Trier par** : permet de réorganiser la liste d’applications. Par défaut cette liste est triée selon **Le plus récent**.
+- **Trier par** : permet de réorganiser la liste d’applications. Par défaut cette liste est triée selon **Le plus récent**. Les applications disponibles depuis peu sont accompagnées d’une balise **Nouveau** pendant 7 jours.
 - **Rechercher** : vous ne trouvez toujours pas ce que vous cherchez ? Entrez des mots clés dans la zone de recherche pour le trouver.
 -  **Changer de vue** : cliquez sur les icônes pour basculer entre le mode Liste et le mode Mosaïque. Par défaut, la liste d’applications s’affiche sous forme de vignettes de graphique. 
     - Mode Mosaïque : votre administrateur informatique peut personnaliser les icônes. Sous chaque vignette s’affiche le nom de l’application, l’éditeur et la version. 
