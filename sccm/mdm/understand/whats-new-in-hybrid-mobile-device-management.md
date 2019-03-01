@@ -2,7 +2,7 @@
 title: Nouveautés de la gestion MDM hybride
 titleSuffix: Configuration Manager
 description: Découvrez les nouvelles fonctionnalités de gestion des appareils mobiles disponibles pour les déploiements hybrides avec Configuration Manager et Intune.
-ms.date: 02/19/2019
+ms.date: 02/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d65f6493ca3d067e31b6602c711ab1fbf9408a1
-ms.sourcegitcommit: e7e5ca04601270ea7af90183123d5db1d42784da
+ms.openlocfilehash: f5c55b48da8e3be356cb91979a8e478a6ac2e43a
+ms.sourcegitcommit: 0bf253085adeca0d9ea62d76497eb5ebf5ce89da
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2019
-ms.locfileid: "56422236"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57012494"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Nouveautés de la gestion hybride des appareils mobiles avec Configuration Manager et Microsoft Intune
 
@@ -51,6 +51,22 @@ Chaque section de cet article répertorie les fonctionnalités hybrides sous tro
 ## <a name="february-2019"></a>Février 2019
 
 ### <a name="new-in-microsoft-intune"></a>Nouveautés de Microsoft Intune
+
+#### <a name="create-new-intune-tenants-in-azure-portal"></a>Créer de nouveaux locataires Intune dans le portail Azure
+<!--3754067--> La possibilité de créer un nouveau client de gestion des appareils mobiles hybride a été supprimée que du 1902 Intune mise à jour. Créer tous les nouveaux locataires Intune dans le portail Azure. En guise de rappel, [hybride MDM est déconseillée](/sccm/mdm/understand/hybrid-mobile-device-management). Dès que possible, les clients de gestion des appareils mobiles hybride actuels doivent migrer vers Intune autonome.
+
+Pour plus d’informations, voir le [billet de blog du support Intune](https://aka.ms/hybrid_notification).
+
+
+#### <a name="intune-uses-google-play-protect-apis-on-android-devices"></a>Intune utilise les API de protéger Google Play sur les appareils Android 
+<!--2577355--> Certains administrateurs sont confrontés à un paysage BYOD où les utilisateurs peuvent racine ou le jailbreak leur téléphone mobile. Ce comportement, bien que parfois pas nuisibles, entraîne un contournement de nombreuses stratégies Intune qui sont définies afin de protéger les données de l’organisation sur les appareils des utilisateurs finaux. Par conséquent, Intune assure la détection de racine et « jailbreakés » pour les appareils inscrits et désinscrits. 
+
+Avec cette version, Intune s’appuie sur Google Play protéger API à ajouter à notre vérifications de détection de racine existantes pour les appareils non inscrits. Même si Google ne partage l’intégralité des vérifications de la détection de racine qui se produisent, nous pensons que ces API pour détecter des utilisateurs qui ont rooté leurs appareils pour une raison quelconque à partir de la personnalisation de l’appareil d’être en mesure d’obtenir les mises à jour du système d’exploitation plus récent sur les appareils plus anciens. Ces utilisateurs peuvent ensuite être bloqués à partir de l’accès aux données d’entreprise, ou leurs comptes d’entreprise peuvent être réinitialisés à partir de leurs applications de la stratégie est activée. 
+
+
+#### <a name="new-app-categories-screen-in-the-company-portal-app-for-windows-10"></a>Nouvelle **catégories d’applications** écran de l’application portail d’entreprise pour Windows 10
+<!--3834780--> Pour améliorer l’expérience de navigation et sélection des applications dans le portail d’entreprise pour Windows 10, il inclut désormais un nouvel écran appelé **catégories d’applications**. Aux utilisateurs de voir leurs applications triées sous catégories comme **en vedette**, **Éducation**, et **productivité**. Cette modification apparaît dans les versions de portail d’entreprise 10.3.3451.0 et versions ultérieures. Pour afficher le nouvel écran, consultez [quelles sont les nouveautés dans l’interface utilisateur de l’application](https://docs.microsoft.com/intune/whats-new). Pour plus d’informations sur les applications dans le portail d’entreprise, consultez [installer et partager des applications sur votre appareil](https://docs.microsoft.com/intune-user-help/install-apps-cpapp-windows).  
+
 
 #### <a name="macos-users-are-prompted-to-update-their-password"></a>les utilisateurs de Mac OS sont invités à mettre à jour son mot de passe 
 <!--1873216--> Sur les appareils macOS, les utilisateurs finaux sont invités à mettre à jour son mot de passe. Cette invite se produit chaque fois qu’un utilisateur exécute une tâche qui nécessite une authentification, telles que la connexion à l’appareil. Utilisateurs également invités à mettre à jour son mot de passe lorsque rien faire qui requiert des privilèges d’administrateur, telles que la demande de trousseau d’accès.  
