@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3f1ca26c4cbc6de21565948ab2f161e2ccf0ea0
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 02f3df4b8c090df960f1052a25c1f6cc8ef45395
+ms.sourcegitcommit: ef2960bd91655c741450774e512dd0a9be610625
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56128253"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56838767"
 ---
 # <a name="create-a-configuration-manager-technical-preview-lab-in-azure"></a>Créer un lab Configuration Manager Technical Preview dans Azure
 
@@ -117,10 +117,10 @@ Contrôleur de domaine Active Directory
 - IIS (Internet Information Service)
 
 
-### `<prefix>MPDP`
+### `<prefix>DPMP`
 
-- Point de gestion
 - Point de distribution
+- Point de gestion
 
 #### <a name="windows-features-and-roles"></a>Rôles et fonctionnalités Windows
 - .NET
