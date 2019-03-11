@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d8eff4154f5799ef0d6411b077f50753d203310e
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 0a66ba04defcea48db143487cc08bc5dc330cf2c
+ms.sourcegitcommit: ef2960bd91655c741450774e512dd0a9be610625
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56126774"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56838903"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Planifier la passerelle de gestion cloud dans Configuration Manager
 
@@ -208,7 +208,8 @@ Le tableau suivant détaille la prise en charge par la passerelle de gestion clo
 | Distribution de logiciels (ciblée sur des appareils)     | ![Pris en charge](media/green_check.png) |
 | Distribution de logiciels (ciblée sur des utilisateurs, obligatoires)<br>(avec intégration d’Azure AD)     | ![Pris en charge](media/green_check.png)  (1710) |
 | Distribution de logiciels (ciblée sur des utilisateurs, disponibles)<br>([toutes les exigences](/sccm/apps/deploy-use/deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices)) | ![Pris en charge](media/green_check.png)  (1802) |
-| Séquence de tâches de mise à niveau sur place de Windows 10     | ![Pris en charge](media/green_check.png)  (1802) |
+| Séquence de tâches de mise à niveau sur place de Windows 10      | ![Pris en charge](media/green_check.png)  (1802) |
+| Séquences de tâches qui n’utilisent pas d’images de démarrage et sont déployées avec une option : **Télécharger tout le contenu localement avant de commencer la séquence de tâches**      | ![Pris en charge](media/green_check.png)  (1802) |
 | CMPivot     | ![Pris en charge](media/green_check.png)  (1806) |
 | Tous les autres scénarios de séquence de tâches     | ![Non pris en charge](media/Red_X.png) |
 | Installation Push du client     | ![Non pris en charge](media/Red_X.png) |

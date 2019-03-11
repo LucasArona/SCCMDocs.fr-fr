@@ -2,7 +2,7 @@
 title: Fonctionnalités dépréciées
 titleSuffix: Configuration Manager
 description: Découvrez les fonctionnalités que Configuration Manager ne prend plus en charge.
-ms.date: 01/30/2019
+ms.date: 02/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0a207399f5baa1b00be954ef4d0eb432939ed261
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 40469e8173303eb7ad46ef8e716529c37ec6e76d
+ms.sourcegitcommit: ef2960bd91655c741450774e512dd0a9be610625
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56127301"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56838784"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Fonctionnalités supprimées et dépréciées pour Configuration Manager
 
@@ -32,6 +32,7 @@ Ces informations sont susceptibles de changer dans les futures versions. Les fon
 
 |Fonctionnalité|Désapprobation annoncée|Prise en charge&nbsp;supprimée|  
 |-----------|---|--------------|  
+|L’implémentation du partage de contenu à partir d’Azure a évolué. Utilisez une passerelle de gestion cloud de gestion compatible avec le contenu. Vous ne pourrez pas créer de point de distribution cloud traditionnel à l’avenir.|Février 2019|Première version publiée après le 1er novembre 2019|
 |Déploiement de services classiques sur Azure pour la passerelle de gestion cloud et le point de distribution cloud. Pour plus d’informations, consultez [Planifier la passerelle de gestion cloud](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager).|Novembre 2018|Première version publiée après le 1er juillet 2019| 
 |System Center Endpoint Protection pour Mac et Linux<br>Pour plus d’informations, consultez le [billet de blog sur la fin du support](https://go.microsoft.com/fwlink/?linkid=870182).|Octobre 2018|31 décembre 2018|
 |Accès conditionnel local<br>Pour plus d’informations, consultez [Qu’est-ce que la gestion hybride des appareils mobiles ?](/sccm/mdm/understand/hybrid-mobile-device-management)|30 janvier 2019|1er septembre 2019|

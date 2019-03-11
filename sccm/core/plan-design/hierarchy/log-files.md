@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a5c6cee6422d3fc8777f54bd42716748410c9323
-ms.sourcegitcommit: ceec0e20bf801071f2a05233f984cf17acc3fd29
+ms.openlocfilehash: b3edf45c5b4eb62d5bfdd795f104c40da1ee1526
+ms.sourcegitcommit: 56ec6933cf7bfc93842f55835ad336ee3a1c6ab5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265068"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57211701"
 ---
 # <a name="log-files-in-configuration-manager"></a>Fichiers journaux de Configuration Manager
 
@@ -576,6 +576,7 @@ Le tableau suivant répertorie les fichiers journaux qui contiennent des informa
 |PrestageContent.log|Enregistre les détails concernant l’utilisation de l’outil ExtractContent.exe sur un point de distribution préparé distant. Cet outil extrait le contenu qui a été exporté vers un fichier.|Rôle de système de site|  
 |SMSdpmon.log|Enregistre les détails concernant les tâches planifiées de surveillance de l’intégrité du point de distribution configurées sur un point de distribution.|Rôle de système de site|  
 |smsdpprov.log|Enregistre des détails concernant l'extraction des fichiers compressés reçus à partir d'un site principal. Ce journal est généré par le fournisseur WMI du point de distribution distant.|Ordinateur de point de distribution n’est pas au même emplacement que le serveur de site|  
+|smsdpusage.log|Enregistre des détails concernant smsdpusage.exe qui s’exécute et collecte les données pour le rapport de synthèse de l’utilisation du point de distribution.|Rôle de système de site|  
 
 ###  <a name="BKMK_DiscoveryLog"></a> Découverte  
 Le tableau suivant répertorie les fichiers journaux qui contiennent des informations liées à la détection.  

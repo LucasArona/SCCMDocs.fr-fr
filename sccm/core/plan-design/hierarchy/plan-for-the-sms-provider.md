@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d6eeb74e3e8e83dd0082f45583bd2eb5dbe1df4e
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: aec16c4b55afd8c4baf7486794e07f29fa84aebf
+ms.sourcegitcommit: 223549003829fce7c6dc63959ee71e8b88542417
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56131606"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56951832"
 ---
 # <a name="plan-for-the-sms-provider"></a>Planifier le fournisseur SMS 
 
@@ -51,7 +51,7 @@ Le fournisseur SMS contribue à l’application de la sécurité de Configuratio
 
  Pour prendre en charge le fournisseur SMS, le serveur cible doit satisfaire aux prérequis suivants :  
 
--   Il doit être dans un domaine qui entretient une relation d’approbation bidirectionnelle avec le serveur de site et les systèmes de site de base de données du site.  
+-   Dans le même domaine que les systèmes de site du serveur et de la base de données de site  
 
 -   Il ne peut pas utiliser un rôle de système de site d’un autre site.  
 

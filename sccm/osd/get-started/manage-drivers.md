@@ -1,8 +1,8 @@
 ---
-title: 'Gérer les pilotes '
+title: Gérer les pilotes
 titleSuffix: Configuration Manager
 description: Le catalogue de pilotes Configuration Manager permet d’importer des pilotes de périphérique, de les regrouper dans des packages et de distribuer ces packages à des points de distribution.
-ms.date: 01/27/2017
+ms.date: 03/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -11,263 +11,285 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 52d5fd0b1d7ec9c262c1f33dd55e452e30008e68
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: be3cc24721674e9da276e7a65af03a5b4a266eed
+ms.sourcegitcommit: 33a006204f7f5f9b9acd1f3e84c4bc207362d00a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56130977"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305692"
 ---
-# <a name="manage-drivers-in-system-center-configuration-manager"></a>Gérer les pilotes dans System Center Configuration Manager
+# <a name="manage-drivers-in-configuration-manager"></a>Gérer les pilotes dans Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager propose un catalogue de pilotes qui permet de gérer les pilotes de périphérique Windows dans l’environnement Configuration Manager. Vous pouvez utiliser le catalogue de pilotes pour importer des pilotes de périphérique dans Configuration Manager, les regrouper dans des packages et distribuer ces packages à des points de distribution accessibles pendant le déploiement d’un système d’exploitation. Des pilotes de périphérique peuvent être utilisés lorsque vous installez le système d'exploitation complet sur l'ordinateur de destination et lorsque vous installez Windows PE à l'aide d'une image de démarrage. Les pilotes de périphérique Windows sont composés d'un fichier d'informations d'installation (INF) et de tous les autres fichiers nécessaires à la prise en charge du périphérique. À cette occasion, Configuration Manager obtient les informations matérielles et de plateforme du périphérique à partir de son fichier INF. Pour gérer les pilotes dans votre environnement Configuration Manager, aidez-vous des sections suivantes.
+Configuration Manager propose un catalogue de pilotes qui permet de gérer les pilotes de périphérique Windows dans un environnement Configuration Manager. Importez des pilotes de périphérique dans Configuration Manager, regroupez-les dans des packages et distribuez-les auprès des points de distribution. Des pilotes de périphérique peuvent être utilisés pour installer le système d’exploitation complet sur l’ordinateur de destination et pour se servir de Windows PE dans une image de démarrage. Les pilotes de périphérique Windows sont composés d’un fichier d’informations d’installation (INF) et de tous les autres fichiers nécessaires à la prise en charge du périphérique. Lors du déploiement d’un système d’exploitation, Configuration Manager récupère les informations sur le matériel et la plateforme du périphérique dans son fichier INF. 
 
-##  <a name="BKMK_DriverCategories"></a> Catégories de pilotes de périphériques  
- Lorsque vous importez des pilotes de périphérique, vous pouvez affecter les pilotes de périphérique à une catégorie. Les catégories de pilotes de périphérique permettent de regrouper les pilotes de périphérique utilisés de la même façon dans le catalogue de pilotes. Par exemple, vous pouvez attribuer tous les pilotes de périphériques de carte réseau à une catégorie précise. Ensuite, quand vous créez une séquence de tâches qui comprend l’étape [Appliquer automatiquement les pilotes](../understand/task-sequence-steps.md#BKMK_AutoApplyDrivers), vous pouvez spécifier une catégorie spécifique de pilotes de périphérique. Configuration Manager analyse ensuite le matériel et sélectionne les pilotes applicables de cette catégorie pour les activer sur le système et permettre à l’installation de Windows de les utiliser.  
 
-##  <a name="BKMK_ManagingDriverPackages"></a> Packages de pilotes  
- Vous pouvez regrouper des pilotes de périphérique similaires dans des packages pour simplifier les déploiements de systèmes d’exploitation. Par exemple, vous pouvez décider de créer un package de pilotes pour chaque marque d’ordinateur présente sur votre réseau. Vous pouvez créer un package de pilotes pendant que vous importez des pilotes dans le catalogue de pilotes directement dans le nœud **Packages de pilotes** . Une fois le package de pilotes créé, il doit être distribué aux points de distribution à partir desquels les ordinateurs clients Configuration Manager peuvent installer les pilotes, le cas échéant. Considérez les points suivants :  
 
-- Lorsque vous créez un package de pilotes, l'emplacement source du package doit pointer sur un partage réseau vide qui n'est pas utilisé par un autre package de pilotes et le fournisseur SMS doit disposer d'autorisations en lecture et en écriture sur cet emplacement.  
+## <a name="BKMK_DriverCategories"></a> Catégories de pilotes
 
-- Quand vous ajoutez des pilotes de périphérique à un package de pilotes, Configuration Manager copie le pilote de périphérique à l’emplacement source du package de pilotes. Vous pouvez ajouter uniquement les pilotes de périphérique qui ont été importés et qui sont activés dans le catalogue de pilotes vers un package de pilotes.  
+Lorsque vous importez des pilotes de périphérique, vous pouvez affecter les pilotes de périphérique à une catégorie. Les catégories de pilotes de périphérique permettent de regrouper les pilotes de périphérique utilisés de la même façon dans le catalogue de pilotes. Par exemple, attribuez une catégorie précise à tous les pilotes de périphériques de carte réseau. Ensuite, quand vous créez une séquence de tâches qui comprend l’étape [Appliquer automatiquement les pilotes](/sccm/osd/understand/task-sequence-steps#BKMK_AutoApplyDrivers), spécifiez une catégorie de pilotes de périphérique. Configuration Manager analyse ensuite le matériel et sélectionne les pilotes applicables de cette catégorie pour les activer sur le système et permettre à l’installation de Windows de les utiliser.  
 
-- Pour copier un sous-ensemble de pilotes de périphérique à partir d'un package de pilotes existant, créez un nouveau package de pilotes, ajoutez-y le sous-ensemble de pilotes de périphérique, puis distribuez le nouveau package à un point de distribution.  
 
-  Pour savoir comment créer et gérer des packages de pilotes, consultez les sections suivantes.  
 
-###  <a name="CreatingDriverPackages"></a> Créer un package de pilotes  
- Utilisez la procédure ci-dessous pour créer un package de pilotes.  
+## <a name="BKMK_ManagingDriverPackages"></a> Packages de pilotes
 
-> [!IMPORTANT]  
->  Pour créer un package de pilotes, vous devez disposer d'un dossier réseau vide qui n'est pas utilisé par un autre package de pilotes. Dans la plupart des cas, vous devez créer un nouveau dossier avant de lancer cette procédure.  
+Regroupez des pilotes de périphérique similaires dans des packages pour simplifier les déploiements de systèmes d’exploitation. Par exemple, créez un package de pilotes pour chaque marque d’ordinateur présente sur votre réseau. Vous pouvez créer un package de pilotes en important directement des pilotes dans le nœud **Packages de pilotes** du catalogue de pilotes. Distribuez-le ensuite auprès des points de distribution. Les ordinateurs clients Configuration Manager pourront alors les installer. 
 
-> [!NOTE]  
->  Si vous prévoyez d’installer des pilotes en utilisant des séquences de tâches, créez des packages de pilotes qui contiennent moins de 500 pilotes de périphérique.  
+Considérations importantes :  
 
- Utilisez la procédure suivante pour créer un package de pilotes.  
+- Lors de la création d’un package de pilotes, son emplacement source doit pointer sur un partage réseau vide et non utilisé par un autre package de pilotes. Le fournisseur SMS doit avoir des autorisations de type **Contrôle total** sur cet emplacement.  
 
-#### <a name="to-create-a-driver-package"></a>Pour créer un package de pilotes  
+- Lorsqu’un pilote de périphérique est ajouté à un package de pilotes, Configuration Manager le copie à l’emplacement source du package. Seuls les pilotes de périphérique qui ont été importés et sont activés dans le catalogue de pilotes peuvent être ajoutés à un package de pilotes.  
 
-1. Dans la console Configuration Manager, cliquez sur **Bibliothèque de logiciels**.  
+- Il est possible de copier un sous-ensemble des pilotes de périphérique d’un package de pilotes existant. Tout d’abord, créez un package de pilotes. Ensuite, ajoutez le sous-ensemble de pilotes de périphérique au nouveau package, puis distribuez le nouveau package auprès d’un point de distribution.  
 
-2. Dans l'espace de travail **Bibliothèque de logiciels** , développez **Systèmes d'exploitation**, puis cliquez sur **Packages de pilotes**.  
+- Si vous prévoyez d’installer des pilotes en utilisant des séquences de tâches, créez des packages de pilotes qui contiennent moins de 500 pilotes de périphérique.
 
-3. Dans l'onglet **Accueil** , dans le groupe **Créer** , cliquez sur **Créer un package de pilotes**.  
 
-4. Dans la zone **Nom** , spécifiez un nom descriptif pour le package de pilotes.  
-
-5. Dans la zone **Commentaire** , entrez une description facultative pour le package de pilotes. Vérifiez que la description fournit des informations sur le contenu ou l'objectif du package de pilotes.  
-
-6. Dans la zone **Chemin d'accès** , spécifiez un dossier source vide pour le package de pilotes. Entrez le chemin d'accès vers le dossier source au format UNC (Universal Naming Convention). Chaque package de pilotes doit utiliser un dossier unique.  
-
-   > [!IMPORTANT]  
-   >  Le compte de serveur de site doit disposer des autorisations en **lecture** et en **écriture** dans le dossier source spécifié.  
-
-   Le nouveau package de pilotes ne contient aucun pilote. L'étape suivante consiste à ajouter des pilotes au package.  
-
-   Si le nœud **Packages de pilotes** contient plusieurs packages, vous pouvez ajouter des dossiers au nœud pour séparer les packages en groupes logiques.  
-
-###  <a name="BKMK_PackageActions"></a> Actions supplémentaires concernant les packages de pilotes  
- Vous pouvez effectuer des actions supplémentaires pour gérer les packages de pilotes lorsque vous sélectionnez un ou plusieurs packages de pilotes dans le nœud **Packages de pilotes** . Ces actions incluent :  
-
-|Action|Description|  
-|------------|-----------------|  
-|**Créer un fichier de contenu préparé**|Crée des fichiers qui peuvent être utilisés pour importer manuellement le contenu et ses métadonnées associées. Utilisez du contenu préparé lorsque vous avez une bande passante réseau faible entre le serveur de site et les points de distribution sur lesquels est stocké le package de pilotes.|  
-|**Supprimer**|Supprime le package de pilotes du nœud **Packages de pilotes** .|  
-|**Distribuer du contenu**|Distribue le package de pilotes sur des points de distribution, des groupes de points de distribution et des groupes de points de distribution associés à des regroupements.|  
-|**Gérer des comptes d'accès**|Ajoute, modifie ou supprime des comptes d'accès pour le package de pilotes.<br /><br /> Pour plus d’informations sur les comptes d’accès au package, consultez [Comptes utilisés dans Configuration Manager](../../core/plan-design/hierarchy/accounts.md).|  
-|**Déplacer**|Déplace le package de pilotes vers un autre dossier dans le nœud **Packages de pilotes** .|  
-|**Mise à jour des points de distribution**|Met à jour le package de pilotes de périphérique sur tous les points de distribution sur lesquels le package est stocké. Cette action copie uniquement le contenu qui a été modifié après sa dernière distribution.|  
-|**Propriétés**|Ouvre la boîte de dialogue **Propriétés** dans laquelle vous pouvez examiner et modifier le contenu et les propriétés du pilote de périphérique. Par exemple, vous pouvez modifier le nom et la description du pilote de périphérique, activer le pilote de périphérique et spécifier les plates-formes sur lesquelles le pilote de périphérique peut être exécuté.|  
-
-##  <a name="BKMK_DeviceDrivers"></a> Pilotes d'appareils  
- Vous pouvez installer des pilotes de périphérique sur les ordinateurs de destination sans les inclure dans l'image du système d'exploitation déployée. Configuration Manager propose un catalogue de pilotes qui contient les références à tous les pilotes de périphérique que vous importez dans Configuration Manager. Le catalogue de pilotes se trouve dans l’espace de travail **Bibliothèque de logiciels** et est composé de deux nœuds : **pilotes** et **packages de pilotes**. Le nœud **Pilotes** répertorie tous les pilotes que vous avez importés dans le catalogue de pilotes. Ce nœud vous permet de découvrir les détails relatifs à chaque pilote importé, de modifier les pilotes contenus dans un package de pilotes ou une image de démarrage, d’activer ou désactiver un pilote, etc.  
-
-###  <a name="BKMK_ImportDrivers"></a> Importer des pilotes de périphérique dans le catalogue de pilotes  
- Vous devez importer les pilotes de périphérique dans le catalogue de pilotes avant de pouvoir les utiliser lorsque vous déployez un système d'exploitation. Pour mieux gérer vos pilotes de périphérique, importez uniquement les pilotes de périphérique que vous prévoyez d'installer dans le cadre du déploiement de votre système d'exploitation. Toutefois, vous pouvez également stocker plusieurs versions de pilotes de périphérique dans le catalogue de périphériques afin de mettre facilement à niveau des pilotes de périphérique existants lorsque la configuration matérielle requise en matière de périphériques évolue sur votre réseau.  
-
- Pendant le processus d’importation de pilote de périphérique, Configuration Manager lit le fournisseur, la classe, la version, la signature, le matériel pris en charge et les informations de plateforme prises en charge associées au périphérique. Par défaut, le nom du pilote repose sur celui du premier périphérique matériel pris en charge ; toutefois, le pilote de périphérique peut être renommé par la suite. La liste des plates-formes prises en charge est basée sur les informations dans le fichier INF du pilote. Comme l'exactitude de ces informations peut varier, vérifiez manuellement que le pilote de périphérique est pris en charge une fois qu'il est importé dans le catalogue de pilotes.  
-
- Après avoir importé des pilotes de périphérique dans le catalogue, vous pouvez les ajouter à des packages de pilotes ou à des packages d’images de démarrage.  
+### <a name="BKMK_CreatingDriverPackages"></a> Créer un package de pilotes  
 
 > [!IMPORTANT]  
->  Vous ne pouvez pas importer des pilotes de périphérique directement dans un sous-dossier du nœud **Pilotes** . Pour importer un pilote de périphérique dans un sous-dossier, importez-le d'abord dans le nœud **Pilotes** , puis déplacez-le dans le sous-dossier.  
+> Pour créer un package de pilotes, vous devez disposer d’un dossier réseau vide et non utilisé par un autre package de pilotes. Dans la plupart des cas, créez un nouveau dossier avant de commencer cette procédure.  
 
- Utilisez la procédure suivante pour importer des pilotes de périphérique Windows.  
+1. Dans la console Configuration Manager, accédez à l’espace de travail **Bibliothèque de logiciels**. Développez **Systèmes d’exploitation**, puis sélectionnez le nœud **Packages de pilotes**.  
 
-#### <a name="to-import-windows-device-drivers-into-the-driver-catalog"></a>Pour importer des pilotes de périphérique Windows dans le catalogue de pilotes  
+2. Sous l’onglet **Accueil** du ruban, sélectionnez **Créer un package de pilotes** dans le groupe **Créer**.  
 
-1. Dans la console Configuration Manager, cliquez sur **Bibliothèque de logiciels**.  
+3. Donnez un **Non** descriptif au package de pilotes.  
 
-2. Dans l'espace de travail **Bibliothèque de logiciels** , développez **Systèmes d'exploitation**, puis cliquez sur **Pilotes**.  
+4. Entrez un **Commentaire** facultatif sur le package de pilotes. Utilisez cette description pour fournir des informations sur son contenu ou son usage.  
 
-3. Dans l'onglet **Accueil** , dans le groupe **Créer** , cliquez sur **Importer un pilote** pour démarrer l' **Assistant Importation de nouveau pilote**.  
-
-4. Sur la page **Trouver le pilote** , spécifiez les options suivantes et cliquez sur **Suivant**:  
-
-   -   **Importer tous les pilotes dans le chemin réseau (UNC) suivant** : Pour importer tous les pilotes de périphérique qui sont contenus dans un dossier spécifique, spécifiez le chemin d'accès réseau vers le dossier de pilote de périphérique. Par exemple :  **\\\\nom_serveur\dossier**.  
-
-       > [!NOTE]  
-       >  Le processus d’importation de l’ensemble des pilotes peut prendre un certain temps en présence d’un grand nombre de dossiers et de fichiers de pilote (.inf).  
-
-   -   **Importer un pilote spécifique** : pour importer un pilote spécifique à partir d'un dossier, spécifiez le chemin d'accès réseau (UNC) vers le fichier .INF du pilote de périphérique Windows ou le fichier Txtsetup.oem du stockage de masse du pilote.  
-
-   -   **Spécifier l’option pour les pilotes dupliqués** : choisissez comment vous voulez que Configuration Manager gère des catégories de pilote lors de l’importation d’un pilote de périphérique en double.  
+5. Dans la zone **Chemin d'accès** , spécifiez un dossier source vide pour le package de pilotes. Chaque package de pilotes doit utiliser un dossier unique. Ce chemin d’accès est requis comme emplacement réseau.  
 
    > [!IMPORTANT]  
-   >  Lorsque vous importez des pilotes, le serveur de site doit disposer de l'autorisation **Lecture** pour le dossier, sinon l'importation échoue.  
+   > Le compte de serveur de site doit disposer d’autorisations de type **Contrôle total** dans le dossier source spécifié.  
 
-5. Sur la page **Détails du pilote** , spécifiez les options suivantes et cliquez sur **Suivant**:  
+Le nouveau package de pilotes ne contient aucun pilote. L’étape suivante consiste à en ajouter.  
 
-   -   **Masquer les pilotes hors classe de stockage ou réseau (pour les images de démarrage)** : ce paramètre permet d'afficher uniquement les pilotes réseau et de stockage, et de masquer les autres pilotes qui ne sont généralement pas nécessaires pour les images de démarrage, tels que les pilotes vidéo ou les pilotes de modem.  
+Si le nœud **Packages de pilotes** contient plusieurs packages, vous pouvez ajouter des dossiers au nœud pour séparer les packages en groupes logiques.  
 
-   -   **Masquer les pilotes qui ne sont pas signés numériquement** : ce paramètre permet de masquer les pilotes qui ne sont pas signés numériquement.  
 
-   -   Dans la liste des pilotes, sélectionnez les pilotes que vous souhaitez importer dans le catalogue de pilotes.  
+### <a name="BKMK_PackageActions"></a> Actions supplémentaires concernant les packages de pilotes  
 
-   -   **Activer ces pilotes et autoriser leur installation sur les ordinateurs** : sélectionnez ce paramètre pour laisser les ordinateurs installer les pilotes de périphérique. Par défaut, cette case à cocher est activée.  
+Vous pouvez effectuer des actions supplémentaires de gestion des packages de pilotes en en sélectionnant un ou plusieurs dans le nœud **Packages de pilotes**. 
 
-       > [!IMPORTANT]  
-       >  Si un pilote de périphérique est à l'origine d'un problème, ou si vous souhaitez suspendre l'installation d'un pilote de périphérique, vous pouvez désactiver le pilote de périphérique en désactivant la case à cocher **Activer ces pilotes et autoriser leur installation sur les ordinateurs** . Vous pouvez également désactiver les pilotes après leur importation.  
 
-   -   Pour attribuer les pilotes de périphérique à une catégorie administrative à des fins de filtrage, telle que « Postes de travail » ou « Ordinateurs portables », cliquez sur **Catégories** et sélectionnez une catégorie existante ou créez-en une nouvelle. Vous pouvez aussi utiliser l’attribution de catégorie pour configurer les pilotes de périphérique qui s’appliquent au déploiement avec l’étape de séquence de tâches [Appliquer automatiquement les pilotes](../understand/task-sequence-steps.md#BKMK_AutoApplyDrivers).  
+#### <a name="create-prestage-content-file"></a>Créer un fichier de contenu préparé
+Crée des fichiers permettant d’importer manuellement le contenu et les métadonnées associées. Utilisez du contenu préparé lorsque vous avez une bande passante réseau faible entre le serveur de site et les points de distribution sur lesquels est stocké le package de pilotes.
 
-6. Dans la page **Ajouter un pilote aux packages** , choisissez d’ajouter ou non les pilotes à un package, puis cliquez sur **Suivant**. Tenez compte des points suivants avant d’ajouter les pilotes à un package :  
+#### <a name="delete"></a>Supprimer
+Supprime le package de pilotes du nœud **Packages de pilotes** .
 
-   -   Sélectionnez les packages de pilotes qui sont utilisés pour distribuer les pilotes de périphérique.  
+#### <a name="distribute-content"></a>Distribuer du contenu
+Distribue le package de pilotes sur des points de distribution, des groupes de points de distribution et des groupes de points de distribution associés à des regroupements.
 
-        Si vous le souhaitez, cliquez sur **Nouveau package** pour créer un nouveau package de pilotes. Lorsque vous créez un nouveau package de pilotes, vous devez fournir un partage réseau qui n'est pas en cours d'utilisation par d'autres packages de pilotes.  
+#### <a name="manage-access-accounts"></a>Gérer des comptes d'accès
+Ajoute, modifie ou supprime des comptes d'accès pour le package de pilotes.
 
-   -   Si le package a déjà été distribué à des points de distribution, cliquez sur **Oui** dans la boîte de dialogue pour mettre à jour les images de démarrage sur les points de distribution. Vous ne pouvez pas utiliser les pilotes de périphérique tant qu'ils ne sont pas distribués sur des points de distribution. Si vous cliquez sur **Non**, vous devez exécuter l'action **Mettre à jour les points de distribution** pour que l'image de démarrage contienne les pilotes mis à jour. Si le package de pilotes n'a jamais été distribué, vous devez cliquer sur **Distribuer du contenu** à partir du nœud **Packages de pilotes** .  
+Pour plus d’informations sur les comptes d’accès au package, voir [Comptes utilisés dans Configuration Manager](/sccm/core/plan-design/hierarchy/accounts).
 
-7. Dans la page **Ajouter un pilote aux images de démarrage** , choisissez éventuellement d’ajouter les pilotes de périphérique aux images de démarrage existantes, puis cliquez sur **Suivant**. Si vous sélectionnez une image de démarrage, tenez compte des points suivants :  
+#### <a name="move"></a>Déplacer
+Déplace le package de pilotes vers un autre dossier dans le nœud **Packages de pilotes** .
 
-   > [!NOTE]  
-   >  En guise de meilleure pratique, vous devez ajouter uniquement les pilotes de périphérique de stockage de masse et les pilotes de périphérique réseau aux images de démarrage dans les scénarios de déploiement de systèmes d'exploitation.  
+#### <a name="update-distribution-points"></a>Mise à jour des points de distribution
+Met à jour le package de pilotes de périphérique sur tous les points de distribution sur lesquels le package est stocké. Cette action copie uniquement le contenu qui a été modifié après sa dernière distribution.
 
-   - Cliquez sur **Oui** dans la boîte de dialogue pour mettre à jour les images de démarrage sur les points de distribution. Vous ne pouvez pas utiliser les pilotes de périphérique tant qu'ils ne sont pas distribués sur des points de distribution. Si vous cliquez sur **Non**, vous devez exécuter l'action **Mettre à jour les points de distribution** pour que l'image de démarrage contienne les pilotes mis à jour. Si le package de pilotes n'a jamais été distribué, vous devez cliquer sur **Distribuer du contenu** à partir du nœud **Packages de pilotes** .  
+#### <a name="properties"></a>Propriétés
+Ouvre la boîte de dialogue **Propriétés**. Passez en revue et modifiez le contenu et les propriétés du pilote. Par exemple, modifiez son nom et sa description, activez ou désactivez-le et spécifiez sur quelles plateformes il peut s’exécuter. 
 
-   - Configuration Manager vous avertit si l’architecture d’un ou plusieurs pilotes ne correspond pas à celle des images de démarrage que vous avez sélectionnées. Si elles ne correspondent pas, cliquez sur **OK** et revenez à la page **Détails du pilote** pour effacer les pilotes qui ne correspondent pas à l'architecture de l'image de démarrage sélectionnée. Par exemple, si vous sélectionnez une image de démarrage x64 et x86, tous les pilotes doivent prendre en charge les deux architectures. Si vous sélectionnez une image de démarrage x64, tous les pilotes doivent prendre en charge l'architecture x 64.  
+<!--3607716, fka 1358270--> Depuis la version 1810, les packages de pilotes comptent des champs de métadonnées **Fabricant** et **Modèle**. Servez-vous de ces champs pour étiqueter les packages de pilotes avec des informations dans le but de faciliter les tâches de nettoyage ou d’identifier les pilotes périmés ou en double que vous pouvez supprimer. Sous l’onglet **Général**, sélectionnez une valeur existante dans les listes déroulantes ou entrez une chaîne pour créer une entrée. 
 
-     > [!NOTE]
-     > - L'architecture est basée sur l'architecture signalée dans le fichier .INF du fabricant.  
-     >   -   Si un pilote indique qu'il prend en charge les deux architectures, vous pouvez l'importer dans l'une ou l'autre image de démarrage.  
+Dans le nœud **Packages de pilotes**, ces champs se présentent dans la liste sous forme de colonnes, **Fabricant du pilote** et **Modèle du pilote**. Ils peuvent aussi être utilisés comme critères de recherche. 
 
-   - Configuration Manager vous avertit si les pilotes de périphérique que vous ajoutez à une image de démarrage ne sont ni des pilotes réseau ni des pilotes de stockage, car dans la plupart des cas ils ne sont pas nécessaires pour l’image de démarrage. Cliquez sur **Oui** pour ajouter les pilotes à l'image de démarrage ou sur **Non** pour revenir en arrière et modifier votre sélection de pilote.  
 
-   - Configuration Manager vous avertit si un ou plusieurs pilotes sélectionnés ne sont pas correctement signés numériquement. Cliquez sur **Oui** pour continuer ou sur **Non** pour revenir en arrière et apporter des modifications à votre sélection de pilote.  
 
-8. Effectuez toutes les étapes de l'Assistant.  
+## <a name="BKMK_DeviceDrivers"></a> Pilotes d'appareils
 
-###  <a name="BKMK_ModifyDriverPackage"></a> Gérer les pilotes de périphérique dans un package de pilotes  
- Utilisez les procédures suivantes pour modifier les packages de pilotes et les images de démarrage. Pour ajouter ou supprimer des pilotes de périphérique, recherchez les pilotes dans le nœud **Pilotes** , puis modifiez les packages ou les images de démarrage auxquels les pilotes sélectionnés sont associés.  
+Il est possible d’installer des pilotes de périphérique sur des ordinateurs de destination sans les inclure dans l’image de système d’exploitation déployée. Configuration Manager propose un catalogue de pilotes qui contient des références à tous les pilotes de périphérique importés dans Configuration Manager. Le catalogue de pilotes se trouve dans l’espace de travail **Bibliothèque de logiciels** et est composé de deux nœuds : **pilotes** et **packages de pilotes**. Le nœud **Pilotes** liste tous les pilotes importés dans le catalogue de pilotes.  
 
-#### <a name="to-modify-the-device-drivers-in-a-driver-package"></a>Pour modifier les pilotes de périphérique dans un package de pilotes  
 
-1.  Dans la console Configuration Manager, cliquez sur **Bibliothèque de logiciels**.  
+### <a name="BKMK_ImportDrivers"></a> Importer des pilotes de périphérique dans le catalogue de pilotes  
 
-2.  Dans l'espace de travail **Bibliothèque de logiciels** , développez **Systèmes d'exploitation**, puis cliquez sur **Pilotes**.  
+Pour pouvoir utiliser un pilote au déploiement d’un système d’exploitation, importez-le dans le catalogue de pilotes. Dans un souci de bonne gestion, importez seulement les pilotes que vous prévoyez d’installer dans le cadre de vos déploiements de systèmes d’exploitation. Stockez plusieurs versions de pilotes dans le catalogue pour pouvoir mettre à niveau des pilotes existants en toute simplicité lorsque la configuration matérielle requise évolue sur votre réseau.  
 
-3.  Dans le nœud **Pilotes** , sélectionnez les pilotes de périphérique que vous souhaitez ajouter au package de pilotes.  
+Dans le cadre du processus d’importation du pilote de périphérique, Configuration Manager lit les propriétés suivantes sur le pilote :
+- Fournisseur
+- Class
+- Version
+- Signature
+- Matériel pris en charge
+- Informations sur les plateformes prises en charge
 
-4.  Dans l'onglet **Accueil** , dans le groupe **Pilote** , cliquez sur **Modifier**, puis sur **Packages de pilotes**.  
+Par défaut, le nom du pilote repose sur celui du premier périphérique matériel pris en charge. Il est possible de renommer le pilote de périphérique par la suite. La liste des plates-formes prises en charge est basée sur les informations dans le fichier INF du pilote. Comme l’exactitude de ces informations peut varier, vérifiez manuellement que le pilote est pris en charge après l’avoir importé dans le catalogue.  
 
-5.  Pour ajouter un pilote de périphérique, activez la case à cocher des packages de pilotes auxquels vous souhaitez ajouter les pilotes de périphérique. Pour supprimer un pilote de périphérique, désactivez la case à cocher des packages de pilotes desquels vous souhaitez supprimer le pilote de périphérique.  
+Après avoir importé des pilotes de périphérique dans le catalogue, ajoutez-les à des packages de pilotes ou à des packages d’images de démarrage.  
 
-     Si vous ajoutez des pilotes de périphérique associés à des packages de pilotes, vous pouvez éventuellement créer un nouveau package en cliquant sur **Nouveau package**qui ouvre la boîte de dialogue **Nouveau package de pilotes** .  
+> [!IMPORTANT]  
+> Il n’est pas possible d’importer directement des pilotes de périphérique dans un sous-dossier du nœud **Pilotes**. Pour importer un pilote de périphérique dans un sous-dossier, importez-le d'abord dans le nœud **Pilotes** , puis déplacez-le dans le sous-dossier.  
 
-6.  Si le package a déjà été distribué à des points de distribution, cliquez sur **Oui** dans la boîte de dialogue pour mettre à jour les images de démarrage sur les points de distribution. Vous ne pouvez pas utiliser les pilotes de périphérique tant qu'ils ne sont pas distribués sur des points de distribution. Si vous cliquez sur **Non**, vous devez exécuter l'action **Mettre à jour les points de distribution** pour que l'image de démarrage contienne les pilotes mis à jour. Si le package de pilotes n'a jamais été distribué, vous devez cliquer sur **Distribuer du contenu** à partir du nœud **Packages de pilotes** . Pour que les pilotes soient disponibles, vous devez mettre à jour le package de pilotes sur les points de distribution.  
 
-     Cliquez sur **OK**.  
+#### <a name="process-to-import-windows-device-drivers-into-the-driver-catalog"></a>Processus d’importation de pilotes de périphériques Windows dans le catalogue de pilotes  
 
-###  <a name="BKMK_ManageDriversBootImage"></a> Gérer les pilotes de périphérique dans une image de démarrage  
- Vous pouvez ajouter des pilotes de périphérique Windows qui ont été importés dans le catalogue de pilotes à des images de démarrage . Lorsque vous ajoutez des pilotes de périphérique à une image de démarrage, procédez comme suit :  
+1. Dans la console Configuration Manager, accédez à l’espace de travail **Bibliothèque de logiciels**. Développez **Systèmes d’exploitation**, puis sélectionnez le nœud **Pilotes**.  
 
-- Ajoutez uniquement les pilotes de périphérique de stockage de masse et de carte réseau aux images de démarrage, car les autres types de pilotes ne sont généralement pas requis. Les pilotes qui ne sont pas requis augmentent inutilement la taille de l'image de démarrage.  
+2. Sous l’onglet **Accueil** du ruban, sélectionnez **Importer un pilote** dans le groupe **Créer** pour lancer **l’Assistant Importation de nouveau pilote**.  
 
-- Ajoutez uniquement les pilotes de périphérique pour Windows 10 à une image de démarrage, car la version requise de Windows PE est basée sur Windows 10.  
+3. Sur la page **Trouver le pilote**, spécifiez les options suivantes :  
 
-- Assurez-vous que vous utilisez le pilote de périphérique correct pour l'architecture de l'image de démarrage.  N'ajoutez pas un pilote de périphérique x86 à une image de démarrage x64.  
+    - **Importer tous les pilotes dans le chemin réseau (UNC) suivant** : pour importer tous les pilotes de périphérique dans un dossier spécifique, spécifiez son chemin d’accès réseau. Par exemple : `\\servername\share\folder`.  
 
-  Pour ajouter ou supprimer des pilotes de périphérique dans une image de démarrage, procédez comme suit :  
+        > [!NOTE]  
+        > En présence de nombreux sous-dossiers et fichiers INF de pilotes, ce processus est susceptible de prendre le temps.  
 
-#### <a name="to-modify-the--device-drivers-associated-with-a-boot-image"></a>Pour modifier les pilotes de périphérique associés à une image de démarrage  
+    - **Importer un pilote spécifique** : pour importer un certain pilote à partir d’un dossier, spécifiez le chemin d’accès réseau vers le fichier .INF du pilote de périphérique Windows.  
 
-1. Dans la console Configuration Manager, cliquez sur **Bibliothèque de logiciels**.  
+    - **Spécifier l’option pour les pilotes dupliqués** : choisissez comment vous voulez que Configuration Manager gère les catégories de pilote en cas d’importation d’un pilote de périphérique en double :  
+        - **Importer le pilote et ajouter une catégorie aux catégories existantes**  
+        - **Importer le pilote et conserver les catégories existantes**  
+        - **Importer le pilote et remplacer les catégories existantes**  
+        - **Ne pas importer le pilote**  
 
-2. Dans l'espace de travail **Bibliothèque de logiciels** , développez **Systèmes d'exploitation**, puis cliquez sur **Pilotes**.  
+    > [!IMPORTANT]  
+    > Lorsque vous importez des pilotes, le serveur de site doit disposer de l'autorisation **Lecture** pour le dossier, sinon l'importation échoue.  
 
-3. Dans le nœud **Pilotes** , sélectionnez les pilotes de périphérique que vous souhaitez ajouter au package de pilotes.  
+4. Sur la page **Détails du pilote**, spécifiez les options suivantes :  
 
-4. Dans l'onglet **Accueil** , dans le groupe **Pilote** , cliquez sur **Modifier**, puis sur **Images de démarrage**.  
+    - **Masquer les pilotes hors classe de stockage ou réseau (pour les images de démarrage)** : utilisez ce paramètre pour afficher seulement les pilotes réseau et les pilotes de stockage. Cette option masque les autres pilotes qui ne sont généralement pas nécessaires pour les images de démarrage, comme les pilotes vidéo et les pilotes de modem.  
 
-5. Pour ajouter un pilote de périphérique, activez la case à cocher de l'image de démarrage à laquelle vous souhaitez ajouter les pilotes de périphérique. Pour supprimer un pilote de périphérique, désactivez la case à cocher de l'image de démarrage de laquelle vous souhaitez supprimer le pilote de périphérique.  
+    - **Masquer les pilotes qui ne sont pas signés numériquement** : Microsoft recommande de n’utiliser que des pilotes signés numériquement.  
 
-6. Si vous ne souhaitez pas mettre à jour les points de distribution dans lesquels l'image de démarrage est stockée, désactivez la case à cocher **Mettre à jour les points de distribution une fois terminé** . Par défaut, les points de distribution sont mis à jour lorsque l'image de démarrage est mise à jour.  
+    - Dans la liste des pilotes, sélectionnez les pilotes que vous souhaitez importer dans le catalogue de pilotes.  
 
-    Cliquez sur **OK** et tenez compte des points suivants :  
+    - **Activer ces pilotes et autoriser leur installation sur les ordinateurs** : sélectionnez ce paramètre pour laisser les ordinateurs installer les pilotes de périphérique. Cette option est activée par défaut.  
 
-   - Cliquez sur **Oui** dans la boîte de dialogue pour mettre à jour les images de démarrage sur les points de distribution. Vous ne pouvez pas utiliser les pilotes de périphérique tant qu'ils ne sont pas distribués sur des points de distribution. Si vous cliquez sur **Non**, vous devez exécuter l'action **Mettre à jour les points de distribution** pour que l'image de démarrage contienne les pilotes mis à jour. Si le package de pilotes n'a jamais été distribué, vous devez cliquer sur **Distribuer du contenu** à partir du nœud **Packages de pilotes** .  
+        > [!IMPORTANT]  
+        > Si un pilote de périphérique pose problème ou que vous souhaitez suspendre l’installation d’un pilote de périphérique, désactivez-le lors de l’importation. Vous pouvez également le désactiver après importation.  
 
-   - Configuration Manager vous avertit si l’architecture d’un ou plusieurs pilotes ne correspond pas à celle des images de démarrage que vous avez sélectionnées. Si elles ne correspondent pas, cliquez sur **OK** et revenez à la page **Détails du pilote** pour effacer les pilotes qui ne correspondent pas à l'architecture de l'image de démarrage sélectionnée. Par exemple, si vous sélectionnez une image de démarrage x64 et x86, tous les pilotes doivent prendre en charge les deux architectures. Si vous sélectionnez une image de démarrage x64, tous les pilotes doivent prendre en charge l'architecture x 64.  
+    - Pour attribuer aux pilotes de périphérique une catégorie administrative à des fins de filtrage, par exemple « Ordinateurs de bureau » ou « Ordinateurs portables », sélectionnez **Catégories**. Ensuite, choisissez une catégorie ou en créez-en une nouvelle. Utilisez des catégories pour contrôler quels pilotes de périphérique sont concernés par l’étape de séquence de tâches [Appliquer automatiquement les pilotes](/sccm/osd/understand/task-sequence-steps#BKMK_AutoApplyDrivers).  
 
-     > [!NOTE]
-     > - L'architecture est basée sur l'architecture signalée dans le fichier .INF du fabricant.  
-     >   -   Si un pilote indique qu'il prend en charge les deux architectures, vous pouvez l'importer dans l'une ou l'autre image de démarrage.  
+5. Sur la page **Ajouter un pilote aux packages**, choisissez si vous souhaitez ajouter les pilotes à un package.  
 
-   - Configuration Manager vous avertit si les pilotes de périphérique que vous ajoutez à une image de démarrage ne sont ni des pilotes réseau ni des pilotes de stockage, car dans la plupart des cas ils ne sont pas nécessaires pour l’image de démarrage. Cliquez sur **Oui** pour ajouter les pilotes à l'image de démarrage ou sur **Non** pour revenir en arrière et modifier votre sélection de pilote.  
+    - Sélectionnez les packages de pilotes qui sont utilisés pour distribuer les pilotes de périphérique.  
 
-   - Configuration Manager vous avertit si un ou plusieurs pilotes sélectionnés ne sont pas correctement signés numériquement. Cliquez sur **Oui** pour continuer ou sur **Non** pour revenir en arrière et apporter des modifications à votre sélection de pilote.  
+        Si nécessaire, sélectionnez **Nouveau package** pour créer un nouveau package de pilotes. Lorsque vous créez un package de pilotes, indiquez un partage réseau non utilisé par d’autres packages de pilotes.  
 
-7. Cliquez sur **OK**.  
+    - Si le package a déjà été distribué auprès de points de distribution, sélectionnez **Oui** dans la boîte de dialogue pour mettre à jour les images de démarrage sur les points de distribution. Les pilotes de périphérique ne sont pas utilisables tant qu’ils ne sont pas distribués sur des points de distribution. Si vous sélectionnez **Non**, exécutez l’action **Mettre à jour le point de distribution** avant d’utiliser l’image de démarrage. Si le package de pilotes n’a jamais été distribué, il faut utiliser l’action **Distribuer du contenu** du nœud **Packages de pilotes**.  
 
-###  <a name="BKMK_DriverActions"></a> Actions supplémentaires concernant les pilotes de périphérique  
- Vous pouvez effectuer des actions supplémentaires pour gérer les pilotes de périphérique lorsque vous sélectionnez un ou plusieurs pilotes de périphérique dans le nœud **Pilotes** . Ces actions incluent :  
+6. Sur la page **Ajouter le pilote aux images de démarrage**, choisissez si vous souhaitez ajouter les pilotes de périphérique à des images de démarrage existantes.  
 
-|Action|Description|  
-|------------|-----------------|  
-|**Catégoriser**|Efface, gère ou définit une catégorie administrative pour les pilotes de périphérique sélectionnés.|  
-|**Supprimer**|Supprime le pilote de périphérique du nœud **Pilotes** et supprime également le pilote des points de distribution associés.|  
-|**Désactiver**|Empêche l'installation du pilote de périphérique. Vous pouvez désactiver temporairement les pilotes de périphérique pour que les ordinateurs clients et les séquences de tâches Configuration Manager ne puissent pas les installer quand vous déployez des systèmes d’exploitation. **Remarque :**  L’action Désactiver empêche uniquement les pilotes d’installer à l’aide de la séquence de tâches Appliquer automatiquement les pilotes.|  
-|**Activer**|Permet aux ordinateurs clients et aux séquences de tâches Configuration Manager d’installer le pilote de périphérique pendant le déploiement du système d’exploitation.|  
-|**Déplacer**|Déplace le pilote de périphérique vers un autre dossier dans le nœud **Pilotes** .|  
-|**Propriétés**|Ouvre la boîte de dialogue **Propriétés** dans laquelle vous pouvez examiner et modifier les propriétés du pilote de périphérique. Par exemple, vous pouvez modifier le nom et la description du pilote de périphérique, activer le pilote de périphérique et spécifier les plates-formes sur lesquelles le pilote de périphérique peut être exécuté.|  
+    > [!NOTE]  
+    > N’ajoutez que des pilotes de stockage et des pilotes réseau aux images de démarrage.  
 
-##  <a name="BKMK_TSDrivers"></a> Utiliser des séquences de tâches pour installer des pilotes de périphérique  
- Utilisez des séquences de tâches pour automatiser le déploiement du système d'exploitation. Chaque étape de la séquence de tâches peut exécuter une action spécifique, telle que l'installation d'un pilote de périphérique. Vous pouvez utiliser les étapes de séquence de tâches suivantes pour installer les pilotes de périphériques pendant que vous déployez des systèmes d'exploitation :  
+    - Sélectionnez **Oui** dans la boîte de dialogue pour mettre à jour les images de démarrage sur les points de distribution. Les pilotes de périphérique ne sont pas utilisables tant qu’ils ne sont pas distribués sur des points de distribution. Si vous sélectionnez **Non**, exécutez l’action **Mettre à jour le point de distribution** avant d’utiliser l’image de démarrage. Si le package de pilotes n’a jamais été distribué, il faut utiliser l’action **Distribuer du contenu** du nœud **Packages de pilotes**.  
 
-- [Appliquer automatiquement les pilotes](../understand/task-sequence-steps.md#BKMK_AutoApplyDrivers) : Cette étape permet de faire correspondre et d'installer automatiquement des pilotes de périphérique dans le cadre du déploiement d'un système d'exploitation. Vous pouvez configurer l'étape de la séquence de tâches de sorte que seul le meilleur pilote correspondant pour chaque périphérique matériel détecté soit installé ou bien spécifier que l'étape de la séquence de tâches installe tous les pilotes compatibles pour chaque périphérique matériel détecté et laisser ensuite le programme d'installation Windows choisir le pilote le mieux adapté. En outre, vous pouvez spécifier une catégorie de pilotes de périphérique pour limiter les pilotes qui sont disponibles pour cette étape.  
+    - Configuration Manager vous avertit si l’architecture d’un ou plusieurs pilotes ne correspond pas à celle des images de démarrage sélectionnées. Si elles ne correspondent pas, sélectionnez **OK**. Revenez à la page **Détails du pilote** pour effacer les pilotes qui ne correspondent pas à l’architecture de l’image de démarrage sélectionnée. Par exemple, si vous sélectionnez une image de démarrage x64 et x86, tous les pilotes doivent prendre en charge les deux architectures. Si vous sélectionnez une image de démarrage x64, tous les pilotes doivent prendre en charge l'architecture x 64.  
 
-- [Appliquer le package de pilotes](../understand/task-sequence-steps.md#BKMK_ApplyDriverPackage) : Cette étape permet de mettre tous les pilotes de périphérique d'un package de pilotes spécifique à la disposition du programme d'installation de Windows. Dans les packages de pilotes spécifiés, le programme d'installation de Windows recherche les pilotes de périphérique qui sont nécessaires. Quand vous créez un média autonome, vous devez utiliser cette étape pour installer les pilotes de périphérique.  
+        > [!NOTE]  
+        > - L’architecture est basée sur celle indiquée dans le fichier INF du fabricant.  
+        > - Si un pilote indique qu’il prend en charge les deux architectures, vous pouvez l’importer dans n’importe quelle image de démarrage.  
 
-  Lorsque vous utilisez ces étapes de séquence de tâches, vous pouvez également spécifier la manière dont les pilotes de périphérique sont installés sur l'ordinateur où vous déployez le système d'exploitation. Pour plus d’informations, consultez [Gérer les séquences de tâches pour automatiser des tâches](../deploy-use/manage-task-sequences-to-automate-tasks.md).  
+    - Configuration Manager vous avertit si vous ajoutez des pilotes de périphérique qui ne sont pas des pilotes réseau ou des pilotes de stockage dans une image de démarrage. Dans la plupart des cas, ils ne sont pas nécessaires à l’image de démarrage. Sélectionnez **Oui** pour ajouter les pilotes à l’image de démarrage ou **Non** pour revenir en arrière et modifier votre sélection de pilotes.  
 
-##  <a name="BKMK_InstallingDeviceDiriversTS"></a> Utiliser des séquences de tâches pour installer des pilotes de périphérique sur des ordinateurs  
- Utilisez la procédure suivante pour installer des pilotes de périphérique dans le cadre du déploiement de systèmes d'exploitation.  
+    - Configuration Manager vous avertit si un ou plusieurs pilotes sélectionnés ne sont pas signés numériquement. Sélectionnez **Oui** pour continuer ou **Non** pour revenir en arrière et apporter des modifications à votre sélection de pilotes.  
 
-#### <a name="use-a-task-sequence-to-install-device-drivers"></a>Utiliser une séquence de tâches pour installer des pilotes de périphérique  
+7. Effectuez toutes les étapes de l'Assistant.  
 
-1. Dans la console Configuration Manager, cliquez sur **Bibliothèque de logiciels**.  
 
-2. Dans l'espace de travail **Bibliothèque de logiciels** , développez **Systèmes d'exploitation**, puis cliquez sur **Séquences de tâches**.  
+### <a name="BKMK_ModifyDriverPackage"></a> Gérer les pilotes de périphérique dans un package de pilotes  
 
-3. Dans le nœud **Séquences de tâches** , sélectionnez la séquence de tâches que vous souhaitez modifier pour installer le pilote de périphérique, puis cliquez sur **Modifier**.  
+Utilisez les procédures suivantes pour modifier les packages de pilotes et les images de démarrage. Pour ajouter ou supprimer un pilote, commencez par le localiser dans le nœud **Pilotes**. Ensuite, modifiez les packages ou les images de démarrage auxquelles le pilote sélectionné est associé.  
 
-4. Rendez-vous à l'emplacement où vous souhaitez ajouter les étapes **Pilote** , cliquez sur **Ajouter**, puis sélectionnez **Pilotes**.  
+1. Dans la console Configuration Manager, accédez à l’espace de travail **Bibliothèque de logiciels**. Développez **Systèmes d’exploitation**, puis sélectionnez le nœud **Pilotes**.  
 
-5. Ajoutez l'étape **Appliquer automatiquement les pilotes** si vous souhaitez que la séquence de tâches installe tous les pilotes de périphérique ou les catégories spécifiques qui sont spécifiées. Spécifiez les options pour l'étape sous l'onglet **Propriétés** et les conditions pour l'étape sous l'onglet **Options** .  
+2. Sélectionnez les pilotes de périphérique que vous souhaitez ajouter à un package de pilotes.  
 
-    Ajoutez l'étape **Appliquer le package de pilotes** si vous souhaitez que la séquence de tâches installe uniquement ces pilotes de périphérique à partir du package spécifié. Spécifiez les options pour l'étape sous l'onglet **Propriétés** et les conditions pour l'étape sous l'onglet **Options** .  
+3. Sous l’onglet **Accueil** du ruban, sélectionnez **Modifier** dans le groupe **Pilote**, puis choisissez **Packages de pilotes**.  
 
-   > [!IMPORTANT]  
-   >  Vous pouvez sélectionner **Désactiver cette étape** sous l’onglet **Options** pour désactiver l’étape de dépannage de la séquence de tâches.  
+4. Pour ajouter un pilote de périphérique, activez la case à cocher des packages de pilotes auxquels vous souhaitez ajouter les pilotes de périphérique. Pour supprimer un pilote de périphérique, désactivez la case à cocher des packages de pilotes desquels vous souhaitez supprimer le pilote de périphérique.  
 
-6. Cliquez sur **OK** pour enregistrer la séquence de tâches.  
+    Si vous ajoutez des pilotes de périphérique associés à des packages de pilotes, vous pouvez si vous le souhaitez créer un package. Sélectionnez **Nouveau Package** pour ouvrir la boîte de dialogue **Nouveau package de pilotes**.  
 
-   Pour plus d’informations sur la création d’une séquence de tâches pour installer un système d’exploitation, consultez [Créer une séquence de tâches pour installer un système d’exploitation](../deploy-use/create-a-task-sequence-to-install-an-operating-system.md).  
+5. Si le package a déjà été distribué auprès de points de distribution, sélectionnez **Oui** dans la boîte de dialogue pour mettre à jour les images de démarrage sur les points de distribution. Les pilotes de périphérique ne sont pas utilisables tant qu’ils ne sont pas distribués sur des points de distribution. Si vous sélectionnez **Non**, exécutez l’action **Mettre à jour le point de distribution** avant d’utiliser l’image de démarrage. Si le package de pilotes n’a jamais été distribué, il faut utiliser l’action **Distribuer du contenu** du nœud **Packages de pilotes**. Pour que les pilotes soient disponibles, vous devez mettre à jour le package de pilotes sur les points de distribution.  
 
-##  <a name="BKMK_DriverReports"></a> Rapports de gestion de pilotes  
- Vous pouvez utiliser plusieurs rapports dans la catégorie des rapports **Gestion des pilotes** pour déterminer des informations générales sur les pilotes de périphérique dans le catalogue de pilotes. Pour plus d’informations sur les rapports, consultez [Rapports](../../core/servers/manage/reporting.md).
+    Sélectionnez **OK** lorsque vous avez terminé.  
+
+
+### <a name="BKMK_ManageDriversBootImage"></a> Gérer les pilotes de périphérique dans une image de démarrage  
+
+Vous pouvez ajouter à des images de démarrage des pilotes de périphérique Windows importés dans le catalogue de pilotes. Lorsque vous ajoutez des pilotes de périphérique à une image de démarrage, procédez comme suit :  
+
+- N’ajoutez que des pilotes de stockage et des pilotes réseau aux images de démarrage. Les autres types de pilotes ne sont généralement pas obligatoires dans Windows PE. Les pilotes non requis augmentent inutilement la taille de l’image de démarrage.  
+
+- N’ajoutez que les pilotes de périphérique de Windows 10 à une image de démarrage. La version requise de Windows PE est basée sur Windows 10.  
+
+- Veillez à utiliser le pilote de périphérique adapté à l’architecture de l’image de démarrage. N’ajoutez pas un pilote de périphérique x86 à une image de démarrage x64.  
+
+#### <a name="process-to-modify-the-device-drivers-associated-with-a-boot-image"></a>Processus de modification des pilotes de périphérique associés à une image de démarrage  
+
+1. Dans la console Configuration Manager, accédez à l’espace de travail **Bibliothèque de logiciels**. Développez **Systèmes d’exploitation**, puis sélectionnez le nœud **Pilotes**.  
+
+2. Sélectionnez les pilotes de périphérique que vous souhaitez ajouter au package de pilotes.  
+
+3. Sous l’onglet **Accueil** du ruban, sélectionnez **Modifier** dans le groupe **Pilote**, puis choisissez **Images de démarrage**.  
+
+4. Pour ajouter un pilote de périphérique, activez la case à cocher de l'image de démarrage à laquelle vous souhaitez ajouter les pilotes de périphérique. Pour supprimer un pilote de périphérique, désactivez la case à cocher de l'image de démarrage de laquelle vous souhaitez supprimer le pilote de périphérique.  
+
+5. Si vous ne souhaitez pas mettre à jour les points de distribution dans lesquels l’image de démarrage est stockée, décochez la case **Mettre à jour les points de distribution une fois terminé**. Par défaut, les points de distribution sont mis à jour lorsque l'image de démarrage est mise à jour.  
+
+    - Sélectionnez **Oui** dans la boîte de dialogue pour mettre à jour les images de démarrage sur les points de distribution. Les pilotes de périphérique ne sont pas utilisables tant qu’ils ne sont pas distribués sur des points de distribution. Si vous sélectionnez **Non**, exécutez l’action **Mettre à jour le point de distribution** avant d’utiliser l’image de démarrage. Si le package de pilotes n’a jamais été distribué, il faut utiliser l’action **Distribuer du contenu** du nœud **Packages de pilotes**.  
+
+    - Configuration Manager vous avertit si l’architecture d’un ou plusieurs pilotes ne correspond pas à celle des images de démarrage sélectionnées. Si elles ne correspondent pas, sélectionnez **OK**. Revenez à la page **Détails du pilote** pour effacer les pilotes qui ne correspondent pas à l’architecture de l’image de démarrage sélectionnée. Par exemple, si vous sélectionnez une image de démarrage x64 et x86, tous les pilotes doivent prendre en charge les deux architectures. Si vous sélectionnez une image de démarrage x64, tous les pilotes doivent prendre en charge l'architecture x 64.  
+
+        > [!NOTE]
+        > - L’architecture est basée sur celle indiquée dans le fichier INF du fabricant.  
+        > - Si un pilote indique qu'il prend en charge les deux architectures, vous pouvez l'importer dans l'une ou l'autre image de démarrage.  
+
+    - Configuration Manager vous avertit si vous ajoutez des pilotes de périphérique qui ne sont pas des pilotes réseau ou des pilotes de stockage dans une image de démarrage. Dans la plupart des cas, ils ne sont pas nécessaires à l’image de démarrage. Sélectionnez **Oui** pour ajouter les pilotes à l’image de démarrage ou **Non** pour revenir en arrière et modifier votre sélection de pilotes.  
+
+    - Configuration Manager vous avertit si un ou plusieurs pilotes sélectionnés ne sont pas signés numériquement. Sélectionnez **Oui** pour continuer ou **Non** pour revenir en arrière et apporter des modifications à votre sélection de pilotes.  
+
+
+### <a name="BKMK_DriverActions"></a> Actions supplémentaires concernant les pilotes de périphérique  
+
+Vous pouvez effectuer des actions supplémentaires de gestion des pilotes en les sélectionnant dans le nœud **Pilotes**.  
+
+#### <a name="categorize"></a>Catégoriser
+Efface, gère ou définit une catégorie administrative pour les pilotes sélectionnés.
+
+#### <a name="delete"></a>Supprimer
+Supprime le pilote du nœud **Pilotes** et des points de distribution associés.
+
+#### <a name="disable"></a>Désactiver
+Empêche l’installation du pilote. Cette action le désactive temporairement. La séquence de tâches ne peut pas installer un pilote désactivé lors du déploiement d’un système d’exploitation. 
+
+> [!Note]  
+> Cette action n’empêche l’installation des pilotes que pendant l’étape **Appliquer automatiquement les pilotes** de la séquence de tâches.
+
+#### <a name="enable"></a>Activez
+Permet aux séquences de tâches et aux ordinateurs clients Configuration Manager d’installer le pilote de périphérique pendant le déploiement du système d’exploitation.
+
+#### <a name="move"></a>Déplacer
+Déplace le pilote de périphérique vers un autre dossier dans le nœud **Pilotes** .
+
+#### <a name="properties"></a>Propriétés
+Ouvre la boîte de dialogue **Propriétés**. Passez en revue et modifiez les propriétés du pilote. Par exemple, modifiez son nom et sa description, activez ou désactivez-le et spécifiez sur quelles plateformes il peut s’exécuter.
+
+
+
+## <a name="BKMK_TSDrivers"></a> Utiliser des séquences de tâches pour installer des pilotes  
+
+Utilisez des séquences de tâches pour automatiser le déploiement du système d’exploitation. Chaque étape de la séquence de tâches peut exécuter une action spécifique, comme installer un pilote. Vous pouvez utiliser les deux étapes de séquence de tâches suivantes pour installer des pilotes de périphériques lors du déploiement d’un système d’exploitation :  
+
+- [Appliquer automatiquement les pilotes](/sccm/osd/understand/task-sequence-steps#BKMK_AutoApplyDrivers) : Cette étape permet de faire correspondre et d'installer automatiquement des pilotes de périphérique dans le cadre du déploiement d'un système d'exploitation. Vous pouvez configurer l’étape de la séquence de tâches de façon à installer uniquement le pilote le plus adapté à chaque périphérique matériel détecté. Sinon, demandez-lui d’installer tous les pilotes compatibles pour chaque périphérique matériel détecté et de laisser le programme d’installation de Windows choisir le meilleur. Vous pouvez également spécifier une catégorie de pilotes de périphérique afin de limiter les pilotes disponibles à cette étape.  
+
+- [Appliquer le package de pilotes](/sccm/osd/understand/task-sequence-steps#BKMK_ApplyDriverPackage) : Cette étape permet de mettre tous les pilotes de périphérique d'un package de pilotes spécifique à la disposition du programme d'installation de Windows. Dans les packages de pilotes spécifiés, le programme d'installation de Windows recherche les pilotes de périphérique qui sont nécessaires. Quand vous créez un média autonome, vous devez utiliser cette étape pour installer les pilotes de périphérique.  
+
+Lorsque vous utilisez ces étapes de séquence de tâches, vous pouvez également spécifier la manière dont les pilotes sont installés sur l’ordinateur au moment du déploiement du système d’exploitation. Pour plus d’informations, consultez [Gérer les séquences de tâches pour automatiser des tâches](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks).  
+
+
+
+## <a name="BKMK_DriverReports"></a> Rapports de pilotes  
+
+Vous pouvez utiliser plusieurs rapports dans la catégorie des rapports **Gestion des pilotes** pour déterminer des informations générales sur les pilotes de périphérique dans le catalogue de pilotes. Pour plus d’informations sur les rapports, consultez [Rapports](/sccm/core/servers/manage/reporting).
+

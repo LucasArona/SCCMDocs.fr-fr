@@ -2,7 +2,7 @@
 title: Point de distribution cloud
 titleSuffix: Configuration Manager
 description: Planifiez et concevez la distribution de contenu logiciels via Microsoft Azure avec des points de distribution cloud dans Configuration Manager.
-ms.date: 11/27/2018
+ms.date: 02/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,16 +11,22 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1f251d1356c0cc04ce285aa0ea9a131e5f21ee0f
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 44eaef29da0635bdf81a02839f60d1c1081d9dec
+ms.sourcegitcommit: ef2960bd91655c741450774e512dd0a9be610625
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56156972"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56838852"
 ---
 # <a name="use-a-cloud-distribution-point-in-configuration-manager"></a>Utiliser un point de distribution cloud dans Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
+
+> [!Important]  
+> L’implémentation du partage de contenu à partir d’Azure a évolué. Utilisez une passerelle de gestion cloud compatible avec le contenu en activant l’option **Autoriser la passerelle de gestion cloud à fonctionner comme un point de distribution cloud et à distribuer du contenu à partir du stockage Azure**. Pour plus d’informations, consultez [Modifier une passerelle de gestion cloud](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#modify-a-cmg).
+> 
+> Vous ne pourrez pas créer de point de distribution cloud traditionnel à l’avenir. Pour plus d’informations, consultez [Fonctionnalités supprimées et déconseillées](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). 
+
 
 Un point de distribution cloud est un point de distribution Configuration Manager qui est hébergé en tant que plateforme PaaS (Platform-as-a-Service) dans Microsoft Azure. Ce service prend en charge les scénarios suivants :  
 

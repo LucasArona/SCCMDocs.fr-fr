@@ -11,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c42cfb2b973084efc897c8f313e58541164d3fa2
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 8d83085637e971b47ee9941d76fef749660861aa
+ms.sourcegitcommit: 223549003829fce7c6dc63959ee71e8b88542417
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56123482"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56951849"
 ---
 #  <a name="automatically-deploy-software-updates"></a>Déployer automatiquement des mises à jour logicielles  
 
@@ -196,7 +196,7 @@ Approuvez et déployez automatiquement des mises à jour logicielles en utilisan
     - **Aucun package de déploiement** : depuis la version 1806, les mises à jour logicielles sont déployées sur les appareils sans que le contenu soit préalablement téléchargé et distribué aux points de distribution. Ce paramètre est particulièrement utile quand le contenu des mises à jour à traiter est extrêmement volumineux. Vous pouvez aussi l’utiliser quand vous voulez que les clients reçoivent systématiquement le contenu à partir du service cloud Microsoft Update. Dans ce cas, les clients peuvent également télécharger le contenu auprès d’homologues qui disposent déjà du contenu nécessaire. Le client Configuration Manager continue de gérer le téléchargement de contenu. Vous pouvez donc utiliser la fonctionnalité de cache d’homologue Configuration Manager ou d’autres technologies telles que l’optimisation de la distribution. Cette fonctionnalité prend en charge tous les types de mises à jour pris en charge par la gestion des mises à jour logicielles Configuration Manager, notamment les mises à jour Windows et Office.<!--1357933-->  
 
         > [!Note]  
-        > Cette option concerne uniquement les nouvelles règles de déploiement automatique. Vous ne pouvez pas modifier les règles existantes avec ce paramètre.<!--SCCMDocs issue 741-->  
+        > Une fois cette option sélectionnée et les paramètres appliqués, elle n’est plus modifiable. Les autres options sont grisées.<!--SCCMDocs-pr issue 3003-->  
 
 12. Dans la page **Points de distribution**, spécifiez les points de distribution ou les groupes de points de distribution où héberger les fichiers de mise à jour logicielle. Pour plus d’informations sur les points de distribution, consultez [Configurations des points de distribution](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_configs). Cette page est disponible uniquement lorsque vous créez un nouveau package de déploiement de mise à jour logicielle.  
   

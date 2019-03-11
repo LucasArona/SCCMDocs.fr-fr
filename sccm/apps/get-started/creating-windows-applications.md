@@ -2,7 +2,7 @@
 title: Créer des applications Windows
 titleSuffix: Configuration Manager
 description: Découvrez-en plus sur la création et le déploiement d’applications Windows dans Configuration Manager.
-ms.date: 07/30/2018
+ms.date: 02/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1fa26147539abc611b86791f6dd9a4be0bc89c59
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: c70212962342bd254a5024c17bb292783b760233
+ms.sourcegitcommit: ef2960bd91655c741450774e512dd0a9be610625
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56156472"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56838869"
 ---
 # <a name="create-windows-applications-in-configuration-manager"></a>Créer des applications Windows dans Configuration Manager
 
@@ -30,13 +30,7 @@ Outre les autres exigences et procédures Configuration Manager à observer pour
 
 Configuration Manager prend en charge le déploiement de formats de package d’application (.aspx) et d’ensemble d’applications (.appxbundle) Windows pour les appareils Windows 8.1 et Windows 10.
 
-Depuis la version 1806, Configuration Manager prend également en charge les nouveaux formats de package d’application (.msix) et d’ensemble d’applications (.msixbundle) Windows 10. Les dernières versions de [Windows Insider Preview](https://insider.windows.com/) prennent en charge ces nouveaux formats.<!--1357427-->  
-
-- Pour une vue d’ensemble de MSIX, voir [Examen plus poussé de MSIX](https://blogs.msdn.microsoft.com/sgern/2018/06/18/a-closer-look-at-msix/).  
-
-- Pour savoir comment créer une application MSIX, voir [Prise en charge de MSIX introduite dans la version 17682 d’Insider](https://techcommunity.microsoft.com/t5/MSIX-Blog/MSIX-support-introduced-in-Insider-Build-17682/ba-p/202376).  
-
-Quand vous créez une application dans la console Configuration Manager, sélectionnez **Package d’application Windows (\*.appx, \*.appxbundle, \*.msix, \*.msixbundle)** comme **Type** de fichier d’installation d’application. Pour plus d’informations, consultez [Créer des applications](/sccm/apps/deploy-use/create-applications). 
+Quand vous créez une application dans la console Configuration Manager, sélectionnez **Package d’application Windows (\*.appx, \*.appxbundle, \*.msix, \*.msixbundle)** comme **Type** de fichier d’installation d’application. Pour plus d’informations sur la création d’applications en général, voir [Créer des applications](/sccm/apps/deploy-use/create-applications). Pour plus d’informations sur le format MSIX, voir [Prise en charge du format MSIX](#bkmk_msix). 
 
 > [!Note]  
 > Pour tirer parti des nouvelles fonctionnalités de Configuration Manager, commencez par mettre à jour les clients vers la dernière version. Bien que les nouvelles fonctionnalités s’affichent dans la console Configuration Manager quand vous mettez à jour le site et la console, le scénario complet n’est pas fonctionnel tant que la version cliente n’est pas également la plus récente.<!--SCCMDocs issue 646-->  
@@ -60,6 +54,63 @@ Pour configurer un type de déploiement d’application Windows pour cette fonct
 
 > [!Note]  
 > Si vous devez désinstaller une application provisionnée sur des appareils auxquels les utilisateurs se sont déjà connectés, vous devez créer deux déploiements de désinstallation. Pour le premier déploiement de désinstallation, ciblez le regroupement d’appareils qui contient les appareils en question. Pour le deuxième déploiement, ciblez le regroupement d’utilisateurs qui contient les utilisateurs déjà connectés aux appareils sur lesquels l’application est provisionnée. Lorsque vous désinstallez une application provisionnée d’un appareil, Windows ne la désinstalle pas pour les utilisateurs. 
+
+
+
+## <a name="bkmk_msix"></a> Prise en charge du format MSIX
+<!--1357427-->
+
+Depuis la version 1806, Configuration Manager prend en charge les nouveaux formats de package d’application (.msix) et d’ensemble d’applications (.msixbundle) Windows 10. Windows 10 1809 (ou version ultérieure) prend en charge ces nouveaux formats.  
+
+- Pour une vue d’ensemble de MSIX, voir [Examen plus poussé de MSIX](https://blogs.msdn.microsoft.com/sgern/2018/06/18/a-closer-look-at-msix/).  
+
+- Pour savoir comment créer une application MSIX, voir [Prise en charge de MSIX introduite dans la version 17682 d’Insider](https://techcommunity.microsoft.com/t5/MSIX-Blog/MSIX-support-introduced-in-Insider-Build-17682/ba-p/202376).  
+
+
+### <a name="convert-applications-to-msix"></a>Convertir des applications en MSIX
+<!--3607729, fka 1359029-->
+
+Depuis la version 1810, vous pouvez convertir vos applications Windows Installer (.msi) existantes au format MSIX. 
+
+#### <a name="prerequisites"></a>Prérequis
+- Un appareil de référence sous Windows 10 version 1809 ou ultérieure  
+
+- Connectez-vous à Windows sur cet appareil en tant qu’utilisateur disposant de droits d’administrateur local  
+
+- Installez les applications suivantes sur cet appareil :  
+
+    - Console Configuration Manager  
+
+    - Installez [l’outil d’empaquetage MSIX](https://www.microsoft.com/store/productId/9N5LW3JBCXKF) à partir du Microsoft Store  
+
+    - Installez le [pilote de l’outil d’empaquetage MSIX](https://docs.microsoft.com/windows/msix/packaging-tool/mpt-known-issues#msix-packaging-tool-driver-considerations)<!--SCCMDocs-pr issue #3091-->  
+
+N’installez pas d’autres applications ou services sur cet appareil. Il s’agit de votre système de référence. 
+
+#### <a name="process-to-convert-applications-to-msix-format"></a>Convertir des applications au format MSIX
+1. Élevez la console Configuration Manager, accédez à l’espace de travail **Bibliothèque de logiciels**, développez **Gestion des applications** et sélectionnez le nœud **Applications**.  
+
+2. Sélectionnez une application qui a un type de déploiement Windows Installer (.msi).  
+
+    > [!Note]  
+    > Vous devez être en mesure d’accéder au contenu source de l’application à partir de l’appareil de référence.  
+    > 
+    > Le nom de l’application ne peut pas contenir de caractères spéciaux. Configuration Manager utilise le nom de l’application en tant que nom du fichier de sortie.  
+    > 
+    > N’installez pas cette application sur l’appareil de référence à l’avance.  
+
+3. Sélectionnez **Convertir en .MSIX** dans le ruban.
+
+Une fois l’Assistant terminé, l’outil d’empaquetage MSIX crée un fichier MSIX à l’emplacement spécifié dans l’Assistant. Pendant ce processus, Configuration Manager installe en mode silencieux l’application sur l’appareil de référence.
+
+Si le processus échoue, la page de résumé pointe vers le fichier journal avec plus d’informations. S’il existe une erreur sur la capture de l’état utilisateur, déconnectez-vous de Windows. Le fait de vous reconnecter peut résoudre ce problème.
+
+Pour utiliser cette application MSIX, vous devez d’abord la signer numériquement afin que les clients lui fassent confiance. Pour plus d’informations sur ce processus, consultez les articles suivants : 
+- [MSIX – Outil d’empaquetage MSIX – signer le package MSIX](https://blogs.msdn.microsoft.com/sgern/2018/09/06/msix-the-msix-packaging-tool-signing-the-msix-package/)
+- [Comment signer un package d’application à l’aide de SignTool](https://docs.microsoft.com/windows/desktop/appxpkg/how-to-sign-a-package-using-signtool)
+
+Après avoir signé l’application, créez un nouveau type de déploiement sur l’application dans Configuration Manager. Pour plus d’informations, consultez [Créer des types de déploiement pour l’application](/sccm/apps/deploy-use/create-applications#bkmk_create-dt).
+
 
 
 

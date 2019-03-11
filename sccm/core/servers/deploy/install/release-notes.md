@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc19092f1272611ea3e05d708bf89bda1a4ba3b9
-ms.sourcegitcommit: 0a23cde6112cbb5987f433bffcf6f223b994ba72
+ms.openlocfilehash: c7e4307d61cccf968729f013ebaa4bfab4b0027e
+ms.sourcegitcommit: 56ec6933cf7bfc93842f55835ad336ee3a1c6ab5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56667458"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57211531"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Notes de publication de Configuration Manager
 
@@ -26,13 +26,15 @@ Avec Configuration Manager, les notes de publication de produit se limitent aux 
 
 La documentation spécifique aux fonctionnalités inclut des informations sur les problèmes connus qui affectent les scénarios de base.  
 
-> [!TIP]  
->  Cette rubrique contient les notes de publication pour l’édition actuelle de Configuration Manager. Pour plus d’informations sur la branche Technical Preview, consultez [Technical Preview](/sccm/core/get-started/technical-preview).  
+Cette rubrique contient les notes de publication pour l’édition actuelle de Configuration Manager. Pour plus d’informations sur la branche Technical Preview, consultez [Technical Preview](/sccm/core/get-started/technical-preview).  
 
 Pour plus d’informations sur les nouvelles fonctionnalités introduites dans les différentes versions, consultez les articles suivants :
 - [Nouveautés de la version 1810](/sccm/core/plan-design/changes/whats-new-in-version-1810)
 - [Nouveautés de la version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806)  
 - [Nouveautés de la version 1802](/sccm/core/plan-design/changes/whats-new-in-version-1802)
+
+> [!Tip]  
+> Pour recevoir une notification en cas de mise à jour de cette page, copiez et collez l’URL suivante dans votre lecteur de flux RSS : `https://docs.microsoft.com/api/search/rss?search=%22release+notes+-+Configuration+Manager%22&locale=en-us`
 
 
 
