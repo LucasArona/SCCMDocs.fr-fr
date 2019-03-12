@@ -2,7 +2,7 @@
 title: Haute disponibilité
 titleSuffix: Configuration Manager
 description: Découvrez comment déployer Configuration Manager avec des options qui garantissent une haute disponibilité des services.
-ms.date: 07/30/2018
+ms.date: 03/06/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9b69fac83283963e49b01c733fb8fa3000702cfb
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 424b841360efbebef96ba5980c4ea7a45995ea0a
+ms.sourcegitcommit: 544f335cfd1bfd0a1d4973439780e9f5e9ee8bed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56132164"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562132"
 ---
 # <a name="high-availability-options-for-configuration-manager"></a>Options de haute disponibilité pour Configuration Manager
 
@@ -214,6 +214,8 @@ Plusieurs systèmes de site ne permettent pas d’avoir plusieurs instances sur 
 > Cette section s’applique uniquement aux versions 1802 et antérieures de Configuration Manager. Depuis la version 1806, Configuration Manager fournit une option de haute disponibilité pour le serveur de site. Pour plus d’informations, consultez [Haute disponibilité du serveur de site](/sccm/core/servers/deploy/configure/site-server-high-availability).  
 
 Configuration Manager ne prend pas en charge l’installation du serveur de site pour chaque site d’un cluster Windows Server ou d’équilibrage de la charge réseau (NLB).  
+
+Depuis la version 1810, le processus d’installation de Configuration Manager ne bloque plus l’installation du rôle de serveur de site sur un ordinateur ayant le rôle Windows pour le clustering de basculement. SQL Always On exige ce rôle, ce qui vous empêchait de colocaliser la base de données de site sur le serveur de site. Avec ce changement, vous pouvez créer un site à haut niveau de disponibilité avec moins de serveurs en utilisant SQL Always On et un serveur de site en mode passif. <!--3607761, fka 1359132-->  
 
 Les informations suivantes peuvent vous aider à vous préparer au cas où un serveur de site tomberait en panne ou ne serait pas opérationnel :  
 
