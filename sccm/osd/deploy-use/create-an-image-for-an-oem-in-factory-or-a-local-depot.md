@@ -13,7 +13,7 @@ manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 56ac5353052fdba2884b6caee8f56d0835028e3e
 ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
 ms.lasthandoff: 02/12/2019
 ms.locfileid: "56135583"
@@ -45,7 +45,7 @@ Cette méthode de déploiement peut réduire le trafic réseau car l'image de d�
 -   **Média et environnement PXE uniquement (masqué)**  
 
 ## <a name="create-the-prestaged-media"></a>Créer le média préparé  
- Créez le fichier de média préparé à envoyer à l’OEM ou à votre dépôt local. Pour plus d'informations, voir [Create prestaged media with System Center Configuration Manager](create-prestaged-media.md).  
+ Créez le fichier de média préparé à envoyer à l’OEM ou à votre dépôt local. Pour plus d'informations, voir [Créer un média préparé avec System Center Configuration Manager](create-prestaged-media.md).  
 
 ## <a name="send-the-prestaged-media-file-to-the-oem-or-local-depot"></a>Envoyer le fichier de média préparé à l’OEM ou au dépôt local  
  Envoyez le média à l’OEM ou à votre dépôt local pour préparer les ordinateurs. Le fichier de média préparé est appliqué à un disque dur formaté sur l’ordinateur.  
