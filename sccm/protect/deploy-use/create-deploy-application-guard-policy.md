@@ -19,8 +19,8 @@ ms.lasthandoff: 02/12/2019
 ms.locfileid: "56132419"
 ---
 # <a name="create-and-deploy-windows-defender-application-guard-policy"></a>Créer et déployer une stratégie Windows Defender Application Guard 
-*S’applique à : System Center Configuration Manager (Current Branch)* 
- <!-- 1351960 --> vous pouvez créer et déployer [Windows Defender Application Guard](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview) stratégies à l’aide du point de terminaison de Configuration Manager protection. Ces stratégies permettent de protéger vos utilisateurs en ouvrant les sites web non approuvés dans un conteneur isolé et sécurisé qui n’est pas accessible par les autres parties du système d’exploitation.
+*S’applique à : System Center Configuration Manager (Current Branch)*
+<!-- 1351960 --> vous pouvez créer et déployer [Windows Defender Application Guard](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview) stratégies à l’aide du point de terminaison de Configuration Manager protection. Ces stratégies permettent de protéger vos utilisateurs en ouvrant les sites web non approuvés dans un conteneur isolé et sécurisé qui n’est pas accessible par les autres parties du système d’exploitation.
 
 ## <a name="prerequisites"></a>Prérequis
 
