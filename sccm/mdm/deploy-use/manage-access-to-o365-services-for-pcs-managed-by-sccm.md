@@ -2,7 +2,7 @@
 title: Gérer l’accès aux services O365
 titleSuffix: Configuration Manager
 description: Découvrez comment configurer l’accès conditionnel aux services Office 365 pour les PC gérés par System Center Configuration Manager.
-ms.date: 04/10/2018
+ms.date: 03/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -11,21 +11,22 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b45e9f586616a1f620864a6e6dc8d0777a118251
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 74a28863b2e30566b07890d57e927703d77247f6
+ms.sourcegitcommit: ec4411fe30770f90128cf6cbd181047db90040cb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56122285"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57881705"
 ---
 # <a name="manage-access-to-o365-services-for-pcs-managed-by-system-center-configuration-manager"></a>Gérer l’accès aux services O365 pour les PC gérés par System Center Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
-<!--1191496--> Configurer l’accès conditionnel aux services Office 365 pour les PC gérés par Configuration Manager.  
+<!--1191496-->
+Configurez l’accès conditionnel aux services Office 365 pour les PC gérés par Configuration Manager.  
 
 > [!Important]  
-> Y compris la gestion des appareils mobiles hybride sur site l’accès conditionnel sont [fonctionnalités déconseillées](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). Pour plus d’informations, voir [Présentation de la gestion MDM hybride](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->  
+> Y compris la gestion des appareils mobiles hybride sur site l’accès conditionnel sont [fonctionnalités déconseillées](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). Pour plus d’informations, consultez [Qu’est-ce que la gestion hybride des appareils mobiles ?](/sccm/mdm/understand/hybrid-mobile-device-management)<!--Intune feature 2683117-->  
 > 
 > Si vous utilisez l’accès conditionnel sur des appareils gérés avec le client Configuration Manager, pour vous assurer qu’ils sont toujours protégées, tout d’abord activer l’accès conditionnel dans Intune pour ces appareils avant de migrer. Activer la cogestion dans Configuration Manager, déplacer la charge de travail de stratégie de conformité dans Intune, puis terminez votre migration à partir d’Intune hybride vers Intune autonome. Pour plus d’informations, consultez [d’accès conditionnel avec la cogestion](https://docs.microsoft.com/sccm/comanage/quickstart-conditional-access). 
 
@@ -112,7 +113,7 @@ Pour plus d’informations sur la configuration de l’accès conditionnel pour 
 ### <a name="configure-active-directory-security-groups"></a>Configurer les groupes de sécurité Active Directory  
  Les stratégies d’accès conditionnel ciblent des groupes d’utilisateurs en fonction des types de stratégies. Ces groupes contiennent les utilisateurs que la stratégie cible ou qui sont exemptés de celle-ci. Quand une stratégie cible un utilisateur, chaque appareil qu’il utilise doit être conforme à cette stratégie pour pouvoir accéder au service.  
 
- Groupes d’utilisateurs de sécurité Active Directory. Ces groupes d’utilisateurs doivent être synchronisés sur Azure Active Directory. Vous pouvez configurer ces groupes vie le Centre d’administration Office 365 ou le Portail du compte Microsoft Intune.  
+ Groupes d’utilisateurs de sécurité Active Directory. Ces groupes d’utilisateurs doivent être synchronisés sur Azure Active Directory. Vous pouvez également configurer ces groupes dans le centre d’administration Microsoft 365 ou le portail de compte Intune.  
 
  Vous pouvez spécifier deux types de groupes dans chaque stratégie. :  
 

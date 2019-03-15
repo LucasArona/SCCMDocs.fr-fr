@@ -2,7 +2,7 @@
 title: Gérer l'accès à SharePoint Online
 titleSuffix: Configuration Manager
 description: Apprenez à utiliser la stratégie d’accès conditionnel System Center Configuration Manager SharePoint Online pour gérer l’accès à OneDrive.
-ms.date: 12/09/2017
+ms.date: 03/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 755be3231c00eabf9562256e62061fbad70633e7
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 69a160a3c7833f196d50185e551f619d68dc0925
+ms.sourcegitcommit: ec4411fe30770f90128cf6cbd181047db90040cb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56140947"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57881739"
 ---
 # <a name="manage-sharepoint-online-access-in-system-center-configuration-manager"></a>Gérer l’accès à SharePoint Online dans System Center Configuration Manager
 
@@ -106,7 +106,7 @@ Vous pouvez bloquer l'accès à SharePoint Online dans les applications suivante
 ## <a name="configure-conditional-access-for-sharepoint-online"></a>Configurer l’accès conditionnel pour SharePoint Online  
 
 ### <a name="step-1-configure-active-directory-security-groups"></a>Étape 1 : Configurer des groupes de sécurité Active Directory  
- Avant de commencer, configurez les groupes de sécurité Azure AD pour la stratégie d’accès conditionnel. Vous pouvez configurer ces groupes dans le **Centre d'administration Office 365**ou dans le **Portail de compte Intune**. Ces groupes incluent les utilisateurs qui sont ciblés par la stratégie ou exemptés de celle-ci. Quand un utilisateur est ciblé par une stratégie, chaque appareil qu’il utilise doit être conforme à cette stratégie pour accéder aux ressources.  
+ Avant de commencer, configurez les groupes de sécurité Azure AD pour la stratégie d’accès conditionnel. Vous pouvez configurer ces groupes dans le **centre d’administration Microsoft 365**, ou le **portail du compte Intune**. Ces groupes incluent les utilisateurs qui sont ciblés par la stratégie ou exemptés de celle-ci. Quand un utilisateur est ciblé par une stratégie, chaque appareil qu’il utilise doit être conforme à cette stratégie pour accéder aux ressources.  
 
  Vous pouvez spécifier deux types de groupes dans une stratégie SharePoint Online :  
 

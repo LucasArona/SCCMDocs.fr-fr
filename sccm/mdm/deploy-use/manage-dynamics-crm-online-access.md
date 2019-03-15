@@ -2,7 +2,7 @@
 title: Gérer l’accès à Dynamics CRM Online
 titleSuffix: Configuration Manager
 description: Découvrez comment contrôler l’accès à Microsoft Dynamics CRM Online à partir des appareils iOS et Android en utilisant l’accès conditionnel Microsoft Intune.
-ms.date: 03/05/2017
+ms.date: 03/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2bf6073a15518e971d4880a7adbb0853d6387f0d
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: fbd3d765a17d41bfbc2c400a3368cf00784b16c1
+ms.sourcegitcommit: ec4411fe30770f90128cf6cbd181047db90040cb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56122846"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57881671"
 ---
 # <a name="manage-dynamics-crm-online-access-in-system-center-configuration-manager"></a>Gérer l’accès à Dynamics CRM Online dans System Center Configuration Manager
 
@@ -47,7 +47,7 @@ Si une condition n'est pas remplie, l'utilisateur reçoit l'un des messages suiv
 ## <a name="configure-conditional-access-for-dynamics-crm-online"></a>Configurer l’accès conditionnel pour Dynamics CRM Online  
 ### <a name="step-1-configure-active-directory-security-groups"></a>Étape 1 : Configurer des groupes de sécurité Active Directory
 
-Avant de commencer, configurez les groupes de sécurité Azure Active Directory pour la stratégie d'accès conditionnel. Vous pouvez configurer ces groupes dans le **Centre d’administration Office 365**. Ces groupes serviront à cibler des utilisateurs avec la stratégie ou à les exempter de la stratégie. Quand un utilisateur est ciblé par une stratégie, chaque appareil qu'il utilise doit être conforme à cette stratégie pour qu'il puisse accéder aux ressources.
+Avant de commencer, configurez les groupes de sécurité Azure Active Directory pour la stratégie d'accès conditionnel. Vous pouvez configurer ces groupes dans le **centre d’administration Microsoft 365**. Ces groupes serviront à cibler des utilisateurs avec la stratégie ou à les exempter de la stratégie. Quand un utilisateur est ciblé par une stratégie, chaque appareil qu'il utilise doit être conforme à cette stratégie pour qu'il puisse accéder aux ressources.
 
 Vous pouvez spécifier deux types de groupes à utiliser pour la stratégie de Dynamics CRM :
 * **Groupes ciblés** : groupes d’utilisateurs auxquels s’applique la stratégie.

@@ -2,7 +2,7 @@
 title: Gérer l'accès à la messagerie
 titleSuffix: Configuration Manager
 description: Découvrez comment utiliser l’accès conditionnel de Configuration Manager pour gérer l’accès à la messagerie Exchange.
-ms.date: 03/05/2017
+ms.date: 03/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f976b63b4580b5df9c6e609ff6b361538860c41c
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 76326a1e0bcb3d9362db5eccfc08459bb4448206
+ms.sourcegitcommit: ec4411fe30770f90128cf6cbd181047db90040cb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56137641"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57881773"
 ---
 # <a name="manage-email-access-in-configuration-manager"></a>Gérer l’accès à la messagerie dans Configuration Manager
 
@@ -146,7 +146,7 @@ Vous pouvez exporter le contenu du rapport et utiliser la colonne **Adresse de m
 
 Vous ciblez les stratégies d'accès conditionnel vers différents groupes ou regroupements d'utilisateurs en fonction du type de stratégie. Ces groupes contiennent les utilisateurs qui seront ciblés par la stratégie ou exemptés de celle-ci. Quand un utilisateur est ciblé par une stratégie, chaque appareil qu'il utilise doit être conforme à cette stratégie pour qu'il puisse accéder à la messagerie.  
 
-- **Pour la stratégie Exchange Online**: pour les groupes de sécurité Azure Active Directory. Vous pouvez configurer ces groupes dans le **Centre d'administration Office 365**ou dans le **Portail de compte Intune**.  
+- **Pour la stratégie Exchange Online**: pour les groupes de sécurité Azure Active Directory. Vous pouvez configurer ces groupes dans le **centre d’administration Microsoft 365**, ou le **portail du compte Intune**.  
 
 - **Pour la stratégie Exchange sur site**: pour les regroupements d’utilisateurs Configuration Manager. Vous pouvez les configurer dans l'espace de travail **Ressources et Conformité** .  
 

@@ -2,7 +2,7 @@
 title: Gérer l’accès à Skype Entreprise Online
 titleSuffix: Configuration Manager
 description: Apprenez à utiliser la stratégie d’accès conditionnel pour gérer l’accès à Skype Entreprise Online.
-ms.date: 12/22/2017
+ms.date: 03/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78c40d84b7d774d7621b983a6e2bb755b14f9563
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 601b58b2f955170e5ab2f038cb49306efe3b499c
+ms.sourcegitcommit: ec4411fe30770f90128cf6cbd181047db90040cb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56138362"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57881722"
 ---
 # <a name="manage-skype-for-business-online-access"></a>Gérer l’accès à Skype Entreprise Online
 
@@ -52,7 +52,7 @@ Utilisez une stratégie d’accès conditionnel pour Skype Entreprise Online pou
 ## <a name="configure-conditional-access-for-skype-for-business-online"></a>Configurer l’accès conditionnel pour Skype Entreprise Online  
 
 ### <a name="step-1-configure-active-directory-security-groups"></a>Étape 1 : Configurer des groupes de sécurité Active Directory  
- Avant de commencer, configurez les groupes de sécurité Azure Active Directory pour la stratégie d'accès conditionnel. Configurez ces groupes dans le Centre d’administration Office 365. Ces groupes contiennent les utilisateurs à cibler avec la stratégie ou à exclure de celle-ci. Quand un utilisateur est ciblé par une stratégie, chaque appareil qu'il utilise doit être conforme à cette stratégie pour qu'il puisse accéder aux ressources.  
+ Avant de commencer, configurez les groupes de sécurité Azure Active Directory pour la stratégie d'accès conditionnel. Configuration de ces groupes dans le centre d’administration Microsoft 365. Ces groupes contiennent les utilisateurs à cibler avec la stratégie ou à exclure de celle-ci. Quand un utilisateur est ciblé par une stratégie, chaque appareil qu'il utilise doit être conforme à cette stratégie pour qu'il puisse accéder aux ressources.  
 
  Vous pouvez spécifier deux types de groupes à utiliser pour la stratégie de Skype Entreprise :  
 
