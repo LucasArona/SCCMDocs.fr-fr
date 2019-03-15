@@ -3,7 +3,7 @@ title: Maintenance des mises à jour logicielles
 titleSuffix: Configuration Manager
 description: Pour assurer la maintenance des mises à jour dans Configuration Manager, vous pouvez planifier la tâche de nettoyage WSUS, ou vous pouvez l’exécuter manuellement.
 author: mestew
-ms.date: 02/19/2019
+ms.date: 03/05/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -11,16 +11,16 @@ ms.assetid: 4b0e2e90-aac7-4d06-a707-512eee6e576c
 manager: dougeby
 ms.author: mstewart
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a872d48437b14bfec5b2b3da3a51be5c11cdfba3
-ms.sourcegitcommit: e18853c214c95e4d21b2f032aba6d17c21e97027
-ms.translationtype: HT
+ms.openlocfilehash: ff0f69a0e43c2d52aec9df262bf8d48587edb94c
+ms.sourcegitcommit: 4ab85212268e76d3fd22f00e6c74edaa5abde60c
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443934"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426853"
 ---
 # <a name="software-updates-maintenance"></a>Maintenance des mises à jour logicielles
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Vous pouvez planifier et exécuter des tâches de nettoyage WSUS à partir de la console Configuration Manager, dans les propriétés du composant de point de mise à jour logicielle. Quand vous choisissez pour la première fois d’exécuter la tâche de nettoyage WSUS, elle s’exécute à l’issue de la synchronisation des mises à jour logicielles suivante.  
 
@@ -52,7 +52,7 @@ Avant Configuration Manager version 1806, l’option de nettoyage WSUS exécute
 - Le nettoyage des éléments de configuration des mises à jour logicielles se produit dans la base de données Configuration Manager tous les sept jours et supprime les mises à jour superflues de la console.
   - Cette opération de nettoyage ne supprime pas les mises à jour expirées de la console Configuration Manager si elles sont actuellement déployées.
 
-Des opérations de maintenance supplémentaire restent nécessaires dans la base de données WSUS de niveau supérieur et dans toutes les autres bases de données WSUS présentes dans l’environnement. Pour obtenir des informations complémentaires et des instructions, consultez le billet de blog [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](https://blogs.technet.microsoft.com/configurationmgr/2016/01/26/the-complete-guide-to-microsoft-wsus-and-configuration-manager-sup-maintenance/).
+Des opérations de maintenance supplémentaire restent nécessaires dans la base de données WSUS de niveau supérieur et dans toutes les autres bases de données WSUS présentes dans l’environnement. Pour obtenir des informations complémentaires et des instructions, consultez le billet de blog [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](https://support.microsoft.com/help/4490644/complete-guide-to-microsoft-wsus-and-configuration-manager-sup-maint/).
 
 ## <a name="wsus-cleanup-behavior-starting-in-version-1806"></a>Comportement de nettoyage WSUS à partir de la version 1806
 
@@ -75,7 +75,7 @@ Toutes les opérations de maintenance WSUS doivent être exécutées manuellemen
 - Ordinateurs ne contactant pas le serveur
 - Fichiers de mise à jour superflus
 
-  Pour obtenir des informations complémentaires et des instructions, consultez le billet de blog [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](https://blogs.technet.microsoft.com/configurationmgr/2016/01/26/the-complete-guide-to-microsoft-wsus-and-configuration-manager-sup-maintenance/).
+  Pour obtenir des informations complémentaires et des instructions, consultez le billet de blog [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](https://support.microsoft.com/help/4490644/complete-guide-to-microsoft-wsus-and-configuration-manager-sup-maint/).
 
 ## <a name="wsus-cleanup-behavior-starting-in-version-1810"></a>Comportement de nettoyage WSUS à partir de la version 1810
 
@@ -97,7 +97,7 @@ Les options de l’**Assistant de nettoyage du serveur WSUS** répertoriées ci-
 - Ordinateurs ne contactant pas le serveur
 - Fichiers de mise à jour superflus
 
-  Pour obtenir des informations complémentaires et des instructions, consultez le billet de blog [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](https://blogs.technet.microsoft.com/configurationmgr/2016/01/26/the-complete-guide-to-microsoft-wsus-and-configuration-manager-sup-maintenance/).
+  Pour obtenir des informations complémentaires et des instructions, consultez le billet de blog [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](https://support.microsoft.com/help/4490644/complete-guide-to-microsoft-wsus-and-configuration-manager-sup-maint/).
 
 ## <a name="updates-cleanup-log-entries"></a>Entrées du journal de nettoyage des mises à jour
 
