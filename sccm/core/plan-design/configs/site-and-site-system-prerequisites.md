@@ -2,7 +2,7 @@
 title: Prérequis des sites
 titleSuffix: Configuration Manager
 description: Découvrez comment configurer un ordinateur Windows en tant que serveur de système de site Configuration Manager.
-ms.date: 07/30/2018
+ms.date: 03/06/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5b1a5a5e27108debe4f9f055da889d5b7a031ece
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 4187be7bf25bd88a5ba1432eaeb4cb5a44945551
+ms.sourcegitcommit: 544f335cfd1bfd0a1d4973439780e9f5e9ee8bed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56128447"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562125"
 ---
 # <a name="site-and-site-system-prerequisites-for-configuration-manager"></a>Prérequis des sites et systèmes de site pour Configuration Manager
 
@@ -52,6 +52,8 @@ Les exigences suivantes s’appliquent à tous les serveurs de système de site�
   Si vous devez changer l’un de ces éléments, supprimez d’abord le rôle de système de site de l’ordinateur. Réinstallez ensuite le rôle, une fois le changement effectué. Pour les changements qui affectent le serveur de site, désinstallez d’abord le site. Réinstallez ensuite le site, une fois le changement effectué.  
 
 - Les rôles de système de site ne sont pas pris en charge sur une instance d’un cluster Windows Server. La seule exception est le serveur de base de données de site. Pour plus d’informations, consultez [Utiliser un cluster SQL Server pour la base de données du site Configuration Manager](/sccm/core/servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database).  
+
+    Depuis la version 1810, le processus d’installation de Configuration Manager ne bloque plus l’installation du rôle de serveur de site sur un ordinateur ayant le rôle Windows pour le clustering de basculement. SQL Always On exige ce rôle, ce qui vous empêchait de colocaliser la base de données de site sur le serveur de site. Avec ce changement, vous pouvez créer un site à haut niveau de disponibilité avec moins de serveurs en utilisant SQL Always On et un serveur de site en mode passif. Pour plus d’informations, consultez [Options de haute disponibilité](/sccm/core/servers/deploy/configure/high-availability-options). <!--3607761, fka 1359132-->  
 
 - Vous ne pouvez pas modifier le type de démarrage ou les paramètres d’ouverture de session pour un service Configuration Manager. Dans ce cas, vous risquez d’empêcher des services clés de s’exécuter correctement.  
 
@@ -337,15 +339,17 @@ Pour plus d'informations, consultez [Installer et configurer des points de distr
 
 #### <a name="windows-server-roles-and-features"></a>Rôles et fonctionnalités Windows Server  
 
--   .NET Framework 3.5 (ou version ultérieure).  
+- .NET Framework 3.5 (ou version ultérieure).  
 
--   .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1 ou 4.7.2 :  
+- .NET Framework 4.5.2, 4.6.1, 4.6.2, 4.7, 4.7.1 ou 4.7.2 :  
 
      Pendant l’installation de ce rôle de système de site, Configuration Manager installe automatiquement .NET Framework 4.5.2. Cette installation peut placer le serveur dans un état d’attente redémarrage. Si un redémarrage est en attente pour .NET Framework, il est possible que les applications .NET ne puissent pas s’exécuter tant que le serveur n’a pas redémarré et que l’installation n’est pas terminée.  
 
-    -   Activation de HTTP (et des options sélectionnées automatiquement)  
+    - Activation de HTTP (et des options sélectionnées automatiquement)  
 
-    -   ASP.NET 4.5  
+    - ASP.NET 4.5  
+
+    - Services Windows Communication Foundation (WCF)<!-- SCCMDocs issue #1168 -->  
 
 #### <a name="iis-configuration"></a>Configuration IIS  
 

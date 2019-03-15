@@ -1,8 +1,8 @@
 ---
-title: Didacticiel&#58; chemin d’accès de la cogestion 1
+title: Tutoriel &#58; Activer la cogestion pour les clients Configuration Manager existants
 titleSuffix: Configuration Manager
-description: Configurer la cogestion avec Microsoft Intune quand vous gérez déjà les appareils Windows 10 avec Configuration Manager.
-ms.date: 01/14/2019
+description: Configurez la cogestion avec Microsoft Intune si vous gérez déjà des appareils Windows 10 avec Configuration Manager.
+ms.date: 03/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: tutorial
@@ -11,206 +11,208 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1aecb2c33c874717f1da979f1316d1b46b785071
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: MT
+ms.openlocfilehash: af526f531ed81de105aea9d6c5d7f2ea81e8f104
+ms.sourcegitcommit: af8693048e6706ffda72572374f56e0bc7dfce2c
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56754872"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57737289"
 ---
-# <a name="tutorial-enable-co-management-for-existing-configuration-manager-clients"></a>Didacticiel : Activer la cogestion pour les clients Configuration Manager existants
-Avec la cogestion, vous pouvez conserver votre processus établis pour l’utilisation de Configuration Manager pour gérer des PC dans votre organisation. En même temps, vous êtes investit dans le cloud à l’aide d’Intune pour la sécurité et l’approvisionnement moderne.  
+# <a name="tutorial-enable-co-management-for-existing-configuration-manager-clients"></a>Tutoriel : Activer la cogestion pour les clients Configuration Manager existants
+Avec la cogestion, vous pouvez conserver vos processus établis d’utilisation de Configuration Manager pour gérer des PC dans votre organisation, tout en investissant dans le cloud en recourant à Intune pour la sécurité et l’approvisionnement moderne.  
 
-Dans ce didacticiel, vous avez configurer cogestion de vos appareils Windows 10 qui sont déjà inscrits dans Configuration Manager. Ce didacticiel commence par du principe que vous utilisez déjà Configuration Manager pour gérer vos appareils Windows 10.
+Ce tutoriel explique comment configurer la cogestion pour des appareils Windows 10 déjà inscrits dans Configuration Manager. Il part du principe que vous utilisez déjà Configuration Manager pour gérer vos appareils Windows 10.
 
-Utilisez ce didacticiel lorsque :  
+Suivez ce tutoriel si :  
 
-- Vous avez une sur site Active Directory que vous pouvez vous connecter à Azure Active Directory (Azure AD) dans une configuration hybride Azure AD
-- Vous avez des clients Configuration Manager existants que vous souhaitez attacher de cloud
+- Vous disposez d’Active Directory en local, que vous pouvez connecter à Azure Active Directory (Azure AD) dans une configuration Azure AD Hybride. 
+
+  Si vous ne pouvez pas déployer de configuration Azure Active Directory (AD) Hybride en joignant AD en local avec Azure AD, nous vous recommandons de suivre notre tutoriel d’accompagnement [Activer la cogestion pour les nouveaux appareils Windows 10 basés sur Internet](/sccm/comanage/tutorial-co-manage-new-devices). 
+- Vous disposez de clients Configuration Manager que vous souhaitez relier au cloud.
 
 
-**Dans ce didacticiel, vous allez :**  
+**Ce tutoriel comporte plusieurs volets :**  
 > [!div class="checklist"]  
-> * Passez en revue les conditions préalables pour Azure et votre environnement local  
+> * Passer en revue les prérequis de l’environnement Azure et de l’environnement local  
 > * Configurer Azure AD hybride  
-> * Configurer les agents du client Configuration Manager auprès d’Azure AD  
-> * Configurer Intune pour l’inscription automatique des appareils  
+> * Configurer les agents clients Configuration Manager de sorte qu’ils s’inscrivent auprès d’Azure AD  
+> * Configurer l’inscription automatique des appareils dans Intune  
 > * Attribuer des licences Intune aux utilisateurs  
 > * Activer la cogestion dans Configuration Manager  
 
 
 ## <a name="prerequisites"></a>Prérequis  
 
-### <a name="azure-services-and-environment"></a>Environnement et les services azure
-- Abonnement Azure ([version d’évaluation gratuite](https://azure.microsoft.com/free))
+### <a name="azure-services-and-environment"></a>Services et environnement Azure
+- Abonnement Azure ([essai gratuit](https://azure.microsoft.com/free))
 - Azure Active Directory Premium
 - Abonnement Microsoft Intune
   > [!TIP]  
-  > Une à Enterprise Mobility + Security (EMS) abonnement inclut Azure Active Directory Premium et Microsoft Intune. Abonnement EMS ([version d’évaluation gratuite](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-trial)).  
+  > Un abonnement Enterprise Mobility + Security (EMS) comprend à la fois Azure Active Directory Premium et Microsoft Intune. Abonnement EMS ([essai gratuit](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-trial)).  
 
-Si elle est déjà présent dans votre environnement, au cours de ce didacticiel, vous allez :
-- Affecter une licence pour des utilisateurs *Intune* et pour *Azure Active Directory Premium*
-- Configurer [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-install-select-installation) entre votre annuaire local Active Directory et votre Azure Active Directory (AD) du client
+Au cours de ce tutoriel, vous allez effectuer les opérations suivantes si ce n’est pas déjà fait dans votre environnement :
+- Attribuer aux utilisateurs une licence *Intune* et *Azure Active Directory Premium*
+- Configurer [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-install-select-installation) entre Active Directory en local et le locataire Azure Active Directory (AD)
 
 
 ### <a name="on-premises-infrastructure"></a>Infrastructure locale
-- Un [version prise en charge](https://docs.microsoft.com/sccm/core/servers/manage/updates#supported-versions) de current branch de System Center Configuration Manager
-- Le [autorité MDM](https://docs.microsoft.com/sccm/mdm/deploy-use/change-mdm-authority) doit être définie sur Intune  
+- Une [version prise en charge](https://docs.microsoft.com/sccm/core/servers/manage/updates#supported-versions) de System Center Configuration Manager Current Branch
+- [L’autorité MDM](https://docs.microsoft.com/sccm/mdm/deploy-use/change-mdm-authority) définie sur Intune  
 
 
 ### <a name="permissions"></a>Autorisations
-Tout au long de ce didacticiel, utilisez les autorisations suivantes pour effectuer des tâches :  
-- Un compte qui est un *administrateur général* dans Azure  
-- Un compte qui est un *administrateur de domaine* sur votre infrastructure locale  
-- Un compte qui est un *administrateur complet* pour *tous les* étendues dans le Gestionnaire de Configuration   
+Tout au long de ce tutoriel, utilisez les autorisations suivantes pour effectuer les tâches :  
+- Un compte *administrateur général* dans Azure  
+- Un compte *administrateur de domaine* dans l’infrastructure locale  
+- Un compte *administrateur complet* pour *toutes* les étendues dans Configuration Manager   
 
 ## <a name="set-up-hybrid-azure-ad"></a>Configurer Azure AD hybride
-Lorsque vous configurez un hybride Azure AD, que vous configurez vraiment à l’intégration d’un site Active Directory avec Azure AD à l’aide d’Azure AD Connect et Active Directory Federated Services (ADFS). Avec une configuration réussie, vos employés peuvent se connecter en toute transparence des systèmes externes à l’aide de leur site informations d’identification AD.
+Configurer une infrastructure Azure AD Hybride, c’est véritablement configurer l’intégration d’AD en local avec Azure AD à l’aide d’Azure AD Connect et des services de fédération Active Directory (AD FS). Une fois la configuration effectuée, les collaborateurs peuvent se connecter en toute transparence à des systèmes externes avec leurs informations d’identification AD local.
 
 > [!IMPORTANT]  
-> Ce didacticiel décrit en détail un processus simple pour configurer hybride Azure AD pour un domaine géré. Nous vous recommandons de vous être familiarisé avec le processus et vous basez pas sur ce didacticiel vous permettront de comprendre et de déploiement hybride d’Azure AD.
+> Ce tutoriel décrit en détail un processus simple permettant de configurer une infrastructure Azure AD Hybride pour un domaine managé. Nous vous recommandons de vous familiariser avec cette procédure afin de ne pas dépendre de ce tutoriel pour comprendre et déployer l’infrastructure Azure AD Hybride.
 >
-> Pour plus d’informations sur Azure AD hybride, commencez par les articles suivants dans la documentation Azure Active Directory :
-> - [Planifier votre implémentation de la jointure Azure AD](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)
-> -  [Planifier votre implémentation de jointure Azure AD hybride](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan)
-> -  [Contrôler la jonction hybride Azure AD de vos appareils](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-control)
-> -  [Configurer hybride Azure AD join pour les domaines fédérés](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-federated-domains)  
+> Pour plus d’informations sur Azure AD Hybride, commencez par les articles suivants dans la documentation Azure Active Directory :
+> - [Planifier une implémentation de jonction Azure AD](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)
+> -  [Planifier une implémentation de jonction Azure AD Hybride](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan)
+> -  [Contrôler la jonction Azure AD Hybride d’appareils](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-control)
+> -  [Configurer la jonction Azure AD Hybride pour les domaines fédérés](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-federated-domains)  
 
 
 ### <a name="set-up-azure-ad-connect"></a>Configurer Azure AD Connect  
-Azure AD hybride nécessite la configuration d’Azure AD Connect pour synchroniser les comptes d’ordinateurs dans votre local Active Directory (AD) et l’objet appareil dans Azure AD.
+Azure AD Hybride exige de configurer Azure AD Connect de façon à synchroniser les comptes d’ordinateurs d’Active Directory (AD) en local et l’objet appareil d’Azure AD.
 
-Depuis la version 1.1.819.0, Azure AD Connect vous offre un Assistant pour configurer une jointure hybrid Azure AD. Utilisation de cet Assistant simplifie le processus de configuration.  
+Depuis la version 1.1.819.0, Azure AD Connect propose un Assistant permettant de configurer une jonction Azure AD Hybride en simplifiant le processus.  
 
-Pour configurer Azure AD Connect, vous avez besoin d’informations d’identification d’un administrateur général pour votre client Azure AD.  
+Pour configurer Azure AD Connect, vous avez besoin d’informations d’identification d’administrateur général sur votre locataire Azure AD.  
 
 > [!TIP]  
-> La procédure suivante ne doit pas être considérée faisant autoritée afin de configurer d’Azure AD Connect, mais est fournie ici pour aider à simplifier la configuration de la cogestion entre Intune et Configuration Manager. Pour le contenu faisant autorité sur ce et les procédures associées afin de configurer Azure AD, consultez [configurer une jointure hybrid Azure AD pour les domaines managés](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains) dans la documentation d’Azure AD.  
+> La procédure suivante ne doit pas être considérée comme faisant autorité pour la configuration d’Azure AD Connect. Sa vocation est de simplifier la configuration de la cogestion entre Intune et Configuration Manager. Pour accéder au contenu de référence à ce sujet et aux procédures de configuration d’Azure AD associées, voir [Configurer une jonction Azure AD Hybride pour les domaines managés](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains) dans la documentation d’Azure AD.  
 
 
-#### <a name="configure-a-hybrid-azure-ad-join-using-azure-ad-connect"></a>Configurer une jonction d’Azure AD hybride à l’aide d’Azure AD Connect
+#### <a name="configure-a-hybrid-azure-ad-join-using-azure-ad-connect"></a>Configurer une jonction Azure AD Hybride avec Azure AD Connect
 
-1. Obtenir et installer le [version la plus récente d’Azure AD Connect](https://www.microsoft.com/download/details.aspx?id=47594) (1.1.819.0 ou une version ultérieure).  
-2. Lancez Azure AD Connect, puis sélectionnez **configurer**.
-3. Sur le **des tâches supplémentaires** page, sélectionnez **configurer les options de l’appareil**, puis sélectionnez **suivant**.
-4. Sur le **vue d’ensemble** page, sélectionnez **suivant**.
-5. Sur le **se connecter à Azure AD** , entrez les informations d’identification d’un administrateur général pour votre locataire Azure AD.
-6. Sur le **options de l’appareil** page, sélectionnez **jonction hybride de configurer Azure AD**, puis sélectionnez **suivant**.
-7. Sur le **SCP** page, pour chaque forêt locale souhaité d’Azure AD Connect pour configurer le point de connexion de service (SCP), procédez comme suit, puis sélectionnez **suivant**:  
+1. Récupérez et installez la [dernière version d’Azure AD Connect](https://www.microsoft.com/download/details.aspx?id=47594) (1.1.819.0 ou version ultérieure).  
+2. Lancez Azure AD Connect, puis sélectionnez **Configurer**.
+3. Sur la page **Tâches supplémentaires**, sélectionnez **Configurer les options de l’appareil**, puis **Suivant**.
+4. Sur la page **Vue d’ensemble**, sélectionnez **Suivant**.
+5. Sur la page **Se connecter à Azure AD**, entrez des informations d’identification d’administrateur général pour votre locataire Azure AD.
+6. Sur la page **Options de l’appareil**, sélectionnez **Configurer la jonction Azure AD Hybride**, puis **Suivant**.
+7. Sur la page **SCP**, pour chaque forêt locale sur laquelle vous souhaitez qu’Azure AD Connect configure le point de connexion de service (SCP), suivez les étapes ci-dessous, puis sélectionnez **Suivant** :  
    1. Sélectionnez la forêt.  
-   2. Sélectionnez le service d’authentification.  Si vous avez un domaine fédéré, sélectionnez un serveur AD FS, sauf si votre organisation a exclusivement les clients Windows 10 et vous avez configuré la synchronisation de l’ordinateur/appareil ou à l’aide de votre organisation [SeamlessSSO](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso).  
-   3. Cliquez sur **ajouter** à entrer les informations d’identification d’administrateur entreprise.  
-8. Sur le **systèmes d’exploitation de périphérique** page, sélectionnez les systèmes d’exploitation utilisés par les appareils dans votre environnement Active Directory, puis **suivant**.  
+   2. Sélectionnez le service d’authentification.  Si vous disposez d’un domaine fédéré, sélectionnez le serveur AD FS, sauf si votre organisation comporte exclusivement des clients Windows 10 et que vous avez configuré la synchronisation ordinateur/appareil ou que votre organisation utilise [l’authentification unique transparente](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso).  
+   3. Cliquez sur **Ajouter** pour entrer les informations d’identification d’administrateur d’entreprise.  
+8. Sur la page **Systèmes d’exploitation des appareils**, sélectionnez les systèmes d’exploitation utilisés par les appareils de votre environnement Active Directory, puis **Suivant**.  
 
-   Vous pouvez sélectionner l’option permettant de prendre en charge les appareils Windows de bas niveau joints à un domaine, mais n’oubliez pas que cogestion des appareils est uniquement prise en charge pour Windows 10.
+   Vous pouvez sélectionner l’option permettant de prendre en charge les appareils Windows joints à un domaine de bas niveau. Cependant, n’oubliez pas que la cogestion des appareils n’est prise en charge que pour Windows 10.
 
-9. Si vous avez un domaine géré, ignorez cette étape.  
+9. Si vous disposez d’un domaine managé, ignorez cette étape.  
 
-   Sur le **configuration de fédération** page, entrez les informations d’identification de l’administrateur AD FS, puis sélectionnez **suivant**.
-10. Sur le **prêt à configurer** page, sélectionnez **configurer**.
-11. Sur le **d’effectuer la Configuration** page, sélectionnez **Exit**.
+   Sur la page **Configuration de la fédération**, entrez les informations d’identification de votre administrateur AD FS, puis sélectionnez **Suivant**.
+10. Sur la page **Prêt à configurer**, sélectionnez **Configurer**.
+11. Sur la page **Configuration effectuée**, sélectionnez **Quitter**.
 
-Si vous rencontrez des problèmes avec Azure AD hybride à la fin jointure de domaine joint les appareils Windows, consultez [jonction hybride Azure AD de résolution des problèmes pour les appareils Windows actuels](https://docs.microsoft.com/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current).
+En cas de problèmes avec la jonction Azure AD Hybride pour les appareils Windows joints à un domaine, voir [Résolution des problèmes de jonction Azure AD Hybride pour les appareils Windows actuels](https://docs.microsoft.com/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current).
 
 
-## <a name="configure-client-settings-to-direct-clients-register-with-azure-ad"></a>Configurer les paramètres Client pour diriger les clients s’inscrivent auprès d’Azure AD  
-Utilisez les paramètres Client pour configurer les clients Configuration Manager pour inscrire automatiquement auprès d’Azure AD.  
+## <a name="configure-client-settings-to-direct-clients-register-with-azure-ad"></a>Configurer les paramètres client de façon à conduire les clients à s’inscrire auprès d’Azure AD  
+Utilisez les paramètres client pour configurer les clients Configuration Manager de sorte qu’ils s’inscrivent automatiquement auprès d’Azure AD.  
 
-1. Ouvrez le **console Configuration Manager** > **Administration** > **vue d’ensemble** > **paramètres Client** , puis modifiez le **paramètres Client par défaut**.  
+1. Ouvrez la **Console Configuration Manager** > **Administration** > **Vue d’ensemble** > **Paramètres client**, puis modifiez **Paramètres client par défaut**.  
 
-2. Sélectionnez **Services Cloud**.  
+2. Sélectionnez **Services cloud**.  
 
-3. Sur le **paramètres par défaut** , définissez **inscrire automatiquement les nouveaux appareils joints à un domaine de Windows 10 avec Azure Active Directory** à = **Oui**.  
+3. Sur la page **Paramètres par défaut**, définissez **Inscrire automatiquement les nouveaux appareils Windows 10 joints à un domaine auprès d’Azure Active Directory** sur **Oui**.  
 
 4. Sélectionnez **OK** pour enregistrer cette configuration.  
 
 ## <a name="configure-auto-enrollment-of-devices-to-intune"></a>Configurer l’inscription automatique des appareils à Intune   
-Ensuite, nous allons configurer l’inscription automatique des appareils avec Intune. Avec l’inscription automatique, les appareils que vous gérez avec Configuration Manager automatiquement s’inscrire à Intune.
+Configurons maintenant l’inscription automatique des appareils auprès d’Intune. Ainsi, les appareils gérés avec Configuration Manager s’inscriront automatiquement à Intune.
 
-L’inscription automatique permet également aux utilisateurs d’inscrire leurs appareils Windows 10 à Intune. Les appareils inscrits lorsqu’un utilisateur ajoute son compte professionnel à leurs appareils personnels, ou quand un appareil d’entreprise est joint à Azure Active Directory.  
+L’inscription automatique permet également aux utilisateurs d’inscrire leurs appareils Windows 10 à Intune. Elle se produit lorsqu’ils ajoutent leur compte professionnel à leurs appareils personnels, ou quand un appareil d’entreprise est joint à Azure Active Directory.  
 
-1. Se connecter à la [Azure portal](https://portal.azure.com/) et sélectionnez **Azure Active Directory** > **mobilité (MDM et MAM)** > **Microsoft Intune** .  
+1. Connectez-vous au [Portail Azure](https://portal.azure.com/) et sélectionnez **Azure Active Directory** > **Mobilité (MDM et MAM)** > **Microsoft Intune**.  
 
-2. Configurer **portée d’utilisateur de gestion des appareils mobiles**. Spécifiez les valeurs suivantes pour configurer les appareils des utilisateurs qui sont gérés par Microsoft Intune et accepter les valeurs par défaut pour les valeurs d’URL.  
+2. Configurez **Portée des utilisateurs MDM**. Spécifiez l’une des valeurs suivantes pour indiquer quels appareils des utilisateurs sont gérés par Microsoft Intune et accepter les valeurs d’URL par défaut.  
 
-   - **Certains** : sélectionnez le **groupes** qui peuvent s’inscrire automatiquement leurs appareils Windows 10  
+   - **Une partie** : sélectionnez les **Groupes** qui peuvent inscrire automatiquement leurs appareils Windows 10.  
 
-   - **Tous les** -tous les utilisateurs peuvent s’inscrire automatiquement leurs appareils Windows 10 lorsque la valeur **aucun**, l’inscription automatique de gestion des appareils mobiles (MDM) est désactivée.
+   - **Tous** : tous les utilisateurs peuvent inscrire automatiquement leurs appareils Windows 10. Si la valeur est **Aucun**, l’inscription automatique à la gestion des appareils mobiles (MDM) est désactivée.
 
    > [!IMPORTANT]  
-   > Si les deux **étendue des utilisateurs MAM** et l’inscription MDM automatique (**portée d’utilisateur de gestion des appareils mobiles**) sont activés pour un groupe, GAM uniquement est activée. Uniquement Mobile Application Management (MAM) est ajoutée pour les utilisateurs de ce groupe lorsqu’ils workplace joignent leur appareil personnel. Les appareils ne sont pas automatiquement inscrits à MDM.  
+   > Si la **Portée des utilisateurs MAM** et l’inscription MDM automatique (**Portée des utilisateurs MDM**) sont toutes deux activées pour un groupe, seule la gestion des applications mobiles (MAM) est activée et ajoutée pour les utilisateurs de ce groupe lorsqu’ils joignent leur appareil personnel à leur lieu de travail. Les appareils ne sont pas inscrits automatiquement à la gestion MDM.  
 
-3. Sélectionnez **enregistrer** pour terminer la configuration de l’inscription automatique.  
+3. Sélectionnez **Enregistrer** pour terminer la configuration de l’inscription automatique.  
 
-4. Retour à **mobilité (MDM et MAM)** , puis sélectionnez **inscription à Microsoft Intune**.  
+4. Revenez à **Mobilité (MDM et MAM)**, puis sélectionnez **Inscription à Microsoft Intune**.  
 
-5. Pour une étendue d’utilisateur de gestion des appareils mobiles, sélectionnez **tous les**, puis **enregistrer**.  
+5. Pour Portée des utilisateurs MDM, sélectionnez **Tous**, puis **Enregistrer**.  
 
 
 ## <a name="assign-intune-licenses-to-users"></a>Attribuer des licences Intune aux utilisateurs   
-Une action souvent négligée mais critique consiste à attribuer une licence Intune à chaque utilisateur qui utilisera un appareil est cogéré.  
+Il est essentiel, quoique souvent négligé, d’attribuer une licence Intune à chacun des utilisateurs qui utiliseront un appareil cogéré.  
 
 Pour attribuer des licences à des groupes d’utilisateurs, utilisez Azure Active Directory.  
 
-1. Se connecter à la [Azure portal](https://portal.azure.com/) avec un compte d’administrateur. Pour gérer les licences, le compte doit être un administrateur de compte d’utilisateur ou un rôle de l’administrateur général.  
+1. Connectez-vous au [Portail Azure](https://portal.azure.com/) avec un compte Administrateur. Pour gérer les licences, il doit avoir le rôle Administrateur général ou Administrateur de compte d’utilisateur.  
 
-2. Sélectionnez **tous les services** dans le volet de navigation gauche, puis sélectionnez **Azure Active Directory**.  
+2. Sélectionnez **Tous les services** dans le volet de navigation gauche, puis **Azure Active Directory**.  
 
-3. Sur le **Azure Active Directory** volet, sélectionnez **licences** pour ouvrir un volet où vous pouvez voir et gérer tous les produits sous licence dans le locataire.  
+3. Sur le volet **Azure Active Directory**, sélectionnez **Licences** pour ouvrir un volet permettant de voir et de gérer tous les produits sous licence du locataire.  
 
-4. Sous **tous les produits**, sélectionnez votre option de produit qui inclut la licence Intune, puis **affecter** en haut du volet.  
+4. Sous **Tous les produits**, sélectionnez votre option de produit qui comporte la licence Intune, puis **Attribuer** en haut du volet.  
 
-   Par exemple, vous pouvez sélectionner **Enterprise Mobility + Security E5** si c’est le mode d’obtention Intune.  
+   Par exemple, vous pouvez sélectionner **Enterprise Mobility + Security E5** si c’est ainsi que vous avez obtenu Intune.  
 
-5. Sur le **affecter une licence** volet, cliquez sur **utilisateurs et groupes** pour ouvrir le **utilisateurs et groupes** volet. Sélectionnez les groupes et utilisateurs individuels auxquels vous souhaitez attribuer une licence.  Ensuite, cliquez sur **sélectionnez** en bas du volet pour confirmer cette sélection.  
+5. Sur le volet **Attribuer une licence**, cliquez sur **Utilisateurs et groupes** pour ouvrir le volet **Utilisateurs et groupes**. Sélectionnez les groupes et les différents utilisateurs auxquels vous souhaitez attribuer une licence.  Ensuite, cliquez sur **Sélectionner** en bas du volet pour confirmer cette sélection.  
 
-6. Sur le **affecter une licence** volet, cliquez sur **options d’affectation** pour afficher tous les plans de service inclus dans le produit que vous avez sélectionnée précédemment. Si vous avez sélectionné un produit unique comme Intune, seulement ce produit est indiqué.  
-   - Définissez **Microsoft Intune** à **sur**.  
-   - Affecter une licence pour chaque utilisateur **Azure Active Directory Premium**.  
+6. Sur le volet **Attribuer une licence**, cliquez sur **Options d’attribution** pour afficher tous les plans de services inclus dans le produit sélectionné. Si vous avez choisi un produit unique comme Intune, seul ce produit s’affiche.  
+   - Définissez **Microsoft Intune** sur **Actif**.  
+   - Attribuez à chaque utilisateur une licence **Azure Active Directory Premium**.  
 
-   Lorsque les licenses applicables sont affectés, sélectionnez **OK**.  
+   Une fois les licences applicables attribuées, sélectionnez **OK**.  
 
-7. Pour terminer l’affectation, sur le **affecter une licence** volet, cliquez sur **affecter** en bas du volet.
+7. Pour terminer l’attribution, cliquez sur **Attribuer** en bas du volet **Attribuer une licence**.
 
-8. Une notification s’affiche dans le coin supérieur droit qui affiche l’état et le résultat du processus. Si l’affectation au groupe n’a pas pu être effectuée (par exemple, en raison de licences existantes dans le groupe), cliquez sur la notification pour afficher les détails de l’échec.
+8. En haut à droite, une notification présente l’état et le résultat du processus. Si l’attribution au groupe n’a pas abouti (par exemple, en présence de licences préexistantes dans le groupe), cliquez sur la notification pour afficher les détails de l’échec.
 
-Pour plus d’informations sur l’attribution de licences pour Intune aux utilisateurs, consultez [attribuer des licences](https://docs.microsoft.com/intune/licenses-assign).
+Pour plus d’informations sur l’attribution de licences Intune aux utilisateurs, voir [Attribuer des licences](https://docs.microsoft.com/intune/licenses-assign).
 
 
 ## <a name="enable-co-management-in-configuration-manager"></a>Activer la cogestion dans Configuration Manager
-Avec l’ensemble d’Azure AD hybride des configurations du client Configuration Manager en place et les licences de produit attribuées aux utilisateurs, vous êtes prêt à basculer sur l’et activer la cogestion de vos appareils Windows 10.  
+Maintenant qu’Azure AD Hybride est configuré, que les configurations du client Configuration Manager sont en place et que les licences de produit ont été attribuées aux utilisateurs, activons la cogestion des appareils Windows 10.  
 
 > [!TIP]  
->  À l’étape six de la procédure suivante, vous allez affecter une collection comme un *groupe pilote* pour la cogestion. Il s’agit d’un groupe qui contient un petit nombre de clients pour tester vos configurations de cogestion. Nous vous recommandons de que créer une collection appropriée avant de commencer la procédure. Ensuite, vous pouvez sélectionner cette collection sans quitter la procédure pour ce faire.  
+>  À l’étape six de la procédure suivante, nous allons désigner un regroupement comme *Groupe pilote* pour la cogestion. Il s’agit d’un groupe qui contient un petit nombre de clients permettant de tester les configurations de cogestion. Nous recommandons de créer un regroupement adapté avant de commencer la procédure. Vous pourrez alors le sélectionner sans avoir à quitter la procédure.  
 
 1. Dans la console Configuration Manager, accédez à **Administration** > **Vue d’ensemble** > **Services cloud** > **Cogestion**.
 
-2. Sous l’onglet Accueil, dans le groupe gérer, sélectionnez **configurer la cogestion** pour ouvrir l’Assistant de Configuration de la cogestion.
+2. Dans le groupe Gérer sous l’onglet Accueil, sélectionnez **Configurer la cogestion** pour ouvrir l’Assistant Configuration de la cogestion.
 
-3. Dans la page d’abonnement, sélectionnez **Sign In** et connectez-vous à votre client Intune, puis sélectionnez **suivant**.
+3. Sur la page Abonnement, sélectionnez **Se connecter** et connectez-vous à votre locataire Intune, puis sélectionnez **Suivant**.
 
-4. Dans la page Activation, à partir de la *l’inscription automatique dans Intune* liste déroulante, sélectionnez une des options suivantes :  
+4. Sur la page Activation, sélectionnez l’une des options suivantes dans la liste déroulante *Inscription automatique dans Intune* :  
 
-   - **Pilote**  - *(recommandé)* membres du regroupement que vous spécifiez sont automatiquement inscrits dans Intune et peuvent ensuite être gérés conjointement. Vous spécifiez le regroupement pilote sur le *intermédiaire* page de cet Assistant. Cette option vous permet de tester la cogestion sur un sous-ensemble de clients. Vous pouvez ensuite déployer les cogestion à des clients supplémentaires à l’aide d’une approche progressive.  
+   - **Pilote**  - *(recommandé)* Membres du regroupement qui seront automatiquement inscrits dans Intune et pourront alors être cogérés. Spécifiez le regroupement pilote sur la page *Gestion intermédiaire* de cet Assistant. Cette option permet de tester la cogestion sur un sous-ensemble de clients. Vous pourrez ensuite déployer la cogestion auprès de clients supplémentaires suivant une approche progressive.  
 
-   - **Tous les** -cogestion est activée pour tous les clients.  
+   - **Tous** – Cogestion activée pour tous les clients.  
 
-5. Dans la page de charges de travail, vous pouvez basculer les charges de travail à partir de **Configuration Manager** à une des opérations suivantes, puis lorsque vous êtes prêt à continuer, sélectionnez **suivant**.  
+5. Sur la page Charges de travail, vous pouvez basculer les charges de travail de **Configuration Manager** vers l’une des options suivantes ; ensuite, sélectionnez **Suivant** pour continuer.  
 
-   - **Piloter Intune** -bascule d’une charge de travail uniquement pour les appareils dans le groupe pilote. Vous allez affecter une collection en tant que le groupe pilote sur la page suivante de l’Assistant.  
+   - **Pilote Intune** – Bascule la charge de travail uniquement pour les appareils du groupe pilote. Un regroupement sera désigné comme groupe pilote sur la page suivante de l’Assistant.  
 
-   - **Intune** -bascule la charge de travail associé pour tous les appareils Windows 10 cogérés.  
+   - **Intune** – Bascule la charge de travail associée pour tous les appareils Windows 10 cogérés.  
 
-   Vous n’avez pas besoin de basculer des charges de travail au moment où que vous activez la cogestion. Vous pouvez revenir consulter cette configuration à partir de la console Configuration Manager ultérieurement, après avoir configuré la cogestion.  
+   Il n’est pas nécessaire de basculer des charges de travail dès l’activation de la cogestion. Vous pourrez revenir consulter cette configuration plus tard à partir de la console Configuration Manager, après avoir configuré la cogestion.  
 
-   Avant de basculer d’une charge de travail, assurez-vous que la charge de travail correspondant dans Intune est configuré et déployé. Faire c’est le cas conserve les charges de travail gérés.  
+   Avant de basculer une charge de travail, vérifiez que la charge de travail correspondante dans Intune est correctement configurée et déployée. Ainsi, les charges de travail resteront gérées.  
 
-6. Dans la page mise en lots, spécifiez un regroupement à utiliser pour le **regroupement pilote**, puis cliquez sur **suivant**. La collection que vous spécifiez est utilisée dans le cadre de votre déploiement progressif de la cogestion. À tout moment, vous pouvez modifier les regroupements dans le groupe pilote à partir des propriétés de cogestion.  
+6. Sur la page Gestion intermédiaire, spécifiez le regroupement à utiliser comme **Regroupement pilote**, puis cliquez sur **Suivant**. Il sera utilisé dans le cadre du déploiement progressif de la cogestion. À tout moment, vous pouvez modifier les regroupements dans le groupe pilote à partir des propriétés de cogestion.  
 
-7. Dans la page Résumé, sélectionnez **suivant**, puis **fermer** pour terminer l’Assistant.  
+7. Sur la page Résumé, sélectionnez **Suivant**, puis **Fermer** pour terminer l’Assistant.  
 
 
 ## <a name="next-steps"></a>Étapes suivantes
-- Passez en revue l’état des appareils gérés conjointement avec le [tableau de bord de cogestion](/sccm/comanage/how-to-monitor)
-- Commencer à obtenir [valeur immédiate](quickstarts.md#immediate-value) à partir de la cogestion
-- Utilisez [accès conditionnel](quickstart-conditional-access.md) et règles de conformité Intune pour gérer l’accès utilisateur aux ressources d’entreprise
+- Passez en revue l’état des appareils cogérés avec le [Tableau de bord de cogestion](/sccm/comanage/how-to-monitor)
+- Commencez à tirer une [valeur ajoutée immédiate](quickstarts.md#immediate-value) de la cogestion
+- Utilisez [l’accès conditionnel](quickstart-conditional-access.md) et les règles de conformité Intune pour gérer l’accès utilisateur aux ressources de l’entreprise

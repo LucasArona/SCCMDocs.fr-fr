@@ -2,7 +2,7 @@
 title: Notification du client
 titleSuffix: Configuration Manager
 description: Gérez les clients en effectuant une action immédiate à partir de la console centrale Configuration Manager.
-ms.date: 11/27/2018
+ms.date: 03/06/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f190522300090247cdca0affa9d993fe46201668
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: a643924cbaef928f9db4011f634ae96171ab7914
+ms.sourcegitcommit: 544f335cfd1bfd0a1d4973439780e9f5e9ee8bed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56122030"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562089"
 ---
 # <a name="client-notification-in-configuration-manager"></a>Notification du client dans Configuration Manager
 
@@ -76,6 +76,7 @@ Cette action nécessite les mêmes autorisations que l’action [Exécuter le sc
 
 Ces actions se trouvent sous le menu **Notification du client**, dans le ruban au niveau du groupe Appareil ou Regroupement de l’onglet Accueil.
 
+Dans les versions 1806 et antérieures, l’option **Notification du client** n’est disponible que dans le nœud Regroupement d’appareils et dans l’affichage de l’adhésion à un regroupement d’appareils. À compter de la version 1810, il est possible de lancer directement une **Notification du client** dans le nœud **Appareils**. Il n’est plus nécessaire de se trouver dans une vue de l’appartenance au regroupement. <!--SCCMDocs-pr issue 2972-->
 
 #### <a name="permissions"></a>Autorisations
 <!--SCCMDocs-pr issue #2972--> Depuis la version 1810, les actions de notification du client nécessitent l’autorisation **Notifier la ressource** sur l’objet Regroupement. Cette autorisation s’applique à toutes les actions du menu **Notification du client**. 

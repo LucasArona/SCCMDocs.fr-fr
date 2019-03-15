@@ -2,7 +2,7 @@
 title: Notes de publication
 titleSuffix: Configuration Manager
 description: Découvrez plus en détail les problèmes urgents qui ne sont pas encore résolus dans le produit ni traités dans un article de la base de connaissances Support Microsoft.
-ms.date: 02/21/2019
+ms.date: 03/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c7e4307d61cccf968729f013ebaa4bfab4b0027e
-ms.sourcegitcommit: 56ec6933cf7bfc93842f55835ad336ee3a1c6ab5
+ms.openlocfilehash: 33ef7020e1b9312717919a9dda8ce189c8db533c
+ms.sourcegitcommit: f3dd8405018fe1043434386be15c16752c1a4a3c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57211531"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57558182"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Notes de publication de Configuration Manager
 
@@ -125,7 +125,7 @@ Créez un rôle de sécurité personnalisé. Copiez un rôle de sécurité exist
 Pour plus d’informations, consultez [Créer des rôles de sécurité personnalisés](/sccm/core/servers/deploy/configure/configure-role-based-administration#BKMK_CreateSecRole)
 
 
-### <a name="changing-office-365-client-setting-doesnt-apply"></a>Le changement du paramètre client Office 365 ne s’applique pas 
+### <a name="changing-office-365-client-setting-doesnt-apply"></a>La modification du paramètre client Office 365 ne s’applique pas 
 <!--511551-->
 *S’applique à : Configuration Manager version 1802*  
 
@@ -142,6 +142,18 @@ Changez la valeur de Registre suivante en `0` et redémarrez le **service Micros
 
 
 ## <a name="mobile-device-management"></a>Gestion des appareils mobiles  
+
+### <a name="validation-for-ios-app-link-sometimes-fails-on-valid-link"></a>La validation de liens d’application iOS valides échoue parfois
+<!-- LSI 106004348 --> Lors de la création d’une application de type **Package d’application pour iOS provenant de l’App Store**, il y a des URL valides pour **l’Emplacement** que le validateur n’accepte pas. Plus précisément, l’App Store iOS ne réclame pas de valeur dans la section du nom d’application de l’URL. Par exemple, les deux liens suivants sont valides et pointent vers la même application, mais **l’Assistant Créer une application** n’accepte que le premier :
+- `https://itunes.apple.com/us/app/app-name/id123456789?mt=8`
+- `https://itunes.apple.com/us/app//id123456789?mt=8`
+
+#### <a name="workaround"></a>Solution de contournement
+Lorsque vous créez une application iOS dont l’URL ne comporte pas le nom, ajoutez à l’URL une valeur quelconque comme s’il s’agissait du nom de l’application. Par exemple :
+- `https://itunes.apple.com/us/app/any-string/id123456789?mt=8`
+
+Cette action permet d’aller au bout de l’Assistant. Le déploiement de l’application sur des appareils iOS réussit quand même. La chaîne ajoutée à l’URL apparaît comme **Nom** dans l’onglet **Informations générales** de l’Assistant. Elle constitue également l’étiquette de l’application sur le Portail d’entreprise.
+
 
 ### <a name="you-can-no-longer-deploy-windows-phone-81-vpn-profiles-to-windows-10"></a>Vous ne pouvez plus déployer de profils VPN Windows Phone 8.1 sur Windows 10
 <!-- 503274  -->

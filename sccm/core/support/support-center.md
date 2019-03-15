@@ -2,7 +2,7 @@
 title: Centre d’aide et de support
 titleSuffix: Configuration Manager
 description: Résoudre les problèmes des clients Configuration Manager avec le Centre d’aide et de support.
-ms.date: 01/30/2019
+ms.date: 03/06/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5942f60ea15ad83f5debdf8dd3d53e72770744c6
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 367c293794eea86ef8b7b7fb0e331ce0602b325e
+ms.sourcegitcommit: 544f335cfd1bfd0a1d4973439780e9f5e9ee8bed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56122863"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562038"
 ---
 # <a name="support-center-for-configuration-manager"></a>Centre d’aide et de support pour Configuration Manager
 
@@ -77,6 +77,9 @@ Une fois que vous l’avez installé, recherchez les éléments suivants dans le
 
 
 ## <a name="known-issues"></a>Problèmes connus 
+
+#### <a name="you-cant-install-the-latest-version-if-an-older-version-is-already-installed"></a>Il n’est pas possible d’installer la dernière version si une version antérieure est déjà installée
+<!--SCCMDocs-pr issue #3090--> Si vous disposez déjà d’une version antérieure du Centre de support, le programme d’installation de la version 1810 échoue. Ce problème est dû à la façon dont sont gérées la version d’origine et la dernière version des fichiers. Pour contourner ce problème, désinstallez d’abord l’ancienne version du Centre de support. Ensuite, installez la dernière version de Configuration Manager version 1810.
 
 #### <a name="remote-connections-must-include-computer-name-or-domain-as-part-of-the-user-name"></a>Les connexions à distance doivent inclure le nom de l’ordinateur ou du domaine dans le nom de l’utilisateur.
 Si vous vous connectez à un client distant à partir du Centre d’aide et de support, vous devez fournir le nom de la machine ou du domaine du compte d’utilisateur lors de l’établissement de la connexion. Si vous utilisez un nom d’ordinateur ou de domaine abrégé (tel que `.\administrator`), la connexion est établie, mais le Centre d’aide et de support ne collecte pas les données du client. 

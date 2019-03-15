@@ -2,7 +2,7 @@
 title: Nouveautés de la version 1810
 titleSuffix: Configuration Manager
 description: Obtenez des informations détaillées sur les changements et les nouvelles fonctionnalités introduits dans la version 1810 de l’édition Current Branch de Configuration Manager.
-ms.date: 03/02/2019
+ms.date: 03/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d8a3c6c73d30d7d5e8e825cd20baa334214dceb
-ms.sourcegitcommit: 33a006204f7f5f9b9acd1f3e84c4bc207362d00a
+ms.openlocfilehash: 9d2ab324038e833da7bc080286c820b3df8d06fa
+ms.sourcegitcommit: f3dd8405018fe1043434386be15c16752c1a4a3c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305794"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57558165"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Nouveautés de la version 1810 de l’édition Current Branch de Configuration Manager
 
@@ -122,27 +122,20 @@ Pour plus d’informations, consultez [Notifications du client](/sccm/core/clien
 
 
 ### <a name="improvements-to-collection-evaluation"></a>Améliorations apportées à l’évaluation de regroupement
-<!--1358981--> Les changements suivants apportés au comportement d’évaluation de regroupement peuvent améliorer les performances de site :  
- 
+<!--3607726, fka 1358981-->
+ ***[MIS À JOUR]*** Ces modifications apportées au comportement d’évaluation de regroupement sont susceptibles d’améliorer les performances de site :  
+
 - Auparavant, lorsque vous configuriez une planification sur un regroupement basé sur une requête, le site continuait à évaluer la requête que le paramètre de regroupement **Planifier une mise à jour complète sur ce regroupement** soit activé ou pas. Pour désactiver entièrement la planification, vous deviez modifier la planification sur **Aucun**. Désormais, le site efface la planification lorsque vous désactivez ce paramètre. Pour spécifier une planification pour l’évaluation du regroupement, activez l’option **Planifier une mise à jour complète sur ce regroupement**.  
 
 - Vous ne pouvez pas désactiver l’évaluation de regroupements intégrés, comme **Tous les systèmes**, mais vous pouvez maintenant configurer la planification. Ce comportement vous permet de personnaliser cette action sur une heure qui répond aux besoins de votre entreprise. 
 
-<!--For more information, see [How to create collections](/sccm/core/clients/manage/collections/create-collections).-->
+Pour plus d’informations, consultez [Guide pratique pour créer des regroupements](/sccm/core/clients/manage/collections/create-collections#bkmk_create).
 
 
 ### <a name="improvement-to-client-installation"></a>Amélioration apportée à l’installation du client
 <!--1358840--> Pendant l’installation du client Configuration Manager, le processus ccmsetup contacte le point de gestion pour localiser le contenu nécessaire. Avant, dans ce processus, le point de gestion retournait uniquement les points de distribution du groupe de limites actif du client. Si aucun contenu n’était disponible, le processus d’installation se repliait sur le téléchargement du contenu auprès du point de gestion. Aucune option ne permettait de se replier sur les points de distribution d’autres groupes de limites qui auraient pu disposer du contenu nécessaire. Maintenant, le point de gestion retourne les points de distribution en fonction de la configuration des groupes de limites. 
 
 Pour plus d’informations, consultez [Configurer des groupes de limites](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_ccmsetup).
-
-
-### <a name="improvements-to-internet-based-client-setup"></a>Améliorations apportées à l’installation de clients basés sur Internet
-<!--1359181-->
-<!--move this under co-management?-->  
-Cette version simplifie davantage le processus d’installation du client Configuration Manager pour les clients sur Internet. Le site publie des informations Azure Active Directory (Azure AD) supplémentaires sur la passerelle de gestion cloud (CMG). Un client joint à un Azure AD obtient ces informations à partir de la passerelle CMG pendant le processus ccmsetup, à l’aide du même locataire que celui auquel il est joint. Ce comportement simplifie davantage l’inscription d’appareils à la cogestion dans un environnement avec plusieurs locataires Azure AD. Maintenant les deux seules propriétés ccmsetup requises sont **CCMHOSTNAME** et **SMSSiteCode**.
-
-<!--For more information, see [Prepare Windows 10 devices for co-management](https://docs.microsoft.com/en-us/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client).-->
 
 
 
@@ -166,6 +159,13 @@ Cette version simplifie davantage le processus d’installation du client Config
 ![Capture d’écran du tableau de bord Cogestion montrant les quatre vignettes principales](media/1358980-comgmt-dashboard.png)
 
 Pour plus d’informations, consultez [Tableau de bord de cogestion](/sccm/comanage/how-to-monitor#co-management-dashboard).
+
+
+### <a name="improvements-to-internet-based-client-setup"></a>Améliorations apportées à l’installation de clients basés sur Internet
+<!--3607731, fka 1359181-->
+ ***[MIS À JOUR]*** Cette version simplifie encore le processus d’installation du client Configuration Manager pour les clients sur Internet. Le site publie des informations Azure Active Directory (Azure AD) supplémentaires sur la passerelle de gestion cloud (CMG). Un client joint à un Azure AD obtient ces informations à partir de la passerelle CMG pendant le processus ccmsetup, à l’aide du même locataire que celui auquel il est joint. Ce comportement simplifie davantage l’inscription d’appareils à la cogestion dans un environnement avec plusieurs locataires Azure AD. Maintenant les deux seules propriétés ccmsetup requises sont **CCMHOSTNAME** et **SMSSiteCode**.
+
+Pour plus d’informations, consultez [Préparer des appareils basés sur Internet à la cogestion](/sccm/comanage/how-to-prepare-Win10#install-the-configuration-manager-client).
 
 
 
@@ -195,14 +195,16 @@ Pour plus d’informations, consultez [Approuver des applications](/sccm/apps/de
 
 
 ### <a name="detection-methods-dont-load-windows-powershell-profiles"></a>Les méthodes de détection ne chargent pas les profils Windows PowerShell
-<!--1359239--> Vous pouvez utiliser des scripts Windows PowerShell pour les méthodes de détection destinées aux applications et aux paramètres dans les éléments de configuration. Quand ces scripts s’exécutent sur des clients, le client Configuration Manager appelle maintenant PowerShell avec le paramètre `-NoProfile`. Cette option démarre PowerShell sans aucun profil. 
+<!--3607762, fka 1359239-->
+ ***[MIS À JOUR]*** Il est possible d’utiliser des scripts Windows PowerShell pour les méthodes de détection destinées aux applications et aux paramètres des éléments de configuration. Quand ces scripts s’exécutent sur des clients, le client Configuration Manager appelle maintenant PowerShell avec le paramètre `-NoProfile`. Cette option démarre PowerShell sans aucun profil. 
 
 Un profil PowerShell est un script qui s’exécute au démarrage de PowerShell. Vous pouvez créer un profil PowerShell pour personnaliser votre environnement et ajouter des éléments spécifiques à la session à chaque session PowerShell que vous démarrez. 
 
 > [!Note]  
 > Ce changement de comportement ne s’applique pas à [Scripts](/sccm/apps/deploy-use/create-deploy-scripts) ni à [CMPivot](/sccm/core/servers/manage/cmpivot). Ces deux fonctionnalités utilisent déjà ce paramètre PowerShell.    
 
-<!--For more information, see []().-->
+Pour plus d’informations, voir [Créer des applications](/sccm/apps/deploy-use/create-applications) et [Créer des éléments de configuration personnalisés](/sccm/compliance/deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client).
+
 
 
 ## <a name="bkmk_osd"></a> Déploiement de système d’exploitation

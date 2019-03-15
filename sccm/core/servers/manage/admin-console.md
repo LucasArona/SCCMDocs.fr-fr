@@ -2,7 +2,7 @@
 title: Console Configuration Manager
 titleSuffix: Configuration Manager
 description: Découvrez comment naviguer dans la console Configuration Manager.
-ms.date: 2/20/2019
+ms.date: 03/06/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 30db8b061f41e8a9255b5a308df6a98ef8c0d81b
-ms.sourcegitcommit: 369db96ee84299b5ab6d74b177e6366b3017fc54
+ms.openlocfilehash: 0f9c06f40af1134055d4038fd23954b3f4c59682
+ms.sourcegitcommit: 544f335cfd1bfd0a1d4973439780e9f5e9ee8bed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56589898"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562106"
 ---
 # <a name="using-the-configuration-manager-console"></a>Utilisation de la console Configuration Manager
 
@@ -160,6 +160,15 @@ Dans la version 1806, le nœud **Appareils** comprend les colonnes suivantes :
     > Pour voir l’utilisateur actuellement connecté, la [découverte des utilisateurs](/sccm/core/servers/deploy/configure/configure-discovery-methods#bkmk_config-adud) et l’[affinité entre utilisateur et appareil](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity) sont nécessaires.  
 
 Pour plus d’informations sur l’affichage d’une colonne non définie par défaut, consultez [Colonnes](#columns).
+
+#### <a name="improvement-to-device-search-performance"></a>Amélioration des performances de la recherche d’appareils
+<!-- 3614690 --> À compter de la version 1806, la recherche d’un mot clé dans un regroupement d’appareils ne prend pas en compte toutes les propriétés de l’objet. Si les éléments à rechercher ne sont pas précisés, la recherche s’effectue sur les quatre propriétés suivantes :
+- Nom
+- Utilisateur ou utilisateurs principaux
+- Utilisateur actuellement connecté
+- Nom d’utilisateur de la dernière ouverture de session
+
+Ce comportement améliore considérablement le temps de recherche par nom, en particulier dans un environnement de grande taille. Les recherches personnalisées sur des critères spécifiques ne sont pas concernées par cette modification. 
 
 
 ### <a name="monitoring-workspace"></a>Espace de travail Analyse

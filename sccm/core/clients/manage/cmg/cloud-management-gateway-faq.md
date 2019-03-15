@@ -10,12 +10,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 4c1a128d-22fb-49f1-8e0b-36513a8dc117
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bcc535c007fc081d2597e5c6dafc159ed1176f39
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 4cbb9b37c951c490c1f2245f089fa22707f4c220
+ms.sourcegitcommit: f3dd8405018fe1043434386be15c16752c1a4a3c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56156870"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57558001"
 ---
 # <a name="frequently-asked-questions-about-the-cloud-management-gateway"></a>Questions fréquentes (FAQ) sur la passerelle de gestion cloud
 
@@ -41,6 +41,10 @@ Si votre organisation utilise ExpressRoute, une bonne pratique de sécurité con
 ### <a name="do-i-need-to-maintain-the-azure-virtual-machines"></a>Ai-je besoin d’assurer la maintenance des machines virtuelles Azure ?
 
 Aucune maintenance n’est nécessaire. La conception de la passerelle de gestion cloud utilise Azure PaaS (Platform as a Service). Configuration Manager utilise l’abonnement que vous fournissez pour créer les machines virtuelles, le stockage et le réseau nécessaires. Azure sécurise et met à jour les machines virtuelles. Ces machines virtuelles ne font pas partie de votre environnement local, comme c’est le cas avec IaaS (Infrastructure as a Service). La passerelle de gestion cloud est un service PaaS qui étend votre environnement Configuration Manager dans le cloud. 
+
+### <a name="how-can-i-ensure-service-continuity-during-service-updates"></a>Comment puis-je assurer la continuité de service pendant les mises à jour du service ?
+
+En mettant à l’échelle la passerelle CMG afin qu’elle inclue deux instances ou plus, vous bénéficiez automatiquement des Domaines de mise à jour dans Azure. Consultez [Mise à jour d’un service cloud](/azure/cloud-services/cloud-services-update-azure-service).
 
 
 ### <a name="im-already-using-ibcm-if-i-add-cmg-how-do-clients-behave"></a>J’utilise déjà la gestion du client basée sur Internet (IBCM, Internet-Based Client Management). Si j’ajoute la passerelle de gestion cloud (CMG), comment se comportent les clients ?
