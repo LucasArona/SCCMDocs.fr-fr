@@ -2,7 +2,7 @@
 title: Créer des applications
 titleSuffix: Configuration Manager
 description: Créez des applications avec des types de déploiement, des méthodes de détection et des spécifications pour installer les logiciels.
-ms.date: 11/27/2018
+ms.date: 03/04/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -11,18 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d7f896f2ad719572c5adb4e0f24cfc1cf7d1c4d6
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 236ae6e9efafcfe24f064fb643a43524eee3718d
+ms.sourcegitcommit: 4ab85212268e76d3fd22f00e6c74edaa5abde60c
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56126751"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426938"
 ---
 # <a name="create-applications-in-configuration-manager"></a>Créer des applications dans Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
-Une application Configuration Manager définit les métadonnées concernant une application. Une application a un ou plusieurs types de déploiement. Ces types de déploiement incluent les fichiers d’installation et les informations nécessaires à l’installation du logiciel sur des appareils. Un type de déploiement comprend également des règles, telles que les méthodes de détection et les spécifications. Ces règles spécifient quand et comment le client installe les logiciels.  
+Une application Configuration Manager définit les métadonnées concernant une application. Une application a un ou plusieurs types de déploiement. Ces types de déploiement incluent les fichiers d’installation et les informations nécessaires à l’installation du logiciel sur des appareils. Un type de déploiement comprend également des règles, par exemple des méthodes de détection, et des spécifications. Ces règles spécifient quand et comment le client installe les logiciels.  
 
 Créez des applications en employant les méthodes suivantes :  
 
@@ -79,16 +79,16 @@ Ensuite, détectez automatiquement ou définissez manuellement les informations 
 
     -   Informations générales sur l’application, telles que le **Nom**, les **Commentaires de l’administrateur**, **l’Éditeur** et la **Version du logiciel**. Pour vous aider à trouver l’application dans la console Configuration Manager, spécifiez une **Référence facultative** ou sélectionnez des **Catégories administratives**.  
 
-    -   **Programme d’installation** : spécifiez le programme d'installation et les éventuelles propriétés obligatoires, nécessaires pour installer le type de déploiement de l'application.  
+    -   **Programme d'installation**: spécifiez le programme d'installation et les éventuelles propriétés obligatoires, nécessaires pour installer le type de déploiement de l'application.  
 
         > [!TIP]  
         >  Si le programme d’installation n’est pas indiqué, choisissez **Parcourir** et accédez à l’emplacement du programme d’installation.  
 
-    -   **Comportement à l’installation** : Sélectionnez une des trois options pour définir la façon dont Configuration Manager doit installer ce type de déploiement. Pour plus d’informations sur ces options, consultez [Expérience utilisateur](#bkmk_dt-ux).  
+    -   **Comportement à l’installation** : sélectionnez une des trois options pour définir la façon dont Configuration Manager doit installer ce type de déploiement. Pour plus d’informations sur ces options, consultez [Expérience utilisateur](#bkmk_dt-ux).  
 
-    -   **Utiliser une connexion VPN automatique (si elle est configurée)** : Si vous avez déployé un profil VPN sur l’appareil sur lequel l’utilisateur lance l’application, connectez le VPN au démarrage de l’application. Cette option ne concerne que Windows 8.1 et Windows Phone 8.1. Sur les appareils Windows Phone 8.1, si vous y déployez plusieurs profils VPN, les connexions VPN automatiques ne sont pas prises en charge. Pour plus d’informations, consultez [Profils VPN](/sccm/protect/deploy-use/vpn-profiles).  
+    -   **Utiliser une connexion VPN automatique (si elle est configurée)** : si vous avez déployé un profil VPN sur l’appareil sur lequel l’utilisateur lance l’application, connectez le VPN au démarrage de l’application. Cette option ne concerne que Windows 8.1 et Windows Phone 8.1. Sur les appareils Windows Phone 8.1, si vous y déployez plusieurs profils VPN, les connexions VPN automatiques ne sont pas prises en charge. Pour plus d’informations, consultez [Profils VPN](/sccm/protect/deploy-use/vpn-profiles).  
 
-    - **Provisionner cette application pour tous les utilisateurs sur l’appareil**<!--1358310--> : À compter de la version 1806, approvisionnez une application avec un package d’application Windows pour tous les utilisateurs d’un appareil. Pour plus d’informations, consultez [Créer des applications Windows](/sccm/apps/get-started/creating-windows-applications#bkmk_provision).  
+    - **Provisionner cette application pour tous les utilisateurs de cet appareil**<!--1358310--> : depuis la version 1806, provisionnez une application avec un package d’application Windows pour tous les utilisateurs d’un appareil. Pour plus d’informations, consultez [Créer des applications Windows](/sccm/apps/get-started/creating-windows-applications#bkmk_provision).  
 
        > [!Tip]  
        > Si vous modifiez une application existante, ce paramètre se trouve sous l’onglet **Expérience utilisateur** des propriétés du type de déploiement du package de l’application Windows.  
@@ -118,28 +118,28 @@ Pour ajouter d’autres types de déploiement ou configurer d’autres paramètr
 
 3.  Dans la page **Catalogue d’applications** de l’Assistant Création d’une application, spécifiez les informations suivantes :  
 
-    -   **Langue sélectionnée** : Dans la liste déroulante, sélectionnez la version de langue de l’application que vous souhaitez configurer. Choisissez **Ajouter/Supprimer** pour configurer d’autres langues pour cette application.  
+    -   **Langue sélectionnée** : dans la liste déroulante, sélectionnez la version linguistique de l’application que vous souhaitez installer. Choisissez **Ajouter/Supprimer** pour configurer d’autres langues pour cette application.  
 
-    -   **Nom de l’application localisée** : Spécifiez le nom de l’application dans la langue sélectionnée.  
+    -   **Nom de l’application localisée** : spécifiez le nom de l’application dans la langue sélectionnée.  
 
         > [!IMPORTANT]  
         > Un nom d’application localisée est obligatoire pour chaque version de langue que vous configurez.  
 
-    -   **Catégories d’utilisateurs** : Choisissez **Modifier** pour spécifier les catégories de l’application dans la langue sélectionnée. Les utilisateurs du Centre logiciel utilisent ces catégories pour filtrer et trier les applications disponibles.  
+    -   **Catégories d’utilisateurs** : choisissez **Modifier** pour spécifier les catégories de l’application dans la langue sélectionnée. Les utilisateurs du Centre logiciel utilisent ces catégories pour filtrer et trier les applications disponibles.  
 
-    -   **Documentation utilisateur** : Spécifiez l’emplacement d’un fichier à partir duquel les utilisateurs du Centre logiciel peuvent obtenir des informations supplémentaires sur cette application. Cet emplacement est une adresse de site web ou un chemin réseau et un nom de fichier. Vérifiez que les utilisateurs ont accès à cet emplacement.  
+    -   **Documentation utilisateur** : spécifier l’emplacement d’un fichier à partir duquel les utilisateurs du Centre logiciel peuvent obtenir des informations supplémentaires sur cette application. Cet emplacement est une adresse de site web ou un chemin réseau et un nom de fichier. Vérifiez que les utilisateurs ont accès à cet emplacement.  
 
-    -   **Texte de lien** : Spécifiez le texte qui s’affiche à la place de l’URL de l’application.  
+    -   **Texte de lien** : spécifiez le texte qui s’affiche à la place de l’URL de l’application.  
 
-    -   **URL de la déclaration de confidentialité** : Spécifiez une adresse de site web vers la déclaration de confidentialité de l’application.  
+    -   **URL de la déclaration de confidentialité** : spécifiez une adresse de site web vers la déclaration de confidentialité de l’application.  
 
-    -   **Description localisée** : Entrez une description pour cette application dans la langue sélectionnée.  
+    -   **Description localisée** : entrez une description pour cette application dans la langue sélectionnée.  
 
-    -   **Mots clés** : Entrez une liste de mots clés dans la langue sélectionnée. Ces mots clés aident les utilisateurs du Centre logiciel à rechercher l’application.  
+    -   **Mots clés** : entrez une liste de mots clés dans la langue sélectionnée. Ces mots clés aident les utilisateurs du Centre logiciel à rechercher l’application.  
 
-    -   **Icône** : Cliquez sur **Parcourir** pour sélectionner une icône pour cette application. Si vous ne spécifiez pas d’icône, Configuration Manager utilise une icône par défaut. Les dimensions maximales des icônes sont 512 x 512 pixels.  
+    -   **Icône** : cliquez sur **Parcourir** pour sélectionner une icône pour cette application. Si vous ne spécifiez pas d’icône, Configuration Manager utilise une icône par défaut. Les dimensions maximales des icônes sont 512 x 512 pixels.  
 
-    -   **Afficher en tant qu’application proposée et la mettre en exergue sur le portail d’entreprise** : Cette option affiche l’application en premier plan dans le portail d’entreprise sur les appareils mobiles.  
+    -   **Afficher en tant qu’application proposée et la mettre en exergue sur le portail de l’entreprise** : cette option met en avant l’application sur le portail de l’entreprise sur les appareils mobiles.  
 
 4.  Dans la page **Types de déploiement** de l’Assistant Création d’une application, choisissez **Ajouter** pour créer un type de déploiement. Pour plus d’informations, consultez [Créer des types de déploiement pour l’application](#bkmk_create-dt).  
 
@@ -169,11 +169,11 @@ Si vous [détectez automatiquement les informations de l’application](#bkmk_au
 
 Vous pouvez démarrer l’Assistant Création d’un type de déploiement de trois façons :
 
-- **Dans le nœud Applications** : Dans la console Configuration Manager, accédez à l’espace de travail **Bibliothèque de logiciels**, développez **Gestion des applications** et sélectionnez le nœud **Applications**. Sélectionnez une application, puis cliquez sur **Créer un type de déploiement** dans le ruban.  
+- **Dans le nœud Applications** : dans la console Configuration Manager, accédez à l’espace de travail **Bibliothèque de logiciels**, développez **Gestion des applications** et sélectionnez le nœud **Applications**. Sélectionnez une application, puis cliquez sur **Créer un type de déploiement** dans le ruban.  
 
-- **Pendant la création d’une application** : Lorsque vous [spécifiez manuellement les informations de l’application](#bkmk_manual-app) dans l’Assistant Création d’une application, cliquez sur **Ajouter** dans la page Types de déploiement.  
+- **Pendant la création d’une application** : quand vous [spécifiez manuellement les informations de l’application](#bkmk_manual-app) dans l’Assistant Création d’une application, cliquez sur **Ajouter** dans la page Types de déploiement.  
 
-- **À partir des propriétés de l’application** : Sélectionnez une application existante dans le nœud **Applications**, puis cliquez sur **Propriétés**. Basculez vers l’onglet **Types de déploiement**, puis cliquez sur **Ajouter**.
+- **À partir des propriétés de l’application** : sélectionnez une application existante dans le nœud **Applications**, puis cliquez sur **Propriétés**. Basculez vers l’onglet **Types de déploiement**, puis cliquez sur **Ajouter**.
 
 Ensuite, utilisez l’une des procédures suivantes pour [identifier automatiquement](#bkmk_auto-dt) ou [spécifier manuellement](#bkmk_manual-dt) les informations relatives au type de déploiement.  
 
@@ -202,11 +202,11 @@ Ensuite, utilisez l’une des procédures suivantes pour [identifier automatique
 
         - **Langues** disponibles pour celui-ci   
 
-    -   **Programme d’installation** : spécifiez le programme d'installation et les éventuelles propriétés nécessaires pour installer le type de déploiement.  
+    -   **Programme d'installation**: spécifiez le programme d'installation et les éventuelles propriétés nécessaires pour installer le type de déploiement.  
 
-    -   **Comportement à l’installation** : Sélectionnez une des trois options pour définir la façon dont Configuration Manager doit installer ce type de déploiement. Pour plus d’informations sur ces options, consultez [Expérience utilisateur](#bkmk_dt-ux).  
+    -   **Comportement à l’installation** : sélectionnez une des trois options pour définir la façon dont Configuration Manager doit installer ce type de déploiement. Pour plus d’informations sur ces options, consultez [Expérience utilisateur](#bkmk_dt-ux).  
 
-    -   **Utiliser une connexion VPN automatique (si elle est configurée)** : Si vous avez déployé un profil VPN sur l’appareil sur lequel l’utilisateur lance l’application, connectez le VPN au démarrage de l’application. Cette option ne concerne que Windows 8.1 et Windows Phone 8.1. Sur les appareils Windows Phone 8.1, si vous y déployez plusieurs profils VPN, les connexions VPN automatiques ne sont pas prises en charge. Pour plus d’informations, consultez [Profils VPN](/sccm/protect/deploy-use/vpn-profiles).  
+    -   **Utiliser une connexion VPN automatique (si elle est configurée)** : si vous avez déployé un profil VPN sur l’appareil sur lequel l’utilisateur lance l’application, connectez le VPN au démarrage de l’application. Cette option ne concerne que Windows 8.1 et Windows Phone 8.1. Sur les appareils Windows Phone 8.1, si vous y déployez plusieurs profils VPN, les connexions VPN automatiques ne sont pas prises en charge. Pour plus d’informations, consultez [Profils VPN](/sccm/protect/deploy-use/vpn-profiles).  
 
 4.  Choisissez **Suivant**, puis passez aux [options de contenu pour le type de déploiement](#bkmk_dt-content).  
 
@@ -228,26 +228,26 @@ Dans la page **Contenu**, spécifiez les informations suivantes :
 > [!Note]  
 > Quand vous affichez les propriétés d’un type de déploiement existant, certaines de ces options apparaissent sous l’onglet **Contenu**, d’autres sous l’onglet **Programmes**.  
 
-- **Emplacement du contenu** : Spécifiez l’emplacement du contenu pour ce type de déploiement ou sélectionnez **Parcourir** pour choisir le dossier de contenu du type de déploiement.  
+- **Emplacement du contenu** : spécifiez l’emplacement du contenu pour ce type de déploiement ou sélectionnez **Parcourir** pour choisir le dossier de contenu du type de déploiement.  
 
     > [!IMPORTANT]  
     >  Le compte du système de l’ordinateur du serveur de site doit disposer d’autorisations vers l’emplacement de contenu spécifié.  
 
-    - **Conserver le contenu dans la mémoire cache du client** : Le client Configuration Manager conserve indéfiniment dans son cache le contenu du type de déploiement. Le client conserve le contenu même si l’application est déjà installée. Cette option est utile avec certains déploiements, comme les logiciels basés sur Windows Installer. Windows Installer a besoin d’une copie locale du contenu source pour appliquer les mises à jour. Cette option réduit l’espace disponible dans le cache. Le choix de cette option peut entraîner l’échec d’un déploiement important plus tard si l’espace disponible dans le cache est insuffisant.  
+    - **Conserver le contenu dans la mémoire cache du client** : le client Configuration Manager conserve indéfiniment dans son cache le contenu du type de déploiement. Le client conserve le contenu même si l’application est déjà installée. Cette option est utile avec certains déploiements, comme les logiciels basés sur Windows Installer. Windows Installer a besoin d’une copie locale du contenu source pour appliquer les mises à jour. Cette option réduit l’espace disponible dans le cache. Le choix de cette option peut entraîner l’échec d’un déploiement important plus tard si l’espace disponible dans le cache est insuffisant.  
 
-- **Programme d’installation** : Spécifiez le nom du programme d’installation et des paramètres d’installation requis.  
+- **Programme d’installation** : spécifiez le nom du programme d’installation et des paramètres d’installation requis.  
 
-    - **Début de l’installation dans** : Spécifiez éventuellement le dossier contenant le programme d’installation pour le type de déploiement. Ce dossier peut être un chemin absolu sur le client, ou un chemin vers le dossier du point de distribution contenant les fichiers d’installation.  
+    - **Début de l’installation dans** : spécifiez éventuellement le dossier contenant le programme d’installation pour le type de déploiement. Ce dossier peut être un chemin absolu sur le client, ou un chemin vers le dossier du point de distribution contenant les fichiers d’installation.  
 
-- **Programme de désinstallation** : Spécifiez éventuellement le nom du programme de désinstallation et les paramètres obligatoires, le cas échéant.  
+- **Programme de désinstallation** : spécifiez éventuellement le nom du programme de désinstallation et les paramètres obligatoires, le cas échéant.  
 
-    - **Début de la désinstallation dans** : Spécifiez éventuellement le dossier contenant le programme de désinstallation pour le type de déploiement. Ce dossier peut être un chemin absolu sur le client. Il peut aussi s’agir d’un chemin relatif sur un point de distribution du dossier contenant le package.  
+    - **Début de la désinstallation dans** : spécifiez éventuellement le dossier contenant le programme de désinstallation pour le type de déploiement. Ce dossier peut être un chemin absolu sur le client. Il peut aussi s’agir d’un chemin relatif sur un point de distribution du dossier contenant le package.  
 
-- **Réparer le programme** : À compter de la version 1810, pour les types de déploiement Windows Installer et Programme d’installation de script, spécifiez éventuellement le nom du programme de réparation et les paramètres obligatoires, le cas échéant.<!--1357866-->  
+- **Réparer le programme** : depuis la version 1810, pour les types de déploiement Windows Installer et Programme d’installation de script, spécifiez éventuellement le nom du programme de réparation et les paramètres obligatoires, le cas échéant.<!--1357866-->  
 
-    - **Début de la réparation dans** : Spécifiez éventuellement le dossier contenant le programme de réparation pour le type de déploiement. Ce dossier peut être un chemin absolu sur le client. Il peut aussi s’agir d’un chemin relatif sur un point de distribution du dossier contenant le package.  
+    - **Début de la réparation dans** : spécifiez éventuellement le dossier contenant le programme de réparation pour le type de déploiement. Ce dossier peut être un chemin absolu sur le client. Il peut aussi s’agir d’un chemin relatif sur un point de distribution du dossier contenant le package.  
 
-- **Exécutez l’installation et désinstallez le programme en tant que processus 32 bits sur des clients 64 bits** : utilisez les emplacements de fichier et de Registre 32 bits sur des ordinateurs fonctionnant sous Windows pour exécuter le programme d'installation pour le type de déploiement.  
+- **Exécutez l'installation et désinstallez le programme en tant que processus 32 bits sur des clients 64 bits**: utilisez les emplacements de fichier et de Registre 32 bits sur des ordinateurs fonctionnant sous Windows pour exécuter le programme d'installation pour le type de déploiement.  
 
 
 #### <a name="deployment-type-properties-content-options"></a>Options de **contenu** pour les propriétés du type de déploiement
@@ -255,19 +255,19 @@ Quand vous affichez les propriétés d’un type de déploiement, les options su
 
 - **Paramètres du contenu de désinstallation** :  
 
-    - **Identique au contenu d’installation** : Si le contenu d’installation et le contenu de désinstallation sont identiques, sélectionnez cette option. Il s’agit de l’option par défaut.  
+    - **Identique au contenu d’installation** : si le contenu d’installation et le contenu de désinstallation sont identiques, sélectionnez cette option. Il s’agit de l’option par défaut.  
 
-    - **Pas de contenu de désinstallation** : Si votre application ne nécessite pas de contenu pour la désinstallation, sélectionnez cette option.  
+    - **Pas de contenu de désinstallation** : si votre application ne nécessite pas de contenu pour la désinstallation, sélectionnez cette option.  
 
-    - **Différent du contenu d’installation** : Sélectionnez cette option si le contenu de désinstallation est différent du contenu d’installation.  
+    - **Différent du contenu d’installation** : si le contenu de désinstallation est différent du contenu d’installation, sélectionnez cette option.  
 
-        - **Emplacement du contenu de désinstallation** : Spécifiez le chemin réseau du contenu qui est utilisé pour désinstaller l’application.  
+        - **Emplacement du contenu de désinstallation** : spécifiez le chemin réseau du contenu qui est utilisé pour désinstaller l’application.  
 
-- **Autoriser les clients à utiliser les points de distribution du groupe de limites de site par défaut** : Indiquez si les clients doivent télécharger et installer le logiciel à partir d’un point de distribution dans le groupe de limites de site par défaut quand le contenu n’est pas disponible à partir d’un point de distribution dans les groupes de limites actuels ou voisins.  
+- **Autoriser les clients à utiliser des points de distribution du groupe de limites de site par défaut** : indiquez si les clients doivent télécharger et installer le logiciel à partir d’un point de distribution dans le groupe de limites de site par défaut quand le contenu n’est pas disponible à partir d’un point de distribution dans les groupes de limites actuels ou voisins.  
 
-- **Options de déploiement** : Indiquez si les clients doivent télécharger l’application quand ils utilisent un point de distribution à partir des groupes de limites de site par défaut ou d’un groupe voisin.  
+- **Options de déploiement** : indiquez si les clients doivent télécharger l’application quand ils utilisent un point de distribution à partir des groupes de limites de site par défaut ou d’un groupe voisin.  
 
-- **Autoriser les clients à partager du contenu avec d’autres clients sur le même sous-réseau** : indiquer si l'utilisation de BranchCache doit être activée pour les téléchargements de contenu. Pour plus d’informations, consultez [BranchCache](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#branchcache). Depuis la version 1802, BranchCache est toujours activé sur les clients. Ce paramètre est supprimé, car les clients utilisent BranchCache si le point de distribution le prend en charge.  
+- **Autoriser les clients à partager du contenu avec d’autres clients sur le même sous-réseau**: indiquez si vous souhaitez activer l’utilisation de BranchCache pour les téléchargements du contenu. Pour plus d’informations, consultez [BranchCache](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#branchcache). Depuis la version 1802, BranchCache est toujours activé sur les clients. Ce paramètre est supprimé, car les clients utilisent BranchCache si le point de distribution le prend en charge.  
 
 
 ### <a name="bkmk_dt-detect"></a> Options de la **méthode de détection** du type de déploiement   
@@ -283,27 +283,27 @@ Cette procédure configure une méthode de détection qui indique la présence d
 
 2.  Dans la boîte de dialogue **Règle de détection**, cliquez sur la liste déroulante **Type de paramètre**. Sélectionnez une des méthodes suivantes pour détecter la présence du type de déploiement :  
 
-    - **Système de fichiers** : Détecte s’il existe un fichier ou un dossier spécifié sur un appareil. Cette détection indique que l’application est installée. Spécifiez les détails supplémentaires suivants :  
+    - **Système de fichiers** : détecte s’il existe un fichier ou un dossier spécifié sur un appareil. Cette détection indique que l’application est installée. Spécifiez les détails supplémentaires suivants :  
 
-        - **Type** : Indiquez s’il s’agit d’un fichier ou dossier.  
+        - **Type** : indiquez s’il s’agit d’un fichier ou dossier.  
 
-        - **Chemin d’accès** (obligatoire) : Entrez ou recherchez le chemin local sur l’appareil qui inclut le fichier ou dossier. Par exemple, `C:\Program Files`. Vous ne pouvez pas spécifier un chemin réseau partagé. Si vous cliquez sur **Parcourir**, parcourez le système de fichiers local ou connectez-vous à un client représentatif à parcourir.  
+        - **Chemin d’accès** (obligatoire) : entrez ou recherchez le chemin local sur l’appareil qui inclut le fichier ou dossier. Par exemple, `C:\Program Files`. Vous ne pouvez pas spécifier un chemin réseau partagé. Si vous cliquez sur **Parcourir**, parcourez le système de fichiers local ou connectez-vous à un client représentatif à parcourir.  
 
-        - **Nom de fichier ou de dossier** (obligatoire) : Spécifiez le nom de fichier ou dossier à détecter dans le chemin ci-dessus. Si le client détecte ce fichier ou dossier sur l’appareil, il considère que l’application est installée sur ce dernier.  
+        - **Nom de fichier ou de dossier** (obligatoire) : spécifiez le nom de fichier ou dossier à détecter dans le chemin ci-dessus. Si le client détecte ce fichier ou dossier sur l’appareil, il considère que l’application est installée sur ce dernier.  
 
-        - **Ce fichier ou dossier est associé à une application 32 bits sur des systèmes 64 bits** : Cette option est activée par défaut. Le client vérifie d’abord les emplacements de fichiers 32 bits pour le fichier ou dossier spécifié. Si le fichier ou dossier est introuvable, le client recherche dans les emplacements 64 bits.  
+        - **Ce fichier ou dossier est associé à une application 32 bits sur des systèmes 64 bits** : cette option est sélectionnée par défaut. Le client vérifie d’abord les emplacements de fichiers 32 bits pour le fichier ou dossier spécifié. Si le fichier ou dossier est introuvable, le client recherche dans les emplacements 64 bits.  
 
-    - **Registre** : Détermine si une clé ou une valeur de Registre spécifiée existe sur un appareil client. Cette détection indique que l’application est installée. Spécifiez les détails supplémentaires suivants :  
+    - **Registre** : détermine si une clé ou une valeur de Registre spécifiée existe sur un appareil client. Cette détection indique que l’application est installée. Spécifiez les détails supplémentaires suivants :  
 
-        - **Ruche** (obligatoire) : Choisissez une ruche de Registre dans la liste déroulante. Par exemple, `HKEY_LOCAL_MACHINE`.  
+        - **Ruche** (obligatoire) : choisissez une ruche de Registre dans la liste déroulante. Par exemple, `HKEY_LOCAL_MACHINE`.  
 
-        - **Clé** (obligatoire) : Spécifiez la clé de Registre à rechercher dans la ruche ci-dessus. Par exemple, `SOFTWARE\Microsoft\Office`.  
+        - **Clé** (obligatoire) : spécifiez la clé de Registre à parcourir dans la ruche ci-dessus. Par exemple, `SOFTWARE\Microsoft\Office`.  
 
-        - **Valeur** (facultatif) : Entrez une valeur spécifique à détecter dans la clé ci-dessus. Si vous souhaitez que le client détecte la valeur (Par défaut), activez l’option **Utiliser la valeur de clé de Registre (Par défaut) pour la détection**. Quand vous entrez une valeur ou que vous activez cette option, vous êtes invité à sélectionner un **Type de données**.  
+        - **Valeur** (facultatif) : entrez une valeur spécifique à détecter dans la clé ci-dessus. Si vous souhaitez que le client détecte la valeur (Par défaut), activez l’option **Utiliser la valeur de clé de Registre (Par défaut) pour la détection**. Quand vous entrez une valeur ou que vous activez cette option, vous êtes invité à sélectionner un **Type de données**.  
 
-        - **Cette clé de Registre est associée à une application 32 bits sur des systèmes 64 bits** : Sélectionnez cette option pour vérifier tout d’abord les emplacements de Registre 32 bits pour la clé de Registre spécifiée. Si la clé de Registre est introuvable, le client la recherche dans les emplacements 64 bits.  
+        - **Cette clé de Registre est associée à une application 32 bits sur des systèmes 64 bits** : sélectionnez cette option pour vérifier d’abord si la clé de Registre spécifiée se trouve dans les emplacements de Registre 32 bits. Si la clé de Registre est introuvable, le client la recherche dans les emplacements 64 bits.  
 
-    - **Windows Installer** : Détermine si un fichier Windows Installer spécifié existe sur un appareil client. Cette détection indique que l’application est installée. Spécifiez le **Code de produit** MSI à détecter sur le client. Si vous cliquez sur **Parcourir**, sélectionnez le fichier MSI à partir duquel lire le code de produit. 
+    - **Windows Installer** : détermine si un fichier Windows Installer spécifié existe sur un appareil client. Cette détection indique que l’application est installée. Spécifiez le **Code de produit** MSI à détecter sur le client. Si vous cliquez sur **Parcourir**, sélectionnez le fichier MSI à partir duquel lire le code de produit. 
 
 3.  En bas de la fenêtre Règle de détection, indiquez si l’élément doit exister ou satisfaire à une règle. Par exemple, si vous détectez un fichier, l’option suivante est sélectionnée par défaut : **Le paramètre du système de fichiers doit exister sur le système cible pour indiquer la présence de cette application**. Sélectionnez l’autre option pour créer une règle de détection basée sur les propriétés d’un fichier ou dossier. Ces propriétés incluent la Date de modification, la Date de création, la Version ou la Taille. Ces critères de règle diffèrent d’un type de paramètre à l’autre.  
 
@@ -319,6 +319,9 @@ Passez à la section suivante sur l’utilisation d’un script personnalisé co
 1.  Dans la page **Méthode de détection**, cochez la case **Utiliser un script personnalisé pour détecter la présence de ce type de déploiement**. Ensuite, cliquez sur **Modifier**.  
 
 2.  Dans la boîte de dialogue **Éditeur de script**, cliquez sur la liste déroulante **Type de script**. Sélectionnez un des langages de script suivants pour détecter le type de déploiement : PowerShell, VBScript ou JScript.  
+
+    > [!Note]  
+    > Depuis la version 1810, quand un script Windows PowerShell s’exécute comme une méthode de détection d’application, le client Configuration Manager appelle PowerShell avec le `-NoProfile` paramètre. Cette option démarre PowerShell sans aucun profil. Un profil PowerShell est un script qui s’exécute au démarrage de PowerShell. <!--3607762-->  
 
 3.  Dans la zone **Contenu du script**, entrez le script que vous souhaitez utiliser ou collez le contenu d’un script existant. Choisissez **Ouvrir** pour accéder à un script enregistré existant. Cliquez sur **Effacer** pour supprimer le texte du champ Contenu du script. Si nécessaire, activez l’option **Exécuter le script comme processus 32 bits sur des clients 64 bits**.  
 
@@ -394,15 +397,15 @@ Ces paramètres indiquent comment le client installe l’application sur les app
 
 Sur la page **Expérience utilisateur** , spécifiez les informations suivantes :  
 
-- **Comportement à l’installation** : sélectionnez l'une des options suivantes dans la liste déroulante :  
+- **Comportement à l'installation**: sélectionnez l'une des options suivantes dans la liste déroulante :  
 
-    - **Installer pour l’utilisateur** : Le client n’installe l’application que pour l’utilisateur pour lequel vous la déployez.  
+    - **Installer pour l’utilisateur** : le client n’installe l’application que pour l’utilisateur pour lequel vous la déployez.  
 
-    - **Installer pour le système** : Le client installe l’application une seule fois. Il est accessible à tous les utilisateurs.  
+    - **Installer pour le système** : le client installe l’application une seule fois. Il est accessible à tous les utilisateurs.  
 
-    - **Installer pour le système si la ressource est un appareil ; sinon installer pour l’utilisateur** : Si vous déployez l’application pour un appareil, le client l’installe pour tous les utilisateurs. Si vous déployez l’application pour un utilisateur, le client l’installe uniquement pour cet utilisateur.  
+    - **Installer pour le système si la ressource est un périphérique ; sinon installer pour l’utilisateur** : si vous déployez l’application sur un appareil, le client l’installe pour tous les utilisateurs. Si vous déployez l’application pour un utilisateur, le client l’installe uniquement pour cet utilisateur.  
 
-- **Condition d’ouverture de session** : Sélectionnez l'une des options suivantes :  
+- **Condition d’ouverture de session** : sélectionnez une des options suivantes :  
 
   - **Uniquement quand un utilisateur a ouvert une session**  
 
@@ -413,17 +416,17 @@ Sur la page **Expérience utilisateur** , spécifiez les informations suivantes 
     > [!NOTE]  
     >  Par défaut, cette option est définie sur **Uniquement lorsqu’un utilisateur a ouvert une session**. Si vous sélectionnez **Installer pour l’utilisateur** dans la liste déroulante **Comportement à l’installation**, vous ne pouvez pas modifier cette option.  
 
-- **Visibilité du programme d’installation** : Spécifiez le mode dans lequel le type de déploiement est exécuté sur les appareils clients. Sélectionnez l'une des options suivantes :  
+- **Visibilité du programme d’installation** : spécifiez le mode d’exécution du type de déploiement sur les appareils clients. Sélectionnez l'une des options suivantes :  
 
-    - **Agrandie** : le type de déploiement est exécuté de manière agrandie sur les appareils clients. Les utilisateurs voient toute l’activité de l’installation.  
+    - **Agrandi**: le type de déploiement est exécuté de manière agrandie sur les appareils clients. Les utilisateurs voient toute l’activité de l’installation.  
 
-    - **Normale** : le type de déploiement est exécuté en mode normal, en fonction des valeurs par défaut du système et du programme. Ce mode est la valeur par défaut.  
+    - **Normal**: le type de déploiement est exécuté en mode normal, en fonction des valeurs par défaut du système et du programme. Ce mode est la valeur par défaut.  
 
-    - **Réduite** : le type de déploiement est exécuté de manière réduite sur les appareils clients. Les utilisateurs peuvent voir l'activité de l'installation dans la zone de notification ou dans la barre des tâches.  
+    - **Réduit**: le type de déploiement est exécuté de manière réduite sur les appareils clients. Les utilisateurs peuvent voir l'activité de l'installation dans la zone de notification ou dans la barre des tâches.  
 
-    - **Masqué** : le type de déploiement s’exécute sous forme masquée sur les appareils clients. Les utilisateurs ne voient aucune activité d’installation.  
+    - **Masqué** : le type de déploiement s’exécute sous forme masquée sur les appareils clients. Les utilisateurs ne voient aucune activité d’installation.  
 
-- **Permettre aux utilisateurs d’afficher et d’interagir avec l’installation du programme** : Spécifiez si un utilisateur peut interagir avec l’installation du type de déploiement pour configurer les options d’installation.  
+- **Permettre aux utilisateurs d’afficher et d’interagir avec l’installation du programme** : indique si un utilisateur peut interagir avec l’installation du type de déploiement pour configurer les options d’installation.  
 
     > [!NOTE]  
     >  Si vous sélectionner l’option **Installer pour l’utilisateur** dans la liste déroulante **Comportement à l’installation**, cette option est activée par défaut.  
@@ -433,7 +436,7 @@ Sur la page **Expérience utilisateur** , spécifiez les informations suivantes 
     >  
     > Une installation dans un contexte système avec des utilisateurs autorisés à interagir avec l’installation ne constitue pas une configuration sécurisée. Pour plus d’informations, consultez [Sécurité et confidentialité pour la gestion d’applications](/sccm/apps/plan-design/security-and-privacy-for-application-management#bkmk_interact).  
 
-- **Durée maximale d’exécution allouée (minutes)** : Spécifiez la durée maximale en minutes pendant laquelle vous pensez que le type de déploiement est susceptible de s’exécuter sur l’ordinateur client. Spécifiez ce paramètre comme un nombre entier supérieur à zéro. La valeur par défaut est 120 minutes (deux heures).  
+- **Durée maximale d’exécution allouée (minutes)** : spécifiez la durée maximale en minutes pendant laquelle vous pensez que le type de déploiement est susceptible de s’exécuter sur l’ordinateur client. Spécifiez ce paramètre comme un nombre entier supérieur à zéro. La valeur par défaut est 120 minutes (deux heures).  
 
     Utilisez cette valeur pour les actions suivantes :  
 
@@ -444,7 +447,7 @@ Sur la page **Expérience utilisateur** , spécifiez les informations suivantes 
     > [!IMPORTANT]  
     >  Un conflit peut se produire si la **durée maximale d'exécution allouée** est plus longue que celle de la fenêtre de maintenance planifiée. Si la durée maximale d’exécution définie par l’utilisateur est supérieure à la longueur des fenêtres de maintenance disponibles, ce type de déploiement ne s’exécute pas.  
 
-- **Temps d’installation estimé (minutes)** : Spécifiez la durée d’installation estimée du type de déploiement. Les utilisateurs voient cette durée dans le Centre logiciel.  
+- **Temps d’installation estimé (minutes)**  : indique la durée d’installation estimée du type de déploiement. Les utilisateurs voient cette durée dans le Centre logiciel.  
 
 
 #### <a name="deployment-type-properties-user-experience-options"></a>Options de **l’expérience utilisateur** pour les propriétés du type de déploiement
@@ -452,13 +455,13 @@ Quand vous affichez les propriétés d’un type de déploiement, les options su
 
 Appliquez un comportement spécifique après l’installation. Sélectionnez l'une des options suivantes :  
 
-- **Déterminer le comportement en fonction des codes de retour** : Gère les redémarrages en fonction des codes configurés sous l’onglet [Codes de retour](#bkmk_dt-return). Le Centre logiciel affiche **Peut nécessiter un redémarrage**. Si un utilisateur s’est connecté pendant l’installation, il reçoit une invite en fonction de la configuration de l’expérience utilisateur du *déploiement*.  
+- **Déterminer le comportement en fonction des codes de retour** : gère les redémarrages en fonction des codes configurés sous l’onglet [Codes de retour](#bkmk_dt-return). Le Centre logiciel affiche **Peut nécessiter un redémarrage**. Si un utilisateur s’est connecté pendant l’installation, il reçoit une invite en fonction de la configuration de l’expérience utilisateur du *déploiement*.  
 
-- **Aucune action spécifique** : Aucun redémarrage n’est nécessaire après l’installation. Le Centre logiciel signale qu’aucun redémarrage n’est nécessaire.  
+- **Aucune action spécifique** : aucun redémarrage n’est nécessaire après l’installation. Le Centre logiciel signale qu’aucun redémarrage n’est nécessaire.  
 
-- **Le programme d’installation logicielle va forcer un redémarrage de l’appareil** : Configuration Manager ne contrôle pas ou ne lance pas de redémarrage, mais l’installation elle-même peut le faire sans avertissement. Utilisez ce paramètre pour empêcher que Configuration Manager signale l’échec de l’installation quand le programme d’installation lance un redémarrage. Le Centre logiciel affiche **Peut nécessiter un redémarrage**.  
+- **Le programme d’installation logicielle va forcer un redémarrage du périphérique** : Configuration Manager ne contrôle pas ou ne lance pas de redémarrage, mais l’installation elle-même peut le faire sans avertissement. Utilisez ce paramètre pour empêcher que Configuration Manager signale l’échec de l’installation quand le programme d’installation lance un redémarrage. Le Centre logiciel affiche **Peut nécessiter un redémarrage**.  
 
-- **Le client Configuration Manager va forcer un redémarrage obligatoire de l’appareil** : Configuration Manager force un redémarrage de l’appareil après une installation réussie. Le Centre logiciel signale qu’un redémarrage est nécessaire. Si un utilisateur s’est connecté pendant l’installation, il reçoit une invite en fonction de la configuration de l’expérience utilisateur du *déploiement*.  
+- **Le client Configuration Manager va forcer un redémarrage obligatoire du périphérique** : Configuration Manager force un redémarrage de l’appareil après une installation réussie. Le Centre logiciel signale qu’un redémarrage est nécessaire. Si un utilisateur s’est connecté pendant l’installation, il reçoit une invite en fonction de la configuration de l’expérience utilisateur du *déploiement*.  
 
 
 ### <a name="bkmk_dt-require"></a> **Spécifications** pour le type de déploiement
@@ -529,15 +532,15 @@ Spécifiez les codes de retour pour contrôler les comportements une fois que le
 
 3. Sélectionnez un **Type de code** dans la liste déroulante. Ce paramètre définit comment Configuration Manager interprète le code de retour spécifié à partir de ce type de déploiement. Les types disponibles varient en fonction de la technologie de type de déploiement.   
 
-    - **Réussite (pas de redémarrage)** : Le type de déploiement s’est installé correctement et aucun redémarrage n’est nécessaire.  
+    - **Réussite (pas de redémarrage)** : le type de déploiement s’est installé correctement et aucun redémarrage n’est nécessaire.  
 
-    - **Échec (pas de redémarrage)** : L’installation du type de déploiement a échoué.  
+    - **Échec (pas de redémarrage)** : l’installation du type de déploiement a échoué.  
 
-    - **Redémarrage matériel** : Le type de déploiement s’est installé correctement, mais l’appareil doit être redémarré. Rien d’autre ne peut être installé tant que l’appareil n’est pas redémarré.  
+    - **Redémarrage matériel** : le type de déploiement s’est installé correctement, mais l’appareil doit être redémarré. Rien d’autre ne peut être installé tant que l’appareil n’est pas redémarré.  
 
-    - **Redémarrage logiciel** : Le type de déploiement s’est installé correctement, mais l’appareil doit être redémarré. D’autres installations peuvent se produire avant le redémarrage de l’appareil.    
+    - **Redémarrage logiciel** : le type de déploiement s’est installé correctement, mais l’appareil doit être redémarré. D’autres installations peuvent se produire avant le redémarrage de l’appareil.    
 
-    - **Nouvelle tentative rapide** : Une autre installation est déjà en cours sur l’appareil. Le client effectue une nouvelle tentative toutes les deux heures, pour un total de 10 fois.  
+    - **Nouvelle tentative rapide** : une autre installation est déjà en cours sur l’appareil. Le client effectue une nouvelle tentative toutes les deux heures, pour un total de 10 fois.  
 
 4. Si vous le souhaitez, entrez un **Nom** et une **Description** pour ce code de retour.
 
@@ -593,9 +596,9 @@ Configurez des options supplémentaires qui sont spécifiques aux types de dépl
 
 4.  Dans les propriétés du type de déploiement, basculez vers l’onglet **Contenu**. Configurez les options suivantes en fonction de vos besoins :  
 
-    -   **Conserver le contenu dans la mémoire cache du client** : Le client Configuration Manager ne supprime pas de son cache le contenu pour ce type de déploiement.  
+    -   **Conserver le contenu dans la mémoire cache du client** : le client Configuration Manager ne supprime pas de son cache le contenu pour ce type de déploiement.  
 
-    -   **Charger le contenu dans le cache App-V avant le lancement** : Avant le démarrage de l’application, le client Configuration Manager charge dans le cache App-V tout le contenu de ce type de déploiement. Le client n’épingle pas le contenu dans le cache. Il supprime le contenu selon les besoins.  
+    -   **Charger le contenu dans le cache App-V avant le lancement** : avant le démarrage de l’application, le client Configuration Manager charge dans le cache App-V tout le contenu de ce type de déploiement. Le client n’épingle pas le contenu dans le cache. Il supprime le contenu selon les besoins.  
 
 5.  Cliquez sur **OK** pour fermer les propriétés du type de déploiement. Ensuite, cliquez sur **OK** pour fermer les propriétés de l’application.  
 
@@ -660,12 +663,12 @@ Configuration Manager prend en charge les types de déploiement suivants pour le
 | **Application web** | Spécifiez un lien vers une application web. Ce type de déploiement installe un raccourci vers l’application web sur l’appareil de l’utilisateur.<sup>[Remarque 2](#bkmk_note2)</sup> |  
 | **Windows Installer via la gestion des appareils mobiles (\*.msi)** | Créez et déployez des applications basées sur Windows Installer sur des appareils Windows 10. Pour plus d’informations, consultez [Déployer des applications Windows Installer sur des appareils Windows 10 inscrits à MDM](/sccm/apps/get-started/creating-windows-applications#bkmk_mdm-msi). |  
 
-#### <a name="bkmk_note1"></a>Remarque 1 : Package d'application Windows (dans le Windows Store)
+#### <a name="bkmk_note1"></a> Remarque 1 : Package d’application Windows (dans le Windows Store)
 Pour déployer l’application sous forme de lien vers le Windows Store, configurez la stratégie de groupe **Désactiver l’application du Windows Store**. Définissez cette stratégie sur **Désactivé** ou **Non configuré**. Si vous activez ce paramètre, les clients ne peuvent pas se connecter au Windows Store pour télécharger et installer des applications.
 
 Les clients Windows évaluent toujours en premier les types de déploiement qui utilisent un lien vers un store. Ils évaluent ensuite les types de déploiement par priorité. 
 
-#### <a name="bkmk_note2"></a> Remarque 2 : Application Web  
+#### <a name="bkmk_note2"></a> Remarque 2 : Application web  
 Si vous avez installé Microsoft Intune Managed Browser sur des appareils iOS ou Android, vérifiez que les utilisateurs peuvent uniquement utiliser Managed Browser pour ouvrir l’application. Dans l’adresse du site web, remplacez **http** par **http-intunemam**, ou **https** par **https-intunemam**. Par exemple : 
 - `http-intunemam://<path to web app>`
 - `https-intunemam://<path to web app>`

@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78acd5880bfdada80fca33ea4147fc36b28c495e
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 322ca2cb3f1df6a71fb7ceaf15017d7bd45db4c7
+ms.sourcegitcommit: 544f335cfd1bfd0a1d4973439780e9f5e9ee8bed
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56126741"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562072"
 ---
 # <a name="use-pxe-to-deploy-windows-over-the-network-with-configuration-manager"></a>Utiliser PXE pour déployer Windows sur le réseau avec Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Les déploiements de système d’exploitation lancés par l’environnement PXE (Preboot Execution Environment) dans Configuration Manager permettent aux clients de demander et de déployer des systèmes d’exploitation sur le réseau. Dans ce scénario de déploiement, vous envoyez l’image de système d’exploitation et les images de démarrage à un point de distribution PXE.
 
@@ -108,9 +108,9 @@ Pour utiliser un déploiement de système de d’exploitation lancé par PXE, co
 
 Déployez le système d’exploitation sur un regroupement cible. Pour plus d'informations, voir [Déployer une séquence de tâches](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS). Quand vous déployez des systèmes d’exploitation à l’aide de PXE, vous pouvez configurer si le déploiement est obligatoire ou disponible.
 
--   **Déploiement obligatoire** : les déploiements obligatoires utilisent PXE sans aucune intervention de l'utilisateur. L’utilisateur ne peut pas contourner le démarrage PXE. Toutefois, si l’utilisateur annule le démarrage PXE avant que le point de distribution réponde, le système d’exploitation n’est pas déployé.
+-   **Déploiement obligatoire**: les déploiements obligatoires utilisent PXE et ne nécessitent aucune intervention de l’utilisateur. L’utilisateur ne peut pas contourner le démarrage PXE. Toutefois, si l’utilisateur annule le démarrage PXE avant que le point de distribution réponde, le système d’exploitation n’est pas déployé.
 
--   **Déploiement disponible** : les déploiements disponibles nécessitent l’intervention de l’utilisateur sur l’ordinateur de destination. L’utilisateur doit appuyer sur la touche **F12** pour continuer le processus de démarrage PXE. Sinon, l’ordinateur démarre dans le système d’exploitation actuel ou à partir du périphérique de démarrage suivant disponible.
+-   **Déploiement disponible** : Les déploiements disponibles nécessitent l’intervention de l’utilisateur sur l’ordinateur de destination. L’utilisateur doit appuyer sur la touche **F12** pour continuer le processus de démarrage PXE. Si un utilisateur n’est pas présent à appuyer sur **F12**, l’ordinateur démarre dans le système d’exploitation actuel ou à partir du périphérique de démarrage suivant disponible.
 
 Vous pouvez redéployer un déploiement PXE requis en désactivant l'état du dernier déploiement PXE affecté à un ordinateur ou à un regroupement Configuration Manager. Pour plus d’informations sur l’action **Effacer les déploiements PXE obligatoires**, consultez [Gérer les clients](/sccm/core/clients/manage/manage-clients#BKMK_ManagingClients_DevicesNode) ou [Gérer les regroupements](/sccm/core/clients/manage/collections/manage-collections#how-to-manage-device-collections). Cette action réinitialise l'état de ce déploiement et installe de nouveau les déploiements requis les plus récents.
 
@@ -134,4 +134,4 @@ La liste ci-dessous indique de quelle manière une image de démarrage est séle
 
 3. Dans la liste des séquences de tâches trouvées à l’étape 2, Configuration Manager recherche une image de démarrage qui correspond à l’architecture du client qui tente de démarrer. Si une image de démarrage est trouvée avec la même architecture, celle-ci est utilisée.  
 
-4. Si aucune image de démarrage n’est trouvée avec la même architecture, Configuration Manager recherche une image de démarrage compatible avec l’architecture du client. Il recherche dans la liste des séquences de tâches trouvées à l’étape 2. Par exemple, un client 64 bits est compatible avec des images de démarrage 32 bits et 64 bits. Un client 32 bits est compatible uniquement avec des images de démarrage 32 bits. Un client UEFI est compatible uniquement avec des images de démarrage 64 bits.  
+4. Si aucune image de démarrage n’est trouvée avec la même architecture, Configuration Manager recherche une image de démarrage compatible avec l’architecture du client. Il recherche dans la liste des séquences de tâches trouvées à l’étape 2. Par exemple, un client BIOS/MBR 64 bits est compatible avec des images de démarrage 32 bits et 64 bits. Un client BIOS/MBR 32 bits n’est compatible qu’avec des images de démarrage 32 bits. Les clients UEFI sont uniquement compatibles avec architecture correspondante. Un client UEFI de 64 bits est compatible avec les images de démarrage 64 bits uniquement et un client UEFI de 32 bits est compatible avec des images de démarrage 32 bits uniquement.

@@ -2,7 +2,7 @@
 title: Windows Autopilot pour les appareils existants
 titleSuffix: Configuration Manager
 description: Utilisez une séquence de tâches Configuration Manager afin de réimager et d’approvisionner un appareil Windows 7 pour Windows Autopilot en mode piloté par l’utilisateur.
-ms.date: 02/22/2019
+ms.date: 03/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -11,17 +11,17 @@ ms.assetid: 2e96f847-5b5a-4da9-8e8f-6aa488838508
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 53a9ac779a9a89e010334970c2045e71380a7801
-ms.sourcegitcommit: ef2960bd91655c741450774e512dd0a9be610625
-ms.translationtype: HT
+ms.openlocfilehash: 6878e36e5bf20774f6eef1ee855dda2f95dabfb4
+ms.sourcegitcommit: f3dd8405018fe1043434386be15c16752c1a4a3c
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56839011"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57558000"
 ---
 # <a name="windows-autopilot-for-existing-devices"></a>Windows Autopilot pour les appareils existants
 <!--3607717, fka 1358333-->
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 [Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot) offre aux organisations le moyen d’expédier directement de nouveaux appareils Windows 10 intacts à l’utilisateur final et de définir le flux d’approvisionnement que suit l’utilisateur pour obtenir un appareil Windows 10 sécurisé et productif. L’appareil étant inscrit auprès du service Windows Autopilot, vous pouvez lui attribuer le profil Windows Autopilot nécessaire. Ce profil définit l’out-of-box experience (OOBE) de l’appareil. 
 
@@ -31,9 +31,12 @@ ms.locfileid: "56839011"
 
 ## <a name="prerequisites"></a>Prérequis
 
-Faites l’acquisition du support d’installation de Windows 10 version 1809 ou ultérieure. Puis, créez une image du système d’exploitation Configuration Manager. Pour plus d’informations, consultez [Gérer les images de système d’exploitation](/sccm/osd/get-started/manage-operating-system-images).
+- Faites l’acquisition du support d’installation de Windows 10 version 1809 ou ultérieure. Puis, créez une image du système d’exploitation Configuration Manager. Pour plus d’informations, consultez [Gérer les images de système d’exploitation](/sccm/osd/get-started/manage-operating-system-images).
 
-Dans Microsoft Intune, créez des profils pour Windows Autopilot. Pour plus d’informations, voir [Inscrire des appareils Windows dans Intune avec Windows Autopilot](https://docs.microsoft.com/intune/enrollment-autopilot).
+- Dans Microsoft Intune, créez des profils pour Windows Autopilot. Pour plus d’informations, voir [Inscrire des appareils Windows dans Intune avec Windows Autopilot](https://docs.microsoft.com/intune/enrollment-autopilot).
+
+- Un appareil qui n’est pas déjà inscrit auprès du service Windows Autopilot. Si l’appareil est déjà inscrit, le profil attribué est prioritaire. Autopilot pour le profil de périphériques existant s’applique uniquement si que le profil en ligne arrive à expiration.
+
 
 
 ## <a name="create-the-configuration-file"></a>Créer le fichier de configuration
@@ -89,13 +92,13 @@ Dans Microsoft Intune, créez des profils pour Windows Autopilot. Pour plus d’
 
 4. Sur la page **Installer Windows**, sélectionnez le **Package d’images** Windows 10. Ensuite, configurez les paramètres suivants :  
 
-    - **Index d’images** : sélectionnez Entreprise, Éducation ou Professionnel, suivant les exigences de votre organisation.  
+    - **Index d’image** : sélectionnez Entreprise, Éducation ou Professionnel suivant les exigences de votre organisation.  
 
     - Activez l’option **Partitionner et formater l’ordinateur cible avant d’installer le système d’exploitation**.  
 
-    - **Configurer la séquence de tâches à utiliser avec BitLocker** : si cette option est activée, la séquence de tâches comporte les étapes nécessaires pour activer BitLocker.  
+    - **Configurer une séquence de tâches pour une utilisation avec Bitlocker**: Si vous activez cette option, la séquence de tâches inclut les étapes nécessaires pour activer Bitlocker  
 
-    - **Clé du produit** : si vous devez spécifier une clé de produit pour l’activation de Windows, entrez-la ici.  
+    - **Clé de produit** : si vous devez spécifier une clé de produit pour l’activation de Windows, entrez-la ici.  
 
     - Sélectionnez l’une des options suivantes pour configurer le compte administrateur local dans Windows 10 :  
         - **Générer de façon aléatoire le mot de passe d’administrateur local et désactiver le compte sur toutes les plateformes prises en charge (recommandé)**
@@ -123,7 +126,7 @@ Si vous modifiez la séquence de tâches, elle ressemble à la séquence de tâc
 
 - **Appliquer la configuration Windows Autopilot** : cette étape applique le fichier de configuration Autopilot à partir du package spécifié. Il ne s’agit pas d’un nouveau type d’étape, mais d’une étape **Exécuter la ligne de commande** pour copier le fichier.  
 
-- **Préparer Windows à la capture** : cette étape exécute Sysprep de Windows et comporte le paramètre **Arrêter l’ordinateur après l’exécution de cette action**. Pour plus d’informations, consultez [Préparer Windows pour capture](/sccm/osd/understand/task-sequence-steps#BKMK_PrepareWindowsforCapture).  
+- **Préparer Windows à la capture** : cette étape, qui exécute Windows Sysprep, propose le paramètre **Arrêter l’ordinateur après l’exécution de cette action**. Pour plus d’informations, consultez [Préparer Windows pour capture](/sccm/osd/understand/task-sequence-steps#BKMK_PrepareWindowsforCapture).  
 
 La séquence de tâches Windows Autopilot pour les appareils existants aboutit à un appareil joint à Azure Active Directory (Azure AD). 
 

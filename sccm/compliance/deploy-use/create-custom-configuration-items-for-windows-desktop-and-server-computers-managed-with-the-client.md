@@ -1,8 +1,8 @@
 ---
-title: 'Créer des éléments de configuration pour les ordinateurs Windows gérés par le client '
+title: Créer des éléments de configuration personnalisée
 titleSuffix: Configuration Manager
-description: Gérer les paramètres des ordinateurs et des serveurs Windows avec un élément de configuration Ordinateurs de bureau et serveurs Windows.
-ms.date: 11/18/2016
+description: Gérez les paramètres des ordinateurs et des serveurs Windows avec un élément de configuration pour les ordinateurs de bureau et les serveurs Windows.
+ms.date: 03/04/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
@@ -11,344 +11,368 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba02c1c3558cc7c0f7280e9517d7b67ee8e46eec
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 4253fdd94985a8a9adbc9e782f8397c2f76f5f2c
+ms.sourcegitcommit: 4ab85212268e76d3fd22f00e6c74edaa5abde60c
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56130375"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426887"
 ---
-# <a name="how-to-create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-system-center-configuration-manager-client"></a>Comment créer des éléments de configuration personnalisés pour les ordinateurs et serveurs Windows gérés par le client System Center Configuration Manager
+# <a name="create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-configuration-manager-client"></a>Créer des éléments de configuration personnalisés pour les ordinateurs de bureau et les serveurs Windows gérés avec le client Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 
-Utilisez l’élément de configuration **Ordinateurs de bureau et serveurs Windows (personnalisés)** pour gérer les paramètres des ordinateurs de bureau et serveurs Windows qui sont gérés par le client  Configuration Manager.  
+Utilisez l’élément de configuration **personnalisé Ordinateurs de bureau et serveurs Windows** Configuration Manager pour gérer les paramètres des ordinateurs et des serveurs Windows gérés par le client Configuration Manager.  
 
-## <a name="start-the-create-configuration-item-wizard"></a>Démarrer l'Assistant Création d'élément de configuration
 
-1.  Dans la console Configuration Manager, cliquez sur **Ressources et Conformité** > **Paramètres de compatibilité** > **Éléments de configuration**.  
 
-3.  Dans l'onglet **Accueil** , dans le groupe **Créer** , cliquez sur **Créer un élément de configuration**.  
+## <a name="start-the-wizard"></a>Démarrer l’Assistant
 
-4.  Dans la page **Général** de l’ **Assistant Création d’élément de configuration**, spécifiez un nom et une description éventuelle pour l’élément de configuration.  
+1. Dans la console Configuration Manager, accédez à l’espace de travail **Ressources et Conformité**, développez **Paramètres de conformité**, puis sélectionnez le nœud **Éléments de configuration**.  
 
-5.  Sous **Spécifier le type d’élément de configuration que vous voulez créer**, sélectionnez **Ordinateurs et serveurs Windows (personnalisés)**.  
+2. Sous l’onglet **Accueil** du ruban, sélectionnez **Créer un élément de configuration** dans le groupe **Créer**.  
+
+3. Dans la page **Général** de l’ **Assistant Création d’élément de configuration**, spécifiez un nom et une description éventuelle pour l’élément de configuration.  
+
+4. Sous **Spécifier le type d’élément de configuration que vous voulez créer**, sélectionnez **Ordinateurs et serveurs Windows (personnalisés)**.  
 
     > [!TIP]  
-    >  Si vous voulez fournir des paramètres de méthode de détection pour vérifier l’existence d’une application, sélectionnez **Cet élément de configuration contient des paramètres d’application**.  
+    > Si vous voulez fournir des paramètres de méthode de détection pour vérifier l’existence d’une application, sélectionnez **Cet élément de configuration contient des paramètres d’application**.  
 
-6.  Cliquez sur **Catégories** si vous créez et attribuez des catégories pour faciliter la recherche et le filtrage des éléments de configuration dans la console Configuration Manager.  
+5. Pour rechercher et filtrer plus facilement des éléments de configuration dans la console Configuration Manager, sélectionnez **Catégories** afin de créer et d’attribuer des catégories.  
 
-## <a name="provide-detection-method-information"></a>Fournir des informations de méthode de détection  
- Utilisez cette procédure pour fournir les informations de méthode de détection de l'élément de configuration.  
+
+
+## <a name="detection-methods"></a>Méthodes de détection  
+
+Utilisez cette procédure pour fournir les informations de méthode de détection de l'élément de configuration.  
 
 > [!NOTE]  
->  S'applique uniquement si vous avez sélectionné **cet élément de configuration contient des paramètres d'application** sur la **Général** page de l'Assistant.  
+> Cette information ne s’applique que si **Cet élément de configuration contient des paramètres d’application** est sélectionné sur la page **Général** de l’Assistant.  
 
- Une méthode de détection dans Configuration Manager contient des règles qui sont utilisées pour déterminer si une application est installée sur un ordinateur. La détection a lieu avant l'évaluation de la compatibilité de l'élément de configuration. Pour déterminer si une application est installée, vous pouvez détecter la présence du Windows Installer de l'application, utiliser un script personnalisé ou sélectionner **Toujours partir du principe que l'application est installée** pour évaluer la compatibilité de l'élément de configuration, que l'application soit installée ou non.  
+Une méthode de détection dans Configuration Manager contient des règles qui sont utilisées pour déterminer si une application est installée sur un ordinateur. Cette détection se produit avant que le client évalue sa conformité pour l’élément de configuration. Pour déterminer si une application est installée, vous pouvez détecter la présence du Windows Installer de l'application, utiliser un script personnalisé ou sélectionner **Toujours partir du principe que l'application est installée** pour évaluer la compatibilité de l'élément de configuration, que l'application soit installée ou non.  
 
- Utilisez ces procédures pour configurer des méthodes de détection dans System Center Configuration Manager.  
 
-### <a name="to-detect-an-application-installation-by-using-the-windows-installer-file"></a>Pour détecter une installation d'application en utilisant le fichier Windows Installer  
+### <a name="to-detect-an-application-installation-by-using-the-windows-installer-file"></a>Pour détecter une installation d’application avec le fichier Windows Installer  
 
-1.  Sur le **des méthodes de détection** page de la **Assistant Création d'un élément de Configuration**, sélectionnez le **utiliser Windows Installer detection** case à cocher.  
+1. Sur la page **Méthodes de détection** de **l’Assistant Création d’un élément de Configuration**, sélectionnez l’option **Utiliser la détection Windows Installer**.  
 
-2.  Cliquez sur **Open**, recherchez le fichier Windows Installer (.msi) que vous souhaitez détecter, puis cliquez sur **Open**.  
+2. Sélectionnez **Ouvrir**, recherchez le fichier Windows Installer (.msi) à détecter, puis sélectionnez **Open**.  
 
-3.  Le **Version** zone est automatiquement renseignée avec le numéro de version du fichier Windows Installer que vous avez sélectionné. Si la valeur affichée est incorrecte, vous pouvez entrer un nouveau numéro de version dans cette zone.  
+3. Le **Version** champ remplit automatiquement avec le numéro de version du fichier Windows Installer. Si la valeur affichée est incorrecte, entrez un nouveau numéro de version ici.  
 
-4.  Cochez la case **Cette application n’est pas installée pour un ou plusieurs utilisateurs** pour détecter chaque profil utilisateur sur l’ordinateur.  
+4. Pour détecter chacun des profils utilisateur de l’ordinateur, sélectionnez **Cette application est installée pour un ou plusieurs utilisateurs**.  
+
 
 ### <a name="to-detect-a-specific-application-and-deployment-type"></a>Pour détecter un type d’application et de déploiement spécifique  
 
-1.  Dans la page **Méthodes de détection** de l’ **Assistant Création d’élément de configuration**, cochez la case **Détecter un type d’application et de déploiement spécifique** , puis cliquez sur **Sélectionner**.  
+1. Sur la page **Méthodes de détection** de **l’Assistant Création d’un élément de configuration**, sélectionnez **Détecter un type d’application et de déploiement spécifique**. Choisissez **sélectionnez**.   
 
-2.  Dans la boîte de dialogue **Spécifier une application** , sélectionnez l’application et un type de déploiement associé à détecter.  
+2. Dans la boîte de dialogue **Spécifier une application** , sélectionnez l’application et un type de déploiement associé à détecter.  
+
 
 ### <a name="to-detect-an-application-installation-by-using-a-custom-script"></a>Pour détecter une installation d’application à l’aide d’un script personnalisé  
 
-1.  Sur le **méthodes de détection** page de la **Assistant Création d'un élément de Configuration**, sélectionnez le **utiliser un script personnalisé pour détecter cette application** case à cocher.  
+1. Sur la page **Méthodes de détection** de **l’Assistant Création d’un élément de Configuration**, sélectionnez l’option **Utiliser un script personnalisé pour détecter cette application**.  
 
-2.  Dans la liste, sélectionnez la langue du script que vous souhaitez ouvrir. Choisissez les scripts suivants :  
+2. Dans la liste, sélectionnez la langue du script. Choisissez l’un des formats suivants :  
 
-    -   **VBScript**  
+    - **VBScript**  
 
-    -   **JScript**  
+    - **JScript**  
 
-    -   **PowerShell**  
+    - **PowerShell**  
 
-3.  Cliquez sur **Ouvrir**, accédez au script à utiliser, puis cliquez sur **Ouvrir**.  
+        > [!Note]  
+        > Depuis la version 1810, quand un script Windows PowerShell s’exécute comme une méthode de détection, le client Configuration Manager appelle PowerShell avec le `-NoProfile` paramètre. Cette option démarre PowerShell sans aucun profil. Un profil PowerShell est un script qui s’exécute au démarrage de PowerShell. <!--3607762-->  
+
+3. Sélectionnez **Ouvrir**, accédez au script à utiliser, puis sélectionnez **Ouvrir**.  
+
+
+
+##  <a name="specify-supported-platforms"></a>Spécifier les plateformes prises en charge  
+
+Sur la page **Plateformes prises en charge** de **l’Assistant Création d’un élément de configuration**, sélectionnez les versions de Windows sur lesquelles vous voulez évaluer la conformité de l’élément de configuration, ou choisissez **Tout sélectionner**. 
+
+Il est également possible de **Spécifier manuellement la version de Windows**. Sélectionnez **ajouter** et spécifiez le numéro de build de chaque partie de la Windows. 
+
+
 
 ##  <a name="configure-settings"></a>Configurer les paramètres  
- Utilisez cette procédure pour configurer les paramètres dans l'élément de configuration.  
 
- Représentent les paramètres de l'entreprise ou critères techniques sont utilisées pour évaluer la conformité des périphériques clients. Vous pouvez configurer un nouveau paramètre ou accéder à un paramètre existant sur un ordinateur de référence.  
+Utilisez cette procédure pour configurer les paramètres dans l'élément de configuration.  
 
-1. Dans la page **Paramètres** de l' **Assistant Création d'élément de configuration**, cliquez sur **Nouveau**.  
+Représentent les paramètres de l'entreprise ou critères techniques sont utilisées pour évaluer la conformité des périphériques clients. Vous pouvez configurer un nouveau paramètre ou accéder à un paramètre existant sur un ordinateur de référence.  
+
+1. Sur la page **Paramètres** de **l’Assistant Création d’un élément de configuration**, sélectionnez **Nouveau**.  
 
 2. Sur l'onglet **Général** de la boîte de dialogue **Créer un paramètre** , fournissez les informations suivantes :  
 
-   - **Nom :** entrez un nom unique pour le paramètre. Vous pouvez utiliser jusqu'à 256 caractères.  
+    - **Nom** : donnez un nom unique au paramètre. Vous pouvez utiliser jusqu'à 256 caractères.  
 
-   - **Description :** entrez la description du paramètre. Vous pouvez utiliser jusqu'à 256 caractères.  
+    - **Description** : entrez la description du paramètre. Vous pouvez utiliser jusqu'à 256 caractères.  
 
-   - **Type de paramètre :** dans la liste, choisissez et configurez l’un des types de paramètres suivants à utiliser pour ce paramètre :  
+    - **Type de paramètre** : choisissez l’un des types de paramètres de la liste suivante et configurez-le de façon à l’utiliser pour ce paramètre :  
+        - [Requête Active Directory](#bkmk_adquery)
+        - [Assembly](#bkmk_assembly)
+        - [Système de fichiers](#bkmk_file)
+        - [Métabase IIS](#bkmk_iis)
+        - [Clé du Registre](#bkmk_regkey)
+        - [Valeur de Registre](#bkmk_regval)
+        - [Script](#bkmk_script)
+        - [Requête SQL](#bkmk_sql)
+        - [Requête WQL](#bkmk_wql)
+        - [Requête XPath](#bkmk_xpath)
 
-     - **Requête Active Directory**  
+    - **Type de données** : choisissez le format dans lequel la condition retourne les données avant de les utiliser pour évaluer le paramètre. La liste **Type de données** ne s’affiche pas pour tous les types de paramètres.  
 
-        **Préfixe LDAP** : désigne un préfixe valide pour la requête des services de domaine Active Directory afin d’évaluer la compatibilité sur les ordinateurs clients. Vous pouvez utiliser **LDAP: / /** pour un ou **GC: / /** pour effectuer une recherche de catalogue global...  
+        > [!Tip]  
+        > Le type de données **Virgule flottante** ne gère que trois chiffres après la virgule décimale.  
 
-        **Nom unique (DN)** -spécifier le nom unique de l'objet Services de domaine Active Directory qui est évaluée pour la conformité sur les ordinateurs clients.  
+3. Configurer des détails supplémentaires sur ce paramètre sous la **définition de type** liste. Les éléments configurables dépendent du type de paramètre sélectionné.  
 
-        Par exemple, si vous voulez évaluer une valeur associée à un utilisateur nommé John Smith dans le domaine corp.contoso.com, entrez ce qui suit :  
+4. Sélectionnez **OK** pour enregistrer le paramètre et fermer la boîte de dialogue **Créer un paramètre**.  
 
-       - **Filtre de recherche** : indique le filtre LDAP facultatif permettant d'affiner les résultats de la requête Services de domaine Active Directory pour évaluer la compatibilité sur les ordinateurs clients.  
 
-          Pour renvoyer tous les résultats de la requête, entrez **(objectclass=\*)**.  
+### <a name="bkmk_adquery"></a> Requête Active Directory
 
-       - **Zone de recherche :** indique la zone de recherche dans les services de domaine Active Directory. Les choix sont les suivants :  
+- **Préfixe LDAP** : indiquez un préfixe valide permettant à la requête Active Directory Domain Services d’évaluer la conformité sur les ordinateurs clients. Pour effectuer une recherche de catalogue global, utilisez `LDAP://` ou `GC://`.  
 
-         -   **Base** -interroge uniquement l'objet spécifié.  
+- **Nom unique** : indiquez le nom unique de l’objet Active Directory Domain Services dont la conformité est évaluée sur les ordinateurs clients.  
 
-         -   **Un niveau** : cette option n’est pas utilisée dans cette version de Configuration Manager.  
+- **Filtre de recherche** : indiquez un filtre LDAP facultatif permettant d’affiner les résultats de la requête Active Directory Domain Services pour évaluer la conformité sur les ordinateurs clients. Pour renvoyer tous les résultats de la requête, entrez `(objectclass=*)`.  
 
-         -   **Sous-arborescence** -interroge l'objet spécifié et son sous-arbre dans l'annuaire.  
+- **Zone de recherche** : indiquez l’étendue de recherche dans Active Directory Domain Services :  
 
-       - **Propriété** -spécifier la propriété de l'objet Services de domaine Active Directory qui est utilisé pour évaluer la conformité sur les ordinateurs clients.  
+    - **Base** : interroge uniquement l’objet spécifié.  
 
-          Par exemple, si vous souhaitez interroger la propriété Active Directory **badPwdCount**, qui stocke le nombre de fois qu'un utilisateur entre incorrectement un mot de passe, entrez **badPwdCount** dans ce champ.  
+    - **Un niveau** : cette option n’est pas utilisée dans cette version de Configuration Manager.  
 
-       - **Requête** -affiche la requête créée à partir des entrées dans **préfixe LDAP**, **nom unique (DN)**, **filtre de recherche** (si spécifiée), et **propriété**, qui sont utilisés pour évaluer la conformité sur les ordinateurs clients.  
+    - **Sous-arborescence** : interroge l’objet spécifié et la totalité de sa sous-arborescence dans le répertoire.  
 
-         Pour plus d'informations sur la construction des requêtes LDAP, voir la documentation de Windows Server.  
+- **Propriété** : indiquez la propriété de l’objet Active Directory Domain Services utilisé pour évaluer la conformité sur les ordinateurs clients.  
 
-     - **Assembly**  
+    Par exemple, pour interroger la propriété Active Directory qui stocke le nombre de saisies incorrectes du mot de passe par un utilisateur, entrez `badPwdCount` dans ce champ.  
 
-        Configurez les éléments suivants pour ce type de paramètre :  
+- **Requête** : affiche la requête créée à partir des entrées **Préfixe LDAP**, **Nom unique**, **Filtre de recherche** (s’il est défini) et **Propriété**.  
 
-       - **Nom de l’assembly :** spécifie le nom de l’objet assembly à rechercher. Ce nom doit être différent des autres objets assembly de même type et il doit être enregistré dans le GAC (Global Assembly Cache). Le nom de l'assembly peut comporter jusqu'à 256 caractères.  
 
-         Un assembly est un fragment de code qui peut être partagé entre plusieurs applications. Les assemblys peuvent comporter l'extension de fichier .dll ou .exe. Le Global Assembly Cache est un dossier appelé *%systemroot%\Assembly* sur client ordinateurs où tous les assemblys partagés sont stockés.  
+### <a name="bkmk_assembly"></a> Assembly
 
-     - **Système de fichiers**  
+Un assembly est un fragment de code qui peut être partagé entre plusieurs applications. Les assemblys peuvent comporter l'extension de fichier .dll ou .exe. Le global assembly cache est le dossier `%SystemRoot%\Assembly` sur les ordinateurs clients. Ce cache est l’emplacement où Windows stocke tous les assemblys partagés.  
 
-       - **Type** : dans la liste, indiquez si vous voulez rechercher un **fichier** ou un **dossier**.  
+- **Nom de l'assembly :** Spécifie le nom de l'objet de l'assembly que vous souhaitez rechercher. Le nom ne peut pas être le même que les autres objets assembly du même type. Tout d’abord l’inscrire dans le global assembly cache. Le nom de l'assembly peut comporter jusqu'à 256 caractères.  
 
-       - **Chemin** -spécifier le chemin d'accès du fichier spécifié ou du dossier sur les ordinateurs clients. Vous pouvez spécifier des variables d'environnement système et la variable d'environnement *%USERPROFILE%* dans le chemin.  
 
-         > [!NOTE]  
-         >  Si vous utilisez la variable d’environnement *%USERPROFILE%* dans les zones **Chemin** ou **Nom de fichier ou de dossier** , tous les profils utilisateur sont recherchés sur l’ordinateur client et plusieurs instances du fichier ou du dossier peuvent être trouvées.  
-         >   
-         >  Si les paramètres de compatibilité n’ont pas accès au chemin spécifié, une erreur de découverte est générée. En outre, si le fichier que vous recherchez est actuellement en cours d'utilisation, une erreur de découverte est générée.  
+### <a name="bkmk_file"></a> Système de fichiers
 
-       - **Nom de fichier ou dossier** -spécifiez le nom de l'objet fichier ou dossier à rechercher. Vous pouvez spécifier des variables d'environnement système et la variable d'environnement *%USERPROFILE%* dans le nom de fichier ou de dossier. Vous pouvez aussi utiliser les caractères génériques * et ? dans le nom du fichier.  
+- **Type** : indiquez dans la liste si vous voulez rechercher un **Fichier** ou un **Dossier**.  
 
-         > [!NOTE]  
-         >  Si vous spécifiez un nom de fichier ou dossier en utilisant des caractères génériques, cette combinaison peut produire un grand nombre de résultats et entraîner une forte utilisation des ressources sur l’ordinateur client ainsi qu’un trafic réseau élevé lors du signalement des résultats à System Center 2012 Configuration Manager.  
+- **Chemin** : indiquez le chemin d’accès du fichier ou du dossier spécifié sur les ordinateurs clients. Vous pouvez spécifier des variables d'environnement système et la variable d'environnement `%USERPROFILE%` dans le chemin.  
 
-       - **Inclure les sous-dossiers** : activez cette option si vous voulez également effectuer la recherche dans les sous-dossiers dans le chemin spécifié.  
+    > [!NOTE]  
+    > Si vous utilisez le `%USERPROFILE%` variable d’environnement dans le **chemin d’accès** ou **nom de fichier ou dossier** zones, le client Configuration Manager recherche dans tous les profils utilisateur sur l’ordinateur client. Ce comportement peut entraîner il recherche plusieurs instances du fichier ou du dossier.  
+    >   
+    > Si les paramètres de conformité n’ont pas accès au chemin spécifié, une erreur de découverte est générée. En outre, si le fichier que vous recherchez est actuellement en cours d'utilisation, une erreur de découverte est générée.  
 
-       - **Ce fichier ou dossier est associé à une application 64 bits** - si activé, seuls les emplacements de fichiers 64 bits (tel que *% ProgramFiles%*) sera vérifié sur les ordinateurs 64 bits. Si cette option n’est pas activée, les emplacements 32 bits (tels que *%ProgramFiles(x86)%*) et 64 bits sont vérifiés.  
+    > [!Tip]  
+    > Sélectionnez **Parcourir** pour configurer le paramètre à partir de valeurs sur un ordinateur de référence.   
 
-         > [!NOTE]  
-         >  Si le même fichier ou dossier existe dans les emplacements de systèmes de fichiers 64 bits et 32 bits sur le même ordinateur 64 bits, la condition globale détecte plusieurs fichiers.  
+- **Nom du fichier ou du dossier** : indiquez le nom de l’objet fichier ou dossier à rechercher. Vous pouvez spécifier des variables d'environnement système et la variable d'environnement `%USERPROFILE%` dans le nom de fichier ou de dossier. Il est également possible d’utiliser les caractères génériques `*` et `?` dans le nom de fichier.  
 
-         Le paramètre **Système de fichiers** ne permet pas de définir un chemin UNC de partage réseau dans la zone **Chemin** .  
+    > [!NOTE]  
+    > Si vous spécifiez un nom de fichier ou de dossier avec des caractères génériques, la combinaison risque de produire de nombreux résultats, ou d’engendrer une utilisation élevée des ressources sur l’ordinateur client et une augmentation du trafic réseau lors de la transmission des résultats à Configuration Manager.  
 
-     - **Métabase IIS**  
+- **Inclure les sous-dossiers**: également rechercher tous les sous-dossiers sous le chemin d’accès spécifié.  
 
-       -   **Chemin de la métabase** : spécifiez un chemin valide à la métabase Internet Information Services (IIS).  
+- **Ce fichier ou dossier est associé à une application 64 bits**: si activé, uniquement rechercher les emplacements de fichiers 64 bits tel que `%ProgramFiles%` sur les ordinateurs 64 bits. Si cette option n’est pas activée, une recherche les emplacements 64 bits et 32 bits emplacements telles que `%ProgramFiles(x86)%`.  
 
-       -   **ID de propriété** : indique la propriété numérique du paramètre Métabase IIS.  
+    > [!NOTE]  
+    > Si le même fichier ou dossier existe dans les emplacements de systèmes de fichiers 64 bits et 32 bits sur le même ordinateur 64 bits, la condition globale détecte plusieurs fichiers.  
 
-     - **Clé du Registre**  
+    Le type de paramètre **Système de fichiers** ne permet pas de spécifier un chemin d’accès UNC à un partage réseau dans la zone **Chemin**.  
 
-       -   **Ruche** : dans la liste, sélectionnez la ruche du Registre dans laquelle vous voulez effectuer la recherche.  
 
-       -   **Clé** : indiquez le nom de clé de Registre à rechercher. Utilisez le format *clé\sous-clé*.  
+### <a name="bkmk_iis"></a> Métabase IIS
 
-       -   **Cette clé de Registre est associée à une application 64 bits** -Spécifie si les clés de Registre 64 bits doivent être recherchés en plus des clés de Registre 32 bits sur les clients qui exécutent une version 64 bits de Windows.  
+- **Chemin de la métabase** : indiquez un chemin d’accès valide à la métabase Internet Information Services (IIS). Par exemple, `/LM/W3SVC/`.  
 
-           > [!NOTE]  
-           >  Si la même clé de Registre existe dans les emplacements de Registre 64 bits et 32 bits sur un même ordinateur 64 bits, les deux clés de Registre sont détectées par la condition globale.  
+- **ID de propriété** : indiquez la propriété numérique du paramètre de la métabase IIS.  
 
-     - **Valeur de Registre**  
 
-       - **Ruche** : dans la liste, sélectionnez la ruche du Registre dans laquelle vous voulez effectuer la recherche.  
+### <a name="bkmk_regkey"></a> Clé de Registre
 
-       - **Clé** : indiquez le nom de clé de Registre à rechercher. Utilisez le format *clé\sous-clé*.  
+- **Hive**: sélectionnez la ruche du Registre que vous souhaitez rechercher
 
-       - **Valeur** : indiquez la valeur qui doit être contenue dans la clé de Registre spécifiée.  
+    > [!Tip]  
+    > Sélectionnez **Parcourir** pour configurer le paramètre à partir de valeurs sur un ordinateur de référence. Pour accéder à une clé de Registre sur un ordinateur distant, vous devez activer le **Registre distant** service sur l’ordinateur distant.  
 
-       - **Cette clé de Registre est associée à une application 64 bits** : indique si la recherche doit être effectuée dans les clés de Registre 64 bits en plus des clés de Registre 32 bits sur les clients qui exécutent une version Windows 64 bits.  
+- **Clé** : indiquez le nom de la clé de Registre à rechercher. Utilisez le format `key\subkey`.  
 
-         > [!NOTE]  
-         >  Si la même clé de Registre existe dans les emplacements de Registre 64 bits et 32 bits sur un même ordinateur 64 bits, les deux clés de Registre sont détectées par la condition globale.  
+- **Cette clé de Registre est associée à une application 64 bits** : recherchez les clés de Registre 64 bits en plus des clés de Registre 32 bits sur les clients qui utilisent une version 64 bits de Windows.  
 
-         Vous pouvez également cliquer sur **Parcourir** pour accéder à un emplacement de Registre sur l’ordinateur ou sur un ordinateur distant. Pour rechercher un ordinateur distant, vous devez disposer des droits d'administrateur sur l'ordinateur distant et l'ordinateur distant doit exécuter le service Registre distant.  
+    > [!NOTE]  
+    > Si la même clé de Registre existe dans les emplacements de Registre 64 bits et 32 bits sur un même ordinateur 64 bits, les deux clés de Registre sont détectées par la condition globale.  
 
-     - **Script**  
 
-       -   **Script de découverte** : cliquez sur **Ajouter** pour entrer ou rechercher le script que vous souhaitez utiliser. Vous pouvez utiliser des scripts Windows PowerShell, VBScript ou Microsoft JScript.  
+### <a name="bkmk_regval"></a> Valeur de Registre
 
-       -   **Exécuter des scripts avec les informations d’identification d’utilisateur dont la session est ouverte** : si vous activez cette option, le script s’exécute sur les ordinateurs clients qui utilisent les informations d’identification des utilisateurs connectés.  
+- **Hive**: sélectionnez la ruche du Registre à rechercher.  
 
-           > [!NOTE]  
-           >  La valeur renvoyée par le script est utilisée pour évaluer la compatibilité de la condition globale. Par exemple, quand vous utilisez VBScript, vous pouvez utiliser la commande **WScript.Echo Result** pour renvoyer la valeur de la variable *Result* vers la condition globale.  
+    > [!Tip]  
+    > Sélectionnez **Parcourir** pour configurer le paramètre à partir de valeurs sur un ordinateur de référence. Pour accéder à une valeur de Registre sur un ordinateur distant, vous devez activer le **Registre distant** service sur l’ordinateur distant. Vous devez également des autorisations d’administrateur pour accéder à l’ordinateur distant.  
 
-     - **Requête SQL**  
+- **Clé**: spécifiez le nom de clé de Registre à rechercher. Utilisez le format `key\subkey`.  
 
-       -   **Instance SQL Server** : indiquez si vous préférez que la requête SQL soit exécutée sur l'instance par défaut, sur toutes les instances ou sur le nom d'une instance de base de données spécifique.  
+- **Valeur** : indiquez la valeur qui doit être contenue dans la clé de Registre spécifiée.  
 
-           > [!NOTE]  
-           >  Le nom de l'instance doit faire référence à une instance locale de SQL Server. Pour faire référence à une instance SQL Server en cluster, utilisez plutôt un paramètre de script.  
+- **Cette clé de Registre est associée à une application 64 bits** : recherchez les clés de Registre 64 bits en plus des clés de Registre 32 bits sur les clients qui utilisent une version 64 bits de Windows.  
 
-       -   **Base de données** -spécifiez le nom de la base de données Microsoft SQL Server sur lequel vous souhaitez exécuter la requête SQL.  
+    > [!NOTE]  
+    > Si la même clé de Registre existe dans les emplacements de Registre 64 bits et 32 bits sur un même ordinateur 64 bits, les deux clés de Registre sont détectées par la condition globale.  
 
-       -   **Colonne** -Indiquez le nom de la colonne renvoyée par l'instruction Transact-SQL qui est utilisée pour évaluer la conformité de la condition globale.  
 
-       -   **Instruction Transact-SQL** : permet d'indiquer la requête SQL complète que vous souhaitez utiliser pour la condition globale. Vous pouvez également cliquer sur **Ouvrir** pour ouvrir une requête SQL existante.  
+### <a name="bkmk_script"></a> Script
 
-           > [!IMPORTANT]  
-           >  Les paramètres de requête SQL ne prennent pas en charge les commandes SQL qui modifient la base de données. Vous pouvez uniquement utiliser les commandes SQL qui lisent des informations à partir de la base de données.  
+La valeur renvoyée par le script est utilisée pour évaluer la compatibilité de la condition globale. Par exemple, quand vous utilisez VBScript, vous pouvez utiliser la commande **WScript.Echo Result** pour renvoyer la valeur de la variable *Result* vers la condition globale.  
 
-     - **Requête WQL**  
+- **Script de découverte**: sélectionnez **ajouter un Script**, puis entrez ou accédez à un script. Ce script est utilisé pour rechercher la valeur. Vous pouvez utiliser des scripts Windows PowerShell, VBScript ou Microsoft JScript.  
 
-       -   **Espace de noms** -spécifiez l'espace de noms Windows Management Instrumentation (WMI) qui est utilisé pour créer une requête WQL qui est évaluée pour la conformité sur les ordinateurs clients. La valeur par défaut est Root\cimv2.  
+- **Script de correction (facultatif)**: sélectionnez **ajouter un Script**, puis entrez ou accédez à un script. Ce script est utilisé pour corriger les valeurs de paramètre non conforme. Vous pouvez utiliser des scripts Windows PowerShell, VBScript ou Microsoft JScript.  
 
-       -   **Classe** -spécifie la classe WMI qui permet de créer une requête WQL qui est évaluée pour la conformité sur les ordinateurs clients.  
+- **Exécuter des scripts avec les informations d’identification de l’utilisateur connecté** : si cette option est activée, le script s’exécute sur les ordinateurs clients qui utilisent les informations d’identification de l’utilisateur connecté.  
 
-       -   **Propriété** -spécifie la propriété WMI qui permet de créer une requête WQL qui est évaluée pour la conformité sur les ordinateurs clients.  
+> [!Note]  
+> Depuis la version 1810, lorsque vous utilisez Windows PowerShell en tant qu’un script de découverte ou la mise à jour, le client Configuration Manager appelle PowerShell avec le `-NoProfile` paramètre. Cette option démarre PowerShell sans aucun profil. Un profil PowerShell est un script qui s’exécute au démarrage de PowerShell. <!--3607762-->  
 
-       -   **Clause WHERE de la requête WQL** : vous pouvez utiliser l'élément **Clause WHERE de la requête WQL** pour indiquer la clause WHERE à appliquer à l'espace de noms, à la classe et à la propriété spécifiés sur les ordinateurs clients.  
 
-     - **Requête XPath**  
+### <a name="bkmk_sql"></a> Requête SQL
 
-       - **Chemin** : spécifiez le chemin du fichier .xml sur les ordinateurs clients utilisé pour évaluer la compatibilité. Configuration Manager prend en charge l’utilisation de toutes les variables d’environnement système Windows et de la variable utilisateur *% USERPROFILE%* dans le nom de chemin.  
+- **Instance SQL Server** : indiquez si vous préférez que la requête SQL soit exécutée sur l’instance par défaut, sur toutes les instances ou sur une instance de base de données portant un nom spécifique.  
 
-       - **Nom du fichier XML** -spécifier le nom du fichier contenant la requête XML qui est utilisée pour évaluer la conformité sur les ordinateurs clients.  
+    > [!NOTE]  
+    > Le nom de l'instance doit faire référence à une instance locale de SQL Server. Pour faire référence à une instance SQL Server en cluster, utilisez plutôt un paramètre de script.  
 
-       - **Inclure les sous-dossiers** : activez cette option si vous voulez également rechercher dans tous les sous-dossiers sous le chemin spécifié.  
+- **Base de données** : indiquez le nom de la base de données Microsoft SQL Server sur laquelle vous souhaitez exécuter la requête SQL.  
 
-       - **Ce fichier est associé à une application 64 bits** : indiquez si la recherche doit porter également sur l’emplacement de fichier système 64 bits (*%windir%* \System32) en plus de l’emplacement de fichier système 32 bits (*%windir%* \Syswow64) sur les clients Configuration Manager qui exécutent une version 64 bits de Windows.  
+- **Colonne** : indiquez le nom de colonne retourné par l’instruction Transact-SQL utilisée pour évaluer la conformité de la condition globale.  
 
-       - **Requête XPath** -spécifier une valide complet requête XML path language (XPath) qui est utilisée pour évaluer la conformité sur les ordinateurs clients.  
+- **Instruction Transact-SQL** : indiquez la requête SQL complète à utiliser pour la condition globale. Pour utiliser une requête SQL existante, sélectionnez **Open**.  
 
-       - **Espaces de noms** : ouvre la boîte de dialogue **Espaces de noms XML** pour identifier les espaces de noms et les préfixes à utiliser pendant la requête XPath.  
+    > [!IMPORTANT]  
+    > Les paramètres de requête SQL ne prennent pas en charge les commandes SQL qui modifient la base de données. Vous pouvez uniquement utiliser les commandes SQL qui lisent des informations à partir de la base de données.  
 
-         Si vous tentez de détecter un fichier .xml chiffré, les paramètres de compatibilité trouvent le fichier, mais la requête XPath ne produit aucun résultat, et aucune erreur n’est générée.  
 
-         Si la requête XPath n’est pas valide, le paramètre est évalué comme étant non compatible sur les ordinateurs clients.  
+### <a name="bkmk_wql"></a> Requête WQL
 
-   - **Type de données :** dans la liste, choisissez le format dans lequel la condition retourne les données avant de les utiliser pour évaluer le paramètre. Le **type de données** liste n'est pas affichée pour tous les types de paramètre.  
+- **Namespace**: spécifiez l’espace de noms WMI qui est évaluée pour la conformité sur les ordinateurs clients. La valeur par défaut est `root\cimv2`.  
 
-     > [!NOTE]  
-     >  Le type de données **Virgule flottante** prend en charge uniquement 3 chiffres après la virgule décimale.  
+- **Classe**: spécifier la cible de classe WMI dans l’espace de noms ci-dessus.  
 
-3. Configurer des détails supplémentaires sur ce paramètre sous la **définition de type** liste. Les éléments que vous pouvez configurer varient selon le type de paramètre que vous avez sélectionné.  
+- **Propriété**: spécifiez la propriété WMI cible dans la classe ci-dessus.  
 
-   > [!NOTE]  
-   >  Lorsque vous créez des paramètres de type **système de fichiers**, **clé de Registre**, et **valeur de Registre**, vous pouvez cliquer sur **Parcourir** pour configurer le paramètre à partir de valeurs sur un ordinateur de référence. Pour accéder à une clé de Registre ou une valeur sur un ordinateur distant, l'ordinateur distant doit avoir le service Registre distant est activé.  
+- **Clause WHERE de la requête WQL**: spécifiez une clause qualifiante pour réduire les résultats. Par exemple, pour interroger uniquement le service DHCP dans la classe Win32_Service, la clause WHERE peut être `Name = 'DHCP' and StartMode = 'Auto'`.   
 
-4. Cliquez sur **OK** pour enregistrer le paramètre et fermer la boîte de dialogue **Créer un paramètre** .  
+
+### <a name="bkmk_xpath"></a> Requête XPath
+
+- **Chemin** : indiquez le chemin sur les ordinateurs clients du fichier .xml utilisé pour évaluer la conformité. Configuration Manager prend en charge toutes les variables d’environnement système Windows et de la variable utilisateur `%USERPROFILE%` dans le nom de chemin.  
+
+- **Nom du fichier XML**: spécifiez le nom de fichier contenant la requête XML dans le chemin d’accès ci-dessus.  
+
+- **Inclure les sous-dossiers** : activez cette option pour effectuer la recherche dans les sous-dossiers du chemin spécifié.  
+
+- **Ce fichier est associé à une application 64 bits**: rechercher l’emplacement du fichier système 64 bits `%Windir%\System32` en plus de l’emplacement du fichier système 32 bits `%Windir%\Syswow64` sur les clients Configuration Manager qui exécutent une version 64 bits de Windows.  
+
+- **Requête XPath**: spécifier une valide complet requête XML path language (XPath).  
+
+- **Espaces de noms**: identifier les espaces de noms et préfixes à utiliser lors de la requête XPath.  
+
+Si vous tentez de détecter un fichier .xml chiffré, les paramètres de conformité trouvent le fichier, mais la requête XPath ne produit aucun résultat. Le client Configuration Manager ne génère une erreur.  
+
+Si la requête XPath n’est pas valide, le paramètre est évalué comme étant non conforme sur les ordinateurs clients.  
+
+
 
 ##  <a name="configure-compliance-rules"></a>Configurer des règles de compatibilité  
- Procédez comme suit pour configurer des règles de compatibilité pour l'élément de configuration.  
 
- Les règles de compatibilité spécifient les critères qui définissent la compatibilité d'un élément de configuration. Avant que la compatibilité d'un paramètre puisse être évaluée, celui-ci doit comporter au moins une règle de compatibilité. WMI, Registre et les paramètres de script vous permettent de corriger les valeurs qui sont identifiés comme étant non conforme. Vous pouvez créer de nouvelles règles ou accédez à un paramètre existant dans n'importe quel élément de configuration pour sélectionner les règles qu'il contient.  
+Les règles de compatibilité spécifient les critères qui définissent la compatibilité d'un élément de configuration. Avant que la compatibilité d'un paramètre puisse être évaluée, celui-ci doit comporter au moins une règle de compatibilité. WMI, Registre et les paramètres de script vous permettent de corriger les valeurs qui sont identifiés comme étant non conforme. Vous pouvez créer de nouvelles règles ou accédez à un paramètre existant dans n'importe quel élément de configuration pour sélectionner les règles qu'il contient.  
+
 
 ### <a name="to-create-a-compliance-rule"></a>Pour créer une règle de compatibilité  
 
-1.  Sur la page **Règles de compatibilité** de l' **Assistant Création d'élément de configuration**, cliquez sur **Nouveau**.  
+1. Sur la page **Règles de conformité** de **l’Assistant Création d’un élément de configuration**, sélectionnez **Nouveau**.  
 
-2.  Dans la boîte de dialogue **Créer une règle** , indiquez les informations suivantes :  
+2. Dans la boîte de dialogue **Créer une règle** , indiquez les informations suivantes :  
 
-    -   **Nom :** Entrez un nom pour la règle de compatibilité.  
+    - **Nom** : donnez un nom à la règle de conformité.  
 
-    -   **Description :** Entrez une description pour la règle de compatibilité.  
+    - **Description** : entrez la description de la règle de conformité.  
 
-    -   **Paramètre sélectionné :** Cliquez sur **Parcourir** pour ouvrir la boîte de dialogue **Paramètre de sélection**. Sélectionnez le paramètre que vous souhaitez définir une règle, ou cliquez sur **nouveau paramètre**. Lorsque vous avez terminé, cliquez sur **Sélectionner**.  
+    - **Paramètre sélectionné** : sélectionnez **Parcourir** pour ouvrir la boîte de dialogue **Sélectionner le paramètre**. Sélectionnez le paramètre pour lequel vous souhaitez définir une règle ou bien **Nouveau paramètre**. Lorsque vous avez terminé, choisissez **sélectionnez**.  
 
-        > [!NOTE]  
-        >  Vous pouvez également cliquer sur **Propriétés** pour afficher des informations sur le paramètre actuellement sélectionné.  
+        > [!Tip]  
+        > Pour afficher des informations sur le paramètre actuellement sélectionné, sélectionnez **propriétés**.  
 
-    -   **Type de règle :** Sélectionnez le type de règle de compatibilité que vous souhaitez utiliser :  
+    - **Type de règle**: Sélectionnez le type de règle de compatibilité que vous souhaitez utiliser :  
 
-        -   **Valeur** créer une règle qui compare la valeur renvoyée par l'élément de configuration par rapport à une valeur que vous spécifiez.  
+        - **Valeur** : créez une règle qui compare la valeur retournée par l’élément de configuration à une valeur spécifiée. Pour plus d’informations sur les paramètres supplémentaires, consultez [valeur règles](#bkmk_value).  
 
-        -   **Existentiel** créer une règle qui évalue le paramètre, selon qu'elle existe sur un périphérique client ou sur le nombre de fois où il se trouve.  
+        - **Existentiel** : créez une règle qui évalue la présence du paramètre sur un appareil client ou bien le nombre d’occurrences. Pour plus d’informations sur les paramètres supplémentaires, consultez [Existentiels règles](#bkmk_exist).  
 
-    -   Pour un type de règle **Valeur**, spécifiez les informations suivantes :  
+3. Sélectionnez **OK** pour fermer la boîte de dialogue **Créer une règle**.  
 
-        -   **Le paramètre doit respecter la règle suivante** – sélectionnez un opérateur et une valeur d'évaluation de la compatibilité avec le paramètre sélectionné. Vous pouvez utiliser les opérateurs suivants :  
 
-            |Opérateur|Informations complémentaires|  
-            |--------------|----------------------|  
-            |Égal à|Aucune information supplémentaire|  
-            |N'est pas égal à|Aucune information supplémentaire|  
-            |Supérieur à|Aucune information supplémentaire|  
-            |Inférieur à|Aucune information supplémentaire|  
-            |Entre|Aucune information supplémentaire|  
-            |Supérieur ou égal à|Aucune information supplémentaire|  
-            |Inférieur ou égal à|Aucune information supplémentaire|  
-            |L'un des|Dans la zone de texte, spécifiez une entrée sur chaque ligne.|  
-            |Aucun des|Dans la zone de texte, spécifiez une entrée sur chaque ligne.|  
 
-        -   **Résoudre les règles non compatibles lorsqu’elles sont prises en charge** : sélectionnez cette option si vous voulez que Configuration Manager corrige automatiquement les règles non compatibles. Configuration Manager.peut corriger automatiquement les types de règles suivants :  
 
-            -   **Valeur de Registre** – la valeur de Registre est mis à jour si elle est non conforme et créé s'il n'existe pas.  
+### <a name="bkmk_value"></a> Règles de valeur  
 
-            -   **Script** (en exécutant automatiquement un script de correction).  
+- **Propriété**: la propriété de l’objet à vérifier varie en fonction du paramètre sélectionné. Les propriétés disponibles varient en fonction du type de paramètre. 
 
-            -   **Requête WQL**  
+- **Le paramètre doit être compatible avec les éléments suivants...** : Les règles disponibles ou les autorisations varient en fonction du type de paramètre.
 
-            > [!IMPORTANT]  
-            >  Vous ne pouvez corriger que les règles non compatibles lorsque l'opérateur de règle est défini sur **Égal à**.  
+- **Corriger les règles non conformes prises en charge** : sélectionnez cette option pour que Configuration Manager corrige automatiquement les règles non conformes. Configuration Manager prend en charge cette action avec les types de règles suivants :  
 
-        -   **Rapport de non-conformité si cette définition de l'instance est introuvable** : l'élément de configuration des rapports non-conformité si ce paramètre n'est pas disponible sur les ordinateurs clients.  
+    - **Valeur de Registre**: si elle n’est pas conforme, le client définit la valeur de Registre. S’il n’existe pas, le client crée la valeur.  
 
-        -   **Gravité de la non conformité pour les rapports :** spécifiez le niveau de gravité signalé (dans les rapports Configuration Manager) si cette règle de conformité échoue. Les niveaux de gravité disponibles sont les suivants :  
+    - **Script**: le client utilise le script de mise à jour que vous avez spécifié avec le paramètre.  
 
-            -   **Aucun** : les ordinateurs non conformes à cette règle de compatibilité ne signalent pas de gravité d'échec.  
+    - **Requête WQL**  
 
-            -   **Information** : les ordinateurs non conformes à cette règle de compatibilité signalent une gravité d'échec **Informations**.  
+    > [!IMPORTANT]  
+    > Vous ne pouvez corriger que les règles non compatibles lorsque l'opérateur de règle est défini sur **Égal à**.  
 
-            -   **Avertissement** : les ordinateurs non conformes à cette règle de compatibilité signalent une gravité d'échec **Avertissement**.  
+- **Signaler la non-compatibilité si l’instance de ce paramètre n’est pas trouvée**: Si ce paramètre n’est pas disponible sur les ordinateurs clients, activez cette option pour l’élément de configuration signaler une non-conformité.  
 
-            -   **Critique** : les ordinateurs non conformes à cette règle de compatibilité signalent une gravité d'échec **Critique**.  
+- **Gravité de non-conformité pour les rapports** : indiquez le niveau de gravité signalé dans les rapports Configuration Manager si cette règle de conformité échoue. Les niveaux de gravité suivants sont disponibles :  
+    - **Aucun**  
+    - **Information**  
+    - **Avertissement**  
+    - **Critique**  
+    - **Critique avec événement** : les ordinateurs non conformes à cette règle signalent une gravité d’échec **Critique**. Ce niveau de gravité est également enregistré comme un événement Windows dans le journal des événements des applications.  
 
-            -   **Critique avec événement** : les ordinateurs non conformes à cette règle de compatibilité signalent une gravité d'échec **Critique**. Ce niveau de gravité est également enregistré comme un événement Windows dans le journal des événements des applications.  
 
-        -   Pour un type de règle **Existentiel**, spécifiez les informations suivantes :  
+### <a name="bkmk_exist"></a> Règles existentiels 
 
-            > [!NOTE]  
-            >  Les options affichées peuvent varier selon le type de paramètre pour lequel vous configurez une règle.  
+> [!NOTE]  
+> Les options affichées peuvent varier selon le type de paramètre pour lequel la règle est configurée.  
 
-            -   **Le paramètre doit exister sur les appareils clients**  
+- **Le paramètre doit exister sur les appareils clients**  
 
-            -   **Le paramètre ne doit pas exister sur les appareils clients**  
+- **Le paramètre ne doit pas exister sur les appareils clients**  
 
-            -   **Le paramètre se produit le nombre de fois suivant :**  
+- **Le paramètre se produit le nombre de fois suivant :**  
 
-        -   **Gravité de la non conformité pour les rapports :** spécifiez le niveau de gravité signalé (dans les rapports Configuration Manager) si cette règle de conformité échoue. Les niveaux de gravité disponibles sont les suivants :  
+- **Gravité de non-conformité pour les rapports** : indiquez le niveau de gravité signalé dans les rapports Configuration Manager si cette règle de conformité échoue. Les niveaux de gravité suivants sont disponibles :  
+    - **Aucun**  
+    - **Information**  
+    - **Avertissement**  
+    - **Critique**  
+    - **Critique avec événement** : les ordinateurs non conformes à cette règle signalent une gravité d’échec **Critique**. Ce niveau de gravité est également enregistré comme un événement Windows dans le journal des événements des applications.  
 
-            -   **Aucun** : les ordinateurs non conformes à cette règle de compatibilité ne signalent pas de gravité d'échec.  
 
-            -   **Information** : les ordinateurs non conformes à cette règle de compatibilité signalent une gravité d'échec **Informations**.  
 
-            -   **Avertissement** : les ordinateurs non conformes à cette règle de compatibilité signalent une gravité d'échec **Avertissement**.  
+## <a name="next-steps"></a>Étapes suivantes
 
-            -   **Critique** : les ordinateurs non conformes à cette règle de compatibilité signalent une gravité d'échec **Critique**.  
-
-            -   **Critique avec événement** : les ordinateurs non conformes à cette règle de compatibilité signalent une gravité d'échec **Critique**. Ce niveau de gravité est également enregistré comme un événement Windows dans le journal des événements des applications.  
-
-3.  Cliquez sur **OK** pour fermer la boîte de dialogue **Créer une règle** .  
-
-##  <a name="specify-supported-platforms"></a>Spécifier les plateformes prises en charge  
- Les plateformes prises en charge sont les systèmes d’exploitation sur lesquels la compatibilité d’un élément de configuration est évaluée.  
-
-Dans la page **Plateformes prises en charge** de l’ **Assistant Création d’élément de configuration**, dans la liste, sélectionnez les versions Windows sur lesquelles vous voulez évaluer la compatibilité de l’élément de configuration ou cliquez sur **Sélectionner tout**.  
-
-## <a name="complete-the-wizard"></a>Effectuer toutes les étapes de l'Assistant  
- Dans la page **Résumé** de l’Assistant, passez en revue les actions qui seront exécutées, puis terminez l’Assistant. Le nouvel élément de configuration est affiché dans le nœud **Éléments de configuration** de l’espace de travail **Ressources et Conformité**.  
+[Créer des bases de référence de configuration](/sccm/compliance/deploy-use/create-configuration-baselines)
