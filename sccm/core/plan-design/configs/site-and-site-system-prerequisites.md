@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4187be7bf25bd88a5ba1432eaeb4cb5a44945551
-ms.sourcegitcommit: 544f335cfd1bfd0a1d4973439780e9f5e9ee8bed
+ms.openlocfilehash: db5e58d82f12ceaac5ad0da66a0836f1d3d913d6
+ms.sourcegitcommit: 8803a64692f3edc0422b58f6c3037a8796374cc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562125"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "57881807"
 ---
 # <a name="site-and-site-system-prerequisites-for-configuration-manager"></a>Prérequis des sites et systèmes de site pour Configuration Manager
 
@@ -157,6 +157,9 @@ Consultez les sections principales de cet article pour connaître les prérequis
 
 - Pour plus d’informations sur cette configuration requise, consultez [Configuration requise de l’infrastructure pour le déploiement de système d’exploitation](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment).  
 
+#### <a name="windows-server-roles-and-features"></a>Rôles et fonctionnalités Windows Server  
+
+- Si vous utilisez le [service d’administration](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service), le serveur qui héberge le rôle de fournisseur SMS peut requérir .NET 4.5.2 ou une version ultérieure.  <!-- SCCMDocs issue #1203 -->
 
 
 ##  <a name="bkmk_2012acwspreq"></a> Point du site web du catalogue des applications  
@@ -349,7 +352,7 @@ Pour plus d'informations, consultez [Installer et configurer des points de distr
 
     - ASP.NET 4.5  
 
-    - Services Windows Communication Foundation (WCF)<!-- SCCMDocs issue #1168 -->  
+    - Services WCF (Windows Communication Foundation)<!-- SCCMDocs issue #1168 -->  
 
 #### <a name="iis-configuration"></a>Configuration IIS  
 

@@ -10,12 +10,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8104210fcf690cecf4bdb815384b8dd672c3873d
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 8add225db488a749eba98f9015fcb112e8f34f04
+ms.sourcegitcommit: 8803a64692f3edc0422b58f6c3037a8796374cc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56122319"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "57881790"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>Certificats pour la passerelle de gestion cloud
 
@@ -40,9 +40,10 @@ Pour plus d’informations sur les différents scénarios, consultez [Planifier 
 
 
 ### <a name="general-information"></a>Informations générales
-<!--SCCMDocs issue #779--> Les certificats pour la passerelle de gestion cloud prennent en charge les configurations suivantes :  
+<!--SCCMDocs issue #779-->
+Les certificats pour la passerelle de gestion cloud prennent en charge les configurations suivantes :  
 
-- **Longueur de clé de 4 096 bits**  
+- longueur de clé de 2048 ou 4096 bits
 
 - À compter de la version 1710, les fournisseurs de stockage de clés sont pris en charge pour les clés privées de certificat. Pour plus d’informations, consultez [Vue d’ensemble des certificats CNG](/sccm/core/plan-design/network/cng-certificates-overview).  
 
@@ -83,7 +84,7 @@ Les clients doivent approuver le certificat d’authentification serveur de la p
     - Vous pouvez également utiliser des profils de certificat Configuration Manager pour provisionner des certificats sur les clients. Pour plus d’informations, consultez [Présentation des profils de certificat](/sccm/protect/deploy-use/introduction-to-certificate-profiles).  
 
 > [!Note]  
-> À compter de la version 1806, quand vous créez une passerelle de gestion cloud, vous n’êtes plus obligé de fournir un certificat racine approuvé dans la page Paramètres. Ce certificat n’est pas nécessaire lorsque vous utilisez Azure Active Directory (Azure AD) pour l’authentification client, mais il était auparavant nécessaire dans l’Assistant. Si vous utilisez des certificats d’authentification client PKI, vous devez néanmoins encore ajouter un certificat racine approuvé pour la passerelle de gestion cloud.<!--SCCMDocs-pr issue #2872-->  
+> À compter de la version 1806, quand vous créez une passerelle de gestion cloud, vous n’êtes plus obligé de fournir un certificat racine approuvé dans la page Paramètres. Ce certificat n’est pas nécessaire lorsque vous utilisez Azure Active Directory (Azure AD) pour l’authentification client, mais il était auparavant nécessaire dans l’Assistant. Si vous utilisez des certificats d’authentification client PKI, vous devez continuer d’ajouter un certificat racine approuvé pour la passerelle de gestion cloud.<!--SCCMDocs-pr issue #2872-->  
 
 
 ### <a name="bkmk_serverauthpublic"></a> Certificat d’authentification serveur émis par le fournisseur public
@@ -107,7 +108,7 @@ Par exemple, Contoso utilise **GraniteFalls.Contoso.com** comme nom commun du ce
 
     - Par exemple, quand Contoso crée la passerelle de gestion cloud, Configuration Manager extrait le nom d’hôte **GraniteFalls** du nom commun du certificat. Azure crée le service proprement dit sous le nom **GraniteFalls.CloudApp.net**.  
 
-Quand vous créez l’instance de la passerelle de gestion cloud dans Configuration Manager, alors que le certificat comporte GraniteFalls.Contoso.com, Configuration Manager extrait seulement le nom d’hôte, par exemple : GraniteFalls. Il ajoute ce nom d’hôte à CloudApp.net, ce qui est exigé par Azure lors de la création d’un service cloud. L’alias CNAME dans l’espace de noms DNS pour votre domaine, Contoso.com, mappe ces deux noms de domaine complets. Configuration Manager donne aux clients une stratégie pour accéder à cette passerelle de gestion cloud et le mappage DNS les lie ensemble pour qu’ils puissent accéder de façon sécurisée au service dans Azure.<!--SCCMDocs issue #565-->  
+Quand vous créez l’instance de la passerelle de gestion cloud dans Configuration Manager, alors que le certificat comporte GraniteFalls.Contoso.com, Configuration Manager extrait seulement le nom d’hôte, par exemple : GraniteFalls. Il ajoute ce nom d’hôte à CloudApp.net, ce qui est exigé par Azure lors de la création d’un service cloud. L’alias CNAME dans l’espace de noms DNS pour votre domaine, Contoso.com, mappe ces deux noms de domaine complets. Configuration Manager donne aux clients une stratégie pour accéder à cette passerelle CMG : le mappage DNS les lie pour qu’ils puissent accéder au service de façon sécurisée dans Azure.<!--SCCMDocs issue #565-->  
 
 
 ### <a name="bkmk_serverauthpki"></a> Certificat d’authentification serveur émis par l’infrastructure à clé publique (PKI) d’entreprise

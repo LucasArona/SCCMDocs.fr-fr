@@ -11,18 +11,19 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0a66ba04defcea48db143487cc08bc5dc330cf2c
-ms.sourcegitcommit: ef2960bd91655c741450774e512dd0a9be610625
+ms.openlocfilehash: 44d19c9d2ba7daa029bb46eeb386771de70a2e8f
+ms.sourcegitcommit: 8803a64692f3edc0422b58f6c3037a8796374cc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56838903"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "57881892"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Planifier la passerelle de gestion cloud dans Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
  
-<!--1101764--> La passerelle de gestion cloud fournit un moyen simple de gérer les clients Configuration Manager sur Internet. En déployant la passerelle de gestion cloud comme un service cloud dans Microsoft Azure, vous pouvez gérer les clients traditionnels qui sont itinérants sur Internet sans infrastructure supplémentaire. De même, vous n’avez pas besoin d’exposer votre infrastructure locale sur Internet. 
+<!--1101764-->
+La passerelle de gestion cloud fournit un moyen simple de gérer les clients Configuration Manager sur Internet. En déployant la passerelle de gestion cloud comme un service cloud dans Microsoft Azure, vous pouvez gérer les clients traditionnels qui sont itinérants sur Internet sans infrastructure supplémentaire. De même, vous n’avez pas besoin d’exposer votre infrastructure locale sur Internet. 
 
 > [!Tip]  
 > Cette fonctionnalité a été introduite dans la version 1610 en tant que [fonctionnalité en préversion](/sccm/core/servers/manage/pre-release-features). À compter de la version 1802, cette fonctionnalité n’est plus en préversion.  
@@ -99,7 +100,8 @@ Le déploiement et le fonctionnement de la passerelle de gestion cloud incluent 
 
 
 ### <a name="azure-resource-manager"></a>Azure Resource Manager
-<!-- 1324735 --> À compter de la version 1802, vous pouvez créer la passerelle de gestion cloud en utilisant un **déploiement Azure Resource Manager**. [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview) est une plateforme moderne permettant de gérer l’ensemble des ressources de la solution comme une seule entité, nommée [groupe de ressources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups). Lors du déploiement d’une Passerelle CMG avec Azure Resource Manager, le site utilise Azure Active Directory (Azure AD) pour authentifier et créer les ressources cloud nécessaires. Le certificat de gestion Azure classique n’est pas nécessaire pour ce déploiement modernisé.  
+<!-- 1324735 -->
+Depuis la version 1802, vous pouvez créer la passerelle de gestion cloud en utilisant un **déploiement Azure Resource Manager**. [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview) est une plateforme moderne permettant de gérer l’ensemble des ressources de la solution comme une seule entité, nommée [groupe de ressources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups). Lors du déploiement d’une Passerelle CMG avec Azure Resource Manager, le site utilise Azure Active Directory (Azure AD) pour authentifier et créer les ressources cloud nécessaires. Le certificat de gestion Azure classique n’est pas nécessaire pour ce déploiement modernisé.  
 
 > [!Note]  
 > Cette fonctionnalité ne permet pas la prise en charge des fournisseurs de services cloud Azure. Le déploiement de la passerelle de gestion cloud avec Azure Resource Manager continue d’utiliser le service cloud classique, que le fournisseur de services cloud ne prend pas en charge. Pour plus d’informations, consultez les [services Azure disponibles auprès du fournisseur de services cloud Azure](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services). 
@@ -185,7 +187,7 @@ De même, quand les clients basés à Paris se déplacent et utilisent Internet,
 
 - La passerelle de gestion cloud prend en charge les rôles Point de gestion et Point de mise à jour logicielle.  
 
-- La passerelle de gestion cloud ne prend pas en charge les clients qui communiquent seulement avec des adresses IPv6.<!--495606-->  
+- La passerelle CMG ne prend pas en charge les clients qui communiquent uniquement avec des adresses IPv6.<!--495606-->  
 
 - Les points de mise à jour logicielle utilisant un équilibreur de charge réseau ne fonctionnent pas avec la passerelle de gestion cloud. <!--505311-->  
 
@@ -297,9 +299,9 @@ Les recommandations suivantes peuvent vous aider à améliorer les performances 
 
 - Si possible, configurez la passerelle CMG, le point de connexion CMG et le serveur de site Configuration Manager dans la même région pour réduire la latence du réseau.  
 
-- Actuellement, la connexion entre le client Configuration Manager et la passerelle de gestion cloud ne tient pas compte de la région.  
+- La connexion entre le client Configuration Manager et la passerelle CMG ne tient pas compte de la région. La communication client n’est en grande partie pas affectée par la latence / la séparation géographique. Il n’est pas nécessaire déployer plusieurs passerelles CMG à des fins de proximité géographique. Déployez la passerelle CMG sur le site de niveau supérieur dans votre hiérarchie et ajoutez des instances pour augmenter l’échelle.
 
-- Pour un service à haute disponibilité, créez au moins deux services de passerelle de gestion cloud et deux points de connexion de passerelle de gestion cloud par site.  
+- Pour une haute disponibilité du service, créez une passerelle CMG avec au moins deux instances CMG et deux points de connexion CMG par site.  
 
 - Faites évoluer la passerelle de gestion cloud pour prendre en charge plus de clients en ajoutant d’autres instances de machine virtuelle. L’équilibrage de charge Azure contrôle les connexions des clients au service.  
 

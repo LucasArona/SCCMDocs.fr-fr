@@ -2,7 +2,7 @@
 title: Fichiers journaux pour la résolution des problèmes
 titleSuffix: Configuration Manager
 description: Utilisez des fichiers journaux pour résoudre des problèmes liés aux systèmes de site et aux clients Configuration Manager.
-ms.date: 02/12/2019
+ms.date: 03/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b3edf45c5b4eb62d5bfdd795f104c40da1ee1526
-ms.sourcegitcommit: 56ec6933cf7bfc93842f55835ad336ee3a1c6ab5
+ms.openlocfilehash: f14953b7c2008f6d0e9e5715a8096126e56b0b7e
+ms.sourcegitcommit: 8803a64692f3edc0422b58f6c3037a8796374cc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57211701"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "57881960"
 ---
 # <a name="log-files-in-configuration-manager"></a>Fichiers journaux de Configuration Manager
 
@@ -117,7 +117,7 @@ Dans Configuration Manager, les composants des clients et des serveurs de site e
 ##  <a name="BKMK_AboutLogs"></a> À propos des fichiers journaux de Configuration Manager  
  La plupart des processus dans Configuration Manager consignent des informations sur les opérations dans un fichier journal dédié à ce processus. Ces fichiers journaux sont identifiés par des extensions de fichier **.log** ou **.lo_**. Configuration Manager écrit dans un fichier .log jusqu’à ce que ce journal atteigne sa taille maximale. Une fois le journal plein, le fichier .log est copié vers un fichier portant le même nom mais avec l’extension .lo_, et le processus ou le composant continue à écrire dans le fichier .log. Quand le fichier .log atteint à nouveau sa taille maximale, le fichier .lo_ est remplacé et le processus se répète. Certains composants établissent un historique du fichier journal en ajoutant une date et une heure au nom du fichier journal, et en conservant l’extension .log. Le client pour Linux et UNIX constitue une exception à la taille maximale et à l’utilisation du fichier .lo_. Pour plus d’informations sur la façon dont le client pour Linux et UNIX utilise les fichiers journaux, consultez [Gérer des fichiers journaux dans le client pour Linux et UNIX](#BKMK_ManageLinuxLogs) dans cet article.  
 
- Pour afficher les journaux, utilisez la visionneuse du journal Configuration Manager, CMTrace, qui se trouve dans le dossier \\\SMSSetup\\Tools du média source de Configuration Manager. Il est ajouté à toutes les images de démarrage ajoutées à la Bibliothèque de logiciels. À compter de la version 1806, l’outil d’affichage des journaux CMTrace est automatiquement installé avec le client Configuration Manager.<!--1357971--> Pour plus d’informations, consultez [CMTrace](/sccm/core/support/cmtrace). 
+ Pour afficher les journaux, utilisez la visionneuse du journal Configuration Manager, CMTrace, qui se trouve dans le dossier \\\SMSSetup\\Tools du média source de Configuration Manager. Il est ajouté à toutes les images de démarrage ajoutées à la Bibliothèque de logiciels. Depuis la version 1806, l’outil d’affichage des journaux CMTrace est automatiquement installé avec le client Configuration Manager.<!--1357971--> Pour plus d’informations, consultez [CMTrace](/sccm/core/support/cmtrace). 
 
 ###  <a name="BKMK_LogOptions"></a> Configurer des options de journalisation à l’aide du Gestionnaire de service de Configuration Manager  
  Vous pouvez changer l’emplacement où Configuration Manager stocke les fichiers journaux, ainsi que leur taille.  
@@ -164,6 +164,7 @@ Le tableau suivant répertorie les fichiers journaux qui se trouvent sur le clie
 |ClientLocation.log|Enregistre les tâches liées à l'attribution d'un site client.|  
 |CMHttpsReadiness.log|Enregistre les résultats de l’exécution de l’outil d’évaluation d’analyse HTTPS de Configuration Manager. Cet outil vérifie si les ordinateurs disposent d’un certificat d’authentification de client PKI qui peut être utilisé avec Configuration Manager.|  
 |CmRcService.log|Enregistre des informations pour le service de contrôle à distance.|  
+|CoManagementHandler.log|Utilisez cette option pour résoudre les problèmes de cogestion sur le client.|
 |ContentTransferManager.log|Planifie le service BITS (Background Intelligent Transfer Service) ou SMB (Server Message Block) pour leur permettre de télécharger des packages ou d’y accéder.|  
 |DataTransferService.log|Enregistre toutes les communications BITS relatives à l'accès aux stratégies ou aux packages.|  
 |EndpointProtectionAgent|Enregistre des informations concernant l’installation du client System Center Endpoint Protection et l’application de la stratégie anti-programme malveillant à ce client.|  
@@ -282,6 +283,7 @@ Le fichier journal SMS_DM.log sur le serveur de système de site enregistre auss
 |--------------|-----------------|----------------------------|  
 |adctrl.log|Enregistre les activités de traitement des inscriptions.|Serveur de site|  
 |ADForestDisc.log|Enregistre les actions de découverte de forêts Active Directory.|Serveur de site|  
+|adminservice.log|Enregistre les actions pour l’API REST du service d’administration du fournisseur SMS|Ordinateur sur lequel le fournisseur SMS est installé|
 |ADService.log|Enregistre la création de compte et les détails des groupes de sécurité dans Active Directory.|Serveur de site|  
 |adsgdis.log|Enregistre les actions de découverte de groupe Active Directory.|Serveur de site|  
 |adsysdis.log|Enregistre les actions de découverte du système Active Directory.|Serveur de site|  
@@ -406,6 +408,7 @@ Le fichier journal SMS_DM.log sur le serveur de système de site enregistre auss
 |mpfdm.log|Enregistre les actions du composant du point de gestion qui déplace les fichiers du client vers le dossier Boîtes de réception correspondant sur le serveur de site.|Serveur de système de site|  
 |mpMSI.log|Enregistre des détails sur l’installation du point de gestion.|Serveur de site|  
 |MPSetup.log|Enregistre le processus de wrapper d'installation du point de gestion.|Serveur de site|  
+|UserService.log|Enregistre les demandes utilisateurs depuis le centre logiciel, récupère/installe des applications accessibles aux utilisateurs à partir du serveur.|Serveur de système de site|
 
 ###  <a name="BKMK_SUPLog"></a> Fichiers journaux du point de mise à jour logicielle  
  Le tableau suivant répertorie les fichiers journaux qui contiennent des informations relatives au point de mise à jour logicielle.  
@@ -520,7 +523,7 @@ Le tableau suivant répertorie les fichiers journaux qui contiennent des informa
 |--------------|-----------------|----------------------------|  
 |CloudMgr.log|Enregistre les détails concernant le déploiement du service de passerelle de gestion cloud, l’état du service en cours et les données d’utilisation associées au service.<br>Vous pouvez configurer le niveau de journalisation en modifiant la valeur **Niveau de journalisation** dans la clé de Registre HKLM\SOFTWARE\ Microsoft\SMS\COMPONENTS\ SMS_CLOUD_ SERVICES_MANAGER|Le dossier *installdir* sur le serveur de site principal ou les autorités de certification.|
 |CMGSetup.log<sup>1</sup>|Enregistre des détails concernant la deuxième phase du déploiement de la passerelle de gestion cloud (déploiement local dans Azure)<br>Vous pouvez configurer le niveau de journalisation à l’aide du paramètre **Niveau de suivi** (**Information** (par défaut), **Verbose**, **Error**) dans l’onglet de **configuration du portail Azure/services cloud**.|Le dossier **%approot%\logs** sur votre serveur Azure, ou le dossier SMS/Logs sur le serveur de système de site|
-|CMGHttpHandler.log<sup>1</sup>|Enregistre des détails concernant la liaison du gestionnaire http de la passerelle de gestion cloud avec Internet Information Services dans Azure<br>Vous pouvez configurer le niveau de journalisation à l’aide du paramètre **Niveau de suivi** (**Information** (par défaut), **Verbose**, **Error**) dans l’onglet de **configuration du portail Azure/services cloud**.<br>À compter de la version 1806, ce journal n’existe plus. Cette fonctionnalité a été fusionnée avec le composant de service de passerelle de gestion cloud. Désormais, vous pouvez consulter le journal CMGService.log.<!--SCCMDocs-pr issue #2822-->|Le dossier **%approot%\logs** sur votre serveur Azure, ou le dossier SMS/Logs sur le serveur de système de site|
+|CMGHttpHandler.log<sup>1</sup>|Enregistre des détails concernant la liaison du gestionnaire http de la passerelle de gestion cloud avec Internet Information Services dans Azure<br>Vous pouvez configurer le niveau de journalisation à l’aide du paramètre **Niveau de suivi** (**Information** (par défaut), **Verbose**, **Error**) dans l’onglet de **configuration du portail Azure/services cloud**.<br>À compter de la version 1806, ce journal n’existe plus. Cette fonctionnalité a été fusionnée avec le composant de service de passerelle de gestion cloud. Consulter le journal CMGService.log à la place.<!--SCCMDocs-pr issue #2822-->|Le dossier **%approot%\logs** sur votre serveur Azure, ou le dossier SMS/Logs sur le serveur de système de site|
 |CMGService.log<sup>1</sup>|Enregistre des détails concernant le composant principal du service de passerelle de gestion cloud dans Azure<br>Vous pouvez configurer le niveau de journalisation à l’aide du paramètre **Niveau de suivi** (**Information** (par défaut), **Verbose**, **Error**) dans l’onglet de **configuration du portail Azure/services cloud**.|Le dossier **%approot%\logs** sur votre serveur Azure, ou le dossier SMS/Logs sur le serveur de système de site|
 |SMS_Cloud_<br>ProxyConnector.log|Enregistre des détails sur la configuration des connexions entre le service de passerelle de gestion cloud et le point de connexion de passerelle de gestion cloud.|Serveur de système de site|
 |CMGContentService.log<sup>1</sup>|<!--SCCMDocs-pr issue #2822-->À compter de la version 1806, lorsque vous activez une passerelle de gestion cloud pour diffuser du contenu à partir du stockage Azure, ce fichier journal enregistre les informations relatives à ce service.|Le dossier **%approot%\logs** sur votre serveur Azure, ou le dossier SMS/Logs sur le serveur de système de site|

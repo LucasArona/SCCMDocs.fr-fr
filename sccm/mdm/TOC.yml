@@ -1,5 +1,5 @@
 items:
-- name: Vue d'ensemble
+- name: Vue d’ensemble
   items:
   - name: Qu’est-ce que la gestion MDM hybride ?
     href: understand/hybrid-mobile-device-management.md
@@ -8,11 +8,11 @@ items:
 - name: Planifier et concevoir
   href: plan-design/plan-hybrid-mobile-device-management.md
   items:
-  - name: Plateformes d’appareils prises en charge
+  - name: Plateformes d’appareil prises en charge
     href: plan-design/supported-device-platforms-for-hybrid.md
   - name: Méthodes d’inscription des appareils
     href: plan-design/device-enrollment-methods.md
-- name: Bien démarrer
+- name: Prise en main
   href: deploy-use/setup-hybrid-mdm.md
   items:
   - name: Créer un regroupement MDM
@@ -49,7 +49,7 @@ items:
       href: deploy-use/ios-device-enrollment-program-for-hybrid.md
     - name: Inscription à Apple Configurator
       href: deploy-use/ios-hybrid-enrollment-using-apple-configurator.md
-    - name: Gestionnaire d'inscription d'appareil
+    - name: Gestionnaire d'inscription d'appareils
       href: deploy-use/enroll-devices-with-device-enrollment-manager.md
     - name: Prédéclarer un ID de matériel
       href: deploy-use/predeclare-devices-with-hardware-id.md
@@ -83,7 +83,7 @@ items:
     items:
     - name: Créer des applications iOS
       href: deploy-use/creating-ios-applications.md
-    - name: Stratégies de configuration d’applications iOS
+    - name: Stratégies de configuration des applications iOS
       href: deploy-use/configure-ios-apps-with-app-configuration-policies.md
     - name: Applications iOS achetées en volume
       href: deploy-use/manage-volume-purchased-ios-apps.md
@@ -101,7 +101,7 @@ items:
       href: deploy-use/windows-store-for-business.md
   - name: Gérer un abonnement Intune
     href: deploy-use/manage-intune-subscriptions.md
-  - name: Changer d’autorité MDM
+  - name: Changer votre autorité de gestion des appareils mobiles
     href: deploy-use/change-mdm-authority.md
   - name: Démarrer la migration de MDM hybride vers Intune autonome
     href: deploy-use/migrate-hybridmdm-to-intunesa.md
@@ -112,7 +112,7 @@ items:
       href: deploy-use/migrate-prepare-intune.md
     - name: Changer l’autorité MDM pour des utilisateurs spécifiques (autorité MDM mixte)
       href: deploy-use/migrate-mixed-authority.md
-    - name: Changer d’autorité MDM
+    - name: Changer votre autorité de gestion des appareils mobiles
       href: deploy-use/migrate-change-mdm-authority.md
   - name: Gérer l’accès aux ressources
     items:
@@ -146,7 +146,7 @@ items:
       href: deploy-use/manage-skype-for-business-online-access.md
     - name: Gérer l’accès à Dynamics CRM Online
       href: deploy-use/manage-dynamics-crm-online-access.md
-    - name: Gérer l’accès des ordinateurs aux services O365
+    - name: Gérer l'accès des PC aux services Office 365
       href: deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md
   - name: Gérer l’accès basé sur les risques que présente l’appareil
     href: deploy-use/mobile-threat-defense.md
@@ -190,7 +190,7 @@ items:
       href: deploy-use/user-enroll-devices-on-premises-mdm.md
     - name: Inscription en bloc
       href: deploy-use/bulk-enroll-devices-on-premises-mdm.md
-  - name: Gérer des appareils
+  - name: Gérer des unités
     href: deploy-use/onprem-manage-devices.md
   - name: Gérer des applications
     href: deploy-use/onprem-manage-applications.md
@@ -198,9 +198,9 @@ items:
     href: deploy-use/onprem-protect-data-devices.md
 - name: Gestion des appareils avec Exchange
   href: deploy-use/manage-mobile-devices-with-exchange-activesync.md
-ms.openlocfilehash: 1ecf2c9c9264f7851982e59d47e0e42b9c8ca1ab
-ms.sourcegitcommit: 8661f10596f565ca2b7bdb5951388b44b3b622ee
+ms.openlocfilehash: 604fce055dcaf8544d85986640ee2ba55a39ebb2
+ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "48817603"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58197127"
