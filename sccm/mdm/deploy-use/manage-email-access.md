@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 76326a1e0bcb3d9362db5eccfc08459bb4448206
-ms.sourcegitcommit: ec4411fe30770f90128cf6cbd181047db90040cb
+ms.openlocfilehash: 2ee4ed8f102507b4d62a1ccbfe1cc38240e85df9
+ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57881773"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58196855"
 ---
 # <a name="manage-email-access-in-configuration-manager"></a>Gérer l’accès à la messagerie dans Configuration Manager
 
@@ -79,7 +79,7 @@ Vous pouvez restreindre l’accès à **Outlook Web Access (OWA)** sur Exchange 
 
 Les navigateurs non pris en charge seront bloqués. Les applications OWA pour iOS et Android ne sont pas pris en charge. Elles doivent être bloquées par les règles de revendications AD FS :  
 
-- Configurez des règles de revendications AD FS pour bloquer les protocoles autres que l'authentification moderne. Obtenir des instructions détaillées sont fournies dans le scénario 3 à [bloquer tout accès à O365, à l’exception des applications basées sur un navigateur](https://technet.microsoft.com/library/dn592182.aspx).  
+- Configurez des règles de revendications AD FS pour bloquer les protocoles autres que l'authentification moderne. Obtenir des instructions détaillées sont fournies dans le scénario 3 à [bloquer tout accès à Office 365 à l’exception des applications basées sur un navigateur](https://technet.microsoft.com/library/dn592182.aspx).  
 
 #### <a name="for-pcs"></a>Pour les PC
 

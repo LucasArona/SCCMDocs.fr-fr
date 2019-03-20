@@ -1,5 +1,5 @@
 ---
-title: Gérer l’accès aux services O365
+title: Gérer l’accès aux services Office 365
 titleSuffix: Configuration Manager
 description: Découvrez comment configurer l’accès conditionnel aux services Office 365 pour les PC gérés par System Center Configuration Manager.
 ms.date: 03/21/2019
@@ -11,14 +11,14 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 74a28863b2e30566b07890d57e927703d77247f6
-ms.sourcegitcommit: ec4411fe30770f90128cf6cbd181047db90040cb
+ms.openlocfilehash: 434801b170ed5efcbbafa046a3ac1e94a615ed3d
+ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57881705"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58196770"
 ---
-# <a name="manage-access-to-o365-services-for-pcs-managed-by-system-center-configuration-manager"></a>Gérer l’accès aux services O365 pour les PC gérés par System Center Configuration Manager
+# <a name="manage-access-to-office-365-services-for-pcs-managed-by-system-center-configuration-manager"></a>Gérer l’accès aux services Office 365 pour les PC gérés par System Center Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
@@ -63,7 +63,7 @@ Pour plus d’informations sur la configuration de l’accès conditionnel pour 
 
 ### <a name="prerequisites"></a>Prérequis  
 
-- Synchronisation d’ADFS et abonnement O365. L’abonnement O365 est nécessaire pour configurer Exchange Online et SharePoint Online.  
+- Synchronisation d’ADFS et un abonnement Office 365. L’abonnement à Office 365 est pour la configuration d’Exchange Online et SharePoint Online.  
 
 - Abonnement Microsoft Intune L’abonnement Microsoft Intune doit être configuré dans la console Configuration Manager. L’abonnement Intune sert à transférer l’état de conformité des appareils à Azure Active Directory et à accorder les licences d’utilisateur.  
 

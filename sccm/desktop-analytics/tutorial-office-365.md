@@ -12,14 +12,14 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eb4170bddfbad34807c6fb82131fa09dc7c6b09f
-ms.sourcegitcommit: ceec0e20bf801071f2a05233f984cf17acc3fd29
+ms.openlocfilehash: c8e346aaabb03296f19a1eaf40d79c0f9f241cce
+ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56754968"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58197008"
 ---
-# <a name="tutorial-deploy-office-365-to-pilot"></a>Didacticiel : Déployer Office 365 pilote 
+# <a name="tutorial-deploy-office-365-to-pilot"></a>Tutoriel : Déployer Office 365 pilote 
 
 > [!Note]  
 > Ces informations est lié à un service en version préliminaire qui peut être substantiellement modifié avant sa commercialisation. Microsoft exclut toute garantie, expresse ou implicite, concernant les informations fournies ici.  
@@ -84,7 +84,7 @@ Avant de commencer ce didacticiel, assurez-vous que vous disposez des prérequis
     - `https://nexus.officeapps.live.com`  
     - `https://office.pipe.aria.microsoft.com`  
     - `https://graph.windows.net` (sur le rôle de serveur de Configuration Manager uniquement)
-    - `https://fef.bmsub01.manage-beta.microsoft.com` (sur le rôle de serveur de Configuration Manager uniquement)
+    - `https://fef.msua06.manage.microsoft.com` (sur le rôle de serveur de Configuration Manager uniquement)
 
     Pour plus d’informations, consultez [comment activer le partage de bureau Analytique des données](/sccm/desktop-analytics/enable-data-sharing#endpoints).  
 
@@ -101,7 +101,7 @@ Utilisez cette procédure pour vous connecter à l’Analytique de bureau et le 
 
 2. Sur le **accepter le contrat de service** page, passez en revue le contrat de service, puis sélectionnez **Accept**.  
 
-3. Sur le **confirmer votre abonnement** page, la liste des licences éligibles requises sont pour les fonctionnalités de contrôle d’intégrité des appareils Windows de bureau Analytique. Sélectionnez **suivant** pour continuer.  
+3. Sur le **confirmer votre abonnement** page, la liste des licences éligibles requises sont pour les fonctionnalités de contrôle d’intégrité des appareils Windows de bureau Analytique. Sélectionnez **Suivant** pour continuer.  
 
 4. Sur le **donner aux utilisateurs accès** page, bureau Analytique préconfigure les deux groupes de sécurité dans Azure Active Directory :  
 

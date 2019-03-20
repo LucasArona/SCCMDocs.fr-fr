@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5213c96ee434d9d87ea7728701945ac46c0a62a0
-ms.sourcegitcommit: ceec0e20bf801071f2a05233f984cf17acc3fd29
+ms.openlocfilehash: f1a6ab6fca6650bde69179b71576d1df2e201b92
+ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56754967"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58196736"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>Activer le partage de bureau Analytique des données 
 
@@ -76,8 +76,8 @@ Pour activer le partage de données, configurez votre serveur proxy à la liste 
 | `https://nexusrules.officeapps.live.com` | Utilisé pour demander des événements de données de diagnostic dynamique à partir de clients Office. Ces données sont utiles pour le zoom et diagnostics dans le portail d’Analytique de bureau |
 | `https://nexus.officeapps.live.com` | Utilisé par les clients Office pour envoyer des événements de données de diagnostic à partir d’Office 14, Office 15 et versions antérieures à 16.0.8702 Office 16. Il est utilisé pour collecter l’utilisation et la fiabilité signale des événements pour l’Analytique de bureau. |
 | `https://office.pipe.aria.microsoft.com` | Utilisé par les clients Office pour envoyer des événements de données de diagnostic à partir des applications Office universal/moderne et les versions de Win32 Office 16 16.0.8702 au plus tard. Il est utilisé pour collecter l’utilisation et la fiabilité signale des événements pour l’Analytique de bureau. |
-| `https://graph.windows.net` | Utilisé par Configuration Manager pour récupérer automatiquement les paramètres tels que CommercialId lors de l’attachement de votre hiérarchie pour l’Analytique de bureau. |
-| `https://fef.bmsub01.manage-beta.microsoft.com` | Utilisé par le Gestionnaire de Configuration pour la synchronisation des appartenances aux regroupements de périphériques, les plans de déploiement et état de préparation du périphérique avec Analytique de bureau. |
+| `https://graph.windows.net` | Permet de récupérer automatiquement les paramètres tels que CommercialId lors de l’attachement de votre hiérarchie pour l’Analytique de bureau (sur le rôle de serveur de Configuration Manager uniquement). |
+| `https://fef.msua06.manage.microsoft.com` | Utilisé pour les appartenances aux collections de périphérique de synchronisation, les plans de déploiement et état de préparation d’appareil avec Analytique de bureau (sur le rôle de serveur de Configuration Manager uniquement). |
 
 
 ### <a name="ssl-inspection"></a>Inspection SSL

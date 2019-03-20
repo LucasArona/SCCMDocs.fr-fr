@@ -2,7 +2,7 @@
 title: Stratégies de conformité des appareils
 titleSuffix: Configuration Manager
 description: Découvrez comment gérer les stratégies de conformité dans Configuration Manager pour rendre les appareils compatibles avec les stratégies d’accès conditionnel.
-ms.date: 07/12/2018
+ms.date: 03/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2544d2b61c3d92555d0bc1abc908003f1c982bab
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 4e225b7ab54a1061387d1c8ee369641f68bd7889
+ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56136515"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58196872"
 ---
 # <a name="device-compliance-policies-in-system-center-configuration-manager"></a>Stratégies de conformité des appareils dans System Center Configuration Manager
 
@@ -26,7 +26,7 @@ Les stratégies de conformité dans Configuration Manager définissent les règl
 
 
 > [!IMPORTANT]  
->  Cet article décrit les stratégies de conformité applicables aux appareils gérés par Microsoft Intune. Les stratégies de conformité applicables aux appareils gérés par le client Configuration Manager sont décrites dans [Gérer l’accès aux services O365 pour les appareils gérés par Configuration Manager](/sccm/protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm).  
+>  Cet article décrit les stratégies de conformité applicables aux appareils gérés par Microsoft Intune. Les stratégies de conformité pour les appareils gérés par le client Configuration Manager est décrite dans [gérer l’accès aux services Office 365 pour les appareils gérés par Configuration Manager](/sccm/protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm).  
 
  Ces règles incluent des exigences telles que :  
 
@@ -71,7 +71,8 @@ Les stratégies de conformité dans Configuration Manager définissent les règl
 
 
 ## <a name="devices-without-any-assigned-compliance-policy"></a>Appareils sans aucune stratégie de conformité affectée
-<!--2520152--> À compter de juillet 2018, indiquez si tous les appareils auxquels aucune stratégie de conformité n’est affectée sont considérés comme conformes ou non. Par défaut, les appareils sans aucune stratégie de conformité affectée sont considérés comme conformes. Utilisez les étapes suivantes pour changer ce paramètre dans le portail Azure :
+<!--2520152-->
+À compter de juillet 2018, configurer si tous les appareils que vous n’ont aucune stratégie de conformité affectée sont considérés comme conformes ou non conformes. Par défaut, les appareils sans aucune stratégie de conformité affectée sont considérés comme conformes. Utilisez les étapes suivantes pour changer ce paramètre dans le portail Azure :
 
 1. Connectez-vous à [Intune sur le portail Azure](https://aka.ms/intuneportal).  
 

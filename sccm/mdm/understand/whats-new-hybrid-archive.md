@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 420026065caf619f51a5ebf84d7ae2f61a2248e1
-ms.sourcegitcommit: ec4411fe30770f90128cf6cbd181047db90040cb
+ms.openlocfilehash: 73eda37c9432750d94ef0b770348fc3d3250800c
+ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57881926"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58197076"
 ---
 # <a name="past-hybrid-features-with-system-center-configuration-manager-and-microsoft-intune"></a>Précédentes fonctionnalités hybrides avec System Center Configuration Manager et Microsoft Intune
 
@@ -223,12 +223,12 @@ Les fonctionnalités hybrides supplémentaires suivantes sont également incluse
   L’application Portail d’entreprise pour Android utilise Google Play Services pour communiquer avec le service Microsoft Intune. Comme Google Play Services n’est pas encore disponible en Chine, la réalisation des tâches suivantes peut prendre jusqu’à 8 heures.
 
   | Configuration de la console d’administration de Configuration Manager | Application Portail d’entreprise Intune pour Android | Site web du portail d’entreprise Intune |
-  |----|----|----|      
-  | Mettre hors service/réinitialiser (supprimer toutes les données)   | Supprimer un appareil distant | Supprimer un appareil (local et distant) |
-  | Mettre hors service/réinitialiser (supprimer les données d’entreprise)   | Réinitialiser un appareil | Réinitialiser un appareil|
+  |----|----|----|
+  | Mettre hors service/réinitialiser (supprimer toutes les données)| Supprimer un appareil distant | Supprimer un appareil (local et distant) |
+  | Mettre hors service/réinitialiser (supprimer les données d’entreprise)| Réinitialiser un appareil | Réinitialiser un appareil|
   | Déploiements d’applications nouvelles ou mises à jour | Installer des applications métier disponibles | Réinitialisation du code secret d’un appareil|
-  | Verrouillage à distance | | |
-  | Réinitialiser le code secret | | |        
+  | Verrouillage à distance| | |
+  | Réinitialiser le code secret | | |
 
 
 ## <a name="november-2016"></a>Novembre 2016
