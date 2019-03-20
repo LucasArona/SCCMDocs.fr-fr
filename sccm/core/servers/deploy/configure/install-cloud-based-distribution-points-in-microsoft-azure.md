@@ -334,7 +334,7 @@ Set-AzureServiceDiagnosticsExtension -StorageAccountName $storage_name -StorageA
 ```
 
 
-L’exemple suivant est un exemple de fichier **diagnostics.wadcfgx**, comme celui qui est référencé dans la variable **public_config** du script PowerShell ci-dessus. Pour plus d’informations, consultez [Schéma de configuration de l’extension Azure Diagnostics](https://docs.microsoft.com/azure/monitoring-and-diagnostics/azure-diagnostics-schema).  
+L’exemple suivant est un exemple de fichier **diagnostics.wadcfgx**, comme celui qui est référencé dans la variable **public_config** du script PowerShell ci-dessus. Pour plus d’informations, consultez [Schéma de configuration de l’extension Diagnostics Azure](https://docs.microsoft.com/azure/monitoring-and-diagnostics/azure-diagnostics-schema).  
 
 ``` XML
 <?xml version="1.0" encoding="utf-8"?>
