@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8e346aaabb03296f19a1eaf40d79c0f9f241cce
-ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
+ms.openlocfilehash: b8102e426e4737efdd5ca77de2824c1465b382ec
+ms.sourcegitcommit: 5f17355f954b9d9e10325c0e9854a9d582dec777
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58197008"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329496"
 ---
 # <a name="tutorial-deploy-office-365-to-pilot"></a>Tutoriel : Déployer Office 365 pilote 
 
@@ -97,7 +97,7 @@ Avant de commencer ce didacticiel, assurez-vous que vous disposez des prérequis
 
 Utilisez cette procédure pour vous connecter à l’Analytique de bureau et le configurer dans votre abonnement. Cette procédure est un processus unique pour configurer Desktop Analytique pour votre organisation.  
 
-1. Ouvrez le [portail d’Analytique de Desktop](https://aka.ms/m365aprod) dans Gestion des appareils Microsoft 365 en tant qu’utilisateur avec **administrateur d’entreprise** autorisations. Sélectionnez **Démarrer**.  
+1. Ouvrez le portail d’Analytique de bureau dans Gestion des appareils Microsoft 365 en tant qu’utilisateur avec **administrateur d’entreprise** autorisations. Sélectionnez **Démarrer**.  
 
 2. Sur le **accepter le contrat de service** page, passez en revue le contrat de service, puis sélectionnez **Accept**.  
 
@@ -134,7 +134,7 @@ Utilisez cette procédure pour vous connecter à l’Analytique de bureau et le 
 
 ### <a name="create-an-app-in-azure-ad-for-configuration-manager"></a>Créer une application dans Azure AD pour Configuration Manager  
 
-1. Dans le [Azure portal](http://portal.azure.com), accédez à **Azure Active Directory**, puis sélectionnez **inscriptions**. Puis sélectionnez **nouvelle inscription d’application**.  
+1. Dans le [Azure portal](https://portal.azure.com), accédez à **Azure Active Directory**, puis sélectionnez **inscriptions**. Puis sélectionnez **nouvelle inscription d’application**.  
 
 2. Dans le **créer** panel, configurez les paramètres suivants :  
 
