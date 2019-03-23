@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9bd3a9efcbc76647ae39eb1a104b401b112d15fb
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 7b20637cea4e02f390ae845ff9d421e5011120ab
+ms.sourcegitcommit: 4441b3035222cfaf7442416873ed824ac7d852c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56754836"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356323"
 ---
 # <a name="how-to-set-up-desktop-analytics"></a>Comment configurer le bureau Analytique 
 
@@ -30,7 +30,7 @@ Utilisez cette procédure pour vous connecter à l’Analytique de bureau et le 
 
 ## <a name="initial-onboarding"></a>Intégration initiale
 
-1. Ouvrez le [portail d’Analytique de Desktop](https://aka.ms/m365aprod) dans Gestion des appareils Microsoft 365 en tant qu’utilisateur avec **administrateur d’entreprise** autorisations. Sélectionnez **Démarrer**.  
+1. Ouvrez le portail d’Analytique de bureau dans Gestion des appareils Microsoft 365 en tant qu’utilisateur avec **administrateur d’entreprise** autorisations. Sélectionnez **Démarrer**.  
 
 2. Sur le **accepter le contrat de service** page, passez en revue le contrat de service, puis sélectionnez **Accept**.  
 

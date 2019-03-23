@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8102e426e4737efdd5ca77de2824c1465b382ec
-ms.sourcegitcommit: 5f17355f954b9d9e10325c0e9854a9d582dec777
+ms.openlocfilehash: 0f05b1115338f9808a950bcd1646d8035f3a563b
+ms.sourcegitcommit: 4441b3035222cfaf7442416873ed824ac7d852c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329496"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356357"
 ---
 # <a name="tutorial-deploy-office-365-to-pilot"></a>Tutoriel : Déployer Office 365 pilote 
 
@@ -381,5 +381,5 @@ Utilisez cette procédure pour déployer Office 365 ProPlus dans Configuration M
 
 Passez à l’article suivant pour en savoir plus sur les plans de déploiement de bureau Analytique.
 > [!div class="nextstepaction"]  
-> [Plans de déploiement](/sccm/desktop-analytics/deployment-plans)  
+> [Plans de déploiement](/sccm/desktop-analytics/about-deployment-plans)
 
