@@ -3,7 +3,7 @@ title: Maintenance des mises à jour logicielles
 titleSuffix: Configuration Manager
 description: Pour assurer la maintenance des mises à jour dans Configuration Manager, vous pouvez planifier la tâche de nettoyage WSUS, ou vous pouvez l’exécuter manuellement.
 author: mestew
-ms.date: 03/05/2019
+ms.date: 03/15/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -11,12 +11,12 @@ ms.assetid: 4b0e2e90-aac7-4d06-a707-512eee6e576c
 manager: dougeby
 ms.author: mstewart
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ff0f69a0e43c2d52aec9df262bf8d48587edb94c
-ms.sourcegitcommit: 4ab85212268e76d3fd22f00e6c74edaa5abde60c
+ms.openlocfilehash: c0391202054a80ea34180e73d107f5c2991aebe2
+ms.sourcegitcommit: d71e558db2da124357b840332e2da671b3810507
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426853"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58269082"
 ---
 # <a name="software-updates-maintenance"></a>Maintenance des mises à jour logicielles
 
@@ -56,7 +56,8 @@ Des opérations de maintenance supplémentaire restent nécessaires dans la base
 
 ## <a name="wsus-cleanup-behavior-starting-in-version-1806"></a>Comportement de nettoyage WSUS à partir de la version 1806
 
-Depuis la version 1806, l’option de nettoyage WSUS s’actionne après chaque synchronisation et procède aux opérations de nettoyage suivantes : <!--1357898 -->
+À partir de la version 1806, l’option de nettoyage WSUS est actionnée après chaque synchronisation et procède aux opérations de nettoyage suivantes :
+<!--1357898 -->
 
 - L’option **Mises à jour expirées** pour les serveurs WSUS sur le site d’administration centrale et les sites principaux.
   - Les serveurs WSUS des sites secondaires n’exécutent pas les opérations de nettoyage WSUS pour les mises à jour expirées.
@@ -79,7 +80,8 @@ Toutes les opérations de maintenance WSUS doivent être exécutées manuellemen
 
 ## <a name="wsus-cleanup-behavior-starting-in-version-1810"></a>Comportement de nettoyage WSUS à partir de la version 1810
 
-Depuis la version 1810, l’option de nettoyage WSUS s’actionne après chaque synchronisation et procède aux opérations de nettoyage suivantes : <!--2839349-->
+À partir de la version 1810, vous pouvez spécifier des règles de remplacement des mises à jour de fonctionnalité séparément à partir de mises à jour non fonctionnalité dans les propriétés du composant Point de mise à jour logicielle. L’option de nettoyage WSUS s’actionne après chaque synchronisation et procède aux opérations de nettoyage suivantes :
+<!--2839349,3098809, 2977644-->
 
 - Option **Mises à jour expirées** pour les serveurs WSUS sur le site d’administration centrale et les sites principaux et secondaires.
 - Configuration Manager génère une liste de mises à jour remplacées à partir de sa base de données. La liste est basée sur le comportement de remplacement dans les propriétés du composant Point de mise à jour logicielle.

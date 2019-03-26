@@ -2,25 +2,25 @@
 title: Planifier les mises à jour logicielles
 titleSuffix: Configuration Manager
 description: Il est essentiel de planifier l’infrastructure du point de mise à jour logicielle avant d’utiliser les mises à jour logicielles dans un environnement de production Configuration Manager.
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
-ms.date: 07/30/2018
+ms.date: 03/21/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 730d99764f8ae8f8ce1b76bfd13411988c3a2e23
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: a4100bca2f1cd1f770c2e739ec229dc020d5d8d8
+ms.sourcegitcommit: 5f17355f954b9d9e10325c0e9854a9d582dec777
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56138538"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329581"
 ---
 # <a name="plan-for-software-updates-in-configuration-manager"></a>Planifier les mises à jour logicielles dans Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Avant d’utiliser les mises à jour logicielles dans un environnement de production Configuration Manager, vous devez parcourir le processus de planification. Une bonne planification de l’infrastructure du point de mise à jour logicielle est la clé d’une implémentation réussie des mises à jour logicielles.
 
@@ -234,8 +234,8 @@ Utilisez une relation de remplacement avec la fonctionnalité de gestion d’app
 
 Pour plus d’informations, consultez [Modifier et remplacer des applications](/sccm/apps/deploy-use/revise-and-supersede-applications).
 
-#### <a name="third-party-software-updates"></a>Mises à jour de logiciels tiers
-Depuis la version 1806, utilisez le nœud **Catalogues de mises à jour de logiciels tiers** de la console Configuration Manager pour vous abonner à des catalogues tiers, publier leurs mises à jour sur votre point de mise à jour logicielle, puis les déployer sur les clients.<!--1352101-->
+#### <a name="third-party-software-updates"></a>Mises à jour de logiciels de tiers
+À partir de la version 1806, utilisez le nœud **Catalogues de mises à jour de logiciels tiers** de la console Configuration Manager pour vous abonner à des catalogues tiers, publier leurs mises à jour sur votre point de mise à jour logicielle, puis les déployer sur les clients.<!--1352101-->
 
 Pour plus d’informations, consultez [Mises à jour de logiciels tiers](/sccm/sum/deploy-use/third-party-software-updates).
 
@@ -373,13 +373,13 @@ La synchronisation des mises à jour logicielles dans Configuration Manager tél
 
 Les paramètres de la source de synchronisation du point de mise à jour logicielle spécifient l’emplacement auquel le point de mise à jour logicielle récupère les métadonnées des mises à jour logicielles. Ils indiquent également si le processus de synchronisation crée des événements de rapports WSUS.  
 
--   **Source de synchronisation** : par défaut, le point de mise à jour logicielle sur le site de niveau supérieur configure la source de synchronisation pour Microsoft Update. Vous pouvez synchroniser le site de niveau supérieur avec un serveur WSUS existant. Le point de mise à jour logicielle sur un site principal enfant configure la source de synchronisation en tant que point de mise à jour logicielle sur le site d’administration centrale.  
+-   **Source de synchronisation :** par défaut, le point de mise à jour logicielle sur le site de niveau supérieur configure la source de synchronisation pour Microsoft Update. Vous pouvez synchroniser le site de niveau supérieur avec un serveur WSUS existant. Le point de mise à jour logicielle sur un site principal enfant configure la source de synchronisation en tant que point de mise à jour logicielle sur le site d’administration centrale.  
 
     -  Le premier point de mise à jour logicielle que vous installez sur un site principal, qui est le point de mise à jour logicielle par défaut, se synchronise avec le site d’administration centrale. Les points de mise à jour logicielle supplémentaires sur le site principal se synchronisent avec le point de mise à jour logicielle par défaut sur le site principal.  
 
     - Quand un point de mise à jour logicielle est déconnecté de Microsoft Update ou du serveur de mise à jour en amont, configurez la source de synchronisation pour qu’elle ne soit pas synchronisée avec une source de synchronisation configurée. À la place, configurez-la pour qu’elle utilise la fonction d’exportation et d’importation de l’outil **WSUSUtil** pour synchroniser les mises à jour logicielles. Pour plus d’informations, consultez [Synchroniser les mises à jour logicielles à partir d’un point de mise à jour logicielle déconnecté](../get-started/synchronize-software-updates-disconnected.md).  
 
--   **Événements de rapports WSUS :** l’agent Windows Update sur les ordinateurs clients peut créer des messages d’événement utilisés pour les rapports WSUS. Configuration Manager n’utilise pas ces événements. Ainsi, l’option **Ne pas créer les événements de rapports WSUS** est sélectionnée par défaut. Si ces événements ne sont pas créés, le client peut se connecter au serveur WSUS uniquement au moment de l’évaluation des mises à jour logicielles et des analyses de conformité. Si ces événements sont nécessaires à la génération de rapports en dehors de Configuration Manager, modifiez ce paramètre pour créer des événements de génération de rapports WSUS.  
+-   **Événements de rapports WSUS :** l’agent Windows Update sur les ordinateurs clients crée des messages d’événement pour les rapports WSUS. Configuration Manager n’utilise pas ces événements. Ainsi, l’option **Ne pas créer les événements de rapports WSUS** est sélectionnée par défaut. Si ces événements ne sont pas créés, le client peut se connecter au serveur WSUS uniquement au moment de l’évaluation des mises à jour logicielles et des analyses de conformité. Si ces événements sont nécessaires à la génération de rapports en dehors de Configuration Manager, modifiez ce paramètre pour créer des événements de génération de rapports WSUS.  
 
 
 ###  <a name="BKMK_SyncSchedule"></a> Calendrier de synchronisation  
@@ -398,23 +398,23 @@ Chaque mise à jour logicielle fait partie d'une classification particulière qu
 
 Configuration Manager prend en charge la synchronisation des classifications de mise à jour suivantes :  
 
--   **Mises à jour critiques** : des mises à jour distribuées en grand nombre, répondant à un problème spécifique qui concerne un bogue critique non lié à la sécurité.  
+-   **Mises à jour critiques** : mises à jour distribuées en grand nombre, répondant à un problème spécifique qui concerne un bogue critique non lié à la sécurité.  
 
--   **Mises à jour de définitions** : des mises à jour pour des virus ou d’autres fichiers de définition.  
+-   **Mises à jour de définitions** : mises à jour pour des virus ou d’autres fichiers de définition.  
 
--   **Packs de fonctionnalités** : nouvelles fonctionnalités de produit, distribuées en dehors d’une version de produit et incluses généralement dans la version suivante du produit.  
+-   **Feature Packs** : nouvelles fonctionnalités de produit, distribuées en dehors d’une version de produit et incluses généralement dans la version suivante du produit.  
 
--   **Mises à jour de sécurité** : des mises à jour distribuées en grand nombre, répondant à un problème de sécurité spécifique à un produit.  
+-   **Mises à jour de sécurité** : mises à jour distribuées en grand nombre, répondant à un problème de sécurité spécifique à un produit.  
 
--   **Service Packs** : ensemble cumulé de correctifs logiciels rattachés à une application ou à un système d’exploitation. Ces correctifs comprennent des mises à jour de sécurité, des mises à jour critiques et des mises à jour logicielles.  
+-   **Service Packs** : ensemble cumulé de correctifs rattaché à une application ou à un système d’exploitation. Ces correctifs comprennent des mises à jour de sécurité, des mises à jour critiques et des mises à jour logicielles.  
 
 -   **Outils** : utilitaires ou fonctionnalités permettant d’effectuer une ou plusieurs tâches.  
 
 -   **Correctifs cumulatifs** : ensemble cumulé de correctifs assemblé pour faciliter leur déploiement. Ces correctifs comprennent des mises à jour de sécurité, des mises à jour critiques et des mises à jour logicielles. Les correctifs cumulatifs concernent généralement un domaine particulier, tel que la sécurité ou un composant de produit.  
 
--   **Mises à jour** : mises à jour d’une application ou d’un fichier déjà installés.  
+-   **Mises à jour** : mise à jour d’une application ou d’un fichier qui sont déjà installés.  
 
--   **Mises à niveau** : mises à jour de fonctionnalité vers une nouvelle version de Windows 10.  
+-   **Mises à niveau** : mise à jour de fonctionnalité vers une nouvelle version de Windows 10.  
 
 Configurez les paramètres de classification des mises à jour uniquement sur le site de niveau supérieur. Ils ne sont pas configurés sur le point de mise à jour logicielle des sites enfants, car les métadonnées des mises à jour logicielles sont répliquées à partir du site de niveau supérieur. Quand vous sélectionnez des classifications de mises à jour, n’oubliez pas que plus vous en sélectionnez, plus la synchronisation des métadonnées des mises à jour logicielles prend du temps.  
 
@@ -455,8 +455,8 @@ Examinez les scénarios suivants, dans lesquels vous devrez peut-être déployer
 -   Une mise à jour logicielle de remplacement n’a pas été approuvée pour le déploiement dans votre environnement de production.  
 
     > [!NOTE]  
-    > Avant la version 1806 de Configuration Manager, quand ce dernier définit une mise à jour logicielle remplacée avec l’état **Expiré**, celle-ci n’est pas définie avec l’état **Refusé** dans WSUS. Les clients continuent de rechercher une mise à jour expirée jusqu’à ce que la mise à jour soit refusée manuellement ou via un script personnalisé.  Après la version 1806 de Configuration Manager, ce dernier refuse également les mises à jour remplacées dans WSUS. Pour plus d’informations sur la tâche de nettoyage WSUS, consultez [Maintenance des mises à jour logicielles](/sccm/sum/deploy-use/software-updates-maintenance).
-
+    > - Avant la version 1806 de Configuration Manager, quand ce dernier définit une mise à jour logicielle remplacée avec l’état **Expiré**, celle-ci n’est pas définie avec l’état **Refusé** dans WSUS. Les clients continuent de rechercher une mise à jour expirée jusqu’à ce que la mise à jour soit refusée manuellement ou via un script personnalisé.  Après la version 1806 de Configuration Manager, ce dernier refuse également les mises à jour remplacées dans WSUS. Pour plus d’informations sur la tâche de nettoyage WSUS, consultez [Maintenance des mises à jour logicielles](/sccm/sum/deploy-use/software-updates-maintenance).
+    > - À compter de Configuration Manager version 1810, vous pouvez spécifier le comportement de règles de remplacement pour **mises à jour des fonctionnalités** séparément à partir de **mises à jour non fonctionnalité**.
 
 ###  <a name="BKMK_UpdateLanguages"></a> Langues  
 
@@ -488,8 +488,11 @@ Configurez les paramètres des détails du résumé uniquement sur le site de ni
 
 ##  <a name="BKMK_MaintenanceWindow"></a> Planifier une fenêtre de maintenance pour les mises à jour logicielles  
 
-Ajoutez une fenêtre de maintenance dédiée à l’installation des mises à jour logicielles. Vous pouvez ainsi configurer une fenêtre de maintenance générale et une fenêtre de maintenance distincte pour les mises à jour logicielles. Quand vous disposez d’une fenêtre de maintenance générale et d’une fenêtre de maintenance des mises à jour logicielles, les clients installent des mises à jour logicielles uniquement dans le cadre de la fenêtre de maintenance des mises à jour logicielles. Pour plus d’informations sur les fenêtres de maintenance, consultez [Guide pratique pour utiliser les fenêtres de maintenance](../../core/clients/manage/collections/use-maintenance-windows.md).  
+Ajoutez une fenêtre de maintenance dédiée à l’installation des mises à jour logicielles. Vous pouvez ainsi configurer une fenêtre de maintenance générale et une fenêtre de maintenance distincte pour les mises à jour logicielles. Quand vous disposez d’une fenêtre de maintenance générale et d’une fenêtre de maintenance des mises à jour logicielles, les clients installent des mises à jour logicielles uniquement dans le cadre de la fenêtre de maintenance des mises à jour logicielles. 
 
+À compter de Configuration Manager version 1810, vous pouvez modifier ce comportement et autoriser les mises à jour logicielles à installer pendant une fenêtre de maintenance générale. Pour plus d’informations sur ce paramètre client, consultez [mises à jour logicielles des paramètres client](/sccm/core/clients/deploy/about-client-settings#bkmk_SUMMaint).
+
+Pour plus d’informations sur les fenêtres de maintenance, consultez [Guide pratique pour utiliser les fenêtres de maintenance](../../core/clients/manage/collections/use-maintenance-windows.md).  
 
 
 ##  <a name="BKMK_RestartOptions"></a> Options de redémarrage pour les clients Windows 10 après l’installation de mises à jour logicielles
