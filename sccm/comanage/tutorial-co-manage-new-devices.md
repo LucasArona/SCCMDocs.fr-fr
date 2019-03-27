@@ -13,10 +13,10 @@ ms.service: ''
 ms.technology: ''
 ms.assetid: ''
 ms.openlocfilehash: 61400d382a539efa495af99795e32fc1f2a517ab
-ms.sourcegitcommit: af8693048e6706ffda72572374f56e0bc7dfce2c
+ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
+ms.lasthandoff: 03/27/2019
 ms.locfileid: "57737353"
 ---
 # <a name="tutorial-enable-co-management-for-new-internet-based-devices"></a>Tutoriel : Activer la cogestion pour les nouveaux appareils basés sur Internet
@@ -46,7 +46,7 @@ Suivez ce tutoriel si :
 
 ## <a name="prerequisites"></a>Prérequis  
 
-### <a name="azure-services-and-environment"></a>Environnement et services Azure
+### <a name="azure-services-and-environment"></a>Services et environnement Azure
 - Abonnement Azure ([essai gratuit](https://azure.microsoft.com/free)) 
 - Azure Active Directory Premium 
 - Abonnement Microsoft Intune 
@@ -72,9 +72,9 @@ Suivez ce tutoriel si :
 - Plus loin dans ce tutoriel, nous fournissons des conseils sur la configuration de la demande pour ce certificat.
 
 ### <a name="permissions"></a>Autorisations
-Tout au long de ce tutoriel, utilisez les autorisations suivantes pour effectuer des tâches :
-- Un compte qui est un *administrateur général* dans Azure  
-- Un compte qui est un *administrateur de domaine* dans votre infrastructure locale  
+Tout au long de ce tutoriel, utilisez les autorisations suivantes pour effectuer les tâches :
+- Un compte *administrateur général* dans Azure  
+- Un compte *administrateur de domaine* dans l’infrastructure locale  
 - Un compte qui est un *administrateur complet* pour *toutes* les étendues dans Configuration Manager   
 
 
@@ -369,7 +369,7 @@ Une fois les configurations, les rôles de système de site et les paramètres A
    
    - **Intune** – Bascule la charge de travail associée pour tous les appareils Windows 10 cogérés.  
 
-   Il n’est pas nécessaire de basculer de charges de travail dès l’activation de la cogestion. Vous pourrez revenir consulter cette configuration plus tard à partir de la console Configuration Manager, après avoir configuré la cogestion.  
+   Il n’est pas nécessaire de basculer des charges de travail dès l’activation de la cogestion. Vous pourrez revenir consulter cette configuration plus tard à partir de la console Configuration Manager, après avoir configuré la cogestion.  
 
    Avant de basculer une charge de travail, vérifiez que la charge de travail correspondante dans Intune est correctement configurée et déployée. Ainsi, les charges de travail resteront gérées.  
 
@@ -430,7 +430,7 @@ Pour attribuer des licences à des groupes d’utilisateurs, utilisez Azure Acti
  
 4. Sous **Tous les produits**, sélectionnez votre option de produit qui comporte la licence Intune, puis **Attribuer** en haut du volet.  
 
-   Par exemple, vous pouvez sélectionner **Enterprise Mobility + Security E5** si ainsi que vous avez obtenu Intune.  
+   Par exemple, vous pouvez sélectionner **Enterprise Mobility + Security E5** si c’est ainsi que vous avez obtenu Intune.  
 
 5. Sur le volet **Attribuer une licence**, cliquez sur **Utilisateurs et groupes** pour ouvrir le volet **Utilisateurs et groupes**. Sélectionnez les groupes et les différents utilisateurs auxquels vous souhaitez attribuer une licence.  Ensuite, cliquez sur **Sélectionner** en bas du volet pour confirmer cette sélection.  
 

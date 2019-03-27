@@ -12,10 +12,10 @@ ms.author: brenduns
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: af526f531ed81de105aea9d6c5d7f2ea81e8f104
-ms.sourcegitcommit: af8693048e6706ffda72572374f56e0bc7dfce2c
+ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
+ms.lasthandoff: 03/27/2019
 ms.locfileid: "57737289"
 ---
 # <a name="tutorial-enable-co-management-for-existing-configuration-manager-clients"></a>Tutoriel : Activer la cogestion pour les clients Configuration Manager existants
@@ -154,7 +154,7 @@ Il est essentiel, quoique souvent négligé, d’attribuer une licence Intune à
 
 Pour attribuer des licences à des groupes d’utilisateurs, utilisez Azure Active Directory.  
 
-1. Connectez-vous au [Portail Azure](https://portal.azure.com/) avec un compte Administrateur. Pour gérer les licences, il doit avoir le rôle Administrateur général ou Administrateur de compte d’utilisateur.  
+1. Connectez-vous au [portail Azure](https://portal.azure.com/) avec un compte Administrateur. Pour gérer les licences, il doit avoir le rôle Administrateur général ou Administrateur de compte d’utilisateur.  
 
 2. Sélectionnez **Tous les services** dans le volet de navigation gauche, puis **Azure Active Directory**.  
 
@@ -168,7 +168,7 @@ Pour attribuer des licences à des groupes d’utilisateurs, utilisez Azure Acti
 
 6. Sur le volet **Attribuer une licence**, cliquez sur **Options d’attribution** pour afficher tous les plans de services inclus dans le produit sélectionné. Si vous avez choisi un produit unique comme Intune, seul ce produit s’affiche.  
    - Définissez **Microsoft Intune** sur **Actif**.  
-   - Attribuez à chaque utilisateur une licence **Azure Active Directory Premium**.  
+   - Attribuez à chaque utilisateur une licence pour **Azure Active Directory Premium**.  
 
    Une fois les licences applicables attribuées, sélectionnez **OK**.  
 
