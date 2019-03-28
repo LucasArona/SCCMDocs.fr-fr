@@ -2,7 +2,7 @@
 title: Haute disponibilité du serveur de site
 titleSuffix: Configuration Manager
 description: Découvrez comment configurer la haute disponibilité pour le serveur de site Configuration Manager, en ajoutant un serveur de site en mode passif.
-ms.date: 03/20/2019
+ms.date: 03/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1259e54f552496f1c838ce4d8da5dbb385dc3c52
-ms.sourcegitcommit: 5f17355f954b9d9e10325c0e9854a9d582dec777
+ms.openlocfilehash: be3b70d91155b379881332ddb7c8d405d0d92e84
+ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329530"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58523858"
 ---
 # <a name="site-server-high-availability-in-configuration-manager"></a>Haute disponibilité du serveur de site dans Configuration Manager
 
