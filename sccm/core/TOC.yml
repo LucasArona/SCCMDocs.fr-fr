@@ -69,6 +69,8 @@ items:
       href: plan-design/changes/what-has-changed-from-configuration-manager-2012.md
     - name: Nouveautés dans les versions incrémentielles
       href: plan-design/changes/whats-new-incremental-versions.md
+    - name: Nouveautés de la version 1902
+      href: plan-design/changes/whats-new-in-version-1902.md
     - name: Nouveautés de la version 1810
       href: plan-design/changes/whats-new-in-version-1810.md
     - name: Nouveautés de la version 1806
@@ -168,6 +170,8 @@ items:
     items:
     - name: Utilisation des données d’utilisation et de diagnostic
       href: plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md
+    - name: Données de diagnostic pour 1902
+      href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1902.md
     - name: Données de diagnostic pour 1810
       href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1810.md
     - name: Données de diagnostic pour 1806
@@ -432,6 +436,8 @@ items:
       href: servers/manage/use-the-update-registration-tool-to-import-hotfixes.md
     - name: Utiliser le programme d’installation de correctif logiciel
       href: servers/manage/use-the-hotfix-installer-to-install-updates.md
+    - name: Liste de contrôle pour l’installation de la mise à jour 1902
+      href: servers/manage/checklist-for-installing-update-1902.md
     - name: Liste de contrôle pour l’installation de la mise à jour 1810
       href: servers/manage/checklist-for-installing-update-1810.md
     - name: Liste de contrôle pour l’installation de la mise à jour 1806
@@ -760,9 +766,9 @@ items:
       href: clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md
     - name: Mettre à niveau les clients Mac
       href: clients/manage/upgrade/upgrade-clients-on-mac-computers.md
-ms.openlocfilehash: 97eb6fe3dac61766ca7f561807e6ee0dd48e1559
-ms.sourcegitcommit: ef2960bd91655c741450774e512dd0a9be610625
+ms.openlocfilehash: befe656dec3949f792d9118a1ef092ff36316fdd
+ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56838801"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58523909"
