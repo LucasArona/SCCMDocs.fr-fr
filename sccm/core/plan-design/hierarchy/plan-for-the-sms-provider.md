@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aba8479d6a2aecb3c73dad6acce6ab8237ff2576
-ms.sourcegitcommit: 8803a64692f3edc0422b58f6c3037a8796374cc8
+ms.openlocfilehash: 6ff872817805c85665bde7219ca26de0bf8d78ef
+ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 03/19/2019
-ms.locfileid: "57881875"
+ms.locfileid: "58197110"
 ---
 # <a name="plan-for-the-sms-provider"></a>Planifier le fournisseur SMS 
 
@@ -259,19 +259,18 @@ L’installation du kit Windows ADK peut nécessiter jusqu’à 650 Mo d’espac
 
 À partir de la version 1810, le fournisseur SMS fournit un accès d’interopérabilité d’API en lecture seule, appelé **service d’administration**, à WMI sur HTTPS. Cette API REST peut être utilisée à la place d’un service web personnalisé pour accéder à des informations à partir du site.
 
-`https://servername/AdminService/wmi/<ClassName>` 
+L’URL du **service d’administration** est au format `https://<servername>/AdminService/wmi/<ClassName>`, où `<servername>` est le serveur où est installé le fournisseur SMS et `<ClassName>` un nom de classe WMI Configuration Manager valide.
 
 Par exemple, `https://servername/AdminService/wmi/SMS_Site`
 
 Effectuer des appels directs à ce service avec l’applet de commande Windows PowerShell [Invoke-RestMethod](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-restmethod).
 
-Vous pouvez également l’utiliser pour accéder à des données du site à partir de Power BI à l’aide de l’option de connecteur OData. 
-
 > [!Tip]  
 > Vous pouvez utiliser cette applet de commande dans une séquence de tâches. Cette action vous permet d’accéder à des informations à partir du site sans avoir besoin d’un service web personnalisé pour interagir avec le fournisseur WMI. 
 
-Le service d’administration consigne son activité dans le fichier **adminservice.log**.
+Vous pouvez également l’utiliser pour accéder à des données du site à partir de Power BI à l’aide de l’option de connecteur OData. 
 
+Le service d’administration consigne son activité dans le fichier **adminservice.log**.
 
 ### <a name="enable-the-administration-service-through-the-cmg"></a>Activez le service d’administration via la passerelle CMG
 

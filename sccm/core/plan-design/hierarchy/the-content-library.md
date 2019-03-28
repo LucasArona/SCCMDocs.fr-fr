@@ -2,7 +2,7 @@
 title: Bibliothèque de contenu
 titleSuffix: Configuration Manager
 description: Découvrez la bibliothèque de contenu utilisée par Configuration Manager pour réduire la taille globale du contenu distribué.
-ms.date: 09/19/2018
+ms.date: 03/20/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0453f181133b69dcf3fe83032da0eace84718cf3
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 9b082e28fde0b1ae53a00b9d3236764d03b474ed
+ms.sourcegitcommit: 5f17355f954b9d9e10325c0e9854a9d582dec777
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56129270"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329513"
 ---
 # <a name="the-content-library-in-configuration-manager"></a>Bibliothèque de contenu dans Configuration Manager
 
@@ -75,7 +75,8 @@ Utilisez les options suivantes pour gérer la bibliothèque de contenu sur le si
 
 
 ## <a name="bkmk_remote"></a> Configurer une bibliothèque de contenu distante pour le serveur de site  
-<!--1357525--> À compter de la version 1806, pour configurer la [haute disponibilité du serveur de site](/sccm/core/servers/deploy/configure/site-server-high-availability) ou pour libérer de l’espace disque sur vos serveurs d’administration centrale ou de site principal, déplacez la bibliothèque de contenu à un autre emplacement de stockage. Déplacez la bibliothèque de contenu sur un autre disque du serveur de site, sur un serveur distinct ou sur des disques à tolérance de panne dans un réseau de zone de stockage (SAN). Un SAN est recommandé, car il est à haute disponibilité et fournit un stockage élastique capable de croître ou de se réduire au fil du temps pour répondre à vos besoins en termes de contenu. Pour plus d’informations, consultez [Options de haute disponibilité](/sccm/protect/understand/high-availability-options).
+<!--1357525-->
+À compter de la version 1806, pour configurer la [haute disponibilité du serveur de site](/sccm/core/servers/deploy/configure/site-server-high-availability) ou libérer de l’espace disque sur les serveurs d’administration centrale ou de site principal, déplacez la bibliothèque de contenu dans un autre emplacement de stockage. Déplacez la bibliothèque de contenu sur un autre disque du serveur de site, sur un serveur distinct ou sur des disques à tolérance de panne dans un réseau de zone de stockage (SAN). Un SAN est recommandé, car il est à haute disponibilité et fournit un stockage élastique capable de croître ou de se réduire au fil du temps pour répondre à vos besoins en termes de contenu. Pour plus d’informations, consultez [Options de haute disponibilité](/sccm/protect/understand/high-availability-options).
 
 Cette bibliothèque de contenu distante est un prérequis pour la [haute disponibilité du serveur de site](/sccm/core/servers/deploy/configure/site-server-high-availability). 
 
@@ -85,17 +86,17 @@ Cette bibliothèque de contenu distante est un prérequis pour la [haute disponi
 > [!Tip]  
 > Planifiez aussi la gestion du contenu des packages, qui est extérieure à la bibliothèque de contenu. Chaque objet de logiciel dans Configuration Manager a une source de package sur un partage réseau. Envisagez la centralisation de toutes les sources sur un seul partage, mais vérifiez que cet emplacement est redondant et à haute disponibilité. 
 > 
-> Si vous déplacez la bibliothèque de contenu vers le même volume de stockage que vos sources de package, vous ne pouvez pas marquer ce volume pour la déduplication des données. Contrairement à la bibliothèque de contenu, le volume de sources de package ne prend pas en charge la déduplication des données. Pour plus d’informations, consultez [Déduplication des données](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#bkmmk_datadedup).<!--SCCMDOcs issue #831-->  
+> Si vous déplacez la bibliothèque de contenu vers le même volume de stockage que vos sources de package, vous ne pouvez pas marquer ce volume pour la déduplication des données. Contrairement à la bibliothèque de contenu, le volume de sources de package ne prend pas en charge la déduplication des données. Pour plus d’informations, voir [Déduplication des données](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#bkmmk_datadedup).<!--SCCMDOcs issue #831-->  
 
 
 ### <a name="prerequisites"></a>Prérequis  
 
-- Le compte de l’ordinateur du serveur de site doit disposer d’autorisations en **lecture** et en **écriture** pour le chemin réseau où vous déplacez la bibliothèque de contenu. Aucun composant n’est installé sur le système à distance.  
+- Le compte d’ordinateur du serveur de site doit disposer d’autorisations de type **Contrôle total** sur le chemin réseau où sera déplacée la bibliothèque de contenu. Cette autorisation s’applique à la fois au partage et au système de fichiers. Aucun composant n’est installé sur le système à distance.
 
 - Le serveur de site ne peut pas avoir le rôle de point de distribution. Le point de distribution utilise également la bibliothèque de contenu, et ce rôle ne prend pas en charge les bibliothèques de contenu distantes. Après avoir déplacé la bibliothèque de contenu, vous ne pouvez plus ajouter le rôle de point de distribution au serveur de site.  
 
 > [!Important]  
-> Ne réutilisez pas un emplacement de réseau partagé entre plusieurs sites. Par exemple, n’utilisez pas le même chemin à la fois pour un site d’administration centrale et pour un site principal enfant. Cette configuration est susceptible d’endommager la bibliothèque de contenu, ce qui nécessiterait sa recréation.<!--SCCMDocs-pr issue 2764-->  
+> Ne réutilisez pas un emplacement de réseau partagé entre plusieurs sites. Par exemple, n’utilisez pas le même chemin à la fois pour un site d’administration centrale et pour un site principal enfant. Cette configuration est susceptible d’endommager la bibliothèque de contenu, ce qui vous obligerait à la recréer.<!--SCCMDocs-pr issue 2764-->  
 
 
 ### <a name="process-to-manage-the-content-library"></a>Processus de gestion de la bibliothèque de contenu
@@ -115,6 +116,9 @@ Cette bibliothèque de contenu distante est un prérequis pour la [haute disponi
 
    - Quand **En cours** est indiqué, la valeur de **Progression du déplacement (%)** affiche le pourcentage d’achèvement.  
 
+        > [!Note]  
+        > Si la bibliothèque de contenu est volumineuse, la console risque d’afficher une progression de `0%` pendant un certain temps. Pour une bibliothèque de 1 To par exemple, elle doit copier 10 Go pour indiquer `1%`. Voir **distmgr.log** pour connaître le nombre de fichiers et d’octets copiés. À compter de la version 1810, le fichier journal présente également une estimation du temps restant.
+
    - En cas d’état d’erreur, l’état affiche l’erreur. **Accès refusé** et **Disque plein** sont des erreurs courantes.  
 
    - Quand l’opération est terminée, l’état passe à **Terminé**.  
@@ -124,6 +128,10 @@ Cette bibliothèque de contenu distante est un prérequis pour la [haute disponi
 Pour plus d’informations sur ce processus, consultez [Diagramme de flux – Gérer la bibliothèque de contenu](/sccm/core/plan-design/hierarchy/manage-content-library-flowchart).
 
 Le site *copie* les fichiers de la bibliothèque de contenu à l’emplacement distant. Ce processus ne supprime pas les fichiers de la bibliothèque de contenu à l’emplacement d’origine sur le serveur de site. Pour libérer l’espace, un administrateur doit supprimer manuellement ces fichiers d’origine.
+
+Si la bibliothèque de contenu d’origine s’étend sur deux lecteurs, elle est fusionnée en un seul dossier dans la nouvelle destination. 
+
+À compter de la version 1810, le site arrête les composants **Déspouleur** et **Gestionnaire de distribution** pendant le processus de copie. L’objectif est d’empêcher tout ajout de contenu à la bibliothèque lors de son déplacement. Planifiez quand même cette modification pendant une maintenance système.
 
 Si vous avez besoin de redéplacer la bibliothèque de contenu vers le serveur de site, répétez ce processus, mais entrez un lecteur et un chemin local pour **Nouvel emplacement**. Il doit inclure un nom de dossier qui existe déjà sur le lecteur, par exemple `D:\SCCMContentLib`. Quand le contenu d’origine existe encore, le processus déplace rapidement la configuration à l’emplacement local sur le serveur de site. 
 

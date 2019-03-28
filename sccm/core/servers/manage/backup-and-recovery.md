@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e876e34929479654240ff220c3cad91043da0f83
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 7fb6a87f965db0a329a4f64918b0efcd5732ea0b
+ms.sourcegitcommit: d71e558db2da124357b840332e2da671b3810507
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56123135"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58269129"
 ---
 # <a name="back-up-a-configuration-manager-site"></a>Sauvegarde d'un site Configuration Manager
 
@@ -67,6 +67,8 @@ Pour simplifier le processus de sauvegarde, vous pouvez créer un fichier **Afte
 Vous pouvez sauvegarder un site d’administration centrale et un site principal. Les sites secondaires ou les serveurs de système de site n’ont pas de tâches de sauvegarde.
 
 Quand le service de sauvegarde de Configuration Manager s’exécute, il suit les instructions définies dans le fichier de contrôle de sauvegarde : `<ConfigMgrInstallationFolder>\Inboxes\Smsbkup.box\Smsbkup.ctl`. Vous pouvez apporter des modifications à ce fichier de contrôle de la sauvegarde afin de changer le comportement du service de sauvegarde.  
+> [!NOTE]
+> Les modifications de **Smsbkup.ctl** s’appliquent après redémarrage du service SMS_SITE_VSS_WRITER sur le serveur de site.
 
 Les informations sur l’état de la sauvegarde du site sont enregistrées dans le fichier **Smsbkup.log** . Ce fichier est créé dans le dossier de destination que vous spécifiez dans les propriétés de la tâche de maintenance de sauvegarde du serveur de site.  
 

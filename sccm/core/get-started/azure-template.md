@@ -2,7 +2,7 @@
 title: Créer un laboratoire dans Azure
 titleSuffix: Configuration Manager
 description: Automatiser la création d’un lab Configuration Manager Technical Preview avec des modèles Azure
-ms.date: 01/22/2019
+ms.date: 03/18/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 02f3df4b8c090df960f1052a25c1f6cc8ef45395
-ms.sourcegitcommit: ef2960bd91655c741450774e512dd0a9be610625
+ms.openlocfilehash: 25283e513e256e8ce779df7b71ac6f6c17f1e370
+ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56838767"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58196821"
 ---
 # <a name="create-a-configuration-manager-technical-preview-lab-in-azure"></a>Créer un lab Configuration Manager Technical Preview dans Azure
 
@@ -33,7 +33,7 @@ Pour plus d’informations sur la branche actuelle de Configuration Manager, con
 ## <a name="prerequisites"></a>Prérequis
 
 Ce processus nécessite un abonnement Azure où vous pouvez créer les objets suivants : 
-- Quatre machines virtuelles Standard_D2s_v3
+- Trois machines virtuelles Standard_D2s_v3
 - Compte de stockage Standard_LRS
 
 > [!Tip]  
@@ -68,7 +68,7 @@ Ce processus nécessite un abonnement Azure où vous pouvez créer les objets su
     > [!Important]  
     > Les paramètres suivants sont obligatoires pour Azure. Utilisez les valeurs par défaut. Ne changez pas ces valeurs.  
     > 
-    > - **\_Emplacement des artefacts** : Emplacement des scripts pour ce modèle<!-- https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/sccm-technicalpreview/ -->  
+    > - **\_Emplacement des artefacts** : Emplacement des scripts pour ce modèle <!-- https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/sccm-technicalpreview/ -->  
     >
     > - **\_Jeton SAS d’emplacement des artefacts** : Le jeton SAS est nécessaire pour accéder à l’emplacement des artefacts  
     > 
@@ -86,7 +86,7 @@ Pour vous connecter aux machines virtuelles, obtenez d’abord les adresses IP p
 
 ## <a name="azure-vm-info"></a>Informations sur les machines virtuelles Azure
 
-Les quatre machines virtuelles ont les spécifications suivantes :
+Les trois machines virtuelles ont les spécifications suivantes :
 - Standard_D2s_v3, qui a 2 cœurs d’UC et 8 Go de mémoire  
 - Windows Server 2016 Datacenter Edition
 - 150 Go d’espace disque
@@ -127,14 +127,4 @@ Contrôleur de domaine Active Directory
 - Compression différentielle à distance (RDC) 
 - IIS (Internet Information Service)
 - Service de transfert intelligent en arrière-plan (BITS)
-
-
-### `<prefix>Other`
-
-Cette machine virtuelle peut être utilisée comme client ou pour héberger d’autres rôles de site.
-
-#### <a name="windows-features-and-roles"></a>Rôles et fonctionnalités Windows
-- .NET
-- Compression différentielle à distance (RDC) 
-
 

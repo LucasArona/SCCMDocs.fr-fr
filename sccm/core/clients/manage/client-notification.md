@@ -2,7 +2,7 @@
 title: Notification du client
 titleSuffix: Configuration Manager
 description: Gérez les clients en effectuant une action immédiate à partir de la console centrale Configuration Manager.
-ms.date: 03/06/2019
+ms.date: 03/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a643924cbaef928f9db4011f634ae96171ab7914
-ms.sourcegitcommit: 544f335cfd1bfd0a1d4973439780e9f5e9ee8bed
+ms.openlocfilehash: 39135a1fa548c83e0ba9c7d2a98cf1e925217280
+ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562089"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58197025"
 ---
 # <a name="client-notification-in-configuration-manager"></a>Notification du client dans Configuration Manager
 
@@ -79,7 +79,8 @@ Ces actions se trouvent sous le menu **Notification du client**, dans le ruban a
 Dans les versions 1806 et antérieures, l’option **Notification du client** n’est disponible que dans le nœud Regroupement d’appareils et dans l’affichage de l’adhésion à un regroupement d’appareils. À compter de la version 1810, il est possible de lancer directement une **Notification du client** dans le nœud **Appareils**. Il n’est plus nécessaire de se trouver dans une vue de l’appartenance au regroupement. <!--SCCMDocs-pr issue 2972-->
 
 #### <a name="permissions"></a>Autorisations
-<!--SCCMDocs-pr issue #2972--> Depuis la version 1810, les actions de notification du client nécessitent l’autorisation **Notifier la ressource** sur l’objet Regroupement. Cette autorisation s’applique à toutes les actions du menu **Notification du client**. 
+<!--SCCMDocs-pr issue #2972-->
+À compter de la version 1810, les actions de notification client exigent l’autorisation **Notifier la ressource** sur l’objet Regroupement. Cette autorisation s’applique à toutes les actions du menu **Notification du client**. 
 
 Les rôles intégrés suivants disposent de cette autorisation par défaut :
 - Administrateur complet  
@@ -135,7 +136,7 @@ Déclenchez sur les clients Windows 10 la vérification et l’envoi de leur de
 
 ### <a name="check-conditional-access-compliance"></a>Vérifier la conformité de l’accès conditionnel
 
-Déclenchez sur les clients la vérification de leur conformité avec l’accès conditionnel. Pour plus d’informations, consultez [Gérer l’accès aux services O365 pour PC](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm).  
+Déclenchez sur les clients la vérification de leur conformité avec l’accès conditionnel. Pour plus d’informations, voir [Gérer l’accès aux services Office 365 des PC](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm).  
 
 
 ### <a name="wake-up"></a>Sortir de veille

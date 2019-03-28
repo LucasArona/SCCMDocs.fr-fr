@@ -2,7 +2,7 @@
 title: Haute disponibilité du serveur de site
 titleSuffix: Configuration Manager
 description: Découvrez comment configurer la haute disponibilité pour le serveur de site Configuration Manager, en ajoutant un serveur de site en mode passif.
-ms.date: 07/30/2018
+ms.date: 03/20/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: be12cfe29ff470f2f577bab2c685695ae5770bae
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 1259e54f552496f1c838ce4d8da5dbb385dc3c52
+ms.sourcegitcommit: 5f17355f954b9d9e10325c0e9854a9d582dec777
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56131419"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329530"
 ---
 # <a name="site-server-high-availability-in-configuration-manager"></a>Haute disponibilité du serveur de site dans Configuration Manager
 
@@ -24,7 +24,14 @@ ms.locfileid: "56131419"
 
 <!--1128774-->
 
-Depuis la version 1806 de Configuration Manager, la haute disponibilité pour le rôle de serveur de site est une solution basée sur Configuration Manager, qui permet d’installer un serveur de site supplémentaire en mode *Passif*. Le serveur de site en mode passif vient s’ajouter à votre serveur de site existant qui se trouve en mode *Actif*. Un serveur de site en mode passif est disponible pour une utilisation immédiate, si nécessaire. Vous pouvez inclure ce serveur de site supplémentaire dans votre conception globale pour rendre le service Configuration Manager [hautement disponible](/sccm/core/servers/deploy/configure/high-availability-options).  
+Il était auparavant possible d’ajouter de la redondance à la plupart des rôles de Configuration Manager en en créant plusieurs instances dans l’environnement, sauf pour le serveur de site proprement dit. Depuis la version 1806 de Configuration Manager, la haute disponibilité du rôle serveur de site est une solution basée sur Configuration Manager permettant d’installer un serveur de site supplémentaire en mode  *passif*. La version 1810 ajoute la prise en charge des hiérarchies : ainsi, les sites d’administration centrale et les sites principaux enfants peuvent également comporter un serveur de site supplémentaire en mode passif. Le serveur de site en mode passif peut être local ou dans le cloud Azure.
+
+Cette fonctionnalité offre les avantages suivants : 
+- redondance et haute disponibilité pour le rôle serveur de site ;  
+- modification facilitée du matériel ou du système d’exploitation du serveur de site ;  
+- déplacement simplifié du serveur de site sur Azure IaaS.  
+
+Le serveur de site en mode passif vient s’ajouter à votre serveur de site existant qui se trouve en mode *Actif*. Un serveur de site en mode passif est disponible pour une utilisation immédiate, si nécessaire. Vous pouvez inclure ce serveur de site supplémentaire dans votre conception globale pour rendre le service Configuration Manager [hautement disponible](/sccm/core/servers/deploy/configure/high-availability-options).  
 
 Un serveur de site en mode passif :
 - Utilise la même base de données de site que votre serveur de site en mode actif
@@ -33,12 +40,17 @@ Un serveur de site en mode passif :
 
 Pour que le serveur de site en mode passif devienne actif, vous devez le *promouvoir* manuellement. Cette action fait passer le serveur de site actif en mode passif, et le serveur de site passif en mode actif. Les rôles de système de site disponibles sur le serveur en mode actif d’origine restent disponibles tant l’ordinateur est accessible. Seul le rôle de serveur de site bascule entre mode passif et mode actif.
 
-> [!Note]  
-> Par défaut, Configuration Manager n’active pas cette fonctionnalité facultative. Vous devez activer cette fonctionnalité avant de l’utiliser. Pour plus d’informations, consultez [Activer les fonctionnalités facultatives des mises à jour](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).
+Microsoft Core Services Engineering and Operations a utilisé cette fonctionnalité pour migrer son site d’administration centrale vers Microsoft Azure. Pour plus d’informations, voir [l’article Microsoft IT Showcase](https://www.microsoft.com/itshowcase/Article/Content/1065/Migrating-System-Center-Configuration-Manager-onpremises-infrastructure-to-Microsoft-Azure).
 
 
 
 ## <a name="prerequisites"></a>Prérequis
+
+- La bibliothèque de contenu de site doit se trouver sur un partage réseau distant. Les deux serveurs de site nécessitent des autorisations Contrôle total sur le partage et son contenu. Pour plus d’informations, voir [Gérer la bibliothèque de contenu](/sccm/core/plan-design/hierarchy/the-content-library#bkmk_remote).<!--1357525-->  
+
+    - Le compte d’ordinateur du serveur de site doit disposer d’autorisations de type **Contrôle total** sur le chemin réseau où sera déplacée la bibliothèque de contenu. Cette autorisation s’applique à la fois au partage et au système de fichiers. Aucun composant n’est installé sur le système à distance.
+
+    - Le serveur de site ne peut pas avoir le rôle de point de distribution. Le point de distribution utilise également la bibliothèque de contenu, et ce rôle ne prend pas en charge les bibliothèques de contenu distantes. Après avoir déplacé la bibliothèque de contenu, vous ne pouvez plus ajouter le rôle de point de distribution au serveur de site.  
 
 - Le serveur de site en mode passif peut être local ou dans le cloud Azure.  
     > [!Note]  
@@ -48,40 +60,73 @@ Pour que le serveur de site en mode passif devienne actif, vous devez le *promou
 
 - Les deux serveurs de site doivent être joints au même domaine Active Directory.  
 
-- Le site est un site principal autonome. 
+- Dans la version 1806, le site doit être un site principal autonome.  
 
-- Les deux serveurs de site doivent utiliser la même base de données, qui doit être distante de chaque serveur de site.  
+    - Depuis la version 1810, Configuration Manager prend en charge les serveurs de site en mode passif dans une hiérarchie. Le site d’administration centrale et les sites principaux enfants peuvent comporter un serveur de site supplémentaire en mode passif.<!-- 3607755 -->  
 
-     - Les deux serveurs de site nécessitent des autorisations **administrateur système** pour l’instance SQL Server qui héberge la base de données du site.
+- Les deux serveurs de site doivent utiliser la même base de données de site.  
 
-     - Le serveur SQL Server qui héberge la base de données de site peut utiliser une instance par défaut, une instance nommée, un [cluster SQL Server](/sccm/core/servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database) ou un [groupe de disponibilité AlwaysOn SQL Server](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database).  
+    - Dans la version 1806, la base de données doit être distante de chaque serveur de site. Depuis la version 1810, le processus d’installation de Configuration Manager ne bloque plus l’installation du rôle de serveur de site sur un ordinateur ayant le rôle Windows pour le clustering de basculement. SQL Always On exige ce rôle, ce qui vous empêchait de colocaliser la base de données de site sur le serveur de site. Avec ce changement, vous pouvez créer un site à haut niveau de disponibilité avec moins de serveurs en utilisant SQL Always On et un serveur de site en mode passif.<!-- SCCMDocs issue 1074 -->  
 
-     - Le serveur de site en mode passif est configuré pour utiliser la même base de données de site que le serveur de site en mode actif. Le serveur de site en mode passif ne fait que lire les données de la base de données. Il n’y écrit pas de données tant qu’il n’a pas été promu vers le mode actif.  
+    - Le serveur SQL Server qui héberge la base de données de site peut utiliser une instance par défaut, une instance nommée, un [cluster SQL Server](/sccm/core/servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database) ou un [groupe de disponibilité AlwaysOn SQL Server](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database).  
 
-- La bibliothèque de contenu de site doit se trouver sur un partage réseau distant. Les deux serveurs de site nécessitent des autorisations Contrôle total sur le partage et son contenu. Pour plus d’informations, consultez [Gérer la bibliothèque de contenu](/sccm/core/plan-design/hierarchy/the-content-library#manage-content-library).<!--1357525-->  
+    - Les deux serveurs de site exigent des rôles de sécurité **sysadmin** et **securityadmin** sur l’instance SQL Server qui héberge la base de données de site. Normalement, le serveur de site d’origine possède déjà ces rôles ; ajoutez-les au nouveau serveur de site. Par exemple, le script SQL suivant ajoute ces rôles au nouveau serveur de site **VM2** dans le domaine Contoso :  
 
-    - Le serveur de site ne peut avoir le rôle de point de distribution. Le point de distribution utilise également la bibliothèque de contenu, et ce rôle ne prend pas en charge les bibliothèques de contenu distantes. Si vous déplacez la bibliothèque de contenu, vous ne pourrez plus ajouter le rôle de point de distribution au serveur de site.  
+        ```SQL
+        USE [master]
+        GO
+        CREATE LOGIN [contoso\vm2$] FROM WINDOWS WITH DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[us_english]
+        GO
+        ALTER SERVER ROLE [sysadmin] ADD MEMBER [contoso\vm2$]
+        GO
+        ALTER SERVER ROLE [securityadmin] ADD MEMBER [contoso\vm2$]
+        GO        
+        ```
+    - Les deux serveurs de site ont besoin d’accéder à la base de données de site sur l’instance SQL Server. Normalement, le serveur de site d’origine possède déjà cet accès ; ajoutez-le au nouveau serveur de site. Par exemple, le script SQL suivant ajoute une connexion à la base de données **CM_ABC** au nouveau serveur de site **VM2** dans le domaine Contoso :  
+
+        ```SQL
+        USE [CM_ABC]
+        GO
+        CREATE USER [contoso\vm2$] FOR LOGIN [contoso\vm2$] WITH DEFAULT_SCHEMA=[dbo]
+        GO
+        ```
+
+    - Le serveur de site en mode passif est configuré pour utiliser la même base de données de site que le serveur de site en mode actif. Le serveur de site en mode passif ne fait que lire les données de la base de données. Il n’y écrit pas de données tant qu’il n’a pas été promu vers le mode actif.  
 
 - Le serveur de site en mode passif :  
 
-     - Doit respecter les [conditions requises pour installer un site principal](/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#primary-sites-and-the-central-administration-site).  
+    - doit respecter les prérequis pour installer un site principal, par exemple .NET Framework, la compression différentielle à distance et Windows ADK (pour en connaître la liste complète, voir [Prérequis des sites et systèmes de site](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)) ;<!-- SCCMDocs issue 765 -->  
 
-     - Doit avoir un compte d’ordinateur faisant partie d’un groupe Administrateurs local sur le serveur de site en mode actif<!--516036-->
+    - doit avoir un compte d’ordinateur faisant partie du groupe Administrateurs local sur le serveur de site en mode actif ;<!--516036-->
 
-     - Est installé à l’aide de fichiers sources correspondant à la version du serveur de site en mode actif  
+    - doit s’installer à l’aide de fichiers sources correspondant à la version du serveur de site en mode actif ;  
 
-     - Ne peut pas avoir un rôle de système de site tant que le serveur de site en mode passif n’est pas installé  
+    - ne peut pas posséder de rôle de système de site tant que le serveur de site en mode passif n’est pas installé.  
 
 - Les deux serveurs de site peuvent exécuter des systèmes d’exploitation différents ou des versions de Service Pack différentes, du moment qu’ils sont tous les deux [pris en charge par Configuration Manager](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers).  
+
+- N’hébergez pas le rôle de point de connexion de service sur un des serveurs de site configurés pour la haute disponibilité. S’il se trouve actuellement sur le serveur de site d’origine, supprimez-le et installez-le sur un autre serveur de système de site. Pour plus d’informations, consultez [À propos du point de connexion de service](/sccm/core/servers/deploy/configure/about-the-service-connection-point).  
+
+- Autorisations du [compte d’installation du système de site](/sccm/core/plan-design/hierarchy/accounts#site-system-installation-account) :  
+
+    - Par défaut, de nombreux clients utilisent le compte d’ordinateur du serveur de site pour installer les nouveaux systèmes de site. Dans les environnements qui suivent cette configuration, il est indispensable d’ajouter ce compte au groupe **Administrateurs** local sur tous les systèmes de site distant, par exemple tous les points de distribution distants.  
+
+    - La configuration recommandée pour l’installation du système de site consiste à utiliser un compte de service, et de préférence un compte de service local pour une sécurité maximale. Si votre environnement suit cette configuration, aucune modification n’est nécessaire.  
 
 
 
 ## <a name="limitations"></a>Limitations
-- Un serveur de site unique en mode passif est pris en charge sur chaque site principal.  
 
-- Un serveur de site en mode passif ne peut pas se trouver dans une hiérarchie. Une hiérarchie comprend un site d’administration centrale et un site principal enfant. Un serveur de site en mode passif ne doit être créé que sur un site principal autonome.<!--1358224-->
+- Seul un serveur de site en mode passif est pris en charge par site.  
 
-- Un serveur de site en mode passif ne peut pas se trouver sur un site secondaire.<!--SCCMDocs issue 680-->  
+- Dans la version 1806, les serveurs de site en mode passif ne sont pas pris en charge dans une hiérarchie. Une hiérarchie comprend un site d’administration centrale et un site principal enfant. Ne créez un serveur de site en mode passif que sur un site principal autonome.<!--1358224-->  
+
+    - Depuis la version 1810, Configuration Manager prend en charge les serveurs de site en mode passif dans une hiérarchie. Le site d’administration centrale et les sites principaux enfants peuvent comporter un serveur de site supplémentaire en mode passif.<!-- 3607755 -->  
+
+- Les serveurs de site en mode passif ne sont pas pris en charge sur un site secondaire.<!--SCCMDocs issue 680-->  
+
+    > [!Note]  
+    > Les sites secondaires restent pris en charge sous un site principal comportant des serveurs de site hautement disponibles.
 
 - La promotion d’un serveur de site passif vers le mode actif se fait manuellement. Il n’existe pas de basculement automatique.  
 
@@ -92,7 +137,7 @@ Pour que le serveur de site en mode passif devienne actif, vous devez le *promou
 
 - Pour les rôles, tels que le point de rapport, qui utilisent une base de données, celle-ci doit être hébergée sur un serveur distant des deux serveurs de site.  
 
-- Le fournisseur SMS ne peut pas être installé sur le serveur de site en mode passif. Vous devez vous connecter à un fournisseur du site pour promouvoir manuellement le serveur de site passif vers le mode actif. Installez au moins une instance supplémentaire du fournisseur sur un autre serveur. Pour plus d’informations, consultez [Planifier le fournisseur SMS](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider).  
+- Lorsque le serveur de site est ajouté en mode passif, le site n’installe pas par la même occasion le rôle Fournisseur SMS. Installez au moins une instance supplémentaire du fournisseur sur un autre serveur pour bénéficier de la haute disponibilité. Si votre conception comporte ce rôle sur votre serveur de site, installez-le sur le nouveau serveur de site après avoir ajouté le serveur de site en mode passif. Pour plus d’informations, consultez [Planifier le fournisseur SMS](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider).  
 
 - La console Configuration Manager n’est pas installée automatiquement sur le serveur de site en mode passif.  
 
@@ -154,10 +199,12 @@ Comme pour la sauvegarde et la récupération, vous pouvez planifier et tester v
 
     - Vérifiez l’état du contenu de tous les packages qui sont répliqués activement d’un site à l’autre.  
 
-    - Ne démarrez pas de nouvelles tâches de distribution de contenu. 
+    - Vérifiez l’état du site secondaire et la réplication de site. 
+
+    - Ne lancez pas de nouvelles tâches de distribution de contenu ou de maintenance sur des serveurs de site secondaires ou enfants. 
 
         > [!Note]  
-        > Si une réplication de fichiers entre sites est en cours pendant le basculement, le nouveau serveur de site ne peut pas recevoir le fichier répliqué. Si cela se produit, redistribuez le contenu logiciel une fois que le nouveau serveur de site est actif.<!--515436-->  
+        > Si une réplication de fichiers ou de la base de données entre sites est en cours pendant le basculement, le nouveau serveur de site risque de ne pas recevoir le contenu répliqué. Dans ce cas, redistribuez le contenu logiciel une fois le nouveau serveur de site actif.<!--515436--> Pour une réplication de la base de données, il peut se révéler nécessaire de réinitialiser un site secondaire après le basculement.<!-- SCCMDocs issue 808 -->
 
 
 ### <a name="process-to-promote-the-site-server-in-passive-mode-to-active-mode"></a>Processus de promotion d’un serveur de site passif en serveur de site actif
@@ -187,7 +234,7 @@ Pour plus d’informations sur le processus de promotion *planifiée*, consultez
 
 Si le serveur de site en mode actif actuel est hors connexion, le serveur de site à promouvoir tente de le contacter pendant 30 minutes. Si le serveur hors connexion se reconnecte avant ces 30 minutes, celui-ci est notifié, et la modification se poursuit normalement. Sinon, le serveur de site à promouvoir force la mise à jour de la configuration du site pour que celui-ci soit actif. Si le serveur hors connexion ne s’est toujours pas reconnecté après ce délai, il vérifie d’abord l’état actuel dans la base de données du site. Ensuite, il se rétrograde lui-même en devenant le serveur de site en mode passif.
 
-Pendant ces 30 minutes, aucun serveur de site n’est actif. Les clients continuent de communiquer avec les rôles qui leur répondent, comme les points de gestion, les points de mise à jour logicielle et les points de distribution. Les utilisateurs peuvent installer les logiciels qui sont déjà déployés. Aucune administration de site n’est possible pendant cette période. Pour plus d’informations, consultez [Impacts des défaillances du site](/sccm/core/servers/manage/site-failure-impacts).  
+Pendant ce délai d’attente de 30 minutes, aucun serveur de site n’est actif. Les clients continuent de communiquer avec les rôles qui leur répondent, comme les points de gestion, les points de mise à jour logicielle et les points de distribution. Les utilisateurs peuvent installer les logiciels qui sont déjà déployés. Aucune administration de site n’est possible pendant cette période. Pour plus d’informations, consultez [Impacts des défaillances du site](/sccm/core/servers/manage/site-failure-impacts).  
 
 Si le serveur hors connexion est endommagé et ne peut pas répondre, supprimez le serveur de site à partir de la console. Ensuite, créez un serveur de site en mode passif pour restaurer un service hautement disponible. 
 
@@ -196,13 +243,13 @@ Pour plus d’informations sur le processus de basculement *non planifié*, cons
 
 ### <a name="additional-tasks-after-site-server-promotion"></a>Tâches supplémentaires après la promotion d’un serveur de site  
 
-Après le changement de serveur de site, vous n’avez pas à exécuter la plupart des autres tâches qui sont nécessaires lors d’une [récupération de site](/sccm/core/servers/manage/recover-sites#post-recovery-tasks). Par exemple, vous n’avez pas besoin de réinitialiser les mots de passe ou de reconnecter votre abonnement Microsoft Intune.
+Après le changement de serveur de site, la plupart des autres tâches nécessaires lors d’une [récupération de site](/sccm/core/servers/manage/recover-sites#post-recovery-tasks) sont superflues. Par exemple, vous n’avez pas besoin de réinitialiser les mots de passe ou de reconnecter votre abonnement Microsoft Intune.
 
 Les étapes suivantes peuvent être nécessaires si votre environnement l’exige :  
 
 - Si vous importez des certificats PKI pour les points de distribution, réimporter le certificat pour les serveurs concernés. Pour plus d’informations, consultez [Regénérer les certificats pour les points de distribution](/sccm/core/servers/manage/recover-sites#regenerate-the-certificates-for-distribution-points).  
 
-- Si vous intégrez Confguration Manager à Microsoft Store pour Entreprises, reconfigurez cette connexion. Pour plus d’informations, consultez [Gérer les applications à partir du Microsoft Store pour Entreprises](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business).  
+- Si vous intégrez Configuration Manager à Microsoft Store pour Entreprises, reconfigurez cette connexion. Pour plus d’informations, consultez [Gérer les applications à partir du Microsoft Store pour Entreprises](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business).  
 
 
 

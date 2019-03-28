@@ -2,7 +2,7 @@
 title: Paramètres du client
 titleSuffix: Configuration Manager
 description: Découvrir les paramètres par défaut et personnalisés pour contrôler les comportements du client
-ms.date: 08/31/2018
+ms.date: 03/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d9a06e9f0607161b87422d29ede028da0e8aea8c
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 472cf012805700e1ec2de2f3c83a0ef63e10183b
+ms.sourcegitcommit: 5f17355f954b9d9e10325c0e9854a9d582dec777
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56140896"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329598"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>À propos des paramètres client dans Configuration Manager
 
@@ -294,7 +294,8 @@ Pour plus d’informations sur les fenêtres de maintenance, consultez [Comment 
 
 ## <a name="delivery-optimization"></a>Optimisation de la distribution
 
-<!-- 1324696 --> Les groupes de limites Configuration Manager permettent de définir et de réguler la distribution de contenu sur le réseau de l’entreprise et dans les agences. [L’Optimisation de la distribution de Windows](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) est une technologie cloud pair à pair de partage de contenu entre appareils Windows 10. À compter de la version 1802, configurez-la de façon à ce qu’elle utilise vos groupes de limites pour partager du contenu entre homologues.
+<!-- 1324696 -->
+Les groupes de limites Configuration Manager permettent de définir et de réguler la distribution de contenu sur le réseau de l’entreprise et dans les agences. [L’Optimisation de la distribution de Windows](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) est une technologie cloud pair à pair de partage de contenu entre appareils Windows 10. À compter de la version 1802, configurez-la de façon à ce qu’elle utilise vos groupes de limites pour partager du contenu entre homologues.
 
  > [!Note]
  > L’Optimisation de la distribution n’est disponible que sur les clients Windows 10
@@ -722,7 +723,7 @@ Sélectionnez **Planifier** pour régler la fréquence à laquelle les clients e
 
 
 
-##  <a name="software-updates"></a>Mises à jour logicielles  
+## <a name="software-updates"></a>Mises à jour logicielles  
 
 ### <a name="enable-software-updates-on-clients"></a>Activer les mises à jour logicielles sur les clients
 
@@ -774,6 +775,10 @@ Ce paramètre configure le port local permettant à l’écouteur HTTP de télé
 ### <a name="enable-management-of-the-office-365-client-agent"></a>Activer la gestion de l'agent Office 365 Client
 
 Quand vous définissez cette option sur **Oui**, il permet de configurer les paramètres d’installation d’Office 365. Il permet également de télécharger des fichiers à partir de réseaux de distribution de contenu (CDN) Office et déployer les fichiers en tant qu’application dans Configuration Manager. Pour plus d’informations, consultez [Gérer Office 365 ProPlus](/sccm/sum/deploy-use/manage-office-365-proplus-updates).
+
+### <a name="bkmk_SUMMaint"></a> Activer l’installation des mises à jour de logiciels dans la fenêtre de maintenance « Tous les déploiements » quand la fenêtre de maintenance « Mise à jour de logiciel » est disponible
+
+Si cette option est paramétrée sur **Oui** et qu’au moins une fenêtre de maintenance « Mise à jour de logiciel » est définie sur le client, les mises à jour de logiciels s’installent pendant une fenêtre de maintenance « Tous les déploiements ». Par défaut, ce paramètre est défini sur **Non**. Ce paramètre client a été ajouté dans la version 1810 de Configuration Manager. <!--2839307-->
 
 ### <a name="enable-third-party-software-updates"></a>Activer les mises à jour de logiciels tiers 
 

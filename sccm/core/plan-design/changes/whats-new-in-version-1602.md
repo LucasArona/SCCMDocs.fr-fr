@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9ac08431c76653711eacb62aed4100c2fab0db50
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 7b0c162e7d1fcc38b388d0b39cc6811bc9e86973
+ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56122506"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58196804"
 ---
 # <a name="what39s-new-in-version-1602-of-system-center-configuration-manager"></a>Nouveautés dans la version 1602 de System Center Configuration Manager
 
@@ -120,7 +120,7 @@ Vous trouverez ces applications dans le nœud **Applications** de la console Con
 ### <a name="conditional-access-for-pcs-managed-by-system-center-configuration-manager"></a>Accès conditionnel pour les PC gérés par System Center Configuration Manager  
  Avant cette version, pour configurer un accès conditionnel pour un PC, celui-ci devait être inscrit dans Intune ou joint à un domaine. À partir de la mise à jour 1602, l’accès conditionnel pour les PC gérés par System Center Configuration manager est pris en charge. Pour les PC gérés par System Center Configuration Manager, vous pouvez restreindre l’accès à Exchange Online et à SharePoint Online aux seuls appareils conformes aux stratégies de conformité que vous définissez.  
 
- Pour plus d’informations, consultez [Gérer l’accès aux services O365 des PC gérés par System Center Configuration Manager](../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md).  
+ Pour plus d’informations, voir [Gérer l’accès aux services Office 365 des PC gérés par System Center Configuration Manager](../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md).  
 
 ### <a name="restricting-access-based-on-the-health-of-devices"></a>Restriction des accès en fonction de l’intégrité des appareils  
  Vous pouvez désormais restreindre l’accès aux services de messagerie et Office 365 en fonction de l’intégrité des appareils, qui est indiquée par le service d’attestation d’intégrité. De plus, les périphériques gérés par Intune sont inclus dans les rapports d’intégrité des périphériques.  
