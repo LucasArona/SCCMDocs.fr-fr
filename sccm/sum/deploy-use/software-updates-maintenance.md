@@ -3,7 +3,7 @@ title: Maintenance des mises à jour logicielles
 titleSuffix: Configuration Manager
 description: Pour assurer la maintenance des mises à jour dans Configuration Manager, vous pouvez planifier la tâche de nettoyage WSUS, ou vous pouvez l’exécuter manuellement.
 author: mestew
-ms.date: 03/15/2019
+ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -11,12 +11,12 @@ ms.assetid: 4b0e2e90-aac7-4d06-a707-512eee6e576c
 manager: dougeby
 ms.author: mstewart
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c0391202054a80ea34180e73d107f5c2991aebe2
-ms.sourcegitcommit: d71e558db2da124357b840332e2da671b3810507
+ms.openlocfilehash: 5146ba92da82aad6c8dfbf4d961a52e197d0a9b2
+ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58269082"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58523824"
 ---
 # <a name="software-updates-maintenance"></a>Maintenance des mises à jour logicielles
 
