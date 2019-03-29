@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e0b1e9404eb332a562b6d48db0f55e8726a09c8
-ms.sourcegitcommit: 5f17355f954b9d9e10325c0e9854a9d582dec777
+ms.openlocfilehash: ca7214b12532305932ddca4595b4ef4d5bdc1569
+ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329615"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477506"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Nouveautés de la version 1810 de l’édition Current Branch de Configuration Manager
 
@@ -417,7 +417,7 @@ En plus des nouvelles fonctionnalités, cette version inclut également des modi
 
 Pour plus d’informations sur les modifications apportées aux applets de commande Windows PowerShell pour Configuration Manager, consultez [Notes de publication pour PowerShell version 1810](https://docs.microsoft.com/powershell/sccm/1810-release-notes?view=sccm-ps).
 
-Le correctif cumulatif suivant (4486457) sera disponible dans la console à partir du 25 janvier 2019 : [Correctif cumulatif pour Configuration Manager Current Branch, version 1810](https://support.microsoft.com/help/4486457).
+Le correctif cumulatif suivant (4488598) sera disponible dans la console à partir du 25 mars 2019 : [Correctif cumulatif 2 pour Configuration Manager Current Branch, version 1810](https://support.microsoft.com/help/4488598). Il remplace le précédent correctif cumulatif, KB 4486457.
 
 
 ### <a name="hotfixes"></a>Correctifs

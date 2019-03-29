@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 472cf012805700e1ec2de2f3c83a0ef63e10183b
-ms.sourcegitcommit: 5f17355f954b9d9e10325c0e9854a9d582dec777
+ms.openlocfilehash: e76dc5892ad34d72bfee3cd4aea0fa660e34855d
+ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329598"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477532"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>À propos des paramètres client dans Configuration Manager
 
@@ -460,6 +460,10 @@ Définissez cette option sur **Oui** pour activer la gestion de l’alimentation
 ### <a name="allow-users-to-exclude-their-device-from-power-management"></a>Autoriser les utilisateurs à exclure leur appareil de la gestion de l'alimentation
 
 Choisissez **Oui** pour permettre aux utilisateurs du Centre logiciel d’exclure leur ordinateur des paramètres de gestion de l’alimentation configurés.  
+
+### <a name="allow-network-wake-up"></a>Autoriser la sortie de veille du réseau
+
+Ajouté dans la version 1810. Quand elle est définie sur **Activer**, configure les paramètres d’alimentation sur la carte réseau pour autoriser la carte réseau à sortir de veille l’appareil. Quand elle est définie sur **Désactiver**, les paramètres d’alimentation sur la carte réseau sont configurés pour ne pas autoriser la carte réseau à sortir de veille l’appareil.
 
 ### <a name="enable-wake-up-proxy"></a>Autoriser le proxy de mise en éveil
 

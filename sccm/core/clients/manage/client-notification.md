@@ -2,7 +2,7 @@
 title: Notification du client
 titleSuffix: Configuration Manager
 description: Gérez les clients en effectuant une action immédiate à partir de la console centrale Configuration Manager.
-ms.date: 03/19/2019
+ms.date: 03/22/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 39135a1fa548c83e0ba9c7d2a98cf1e925217280
-ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
+ms.openlocfilehash: db68a55136d708ad9276f8b1319dde33fcde35ac
+ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58197025"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477464"
 ---
 # <a name="client-notification-in-configuration-manager"></a>Notification du client dans Configuration Manager
 
@@ -141,7 +141,7 @@ Déclenchez sur les clients la vérification de leur conformité avec l’accès
 
 ### <a name="wake-up"></a>Sortir de veille
 
-Depuis la version 1810, déclenchez le retour à un état d’alimentation maximale pour les appareils en veille.
+À compter de la version 1810, déclenchez les appareils configurés pour prendre en charge Wake-on-LAN afin de sortir de veille d’autres appareils sur le même sous-réseau pour envoyer le package Wake-on-LAN.
 
 
 ### <a name="restart"></a>Redémarrer
