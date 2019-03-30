@@ -2,7 +2,7 @@
 title: Nouveautés de la gestion MDM hybride
 titleSuffix: Configuration Manager
 description: Découvrez les nouvelles fonctionnalités de gestion des appareils mobiles disponibles pour les déploiements hybrides avec Configuration Manager et Intune.
-ms.date: 02/26/2019
+ms.date: 03/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c6e883b6ea5cea6d6b27863afc84eef774b4d552
-ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
+ms.openlocfilehash: b26ad559d9417fcc81a2023c1bf1704ae44b7d0c
+ms.sourcegitcommit: 60aff44c76e6432dc544c8b26acba432ac799cfc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58197144"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58639594"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Nouveautés de la gestion hybride des appareils mobiles avec Configuration Manager et Microsoft Intune
 
@@ -45,6 +45,32 @@ Chaque section de cet article répertorie les fonctionnalités hybrides sous tro
 |**Nouveautés de Microsoft Intune** | En règle générale, toutes les fonctionnalités listées dans cette catégorie fonctionnent avec chacune des versions de Configuration Manager. Sont notamment comprises les versions de System Center 2012 R2 Configuration Manager, dans la mesure où ces fonctionnalités ont seulement besoin du service Intune, sans aucune fonctionnalité supplémentaire dans Configuration Manager.|
 |**Nouveautés de Configuration Manager Technical Preview**| Toutes les fonctionnalités répertoriées dans cette catégorie fonctionnent uniquement avec la branche Technical Preview spécifiée. Pour tester ces fonctionnalités, vous devez installer la version Technical Preview spécifiée dans la description de la fonctionnalité. Pour plus d’informations, consultez [Technical Preview pour Configuration Manager](/sccm/core/get-started/technical-preview).|
 |**Nouveautés de Configuration Manager (Current Branch)**| Toutes les fonctionnalités répertoriées dans cette catégorie fonctionnent uniquement avec la version spécifiée de Configuration Manager (Current Branch). Si vous utilisez une version antérieure de Configuration Manager pour votre déploiement hybride, effectuez la mise à niveau vers la version de Configuration Manager (Current Branch) spécifiée dans la description de la fonctionnalité. Pour plus d’informations, consultez [Mettre à niveau vers Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager).|
+
+
+
+## <a name="march-2019"></a>Mars 2019
+
+### <a name="new-in-microsoft-intune"></a>Nouveautés de Microsoft Intune
+
+#### <a name="install-available-apps-using-the-company-portal-app-after-windows-bulk-enrollment"></a>Installer des applications disponibles à l’aide de l’application portail d’entreprise après l’inscription en bloc Windows 
+<!-- 2751523 -->
+Les appareils Windows inscrits dans Intune à l’aide [l’inscription en bloc de Windows](https://docs.microsoft.com/intune/windows-bulk-enroll) (packages d’approvisionnement) seront en mesure d’utiliser l’application portail d’entreprise pour installer des applications disponibles. Pour plus d’informations sur l’application portail d’entreprise, consultez [ajouter manuellement le portail d’entreprise Windows 10](https://docs.microsoft.com/intune/store-apps-company-portal-app) et [comment configurer l’application portail d’entreprise Microsoft Intune](https://docs.microsoft.com/intune/company-portal-app).
+
+> [!Note]  
+> Cette fonctionnalité n’est pas encore entièrement déployée à tous les clients. Si vous ne pouvez pas utiliser le portail d’entreprise sur les appareils en bloc inscrits, vous devrez patienter jusqu'à ce que cette modification se déploie sur votre compte.
+
+#### <a name="app-icons-are-displayed-with-an-automatically-generated-background"></a>Icônes d’application sont affichés avec un arrière-plan généré automatiquement 
+<!-- 1429026 -->
+L’application portail d’entreprise Windows affiche maintenant les icônes d’application avec un arrière-plan généré automatiquement. Cet arrière-plan est basé sur la couleur dominante de l’icône, si elle peut être détectée. Le cas échéant, l’arrière-plan remplace la bordure grise qui apparaissaît sur les vignettes de l’application. Vous verrez cette modification dans les versions de portail d’entreprise 10.3.3451.0 au plus tard.
+
+#### <a name="changes-to-company-portal-enrollment-for-ios-12-devices"></a>Modifications apportées à leur inscription au portail d’entreprise pour les appareils iOS 12
+<!-- 3448635 -->  
+Portail d’entreprise pour iOS met à jour les écrans d’inscription de l’application et les étapes pour s’aligner avec les modifications de l’inscription MDM publiées dans Apple iOS 12.2. Le flux de travail mis à jour maintenant vous invite à :
+- Autoriser Safari ouvrir le site Web portail d’entreprise (par le biais de Safari) et de télécharger le profil de gestion avant de retourner à l’application portail d’entreprise. 
+- Ouvrez l’application paramètres afin d’installer le profil de gestion sur son appareil.
+- Retourner à l’application de portail d’entreprise pour effectuer d’inscription.  
+
+Pour plus d’informations sur la façon dont vous pouvez préparer ces modifications, consultez le [post de la Communauté technologique Microsoft](https://aka.ms/CP_changes_iOS12). Pour prendre en charge les nouvelles inscriptions iOS dans le portail d’entreprise, consultez [inscription iOS appareil dans Intune](https://docs.microsoft.com/intune/ios-enroll).
 
 
 
