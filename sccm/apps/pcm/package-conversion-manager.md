@@ -2,7 +2,7 @@
 title: Package Conversion Manager
 titleSuffix: Configuration Manager
 description: En savoir plus sur Package Conversion Manager pour convertir des packages en applications dans Configuration Manager.
-ms.date: 08/24/2018
+ms.date: 03/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba73d215b9a672f4843c2f1e4a63dfc6bd13ea74
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 2abfa18bdf454850510c18551f2f64813a7891ea
+ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56132882"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58523926"
 ---
 # <a name="package-conversion-manager"></a>Package Conversion Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 <!--1357861-->
 
@@ -41,9 +41,15 @@ Pour plus d’informations, consultez les articles suivants :
 
 Cette version intégrée de Package Conversion Manager fonctionne sur les packages dans le site Current Branch Configuration Manager. Il ne s’agit pas d’un outil autonome. Si vous avez des packages et programmes dans une version antérieure de Configuration Manager, vous devez d’abord migrer les packages vers votre site Current Branch. Pour plus d’informations, consultez [Faire migrer des données entre des hiérarchies](/sccm/core/migration/migrate-data-between-hierarchies).
 
+<!-- SCCMDocs-pr issue #3357 -->
+Configuration Manager version 1902 inclut les améliorations suivantes :
+- Analyse du lot planifié s’exécute tous les 7 jours par défaut
+- Applets de commande PowerShell pour l’analyse et de conversion de packages
+- Général des correctifs de bogues et améliorations
 
 
-## <a name="planning"></a>Planning
+
+## <a name="planning"></a>Planification
 
 Avant de commencer la conversion des packages en applications, développez d’abord un plan. Le processus suivant est un exemple de plan :
 
@@ -62,9 +68,9 @@ Avant de commencer la conversion des packages en applications, développez d’a
 
 Cette section décrit deux exemples de plans de conversion de packages :  
 
-- [Environnement de test avec ressources nombreuses](#bkmk_define-high) : vous disposez d’un environnement de test avec les ressources, les autorisations et l’architecture nécessaires pour répliquer entièrement votre environnement de production.  
+- [Un environnement de test avec ressources nombreuses](#bkmk_define-high) : vous disposez d'un environnement de test avec les ressources, les autorisations et l'architecture nécessaires pour répliquer entièrement votre environnement de production.  
 
-- [Environnement de test avec ressources limitées](#bkmk_define-limited) : vous ne disposez pas d’un environnement de test qui réplique entièrement votre environnement de production.  
+- [Un environnement de test avec ressources limitées](#bkmk_define-limited) : vous ne disposez pas d’un environnement de test qui réplique entièrement votre environnement de production.  
 
 Ajustez ces plans en fonction d’autres problèmes spécifiques à votre environnement.
 

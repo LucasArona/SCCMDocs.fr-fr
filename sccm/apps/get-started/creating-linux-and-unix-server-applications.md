@@ -2,7 +2,7 @@
 title: Créer des applications serveur Linux et UNIX
 titleSuffix: Configuration Manager
 description: Examinez les éléments à prendre en compte quand vous créez et déployez des applications pour appareils Linux et Unix.
-ms.date: 04/13/2017
+ms.date: 03/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -11,16 +11,21 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 125a5fda74834c51e98f3028325bcc227fd106eb
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 35765aa804bf0e6d303caf2c395d3d44d5027951
+ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56126177"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58524079"
 ---
-# <a name="create-linux-and-unix-server-applications-with-system-center-configuration-manager"></a>Créer des applications serveur Linux et UNIX avec System Center Configuration Manager
+# <a name="create-linux-and-unix-server-applications-with-configuration-manager"></a>Créer des applications serveur Linux et UNIX avec Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
+
+> [!Important]  
+> Depuis la version 1902, Configuration Manager ne prend en charge des clients Linux ou UNIX. 
+> 
+> Envisagez de gestion Microsoft Azure pour la gestion des serveurs Linux. Les solutions Azure offrent une prise en charge étendue de Linux qui, dans la plupart des cas, dépasse les fonctionnalités de Configuration Manager, notamment la gestion des correctifs de bout en bout pour Linux.
 
 Prenez en compte les points suivants quand vous créez et déployez des applications pour des ordinateurs qui exécutent Linux et UNIX.  
 
@@ -29,13 +34,13 @@ Prenez en compte les points suivants quand vous créez et déployez des applicat
 
  Le déploiement de logiciels Linux et UNIX inclut les possibilités suivantes :  
 
--   l’installation de logiciels pour des serveurs Linux et UNIX, notamment :  
+-   L’installation de logiciels pour des serveurs Linux et UNIX, notamment :  
 
     -   un déploiement de nouveaux logiciels ;  
 
     -   des mises à jour logicielles pour les programmes qui sont déjà installés sur un ordinateur ;  
 
-    -   des correctifs de système d'exploitation.  
+    -   Correctifs de système d’exploitation  
 
 -   des commandes Linux et UNIX natives, et des scripts situés sur des serveurs Linux et UNIX  
 
@@ -68,7 +73,7 @@ Les principales différences entre le déploiement de packages et de programmes 
  Pour configurer les packages, les programmes et les déploiements, aidez-vous des informations figurant dans les sections suivantes.  
 
 ### <a name="packages-and-programs"></a>Packages et programmes  
- Pour créer un package et un programme pour un serveur Linux ou UNIX, utilisez l’**Assistant Création d’un package et d’un programme** à partir de la console Configuration Manager. Le client pour Linux et UNIX prend en charge la plupart des paramètres de package et de programme. Toutefois, certains ne sont pas pris en charge. Lorsque vous créez ou configurez un package et un programme, tenez compte des points suivants :  
+ Pour créer un package et un programme pour un serveur Linux ou UNIX, utilisez l’**Assistant Création d’un package et d’un programme** à partir de la console Configuration Manager. Le client pour Linux et UNIX prend en charge la plupart des paramètres de package et de programme. Cela n’est toutefois pas le cas pour certains paramètres. Lorsque vous créez ou configurez un package et un programme, tenez compte des points suivants :  
 
 -   Incluez les types de fichiers pris en charge par les ordinateurs de destination.  
 
@@ -91,7 +96,7 @@ Le tableau suivant répertorie les propriétés pour packages et programmes qui 
 |Permettre aux utilisateurs d’afficher et d’interagir avec l’installation du programme|Les paramètres sont ignorés.|Les paramètres spécifiques à l’utilisateur ne sont pas pris en charge.<br /><br /> Cette configuration est ignorée et l'installation du logiciel se poursuit.|  
 |Mode lecteur :<br /><br /> - Toutes les options|Les paramètres sont ignorés.|Ce paramètre n'est pas pris en charge, car le contenu est toujours téléchargé sur le client et exécuté localement.|  
 |Exécuter un autre programme en premier|Une erreur est générée et l’installation du logiciel échoue.|L'installation récursive de programmes n'est pas prise en charge.<br /><br /> Lorsqu'un programme est configuré pour exécuter préalablement un autre programme, l'installation du logiciel échoue et l'installation de l'autre programme ne démarre pas.|  
-|Lorsque ce programme est attribué à un ordinateur :<br /><br /> - Exécuter une fois pour chaque utilisateur qui se connecte|Les paramètres sont ignorés.|Les paramètres spécifiques à l’utilisateur ne sont pas pris en charge.<br /><br /> Toutefois, le client prend en charge l’exécution de la configuration une fois pour l’ordinateur.<br /><br /> Ce paramètre ne génère pas d'erreur ni d'entrée de journal, car il en a déjà été créée pour la configuration requise de **Le programme peut s'exécuter** = **Uniquement quand un utilisateur a ouvert une session**.|  
+|Lorsque ce programme est attribué à un ordinateur :<br /><br /> - Exécuter une fois pour chaque utilisateur qui se connecte|Les paramètres sont ignorés.|Les paramètres spécifiques à l’utilisateur ne sont pas pris en charge.<br /><br /> Toutefois, le client prend en charge l’exécution de la configuration une fois pour l’ordinateur.<br /><br /> Ce paramètre ne génère pas d'erreur ni d'entrée de journal, car ces éléments ont déjà été créés pour la configuration requise de **Le programme peut s'exécuter** = **Uniquement quand un utilisateur a ouvert une session**.|  
 |Supprimer les notifications de programmes|Les paramètres sont ignorés.|Le client n'implémente pas d'interface utilisateur.<br /><br /> Lorsque cette configuration est sélectionnée, elle est ignorée et l'installation du logiciel se poursuit.|  
 |Désactiver ce programme sur les ordinateurs sur lesquels il est déployé|Les paramètres sont ignorés.|Ce paramètre n'est pas pris en charge et n'a pas d'incidence sur l'installation du logiciel.|  
 |Autoriser l'installation de ce programme depuis la séquence de tâches d'installation du package sans le déployer||Le client ne prend pas en charge les séquences de tâches.<br /><br /> Ce paramètre n'est pas pris en charge et n'a pas d'incidence sur l'installation du logiciel.|  
@@ -101,7 +106,7 @@ Le tableau suivant répertorie les propriétés pour packages et programmes qui 
 ### <a name="deploy-software-to-a-linux-or-unix-server"></a>Déployer un logiciel sur un serveur Linux ou UNIX
  Pour déployer un logiciel sur un serveur Linux ou UNIX à l’aide d’un package et d’un programme, vous pouvez utiliser l’**Assistant Déploiement logiciel** de la console Configuration Manager. Le client pour Linux et UNIX prend en charge la plupart des paramètres de déploiement. Cela n’est toutefois pas le cas pour certains paramètres. Lors du déploiement d’un logiciel, tenez compte des points suivants :  
 
-- Vous devez préparer le package sur au moins un point de distribution associé à un groupe de limites configuré pour l'emplacement du contenu.  
+- Préparez le package sur au moins un point de distribution associé à un groupe de limites configuré pour l'emplacement du contenu.  
 
 - Le client pour Linux et UNIX qui reçoit ce déploiement doit être en mesure d’accéder à ce point de distribution à partir de son emplacement réseau.  
 
@@ -115,7 +120,7 @@ Le tableau suivant répertorie les propriétés pour packages et programmes qui 
 |-------------------------|--------------|----------------------|  
 |Paramètres de déploiement – objet :<br /><br /> - Disponible<br /><br /> - Obligatoire|Les paramètres sont ignorés.|Les paramètres spécifiques à l’utilisateur ne sont pas pris en charge.<br /><br /> Toutefois, le client prend en charge le paramètre **Obligatoire**, qui applique l'heure d'installation planifiée, mais toute installation manuelle avant cette heure planifiée n'est pas prise en charge.|  
 |Envoyer des paquets de mise en éveil|Les paramètres sont ignorés.|Le client ne prend pas en charge cette configuration.|  
-|Calendrier d'attribution :<br /><br /> - ouverture de session<br /><br /> - fermeture de session|Une erreur est générée et l’installation du logiciel échoue.|Les paramètres spécifiques à l’utilisateur ne sont pas pris en charge.<br /><br /> Toutefois, le client prend en charge le paramètre **Dès que possible**.|  
+|Calendrier d'attribution :<br /><br /> - se connecter<br /><br /> - se déconnecter|Une erreur est générée et l’installation du logiciel échoue.|Les paramètres spécifiques à l’utilisateur ne sont pas pris en charge.<br /><br /> Toutefois, le client prend en charge le paramètre **Dès que possible**.|  
 |Paramètres de notification :<br /><br /> - Autoriser les utilisateurs à exécuter le programme indépendamment des attributions|Les paramètres sont ignorés.|Le client n'implémente pas d'interface utilisateur.|  
 |Lorsque l'heure d'attribution planifiée est atteinte, autorisez l'exécution des activités suivantes en dehors de la fenêtre de maintenance :<br /><br /> - Redémarrage du système (si nécessaire pour terminer l’installation)|Une erreur est générée.|Le client ne prend pas en charge un redémarrage du système.|  
 |Option de déploiement pour les réseaux (LAN) rapides :<br /><br /> - Exécuter le programme à partir du point de distribution|Une erreur est générée et l’installation du logiciel échoue.|Le client ne peut pas exécuter le logiciel à partir du point de distribution et doit au lieu de cela télécharger le programme avant de pouvoir l'exécuter.|  
