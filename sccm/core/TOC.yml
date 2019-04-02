@@ -308,7 +308,7 @@ items:
         href: servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure.md
       - name: À propos du point de connexion de service
         href: servers/deploy/configure/about-the-service-connection-point.md
-      - name: Options de configuration pour les rôles de système de site
+      - name: Options de configuration des rôles de système de site
         href: servers/deploy/configure/configuration-options-for-site-system-roles.md
       - name: Réplicas de base de données pour les points de gestion
         href: servers/deploy/configure/database-replicas-for-management-points.md
@@ -332,7 +332,7 @@ items:
         href: servers/deploy/configure/about-discovery-methods.md
       - name: Sélectionner des méthodes de découverte
         href: servers/deploy/configure/select-discovery-methods-to-use.md
-      - name: Configuration des méthodes de découverte
+      - name: Configurer les méthodes de découverte
         href: servers/deploy/configure/configure-discovery-methods.md
     - name: Limites de site et groupes de limites
       href: servers/deploy/configure/define-site-boundaries-and-boundary-groups.md
@@ -400,6 +400,9 @@ items:
     href: servers/manage/management-insights.md
   - name: CMPivot
     href: servers/manage/cmpivot.md
+    items:
+    - name: Résoudre les problèmes de CMPivot
+      href: servers/manage/cmpivot-tsg.md
   - name: Tâches de maintenance
     href: servers/manage/maintenance-tasks.md
     items:
@@ -766,9 +769,9 @@ items:
       href: clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md
     - name: Mettre à niveau les clients Mac
       href: clients/manage/upgrade/upgrade-clients-on-mac-computers.md
-ms.openlocfilehash: befe656dec3949f792d9118a1ef092ff36316fdd
-ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
+ms.openlocfilehash: d5340329217fb4769b1bc708feba0744d3e8d40a
+ms.sourcegitcommit: 60aff44c76e6432dc544c8b26acba432ac799cfc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58523909"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58639560"
