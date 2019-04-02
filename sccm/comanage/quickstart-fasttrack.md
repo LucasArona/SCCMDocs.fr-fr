@@ -1,7 +1,7 @@
 ---
 title: Obtenir l’aide de FastTrack
 titleSuffix: Configuration Manager
-description: L’organisation FastTrack est un grand groupe d’ingénieurs de Microsoft spécialisés pour aider à tous les types d’organisations de déployer Microsoft 365
+description: L’organisation FastTrack est un grand groupe d’ingénieurs Microsoft dont la spécialité est d’aider tous les types d’organisations à déployer Microsoft 365
 ms.date: 01/14/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -12,37 +12,37 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 5827f68dc7ec499e59291edc4ed4de10f5081311
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: MT
+ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
+ms.lasthandoff: 03/27/2019
 ms.locfileid: "56754847"
 ---
 # <a name="get-help-from-fasttrack-for-co-management"></a>Obtenir l’aide de FastTrack pour la cogestion
 
-L’organisation de FastTrack est un grand groupe d’ingénieurs de Microsoft spécialisés pour aider à tous les types d’organisations de déployer des applications de Microsoft 365, y compris la configuration de la cogestion. Si vous avez besoin d’aide à la configuration requise de cogestion, activé la cogestion ou en basculant les charges de travail, demandez une assistance auprès [Microsoft FastTrack](https://Microsoft.com/FastTrack/). 
+L’organisation FastTrack est un grand groupe d’ingénieurs Microsoft dont la spécialité est d’aider tous les types d’organisations à déployer des applications Microsoft 365, notamment la configuration de la cogestion. Si vous avez besoin d’une assistance concernant les prérequis de la cogestion, l’activation de la cogestion ou le basculement des charges de travail, demandez de l’aide à [Microsoft FastTrack](https://Microsoft.com/FastTrack/). 
 
-Dans la vidéo suivante, responsable de programme senior Patrick McSweeney produit marketing Ainley Locky manager discuter et de démonstration FastTrack pour Microsoft 365 :
+Dans la vidéo suivante, le program manager senior, Patrick McSweeney, et le directeur du marketing produit, Ainley Locky, parlent et font la démonstration de FastTrack pour Microsoft 365 :
 
 > [!VIDEO https://channel9.msdn.com/Series/Endpoint-Zone/How-to-Request-Assistance-from-FastTrack/player]
 
-Pour rendre une demande d’assistance à partir de FastTrack, accédez d’abord à [FastTrack pour Microsoft 365](https://fasttrack.microsoft.com/microsoft365/capabilities?view=security). Sélectionnez **Sign In**, puis entrez votre ID d’organisation. Une fois que vous authentifier, accédez au tableau de bord, suivez les invites pour trouver la **demande d’Assistance** formulaire.
+Pour faire une demande d’assistance auprès de FastTrack, accédez d’abord à [FastTrack pour Microsoft 365](https://fasttrack.microsoft.com/microsoft365/capabilities?view=security). Sélectionnez **Se connecter**, puis entrez l’ID de votre organisation. Après vous être authentifié, accédez au tableau de bord, puis suivez les invites pour trouver le formulaire de **demande d’assistance**.
 
-Votre envoi est passé en revue et acheminé vers l’équipe FastTrack approprié. Allez contre-mesure votre éligibilité et les besoins spécifiques. 
+Votre demande est étudiée et dirigée vers l’équipe FastTrack appropriée. Ses membres examinent votre éligibilité et vos besoins spécifiques. 
 
-Le programme FastTrack pour Microsoft 365 site inclut également des ressources, des recommandations, des outils et documentation créés par l’expert.
+Le site FastTrack pour Microsoft 365 inclut également une documentation créée par des experts, des recommandations, des outils et des ressources.
 
 
-### <a name="make-a-fasttrack-request"></a>Effectuer une demande de FastTrack :
+### <a name="make-a-fasttrack-request"></a>Effectuer une demande FastTrack :
 
-1. Connectez-vous à [FastTrack pour Microsoft 365](https://fasttrack.microsoft.com/microsoft365/capabilities?view=security) à l’aide de votre ID d’organisation et le mot de passe.  
+1. Connectez-vous à [FastTrack pour Microsoft 365](https://fasttrack.microsoft.com/microsoft365/capabilities?view=security) à l’aide de l’ID et du mot de passe de votre organisation.  
 
-2. Sous la section de FastTrack de bienvenue, sélectionnez **demander une Assistance de FastTrack**.  
+2. Sous la section Bienvenue dans FastTrack, sélectionnez **Demande d’assistance FastTrack**.  
 
-3. Entrez le nombre de **licences EMS** dans votre organisation.  
+3. Entrez le nombre de **licences EMS** dont dispose votre organisation.  
 
-4. Remplissez le formulaire en ajoutant vos informations de contact, des scénarios d’entreprise et les produits que vous tentez de résoudre les problèmes. Par exemple, si vous avez besoin d’assistance de migration à partir d’Intune hybride vers Intune autonome, sélectionnez **Microsoft Intune** sur le formulaire.  
+4. Remplissez le formulaire en ajoutant vos informations de contact, des scénarios métier et les produits pour lesquels vous tentez de résoudre des problèmes. Par exemple, si vous avez besoin d’assistance concernant la migration d’Intune hybride vers Intune autonome, sélectionnez **Microsoft Intune** sur le formulaire.  
 
-5. Envoyer la demande. 
+5. Envoyez la demande. 
 
-Un gestionnaire de FastTrack vous contactera pour démarrer.
+Un responsable FastTrack vous contactera pour que vous puissiez commencer.

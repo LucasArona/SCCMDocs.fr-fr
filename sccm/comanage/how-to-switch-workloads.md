@@ -12,41 +12,42 @@ ms.topic: conceptual
 ms.assetid: 60e2022f-a4f9-40dd-af01-9ecb37b43878
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: a4b50d0491644e6be0967c1adcf2db641c1bb1cd
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: MT
+ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
+ms.lasthandoff: 03/27/2019
 ms.locfileid: "56754951"
 ---
-# <a name="how-to-switch-configuration-manager-workloads-to-intune"></a>Comment basculer des charges de travail de Configuration Manager sur Intune
+# <a name="how-to-switch-configuration-manager-workloads-to-intune"></a>Comment basculer les charges de travail de Configuration Manager vers Intune
 
-Un des avantages de la cogestion bascule les charges de travail de Configuration Manager à Microsoft Intune. Quand un appareil Windows 10 a le client Configuration Manager et est inscrit à Intune, vous bénéficiez des avantages des deux services. Vous contrôlez les charges de travail, le cas échéant, que vous basculez de l’autorité de Configuration Manager à Intune. Configuration Manager continue de gérer toutes les autres charges de travail, y compris les charges de travail que vous ne basculez vers Intune, et toutes les autres fonctionnalités de Configuration Manager que cogestion ne prend pas en charge.
+Le basculement des charges de travail de Configuration Manager vers Microsoft Intune est l’un des avantages de la cogestion. Quand un appareil Windows 10 dispose du client Configuration Manager et qu’il est inscrit à Intune, vous bénéficiez des avantages des deux services. Vous contrôlez les charges de travail, le cas échéant, pour lesquelles vous utilisez Intune à la place de Configuration Manager comme autorité. Configuration Manager continue de gérer toutes les autres charges de travail, notamment celles que vous ne basculez pas vers Intune, ainsi que toutes les autres fonctionnalités de Configuration Manager que la cogestion ne prend pas en charge.
 
-Pour plus d’informations sur les charges de travail pris en charge, consultez [charges de travail](/sccm/comanage/workloads).
+Pour plus d’informations sur les charges de travail prises en charge, consultez [Charges de travail](/sccm/comanage/workloads).
 
-Vous pouvez basculer des charges de travail lorsque vous activez la cogestion, ou ultérieurement, lorsque vous êtes prêt. Si vous n’avez pas encore activé la cogestion, faites-le en premier. Pour plus d’informations, consultez [comment activer la cogestion](/sccm/comanage/how-to-enable).
+Vous pouvez basculer des charges de travail au moment où vous activez la cogestion ou ultérieurement quand vous êtes prêt. Si vous n’avez pas encore activé la cogestion, commencez par cette opération. Pour plus d’informations, consultez [Guide pratique pour activer la cogestion](/sccm/comanage/how-to-enable).
 
 
 Après avoir activé la cogestion, modifiez les paramètres dans les propriétés de cogestion. 
 
 1. Dans la console Configuration Manager, accédez à l’espace de travail **Administration**, développez **Services cloud**, puis sélectionnez le nœud **Cogestion**.  
 
-2. Sélectionnez l’objet de cogestion, puis choisissez **propriétés** dans le ruban.  
+2. Sélectionnez l’objet de cogestion, puis choisissez **Propriétés** dans le ruban.  
 
-3. Basculez vers le **charges de travail** onglet. Par défaut, toutes les charges de travail sont définies sur le **Configuration Manager** paramètre. Pour basculer d’une charge de travail, déplacez le contrôle de curseur pour cette charge de travail pour le paramètre souhaité.  
+3. Basculez vers l’onglet **Charges de travail**. Par défaut, toutes les charges de travail sont définies sur le paramètre **Configuration Manager**. Pour basculer une charge de travail, déplacez le contrôle de curseur de cette charge de travail sur le paramètre souhaité.  
 
-    ![Onglet de capture d’écran de charges de travail sur la page de propriétés de cogestion](media/properties-workloads.png)
+    ![Capture d’écran de l’onglet Charges de travail sur la page des propriétés de cogestion](media/properties-workloads.png)
 
-    - **Configuration Manager**: Configuration Manager continue de gérer cette charge de travail.  
+    - **Configuration Manager** : Configuration Manager continue de gérer cette charge de travail.  
 
-    - **Piloter Intune**: Passez cette charge de travail uniquement pour les appareils dans la collection pilote. Vous pouvez modifier le **regroupement pilote** sur le **intermédiaire** onglet de la page de propriétés de cogestion.  
+    - **Intune pilote** : Bascule cette charge de travail uniquement pour les appareils du regroupement pilote. Vous pouvez changer le **Regroupement pilote** sous l’onglet **Préproduction** de la page des propriétés de cogestion.  
 
-    - **Intune**: Commutateur de cette charge de travail pour tous les appareils Windows 10 inscrits à la cogestion.  
+    - **Intune** : Basculez cette charge de travail pour tous les appareils Windows 10 inscrits dans la cogestion.  
 
 
 > [!Important]  
-> Avant de basculer des charges de travail, assurez-vous que vous puissiez correctement configurez et déployez la charge de travail correspondant dans Intune. Assurez-vous que les charges de travail sont toujours gérées par l’un des outils de gestion de vos appareils.  
+> Avant de basculer des charges de travail, vérifiez que vous avez correctement configuré et déployé la charge de travail correspondante dans Intune. Assurez-vous que les charges de travail sont toujours gérées par l’un des outils de gestion de vos appareils.  
 
-<!--1357377--> À compter de Configuration Manager version 1806, quand vous passez à une charge de travail en cogestion, les appareils cogérés sont automatiquement synchronisés avec la stratégie MDM de Microsoft Intune. Cette synchronisation est effectuée lorsque vous lancez l’action **Télécharger la stratégie d’ordinateur** à partir de notifications du client dans la console Configuration Manager. Pour plus d’informations, consultez [Lancer une récupération de stratégie client en utilisant une notification de client](/sccm/core/clients/manage/manage-clients#initiate-client-policy-retrieval-using-client-notification).
+<!--1357377-->
+À compter de Configuration Manager version 1806, quand vous basculez une charge de travail en cogestion, les appareils cogérés sont automatiquement synchronisés avec la stratégie MDM de Microsoft Intune. Cette synchronisation est effectuée lorsque vous lancez l’action **Télécharger la stratégie d’ordinateur** à partir de notifications du client dans la console Configuration Manager. Pour plus d’informations, consultez [Lancer une récupération de stratégie client en utilisant une notification de client](/sccm/core/clients/manage/manage-clients#initiate-client-policy-retrieval-using-client-notification).
 
 

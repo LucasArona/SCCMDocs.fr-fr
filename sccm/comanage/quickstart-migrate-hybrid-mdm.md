@@ -1,7 +1,7 @@
 ---
 title: Migrer à partir de MDM hybride
 titleSuffix: Configuration Manager
-description: MDM hybride est déconseillée, Intune autonome est requis pour la cogestion.
+description: MDM hybride est déprécié. Intune autonome est nécessaire pour la cogestion.
 ms.date: 01/14/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -12,19 +12,19 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 84625c12c9cac643fe5a895c066632f44ffeacdc
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: MT
+ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
+ms.lasthandoff: 03/27/2019
 ms.locfileid: "56754912"
 ---
-# <a name="migrate-from-hybrid-mdm-for-co-management"></a>Migration de MDM hybride pour la cogestion
+# <a name="migrate-from-hybrid-mdm-for-co-management"></a>Migrer à partir de MDM hybride pour la cogestion
 
-Gestion des appareils mobiles (MDM) hybride est une fonctionnalité déconseillée. Prend en charge des appareils mobiles hybride se termine sur le 1 septembre 2019. Pour plus d’informations, consultez [MDM hybride avec Configuration Manager et Microsoft Intune](/sccm/mdm/understand/hybrid-mobile-device-management).
+La gestion hybride des appareils mobiles (MDM) est une fonctionnalité dépréciée. La prise en charge de MDM hybride se termine le 1er septembre 2019. Pour plus d’informations, consultez [MDM hybride avec Configuration Manager et Microsoft Intune](/sccm/mdm/understand/hybrid-mobile-device-management).
 
-Version autonome d’Intune est la topologie de déploiement recommandée et est requis pour la cogestion. Si vous souhaitez activer la cogestion, migrer à partir d’une configuration hybride d’Intune vers Intune autonome. 
+Intune autonome est la topologie de déploiement recommandée et est nécessaire pour la cogestion. Si vous voulez activer la cogestion, migrez d’une configuration hybride d’Intune vers Intune autonome. 
 
-Dans la vidéo suivante, responsable de programme principal Andrew McMurray responsable marketing produit senior Mayunk Jain discuter et migration de MDM hybride de démonstration :
+Dans la vidéo suivante, le program manager principal, Andrew McMurray, et le directeur du marketing produit senior, Mayunk Jain, parlent et font la démonstration de la migration à partir de MDM hybride :
 
 > [!VIDEO https://channel9.msdn.com/Series/Endpoint-Zone/Moving-From-Hybrid-MDM-To-Microsoft-Intune/player]
 
@@ -32,30 +32,30 @@ Dans la vidéo suivante, responsable de programme principal Andrew McMurray resp
 
 ## <a name="how-to-do-it"></a>Marche à suivre
 
-Votre migration vers Intune autonome sera optimale lorsque vous utilisez une approche progressive. Avec une migration en plusieurs phases, vous déplacez un petit sous-ensemble d’utilisateurs et appareils pendant que la plupart de vos utilisateurs et les appareils est toujours gérée avec des appareils mobiles hybride Une fois que vous vérifiez que la migration a réussi, vous pouvez commencer à davantage de ressources une migration vers Intune.
+Votre migration vers Intune autonome sera optimale si vous utilisez une approche progressive. Avec ce type d’approche, vous déplacez une petite partie d’utilisateurs et d’appareils, tandis que la plupart de vos utilisateurs et appareils restent gérés par MDM hybride. Après avoir vérifié que la migration a réussi, vous pouvez commencer la migration d’autres ressources vers Intune.
 
-Pour commencer la migration, utilisez le [outil d’importation de données de Microsoft Intune](/sccm/mdm/deploy-use/migrate-import-data) pour collecter et d’automatiser le processus d’avoir à recréer les objets de Configuration Manager dans votre client d’autonome d’Intune. Ensuite, changer votre autorité MDM pour un ensemble spécifique d’utilisateurs et tester la fonctionnalité dans la version autonome d’Intune. Lorsque cette vérification est effectuée, modifier votre autorité de gestion des appareils mobiles vers Intune autonome pour tous les utilisateurs.
+Pour commencer la migration, utilisez l’[outil Microsoft Intune Data Importer](/sccm/mdm/deploy-use/migrate-import-data) pour collecter et automatiser le processus de recréation des objets à partir de Configuration Manager dans votre locataire autonome Intune. Ensuite, changez votre autorité MDM pour un ensemble d’utilisateurs spécifique, puis testez la fonctionnalité dans la version autonome d’Intune. Une fois cette vérification effectuée, changez votre autorité MDM pour la définir sur Intune autonome pour tous les utilisateurs.
 
 > [!Important]  
-> Si vous utilisez l’accès conditionnel en local dans Configuration Manager, cette fonctionnalité nécessite actuellement Intune hybride.  
+> Si vous utilisez l’accès conditionnel local dans Configuration Manager, cette fonctionnalité nécessite actuellement Intune hybride.  
 
-Pour plus d’informations sur ce processus de migration, consultez [migrer des appareils et utilisateurs MDM hybrides vers Intune autonome](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa).
+Pour plus d’informations sur ce processus de migration, consultez [Faire migrer des utilisateurs et appareils MDM hybrides vers la version autonome d’Intune](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa).
 
 
 
 ## <a name="case-studies"></a>Études de cas
 
-Microsoft IT récemment déplacé des 130 000 utilisateurs de Intune hybride vers Intune autonome des trois derniers mois. Pour plus d’informations, consultez [comment Microsoft utilise l’accès conditionnel - point de terminaison de Zone 1812](https://youtu.be/offk-KH7eIA?t=651). Cette vidéo est une conversation entre Microsoft vice-président Brad Anderson et de Microsoft directeur informatique sécurité Bret Arsenault qui dirigeait personnellement la migration. 
+L’équipe informatique de Microsoft a récemment déplacé 130 000 utilisateurs d’Intune hybride vers Intune autonome en trois mois. Pour plus d’informations, consultez la vidéo relative à l’[utilisation de l’accès conditionnel par Microsoft - Zone de point de terminaison 1812](https://youtu.be/offk-KH7eIA?t=651). Cette vidéo est une conversation entre le Vice-président de Microsoft, Brad Anderson, et le Directeur de la sécurité des systèmes d’information de Microsoft, Bret Arsenault, qui a personnellement supervisé la migration. 
 
-Une grande entreprise pharmaceutique déplacé 10 000 utilisateurs à partir d’Intune hybride vers Intune autonome dans quelques semaines.
+Une grande entreprise pharmaceutique a déplacé 10 000 utilisateurs d’Intune hybride vers Intune autonome en quelques semaines.
 
-Une grande société de conseil informatique en Inde migrés 40 000 utilisateurs Intune hybride vers Intune autonome dans moins d’un mois.
+Une grande société de conseil informatique basée en Inde a migré 40 000 utilisateurs d’Intune hybride vers Intune autonome en moins d’un mois.
 
 
 
-## <a name="contact-fasttrack"></a>Contactez FastTrack
+## <a name="contact-fasttrack"></a>Contacter FastTrack
 
-Si vous avez besoin d’assistance de migration de MDM hybride à tout moment dans le processus, accédez à [Microsoft FastTrack](https://Microsoft.com/FastTrack/), connectez-vous, puis demander une assistance. 
+Si vous avez besoin d’assistance concernant la migration de MDM hybride à n’importe quelle étape du processus, accédez à [Microsoft FastTrack](https://Microsoft.com/FastTrack/), connectez-vous, puis demandez de l’aide. 
 
-Pour plus d’informations, consultez [obtenir de l’aide de FastTrack](/sccm/comanage/quickstart-fasttrack). 
+Pour plus d’informations, consultez [Obtenir l’aide de FastTrack](/sccm/comanage/quickstart-fasttrack). 
 
