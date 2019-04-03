@@ -1,8 +1,8 @@
 ---
 title: Inventaire matériel pour Linux et UNIX
 titleSuffix: Configuration Manager
-description: Découvrez comment utiliser l’inventaire matériel pour Linux et UNIX dans System Center Configuration Manager.
-ms.date: 02/22/2017
+description: Découvrez comment utiliser l’inventaire matériel pour Linux et UNIX dans Configuration Manager.
+ms.date: 03/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,18 +11,23 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 96bed23c96a6ccf511cd4808ad775343dc8e5d9e
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: f378bb3bda5341e99eb06303d5fb5a8e13c8ac88
+ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56132470"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58524062"
 ---
-# <a name="hardware-inventory-for-linux-and-unix-in-system-center-configuration-manager"></a>Inventaire matériel pour Linux et UNIX dans System Center Configuration Manager
+# <a name="hardware-inventory-for-linux-and-unix-in-configuration-manager"></a>Inventaire matériel pour Linux et UNIX dans Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
-Le client System Center Configuration Manager pour Linux et UNIX prend en charge l’inventaire matériel. Une fois l’inventaire matériel effectué, vous pouvez l’afficher dans l’Explorateur de ressources ou dans les rapports Configuration Manager, et utiliser ces informations pour créer des requêtes et des regroupements qui permettent d’effectuer les opérations suivantes :  
+> [!Important]  
+> Depuis la version 1902, Configuration Manager ne prend en charge les clients Linux ou UNIX. 
+> 
+> Utilisez plutôt Microsoft Azure Management pour la gestion des serveurs Linux. Les solutions Azure offrent une prise en charge étendue de Linux qui, dans la plupart des cas, dépasse les fonctionnalités de Configuration Manager, notamment la gestion des correctifs de bout en bout pour Linux.
+
+Le client Configuration Manager pour Linux et UNIX prend en charge l’inventaire matériel. Une fois l’inventaire matériel effectué, vous pouvez l’afficher dans l’Explorateur de ressources ou dans les rapports Configuration Manager, et utiliser ces informations pour créer des requêtes et des regroupements qui permettent d’effectuer les opérations suivantes :  
 
 - Déploiement logiciel  
 
@@ -30,13 +35,13 @@ Le client System Center Configuration Manager pour Linux et UNIX prend en charge
 
 - Déploiement de paramètres client personnalisés  
 
-  L’inventaire matériel pour les serveurs Linux et UNIX utilise un serveur CIM (Common Information Model) basé sur des normes. Le serveur CIM s’exécute en tant que service logiciel (ou démon) et fournit une infrastructure de gestion basée sur des normes DMTF (Distributed Management Task Force). Il fournit des fonctionnalités semblables aux fonctionnalités CIM de l’infrastructure de gestion Windows (WMI, Windows Management Infrastructure) disponibles sur les ordinateurs Windows.  
+L’inventaire matériel pour les serveurs Linux et UNIX utilise un serveur CIM (Common Information Model) basé sur des normes. Le serveur CIM s’exécute en tant que service logiciel (ou démon) et fournit une infrastructure de gestion basée sur des normes DMTF (Distributed Management Task Force). Il fournit des fonctionnalités semblables aux fonctionnalités CIM de l’infrastructure de gestion Windows (WMI, Windows Management Infrastructure) disponibles sur les ordinateurs Windows.  
 
-  À partir de la mise à jour cumulative 1, le client pour Linux et UNIX utilise l’ **omiserver** version 1.0.6 open source de l’ **Open Group**. (Avant la mise à jour cumulative 1, le client utilisait **nanowbem** comme serveur CIM).  
+À partir de la mise à jour cumulative 1, le client pour Linux et UNIX utilise l’**omiserver** version 1.0.6 open source de l’**Open Group**. (Avant la mise à jour cumulative 1, le client utilisait **nanowbem** comme serveur CIM).  
 
-  Le serveur CIM est installé dans le cadre de l’installation du client pour Linux et UNIX. Le client pour Linux et UNIX communique directement avec le serveur CIM. Il n’utilise pas l’interface WS-MAN du serveur CIM. Le port WS-MAN sur le serveur CIM est désactivé lors de l’installation du client. Microsoft a développé le serveur CIM désormais disponible en tant qu’open source par l’intermédiaire du projet OMI (Open Management infrastructure). Pour plus d’informations sur le projet OMI, consultez le site web [The Open Group](http://go.microsoft.com/fwlink/p/?LinkId=262317) .  
+Le serveur CIM est installé dans le cadre de l’installation du client pour Linux et UNIX. Le client pour Linux et UNIX communique directement avec le serveur CIM. Il n’utilise pas l’interface WS-MAN du serveur CIM. Le port WS-MAN sur le serveur CIM est désactivé lors de l’installation du client. Microsoft a développé le serveur CIM désormais disponible en tant qu’open source par l’intermédiaire du projet OMI (Open Management infrastructure). Pour plus d’informations sur le projet OMI, consultez le site web [The Open Group](https://go.microsoft.com/fwlink/p/?LinkId=262317) .  
 
-  L’inventaire matériel sur les serveurs Linux et UNIX fonctionne en mappant les classes et les propriétés WMI Win32 existantes aux classes et propriétés équivalentes des serveurs Linux et UNIX. Ce mappage un-à-un des classes et des propriétés permet d’intégrer l’inventaire matériel Linux et UNIX à Configuration Manager. Les données d’inventaire des serveurs Linux et UNIX sont affichées avec l’inventaire des ordinateurs Windows dans la console et les rapports Configuration Manager. Vous bénéficiez ainsi d’une expérience de gestion cohérente et hétérogène.  
+L’inventaire matériel sur les serveurs Linux et UNIX fonctionne en mappant les classes et les propriétés WMI Win32 existantes aux classes et propriétés équivalentes des serveurs Linux et UNIX. Ce mappage un-à-un des classes et des propriétés permet d’intégrer l’inventaire matériel Linux et UNIX à Configuration Manager. Les données d’inventaire des serveurs Linux et UNIX sont affichées avec l’inventaire des ordinateurs Windows dans la console et les rapports Configuration Manager. Vous bénéficiez ainsi d’une expérience de gestion cohérente et hétérogène.  
 
 > [!TIP]  
 >  Vous pouvez utiliser la valeur **Caption** pour la classe **Operating System** pour identifier différents systèmes d’exploitation Linux et UNIX dans les requêtes et les regroupements.  
@@ -70,7 +75,7 @@ Le client System Center Configuration Manager pour Linux et UNIX prend en charge
 
 - SMS_Processor  
 
-  Les propriétés de ces classes d’inventaire ne sont pas toutes activées pour les ordinateurs Linux et UNIX dans Configuration Manager.  
+Les propriétés de ces classes d’inventaire ne sont pas toutes activées pour les ordinateurs Linux et UNIX dans Configuration Manager.  
 
 ##  <a name="BKMK_OperationsforHardwareforLnU"></a> Opérations d’inventaire matériel  
  Une fois la collecte de l’inventaire matériel sur vos serveurs Linux et UNIX terminée, vous pouvez afficher et utiliser ces informations comme s’il s’agissait d’autres ordinateurs, et effectuer les opérations suivantes :  
@@ -83,11 +88,11 @@ Le client System Center Configuration Manager pour Linux et UNIX prend en charge
 
 - Exécuter des rapports qui affichent des détails spécifiques sur les configurations matérielles  
 
-  L’inventaire matériel sur un serveur Linux ou UNIX s’exécute conformément au calendrier que vous configurez dans les paramètres client. Par défaut, l’inventaire est exécuté tous les sept jours. Le client pour Linux et UNIX prend en charge les cycles d’inventaire complet et les cycles d’inventaire delta.  
+L’inventaire matériel sur un serveur Linux ou UNIX s’exécute conformément au calendrier que vous configurez dans les paramètres client. Par défaut, ce calendrier est exécuté tous les sept jours. Le client pour Linux et UNIX prend en charge les cycles d’inventaire complet et les cycles d’inventaire delta.  
 
-  Vous pouvez également forcer le client sur un serveur Linux ou UNIX à exécuter immédiatement l’inventaire matériel. Pour exécuter l’inventaire matériel sur un client, utilisez des informations d’identification **racines** pour exécuter la commande suivante pour démarrer un cycle d’inventaire matériel : **/opt/microsoft/configmgr/bin/ccmexec -rs hinv**  
+Vous pouvez également forcer le client sur un serveur Linux ou UNIX à exécuter immédiatement l’inventaire matériel. Pour exécuter l’inventaire matériel sur un client, utilisez des informations d’identification **racines** pour exécuter la commande suivante pour démarrer un cycle d’inventaire matériel : `/opt/microsoft/configmgr/bin/ccmexec -rs hinv`  
 
-  Les actions d’inventaire matériel sont entrées dans le fichier journal du client, **scxcm.log**.  
+Les actions d’inventaire matériel sont entrées dans le fichier journal du client, **scxcm.log**.  
 
 ##  <a name="BKMK_CustomHINVforLinux"></a> Comment utiliser l’infrastructure OMI pour créer un inventaire matériel personnalisé  
  Le client pour Linux et UNIX prend en charge l’inventaire matériel personnalisé que vous pouvez créer à l’aide de l’infrastructure OMI. Pour ce faire, vous devez procédez comme suit :  
@@ -108,7 +113,7 @@ Le client System Center Configuration Manager pour Linux et UNIX prend en charge
 
 1.  Copiez la bibliothèque du fournisseur sur chaque ordinateur Linux et UNIX dont vous souhaitez recueillir l’inventaire. Le nom de la bibliothèque du fournisseur ressemble à ceci : **XYZ_MyProvider.so**  
 
-2.  Ensuite, sur chaque ordinateur Linux et UNIX, inscrivez la bibliothèque du fournisseur auprès du serveur OMI. Le serveur OMI s’installe sur l’ordinateur quand vous installez le client Configuration Manager pour Linux et UNIX, mais vous devez inscrire manuellement les fournisseurs personnalisés. Exécutez la ligne de commande suivante pour inscrire le fournisseur : **/opt/microsoft/omi/bin/omireg XYZ_MyProvider.so**  
+2.  Ensuite, sur chaque ordinateur Linux et UNIX, inscrivez la bibliothèque du fournisseur auprès du serveur OMI. Le serveur OMI s’installe sur l’ordinateur quand vous installez le client Configuration Manager pour Linux et UNIX, mais vous devez inscrire manuellement les fournisseurs personnalisés. Exécutez la ligne de commande suivante pour inscrire le fournisseur : `/opt/microsoft/omi/bin/omireg XYZ_MyProvider.so`  
 
 3.  Une fois le nouveau fournisseur inscrit, testez-le à l’aide de l’outil **omicli** . L’outil **omicli** s’installe sur chaque ordinateur Linux et UNIX quand vous installez le client Configuration Manager pour Linux et UNIX. Par exemple, **XYZ_MyProvider** étant le nom du fournisseur que vous avez créé, exécutez la commande suivante sur l’ordinateur : **/opt/microsoft/omi/bin/omicli ei root/cimv2 XYZ_MyProvider**  
 

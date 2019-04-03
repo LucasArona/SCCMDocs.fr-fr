@@ -2,7 +2,7 @@
 title: Déprécié pour les clients
 titleSuffix: Configuration Manager
 description: Découvrez les systèmes d’exploitation clients que Configuration Manager ne prend plus en charge.
-ms.date: 01/15/2019
+ms.date: 03/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d55c246c696a550ad3935a1f2bf9a7b838af996a
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 9c6c4af31af08d2c723df01fa37f21f708453044
+ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56156853"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58523773"
 ---
 # <a name="removed-and-deprecated-items-for-configuration-manager-clients"></a>Éléments supprimés et dépréciés pour les clients Configuration Manager
 
@@ -33,7 +33,7 @@ Sauf indication contraire, chaque système d’exploitation est pris en charge e
 
 |**Systèmes d’exploitation**|**Première annonce de dépréciation**|**Support supprimé**|  
 |-|-|-|
-|Linux et UNIX|22 mars 2018||
+|Linux et UNIX|22 mars 2018|Version 1902|
 |Windows 8 : Professionnel, Entreprise|12 janvier 2016|Version 1802|
 |Windows Embedded 8 Pro|12 janvier 2016|Version 1802|
 |Windows Embedded 8 Industry|12 janvier 2016|Version 1802|

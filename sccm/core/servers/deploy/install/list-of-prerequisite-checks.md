@@ -2,7 +2,7 @@
 title: Vérifications des prérequis
 titleSuffix: Configuration Manager
 description: Informations de référence sur les vérifications des prérequis spécifiques pour les mises à jour de Configuration Manager.
-ms.date: 12/14/2018
+ms.date: 03/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6bea2d7fc41bdec96fbdfe3508d13eea0a59d514
-ms.sourcegitcommit: ceec0e20bf801071f2a05233f984cf17acc3fd29
+ms.openlocfilehash: 81689907f326399de704b075b8500b82803b4d3d
+ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265034"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58524181"
 ---
 # <a name="list-of-prerequisite-checks-for-configuration-manager"></a>Liste de vérifications des prérequis pour Configuration Manager
 
@@ -455,7 +455,7 @@ L’ordinateur Configuration Manager est membre d’un domaine Windows.
 Pour pouvoir installer le serveur de site, celui-ci doit avoir au moins 15 Go d’espace disque libre. Si vous installez le fournisseur SMS sur le même serveur, un espace libre supplémentaire de 1 Go est nécessaire.
 
 #### <a name="pending-system-restart"></a>Redémarrage du système en attente 
-*S’applique à : site d’administration centrale, site principal, site secondaire, console Configuration Manager, fournisseur SMS, SQL Server, point de gestion, point de distribution*
+*S’applique à : site d’administration centrale, site principal, site secondaire*
 
 Avant d’exécuter le programme d’installation, un autre programme requiert le redémarrage du serveur.
 
@@ -514,6 +514,18 @@ L’ordinateur Configuration Manager est membre d’un domaine Windows.
 *S’applique à : site principal*
 
 Le lecteur de disque est formaté avec le système de fichiers NTFS. Pour une meilleure sécurité, installez les composants de serveur de site sur des disques formatés avec le système de fichiers NTFS.
+
+#### <a name="pending-system-restart-on-the-remote-sql-server"></a>Redémarrage du système en attente sur le serveur SQL distant
+*S’applique à : Version 1902 et versions ultérieures, serveur SQL distant*
+
+Avant d’exécuter le programme d’installation, un autre programme requiert le redémarrage du serveur.
+
+Pour voir si l’ordinateur est dans un état de redémarrage en attente, les emplacements de Registre suivants sont vérifiés :<!--SCCMDocs-pr issue 3377-->  
+
+- `HKLM:Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\RebootPending`  
+- `HKLM:SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired`  
+- `HKLM:SYSTEM\CurrentControlSet\Control\Session Manager, PendingFileRenameOperations`  
+- `HKLM:Software\Microsoft\ServerManager, CurrentRebootAttempts`  
 
 #### <a name="schema-extensions"></a>Extensions de schéma 
 *S’applique à : site d’administration centrale, site principal*

@@ -2,7 +2,7 @@
 title: Notes de publication
 titleSuffix: Configuration Manager
 description: Découvrez plus en détail les problèmes urgents qui ne sont pas encore résolus dans le produit ni traités dans un article de la base de connaissances Support Microsoft.
-ms.date: 03/05/2019
+ms.date: 03/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 33ef7020e1b9312717919a9dda8ce189c8db533c
-ms.sourcegitcommit: f3dd8405018fe1043434386be15c16752c1a4a3c
+ms.openlocfilehash: a168e12000f11ca2bb6af8b1988f508910ab7263
+ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57558182"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58523960"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Notes de publication de Configuration Manager
 
@@ -29,6 +29,7 @@ La documentation spécifique aux fonctionnalités inclut des informations sur le
 Cette rubrique contient les notes de publication pour l’édition actuelle de Configuration Manager. Pour plus d’informations sur la branche Technical Preview, consultez [Technical Preview](/sccm/core/get-started/technical-preview).  
 
 Pour plus d’informations sur les nouvelles fonctionnalités introduites dans les différentes versions, consultez les articles suivants :
+- [Nouveautés de la version 1902](/sccm/core/plan-design/changes/whats-new-in-version-1902)
 - [Nouveautés de la version 1810](/sccm/core/plan-design/changes/whats-new-in-version-1810)
 - [Nouveautés de la version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806)  
 - [Nouveautés de la version 1802](/sccm/core/plan-design/changes/whats-new-in-version-1802)
@@ -103,7 +104,7 @@ Aucun
 
 ### <a name="security-roles-are-missing-for-phased-deployments"></a>Les rôles de sécurité sont manquants pour les déploiements par phases
 <!--3479337, SCCMDocs-pr issue 3095-->
-*S’applique à : Configuration Manager version 1810*
+*S’applique à : Configuration Manager versions 1810, 1902*
 
 Le rôle de sécurité intégré **Gestionnaire de déploiement de système d’exploitation** dispose des autorisations pour les [déploiements par phases](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence). Ces autorisations sont manquantes dans les rôles suivants :  
 
@@ -144,7 +145,8 @@ Changez la valeur de Registre suivante en `0` et redémarrez le **service Micros
 ## <a name="mobile-device-management"></a>Gestion des appareils mobiles  
 
 ### <a name="validation-for-ios-app-link-sometimes-fails-on-valid-link"></a>La validation de liens d’application iOS valides échoue parfois
-<!-- LSI 106004348 --> Lors de la création d’une application de type **Package d’application pour iOS provenant de l’App Store**, il y a des URL valides pour **l’Emplacement** que le validateur n’accepte pas. Plus précisément, l’App Store iOS ne réclame pas de valeur dans la section du nom d’application de l’URL. Par exemple, les deux liens suivants sont valides et pointent vers la même application, mais **l’Assistant Créer une application** n’accepte que le premier :
+<!-- LSI 106004348 -->
+Lors de la création d’une application de type **Package d’application pour iOS provenant de l’App Store**, il y a des URL valides pour **l’Emplacement** que le validateur n’accepte pas. Plus précisément, l’App Store iOS ne réclame pas de valeur dans la section du nom d’application de l’URL. Par exemple, les deux liens suivants sont valides et pointent vers la même application, mais **l’Assistant Créer une application** n’accepte que le premier :
 - `https://itunes.apple.com/us/app/app-name/id123456789?mt=8`
 - `https://itunes.apple.com/us/app//id123456789?mt=8`
 

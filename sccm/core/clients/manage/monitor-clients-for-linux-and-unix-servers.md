@@ -1,8 +1,8 @@
 ---
-title: 'Surveiller les clients Linux/UNIX '
+title: Surveiller les clients Linux/UNIX
 titleSuffix: Configuration Manager
-description: Surveillez les clients sur des serveurs Linux et UNIX dans System Center Configuration Manager.
-ms.date: 08/04/2017
+description: Surveiller les clients sur des serveurs Linux et UNIX dans Configuration Manager.
+ms.date: 03/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,18 +11,23 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e8e10b4297e1367f6835e61ced77f2a1154319b
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 47a85ec7dea72f08a0ec48ebb151566b8563ba9a
+ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56127930"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58523688"
 ---
-# <a name="how-to-monitor-clients-for-linux-and-unix-servers-in-system-center-configuration-manager"></a>Guide pratique pour surveiller les clients pour des serveurs Linux et UNIX dans System Center Configuration Manager
+# <a name="how-to-monitor-clients-for-linux-and-unix-servers-in-configuration-manager"></a>Guide pratique pour surveiller les clients sur des serveurs Linux et UNIX dans Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
-Vous pouvez afficher des informations sur les serveurs Linux et UNIX dans la console System Center Configuration Manager selon les mêmes méthodes que vous employez pour afficher des informations sur des clients Windows.  
+> [!Important]  
+> Depuis la version 1902, Configuration Manager ne prend en charge les clients Linux ou UNIX. 
+> 
+> Utilisez plutôt Microsoft Azure Management pour la gestion des serveurs Linux. Les solutions Azure offrent une prise en charge étendue de Linux qui, dans la plupart des cas, dépasse les fonctionnalités de Configuration Manager, notamment la gestion des correctifs de bout en bout pour Linux.
+
+Vous pouvez afficher des informations sur les serveurs Linux et UNIX dans la console Configuration Manager selon les mêmes méthodes que vous employez pour afficher des informations sur des clients Windows.  
 
  Vous pouvez notamment afficher les informations suivantes :  
 

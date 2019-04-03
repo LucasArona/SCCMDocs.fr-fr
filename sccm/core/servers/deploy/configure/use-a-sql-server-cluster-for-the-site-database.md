@@ -11,18 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cdbe1d7c3fb28a16c6ba55d073adba3781b12f58
-ms.sourcegitcommit: 544f335cfd1bfd0a1d4973439780e9f5e9ee8bed
+ms.openlocfilehash: d07005c63f0d69d57d24eac163b67c34529658cf
+ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562055"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477549"
 ---
 # <a name="use-a-sql-server-cluster-for-the-site-database"></a>Utiliser un cluster SQL Server pour la base de données du site
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
-Vous pouvez utiliser un cluster SQL Server pour héberger la base de données du site Configuration Manager. Un cluster permet de prendre en charge le basculement et d’améliorer la fiabilité de la base de données de site. Toutefois, il n’offre pas d’autres avantages en matière de traitement ou d’équilibrage de la charge. Une détérioration des performances peut survenir car le serveur de site doit trouver le nœud actif du cluster SQL Server avant de se connecter à la base de données de site.  
+Vous pouvez utiliser un cluster de basculement SQL Server pour héberger la base de données du site Configuration Manager. Un cluster permet de prendre en charge le basculement et d’améliorer la fiabilité de la base de données de site. Toutefois, il n’offre pas d’autres avantages en matière de traitement ou d’équilibrage de la charge. En outre, un cluster de basculement SQL Server utilise un stockage partagé et introduit un point de défaillance unique. Une détérioration des performances peut survenir car le serveur de site doit trouver le nœud actif du cluster SQL Server avant de se connecter à la base de données de site.  
 
 > [!IMPORTANT]  
 > La configuration réussie des clusters SQL Server s’appuie sur la documentation et les procédures fournies dans la bibliothèque de documentation de SQL Server.  

@@ -2,7 +2,7 @@
 title: Versions Technical Preview
 titleSuffix: Configuration Manager
 description: Découvrez la branche Technical Preview qui permet de tester les nouvelles fonctionnalités de Configuration Manager.
-ms.date: 02/19/2019
+ms.date: 03/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d9dee0aa39454d41f217cbe646845bf42076d3af
-ms.sourcegitcommit: 56ec6933cf7bfc93842f55835ad336ee3a1c6ab5
+ms.openlocfilehash: daa2367dde0ce1e1d76673b787240b24e9bd38ea
+ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57211616"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58524249"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Version Technical Preview de Configuration Manager
 
@@ -131,10 +131,10 @@ Les fonctionnalités suivantes sont disponibles dans la version Technical Previe
 
 <!-- - [title](/sccm/core/get-started/2019/technical-preview-1901#bkmk_anchor) <!--ID--> 
 
-- [Langues supplémentaires pour les mises à jour Office 365](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_o365lang) <!--3555955--> 
-- [Intégration avec l’analytique pour Office 365 ProPlus Readiness](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_o365) <!--3735402--> 
-- [Amélioration des critères de réussite du déploiement par phases](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_pod) <!--3555946--> 
-- [Amélioration apportée à HTTP avancé](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_ehttp) <!--3798957--> 
+- [Langues supplémentaires pour les mises à jour Office 365](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_o365lang) <!--3555955--> <!-- Version 1902 --> 
+- [Intégration avec l’analytique pour Office 365 ProPlus Readiness](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_o365) <!--3735402--> <!-- Version 1902 --> 
+- [Amélioration des critères de réussite du déploiement par phases](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_pod) <!--3555946--> <!-- Version 1902 -->
+- [Amélioration apportée à HTTP avancé](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_ehttp) <!--3798957--> <!-- Version 1902 -->
 
 
 > [!Note]  
@@ -153,43 +153,43 @@ Then remove the bottom of this list and/or move individual items not in CB to th
 
  | Fonctionnalité | Version Technical Preview | Version Current Branch |  
  |---------|---------------------------|------------------------|
- | Remplacer les notifications toast par une fenêtre de dialogue <!--3555947--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_impact) | ![Non ajouté](media/Red_X.gif) | 
- | État de progression pendant une séquence de tâches de mise à niveau sur place <!--3747129--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_ipu) | ![Non ajouté](media/Red_X.gif) | 
- | Rediriger les dossiers Windows connus vers OneDrive <!--3556021--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_odfb) | ![Non ajouté](media/Red_X.gif) | 
- | Afficher le premier écran uniquement pendant le contrôle à distance <!--3231732--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_rcmulti) | ![Non ajouté](media/Red_X.gif) | 
- | Modifier ou copier des scripts PowerShell <!--3705507--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_psedit) | ![Non ajouté](media/Red_X.gif) | 
- | Ajouter une passerelle de gestion cloud à des groupes de limites <!--3640932--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_cmgbg) | ![Non ajouté](media/Red_X.gif) | 
- | Configurer des vues par défaut dans le Centre logiciel <!--3612112--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_swctr) | ![Non ajouté](media/Red_X.gif) | 
- | Améliorations apportées au tableau de bord d’intégrité du client <!--3599209--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_health) | ![Non ajouté](media/Red_X.gif) | 
- | Tableau de bord d’intégrité du client <!--3599209--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_health) | ![Non ajouté](media/Red_X.gif) | 
- | Spécifier la priorité des mises à jour de fonctionnalités lors de la maintenance de Windows 10 <!--3734525--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_neo) | ![Non ajouté](media/Red_X.gif) | 
- | Supervision dédiée pour les déploiements par phases <!--3555949--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_pod) | ![Non ajouté](media/Red_X.gif) | 
- | Exécuter CMPivot à partir du site d’administration centrale <!--3610960--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_cmpivot) | ![Non ajouté](media/Red_X.gif) | 
- | Améliorations apportées à l’étape de séquence de tâches Exécuter le script PowerShell <!--3556028--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_posh) | ![Non ajouté](media/Red_X.gif) | 
- | Produits Office sur le tableau de bord Cycle de vie <!--3556026--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_lifecycle) | ![Non ajouté](media/Red_X.gif) | 
- | Règles d’insight de gestion pour les regroupements <!--3555752--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_micoll) | ![Non ajouté](media/Red_X.gif) | 
- | Vues de recherche d’appareils avec une adresse MAC <!--3600878--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_mac) | ![Non ajouté](media/Red_X.gif) | 
- | Mode maintenance des points de distribution <!--3555754--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_dpmaint) | ![Non ajouté](media/Red_X.gif) | 
- | Maintenance optimisée des images <!--3555951--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_resetbase) | ![Non ajouté](media/Red_X.gif) | 
- | Importer un index unique d’une image de système d’exploitation <!--3719699--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_index) | ![Non ajouté](media/Red_X.gif) | 
- | Utiliser Azure Resource Manager pour les services cloud <!--3605704--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_arm) | ![Non ajouté](media/Red_X.gif) | 
- | Confirmation de commentaires de la console <!--3556010--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_feedback) | ![Non ajouté](media/Red_X.gif) | 
- | Créer un laboratoire Configuration Manager Technical Preview dans Azure <!--3556017--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_azurevm) | ![Non ajouté](media/Red_X.gif) | 
- | Spécifier un port personnalisé pour mettre en éveil le pair <!--3605925--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_sleep) | ![Non ajouté](media/Red_X.gif) | 
- | Afficher les consoles récemment connectées <!--3699367--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_console) | ![Non ajouté](media/Red_X.gif) | 
- | Arrêter le service cloud quand il dépasse le seuil <!--3735092--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_cmg) | ![Non ajouté](media/Red_X.gif) | 
- | Délai d’expiration du mode de provisionnement de client <!--3197824--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_osdprov) | ![Non ajouté](media/Red_X.gif) | 
- | Améliorations apportées au déploiement de système d’exploitation <!--3633146,3641475,3654172,3734270--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_osd) | ![Non ajouté](media/Red_X.gif) | 
- | Améliorations apportées à l’étape de séquence de tâches Exécuter le script PowerShell <!--3556028 fka 1359389--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_posh) | ![Non ajouté](media/Red_X.gif) | 
- | Améliorations des approbations d’applications par e-mail <!--3594063--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_email) | ![Non ajouté](media/Red_X.gif) | 
- | Configurer l’affinité entre utilisateur et appareil dans le Centre logiciel <!--3485366--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_uda) | ![Non ajouté](media/Red_X.gif) | 
- | Améliorations apportées à la console Configuration Manager <!--3594151--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_console) | ![Non ajouté](media/Red_X.gif) | 
+ | Remplacer les notifications toast par une fenêtre de dialogue <!--3555947--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_impact) | Version 1902 | 
+ | État de progression pendant une séquence de tâches de mise à niveau sur place <!--3747129--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_ipu) | Version 1902 | 
+ | Rediriger les dossiers Windows connus vers OneDrive <!--3556021--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_odfb) | Version 1902 | 
+ | Afficher le premier écran uniquement pendant le contrôle à distance <!--3231732--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_rcmulti) | Version 1902 | 
+ | Modifier ou copier des scripts PowerShell <!--3705507--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_psedit) | Version 1902 | 
+ | Ajouter une passerelle de gestion cloud à des groupes de limites <!--3640932--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_cmgbg) | Version 1902 | 
+ | Configurer des vues par défaut dans le Centre logiciel <!--3612112--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_swctr) | Version 1902 | 
+ | Améliorations apportées au tableau de bord d’intégrité du client <!--3599209--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_health) | Version 1902 | 
+ | Tableau de bord d’intégrité du client <!--3599209--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_health) | Version 1902 | 
+ | Spécifier la priorité des mises à jour de fonctionnalités lors de la maintenance de Windows 10 <!--3734525--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_neo) | Version 1902 | 
+ | Supervision dédiée pour les déploiements par phases <!--3555949--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_pod) | Version 1902 | 
+ | Exécuter CMPivot à partir du site d’administration centrale <!--3610960--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_cmpivot) | Version 1902 | 
+ | Améliorations apportées à l’étape de séquence de tâches Exécuter le script PowerShell <!--3556028--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_posh) | Version 1902 | 
+ | Produits Office sur le tableau de bord Cycle de vie <!--3556026--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_lifecycle) | Version 1902 | 
+ | Règles d’insight de gestion pour les regroupements <!--3555752--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_micoll) | Version 1902 | 
+ | Vues de recherche d’appareils avec une adresse MAC <!--3600878--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_mac) | Version 1902 | 
+ | Mode maintenance des points de distribution <!--3555754--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_dpmaint) | Version 1902 | 
+ | Maintenance optimisée des images <!--3555951--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_resetbase) | Version 1902 | 
+ | Importer un index unique d’une image de système d’exploitation <!--3719699--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_index) | Version 1902 | 
+ | Utiliser Azure Resource Manager pour les services cloud <!--3605704--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_arm) | Version 1902 | 
+ | Confirmation de commentaires de la console <!--3556010--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_feedback) | Version 1902 | 
+ | Créer un lab Configuration Manager Technical Preview dans Azure <!--3556017--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_azurevm) | Non applicable | 
+ | Spécifier un port personnalisé pour mettre en éveil le pair <!--3605925--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_sleep) | Version 1902 | 
+ | Afficher les consoles récemment connectées <!--3699367--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_console) | Version 1902 | 
+ | Arrêter le service cloud quand il dépasse le seuil <!--3735092--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_cmg) | Version 1902 | 
+ | Délai d’expiration du mode de provisionnement de client <!--3197824--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_osdprov) | Version 1902 | 
+ | Améliorations apportées au déploiement de système d’exploitation <!--3633146,3641475,3654172,3734270--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_osd) | Version 1902 | 
+ | Améliorations apportées à l’étape de séquence de tâches Exécuter le script PowerShell <!--3556028 fka 1359389--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_posh) | Version 1902 | 
+ | Améliorations des approbations d’applications par e-mail <!--3594063--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_email) | Version 1902 | 
+ | Configurer l’affinité entre utilisateur et appareil dans le Centre logiciel <!--3485366--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_uda) | Version 1902 | 
+ | Améliorations apportées à la console Configuration Manager <!--3594151--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_console) | Version 1902 | 
  | Télécharger des rapports depuis le Hub Communauté<!--3555936--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_hub) | ![Non ajouté](media/Red_X.gif) | 
- | Ne pas charger les profils Windows PowerShell <!--1359239--> | [Préversion technique 1811](capabilities-in-technical-preview-1811.md#bkmk_noprofile) | ![Non ajouté](media/Red_X.gif) | 
- | Une connexion Intune n’est plus nécessaire pour MDM au niveau local <!--1359124--> | [Préversion technique 1811](capabilities-in-technical-preview-1811.md#bkmk_opmdm) | ![Non ajouté](media/Red_X.gif) | 
- | Notifications de la console Configuration Manager <!--1318035--> | [Préversion technique 1811](capabilities-in-technical-preview-1811.md#bkmk_notify) | ![Non ajouté](media/Red_X.gif) | 
- | Améliorations apportées à la création d’un média de séquence de tâches <!--1359388--> | [Préversion technique 1811](capabilities-in-technical-preview-1811.md#bkmk_tsmedia) | ![Non ajouté](media/Red_X.gif) | 
- | Amélioration apportée à l’étape de séquence de tâches Exécuter le script PowerShell <!--1359389--> | [Préversion technique 1811](capabilities-in-technical-preview-1811.md#bkmk_posh) | ![Non ajouté](media/Red_X.gif) | 
+ | Ne pas charger les profils Windows PowerShell <!--3607762, fka 1359239--> | [Préversion technique 1811](capabilities-in-technical-preview-1811.md#bkmk_noprofile) | Version 1810 | 
+ | Une connexion Intune n’est plus nécessaire pour MDM au niveau local <!--3607730, fka 1359124--> | [Préversion technique 1811](capabilities-in-technical-preview-1811.md#bkmk_opmdm) | Version 1810 | 
+ | Notifications de la console Configuration Manager <!--3556016, fka 1318035--> | [Préversion technique 1811](capabilities-in-technical-preview-1811.md#bkmk_notify) | Version 1902 | 
+ | Améliorations apportées à la création d’un média de séquence de tâches <!--3556027, fka 1359388--> | [Préversion technique 1811](capabilities-in-technical-preview-1811.md#bkmk_tsmedia) | Version 1902 | 
+ | Amélioration apportée à l’étape de séquence de tâches Exécuter le script PowerShell <!--3556028, fka 1359389--> | [Préversion technique 1811](capabilities-in-technical-preview-1811.md#bkmk_posh) | Version 1902 | 
 
 
 
@@ -205,15 +205,12 @@ With each CB release, review and remove from this list for anything that's now a
 
 | Fonctionnalité        | Version Technical Preview |  
 |----------------|---------------------------|
-| Tableau de bord Documentation dans la console <!--1357546--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_doc-dashboard) | 
-| Hub Communauté <!--1357766--> | [Tech Preview 1807](capabilities-in-technical-preview-1807.md#bkmk_hub) | 
-| Activité de synchronisation d’appareil cogéré avec Intune <!--1358565--> | [Tech Preview 1807](capabilities-in-technical-preview-1807.md#bkmk_comgmt) | 
-| Service de répondeur PXE basé sur le client <!--1357148--> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#client-based-pxe-responder-service) |
-| Prise en charge du démarrage réseau PXE pour IPv6 <!--1269793--> |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#pxe-network-boot-support-for-ipv6)|
-| Utiliser Azure Active Directory <!--1322145--> | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#azurediscovery) |
-| Évaluation de la conformité des mises à jour Windows Update pour Entreprise <!--1235390--> | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#compliance-assessment-for-windows-update-for-business-updates) |
-| Améliorations apportées à Asset Intelligence <!--1307390--> | [Tech Preview 1608](capabilities-in-technical-preview-1608.md#improvements-to-asset-intelligence) |
-| Les utilisateurs finaux peuvent installer des applications à partir du portail d’entreprise <!--1037233?--> | [Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_End) |
+| Hub Communauté <!--3556020, fka 1357766--> | [Tech Preview 1807](capabilities-in-technical-preview-1807.md#bkmk_hub) | 
+| Service de répondeur PXE basé sur le client <!--3556018, fka 1357148--> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#client-based-pxe-responder-service) |
+| Prise en charge du démarrage réseau PXE pour IPv6 <!--3601254, fka 1269793--> |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#pxe-network-boot-support-for-ipv6)|
+| Utiliser Azure Active Directory <!--3607315, fka 1322145--> | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#azurediscovery) |
+| Améliorations apportées à Asset Intelligence <!--3601024, fka 1307390--> | [Tech Preview 1608](capabilities-in-technical-preview-1608.md#improvements-to-asset-intelligence) |
+| Les utilisateurs finaux peuvent installer des applications à partir du portail d’entreprise <!--3601249, fka 1037233--> | [Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_End) |
 
 
 

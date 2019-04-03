@@ -1,8 +1,8 @@
 ---
 title: Mettre à niveau les clients Linux et UNIX
 titleSuffix: Configuration Manager
-description: Mettez à niveau un client sur un serveur Linux ou UNIX dans System Center Configuration Manager.
-ms.date: 04/23/2017
+description: Mettez à niveau un client sur un serveur Linux ou UNIX dans Configuration Manager.
+ms.date: 03/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,16 +11,21 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c71d58b247620be08dfbd1244deda5e513890376
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 987014084626e13b09a3c39fe6eff08ecc8fbe6b
+ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56141576"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58523994"
 ---
-# <a name="how-to-upgrade-clients-for-linux-and-unix-servers-in-system-center-configuration-manager"></a>Comment mettre à niveau les clients pour des serveurs Linux et UNIX dans System Center Configuration Manager
+# <a name="how-to-upgrade-clients-for-linux-and-unix-servers-in-configuration-manager"></a>Guide pratique pour mettre à niveau les clients pour des serveurs Linux et UNIX dans Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
+
+> [!Important]  
+> Depuis la version 1902, Configuration Manager ne prend en charge les clients Linux ou UNIX. 
+> 
+> Utilisez plutôt Microsoft Azure Management pour la gestion des serveurs Linux. Les solutions Azure offrent une prise en charge étendue de Linux qui, dans la plupart des cas, dépasse les fonctionnalités de Configuration Manager, notamment la gestion des correctifs de bout en bout pour Linux.
 
 Vous pouvez mettre à niveau la version du client pour Linux et UNIX vers une version plus récente du client sans désinstaller au préalable le client actuel. Pour cela, installez le nouveau package d’installation du client sur l’ordinateur en utilisant la propriété de ligne de commande **-keepdb**. Quand le client pour Linux et UNIX est installé, il remplace les données du client existantes par les nouveaux fichiers du client. Toutefois, la propriété de ligne de commande **-keepdb** demande au processus d’installation de conserver l’identificateur unique (GUID) du client, la base de données locale d’informations et le magasin de certificats. Ces informations sont ensuite utilisées par la nouvelle installation du client.  
 

@@ -1,8 +1,8 @@
 ---
 title: Accessibilité
 titleSuffix: Configuration Manager
-description: Découvrez les fonctionnalités qui rendent System Center Configuration Manager accessible aux personnes en situation de handicap.
-ms.date: 7/31/2017
+description: Découvrez les fonctionnalités qui rendent Configuration Manager accessible à tous.
+ms.date: 03/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,24 +11,42 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2f52e903f730590cd9e0b3c8e6f53982ac24fc1b
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 5a1bf32c77989c11c55723d5edf271e234ccd4ec
+ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56136241"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58523739"
 ---
-# <a name="accessibility-features-in-system-center-configuration-manager"></a>Fonctionnalités d’accessibilité dans System Center Configuration Manager
+# <a name="accessibility-features-in-configuration-manager"></a>Fonctionnalités d’accessibilité dans Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
 
-System Center Configuration Manager inclut des fonctionnalités d’accessibilité pour les personnes en situation de handicap.
+Configuration Manager inclut des fonctionnalités qui le rendent accessible à tous.
+
+> [!Note]  
+> Depuis la version 1902, pour améliorer les fonctionnalités d’accessibilité de la console Configuration Manager, mettez à jour .NET avec la version 4.7 ou versions ultérieures sur l’ordinateur qui exécute la console. <!-- SCCMDocs-pr issue #3228 -->  
+> 
+> Pour plus d’informations sur les modifications d’accessibilité apportées à .NET 4.7.1 et 4.7.2, consultez [Nouveautés apportées à l’accessibilité dans .NET Framework](https://docs.microsoft.com/dotnet/framework/whats-new/whats-new-in-accessibility).  
 
 
-## <a name="bkmk_aconsole"></a> Fonctionnalités d’accessibilité pour la console Configuration Manager  
 
-**Raccourcis et améliorations apportées avec la version 1706**
+## <a name="keyboard-shortcuts"></a>raccourcis clavier
+
+### <a name="console-workspaces"></a>Espaces de travail de la console
+
+Pour accéder à un espace de travail, utilisez les raccourcis clavier suivants :  
+
+|Raccourci clavier| Espace de travail|
+|--------|--------|  
+|Ctrl + 1| Biens et conformité|
+|Ctrl + 2|  Bibliothèque de logiciels|
+|Ctrl + 3|  Analyse|
+|Ctrl + 4|  Administration|
+
+
+### <a name="other-keyboard-shortcuts"></a>Autres raccourcis clavier
 
 |Raccourci clavier|  Fonction|
 |--------|--------|  
@@ -40,93 +58,37 @@ System Center Configuration Manager inclut des fonctionnalités d’accessibilit
 |Alt     |Fait basculer le focus vers et hors du ruban.|
 
 
-- Amélioration de la navigation dans le volet de navigation lorsque vous saisissez les lettres d’un nom de nœud.
-- La navigation au clavier via la vue principale et le ruban est désormais circulaire.
-- La navigation au clavier dans le volet d’informations est désormais circulaire. Pour revenir à l’objet ou au volet précédent, utilisez Ctrl + D, puis MAJ + TAB.
+
+## <a name="other-accessibility-features"></a>Autres fonctionnalités d’accessibilité
+
+- Pour parcourir le volet de navigation, saisissez les lettres d’un nom de nœud.
+
+- La navigation au clavier via la vue principale et le ruban est circulaire.
+
+- La navigation au clavier dans le volet d’informations est circulaire. Pour revenir à l’objet ou au volet précédent, utilisez Ctrl + D, puis MAJ + TAB.
+
 - Après l’actualisation d’une vue de l’espace de travail, le focus est défini sur le volet principal de cet espace de travail.
-- Correction d’un problème pour activer les lecteurs d’écran pour annoncer les noms des éléments de liste.
-- Ajout des noms accessibles de plusieurs contrôles sur la page qui active les lecteurs d’écran pour annoncer des informations importantes.
+
+- Pour accéder au menu d’un espace de travail, sélectionnez la touche Tab jusqu’à ce que l’icône de réduction/développement soit active. Sélectionnez ensuite la flèche Bas pour accéder au menu de l’espace de travail.  
+
+- Pour naviguer dans le menu d'un espace de travail, utilisez les touches de direction.  
+
+- Pour accéder aux différentes zones de l'espace de travail, utilisez la touche Tab et les touches Maj+Tab. Pour naviguer dans une zone de l'espace de travail telle que le ruban, utilisez les touches de direction.  
+
+- Pour accéder à la barre d’adresses quand le focus se trouve dans le nœud de l’arborescence, utilisez Maj+Tab à trois reprises.  
+
+- Sur une page d'Assistant ou une page de propriétés, vous pouvez vous déplacer entre les zones à l'aide de raccourcis clavier. Sélectionnez la touche Alt et le caractère souligné (Alt+_) pour sélectionner une zone spécifique.     
+
+- Pour parcourir les différents nœuds d’un espace de travail, entrez la première lettre du nom d’un nœud. Chaque appui sur une touche déplace le curseur au nœud suivant qui commence par cette lettre. Si vous utilisez un lecteur d’écran, le lecteur lit le nom de ce nœud.
 
 
-**Les raccourcis suivants sont disponibles pour toutes les versions**
 
-- Pour accéder à un espace de travail, utilisez les raccourcis clavier suivants :  
+## <a name="see-also"></a>Voir aussi
 
-|Raccourci clavier| Espace de travail|
-|--------|--------|  
-|Ctrl + 1| Biens et conformité|
-|Ctrl + 2|  Bibliothèque de logiciels|
-|Ctrl + 3|  Analyse|
-|Ctrl + 4|  Administration|
-
-
--   Pour accéder au menu d’un espace de travail, sélectionnez la touche Tab jusqu’à ce que l’icône de réduction/développement soit active. Sélectionnez ensuite la flèche Bas pour accéder au menu de l’espace de travail.  
-
--   Pour naviguer dans le menu d'un espace de travail, utilisez les touches de direction.  
-
--   Pour accéder aux différentes zones de l'espace de travail, utilisez la touche Tab et les touches Maj+Tab. Pour naviguer dans une zone de l'espace de travail telle que le ruban, utilisez les touches de direction.  
-
--   Pour accéder à la barre d’adresses quand le focus se trouve dans le nœud de l’arborescence, utilisez Maj+Tab à trois reprises.  
-
--   Sur une page d'Assistant ou une page de propriétés, vous pouvez vous déplacer entre les zones à l'aide de raccourcis clavier. Sélectionnez la touche Alt et le caractère souligné (Alt+_) pour sélectionner une zone spécifique.     
-
--  Pour parcourir les différents nœuds d’un espace de travail, entrez la première lettre du nom d’un nœud. Chaque appui sur une touche déplace le curseur au nœud suivant qui commence par cette lettre. Si vous utilisez un lecteur d’écran, le lecteur lit le nom de ce nœud.
+Pour plus d’informations sur les principes fondamentaux de la navigation dans les interfaces utilisateur de Configuration Manager, consultez les articles suivants :
+- [Utilisation de la console Configuration Manager](/sccm/core/servers/manage/admin-console)  
+- [Guide de l’utilisateur sur le Centre logiciel](/sccm/core/understand/software-center)
 
 > [!NOTE]  
->  Les informations présentes dans cette section ne s’appliquent qu’aux utilisateurs détenteurs de licences de produits Microsoft aux États-Unis. Si vous avez obtenu ce produit en dehors des États-Unis, vous pouvez utiliser la carte d’information de filiale fournie avec le package logiciel ou consulter le [site web Accessibilité de Microsoft](http://go.microsoft.com/fwlink/?LinkId=8431) pour obtenir les coordonnées des services de support technique Microsoft. Vous pouvez contacter votre filiale pour savoir si les types de produits ou de services décrits dans cette section sont disponibles dans votre région. Les informations sur l'accessibilité sont disponibles dans d'autres langues, notamment en japonais et en français.  
+> Les informations présentes dans cet article ne s’appliquent qu’aux utilisateurs détenteurs de licences de produits Microsoft aux États-Unis. Si vous avez obtenu ce produit en dehors des États-Unis, vous pouvez utiliser la carte d’information de filiale fournie avec le package logiciel ou consulter le [site web Accessibilité de Microsoft](https://go.microsoft.com/fwlink/?LinkId=8431) pour obtenir les coordonnées des services de support technique Microsoft. Vous pouvez contacter votre filiale pour savoir si les types de produits ou de services décrits dans cette section sont disponibles dans votre région. Les informations sur l'accessibilité sont disponibles dans d'autres langues, notamment en japonais et en français.  
 
-##  <a name="bkmk_ahelp"></a> Fonctionnalités d’accessibilité dans l’aide de Configuration Manager  
- L’aide de Configuration Manager intègre des fonctionnalités qui la rendent accessible à un plus grand nombre d’utilisateurs, notamment ceux présentant une mobilité réduite, une acuité visuelle réduite ou d’autres handicaps.  
-
-|Tâche|Utiliser ce raccourci clavier|  
-|----------------|--------------------------------|  
-|Afficher la fenêtre d'aide.|F1|  
-|Basculer le curseur entre les volets Rubrique d'aide et Navigation (onglets **Sommaire**, **Rechercher**et **Index** ).|F6|  
-|Changer d’onglet (par exemple, **Contenu**, **Rechercher** et **Index**) dans le volet de navigation.|ALT+lettre soulignée de l'onglet|  
-|Sélectionner le texte masqué ou le lien hypertexte suivant.|Onglet|  
-|Sélectionner le texte masqué ou le lien hypertexte précédent.|Maj+Tabulation|  
-|Effectuer l'action pour l'élément sélectionné (option Afficher tout, Masquer tout, texte masqué ou lien hypertexte).|Touche Entrée|  
-|Afficher le menu **Options** pour accéder à n'importe quelle commande de la barre d'outils de l'aide.|Alt+O|  
-|Masquer ou afficher le volet contenant les onglets **Contenu**, **Rechercher** et **Index**.|Alt+O, puis sélectionner T|  
-|Afficher la rubrique précédemment consultée.|Alt+O, puis sélectionner B|  
-|Afficher la rubrique suivante dans une séquence de rubriques précédemment affichées.|Alt+O, puis sélectionner F|  
-|Revenir à la page d'accueil spécifiée.|Alt+O, puis sélectionner H|  
-|Arrêter l’ouverture d’une rubrique dans la fenêtre d’aide, par exemple pour arrêter le téléchargement d’une page web.|Alt+O, puis sélectionner S|  
-|Ouvrir la boîte de dialogue **Options Internet** pour Windows Internet Explorer, dans laquelle vous pouvez modifier les paramètres d'accessibilité.|Alt+O, puis sélectionner I|  
-|Actualiser la rubrique, par exemple une page Web accessible via un lien.|Alt+O, puis sélectionner R|  
-|Imprimer toutes les rubriques d'un livre ou seulement une rubrique sélectionnée.|Alt+O, puis sélectionner P|  
-|Fermer la fenêtre d'aide.|Alt+F4|  
-
-#### <a name="to-change-the-appearance-of-a-help-topic"></a>Pour modifier l'apparence d'une rubrique d'aide  
-
-1.  Pour vous préparer à personnaliser les couleurs, les styles et les tailles de police utilisés dans l'Aide, ouvrez la fenêtre de l'Aide.  
-
-2.  Choisissez **Options**, puis **Options Internet**.  
-
-3.  Sous l’onglet **Général**, choisissez **Accessibilité**. Choisissez **Ignorer les couleurs spécifiées sur les pages Web**, **Ignorer les styles de police spécifiés sur les pages Web** et **Ignorer les tailles de police spécifiées sur les pages Web**. Vous pouvez également choisir d'utiliser les paramètres qui sont spécifiés dans votre propre feuille de style.  
-
-#### <a name="to-change-the-color-of-the-background-or-text-in-help"></a>Pour modifier la couleur de l'arrière-plan ou du texte dans l'aide  
-
-1.  Ouvrez la fenêtre d'aide.  
-
-2.  Choisissez **Options**, puis **Options Internet**.  
-
-3.  Sous l’onglet **Général**, choisissez **Accessibilité**. Choisissez ensuite **Ignorer les couleurs spécifiées sur les pages Web**. Vous pouvez également choisir d'utiliser les paramètres qui sont spécifiés dans votre propre feuille de style.  
-
-4.  Pour personnaliser les couleurs utilisées dans l’aide, choisissez **Couleurs** sous l’onglet **Général**. Décochez la case **Utiliser les couleurs Windows**, puis choisissez les couleurs de police et d’arrière-plan que vous souhaitez utiliser.  
-
-    > [!NOTE]  
-    >  Si vous modifiez la couleur d'arrière-plan des rubriques d'aide dans la fenêtre de l'Aide, la modification affecte également la couleur d'arrière-plan des pages Web dans Windows Internet Explorer.  
-
-#### <a name="to-change-the-font-in-help"></a>Pour modifier la police dans l'aide  
-
-1.  Ouvrez la fenêtre d'aide.  
-
-2.  Choisissez **Options**, puis **Options Internet**.  
-
-3.  Sous l’onglet **Général**, choisissez **Accessibilité**. Pour utiliser les mêmes paramètres que ceux utilisés dans votre instance d’Internet Explorer, choisissez **Ignorer les styles de police spécifiés sur les pages Web** et **Ignorer les tailles de police spécifiées sur les pages Web**. Vous pouvez également choisir d'utiliser les paramètres qui sont spécifiés dans votre propre feuille de style.  
-
-4.  Pour personnaliser le style de police utilisé dans l’Aide, sous l’onglet **Général**, choisissez **Polices**, puis sur le style de police souhaité.  
-
-    > [!NOTE]  
-    >  Si vous modifiez la police des rubriques d'aide dans la fenêtre de l'Aide, la modification affecte également la police des pages Web dans Windows Internet Explorer.  

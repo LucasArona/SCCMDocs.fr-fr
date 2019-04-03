@@ -2,7 +2,7 @@
 title: Versions Current Branch
 titleSuffix: Configuration Manager
 description: Consultez l’historique des versions de Configuration Manager, puis découvrez les phases de service proposées.
-ms.date: 11/27/2018
+ms.date: 03/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: acdc85980db937433cf8bf10336d940d0a434c94
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: ed5e7b6931fe8c853b867483d3db8a2d5bc9ad8b
+ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56135954"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58523722"
 ---
 # <a name="support-for-configuration-manager-current-branch-versions"></a>Prise en charge des versions Current Branch de Configuration Manager
 
@@ -28,8 +28,11 @@ Microsoft prévoit de publier des mises à jour pour l’édition Current Branch
 
 - Phase de maintenance **Mises à jour de sécurité (uniquement)**  : après la sortie d’une nouvelle version Current Branch, Microsoft prend uniquement en charge les mises à jour de sécurité des anciennes versions pendant le reste du cycle de vie de cette version (figure 1).  
 
-  ![Graphisme illustrant la chronologie de maintenance et de prise en charge de Configuration Manager](media/CM_Servicing_support_timeline1.png)  
-  Figure 1. Exemple de la superposition du cycle de publication pour la prise en charge de maintenance de Current Branch. Cet exemple sert à illustrer le cycle et ne représente pas les dates de sortie réelles ou attendues.
+([Afficher le graphisme en taille réelle](media/CM_Servicing_support_timeline1.png))
+
+![Graphisme illustrant la chronologie de maintenance et de prise en charge de Configuration Manager](media/CM_Servicing_support_timeline1.png)  
+
+Figure 1. Exemple de la superposition du cycle de publication pour la prise en charge de maintenance de Current Branch. Cet exemple sert à illustrer le cycle et ne représente pas les dates de sortie réelles ou attendues.
 
 > [!NOTE]  
 >  La dernière version Current Branch est toujours en phase de maintenance **Mises à jour de sécurité et mises à jour critiques**. Cette déclaration de support signifie que si vous rencontrez une erreur de code qui nécessite une mise à jour critique, vous devez avoir la dernière version Current Branch afin de recevoir un correctif. Toutes les autres versions Current Branch prises en charge sont autorisées à recevoir uniquement les mises à jour de sécurité.
