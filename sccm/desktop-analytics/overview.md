@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8602db7ece8d786598eb419eb855f1c77cff35ca
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 4105a8a81ab3f09dee9cf3ca5a2462ed2bb4183a
+ms.sourcegitcommit: da753df27d3909265ca45d3e79091f1e98758d16
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56754900"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58913589"
 ---
 # <a name="what-is-desktop-analytics"></a>Nouveautés d’Analytique de bureau ?
 
@@ -74,7 +74,7 @@ Pour utiliser l’Analytique de bureau, assurez-vous que votre environnement rem
 
     - **Administrateur d’entreprise** autorisations dans Azure  
 
-- Configuration Manager, version 1810 avec correctif cumulatif 4486457 ou version ultérieure. Pour plus d’informations, consultez [mise à jour Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
+- Configuration Manager, version 1810 avec 4488598 de correctif cumulatif de mise à jour ou une version ultérieure. Pour plus d’informations, consultez [mise à jour Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
 
     - **Administrateur complet** rôle dans le Gestionnaire de Configuration  
 

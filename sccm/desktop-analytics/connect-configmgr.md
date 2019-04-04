@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 063502ae7b09fcdcd7ae1b5c463da4b616829804
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 1280e7cbd1c2d8e7524b296e48d0b1bec426d9ed
+ms.sourcegitcommit: da753df27d3909265ca45d3e79091f1e98758d16
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56754832"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58913623"
 ---
 # <a name="how-to-connect-configuration-manager-with-desktop-analytics"></a>Comment connecter Configuration Manager avec l’Analytique de bureau 
 
@@ -31,7 +31,7 @@ Analytique de bureau est étroitement intégré avec Configuration Manager. Tout
 
 Tout d’abord, assurez-vous que votre site Configuration Manager est en cours d’exécution au moins la version 1810. Pour plus d’informations, consultez [Installer des mises à jour dans la console](/sccm/core/servers/manage/install-in-console-updates).
 
-Vous devez également installer la version 1810 correctif cumulatif (4486457) pour prendre en charge l’intégration avec l’Analytique de bureau. Pour plus d’informations sur cette mise à jour, consultez [correctif cumulatif pour Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4486457).
+Vous devez également installer la version 1810 correctif cumulatif 2 (4488598) pour prendre en charge l’intégration avec l’Analytique de bureau. Pour plus d’informations sur cette mise à jour, consultez [correctif cumulatif 2 pour Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4488598).
 
 1. Mettez à jour le site avec le correctif cumulatif de la version 1810. Pour plus d’informations, consultez [Installer des mises à jour dans la console](/sccm/core/servers/manage/install-in-console-updates).  
 
