@@ -12,10 +12,10 @@ ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 007c3b68932a673b5d1971fbcf6919a7ad3adc70
-ms.sourcegitcommit: 8803a64692f3edc0422b58f6c3037a8796374cc8
+ms.sourcegitcommit: da753df27d3909265ca45d3e79091f1e98758d16
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2019
+ms.lasthandoff: 04/04/2019
 ms.locfileid: "57881841"
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Créer et exécuter des scripts PowerShell à partir de la console Configuration Manager
@@ -177,11 +177,11 @@ Les trois rôles de sécurité utilisés pour exécuter des scripts ne sont pas 
 
 ## <a name="script-parameters"></a>Paramètres de script
 *(Fonctionnalité introduite avec la version 1710)*  
-L’ajout de paramètres à un script offre une flexibilité accrue à votre travail. Vous pouvez inclure jusqu'à 10 paramètres. Voici les possibilités actuelles de la fonctionnalité Exécuter les scripts avec des paramètres de script pour des types de données *Chaîne* et *Entier*. Les listes des valeurs prédéfinies sont également disponibles. Si votre script comporte des types de données non pris en charge, vous obtenez un avertissement.
+L’ajout de paramètres à un script offre une flexibilité accrue à votre travail. Vous pouvez inclure jusqu’à 10 paramètres. Voici les possibilités actuelles de la fonctionnalité Exécuter les scripts avec des paramètres de script pour des types de données *Chaîne* et *Entier*. Les listes des valeurs prédéfinies sont également disponibles. Si votre script comporte des types de données non pris en charge, vous obtenez un avertissement.
 
 Dans la boîte de dialogue **Créer un script**, cliquez sur **Paramètres de script** sous **Script**.
 
-Chacun des paramètres de votre script a sa propre boîte de dialogue pour l’ajout d’autres informations et la validation. S’il existe un paramètre par défaut dans le script, il sera possible d’énumérer dans le paramètre de l’interface utilisateur et vous pouvez la définir. Configuration Manager ne remplace pas la valeur par défaut dans la mesure où il n’est jamais directement modifier le script. Vous pouvez considérer cela comme « préremplies valeurs suggérées » sont mentionnées dans l’interface utilisateur, mais le Gestionnaire de Configuration ne fournit aucun accès aux valeurs « default » au moment de l’exécution. Cela peut être contourné en modifiant le script pour que les valeurs par défaut correctes. <!--17694323-->
+Chacun des paramètres de votre script a sa propre boîte de dialogue pour l’ajout d’autres informations et la validation. S’il existe un paramètre par défaut dans le script, il apparaîtra dans l’interface utilisateur et vous pouvez le définir. Configuration Manager ne remplacera pas la valeur par défaut car il ne modifiera jamais directement le script. Vous pouvez considérer ces valeurs comme des « valeurs suggérées préremplies» fournies dans l’interface utilisateur, mais Configuration Manager ne permet pas d’accès aux valeurs « par défaut » lors de l’exécution. Pour contourner le problème, vous pouvez modifier le script en spécifiant les valeurs par défaut correctes. <!--17694323-->
 
 >[!IMPORTANT]
 > Les valeurs des paramètres ne peuvent pas contenir d’apostrophe. </br></br>
@@ -263,7 +263,7 @@ Le script est exécuté en tant que compte *système* ou *d’ordinateur* sur le
 
 ## <a name="script-monitoring"></a>Surveillance des scripts
 
-Une fois que vous avez lancé l’exécution d’un script sur un regroupement d’appareils, utilisez la procédure suivante pour surveiller l’opération. Depuis la version 1710, vous êtes en mesure de surveiller un script en temps réel pendant qu’il s’exécute et vous pouvez également revenir au rapport d’une exécution du script donnée. Données d’état de script sont nettoyées dans le cadre de la [tâche de maintenance de supprimer les anciennes opérations des clients](../../core/servers/manage/reference-for-maintenance-tasks.md) ou la suppression du script.<br>
+Une fois que vous avez lancé l’exécution d’un script sur un regroupement d’appareils, utilisez la procédure suivante pour surveiller l’opération. Depuis la version 1710, vous êtes en mesure de surveiller un script en temps réel pendant qu’il s’exécute et vous pouvez également revenir au rapport d’une exécution du script donnée. Les données d’état du script sont nettoyées dans le cadre de la [tâche de maintenance Supprimer les anciennes opérations des clients](../../core/servers/manage/reference-for-maintenance-tasks.md) ou la suppression du script.<br>
 
 ![Surveillance de script - État de l’exécution du script](./media/run-scripts/RS-monitoring-three-bar.png)
 
@@ -299,7 +299,7 @@ Microsoft Windows 10 Enterprise
 - Les clients 1810 retournent une sortie de moins de 80 Ko au site via un canal de communication rapide. Cette modification améliore les performances d’affichage de la sortie de script ou de requête.  
 
   - Si la sortie de script ou de requête est supérieure à 80 Ko, le client envoie les données via un message d’état.  
-  - Les clients de versions antérieures à la version 1802 continuent d’utiliser des messages d’état.
+  - Les clients antérieurs à la version 1802 continuent d’utiliser des messages d’état.
 
 ## <a name="script-output-pre-1810"></a>Sortie du script avant la version 1810
 
@@ -317,7 +317,7 @@ Microsoft Windows 10 Enterprise
 
 ## <a name="log-files"></a>Fichiers journaux
 
-Depuis la version 1810, un enregistrement supplémentaire a été ajouté pour le dépannage.
+À compter de la version 1810, une journalisation supplémentaire a été ajoutée à des fins de dépannage.
 
 - Sur le client, par défaut dans C:\Windows\CCM\logs :  
   - **Scripts.log**  

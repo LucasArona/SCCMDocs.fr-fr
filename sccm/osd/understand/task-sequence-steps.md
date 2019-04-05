@@ -11,35 +11,35 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 95fb105d10fc7afbb94328dd7905ef075daa447b
-ms.sourcegitcommit: 33a006204f7f5f9b9acd1f3e84c4bc207362d00a
-ms.translationtype: HT
+ms.openlocfilehash: a349997150c951d1a4ec9e0b99f9d24c21f37205
+ms.sourcegitcommit: d584c126a0a5725567631b74ac1e01f63242a997
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305777"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58861086"
 ---
 # <a name="task-sequence-steps-in-configuration-manager"></a>Étapes de séquence de tâches dans Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Vous trouverez ci-dessous les différentes étapes de séquence de tâches qui peuvent être ajoutées à une séquence de tâches Configuration Manager. Pour plus d’informations sur la modification d’une séquence de tâches, consultez [Modifier une séquence de tâches](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_ModifyTaskSequence).  
 
 Les paramètres suivants sont communs à toutes les étapes de la séquence de tâches :
 
 #### <a name="properties-tab"></a>Onglet Propriétés
-- **Nom** : L’éditeur de séquence de tâches vous demande de spécifier un nom court pour décrire cette étape. Quand vous ajoutez une nouvelle étape, l’Éditeur de séquence de tâches définit le nom en utilisant le type par défaut. La longueur du **Nom** ne peut pas dépasser 50 caractères.  
+- **Nom** : l’Éditeur de séquence de tâches vous demande de spécifier un nom court pour décrire cette étape. Quand vous ajoutez une nouvelle étape, l’Éditeur de séquence de tâches définit le nom en utilisant le type par défaut. La longueur du **Nom** ne peut pas dépasser 50 caractères.  
 
-- **Description** : Si vous le souhaitez, spécifiez des informations plus détaillées sur cette étape. La longueur de la **Description** ne peut pas dépasser 256 caractères.  
+- **Description** : si vous le souhaitez, spécifiez des informations plus détaillées sur cette étape. La longueur de la **Description** ne peut pas dépasser 256 caractères.  
 
 Le reste de cet article décrit les autres paramètres présents sous l’onglet **Propriétés** de chaque étape de la séquence de tâches.
 
 #### <a name="options-tab"></a>Onglet Options  
 
-- **Désactiver cette étape** : La séquence de tâches ignore cette étape quand elle s’exécute sur un ordinateur. L’icône de cette étape est grisée dans l’Éditeur de séquence de tâches.  
+- **Désactiver cette étape** : la séquence de tâches ignore cette étape quand elle s’exécute sur un ordinateur. L’icône de cette étape est grisée dans l’Éditeur de séquence de tâches.  
 
-- **Continuer en cas d'erreur** : La séquence de tâches continue si une erreur se produit lors de l’exécution de l’étape. Pour plus d’informations, consultez [Considérations relatives à la planification de l’automatisation des tâches](/sccm/osd/plan-design/planning-considerations-for-automating-tasks#BKMK_TSGroups).   
+- **Continuer en cas d’erreur** : la séquence de tâches continue si une erreur se produit lors de l’exécution de l’étape. Pour plus d’informations, consultez [Considérations relatives à la planification de l’automatisation des tâches](/sccm/osd/plan-design/planning-considerations-for-automating-tasks#BKMK_TSGroups).   
 
-- **Ajouter une condition** : La séquence de tâches évalue ces instructions conditionnelles pour déterminer si elle exécute l’étape. Pour obtenir un exemple d’utilisation d’une variable de séquence de tâches en tant que condition, consultez [Guide pratique pour utiliser les variables de séquence de tâches](/sccm/osd/understand/using-task-sequence-variables#bkmk_access-condition).   
+- **Ajouter une condition** : la séquence de tâches évalue ces instructions conditionnelles pour déterminer si elle exécute l’étape. Pour obtenir un exemple d’utilisation d’une variable de séquence de tâches en tant que condition, consultez [Guide pratique pour utiliser les variables de séquence de tâches](/sccm/osd/understand/using-task-sequence-variables#bkmk_access-condition).   
 
 Les sections ci-dessous pour des étapes de séquence de tâches spécifiques décrivent d’autres paramètres possibles sous l’onglet **Options**.
 
@@ -71,13 +71,13 @@ Sélectionnez **Parcourir** pour spécifier le **Package d’images** utilisé p
 #### <a name="destination"></a>Destination  
 Configurez une des options suivantes :
 
-- **Prochaine partition disponible** : Utilisez la partition séquentielle suivante qui n’a pas déjà été ciblée par une étape **Appliquer le système d’exploitation** ou **Appliquer l’image de données** dans cette séquence de tâches.  
+- **Prochaine partition disponible** : utilisez la partition séquentielle suivante qui n’a pas déjà été ciblée par une étape **Appliquer le système d’exploitation** ou **Appliquer l’image de données** dans cette séquence de tâches.  
 
-- **Disque et partition spécifiques** : Sélectionnez le numéro de **disque** (à partir de 0) et le numéro de **partition** (à partir de 1).  
+- **Disque et partition spécifiques** : sélectionnez le numéro de **disque** (à partir de 0) et le numéro de **partition** (à partir de 1).  
 
-- **Lettre de lecteur logique spécifique** : Spécifiez la **lettre de lecteur** affectée à la partition par Windows PE. Cette lettre de lecteur peut être différente de la lettre de lecteur affectée par le système d’exploitation nouvellement déployé.  
+- **Lettre de lecteur logique spécifique** : spécifiez la **lettre de lecteur** affectée à la partition par Windows PE. Cette lettre de lecteur peut être différente de la lettre de lecteur affectée par le système d’exploitation nouvellement déployé.  
 
-- **Lettre de lecteur logique stockée dans une variable** : Spécifiez la variable de séquence de tâches contenant la lettre de lecteur affectée à la partition par Windows PE. Cette variable est généralement définie dans la section Avancé de la boîte de dialogue **Propriétés de la partition** pour l’étape de séquence de tâches **Formater et partitionner le disque**.  
+- **Lettre de lecteur logique stockée dans une variable** : spécifiez la variable de séquence de tâches contenant la lettre de lecteur affectée à la partition par Windows PE. Cette variable est généralement définie dans la section Avancé de la boîte de dialogue **Propriétés de la partition** pour l’étape de séquence de tâches **Formater et partitionner le disque**.  
 
 #### <a name="delete-all-content-on-the-partition-before-applying-the-image"></a>Supprimer l'intégralité du contenu de la partition avant d'appliquer l'image  
 Spécifie que la séquence de tâches supprime tous les fichiers sur la partition cible avant d’installer l’image. Si vous ne supprimez pas le contenu de la partition, cette action peut être utilisée pour appliquer le contenu supplémentaire à une partition précédemment ciblée.  
@@ -88,7 +88,7 @@ Spécifie que la séquence de tâches supprime tous les fichiers sur la partitio
 
 Utilisez cette étape pour télécharger tous les pilotes du package de pilotes et les installer sur le système d’exploitation Windows.
 
-L'étape de séquence de tâches **Appliquer le package de pilotes** rend disponibles tous les pilotes d'appareils d'un package de pilotes pour l'utilisation avec Windows. Ajoutez cette étape entre les étapes **Appliquer le système d’exploitation** et **Configurer Windows et ConfigMgr** pour que les pilotes du package soient disponibles sous Windows. Généralement, l'étape **Appliquer le package de pilotes** est placée après l'étape de séquence de tâches **Appliquer automatiquement les pilotes** . L'étape de séquence de tâches **Appliquer le package de pilotes** est également utile avec des scénarios de déploiement de médias autonomes.  
+L'étape de séquence de tâches **Appliquer le package de pilotes** rend disponibles tous les pilotes d'appareils d'un package de pilotes pour l'utilisation avec Windows. Ajoutez cette étape entre les étapes **Appliquer le système d’exploitation** et **Configurer Windows et ConfigMgr** pour que les pilotes du package soient disponibles sous Windows. L'étape de séquence de tâches **Appliquer le package de pilotes** est également utile avec des scénarios de déploiement de médias autonomes.  
 
 Placez les pilotes de périphérique identiques dans un package de pilotes et distribuez-les aux points de distribution appropriés. Par exemple, placez tous les pilotes d’un même fabricant dans un package de pilotes. Distribuez ensuite le package aux points de distribution auquel les ordinateurs associés peuvent accéder.
 
@@ -101,7 +101,7 @@ Utilisez les variables de séquence de tâches suivantes avec cette étape :
 - [OSDApplyDriverBootCriticalHardwareComponent](/sccm/osd/understand/task-sequence-variables#OSDApplyDriverBootCriticalHardwareComponent)  
 - [OSDApplyDriverBootCriticalID](/sccm/osd/understand/task-sequence-variables#OSDApplyDriverBootCriticalID)  
 - [OSDApplyDriverBootCriticalINFFile](/sccm/osd/understand/task-sequence-variables#OSDApplyDriverBootCriticalINFFile)  
-- [OSDInstallDriversAdditionalOptions](/sccm/osd/understand/task-sequence-variables#OSDInstallDriversAdditionalOptions)<!--516679/2840016--> (à partir de la version 1806)  
+- [OSDInstallDriversAdditionalOptions](/sccm/osd/understand/task-sequence-variables#OSDInstallDriversAdditionalOptions)<!--516679/2840016--> (depuis la version 1806)  
 
 Dans l’Éditeur de séquence de tâches, sélectionnez successivement **Ajouter**, **Pilotes** et sélectionnez **Appliquer le package de pilotes** pour ajouter cette étape. 
 
@@ -250,13 +250,13 @@ Si vous ne fournissez pas de fichier de réponses d’installation de Windows, l
 #### <a name="destination"></a>Destination  
 Configurez une des options suivantes :  
 
-- **Prochaine partition disponible** : Utilisez la partition séquentielle suivante qui n’a pas déjà été ciblée par une étape **Appliquer le système d’exploitation** ou **Appliquer l’image de données** dans cette séquence de tâches.  
+- **Prochaine partition disponible** : utilisez la partition séquentielle suivante qui n’a pas déjà été ciblée par une étape **Appliquer le système d’exploitation** ou **Appliquer l’image de données** dans cette séquence de tâches.  
 
-- **Disque et partition spécifiques** : Sélectionnez le numéro de **disque** (à partir de 0) et le numéro de **partition** (à partir de 1).  
+- **Disque et partition spécifiques** : sélectionnez le numéro de **disque** (à partir de 0) et le numéro de **partition** (à partir de 1).  
 
-- **Lettre de lecteur logique spécifique** : Spécifiez la **lettre de lecteur** affectée à la partition par Windows PE. Cette lettre de lecteur peut être différente de la lettre de lecteur affectée par le système d’exploitation nouvellement déployé.  
+- **Lettre de lecteur logique spécifique** : spécifiez la **lettre de lecteur** affectée à la partition par Windows PE. Cette lettre de lecteur peut être différente de la lettre de lecteur affectée par le système d’exploitation nouvellement déployé.  
 
-- **Lettre de lecteur logique stockée dans une variable** : Spécifiez la variable de séquence de tâches contenant la lettre de lecteur affectée à la partition par Windows PE. Cette variable est généralement définie dans la section Avancé de la boîte de dialogue **Propriétés de la partition** pour l’étape de séquence de tâches **Formater et partitionner le disque**.  
+- **Lettre de lecteur logique stockée dans une variable** : spécifiez la variable de séquence de tâches contenant la lettre de lecteur affectée à la partition par Windows PE. Cette variable est généralement définie dans la section Avancé de la boîte de dialogue **Propriétés de la partition** pour l’étape de séquence de tâches **Formater et partitionner le disque**.  
 
 
 ### <a name="options"></a>Options  
@@ -408,7 +408,7 @@ Capture les informations d'appartenance du domaine et du groupe de travail de l'
 Capture la configuration de la carte réseau de l'ordinateur de destination. Il capture les informations suivantes : 
 - Paramètres de réseau global  
 - Nombre de cartes réseau  
-- Les paramètres réseau suivants associés à chaque carte réseau : DNS, WINS, IP et filtres de port
+- Les paramètres réseau suivants associés à chaque carte réseau : DNS, WINS, IP et filtres de port
 
 
 
@@ -515,13 +515,13 @@ Activez cette option pour ignorer la capture des fichiers chiffrés avec EFS (En
 #### <a name="copy-by-using-file-system-access"></a>Copier en utilisant l'accès au système de fichiers
 Activez cette option pour spécifier les paramètres suivants :  
 
-- **Continuer si certains fichiers ne peuvent pas être capturés** : Activez ce paramètre pour continuer le processus de migration même si certains fichiers ne peuvent pas être capturés. Si vous désactivez cette option et qu’un fichier ne peut pas être capturé, cette étape échoue. Cette option est activée par défaut.  
+- **Continuer si certains fichiers ne peuvent pas être capturés** : activez ce paramètre pour continuer le processus de migration même si certains fichiers ne peuvent pas être capturés. Si vous désactivez cette option et qu’un fichier ne peut pas être capturé, cette étape échoue. Cette option est activée par défaut.  
 
-- **Capturer localement en utilisant des liens au lien de copier les fichiers** : Activez ce paramètre pour utiliser des liens directs NTFS pour capturer les fichiers.  
+- **Capturer localement en utilisant les liens au lieu de copier les fichiers**: activez ce paramètre pour utiliser des liens physiques NTFS pour capturer les fichiers.  
 
     Pour plus d'informations sur la migration de données à l'aide de liens directs, consultez [Magasin de migration de lien direct](https://docs.microsoft.com/windows/deployment/usmt/usmt-hard-link-migration-store).  
 
-- **Capturer en mode hors-ligne (Windows PE uniquement)** : Activez ce paramètre pour capturer l’état utilisateur dans Windows PE au lieu du système d’exploitation complet.  
+- **Capturer en mode hors-ligne (Windows PE uniquement)** : activez ce paramètre pour capturer l’état utilisateur dans Windows PE au lieu du système d’exploitation complet.  
 
 #### <a name="capture-by-using-volume-copy-shadow-services-vss"></a>Capturer en utilisant Volume Copy Shadow Service (VSS)
 Cette option vous permet de capturer des fichiers même s’ils sont verrouillés pour modification par une autre application.  
@@ -681,11 +681,11 @@ Sélectionnez l’icône pour choisir le package à télécharger. Ensuite, rép
 #### <a name="place-into-the-following-location"></a>Placez à l’emplacement suivant
 Choisissez d’enregistrer le package à l’un des emplacements suivants :  
 
-- **Répertoire de travail de la séquence de tâches** : Cet emplacement est également appelé le cache de la séquence de tâches.  
+- **Répertoire de travail de la séquence de tâches** : cet emplacement est également appelé le cache de la séquence de tâches.  
 
-- **Cache du client Configuration Manager** : Utilisez cette option pour stocker le contenu dans le cache du client. Par défaut, ce chemin est le suivant : `%WinDir%\ccmcache`.  
+- **Cache du client Configuration Manager** : utilisez cette option pour stocker le contenu dans le cache du client. Par défaut, ce chemin est le suivant : `%WinDir%\ccmcache`.  
 
-- **Chemin personnalisé** : Le moteur de séquence de tâches télécharge d’abord le package dans le répertoire de travail de séquence de tâches. Il déplace ensuite le contenu vers ce chemin d’accès que vous spécifiez. Le moteur de séquence de tâches ajoute le chemin avec l’ID de package.  
+- **Chemin personnalisé** : le moteur de séquence de tâches télécharge d’abord le package dans le répertoire de travail de séquence de tâches. Il déplace ensuite le contenu vers ce chemin d’accès que vous spécifiez. Le moteur de séquence de tâches ajoute le chemin avec l’ID de package.  
 
 #### <a name="save-path-as-a-variable"></a>Enregistrez le chemin d’accès en tant que variable
 Enregistrez le chemin d’accès du package dans une variable de séquence de tâches personnalisée. Utilisez ensuite cette variable dans une autre étape de la séquence de tâches. 
@@ -739,18 +739,19 @@ Sous l’onglet **Propriétés** de cette étape, configurez les paramètres dé
 #### <a name="choose-the-drive-to-encrypt"></a>Lecteur à chiffrer
 Indique le lecteur à chiffrer. Pour chiffrer le lecteur du système d’exploitation actuel, sélectionnez **Lecteur du système d’exploitation actuel**. Ensuite, configurez l’une des options suivantes pour la gestion des clés :  
 
-- **TPM uniquement** : sélectionnez cette option pour utiliser uniquement le module de plateforme sécurisée (TPM).  
+- **TPM uniquement**: sélectionnez cette option pour utiliser uniquement le module de plateforme sécurisée (TPM).  
 
-- **Clé de démarrage sur USB uniquement** : sélectionnez cette option pour utiliser une clé de démarrage stockée sur un disque mémoire flash USB. Lorsque vous sélectionnez cette option, BitLocker verrouille le processus de démarrage normal jusqu'à ce qu'un périphérique USB contenant une clé de démarrage BitLocker soit connecté à l'ordinateur.  
+- **Clé de démarrage sur USB uniquement**: sélectionnez cette option pour utiliser une clé de démarrage stockée sur une clé USB. Lorsque vous sélectionnez cette option, BitLocker verrouille le processus de démarrage normal jusqu'à ce qu'un périphérique USB contenant une clé de démarrage BitLocker soit connecté à l'ordinateur.  
 
-- **TPM et clé de démarrage sur USB** : sélectionnez cette option pour utiliser le module TPM et une clé de démarrage stockée sur un disque mémoire flash USB. Lorsque vous sélectionnez cette option, BitLocker verrouille le processus de démarrage normal jusqu'à ce qu'un périphérique USB contenant une clé de démarrage BitLocker soit connecté à l'ordinateur.  
+- **TPM et clé de démarrage sur USB**: sélectionnez cette option pour utiliser le module TPM et une clé de démarrage stockée sur une clé USB. Lorsque vous sélectionnez cette option, BitLocker verrouille le processus de démarrage normal jusqu'à ce qu'un périphérique USB contenant une clé de démarrage BitLocker soit connecté à l'ordinateur.  
 
-- **TPM et code confidentiel** : Sélectionnez cette option pour utiliser le module de plateforme sécurisée et un numéro d'identification personnel (code confidentiel). Lorsque vous sélectionnez cette option, BitLocker verrouille le processus de démarrage normal jusqu'à ce que l'utilisateur fournisse le code confidentiel.  
+- **TPM et code confidentiel** : sélectionnez cette option pour utiliser le module TPM et un numéro d’identification personnel (code confidentiel). Lorsque vous sélectionnez cette option, BitLocker verrouille le processus de démarrage normal jusqu'à ce que l'utilisateur fournisse le code confidentiel.  
 
 Pour chiffrer un lecteur spécifique (un lecteur de données ne comportant pas de système d'exploitation), sélectionnez **Lecteur spécifique**. Puis sélectionnez le lecteur dans la liste.  
 
 #### <a name="use-full-disk-encryption"></a>Utiliser le chiffrement de lecteur complet
-<!--SCCMDocs-pr issue 2671--> Par défaut, cette étape chiffre uniquement l’espace utilisé sur le lecteur. Ce comportement par défaut est recommandé, car il est plus rapide et plus efficace. À compter de la version 1806, si votre organisation doit chiffrer l’intégralité du lecteur durant l’installation, activez cette option. Le programme d’installation de Windows attend que le lecteur entier soit chiffré, ce qui prend beaucoup de temps, en particulier sur les grands lecteurs. 
+<!--SCCMDocs-pr issue 2671-->
+Par défaut, cette étape chiffre uniquement l’espace utilisé sur le lecteur. Ce comportement par défaut est recommandé, car il est plus rapide et plus efficace. À compter de la version 1806, si votre organisation doit chiffrer l’intégralité du lecteur durant l’installation, activez cette option. Le programme d’installation de Windows attend que le lecteur entier soit chiffré, ce qui prend beaucoup de temps, en particulier sur les grands lecteurs. 
 
 #### <a name="choose-where-to-create-the-recovery-key"></a>Emplacement de création de la clé de récupération
 Pour indiquer à BitLocker de créer le mot de passe de récupération et de déposer la clé dans Active Directory, sélectionnez **Dans Active Directory**. Cette option nécessite que vous étendiez Active Directory pour le dépôt de clé BitLocker. BitLocker peut ensuite enregistrer les informations de récupération associées dans Active Directory. Sélectionnez **Ne pas créer de clé de récupération** pour ne pas créer un mot de passe. La création d’un mot de passe est l’option recommandée.  
@@ -789,8 +790,8 @@ Numéro de disque physique du disque à formater. Le numéro se base sur le clas
 
 #### <a name="disk-type"></a>Type du disque
 Le type de disque à formater. Deux options sont disponibles dans la liste déroulante : 
-- **Standard (MBR)** : Enregistrement de démarrage principal  
-- **GPT** : Table de partition GUID  
+- **Standard (MBR)** : secteur de démarrage principal  
+- **GPT** : table de partition GUID  
 
 > [!NOTE]  
 > Si vous passez le type de disque de **Standard (MBR)** à **GPT** et si la structure des partitions contient une partition étendue, la séquence de tâches supprime toutes les partitions étendues et logiques de la structure. L’Éditeur de séquence de tâches vous invite à confirmer cette action avant de changer le type de disque.  
@@ -859,7 +860,7 @@ Ces applications n’apparaissent pas dans la boîte de dialogue **Sélectionner
 #### <a name="install-applications-according-to-dynamic-variable-list"></a>Installer les applications en fonction de la liste de variables dynamiques
 La séquence de tâches installe les applications en utilisant ce nom de variable de base. Le nom de variable de base vaut pour un ensemble de variables de séquence de tâches définies pour un regroupement ou un ordinateur. Ces variables spécifient les applications que la séquence de tâches installe pour ce regroupement ou cet ordinateur. Chaque nom de variable comprend son nom de base courant plus un suffixe numérique commençant par 01. La valeur de chaque variable doit contenir le nom de l'application et rien d'autre.  
 
-Pour que la séquence de tâches installe les applications à l'aide d'une liste de variables dynamiques, activez le paramètre suivant sous l'onglet **Général** dans les **Propriétés** de l'application : **Autoriser cette application à être installée à partir de l'action de la séquence de tâches Installer l'application plutôt que de la déployer manuellement**.  
+Pour que la séquence de tâches installe les applications en utilisant une liste de variables dynamiques, activez le paramètre suivant sous l’onglet **Général** de la boîte de dialogue **Propriétés** de l’application : **Autoriser cette application à être installée à partir de l’action de la séquence de tâches Installer l’application plutôt que de la déployer manuellement**.  
 
 > [!NOTE]  
 > Vous ne pouvez pas installer d'applications à l'aide d'une liste de variables dynamiques pour les déploiements de média autonome.  
@@ -942,7 +943,7 @@ Ce paramètre permet de spécifier un package logiciel Configuration Manager. L�
 #### <a name="install-software-packages-according-to-dynamic-variable-list"></a>Installer les packages logiciels en fonction de la liste de variables dynamiques
 La séquence de tâches installe les packages en utilisant ce nom de variable de base. Le nom de variable de base vaut pour un ensemble de variables de séquence de tâches définies pour un regroupement ou un ordinateur. Ces variables spécifient les packages que la séquence de tâches installe pour ce regroupement ou cet ordinateur. Chaque nom de variable comprend son nom de base courant plus un suffixe numérique commençant par 001. La valeur de chaque variable doit contenir un ID de package et le nom du logiciel séparés par deux-points.  
 
-Pour que la séquence de tâches installe le logiciel à l'aide d'une liste de variables dynamiques, activez le paramètre suivant sous l'onglet **Avancé** dans les **Propriétés** du package : **Autoriser l'installation de ce programme depuis la séquence de tâches Installer le package sans le déployer**.  
+Pour que la séquence de tâches installe les logiciels en utilisant une liste de variables dynamiques, activez le paramètre suivant sous l’onglet **Avancé** de la boîte de dialogue **Propriétés** du package : **Autoriser l’installation de ce programme depuis la séquence de tâches d’installation du package sans le déployer**.  
 
 > [!NOTE]  
 > Vous ne pouvez pas installer de packages logiciels à l'aide d'une liste de variables dynamiques pour les déploiements de média autonome.  
@@ -1113,7 +1114,8 @@ Sélectionnez cette option pour demander à Sysprep de générer automatiquement
 Choisissez cette option pour empêcher Sysprep de réinitialiser l'indicateur d'activation du produit.  
 
 #### <a name="shutdown-the-computer-after-running-this-action"></a>Arrêter l’ordinateur après l’exécution de cette action
-<!--SCCMDocs-pr issue 2695--> À compter de la version 1806, cette option indique à Sysprep d’arrêter l’ordinateur au lieu d’appliquer son comportement de redémarrage par défaut. 
+<!--SCCMDocs-pr issue 2695-->
+À compter de la version 1806, cette option indique à Sysprep d’arrêter l’ordinateur au lieu d’appliquer son comportement de redémarrage par défaut. 
 
 Depuis la version 1810, cette étape est utilisée dans la séquence de tâches [Windows Autopilot pour les appareils existants](/sccm/osd/deploy-use/windows-autopilot-for-existing-devices).
 
@@ -1143,7 +1145,8 @@ Sous l’onglet **Propriétés** de cette étape, configurez les paramètres dé
 Spécifiez le lecteur pour lequel vous souhaitez activer BitLocker. BitLocker chiffre seulement l'espace utilisé sur le lecteur.  
 
 #### <a name="use-full-disk-encryption"></a>Utiliser le chiffrement de lecteur complet
-<!--SCCMDocs-pr issue 2671--> Par défaut, cette étape chiffre uniquement l’espace utilisé sur le lecteur. Ce comportement par défaut est recommandé, car il est plus rapide et plus efficace. À compter de la version 1806, si votre organisation doit chiffrer l’intégralité du lecteur durant l’installation, activez cette option. Le programme d’installation de Windows attend que le lecteur entier soit chiffré, ce qui prend beaucoup de temps, en particulier sur les grands lecteurs. 
+<!--SCCMDocs-pr issue 2671-->
+Par défaut, cette étape chiffre uniquement l’espace utilisé sur le lecteur. Ce comportement par défaut est recommandé, car il est plus rapide et plus efficace. À compter de la version 1806, si votre organisation doit chiffrer l’intégralité du lecteur durant l’installation, activez cette option. Le programme d’installation de Windows attend que le lecteur entier soit chiffré, ce qui prend beaucoup de temps, en particulier sur les grands lecteurs. 
 
 #### <a name="skip-this-step-for-computers-that-do-not-have-a-tpm-or-when-tpm-is-not-enabled"></a>Ignorer cette étape pour les ordinateurs n'ayant pas un module de plateforme sécurisée ou lorsque celui-ci n'est pas activé
 Sélectionnez cette option pour ignorer le chiffrement de lecteur sur un ordinateur qui ne contient pas un module de plateforme sécurisée pris en charge ou activé. Par exemple, utilisez cette option quand vous déployez un système d’exploitation sur une machine virtuelle.  
@@ -1419,11 +1422,11 @@ Spécifie les paramètres passés au script PowerShell. Ces paramètres sont les
 #### <a name="powershell-execution-policy"></a>Stratégie d'exécution de PowerShell
 Détermine les scripts PowerShell (le cas échéant) que vous autorisez à s’exécuter sur l’ordinateur. Choisissez l'une des stratégies d'exécution suivantes :  
 
-- **AllSigned** : Exécuter seulement les scripts signés par un éditeur approuvé  
+- **AllSigned** : exécuter seulement les scripts signés par un éditeur approuvé  
 
-- **Non défini** : Ne pas définir de stratégie d’exécution  
+- **Non défini** : ne pas définir de stratégie d’exécution  
 
-- **Bypass** : Charger tous les fichiers de configuration et exécuter tous les scripts Si vous téléchargez un script non signé à partir d’Internet, Windows PowerShell ne demande pas d’autorisation avant d’exécuter le script.  
+- **Bypass** : charger tous les fichiers de configuration et exécuter tous les scripts Si vous téléchargez un script non signé à partir d’Internet, Windows PowerShell ne demande pas d’autorisation avant d’exécuter le script.  
 
 
 > [!IMPORTANT]  
@@ -1502,23 +1505,23 @@ Sous l’onglet **Propriétés** de cette étape, configurez les paramètres dé
 #### <a name="dynamic-rules-and-variables"></a>Règles dynamiques et variables
 Pour définir une variable dynamique à utiliser dans la séquence de tâches, ajoutez une règle. Ensuite, définissez une valeur pour chaque variable spécifiée dans la règle. Ajoutez aussi une ou plusieurs variables sans ajouter une règle. Quand vous ajoutez une règle, choisissez parmi les catégories suivantes :  
 
-- **Ordinateur** : Évalue des valeurs d’étiquette d’inventaire matériel, d’UUID, de numéro de série ou d’adresse MAC. Définissez plusieurs valeurs selon vos besoins. Si une des valeurs est true, la règle est évaluée comme étant vraie. Par exemple, la règle suivante est évaluée comme étant vraie si le numéro de série du périphérique est 5892087 et si l’adresse MAC est 22-A4-5A-13-78-26 :  
+- **Ordinateur** : évalue des valeurs d’étiquette d’inventaire matériel, d’UUID, de numéro de série ou d’adresse MAC. Définissez plusieurs valeurs selon vos besoins. Si une des valeurs est true, la règle est évaluée comme étant vraie. Par exemple, la règle suivante est évaluée comme étant vraie si le numéro de série du périphérique est 5892087 et si l’adresse MAC est 22-A4-5A-13-78-26 :  
 
     `IF Serial Number = 5892087 OR MAC address = 26-78-13-5A-A4-22 THEN`  
 
-- **Emplacement** : Évalue les valeurs de la passerelle réseau par défaut  
+- **Emplacement** : évalue les valeurs de la passerelle réseau par défaut  
 
-- **Marque et modèle** : Évalue les valeurs de la marque et du modèle d’un ordinateur La marque et le modèle doivent tous deux être évalués comme vrais pour que la règle soit évaluée comme vraie.   
+- **Marque et modèle** : évalue les valeurs de la marque et du modèle d’un ordinateur La marque et le modèle doivent tous deux être évalués comme vrais pour que la règle soit évaluée comme vraie.   
 
     Spécifiez l’astérisque (`*`) et le point d’interrogation (`?`) en tant que caractères génériques. L’astérisque correspond à plusieurs caractères et le point d’interrogation correspond à un seul caractère. Par exemple, la chaîne `DELL*900?` correspond à `DELL-ABC-9001` et à `DELL9009`.  
 
-- **Variable de séquence de tâches** : Ajoute une variable de séquence de tâches, une condition et une valeur à évaluer. La règle est évaluée comme vraie quand la valeur définie pour la variable remplit la condition spécifiée.  
+- **Variable de séquence de tâches** : ajoute une variable de séquence de tâches, une condition et une valeur à évaluer. La règle est évaluée comme vraie quand la valeur définie pour la variable remplit la condition spécifiée.  
 
     Spécifiez une ou plusieurs variables à définir pour une règle évaluée comme étant vraie, ou définissez des variables sans utiliser de règle. Sélectionnez une variable existante ou créez une variable personnalisée.  
 
-    - **Variables de séquence de tâches existantes** : Sélectionnez une ou plusieurs variables dans une liste de variables de séquence de tâches existantes. Les variables tableau ne peuvent pas être sélectionnées.  
+    - **Variables de séquence de tâches existantes** : sélectionnez une ou plusieurs variables dans une liste des variables de séquence de tâches existantes. Les variables tableau ne peuvent pas être sélectionnées.  
 
-    - **Variables de séquence de tâches personnalisées** : Définissez une variable de séquence de tâches personnalisée. Vous pouvez également spécifier une variable de séquence de tâches existante. Ce paramètre utile pour spécifier un tableau de variables existantes, comme **OSDAdapter**, car les tableaux de variables ne figurent pas dans la liste des variables de séquence de tâches existantes.  
+    - **Variables de séquence de tâches personnalisées** : définissez une variable de séquence de tâches personnalisée. Vous pouvez également spécifier une variable de séquence de tâches existante. Ce paramètre utile pour spécifier un tableau de variables existantes, comme **OSDAdapter**, car les tableaux de variables ne figurent pas dans la liste des variables de séquence de tâches existantes.  
 
 
 Après avoir sélectionné les variables pour une règle, fournissez une valeur pour chaque variable. Lorsque la règle est évaluée comme vraie, la variable est définie à la valeur spécifiée. Pour chaque variable, vous pouvez sélectionner **Valeur secrète** pour masquer la valeur de la variable. Par défaut, certaines variables existantes (telles que la variable **OSDCaptureAccountPassword**) masquent les valeurs.  
@@ -1549,7 +1552,8 @@ Sous l’onglet **Propriétés** de cette étape, configurez les paramètres dé
 Spécifiez le nom d’une variable intégrée ou d’action de séquence de tâches, ou spécifiez le nom de votre propre variable définie par l’utilisateur.  
 
 #### <a name="do-not-display-this-value"></a>Ne pas afficher cette valeur
-<!--1358330--> À compter de la version 1806, activez cette option pour masquer les données sensibles stockées dans des variables de séquence de tâches. Par exemple, quand vous spécifiez un mot de passe. 
+<!--1358330-->
+À compter de la version 1806, activez cette option pour masquer les données sensibles stockées dans des variables de séquence de tâches. Par exemple, quand vous spécifiez un mot de passe. 
 
 > [!Note]  
 > Activez cette option, puis définissez la valeur de la variable de séquence de tâches. Sinon, elle ne sera pas définie comme vous le souhaitez, ce qui peut provoquer des comportements inattendus à l’exécution de la séquence de tâches.<!--SCCMdocs issue #800--> 
@@ -1577,7 +1581,7 @@ Dans l’Éditeur de séquence de tâches, sélectionnez successivement **Ajoute
 
 Cette étape effectue les actions suivantes :  
 
-#### <a name="preliminaries-windows-pe"></a>Préliminaires : Windows PE  
+#### <a name="preliminaries-windows-pe"></a>Préliminaires : Windows PE  
 
 1. Remplacez les variables de séquence de tâches dans le fichier unattend.xml.  
 
@@ -1680,11 +1684,11 @@ Spécifiez l’édition au sein du support du système d’exploitation à utili
 Spécifiez la clé de produit à appliquer au processus de mise à niveau.  
 
 #### <a name="provide-the-following-driver-content-to-windows-setup-during-upgrade"></a>Fournir le contenu du pilote suivant à l’installation de Windows pendant la mise à niveau
-Ajouter des pilotes à l’ordinateur de destination lors du processus de mise à niveau. Ce paramètre correspond à l’option de ligne de commande de l’installation de Windows `/InstallDriver`. Les pilotes doivent être compatibles avec Windows 10. Spécifiez l'une des options suivantes :  
+Ajouter des pilotes à l’ordinateur de destination lors du processus de mise à niveau. Ce paramètre correspond à l’option de ligne de commande de l’installation de Windows `/InstallDriver`. Les pilotes doivent être compatibles avec Windows 10. Spécifiez l’une des options suivantes :  
 
-- **Package de pilotes** : Sélectionnez **Parcourir** et choisissez un package de pilotes existant dans la liste.  
+- **Package de pilotes** : sélectionnez **Parcourir** et choisissez un package de pilotes existant dans la liste.  
 
-- **Contenu intermédiaire** :  Sélectionnez cette option pour spécifier l’emplacement du package de pilotes. Vous pouvez spécifier un dossier local, un chemin réseau ou une variable de séquence de tâches. Quand vous utilisez une variable pour le chemin source, sa valeur doit être spécifiée plus tôt dans la séquence de tâches. Par exemple, en utilisant l’étape [Télécharger le contenu du package](/sccm/osd/understand/task-sequence-steps#BKMK_DownloadPackageContent).  
+- **Contenu intermédiaire** : sélectionnez cette option pour spécifier l’emplacement du package de pilotes. Vous pouvez spécifier un dossier local, un chemin réseau ou une variable de séquence de tâches. Quand vous utilisez une variable pour le chemin source, sa valeur doit être spécifiée plus tôt dans la séquence de tâches. Par exemple, en utilisant l’étape [Télécharger le contenu du package](/sccm/osd/understand/task-sequence-steps#BKMK_DownloadPackageContent).  
 
 #### <a name="time-out-minutes"></a>Délai d’expiration (minutes)
 Spécifiez le nombre de minutes avant que Configuration Manager considère que cette étape a échoué. Cette option est utile si l’installation de Windows arrête le traitement mais ne se termine pas.  
@@ -1692,7 +1696,8 @@ Spécifiez le nombre de minutes avant que Configuration Manager considère que c
 #### <a name="perform-windows-setup-compatibility-scan-without-starting-upgrade"></a>Effectuer une analyse de compatibilité d’installation de Windows sans démarrer la mise à niveau
 Effectuer l’analyse de compatibilité de l’installation de Windows sans démarrer le processus de mise à niveau. Ce paramètre correspond à l’option de ligne de commande de l’installation de Windows `/Compat ScanOnly`. Déployez le package de mise à niveau du système d’exploitation entier avec cette option. 
 
-<!--SCCMDocs-pr issue 2812--> À compter de la version 1806, lorsque vous activez cette option, cette étape ne place pas le client Configuration Manager en mode de provisionnement. L’installation de Windows s’exécute en mode silencieux en arrière-plan, et le client continue à fonctionner normalement. 
+<!--SCCMDocs-pr issue 2812-->
+À compter de la version 1806, lorsque vous activez cette option, cette étape ne place pas le client Configuration Manager en mode de provisionnement. L’installation de Windows s’exécute en mode silencieux en arrière-plan, et le client continue à fonctionner normalement. 
 
 Le programme d’installation renvoie un code de sortie suite à l’analyse. Le tableau suivant indique certains des codes de sortie les plus courants :  
 
