@@ -67,19 +67,19 @@ items:
   - name: Interface ICcmAlternateDownloadProvider
     href: core/servers/configure/iccmalternatedowloadprovider-interface.md
     items:
-    - name: 'ICcmAlternatedownloadProvider : Méthode CancelJob'
+    - name: Méthode CancelJob ICcmAlternatedownloadProvider
       href: core/servers/configure/iccmalternatedownloadprovider---canceljob-method.md
-    - name: 'ICcmAlternatedownloadProvider : Méthode DownloadContent'
+    - name: Méthode DownloadContent ICcmAlternatedownloadProvider
       href: core/servers/configure/iccmalternatedownloadprovider---downloadcontent-method.md
-    - name: 'ICcmAlternatedownloadProvider : Méthode ModifyJobPriority'
+    - name: Méthode ModifyJobPriority ICcmAlternatedownloadProvider
       href: core/servers/configure/iccmalternatedownloadprovider---modifyjobpriority-method.md
-    - name: 'ICcmAlternatedownloadProvider : Méthode ModifyJobSource'
+    - name: Méthode ModifyJobSource ICcmAlternatedownloadProvider
       href: core/servers/configure/iccmalternatedownloadprovider---modifyjobsource-method.md
-    - name: 'ICcmAlternatedownloadProvider : Méthode ModifyJobTimeout'
+    - name: Méthode ModifyJobTimeout ICcmAlternatedownloadProvider
       href: core/servers/configure/iccmalternatedownloadprovider---modifyjobtimeout-method.md
-    - name: 'ICcmAlternatedownloadProvider : Méthode Resume'
+    - name: Méthode Resume ICcmAlternatedownloadProvider
       href: core/servers/configure/iccmalternatedownloadprovider---resume-method.md
-    - name: 'ICcmAlternatedownloadProvider : Méthode Suspend'
+    - name: Méthode Suspend ICcmAlternatedownloadProvider
       href: core/servers/configure/iccmalternatedownloadprovider---suspend-method.md
   - name: Interface ICcmContentTransferManager4
     href: core/servers/configure/iccmcontenttransfermanager4-interface.md
@@ -260,22 +260,22 @@ items:
     - name: Interface IAppContentExt
       href: core/clients/client-classes/iappcontentext-interface.md
       items:
-      - name: IAppContentExt::GetExcludedFileList
+      - name: GetExcludedFileList IAppContentExt
         href: core/clients/client-classes/iappcontentext--getexcludedfilelist.md
     - name: Interface IAppManagementHandler
       href: core/clients/client-classes/iappmanagementhandler-interface.md
       items:
-      - name: Méthode IAppManagementHandler::CheckReconnectData
+      - name: Méthode CheckReconnectData IAppManagementHandler
         href: core/clients/client-classes/iappmanagementhandler--checkreconnectdata-method.md
-      - name: Méthode IAppManagementHandler::CompleteEnforcement
+      - name: Méthode CompleteEnforcement IAppManagementHandler
         href: core/clients/client-classes/iappmanagementhandler--completeenforcement-method.md
-      - name: Méthode IAppManagementHandler::DiscoverApp
+      - name: Méthode DiscoverApp IAppManagementHandler
         href: core/clients/client-classes/iappmanagementhandler--discoverapp-method.md
-      - name: Méthode IAppManagementHandler::EnforceApp
+      - name: Méthode EnforceApp IAppManagementHandler
         href: core/clients/client-classes/iappmanagementhandler--enforceapp-method.md
-      - name: Méthode IAppManagementHandler::EnumerateApps
+      - name: Méthode EnumerateApps IAppManagementHandler
         href: core/clients/client-classes/iappmanagementhandler--enumerateapps-method.md
-      - name: Méthode IAppManagementHandler::GetPendingComponentList
+      - name: Méthode GetPendingComponentList IAppManagementHandler
         href: core/clients/client-classes/iappmanagementhandler--getpendingcomponentlist-method.md
     - name: Interface IAppManagementTypes
       href: core/clients/client-classes/iappmanagementtypes-interface.md
@@ -383,53 +383,53 @@ items:
     - name: Interface ICIINFO
       href: core/clients/client-classes/iciinfo-interface.md
       items:
-      - name: Méthode ICIINFO::GetCategory
+      - name: Méthode GetCategory ICIINFO
         href: core/clients/client-classes/iciinfo--getcategory-method.md
-      - name: Méthode ICIINFO::GetCategoryCount
+      - name: Méthode GetCategoryCount ICIINFO
         href: core/clients/client-classes/iciinfo--getcategorycount-method.md
-      - name: Méthode ICIINFO::GetCIPresence
+      - name: Méthode GetCIPresence ICIINFO
         href: core/clients/client-classes/iciinfo--getcipresence-method.md
-      - name: Méthode ICIINFO::GetContextInfo
+      - name: Méthode GetContextInfo ICIINFO
         href: core/clients/client-classes/iciinfo--getcontextinfo-method.md
-      - name: Méthode ICIINFO::GetDependantPackages
+      - name: Méthode GetDependantPackages ICIINFO
         href: core/clients/client-classes/iciinfo--getdependantpackages-method.md
-      - name: Méthode ICIINFO::GetDetailedComplianceInfo
+      - name: Méthode GetDetailedComplianceInfo ICIINFO
         href: core/clients/client-classes/iciinfo--getdetailedcomplianceinfo-method.md
-      - name: Méthode ICIINFO::GetEvalState
+      - name: Méthode GetEvalState ICIINFO
         href: core/clients/client-classes/iciinfo--getevalstate-method.md
-      - name: Méthode ICIINFO::GetId
+      - name: Méthode GetId ICIINFO
         href: core/clients/client-classes/iciinfo--getid-method.md
-      - name: Méthode ICIINFO::GetJobState
+      - name: Méthode GetJobState ICIINFO
         href: core/clients/client-classes/iciinfo--getjobstate-method.md
-      - name: Méthode ICIINFO::GetLastEvalTime
+      - name: Méthode GetLastEvalTime ICIINFO
         href: core/clients/client-classes/iciinfo--getlastevaltime-method.md
-      - name: Méthode ICIINFO::GetProperty
+      - name: Méthode GetProperty ICIINFO
         href: core/clients/client-classes/iciinfo--getproperty-method.md
-      - name: Méthode ICIINFO::GetSdmTypeName
+      - name: Méthode GetSdmTypeName ICIINFO
         href: core/clients/client-classes/iciinfo--getsdmtypename-method.md
-      - name: Méthode ICIINFO::GetVersion
+      - name: Méthode GetVersion ICIINFO
         href: core/clients/client-classes/iciinfo--getversion-method.md
     - name: Interface IDCMAgentCallback
       href: core/clients/client-classes/idcmagentcallback-interface.md
       items:
-      - name: Méthode IDCMAgentCallback::NotifyComplete
+      - name: Méthode NotifyComplete IDCMAgentCallback
         href: core/clients/client-classes/idcmagentcallback--notifycomplete-method.md
-      - name: Méthode IDCMAgentCallback::NotifyError
+      - name: Méthode NotifyError IDCMAgentCallback
         href: core/clients/client-classes/idcmagentcallback--notifyerror-method.md
-      - name: Méthode IDCMAgentCallback::NotifyProgress
+      - name: Méthode NotifyProgress IDCMAgentCallback
         href: core/clients/client-classes/idcmagentcallback--notifyprogress-method.md
     - name: Interface IDCMSDK
       href: core/clients/client-classes/idcmsdk-interface.md
       items:
-      - name: Méthode IDCMSDK::EvaluateBaseline
+      - name: Méthode EvaluateBaseline IDCMSDK
         href: core/clients/client-classes/idcmsdk--evaluatebaseline-method.md
-      - name: Méthode IDCMSDK::GetAssignedBaselines
+      - name: Méthode GetAssignedBaselines IDCMSDK
         href: core/clients/client-classes/idcmsdk--getassignedbaselines-method.md
-      - name: Méthode IDCMSDK::GetBaselineComplianceReport
+      - name: Méthode GetBaselineComplianceReport IDCMSDK
         href: core/clients/client-classes/idcmsdk--getbaselinecompliancereport-method.md
-      - name: Méthode IDCMSDK::GetBaselineInfo
+      - name: Méthode GetBaselineInfo IDCMSDK
         href: core/clients/client-classes/idcmsdk--getbaselineinfo-method.md
-      - name: Méthode IDCMSDK::SetEvaluationCallback
+      - name: Méthode SetEvaluationCallback IDCMSDK
         href: core/clients/client-classes/idcmsdk--setevaluationcallback-method.md
     - name: Structure CIDetectInfo
       href: core/clients/client-classes/cidetectinfo-structure.md
@@ -482,28 +482,40 @@ items:
       - name: Interface IProgressUI
         href: core/clients/client-classes/iprogressui-interface.md
         items:
-        - name: Méthode IProgressUI::ShowActionProgress
+        - name: Méthode CloseProgressDialog IProgressUI
+          href: core/clients/client-classes/iprogressui--closeprogressdialog-method.md
+        - name: Méthode ShowActionProgress IProgressUI
           href: core/clients/client-classes/iprogressui--showactionprogress-method.md
+        - name: Méthode ShowErrorDialog IProgressUI
+          href: core/clients/client-classes/iprogressui--showerrordialog-method.md
+        - name: Méthode ShowMessage IProgressUI
+          href: core/clients/client-classes/iprogressui--showmessage-method.md
+        - name: Méthode ShowRebootDialog IProgressUI
+          href: core/clients/client-classes/iprogressui--showrebootdialog-method.md
+        - name: Méthode ShowSwapMediaDialog IProgressUI
+          href: core/clients/client-classes/iprogressui--showswapmediadialog-method.md
+        - name: Méthode ShowTSProgress IProgressUI
+          href: core/clients/client-classes/iprogressui--showtsprogress-method.md
     - name: Classe Automation COM du client - PxeAuthClass
       href: core/clients/client-classes/pxeauthclass-client-com-automation-class.md
       items:
       - name: Interface IPxeAuthClass
         href: core/clients/client-classes/ipxeauthclass-interface.md
         items:
-        - name: Méthode IPxeAuthClass::CreateIdentity
+        - name: Méthode CreateIdentity IPxeAuthClass
           href: core/clients/client-classes/ipxeauthclass--createidentity-method.md
-        - name: Méthode IPxeAuthClass::ReadIdentity
+        - name: Méthode ReadIdentity IPxeAuthClass
           href: core/clients/client-classes/ipxeauthclass--readidentity-method.md
     - name: Interface ITSEnvClass
       href: core/clients/client-classes/itsenvclass-interface.md
       items:
-      - name: Méthode ITSEnvClass::Clear
+      - name: Méthode Clear ITSEnvClass
         href: core/clients/client-classes/itsenvclass--clear-method.md
-      - name: Méthode ITSEnvClass::Create
+      - name: Méthode Create ITSEnvClass
         href: core/clients/client-classes/itsenvclass--create-method.md
-      - name: Méthode ITSEnvClass::GetVariables
+      - name: Méthode GetVariables ITSEnvClass
         href: core/clients/client-classes/itsenvclass--getvariables-method.md
-      - name: Propriété ITSEnvClass::Value
+      - name: Propriété Value ITSEnvClass
         href: core/clients/client-classes/itsenvclass--value-property.md
   - name: Classes WMI du client Gestion hors bande
     href: core/clients/client-classes/out-of-band-management-client-wmi-classes.md
@@ -1476,37 +1488,37 @@ items:
     - name: Interface ITsMediaClass
       href: misc/itsmediaclass-interface.md
       items:
-      - name: Méthode ITsMediaClass::Cancel
+      - name: Méthode Cancel ITsMediaClass
         href: misc/itsmediaclass--cancel-method.md
-      - name: Propriété ITsMediaClass::ConnectionOptions
+      - name: Propriété ConnectionOptions ITsMediaClass
         href: misc/itsmediaclass--connectionoptions-property.md
-      - name: Méthode ITsMediaClass::CreateBootMedia
+      - name: Méthode CreateBootMedia ITsMediaClass
         href: misc/itsmediaclass--createbootmedia-method.md
-      - name: Méthode ITsMediaClass::CreateCaptureMedia
+      - name: Méthode CreateCaptureMedia ITsMediaClass
         href: misc/itsmediaclass--createcapturemedia-method.md
-      - name: Méthode ITsMediaClass::CreateStandaloneMedia
+      - name: Méthode CreateStandaloneMedia ITsMediaClass
         href: misc/itsmediaclass--createstandalonemedia-method.md
-      - name: Propriété ITsMediaClass::CurrentStep
+      - name: Propriété CurrentStep ITsMediaClass
         href: misc/itsmediaclass--currentstep-property.md
-      - name: Propriété ITsMediaClass::DistributionPoints
+      - name: Propriété DistributionPoints ITsMediaClass
         href: misc/itsmediaclass--distributionpoints-property.md
-      - name: Propriété ITsMediaClass::ErrorDetail
+      - name: Propriété ErrorDetail ITsMediaClass
         href: misc/itsmediaclass--errordetail-property.md
-      - name: Propriété ITsMediaClass::ExitCode
+      - name: Propriété ExitCode ITsMediaClass
         href: misc/itsmediaclass--exitcode-property.md
-      - name: Propriété ITsMediaClass::MediaLabel
+      - name: Propriété MediaLabel ITsMediaClass
         href: misc/itsmediaclass--medialabel-property.md
-      - name: Propriété ITsMediaClass::NumSteps
+      - name: Propriété NumSteps ITsMediaClass
         href: misc/itsmediaclass--numsteps-property.md
-      - name: Propriété ITsMediaClass::ProviderName
+      - name: Propriété ProviderName ITsMediaClass
         href: misc/itsmediaclass--providername-property.md
-      - name: Propriété ITsMediaClass::SiteCode
+      - name: Propriété SiteCode ITsMediaClass
         href: misc/itsmediaclass--sitecode-property.md
-      - name: Propriété ITsMediaClass::Status
+      - name: Propriété Status ITsMediaClass
         href: misc/itsmediaclass--status-property.md
-      - name: Propriété ITsMediaClass::StepInfo
+      - name: Propriété StepInfo ITsMediaClass
         href: misc/itsmediaclass--stepinfo-property.md
-      - name: Propriété ITsMediaClass::StepProgress
+      - name: Propriété StepProgress ITsMediaClass
         href: misc/itsmediaclass--stepprogress-property.md
 - name: Classes de déploiement de système d’exploitation
   href: osd/operating-system-deployment-classes.md
@@ -2238,6 +2250,8 @@ items:
       href: core/servers/configure/importglobaluseraccountex-method-in-class-sms_site.md
     - name: Méthode ImportMachineEntry dans la classe SMS_Site
       href: core/servers/configure/importmachineentry-method-in-class-sms_site.md
+    - name: Méthode ImportMachineEntryToMultipleCollections dans la classe SMS_Site
+      href: core/servers/configure/importmachineentrytomultiplecollections-method-in-class-sms_site.md
     - name: Méthode IsUsedCert dans la classe SMS_Site
       href: core/servers/configure/isusedcert-method-in-class-sms_site.md
     - name: Méthode RedistributeAutoUpgradeClientContent dans la classe SMS_Site
@@ -2619,15 +2633,15 @@ items:
     - name: Classe SMSEvent
       href: core/servers/manage/smsevent-class.md
       items:
-      - name: Propriété ICCMEvent::EventType
+      - name: Propriété EventType ICCMEvent
         href: core/servers/manage/iccmevent--eventtype-property.md
-      - name: Propriété ICCMEvent::RawEvent
+      - name: Propriété RawEvent ICCMEvent
         href: core/servers/manage/iccmevent--rawevent-property.md
-      - name: Méthode ICCMEvent::SetProperty
+      - name: Méthode SetProperty ICCMEvent
         href: core/servers/manage/iccmevent--setproperty-method.md
-      - name: Méthode ICCMEvent::Submit
+      - name: Méthode Submit ICCMEvent
         href: core/servers/manage/iccmevent--submit-method.md
-      - name: Méthode ICCMEvent::SubmitPending
+      - name: Méthode SubmitPending ICCMEvent
         href: core/servers/manage/iccmevent--submitpending-method.md
   - name: Types de messages d’état
     href: core/servers/manage/status-message-types.md
@@ -2745,11 +2759,9 @@ items:
     href: misc/sms_windowsservicinglocalizednames-server-wmi-class.md
   - name: Classe WMI du serveur SMS_WindowsServicingStates
     href: misc/sms_windowsservicingstates-server-wmi-class.md
-- name: Informations de référence sur Configuration Manager
-  href: https://msdn.microsoft.com/library/mt767606.aspx
-ms.openlocfilehash: ba172c1d11b9c3089e8cbeec1493cbeb0ebe4217
-ms.sourcegitcommit: 4f05517f7b284696a492a1b184cc5f25c5cda5e6
+ms.openlocfilehash: 19da531a2b9821b54ed03f93e495cdfbb1e84f86
+ms.sourcegitcommit: deb28cdc95a456d4a38499ef1bc71e765ef6dc13
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48891246"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58901534"
