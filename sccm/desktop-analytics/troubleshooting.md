@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6bebf4065a4db1c45ee7eaa0a5b04b8d1533f29f
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: d857b0e9d280bfed0834a97760d4fd481f0398d7
+ms.sourcegitcommit: d138a6a9ccbb6a03dc378272cf6f81b98b940f1d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56754864"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "59013405"
 ---
 # <a name="troubleshooting-desktop-analytics"></a>Dépannage des postes de travail Analytique
 
@@ -137,7 +137,8 @@ Les colonnes suivantes sont disponibles dans la liste des appareils :
 - [Connectivité de point de terminaison diagnostic Office](#office-diagnostic-endpoint-connectivity)  
 
 #### <a name="appraiser-configuration"></a>Configuration de appraiser
-<!--20,21--> Appraiser est le composant de Windows qui correspond à la [mises à jour de compatibilité](/sccm/desktop-analytics/enroll-devices#update-devices). Il évalue les applications et les pilotes sur l’appareil pour la compatibilité avec la dernière version de Windows. 
+<!--20,21-->
+Appraiser est le composant de Windows qui correspond à la [mises à jour de compatibilité](/sccm/desktop-analytics/enroll-devices#update-devices). Il évalue les applications et les pilotes sur l’appareil pour la compatibilité avec la dernière version de Windows. 
 
 Si cette vérification est réussie, le composant appraiser est correctement configuré sur l’appareil. 
 
@@ -155,7 +156,8 @@ Pour plus d’informations, consultez M365AHandler.log sur le client.
 
 
 #### <a name="minimum-compatibility-update"></a>Mise à jour de la compatibilité minimale
-<!--18,19,32--> La mise à jour de compatibilité (appraiser.dll) n’est pas installé ou obsolètes sur l’appareil. Elle est antérieure à la configuration minimale requise pour l’Analytique de bureau, 10.0.17763. 
+<!--18,19,32-->
+La mise à jour de compatibilité (appraiser.dll) n’est pas installé ou obsolètes sur l’appareil. Elle est antérieure à la configuration minimale requise pour l’Analytique de bureau, 10.0.17763. 
 
 Installez la dernière mise à jour de compatibilité. Pour plus d’informations, consultez [mises à jour de compatibilité](/sccm/desktop-analytics/enroll-devices#bkmk_appraiser).
 
@@ -170,7 +172,8 @@ Cette propriété affiche la date et l’heure auxquelles l’appareil dernière
 
 #### <a name="appraiser-data-collection"></a>Collecte des données appraiser
 <!--Appraiser run status-->
-<!--22,33--> Cette propriété indique le dernier résultat à partir de Windows qui exécute le composant appraiser. 
+<!--22,33-->
+Cette propriété indique le dernier résultat à partir de Windows qui exécute le composant appraiser. 
 
 Si ce n’est pas le cas, réussite, il peut afficher les erreurs suivantes : 
 
@@ -212,7 +215,8 @@ Cette propriété affiche la date et l’heure auxquelles l’appareil dernière
 
 #### <a name="census-data-collection"></a>Collecte de données de recensement
 <!-- Census run status -->
-<!--51,52--> Recensement est le composant de Windows qui inventorie le périphérique. Ces données d’inventaire sont utilisées pour comprendre l’appareil et sa configuration. 
+<!--51,52-->
+Recensement est le composant de Windows qui inventorie le périphérique. Ces données d’inventaire sont utilisées pour comprendre l’appareil et sa configuration. 
 
 Cette propriété indique le dernier résultat à partir de Windows qui exécute le composant de recensement.
 
@@ -228,7 +232,8 @@ Recherchez le fichier suivant : `%windir%\System32\DeviceCensus.exe`. S’il n�
 
 
 #### <a name="windows-diagnostic-endpoint-connectivity"></a>Connectivité de point de terminaison de diagnostic de Windows
-<!--12,15--> Si cette vérification est réussie, l’appareil est en mesure de se connecter à l’utilisateur connecté expérience et les données de télémétrie point de terminaison (tourbillon). 
+<!--12,15-->
+Si cette vérification est réussie, l’appareil est en mesure de se connecter à l’utilisateur connecté expérience et les données de télémétrie point de terminaison (tourbillon). 
 
 Sinon, il peut afficher les erreurs suivantes :  
 
@@ -275,7 +280,8 @@ Vérifiez les autorisations sur cette clé de Registre. Assurez-vous que le comp
 
 
 #### <a name="commercial-id-configuration"></a>Configuration de l’ID commerciale
-<!--9, 11, 53--> Microsoft utilise un ID commercial unique pour mapper les informations à partir d’appareils à votre espace de travail Analytique de bureau. Lorsque vous intégrez Configuration Manager avec l’Analytique de bureau, il interroge automatiquement le service pour ce code. Configuration Manager doit appliquer automatiquement cet ID pour les clients sur lesquels vous ciblez des paramètres de bureau Analytique. 
+<!--9, 11, 53-->
+Microsoft utilise un ID commercial unique pour mapper les informations à partir d’appareils à votre espace de travail Analytique de bureau. Lorsque vous intégrez Configuration Manager avec l’Analytique de bureau, il interroge automatiquement le service pour ce code. Configuration Manager doit appliquer automatiquement cet ID pour les clients sur lesquels vous ciblez des paramètres de bureau Analytique. 
 
 Si cette vérification est réussie, puis l’appareil est correctement configuré avec un ID commercial.
 
@@ -331,7 +337,8 @@ Assurez-vous qu’un autre mécanisme de stratégie, tels que la stratégie de g
 
 
 #### <a name="diagtrack-service-configuration"></a>Configuration du service DiagTrack
-<!--44,45,50--> Si cette vérification est réussie, le composant DiagTrack est correctement configuré sur l’appareil. La version minimale requise par bureau Analytique est 10010586 (10.0.10586). 
+<!--44,45,50-->
+Si cette vérification est réussie, le composant DiagTrack est correctement configuré sur l’appareil. La version minimale requise par bureau Analytique est 10010586 (10.0.10586). 
 
 Sinon, il peut afficher les erreurs suivantes :
 
@@ -369,7 +376,8 @@ Assurez-vous que vous n’avez pas des ID dupliqués dans votre environnement. P
 
 
 #### <a name="unique-device-identifier-retrieval"></a>Récupération d’identificateur unique de l’appareil
-<!--54--> Analytique de postes de travail utilise le service de Account Microsoft pour une identité d’appareil plus fiable. 
+<!--54-->
+Analytique de postes de travail utilise le service de Account Microsoft pour une identité d’appareil plus fiable. 
 
 Assurez-vous que le **Microsoft compte Assistant de connexion** service n’est pas désactivé. Le type de démarrage doit être **manuel (début du déclencheur)**.
 
@@ -377,7 +385,8 @@ Pour désactiver l’accès de compte Microsoft de l’utilisateur final, utilis
 
 
 #### <a name="windows-diagnostic-data-opt-in"></a>Windows les données de diagnostic participer
-<!--8,40,55,62--> Cette propriété vérifie que Windows est correctement configuré pour autoriser les données de diagnostic. Il vérifie la valeur de AllowTelemetry dans les clés de Registre suivantes :
+<!--8,40,55,62-->
+Cette propriété vérifie que Windows est correctement configuré pour autoriser les données de diagnostic. Il vérifie la valeur de AllowTelemetry dans les clés de Registre suivantes :
 
 - `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection`
 - `HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`
@@ -418,6 +427,7 @@ Les fichiers journaux suivants sont sur le point de connexion de service dans le
 | **M365ADeploymentPlanWorker.log** | Informations sur la synchronisation de plan de déploiement de bureau Analytique cloud service pour le Gestionnaire de Configuration local |
 | **M365ADeviceHealthWorker.log** | Informations sur l’intégrité de l’appareil télécharger à partir du Gestionnaire de Configuration à Microsoft cloud |
 | **M365AUploadWorker.log** | Plus d’informations sur la collecte et l’appareil charger à partir de Configuration Manager à Microsoft cloud |
+| **SmsAdminUI.log** | Plus d’informations sur l’activité de la console Configuration Manager, telles que la configuration des services cloud Azure  |
 
 
 ### <a name="configuration-manager-client"></a>Client de Configuration Manager
@@ -426,14 +436,14 @@ Les fichiers journaux suivants sont sur le client Configuration Manager dans le 
 
 | Journal | Description |
 |---------|---------|
-| **M365Handler.log** | Informations sur la stratégie de paramètres de bureau Analytique |
+| **M365AHandler.log** | Informations sur la stratégie de paramètres de bureau Analytique |
 
 
 ### <a name="enable-verbose-logging"></a>Activer la journalisation documentée 
 
 1. Sur le point de connexion, accédez à la clé de Registre suivante : `HKLM\Software\Microsoft\SMS\Tracing\SMS_SERVICE_CONNECTOR`  
 2. Définir le **LogLevel** valeur `0`  
-3. Exécutez la commande SQL suivante sur la base de données de site :  
+3. (Facultatif) Exécutez la commande SQL suivante sur la base de données de site :  
 
     ```SQL
     DELETE FROM M365AProperties WHERE Name = 'M365ATenantUpdateInfo_LastUpdateTime'

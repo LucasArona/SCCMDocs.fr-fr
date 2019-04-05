@@ -11,16 +11,17 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fa50719107838ed2c5c277a45ead4a7d9be6192a
-ms.sourcegitcommit: dff462bd9830e5e66f519f3c948d5150c18e94ad
+ms.openlocfilehash: cf5345cd54882ae46171b7d3800e1ed818834ecb
+ms.sourcegitcommit: d584c126a0a5725567631b74ac1e01f63242a997
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58417030"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58861001"
 ---
 # <a name="create-and-deploy-windows-defender-application-guard-policy"></a>Créer et déployer une stratégie Windows Defender Application Guard 
 *S’applique à : System Center Configuration Manager (Current Branch)*
-<!-- 1351960 --> Vous pouvez créer et déployer des stratégies [Windows Defender Application Guard](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview) à l’aide de la protection du point de terminaison Configuration Manager. Ces stratégies permettent de protéger vos utilisateurs en ouvrant les sites web non approuvés dans un conteneur isolé et sécurisé qui n’est pas accessible par les autres parties du système d’exploitation.
+<!-- 1351960 -->  
+Vous pouvez créer et déployer des stratégies [Windows Defender Application Guard](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview) à l’aide de la protection du point de terminaison Configuration Manager. Ces stratégies permettent de protéger vos utilisateurs en ouvrant les sites web non approuvés dans un conteneur isolé et sécurisé qui n’est pas accessible par les autres parties du système d’exploitation.
 
 ## <a name="prerequisites"></a>Prérequis
 
