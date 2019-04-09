@@ -2,7 +2,7 @@
 title: Connecter le Gestionnaire de configuration
 titleSuffix: Configuration Manager
 description: Guide pratique pour la connexion de Configuration Manager avec l’Analytique de bureau.
-ms.date: 01/25/2019
+ms.date: 04/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,19 +12,19 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1280e7cbd1c2d8e7524b296e48d0b1bec426d9ed
-ms.sourcegitcommit: da753df27d3909265ca45d3e79091f1e98758d16
+ms.openlocfilehash: b30770b912e012aafa3f1d476c4791873752ecc7
+ms.sourcegitcommit: 5ee9487c891c37916294bd34a10d04e398f111f7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58913623"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59069345"
 ---
-# <a name="how-to-connect-configuration-manager-with-desktop-analytics"></a>Comment connecter Configuration Manager avec l’Analytique de bureau 
+# <a name="how-to-connect-configuration-manager-with-desktop-analytics"></a>Comment connecter Configuration Manager avec l’Analytique de bureau
 
 > [!Note]  
 > Ces informations est lié à un service en version préliminaire qui peut être substantiellement modifié avant sa commercialisation. Microsoft exclut toute garantie, expresse ou implicite, concernant les informations fournies ici.  
 
-Analytique de bureau est étroitement intégré avec Configuration Manager. Tout d’abord, assurez-vous que le site est à jour pour prendre en charge des fonctionnalités les plus récentes. Puis créez la connexion de bureau Analytique dans Configuration Manager. Enfin, surveiller l’intégrité de la connexion. 
+Analytique de bureau est étroitement intégré avec Configuration Manager. Tout d’abord, assurez-vous que le site est à jour pour prendre en charge des fonctionnalités les plus récentes. Puis créez la connexion de bureau Analytique dans Configuration Manager. Enfin, surveiller l’intégrité de la connexion.
 
 
 ## <a name="bkmk_hotfix"></a> Mettre à jour le site
@@ -59,13 +59,13 @@ Utilisez cette procédure pour connecter Configuration Manager à l’Analytique
 
     - **Nom du locataire Azure AD**: Ce nom est la façon dont il est nommé dans Configuration Manager  
 
-    - **ID de locataire Azure AD**: Le **ID de répertoire** vous avez copié à partir d’Azure AD   
+    - **ID de locataire Azure AD**: Le **ID de répertoire** vous avez copié à partir d’Azure AD  
 
-    - **ID de client** : Le **ID d’Application** vous avez copié à partir de l’application Azure AD   
+    - **ID de client** : Le **ID d’Application** vous avez copié à partir de l’application Azure AD  
 
-    - **Clé secrète**: La clé **valeur** vous avez copié à partir de l’application Azure AD   
+    - **Clé secrète**: La clé **valeur** vous avez copié à partir de l’application Azure AD  
 
-    - **Expiration de la clé secrète** : La même date d’expiration de la clé   
+    - **Expiration de la clé secrète** : La même date d’expiration de la clé  
 
     - **URI ID d’application** : Ce paramètre doit remplir automatiquement avec la valeur suivante : `https://cmmicrosvc.manage.microsoft.com/`  
   
@@ -82,7 +82,7 @@ Utilisez cette procédure pour connecter Configuration Manager à l’Analytique
         > [!Note]  
         > À compter de Windows 10 version 1803, le nom de l’appareil n’est pas envoyé à Microsoft par défaut. Si vous n’envoyez pas le nom du périphérique, il apparaît dans l’Analytique de bureau comme « Inconnu ». Ce comportement peut rendre difficile d’identifier et évaluer les appareils.  
 
-   Sélectionnez **Suivant**. Le **fonctionnalités disponibles** page affiche les fonctionnalités d’Analytique de bureau qui sont disponibles avec les paramètres de données de diagnostic à partir de la page précédente. Sélectionnez **suivant** pour continuer ou **précédent** pour apporter des modifications.   
+   Sélectionnez **Suivant**. Le **fonctionnalités disponibles** page affiche les fonctionnalités d’Analytique de bureau qui sont disponibles avec les paramètres de données de diagnostic à partir de la page précédente. Sélectionnez **suivant** pour continuer ou **précédent** pour apporter des modifications.  
 
     ![Exemple de page de fonctionnalités disponibles dans l’Assistant Services Azure](media/available-functionality.png)
 
@@ -92,11 +92,14 @@ Utilisez cette procédure pour connecter Configuration Manager à l’Analytique
 
     - **Regroupement cible**: Cette collection inclut tous les appareils Configuration Manager configure avec votre ID commercial et les paramètres de données de diagnostic. Il est l’ensemble des appareils Configuration Manager se connecte au service d’Analytique de bureau.  
 
-    - **Appareils du regroupement cible utilisent un proxy authentifié par l’utilisateur pour les communications sortantes**: Par défaut, cette valeur est **non**. Si nécessaire dans votre environnement, la valeur est **Oui**.   
+    - **Appareils du regroupement cible utilisent un proxy authentifié par l’utilisateur pour les communications sortantes**: Par défaut, cette valeur est **non**. Si nécessaire dans votre environnement, la valeur est **Oui**.  
 
     - **Sélectionner des regroupements spécifiques pour se synchroniser avec le bureau Analytique**: Sélectionnez **ajouter** pour inclure des collections supplémentaires. Ces collections sont disponibles dans le portail d’Analytique de bureau pour le regroupement des plans de déploiement. Veillez à inclure les collections d’exclusion de pilote et de pilote.  
 
         Ces collections continuent à synchroniser en tant que leurs changements d’appartenance. Par exemple, votre plan de déploiement utilise une collection avec une règle d’adhésion de Windows 7. Comme ces appareils mise à niveau vers Windows 10 et Configuration Manager évalue l’appartenance au regroupement, ces appareils déposent hors de la collecte et le plan de déploiement.  
+
+        > [!Important]  
+        > Veillez à limiter ces collections supplémentaires sur le regroupement cible. Sur les propriétés de ces regroupements supplémentaires, le **limitation au regroupement** doit être la même collection que l’Analytique de Desktop **regroupement cible**.<!-- 4097528 -->  
 
 6. Effectuez toutes les étapes de l'Assistant.  
 
@@ -110,7 +113,7 @@ Surveiller la configuration de vos appareils pour l’Analytique de bureau. Dans
 
 Pour plus d’informations, consultez [surveiller l’intégrité de la connexion](/sccm/desktop-analytics/troubleshooting#monitor-connection-health).
 
-Configuration Manager synchronise les plans de déploiement de bureau Analytique dans les 15 minutes de la création de la connexion. Dans la console Configuration Manager, accédez à la **bibliothèque de logiciels** espace de travail, développez le **Microsoft 365 Servicing** nœud, puis sélectionnez le **Plans de déploiement** nœud. 
+Configuration Manager synchronise les plans de déploiement de bureau Analytique dans les 15 minutes de la création de la connexion. Dans la console Configuration Manager, accédez à la **bibliothèque de logiciels** espace de travail, développez le **Microsoft 365 Servicing** nœud, puis sélectionnez le **Plans de déploiement** nœud.
 
 
 
@@ -119,4 +122,3 @@ Configuration Manager synchronise les plans de déploiement de bureau Analytique
 Passez à l’article suivant pour inscrire des appareils pour l’Analytique de bureau.
 > [!div class="nextstepaction"]  
 > [Inscrire des appareils](/sccm/desktop-analytics/enroll-devices)  
-

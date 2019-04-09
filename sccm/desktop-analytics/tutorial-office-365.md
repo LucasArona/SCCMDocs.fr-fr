@@ -2,7 +2,7 @@
 title: Didacticiel - déployer Office 365
 titleSuffix: Configuration Manager
 description: Un didacticiel sur l’utilisation d’Analytique de bureau et de Configuration Manager pour déployer Office 365 à un groupe pilote.
-ms.date: 01/25/2019
+ms.date: 04/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: tutorial
@@ -12,14 +12,14 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 12f19fe6f52d1ceb4b47b080e45030df898a332a
-ms.sourcegitcommit: da753df27d3909265ca45d3e79091f1e98758d16
+ms.openlocfilehash: 4d21b2b94c53390a9fcdbc1be640578060042ea9
+ms.sourcegitcommit: 5ee9487c891c37916294bd34a10d04e398f111f7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58913555"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59069447"
 ---
-# <a name="tutorial-deploy-office-365-to-pilot"></a>Tutoriel : Déployer Office 365 pilote 
+# <a name="tutorial-deploy-office-365-to-pilot"></a>Tutoriel : Déployer Office 365 pilote
 
 > [!Note]  
 > Ces informations est lié à un service en version préliminaire qui peut être substantiellement modifié avant sa commercialisation. Microsoft exclut toute garantie, expresse ou implicite, concernant les informations fournies ici.  
@@ -34,7 +34,7 @@ Dans ce didacticiel, vous allez découvrir comment :
 > * Créer un plan de déploiement de bureau Analytique pour Office 365 ProPlus  
 > * Déployer Office 365 ProPlus dans Configuration Manager dans le groupe pilote  
 
-Si vous n’avez pas d’abonnement Azure, créez un [compte gratuit](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) avant de commencer. Lorsqu’est correctement configuré, utilisation d’Analytique de bureau n’aucun frais Azure. 
+Si vous n’avez pas d’abonnement Azure, créez un [compte gratuit](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) avant de commencer. Lorsqu’est correctement configuré, utilisation d’Analytique de bureau n’aucun frais Azure.
 
 Analytique de bureau utilise un *espace de travail Analytique de journal* dans votre abonnement Azure. Un espace de travail est essentiellement un conteneur qui inclut des informations de compte et les informations de configuration simple pour le compte. Pour plus d’informations, consultez [gérer les espaces de travail](https://docs.microsoft.com/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor/toc.json).
 
@@ -109,7 +109,7 @@ Utilisez cette procédure pour vous connecter à l’Analytique de bureau et le 
 
     - **Contributeurs de l’espace de travail**: Créer et gérer des plans de déploiement dans cet espace de travail. Ils ne doivent tout accès Azure supplémentaires.  
   
-   Pour ajouter un utilisateur au groupe, tapez son nom ou l’adresse électronique dans le **Entrez le nom ou adresse de messagerie** section du groupe approprié. Lorsque vous avez terminé, sélectionnez **suivant**. 
+   Pour ajouter un utilisateur au groupe, tapez son nom ou l’adresse électronique dans le **Entrez le nom ou adresse de messagerie** section du groupe approprié. Lorsque vous avez terminé, sélectionnez **suivant**.
 
 5. Sur la page pour **configurer votre espace de travail**:  
 
@@ -148,11 +148,11 @@ Utilisez cette procédure pour vous connecter à l’Analytique de bureau et le 
 
 3. Sélectionnez l’application et notez le **ID d’Application**. Cette valeur est un GUID qui est utilisé pour configurer la connexion de Configuration Manager.  
 
-4. Sélectionnez **paramètres** dans l’application, puis sélectionnez **clés**. Dans le **les mots de passe** section, entrez un **description de la clé**, spécifiez un délai d’expiration **durée**, puis sélectionnez **enregistrer**. Copie le **valeur** de la clé, qui est utilisée pour configurer la connexion de Configuration Manager. 
+4. Sélectionnez **paramètres** dans l’application, puis sélectionnez **clés**. Dans le **les mots de passe** section, entrez un **description de la clé**, spécifiez un délai d’expiration **durée**, puis sélectionnez **enregistrer**. Copie le **valeur** de la clé, qui est utilisée pour configurer la connexion de Configuration Manager.
 
     > [!Important]  
     > Il s’agit de la seule possibilité pour copier la valeur de clé. Si vous ne le copiez maintenant, vous devez créer une autre clé.  
-    > 
+    >
     > Enregistrez la valeur de clé dans un emplacement sécurisé.  
 
 5. Sur l’application **paramètres** panneau, sélectionnez **autorisations requises**.  
@@ -205,11 +205,11 @@ Installez le correctif cumulatif de Configuration Manager version 1810 (4486457)
 
     - **Nom du locataire Azure AD**: Ce nom est la façon dont il est nommé dans Configuration Manager  
 
-    - **ID de locataire Azure AD**: Le **ID de répertoire** vous avez copié à partir d’Azure AD   
+    - **ID de locataire Azure AD**: Le **ID de répertoire** vous avez copié à partir d’Azure AD  
 
-    - **ID de client** : Le **ID d’Application** vous avez copié à partir de l’application Azure AD   
+    - **ID de client** : Le **ID d’Application** vous avez copié à partir de l’application Azure AD  
 
-    - **Clé secrète**: La clé **valeur** vous avez copié à partir de l’application Azure AD   
+    - **Clé secrète**: La clé **valeur** vous avez copié à partir de l’application Azure AD  
 
     - **Expiration de la clé secrète** : La même date d’expiration de la clé   
 
@@ -233,7 +233,7 @@ Installez le correctif cumulatif de Configuration Manager version 1810 (4486457)
 
     - **Regroupement cible**: Cette collection inclut tous les appareils Configuration Manager configure avec votre ID commercial et les paramètres de données de diagnostic. Il est l’ensemble des appareils Configuration Manager se connecte au service d’Analytique de bureau.  
 
-    - **Appareils du regroupement cible utilisent un proxy authentifié par l’utilisateur pour les communications sortantes**: Par défaut, cette valeur est **non**. Si nécessaire dans votre environnement, la valeur est **Oui**.   
+    - **Appareils du regroupement cible utilisent un proxy authentifié par l’utilisateur pour les communications sortantes**: Par défaut, cette valeur est **non**. Si nécessaire dans votre environnement, la valeur est **Oui**.  
 
     - **Sélectionner des regroupements spécifiques pour se synchroniser avec le bureau Analytique**: Sélectionnez **ajouter** pour inclure des collections supplémentaires. Ces collections sont disponibles dans le portail d’Analytique de bureau pour le regroupement des plans de déploiement. Veillez à inclure les collections d’exclusion de pilote et de pilote.  
 
@@ -245,7 +245,7 @@ Configuration Manager crée une stratégie de paramètres pour configurer les ap
 
 Surveiller la configuration de vos appareils pour l’Analytique de bureau. Dans la console Configuration Manager, accédez à la **bibliothèque de logiciels** espace de travail, développez le **Microsoft 365 Servicing** nœud, puis sélectionnez le **intégrité de la connexion** tableau de bord.  
 
-Configuration Manager synchronise les plans de déploiement de bureau Analytique dans les 15 minutes de la création de la connexion. Dans la console Configuration Manager, accédez à la **bibliothèque de logiciels** espace de travail, développez le **Microsoft 365 Servicing** nœud, puis sélectionnez le **Plans de déploiement** nœud. 
+Configuration Manager synchronise les plans de déploiement de bureau Analytique dans les 15 minutes de la création de la connexion. Dans la console Configuration Manager, accédez à la **bibliothèque de logiciels** espace de travail, développez le **Microsoft 365 Servicing** nœud, puis sélectionnez le **Plans de déploiement** nœud.
 
 
 
@@ -275,7 +275,7 @@ Utilisez cette procédure pour créer un plan de déploiement dans l’Analytiqu
 
         - Faible installer seuil du nombre de vos compléments Office. Le seuil par défaut est `2%`. Compléments sous ce seuil sont automatiquement définis pour *faible nombre d’installations*. Analytique de bureau ne valide pas ces compléments pendant la phase pilote. 
 
-            Si un complément est installé sur un pourcentage plus élevé d’ordinateurs à ce seuil, le plan de déploiement marque le complément en tant que *Noteworthy*. Vous pouvez ensuite son importance pour tester pendant la phase pilote.   
+            Si un complément est installé sur un pourcentage plus élevé d’ordinateurs à ce seuil, le plan de déploiement marque le complément en tant que *Noteworthy*. Vous pouvez ensuite son importance pour tester pendant la phase pilote.  
 
     - **Date de fin**: Choisissez la date à laquelle Office doit être entièrement déployé à tous les appareils ciblés.  
 
@@ -287,7 +287,7 @@ Utilisez cette procédure pour créer un plan de déploiement dans l’Analytiqu
 
     1. Sur le **des compléments Office** onglet, sélectionnez cette option pour n’afficher que **pas été revues** actifs.  
 
-    2. Sélectionnez chaque complément, puis **modifier**. Vous pouvez sélectionner plusieurs applications à modifier en même temps.   
+    2. Sélectionnez chaque complément, puis **modifier**. Vous pouvez sélectionner plusieurs applications à modifier en même temps.  
 
     3. Choisissez un niveau d’importance dans le **Importance** liste. Si vous souhaitez Analytique de bureau pour valider le complément pendant la phase pilote, sélectionnez **critique** ou **Important**. Il ne valide pas les compléments marqués comme **pas Important**. Prendre en compte les risques de compatibilité et d’autres informations de plan lors de l’affectation de niveaux d’importance.  
 
@@ -337,7 +337,7 @@ Utilisez cette procédure pour déployer Office 365 ProPlus dans Configuration M
 
     5. Lorsque vous avez terminé, sélectionnez **révision** dans le coin supérieur droit. Passez en revue les paramètres configurés, puis sélectionnez **envoyer**.  
 
-5. Sélectionnez **Suivant**. Sur le **déploiement** page, sélectionnez **non** à déployer maintenant. (La procédure suivante utilise le plan de déploiement de bureau Analytique pour le déploiement.) Sélectionnez **suivant** et terminez l’Assistant.  
+4. Sélectionnez **Suivant**. Sur le **déploiement** page, sélectionnez **non** à déployer maintenant. (La procédure suivante utilise le plan de déploiement de bureau Analytique pour le déploiement.) Sélectionnez **suivant** et terminez l’Assistant.  
 
 
 ### <a name="bkmk_deploy-app"></a> Déployer Office 365 à l’aide du plan de déploiement de bureau Analytique
@@ -348,7 +348,12 @@ Utilisez cette procédure pour déployer Office 365 ProPlus dans Configuration M
 
 3. Dans le **piloter état** en mosaïque, choisissez **Application** dans la liste déroulante, puis sélectionnez **déployer**.  
 
-4. Sur le **général** page de l’Assistant Déploiement de logiciel, sélectionnez **Parcourir** à côté du **logiciel** champ. Sélectionnez votre application Office 365, par exemple, **Office 365 ProPlus**. Avec l’intégration Analytique de bureau, Configuration Manager crée automatiquement une collection pour le plan de déploiement pilote. Sélectionnez **Suivant**.  
+4. Sur le **général** page de l’Assistant Déploiement de logiciel, sélectionnez **Parcourir** à côté du **logiciel** champ. Sélectionnez votre application Office 365, par exemple, **Office 365 ProPlus**. Sélectionnez **Suivant**.  
+
+    > [!Note]  
+    > Avec l’intégration Analytique de bureau, Configuration Manager crée automatiquement une collection pour le plan de déploiement pilote. Il peut prendre jusqu'à 10 minutes pour cette collection à synchroniser que vous puissiez l’utiliser.<!-- 3887891 -->
+    >
+    > Cette collection est réservée aux appareils de plan de déploiement de bureau Analytique. Les modifications manuelles à cette collection ne sont pas pris en charge.<!-- 3866460, SCCMDocs-pr 3544 -->  
 
 5. Sur le **contenu** page, sélectionnez **ajouter**, puis sélectionnez **point de Distribution**. Sélectionnez un point de distribution disponible pour héberger le contenu de l’installation, puis sélectionnez **OK**. Puis sélectionnez **Suivant**.  
 
@@ -375,11 +380,8 @@ Utilisez cette procédure pour déployer Office 365 ProPlus dans Configuration M
 -->
 
 
-
-
 ## <a name="next-steps"></a>Étapes suivantes
 
 Passez à l’article suivant pour en savoir plus sur les plans de déploiement de bureau Analytique.
 > [!div class="nextstepaction"]  
 > [Plans de déploiement](/sccm/desktop-analytics/about-deployment-plans)
-

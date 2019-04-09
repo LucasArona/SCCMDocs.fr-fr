@@ -2,7 +2,7 @@
 title: Dépannage des postes de travail Analytique
 titleSuffix: Configuration Manager
 description: Détails techniques pour vous aider à résoudre les problèmes avec l’Analytique de bureau.
-ms.date: 01/25/2019
+ms.date: 04/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d857b0e9d280bfed0834a97760d4fd481f0398d7
-ms.sourcegitcommit: d138a6a9ccbb6a03dc378272cf6f81b98b940f1d
+ms.openlocfilehash: b7fab23b4d1d977d2d634a11959887f1c1baa9a7
+ms.sourcegitcommit: 5ee9487c891c37916294bd34a10d04e398f111f7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "59013405"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59069430"
 ---
 # <a name="troubleshooting-desktop-analytics"></a>Dépannage des postes de travail Analytique
 
@@ -45,9 +45,11 @@ Nombreux problèmes courants sont causés par les composants requis manquants. V
 
 ## <a name="monitor-connection-health"></a>Surveiller l’intégrité de la connexion
 
-Utilisez le **intégrité de la connexion** tableau de bord dans le Gestionnaire de Configuration pour explorer des catégories par intégrité de l’appareil. Dans la console Configuration Manager, accédez à la **bibliothèque de logiciels** espace de travail, développez le **Microsoft 365 Servicing** nœud, puis sélectionnez le **intégrité de la connexion** tableau de bord.  
+Utilisez le **intégrité de la connexion** tableau de bord dans le Gestionnaire de Configuration pour explorer des catégories par intégrité de l’appareil. Dans la console Configuration Manager, accédez à la **bibliothèque de logiciels** espace de travail, développez le **Desktop Analytique maintenance** nœud, puis sélectionnez le **intégrité de la connexion** tableau de bord.  
 
 ![Capture d’écran du tableau de bord d’intégrité de connexion de Configuration Manager](media/connection-health-dashboard.png)
+
+Lorsque vous configurez tout d’abord Analytique de bureau, ces graphiques peuvent affichent pas de données complètes. Il peut prendre 2 à 3 jours pour les périphériques actifs envoyer des données de diagnostic à l’Analytique de bureau, le service pour traiter les données et ensuite synchroniser avec votre site Configuration Manager.<!-- 4098037 -->
 
 Si vous pensez que certains appareils ne sont pas affichées dans l’Analytique de bureau, vérifiez tout d’abord le pourcentage de **appareils connectés**. Si elle est inférieure à 100 %, assurez-vous que les appareils sont pris en charge par l’Analytique de bureau. Pour plus d’informations, consultez [Prérequis](/sccm/desktop-analytics/overview#prerequisites).
 
@@ -63,35 +65,42 @@ Examinez ensuite le **intégrité de la connexion** graphique. Il affiche le nom
 - [Composants requis manquants](#missing-prerequisites)  
 - [Données manquantes](#missing-data)  
 
-Sélectionnez le nom de catégorie à supprimer, ou ajoutez-le à partir du graphique. Cette action permet d’effectuer un zoom avant du graphique afin que vous puissiez voir les tailles relatives des segments plus petits. 
+Sélectionnez le nom de catégorie à supprimer, ou ajoutez-le à partir du graphique. Cette action permet d’effectuer un zoom avant du graphique afin que vous puissiez voir les tailles relatives des segments plus petits.
 
 #### <a name="properly-enrolled"></a>Inscrit correctement
-L’appareil a les attributs suivants :  
+
+L’appareil a les attributs suivants :
+
 - Un gestionnaire de Configuration client 1810 ou version ultérieure  
 - Aucune erreur de configuration  
 - Postes de travail Analytique reçu des données de diagnostics complètes à partir de cet appareil au cours des 28 derniers jours  
 - Analytique de postes de travail a un inventaire complet de configuration de l’appareil et les applications installées  
 
 #### <a name="configuration-issues"></a>Problèmes de configuration
+
 Configuration Manager détecte un ou plusieurs problèmes avec la configuration requise pour l’Analytique de bureau. Pour plus d’informations, consultez la liste des [propriétés dans le Gestionnaire de Configuration de l’appareil de bureau Analytique](#bkmk_config-issues).  
 
 #### <a name="client-not-installed"></a>Client non installé
-L’appareil est ciblé pour l’Analytique de bureau, mais n’est pas un client Configuration Manager. 
+
+L’appareil est ciblé pour l’Analytique de bureau, mais n’est pas un client Configuration Manager.
 
 Le client Configuration Manager est requis pour configurer et gérer l’appareil pour l’Analytique de bureau. Pour plus d’informations, consultez [Méthodes d’installation du client](/sccm/core/clients/deploy/plan/client-installation-methods).  
 
 #### <a name="waiting-for-enrollment"></a>En attente pour l’inscription
-Analytique de postes de travail n’a pas les données de diagnostic pour cet appareil. Ce problème peut être parce que l’appareil a été récemment ajoutée à la collection cible et n’a pas encore envoyé de données. Cela peut également signifier l’appareil ne communique pas correctement avec le service et les dernières données de diagnostics sont plus de 28 jours. 
+
+Analytique de postes de travail n’a pas les données de diagnostic pour cet appareil. Ce problème peut être parce que l’appareil a été récemment ajoutée à la collection cible et n’a pas encore envoyé de données. Cela peut également signifier l’appareil ne communique pas correctement avec le service et les dernières données de diagnostics sont plus de 28 jours.
 
 Assurez-vous que l’appareil est en mesure de communiquer avec le service. Pour plus d’informations, consultez [points de terminaison](/sccm/desktop-analytics/enable-data-sharing#endpoints).  
 
 #### <a name="missing-prerequisites"></a>Composants requis manquants
-Le client Configuration Manager n’est pas au moins la version 1810 (5.0.8740). 
+
+Le client Configuration Manager n’est pas au moins la version 1810 (5.0.8740).
 
 Mettre à jour le client vers la dernière version. Envisagez d’activer la mise à niveau automatique du client pour le site Configuration Manager. Pour plus d’informations, consultez [Mettre à niveau les clients](/sccm/core/clients/manage/upgrade/upgrade-clients#automatic-client-upgrade).  
 
 #### <a name="missing-data"></a>Données manquantes
-Analytique de bureau ne peut pas créer une évaluation de la compatibilité. Il n’a pas un jeu de données complet pour la configuration de l’appareil (recensement) ou installé des applications (inventaire). 
+
+Analytique de bureau ne peut pas créer une évaluation de la compatibilité. Il n’a pas un jeu de données complet pour la configuration de l’appareil (recensement) ou installé des applications (inventaire).
 
 Ce problème est souvent résolu automatiquement lorsque l’appareil doit renvoyer. Si elle persiste, assurez-vous que l’appareil est en mesure de communiquer avec le service. Pour plus d’informations, consultez [points de terminaison](/sccm/desktop-analytics/enable-data-sharing#endpoints).  
 
@@ -99,6 +108,7 @@ Ce problème est souvent résolu automatiquement lorsque l’appareil doit renvo
 ### <a name="device-list"></a>Liste des appareils
 
 Pour afficher une liste spécifique d’appareils par état, commencez par le **intégrité de la connexion** tableau de bord. Sélectionnez un des segments de la **intégrité de la connexion** vignette et afficher la liste des appareils de cette catégorie. Cet affichage de périphérique personnalisés affiche les colonnes de bureau Analytique suivantes par défaut :
+
 - Configuration de l’ID commerciale
 - Mise à jour de la compatibilité minimale
 - Windows les données de diagnostic participer
@@ -106,16 +116,17 @@ Pour afficher une liste spécifique d’appareils par état, commencez par le **
 - Connectivité de point de terminaison de diagnostic de Windows
 - Connectivité de point de terminaison diagnostic Office
 
-Ces colonnes correspondent à la clé [conditions préalables](/sccm/desktop-analytics/overview#prerequisites) pour les appareils communiquer avec l’Analytique de bureau. 
+Ces colonnes correspondent à la clé [conditions préalables](/sccm/desktop-analytics/overview#prerequisites) pour les appareils communiquer avec l’Analytique de bureau.
 
 ![Liste des périphériques de capture d’écran de correctement inscrits](media/sccm-device-list-properly-enrolled.png)
 
-Sélectionnez un appareil pour afficher la liste complète des propriétés disponibles dans le volet détails. Vous pouvez également ajouter une de ces propriétés en tant que colonnes à la liste des appareils. 
+Sélectionnez un appareil pour afficher la liste complète des propriétés disponibles dans le volet détails. Vous pouvez également ajouter une de ces propriétés en tant que colonnes à la liste des appareils.
 
 
 ### <a name="bkmk_config-issues"></a> Propriétés de l’appareil Analytique bureau dans Configuration Manager
 
 Les colonnes suivantes sont disponibles dans la liste des appareils :
+
 - [Configuration de appraiser](#appraiser-configuration)  
 - [Mise à jour de la compatibilité minimale](#minimum-compatibility-update)  
 - [Version de appraiser](#appraiser-version)  
@@ -135,12 +146,14 @@ Les colonnes suivantes sont disponibles dans la liste des appareils :
 - [Récupération d’identificateur unique de l’appareil](#unique-device-identifier-retrieval)  
 - [Windows les données de diagnostic participer](#windows-diagnostic-data-opt-in)  
 - [Connectivité de point de terminaison diagnostic Office](#office-diagnostic-endpoint-connectivity)  
+- [Office données de diagnostic participer](#office-diagnostic-data-opt-in)
 
 #### <a name="appraiser-configuration"></a>Configuration de appraiser
+
 <!--20,21-->
 Appraiser est le composant de Windows qui correspond à la [mises à jour de compatibilité](/sccm/desktop-analytics/enroll-devices#update-devices). Il évalue les applications et les pilotes sur l’appareil pour la compatibilité avec la dernière version de Windows. 
 
-Si cette vérification est réussie, le composant appraiser est correctement configuré sur l’appareil. 
+Si cette vérification est réussie, le composant appraiser est correctement configuré sur l’appareil.
 
 Sinon, il peut afficher les erreurs suivantes :
 
@@ -154,36 +167,36 @@ Vérifiez les autorisations sur cette clé de Registre. Assurez-vous que le comp
 
 Pour plus d’informations, consultez M365AHandler.log sur le client.  
 
-
 #### <a name="minimum-compatibility-update"></a>Mise à jour de la compatibilité minimale
+
 <!--18,19,32-->
-La mise à jour de compatibilité (appraiser.dll) n’est pas installé ou obsolètes sur l’appareil. Elle est antérieure à la configuration minimale requise pour l’Analytique de bureau, 10.0.17763. 
+La mise à jour de compatibilité (appraiser.dll) n’est pas installé ou obsolètes sur l’appareil. Elle est antérieure à la configuration minimale requise pour l’Analytique de bureau, 10.0.17763.
 
 Installez la dernière mise à jour de compatibilité. Pour plus d’informations, consultez [mises à jour de compatibilité](/sccm/desktop-analytics/enroll-devices#bkmk_appraiser).
 
-
 #### <a name="appraiser-version"></a>Version de appraiser
-Cette propriété affiche la version actuelle du composant Appraiser sur l’appareil. Il affiche la version du fichier sur `%windir%\System32\appraiser.dll`, sans la décimale. Par exemple, la version du fichier 10.0.17763 affiche sous la forme de 10017763. 
 
+Cette propriété affiche la version actuelle du composant Appraiser sur l’appareil. Il affiche la version du fichier sur `%windir%\System32\appraiser.dll`, sans la décimale. Par exemple, la version du fichier 10.0.17763 affiche sous la forme de 10017763.
 
 #### <a name="last-successful-full-run-of-appraiser"></a>Dernière exécution complète de Appraiser
+
 Cette propriété affiche la date et l’heure auxquelles l’appareil dernière exécuté avec succès Appraiser.
 
-
 #### <a name="appraiser-data-collection"></a>Collecte des données appraiser
+
 <!--Appraiser run status-->
 <!--22,33-->
-Cette propriété indique le dernier résultat à partir de Windows qui exécute le composant appraiser. 
+Cette propriété indique le dernier résultat à partir de Windows qui exécute le composant appraiser.
 
-Si ce n’est pas le cas, réussite, il peut afficher les erreurs suivantes : 
+Si ce n’est pas le cas, réussite, il peut afficher les erreurs suivantes :
 
 - Impossible de collecter les données de compatibilité d’application (RunAppraiser). Vérifiez les journaux pour plus d’informations  
 
 - Collecte de données de compatibilité des applications (CompatTelRunner.exe) s’est terminée avec un code d’erreur  
 
-Pour plus d’informations, consultez M365AHandler.log sur le client. 
+Pour plus d’informations, consultez M365AHandler.log sur le client.
 
-Recherchez le fichier suivant : `%windir%\System32\CompatTelRunner.exe`. S’il n’existe pas, réinstallez requis [mises à jour de compatibilité](/sccm/desktop-analytics/enroll-devices#bkmk_appraiser). Assurez-vous que la suppression d’aucun autre composant du système de ce fichier, tels que la stratégie de groupe ou un service logiciel anti-programme malveillant. 
+Recherchez le fichier suivant : `%windir%\System32\CompatTelRunner.exe`. S’il n’existe pas, réinstallez requis [mises à jour de compatibilité](/sccm/desktop-analytics/enroll-devices#bkmk_appraiser). Assurez-vous que la suppression d’aucun autre composant du système de ce fichier, tels que la stratégie de groupe ou un service logiciel anti-programme malveillant.
 
 Si le fichier M365Handler.log sur le client inclut l’une des erreurs suivantes : `RunAppraiser failed. CompatTelRunner.exe exited with last error code: 0x800703F1`
 `RunAppraiser failed. CompatTelRunner.exe exited with last error code: 0x80070005`
@@ -202,7 +215,7 @@ Remove-Item -Path $Env:WinDir\appcompat\programs\amcache.hve
 Remove-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags" -Name AmiHivePermissionsCorrect -Force
 
 # set ASL logging level to output log files in %windir%\temp
-New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags" -Name LogFlags -Value 4 -PropertyType DWord -Force 
+New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags" -Name LogFlags -Value 4 -PropertyType DWord -Force
 
 # restart services
 Start-Service -Name diagtrack
@@ -211,29 +224,31 @@ Start-Service -Name dps
 ```
 
 #### <a name="last-successful-full-run-of-census"></a>Dernière exécution complète de recensement
-Cette propriété affiche la date et l’heure auxquelles l’appareil dernière exécution réussie de recensement. 
+
+Cette propriété affiche la date et l’heure auxquelles l’appareil dernière exécution réussie de recensement.
 
 #### <a name="census-data-collection"></a>Collecte de données de recensement
+
 <!-- Census run status -->
 <!--51,52-->
-Recensement est le composant de Windows qui inventorie le périphérique. Ces données d’inventaire sont utilisées pour comprendre l’appareil et sa configuration. 
+Recensement est le composant de Windows qui inventorie le périphérique. Ces données d’inventaire sont utilisées pour comprendre l’appareil et sa configuration.
 
 Cette propriété indique le dernier résultat à partir de Windows qui exécute le composant de recensement.
 
-Si ce n’est pas le cas, réussite, il peut afficher les erreurs suivantes : 
+Si ce n’est pas le cas, réussite, il peut afficher les erreurs suivantes :
 
 - Impossible de collecter les données sur l’appareil et sa configuration (RunCensus). Consultez les journaux pour les détails d’exception  
 
 - APPAREIL data collection outil de configuration et (devicecensus.exe) introuvable  
 
-Pour plus d’informations, consultez M365AHandler.log sur le client. 
+Pour plus d’informations, consultez M365AHandler.log sur le client.
 
-Recherchez le fichier suivant : `%windir%\System32\DeviceCensus.exe`. S’il n’existe pas, réinstallez requis [mises à jour de compatibilité](/sccm/desktop-analytics/enroll-devices#bkmk_appraiser). Assurez-vous que la suppression d’aucun autre composant du système de ce fichier, tels que la stratégie de groupe ou un service logiciel anti-programme malveillant. 
-
+Recherchez le fichier suivant : `%windir%\System32\DeviceCensus.exe`. S’il n’existe pas, réinstallez requis [mises à jour de compatibilité](/sccm/desktop-analytics/enroll-devices#bkmk_appraiser). Assurez-vous que la suppression d’aucun autre composant du système de ce fichier, tels que la stratégie de groupe ou un service logiciel anti-programme malveillant.
 
 #### <a name="windows-diagnostic-endpoint-connectivity"></a>Connectivité de point de terminaison de diagnostic de Windows
+
 <!--12,15-->
-Si cette vérification est réussie, l’appareil est en mesure de se connecter à l’utilisateur connecté expérience et les données de télémétrie point de terminaison (tourbillon). 
+Si cette vérification est réussie, l’appareil est en mesure de se connecter à l’utilisateur connecté expérience et les données de télémétrie point de terminaison (tourbillon).
 
 Sinon, il peut afficher les erreurs suivantes :  
 
@@ -254,23 +269,21 @@ Assurez-vous que l’appareil est en mesure de communiquer avec le service. Cett
 
 Pour plus d’informations, consultez M365AHandler.log sur le client.  
 
-
 #### <a name="check-end-user-diagnostic-data"></a>Vérifier les données de diagnostic de l’utilisateur final
-<!--1004-->
 
+<!--1004-->
 Si cette vérification n’est pas réussie, un utilisateur a sélectionné une inférieur données de diagnostic de Windows sur l’appareil.
 
 En fonction des besoins de votre entreprise, vous pouvez désactiver les choix de l’utilisateur via la stratégie de groupe. Utilisez le paramètre pour **configurer l’interface utilisateur participer paramètre télémétrie**. Pour plus d’informations, consultez [Configurer les données de diagnostic Windows dans votre organisation](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management).
 
-
 #### <a name="check-user-proxy"></a>Vérifier le proxy de l’utilisateur
-<!--30,35-->
 
+<!--30,35-->
 Le paramètre DisableEnterpriseAuthProxy est activé par défaut pour Windows 7. Pour les ordinateurs Windows 8.1, Configuration Manager définit le paramètre DisableEnterpriseAuthProxy sur 0 (ne pas désactivé).
 
 Cette propriété peut afficher les erreurs suivantes :
 
-- Authentification proxy est activé. La valeur 0 dans DisableEnterpriseAuthProxy `HKLM\Software\Policies\Microsoft\Windows\DataCollection` 
+- Authentification proxy est activé. La valeur 0 dans DisableEnterpriseAuthProxy `HKLM\Software\Policies\Microsoft\Windows\DataCollection`
 
 - Impossible de vérifier l’état du proxy d’authentification. Consultez les journaux pour les détails d’exception
 
@@ -278,10 +291,10 @@ Pour plus d’informations, consultez M365AHandler.log sur le client.
 
 Vérifiez les autorisations sur cette clé de Registre. Assurez-vous que le compte système local peut accéder à cette clé pour le client Configuration Manager à définir.  
 
-
 #### <a name="commercial-id-configuration"></a>Configuration de l’ID commerciale
+
 <!--9, 11, 53-->
-Microsoft utilise un ID commercial unique pour mapper les informations à partir d’appareils à votre espace de travail Analytique de bureau. Lorsque vous intégrez Configuration Manager avec l’Analytique de bureau, il interroge automatiquement le service pour ce code. Configuration Manager doit appliquer automatiquement cet ID pour les clients sur lesquels vous ciblez des paramètres de bureau Analytique. 
+Microsoft utilise un ID commercial unique pour mapper les informations à partir d’appareils à votre espace de travail Analytique de bureau. Lorsque vous intégrez Configuration Manager avec l’Analytique de bureau, il interroge automatiquement le service pour ce code. Configuration Manager doit appliquer automatiquement cet ID pour les clients sur lesquels vous ciblez des paramètres de bureau Analytique.
 
 Si cette vérification est réussie, puis l’appareil est correctement configuré avec un ID commercial.
 
@@ -289,7 +302,7 @@ Sinon, il peut afficher les erreurs suivantes :
 
 - Impossible d’écrire le CommercialId à la clé de Registre `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection`. Vérifiez les autorisations  
 
-- Impossible de mettre à jour le CommercialId dans la clé de Registre `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection`. Consultez les journaux pour les détails d’exception   
+- Impossible de mettre à jour le CommercialId dans la clé de Registre `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection`. Consultez les journaux pour les détails d’exception  
 
 - Indiquez la valeur correcte de CommercialId à `HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`  
 
@@ -299,8 +312,7 @@ Vérifiez les autorisations sur cette clé de Registre. Assurez-vous que le comp
 
 Il existe un ID différent pour l’appareil. Cette clé de Registre est utilisée par la stratégie de groupe. Il est prioritaire sur l’ID fourni par le Gestionnaire de Configuration.  
 
-
-Pour afficher l’ID commercial dans le portail d’Analytique de bureau, utilisez la procédure suivante : 
+Pour afficher l’ID commercial dans le portail d’Analytique de bureau, utilisez la procédure suivante :
 
 1. Accédez au portail d’Analytique de bureau, puis sélectionnez **services connectés** dans le groupe de paramètres globaux.  
 
@@ -311,16 +323,14 @@ Pour afficher l’ID commercial dans le portail d’Analytique de bureau, utilis
 > [!Important]  
 > Uniquement **Get nouvelle clé d’ID** lorsque vous ne pouvez pas utiliser l’objet actuel. Si vous régénérez l’ID commercial, déployez le nouvel ID sur vos appareils. Ce processus peut provoquer une perte de données de diagnostic pendant la transition.  
 
-
 #### <a name="windows-commercial-data-opt-in"></a>Windows données commerciales participer
-<!--64-->
 
+<!--64-->
 Cette propriété est spécifique aux appareils exécutant Windows 7 ou Windows 8.1. Il s’exécute des tests similaires en tant que [Windows données de diagnostic participer](#windows-diagnostic-data-opt-in), sauf pour l’et les valeurs.
 
-
 #### <a name="check-device-name-in-diagnostic-data"></a>Vérifiez le nom de l’appareil dans les données de diagnostic
-<!--56,58-->
 
+<!--56,58-->
 Si cette vérification est réussie, l’appareil est correctement configuré pour partager le nom du périphérique.
 
 Sinon, il peut afficher les erreurs suivantes :
@@ -333,12 +343,12 @@ Pour plus d’informations, consultez M365AHandler.log sur le client.
 
 Vérifiez les autorisations sur cette clé de Registre. Assurez-vous que le compte système local peut accéder à cette clé pour le client Configuration Manager à définir.  
 
-Assurez-vous qu’un autre mécanisme de stratégie, tels que la stratégie de groupe, n’est pas la désactivation de ce paramètre. 
-
+Assurez-vous qu’un autre mécanisme de stratégie, tels que la stratégie de groupe, n’est pas la désactivation de ce paramètre.
 
 #### <a name="diagtrack-service-configuration"></a>Configuration du service DiagTrack
+
 <!--44,45,50-->
-Si cette vérification est réussie, le composant DiagTrack est correctement configuré sur l’appareil. La version minimale requise par bureau Analytique est 10010586 (10.0.10586). 
+Si cette vérification est réussie, le composant DiagTrack est correctement configuré sur l’appareil. La version minimale requise par bureau Analytique est 10010586 (10.0.10586).
 
 Sinon, il peut afficher les erreurs suivantes :
 
@@ -359,12 +369,13 @@ Installez les dernières mises à jour. Pour plus d’informations, consultez [m
 Assurez-vous que le **expériences des utilisateurs connectés et télémétrie** service sur l’appareil est en cours d’exécution.
 
 #### <a name="diagtrack-version"></a>Version de DiagTrack
-Cette propriété affiche la version actuelle du composant expériences des utilisateurs connectés et télémétrie sur l’appareil. Il affiche la version du fichier sur `%windir%\System32\diagtrack.dll`, sans la décimale. Par exemple, la version du fichier 10.0.10586 affiche sous la forme de 10010586. 
+
+Cette propriété affiche la version actuelle du composant expériences des utilisateurs connectés et télémétrie sur l’appareil. Il affiche la version du fichier sur `%windir%\System32\diagtrack.dll`, sans la décimale. Par exemple, la version du fichier 10.0.10586 affiche sous la forme de 10010586.
 
 #### <a name="sqm-id-retrieval"></a>Récupération de l’ID SQM
-<!--38-->
 
-Cette propriété est principalement destinée aux appareils de Windows 7. Il peut servir par les dernières versions de système d’exploitation comme un identificateur de secours pour l’appareil. 
+<!--38-->
+Cette propriété est principalement destinée aux appareils de Windows 7. Il peut servir par les dernières versions de système d’exploitation comme un identificateur de secours pour l’appareil.
 
 Si ce n’est pas le cas, réussite, il peut afficher l’erreur suivante :
 
@@ -372,19 +383,19 @@ Si ce n’est pas le cas, réussite, il peut afficher l’erreur suivante :
 
 Pour plus d’informations, consultez M365AHandler.log sur le client.  
 
-Assurez-vous que vous n’avez pas des ID dupliqués dans votre environnement. Par exemple, si les appareils ont été déployées avec une image de système d’exploitation qui n’a pas été généralisée. 
-
+Assurez-vous que vous n’avez pas des ID dupliqués dans votre environnement. Par exemple, si les appareils ont été déployées avec une image de système d’exploitation qui n’a pas été généralisée.
 
 #### <a name="unique-device-identifier-retrieval"></a>Récupération d’identificateur unique de l’appareil
+
 <!--54-->
-Analytique de postes de travail utilise le service de Account Microsoft pour une identité d’appareil plus fiable. 
+Analytique de postes de travail utilise le service de Account Microsoft pour une identité d’appareil plus fiable.
 
 Assurez-vous que le **Microsoft compte Assistant de connexion** service n’est pas désactivé. Le type de démarrage doit être **manuel (début du déclencheur)**.
 
 Pour désactiver l’accès de compte Microsoft de l’utilisateur final, utilisez les paramètres de stratégie au lieu de bloquer ce point de terminaison. Pour plus d’informations, consultez [compte Microsoft dans l’entreprise](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication).
 
-
 #### <a name="windows-diagnostic-data-opt-in"></a>Windows les données de diagnostic participer
+
 <!--8,40,55,62-->
 Cette propriété vérifie que Windows est correctement configuré pour autoriser les données de diagnostic. Il vérifie la valeur de AllowTelemetry dans les clés de Registre suivantes :
 
@@ -395,11 +406,11 @@ Vérifiez les autorisations sur ces clés de Registre. Assurez-vous que le compt
 
 Pour plus d’informations, consultez M365AHandler.log sur le client.  
 
-
 #### <a name="office-diagnostic-endpoint-connectivity"></a>Connectivité de point de terminaison diagnostic Office
+
 <!-- 1001,1002,1003 -->
 
-Si cette vérification est réussie, l’appareil est en mesure de se connecter aux points de terminaison de Diagnostics Office. 
+Si cette vérification est réussie, l’appareil est en mesure de se connecter aux points de terminaison de Diagnostics Office.
 
 Sinon, il peut afficher les erreurs suivantes :
 
@@ -411,11 +422,20 @@ Sinon, il peut afficher les erreurs suivantes :
 
 Assurez-vous que l’appareil est en mesure de communiquer avec le service. Pour plus d’informations, consultez [points de terminaison](/sccm/desktop-analytics/enable-data-sharing#endpoints).  
 
+#### <a name="office-diagnostic-data-opt-in"></a>Office données de diagnostic participer
+
+<!-- SCCMDocs-pr 3570 -->
+À compter de Configuration Manager version 1902, le comportement est modifié pour l’envoi de service d’Office et les données de diagnostic à Microsoft. Cette propriété vérifie que les paramètres de stratégie d’Office sont correctement configurés. Ces paramètres contrôlent les données minimales requises pour aider à maintenir le bureau sécurisé et à jour, et fonctionnent comme prévu sur l’appareil est installé.
+
+Pour plus d’informations, consultez [contrôle de la vue d’ensemble de la confidentialité d’Office 365 ProPlus](https://docs.microsoft.com/DeployOffice/privacy/overview-privacy-controls). Cet article explique comment la confidentialité contrôle pour les données de diagnostic qui a collectées et envoyées à Microsoft sur les logiciels du client Office utilisé sur Windows des ordinateurs de votre organisation.
+
+Cette vérification échoue pour les clients Configuration Manager version 1810. Mettre à jour le client vers la dernière version. Envisagez d’activer la mise à niveau automatique du client pour le site Configuration Manager. Pour plus d’informations, consultez [Mettre à niveau les clients](/sccm/core/clients/manage/upgrade/upgrade-clients#automatic-client-upgrade).
+
 
 
 ## <a name="log-files"></a>Fichiers journaux
 
-Utilisez les fichiers journaux suivants pour vous aider à résoudre les problèmes d’Analytique de bureau intégré à Configuration Manager. 
+Utilisez les fichiers journaux suivants pour vous aider à résoudre les problèmes d’Analytique de bureau intégré à Configuration Manager.
 
 
 ### <a name="service-connection-point"></a>point de connexion de service
@@ -439,7 +459,7 @@ Les fichiers journaux suivants sont sur le client Configuration Manager dans le 
 | **M365AHandler.log** | Informations sur la stratégie de paramètres de bureau Analytique |
 
 
-### <a name="enable-verbose-logging"></a>Activer la journalisation documentée 
+### <a name="enable-verbose-logging"></a>Activer la journalisation documentée
 
 1. Sur le point de connexion, accédez à la clé de Registre suivante : `HKLM\Software\Microsoft\SMS\Tracing\SMS_SERVICE_CONNECTOR`  
 2. Définir le **LogLevel** valeur `0`  
@@ -455,24 +475,4 @@ Les fichiers journaux suivants sont sur le client Configuration Manager dans le 
 
 ## <a name="bkmk_MALogAnalyticsReader"></a> Rôle d’application MALogAnalyticsReader
 
-Lorsque vous configurez l’Analytique de bureau, vous acceptez un consentement au nom de votre organisation. Ce consentement consiste à affecter l’application MALogAnalyticsReader le rôle de lecture du journal Analytique à l’espace de travail. Ce rôle d’application est requise par l’Analytique de bureau. 
-
-S’il existe un problème avec ce processus au cours de configuration, utilisez le processus suivant pour ajouter manuellement cette autorisation :
-
-1. Accédez à la [Azure portal](http://portal.azure.com), puis sélectionnez **toutes les ressources**. Sélectionnez l’espace de travail de type **Analytique de journal**.  
-
-2. Dans le menu de l’espace de travail, sélectionnez **contrôle d’accès (IAM)**, puis sélectionnez **ajouter**.  
-
-3. Dans le **ajouter des autorisations** panel, configurez les paramètres suivants :  
-
-    - **Rôle**: **Lecture du journal Analytique**  
-
-    - **Attribuer l’accès à**: **Azure AD utilisateur, groupe ou application**  
-
-    - **Sélectionnez**: **MALogAnalyticsReader**  
-  
-4. Sélectionnez **Enregistrer**. 
-
-Le portail affiche une notification qu’il ajoute l’attribution de rôle.
-
-
+Lorsque vous configurez l’Analytique de bureau, vous acceptez un consentement au nom de votre organisation. Ce consentement consiste à attribuer le 

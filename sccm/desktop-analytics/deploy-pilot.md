@@ -2,7 +2,7 @@
 title: Le déploiement pilote
 titleSuffix: Configuration Manager
 description: Guide pratique pour le déploiement sur un groupe pilote Analytique de bureau.
-ms.date: 01/25/2019
+ms.date: 04/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 797b8ab61f5be2fd851e735c475ed610ed7d3cfe
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 4aa078f5a8306cb30ea83d45b93b18971be7764f
+ms.sourcegitcommit: 5ee9487c891c37916294bd34a10d04e398f111f7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56754835"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59069379"
 ---
 # <a name="how-to-deploy-to-pilot-with-desktop-analytics"></a>Le déploiement pilote avec Analytique de bureau
 
@@ -32,7 +32,7 @@ Un des avantages du Desktop Analytique est pour aider à identifier le plus peti
 
 ## <a name="address-issues"></a>Résoudre les problèmes
 
-Utilisez le portail d’Analytique de bureau pour passer en revue les problèmes signalés avec les ressources susceptibles de bloquer votre déploiement. Puis l’approuver, rejeter ou modifier la correction suggérée. Tous les éléments doivent être marqués **prêt** ou **prêt (avec mise à jour)** avant le déploiement pilote. 
+Utilisez le portail d’Analytique de bureau pour passer en revue les problèmes signalés avec les ressources susceptibles de bloquer votre déploiement. Puis l’approuver, rejeter ou modifier la correction suggérée. Tous les éléments doivent être marqués **prêt** ou **prêt (avec mise à jour)** avant le déploiement pilote.
 
 1. Accédez au portail d’Analytique de bureau, puis sélectionnez **plans de déploiement** dans le groupe de gestion.  
 
@@ -42,10 +42,9 @@ Utilisez le portail d’Analytique de bureau pour passer en revue les problèmes
 
 4. Sur le **applications** onglet, passez en revue les applications nécessitant votre entrée.  
 
-5. Pour chaque application, sélectionnez le nom de l’application. Dans le volet d’informations, passez en revue la recommandation, puis sélectionnez la décision de mise à niveau. Si vous choisissez **ne pas été revues** ou **impossible**, puis Bureau Analytique n’inclut pas les appareils avec cette application dans le déploiement pilote.  
+5. Pour chaque application, sélectionnez le nom de l’application. Dans le volet d’informations, passez en revue la recommandation, puis sélectionnez la décision de mise à niveau. Si vous choisissez **ne pas été revues** ou **impossible**, puis Bureau Analytique n’inclut pas les appareils avec cette application dans le déploiement pilote. Si vous choisissez **prêt (avec mise à jour)**, utilisez le **notes de mise à jour** pour capturer les actions à suivre pour résoudre un problème, comme *réinstaller* ou *trouver le version recommandée du fabricant*.
 
 6. Répétez cette revue pour d’autres ressources.  
-
 
 
 
@@ -73,15 +72,18 @@ Configuration Manager utilise les données d’Analytique de bureau pour créer 
 
     - **Séquence de tâches** pour Windows 10  
   
-   Sélectionnez **déployer**. Cette action lance l’Assistant Déploiement de logiciel pour le type d’objet sélectionné. 
+   Sélectionnez **déployer**. Cette action lance l’Assistant Déploiement de logiciel pour le type d’objet sélectionné.
 
+    > [!Note]  
+    > Avec l’intégration Analytique de bureau, Configuration Manager crée automatiquement une collection pour le plan de déploiement pilote. Il peut prendre jusqu'à 10 minutes pour cette collection à synchroniser que vous puissiez l’utiliser.<!-- 3887891 -->
+    >
+    > Cette collection est réservée aux appareils de plan de déploiement de bureau Analytique. Les modifications manuelles à cette collection ne sont pas pris en charge.<!-- 3866460, SCCMDocs-pr 3544 -->  
 
 Pour plus d’informations, consultez les articles suivants :  
 
 - [Déployer une application](/sccm/apps/deploy-use/deploy-applications#bkmk_deploy)  
 
 - [Déployer une séquence de tâches](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS)  
-
 
 Si votre plan de déploiement est pour Windows 10 et Office 365, répétez ce processus pour créer un deuxième déploiement. Par exemple, si le premier déploiement concerne la séquence de tâches, créez un deuxième déploiement pour l’application.
 
@@ -100,7 +102,7 @@ Déploiement d’utiliser le Gestionnaire de Configuration analyse le même dép
 
 ### <a name="desktop-analytics-portal"></a>Portail d’Analytique bureau
 
-Utilisez le portail d’Analytique de bureau pour afficher l’état d’un plan de déploiement. Sélectionnez le plan de déploiement, puis **vue d’ensemble du Plan**. 
+Utilisez le portail d’Analytique de bureau pour afficher l’état d’un plan de déploiement. Sélectionnez le plan de déploiement, puis **vue d’ensemble du Plan**.
 
 ![Capture d’écran de vue d’ensemble du plan de déploiement dans l’Analytique de bureau](media/deployment-plan-overview.png)
 
@@ -126,7 +128,7 @@ Que vous résolvez ces problèmes de déploiement, le tableau de bord continue �
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Permettent l’exécution du pilote pour une période de temps pour collecter des données opérationnelles. Encouragez les utilisateurs d’appareils de pilotes pour tester des applications, des compléments et macros. 
+Permettent l’exécution du pilote pour une période de temps pour collecter des données opérationnelles. Encouragez les utilisateurs d’appareils de pilotes pour tester des applications, des compléments et macros.
 
 Lorsque votre déploiement pilote répond à vos critères de réussite, accédez à l’article suivant pour déployer en production.
 > [!div class="nextstepaction"]  
