@@ -11,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e937bf4adf3b695bf33d41318e5d48bc560ad06b
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 94a55e0678942623e6afe9752f435ceb8eb71270
+ms.sourcegitcommit: d584c126a0a5725567631b74ac1e01f63242a997
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56128100"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58861052"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Configurer la passerelle de gestion cloud pour Configuration Manager
 
@@ -43,7 +43,7 @@ Utilisez la liste de vérification suivante pour vous assurer que vous disposez 
 
     - Intégration à [Azure AD](/sccm/core/servers/deploy/configure/azure-services-wizard) pour la **gestion cloud**. La découverte des utilisateurs Azure AD n’est pas nécessaire.  
     
-    - Le fournisseur de ressources **Microsoft.ClassicCompute** doit être enregistré dans l’abonnement Azure. Pour plus d’informations, consultez [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-supported-services).
+    - Les fournisseurs de ressources **Microsoft.ClassicCompute** & **Microsoft.Storage** doivent être inscrit dans l’abonnement Azure. Pour plus d’informations, consultez [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-supported-services).
 
     - Un administrateur de l’abonnement doit se connecter.  
 
@@ -104,7 +104,7 @@ Effectuez cette procédure sur le site de plus haut niveau. Ce site est soit un 
 10. Sélectionnez **Certificats** pour ajouter des certificats racines approuvés de client. Ajoutez jusqu’à deux autorités de certification racines de confiance et quatre autorités de certification (subordonnées) intermédiaires.  
 
      > [!Note]  
-     > À compter de la version 1806, quand vous créez une passerelle de gestion cloud, vous n’êtes plus obligé de fournir un certificat racine approuvé dans la page Paramètres. Ce certificat n’est pas nécessaire lorsque vous utilisez Azure Active Directory (Azure AD) pour l’authentification client, mais il était auparavant nécessaire dans l’Assistant. Si vous utilisez des certificats d’authentification client PKI, vous devez néanmoins encore ajouter un certificat racine approuvé pour la passerelle de gestion cloud.<!--SCCMDocs-pr issue #2872-->  
+     > À compter de la version 1806, quand vous créez une passerelle de gestion cloud, vous n’êtes plus obligé de fournir un certificat racine approuvé dans la page Paramètres. Ce certificat n’est pas nécessaire lorsque vous utilisez Azure Active Directory (Azure AD) pour l’authentification client, mais il était auparavant nécessaire dans l’Assistant. Si vous utilisez des certificats d’authentification client PKI, vous devez continuer d’ajouter un certificat racine approuvé pour la passerelle de gestion cloud.<!--SCCMDocs-pr issue #2872-->  
 
 11. Par défaut, l’Assistant active l’option permettant de **Vérifier la révocation des certificats clients**. Une liste de révocation de certificats doit être publiée publiquement pour que cette vérification fonctionne. Si vous ne publiez pas de liste de révocation de certificats, désélectionnez cette option.  
 
@@ -226,7 +226,7 @@ Conservez toujours au moins une passerelle de gestion cloud active pour que les 
 
 Étant donné que les clients actualisent la stratégie par défaut toutes les 24 heures, attendez au moins un jour après avoir créé une passerelle de gestion cloud pour supprimer l’ancienne. Si les clients sont désactivés ou sans connexion Internet, vous devrez peut-être attendre plus longtemps. 
 
-À compter de la version 1802, si vous avez une passerelle de gestion cloud existante sur la méthode de déploiement classique, vous devez déployer une nouvelle passerelle de gestion cloud pour utiliser la méthode de déploiement Azure Resource Manager.<!--509753--> Il existe deux options :  
+À compter de la version 1802, si vous avez une passerelle de gestion cloud existante sur la méthode de déploiement classique, vous devez déployer une nouvelle passerelle de gestion cloud pour utiliser la méthode de déploiement Azure Resource Manager.<!--509753--> Deux options s’offrent à vous :  
 
 - Si vous voulez réutiliser le même nom de service :  
 
@@ -247,7 +247,7 @@ Conservez toujours au moins une passerelle de gestion cloud active pour que les 
     4. Supprimez la passerelle de gestion cloud classique.  
 
 > [!Tip]  
-> Pour déterminer le modèle de déploiement actuel d’une passerelle de gestion cloud :<!--SCCMDocs issue #611-->  
+> Pour déterminer le modèle de déploiement actuel d’une passerelle de gestion cloud :<!--SCCMDocs issue #611-->  
 > 1. Dans la console Configuration Manager, accédez à l’espace de travail **Administration**, développez **Services cloud**, puis sélectionnez le nœud **Passerelle de gestion cloud**.  
 > 2. Sélectionnez l’instance de la passerelle de gestion cloud.  
 > 3. Dans le volet Détails en bas de la fenêtre, recherchez l’attribut **Modèle de déploiement**. Pour un déploiement Resource Manager, cet attribut est **Azure Resource Manager**. 

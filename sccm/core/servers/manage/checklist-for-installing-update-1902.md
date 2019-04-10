@@ -11,18 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 60856d3e2621f48fb669a4a1385876ddae849b2e
-ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
+ms.openlocfilehash: 5833db7cd6f47d0711fdcfae5d1f7a4114d7ff34
+ms.sourcegitcommit: d584c126a0a5725567631b74ac1e01f63242a997
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58525011"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58861018"
 ---
 # <a name="checklist-for-installing-update-1902-for-configuration-manager"></a>Liste de contrôle pour l’installation de la mise à jour 1902 de Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
-Quand vous utilisez l’édition Current Branch de Configuration Manager, vous pouvez installer la mise à jour dans la console de la version 1902 pour mettre à jour votre hiérarchie à partir d’une version antérieure. <!-- baseline only statement:-->(Comme la version 1802 est également disponible en tant que [support de base de référence](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions), vous pouvez utiliser le support d’installation pour installer le premier site d’une nouvelle hiérarchie.)
+Quand vous utilisez l’édition Current Branch de Configuration Manager, vous pouvez installer la mise à jour dans la console de la version 1902 pour mettre à jour votre hiérarchie à partir d’une version antérieure. <!-- baseline only statement:-->(Comme la version 1902 est également disponible en tant que [support de base de référence](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions), vous pouvez utiliser le support d’installation pour installer le premier site d’une nouvelle hiérarchie.)
 
 Pour obtenir la mise à jour de la version 1902, vous devez utiliser un point de connexion de service sur le site de niveau supérieur de votre hiérarchie. Ce rôle de système de site peut être en mode en ligne ou hors connexion. Une fois que votre hiérarchie a téléchargé la mise à jour auprès de Microsoft, recherchez-la dans la console. Dans l’espace de travail **Administration**, sélectionnez le nœud **Mises à jour et maintenance**.
 

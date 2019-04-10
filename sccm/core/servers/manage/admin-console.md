@@ -2,21 +2,21 @@
 title: Console Configuration Manager
 titleSuffix: Configuration Manager
 description: Découvrez comment naviguer dans la console Configuration Manager.
-ms.date: 03/06/2019
+ms.date: 04/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 463ce307-59dd-4abd-87b8-42ca9db178d7
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0f9c06f40af1134055d4038fd23954b3f4c59682
-ms.sourcegitcommit: 544f335cfd1bfd0a1d4973439780e9f5e9ee8bed
+ms.openlocfilehash: fb58662350caec9fd1a08295c93c3811893048a9
+ms.sourcegitcommit: da753df27d3909265ca45d3e79091f1e98758d16
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562106"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58913538"
 ---
 # <a name="using-the-configuration-manager-console"></a>Utilisation de la console Configuration Manager
 
@@ -99,7 +99,7 @@ Le ruban se situe en haut de la console Configuration Manager. Le ruban peut avo
 ![Exemple de ruban, mise en surbrillance de plusieurs onglets et de la flèche Réduire](media/ribbon.png)   
 
 
-### <a name="details-pane"></a>Volet de détails
+### <a name="details-pane"></a>Volet Détails
 
 Vous pouvez obtenir des informations supplémentaires sur les éléments en examinant le volet de détails. Le volet de détails peut présenter un ou plusieurs onglets. Les onglets varient en fonction du nœud.  
 
@@ -116,7 +116,36 @@ Au bas du menu contextuel de la colonne, vous pouvez trier ou regrouper selon un
 
 ![Configuration Manager, regrouper selon une colonne](media/column-group-by.png)  
 
+## <a name="bkmk_viewconnected"></a> Afficher les consoles récemment connectées
+<!--3699367-->
 
+À compter de la version 1902, vous pouvez voir les connexions les plus récentes pour la console Configuration Manager. La vue comprend les connexions actives et les connexions récentes. Vous voyez toujours votre connexion à la console actuelle dans la liste et vous voyez uniquement les connexions à partir de la console Configuration Manager. Vous ne voyez pas les connexions au fournisseur SMS via PowerShell ou d’autres kits SDK. Le site supprime de la liste les instances qui datent de plus de 30 jours.
+
+
+### <a name="prerequisites-to-view-connected-consoles"></a>Prérequis pour voir les consoles connectées
+
+- Votre compte nécessite l’autorisation **Lire** sur l’objet **SMS_Site**. 
+- IIS doit être installé sur le serveur de fournisseur SMS <!---SCCMDocs-pr issue 1326--> 
+- Autorisez le fournisseur SMS à utiliser un certificat.<!--SCCMDocs-pr issue 3135--> Utilisez l’une des options suivantes :  
+
+  - Activer [HTTP amélioré](/sccm/core/plan-design/hierarchy/enhanced-http) (recommandé)
+  - Liez manuellement un certificat basé sur une infrastructure à clé publique (PKI) dans IIS au port 443 du serveur qui héberge le rôle Fournisseur SMS  
+
+### <a name="view-connected-consoles"></a>Voir les consoles connectées
+
+1. Dans la console de Configuration Manager, accédez à l’espace de travail **Administration**.  
+
+2. Développez **Sécurité** et sélectionnez le nœud **Connexions à la console**.  
+
+3. Affichez les connexions récentes, avec les propriétés suivantes :  
+
+    - Nom d'utilisateur
+    - Nom de l’ordinateur
+    - Code de site connecté
+    - Version de la console
+    - Dernière connexion : Quand l’utilisateur a *ouvert* la console pour la dernière fois
+
+![Voir les connexions de la console Configuration Manager](media/console-connections.png) 
 
 ## <a name="command-line-options"></a>Options de ligne de commande
 
@@ -153,7 +182,7 @@ Pour plus d’informations, consultez [Commentaires produit](/sccm/core/understa
 #### <a name="view-users-for-a-device"></a>Afficher les utilisateurs d’un appareil
 Dans la version 1806, le nœud **Appareils** comprend les colonnes suivantes :  
 
-- **Utilisateurs principaux** <!--1357280-->  
+- **Utilisateur principaux** <!--1357280-->  
 
 - **Utilisateur actuellement connecté** <!--1358202-->  
     > [!NOTE]  
@@ -162,7 +191,8 @@ Dans la version 1806, le nœud **Appareils** comprend les colonnes suivantes :
 Pour plus d’informations sur l’affichage d’une colonne non définie par défaut, consultez [Colonnes](#columns).
 
 #### <a name="improvement-to-device-search-performance"></a>Amélioration des performances de la recherche d’appareils
-<!-- 3614690 --> À compter de la version 1806, la recherche d’un mot clé dans un regroupement d’appareils ne prend pas en compte toutes les propriétés de l’objet. Si les éléments à rechercher ne sont pas précisés, la recherche s’effectue sur les quatre propriétés suivantes :
+<!-- 3614690 -->
+À compter de la version 1806, la recherche d’un mot clé dans un regroupement d’appareils ne prend pas en compte toutes les propriétés de l’objet. Si les éléments à rechercher ne sont pas précisés, la recherche s’effectue sur les quatre propriétés suivantes :
 - Nom
 - Utilisateur ou utilisateurs principaux
 - Utilisateur actuellement connecté
@@ -174,7 +204,8 @@ Ce comportement améliore considérablement le temps de recherche par nom, en pa
 ### <a name="monitoring-workspace"></a>Espace de travail Analyse
 
 #### <a name="copy-details-in-monitoring-views"></a>Copier les détails des vues d’analyse
-<!--1357856--> À compter de la version 1806, vous devez copier les informations du volet **Détails du bien** pour les nœuds d’analyse suivants :  
+<!--1357856-->
+À compter de la version 1806, vous devez copier les informations du volet **Détails du bien** pour les nœuds de supervision suivants :  
 
 - **État de distribution du contenu**  
 
