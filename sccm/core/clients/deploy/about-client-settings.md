@@ -2,7 +2,7 @@
 title: Paramètres du client
 titleSuffix: Configuration Manager
 description: Découvrir les paramètres par défaut et personnalisés pour contrôler les comportements du client
-ms.date: 03/21/2019
+ms.date: 04/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e76dc5892ad34d72bfee3cd4aea0fa660e34855d
-ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
+ms.openlocfilehash: 42218443f83726bfbca0dcf77ffa37e61c46a2b3
+ms.sourcegitcommit: d4b0e44e6bb06a830d0887493528d9166a15154b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477532"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506207"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>À propos des paramètres client dans Configuration Manager
 
@@ -345,7 +345,7 @@ Choisissez **Oui** pour ignorer le redémarrage de l’ordinateur après l’ins
 > [!IMPORTANT]  
 >  Si le client Endpoint Protection nécessite un redémarrage de l’ordinateur et que ce paramètre est **Non**, l’ordinateur redémarre quelle que soit la fenêtre de maintenance configurée.  
 
-### <a name="allowed-period-of-time-users-can-postpone-a-required-restart-to-complete-the-endpoint-protection-installation-hours"></a>Durée pendant laquelle les utilisateurs sont autorisés à différer un redémarrage nécessaire pour terminer l'installation de Endpoint Protection (heures)
+### <a name="allowed-period-of-time-users-can-postpone-a-required-restart-to-complete-the-endpoint-protection-installation-hours"></a>Durée pendant laquelle les utilisateurs sont autorisés à différer un redémarrage nécessaire pour terminer l’installation de Endpoint Protection (heures)
 
 Si un redémarrage est nécessaire après l’installation du client Endpoint Protection, ce paramètre spécifie le nombre d’heures duquel les utilisateurs sont autorisés à différer le redémarrage. Ce paramètre exige que le paramètre **Supprimer tout redémarrage d’ordinateur requis après l’installation du client Endpoint Protection** soit **Non**.  
 
@@ -638,7 +638,7 @@ Lancez cette action à partir du client en procédant comme suit : dans le panne
 
 ##  <a name="software-inventory"></a>Inventaire logiciel  
 
-### <a name="enable-software-inventory-on-clients"></a>Activer l'inventaire logiciel sur les clients
+### <a name="enable-software-inventory-on-clients"></a>Activer l’inventaire logiciel sur les clients
 
 Cette option est définie sur **Oui** par défaut. Pour plus d’informations, consultez [Présentation de l’inventaire logiciel](/sccm/core/clients/manage/inventory/introduction-to-software-inventory).
 
@@ -709,7 +709,7 @@ Si vous souhaitez collecter des fichiers stockés à partir d’ordinateurs clie
 
 L’agent d’inventaire logiciel récupère le nom du fabricant et du produit à partir des informations d’en-tête de fichier. Ces noms ne sont pas systématiquement normalisés dans les informations d’en-tête de fichier. Quand vous affichez l’inventaire logiciel dans l’Explorateur de ressources, des versions différentes du même nom de fabricant ou de produit peuvent apparaître. Pour normaliser ces noms complets, sélectionnez **Définir des noms**, puis configurez les paramètres suivants :  
 
--   **Type de nom** : l'inventaire logiciel recueille des informations sur les produits et les fabricants. Choisissez si vous souhaitez configurer des noms complets pour un **Fabricant** ou un **Produit**.  
+-   **Type de nom** : l’inventaire logiciel recueille des informations sur les produits et les fabricants. Choisissez si vous souhaitez configurer des noms complets pour un **Fabricant** ou un **Produit**.  
 
 -   **Nom complet** : spécifiez le nom complet que vous souhaitez utiliser à la place des noms dans la liste **Noms inventoriés**. Sélectionnez **Nouveau** pour spécifier un nouveau nom complet.  
 
@@ -784,15 +784,27 @@ Quand vous définissez cette option sur **Oui**, il permet de configurer les par
 
 Si cette option est paramétrée sur **Oui** et qu’au moins une fenêtre de maintenance « Mise à jour de logiciel » est définie sur le client, les mises à jour de logiciels s’installent pendant une fenêtre de maintenance « Tous les déploiements ». Par défaut, ce paramètre est défini sur **Non**. Ce paramètre client a été ajouté dans la version 1810 de Configuration Manager. <!--2839307-->
 
+### <a name="bkmk_thread-priority"></a> Spécifier la priorité du thread pour les mises à jour des fonctionnalités
+<!--3734525-->
+À compter de la version 1902 de Configuration Manager, vous pourrez ajuster l’ordre de priorité utilisé par Windows 10 version 1709 ou clients ultérieurs pour l’installation d’une mise à jour de fonctionnalité via [maintenance de Windows 10](/sccm/osd/deploy-use/manage-windows-as-a-service). Ce paramètre n’a pas impact sur les séquences de tâches de mise à niveau sur place de Windows 10.
+
+Ce paramètre client offre les options suivantes :
+
+- **Non configuré** : Configuration Manager ne change pas le paramètre. Les administrateurs peuvent prédéfinir leur propre fichier setupconfig.ini. Cette valeur est la valeur par défaut. 
+- **Normale** : L’installation de Windows utilise plus de ressources système et effectue les mises à jour plus rapidement. Elle utilise plus de temps processeur : le temps total d’installation est donc plus court, mais le temps d’arrêt est plus long pour l’utilisateur.  
+   - Configure le fichier setupconfig.ini sur l’appareil avec l’[option de la ligne de commande du programme d’installation de Windows](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) `/Priority Normal`.
+
+- **Faible** : Vous pouvez continuer à travailler sur l’appareil pendant qu’il télécharge et se met à jour en arrière-plan. Le temps total d’installation est plus long, mais le temps d’arrêt est plus court pour l’utilisateur. En utilisant cette option, vous devrez peut-être augmenter le temps d’exécution maximale de la mise à jour afin d’éviter l’expiration du délai d’attente.
+  - Supprime l’[option de la ligne de commande du programme d’installation de Windows](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) `/Priority` à partir du fichier setupconfig.ini.
+
+
 ### <a name="enable-third-party-software-updates"></a>Activer les mises à jour de logiciels tiers 
 
 Le fait d’affecter la valeur **Oui** à cette option définit la stratégie pour « Autoriser les mises à jour signées provenant d’un emplacement intranet du service de mise à jour Microsoft » et installe le certificat de signature dans la banque d’éditeurs approuvés sur le client. Ce paramètre client a été ajouté dans Configuration Manager version 1802.
 
-
-
 ## <a name="state-messaging"></a>Messagerie d’état
 
-### <a name="state-message-reporting-cycle-minutes"></a>Cycle de diffusion des messages d'état (en minutes)
+### <a name="state-message-reporting-cycle-minutes"></a>Cycle de diffusion des messages d’état (en minutes)
 Spécifie la fréquence à laquelle les clients signalent les messages d’état. La valeur par défaut est de 15 minutes.
 
 

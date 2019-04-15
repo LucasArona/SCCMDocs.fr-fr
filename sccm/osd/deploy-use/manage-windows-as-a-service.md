@@ -2,7 +2,7 @@
 title: Gérer Windows en tant que service
 titleSuffix: Configuration Manager
 description: Affichez l’état de Windows as a Service (WaaS) à l’aide de Configuration Manager, créez des plans de maintenance pour former des anneaux de déploiement et affichez des alertes quand la fin de support des clients Windows 10 est proche.
-ms.date: 03/15/2017
+ms.date: 04/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 614ccc06a3fef5cca54c7eb1c32952e8531aedfa
-ms.sourcegitcommit: d71e558db2da124357b840332e2da671b3810507
+ms.openlocfilehash: 13fde17d8fe46b723a8f49b22a68685fbc4d47de
+ms.sourcegitcommit: d4b0e44e6bb06a830d0887493528d9166a15154b
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58269057"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506241"
 ---
 # <a name="manage-windows-as-a-service-using-system-center-configuration-manager"></a>Gérer Windows as a Service (WaaS) à l’aide de System Center Configuration Manager
 
@@ -54,6 +54,7 @@ ms.locfileid: "58269057"
 -   Internet Explorer 9 ou version ultérieure doit être installé sur l’ordinateur qui exécute la console Configuration Manager.  
 
 -   Les mises à jour logicielles doivent être configurées et synchronisées. Sélectionnez la classification **Mises à niveau** et synchronisez les mises à jour logicielles pour que les mises à niveau de fonctionnalités Windows 10 soient disponibles dans la console Configuration Manager. Pour plus d’informations, consultez [Préparer la gestion des mises à jour logicielles](../../sum/get-started/prepare-for-software-updates-management.md).  
+- À compter de Configuration Manager version 1902, vérifiez que le **paramètre client** [Spécifier la priorité du thread pour les mises à jour des fonctionnalités](/sccm/core/clients/deploy/about-client-settings#bkmk_thread-priority) est adapté à votre environnement.
 
 ##  <a name="BKMK_ServicingDashboard"></a> Tableau de bord de maintenance de Windows 10  
  Le tableau de bord de maintenance de Windows 10 fournit des informations sur les ordinateurs Windows 10 de votre environnement, les plans de maintenance actifs, les informations de conformité et ainsi de suite. Les données du tableau de bord de maintenance de Windows 10 dépendent de l’installation du point de connexion de service. Le tableau de bord comporte les vignettes suivantes :  
@@ -72,7 +73,7 @@ ms.locfileid: "58269057"
 
 -   **Vignette Surveillance du plan de maintenance**: affiche les plans de maintenance que vous avez créés et un graphique de conformité pour chacun. Cette vignette donne un aperçu rapide de l’état actuel des déploiements de plan de maintenance. Si une boucle de déploiement précédente répond à vos attentes en matière de conformité, vous pouvez sélectionner un plan de maintenance (boucle de déploiement) ultérieur et cliquer sur **Déployer maintenant** au lieu d’attendre que les règles du plan de maintenance soient déclenchées automatiquement.  
 
--   **Vignette Builds Windows 10** : Affiche une chronologie fixe qui fournit une vue d’ensemble des builds Windows 10 actuellement publiées, et donne une idée générale du moment où les builds passent à des états différents.  
+-   **Vignette Builds Windows 10** : Affiche une chronologie fixe qui fournit une vue d’ensemble des builds Windows 10 actuellement publiées, et donne une idée générale du moment où les builds passent à des états différents. Cette vignette a été supprimée à compter de Configuration Manager version 1902 car des informations plus détaillées sont proposées dans le [tableau de bord de cycle de vie du produit](/sccm/core/clients/manage/asset-intelligence/product-lifecycle-dashboard). <!--3446861-->
 
 > [!IMPORTANT]  
 >  Les informations affichées dans le tableau de bord de maintenance de Windows 10 (telles que le cycle de vie de prise en charge des versions de Windows 10) sont fournies à des fins de commodité et destinées uniquement à une utilisation en interne dans votre société. Vous ne devez pas vous fier uniquement à ces informations pour confirmer la conformité des mises à jour. Veillez à vérifier l’exactitude des informations qui vous sont fournies.  
@@ -144,15 +145,15 @@ ms.locfileid: "58269057"
    -   **Combien de jours après la publication par Microsoft d’une nouvelle mise à niveau voulez-vous attendre avant un déploiement dans votre environnement** : Si la date actuelle est la date de publication plus le nombre de jours configuré pour ce paramètre, Configuration Manager évalue s’il faut ajouter une mise à niveau dans le déploiement.
 
 
-7. Dans la page Mises à niveau, configurez les critères de recherche pour filtrer les mises à niveau ajoutées au plan de maintenance. Seules les mises à jour qui remplissent les critères spécifiés sont ajoutées au déploiement associé. Les filtres de propriétés suivantes sont disponibles : <!--3098809, 3113836, 3204570 -->
+7. Dans la page Mises à niveau, configurez les critères de recherche pour filtrer les mises à niveau ajoutées au plan de maintenance. Seules les mises à jour qui remplissent les critères spécifiés sont ajoutées au déploiement associé. Les filtres de propriétés suivants sont disponibles : <!--3098809, 3113836, 3204570 -->
 
-   - **Architecture** (depuis la version 1810)
+   - **Architecture** (à compter de la version 1810)
    - **Langue**
-   - **Catégorie de produit** (depuis la version 1810)
+   - **Catégorie de produit** (à compter de la version 1810)
    - **Obligatoire**
       > [!Important]    
       > Dans vos critères de recherche, nous vous recommandons de définir le champ **Obligatoire** avec la valeur **>=1**. Ce critère permet d’ajouter seulement les mises à jour applicables au plan de maintenance.
-   - **Remplacée** (depuis la version 1810)
+   - **Remplacée** (à compter de la version 1810)
    - **Titre**
 
     Cliquez sur **Aperçu** pour afficher les mises à niveau qui répondent aux critères spécifiés.  

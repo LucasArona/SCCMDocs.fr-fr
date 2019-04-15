@@ -2,7 +2,7 @@
 title: Liste de contrôle pour la version 1902
 titleSuffix: Configuration Manager
 description: Découvrez les actions à entreprendre avant d’effectuer la mise à jour vers Configuration Manager version 1902.
-ms.date: 03/27/2019
+ms.date: 04/11/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5833db7cd6f47d0711fdcfae5d1f7a4114d7ff34
-ms.sourcegitcommit: d584c126a0a5725567631b74ac1e01f63242a997
+ms.openlocfilehash: c9d0714bd55b4c99b181dfaf3ac34e63a0e9a35e
+ms.sourcegitcommit: d4b0e44e6bb06a830d0887493528d9166a15154b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58861018"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506139"
 ---
 # <a name="checklist-for-installing-update-1902-for-configuration-manager"></a>Liste de contrôle pour l’installation de la mise à jour 1902 de Configuration Manager
 
@@ -65,7 +65,7 @@ La première fois que vous utilisez une console Configuration Manager à l’iss
 ## <a name="checklist"></a>Liste de contrôle
 
 #### <a name="all-sites-run-a-supported-version-of-configuration-manager"></a>Tous les sites exécutent une version prise en charge de Configuration Manager  
-Chaque serveur de site de la hiérarchie doit exécuter la même version de Configuration Manager pour que vous puissiez démarrer l’installation de la mise à jour 1902. Pour effectuer la mise à jour vers la version 1902, vous devez utiliser les versions 1710, 1802, 1806 ou 1810.
+Chaque serveur de site de la hiérarchie doit exécuter la même version de Configuration Manager pour que vous puissiez démarrer l’installation de la mise à jour 1902. Pour effectuer la mise à jour vers la version 1902, vous devez utiliser les versions 1802, 1806 ou 1810.
 
 #### <a name="review-the-status-of-your-product-licensing"></a>Vérifier l’état de votre licence de produit 
 Vous devez avoir un contrat SA (Software Assurance) actif ou des droits d’abonnement équivalents pour installer cette mise à jour. Quand vous mettez à jour le site, la page **Licences** propose une option qui permet de confirmer la **Date d’expiration de la Software Assurance**.
