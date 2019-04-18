@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b30770b912e012aafa3f1d476c4791873752ecc7
-ms.sourcegitcommit: 5ee9487c891c37916294bd34a10d04e398f111f7
+ms.openlocfilehash: 11979d35829660633dd77059562dcf519e0af05b
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59069345"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59673341"
 ---
 # <a name="how-to-connect-configuration-manager-with-desktop-analytics"></a>Comment connecter Configuration Manager avec l’Analytique de bureau
 
@@ -73,7 +73,7 @@ Utilisez cette procédure pour connecter Configuration Manager à l’Analytique
 
 4. Sur le **données de Diagnostic** page, configurez les paramètres suivants :  
 
-    - **ID commercial**: cette valeur doit remplir automatiquement avec l’ID de votre organisation  
+    - **ID commercial**: cette valeur doit remplir automatiquement avec l’ID de. votre organisation Si elle ne, assurez-vous que votre serveur proxy est configuré à la liste verte tous requis [points de terminaison](/sccm/desktop-analytics/enable-data-sharing#endpoints) avant de continuer. Vous pouvez également récupérer votre ID Commercial à partir de la **Services connectés** volet dans le [portail d’Analytique de bureau](https://aka.ms/m365aprod).  
 
     - **Niveau de données de diagnostic de Windows 10**: sélectionnez au moins **avancé (limité)**  
 

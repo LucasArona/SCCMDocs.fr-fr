@@ -2,7 +2,7 @@
 title: Didacticiel - déployer Office 365
 titleSuffix: Configuration Manager
 description: Un didacticiel sur l’utilisation d’Analytique de bureau et de Configuration Manager pour déployer Office 365 à un groupe pilote.
-ms.date: 04/05/2019
+ms.date: 04/15/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: tutorial
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4d21b2b94c53390a9fcdbc1be640578060042ea9
-ms.sourcegitcommit: 5ee9487c891c37916294bd34a10d04e398f111f7
+ms.openlocfilehash: 66fc982fa7f2cee3fdd83945c1b43d490b40d2f2
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59069447"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59673783"
 ---
 # <a name="tutorial-deploy-office-365-to-pilot"></a>Tutoriel : Déployer Office 365 pilote
 
@@ -103,13 +103,21 @@ Utilisez cette procédure pour vous connecter à l’Analytique de bureau et le 
 
 3. Sur le **confirmer votre abonnement** page, la liste des licences éligibles requises sont pour les fonctionnalités de contrôle d’intégrité des appareils Windows de bureau Analytique. Sélectionnez **Suivant** pour continuer.  
 
-4. Sur le **donner aux utilisateurs accès** page, bureau Analytique préconfigure les deux groupes de sécurité dans Azure Active Directory :  
+4. Sur le **donner aux utilisateurs accès** page :
 
-    - **Propriétaires de l’espace de travail**: Créer et gérer des espaces de travail. Ces comptes ont besoin d’un accès propriétaire à l’abonnement Azure.  
+    - **Voulez-vous vraiment Analytique de bureau pour gérer les rôles d’annuaire pour vos utilisateurs**: Analytique de postes de travail affecte automatiquement la **propriétaires de l’espace de travail** et **contributeurs de l’espace de travail** regroupe à la **Desktop Analytique Administrator** rôle. Si ces groupes sont déjà un **administrateur général**, il n’existe aucune modification.  
 
-    - **Contributeurs de l’espace de travail**: Créer et gérer des plans de déploiement dans cet espace de travail. Ils ne doivent tout accès Azure supplémentaires.  
-  
-   Pour ajouter un utilisateur au groupe, tapez son nom ou l’adresse électronique dans le **Entrez le nom ou adresse de messagerie** section du groupe approprié. Lorsque vous avez terminé, sélectionnez **suivant**.
+        Si vous ne sélectionnez pas cette option, bureau Analytique ajoute toujours les utilisateurs en tant que membres des groupes de sécurité de deux. Un **administrateur général** doit affecter manuellement la **Desktop Analytique Administrator** rôle pour les utilisateurs.  
+
+        Pour plus d’informations sur l’attribution d’autorisations de rôle d’administrateur dans Azure Active Directory et les autorisations affectées aux **les administrateurs de bureau Analytique**, consultez [autorisations du rôle administrateur dans Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles).  
+
+    - Postes de travail Analytique préconfigure les deux groupes de sécurité dans Azure Active Directory :  
+
+        - **Propriétaires de l’espace de travail**: Un groupe de sécurité pour créer et gérer des espaces de travail. Ces comptes ont besoin d’un accès propriétaire à l’abonnement Azure.  
+
+        - **Contributeurs de l’espace de travail**: Un groupe de sécurité pour créer et gérer des plans de déploiement dans cet espace de travail. Ils ne doivent tout accès Azure supplémentaires.  
+
+        Pour ajouter un utilisateur au groupe, tapez son nom ou l’adresse électronique dans le **Entrez le nom ou adresse de messagerie** section du groupe approprié. Lorsque vous avez terminé, sélectionnez **suivant**.
 
 5. Sur la page pour **configurer votre espace de travail**:  
 

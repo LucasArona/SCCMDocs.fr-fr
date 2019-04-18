@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b46bf167bc77716fe360940c4fb45cae2dc9dc5a
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: a10a7b5bbb3a1b7d0dada86774f3412e22faff01
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56754924"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59673545"
 ---
 # <a name="updates-in-desktop-analytics"></a>Mises à jour dans les postes de travail Analytique 
 
@@ -48,7 +48,7 @@ Les appareils sont en cours d’exécution une mise à jour de sécurité antér
 #### <a name="not-measured"></a>Pas mesuré
 Analytique de postes de travail n’a pas encore évalué l’appareil. 
 
-- Pour Windows, cela inclut les appareils exécutant Windows 7 ou Windows 8.1  
+- Pour Windows, cela inclut les appareils exécutant Windows 7, Windows 8.1 ou Windows 10 appareils inscrits pour le programme Insider de Windows  
 
 - Pour Office, cela inclut les appareils avec l’une des versions suivantes :  
 
@@ -81,12 +81,12 @@ Appareils exécutent la dernière mise à jour de la fonctionnalité pour cette 
 Les appareils sont en cours d’exécution une mise à jour de fonctionnalité qui est de 90 jours d’atteindre la fin du service.
 
 #### <a name="end-of-service"></a>Fin de service
-Les appareils sont en cours d’exécution une mise à jour de fonctionnalité qui est au-delà de la date de fin du service. Pour plus d’informations sur la fin de dates de service, consultez {xlink dans la section appropriée de UDR_monitoring} |
+Les appareils sont en cours d’exécution une mise à jour de fonctionnalité qui est au-delà de la date de fin du service. Pour plus d’informations sur la fin de dates de service, consultez [fiche d’information de cycle de vie de Windows](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet)  <!-- {xlink into relevant section of UDR_monitoring}|-->
 
 #### <a name="not-measured"></a>Pas mesuré
 Analytique de postes de travail n’a pas encore évalué l’appareil. 
 
-- Pour Windows, cela inclut les appareils exécutant Windows 7 ou Windows 8.1  
+- Pour Windows, cela inclut les appareils exécutant Windows 7, Windows 8.1 ou Windows 10 appareils inscrits pour le programme Insider de Windows
 
 - Pour Office, cela inclut les appareils avec l’une des versions suivantes :  
 

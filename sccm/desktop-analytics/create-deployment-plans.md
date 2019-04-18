@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4b56fac3060acc16fe46221464ddc6535b478399
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 35e8e883acafaa1d606d81402b868b8a755d0887
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56754880"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59673460"
 ---
 # <a name="how-to-create-deployment-plans-in-desktop-analytics"></a>Comment créer des plans de déploiement dans Desktop Analytique 
 
@@ -56,7 +56,7 @@ Suivez les étapes décrites dans cet article pour utiliser l’Analytique de bu
 
     2. Sélectionnez chaque application, puis **modifier**. Vous pouvez sélectionner plusieurs applications à modifier en même temps.   
 
-    3. Choisissez un niveau d’importance dans le **Importance** liste. Si vous souhaitez Analytique de bureau pour valider le complément pendant la phase pilote, sélectionnez **critique** ou **Important**. Il ne valide pas les compléments marqués comme **pas Important**. Prendre en compte les risques de compatibilité et d’autres informations de plan lors de l’affectation de niveaux d’importance.  
+    3. Choisissez un niveau d’importance dans le **Importance** liste. Si vous souhaitez Analytique de bureau pour valider le complément pendant la phase pilote, sélectionnez **critique** ou **Important**. Il ne valide pas les compléments marqués comme **pas Important**. Prendre en compte la [risque de compatibilité](/sccm/desktop-analytics/compat-risk) et d’autres informations de plan lors de l’affectation de niveaux d’importance.  
 
         Lorsque vous affectez des niveaux d’importance, vous pouvez également choisir la décision de mise à niveau.  
 

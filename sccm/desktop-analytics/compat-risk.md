@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da0bde04e019fdf0fbb0a997be652860824270b1
-ms.sourcegitcommit: 5ee9487c891c37916294bd34a10d04e398f111f7
+ms.openlocfilehash: bf2114ac77a75fedc18c38a8d373b9c0a1ada591
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59069396"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59673409"
 ---
 # <a name="compatibility-risk-for-windows-apps-in-desktop-analytics"></a>Risque de compatibilité pour les applications Windows dans Desktop Analytique
 
@@ -52,8 +52,17 @@ L’analyseur d’intégrité application examine la base de données de compati
 
 ### <a name="ready-for-windows"></a>Prêt pour Windows
 
-La banque de données prêt pour Windows vérifie les blocs de compatibilité sur un appareil. Il met également en corrélation les données à partir d’autres clients ayant des applications similaires. Microsoft utilise les données à partir d’autres appareils similaires où cette application a signalé aucun problème.
+Le [prêt pour Windows](https://www.readyforwindows.com) catalogue d’applications met en corrélation les données de diagnostic à partir d’autres clients ayant les mêmes applications avec des vérifications supplémentaires de Microsoft comme blocs de compatibilité sur un appareil. 
 
+Les catégories possibles sont :
+
+- **Données insuffisantes** signifie que trop peu d’appareils Windows 10 commerciale partagent des informations pour cette application pour Microsoft de catégoriser son adoption.
+
+- **Adopté** signifie que l’application a été installée sur au moins 10 000 appareils Windows 10 commerciale.  
+
+- **Hautement adoptées** signifie que l’application a été installée sur au moins 100 000 appareils Windows 10 commerciales.  
+
+- **Contactez le développeur** signifie qu’il peut y avoir des problèmes de compatibilité avec cette solution, et par conséquent, Microsoft vous recommande de contacter le fournisseur de logiciels pour en savoir plus.  
 
 ### <a name="app-health-analyzer-signals-for-compatibility-assessment"></a>Analyseur d’intégrité application signale pour l’évaluation de compatibilité
 

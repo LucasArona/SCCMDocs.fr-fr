@@ -2,7 +2,7 @@
 title: Configurer les Analyses du bureau
 titleSuffix: Configuration Manager
 description: Guide pratique pour configurer et d’intégration pour l’Analytique de bureau.
-ms.date: 01/25/2019
+ms.date: 04/15/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,14 +12,14 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7b20637cea4e02f390ae845ff9d421e5011120ab
-ms.sourcegitcommit: 4441b3035222cfaf7442416873ed824ac7d852c5
+ms.openlocfilehash: 0d03b670ade984298df7a1ba5428a3f8696360bb
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356323"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59673562"
 ---
-# <a name="how-to-set-up-desktop-analytics"></a>Comment configurer le bureau Analytique 
+# <a name="how-to-set-up-desktop-analytics"></a>Comment configurer le bureau Analytique
 
 > [!Note]  
 > Ces informations est lié à un service en version préliminaire qui peut être substantiellement modifié avant sa commercialisation. Microsoft exclut toute garantie, expresse ou implicite, concernant les informations fournies ici.  
@@ -36,22 +36,30 @@ Utilisez cette procédure pour vous connecter à l’Analytique de bureau et le 
 
 3. Sur le **confirmer votre abonnement** passez en revue la liste des requis les licences éligibles. Basculer le paramètre sur **Oui** regard **avez-vous un des abonnements pris en charge ou une version ultérieure**, puis sélectionnez **suivant**.  
 
-4. Sur le **accorder l’accès des utilisateurs et applications** page, bureau Analytique préconfigure les deux groupes de sécurité dans Azure Active Directory :  
+4. Sur le **donner aux utilisateurs accès** page :
 
-    - **Propriétaires de l’espace de travail**: Créer et gérer des espaces de travail. Ces comptes ont besoin d’un accès propriétaire à l’abonnement Azure.  
+    - **Voulez-vous vraiment Analytique de bureau pour gérer les rôles d’annuaire pour vos utilisateurs**: Analytique de postes de travail affecte automatiquement la **propriétaires de l’espace de travail** et **contributeurs de l’espace de travail** regroupe à la **Desktop Analytique Administrator** rôle. Si ces groupes sont déjà un **administrateur général**, il n’existe aucune modification.  
 
-    - **Contributeurs de l’espace de travail**: Créer et gérer des plans de déploiement dans cet espace de travail. Ils ne doivent tout accès Azure supplémentaires.  
-  
-   Pour ajouter un utilisateur au groupe, tapez son nom ou l’adresse électronique dans le **Entrez le nom ou adresse de messagerie** section du groupe approprié. Lorsque vous avez terminé, sélectionnez **suivant**. 
+        Si vous ne sélectionnez pas cette option, bureau Analytique ajoute toujours les utilisateurs en tant que membres des groupes de sécurité de deux. Un **administrateur général** doit affecter manuellement la **Desktop Analytique Administrator** rôle pour les utilisateurs.  
+
+        Pour plus d’informations sur l’attribution d’autorisations de rôle d’administrateur dans Azure Active Directory et les autorisations affectées aux **les administrateurs de bureau Analytique**, consultez [autorisations du rôle administrateur dans Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles).  
+
+    - Postes de travail Analytique préconfigure les deux groupes de sécurité dans Azure Active Directory :  
+
+        - **Propriétaires de l’espace de travail**: Un groupe de sécurité pour créer et gérer des espaces de travail. Ces comptes ont besoin d’un accès propriétaire à l’abonnement Azure.  
+
+        - **Contributeurs de l’espace de travail**: Un groupe de sécurité pour créer et gérer des plans de déploiement dans cet espace de travail. Ils ne doivent tout accès Azure supplémentaires.  
+
+        Pour ajouter un utilisateur au groupe, tapez son nom ou l’adresse électronique dans le **Entrez le nom ou adresse de messagerie** section du groupe approprié. Lorsque vous avez terminé, sélectionnez **suivant**.
 
 5. Sur la page pour **configurer votre espace de travail**:  
 
     - Pour utiliser un espace de travail pour l’Analytique de bureau, sélectionnez-le, puis passez à l’étape suivante.  
 
         > [!Note]  
-        > Si vous utilisez déjà Windows Analytique, sélectionnez ce même espace de travail. Vous devez réinscrire les appareils pour l’Analytique de bureau que vous avez précédemment inscrit dans Windows Analytique. 
-        > 
-        > Vous ne pouvez avoir qu’un espace de travail Analytique de bureau par le locataire Azure AD. Appareils peuvent envoyer uniquement les données de diagnostic pour un espace de travail.   
+        > Si vous utilisez déjà Windows Analytique, sélectionnez ce même espace de travail. Vous devez réinscrire les appareils pour l’Analytique de bureau que vous avez précédemment inscrit dans Windows Analytique.
+        >
+        > Vous ne pouvez avoir qu’un espace de travail Analytique de bureau par le locataire Azure AD. Appareils peuvent envoyer uniquement les données de diagnostic pour un espace de travail.  
 
     - Pour créer un espace de travail pour l’Analytique de bureau, sélectionnez **ajouter l’espace de travail**.  
 
@@ -70,7 +78,7 @@ Utilisez cette procédure pour vous connecter à l’Analytique de bureau et le 
 
 8. Revenez à la page à **configurer votre espace de travail**, sélectionnez **suivant**.  
 
-9. Sur le **dernières étapes** page, sélectionnez **accéder au bureau Analytique**. 
+9. Sur le **dernières étapes** page, sélectionnez **accéder au bureau Analytique**.
 
 Le portail Azure affiche l’Analytique de Desktop **accueil** page.
 
@@ -94,11 +102,11 @@ Créer une application dans Azure AD pour Configuration Manager.
 
 3. Sélectionnez l’application et notez le **ID d’Application**. Cette valeur est un GUID qui est utilisé pour configurer la connexion de Configuration Manager.  
 
-4. Sélectionnez **paramètres** dans l’application, puis sélectionnez **clés**. Dans le **les mots de passe** section, entrez un **description de la clé**, spécifiez un délai d’expiration **durée**, puis sélectionnez **enregistrer**. Copie le **valeur** de la clé, qui est utilisée pour configurer la connexion de Configuration Manager. 
+4. Sélectionnez **paramètres** dans l’application, puis sélectionnez **clés**. Dans le **les mots de passe** section, entrez un **description de la clé**, spécifiez un délai d’expiration **durée**, puis sélectionnez **enregistrer**. Copie le **valeur** de la clé, qui est utilisée pour configurer la connexion de Configuration Manager.
 
     > [!Important]  
     > Il s’agit de la seule possibilité pour copier la valeur de clé. Si vous ne le copiez maintenant, vous devez créer une autre clé.  
-    > 
+    >
     > Enregistrez la valeur de clé dans un emplacement sécurisé.  
 
 5. Sur l’application **paramètres** panneau, sélectionnez **autorisations requises**.  

@@ -2,7 +2,7 @@
 title: Dépannage des postes de travail Analytique
 titleSuffix: Configuration Manager
 description: Détails techniques pour vous aider à résoudre les problèmes avec l’Analytique de bureau.
-ms.date: 04/05/2019
+ms.date: 04/15/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b7fab23b4d1d977d2d634a11959887f1c1baa9a7
-ms.sourcegitcommit: 5ee9487c891c37916294bd34a10d04e398f111f7
+ms.openlocfilehash: f0da26f1ea2b7f7c0c49377cb934e451d56889b7
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59069430"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59673664"
 ---
 # <a name="troubleshooting-desktop-analytics"></a>Dépannage des postes de travail Analytique
 
@@ -272,7 +272,7 @@ Pour plus d’informations, consultez M365AHandler.log sur le client.
 #### <a name="check-end-user-diagnostic-data"></a>Vérifier les données de diagnostic de l’utilisateur final
 
 <!--1004-->
-Si cette vérification n’est pas réussie, un utilisateur a sélectionné une inférieur données de diagnostic de Windows sur l’appareil.
+Si cette vérification n’est pas réussie, un utilisateur a sélectionné une inférieur données de diagnostic de Windows sur l’appareil. Elle peut également être due à un objet de stratégie de groupe en conflit. Pour plus d’informations, consultez [les paramètres Windows](/sccm/desktop-analytics/enroll-devices#windows-settings).
 
 En fonction des besoins de votre entreprise, vous pouvez désactiver les choix de l’utilisateur via la stratégie de groupe. Utilisez le paramètre pour **configurer l’interface utilisateur participer paramètre télémétrie**. Pour plus d’informations, consultez [Configurer les données de diagnostic Windows dans votre organisation](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management).
 
@@ -289,7 +289,7 @@ Cette propriété peut afficher les erreurs suivantes :
 
 Pour plus d’informations, consultez M365AHandler.log sur le client.  
 
-Vérifiez les autorisations sur cette clé de Registre. Assurez-vous que le compte système local peut accéder à cette clé pour le client Configuration Manager à définir.  
+Vérifiez les autorisations sur cette clé de Registre. Assurez-vous que le compte système local peut accéder à cette clé pour le client Configuration Manager à définir. Elle peut également être due à un objet de stratégie de groupe en conflit. Pour plus d’informations, consultez [les paramètres Windows](/sccm/desktop-analytics/enroll-devices#windows-settings).  
 
 #### <a name="commercial-id-configuration"></a>Configuration de l’ID commerciale
 
@@ -308,7 +308,7 @@ Sinon, il peut afficher les erreurs suivantes :
 
 Pour plus d’informations, consultez M365AHandler.log sur le client.  
 
-Vérifiez les autorisations sur cette clé de Registre. Assurez-vous que le compte système local peut accéder à cette clé pour le client Configuration Manager à définir.  
+Vérifiez les autorisations sur cette clé de Registre. Assurez-vous que le compte système local peut accéder à cette clé pour le client Configuration Manager à définir. Elle peut également être due à un objet de stratégie de groupe en conflit. Pour plus d’informations, consultez [les paramètres Windows](/sccm/desktop-analytics/enroll-devices#windows-settings).  
 
 Il existe un ID différent pour l’appareil. Cette clé de Registre est utilisée par la stratégie de groupe. Il est prioritaire sur l’ID fourni par le Gestionnaire de Configuration.  
 
@@ -341,7 +341,7 @@ Sinon, il peut afficher les erreurs suivantes :
 
 Pour plus d’informations, consultez M365AHandler.log sur le client.  
 
-Vérifiez les autorisations sur cette clé de Registre. Assurez-vous que le compte système local peut accéder à cette clé pour le client Configuration Manager à définir.  
+Vérifiez les autorisations sur cette clé de Registre. Assurez-vous que le compte système local peut accéder à cette clé pour le client Configuration Manager à définir. Elle peut également être due à un objet de stratégie de groupe en conflit. Pour plus d’informations, consultez [les paramètres Windows](/sccm/desktop-analytics/enroll-devices#windows-settings).  
 
 Assurez-vous qu’un autre mécanisme de stratégie, tels que la stratégie de groupe, n’est pas la désactivation de ce paramètre.
 
@@ -402,7 +402,7 @@ Cette propriété vérifie que Windows est correctement configuré pour autorise
 - `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection`
 - `HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`
 
-Vérifiez les autorisations sur ces clés de Registre. Assurez-vous que le compte système local permettre accéder à ces clés pour le client Configuration Manager à définir.  
+Vérifiez les autorisations sur ces clés de Registre. Assurez-vous que le compte système local permettre accéder à ces clés pour le client Configuration Manager à définir. Elle peut également être due à un objet de stratégie de groupe en conflit. Pour plus d’informations, consultez [les paramètres Windows](/sccm/desktop-analytics/enroll-devices#windows-settings).  
 
 Pour plus d’informations, consultez M365AHandler.log sur le client.  
 
@@ -473,6 +473,54 @@ Les fichiers journaux suivants sont sur le client Configuration Manager dans le 
 
 
 
-## <a name="bkmk_MALogAnalyticsReader"></a> Rôle d’application MALogAnalyticsReader
+## <a name="bkmk_AzureADApps"></a> Applications Azure AD
 
-Lorsque vous configurez l’Analytique de bureau, vous acceptez un consentement au nom de votre organisation. Ce consentement consiste à attribuer le 
+Analytique de postes de travail ajoute les applications suivantes à votre Azure AD :
+
+- **Gestionnaire de configuration de Microservice**: Se connecte à Configuration Manager avec des postes de travail Analytique. Cette application n’a aucune exigence d’accès.  
+
+- **Office 365 Client Admin**: Récupère les données à partir de votre espace de travail Analytique de journal. Cette application nécessite un accès en écriture au journal Analytique.  
+
+- **MALogAnalyticsReader**: Récupère les groupes d’OMS et les appareils créés dans le journal Analytique. Pour plus d’informations, consultez [rôle d’application MALogAnalyticsReader](#bkmk_MALogAnalyticsReader).  
+
+Si vous devez configurer ces applications après avoir effectué des, accédez à la **services connectés** volet. Sélectionnez **configurer l’accès des utilisateurs et des applications**et configurer les applications.  
+
+- **L’application Azure AD pour Configuration Manager**. Si vous avez besoin configurer ou résoudre les problèmes de connexion après avoir effectué les, consultez [créer une application pour le Gestionnaire de Configuration](/sccm/desktop-analytics/set-up#create-app-for-configuration-manager). Cette application nécessite **écrire les données de Collection CM** et **lire les données de Collection CM** sur le **Configuration Manager Service** API.  
+
+### <a name="bkmk_MALogAnalyticsReader"></a> Rôle d’application MALogAnalyticsReader
+
+Lorsque vous configurez l’Analytique de bureau, vous acceptez un consentement au nom de votre organisation. Ce consentement consiste à affecter l’application MALogAnalyticsReader le rôle de lecture du journal Analytique à l’espace de travail. Ce rôle d’application est requise par l’Analytique de bureau.
+
+S’il existe un problème avec ce processus au cours de configuration, utilisez le processus suivant pour ajouter manuellement cette autorisation :
+
+1. Accédez à la [Azure portal](http://portal.azure.com), puis sélectionnez **toutes les ressources**. Sélectionnez l’espace de travail de type **Analytique de journal**.  
+
+2. Dans le menu de l’espace de travail, sélectionnez **contrôle d’accès (IAM)**, puis sélectionnez **ajouter**.  
+
+3. Dans le **ajouter des autorisations** panel, configurez les paramètres suivants :  
+
+    - **Rôle**: **Lecture du journal Analytique**  
+
+    - **Attribuer l’accès à**: **Azure AD utilisateur, groupe ou application**  
+
+    - **Sélectionnez**: **MALogAnalyticsReader**  
+
+4. Sélectionnez **Enregistrer**.
+
+Le portail affiche une notification qu’il ajoute l’attribution de rôle.
+
+
+## <a name="data-latency"></a>Latence des données
+
+<!-- 3846531 -->
+Données dans le portail d’Analytique de bureau sont actualisées quotidiennement. Cette actualisation inclut les modifications de périphérique collectées à partir de données de diagnostic et les modifications que vous apportez à la configuration. Par exemple, lorsque vous modifiez d’une ressource **décision de mettre à niveau**, cela peut entraîner des modifications à l’état de préparation des appareils avec cette ressource installée.
+
+- **Modifications de l’administrateur** sont généralement traités par le service d’Analytique de bureau dans les neuf heures. Par exemple, si vous apportez des modifications à 11 h 00 UTC, le portail doit refléter ces modifications avant l’heure UTC de 08:00 AM le lendemain.
+
+- **Modifications de l’appareil** détecté par UTC minuit en heure locale sont généralement incluses dans l’actualisation quotidienne. Il est généralement 23 heures supplémentaires de la latence associée au traitement des changements de périphérique par rapport aux modifications de l’administrateur.
+
+Si vous ne voyez pas les modifications mises à jour dans ces périodes, attendez un autre de 24 heures pour la prochaine actualisation quotidienne. Si vous voyez des délais plus longs, consultez le tableau de bord service health. Si le service signale comme étant saine, contactez le support Microsoft.
+
+Lorsque vous configurez tout d’abord Analytique de bureau, les graphiques dans Configuration Manager et le portail d’Analytique de bureau ne peuvent pas montrent complète des données. Il peut prendre 2 à 3 jours pour les périphériques actifs envoyer des données de diagnostic à l’Analytique de bureau, le service pour traiter les données et ensuite synchroniser avec votre site Configuration Manager.
+
+Dans une hiérarchie Configuration Manager, il peut prendre 10 minutes pour les nouvelles collections à afficher pour les plans de déploiement. Les sites principaux créent les collections, et le site d’administration centrale se synchronise avec Analytique de bureau.<!-- 3896921 -->
