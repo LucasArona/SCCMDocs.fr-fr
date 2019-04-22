@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c9d0714bd55b4c99b181dfaf3ac34e63a0e9a35e
-ms.sourcegitcommit: d4b0e44e6bb06a830d0887493528d9166a15154b
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59506139"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59802484"
 ---
 # <a name="checklist-for-installing-update-1902-for-configuration-manager"></a>Liste de contrôle pour l’installation de la mise à jour 1902 de Configuration Manager
 

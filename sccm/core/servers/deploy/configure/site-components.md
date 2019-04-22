@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af4d3319e94d8dd673f597e4df4dde3e73e15653
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: c64968ca0348b94e3fb20367af7f739d8a699c58
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56129049"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59673596"
 ---
 # <a name="site-components-for-configuration-manager"></a>Composants de site pour Configuration Manager
 
@@ -27,7 +27,8 @@ Pour chaque site Configuration Manager, vous pouvez configurer des composants de
 Dans la console Configuration Manager, accédez à l’espace de travail **Administration**, développez **Configuration du site**, puis sélectionnez le nœud **Sites**. Sélectionnez un site. Dans le groupe **Paramètres** du ruban, choisissez **Configurer les composants de site**. Sélectionnez l'une des options suivantes :
 
 - [Distribution de logiciels](#software-distribution)  
-- [Point de mise à jour logicielle](#software-update-point)  
+- [Point de mise à jour logicielle](#software-update-point) 
+- [Déploiement de systèmes d’exploitation](#operating-system-deployment)
 - [Point de gestion](#management-point)  
 - [Création de rapports d’état](#status-reporting)  
 - [Notification par e-mail](#email-notification)
@@ -58,6 +59,11 @@ Pour plus d’informations, consultez [Compte d’accès réseau](/sccm/core/pla
 ### <a name="software-update-point"></a>Point de mise à jour logicielle  
 
 Pour plus d’informations, consultez [Installer un point de mise à jour logicielle](/sccm/sum/get-started/install-a-software-update-point).  
+
+
+### <a name="operating-system-deployment"></a>Déploiement du système d'exploitation
+
+Pour plus d’informations, consultez [Spécifier le lecteur pour la maintenance des images de système d’exploitation hors connexion](/sccm/osd/get-started/manage-operating-system-images#bkmk_servicing-drive).
 
 
 ### <a name="management-point"></a>Point de gestion  
