@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0d03b670ade984298df7a1ba5428a3f8696360bb
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.openlocfilehash: b75b82f632c8bfbbc11a2b11d58ab83116e2180a
+ms.sourcegitcommit: d23ccf7b95e6c2a6b156975194ebbc375cb5e6ea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59673562"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124435"
 ---
 # <a name="how-to-set-up-desktop-analytics"></a>Comment configurer le bureau Analytique
 
@@ -51,6 +51,8 @@ Utilisez cette procédure pour vous connecter à l’Analytique de bureau et le 
         - **Contributeurs de l’espace de travail**: Un groupe de sécurité pour créer et gérer des plans de déploiement dans cet espace de travail. Ils ne doivent tout accès Azure supplémentaires.  
 
         Pour ajouter un utilisateur au groupe, tapez son nom ou l’adresse électronique dans le **Entrez le nom ou adresse de messagerie** section du groupe approprié. Lorsque vous avez terminé, sélectionnez **suivant**.
+
+L’étape suivante peut être effectuée par un **propriétaire de l’espace de travail** ou **contributeur**. Consultez [conditions préalables.](/sccm/desktop-analytics/overview#prerequisites) 
 
 5. Sur la page pour **configurer votre espace de travail**:  
 
@@ -88,7 +90,7 @@ Le portail Azure affiche l’Analytique de Desktop **accueil** page.
 
 Créer une application dans Azure AD pour Configuration Manager.
 
-1. Dans le [Azure portal](http://portal.azure.com), accédez à **Azure Active Directory**, puis sélectionnez **inscriptions**. Puis sélectionnez **nouvelle inscription d’application**.  
+1. Ouvrez le [portail Azure](http://portal.azure.com) en tant qu’utilisateur avec des autorisations d’administrateur d’entreprise, accédez à **Azure Active Directory**, puis sélectionnez **inscriptions**. Puis sélectionnez **nouvelle inscription d’application**.  
 
 2. Dans le **créer** panel, configurez les paramètres suivants :  
 

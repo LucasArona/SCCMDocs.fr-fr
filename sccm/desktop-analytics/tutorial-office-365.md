@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 66fc982fa7f2cee3fdd83945c1b43d490b40d2f2
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.openlocfilehash: 006a887a3989d7f05b7cf44b13562e644e6f7d94
+ms.sourcegitcommit: d23ccf7b95e6c2a6b156975194ebbc375cb5e6ea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59673783"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124401"
 ---
 # <a name="tutorial-deploy-office-365-to-pilot"></a>Tutoriel : Déployer Office 365 pilote
 
@@ -45,6 +45,8 @@ Analytique de bureau utilise un *espace de travail Analytique de journal* dans v
 Avant de commencer ce didacticiel, assurez-vous que vous disposez des prérequis suivants :  
 
 - Un abonnement Azure actif, avec **administrateur d’entreprise** autorisations  
+    
+    Pour plus d’informations, consultez [conditions préalables de bureau Analytique](/sccm/desktop-analytics/overview#prerequisites).
 
 - Configuration Manager, version 1810 avec 4488598 de correctif cumulatif de mise à jour ou version ultérieure, avec **administrateur complet** rôle  
 
@@ -119,7 +121,11 @@ Utilisez cette procédure pour vous connecter à l’Analytique de bureau et le 
 
         Pour ajouter un utilisateur au groupe, tapez son nom ou l’adresse électronique dans le **Entrez le nom ou adresse de messagerie** section du groupe approprié. Lorsque vous avez terminé, sélectionnez **suivant**.
 
+L’étape suivante peut être effectuée par un **propriétaire de l’espace de travail** ou **contributeur**. 
+
 5. Sur la page pour **configurer votre espace de travail**:  
+
+    - Sélectionnez votre abonnement Azure. 
 
     - Pour utiliser un espace de travail pour l’Analytique de bureau, sélectionnez-le, puis passez à l’étape suivante.  
 
@@ -129,7 +135,9 @@ Utilisez cette procédure pour vous connecter à l’Analytique de bureau et le 
 
         2. Sélectionnez la liste déroulante à **sélectionnez le nom de l’abonnement Azure pour cet espace de travail**, puis choisissez l’abonnement Azure pour cet espace de travail.  
 
-        3. Sélectionnez le **région** dans la liste, puis sélectionnez **ajouter**.  
+        3. **Créer de nouveaux** groupe de ressources ou **utiliser l’existant**.  
+
+        4. Sélectionnez le **région** dans la liste, puis sélectionnez **ajouter**.  
 
 6. Sélectionnez un espace de travail nouveau ou existant, puis **définir comme espace de travail Analytique de bureau**.  Puis sélectionnez **continuer** dans le **confirmer et accorder l’accès** boîte de dialogue.  
 
@@ -142,7 +150,7 @@ Utilisez cette procédure pour vous connecter à l’Analytique de bureau et le 
 
 ### <a name="create-an-app-in-azure-ad-for-configuration-manager"></a>Créer une application dans Azure AD pour Configuration Manager  
 
-1. Dans le [Azure portal](https://portal.azure.com), accédez à **Azure Active Directory**, puis sélectionnez **inscriptions**. Puis sélectionnez **nouvelle inscription d’application**.  
+1. Ouvrez le [portail Azure](http://portal.azure.com) en tant qu’utilisateur avec des autorisations d’administrateur d’entreprise, accédez à **Azure Active Directory**, puis sélectionnez **inscriptions**. Puis sélectionnez **nouvelle inscription d’application**.  
 
 2. Dans le **créer** panel, configurez les paramètres suivants :  
 
