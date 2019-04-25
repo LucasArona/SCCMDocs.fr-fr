@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f0ea9d6d923aeb1c278e5f3e96806044bbae6e4
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: f6ffa061e3d04bbbda31cc4406494b492ba98d9b
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56138617"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59673851"
 ---
 # <a name="plan-for-security-in-configuration-manager"></a>Planifier la sécurité dans Configuration Manager
 
@@ -121,7 +121,7 @@ Consultez vos administrateurs PKI avant de décider si les clients Configuration
 -   L’exigence de vérification de la liste de révocation des certificats pour chaque connexion à un système de site qui est configuré pour utiliser un certificat PKI a la priorité sur les spécifications suivantes :  
     - Des connexions plus rapides  
     - Un traitement efficace sur le client  
-    - Le risque que des clients échouent à se connecter aux serveurs s’ils ne peuvent pas localiser la liste de révocation des certificats  
+    - Le risque que des clients ne réussissent pas à se connecter à des serveurs si la CRL ne peut pas être localisée.  
 
 
 ###  <a name="BKMK_PlanningForRootCAs"></a> Planifier les certificats racine approuvés PKI et la liste des émetteurs de certificats  
@@ -213,9 +213,9 @@ Le tableau suivant indique les valeurs d’attribut que Configuration Manager pr
 
 Si plusieurs certificats appropriés sont détectés après l’application des critères de sélection, vous pouvez remplacer la configuration par défaut pour sélectionner le certificat ayant la plus longue période de validité et spécifier, au contraire, qu’aucun certificat n’est sélectionné. Dans ce scénario, le client ne peut pas communiquer avec des systèmes de site IIS avec un certificat PKI. Le client transmet un message d’erreur au point d’état de secours qui lui est attribué pour vous prévenir de l’échec de sélection du certificat et vous permettre de modifier ou d’affiner vos critères de sélection de certificat. Le comportement du client dépend ensuite de l'emplacement de la connexion qui a échoué, à savoir sur HTTPS ou HTTP :  
 
--   Si la connexion qui a échoué était sur HTTPS : le client tente d’établir une connexion sur HTTP et utilise le certificat de client auto-signé.  
+-   Si la connexion qui a échoué était établie via HTTPS : le client tente d’établir une connexion sur HTTP et utilise le certificat de client auto-signé.  
 
--   Si la connexion qui a échoué était sur HTTP : le client tente d’établir une autre connexion sur HTTP à l’aide du certificat de client auto-signé.  
+-   Si la connexion qui a échoué était établie via HTTP : le client tente d’établir une autre connexion sur HTTP à l’aide du certificat de client auto-signé.  
 
 Pour identifier facilement un certificat de client unique PKI, vous pouvez également spécifier un magasin personnalisé autre que le magasin par défaut **Personnel** dans **Ordinateur**. Cependant, vous devez créer ce magasin indépendamment de Configuration Manager. Vous devez être en mesure de déployer des certificats sur ce magasin personnalisé et de les renouveler avant l’expiration de la période de validité.  
 

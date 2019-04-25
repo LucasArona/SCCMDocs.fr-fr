@@ -2,7 +2,7 @@
 title: Serveurs de système de site pris en charge
 titleSuffix: Configuration Manager
 description: Déterminez les versions de Windows que vous pouvez utiliser pour héberger un site ou un rôle de système de site Configuration Manager.
-ms.date: 01/15/2019
+ms.date: 04/16/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c5352d1d43de97375eb66389586778d7c23c2aa0
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 125d139548b827d349864496cd636622449b8fe3
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56138702"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59673630"
 ---
 # <a name="supported-operating-systems-for-configuration-manager-site-system-servers"></a>Systèmes d’exploitation pris en charge pour les serveurs de système Configuration Manager
 
@@ -233,6 +233,7 @@ Cette prise en charge présente la limitation suivante :
 
 L’installation minimale des versions du système d’exploitation serveur suivantes est prise en charge pour une utilisation comme **point de distribution** : 
 
+- Windows Server 2019 (à partir de Configuration Manager, version 1810)  
 - Windows Server, version 1809 (à partir de Configuration Manager, version 1810)  
 - Windows Server, version 1803 (à partir de Configuration Manager, version 1802)  
 - Windows Server, version 1709 (à partir de Configuration Manager, version 1710)  

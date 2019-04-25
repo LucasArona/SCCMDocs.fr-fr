@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 76f82734229f3b8e9ed37ed4bc9057eff6421aad
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 44f71aeb0019ce2b481e9f5ecd9f37ce6421398e
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56156540"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59673817"
 ---
 # <a name="plan-a-source-hierarchy-strategy-in-system-center-configuration-manager"></a>Planifier une stratégie de hiérarchie source dans System Center Configuration Manager
 
@@ -55,6 +55,7 @@ Si vous restaurez une hiérarchie source inactive et que vous n’avez pas utili
 
 > [!CAUTION]  
 >  Si vous migrez des données à partir de plusieurs hiérarchies source, chaque hiérarchie source supplémentaire doit contenir un ensemble unique de codes de site.  
+> Les hiérarchies source et de destination requièrent également un ensemble différent de codes de sites.
 
 Pour plus d’informations sur la configuration d’une hiérarchie source, consultez [Configuration des hiérarchies sources et des sites sources pour la migration vers System Center Configuration Manager](../../core/migration/configuring-source-hierarchies-and-source-sites-for-migration.md)  
 

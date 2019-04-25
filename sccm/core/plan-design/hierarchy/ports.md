@@ -2,7 +2,7 @@
 title: Ports utilisés pour les connexions
 titleSuffix: Configuration Manager
 description: Découvrez les ports réseau obligatoires et personnalisables qu’utilise Configuration Manager pour les connexions.
-ms.date: 01/29/2019
+ms.date: 04/11/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7aaadae5feaff2aa55e521c4b7438f4f1d24209a
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 99df201cb3525a124b42d5d599d4a74708258bad
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56156812"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59673715"
 ---
 # <a name="ports-used-in-configuration-manager"></a>Ports utilisés dans Configuration Manager
 
@@ -586,6 +586,14 @@ Pour plus d’informations, consultez [Ports et flux de données](/sccm/core/pla
 |RPC (DCOM)|--|DYNAMIQUE <sup>[Note 6](#bkmk_note6)</sup>|  
 
 
+###  <a name="BKMK_PortsSite-RCL"></a> Serveur de site--> serveur qui héberge le partage de bibliothèque de contenu à distance  
+ À partir de la version 1806, vous pouvez déplacer la bibliothèque de contenu vers un autre emplacement de stockage pour libérer de l’espace disque sur les serveurs de site d’administration centrale ou les serveurs de sites principaux. Pour plus d’informations, consultez [Configurer une bibliothèque de contenu à distance pour le serveur de site](/sccm/core/plan-design/hierarchy/the-content-library#bkmk_remote).  
+
+|Description|UDP|TCP|  
+|-----------------|---------|---------|  
+|SMB (Server Message Block)|--|445|  
+
+
 ###  <a name="BKMK_PortsSite-RSP"></a> Serveur de site &lt; -- > Point de Reporting Services  
  <sup>[Note 5](#bkmk_note5)</sup>  
 
@@ -726,7 +734,7 @@ Toutefois, lors du démarrage PXE, la carte réseau de l’appareil sélectionn
 
 
 #### <a name="bkmk_note5"></a> Note 5 : Communication entre le serveur de site et les systèmes de site
-par défaut, la communication entre le serveur de site et les systèmes de site est bidirectionnelle. Le serveur de site initialise la communication pour configurer le système de site, puis la plupart des systèmes de site se connectent à leur tour au serveur de site pour envoyer des informations d'état. Les points de Reporting Services et les points de distribution n’envoient pas d’informations d’état. Si vous sélectionnez **Exiger que le serveur de site démarre les connexions vers ce système de site** dans les propriétés du système de site, après l’installation du système de site, ce dernier n’établit pas la communication vers le système de site. Au lieu de cela, le serveur de site initie la communication et utilise le compte d’installation du système de site pour l’authentification auprès du serveur de système de site.  
+Par défaut, la communication entre le serveur de site et les systèmes de site est bidirectionnelle. Le serveur de site initialise la communication pour configurer le système de site, puis la plupart des systèmes de site se connectent à leur tour au serveur de site pour envoyer des informations d'état. Les points de Reporting Services et les points de distribution n’envoient pas d’informations d’état. Si vous sélectionnez **Exiger que le serveur de site démarre les connexions vers ce système de site** dans les propriétés du système de site, après l’installation du système de site, ce dernier n’établit pas la communication vers le système de site. Au lieu de cela, le serveur de site initie la communication et utilise le compte d’installation du système de site pour l’authentification auprès du serveur de système de site.  
 
 #### <a name="bkmk_note6"></a> Note 6 : Ports dynamiques
 Les ports dynamiques utilisent une plage de numéros de ports qui est définie par la version du système d’exploitation. Ces ports sont également appelés « ports éphémères ». Pour plus d'informations sur les plages de port par défaut, voir [Vue d'ensemble des services et exigences de ports réseau pour le système Windows Server](https://support.microsoft.com/help/832017/service-overview-and-network-port-requirements-for-windows).  

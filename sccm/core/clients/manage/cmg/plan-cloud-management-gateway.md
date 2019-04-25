@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f50bb18edf782d5012e90db0b4b21a2309ad4f0b
-ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
+ms.openlocfilehash: f9057a2126a548ebb8706e905b86edb702f0ff35
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58196889"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59673681"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Planifier la passerelle de gestion cloud dans Configuration Manager
 
@@ -175,7 +175,7 @@ De même, quand les clients basés à Paris se déplacent et utilisent Internet,
     - À compter de la version 1806, quand vous utilisez l’option de site destinée à **Utiliser les certificats générés par Configuration Manager pour les systèmes de site HTTP**, le point de gestion peut être HTTP. Pour plus d’informations, consultez [HTTP amélioré](/sccm/core/plan-design/hierarchy/enhanced-http).  
 
 
-- L’intégration à **Azure AD** peut être nécessaire pour les clients Windows 10. Pour plus d’informations, consultez [Configurer des services Azure](/sccm/core/servers/deploy/configure/azure-services-wizard).  
+- L’intégration avec **Azure AD** est nécessaire pour les déploiements d’Azure Resource Manager. Elle peut également être requise pour les clients Windows 10. Pour plus d’informations, consultez [Configurer des services Azure](/sccm/core/servers/deploy/configure/azure-services-wizard).  
 
 - Les clients doivent utiliser **IPv4**.  
 
