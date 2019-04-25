@@ -1,75 +1,68 @@
-items:
 - name: Comprendre et explorer
   items:
-  - name: Assurer la conformité des appareils
-    href: understand/ensure-device-compliance.md
+    - name: Assurer la conformité des appareils
+      href: understand/ensure-device-compliance.md
 - name: Bien démarrer
   items:
-  - name: Prendre en main les paramètres de compatibilité
-    href: get-started/get-started-with-compliance-settings.md
+    - name: Prendre en main les paramètres de compatibilité
+      href: get-started/get-started-with-compliance-settings.md
 - name: Planifier et concevoir
   items:
-  - name: Planifier et configurer les paramètres de conformité
-    href: plan-design/plan-for-and-configure-compliance-settings.md
-  - name: Tâches courantes de gestion de la conformité
-    href: plan-design/common-tasks-for-managing-compliance.md
-    items:
-    - name: Appareils avec le client Configuration Manager
-      href: plan-design/common-tasks-for-managing-compliance-on-devices-with-the-client.md
-    - name: Créer et déployer des bases de référence de configuration
-      href: plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md
-  - name: Sécurité et confidentialité
-    href: plan-design/security-and-privacy-for-compliance-settings.md
-  - name: Extensions SCAP (Security Content Automation Protocol)
-    href: plan-design/scap/about-scap.md
-    items:
-    - name: Installer et configurer des extensions SCAP
-      href: plan-design/scap/install-configure-scap.md
-    - name: Déployer et surveiller la conformité SCAP
-      href: plan-design/scap/deploy-monitor-export.md
-    - name: Résoudre les problèmes des extensions SCAP
-      href: plan-design/scap/troubleshooting-scap.md
+    - name: Planifier et configurer les paramètres de conformité
+      href: plan-design/plan-for-and-configure-compliance-settings.md
+    - name: Tâches courantes de gestion de la conformité
+      href: plan-design/common-tasks-for-managing-compliance.md
+      items:
+        - name: Appareils avec le client Configuration Manager
+          href: plan-design/common-tasks-for-managing-compliance-on-devices-with-the-client.md
+        - name: Créer et déployer des bases de référence de configuration
+          href: plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md
+    - name: Sécurité et confidentialité
+      href: plan-design/security-and-privacy-for-compliance-settings.md
+    - name: Extensions SCAP (Security Content Automation Protocol)
+      href: plan-design/scap/about-scap.md
+      items:
+        - name: Installer et configurer des extensions SCAP
+          href: plan-design/scap/install-configure-scap.md
+        - name: Déployer et surveiller la conformité SCAP
+          href: plan-design/scap/deploy-monitor-export.md
+        - name: Résoudre les problèmes des extensions SCAP
+          href: plan-design/scap/troubleshooting-scap.md
 - name: Déployer et utiliser
   items:
-  - name: Créer des éléments de configuration
-    href: deploy-use/create-configuration-items.md
-    items:
-    - name: Appareils gérés avec le client Configuration Manager
-      href: deploy-use/configuration-items-for-devices-managed-with-the-client.md
+    - name: Créer des éléments de configuration
+      href: deploy-use/create-configuration-items.md
       items:
-      - name: Windows 10
-        href: deploy-use/create-configuration-items-for-windows-10-devices-managed-with-the-client.md
-      - name: Mac OS X
-        href: deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md
-      - name: Poste de travail et serveur Windows (personnalisé)
-        href: deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client.md
-  - name: Créer des éléments de configuration enfants
-    href: deploy-use/create-child-configuration-items.md
-  - name: Créer des bases de référence de configuration
-    href: deploy-use/create-configuration-baselines.md
-  - name: Déployer des bases de référence de configuration
-    href: deploy-use/deploy-configuration-baselines.md
-  - name: Gérer des données de configuration
-    items:
+        - name: Appareils gérés avec le client Configuration Manager
+          href: deploy-use/configuration-items-for-devices-managed-with-the-client.md
+          items:
+            - name: Windows 10
+              href: deploy-use/create-configuration-items-for-windows-10-devices-managed-with-the-client.md
+            - name: Mac OS X
+              href: deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md
+            - name: Poste de travail et serveur Windows (personnalisé)
+              href: deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client.md
+    - name: Créer des éléments de configuration enfants
+      href: deploy-use/create-child-configuration-items.md
+    - name: Créer des bases de référence de configuration
+      href: deploy-use/create-configuration-baselines.md
+    - name: Déployer des bases de référence de configuration
+      href: deploy-use/deploy-configuration-baselines.md
     - name: Gérer des données de configuration
-      href: deploy-use/management-tasks-for-configuration-data.md
-    - name: Importer des données de configuration
-      href: deploy-use/import-configuration-data.md
-  - name: Créer des éléments de configuration des données et profils utilisateur
-    href: deploy-use/create-user-data-and-profiles-configuration-items.md
-  - name: Profils OneDrive Entreprise
-    href: deploy-use/onedrive-profile.md
-  - name: Créer des profils de connexion à distance
-    href: deploy-use/create-remote-connection-profiles.md
-  - name: Mettre à niveau des appareils Windows vers une nouvelle édition
-    href: deploy-use/upgrade-windows-version.md
-  - name: Configurer les paramètres Microsoft Edge
-    href: deploy-use/browser-profiles.md
-  - name: Surveiller les paramètres de compatibilité
-    href: deploy-use/monitor-compliance-settings.md
-ms.openlocfilehash: 0e3875fe8038d1d17030a69d2df11631e4e480c1
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59802408"
+      items:
+        - name: Gérer des données de configuration
+          href: deploy-use/management-tasks-for-configuration-data.md
+        - name: Importer des données de configuration
+          href: deploy-use/import-configuration-data.md
+    - name: Créer des éléments de configuration des données et profils utilisateur
+      href: deploy-use/create-user-data-and-profiles-configuration-items.md
+    - name: Profils OneDrive Entreprise
+      href: deploy-use/onedrive-profile.md
+    - name: Créer des profils de connexion à distance
+      href: deploy-use/create-remote-connection-profiles.md
+    - name: Mettre à niveau des appareils Windows vers une nouvelle édition
+      href: deploy-use/upgrade-windows-version.md
+    - name: Configurer les paramètres Microsoft Edge
+      href: deploy-use/browser-profiles.md
+    - name: Surveiller les paramètres de compatibilité
+      href: deploy-use/monitor-compliance-settings.md
