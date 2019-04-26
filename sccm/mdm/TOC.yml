@@ -1,206 +1,199 @@
-items:
-- name: Vue d’ensemble
+- name: Vue d'ensemble
   items:
-  - name: Qu’est-ce que la gestion MDM hybride ?
-    href: understand/hybrid-mobile-device-management.md
-  - name: Nouveautés de la gestion MDM hybride
-    href: understand/whats-new-in-hybrid-mobile-device-management.md
+    - name: Qu’est-ce que la gestion MDM hybride ?
+      href: understand/hybrid-mobile-device-management.md
+    - name: Nouveautés de la gestion MDM hybride
+      href: understand/whats-new-in-hybrid-mobile-device-management.md
 - name: Planifier et concevoir
   href: plan-design/plan-hybrid-mobile-device-management.md
   items:
-  - name: Plateformes d’appareil prises en charge
-    href: plan-design/supported-device-platforms-for-hybrid.md
-  - name: Méthodes d’inscription des appareils
-    href: plan-design/device-enrollment-methods.md
-- name: Prise en main
+    - name: Plateformes d’appareils prises en charge
+      href: plan-design/supported-device-platforms-for-hybrid.md
+    - name: Méthodes d’inscription des appareils
+      href: plan-design/device-enrollment-methods.md
+- name: Bien démarrer
   href: deploy-use/setup-hybrid-mdm.md
   items:
-  - name: Créer un regroupement MDM
-    href: deploy-use/create-mdm-collection.md
-  - name: Confirmer les exigences relatives aux noms de domaine
-    href: deploy-use/confirm-dns.md
-  - name: Configurer un abonnement Intune
-    href: deploy-use/configure-intune-subscription.md
-  - name: Ajouter des conditions générales
-    href: deploy-use/terms-and-conditions.md
-  - name: Créer un point de connexion de service
-    href: deploy-use/create-service-connection-point.md
-  - name: Activer l’inscription de la plateforme
-    href: deploy-use/enable-platform-enrollment.md
-    items:
-    - name: iOS et MAC
-      href: deploy-use/enroll-hybrid-ios-mac.md
-    - name: Windows
-      href: deploy-use/enroll-hybrid-windows.md
-    - name: Android
-      href: deploy-use/enroll-hybrid-android.md
-  - name: Configurer une gestion supplémentaire
-    href: deploy-use/set-up-additional-management.md
-  - name: Vérifier la configuration MDM
-    href: deploy-use/verify-mdm-configuration.md
+    - name: Créer un regroupement MDM
+      href: deploy-use/create-mdm-collection.md
+    - name: Confirmer les exigences relatives aux noms de domaine
+      href: deploy-use/confirm-dns.md
+    - name: Configurer un abonnement Intune
+      href: deploy-use/configure-intune-subscription.md
+    - name: Ajouter des conditions générales
+      href: deploy-use/terms-and-conditions.md
+    - name: Créer un point de connexion de service
+      href: deploy-use/create-service-connection-point.md
+    - name: Activer l’inscription de la plateforme
+      href: deploy-use/enable-platform-enrollment.md
+      items:
+        - name: iOS et MAC
+          href: deploy-use/enroll-hybrid-ios-mac.md
+        - name: Windows
+          href: deploy-use/enroll-hybrid-windows.md
+        - name: Android
+          href: deploy-use/enroll-hybrid-android.md
+    - name: Configurer une gestion supplémentaire
+      href: deploy-use/set-up-additional-management.md
+    - name: Vérifier la configuration MDM
+      href: deploy-use/verify-mdm-configuration.md
 - name: Guide pratique
   items:
-  - name: Inscrire des appareils appartenant aux utilisateurs (BYOD)
-    href: deploy-use/enroll-user-owned-devices.md
-  - name: Inscrire des appareils d’entreprise
-    href: deploy-use/enroll-company-owned-devices.md
-    items:
-    - name: Inscription au programme DEP iOS
-      href: deploy-use/ios-device-enrollment-program-for-hybrid.md
-    - name: Inscription à Apple Configurator
-      href: deploy-use/ios-hybrid-enrollment-using-apple-configurator.md
-    - name: Gestionnaire d'inscription d'appareils
-      href: deploy-use/enroll-devices-with-device-enrollment-manager.md
-    - name: Prédéclarer un ID de matériel
-      href: deploy-use/predeclare-devices-with-hardware-id.md
-    - name: Gérer le verrou d’activation iOS
-      href: deploy-use/manage-ios-activation-lock.md
-    - name: Affinité entre périphérique et utilisateur
-      href: deploy-use/user-affinity-for-hybrid-managed-devices.md
-  - name: Mettre hors service/effacer, verrouiller et réinitialiser les appareils
-    href: deploy-use/wipe-lock-reset-devices.md
-  - name: Configurer l’inventaire matériel
-    href: deploy-use/mobile-device-hardware-inventory-hybrid.md
-  - name: Configurer l’inventaire logiciel
-    href: deploy-use/software-inventory-mobile-devices.md
-  - name: Gérer les paramètres de conformité
-    href: deploy-use/manage-compliance-settings.md
-    items:
-    - name: Windows 8.1 et Windows 10
-      href: deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md
-    - name: Windows Phone
-      href: deploy-use/create-configuration-items-for-windows-phone-devices-managed-without-the-client.md
-    - name: iOS et Mac OS X
-      href: deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client.md
-    - name: Android et Samsung KNOX Standard
-      href: deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md
-    - name: Android for Work
-      href: deploy-use/create-configuration-items-for-android-for-work-devices-managed-without-the-client.md
-  - name: Synchroniser des appareils inscrits dans Intune
-    href: deploy-use/sync-intune-device.md
-  - name: Gérer des applications
-    href: deploy-use/management-tasks-applications.md
-    items:
-    - name: Créer des applications iOS
-      href: deploy-use/creating-ios-applications.md
-    - name: Stratégies de configuration des applications iOS
-      href: deploy-use/configure-ios-apps-with-app-configuration-policies.md
-    - name: Applications iOS achetées en volume
-      href: deploy-use/manage-volume-purchased-ios-apps.md
-    - name: Créer des applications Windows Phone
-      href: deploy-use/creating-windows-phone-applications.md
-    - name: Créer des applications Android
-      href: deploy-use/creating-android-applications.md
-    - name: Stratégies de configuration d’applications Android
-      href: deploy-use/configure-android-apps-with-app-configuration-policies.md
-    - name: Stratégies de gestion des applications mobiles
-      href: deploy-use/protect-apps-using-mam-policies.md
-    - name: Stratégies Managed Browser
-      href: deploy-use/manage-internet-access-using-managed-browser-policies.md
-    - name: Applications Microsoft Store pour Entreprises
-      href: deploy-use/windows-store-for-business.md
-  - name: Gérer un abonnement Intune
-    href: deploy-use/manage-intune-subscriptions.md
-  - name: Changer votre autorité de gestion des appareils mobiles
-    href: deploy-use/change-mdm-authority.md
-  - name: Démarrer la migration de MDM hybride vers Intune autonome
-    href: deploy-use/migrate-hybridmdm-to-intunesa.md
-    items:
-    - name: Importer des données Configuration Manager dans Microsoft Intune
-      href: deploy-use/migrate-import-data.md
-    - name: Préparer Intune à la migration des utilisateurs
-      href: deploy-use/migrate-prepare-intune.md
-    - name: Changer l’autorité MDM pour des utilisateurs spécifiques (autorité MDM mixte)
-      href: deploy-use/migrate-mixed-authority.md
-    - name: Changer votre autorité de gestion des appareils mobiles
-      href: deploy-use/migrate-change-mdm-authority.md
-  - name: Gérer l’accès aux ressources
-    items:
-    - name: Créer des profils Wi-Fi
-      href: deploy-use/create-wifi-profiles.md
-    - name: Créer des profils de certificat PFX
-      href: deploy-use/create-pfx-certificate-profiles.md
-    - name: Importer des profils de certificat PFX
-      href: deploy-use/import-pfx-certificate-profiles.md
-    - name: Profils VPN
-      href: deploy-use/create-vpn-profiles.md
-    - name: Créer des profils de messagerie
-      href: deploy-use/create-exchange-activesync-profiles.md
-    - name: Paramètres Windows Hello Entreprise
-      href: deploy-use/windows-hello-for-business-settings.md
-  - name: Gérer l’accès conditionnel
-    href: deploy-use/manage-access-to-services.md
-    items:
-    - name: Stratégies de conformité des appareils
-      href: deploy-use/device-compliance-policies.md
+    - name: Inscrire des appareils appartenant aux utilisateurs (BYOD)
+      href: deploy-use/enroll-user-owned-devices.md
+    - name: Inscrire des appareils d’entreprise
+      href: deploy-use/enroll-company-owned-devices.md
       items:
-      - name: Actions en cas de non-conformité
-        href: deploy-use/actions-for-noncompliance.md
-    - name: Créer une stratégie de conformité des appareils
-      href: deploy-use/create-compliance-policy.md
-    - name: Gérer l'accès à la messagerie
-      href: deploy-use/manage-email-access.md
-    - name: Gérer l'accès à SharePoint Online
-      href: deploy-use/manage-sharepoint-online-access.md
-    - name: Gérer l’accès à Skype Entreprise Online
-      href: deploy-use/manage-skype-for-business-online-access.md
-    - name: Gérer l’accès à Dynamics CRM Online
-      href: deploy-use/manage-dynamics-crm-online-access.md
-    - name: Gérer l'accès des PC aux services Office 365
-      href: deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md
-  - name: Gérer l’accès basé sur les risques que présente l’appareil
-    href: deploy-use/mobile-threat-defense.md
-    items:
-    - name: Lookout dans Configuration Manager
-      href: deploy-use/lookout-mobile-threat-defense-in-configuration-manager.md
+        - name: Inscription au programme DEP iOS
+          href: deploy-use/ios-device-enrollment-program-for-hybrid.md
+        - name: Inscription à Apple Configurator
+          href: deploy-use/ios-hybrid-enrollment-using-apple-configurator.md
+        - name: Gestionnaire d’inscription d’appareil
+          href: deploy-use/enroll-devices-with-device-enrollment-manager.md
+        - name: Prédéclarer un ID de matériel
+          href: deploy-use/predeclare-devices-with-hardware-id.md
+        - name: Gérer le verrou d’activation iOS
+          href: deploy-use/manage-ios-activation-lock.md
+        - name: Affinité entre périphérique et utilisateur
+          href: deploy-use/user-affinity-for-hybrid-managed-devices.md
+    - name: 'Mettre hors service/effacer, verrouiller et réinitialiser les appareils'
+      href: deploy-use/wipe-lock-reset-devices.md
+    - name: Configurer l’inventaire matériel
+      href: deploy-use/mobile-device-hardware-inventory-hybrid.md
+    - name: Configurer l’inventaire logiciel
+      href: deploy-use/software-inventory-mobile-devices.md
+    - name: Gérer les paramètres de conformité
+      href: deploy-use/manage-compliance-settings.md
       items:
-      - name: Configurer la Protection contre les menaces mobiles pour Lookout
-        href: deploy-use/set-up-your-subscription-with-lookout.md
-      - name: Activer Lookout dans Intune
-        href: deploy-use/enable-lookout-connection-in-intune.md
-      - name: Déployer des applications Lookout for Work
-        href: deploy-use/configure-and-deploy-lookout-for-work-apps.md
-      - name: Créer une stratégie de conformité Lookout
-        href: deploy-use/enable-device-threat-protection-rule-compliance-policy.md
-      - name: Résoudre les problèmes liés à l’intégration de Lookout
-        href: deploy-use/troubleshoot-lookout-integration.md
-      - name: Surveiller Mobile Threat Defense
-        href: deploy-use/monitor-mobile-threat-defense-compliance.md
+        - name: Windows 8.1 et Windows 10
+          href: deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md
+        - name: Windows Phone
+          href: deploy-use/create-configuration-items-for-windows-phone-devices-managed-without-the-client.md
+        - name: iOS et Mac OS X
+          href: deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client.md
+        - name: Android et Samsung KNOX Standard
+          href: deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md
+        - name: Android for Work
+          href: deploy-use/create-configuration-items-for-android-for-work-devices-managed-without-the-client.md
+    - name: Synchroniser des appareils inscrits dans Intune
+      href: deploy-use/sync-intune-device.md
+    - name: Gérer des applications
+      href: deploy-use/management-tasks-applications.md
+      items:
+        - name: Créer des applications iOS
+          href: deploy-use/creating-ios-applications.md
+        - name: Stratégies de configuration d’applications iOS
+          href: deploy-use/configure-ios-apps-with-app-configuration-policies.md
+        - name: Applications iOS achetées en volume
+          href: deploy-use/manage-volume-purchased-ios-apps.md
+        - name: Créer des applications Windows Phone
+          href: deploy-use/creating-windows-phone-applications.md
+        - name: Créer des applications Android
+          href: deploy-use/creating-android-applications.md
+        - name: Stratégies de configuration d’applications Android
+          href: deploy-use/configure-android-apps-with-app-configuration-policies.md
+        - name: Stratégies de gestion des applications mobiles
+          href: deploy-use/protect-apps-using-mam-policies.md
+        - name: Stratégies Managed Browser
+          href: deploy-use/manage-internet-access-using-managed-browser-policies.md
+        - name: Applications Microsoft Store pour Entreprises
+          href: deploy-use/windows-store-for-business.md
+    - name: Gérer un abonnement Intune
+      href: deploy-use/manage-intune-subscriptions.md
+    - name: Changer d’autorité MDM
+      href: deploy-use/change-mdm-authority.md
+    - name: Démarrer la migration de MDM hybride vers Intune autonome
+      href: deploy-use/migrate-hybridmdm-to-intunesa.md
+      items:
+        - name: Importer des données Configuration Manager dans Microsoft Intune
+          href: deploy-use/migrate-import-data.md
+        - name: Préparer Intune à la migration des utilisateurs
+          href: deploy-use/migrate-prepare-intune.md
+        - name: Changer l’autorité MDM pour des utilisateurs spécifiques (autorité MDM mixte)
+          href: deploy-use/migrate-mixed-authority.md
+        - name: Changer d’autorité MDM
+          href: deploy-use/migrate-change-mdm-authority.md
+    - name: Gérer l’accès aux ressources
+      items:
+        - name: Créer des profils Wi-Fi
+          href: deploy-use/create-wifi-profiles.md
+        - name: Créer des profils de certificat PFX
+          href: deploy-use/create-pfx-certificate-profiles.md
+        - name: Importer des profils de certificat PFX
+          href: deploy-use/import-pfx-certificate-profiles.md
+        - name: Profils VPN
+          href: deploy-use/create-vpn-profiles.md
+        - name: Créer des profils de messagerie
+          href: deploy-use/create-exchange-activesync-profiles.md
+        - name: Paramètres Windows Hello Entreprise
+          href: deploy-use/windows-hello-for-business-settings.md
+    - name: Gérer l’accès conditionnel
+      href: deploy-use/manage-access-to-services.md
+      items:
+        - name: Stratégies de conformité des appareils
+          href: deploy-use/device-compliance-policies.md
+          items:
+            - name: Actions en cas de non-conformité
+              href: deploy-use/actions-for-noncompliance.md
+        - name: Créer une stratégie de conformité des appareils
+          href: deploy-use/create-compliance-policy.md
+        - name: Gérer l'accès à la messagerie
+          href: deploy-use/manage-email-access.md
+        - name: Gérer l'accès à SharePoint Online
+          href: deploy-use/manage-sharepoint-online-access.md
+        - name: Gérer l’accès à Skype Entreprise Online
+          href: deploy-use/manage-skype-for-business-online-access.md
+        - name: Gérer l’accès à Dynamics CRM Online
+          href: deploy-use/manage-dynamics-crm-online-access.md
+        - name: "Gérer l’accès PC aux services Office\_365"
+          href: deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md
+    - name: Gérer l’accès basé sur les risques que présente l’appareil
+      href: deploy-use/mobile-threat-defense.md
+      items:
+        - name: Lookout dans Configuration Manager
+          href: deploy-use/lookout-mobile-threat-defense-in-configuration-manager.md
+          items:
+            - name: Configurer la Protection contre les menaces mobiles pour Lookout
+              href: deploy-use/set-up-your-subscription-with-lookout.md
+            - name: Activer Lookout dans Intune
+              href: deploy-use/enable-lookout-connection-in-intune.md
+            - name: Déployer des applications Lookout for Work
+              href: deploy-use/configure-and-deploy-lookout-for-work-apps.md
+            - name: Créer une stratégie de conformité Lookout
+              href: deploy-use/enable-device-threat-protection-rule-compliance-policy.md
+            - name: Résoudre les problèmes liés à l’intégration de Lookout
+              href: deploy-use/troubleshoot-lookout-integration.md
+            - name: Surveiller Mobile Threat Defense
+              href: deploy-use/monitor-mobile-threat-defense-compliance.md
 - name: Gestion locale des appareils mobiles
   items:
-  - name: Qu’est-ce que la gestion MDM locale ?
-    href: understand/manage-mobile-devices-with-on-premises-infrastructure.md
-  - name: Planifier la gestion MDM locale
-    href: plan-design/plan-on-premises-mdm.md
-  - name: Étapes de configuration
-    href: get-started/preparation-steps-for-on-premises-mdm.md
-    items:
-    - name: Configurer l’abonnement Intune
-      href: get-started/set-up-intune-subscription-on-premises-mdm.md
-    - name: Installer des rôles locaux
-      href: get-started/install-site-system-roles-for-on-premises-mdm.md
-    - name: Configurer des certificats
-      href: get-started/set-up-certificates-on-premises-mdm.md
-    - name: Configurer pour l’inscription
-      href: get-started/set-up-device-enrollment-on-premises-mdm.md
-  - name: Inscrire des appareils pour la gestion MDM locale
-    href: deploy-use/enroll-devices-on-premises-mdm.md
-    items:
-    - name: Inscription d’utilisateur
-      href: deploy-use/user-enroll-devices-on-premises-mdm.md
-    - name: Inscription en bloc
-      href: deploy-use/bulk-enroll-devices-on-premises-mdm.md
-  - name: Gérer des unités
-    href: deploy-use/onprem-manage-devices.md
-  - name: Gérer des applications
-    href: deploy-use/onprem-manage-applications.md
-  - name: Protéger les données et les appareils
-    href: deploy-use/onprem-protect-data-devices.md
+    - name: Qu’est-ce que la gestion MDM locale ?
+      href: understand/manage-mobile-devices-with-on-premises-infrastructure.md
+    - name: Planifier la gestion MDM locale
+      href: plan-design/plan-on-premises-mdm.md
+    - name: Étapes de configuration
+      href: get-started/preparation-steps-for-on-premises-mdm.md
+      items:
+        - name: Configurer l’abonnement Intune
+          href: get-started/set-up-intune-subscription-on-premises-mdm.md
+        - name: Installer des rôles locaux
+          href: get-started/install-site-system-roles-for-on-premises-mdm.md
+        - name: Configurer des certificats
+          href: get-started/set-up-certificates-on-premises-mdm.md
+        - name: Configurer pour l’inscription
+          href: get-started/set-up-device-enrollment-on-premises-mdm.md
+    - name: Inscrire des appareils pour la gestion MDM locale
+      href: deploy-use/enroll-devices-on-premises-mdm.md
+      items:
+        - name: Inscription d’utilisateur
+          href: deploy-use/user-enroll-devices-on-premises-mdm.md
+        - name: Inscription en bloc
+          href: deploy-use/bulk-enroll-devices-on-premises-mdm.md
+    - name: Gérer des appareils
+      href: deploy-use/onprem-manage-devices.md
+    - name: Gérer des applications
+      href: deploy-use/onprem-manage-applications.md
+    - name: Protéger les données et les appareils
+      href: deploy-use/onprem-protect-data-devices.md
 - name: Gestion des appareils avec Exchange
   href: deploy-use/manage-mobile-devices-with-exchange-activesync.md
-ms.openlocfilehash: 604fce055dcaf8544d85986640ee2ba55a39ebb2
-ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58197127"
