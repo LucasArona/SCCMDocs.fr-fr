@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: a57beb79bf7e4dc51e72d7254ff0f190c6ca32c4
-ms.sourcegitcommit: ef2960bd91655c741450774e512dd0a9be610625
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56838954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62227997"
 ---
 # <a name="manage-applications-in-system-center-configuration-manager"></a>Gérer des applications dans System Center Configuration Manager
 

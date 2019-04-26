@@ -1,117 +1,110 @@
-items:
 - name: Comprendre et explorer
   items:
-  - name: Vue d'ensemble
-    href: understand\protect-data-and-site-infrastructure.md
+    - name: Vue d'ensemble
+      href: understand\protect-data-and-site-infrastructure.md
 - name: Planifier et concevoir
   items:
-  - name: Prérequis des profils de certificat
-    href: plan-design/prerequisites-for-certificate-profiles.md
-    items:
-    - name: Autorisations de modèles de certificat pour les profils de certificat
-      href: plan-design/planning-for-certificate-template-permissions.md
-    - name: Sécurité et confidentialité des profils de certificat
-      href: plan-design/security-and-privacy-for-certificate-profiles.md
-  - name: Planifier Endpoint Protection
-    href: plan-design/planning-for-endpoint-protection.md
-  - name: Planifier des profils de messagerie, Wi-Fi et VPN
-    href: plan-design/prerequisites-for-email-profiles.md
-    items:
-    - name: Conditions préalables pour les profils de messagerie
+    - name: Prérequis des profils de certificat
+      href: plan-design/prerequisites-for-certificate-profiles.md
+      items:
+        - name: Autorisations de modèles de certificat pour les profils de certificat
+          href: plan-design/planning-for-certificate-template-permissions.md
+        - name: Sécurité et confidentialité des profils de certificat
+          href: plan-design/security-and-privacy-for-certificate-profiles.md
+    - name: Planifier Endpoint Protection
+      href: plan-design/planning-for-endpoint-protection.md
+    - name: 'Planifier des profils de messagerie, Wi-Fi et VPN'
       href: plan-design/prerequisites-for-email-profiles.md
-    - name: Prérequis des profils Wi-Fi et VPN
-      href: plan-design/prerequisites-for-wifi-vpn-profiles.md
-  - name: Sécurité et confidentialité pour les profils Wi-Fi et VPN
-    href: plan-design/security-and-privacy-for-wifi-vpn-profiles.md
-  - name: Sécurité et confidentialité pour les profils de messagerie
-    href: plan-design/security-and-privacy-for-email-profiles.md
-  - name: Sécurité et confidentialité pour les profils de certificat
-    href: plan-design/security-and-privacy-for-certificate-profiles.md
+      items:
+        - name: Conditions préalables pour les profils de messagerie
+          href: plan-design/prerequisites-for-email-profiles.md
+        - name: Prérequis des profils Wi-Fi et VPN
+          href: plan-design/prerequisites-for-wifi-vpn-profiles.md
+    - name: Sécurité et confidentialité pour les profils Wi-Fi et VPN
+      href: plan-design/security-and-privacy-for-wifi-vpn-profiles.md
+    - name: Sécurité et confidentialité pour les profils de messagerie
+      href: plan-design/security-and-privacy-for-email-profiles.md
+    - name: Sécurité et confidentialité pour les profils de certificat
+      href: plan-design/security-and-privacy-for-certificate-profiles.md
 - name: Déployer et utiliser
   items:
-  - name: Profils VPN
-    href: deploy-use/vpn-profiles.md
-    items:
-    - name: Création de profils VPN
-      href: deploy-use/create-vpn-profiles.md
-    - name: Rechercher un nom de famille de packages (NFP) pour un VPN par application
-      href: deploy-use/find-a-pfn-for-per-app-vpn.md
-  - name: Profils Wi-Fi
-    href: deploy-use/create-wifi-profiles.md
-    items:
-    - name: Créer des profils Wi-Fi
-      href: deploy-use/create-wifi-profiles.md
-  - name: Profils de certificat
-    href: deploy-use/introduction-to-certificate-profiles.md
-    items:
-    - name: Créer des profils de certificat
-      href: deploy-use/create-certificate-profiles.md
-    - name: Configuration de l’infrastructure de certificats
-      href: deploy-use/certificate-infrastructure.md
-  - name: Endpoint Protection
-    href: deploy-use/endpoint-protection.md
-    items:
-    - name: Configurer Endpoint Protection
-      href: deploy-use/endpoint-protection-configure.md
+    - name: Profils VPN
+      href: deploy-use/vpn-profiles.md
       items:
-      - name: Rôle de système de site
-        href: deploy-use/endpoint-protection-site-role.md
-      - name: Alertes
-        href: deploy-use/endpoint-configure-alerts.md
-      - name: Mises à jour de définitions
-        href: deploy-use/endpoint-definition-updates.md
-        items:
-        - name: Mises à jour de ConfigMgr
-          href: deploy-use/endpoint-definitions-configmgr.md
-        - name: Mises à jour WSUS
-          href: deploy-use/endpoint-definitions-wsus.md
-        - name: Mises à jour Microsoft
-          href: deploy-use/endpoint-definitions-microsoft-updates.md
-        - name: Centre de protection contre les programmes malveillants
-          href: deploy-use/endpoint-definitions-protection-center.md
-        - name: Mises à jour du partage réseau
-          href: deploy-use/endpoint-definitions-network.md
-      - name: Déployer la stratégie
-        href: deploy-use/endpoint-antimalware-policies.md
-      - name: Configurer le client
-        href: deploy-use/endpoint-protection-configure-client.md
-    - name: Stratégies de pare-feu Windows
-      href: deploy-use/create-windows-firewall-policies.md
-    - name: Windows Defender - Protection avancée contre les menaces
-      href: deploy-use/windows-defender-advanced-threat-protection.md
-    - name: Créer et déployer une stratégie Exploit Guard
-      href: deploy-use/create-deploy-exploit-guard-policy.md
-    - name: Créer et déployer une stratégie Application Guard
-      href: deploy-use/create-deploy-application-guard-policy.md
-    - name: Tâches de pare-feu et anti-programme malveillant
-      href: deploy-use/endpoint-antimalware-firewall.md
-    - name: Scénario Endpoint Protection
-      href: deploy-use/scenarios-endpoint-protection.md
-    - name: Aide du client Endpoint Protection
-      href: deploy-use/endpoint-protection-client-help.md
-    - name: Résolution des problèmes liés au client
-      href: deploy-use/troubleshoot-endpoint-client.md
-    - name: FAQ sur Windows Defender
-      href: deploy-use/endpoint-protection-client-faq.md
-    - name: Paramètres Device Guard
-      href: deploy-use/use-device-guard-with-configuration-manager.md
-  - name: Déployer des profils de certificat, de messagerie, VPN et Wi-Fi
-    href: deploy-use/deploy-wifi-vpn-email-cert-profiles.md
-  - name: Paramètres Windows Hello Entreprise
-    href: deploy-use/windows-hello-for-business-settings.md
-  - name: Paramètres des conditions générales
-    href: ../mdm/deploy-use/terms-and-conditions.md
-  - name: Surveiller la protection
-    items:
-    - name: Surveiller les profils Wi-Fi, de messagerie et VPN
-      href: deploy-use/monitor-wifi-email-vpn-profiles.md
-    - name: Surveiller les profils de certificat
-      href: deploy-use/monitor-certificate-profiles.md
-    - name: Surveiller Endpoint Protection
-      href: deploy-use/monitor-endpoint-protection.md
-ms.openlocfilehash: b07b7146b336626bc478357808bc9a6d7941260f
-ms.sourcegitcommit: 8661f10596f565ca2b7bdb5951388b44b3b622ee
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "48817612"
+        - name: "Création de profils\_VPN"
+          href: deploy-use/create-vpn-profiles.md
+        - name: Rechercher un nom de famille de packages (NFP) pour un VPN par application
+          href: deploy-use/find-a-pfn-for-per-app-vpn.md
+    - name: Profils Wi-Fi
+      href: deploy-use/create-wifi-profiles.md
+      items:
+        - name: Créer des profils Wi-Fi
+          href: deploy-use/create-wifi-profiles.md
+    - name: Profils de certificat
+      href: deploy-use/introduction-to-certificate-profiles.md
+      items:
+        - name: Créer des profils de certificat
+          href: deploy-use/create-certificate-profiles.md
+        - name: Configuration de l’infrastructure de certificats
+          href: deploy-use/certificate-infrastructure.md
+    - name: Endpoint Protection
+      href: deploy-use/endpoint-protection.md
+      items:
+        - name: Configurer Endpoint Protection
+          href: deploy-use/endpoint-protection-configure.md
+          items:
+            - name: Rôle de système de site
+              href: deploy-use/endpoint-protection-site-role.md
+            - name: Alertes
+              href: deploy-use/endpoint-configure-alerts.md
+            - name: Mises à jour de définitions
+              href: deploy-use/endpoint-definition-updates.md
+              items:
+                - name: Mises à jour de ConfigMgr
+                  href: deploy-use/endpoint-definitions-configmgr.md
+                - name: Mises à jour WSUS
+                  href: deploy-use/endpoint-definitions-wsus.md
+                - name: Mises à jour Microsoft
+                  href: deploy-use/endpoint-definitions-microsoft-updates.md
+                - name: Centre de protection contre les programmes malveillants
+                  href: deploy-use/endpoint-definitions-protection-center.md
+                - name: Mises à jour du partage réseau
+                  href: deploy-use/endpoint-definitions-network.md
+            - name: Déployer la stratégie
+              href: deploy-use/endpoint-antimalware-policies.md
+            - name: Configurer le client
+              href: deploy-use/endpoint-protection-configure-client.md
+        - name: Stratégies de pare-feu Windows
+          href: deploy-use/create-windows-firewall-policies.md
+        - name: Windows Defender - Protection avancée contre les menaces
+          href: deploy-use/windows-defender-advanced-threat-protection.md
+        - name: Créer et déployer une stratégie Exploit Guard
+          href: deploy-use/create-deploy-exploit-guard-policy.md
+        - name: Créer et déployer une stratégie Application Guard
+          href: deploy-use/create-deploy-application-guard-policy.md
+        - name: Tâches de pare-feu et anti-programme malveillant
+          href: deploy-use/endpoint-antimalware-firewall.md
+        - name: Scénario Endpoint Protection
+          href: deploy-use/scenarios-endpoint-protection.md
+        - name: Aide du client Endpoint Protection
+          href: deploy-use/endpoint-protection-client-help.md
+        - name: Résolution des problèmes liés au client
+          href: deploy-use/troubleshoot-endpoint-client.md
+        - name: Questions fréquentes (FAQ) sur Windows Defender
+          href: deploy-use/endpoint-protection-client-faq.md
+        - name: Paramètres Device Guard
+          href: deploy-use/use-device-guard-with-configuration-manager.md
+    - name: 'Déployer des profils de certificat, de messagerie, VPN et Wi-Fi'
+      href: deploy-use/deploy-wifi-vpn-email-cert-profiles.md
+    - name: Paramètres Windows Hello Entreprise
+      href: deploy-use/windows-hello-for-business-settings.md
+    - name: Paramètres des conditions générales
+      href: ../mdm/deploy-use/terms-and-conditions.md
+    - name: Surveiller la protection
+      items:
+        - name: 'Surveiller les profils Wi-Fi, de messagerie et VPN'
+          href: deploy-use/monitor-wifi-email-vpn-profiles.md
+        - name: Surveiller les profils de certificat
+          href: deploy-use/monitor-certificate-profiles.md
+        - name: Surveiller Endpoint Protection
+          href: deploy-use/monitor-endpoint-protection.md

@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d7da4767bd8ef26ebf3f56010e99bc1cbd0b0c10
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56120389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62227860"
 ---
 # <a name="protect-apps-using-mobile-application-management-policies-in-system-center-configuration-manager"></a>Protéger des applications à l’aide de stratégies de gestion des applications mobiles dans System Center Configuration Manager
 
@@ -47,7 +47,7 @@ Pour appliquer des restrictions à une application, celle-ci doit intégrer le K
 
 ## <a name="create-and-deploy-an-app-with-a-mobile-application-management-policy"></a>Créer et déployer une application avec une stratégie de gestion des applications mobiles  
 
-##  <a name="step-1-obtain-the-link-to-a-policy-managed-app-or-create-a-wrapped-app"></a>Étape 1 : Obtenir le lien vers une application gérée par stratégie ou créer une application encapsulée  
+##  <a name="step-1-obtain-the-link-to-a-policy-managed-app-or-create-a-wrapped-app"></a>Étape 1 : Obtenir le lien vers une application gérée par stratégie ou créer une application encapsulée  
 
 -   **Pour obtenir un lien à une stratégie d’application gérée**: À partir de l’app store, recherchez et notez l’URL de l’application gérée de stratégie à déployer.  
 
@@ -57,7 +57,7 @@ Pour appliquer des restrictions à une application, celle-ci doit intégrer le K
 
      L'outil crée une application traitée et un fichier manifeste associé. Vous utilisez ces fichiers quand vous créez une application Configuration Manager contenant l’application.  
 
-##  <a name="step-2-create-a-configuration-manager-application-that-contains-an-app"></a>Étape 2 : Créer une application Configuration Manager qui contient une application  
+##  <a name="step-2-create-a-configuration-manager-application-that-contains-an-app"></a>Étape 2 : Créer une application Configuration Manager qui contient une application  
  La procédure de création de l’application Configuration Manager diffère selon que vous utilisez une application gérée par une stratégie (lien externe) ou une application qui a été créée avec l’outil de création de package de restrictions d’application Microsoft Intune pour iOS (package d’application pour iOS). Utilisez l’une des procédures suivantes pour créer l’application Configuration Manager.  
 
 1. Dans la console Configuration Manager, choisissez **Bibliothèque de logiciels** > **Gestion des applications** > **Applications**.  
@@ -98,7 +98,7 @@ Pour appliquer des restrictions à une application, celle-ci doit intégrer le K
 
    La nouvelle application s'affiche dans le nœud **Applications** de l'espace de travail **Bibliothèque de logiciels** .  
 
-##  <a name="step-3-create-an-application-management-policy"></a>Étape 3 : Créer une stratégie de gestion des applications  
+##  <a name="step-3-create-an-application-management-policy"></a>Étape 3 : Créer une stratégie de gestion des applications  
  Ensuite, créez une stratégie de gestion d’application que vous associez à l’application. Vous pouvez créer une stratégie générale ou Managed Browser.  
 
 1)  Dans la console Configuration Manager, choisissez **Bibliothèque de logiciels** > **Gestion des applications** > **Stratégies de gestion d’application**.  
@@ -140,7 +140,7 @@ Pour plus d’informations, consultez [Gérer l’accès à Internet à l’aide
 
  La nouvelle stratégie s'affiche dans le nœud **Stratégies de gestion d'application** de l'espace de travail **Bibliothèque de logiciels** .  
 
-##  <a name="step-4-associate-the-application-management-policy-with-a-deployment-type"></a>Étape 4 : Associer la stratégie de gestion des applications avec un type de déploiement  
+##  <a name="step-4-associate-the-application-management-policy-with-a-deployment-type"></a>Étape 4 : Associer la stratégie de gestion des applications avec un type de déploiement  
 
  Quand un type de déploiement est créé pour une application qui nécessite une stratégie de gestion des applications, Configuration Manager vous invite à associer une stratégie de gestion des applications. Pour Managed Browser, vous devez associer une stratégie Général et une stratégie Managed Browser. Pour plus d’informations, consultez [Créer des applications](create-applications.md).  
 

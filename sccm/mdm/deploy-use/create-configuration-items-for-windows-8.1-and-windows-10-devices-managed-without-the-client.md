@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: a696059076c64d8341f5fbfa3dd5ab68fd2b34ff
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56129525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62275687"
 ---
 # <a name="how-to-create-configuration-items-for-windows-81-and-windows-10-devices-managed-without-the-system-center-configuration-manager-client"></a>Comment créer des éléments de configuration pour des appareils Windows 8.1 et Windows 10 gérés sans le client System Center Configuration Manager
 

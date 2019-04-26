@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 90098dc0243e8513fe78692fe91a8390f7936eba
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56119647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62228345"
 ---
 # <a name="manage-access-to-company-resource-based-on-device-network-and-application-risk"></a>Gérer l’accès aux ressources d’entreprise en fonction du risque évalué pour l’appareil, le réseau et l’application
 
@@ -25,7 +25,7 @@ ms.locfileid: "56119647"
 Les connecteurs de protection contre les menaces mobiles vous permettent d’utiliser votre fournisseur de protection contre les menaces mobiles comme source d’informations pour vos règles d’accès conditionnelles et stratégies de conformité. Ceci vous permet d’ajouter une couche de protection aux ressources de votre organisation telles que Microsoft Exchange et Sharepoint, tout particulièrement en cas de corruption d’appareils mobiles.
 
 > [!Important]  
-> Depuis le 14 août 2018, la gestion hybride des appareils mobiles est une [fonctionnalité déconseillée](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). Pour plus d’informations, voir [Présentation de la gestion MDM hybride](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->  
+> Depuis le 14 août 2018, la gestion hybride des appareils mobiles est une [fonctionnalité déconseillée](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). Pour plus d’informations, consultez [Qu’est-ce que la gestion hybride des appareils mobiles ?](/sccm/mdm/understand/hybrid-mobile-device-management)<!--Intune feature 2683117-->  
 
 
 

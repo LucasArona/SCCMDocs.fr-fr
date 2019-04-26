@@ -12,11 +12,11 @@ ms.technology: configmgr-hybrid
 ms.assetid: cc397ab5-125f-4f17-905b-fab980194f49
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c0420113feaaf9c9485b8d1e3d488b07878c61b5
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56131963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233977"
 ---
 # <a name="change-your-mdm-authority"></a>Changer d’autorité MDM
 
@@ -27,7 +27,7 @@ Vous pouvez modifier votre autorité MDM sans avoir à contacter le Support Micr
 Cet article concerne le changement d’autorité de gestion des appareils mobiles (MDM) dans le cas où aucun utilisateur n’a fait l’objet d’une migration. Pour la changer après avoir [migré un sous-ensemble d’utilisateurs](migrate-hybridmdm-to-intunesa.md), consultez la page [Changer d’autorité MDM](migrate-change-mdm-authority.md).
 
 > [!Important]  
-> Depuis le 13 août 2018, la gestion hybride des appareils mobiles est une [fonctionnalité déconseillée](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). Pour plus d’informations, voir [Présentation de la gestion MDM hybride](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->  
+> Depuis le 13 août 2018, la gestion hybride des appareils mobiles est une [fonctionnalité déconseillée](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). Pour plus d’informations, consultez [Qu’est-ce que la gestion hybride des appareils mobiles ?](/sccm/mdm/understand/hybrid-mobile-device-management)<!--Intune feature 2683117-->  
 
 
 
@@ -124,9 +124,9 @@ Une fois le changement d’autorité MDM effectué, passez en revue les étapes 
     
 - Si vous rencontrez des problèmes avec un appareil, vous pouvez le désinscrire, puis le réinscrire. Cette action établit une connexion avec la nouvelle autorité et est effectuée aussi rapidement que possible.  
 
-- Si vous avez activé [Android for Work](/sccm/mdm/deploy-use/create-configuration-items-for-android-for-work-devices-managed-without-the-client) en tant que locataire hybride, puis avez migré votre locataire vers une version autonome d’Intune, le paramètre Android for Work situé sous les restrictions d’inscription peut afficher Bloquer au lieu d’Autoriser. Définissez-le manuellement sur **Autoriser** pour réactiver l’inscription Android for Work.<!--512117-->  
+- Si vous avez activé [Android for Work](/sccm/mdm/deploy-use/create-configuration-items-for-android-for-work-devices-managed-without-the-client) en tant que locataire hybride, puis avez migré votre locataire vers une version autonome d’Intune, le paramètre Android for Work situé sous les restrictions d’inscription peut afficher Bloquer au lieu d’Autoriser. Définissez-le manuellement sur **autoriser** pour réactiver Android pour l’inscription de travail.<!--512117-->  
 
-- Après la modification de l’autorité MDM, le jeton Apple VPP et les [applications iOS achetées en volume](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps) associées ne sont pas supprimés automatiquement. Pour nettoyer ces informations, suivez les étapes de [Supprimer un jeton Apple VPP](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps#delete-an-apple-vpp-token). Une fois l’opération terminée, le site supprime le jeton. Il supprime également à partir du nœud de l’application Store sous licence les métadonnées de l’application pour ce jeton.<!--SCCMDocs issue 579-->  
+- Après la modification de l’autorité MDM, le jeton Apple VPP et les [applications iOS achetées en volume](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps) associées ne sont pas supprimés automatiquement. Pour nettoyer ces informations, suivez les étapes de [Supprimer un jeton Apple VPP](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps#delete-an-apple-vpp-token). Une fois l’opération terminée, le site supprime le jeton. Elle supprime également à partir du nœud de l’application de Store sous licence les métadonnées de l’application pour ce jeton.<!--SCCMDocs issue 579-->  
 
     Dans de rares cas, vous pouvez rencontrer une erreur indiquant que le site n’a pas pu supprimer l’objet de gestion.  
 

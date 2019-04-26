@@ -12,11 +12,11 @@ ms.technology: configmgr-hybrid
 ms.assetid: 6f0201d7-5714-4ba0-b2bf-d1acd0203e9a
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b7f2875852b49ab8af9b1f34c4747f12a6620896
-ms.sourcegitcommit: fd16fc2b681608fd6def5bad2cedffbcd1f2423a
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56405673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62282479"
 ---
 # <a name="change-the-mdm-authority-for-specific-users-mixed-mdm-authority"></a>Changer l’autorité MDM pour des utilisateurs spécifiques (autorité MDM mixte) 
 
@@ -34,7 +34,7 @@ Vous pouvez configurer une autorité MDM mixte dans le même client. Gérer cert
 Gérer les utilisateurs migrés et leurs appareils dans Intune. Continuer à gérer d’autres appareils dans Configuration Manager. Pour vérifier que tout fonctionne comme prévu, démarrez avec un petit groupe test d’utilisateurs. Ensuite migrer progressivement les autres groupes d’utilisateurs. Lorsque vous êtes prêt, faire basculer l’autorité de gestion des appareils mobiles au niveau du locataire depuis Configuration Manager vers Intune autonome. 
 
 > [!Important]  
-> Depuis le 13 août 2018, la gestion hybride des appareils mobiles est une [fonctionnalité déconseillée](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). Pour plus d’informations, voir [Présentation de la gestion MDM hybride](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->  
+> Depuis le 13 août 2018, la gestion hybride des appareils mobiles est une [fonctionnalité déconseillée](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). Pour plus d’informations, consultez [Qu’est-ce que la gestion hybride des appareils mobiles ?](/sccm/mdm/understand/hybrid-mobile-device-management)<!--Intune feature 2683117-->  
 
 
 
@@ -85,7 +85,7 @@ Gérer les utilisateurs migrés et leurs appareils dans Intune. Continuer à gé
 - Ne faites pas migrer de comptes d’utilisateur qui ont été ajoutés en tant que gestionnaires d’inscription d’appareil dans Configuration Manager. Plus tard, quand vous remplacerez votre autorité MDM au niveau du locataire par Intune, ces comptes d’utilisateur migreront correctement. Si vous ne migrez pas le compte d’utilisateur DEM avant le changement d’autorité de gestion des appareils mobiles au niveau du locataire, vous devez ajouter manuellement l’utilisateur en tant qu’une inscription dans Intune sur Azure. Toutefois, les appareils inscrits à l’aide d’un gestionnaire Device Emulator ne migrent correctement. Appelez le support technique pour faire migrer ces appareils. Pour plus d’informations, consultez [Ajouter un gestionnaire d’inscription d’appareil](https://docs.microsoft.com/intune/device-enrollment-manager-enroll#add-a-device-enrollment-manager).  
 
     > [!Note]  
-    > En mode autorité mixte, ne déplacez pas ces comptes vers Intune en les supprimant de la collection cloud de ConfigMgr. Si vous le faites, l’utilisateur devient un utilisateur standard et ne peut pas inscrire plus de 15 appareils. Au lieu de cela, migrez ces utilisateurs et leurs appareils une fois que vous modifiez complètement l’autorité de gestion des appareils mobiles du locataire.<!--Intune bug 2174210-->  
+    > En mode autorité mixte, ne déplacez pas ces comptes vers Intune en les supprimant de la collection cloud de ConfigMgr. Si vous le faites, l’utilisateur devient un utilisateur standard et ne peut pas inscrire plus de 15 appareils. Au lieu de cela, migrez ces utilisateurs et leurs appareils une fois que vous passez entièrement l’autorité MDM du locataire.<!--Intune bug 2174210-->  
 
 - Les appareils inscrits à l’aide d’un gestionnaire Device Emulator et les appareils sans [l’affinité utilisateur](/sccm/mdm/deploy-use/user-affinity-for-hybrid-managed-devices) ne sont pas migrés automatiquement vers la nouvelle autorité MDM. Pour modifier l’autorité de gestion de ces appareils MDM, consultez [Migrer des appareils sans affinité utilisateur](#migrate-devices-without-user-affinity).  
 

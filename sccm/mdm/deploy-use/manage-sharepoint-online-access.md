@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 69a160a3c7833f196d50185e551f619d68dc0925
-ms.sourcegitcommit: ec4411fe30770f90128cf6cbd181047db90040cb
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57881739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62255565"
 ---
 # <a name="manage-sharepoint-online-access-in-system-center-configuration-manager"></a>Gérer l’accès à SharePoint Online dans System Center Configuration Manager
 
@@ -105,7 +105,7 @@ Vous pouvez bloquer l'accès à SharePoint Online dans les applications suivante
 
 ## <a name="configure-conditional-access-for-sharepoint-online"></a>Configurer l’accès conditionnel pour SharePoint Online  
 
-### <a name="step-1-configure-active-directory-security-groups"></a>Étape 1 : Configurer des groupes de sécurité Active Directory  
+### <a name="step-1-configure-active-directory-security-groups"></a>Étape 1 : Configurer des groupes de sécurité Active Directory  
  Avant de commencer, configurez les groupes de sécurité Azure AD pour la stratégie d’accès conditionnel. Vous pouvez configurer ces groupes dans le **centre d’administration Microsoft 365**, ou le **portail du compte Intune**. Ces groupes incluent les utilisateurs qui sont ciblés par la stratégie ou exemptés de celle-ci. Quand un utilisateur est ciblé par une stratégie, chaque appareil qu’il utilise doit être conforme à cette stratégie pour accéder aux ressources.  
 
  Vous pouvez spécifier deux types de groupes dans une stratégie SharePoint Online :  
@@ -116,7 +116,7 @@ Vous pouvez bloquer l'accès à SharePoint Online dans les applications suivante
 
   Si un utilisateur se trouve dans les deux groupes, il est exempt de la stratégie.  
 
-### <a name="step-2-configure-and-deploy-a-compliance-policy"></a>Étape 2 : Configurer et déployer une stratégie de conformité  
+### <a name="step-2-configure-and-deploy-a-compliance-policy"></a>Étape 2 : Configurer et déployer une stratégie de conformité  
  Créez et déployez une stratégie de conformité sur tous les appareils sur lesquels vous ciblez la stratégie SharePoint Online.  
 
 > [!NOTE]   

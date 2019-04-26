@@ -12,11 +12,11 @@ ms.technology: configmgr-hybrid
 ms.assetid: be503ec9-5324-4f7c-bcf5-77204328e99c
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 9d6a909be4b1817b9a251046d666839e2e351443
-ms.sourcegitcommit: 0bf253085adeca0d9ea62d76497eb5ebf5ce89da
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57012426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62282165"
 ---
 # <a name="change-your-mdm-authority-to-intune-standalone"></a>Utiliser la version autonome d’Intune comme autorité MDM
 
@@ -118,7 +118,8 @@ Après avoir modifié l’autorité de gestion des appareils mobiles, procédez 
 - Pour les appareils qui ne sont pas associés à un utilisateur, appelez le support pour vous aider à changer l’autorité de gestion des appareils mobiles. 
 
 #### <a name="bkmk-ki-dep"></a> Enregistrements d’appareils Apple DEP
-<!--ICM 105091970--> Après avoir effectué la migration de MDM hybride, vous pouvez remarquer appareil PED Apple sont conservés dans la console Configuration Manager. Une fois que vous modifiez l’autorité de gestion des appareils mobiles à Intune, vous ne pouvez pas supprimer ces appareils à partir du Gestionnaire de Configuration. 
+<!--ICM 105091970-->
+Après avoir effectué la migration de MDM hybride, vous pouvez remarquer appareil PED Apple sont conservés dans la console Configuration Manager. Une fois que vous modifiez l’autorité de gestion des appareils mobiles à Intune, vous ne pouvez pas supprimer ces appareils à partir du Gestionnaire de Configuration. 
 
 Il existe deux solutions de contournement :
 

@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: aff4fcc67325645387aea1e57354321769a515ca
-ms.sourcegitcommit: f3dd8405018fe1043434386be15c16752c1a4a3c
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57558063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62217012"
 ---
 # <a name="set-up-a-microsoft-intune-subscription-for-on-premises-mdm-in-configuration-manager"></a>Configurer un abonnement Microsoft Intune pour des applications MDM locales dans Configuration Manager
 
@@ -27,7 +27,7 @@ Configuration Manager local gestion des appareils mobiles (MDM) nécessite un ab
 Avant d’installer les rôles de système de site nécessaires pour la gestion MDM locale, configurez l’abonnement Intune. Cette action réduit le temps nécessaire pour les rôles de système de site qui vient d’être installé devenir fonctionnelle.  
 
 > [!Note]  
-> Depuis la version 1810, une connexion Intune n’est plus nécessaire pour les nouveaux déploiements de gestion des appareils mobiles en local.<!--3607730, fka 1359124--> Votre organisation exige toujours des licences Intune pour utiliser cette fonctionnalité. Actuellement impossible de supprimer la connexion Intune à partir des déploiements de gestion des appareils mobiles locaux existants. Pour plus d’informations, consultez le [billet de blog du support Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150).  
+> Depuis la version 1810, une connexion Intune n’est plus nécessaire pour les nouveaux déploiements de gestion des appareils mobiles en local.<!--3607730, fka 1359124--> Votre organisation exige toujours des licences Intune pour utiliser cette fonctionnalité. À l’heure actuelle, il n’est pas possible de supprimer la connexion Intune des déploiements MDM locaux existants. Pour plus d’informations, consultez le [billet de blog du support Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150).  
 
 
 

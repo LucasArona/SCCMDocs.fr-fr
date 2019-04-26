@@ -13,11 +13,11 @@ manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c5d5e6665b0ddd2e7726af4b8ac8929d5019fedf
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59802442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62245877"
 ---
 # <a name="how-to-enroll-devices-in-desktop-analytics"></a>Comment inscrire des appareils dans Desktop Analytique
 

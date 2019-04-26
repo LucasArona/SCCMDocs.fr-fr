@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 2ee4ed8f102507b4d62a1ccbfe1cc38240e85df9
-ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58196855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260489"
 ---
 # <a name="manage-email-access-in-configuration-manager"></a>Gérer l’accès à la messagerie dans Configuration Manager
 
@@ -107,7 +107,7 @@ Vous pouvez configurer une stratégie d’accès conditionnel pour Exchange sur 
 
 ## <a name="configure-conditional-access"></a>Configurer un accès conditionnel
 
-### <a name="step-1-evaluate-the-effect-of-the-conditional-access-policy"></a>Étape 1 : Évaluer l’impact de la stratégie d’accès conditionnel  
+### <a name="step-1-evaluate-the-effect-of-the-conditional-access-policy"></a>Étape 1 : Évaluer l’impact de la stratégie d’accès conditionnel  
 
 Une fois que vous avez configuré le **connecteur Exchange sur site**, vous pouvez utiliser le Gestionnaire de Configuration **liste des appareils par état d’accès conditionnel** rapport pour identifier les appareils qui ne peuvent pas Après avoir configuré la stratégie d’accès conditionnel, l’accès à Exchange. Ce rapport requiert également les éléments suivants :  
 
@@ -142,7 +142,7 @@ Les appareils qui font partie d'un groupe ou d'un regroupement ciblé verront le
 Vous pouvez exporter le contenu du rapport et utiliser la colonne **Adresse de messagerie** pour informer les utilisateurs qu'ils ne pourront pas accéder à la messagerie.  
 
 
-### <a name="step-2-configure-user-groups-or-collections-for-the-conditional-access-policy"></a>Étape 2 : Configurer des groupes d’utilisateurs ou des regroupements pour la stratégie d’accès conditionnel  
+### <a name="step-2-configure-user-groups-or-collections-for-the-conditional-access-policy"></a>Étape 2 : Configurer des groupes d’utilisateurs ou des regroupements pour la stratégie d’accès conditionnel  
 
 Vous ciblez les stratégies d'accès conditionnel vers différents groupes ou regroupements d'utilisateurs en fonction du type de stratégie. Ces groupes contiennent les utilisateurs qui seront ciblés par la stratégie ou exemptés de celle-ci. Quand un utilisateur est ciblé par une stratégie, chaque appareil qu'il utilise doit être conforme à cette stratégie pour qu'il puisse accéder à la messagerie.  
 
@@ -161,7 +161,7 @@ Si un utilisateur se trouve dans les deux, il est exempté de la stratégie.
 Seuls les groupes ou les regroupements qui sont ciblés par la stratégie d'accès conditionnel sont évalués pour l'accès à Exchange.  
 
 
-### <a name="step-3-configure-and-deploy-a-compliance-policy"></a>Étape 3 : Configurer et déployer une stratégie de conformité  
+### <a name="step-3-configure-and-deploy-a-compliance-policy"></a>Étape 3 : Configurer et déployer une stratégie de conformité  
 
 Vérifiez que vous avez créé et déployé une stratégie de conformité pour tous les appareils qui seront ciblés par la stratégie d'accès conditionnel Exchange.  
 
@@ -171,12 +171,12 @@ Pour plus d’informations sur la configuration de la stratégie de conformité,
 > Si vous n’avez pas déployé une stratégie de conformité et que vous activez ensuite une stratégie d’accès conditionnel Exchange, tous les appareils ciblés pourront accéder.  
 
 
-### <a name="step-4-configure-the-conditional-access-policy"></a>Étape 4 : Configurer la stratégie d’accès conditionnel  
+### <a name="step-4-configure-the-conditional-access-policy"></a>Étape 4 : Configurer la stratégie d’accès conditionnel  
 
 #### <a name="for-exchange-online-and-tenants-in-the-new-exchange-online-dedicated-environment"></a>Pour Exchange Online (et les locataires dans le nouvel environnement Exchange Online Dedicated)
 
 > [!NOTE]  
-> Vous pouvez aussi créer une stratégie d’accès conditionnel dans la console de gestion Azure AD. Celle-ci vous permet de créer les stratégies d’accès conditionnel aux appareils (appelées dans Azure AD « stratégies d’accès conditionnel en fonction de l’appareil ») en plus des autres stratégies d’accès conditionnel comme l’authentification multifacteur. Vous pouvez aussi définir des stratégies d’accès conditionnel pour des applications d’entreprise tierces comme Salesforce et Box prises en charge par Azure AD. Pour plus d’informations, consultez [How To : Exiger que les appareils gérés pour accéder aux applications de cloud avec l’accès conditionnel](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices).  
+> Vous pouvez aussi créer une stratégie d’accès conditionnel dans la console de gestion Azure AD. Celle-ci vous permet de créer les stratégies d’accès conditionnel aux appareils (appelées dans Azure AD « stratégies d’accès conditionnel en fonction de l’appareil ») en plus des autres stratégies d’accès conditionnel comme l’authentification multifacteur. Vous pouvez aussi définir des stratégies d’accès conditionnel pour des applications d’entreprise tierces comme Salesforce et Box prises en charge par Azure AD. Pour plus d’informations, consultez [How To : exiger des appareils gérés pour accéder aux applications cloud avec l’accès conditionnel](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices).  
 
 Le flux suivant est utilisé par les stratégies d'accès conditionnel pour Exchange Online pour évaluer s'il faut autoriser ou bloquer des appareils.  
 

@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: fad5ce96b84b5a6edfafdead64cff0223009ebf8
-ms.sourcegitcommit: f3dd8405018fe1043434386be15c16752c1a4a3c
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57558046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288641"
 ---
 # <a name="preparation-steps-for-on-premises-mdm-in-configuration-manager"></a>Étapes de préparation pour MDM en local dans Configuration Manager
 
@@ -31,7 +31,7 @@ Les tâches principales suivantes sont requises pour préparer des applications 
     S’inscrire à Microsoft Intune, puis ajouter l’abonnement à Configuration Manager via la console Configuration Manager. Cette étape est nécessaire uniquement pour la licence. Intune n’est pas utilisé pour gérer les appareils ou stocker des informations de gestion. La coordination et la gestion des appareils est entièrement assurée dans votre entreprise à l’aide de l’infrastructure Configuration Manager locale.  
 
     > [!Note]  
-    > Depuis la version 1810, une connexion Intune n’est plus nécessaire pour les nouveaux déploiements de gestion des appareils mobiles en local.<!--3607730, fka 1359124--> Votre organisation exige toujours des licences Intune pour utiliser cette fonctionnalité. Actuellement impossible de supprimer la connexion Intune à partir des déploiements de gestion des appareils mobiles locaux existants. Pour plus d’informations, consultez le [billet de blog du support Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150).  
+    > Depuis la version 1810, une connexion Intune n’est plus nécessaire pour les nouveaux déploiements de gestion des appareils mobiles en local.<!--3607730, fka 1359124--> Votre organisation exige toujours des licences Intune pour utiliser cette fonctionnalité. À l’heure actuelle, il n’est pas possible de supprimer la connexion Intune des déploiements MDM locaux existants. Pour plus d’informations, consultez le [billet de blog du support Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150).  
 
 - [Installer des rôles de système de site pour la gestion MDM locale](/sccm/mdm/get-started/install-site-system-roles-for-on-premises-mdm)  
 

@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 006a887a3989d7f05b7cf44b13562e644e6f7d94
-ms.sourcegitcommit: d23ccf7b95e6c2a6b156975194ebbc375cb5e6ea
+ms.openlocfilehash: 66b7d7da7081a4523378c0dc4b2a00917ac16ea9
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60124401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62261415"
 ---
 # <a name="tutorial-deploy-office-365-to-pilot"></a>Tutoriel : Déployer Office 365 pilote
 
@@ -121,7 +121,7 @@ Utilisez cette procédure pour vous connecter à l’Analytique de bureau et le 
 
         Pour ajouter un utilisateur au groupe, tapez son nom ou l’adresse électronique dans le **Entrez le nom ou adresse de messagerie** section du groupe approprié. Lorsque vous avez terminé, sélectionnez **suivant**.
 
-L’étape suivante peut être effectuée par un **propriétaire de l’espace de travail** ou **contributeur**. 
+L’étape suivante peut être effectuée par un **propriétaire de l’espace de travail** ou **contributeur**. Pour plus d’informations, consultez [conditions préalables](/sccm/desktop-analytics/overview#prerequisites).
 
 5. Sur la page pour **configurer votre espace de travail**:  
 

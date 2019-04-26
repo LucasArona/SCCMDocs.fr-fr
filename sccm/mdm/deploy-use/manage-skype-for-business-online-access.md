@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 601b58b2f955170e5ab2f038cb49306efe3b499c
-ms.sourcegitcommit: ec4411fe30770f90128cf6cbd181047db90040cb
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57881722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62255273"
 ---
 # <a name="manage-skype-for-business-online-access"></a>Gérer l’accès à Skype Entreprise Online
 
@@ -51,7 +51,7 @@ Utilisez une stratégie d’accès conditionnel pour Skype Entreprise Online pou
 
 ## <a name="configure-conditional-access-for-skype-for-business-online"></a>Configurer l’accès conditionnel pour Skype Entreprise Online  
 
-### <a name="step-1-configure-active-directory-security-groups"></a>Étape 1 : Configurer des groupes de sécurité Active Directory  
+### <a name="step-1-configure-active-directory-security-groups"></a>Étape 1 : Configurer des groupes de sécurité Active Directory  
  Avant de commencer, configurez les groupes de sécurité Azure Active Directory pour la stratégie d'accès conditionnel. Configuration de ces groupes dans le centre d’administration Microsoft 365. Ces groupes contiennent les utilisateurs à cibler avec la stratégie ou à exclure de celle-ci. Quand un utilisateur est ciblé par une stratégie, chaque appareil qu'il utilise doit être conforme à cette stratégie pour qu'il puisse accéder aux ressources.  
 
  Vous pouvez spécifier deux types de groupes à utiliser pour la stratégie de Skype Entreprise :  
@@ -61,7 +61,7 @@ Utilisez une stratégie d’accès conditionnel pour Skype Entreprise Online pou
 -   Les **Groupes exemptés** contiennent les utilisateurs à exclure de la stratégie  
     Si un utilisateur figure dans les deux groupes, il est exempté.  
 
-### <a name="step-2-configure-and-deploy-a-compliance-policy"></a>Étape 2 : Configurer et déployer une stratégie de conformité  
+### <a name="step-2-configure-and-deploy-a-compliance-policy"></a>Étape 2 : Configurer et déployer une stratégie de conformité  
  Créez et déployez une stratégie de conformité sur tous les appareils sur lesquels la stratégie Skype Entreprise Online est ciblée.  
 
  Pour plus d’informations sur la configuration de la stratégie de conformité, consultez [Gérer les stratégies de conformité d’appareils](../../protect/deploy-use/device-compliance-policies.md).  
@@ -70,7 +70,7 @@ Utilisez une stratégie d’accès conditionnel pour Skype Entreprise Online pou
 >  Si vous n’avez pas déployé de stratégie de conformité, et que vous activez la stratégie Skype Entreprise Online, tous les appareils ciblés sont autorisés à accéder s’ils sont inscrits auprès de Microsoft Intune.  
 
 
-### <a name="step-3-configure-the-skype-for-business-online-policy"></a>Étape 3 : Configurer le Skype entreprise Online stratégie  
+### <a name="step-3-configure-the-skype-for-business-online-policy"></a>Étape 3 : Configurer le Skype entreprise Online stratégie  
  Configurez la stratégie de manière à restreindre l’accès à Skype Entreprise Online aux seuls appareils gérés et conformes. Cette stratégie est stockée dans Azure Active Directory.  
 
 1. Dans la [Console d’administration Microsoft Intune](https://manage.microsoft.com), cliquez sur **Stratégie** > **Accès conditionnel** > **Stratégie Skype Entreprise Online**.  

@@ -1,58 +1,51 @@
-items:
 - name: Cogestion
   items:
-  - name: Qu’est-ce que la cogestion ?
-    href: overview.md
-  - name: Démarrages rapides
-    href: quickstarts.md
-    items:
-    - name: Valeur immédiate
+    - name: "Qu’est-ce que la cogestion\_?"
+      href: overview.md
+    - name: Démarrages rapides
+      href: quickstarts.md
       items:
-      - name: Accès conditionnel
-        href: quickstart-conditional-access.md
-      - name: Actions à distance à partir d’Intune
-        href: quickstart-remote-actions.md
-      - name: Intégrité du client
-        href: quickstart-client-health.md
-      - name: Azure AD hybride
-        href: quickstart-hybrid-aad.md
-      - name: Windows Autopilot
-        href: quickstart-autopilot.md
-    - name: Prise en main
+        - name: Valeur immédiate
+          items:
+            - name: Accès conditionnel
+              href: quickstart-conditional-access.md
+            - name: Actions à distance à partir d’Intune
+              href: quickstart-remote-actions.md
+            - name: Intégrité du client
+              href: quickstart-client-health.md
+            - name: Azure AD hybride
+              href: quickstart-hybrid-aad.md
+            - name: Windows Autopilot
+              href: quickstart-autopilot.md
+        - name: Prise en main
+          items:
+            - name: Chemins vers la cogestion
+              href: quickstart-paths.md
+            - name: Configurer Azure AD hybride
+              href: quickstart-setup-hybrid-aad.md
+            - name: Mettre à niveau vers Windows 10
+              href: quickstart-upgrade-win10.md
+            - name: Migrer à partir de MDM hybride
+              href: quickstart-migrate-hybrid-mdm.md
+            - name: Obtenir l’aide de FastTrack
+              href: quickstart-fasttrack.md
+    - name: Didacticiels
       items:
-      - name: Chemins vers la cogestion
-        href: quickstart-paths.md
-      - name: Configurer Azure AD hybride
-        href: quickstart-setup-hybrid-aad.md
-      - name: Mettre à niveau vers Windows 10
-        href: quickstart-upgrade-win10.md
-      - name: Migrer à partir de MDM hybride
-        href: quickstart-migrate-hybrid-mdm.md
-      - name: Obtenir l’aide de FastTrack
-        href: quickstart-fasttrack.md
-  - name: Didacticiels
-    items:
-    - name: Activer la cogestion pour les clients Configuration Manager
-      href: tutorial-co-manage-clients.md
-    - name: Activer la cogestion pour les appareils basés sur Internet
-      href: tutorial-co-manage-new-devices.md
-  - name: Concepts
-    items:
-    - name: Charges de travail
-      href: workloads.md
-  - name: Guides pratiques
-    items:
-    - name: Activer la cogestion
-      href: how-to-enable.md
-    - name: Préparer les appareils basés sur Internet
-      href: how-to-prepare-Win10.md
-    - name: Basculer les charges de travail vers Intune
-      href: how-to-switch-workloads.md
-    - name: Surveiller la cogestion
-      href: how-to-monitor.md
-ms.openlocfilehash: ff313299137330aab790e62d1db127c0f1bb1808
-ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "57737268"
+        - name: Activer la cogestion pour les clients Configuration Manager
+          href: tutorial-co-manage-clients.md
+        - name: Activer la cogestion pour les appareils basés sur Internet
+          href: tutorial-co-manage-new-devices.md
+    - name: Concepts
+      items:
+        - name: Charges de travail
+          href: workloads.md
+    - name: Guides pratiques
+      items:
+        - name: Activer la cogestion
+          href: how-to-enable.md
+        - name: Préparer les appareils basés sur Internet
+          href: how-to-prepare-Win10.md
+        - name: Basculer les charges de travail vers Intune
+          href: how-to-switch-workloads.md
+        - name: Surveiller la cogestion
+          href: how-to-monitor.md

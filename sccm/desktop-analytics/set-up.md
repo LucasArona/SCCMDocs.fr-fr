@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b75b82f632c8bfbbc11a2b11d58ab83116e2180a
-ms.sourcegitcommit: d23ccf7b95e6c2a6b156975194ebbc375cb5e6ea
+ms.openlocfilehash: 7f59e7a9feb53370b069852b871ce2a2c333dda0
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60124435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258195"
 ---
 # <a name="how-to-set-up-desktop-analytics"></a>Comment configurer le bureau Analytique
 
@@ -68,8 +68,10 @@ L’étape suivante peut être effectuée par un **propriétaire de l’espace d
         1. Entrez un **nom de l’espace de travail**.<!--do we have any guidance for this name?-->  
 
         2. Sélectionnez la liste déroulante à **sélectionnez le nom de l’abonnement Azure pour cet espace de travail**, puis choisissez l’abonnement Azure pour cet espace de travail.  
+        
+        3. **Créer de nouveaux** groupe de ressources ou **utiliser l’existant**. 
 
-        3. Sélectionnez le **région** dans la liste, puis sélectionnez **ajouter**.  
+        4. Sélectionnez le **région** dans la liste, puis sélectionnez **ajouter**.  
 
 6. Sélectionnez un espace de travail nouveau ou existant, puis **définir comme espace de travail Analytique de bureau**.  Puis sélectionnez **continuer** dans le **confirmer et accorder l’accès** boîte de dialogue.  
 

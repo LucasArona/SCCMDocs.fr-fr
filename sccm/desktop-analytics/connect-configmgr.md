@@ -13,11 +13,11 @@ manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 11979d35829660633dd77059562dcf519e0af05b
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59673341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62206140"
 ---
 # <a name="how-to-connect-configuration-manager-with-desktop-analytics"></a>Comment connecter Configuration Manager avec l’Analytique de bureau
 

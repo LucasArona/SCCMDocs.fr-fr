@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 21b4907667e055c9595b31eedf9da0ad516b5fec
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.openlocfilehash: d982094a427f1f67992584e3262493d3f4a96766
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59802255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62206540"
 ---
 # <a name="how-to-assess-compatibility-with-app-health-analyzer"></a>Comment évaluer la compatibilité avec l’application Analyseur d’intégrité
 
@@ -30,7 +30,7 @@ Utilisez la boîte à outils de l’analyseur d’intégrité application pour l
 
 ## <a name="download"></a>Téléchargement
 
-Télécharger les outils depuis le [Microsoft Download Center](http://download.microsoft.com/download/3/7/D/37D7E378-D805-4822-A712-4EADBF50FC08/AppHealthAnalyzer.zip)<!-- (https://www.microsoft.com/download/details.aspx?id=57276) -->. Utilisez toujours la version la plus récente.
+Contactez votre représentant Microsoft pour obtenir un lien de téléchargement. Utilisez toujours la version la plus récente.
 
 Le téléchargement est un fichier Windows Installer (MSI). Installez le Kit de ressources de l’analyseur d’intégrité application sur l’ordinateur d’un utilisateur. Lorsque vous exécutez le Kit de ressources, un Assistant vous guide tout au long du processus de création d’un rapport de disponibilité d’application.
 

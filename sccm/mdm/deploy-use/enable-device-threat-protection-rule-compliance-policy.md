@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 0bae054d3daa5aea8e343fef05aa4578221f17b6
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56133984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62226825"
 ---
 # <a name="enable-device-threat-protection-rule-in-the-compliance-policy"></a>Activer une règle de protection contre les menaces des appareils dans la stratégie de conformité
 
@@ -39,7 +39,7 @@ Dans le cadre de l’installation de Mobile Threat Protection de Lookout, dans l
 
 Dans la page **Règles** de l’Assistant Stratégie de conformité, définissez une nouvelle règle avec les informations suivantes :
   * Condition : Niveau de risque maximal protection appareil contre les menaces.
-  * Valeur : La valeur peut être une des opérations suivantes :
+  * Valeur : La valeur peut être une des opérations suivantes :
     * **Aucun (sécurisé)**: Il s’agit le plus sécurisé. Cela signifie que l’appareil ne peut avoir aucune menace. Si un quelconque niveau de menace est détecté, l’appareil est évalué comme non conforme.
     * **Faible** : L’appareil est évalué comme conforme uniquement si les menaces de niveau faible sont présentes. Toute menace d’un niveau supérieur place l’appareil dans un état de non-conformité.
     * **Support**: L’appareil est évalué comme conforme si les menaces détectées sur l’appareil sont de niveau faible ou moyen. Si des menaces de niveau Élevé sont détectées, l’appareil est déterminé comme étant non conforme.

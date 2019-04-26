@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 0efe4dbc80c787591f5c7274dbaa89aa8e326c6c
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56121054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62227658"
 ---
 # <a name="set-up-hybrid-mdm-with-configuration-manager-and-microsoft-intune"></a>Configurer MDM hybride avec Configuration Manager et Microsoft Intune
 
@@ -26,7 +26,7 @@ ms.locfileid: "56121054"
 Avant de pouvoir gérer des appareils iOS, Windows et Android avec Configuration Manager, vous devez les inscrire dans Intune. Effectuez les étapes suivantes pour configurer une inscription d’appareils hybride avec Configuration Manager via Intune. En effectuant les étapes suivantes, vous allez activer l’inscription BYOD (« Apportez votre propre appareil ») pour vos utilisateurs. Ces étapes sont également des conditions préalables pour [l’inscription d’appareils BYOD](enroll-hybrid-ios-mac.md) et [l’inscription d’appareils appartenant à l’entreprise](enroll-company-owned-devices.md).
 
 > [!Important]  
-> Depuis le 14 août 2018, la gestion hybride des appareils mobiles est une [fonctionnalité déconseillée](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). Pour plus d’informations, consultez [Qu’est-ce que la gestion MDM hybride ?](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->  
+> Depuis le 14 août 2018, la gestion hybride des appareils mobiles est une [fonctionnalité déconseillée](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). Pour plus d’informations, consultez [Qu’est-ce que la gestion hybride des appareils mobiles ?](/sccm/mdm/understand/hybrid-mobile-device-management)<!--Intune feature 2683117-->  
 
 
 
