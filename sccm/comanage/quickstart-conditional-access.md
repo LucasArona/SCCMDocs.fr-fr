@@ -71,8 +71,8 @@ Pour plus d’informations, consultez le billet de blog [Enhancing conditional a
 
 La société de services de conseil informatique Wipro utilise l’accès conditionnel pour protéger et gérer les appareils utilisés par ses 91 000 employés. Dans une récente étude de cas, le vice-président du service informatique de Wipro a noté :
 
-> *L’utilisation de l’accès conditionnel est un énorme succès pour Wipro. À présent, tous nos employés ont un accès mobile aux informations à la demande. * 
->  *Nous avons amélioré notre posture de sécurité et la productivité de nos employés. À présent 91 000 employés bénéficient d’un accès hautement sécurisé à plus de 100 applications sur tous les appareils, où qu’ils soient.*
+> *L’utilisation de l’accès conditionnel est un énorme succès pour Wipro. À présent, tous nos employés ont un accès mobile aux informations à la demande.*
+> *Nous avons amélioré notre posture de sécurité et la productivité de nos employés. À présent 91 000 employés bénéficient d’un accès hautement sécurisé à plus de 100 applications sur tous les appareils, où qu’ils soient.*
 
 <!-- waiting for the case study to be public
 For more information, see [Wipro drives mobile productivity with Microsoft cloud security tools to improve customer engagements](https://customers.microsoft.com/story/446f72f9-2f50-4697-b688-6d279786e010)
