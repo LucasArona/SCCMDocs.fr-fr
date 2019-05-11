@@ -2,7 +2,7 @@
 title: Configurer les Analyses du bureau
 titleSuffix: Configuration Manager
 description: Guide pratique pour configurer et d’intégration pour l’Analytique de bureau.
-ms.date: 04/15/2019
+ms.date: 04/25/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f59e7a9feb53370b069852b871ce2a2c333dda0
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: 3b831d6f42e6a9c908b46bf21882cab58fa08483
+ms.sourcegitcommit: 9af73f5c1b93f6ccaea3e6a096f75a5fecd65c2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258195"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64559046"
 ---
 # <a name="how-to-set-up-desktop-analytics"></a>Comment configurer le bureau Analytique
 
@@ -52,9 +52,10 @@ Utilisez cette procédure pour vous connecter à l’Analytique de bureau et le 
 
         Pour ajouter un utilisateur au groupe, tapez son nom ou l’adresse électronique dans le **Entrez le nom ou adresse de messagerie** section du groupe approprié. Lorsque vous avez terminé, sélectionnez **suivant**.
 
-L’étape suivante peut être effectuée par un **propriétaire de l’espace de travail** ou **contributeur**. Consultez [conditions préalables.](/sccm/desktop-analytics/overview#prerequisites) 
-
 5. Sur la page pour **configurer votre espace de travail**:  
+
+    > [!Note]  
+    > Effectuez cette étape en tant qu’un **propriétaire de l’espace de travail** ou **contributeur**. Pour plus d’informations, consultez [conditions préalables](/sccm/desktop-analytics/overview#prerequisites).  
 
     - Pour utiliser un espace de travail pour l’Analytique de bureau, sélectionnez-le, puis passez à l’étape suivante.  
 
@@ -68,8 +69,8 @@ L’étape suivante peut être effectuée par un **propriétaire de l’espace d
         1. Entrez un **nom de l’espace de travail**.<!--do we have any guidance for this name?-->  
 
         2. Sélectionnez la liste déroulante à **sélectionnez le nom de l’abonnement Azure pour cet espace de travail**, puis choisissez l’abonnement Azure pour cet espace de travail.  
-        
-        3. **Créer de nouveaux** groupe de ressources ou **utiliser l’existant**. 
+
+        3. **Créer de nouveaux** groupe de ressources ou **utiliser l’existant**.
 
         4. Sélectionnez le **région** dans la liste, puis sélectionnez **ajouter**.  
 
@@ -85,50 +86,6 @@ L’étape suivante peut être effectuée par un **propriétaire de l’espace d
 9. Sur le **dernières étapes** page, sélectionnez **accéder au bureau Analytique**.
 
 Le portail Azure affiche l’Analytique de Desktop **accueil** page.
-
-
-
-## <a name="create-app-for-configuration-manager"></a>Créer des applications pour Configuration Manager
-
-Créer une application dans Azure AD pour Configuration Manager.
-
-1. Ouvrez le [portail Azure](http://portal.azure.com) en tant qu’utilisateur avec des autorisations d’administrateur d’entreprise, accédez à **Azure Active Directory**, puis sélectionnez **inscriptions**. Puis sélectionnez **nouvelle inscription d’application**.  
-
-2. Dans le **créer** panel, configurez les paramètres suivants :  
-
-    - **Nom**: un nom unique qui identifie l’application, par exemple : `Desktop-Analytics-Connection`  
-
-    - **Type d’application**: **Application Web / API**  
-
-    - **URL d’authentification**: cette valeur n’est pas utilisée par Configuration Manager, mais requis par Azure AD. Entrez une URL valide et unique, par exemple : `https://configmgrapp`  
-  
-   Sélectionnez **créer**.  
-
-3. Sélectionnez l’application et notez le **ID d’Application**. Cette valeur est un GUID qui est utilisé pour configurer la connexion de Configuration Manager.  
-
-4. Sélectionnez **paramètres** dans l’application, puis sélectionnez **clés**. Dans le **les mots de passe** section, entrez un **description de la clé**, spécifiez un délai d’expiration **durée**, puis sélectionnez **enregistrer**. Copie le **valeur** de la clé, qui est utilisée pour configurer la connexion de Configuration Manager.
-
-    > [!Important]  
-    > Il s’agit de la seule possibilité pour copier la valeur de clé. Si vous ne le copiez maintenant, vous devez créer une autre clé.  
-    >
-    > Enregistrez la valeur de clé dans un emplacement sécurisé.  
-
-5. Sur l’application **paramètres** panneau, sélectionnez **autorisations requises**.  
-
-    1. Sur le **autorisations requises** panneau, sélectionnez **ajouter**.  
-
-    2. Dans le **ajouter un accès API** Panneau de configuration, **sélectionner une API**.  
-
-    3. Recherchez le **Microservice de Configuration Manager** API. Sélectionnez-le, puis choisissez **sélectionnez**.  
-
-    4. Sur le **activer l’accès** du panneau, sélectionnez à la fois des autorisations de l’application : **Écrire des données de Collection CM** et **lire les données de Collection CM**. Puis choisissez **sélectionnez**.  
-
-    5. Sur le **ajouter un accès API** panneau, sélectionnez **fait**.  
-
-6. Sur le **autorisations requises** page, sélectionnez **accorder des autorisations**. Sélectionnez **Oui**.  
-
-7. Copiez l’ID de locataire Azure AD. Cette valeur est un GUID qui est utilisé pour configurer la connexion de Configuration Manager. Sélectionnez **Azure Active Directory** dans le menu principal, puis sélectionnez **propriétés**. Copie le **ID de répertoire** valeur.  
-
 
 
 ## <a name="next-steps"></a>Étapes suivantes

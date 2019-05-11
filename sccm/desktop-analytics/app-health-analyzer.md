@@ -13,11 +13,11 @@ manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d982094a427f1f67992584e3262493d3f4a96766
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.sourcegitcommit: 9af73f5c1b93f6ccaea3e6a096f75a5fecd65c2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62206540"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64669170"
 ---
 # <a name="how-to-assess-compatibility-with-app-health-analyzer"></a>Comment évaluer la compatibilité avec l’application Analyseur d’intégrité
 
