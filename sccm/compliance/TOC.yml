@@ -1,3 +1,4 @@
+- name: Conformité de l’appareil
 - name: Comprendre et explorer
   items:
     - name: Assurer la conformité des appareils
@@ -10,9 +11,10 @@
   items:
     - name: Planifier et configurer les paramètres de conformité
       href: plan-design/plan-for-and-configure-compliance-settings.md
-    - name: Tâches courantes de gestion de la conformité
-      href: plan-design/common-tasks-for-managing-compliance.md
+    - name: Tâches de gestion de la conformité
       items:
+        - name: Tâches courantes de gestion de la conformité
+          href: plan-design/common-tasks-for-managing-compliance.md
         - name: Appareils avec le client Configuration Manager
           href: plan-design/common-tasks-for-managing-compliance-on-devices-with-the-client.md
         - name: Créer et déployer des bases de référence de configuration
@@ -20,8 +22,9 @@
     - name: Sécurité et confidentialité
       href: plan-design/security-and-privacy-for-compliance-settings.md
     - name: Extensions SCAP (Security Content Automation Protocol)
-      href: plan-design/scap/about-scap.md
       items:
+        - name: À propos des extensions SCAP
+          href: plan-design/scap/about-scap.md
         - name: Installer et configurer des extensions SCAP
           href: plan-design/scap/install-configure-scap.md
         - name: Déployer et surveiller la conformité SCAP
@@ -31,10 +34,10 @@
 - name: Déployer et utiliser
   items:
     - name: Créer des éléments de configuration
-      href: deploy-use/create-configuration-items.md
       items:
+        - name: Vue d’ensemble de la création d’éléments de configuration
+          href: deploy-use/create-configuration-items.md
         - name: Appareils gérés avec le client Configuration Manager
-          href: deploy-use/configuration-items-for-devices-managed-with-the-client.md
           items:
             - name: Windows 10
               href: deploy-use/create-configuration-items-for-windows-10-devices-managed-with-the-client.md
