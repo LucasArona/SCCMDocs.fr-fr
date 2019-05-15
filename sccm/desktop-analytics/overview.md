@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 52879853e3d3286234ccd51479adddac94098441
-ms.sourcegitcommit: 9af73f5c1b93f6ccaea3e6a096f75a5fecd65c2f
+ms.openlocfilehash: 6827f94a0191aee9c1fe1e20978e6414050fca7c
+ms.sourcegitcommit: ab9f2a7fb7ea3a0c65808fce2975ab25a670281f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64559093"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65612507"
 ---
 # <a name="what-is-desktop-analytics"></a>Nouveautés d’Analytique de bureau ?
 
@@ -70,7 +70,7 @@ Pour utiliser l’Analytique de bureau, assurez-vous que votre environnement rem
 
 ### <a name="technical"></a>Techniques
 
-- Un abonnement Azure actif  
+- Un abonnement Azure actif, avec [administrateur général](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator) autorisations  
 
     - **Propriétaire de l’espace de travail** ou **contributeur** autorisations pour **configurer votre espace de travail**et les rôles suivants :  
 
