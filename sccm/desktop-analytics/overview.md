@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6827f94a0191aee9c1fe1e20978e6414050fca7c
-ms.sourcegitcommit: ab9f2a7fb7ea3a0c65808fce2975ab25a670281f
+ms.openlocfilehash: 78e9454212bb8264926c1aba5262f06db1798abe
+ms.sourcegitcommit: 53f2380ac67025fb4a69fc1651edad15d98e0cdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65612507"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65673442"
 ---
 # <a name="what-is-desktop-analytics"></a>Nouveautés d’Analytique de bureau ?
 
@@ -101,20 +101,14 @@ Pour utiliser l’Analytique de bureau, assurez-vous que votre environnement rem
 
 ### <a name="licensing"></a>Licences
 
-La plupart des fonctionnalités de bureau Analytique ne nécessitent pas des licences supplémentaires ou des abonnements. Lorsqu’est correctement configuré, utilisation d’Analytique de bureau n’aucun frais Azure.
+Analytique bureau nécessite les abonnements de licence suivants :
 
-Pour accéder aux informations de contrôle d’intégrité de Windows ou exporter des données, il existe des exigences de licence supplémentaires. Si vous n’avez pas un des abonnements suivants, vous pouvez toujours configurer et utiliser l’Analytique de bureau, mais vous ne sont pas autorisés à utiliser les informations de contrôle d’intégrité de Windows ou pour exporter des données :
+- Windows 10 entreprise E3 ou E5 ; ou Microsoft 365 F1, E3 ou E5  
 
-- Windows 10 entreprise ou Windows 10 éducation : par périphérique avec Software Assurance actif  
+- Windows 10 éducation A3 ou A5 ; ou Microsoft 365 A3 ou A5  
 
-- Windows 10 entreprise E3 ou E5 : abonnement par périphérique ou par utilisateur (inclus avec Microsoft 365 F1, E3 ou E5)  
+- Windows VDA E3 ou E5  
 
-- Windows 10 éducation A3 ou A5 (inclus avec Microsoft 365 éducation A3 ou A5)  
-
-- Windows Virtual Desktop Access E3 ou E5 : par périphérique de l’abonnement par utilisateur  
-
-> [!Note]  
-> Pour les licences par périphérique, vous n’êtes pas obligé d’activer chaque périphérique avec une licence. Vous devez simplement suffisamment de licences pour les appareils inscrits dans Analytique de bureau.  
 
 
 

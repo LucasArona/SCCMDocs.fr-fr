@@ -2,7 +2,7 @@
 title: Plans de déploiement dans l’Analytique de bureau
 titleSuffix: Configuration Manager
 description: En savoir plus sur les plans de déploiement dans l’Analytique de bureau.
-ms.date: 04/22/2019
+ms.date: 05/14/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 91cd7fc450ee53f900ae890e3a698c26c789ba8c
-ms.sourcegitcommit: 4023fb6fb534d8a0d589c8208f021e3311c7167f
+ms.openlocfilehash: b44684f897e7aad4365c39e58c9bfd486bde7cbb
+ms.sourcegitcommit: 53f2380ac67025fb4a69fc1651edad15d98e0cdd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64880582"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65673292"
 ---
 # <a name="about-deployment-plans-in-desktop-analytics"></a>À propos des plans de déploiement dans l’Analytique de bureau
 
@@ -51,8 +51,6 @@ Dans le cadre de votre plan de déploiement, vous effectuez les actions suivante
 Analytique bureau actualise les données de plan de déploiement de tous les jours. Les modifications que vous apportez peuvent ne pas apparaîtront pendant 24 heures. Ces modifications incluent l’affectation d’importance à une application, ou en choisissant un appareil à inclure dans un projet pilote.  
 
 Après avoir connecté le bureau Analytique à Configuration Manager, sélectionnez vos collections dans les plans de déploiement. Puis cette intégration vous permet de déployer Windows sur un regroupement basé sur les données d’Analytique de bureau.
-
-Alors que le bureau Analytique fonctionne mieux avec les collections de Configuration Manager, vous pouvez également créer des groupes d’appareils dans le journal Analytique. Pour plus d’informations, consultez [recherches dans les journaux des groupes d’ordinateurs dans le journal Analytique](https://docs.microsoft.com/azure/log-analytics/log-analytics-computer-groups).
 
 
 
