@@ -2,25 +2,32 @@
 title: Sortie de veille des clients
 titleSuffix: Configuration Manager
 description: Planifier la sortie de veille des clients dans System Center Configuration Manager à l’aide de Wake On LAN (WOL).
-ms.date: 05/23/2018
+ms.date: 04/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
 ms.assetid: 52ee82b2-0b91-4829-89df-80a6abc0e63a
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8ad20f88d6296a45c97e7c04d94624f9341d369e
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: a16d598b80dd18802e42cae51aeba3c91a4d707c
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56125974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62201411"
 ---
 # <a name="plan-how-to-wake-up-clients-in-system-center-configuration-manager"></a>Planifier la sortie de veille des clients dans System Center Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
+
+ Configuration Manager prend en charge les paquets de mise en éveil traditionnels permettant de réveiller les ordinateurs en mode veille lorsque vous souhaitez installer le logiciel requis, par exemple des mises à jour logicielles et des applications.
+
+> [!NOTE]
+> Cet article décrit le fonctionnement d’une version antérieure de Wake On LAN. Cette fonctionnalité existe toujours dans Configuration Manager version 1810, qui inclut également une version plus récente de Wake on LAN. Les deux versions de Wake On LAN peuvent être, et sont dans de nombreux cas, activées simultanément. Pour plus d’informations sur le fonctionnement de la nouvelle version de Wake On LAN à partir de la version 1810 et l’activation de l’une ou des deux versions, consultez [Guide pratique pour configurer Wake On LAN](/sccm/core/clients/deploy/configure-wake-on-lan).  
+
+## <a name="how-to-wake-up-clients-in-system-center-configuration-manager"></a>Guide pratique de la sortie de veille des clients dans System Center Configuration Manager
 
  Configuration Manager prend en charge les paquets de mise en éveil traditionnels permettant de réveiller les ordinateurs en mode veille lorsque vous souhaitez installer le logiciel requis, par exemple des mises à jour logicielles et des applications.  
 
@@ -30,13 +37,13 @@ Vous pouvez compléter la méthode traditionnelle des paquets de mise en éveil 
 
 2. Si les autres ordinateurs ne répondent pas, ils sont considérés comme étant en veille. Les ordinateurs qui ne sont pas en veille deviennent *ordinateurs gestionnaires* du sous-réseau.  
 
-    Étant donné qu’un ordinateur risque ne pas répondre pour une raison autre que la veille (par exemple, s’il est éteint, supprimé du réseau ou si le paramètre client de mise en éveil du proxy n’est plus appliqué), les ordinateurs reçoivent un paquet de mise en éveil tous les jours à 14h00, heure locale. Les ordinateurs qui ne répondent pas ne sont plus considérés comme étant en veille et ne sont pas mis en éveil par le proxy de mise en éveil.  
+    Étant donné qu’un ordinateur risque de ne pas répondre pour une raison autre que la veille (par exemple, s’il est éteint, supprimé du réseau ou si le paramètre client de mise en éveil du proxy n’est plus appliqué), les ordinateurs reçoivent un paquet de mise en éveil tous les jours à 14h00, heure locale. Les ordinateurs qui ne répondent pas ne sont plus considérés comme étant en veille et ne sont pas mis en éveil par le proxy de mise en éveil.  
 
     Pour prendre en charge un proxy de mise en éveil, au moins trois ordinateurs doivent être sortis de veille pour chaque sous-réseau. Pour remplir cette condition, trois ordinateurs sont choisis sans déterminisme en tant que *gardiens* du sous-réseau. Cet état signifie qu'ils restent éveillés, malgré toute stratégie d'alimentation configurée pour la mise en veille ou la mise en veille prolongée à l'issue d'une période d'inactivité. Les gardiens respectent les commandes d'arrêt ou de redémarrage, par exemple, consécutivement à des tâches de maintenance. Dans ce cas, les gardiens restants mettent en éveil un autre ordinateur du sous-réseau afin que le sous-réseau continue à disposer de trois gardiens.  
 
 3. Les ordinateurs gestionnaires demandent au commutateur réseau de rediriger le trafic réseau des ordinateurs en veille vers eux-mêmes.  
 
-    La redirection est accomplie par l'ordinateur gestionnaire qui émet une trame Ethernet qui utilise l'adresse MAC de l'ordinateur en veille comme adresse source. Ce comportement permet au commutateur réseau de se comporter comme si l'ordinateur en veille avait été déplacé vers le même port que celui sur lequel se trouve l'ordinateur gestionnaire. L'ordinateur gestionnaire envoie également des paquets ARP pour que les ordinateurs en veille conservent l'entrée actualisée dans le cache ARP. L'ordinateur gestionnaire répond également aux requêtes ARP au nom de l'ordinateur en veille en utilisant l'adresse MAC de cet ordinateur en veille.  
+    La redirection est accomplie par l'ordinateur gestionnaire qui émet une trame Ethernet qui utilise l'adresse MAC de l'ordinateur en veille comme adresse source. Ce comportement permet au commutateur réseau de se comporter comme si l'ordinateur en veille avait été déplacé vers le même port que celui sur lequel se trouve l'ordinateur gestionnaire. L'ordinateur gestionnaire envoie également des paquets ARP pour que les ordinateurs en veille conservent l'entrée actualisée dans le cache ARP. L’ordinateur gestionnaire répond également aux requêtes ARP au nom de l’ordinateur en veille en utilisant l’adresse MAC de cet ordinateur en veille.  
 
    > [!WARNING]  
    >  Pendant ce processus, le mappage IP vers MAC de l'ordinateur en veille reste le même. Le proxy de mise en éveil fonctionne en informant le commutateur réseau qu'une autre carte réseau utilise le port qui a été enregistré par une autre carte réseau. Toutefois, ce comportement est connu sous le nom de bagottement MAC et il est inhabituel dans le cadre d'un fonctionnement normal du réseau. Certains outils d'analyse réseau recherchent ce comportement et peuvent supposer que quelque chose ne va pas. Par conséquent, ces outils d'analyse peuvent générer des alertes ou arrêter des ports lorsque vous utilisez le proxy de mise en éveil.  
@@ -84,7 +91,7 @@ Si vous voulez sortir de veille des ordinateurs pour l’installation planifiée
 
 Décidez d’utiliser ou non des paquets de diffusions dirigées vers le sous-réseau, ou des paquets monodiffusion, ainsi que le numéro de port UDP à utiliser. Par défaut, les paquets de mise en éveil traditionnels sont transmis via le port UDP 9, mais pour une plus grande sécurité, vous pouvez sélectionner un autre port pour le site si cet autre port est pris en charge par les routeurs et pare-feu qui interviennent.  
 
-### <a name="choose-between-unicast-and-subnet-directed-broadcast-for-wake-on-lan"></a>Choisir entre une diffusion monodiffusion et une diffusion dirigée vers le sous-réseau pour Wake on LAN  
+## <a name="choose-between-unicast-and-subnet-directed-broadcast-for-wake-on-lan"></a>Choisir entre une diffusion monodiffusion et une diffusion dirigée vers le sous-réseau pour Wake on LAN  
  Si vous avez choisi de réveiller des ordinateurs en envoyant des paquets de mise en éveil traditionnels, vous devez décider de transmettre les paquets monodiffusion ou les paquets de diffusion dirigée vers le sous-réseau. Si vous utilisez le proxy de mise en éveil, vous devez utiliser des paquets monodiffusion. Sinon, utilisez le tableau suivant pour déterminer la méthode de transmission à choisir.  
 
 |Méthode de transmission|Avantages|Inconvénients|  
@@ -93,4 +100,4 @@ Décidez d’utiliser ou non des paquets de diffusions dirigées vers le sous-r�
 |Diffusion dirigée vers le sous-réseau|Elle génère un taux de réussite supérieur à celui de la monodiffusion si vous possédez des ordinateurs qui modifient souvent leur adresse IP dans le même sous-réseau.<br /><br /> Aucune configuration de commutateur n'est requise.<br /><br /> Le taux de compatibilité avec les cartes d'ordinateurs pour tous les états de veille est élevé. En effet, les diffusions dirigées vers le sous-réseau correspondaient à la méthode de transmission d'origine pour l'envoi des paquets de mise en éveil.|Solution moins sûre que l'utilisation de la monodiffusion, car une personne malveillante pourrait envoyer des flux continus de demandes d'écho ICMP à partir d'une adresse source falsifiée à l'adresse de diffusion dirigée. En conséquence, tous les hôtes répondent à cette adresse source. Si les routeurs sont configurés pour autoriser les diffusions dirigées vers le sous-réseau, la configuration supplémentaire est recommandée pour des raisons de sécurité :<br /><br /> -   Configurez les routeurs pour autoriser uniquement les diffusions dirigées vers IP depuis le serveur de site Configuration Manager, à l’aide d’un numéro de port UDP spécifique.<br />-   Configurez Configuration Manager pour utiliser le numéro de port autre que celui par défaut spécifié.<br /><br /> Il peut être nécessaire de reconfigurer tous les routeurs intervenants pour permettre des diffusions dirigées vers le sous-réseau.<br /><br /> Elle consomme plus de bande passante réseau que les transmissions par monodiffusion.<br /><br /> Prise en charge avec IPv4 uniquement. IPv6 n'est pas pris en charge.|  
 
 > [!WARNING]  
->  Il existe des risques de sécurité associés aux diffusions dirigées vers le sous-réseau : Une personne malveillante pourrait envoyer des flux continus de demandes d'écho ICMP (Internet Control Message Protocol) à partir d'une adresse source falsifiée vers l'adresse de diffusion dirigée, obligeant tous les hôtes à répondre à cette adresse source. Ce type d'attaque par déni de service est généralement appelé attaque de réflexion et est traité en rejetant les diffusions dirigées vers le sous-réseau.
+>  Il existe des risques de sécurité associés aux diffusions dirigées vers le sous-réseau : Une personne malveillante pourrait envoyer des flux continus de demandes d’écho ICMP (Internet Control Message Protocol) à partir d’une adresse source falsifiée vers l’adresse de diffusion dirigée, obligeant tous les hôtes à répondre à cette adresse source. Ce type d'attaque par déni de service est généralement appelé attaque de réflexion et est traité en rejetant les diffusions dirigées vers le sous-réseau.
