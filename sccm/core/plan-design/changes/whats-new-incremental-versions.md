@@ -2,21 +2,21 @@
 title: Versions incrémentielles
 titleSuffix: Configuration Manager
 description: Découvrez les nouveautés de la dernière mise à jour Configuration Manager.
-ms.date: 03/27/2019
+ms.date: 04/17/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: b57acf0b-05b7-46af-ad4c-f3e707bd3861
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 350b349aee07a984b51d1d1f53358bf45dd4402b
-ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
+ms.openlocfilehash: 5b053cdb8bbaf03a250c1daeff3a51beb16508d8
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58523705"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499585"
 ---
 # <a name="whats-new-in-configuration-manager-incremental-versions"></a>Nouveautés des versions incrémentielles de Configuration Manager
 
@@ -33,11 +33,12 @@ Les versions des mises à jour sont identifiées par un numéro composé de l’
 ## <a name="supported-versions"></a>Versions prises en charge
 
 Utilisez les liens suivants pour découvrir les nouveautés propres à chaque version prise en charge :
-    - [Nouveautés de la version 1902](/sccm/core/plan-design/changes/whats-new-in-version-1902)
-    - [Nouveautés de la version 1810](/sccm/core/plan-design/changes/whats-new-in-version-1810)
-    - [Nouveautés de la version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806)  
-    - [Nouveautés de la version 1802](/sccm/core/plan-design/changes/whats-new-in-version-1802)
-    - [Nouveautés dans la version 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710)
+
+- [Nouveautés de la version 1902](/sccm/core/plan-design/changes/whats-new-in-version-1902)  
+- [Nouveautés de la version 1810](/sccm/core/plan-design/changes/whats-new-in-version-1810)  
+- [Nouveautés de la version 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806)  
+- [Nouveautés de la version 1802](/sccm/core/plan-design/changes/whats-new-in-version-1802)  
+- [Nouveautés dans la version 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710)  
 
 Pour les versions de Configuration Manager publiées avant la version 1710, la prise en charge dure 12 mois. À compter de la version 1710, chaque version de mise à jour reste prise en charge pendant 18 mois suivant sa date de disponibilité générale (GA).  Pour rester à jour, utilisez la version la plus récente de la mise à jour. Pour plus d’informations, consultez [Prise en charge des versions Current Branch de Configuration Manager](/sccm/core/servers/manage/current-branch-versions-supported).  
 

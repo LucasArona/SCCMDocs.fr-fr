@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 50c613e30304dc9208dfd8bf6d0fd3e5afb41ff2
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.openlocfilehash: 12d40a64cd4300b80e8e625672f1da053814f437
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59802884"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65497970"
 ---
 # <a name="list-of-prerequisite-checks-for-configuration-manager"></a>Liste de vérifications des prérequis pour Configuration Manager
 

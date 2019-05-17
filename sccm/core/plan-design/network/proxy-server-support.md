@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 9123a87a-0b6f-43c7-b5c2-fac5d09686b1
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5123bd51de9678666b28ec464e811dafdd91a30d
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: e5c689ff3621477aa84d958e97c2dfebb81dcca1
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56156557"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499167"
 ---
 # <a name="proxy-server-support-in-configuration-manager"></a>Prise en charge de serveur proxy dans Configuration Manager
 

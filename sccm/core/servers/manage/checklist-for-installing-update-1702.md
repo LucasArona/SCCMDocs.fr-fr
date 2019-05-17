@@ -7,17 +7,17 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: b587779e-1bd3-4ee3-8146-8e31f53499bd
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6ba897213299d5282923d619b48cdbbdbe19168f
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: ebb4ea7ad1c45d85091f058e87cab762f133d751
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56122455"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65497590"
 ---
 # <a name="checklist-for-installing-update-1702-for-system-center-configuration-manager"></a>Liste de contrôle de l’installation de la mise à jour 1702 pour System Center Configuration Manager
 

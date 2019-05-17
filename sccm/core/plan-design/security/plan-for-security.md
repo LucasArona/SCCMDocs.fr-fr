@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f6ffa061e3d04bbbda31cc4406494b492ba98d9b
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.openlocfilehash: c5e6aca35dcadf145c0b93f0c984767099eb8960
+ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59673851"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65083557"
 ---
 # <a name="plan-for-security-in-configuration-manager"></a>Planifier la sécurité dans Configuration Manager
 
@@ -388,7 +388,7 @@ La chaîne retournée est la clé racine approuvée. Vérifiez qu’elle corresp
 
 - [Applications en ligne Microsoft Store pour Entreprises](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)  
 
-- Réduisez les exigences en matière d’infrastructure. Par exemple, le [Centre logiciel utilisant le point de gestion](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex) au lieu du catalogue d’applications  
+- Réduisez les exigences en matière d’infrastructure. Par exemple, le [Centre logiciel utilisant le point de gestion](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex) au lieu du catalogue d’applications  
 
 - [Gérer les applications Office 365](/sccm/sum/deploy-use/manage-office-365-proplus-updates)  
 

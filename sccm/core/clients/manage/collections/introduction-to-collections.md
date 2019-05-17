@@ -2,7 +2,7 @@
 title: Présentation des regroupements
 titleSuffix: Configuration Manager
 description: Obtenez une présentation de l’utilisation des regroupements dans System Center Configuration Manager.
-ms.date: 01/03/2017
+ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9b995d0abfc3f14dce35e0aec70ac25b2ca2853
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 15359aa414554d0bef9e29c011966caec1c1e6d6
+ms.sourcegitcommit: 417e3834a42b415a8e129327dd3c15cc0c7ec5a2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56138940"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65443148"
 ---
 # <a name="introduction-to-collections-in-system-center-configuration-manager"></a>Présentation des regroupements dans System Center Configuration Manager
 
@@ -35,7 +35,7 @@ Voici quelques exemples d’utilisation de regroupements :
 |Opération|Exemple|  
 |---------|-------|  
 |Regroupement des ressources|Vous pouvez créer des regroupements qui rassemblent des ressources en fonction de la hiérarchie de votre organisation.<br /><br /> Par exemple, vous pouvez créer un regroupement de tous les ordinateurs de l’unité d’organisation Active Directory « Siège social de Londres ». Pour plus d’informations sur la création de ce type de regroupement, consultez [Guide pratique pour créer des regroupements dans System Center Configuration Manager](../../../../core/clients/manage/collections/create-collections.md).<br /><br /> Vous pouvez utiliser ce regroupement pour des opérations comme la configuration des paramètres Endpoint Protection, la configuration des paramètres de gestion de l’alimentation des appareils ou l’installation du client Configuration Manager.|  
-|[Déploiement d’applications]|Vous pouvez créer un regroupement de tous les ordinateurs où Microsoft Office 2013 n’est pas installé, puis le déployer sur tous les ordinateurs de ce regroupement.<br /><br /> Vous pouvez également utiliser des données de configuration requise pour l’application pour effectuer cette tâche. Pour plus d’informations, consultez [Comment créer des applications avec System Center Configuration Manager](../../../../apps/deploy-use/create-applications.md).|  
+|Déploiement d’applications|Vous pouvez créer un regroupement de tous les ordinateurs où Microsoft Office 2013 n’est pas installé, puis le déployer sur tous les ordinateurs de ce regroupement.<br /><br /> Vous pouvez également utiliser des données de configuration requise pour l’application pour effectuer cette tâche. Pour plus d’informations, consultez [Comment créer des applications avec System Center Configuration Manager](../../../../apps/deploy-use/create-applications.md).|  
 |[Gestion des paramètres client](../../../../core/clients/deploy/about-client-settings.md)|Bien que les paramètres client par défaut dans Configuration Manager s’appliquent à tous les appareils et à tous les utilisateurs, vous pouvez créer des paramètres client personnalisés qui s’appliquent à un regroupement d’appareils ou d’utilisateurs.<br /><br /> Par exemple, si vous voulez que le contrôle à distance soit disponible sur tous les appareils excepté quelques-uns, configurez les paramètres client par défaut pour autoriser le contrôle à distance, puis configurez les paramètres client personnalisés qui interdisent le contrôle à distance et déployez-les sur le regroupement des clients qui font l’objet de cette exception. |  
 |[Gestion de l’alimentation](../power/introduction-to-power-management.md)|Vous pouvez configurer des paramètres d’alimentation spécifiques par regroupement.|  
 |[Administration basée sur des rôles](../../../../core/servers/deploy/configure/configure-role-based-administration.md)|Utiliser des regroupements pour contrôler quels groupes d’utilisateurs ont accès à différentes fonctionnalités dans la console Configuration Manager.|  
