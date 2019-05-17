@@ -2,25 +2,25 @@
 title: Gérer la synchronisation des mises à jour logicielles
 titleSuffix: Configuration Manager
 description: Exécutez ces étapes pour planifier, démarrer manuellement et surveiller la synchronisation des mises à jour logicielles.
-author: aczechowski
 ms.date: 12/20/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: ea8698c4-9df5-4cf5-8b62-ab93115b4769
 manager: dougeby
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 543a7867ca40cded389ee3ce875845dd32631274
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 4ef815287321bf6c5554ff424da58276af0cc655
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56123516"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65493932"
 ---
 #  <a name="BKMK_SUMSync"></a> Synchroniser les mises à jour logicielles
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
  La synchronisation des mises à jour logicielles dans Configuration Manager consiste à récupérer les métadonnées des mises à jour logicielles correspondant aux critères que vous configurez, comme les produits, les classifications et les langues. En règle générale, les métadonnées sont récupérées par le point de mise à jour logicielle du site d’administration centrale ou d’un site principal autonome auprès de Microsoft Update. Ensuite, le site de niveau supérieur envoie une demande de synchronisation aux autres sites. Quand un site reçoit la demande de synchronisation du site parent, le point de mise à jour logicielle du site récupère les métadonnées des mises à jour logicielles à partir de sa [source de synchronisation](../plan-design/plan-for-software-updates.md#BKMK_SyncSource) en amont. Pour plus d’informations sur la synchronisation des mises à jour logicielles, consultez [Synchronisation des mises à jour logicielles](../understand/software-updates-introduction.md#BKMK_Synchronization).
 

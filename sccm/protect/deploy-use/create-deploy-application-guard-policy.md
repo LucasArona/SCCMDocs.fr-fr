@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
 ms.assetid: 33a6c1d9-4dd8-411c-a748-693a5bd2ea5a
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cf5345cd54882ae46171b7d3800e1ed818834ecb
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.openlocfilehash: 3e2eb7aa483c48ee6099cbb1605c082c9b0315ee
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59802238"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500621"
 ---
 # <a name="create-and-deploy-windows-defender-application-guard-policy"></a>Créer et déployer une stratégie Windows Defender Application Guard 
 *S’applique à : System Center Configuration Manager (Current Branch)*
@@ -33,7 +33,7 @@ Pour créer et déployer une stratégie Windows Defender Application Guard, vous
 1. Dans la console Configuration Manager, choisissez **Ressources et Conformité**.
 2. Dans l’espace de travail **Biens et conformité**, choisissez **Vue d’ensemble** > **Endpoint Protection** > **Windows Defender Application Guard**.
 3. Sous l'onglet **Accueil** , dans le groupe **Créer** , cliquez sur **Créer une stratégie Windows Defender Application Guard**.
-4. Utilisez l’[article](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/configure-wd-app-guard) comme référence pour pouvoir parcourir et configurer les paramètres disponibles. Configuration Manager vous permet de définir certains paramètres de stratégie. Consultez [Paramètres d’interaction de l’hôte](#BKMK_HIS) et [Comportement de l’application](#BKMK_AppB).
+4. Utilisez l’[article](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/configure-wd-app-guard) comme référence pour pouvoir parcourir et configurer les paramètres disponibles. Configuration Manager vous permet de définir certains paramètres de stratégie. Consultez [Paramètres d’interaction de l’hôte](#bkmk_HIS) et [Comportement de l’application](#bkmk_ABS).
 5. Dans la page **Définition du réseau**, spécifiez l’identité d’entreprise et définissez les limites du réseau de votre entreprise.
 
     > [!NOTE]

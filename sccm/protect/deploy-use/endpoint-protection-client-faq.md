@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
 ms.assetid: e3aaa9d2-a40e-42b1-ad75-5a115351729e
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2f19fee37ab817670bd754d6da1ad1ebe9ccb452
-ms.sourcegitcommit: 369db96ee84299b5ab6d74b177e6366b3017fc54
+ms.openlocfilehash: e0f3e0a20874539b079541f363c6d494a738225f
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56589932"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500517"
 ---
 # <a name="endpoint-protection-client-frequently-asked-questions"></a>Forum aux questions sur le client Endpoint Protection
 
@@ -28,15 +28,15 @@ Ce forum aux questions est destiné aux utilisateurs dont l’administrateur inf
 -   [Pourquoi ai-je besoin d’un logiciel antivirus et anti-espion ?](#why-do-i-need-antivirus-and-antispyware-software)  
 -   [Comment savoir si mon ordinateur est infecté par un logiciel malveillant ?](#how-can-i-tell-if-my-computer-is-infected-with-malicious-software)
 -   [Comment puis-je trouver la version de Windows Defender ?](#how-can-i-find-the-version-of-windows-defender)
--   [Que faire si Windows Defender ou Endpoint Protection détecte un logiciel malveillant sur mon ordinateur ?](#what-should-i-do-if-windows-defender-or-endpoint-protection-detects-software-on-my-computer)  
+-   [Que faire si Windows Defender ou Endpoint Protection détecte un logiciel malveillant sur mon ordinateur ?](#what-should-i-do-if-windows-defender-or-endpoint-protection-detects-malicious-software-on-my-computer)  
 -   [Qu’est-ce qu’un virus ?](#what-is-a-virus)  
 -   [Qu’est-ce qu’un logiciel espion ?](#what-is-spyware)  
--   [Quelle est la différence entre les virus, les logiciels espions et autres logiciels potentiellement dangereux ?](#hat-s-the-difference-between-viruses-spyware-and-other-potentially-harmful-software)  
+-   [Quelle est la différence entre les virus, les logiciels espions et autres logiciels potentiellement dangereux ?](#whats-the-difference-between-viruses-spyware-and-other-potentially-harmful-software)  
 -   [D’où viennent les virus, les logiciels espions et les autres logiciels potentiellement indésirables ?](#where-do-viruses-spyware-and-other-potentially-unwanted-software-come-from)  
 -   [Puis-je recevoir un logiciel malveillant sans le savoir ?](#can-i-get-malicious-software-without-knowing-it)  
 -   [Pourquoi est-il important de lire les contrats de licence avant d’installer des logiciels ?](#why-is-it-important-to-review-license-agreements-before-installing-software)  
--   [Quelle est la différence entre Endpoint Protection et Windows Defender ?](#what-s-the-difference-between-endpoint-protection-and-windows-defender)  
--   [Pourquoi Windows Defender ne détecte-t-il pas les cookies ?](#why-doesn-t-windows-defender-detect-cookies)  
+-   [Quelle est la différence entre Endpoint Protection et Windows Defender ?](#whats-the-difference-between-endpoint-protection-and-windows-defender)  
+-   [Pourquoi Windows Defender ne détecte-t-il pas les cookies ?](#why-doesnt-windows-defender-detect-cookies)  
 -   [Comment me protéger contre les programmes malveillants ?](#how-can-i-prevent-malware)  
 -   [Que sont les définitions de virus et de logiciels espions ?](#what-are-virus-and-spyware-definitions)  
 -   [Comment maintenir à jour les définitions de virus et de logiciels espions ?](#how-do-i-keep-virus-and-spyware-definitions-up-to-date)  

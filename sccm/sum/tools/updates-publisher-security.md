@@ -7,20 +7,20 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
 ms.assetid: a7f91e63-4750-402e-9970-dd14be7f76a3
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2a0dbe80e2333df85893365a366d5862842ffa3d
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 045a1daef8da0863ed7957ce4c9d3d48cfacca64
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56125406"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65496195"
 ---
 # <a name="manage-certificates-and-security-for-updates-publisher"></a>Gérer les certificats et la sécurité pour l’éditeur de mise à jour
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Les procédures suivantes peuvent vous aider à configurer le magasin de certificats sur le serveur de mise à jour, à configurer un certificat d’auto-signature sur l’ordinateur client, et à configurer la stratégie de groupe pour permettre à l’Agent Windows Update sur les ordinateurs de rechercher les mises à jour publiées.
 
@@ -72,9 +72,9 @@ Voici un exemple montrant comment configurer le certificat de signature sur les 
 
 6. À l’aide de l’une des méthodes suivantes, ajoutez le certificat utilisé pour signer le catalogue de mises à jour sur chaque ordinateur client qui utilisera WUA pour rechercher les mises à jour dans le catalogue. Ajoutez le certificat sur l’ordinateur client comme suit :
 
-   -   Pour les certificats auto-signés : Ajoutez le certificat aux magasins de certificats **Autorités de certification racines de confiance** et **Éditeurs approuvés**.
+   -   Pour les certificats auto-signés : ajoutez le certificat aux magasins de certificats **Autorités de certification racines de confiance** et **Éditeurs approuvés**.
 
-   -   Pour les certificats délivrés une autorité de certification : Ajoutez le certificat au magasin de certificats **Éditeurs approuvés**.
+   -   Pour les certificats émis par une autorité de certification (CA) : ajoutez le certificat au magasin de certificats **Éditeurs approuvés**.
 
    > [!NOTE]
    > WUA vérifie également si le paramètre **Autoriser le contenu signé de la stratégie de groupe d'emplacement des services de mise à jour Microsoft sur l'intranet** est activé sur l'ordinateur local. Ce paramètre de stratégie doit être activé pour que WUA analyse les mises à jour qui ont été créées et publiées à l'aide de l'éditeur de mises à jour. Pour plus d’informations sur l’activation du paramètre Stratégie de groupe, consultez le [Guide pratique pour configurer la stratégie de groupe sur les ordinateurs clients](<https://technet.microsoft.com/library/bb530967.aspx(d=robot>).

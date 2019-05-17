@@ -7,20 +7,20 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
 ms.assetid: e6c1df1d-7728-4980-9199-bc32cde5439e
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 72c23bdf08972028d86c1824b3b796995845e8c4
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 636d9ef3ba7768c73b00de4f50c22629548e7921
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56134814"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65493956"
 ---
 # <a name="manage-publications-in-updates-publisher"></a>Gérer des publications dans l’éditeur de mises à jour
 
-*S’applique à : System Center Updates Publisher*
+*S’applique à : l'éditeur de mise à jour System Center*
 
 Vous pouvez utiliser des publications pour gérer des offres groupées de mises à jour comme un seul objet. Cela inclut la publication des mises à jour sur un serveur d’administration et l’exportation de la publication en tant que groupe pour une utilisation avec une autre installation de l’éditeur de mise à jour.
 

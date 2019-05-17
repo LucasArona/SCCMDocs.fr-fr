@@ -2,25 +2,25 @@
 title: Gérer les paramètres des mises à jour logicielles
 titleSuffix: Configuration Manager
 description: Découvrez les paramètres client adaptés aux mises à jour logicielles sur votre site après avoir installé le point de mise à jour logicielle.
-author: aczechowski
 ms.date: 03/26/2017
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 0d484c1a-e903-4bff-9e9b-e452c62e38a8
 manager: dougeby
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 848cb4e23240091c62ff9ca12c46fedae769010f
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 90304156778f4f41b2ac35a2840a4a7e7bb4dc32
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56129015"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499781"
 ---
 #  <a name="BKMK_ManageSUSettings"></a> Gérer les paramètres des mises à jour logicielles  
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Après avoir synchronisé les mises à jour logicielles dans Configuration Manager, configurez et vérifiez les paramètres décrits dans les sections suivantes.
 
@@ -69,32 +69,32 @@ Dans les propriétés de mise à jour logicielle, vous pouvez consulter des info
 ####  <a name="BKMK_SoftwareUpdateDetails"></a> Détails des mises à jour logicielles  
 Sous l'onglet **Détails de la mise à jour** , vous pouvez consulter les informations récapitulatives suivantes relatives à la mise à jour logicielle sélectionnée :  
 
-- **ID du bulletin** : indique l'ID du bulletin associé aux mises à jour logicielles de sécurité. Vous trouverez des détails sur le bulletin de sécurité en effectuant une recherche sur l'ID du bulletin sur la page Web [Recherche des bulletins de sécurité de Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=58313) .  
+- **ID du bulletin**: indique l’ID du bulletin associé aux mises à jour logicielles de sécurité. Vous trouverez des détails sur le bulletin de sécurité en effectuant une recherche sur l'ID du bulletin sur la page Web [Recherche des bulletins de sécurité de Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=58313) .  
 
-- **ID de l’article** : indique l'ID de l'article pour la mise à jour logicielle. L'article référencé fournit des informations détaillées sur la mise à jour logicielle et le problème qu'elle corrige ou améliore.  
+- **Article ID**: indique l’ID de l’article pour la mise à jour logicielle. L'article référencé fournit des informations détaillées sur la mise à jour logicielle et le problème qu'elle corrige ou améliore.  
 
-- **Date de révision** : indique la date à laquelle la mise à jour logicielle a été modifiée pour la dernière fois.  
+- **Date de révision**: indique la date à laquelle la mise à jour logicielle a été modifiée pour la dernière fois.  
 
-- **Taux de gravité maximal** : indique le taux de gravité défini par le fournisseur pour la mise à jour logicielle.  
+- **Taux de gravité maximal**: indique le taux de gravité défini par le fournisseur pour la mise à jour logicielle.  
 
-- **Description** : fournit une vue d'ensemble de la condition que la mise à jour logicielle corrige ou améliore.  
+- **Description**: fournit une vue d’ensemble de la condition que la mise à jour logicielle corrige ou améliore.  
 
-- **Langues applicables** : indique les langues pour lesquelles la mise à jour logicielle est applicable.  
+- **Langues applicables**: indique les langues pour lesquelles la mise à jour logicielle est applicable.  
 
-- **Produits affectés** : indique les produits pour lesquels la mise à jour logicielle est applicable.  
+- **Produits affectés**: indique les produits pour lesquels la mise à jour logicielle est applicable.  
 
 ####  <a name="BKMK_ContentInformation"></a> Informations de contenu  
 Sous l'onglet **Informations de contenu** , consultez les informations suivantes sur le contenu associé à la mise à jour logicielle sélectionnée :  
 
--   **ID du contenu** : indique l'ID du contenu pour la mise à jour logicielle.  
+-   **ID du contenu**: indique l’ID du contenu pour la mise à jour logicielle.  
 
 -   **Téléchargé** : indique si Configuration Manager a téléchargé les fichiers de la mise à jour logicielle.  
 
--   **Langue** : indique les langues de la mise à jour logicielle.  
+-   **Langue**: indique les langues de la mise à jour logicielle.  
 
--   **Chemin de la source** : indique le chemin d'accès aux fichiers sources de la mise à jour logicielle.  
+-   **Chemin source**: indique le chemin des fichiers sources de la mise à jour logicielle.  
 
--   **Taille (Mo)**  : indique la taille des fichiers sources de la mise à jour logicielle.  
+-   **Taille (Mo)**: indique la taille des fichiers sources de la mise à jour logicielle.  
 
 ####  <a name="BKMK_CustomBundleInformation"></a> Informations sur le groupement personnalisé  
 Dans l'onglet **Informations sur le groupement personnalisé** , consultez les informations sur le groupement personnalisé pour la mise à jour logicielle. Lorsque la mise à jour logicielle sélectionnée contient des mises à jour logicielles regroupées situées dans le fichier de mise à jour logicielle, celles-ci sont affichées dans la section **Informations sur le groupement** . Cet onglet n'affiche pas les mises à jour logicielles groupées qui apparaissent sous l'onglet **Informations de contenu** , notamment les fichiers de mise à jour des différentes langues.  
@@ -102,9 +102,9 @@ Dans l'onglet **Informations sur le groupement personnalisé** , consultez les i
 ####  <a name="BKMK_SupersedenceInformation"></a> Informations de remplacement  
 Sous l'onglet **Informations de remplacement** , vous pouvez voir les informations suivantes sur le remplacement de la mise à jour logicielle :  
 
-- **Cette mise à jour a été remplacée par les mises à jour suivantes** : indique les mises à jour logicielles qui remplacent cette mise à jour, ce qui signifie que les mises à jour répertoriées sont plus récentes. Dans la plupart des cas, vous allez déployer l'une des mises à jour logicielles qui remplace la mise à jour logicielle. Les mises à jour logicielles qui sont répertoriées dans la liste contiennent des liens hypertexte vers des pages Web qui fournissent davantage d'informations sur les mises à jour logicielles. Lorsque cette mise à jour n'est pas remplacée, l'option **Aucune** s'affiche.  
+- **Cette mise à jour a été remplacée par les mises à jour suivantes**: indique les mises à jour logicielles qui remplacent cette mise à jour, ce qui signifie que les mises à jour répertoriées sont plus récentes. Dans la plupart des cas, vous allez déployer l'une des mises à jour logicielles qui remplace la mise à jour logicielle. Les mises à jour logicielles qui sont répertoriées dans la liste contiennent des liens hypertexte vers des pages Web qui fournissent davantage d'informations sur les mises à jour logicielles. Lorsque cette mise à jour n'est pas remplacée, l'option **Aucune** s'affiche.  
 
-- **Cette mise à jour remplace les mises à jour suivantes** : spécifie les mises à jour logicielles remplacées par cette mise à jour logicielle, ce qui signifie que cette mise à jour logicielle est plus récente. Dans la plupart des cas, vous allez déployer cette mise à jour logicielle pour qu'elle se substitue aux mises à jour logicielles remplacées. Les mises à jour logicielles qui sont répertoriées dans la liste contiennent des liens hypertexte vers des pages Web qui fournissent davantage d'informations sur les mises à jour logicielles. Lorsque cette mise à jour n'en remplace aucune autre, **Aucun** s'affiche.  
+- **Cette mise à jour remplace les mises à jour suivantes**: spécifie les mises à jour logicielles remplacées par cette mise à jour logicielle, ce qui signifie que cette mise à jour logicielle est plus récente. Dans la plupart des cas, vous allez déployer cette mise à jour logicielle pour qu'elle se substitue aux mises à jour logicielles remplacées. Les mises à jour logicielles qui sont répertoriées dans la liste contiennent des liens hypertexte vers des pages Web qui fournissent davantage d'informations sur les mises à jour logicielles. Lorsque cette mise à jour n'en remplace aucune autre, **Aucun** s'affiche.  
 
 ###  <a name="BKMK_SoftwareUpdatesSettings"></a> Configurer les paramètres de mise à jour logicielle  
 Dans les propriétés, vous pouvez configurer les paramètres d'une ou plusieurs mises à jour logicielles. Vous pouvez configurer la plupart des paramètres des mises à jour logicielles uniquement au niveau du site d'administration centrale ou du site principal autonome. Aidez-vous des sections suivantes pour configurer les paramètres des mises à jour logicielles.  
@@ -126,7 +126,7 @@ Dans les propriétés d'une mise à jour logicielle, vous pouvez utiliser l'ongl
 
 Vous pouvez configurer les paramètres suivants sous l'onglet **Gravité personnalisée** .  
 
-- **Gravité personnalisée** : Définit une valeur de gravité personnalisée pour les mises à jour logicielles. Sélectionnez **Critique**, **Important**, **Modéré**ou **Faible** dans la liste. Par défaut, la valeur de la gravité personnalisée n'est pas renseignée.
+- **Gravité personnalisée**: définit une valeur de gravité personnalisée pour les mises à jour logicielles. Sélectionnez **Critique**, **Important**, **Modéré**ou **Faible** dans la liste. Par défaut, la valeur de la gravité personnalisée n'est pas renseignée.
 
 ## <a name="crl-checking-for-software-updates"></a>Vérification de la liste de révocation de certificats pour les mises à jour logicielles
 Par défaut, la liste de révocation de certificats n’est pas contrôlée pendant la vérification de la signature des mises à jour logicielles System Center Configuration Manager. La vérification de la liste de révocation de certificats à chaque utilisation d'un certificat est une sécurité supplémentaire qui permet de ne pas utiliser de certificat révoqué. Toutefois, elle implique un délai de connexion et un traitement supplémentaire sur l'ordinateur qui l'effectue.  

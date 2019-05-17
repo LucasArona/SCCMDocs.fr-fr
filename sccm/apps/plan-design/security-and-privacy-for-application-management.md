@@ -11,27 +11,28 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 13467e3b227a8080d03e3e44864970703c2e000f
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 6d8715b8d91f6397fbf5d4d254b48f8078b0dfc3
+ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56126335"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65083239"
 ---
 # <a name="security-and-privacy-for-application-management-in-configuration-manager"></a>Sécurité et confidentialité pour la gestion des applications dans Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 
 ##  <a name="security-guidance-for-application-management"></a>Conseils en matière de sécurité pour la gestion des applications  
 
 
 ### <a name="use-the-new-software-center-without-the-application-catalog"></a>Utiliser le nouveau Centre logiciel sans le catalogue d’applications
-<!--1358309--> À compter de la version 1806, les rôles du catalogue d’applications ne sont plus nécessaires pour afficher les applications accessibles aux utilisateurs dans le Centre logiciel. Cette configuration permet d’alléger l’infrastructure de serveur nécessaire pour fournir des applications aux utilisateurs. La réduction de l’infrastructure du serveur réduit également la surface d’attaque. 
+<!--1358309-->
+À compter de la version 1806, les rôles du catalogue d’applications ne sont plus nécessaires pour afficher les applications accessibles aux utilisateurs dans le Centre logiciel. Cette configuration permet d’alléger l’infrastructure de serveur nécessaire pour fournir des applications aux utilisateurs. La réduction de l’infrastructure du serveur réduit également la surface d’attaque. 
 
 Pour fournir une expérience d’application cohérente et sécurisée aux clients basés sur Internet, utilisez Azure Active Directory et la passerelle de gestion cloud.
 
-Pour plus d'informations, consultez [Configurer le Centre logiciel](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex). 
+Pour plus d'informations, consultez [Configurer le Centre logiciel](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex). 
 
 
 ### <a name="use-https-with-the-application-catalog"></a>Utiliser HTTPS avec le catalogue d’applications
@@ -178,7 +179,7 @@ Si vous configurez un type de déploiement d’application web, utilisez le prot
 > [!Important]  
 > À compter de Configuration Manager version 1802, le client n’installe pas automatiquement Silverlight.
 > 
-> À compter de la version 1806, **l’expérience utilisateur Silverlight** pour le point du site Web du catalogue des applications n’est plus prise en charge. Les utilisateurs doivent utiliser le nouveau Centre logiciel. Pour plus d’informations, consultez [Configurer le Centre logiciel](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex).  
+> À compter de la version 1806, **l’expérience utilisateur Silverlight** pour le point du site Web du catalogue des applications n’est plus prise en charge. Les utilisateurs doivent utiliser le nouveau Centre logiciel. Pour plus d’informations, consultez [Configurer le Centre logiciel](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex).  
 
  Les clients Configuration Manager version 1710 et antérieures requièrent Microsoft Silverlight 5, qui doit s’exécuter en mode de confiance élevée pour permettre aux utilisateurs d’installer des logiciels à partir du catalogue d’applications. Par défaut, les applications Silverlight s'exécutent en mode de confiance partielle pour empêcher les applications d'accéder aux données utilisateur. Si ce n’est pas déjà fait, Configuration Manager installe automatiquement Microsoft Silverlight 5 sur les clients. Par défaut, Configuration Manager définit le paramètre du client **Autoriser les applications Silverlight à s’exécuter en mode de confiance élevée** de l’Agent ordinateur sur **Oui**. Ce paramètre permet aux applications Silverlight signées et approuvées de demander le mode de confiance élevée.  
 
@@ -212,7 +213,7 @@ Si vous configurez un type de déploiement d’application web, utilisez le prot
 - Le **catalogue d’applications** est un site web qui permet aux utilisateurs de demander l’installation de logiciels.  
 
     > [!Note]  
-    > À compter de Configuration Manager 1802, la fonctionnalité principale du catalogue d’applications est désormais incluse dans le Centre logiciel. Pour plus d'informations, consultez [Configurer le Centre logiciel](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex).  
+    > À compter de Configuration Manager 1802, la fonctionnalité principale du catalogue d’applications est désormais incluse dans le Centre logiciel. Pour plus d'informations, consultez [Configurer le Centre logiciel](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex).  
 
 - Le **Centre logiciel** est installé automatiquement sur un appareil pendant l’installation du client Configuration Manager. Les utilisateurs modifient les paramètres, recherchent et installent des applications à partir du Centre logiciel.  
 

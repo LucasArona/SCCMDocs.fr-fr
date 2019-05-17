@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
 ms.assetid: eab0e09d-b09e-4c14-ab14-c5f87472522e
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8c885920fa1e413468d09201ddaecc728ffb7b53
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 817dc9a2fcce8580bf01d57053536ce78b4d1ed3
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56135372"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500342"
 ---
 # <a name="planning-for-certificate-template-permissions-for-certificate-profiles-in-system-center-configuration-manager"></a>Planification d’autorisations de modèles de certificat pour les profils de certificat dans System Center Configuration Manager
 

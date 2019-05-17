@@ -7,20 +7,20 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
 ms.assetid: 46a1a8ac-126c-4ee6-ae09-32dfbdb83368
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0cf0665e3302181370b3d2d08b4071be3527852a
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: ec448f0d2752cda2509b6daa0302ff521044bef4
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56141134"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65493753"
 ---
 # <a name="create--software-updates-and-update-bundles-with-updates-publisher"></a>Créer des mises à jour logicielles et des offres groupées de mises à jour avec l’éditeur de mise à jour
 
-*S’applique à : Éditeur de mise à jour System Center*
+*S’applique à : l'éditeur de mise à jour System Center*
 
 L’éditeur de mise à jour vous permet d’utiliser l’Assistant **Création d’une mise à jour** pour créer vos propres mises à jour et l’Assistant **Création d’une offre groupée** pour créer des offres groupées de mises à jour.
 
@@ -55,31 +55,31 @@ Ces deux Assistants ayant un flux de travail similaire, la procédure de créati
 
     __Propriétés localisées :__
 
-   - **Langue** : Sélectionnez une langue, puis spécifiez un titre et une description. Vous pouvez ensuite sélectionner d’autres langues, une par une, chaque langue prenant en charge ses propres titre et description.
+   - **Langue** : sélectionnez une langue, puis spécifiez un titre et une description. Vous pouvez ensuite sélectionner d’autres langues, une par une, chaque langue prenant en charge ses propres titre et description.
 
-   - **Titre** : Entrez le nom de la mise à jour. Ce nom s’affiche dans l’espace de travail Mises à jour de la console de l’éditeur de mise à jour.
+   - **Titre** : entrez le nom de la mise à jour. Ce nom s’affiche dans l’espace de travail Mises à jour de la console de l’éditeur de mise à jour.
 
-   - **Description** : Une description claire de la mise à jour. Vous pouvez inclure les éléments installés par la mise à jour et indiquer pourquoi ou quand celle-ci doit être utilisée.
+   - **Description**: une description claire de la mise à jour. Vous pouvez inclure les éléments installés par la mise à jour et indiquer pourquoi ou quand celle-ci doit être utilisée.
 
-     **Classification :** Les éléments suivants sont des descriptions communes des différentes classifications.
+     **Classification :** les éléments suivants sont des descriptions communes des différentes classifications.
 
-   - **Mise à jour** : Mise à jour d’une application ou d’un fichier qui sont déjà installés.
+   - **Mise à jour** : mise à jour d'une application ou d'un fichier qui sont déjà installés.
 
-   - **Critique** : Mise à jour distribuée en grand nombre, répondant à un problème spécifique qui concerne un bogue critique non lié à la sécurité.
+   - **Critique** : mise à jour distribuée en grand nombre, répondant à un problème spécifique qui concerne un bogue critique non lié à la sécurité.
 
-   - **Feature Pack** : Nouvelles fonctionnalités de produit, distribuées en dehors d’une version de produit et incluses généralement dans la version suivante du produit.
+   - **Feature Pack** : nouvelles fonctionnalités de produit, distribuées en dehors d'une version de produit et incluses généralement dans la version suivante du produit.
 
-   - **Sécurité** : Mise à jour distribuée en grand nombre, répondant à un problème de sécurité spécifique à un produit.
+   - **Sécurité** : mise à jour distribuée en grand nombre, répondant à un problème de sécurité spécifique à un produit.
 
-   - **Correctif cumulatif** : Ensemble cumulé de correctifs, assemblés pour faciliter leur déploiement. Ces correctifs peuvent comprendre des mises à jour de sécurité, des mises à jour critiques, des mises à jour, etc. Les correctifs cumulatifs concernent généralement un domaine particulier, par exemple la sécurité ou une fonctionnalité de produit.
+   - **Correctif cumulatif**: ensemble cumulé de correctifs assemblés pour faciliter leur déploiement. Ces correctifs peuvent comprendre des mises à jour de sécurité, des mises à jour critiques, des mises à jour, etc. Les correctifs cumulatifs concernent généralement un domaine particulier, par exemple la sécurité ou une fonctionnalité de produit.
 
-   - **Service Pack** : Ensemble cumulé de correctifs rattachés à une application. Ces correctifs peuvent comprendre des mises à jour de sécurité, des mises à jour critiques, des mises à jour logicielles, etc.
+   - **Service Pack** : ensemble cumulé de correctifs rattachés à une application. Ces correctifs peuvent comprendre des mises à jour de sécurité, des mises à jour critiques, des mises à jour logicielles, etc.
 
-   - **Outil** : Spécifie un outil ou une fonctionnalité permettant d’effectuer une ou plusieurs tâches.
+   - **Outil** : outil ou fonctionnalité permettant d'effectuer une ou plusieurs tâches.
 
-     -   **Pilote** : Mise à jour du logiciel d’un pilote.
+     -   **Pilote** : mise à jour du logiciel d’un pilote.
 
-   **Fournisseur :** Spécifie un fournisseur pour la mise à jour. Vous pouvez utiliser la liste déroulante pour choisir les valeurs des mises à jour figurant dans le référentiel. Lorsque vous spécifiez un fournisseur, l’Assistant crée un dossier portant le nom de ce fournisseur sous **Toutes les mises à jour logicielles** dans l **’espace de travail Mises à jour** si ce dossier n’existe pas déjà. Voici une liste des noms Windows Server Update Services (WSUS) réservés qui ne peuvent pas être entrés pour les mises à jour que vous créez :
+   **Fournisseur :** spécifie un fournisseur pour la mise à jour. Vous pouvez utiliser la liste déroulante pour choisir les valeurs des mises à jour figurant dans le référentiel. Lorsque vous spécifiez un fournisseur, l’Assistant crée un dossier portant le nom de ce fournisseur sous **Toutes les mises à jour logicielles** dans l **’espace de travail Mises à jour** si ce dossier n’existe pas déjà. Voici une liste des noms Windows Server Update Services (WSUS) réservés qui ne peuvent pas être entrés pour les mises à jour que vous créez :
    >*   Microsoft Corporation
    >*   Microsoft
    >*   Mise à jour
@@ -98,32 +98,32 @@ Ces deux Assistants ayant un flux de travail similaire, la procédure de créati
    >*   Offre groupée
    >*   Offre groupée de mises à jour
 
-**Produit** : Spécifie le type de produit pour lequel la mise à jour est destinée. Vous pouvez utiliser la liste déroulante pour choisir les valeurs des mises à jour figurant dans le référentiel. La même liste de noms WSUS réservés qui ne peuvent pas être utilisés pour **Fournisseur**, ne peut pas être utilisée pour **Produit**.
+**Produit** : spécifie le type de produit pour lequel la mise à jour est destinée. Vous pouvez utiliser la liste déroulante pour choisir les valeurs des mises à jour figurant dans le référentiel. La même liste de noms WSUS réservés qui ne peuvent pas être utilisés pour **Fournisseur**, ne peut pas être utilisée pour **Produit**.
 
- **URL Informations** : Spécifie l’URL où vous trouverez plus d’informations sur cette mise à jour. Vous devez utiliser des minuscules pour **https** ou **http** lorsque vous entrez cette URL.
+ **URL Informations** : spécifie l’URL où vous trouverez plus d’informations sur cette mise à jour. Vous devez utiliser des minuscules pour **https** ou **http** lorsque vous entrez cette URL.
 
 4. Sur la page **Informations facultatives**, vous pouvez configurer les détails qui fournissent des informations supplémentaires sur la mise à jour.
 
-   -   **ID du bulletin** : Les ID de bulletin sont généralement, mais pas toujours, fournis par les fournisseurs de mises à jour.
+   -   **ID du bulletin** : les ID de bulletin sont généralement, mais pas toujours, fournis par les fournisseurs de mises à jour.
 
-   -   **ID de l’article** : Si l’article d’une mise à jour logicielle est disponible, l’ID de l’article peut être utile pour les personnes qui cherchent plus d’informations sur la mise à jour.
+   -   **ID de l’article** : si l’article d’une mise à jour logicielle est disponible, l’ID de l’article peut être utile pour les personnes qui cherchent plus d’informations sur la mise à jour.
 
-   -   **ID de CVE :** Répertorie un ou plusieurs identificateurs CVE (Common Vulnerabilities and Exposures) qui fournissent des informations de sécurité sur la mise à jour ou l’offre groupée de mises à jour. Si la liste contient plusieurs CVE, utilisez un point-virgule pour les séparer, comme dans cet exemple : *CVE1;CVE2.*
+   -   **ID de CVE :** répertorie un ou plusieurs identificateurs CVE (Common Vulnerabilities and Exposures) qui fournissent des informations de sécurité sur la mise à jour ou l’offre groupée de mises à jour. Si la liste contient plusieurs CVE, utilisez un point-virgule pour les séparer, comme dans cet exemple : *CVE1;CVE2.*
 
-   -   **URL de prise en charge :** Répertorie les URL qui contiennent des informations de prise en charge pour cette mise à jour, le cas échéant. Vous devez utiliser des minuscules pour **https** ou **http** lorsque vous entrez cette URL.
+   -   **URL de prise en charge :** répertorie les URL qui contiennent des informations de prise en charge pour cette mise à jour, le cas échéant. Vous devez utiliser des minuscules pour **https** ou **http** lorsque vous entrez cette URL.
 
-   -   **Gravité :** Définit le niveau de gravité de cette mise à jour.
+   -   **Gravité :** définit le niveau de gravité de cette mise à jour.
 
-   -   **Impact :** Les options suivantes peuvent être utilisées pour spécifier l’impact :
+   -   **Impact :** les options suivantes peuvent être utilisées pour spécifier l’impact :
        -   **Normal** : indique que la mise à jour nécessite les procédures d’installation par défaut.
        -   **Mineur**  : indique que la mise à jour nécessite les procédures d’installation minimale.
        -   **Nécessite une prise en charge exclusive** : indique que la mise à jour doit être installée par elle-même, sans tenir compte d’autres mises à jour.   <br /><br />
 
-   -   **Comportement de redémarrage :** Permet de fournir des informations sur le comportement de redémarrage des mises à jour. Ce paramètre n’affecte pas le comportement réel de l’installation de la mise à jour.
+   -   **Comportement de redémarrage :** permet de fournir des informations sur le comportement de redémarrage des mises à jour. Ce paramètre n’affecte pas le comportement réel de l’installation de la mise à jour.
 
-       -   **Ne redémarre jamais** : L’ordinateur n’effectue jamais un redémarrage du système après l’installation de la mise à jour logicielle.
-       -   **Nécessite toujours un redémarrage** : L’ordinateur effectue toujours un redémarrage du système après l’installation de la mise à jour logicielle.
-       -   **Peut nécessiter un redémarrage** : Après l’installation de la mise à jour, l’ordinateur demande un redémarrage du système uniquement si un redémarrage est nécessaire. L’utilisateur a la possibilité de reporter le redémarrage. Il s'agit de la valeur par défaut. <br /><br />
+       -   **Ne redémarre jamais** : l’ordinateur n’effectue jamais un redémarrage du système après l’installation de la mise à jour logicielle.
+       -   **Nécessite toujours un redémarrage** : l’ordinateur effectue toujours un redémarrage du système après l’installation de la mise à jour logicielle.
+       -   **Peut nécessiter un redémarrage** : après l’installation de la mise à jour, l’ordinateur demande un redémarrage du système uniquement si un redémarrage est nécessaire. L’utilisateur a la possibilité de reporter le redémarrage. Il s'agit de la valeur par défaut. <br /><br />
 
 5. Sur la page des **conditions préalables**, spécifiez les conditions préalables qui doivent être réunies sur un ordinateur avant de pouvoir installer cette mise à jour. Les conditions requises peuvent être des **detectoids** ou d’autres mises à jour. Les detectoids sont des règles de haut niveau nécessitant, par exemple, des ordinateurs équipés d’un processeur 64 bits. Les detectoids peuvent également indiquer les mises à jour spécifiques qui doivent être installées avant de pouvoir installer cette mise à jour.
 

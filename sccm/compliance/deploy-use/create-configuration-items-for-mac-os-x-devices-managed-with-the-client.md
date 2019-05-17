@@ -2,7 +2,7 @@
 title: 'Créer des éléments de configuration pour les appareils Mac gérés par le client '
 titleSuffix: Configuration Manager
 description: L’élément de configuration System Center Configuration Manager Mac OS X permet de gérer les paramètres des appareils Mac OS X.
-ms.date: 03/28/2017
+ms.date: 05/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
@@ -11,19 +11,19 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cf610c3310265f8b7dd6b467640617928a51258f
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 07ef57dba35fc78bcf4e108ec571106b099b9145
+ms.sourcegitcommit: 99dfe4fb9e9cfd20c44380ae442b3a5b895a0d9b
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56124051"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65214791"
 ---
 # <a name="how-to-create-configuration-items-for-mac-os-x-devices-managed-with-the-system-center-configuration-manager-client"></a>Comment créer des éléments de configuration pour des appareils Mac OS X gérés avec le client System Center Configuration Manager
 Utilisez l’élément de configuration System Center Configuration Manager **Mac OS X (personnalisé)** pour gérer les paramètres des appareils Mac OS X gérés par le client Configuration Manager.  
   
  Le système d’exploitation Mac OS X utilise des fichiers de liste de propriétés (plist) pour stocker les paramètres d’application. Utilisez les paramètres de compatibilité pour évaluer et corriger les paramètres dans un fichier de liste de propriétés. Vous pouvez également gérer les paramètres Mac OS X en écrivant un script Shell qui retourne une valeur que vous pouvez évaluer et dont vous pouvez corriger la conformité.  
   
-### <a name="to-create-a-custom-mac-os-x-configuration-item"></a>Pour créer un élément de configuration Mac OS X personnalisé  
+## <a name="to-create-a-custom-mac-os-x-configuration-item"></a>Pour créer un élément de configuration Mac OS X personnalisé  
   
 1. Dans la console Configuration Manager, cliquez sur **Ressources et conformité**.  
   
@@ -81,18 +81,18 @@ Utilisez l’élément de configuration System Center Configuration Manager **Ma
   
 14. Dans la boîte de dialogue **Créer une règle** , indiquez les informations suivantes :  
   
-    -   **Nom :** Entrez un nom pour la règle de compatibilité.  
+    -   **Nom :** Entrez un nom pour la règle de conformité.  
   
-    -   **Description :** Entrez une description pour la règle de compatibilité.  
+    -   **Description :** Entrez une description pour la règle de conformité.  
   
-    -   **Paramètre sélectionné :** Cliquez sur **Parcourir** pour ouvrir la boîte de dialogue **Paramètre de sélection**. Sélectionnez le paramètre que vous souhaitez définir une règle, ou cliquez sur **nouveau paramètre**. Lorsque vous avez terminé, cliquez sur **Sélectionner**.  
+    -   **Paramètre sélectionné :** Cliquez sur **Parcourir** pour ouvrir le **Sélectionner le paramètre** boîte de dialogue. Sélectionnez le paramètre que vous souhaitez définir une règle, ou cliquez sur **nouveau paramètre**. Lorsque vous avez terminé, cliquez sur **Sélectionner**.  
   
         > [!TIP]  
         >  Vous pouvez également cliquer sur **Propriétés** pour afficher des informations sur le paramètre actuellement sélectionné.  
   
-    -   **Type de règle :** Sélectionnez le type de règle de compatibilité que vous souhaitez utiliser :  
+    -   **Type de règle :** sélectionnez le type de règle de compatibilité à utiliser :  
   
-        -   **Valeur :** Créez une règle qui compare la valeur renvoyée par l’élément de configuration par rapport à une valeur que vous spécifiez.  
+        -   **Valeur** : créez une règle qui compare la valeur renvoyée par l’élément de configuration à une valeur que vous spécifiez.  
   
         -   **Existentiel** : créez une règle qui évalue le paramètre, selon qu’il existe sur un périphérique.  
   
@@ -143,9 +143,9 @@ Utilisez l’élément de configuration System Center Configuration Manager **Ma
   
             -   **Le paramètre doit exister sur les périphériques clients**  
   
-            -   **Le paramètre ne doit pas exister sur les appareils clients**  
+            -   **Le paramètre ne doit pas exister sur les périphériques clients**  
   
-        -   **Gravité de la non conformité pour les rapports :** spécifiez le niveau de gravité qui est signalé en cas d’échec de cette règle de compatibilité. Les niveaux de gravité disponibles sont les suivants :  
+        -   **Gravité de non compatibilité pour les rapports :** Spécifier le niveau de gravité signalé en cas d'échec de cette règle de conformité. Les niveaux de gravité disponibles sont les suivants :  
   
             -   **Aucun** : les ordinateurs qui ne respectent pas cette règle de conformité ne signalent pas la gravité d’un échec pour les rapports Configuration Manager.  
   
@@ -168,5 +168,6 @@ Utilisez l’élément de configuration System Center Configuration Manager **Ma
   
     Si vous souhaitez maintenant ajouter cet élément de configuration à une base de référence de configuration, consultez [Comment créer des bases de référence de configuration dans System Center Configuration Manager](../../compliance/deploy-use/create-configuration-baselines.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Éléments de configuration pour les appareils gérés avec le client System Center Configuration Manager](../../compliance/deploy-use/configuration-items-for-devices-managed-with-the-client.md)
+## <a name="next-steps"></a>Étapes suivantes
+
+ [Éléments de configuration pour les appareils gérés avec le client System Center Configuration Manager](../../compliance/deploy-use/create-configuration-items.md)

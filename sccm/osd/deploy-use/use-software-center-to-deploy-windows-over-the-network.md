@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99cd37d0034725c85709e454960171714cd3db13
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: fa86d335b94db796f37955462abddeb9451ccf4e
+ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56133814"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65083137"
 ---
 # <a name="use-software-center-to-deploy-windows-over-the-network-with-system-center-configuration-manager"></a>Utiliser le Centre logiciel pour déployer Windows sur le réseau avec System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Vous pouvez rendre disponible la séquence de tâches pour installer un système d’exploitation dans System Center Configuration Manager dans le Centre logiciel. Vous pouvez déployer un système d’exploitation dans le Centre logiciel dans les scénarios de déploiement de système d’exploitation suivants :
 
@@ -34,8 +34,8 @@ Effectuez les étapes dans un des scénarios de déploiement de système d’exp
 Pour rendre le déploiement de système d’exploitation disponible dans le centre logiciel, configurez le déploiement. Vous pouvez configurer le déploiement dans la page **Paramètres de déploiement** de l’Assistant Déploiement logiciel ou sous l’onglet **Paramètres de déploiement** dans les propriétés du déploiement. Pour le paramètre **Rendre disponible aux éléments suivants** , sélectionnez **Clients Configuration Manager uniquement** ou **Clients, média et environnement PXE Configuration Manager**. Une fois que le système déploie le système d’exploitation, il est affiché dans le Centre logiciel pour les membres du regroupement cible.
 
 ##  <a name="BKMK_Deploy"></a> Déployer la séquence de tâches sur les ordinateurs  
-Déployez le système d’exploitation dans un regroupement cible. Pour plus d'informations, voir [Déployer une séquence de tâches](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS). Quand vous déployez des systèmes d’exploitation pour le Centre logiciel, vous pouvez configurer si le déploiement est obligatoire ou disponible.
+Déployez le système d’exploitation dans un regroupement cible. Pour plus d'informations, voir [Déployer une séquence de tâches](/sccm/osd/deploy-use/deploy-a-task-sequence). Quand vous déployez des systèmes d’exploitation pour le Centre logiciel, vous pouvez configurer si le déploiement est obligatoire ou disponible.
 
--   **Déploiement obligatoire** : Les déploiements obligatoires rendent le système d’exploitation accessible dans le Centre logiciel, mais il est démarré automatiquement conformément à la planification d’affectation configurée.
+-   **Déploiement obligatoire**: les déploiements obligatoires rendent le système d’exploitation accessible dans le Centre logiciel, mais il est démarré automatiquement conformément au calendrier d’attribution configurée.
 
--   **Déploiement disponible** : Le système d’exploitation est disponible dans le Centre logiciel et l’utilisateur peut l’installer à la demande.
+-   **Déploiement disponible**: le système d’exploitation est disponible dans le Centre logiciel et l’utilisateur peut l’installer à la demande.

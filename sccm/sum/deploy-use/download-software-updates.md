@@ -2,25 +2,25 @@
 title: 'Télécharger les mises à jour logicielles '
 titleSuffix: Configuration Manager
 description: Utilisez l’Assistant Téléchargement des mises à jour logicielles pour télécharger les mises à jour logicielles et les distribuer aux points de distribution afin qu’elles soient prêtes à être déployées sur les clients.
-author: aczechowski
 ms.date: 01/23/2017
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: de78e8d3-043f-4cd3-97e0-4dfb824fd3fb
 manager: dougeby
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f43379f315a3a2e24a33f2112a26108aa7418bb
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 15ed5e56d5284b3014061a5d910dc88903b624db
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56138719"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500209"
 ---
 # <a name="download-software-updates"></a>Télécharger les mises à jour logicielles  
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Vous avez le choix entre plusieurs méthodes pour télécharger les mises à jour logicielles dans Configuration Manager. Quand vous créez une règle de déploiement automatique (ADR) ou que vous déployez manuellement des mises à jour logicielles, celles-ci sont téléchargées vers la bibliothèque de contenu du serveur de site. Ensuite, les mises à jour logicielles sont copiées dans la bibliothèque de contenu sur les points de distribution associés au package de déploiement configuré. Si vous souhaitez télécharger les mises à jour logicielles avant de les déployer, vous pouvez utiliser l'Assistant Téléchargement des mises à jour. Cela vous permet de vérifier que les mises à jour logicielles sont disponibles sur les points de distribution avant de les déployer sur les ordinateurs clients.  
 

@@ -2,8 +2,8 @@
 title: Présentation des mises à jour logicielles
 titleSuffix: Configuration Manager
 description: Découvrez les principes de base des mises à jour logicielles dans System Center Configuration Manager.
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.date: 10/30/2017
 ms.topic: conceptual
@@ -11,16 +11,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: e9778b13-c8a3-40eb-8655-34ac8ce9cdaa
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ac745419dafea6a8fc86ddf1c744944f8f5698b2
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: e95055473cc5d61b10ee06e43456f3f7dfeb428b
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56125032"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65493364"
 ---
 # <a name="introduction-to-software-updates-in-system-center-configuration-manager"></a>Présentation des mises à jour logicielles dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Les mises à jour logicielles dans System Center Configuration Manager offrent un ensemble d’outils et de ressources qui peuvent faciliter la gestion de la tâche complexe que représentent le suivi et l’application des mises à jour logicielles sur les ordinateurs clients de l’entreprise. Il est essentiel de disposer d'un processus de gestion des mises à jour logicielles efficace pour assurer le fonctionnement des opérations, résoudre les problèmes de sécurité et préserver la stabilité de l'infrastructure réseau. Toutefois, la gestion des mises à jour logicielles nécessite une attention constante et continue du fait que les technologies évoluent rapidement et que de nouvelles menaces de sécurité émergent constamment.  
 
@@ -130,19 +130,19 @@ Pour obtenir un exemple de scénario illustrant la façon dont vous pouvez dépl
 
  En incluant la planification de l'analyse, l'analyse de la conformité des mises à jour logicielles peut être lancée de différentes manières :  
 
--   **Calendrier d’analyse des mises à jour logicielles** : l'analyse de la conformité des mises à jour logicielles commence selon le calendrier d'analyse configuré dans les paramètres Agent client des mises à jour logicielles. Pour plus d’informations sur la configuration des paramètres client des mises à jour logicielles, consultez [paramètres client des mises à jour logicielles](../../core/clients/deploy/about-client-settings.md#software-updates).  
+-   **Calendrier d’analyse des mises à jour logicielles**: l’analyse de la conformité des mises à jour logicielles commence selon le calendrier d’analyse configuré dans les paramètres Agent client des mises à jour logicielles. Pour plus d’informations sur la configuration des paramètres client des mises à jour logicielles, consultez [paramètres client des mises à jour logicielles](../../core/clients/deploy/about-client-settings.md#software-updates).  
 
--   **Action dans Propriétés de Configuration Manager** : l’utilisateur peut démarrer l’action **Cycle d’analyse des mises à jour de logiciels** ou **Cycle d’évaluation des déploiements de mises à jour de logiciels** sur l’onglet **Action** dans la boîte de dialogue **Propriétés de Configuration Manager** sur l’ordinateur client.  
+-   **Action Propriétés de Configuration Manager**: l’utilisateur peut démarrer l’action **Cycle d’analyse des mises à jour de logiciels** ou **Cycle d’évaluation des déploiements de mises à jour de logiciels** sous l’onglet **Action** de la boîte de dialogue **Propriétés du Configuration Manager** sur l’ordinateur client.  
 
--   **Planification de la réévaluation du déploiement** : L'évaluation du déploiement et l'analyse de la conformité des mises à jour logicielles commence selon le calendrier de réévaluation du déploiement configuré, comme indiqué dans les paramètres Agent client des mises à jour logicielles. Pour plus d’informations sur les paramètres client des mises à jour logicielles, consultez [paramètres client des mises à jour logicielles](../../core/clients/deploy/about-client-settings.md#software-updates).  
+-   **Planification de la réévaluation du déploiement**: l’évaluation du déploiement et l’analyse de la conformité des mises à jour logicielles commencent selon le calendrier de réévaluation du déploiement configuré, comme indiqué dans les paramètres Agent client des mises à jour logicielles. Pour plus d’informations sur les paramètres client des mises à jour logicielles, consultez [paramètres client des mises à jour logicielles](../../core/clients/deploy/about-client-settings.md#software-updates).  
 
--   **Avant de télécharger les fichiers de mises à jour** : Quand un ordinateur client reçoit une stratégie d'attribution pour un nouveau déploiement requis, l'Agent client des mises à jour logicielles télécharge les fichiers de mise à jour logicielle dans le cache du client local. Avant de télécharger les fichiers de mise à jour logicielle, l'agent du client démarre une analyse pour vérifier que la mise à jour logicielle est toujours nécessaire.  
+-   **Avant de télécharger les fichiers de mises à jour**: quand un ordinateur client reçoit une stratégie d’attribution pour un nouveau déploiement obligatoire, l’Agent client des mises à jour logicielles télécharge les fichiers de mise à jour logicielle dans le cache du client local. Avant de télécharger les fichiers de mise à jour logicielle, l'agent du client démarre une analyse pour vérifier que la mise à jour logicielle est toujours nécessaire.  
 
--   **Avant l’installation des mises à jour logicielles** : Juste avant d'installer des mises à jour logicielles, l'Agent client des mises à jour logicielles démarre une analyse pour vérifier que les mises à jour logicielles sont toujours nécessaires.  
+-   **Avant l’installation des mises à jour logicielles**: juste avant d’installer des mises à jour logicielles, l’Agent client des mises à jour logicielles démarre une analyse pour vérifier que les mises à jour logicielles sont toujours nécessaires.  
 
--   **Après l’installation des mises à jour logicielles** : juste après la fin de l'installation des mises à jour logicielles, l'Agent client des mises à jour logicielles démarre une analyse pour vérifier que plus aucune mise à jour logicielle n'est nécessaire et crée un message d'état indiquant que la mise à jour logicielle est installée. Lorsque l'installation est terminée mais qu'un redémarrage est nécessaire, le message d'état indique que l'ordinateur client doit être redémarré.  
+-   **Après l’installation des mises à jour logicielles**: juste après la fin de l’installation des mises à jour logicielles, l’Agent client des mises à jour logicielles démarre une analyse pour vérifier que les mises à jour logicielles ne sont plus nécessaires et crée un message d’état indiquant que la mise à jour logicielle est installée. Lorsque l'installation est terminée mais qu'un redémarrage est nécessaire, le message d'état indique que l'ordinateur client doit être redémarré.  
 
--   **Après le redémarrage du système** : si un ordinateur client attend le redémarrage du système pour terminer l'installation de la mise à jour logicielle, l'Agent client des mises à jour logicielles démarre une analyse après le redémarrage pour vérifier que la mise à jour logicielle n'est désormais plus requise et il crée un message d'état indiquant que la mise à jour logicielle est installée.  
+-   **Après le redémarrage du système**: si un ordinateur client attend le redémarrage du système pour terminer l’installation de la mise à jour logicielle, l’Agent client des mises à jour logicielles démarre une analyse après le redémarrage pour vérifier que la mise à jour logicielle n’est plus nécessaire et crée un message d’état indiquant que la mise à jour logicielle est installée.  
 
 #### <a name="time-to-live-value"></a>Valeur de la durée de vie  
  Les métadonnées des mises à jour logicielles requises pour l'analyse de la conformité des mises à jour logicielles sont stockées sur l'ordinateur client local et, par défaut, sont pertinentes pendant 24 heures. Cette durée est appelée durée de vie.  

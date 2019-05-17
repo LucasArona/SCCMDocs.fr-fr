@@ -2,25 +2,25 @@
 title: 'Synchroniser les mises à jour sans connexion Internet '
 titleSuffix: Configuration Manager
 description: Exécutez la synchronisation des mises à jour logicielles à partir du point de mise à jour logicielle de niveau supérieur qui est déconnecté d’Internet.
-author: aczechowski
 ms.date: 01/23/2017
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 1a997c30-8e71-4be5-89ee-41efb2c8d199
 manager: dougeby
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0ca643b348d9d6d2800c671d9985f10d08bf5d60
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 67b284e369268b184067e33d2a505585618795e5
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56130467"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65493984"
 ---
 # <a name="synchronize-software-updates-from-a-disconnected-software-update-point"></a>Synchroniser les mises à jour logicielles à partir d’un point de mise à jour logicielle déconnecté  
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
  Quand le point de mise à jour logicielle sur le site de niveau supérieur est déconnecté d'Internet, vous devez utiliser les fonctions d'exportation et d'importation de l'outil WSUSUtil pour synchroniser les métadonnées des mises à jour logicielles. Vous pouvez choisir un serveur WSUS existant qui ne fait pas partie de votre hiérarchie Configuration Manager en tant que source de synchronisation. Cette rubrique fournit des informations sur l’utilisation des fonctions d’exportation et d’importation de l’outil WSUSUtil.  
 
@@ -71,7 +71,7 @@ ms.locfileid: "56130467"
 
      **wsusutil.exe export export.cab export.log**  
 
-     Le format peut être résumé comme suit : WSUSutil.exe est suivi de l'option d'exportation, du nom du fichier .cab d'exportation créé pendant l'opération d'exportation et du nom d'un fichier journal. WSUSutil.exe exporte les métadonnées du serveur d'exportation et crée un fichier journal de l'opération.  
+     Le format peut être résumé comme suit : WSUSutil.exe est suivi de l’option d’exportation, du nom du fichier .cab d’exportation créé pendant l’opération d’exportation et du nom d’un fichier journal. WSUSutil.exe exporte les métadonnées du serveur d'exportation et crée un fichier journal de l'opération.  
 
     > [!NOTE]  
     >  Le nom du package (fichier .cab) et du fichier journal doivent être uniques dans le dossier actif.  
@@ -99,7 +99,7 @@ ms.locfileid: "56130467"
 
      **wsusutil.exe import export.cab import.log**  
 
-     Le format peut être résumé comme suit : WSUSutil.exe est suivi par la commande d'importation, le nom du fichier de package (.cab) créé pendant l'opération d'exportation, le chemin du fichier de package s'il se trouve dans un autre dossier et le nom d'un fichier journal. WSUSutil.exe importe les métadonnées du serveur d'exportation et crée un fichier journal de l'opération.  
+     Le format peut être résumé comme suit : WSUSutil.exe est suivi par la commande d’importation, le nom du fichier de package (.cab) créé pendant l’opération d’exportation, le chemin du fichier de package s’il se trouve dans un autre dossier et le nom d’un fichier journal. WSUSutil.exe importe les métadonnées du serveur d'exportation et crée un fichier journal de l'opération.  
 
 ## <a name="next-steps"></a>Étapes suivantes
 À l’issue de la première synchronisation de mises à jour logicielles ou après la mise à disposition de nouvelles classifications ou de nouveaux produits, vous devez [configurer les nouvelles classifications et les nouveaux produits](configure-classifications-and-products.md) pour synchroniser les mises à jour logicielles avec les nouveaux critères.

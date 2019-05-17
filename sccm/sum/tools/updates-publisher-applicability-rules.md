@@ -7,20 +7,20 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
 ms.assetid: 3cf0c2cd-397a-4622-b11c-961f334fb7d7
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 95358cca51bfb6a5af8d4302251b74e19651bdca
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: b4b289daa6f0f76c1d8e71879050bdfb6f5de679
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56124102"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65496488"
 ---
 # <a name="manage-applicability-rules-in-updates-publisher"></a>Gérer les règles de mise en application dans l’éditeur de mise à jour
 
-*S’applique à : Éditeur de mise à jour Systems Center*
+*S’applique à : l'éditeur de mise à jour System Center*
 
 Avec l’éditeur de mise à jour, les règles de mise en application définissent les exigences qui doivent être remplies pour qu’un appareil puisse installer une mise à jour. Les règles sont également utilisées pour déterminer si une mise à jour a été installée sur un ordinateur. Une règle de mise en application complexe comportant plusieurs parties est appelée ensemble de règles.
 

@@ -7,20 +7,20 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
 ms.assetid: 2200b02b-e76b-4aa7-a77a-6dc5e70f1333
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0f21e087e73a26191af56793e0015cbb21e8714c
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: d19f2529c549c84b969124bf006dd5793b28521b
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56136532"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65493384"
 ---
 # <a name="system-center-updates-publisher"></a>Éditeur de mise à jour Systems Center
 
-*S’applique à : Éditeur de mise à jour System Center*
+*S’applique à : l'éditeur de mise à jour System Center*
 
 L’éditeur de mise à jour System Center (SCUP) est un outil autonome qui permet aux éditeurs de logiciels indépendants ou aux développeurs d’applications métier de gérer les mises à jour personnalisées. Cela inclut les mises à jour qui comportent des dépendances, comme les pilotes et les offres groupées de mises à jour.
 
@@ -45,19 +45,19 @@ Lorsque vous ouvrez l’éditeur de mise à jour, il affiche par défaut le nœu
 L’éditeur de mise à jour comporte quatre espaces de travail qui facilitent son utilisation.
 
 
-**Espace de travail Mises à jour :** utilisez cet espace de travail pour [créer](/sccm/sum/tools/create-updates-with-updates-publisher) et [gérer](/sccm/sum/tools/manage-updates-with-updates-publisher) les mises à jour logicielles et les bundles de mises à jour. Cela inclut l’affectation de mises à jour et d’offres groupées à une publication, ainsi que la publication et l’exportation vers le référentiel d’un autre éditeur de mise à jour.
+**Espace de travail Mises à jour :** utilisez cet espace de travail pour [créer](/sccm/sum/tools/create-updates-with-updates-publisher) et [gérer](/sccm/sum/tools/manage-updates-with-updates-publisher) les mises à jour logicielles et les offres groupées de mises à jour. Cela inclut l’affectation de mises à jour et d’offres groupées à une publication, ainsi que la publication et l’exportation vers le référentiel d’un autre éditeur de mise à jour.
 
-**Espace de travail Publications :** c’est là que vous [gérez vos publications](/sccm/sum/tools/updates-publisher-publications). Une publication est un groupe de mises à jour que vous créez pour simplifier l’exportation et la publication des mises à jour.
+**Espace de travail Publications :** c’est ici que vous [gérez vos publications](/sccm/sum/tools/updates-publisher-publications). Une publication est un groupe de mises à jour que vous créez pour simplifier l’exportation et la publication des mises à jour.
 
 La gestion des publications inclut la publication des mises à jour sur un serveur afin que vos clients puissent les trouver et les installer, l’exportation de mises à jour et d’offres groupées à utiliser par d’autres installations de l’éditeur de mise à jour, ou la modification du contenu ou des détails d’une publication.
 
 
 
-**Espace de travail Règles :** c’est là que vous [gérez les règles d’application](/sccm/sum/tools/updates-publisher-applicability-rules) qui peuvent être enregistrées puis utilisées avec les mises à jour que vous déployez. Il existe deux types de règles:
+**Espace de travail Règles :** c’est ici que vous [gérez les règles de mise en application](/sccm/sum/tools/updates-publisher-applicability-rules) qui peuvent être enregistrées puis utilisées avec les mises à jour que vous déployez. Il existe deux types de règles:
 
 -   Règles installables : ces règles permettent de déterminer si un client doit installer une mise à jour.
 -   Règles installées : ces règles vérifient si une mise à jour est déjà installée.
 
-**Espace de travail Catalogues :** utilisez cet espace de travail pour ajouter et [gérer les catalogues de mises à jour logicielles](/sccm/sum/tools/updates-publisher-catalogs). Cela inclut l’importation des mises à jour logicielles de ces catalogues vers le référentiel de l’éditeur de mise à jour.
+**Espace de travail Catalogues :** utilisez cet espace de travail pour ajouter cet espace de travail et [gérer les catalogues de mises à jour logicielles](/sccm/sum/tools/updates-publisher-catalogs). Cela inclut l’importation des mises à jour logicielles de ces catalogues vers le référentiel de l’éditeur de mise à jour.
 ## <a name="first-steps"></a>Premières étapes
 Pour commencer, [installez](/sccm/sum/tools/install-updates-publisher) puis [configurez les options](/sccm/sum/tools/updates-publisher-options) de l’éditeur de mise à jour.

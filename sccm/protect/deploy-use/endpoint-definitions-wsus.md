@@ -6,17 +6,17 @@ ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
 ms.assetid: a34d9401-83e4-471d-8e23-b8042fc11c90
-author: aczechowski
+author: mestew
+ms.author: mstewart
 description: Découvrez comment configurer Windows Server Update Services pour approuver automatiquement les mises à jour de définition.
 manager: dougeby
-ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 74a1dc94a30f56e22b181446422a8b5f99790ffc
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: f79fd876d19ecfae0872c97a8aabe60c121a90f2
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56127624"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65494543"
 ---
 # <a name="enable-endpoint-protection-malware-definitions-to-download-from-windows-server-update-services-wsus-for-configuration-manager"></a>Activer le téléchargement des définitions de programmes malveillants pour Endpoint Protection à partir de Windows Server Update Services (WSUS) pour Configuration Manager
 

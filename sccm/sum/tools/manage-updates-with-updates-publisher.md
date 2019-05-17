@@ -7,20 +7,20 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
 ms.assetid: cd64994c-b426-4465-96cd-54b0edc2778d
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f658ce4757455e4e49cff6228ee37a38b8e4fa5
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 88cc03de66847143336425dbc4b730703d15378c
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56139491"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65493786"
 ---
 # <a name="manage-software-updates-in-updates-publisher"></a>Gérer les mises à jour logicielles dans l’éditeur de mise à jour
 
-*S’applique à : Éditeur de mise à jour System Center*     
+*S’applique à : l'éditeur de mise à jour System Center*     
 
 Dans l’éditeur de mise à jour System Center, vous utilisez l **’espace de travail Mises à jour** pour gérer les mises à jour logicielles et offres groupées que vous avez importées dans le référentiel.  
 
@@ -90,7 +90,7 @@ Il existe deux façons de publier des mises à jour et des offres groupées :
 ### <a name="to-publish-updates-and-bundles"></a>Pour publier des mises à jour et des offres groupées
 1.  Accédez à l **’espace de travail Mises à jour**, puis sélectionnez une ou plusieurs mises à jour et offres groupées que vous souhaitez publier. Puis choisissez **Publier** dans l’onglet **Accueil** du ruban.
 
-2.  Sur la page **Sélectionner** de l’Assistant **Publication**, indiquez comment vous voulez publier les mises à jour. Les options sont les mêmes que pour l’[affectation de mises à jour](#assign-updates-and-bundles-to-a-publication) : **Tous les contenus**, **Métadonnées uniquement** ou **Automatique**.
+2.  Sur la page **Sélectionner** de l’Assistant **Publication**, indiquez comment vous voulez publier les mises à jour. Les options sont les mêmes que pour l[’attribution des mises à jour](#assign-updates-and-bundles-to-a-publication) : **Tout le contenu**, **Uniquement les métadonnées** ou **Automatique**.
 
     Vous pouvez également choisir de signer toutes les mises à jour avec un nouveau certificat de publication.
 

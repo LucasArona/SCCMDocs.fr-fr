@@ -2,25 +2,25 @@
 title: Icônes utilisées pour les mises à jour logicielles
 titleSuffix: Configuration Manager
 description: La console Configuration Manager contient des icônes qui indiquent un état pour la mise à jour ou le groupe de mises à jour logicielles synchronisés.
-author: aczechowski
 manager: dougeby
 ms.date: 10/06/2016
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 63c5ef72-5715-4d86-85a2-71beba469fab
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 898eabbb142a5562464950812cbfd057d3d65187
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 9dbb2b7fadf13a49c25e2eb9bb6fcc608d3869f6
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56128270"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65495852"
 ---
 # <a name="icons-used-for-software-updates-in-system-center-configuration-manager"></a>Icônes utilisées pour les mises à jour logicielles dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Les mises à jour logicielles synchronisées sont affichées dans la console Configuration Manager, où la première colonne de chaque mise à jour logicielle contient une icône indiquant un état spécifique. Les groupes de mises à jour logicielles sont également représentés par une icône qui fournit des informations sur l’état des mises à jour logicielles contenues dans chaque groupe. Cette section fournit des informations sur les icônes des mises à jour logicielles et sur la signification de chaque icône.  
 

@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4c18d6320397281156e39624ea8dc50e6d0539ed
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: c6d0cecc348076bcf728cb08ba29500ae55d1c77
+ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56139906"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65082874"
 ---
 # <a name="create-a-task-sequence-to-install-an-operating-system-in-system-center-configuration-manager"></a>Créer une séquence de tâches pour installer un système d’exploitation dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Dans System Center Configuration Manager, utilisez des séquences de tâches pour installer automatiquement une image de système d’exploitation sur un ordinateur de destination. Vous pouvez créer une séquence de tâches qui fasse référence à l’image de démarrage chargée de démarrer l’ordinateur de destination, à l’image du système d’exploitation que vous voulez installer sur l’ordinateur de destination et à tout autre contenu supplémentaire, par exemple les autres applications ou les mises à jour logicielles que vous voulez installer. Vous devez ensuite déployer la séquence de tâches sur le regroupement qui contient l’ordinateur de destination.  
 
@@ -51,45 +51,45 @@ Dans System Center Configuration Manager, utilisez des séquences de tâches pou
 
 5. Sur la page **Informations sur la séquence de tâches** , spécifiez les paramètres suivants et cliquez sur **Suivant**.  
 
-   -   **Nom de la séquence de tâches** : spécifiez un nom qui identifie la séquence de tâches.  
+   -   **Nom de la séquence de tâches**: spécifiez un nom qui identifie la séquence de tâches.  
 
-   -   **Description** : spécifiez une description de la tâche qui est effectuée par la séquence de tâches.  
+   -   **Description**: spécifiez une description de la tâche qui est effectuée par la séquence de tâches.  
 
-   -   **Image de démarrage** : spécifiez l'image de démarrage qui installe le système d'exploitation sur l'ordinateur de destination. L'image de démarrage contient une version de Windows PE qui est utilisée pour installer le système d'exploitation, ainsi que les pilotes d'appareil supplémentaires qui sont requis. Pour plus d’informations, consultez [Gérer les images de démarrage](../get-started/manage-boot-images.md).  
+   -   **Images de démarrage**: spécifiez l'image de démarrage qui installe le système d'exploitation sur l'ordinateur de destination. L'image de démarrage contient une version de Windows PE qui est utilisée pour installer le système d'exploitation, ainsi que les pilotes d'appareil supplémentaires qui sont requis. Pour plus d’informations, consultez [Gérer les images de démarrage](../get-started/manage-boot-images.md).  
 
        > [!IMPORTANT]  
        >  L'architecture de l'image de démarrage doit être compatible avec l'architecture matérielle de l'ordinateur de destination.  
 
 6. Sur la page **Installer Windows** , spécifiez les paramètres suivants et cliquez sur **Suivant**.  
 
-   -   **Package d’images** : spécifiez le package qui contient l'image du système d'exploitation à installer. Pour plus d’informations, voir [Gérer les images de système d’exploitation](../get-started/manage-operating-system-images.md).  
+   -   **Package d'images**: spécifiez le package qui contient l'image du système d'exploitation à installer. Pour plus d’informations, voir [Gérer les images de système d’exploitation](../get-started/manage-operating-system-images.md).  
 
-   -   **Image** : si le package d'images du système d'exploitation comporte plusieurs images, spécifiez l'index de l'image du système d'exploitation à installer.  
+   -   **Image**: si le package d’images du système d’exploitation comporte plusieurs images, spécifiez l’index de l’image du système d’exploitation à installer.  
 
-   -   **Partitionnez et formatez l’ordinateur cible avant d’installer le système d’exploitation** : spécifiez si vous souhaitez que la séquence de tâches partitionne et formate l'ordinateur de destination avant que le système d'exploitation soit installé.  
+   -   **Effectuez la partition et le formatage de l'ordinateur cible avant d'installer le système d'exploitation**: spécifiez si vous souhaitez que la séquence de tâches partitionne et formate l'ordinateur de destination avant que le système d'exploitation soit installé.  
 
-   -   **Clé du produit** : spécifiez la clé de produit pour le système d'exploitation Windows à installer. Vous pouvez spécifier des clés de licence en volume codées et des clés de produit standard. Si vous utilisez une clé de produit non codée, chaque groupe de 5 caractères doit être séparé par un tiret (-). Par exemple : *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*  
+   -   **Clé du produit**: spécifiez la clé de produit pour le système d'exploitation Windows à installer. Vous pouvez spécifier des clés de licence en volume codées et des clés de produit standard. Si vous utilisez une clé de produit non codée, chaque groupe de 5 caractères doit être séparé par un tiret (-). Par exemple : *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*  
 
-   -   **Mode de licence serveur** : Indiquez que la licence serveur est **Par poste**, **Par serveur** ou qu’aucune licence n’est spécifiée. Si la licence serveur est **Par serveur**, spécifiez également le nombre maximal de connexions au serveur.  
+   -   **Mode de licence serveur :** spécifiez que la licence serveur est **Par siège**, **Par serveur**ou qu’aucune licence n’est spécifiée. Si la licence serveur est **Par serveur**, spécifiez également le nombre maximal de connexions au serveur.  
 
    -   Spécifiez comment gérer le compte administrateur qui est utilisé lors du déploiement de l'image du système d'exploitation.  
 
-       -   **Désactiver le compte administrateur local** : spécifiez si le compte administrateur local est désactivé lorsque l'image du système d'exploitation est déployée.  
+       -   **Désactiver le compte administrateur local**: spécifiez si le compte administrateur local est désactivé lorsque l'image du système d'exploitation est déployée.  
 
-       -   **Toujours utiliser le même mot de passe administrateur** : spécifiez si le même mot de passe est utilisé pour le compte administrateur local sur tous les ordinateurs où l'image du système d'exploitation est déployée.  
+       -   **Toujours utiliser le même mot de passe administrateur**: spécifiez si le même mot de passe est utilisé pour le compte administrateur local sur tous les ordinateurs où l'image du système d'exploitation est déployée.  
 
 7. Sur la page **Configurer le réseau** , spécifiez les paramètres suivants et cliquez sur **Suivant**.  
 
-   -   **Rejoindre un groupe de travail** : indiquez si vous souhaitez ajouter l'ordinateur de destination à un groupe de travail.  
+   -   **Joindre un groupe de travail**: indiquez si vous souhaitez ajouter l'ordinateur de destination à un groupe de travail.  
 
-   -   **Joindre un domaine** : indiquez si vous souhaitez ajouter l'ordinateur de destination à un domaine. Dans **Domaine**, spécifiez le nom du domaine.  
+   -   **Joindre un domaine**: indiquez si vous souhaitez ajouter l'ordinateur de destination à un domaine. Dans **Domaine**, spécifiez le nom du domaine.  
 
        > [!IMPORTANT]  
        >  Vous pouvez rechercher des domaines dans la forêt locale, mais vous devez spécifier le nom de domaine d'une forêt distante.  
 
         Vous pouvez également spécifier une unité d'organisation (UO). Il s'agit d'un paramètre facultatif qui spécifie le nom unique LDAP X.500 de l'UO dans laquelle vous créez le compte d'ordinateur s'il n'existe pas déjà.  
 
-   -   **Compte** : spécifiez le nom d'utilisateur et le mot de passe du compte qui dispose des autorisations pour joindre le domaine spécifié. Par exemple : *domaine\utilisateur* ou *%variable%*.  
+   -   **Compte**: spécifiez le nom d’utilisateur et le mot de passe du compte qui dispose des autorisations pour joindre le domaine spécifié. Par exemple : *domaine\utilisateur* ou *%variable%*.  
 
        > [!IMPORTANT]  
        >  Vous devez entrer les informations d'identification de domaine appropriées si vous prévoyez de migrer les paramètres du domaine ou les paramètres du groupe de travail.  
@@ -98,11 +98,11 @@ Dans System Center Configuration Manager, utilisez des séquences de tâches pou
 
 9. Sur la page **Migration de l'état** , spécifiez les informations suivantes, puis cliquez sur **Suivant**.  
 
-    -   **Capturer les paramètres utilisateur** : spécifiez si la séquence de tâches capture l'état utilisateur. Pour plus d’informations sur la capture et la restauration de l’état utilisateur, consultez [Gérer l’état utilisateur](../get-started/manage-user-state.md).  
+    -   **Capturer les paramètres utilisateur**: spécifiez si la séquence de tâches capture l'état utilisateur. Pour plus d’informations sur la capture et la restauration de l’état utilisateur, consultez [Gérer l’état utilisateur](../get-started/manage-user-state.md).  
 
-    -   **Capturer les paramètres réseau** : spécifiez si la séquence de tâches capture les paramètres réseau de l'ordinateur de destination. Vous pouvez capturer l'appartenance du domaine ou du groupe de travail avec les paramètres de carte réseau.  
+    -   **Capturer les paramètres réseau**: spécifiez si la séquence de tâches capture les paramètres réseau de l'ordinateur de destination. Vous pouvez capturer l'appartenance du domaine ou du groupe de travail avec les paramètres de carte réseau.  
 
-    -   **Capturer les paramètres Microsoft Windows** :  spécifiez si la séquence de tâches capture les paramètres Windows à partir de l'ordinateur de destination avant l'installation de l'image du système d'exploitation. Vous pouvez capturer le nom de l'ordinateur, les noms d'organisations et d'utilisateurs inscrits et les paramètres des fuseaux horaires.  
+    -   **Capturer les paramètres Microsoft Windows**:  spécifiez si la séquence de tâches capture les paramètres Windows à partir de l'ordinateur de destination avant l'installation de l'image du système d'exploitation. Vous pouvez capturer le nom de l'ordinateur, les noms d'organisations et d'utilisateurs inscrits et les paramètres des fuseaux horaires.  
 
 10. Sur la page **Inclure les mises à jour** , spécifiez si vous souhaitez installer les mises à jour logicielles requises, toutes les mises à jour logicielles ou aucune mise à jour logicielle, puis cliquez sur **Suivant**. Si vous spécifiez l’installation des mises à jour logicielles, Configuration Manager installe uniquement les mises à jour logicielles ciblant les regroupements auxquels l’ordinateur de destination appartient.  
 
@@ -110,7 +110,7 @@ Dans System Center Configuration Manager, utilisez des séquences de tâches pou
 
 12. Effectuez toutes les étapes de l'Assistant.  
 
-    Vous pouvez maintenant déployer la séquence de tâches dans un regroupement d’ordinateurs.  Pour plus d'informations, voir [Déployer une séquence de tâches](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS).  
+    Vous pouvez maintenant déployer la séquence de tâches dans un regroupement d’ordinateurs.  Pour plus d'informations, voir [Déployer une séquence de tâches](/sccm/osd/deploy-use/deploy-a-task-sequence).  
 
 ##  <a name="BKMK_InstallExistingOSImageTSExample"></a> Exemple de séquence de tâches pour installer une image de système d’exploitation existante  
  Utilisez le tableau suivant comme guide lorsque vous créez une séquence de tâches qui déploie un système d'exploitation à l'aide d'une image de système d'exploitation existante. Ce tableau vous aidera à définir la séquence générale des étapes de votre séquence de tâches. Il vous permettra également d'organiser et de structurer ces étapes en groupes logiques. La séquence de tâches que vous créez peut être différente de celle de cet exemple et elle peut contenir un nombre de groupes et d'étapes de séquence de tâches plus ou moins important.  

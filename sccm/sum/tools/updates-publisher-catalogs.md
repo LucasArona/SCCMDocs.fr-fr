@@ -7,20 +7,20 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
 ms.assetid: 887f8029-1a3a-423c-a9c1-31dc0d693386
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 383cd0aaa8e20613cdef0009c95aa44c6b1117f1
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: ad9387b3864511af6e619d19be2107fab818f86e
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56156489"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65493742"
 ---
 # <a name="manage-software-update-catalogs-in-updates-publisher"></a>Gérer des catalogues de mises à jour logicielles dans l’éditeur de mise à jour
 
-*S’applique à : System Center Updates Publisher*
+*S’applique à : l'éditeur de mise à jour System Center*
 
 Utilisez l’**espace de travail** **Catalogues** pour gérer les catalogues de mises à jour logicielles. Cela inclut l’ajout de nouveaux catalogues, la gestion d’abonnements à des catalogues existants et l’importation d’informations sur les mises à jour d’un catalogue vers le référentiel de l’éditeur de mise à jour.
 
@@ -48,22 +48,22 @@ Outre l’ajout de catalogues et l’affichage des informations sur les catalogu
 ## <a name="manage-update-catalogs"></a>Gérer des catalogues de mises à jour
 Vous pouvez afficher la liste des catalogues que vous avez importés dans la fenêtre **Mes catalogues de mises à jour logiciels** de l **’espace de travail Catalogues**. À partir de cet espace de travail, vous pouvez :
 
--   **Ajouter un catalogue de partenaires :** Utilisez l’une des opérations suivantes pour rechercher des catalogues partenaires :
+-   **Ajouter un catalogue partenaire :** utilisez l’une des opérations suivantes pour rechercher des catalogues partenaires :
 
     -   Dans la console, accédez à l **’espace de travail Mises à jour** > **Vue d’ensemble**. Dans la fenêtre **Prise en main**, choisissez **Ajouter des catalogues de mises à jour logicielles partenaires**.
 
     -   Dans la console, accédez à l **’espace de travail Catalogues** > **Mes catalogues**. Puis, dans le ruban, choisissez **Ajouter des catalogues**.
 
--   **Ajouter un catalogue des utilisateurs :** Dans la console, accédez à l **’espace de travail Catalogues** > **Mes catalogues**. Puis, dans le ruban, choisissez **Ajouter des catalogues**. Outre l’emplacement du fichier .cab, vous devez spécifier un éditeur, un nom et une description pour identifier le catalogue.
+-   **Ajouter un catalogue utilisateur :** dans la console, accédez à l **’espace de travail Catalogues** > **Mes catalogues**. Puis, dans le ruban, choisissez **Ajouter des catalogues**. Outre l’emplacement du fichier .cab, vous devez spécifier un éditeur, un nom et une description pour identifier le catalogue.
 
 
--   **Rechercher des mises à jour pour les catalogues :** Sélectionnez un ou plusieurs catalogues, puis choisissez **Actualiser** dans le ruban.
+-   **Rechercher les mises à jour des catalogues :** sélectionnez un ou plusieurs catalogues, puis choisissez **Actualiser** dans le ruban.
 
--   **Modifier le catalogue des utilisateurs :** Sélectionnez un catalogue des *utilisateurs*, puis choisissez **Modifier** dans le ruban. Vous pouvez ensuite modifier les propriétés définies par l’utilisateur.
+-   **Modifier un catalogue utilisateur :** sélectionnez un catalogue *utilisateur*, puis choisissez **Modifier** dans le ruban. Vous pouvez ensuite modifier les propriétés définies par l’utilisateur.
 
--   **Supprimer des catalogues :** Sélectionnez un ou plusieurs catalogues, puis choisissez **Supprimer** dans le ruban. Cette opération supprime le catalogue, votre abonnement et les mises à jour de ces catalogues du référentiel de votre éditeur de mise à jour.
+-   **Supprimer des catalogues :** sélectionnez un ou plusieurs catalogues, puis choisissez **Supprimer** dans le ruban. Cette opération supprime le catalogue, votre abonnement et les mises à jour de ces catalogues du référentiel de votre éditeur de mise à jour.
 
--   **Ajouter des mises à jour d’un catalogue à votre référentiel** : Choisissez **Importer** dans le ruban pour démarrer l’assistant **Importation de catalogue**. Pour plus d’informations, consultez la rubrique [Importer des mises à jour](#import-updates)
+-   **Ajouter des mises à jour d’un catalogue à votre référentiel**: choisissez **Importer** dans le ruban pour démarrer l’Assistant **Importation de catalogue**. Pour plus d’informations, consultez la rubrique [Importer des mises à jour](#import-updates)
 
 ## <a name="import-updates"></a>Importer des mises à jour
 Lorsque vous importez un catalogue, Updates Manager ajoute les mises à jour de ce catalogue vers le référentiel de l’éditeur de mise à jour. Une fois les mises à jour importées, vous pouvez les publier sur votre serveur de mise à jour pour les mettre à disposition des appareils gérés.

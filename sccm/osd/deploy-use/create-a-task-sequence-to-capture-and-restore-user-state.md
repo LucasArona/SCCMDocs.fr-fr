@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0077cd6a906da59a06f4cf619b74ddc0af947cea
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 709442083cd2d9c935aeb2c5fe6c2ad30a2dddf5
+ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56133916"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65083047"
 ---
 # <a name="create-a-task-sequence-to-capture-and-restore-user-state-in-configuration-manager"></a>Créer une séquence de tâches pour capturer et restaurer l’état utilisateur dans Configuration Manager
 
- *S’applique à : System Center Configuration Manager (Current Branch)*
+ *S’applique à : System Center Configuration Manager (Current Branch)*
 
  Utiliser les séquences de tâches de Configuration Manager pour capturer et restaurer les données d’état utilisateur dans les scénarios de déploiement de système d’exploitation. Dans ces scénarios, vous souhaitez conserver l’état utilisateur du système d’exploitation actuel. En fonction du type de séquence de tâches que vous créez, les étapes de capture et de restauration peuvent être ajoutées automatiquement dans le cadre de la séquence de tâches. Dans d’autres scénarios, vous devrez peut-être ajouter manuellement les étapes de capture et de restauration à la séquence de tâches. Cet article fournit les étapes que vous devez ajouter à une séquence de tâches existante pour capturer et restaurer des données d’état utilisateur.  
 
@@ -30,13 +30,13 @@ ms.locfileid: "56133916"
 
  Pour capturer et restaurer l’état utilisateur, ajoutez les étapes suivantes à la séquence de tâches :  
 
- - [Demander le magasin d’états](/sccm/osd/understand/task-sequence-steps#BKMK_RequestStateStore) : Si vous stockez l’état utilisateur sur le point de migration d’état, cette étape est nécessaire.  
+ - [Demander le magasin d’état](/sccm/osd/understand/task-sequence-steps#BKMK_RequestStateStore) : si vous stockez l’état utilisateur sur le point de migration d’état, cette étape est nécessaire.  
 
-- [Capturer l’état utilisateur](/sccm/osd/understand/task-sequence-steps#BKMK_CaptureUserState) : Cette étape capture les données d’état utilisateur. Il stocke ensuite les données sur le point de migration d’état ou sur le disque local à l’aide des liaisons permanentes.  
+- [Capturer l’état utilisateur](/sccm/osd/understand/task-sequence-steps#BKMK_CaptureUserState) : cette étape capture les données d’état utilisateur. Il stocke ensuite les données sur le point de migration d’état ou sur le disque local à l’aide des liaisons permanentes.  
 
-- [Restaurer l’état utilisateur](/sccm/osd/understand/task-sequence-steps#BKMK_RestoreUserState) : cette étape restaure les données d'état utilisateur sur l'ordinateur de destination. Il peut récupérer les données à partir d’un point de migration d’état, ou s’il y a des liaisons permanentes sur le disque local.  
+- [Restaurer l’état utilisateur](/sccm/osd/understand/task-sequence-steps#BKMK_RestoreUserState): cette étape restaure les données d’état utilisateur sur l’ordinateur de destination. Il peut récupérer les données à partir d’un point de migration d’état, ou s’il y a des liaisons permanentes sur le disque local.  
 
-- [Libérer le magasin d’état](/sccm/osd/understand/task-sequence-steps#BKMK_ReleaseStateStore) : Si vous stockez l’état utilisateur sur le point de migration d’état, cette étape est nécessaire. Cette étape supprime les données du point de migration d'état.  
+- [Libérer le magasin d’état](/sccm/osd/understand/task-sequence-steps#BKMK_ReleaseStateStore) : si vous stockez l’état utilisateur sur le point de migration d’état, cette étape est nécessaire. Cette étape supprime les données du point de migration d'état.  
 
 
  Utilisez les procédures suivantes pour ajouter les étapes de séquence de tâches nécessaires pour capturer et restaurer l'état utilisateur. Pour plus d’informations sur la création d’une séquence de tâches, consultez [Gérer les séquences de tâches pour automatiser des tâches](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks).  
@@ -62,7 +62,7 @@ ms.locfileid: "56133916"
     >  L'action de séquence de tâches exécutée avant l'étape **Libérer le magasin d'état** doit être effectuée avec succès avant que l'étape **Libérer le magasin d'état** démarre.  
 
 
- Déployez cette séquence de tâches pour capturer l'état utilisateur sur un ordinateur de destination. Pour plus d’informations sur la façon de déployer des séquences de tâches, consultez [Déployer une séquence de tâches](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS).  
+ Déployez cette séquence de tâches pour capturer l'état utilisateur sur un ordinateur de destination. Pour plus d’informations sur la façon de déployer des séquences de tâches, consultez [Déployer une séquence de tâches](/sccm/osd/deploy-use/deploy-a-task-sequence).  
 
 
 
@@ -86,7 +86,7 @@ ms.locfileid: "56133916"
    >  L'action de séquence de tâches exécutée avant l'étape **Libérer le magasin d'état** doit être effectuée avec succès avant que l'étape **Libérer le magasin d'état** démarre.  
 
 
- Déployez cette séquence de tâches pour restaurer l'état utilisateur sur un ordinateur de destination. Pour plus d’informations sur le déploiement de séquences de tâches, consultez [Déployer une séquence de tâches](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS).  
+ Déployez cette séquence de tâches pour restaurer l'état utilisateur sur un ordinateur de destination. Pour plus d’informations sur le déploiement de séquences de tâches, consultez [Déployer une séquence de tâches](/sccm/osd/deploy-use/deploy-a-task-sequence).  
 
 
 

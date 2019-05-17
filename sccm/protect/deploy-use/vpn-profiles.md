@@ -7,22 +7,23 @@ ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
 ms.assetid: c0f094f1-852e-4606-91db-97846d8f0772
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6c3217dee8406b46aeb93925c368f18f402bfb70
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 505a4f3c00bc69e115b4130d422e11d8dec3fe30
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56123591"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500397"
 ---
 # <a name="vpn-profiles-in-system-center-configuration-manager"></a>Profils VPN dans System Center Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
-<!--1283610--> Si vous souhaitez déployer des paramètres VPN pour les utilisateurs de votre organisation, utilisez des profils VPN dans Configuration Manager. En déployant ces paramètres, vous réduisez l'effort que doit fournir l'utilisateur final pour se connecter aux ressources du réseau d'entreprise.  
+<!--1283610-->
+Si vous souhaitez déployer des paramètres VPN pour les utilisateurs de votre organisation, utilisez des profils VPN dans Configuration Manager. En déployant ces paramètres, vous réduisez l'effort que doit fournir l'utilisateur final pour se connecter aux ressources du réseau d'entreprise.  
 
  Par exemple, supposons que vous souhaitiez configurer tous les appareils Windows 10 en fonction des paramètres nécessaires pour vous connecter à un partage de fichiers sur le réseau de l’entreprise. Vous pouvez créer un profil VPN avec les paramètres nécessaires pour vous connecter au réseau de l’entreprise. Ensuite, déployez ce profil pour tous les utilisateurs qui disposent d’appareils exécutant Windows 10. Les utilisateurs voient la connexion VPN dans la liste des réseaux disponibles et peuvent se connecter très facilement.  
 
