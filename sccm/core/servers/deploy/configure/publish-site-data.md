@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 17cf034f-eaff-43ce-bc8e-917213c1db74
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f8efc99783b07b5097ac2e6de82df9651eefa5ce
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: bce6e2d18da1c2cb87a52fdef545d1b23f602f38
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56127199"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65501424"
 ---
 # <a name="publish-site-data-for-system-center-configuration-manager"></a>Publication de données de site pour System Center Configuration Manager
 

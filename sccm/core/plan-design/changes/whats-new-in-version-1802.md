@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 5bd637b1-d7a1-411b-877a-c7aae9741173
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9d36ac033b197c21122b49aba70bdeaef4f9b5ac
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.openlocfilehash: 6e6e603210342f5acc3e66328fca95e964dde2bf
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59802850"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65495509"
 ---
 # <a name="whats-new-in-version-1802-of-system-center-configuration-manager"></a>Nouveautés de la version 1802 de System Center Configuration Manager
 
@@ -214,12 +214,12 @@ Cette version inclut les améliorations suivantes pour le déploiement de systè
      - Prise en charge de tous les scénarios de déploiement de système d’exploitation à partir du Centre logiciel, de l’environnement PXE (Preboot Execution Environment) et de médias.
      - Améliorations apportées à des actions de console comme la copie, l’importation, l’exportation et l’avertissement lors de la suppression d’objets.
      - Prise en charge de l’Assistant [Création d’un fichier de contenu préparé](/sccm/core/plan-design/hierarchy/manage-network-bandwidth#BKMK_PrestagingContent).
-     - Intégration à la vérification du déploiement. Pour plus d’informations, consultez [Déploiements de séquences de tâches à haut risque](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS). 
+     - Intégration à la vérification du déploiement. Pour plus d’informations, consultez [Déploiements de séquences de tâches à haut risque](/sccm/osd/deploy-use/deploy-a-task-sequence). 
      - Vous pouvez désormais utiliser l’étape d’exécution de la séquence de tâches sur plusieurs niveaux de séquences de tâches, et non uniquement sur une relation parent-enfant unique. Les relations multiniveaux ajoutent de la complexité, alors utilisez-les avec précaution. Les références circulaires sont toujours vérifiées dans ces relations.
     
 ### <a name="deployment-templates-for-task-sequences"></a>Modèles de déploiement pour les séquences de tâches
 <!-- 1357391 -->
-[L’Assistant Déploiement de séquences de tâches](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS) peut maintenant créer un modèle de déploiement. Celui-ci peut être enregistré et appliqué à une séquence de tâches existante ou nouvelle pour créer un déploiement. 
+[L’Assistant Déploiement de séquences de tâches](/sccm/osd/deploy-use/deploy-a-task-sequence) peut maintenant créer un modèle de déploiement. Celui-ci peut être enregistré et appliqué à une séquence de tâches existante ou nouvelle pour créer un déploiement. 
 
 ### <a name="phased-deployments-for-task-sequences"></a>Déploiements par phases pour des séquences de tâches
 <!--1356837-->
@@ -287,11 +287,11 @@ Le rapport **Détails de la maintenance de Windows 10 pour un regroupement spéc
 
 ### <a name="improvements-to-configuration-manager-policies-for-windows-defender-exploit-guard"></a>Améliorations apportées aux stratégies de Configuration Manager pour Windows Defender Exploit Guard
 <!-- 1356220 -->
-Des paramètres de stratégie supplémentaires pour les composants [Réduction de la surface d’attaque](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy#BKMK_ASR) et [Accès contrôlé aux dossiers](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy#BKMK_CFA) ont été ajoutés à Configuration Manager pour [Windows Defender Exploit Guard](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard).
+Des paramètres de stratégie supplémentaires pour les composants [Réduction de la surface d’attaque](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy#bkmk_ASR) et [Accès contrôlé aux dossiers](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy#bkmk_CFA) ont été ajoutés à Configuration Manager pour [Windows Defender Exploit Guard](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard).
 
 ### <a name="new-host-interaction-settings-for-windows-defender-application-guard"></a>Nouveaux paramètres d’interaction d’hôte pour Windows Defender Application Guard
 <!-- 1356256 -->
-Pour les appareils avec Windows 10 version 1709 et ultérieur, il existe deux nouveaux paramètres d’interaction d’hôte pour [Windows Defender Application Guard](/sccm/protect/deploy-use/create-deploy-application-guard-policy#BKMK_HIS) : 
+Pour les appareils avec Windows 10 version 1709 et ultérieur, il existe deux nouveaux paramètres d’interaction d’hôte pour [Windows Defender Application Guard](/sccm/protect/deploy-use/create-deploy-application-guard-policy#bkmk_HIS) : 
 - Vous pouvez autoriser les sites web à accéder au processeur graphique virtuel de l’hôte. 
 - Les fichiers téléchargés dans le conteneur peuvent être conservés sur l’hôte. 
 

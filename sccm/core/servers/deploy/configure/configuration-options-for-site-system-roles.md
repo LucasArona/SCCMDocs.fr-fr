@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 0e9f0fbd-e442-4509-a021-bfdedf2d04dd
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 209e09ba11de851a1275211364af3cee930737d0
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: a5fb9a553efa634dad314da58298611cdf0bbb58
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56131538"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65498977"
 ---
 # <a name="configuration-options-for-site-system-roles-in-configuration-manager"></a>Options de configuration pour les rôles de système de site dans Configuration Manager
 
@@ -29,7 +29,7 @@ La plupart des options de configuration pour les rôles de système de site Conf
 ##  <a name="BKMK_ApplicationCatalog_Website"></a> Point du site web du catalogue des applications  
 
 > [!Note]  
-> À compter de la version 1806, le point du site Web du catalogue des applications n’est plus *requis*, mais il est toujours *pris en charge*. Pour plus d’informations, consultez [Configurer le Centre logiciel](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex).  
+> À compter de la version 1806, le point du site Web du catalogue des applications n’est plus *requis*, mais il est toujours *pris en charge*. Pour plus d’informations, consultez [Configurer le Centre logiciel](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex).  
 > 
 > L’**expérience utilisateur Silverlight** pour le point du site web du catalogue des applications n’est plus prise en charge. Pour plus d’informations, consultez [Fonctionnalités supprimées et déconseillées](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
 
@@ -54,7 +54,7 @@ La plupart des options de configuration pour les rôles de système de site Conf
 ##  <a name="BKMK_ApplicationCatalog_WebService"></a> Point de service web du catalogue des applications  
 
 > [!Note]  
-> À compter de la version 1806, le point de service Web du catalogue des applications n’est plus *requis*, mais il est toujours *pris en charge*. Pour plus d'informations, consultez [Configurer le Centre logiciel](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex).  
+> À compter de la version 1806, le point de service Web du catalogue des applications n’est plus *requis*, mais il est toujours *pris en charge*. Pour plus d'informations, consultez [Configurer le Centre logiciel](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex).  
 
  Pour plus d’informations sur la procédure de configuration du point de service Web du catalogue des applications, consultez [Planifier et configurer la gestion des applications](/sccm/apps/plan-design/plan-for-and-configure-application-management).  
 

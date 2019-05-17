@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 7e8ab8ca-41ef-467a-943b-a115d88cafe0
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 188d2ffdb3ad6f908a0ea25a6966bd0dcf5db807
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 7a23759bea4135aa929e3dcf940eeb479f16c92a
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56122999"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65497886"
 ---
 # <a name="checklist-for-installing-update-1710-for-system-center-configuration-manager"></a>Liste de contrôle pour l’installation de la mise à jour 1710 pour System Center Configuration Manager
 
@@ -108,7 +108,8 @@ Pour plus d’informations, consultez [Réplicas de base de données pour les po
 Si vous utilisez un groupe de disponibilité, vérifiez qu’il est défini sur le basculement manuel avant de commencer l’installation de la mise à jour. Une fois le site mis à jour, vous pouvez restaurer le basculement automatique. Pour plus d’informations, consultez  [Se préparer à l’utilisation de groupes de disponibilité SQL Server Always On avec Configuration Manager](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database).
 
 **Reconfigurez les points de mise à jour logicielle qui utilisent l’équilibrage de la charge réseau (NLB) :**   
-<!-- Support for NLBs is fully removed with 1702. When 1702 is no longer in support, this statement can drop --> Configuration Manager ne peut pas mettre à jour un site qui utilise un cluster d’équilibrage de la charge réseau (NLB) pour héberger des points de mise à jour logicielle.
+<!-- Support for NLBs is fully removed with 1702. When 1702 is no longer in support, this statement can drop -->
+Configuration Manager ne peut pas mettre à jour un site qui utilise un cluster d’équilibrage de la charge réseau (NLB) pour héberger des points de mise à jour logicielle.
 
 Si vous utilisez des clusters NLB pour les points de mise à jour logicielle, utilisez Windows PowerShell pour supprimer le cluster NLB.
 Pour plus d’informations, consultez  [Planifier les mises à jour logicielles dans Configuration Manager](/sccm/sum/plan-design/plan-for-software-updates).
