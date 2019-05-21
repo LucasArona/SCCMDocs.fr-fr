@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a157e8696a9b4b24acb722be037185351f94ccdc
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: 8f774fc163d6ec9739733002a4c5054a2e85fec8
+ms.sourcegitcommit: f531d0a622f220739710b2fe6644ea58d024064a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62255363"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65933551"
 ---
 # <a name="manage-mobile-devices-with-system-center-configuration-manager-and-exchange"></a>Gérer des appareils mobiles à l’aide de System Center Configuration Manager et d’Exchange
 
@@ -40,7 +40,7 @@ Utilisez le connecteur Exchange Server dans System Center Configuration Manager 
  L’appareil mobile d’un utilisateur s’affiche automatiquement dans le catalogue d’applications s’il est géré par le connecteur Exchange Server et si Exchange Server est installé en local. Si vous configurez le connecteur Exchange Server pour Microsoft Exchange Online, vous devez configurer manuellement l’affinité entre utilisateur et appareil pour que l’appareil mobile de l’utilisateur s’affiche dans le catalogue d’applications. Pour plus d’informations sur la configuration manuelle de l’affinité entre utilisateur et appareil, consultez [Lier des utilisateurs et des appareils avec l’affinité entre utilisateur et appareil dans System Center Configuration Manager](../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md).  
 
 > [!TIP]  
->  Si vous gérez un appareil mobile à l’aide du connecteur Exchange Server et que cet appareil est transféré à un autre utilisateur, supprimez l’appareil mobile de la console Configuration Manager pour permettre au nouveau propriétaire de l’appareil mobile de configurer son compte Exchange sur cet appareil mobile transféré.  
+>  Si vous gérez un appareil mobile à l’aide du connecteur Exchange Server et le périphérique mobile est transféré à un autre utilisateur, supprimez le périphérique mobile à partir de la console Configuration Manager avant que le nouveau propriétaire de l’appareil mobile configure son compte Exchange sur périphérique mobile est transféré.  
 
 ## <a name="required-security-permissions"></a>Autorisations de sécurité requises  
  Vous devez disposer des autorisations de sécurité suivantes pour configurer le connecteur Exchange Server :  
