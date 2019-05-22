@@ -7,26 +7,27 @@ ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
 ms.assetid: a95bc292-af10-4beb-ab56-2a815fc69304
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d23fee65cec798440449a00bf8a22d58cc373132
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 94cbbb7616588fa88bae9ae71f5b5f53dd4a4d63
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56133780"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500364"
 ---
 # <a name="windows-hello-for-business-settings-in-configuration-manager"></a>Paramètres Windows Hello Entreprise dans Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
-<!--1245704--> Configuration Manager permet d’intégrer Windows Hello Entreprise (anciennement Microsoft Passport pour Windows), qui constitue une méthode alternative de connexion pour les appareils Windows 10. Hello Entreprise utilise Active Directory ou un compte Azure Active Directory pour remplacer un mot de passe, une carte à puce ou une carte à puce virtuelle. Hello Entreprise vous permet d’utiliser un **geste utilisateur** plutôt qu’un mot de passe pour vous connecter. Un geste utilisateur peut être un simple code confidentiel, une authentification biométrique ou un appareil externe tel qu’un lecteur d’empreintes digitales.
+<!--1245704-->
+Configuration Manager permet d’intégrer Windows Hello Entreprise (anciennement Microsoft Passport pour Windows), une autre méthode de connexion pour les appareils Windows 10. Hello Entreprise utilise Active Directory ou un compte Azure Active Directory pour remplacer un mot de passe, une carte à puce ou une carte à puce virtuelle. Hello Entreprise vous permet d’utiliser un **geste utilisateur** plutôt qu’un mot de passe pour vous connecter. Un geste utilisateur peut être un simple code confidentiel, une authentification biométrique ou un appareil externe tel qu’un lecteur d’empreintes digitales.
 
 
 > [!Important]  
-> À compter de décembre 2017, Windows Hello pour les paramètres d’entreprise dans Configuration Manager est un [fonctionnalité déconseillée](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). Déploiement de Windows Server 2016 autorité Active Directory Federation Services d’inscription (RA ADFS) est plus simple, fournit une meilleure expérience utilisateur et offre une expérience d’inscription de certificat plus déterministe.  
+> Depuis décembre 2017, les paramètres Windows Hello Entreprise de Configuration Manager sont une [fonctionnalité dépréciée](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). Le déploiement de l’autorité d’inscription des services de fédération Active Directory (AD FS) de Windows Server 2016 est plus simple, offre une meilleure expérience utilisateur et assure une inscription de certificats plus déterministe.  
 
 
 Pour plus d’informations, consultez [Windows Hello Entreprise](https://docs.microsoft.com/windows/access-protection/hello-for-business/hello-identity-verification).
@@ -51,7 +52,7 @@ Configuration Manager s’intègre avec Windows Hello Entreprise de deux manièr
 Vous pouvez contrôler les paramètres Windows Hello Entreprise sur les appareils Windows 10 joints à un domaine en créant et en déployant un profil Windows Hello Entreprise. Il s’agit de l’approche recommandée.
 
 
-Si vous utilisez l’authentification par certificat, vous devez également déployer un profil de certificat, comme le décrit la section [Configurer un profil de certificat](#configure-a-certificate-profile). Si vous utilisez l’authentification par clé, il est inutile de déployer un profil de certificat.
+Si vous utilisez l’authentification par certificat, vous devez également déployer un profil de certificat, comme le décrit la section [Configurer un profil de certificat](#configure-a-certificate-profile-to-enroll-the-windows-hello-for-business-enrollment-certificate-in-configuration-manager). Si vous utilisez l’authentification par clé, il est inutile de déployer un profil de certificat.
 
 
 

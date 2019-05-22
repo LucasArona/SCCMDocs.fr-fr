@@ -11,16 +11,16 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 37a468a2b9727d66f7d3fe0cafd1aae044585b2a
-ms.sourcegitcommit: e18853c214c95e4d21b2f032aba6d17c21e97027
-ms.translationtype: HT
+ms.openlocfilehash: eb07b154c1da9c7b93f2d8e0f06b825eb52fd561
+ms.sourcegitcommit: 417e3834a42b415a8e129327dd3c15cc0c7ec5a2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443951"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65443202"
 ---
 # <a name="install-updates-publisher"></a>Installer l'éditeur de mise à jour
 
-*S’applique à : Éditeur de mise à jour System Center*
+*S’applique à : l'éditeur de mise à jour System Center*
 
 Les informations contenues dans ces articles peuvent vous aider à télécharger, installer et configurer l’éditeur de mise à jour pour l’utiliser dans votre environnement System Center Configuration Manager.
 
@@ -40,14 +40,14 @@ Installez et exécutez l’éditeur de mise à jour sur des éditions 64 bits de
 ### <a name="prerequisites"></a>Prérequis
 Les éléments suivants sont requis sur l’ordinateur qui exécute l’éditeur de mise à jour.
 
--   **Système d’exploitation 64 bits** : l’ordinateur sur lequel vous installez l’éditeur de mise à jour doit exécuter un système d’exploitation 64 bits.
+-   **Système d’exploitation 64 bits**: l’ordinateur sur lequel vous installez l’éditeur de mise à jour doit exécuter un système d’exploitation 64 bits.
 -   **WSUS 4.0 ou version ultérieure** :
     -   Sur Windows Server, installez la console d’administration par défaut pour répondre à cette exigence.
     -   Pour Windows 10 et Windows 8.1, installez [Remote Server Administration Tools (RSAT) pour les systèmes d’exploitation Windows](https://support.microsoft.com/help/2693643/remote-server-administration-tools-rsat-for-windows-operating-systems). Cette opération installe la prise en charge nécessaire pour utiliser l’éditeur de mise à jour (*applets de commande PowerShell et API*, et *Console de gestion de l’interface utilisateur*).
 -   **Autorisations** :
-    -   Installation : Administrateur local
+    -   Installation : administrateur local
     -   La plupart des opérations : utilisateur local
-    -   Publication ou autres opérations impliquant WSUS : Membre du groupe Administrateurs WSUS sur le serveur WSUS.
+    -   Publication ou opérations impliquant WSUS : membre du groupe Administrateurs WSUS sur le serveur WSUS.
 
 ### <a name="supported-languages"></a>Langues prises en charge
 L’éditeur de mise à jour est disponible uniquement en anglais mais peut gérer les mises à jour pour d’autres langues. La prise en charge de la langue dépend de la tâche, par exemple la publication, la création ou la modification de mises à jour.
@@ -103,12 +103,10 @@ Les langues suivantes sont prises en charge pour les titres et les descriptions 
 -   Russe
 -   Espagnol
 
-
-
 ## <a name="install-updates-publisher"></a>Installer l'éditeur de mise à jour
 Obtenez le fichier **UpdatesPubliser.msi** pour installer l’éditeur de mise à jour System Center à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=55543).
 
-Pour installer l’éditeur de mise à jour, exécutez le fichier **UpdatesPublisher.msi** sur un ordinateur remplissant les *conditions préalables*. Le programme d’installation crée le dossier suivant contenant les fichiers nécessaires pour exécuter l’éditeur de mise à jour : *&lt;chemin&gt;\Program Files\Microsoft\UpdatesPublisher*.
+Pour installer l’éditeur de mise à jour, exécutez le fichier **UpdatesPublisher.msi** sur un ordinateur remplissant les *conditions préalables*. Le programme d’installation crée le dossier %PROGRAMFILES%\Microsoft\UpdatesPublisher*, qui contiendra les fichiers nécessaires pour exécuter l’éditeur de mises à jour.
 
 Comme ce dossier contient tous les fichiers nécessaires pour utiliser l’éditeur de mise à jour, vous pouvez copier le dossier et son contenu vers un nouvel emplacement ou ordinateur, puis utiliser l’éditeur de mise à jour depuis cet emplacement. Toutefois, le nouvel emplacement ou ordinateur doit remplir les conditions requises pour exécuter l’éditeur de mise à jour.
 
@@ -118,4 +116,3 @@ Une fois l’installation terminée, exécutez le fichier **UpdatesPublisher.exe
  Après avoir installé l’éditeur de mise à jour, nous vous recommandons de [configurer ses options](updates-publisher-options.md). Vous devez configurer quelques options avant de pouvoir utiliser certaines fonctionnalités de l’éditeur de mise à jour.
 
  Toutefois, si vous souhaitez utiliser les valeurs par défaut et n’envisagez pas de déployer des mises à jour sur un serveur de mise à jour ou sur des appareils gérés, vous pouvez passer directement à la [gestion des catalogues de mises à jour logicielles](updates-publisher-catalogs.md) ou à la [création de mises à jour logicielles](create-updates-with-updates-publisher.md) et créer vos propres catalogues de mises à jour.
-

@@ -2,8 +2,8 @@
 title: Surveiller les mises à jour logicielles
 titleSuffix: Configuration Manager
 description: La console System Center Configuration Manager fournit des alertes et des états pour surveiller les mises à jour et la compatibilité.
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.date: 07/30/2018
 ms.topic: conceptual
@@ -11,16 +11,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 9afd7b0f-5c8e-48bc-9a65-1f7d74103688
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9399900849ead41118cb727c3ec36cd8345e393b
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 5cd5c27aa04f25b044f74533983a214dc9f9341b
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56133103"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500150"
 ---
 # <a name="monitor-software-updates-in-system-center-configuration-manager"></a>Surveiller les mises à jour logicielles dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager fournit de nombreuses méthodes pour vous aider à surveiller les objets de mises à jour logicielles, les processus et les informations de conformité. Utilisez les sections suivantes pour surveiller les mises à jour logicielles.
 
@@ -30,9 +30,9 @@ System Center Configuration Manager fournit de nombreuses méthodes pour vous ai
 ##  <a name="BKMK_SUAlerts"></a> Alertes pour les mises à jour logicielles  
  Vous pouvez configurer des alertes pour les mises à jour logicielles afin d'avertir les utilisateurs administratifs lorsque les niveaux de conformité pour les déploiements de mises à jour logicielles sont inférieurs au pourcentage configuré. Vous pouvez configurer des alertes pour les déploiements de mises à jour logicielles aux emplacements suivants :  
 
--   Paramètre ADR : Vous pouvez configurer les paramètres d’alertes dans l’Assistant Règle de déploiement automatique et dans les propriétés de l’ADR.  
+-   Paramètre ADR : vous pouvez configurer les paramètres des alertes dans l’Assistant Règle de déploiement automatique et dans les propriétés de la règle de déploiement automatique.  
 
--   Paramètre de déploiement : Vous pouvez configurer les paramètres des alertes dans l'Assistant Déploiement des mises à jour logicielles et dans les propriétés de déploiement.  
+-   Paramètre de déploiement : vous pouvez configurer les paramètres des alertes dans l’Assistant Déploiement des mises à jour logicielles et dans les propriétés de déploiement.  
 
 Après avoir configuré les paramètres d’alerte, si les conditions spécifiées sont remplies, Configuration Manager génère une alerte. Vous pouvez consulter les alertes des mises à jour logicielles aux emplacements suivants :  
 
@@ -69,16 +69,16 @@ Voici quelques-uns des rapports qui s’avèrent utiles pour identifier les prob
 #### <a name="compliance-9---overall-health-and-compliance-starting-in-version-1806"></a>Conformité 9 – Conformité et intégrité globales (à compter de la version 1806)
 Le rapport comprend les parties suivantes :
 
-- **Proportion de clients sains par rapport au nombre total de clients** : Ce graphique à barres compare le nombre de clients « sains », qui ont communiqué avec le site au cours de la période indiquée, avec le nombre total de clients dans le regroupement spécifié.
-- **Vue d’ensemble de la conformité** : Ce graphique à secteurs indique l’état de conformité global du groupe de mises à jour logicielles concerné sur les clients actifs dans le regroupement spécifié.
-- **5 principales mises à jour non conformes par ID d’article** : Ce graphique à barres montre les cinq principales mises à jour logicielles du groupe concerné qui ne sont pas conformes sur les clients actifs dans le regroupement spécifié.
+- **Proportion de clients sains par rapport au nombre total de clients** : ce graphique à barres compare le nombre de clients « sains », qui ont communiqué avec le site au cours de la période indiquée, avec le nombre total de clients dans la collection spécifiée.
+- **Vue d’ensemble de la conformité** : ce graphique à secteurs indique l’état de conformité global du groupe de mises à jour logicielles concerné sur les clients actifs dans la collection spécifiée.
+- **5 principales mises à jour non conformes par ID d’article** : ce graphique à barres affiche les cinq principales mises à jour logicielles du groupe concerné qui ne sont pas conformes sur les clients actifs dans la collection spécifiée.
 - La partie inférieure du rapport est un tableau plus détaillé, qui liste les mises à jour logicielles du groupe spécifié.
 
 #### <a name="management-2---updates-required-but-not-deployed"></a>Gestion 2 - Mises à jour requises mais non déployées
 
 Ce rapport affiche les mises à jour logicielles propres à un fournisseur dont les critères de classification ont été détectés comme étant des mises à jour obligatoires sur les clients, mais qui n’ont pas été déployées dans un regroupement spécifique. 
 
-#### <a name="troubleshooting-2---deployment-errors"></a>Dépannage 2 - Erreurs de déploiement
+#### <a name="troubleshooting-2---deployment-errors"></a>Résolution des problèmes 2 - Erreurs de déploiement
 
 Ce rapport retourne les erreurs de déploiement rencontrées sur le site, ainsi que le nombre d’ordinateurs subissant chaque erreur. 
 

@@ -1,8 +1,8 @@
 ---
 title: Créer un média de capture
 titleSuffix: Configuration Manager
-description: Utilisez l’Assistant Création d’un média de séquence de tâches pour créer un média de capture dans Configuration Manager pour capturer une image de système d’exploitation à partir d’un ordinateur de référence.
-ms.date: 01/23/2017
+description: Utilisez les médias de capture de Configuration Manager pour capturer une image de système d’exploitation sur un ordinateur de référence.
+ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: article
@@ -11,68 +11,97 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: edf7d7d40e42535a600d127dc0692aee3d7dd857
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: d6e1e007387a50146a899bca767aa5d1f2d85a3a
+ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56142423"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65082759"
 ---
-# <a name="create-capture-media-with-system-center-configuration-manager"></a>Créer un média de capture avec System Center Configuration Manager
+# <a name="create-capture-media"></a>Créer un média de capture
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
-Dans Configuration Manager, un média de capture vous permet de capturer une image de système d’exploitation à partir d’un ordinateur de référence. Utilisez un média de capture dans le scénario suivant :  
+Dans Configuration Manager, un média de capture permet de capturer une image de système d’exploitation sur un ordinateur de référence. Il contient l’image de démarrage qui démarre l’ordinateur de référence et la séquence de tâches qui capture l’image de système d’exploitation. Utilisez un média de capture dans le scénario [Créer une séquence de tâches pour capturer un système d’exploitation](/sccm/osd/deploy-use/create-a-task-sequence-to-capture-an-operating-system).  
 
--   [Créer une séquence de tâches pour capturer un système d’exploitation](create-a-task-sequence-to-capture-an-operating-system.md)  
 
-##  <a name="BKMK_CreateCaptureMedia"></a> Comment créer un média de capture  
- Utilisez un média de capture pour capturer une image de système d'exploitation à partir d'un ordinateur de référence. Un média de capture contient l'image de démarrage qui démarre l'ordinateur de référence et la séquence de tâches qui capture l'image du système d'exploitation.
+## <a name="prerequisites"></a>Prérequis
 
-Vous créez des média de capture à l'aide de l'Assistant Création d'un média de séquence de tâches. Avant d'exécuter l'Assistant, assurez-vous que toutes les conditions suivantes sont remplies :  
+Avant de créer un média de capture avec l’Assistant Création d’un média de séquence de tâches, vérifiez que toutes ces conditions sont remplies.
 
-|Tâche|Description|  
-|----------|-----------------|  
-|Image de démarrage|Prenez en considération les éléments suivants relatifs à l’image de démarrage que vous utiliserez dans la séquence de tâches pour capturer le système d’exploitation :<br /><br /> -   L’architecture de l’image de démarrage doit être adaptée à l’architecture de l’ordinateur de destination. Par exemple, un ordinateur de destination x64 peut démarrer et exécuter une image de démarrage x86 ou x64. Toutefois, un ordinateur de destination x86 peut démarrer et exécuter uniquement une image de démarrage x86.<br />-   Vérifiez que l’image de démarrage contient les pilotes de stockage de masse et de réseau nécessaires à l’approvisionnement de l’ordinateur de destination.|  
-|Distribuer tout le contenu associé à la séquence de tâches|Vous devez distribuer tout le contenu exigé par la séquence de tâches à au moins un point de distribution. Cela inclut l’image de démarrage, l’image du système d’exploitation et les autres fichiers associés. L'Assistant collecte les informations à partir du point de distribution lorsqu'il crée le média autonome. Vous devez disposer de droits d’accès en **Lecture** à la bibliothèque de contenu sur ce point de distribution.  Pour plus d’informations, voir [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).|  
-|Préparer le lecteur USB amovible|Pour un lecteur USB amovible :<br /><br /> Si vous envisagez d’utiliser un lecteur USB amovible, ce dernier doit être connecté à l’ordinateur sur lequel est exécuté l’Assistant et il doit être détectable par Windows en tant que périphérique amovible. L’Assistant écrit directement sur le lecteur USB quand il crée le média.|  
-|Créer un dossier de sortie|Pour un ensemble de CD/DVD :<br /><br /> Avant d'exécuter l'Assistant Création d'un média de séquence de tâches afin de créer un média pour un ensemble de CD ou DVD, vous devez créer un dossier pour les fichiers de sortie créés par l'Assistant. Le média créé pour un ensemble de CD ou DVD est écrit sous forme de fichiers .iso directement dans le dossier.|  
+### <a name="boot-image"></a>Image de démarrage
 
- Pour créer un média de capture, procédez comme suit.  
+Prenez en considération les points suivants concernant l’image de démarrage utilisée dans la séquence de tâches pour déployer le système d’exploitation :
 
-#### <a name="to-create-capture-media"></a>Pour créer un support de capture  
+- L’architecture de l’image de démarrage doit être adaptée à l’architecture de l’ordinateur de destination. Par exemple, un ordinateur de destination x64 peut démarrer et exécuter une image de démarrage x86 ou x64. Toutefois, un ordinateur de destination x86 peut démarrer et exécuter uniquement une image de démarrage x86.
+- Vérifiez que l’image de démarrage contient les pilotes de réseau et de stockage nécessaires pour approvisionner l’ordinateur de destination.
 
-1. Dans la console Configuration Manager, cliquez sur **Bibliothèque de logiciels**.  
+### <a name="distribute-all-content-associated-with-the-task-sequence"></a>Distribuer tout le contenu associé à la séquence de tâches
 
-2. Dans l'espace de travail **Bibliothèque de logiciels** , développez **Systèmes d'exploitation**, puis cliquez sur **Séquences de tâches**.  
+Distribuez auprès d’au moins un point de distribution tout le contenu exigé par la séquence de tâches, à savoir l’image de démarrage, l’image de système d’exploitation et les autres fichiers associés. L’Assistant collecte le contenu sur le point de distribution quand il crée le média de capture.
 
-3. Dans l'onglet **Accueil** , dans le groupe **Créer** , cliquez sur **Créer un média de séquence de tâches** pour démarrer l'Assistant Création d'un média de séquence de tâches.  
+Votre compte d’utilisateur doit au moins disposer de droits d’accès en **Lecture** à la bibliothèque de contenu de ce point de distribution. Pour plus d’informations, consultez [Distribuer du contenu](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_distribute).
 
-4. Sur la page **Sélectionner le type de média** , sélectionnez **Média de capture**, puis cliquez sur **Suivant**.  
+### <a name="prepare-the-removable-usb-drive"></a>Préparer le lecteur USB amovible
 
-5. Dans la page **Type de média** , spécifiez si le média est un disque mémoire flash ou un ensemble de CD/DVD, puis cliquez pour configurer les éléments suivants :  
+Si vous utilisez un lecteur USB amovible, branchez-le à l’ordinateur sur lequel s’exécute l’Assistant Création d’un média de séquence de tâches. Il doit être détectable comme appareil amovible par Windows. L’Assistant écrit directement sur le lecteur USB quand il crée le média.
 
-   - Si vous sélectionnez **Périphérique flash USB**, spécifiez le lecteur sur lequel stocker le contenu.  
+### <a name="create-an-output-folder"></a>Créer un dossier de sortie
 
-   - Si vous sélectionnez **Ensemble CD/DVD**, spécifiez la capacité du média et le nom et le chemin d'accès des fichiers de sortie. L'Assistant écrit les fichiers de sortie à cet emplacement. Par exemple : **\\\nom_serveur\dossier\fichier_sortie.iso**  
+Avant d’exécuter l’Assistant Création d’un média de séquence de tâches afin de créer un média pour un ensemble de CD ou de DVD, créez un dossier pour les fichiers de sortie créés. Le média créé pour un ensemble de CD ou de DVD est directement écrit sous forme de fichier .ISO dans le dossier.
 
-      Si la capacité du média est insuffisante pour stocker l’ensemble du contenu, plusieurs fichiers sont créés et vous devez stocker le contenu sur plusieurs CD ou DVD. Quand plusieurs médias sont nécessaires, Configuration Manager ajoute un numéro de séquence au nom de chaque fichier de sortie qu’il crée. De plus, si vous déployez une application en même temps que le système d’exploitation et que cette application ne peut pas tenir sur un seul média, Configuration Manager stocke l’application sur plusieurs médias. Quand le média autonome est exécuté, Configuration Manager invite l’utilisateur à insérer le média suivant sur lequel l’application est stockée.  
 
-     > [!IMPORTANT]  
-     >  Si vous sélectionnez une image .iso existante, l'Assistant Média de séquence de tâches supprime cette image du lecteur ou du partage dès lors que vous passez à la page suivante de l'Assistant. L'image existante est supprimée même si vous annulez ensuite l'Assistant.  
+## <a name="process"></a>Processus
 
-     Cliquez sur **Suivant**.  
+1. Dans la console Configuration Manager, accédez à l’espace de travail **Bibliothèque de logiciels**, développez **Systèmes d’exploitation**, puis sélectionnez le nœud **Séquences de tâches**.  
 
-6. Sur la page **Image de démarrage** , spécifiez les informations suivantes et cliquez sur **Suivant**.  
+2. Sous l’onglet **Accueil** du ruban, sélectionnez **Créer un média de séquence de tâches** dans le groupe **Créer** pour lancer l’Assistant Création d’un média de séquence de tâches.  
 
-   > [!IMPORTANT]  
-   >  L'architecture de l'image de démarrage que vous spécifiez doit être adaptée à l'architecture de l'ordinateur de référence. Par exemple, un ordinateur de référence x64 peut démarrer et exécuter une image de démarrage x86 ou x64. Toutefois, un ordinateur de référence x86 peut démarrer et exécuter uniquement une image de démarrage x86.  
+3. Sur la page **Sélectionner le type de média**, sélectionnez **Média de capture**.  
 
-   -   Dans la zone **Image de démarrage** , spécifiez l'image de démarrage pour démarrer l'ordinateur de référence.  
+4. Sur la page **Type de média**, spécifiez s’il s’agit d’un **Lecteur USB amovible** ou d’un **Ensemble de CD/DVD**. Ensuite, configurez les options suivantes :  
 
-   -   Dans la zone **Point de distribution** , spécifiez le point de distribution où réside l'image de démarrage. L'Assistant extrait l'image de démarrage à partir du point de distribution et l'écrit sur le média.  
+    > [!IMPORTANT]  
+    > Le média utilise un système de fichiers FAT32. Il n’est pas possible de créer un média sur un lecteur USB contenant un fichier d’une taille supérieure à 4 Go.  
 
-       > [!NOTE]  
-       >  Vous devez disposer de droits d'accès en lecture à la bibliothèque de contenu sur le point de distribution.  
+    - Si vous sélectionnez **Lecteur USB amovible**, choisissez le lecteur sur lequel le contenu sera stocké.  
 
-7. Effectuez toutes les étapes de l'Assistant.  
+        - **Formater le lecteur USB amovible (FAT32) et le rendre démarrable** : par défaut, laisser Configuration Manager préparer le lecteur USB. De nombreux appareils UEFI récents nécessitent une partition FAT32 amorçable. Toutefois, ce format limite également la taille des fichiers et la capacité globale du lecteur. Si vous avez déjà formaté et configuré le lecteur amovible, désactivez cette option.
+
+    - Si vous sélectionnez **Ensemble de CD/DVD**, spécifiez la capacité du média (**Taille du média**) et le nom et le chemin d’accès du fichier de sortie (**Fichier de média**). L'Assistant écrit les fichiers de sortie à cet emplacement. Exemple : `\\servername\folder\outputfile.iso`  
+
+        Si la capacité du média est insuffisante pour stocker l’ensemble du contenu, il crée plusieurs fichiers. Il vous faut alors stocker le contenu sur plusieurs CD ou DVD. Quand plusieurs fichiers de média sont nécessaires, Configuration Manager ajoute un numéro de séquence au nom de chaque fichier de sortie qu’il crée.  
+
+        > [!IMPORTANT]  
+        > Si vous sélectionnez une image .iso existante, l'Assistant Média de séquence de tâches supprime cette image du lecteur ou du partage dès lors que vous passez à la page suivante de l'Assistant. L'image existante est supprimée même si vous annulez ensuite l'Assistant.  
+
+    - **Dossier intermédiaire**<!--1359388-->: le processus de création de média est susceptible de prendre beaucoup d’espace lecteur temporaire. Par défaut, cet emplacement est semblable au suivant : `%UserProfile%\AppData\Local\Temp`. À compter de la version 1902, remplacez cette valeur par un autre lecteur et un autre chemin d’accès pour choisir où stocker ces fichiers temporaires.  
+
+    - **Étiquette du média**<!--1359388-->: à compter de la version 1902, ajoutez une étiquette au média de séquence de tâches. Cette étiquette vous permet de mieux identifier le média une fois celui-ci créé. La valeur par défaut est `Configuration Manager`. Ce champ de texte s’affiche dans les emplacements suivants :  
+
+        - Si vous montez un fichier ISO, Windows utilise cette étiquette pour nommer le lecteur monté.  
+
+        - Si vous formatez un lecteur USB, les 11 premiers caractères de l’étiquette sont utilisés pour former son nom.  
+
+        - Configuration Manager écrit un fichier texte appelé `MediaLabel.txt` à la racine du média. Par défaut, le fichier comprend une seule ligne de texte : `label=Configuration Manager`. Si vous personnalisez l’étiquette du média, cette ligne utilise votre étiquette personnalisée à la place de la valeur par défaut.  
+
+    - **Inclure le fichier autorun.inf sur le média**<!-- 4090666 -->: à compter de la version 1902, Configuration Manager n’ajoute pas par défaut de fichier autorun.inf. Ce fichier est généralement bloqué par les produits anti-programme malveillant. Pour plus d’informations sur la fonctionnalité d’exécution automatique (AutoRun) de Windows, consultez [Création d’une application sur CD-ROM prenant en charge l’exécution automatique](https://docs.microsoft.com/windows/desktop/shell/autoplay). Si elle reste nécessaire dans votre scénario, sélectionnez cette option pour inclure le fichier.  
+
+5. Sur la page **Image de démarrage**, spécifiez les options suivantes :  
+
+    > [!IMPORTANT]  
+    > L’architecture de l’image de démarrage distribuée doit être adaptée à l’architecture de l’ordinateur de destination. Par exemple, un ordinateur de destination x64 peut démarrer et exécuter une image de démarrage x86 ou x64. Toutefois, un ordinateur de destination x86 peut démarrer et exécuter uniquement une image de démarrage x86.  
+
+    - **Image de démarrage** : sélectionnez l’image de démarrage permettant de démarrer l’ordinateur de destination.  
+
+    - **Point de distribution** : sélectionnez le point de distribution comportant l’image de démarrage. L'Assistant extrait l'image de démarrage à partir du point de distribution et l'écrit sur le média.  
+
+        > [!NOTE]  
+        > Votre compte d’utilisateur doit au moins disposer d’autorisations d’accès en **Lecture** à la bibliothèque de contenu du point de distribution.  
+
+6. Effectuez toutes les étapes de l'Assistant.  
+
+
+## <a name="next-steps"></a>Étapes suivantes
+
+[Créer une séquence de tâches pour capturer un système d’exploitation](/sccm/osd/deploy-use/create-a-task-sequence-to-capture-an-operating-system)

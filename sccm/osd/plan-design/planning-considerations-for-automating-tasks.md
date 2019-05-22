@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6030bb1a02a94e61cf3ef53b6d90f7b6a5ae4f7a
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 32a645f95d25c92809723ae735f566535fc4043d
+ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56122098"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65083301"
 ---
 # <a name="planning-considerations-for-automating-tasks-in-configuration-manager"></a>Considérations relatives à la planification de l’automatisation des tâches dans Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
  Vous pouvez créer des séquences de tâches pour automatiser les tâches dans votre environnement Configuration Manager. Ces tâches vont de la capture d’un système d’exploitation sur un ordinateur de référence au déploiement du système d’exploitation sur un ou plusieurs ordinateurs de destination. Les actions de la séquence de tâches sont définies dans les étapes individuelles de la séquence. Lorsque la séquence de tâches s’exécute, elle exécute les actions de chaque étape au niveau des lignes de commande dans le contexte système local. Ce comportement est entièrement automatisé, sans intervention de l’utilisateur. 
 
@@ -92,7 +92,8 @@ ms.locfileid: "56122098"
 
 
 ## <a name="add-child-task-sequences-to-a-task-sequence"></a>Ajouter des séquences de tâches enfants à une séquence de tâches
- <!--1261338--> À partir de Configuration Manager version 1710, vous pouvez ajouter une nouvelle étape de séquence de tâches qui exécute une autre séquence de tâches. Cette étape crée une relation parent-enfant entre les séquences de tâches. Effectuez cette étape pour créer des séquences de tâches plus modulaires réutilisables.  
+ <!--1261338-->
+ À partir de Configuration Manager version 1710, vous pouvez ajouter une nouvelle étape de séquence de tâches qui exécute une autre séquence de tâches. Cette étape crée une relation parent-enfant entre les séquences de tâches. Effectuez cette étape pour créer des séquences de tâches plus modulaires réutilisables.  
 
  Pour plus d’informations, voir [Exécuter une séquence de tâches](/sccm/osd/understand/task-sequence-steps#child-task-sequence). 
 
@@ -190,7 +191,7 @@ ms.locfileid: "56122098"
  >   
  >  Si les clients téléchargent des séquences de tâches en dehors d'une fenêtre de maintenance, la séquence de tâches est téléchargée deux fois. Dans ce scénario, le client télécharge la séquence de tâches, désactive le filtre d’écriture, redémarre l’ordinateur, puis télécharge de nouveau la séquence de tâches. En effet, la séquence de tâches a été téléchargée à l’origine dans le segment de recouvrement temporaire, qui est effacé au redémarrage de l’appareil.  
 
- Pour plus d’informations sur le déploiement de séquences de tâches, consultez [Déployer une séquence de tâches](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS).  
+ Pour plus d’informations sur le déploiement de séquences de tâches, consultez [Déployer une séquence de tâches](/sccm/osd/deploy-use/deploy-a-task-sequence).  
 
 
 
@@ -267,7 +268,7 @@ Pour plus d’informations, consultez [HTTP amélioré](/sccm/core/plan-design/h
 > [!Note]  
 > Les scénarios de déploiement de système d’exploitation suivants nécessitent toujours l’utilisation d’un compte d’accès réseau :
 >  
-> - **Accéder au contenu directement à partir d’un point de distribution lorsque la séquence de tâches en cours d’exécution en a besoin** ([option de déploiement](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS) de séquence de tâches)   
+> - **Accéder au contenu directement à partir d’un point de distribution lorsque la séquence de tâches en cours d’exécution en a besoin** ([option de déploiement](/sccm/osd/deploy-use/deploy-a-task-sequence) de séquence de tâches)   
 > - **Si le compte d’ordinateur ne parvient pas à se connecter au magasin d’état, utiliser le compte d’accès réseau** (option de l’étape [Demander le magasin d’état](/sccm/osd/understand/task-sequence-steps#BKMK_RequestStateStore)) 
 > - Connexion à un domaine non approuvé ou entre forêts Active Directory 
 > - **Accéder au contenu directement depuis le point de distribution** (option de l’étape [Appliquer l’image de système d’exploitation](/sccm/osd/understand/task-sequence-steps#BKMK_ApplyOperatingSystemImage)) 

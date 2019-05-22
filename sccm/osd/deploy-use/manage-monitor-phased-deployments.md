@@ -2,21 +2,21 @@
 title: Gérer et surveiller les déploiements par phases
 titleSuffix: Configuration Manager
 description: Découvrez comment gérer et surveiller les déploiements par phases de logiciels dans Configuration Manager.
-ms.date: 11/27/2018
+ms.date: 04/16/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
 ms.assetid: dc245916-bc11-4983-9c4d-015f655007c1
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5ebf89e46b33649f12ea5770d6e771e811a66094
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: f378fd399a874b0db3844bbf02528dfe92981db5
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56125729"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500662"
 ---
 # <a name="manage-and-monitor-phased-deployments"></a>Gérer et surveiller les déploiements par phases
 
@@ -35,16 +35,16 @@ Lorsque vous sélectionnez le paramètre **Commencer manuellement la deuxième p
 
 1. La méthode de lancement de cette action varie en fonction du type de logiciel que vous déployez :  
 
-    - **Application** (uniquement dans la version 1806 ou ultérieure) : Accédez à l’espace de travail **Bibliothèque de logiciels**, développez **Gestion d’applications** et sélectionnez **Applications**.   
+    - **Application** (uniquement dans la version 1806 ou ultérieure) : accédez à l’espace de travail **Bibliothèque de logiciels**, développez **Gestion des applications** et sélectionnez **Applications**.   
 
-    - **Mise à jour de logiciel** (uniquement dans la version 1810 ou ultérieure) : Accédez à l’espace de travail **Bibliothèque de logiciels**, puis sélectionnez un des nœuds suivants :    
+    - **Mise à jour logicielle** (uniquement dans la version 1810 ou ultérieure) : accédez à l’espace de travail **Bibliothèque de logiciels**, puis sélectionnez un des nœuds suivants :    
         - mises à jour logicielles  
             - **Toutes les mises à jour logicielles**  
             - **Groupes de mises à jour logicielles**   
         - Maintenance de Windows 10, **toutes les mises à jour Windows 10**  
         - Gestion des clients Office 365, **mises à jour Office 365**  
 
-    - **Séquence de tâches** : Accédez à l’espace de travail **Bibliothèque de logiciels**, développez **Systèmes d’exploitation**, puis sélectionnez **Séquences de tâches**.   
+    - **Séquence de tâches** : accédez à l’espace de travail **Bibliothèque de logiciels**, développez **Systèmes d’exploitation**, puis sélectionnez **Séquences de tâches**.   
 
 2. Sélectionnez le logiciel pour le déploiement par phases.  
 
@@ -62,16 +62,16 @@ Vous pouvez interrompre ou reprendre manuellement un déploiement par phases. Pa
 
 1. La méthode de lancement de cette action varie en fonction du type de logiciel que vous déployez :  
 
-    - **Application** (uniquement dans la version 1806 ou ultérieure) : Accédez à l’espace de travail **Bibliothèque de logiciels**, développez **Gestion d’applications** et sélectionnez **Applications**.   
+    - **Application** (uniquement dans la version 1806 ou ultérieure) : accédez à l’espace de travail **Bibliothèque de logiciels**, développez **Gestion des applications** et sélectionnez **Applications**.   
 
-    - **Mise à jour de logiciel** (uniquement dans la version 1810 ou ultérieure) : Accédez à l’espace de travail **Bibliothèque de logiciels**, puis sélectionnez un des nœuds suivants :    
+    - **Mise à jour logicielle** (uniquement dans la version 1810 ou ultérieure) : accédez à l’espace de travail **Bibliothèque de logiciels**, puis sélectionnez un des nœuds suivants :    
         - mises à jour logicielles  
             - **Toutes les mises à jour logicielles**  
             - **Groupes de mises à jour logicielles**   
         - Maintenance de Windows 10, **toutes les mises à jour Windows 10**  
         - Gestion des clients Office 365, **mises à jour Office 365**  
 
-    - **Séquence de tâches** : Accédez à l’espace de travail **Bibliothèque de logiciels**, développez **Systèmes d’exploitation**, puis sélectionnez **Séquences de tâches**. Sélectionnez une séquence de tâches existante, puis cliquez sur **Créer un déploiement par phases** dans le ruban.  
+    - **Séquence de tâches** : accédez à l’espace de travail **Bibliothèque de logiciels**, développez **Systèmes d’exploitation**, puis sélectionnez **Séquences de tâches**. Sélectionnez une séquence de tâches existante, puis cliquez sur **Créer un déploiement par phases** dans le ruban.  
 
 2. Sélectionnez le logiciel pour le déploiement par phases.  
 
@@ -86,32 +86,33 @@ When you suspend a phased deployment, it sets the available and deadline times o
 
 ## <a name="bkmk_monitor"></a> Surveiller le déploiement
 <!--1358577-->
+À compter de la version 1902, les déploiements par phases ont leur propre nœud de monitoring dédié, ce qui facilite leur identification et la navigation dans la vue de monitoring des déploiements par phases. Dans l’espace de travail **Monitoring**, sélectionnez **Déploiements par phases**, puis double-cliquez sur l’un des déploiements par phases pour en connaître l’état. <!--3555949-->
 
-Depuis la version 1806, les déploiements par phases incluent une fonction de surveillance native. Dans le nœud **Déploiements** de l’espace de travail **Monitoring**, sélectionnez un déploiement par phases, puis cliquez sur **État du déploiement par phases** dans le ruban.
+Dans Configuration Manager 1806 et 1810, vous pouvez voir l’expérience de monitoring native des déploiements par phases. Dans le nœud **Déploiements** de l’espace de travail **Monitoring**, sélectionnez un déploiement par phases, puis cliquez sur **État du déploiement par phases** dans le ruban.
 
 ![Tableau de bord de l’état du déploiement par phases indiquant l’état de deux phases](media/1358577-phased-deployment-status.png)
 
 Ce tableau de bord montre les informations suivantes pour chaque phase du déploiement :  
 
-- **Nombre total d’appareils** : Nombre d’appareils ciblés par cette phase.  
+- **Nombre total d’appareils** ou **Nombre total de ressources** : nombre d’appareils ciblés par cette phase.  
 
-- **État** : État actuel de cette phase. Chaque phase peut se trouver dans l’un des états suivants :  
+- **État** : état actuel de cette phase. Chaque phase peut se trouver dans l’un des états suivants :  
 
-    - **Déploiement créé** : Le déploiement par phases a créé un déploiement du logiciel sur le regroupement pour cette phase. Les clients sont activement ciblés avec ce logiciel.  
+    - **Déploiement créé** : le déploiement par phases a créé un déploiement du logiciel sur la collection de cette phase. Les clients sont activement ciblés avec ce logiciel.  
 
-    - **En attente** : La phase précédente n’a pas encore rempli les critères de réussite pour que le déploiement passe à cette phase.  
+    - **En attente** : la phase précédente n’a pas encore rempli les critères de réussite pour que le déploiement passe à cette phase.  
 
-    - **Suspendu** : Un administrateur a suspendu le déploiement.  
+    - **Suspendu** : un administrateur a suspendu le déploiement.  
 
-- **Progression** : États de déploiement à partir des clients selon un code de couleurs. Par exemple : Réussite, En cours, Erreur, Exigences non remplies et Inconnu. 
+- **Progression** : états de déploiement à partir des clients selon un code de couleurs. Par exemple : Réussite, En cours, Erreur, Exigences non remplies et Inconnu. 
 
 #### <a name="success-criteria-tile"></a>Vignette Critères de réussite
 
-Utilisez la liste déroulante **Select Phase** (Sélectionnez la phase) pour changer l’affichage de la vignette **Critères de réussite**. Cette vignette compare la valeur **Objectif de la phase** par rapport à la conformité actuelle du déploiement. Avec les paramètres par défaut, l’objectif de la phase est de 95 %. Cette valeur signifie que le déploiement doit présenter une conformité de 95 % pour passer à la phase suivante. 
+Utilisez la liste déroulante **Select Phase** (Sélectionnez la phase) pour changer l’affichage de la vignette **Critères de réussite**. Cette vignette compare la valeur **Objectif de la phase** par rapport à la conformité actuelle du déploiement. Avec les paramètres par défaut, l’objectif de la phase est de 95 %. Cette valeur signifie que le déploiement doit présenter une conformité de 95 % pour passer à la phase suivante.
 
-Dans cet exemple, l’objectif de la phase est de 65 % et la conformité actuelle est de 66,7 %. Comme la première phase répondait aux critères de réussite, le déploiement par phases a automatiquement commencé la deuxième phase.  
+Dans l’exemple, l’objectif de la phase est de 65 % et la conformité actuelle est de 66,7 %. Comme la première phase répondait aux critères de réussite, le déploiement par phases a automatiquement commencé la deuxième phase.  
 
-![Exemple de vignette Critères de réussite dans État du déploiement par phases](media/pod-status-success-criteria-tile.png)
+   ![Exemple de vignette Critères de réussite dans État du déploiement par phases, avec un objectif de 65 %](media/pod-status-success-criteria-tile.png)
 
 L’objectif de la phase est le même que le **pourcentage de réussite du déploiement** dans la page de paramètres de la phase *suivante*. C’est cette deuxième phase qui définit les critères de réussite de la première phase selon lesquels le déploiement par phases peut démarrer la phase suivante. Pour voir ce paramètre : 
 

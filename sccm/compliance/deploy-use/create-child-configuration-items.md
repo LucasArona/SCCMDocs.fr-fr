@@ -2,7 +2,7 @@
 title: Créer des éléments de configuration enfants
 titleSuffix: Configuration Manager
 description: Créez des éléments de configuration enfants dans System Center Configuration Manager.
-ms.date: 10/06/2016
+ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
@@ -11,21 +11,21 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 42b6bceacf8d8ecd733e4d13b882fe3b5c0500e7
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 0b88ee7eaac8df8ffce93937f3a3f2616b9e085b
+ms.sourcegitcommit: 417e3834a42b415a8e129327dd3c15cc0c7ec5a2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56135743"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65443162"
 ---
 # <a name="how-to-create-child-configuration-items-in-system-center-configuration-manager"></a>Guide pratique pour créer des éléments de configuration enfants dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Dans System Center Configuration Manager, les éléments de configuration enfants sont des copies d’éléments de configuration qui maintiennent une relation avec l’élément de configuration d’origine dans le sens où ils héritent de la configuration d’origine de l’élément de configuration parent.  
 
 Quand vous examinez les propriétés d’un élément de configuration enfant dans la console Configuration Manager, vous ne pouvez pas modifier les objets et les paramètres hérités avec leurs critères de validation. En revanche, il vous est possible d'ajouter, puis de modifier, d'autres critères de validation pour l'élément de configuration enfant. Vous pouvez aussi ajouter de nouveaux objets et paramètres à ce dernier.
-La création et la modification d’un élément de configuration enfant vise généralement à redéfinir l’élément de configuration d’origine pour l’adapter aux besoins de votre entreprise.  
+On peut par exemple créer et modifier un élément de configuration enfant pour adapter l’élément de configuration d’origine aux besoins de l’entreprise.  
 
 > [!NOTE]  
 >  Vous pouvez uniquement créer des éléments de configuration enfants à partir d’éléments de configuration du type **Ordinateurs et serveurs Windows (personnalisés)**.  

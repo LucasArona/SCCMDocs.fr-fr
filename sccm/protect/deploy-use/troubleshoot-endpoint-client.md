@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
 ms.assetid: d837253e-fcc2-422a-9e2c-c78b938dfd8c
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f7528f15c67e8ce339013db583d545cb252712d
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 1b8bda1fd21ed3281142a717b768ff7d8c6ac3c3
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56125661"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500421"
 ---
 # <a name="troubleshooting-windows-defender-or-endpoint-protection-client"></a>Résolution des problèmes du client Windows Defender ou Endpoint Protection
 
@@ -234,7 +234,7 @@ Si vous rencontrez des problèmes avec Windows Defender ou Endpoint Protection, 
 3.  Si vous utilisez un modem câble ou un routeur DSL, vérifiez que les connexions au routeur et à l’ordinateur sont correctement branchées. Déconnectez et arrêtez le routeur et le modem. Attendez quelques minutes, branchez d’abord le modem, patientez une minute, puis branchez le routeur et redémarrez votre ordinateur.  
 
 ##  <a name="detected-threat-cant-be-remediated"></a>Impossible de remédier à une menace détectée  
- Quand Windows Defender ou Endpoint Protection détecte une menace potentielle dissimulée dans un fichier compressé avec une extension .zip ou dans un partage réseau, il tente d’y remédier en supprimant la menace ou en la plaçant en quarantaine.  
+ Quand Windows Defender ou Endpoint Protection détecte une menace potentielle dissimulée dans un fichier compressé portant l’extension de nom de fichier .zip ou dans un partage réseau, il tente d’y remédier en la mettant en quarantaine ou en la supprimant.  
 
 ### <a name="remove-or-scan-the-file"></a>Supprimer ou analyser le fichier  
 

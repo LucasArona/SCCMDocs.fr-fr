@@ -2,7 +2,7 @@
 title: Créer des applications
 titleSuffix: Configuration Manager
 description: Créez des applications avec des types de déploiement, des méthodes de détection et des spécifications pour installer les logiciels.
-ms.date: 03/04/2019
+ms.date: 05/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -11,20 +11,20 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 236ae6e9efafcfe24f064fb643a43524eee3718d
-ms.sourcegitcommit: 4ab85212268e76d3fd22f00e6c74edaa5abde60c
+ms.openlocfilehash: e796996f870fcdd8428f3a16b08eee56d249cfa6
+ms.sourcegitcommit: 53f2380ac67025fb4a69fc1651edad15d98e0cdd
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426938"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65673390"
 ---
 # <a name="create-applications-in-configuration-manager"></a>Créer des applications dans Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
-Une application Configuration Manager définit les métadonnées concernant une application. Une application a un ou plusieurs types de déploiement. Ces types de déploiement incluent les fichiers d’installation et les informations nécessaires à l’installation du logiciel sur des appareils. Un type de déploiement comprend également des règles, par exemple des méthodes de détection, et des spécifications. Ces règles spécifient quand et comment le client installe les logiciels.  
+Une application Configuration Manager définit les métadonnées d’une application. Une application a un ou plusieurs types de déploiement. Ces types de déploiement incluent les fichiers d’installation et les informations nécessaires à l’installation du logiciel sur des appareils. Un type de déploiement comprend également des règles, par exemple des méthodes de détection, et des spécifications. Ces règles spécifient quand et comment le client installe les logiciels.  
 
-Créez des applications en employant les méthodes suivantes :  
+Créez des applications suivant les méthodes ci-dessous :  
 
 -   Créer automatiquement une application et des types de déploiement en lisant les fichiers d’installation de l’application :  
     - [Créer une application](#bkmk_create) et [détecter automatiquement](#bkmk_auto-app) les informations de l’application
@@ -88,7 +88,7 @@ Ensuite, détectez automatiquement ou définissez manuellement les informations 
 
     -   **Utiliser une connexion VPN automatique (si elle est configurée)** : si vous avez déployé un profil VPN sur l’appareil sur lequel l’utilisateur lance l’application, connectez le VPN au démarrage de l’application. Cette option ne concerne que Windows 8.1 et Windows Phone 8.1. Sur les appareils Windows Phone 8.1, si vous y déployez plusieurs profils VPN, les connexions VPN automatiques ne sont pas prises en charge. Pour plus d’informations, consultez [Profils VPN](/sccm/protect/deploy-use/vpn-profiles).  
 
-    - **Provisionner cette application pour tous les utilisateurs de cet appareil**<!--1358310--> : depuis la version 1806, provisionnez une application avec un package d’application Windows pour tous les utilisateurs d’un appareil. Pour plus d’informations, consultez [Créer des applications Windows](/sccm/apps/get-started/creating-windows-applications#bkmk_provision).  
+    - **Approvisionner cette application pour tous les utilisateurs de l’appareil**<!--1358310-->: à compter de la version 1806, approvisionnez une application avec un package d’application Windows pour tous les utilisateurs de l’appareil. Pour plus d’informations, consultez [Créer des applications Windows](/sccm/apps/get-started/creating-windows-applications#bkmk_provision).  
 
        > [!Tip]  
        > Si vous modifiez une application existante, ce paramètre se trouve sous l’onglet **Expérience utilisateur** des propriétés du type de déploiement du package de l’application Windows.  
@@ -126,6 +126,9 @@ Pour ajouter d’autres types de déploiement ou configurer d’autres paramètr
         > Un nom d’application localisée est obligatoire pour chaque version de langue que vous configurez.  
 
     -   **Catégories d’utilisateurs** : choisissez **Modifier** pour spécifier les catégories de l’application dans la langue sélectionnée. Les utilisateurs du Centre logiciel utilisent ces catégories pour filtrer et trier les applications disponibles.  
+
+        > [!IMPORTANT]  
+        > Les catégories d’utilisateurs ne s’appliquent qu’aux déploiements effectués sur des regroupements d’utilisateurs.  Si l’application est déployée sur un regroupement d’ordinateurs, elles sont ignorées.
 
     -   **Documentation utilisateur** : spécifier l’emplacement d’un fichier à partir duquel les utilisateurs du Centre logiciel peuvent obtenir des informations supplémentaires sur cette application. Cet emplacement est une adresse de site web ou un chemin réseau et un nom de fichier. Vérifiez que les utilisateurs ont accès à cet emplacement.  
 
@@ -237,13 +240,13 @@ Dans la page **Contenu**, spécifiez les informations suivantes :
 
 - **Programme d’installation** : spécifiez le nom du programme d’installation et des paramètres d’installation requis.  
 
-    - **Début de l’installation dans** : spécifiez éventuellement le dossier contenant le programme d’installation pour le type de déploiement. Ce dossier peut être un chemin absolu sur le client, ou un chemin vers le dossier du point de distribution contenant les fichiers d’installation.  
+    - **Début de l’installation dans** : spécifiez éventuellement le dossier contenant le programme d’installation pour le type de déploiement. Ce dossier peut être un chemin absolu sur le client ou un chemin vers le dossier du point de distribution contenant les fichiers d’installation.  
 
 - **Programme de désinstallation** : spécifiez éventuellement le nom du programme de désinstallation et les paramètres obligatoires, le cas échéant.  
 
     - **Début de la désinstallation dans** : spécifiez éventuellement le dossier contenant le programme de désinstallation pour le type de déploiement. Ce dossier peut être un chemin absolu sur le client. Il peut aussi s’agir d’un chemin relatif sur un point de distribution du dossier contenant le package.  
 
-- **Réparer le programme** : depuis la version 1810, pour les types de déploiement Windows Installer et Programme d’installation de script, spécifiez éventuellement le nom du programme de réparation et les paramètres obligatoires, le cas échéant.<!--1357866-->  
+- **Réparer le programme** : à compter de la version 1810, vous pouvez spécifier le nom du programme de réparation et les paramètres obligatoires pour les types de déploiement Windows Installer et Programme d’installation de script.<!--1357866-->  
 
     - **Début de la réparation dans** : spécifiez éventuellement le dossier contenant le programme de réparation pour le type de déploiement. Ce dossier peut être un chemin absolu sur le client. Il peut aussi s’agir d’un chemin relatif sur un point de distribution du dossier contenant le package.  
 
@@ -263,7 +266,7 @@ Quand vous affichez les propriétés d’un type de déploiement, les options su
 
         - **Emplacement du contenu de désinstallation** : spécifiez le chemin réseau du contenu qui est utilisé pour désinstaller l’application.  
 
-- **Autoriser les clients à utiliser des points de distribution du groupe de limites de site par défaut** : indiquez si les clients doivent télécharger et installer le logiciel à partir d’un point de distribution dans le groupe de limites de site par défaut quand le contenu n’est pas disponible à partir d’un point de distribution dans les groupes de limites actuels ou voisins.  
+- **Autoriser les clients à utiliser les points de distribution du groupe de limites de site par défaut** : indiquez si les clients doivent télécharger et installer le logiciel auprès d’un point de distribution issu du groupe de limites de site par défaut quand le contenu n’est disponible dans aucun point de distribution des groupes de limites actifs ou voisins.  
 
 - **Options de déploiement** : indiquez si les clients doivent télécharger l’application quand ils utilisent un point de distribution à partir des groupes de limites de site par défaut ou d’un groupe voisin.  
 
@@ -321,7 +324,7 @@ Passez à la section suivante sur l’utilisation d’un script personnalisé co
 2.  Dans la boîte de dialogue **Éditeur de script**, cliquez sur la liste déroulante **Type de script**. Sélectionnez un des langages de script suivants pour détecter le type de déploiement : PowerShell, VBScript ou JScript.  
 
     > [!Note]  
-    > Depuis la version 1810, quand un script Windows PowerShell s’exécute comme une méthode de détection d’application, le client Configuration Manager appelle PowerShell avec le `-NoProfile` paramètre. Cette option démarre PowerShell sans aucun profil. Un profil PowerShell est un script qui s’exécute au démarrage de PowerShell. <!--3607762-->  
+    > À compter de la version 1810, quand un script Windows PowerShell s’exécute comme méthode de détection d’application, le client Configuration Manager appelle PowerShell avec le paramètre `-NoProfile`. Cette option démarre PowerShell sans aucun profil. Un profil PowerShell est un script qui s’exécute au démarrage de PowerShell. <!--3607762-->  
 
 3.  Dans la zone **Contenu du script**, entrez le script que vous souhaitez utiliser ou collez le contenu d’un script existant. Choisissez **Ouvrir** pour accéder à un script enregistré existant. Cliquez sur **Effacer** pour supprimer le texte du champ Contenu du script. Si nécessaire, activez l’option **Exécuter le script comme processus 32 bits sur des clients 64 bits**.  
 
@@ -403,7 +406,7 @@ Sur la page **Expérience utilisateur** , spécifiez les informations suivantes 
 
     - **Installer pour le système** : le client installe l’application une seule fois. Il est accessible à tous les utilisateurs.  
 
-    - **Installer pour le système si la ressource est un périphérique ; sinon installer pour l’utilisateur** : si vous déployez l’application sur un appareil, le client l’installe pour tous les utilisateurs. Si vous déployez l’application pour un utilisateur, le client l’installe uniquement pour cet utilisateur.  
+    - **Installer pour le système si la ressource est un appareil ; sinon, installer pour l’utilisateur** : si vous déployez l’application sur un appareil, le client l’installe pour tous les utilisateurs. Si vous déployez l’application pour un utilisateur, le client l’installe uniquement pour cet utilisateur.  
 
 - **Condition d’ouverture de session** : sélectionnez une des options suivantes :  
 
@@ -650,7 +653,7 @@ Configuration Manager prend en charge les types de déploiement suivants pour le
 | **Package d’application Windows (\*.appx, \*.appxbundle)** | Pour Windows 8 ou version ultérieure. Sélectionnez le fichier de package d’une application Windows ou le package d’un ensemble d’applications Windows. |  
 | **Package d’application Windows (\*.appx, \*.appxbundle, \*.msix, \*.msixbundle)** | Depuis la version 1806, pour les nouveaux formats de package d’application (.msix) et d’ensemble d’applications (.msixbundle) Windows 10. Sélectionnez le fichier de package d’une application Windows ou le package d’un ensemble d’applications Windows.<!--1357427--> |  
 | **Package d’application Windows (dans le Windows Store)** | Pour Windows 8 ou version ultérieure. Spécifiez un lien vers l’application dans le Windows Store ou parcourez ce dernier pour sélectionner l’application.<sup>[Remarque 1](#bkmk_note1)</sup> |  
-| **Programme d’installation de script** | Spécifiez un script ou un programme qui s’exécute sur les clients Windows pour installer un contenu ou effectuer une action. Utilisez ce type de déploiement pour les programmes d’installation setup.exe ou les wrappers de script. |  
+| **Programme d’installation de script** | Spécifiez un script ou un programme qui s’exécute sur les clients Windows pour installer un contenu ou effectuer une action. Utilisez ce type de déploiement pour les programmes d’installation setup.exe ou les wrappers de scripts. |  
 | **Microsoft Application Virtualization 4** | Manifeste Microsoft App-V v4. |  
 | **Microsoft Application Virtualization 5** | Fichier de package Microsoft App-V v5. |  
 | **Package d’application Windows Phone (\*fichier .xap)** | Fichier de package d’application Windows Phone. |  

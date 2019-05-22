@@ -7,20 +7,20 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
 ms.assetid: 946b0f74-0794-4e8f-a6af-9737d877179b
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e361760d9d7a2b21f42dc7b9504d653b584fca0a
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 04963f6c565a9cb83655416dd706d5dd9055a29b
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56132436"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499912"
 ---
 # <a name="enable-third-party-updates"></a>Activer les mises à jour tierces 
 
-*S’applique à : version 1806 de System Center Configuration Manager*
+*S’applique à : System Center Configuration Manager version 1806*
 
 Depuis la version 1806, le nœud **Catalogues de mises à jour de logiciels tiers** de la console Configuration Manager vous permet de vous abonner à des catalogues tiers, de publier leurs mises à jour sur votre point de mise à jour logicielle, puis de les déployer sur les clients.  <!--1357605, 1352101, 1358714-->
 
@@ -37,7 +37,7 @@ Depuis la version 1806, le nœud **Catalogues de mises à jour de logiciels tie
 
 ## <a name="additional-requirements-when-the-sup-is-remote-from-the-top-level-site-server"></a>Autre exigences quand le point de mise à jour logicielle est distant par rapport au serveur de site de niveau supérieur 
 
-1. SSL doit être activé sur le point de mise à jour logicielle quand celui-ci est distant. Ceci nécessite un certificat d’authentification serveur généré à partir d’une autorité de certification interne ou via un fournisseur public.
+1. SSL doit être activé sur le point de mise à jour logicielle quand celui-ci est distant. Un certificat d’authentification serveur généré à partir d’une autorité de certification interne ou par le biais d’un fournisseur public est donc nécessaire.
     - [Configurer SSL sur WSUS](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#bkmk_2.5.ConfigSSL)
         - Quand vous configurez SSL sur WSUS, certains services web et répertoires virtuels utilisent toujours HTTP et non HTTPS. 
         - Configuration Manager télécharge le contenu tiers des packages de mise à jour logicielle à partir de votre répertoire de contenu WSUS via HTTP.   
@@ -78,7 +78,7 @@ Si vous n’avez pas l’obligation d’utiliser des certificats PKI, vous pouve
 1. Dans la console de Configuration Manager, accédez à l’espace de travail **Administration**. Développez **Configuration du site**, puis sélectionnez le nœud **Sites**.
 2. Sélectionnez le site de niveau supérieur dans la hiérarchie. Dans le ruban, cliquez sur **Configurer les composants de site**, puis sélectionnez **Point de mise à jour logicielle**.
 3. Basculez sous l’onglet **Mises à jour tierces**. Sélectionnez l’option **Configuration Manager gère le certificat**. 
-4. Tout nouveau certificat de type **Signature WSUS tierce** est créé dans le nœud **Certificats**, sous  **Sécurité**, dans l’espace de travail **Administration**.  
+4. Tout nouveau certificat de type **Signature WSUS tierce** est créé dans le nœud **Certificats**, sous **Sécurité**, dans l’espace de travail **Administration**.  
 
 ### <a name="manually-manage-the-wsus-signing-certificate"></a>Gérer manuellement le certificat de signature WSUS
 Si vous avez besoin de configurer manuellement le certificat, par exemple pour utiliser un certificat PKI, vous devez utiliser l’[éditeur de mise à jour System Center](../tools/updates-publisher-options.md#update-server) ou un autre outil prévu à cet effet.  
@@ -110,10 +110,10 @@ Les *catalogues de partenaires* sont des catalogues d’éditeurs de logiciels d
 1. Dans la page **Général**, spécifiez les éléments suivants : 
     - **URL de téléchargement** : adresse HTTPS valide du catalogue personnalisé.
     - **Éditeur** : nom de l’organisation qui publie le catalogue. 
-    - **Nom** : nom du catalogue à afficher dans la console Configuration Manager. 
-    - **Description** : description du catalogue. 
-    - **URL de support** (facultatif) : adresse HTTPS valide d’un site web d’aide sur le catalogue. 
-    - **Contact de support** (facultatif) : coordonnées de la personne à contacter pour obtenir de l’aide sur le catalogue. 
+    - **Nom** : nom du catalogue à afficher dans la console Configuration Manager. 
+    - **Description** : description du catalogue. 
+    - **URL de support** (facultatif) : adresse HTTPS valide d’un site web d’aide sur le catalogue. 
+    - **Contact de support** (facultatif) : coordonnées à contacter pour obtenir de l’aide sur le catalogue. 
 2. Cliquez sur **Suivant** pour passer en revue le résumé du catalogue et poursuivre l’**Assistant Catalogue personnalisé de mises à jour logicielles tierces**.
 
 

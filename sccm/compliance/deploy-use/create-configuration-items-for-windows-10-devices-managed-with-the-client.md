@@ -2,7 +2,7 @@
 title: 'Créer des éléments de configuration pour Windows 10 géré par le client '
 titleSuffix: Configuration Manager
 description: Utilisez l’élément de configuration System Center Configuration Manager Windows 10 pour gérer les paramètres des ordinateurs Windows 10 gérés par le client Configuration Manager.
-ms.date: 03/28/2017
+ms.date: 05/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e7215214c315af5965344c2b3c8ffbd29d522012
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 6a26ffcb0d88f50902e82049102825af956a4027
+ms.sourcegitcommit: 99dfe4fb9e9cfd20c44380ae442b3a5b895a0d9b
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56121020"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65214924"
 ---
 # <a name="how-to-create-configuration-items-for-windows-10-devices-managed-with-the-system-center-configuration-manager-client"></a>Comment créer des éléments de configuration pour des périphériques Windows 10 gérés avec le client System Center Configuration Manager
 Utilisez l’élément de configuration System Center Configuration Manager **Windows 10** pour gérer les paramètres des ordinateurs Windows 10 gérés par le client Configuration Manager.  
@@ -42,16 +42,16 @@ Utilisez l’élément de configuration System Center Configuration Manager **Wi
   
 7. Dans la page **Plateformes prises en charge** de l’Assistant, sélectionnez les plateformes Windows 10 spécifiques qui évaluent l’élément de configuration.  
   
-8. Dans la page **Paramètres de périphérique** de l’Assistant, sélectionnez le groupe de paramètres à configurer. Consultez [Windows 10 configuration item settings reference](#BKMK_Ref) dans cette rubrique pour plus d’informations, puis cliquez sur **Suivant**.  
+8. Dans la page **Paramètres de périphérique** de l’Assistant, sélectionnez le groupe de paramètres à configurer. Pour plus d’informations, voir [Informations de référence sur les paramètres des éléments de configuration Windows 10](#BKMK_Ref) dans cet article. Ensuite, cliquez sur **Suivant**.  
   
    > [!TIP]  
    >  Si le paramètre souhaité n’est pas répertorié, cochez la case **Configurer d’autres paramètres qui ne se trouvent pas dans les groupes de paramètres par défaut**.  
   
-9. Dans chaque page de paramètres, configurez les paramètres dont vous avez besoin et indiquez si vous voulez les corriger quand ils ne sont pas conformes sur des périphériques (quand cela est pris en charge).  
+9. Sur chaque page de paramètres, configurez les paramètres obligatoires et indiquez si vous voulez les corriger quand ils ne sont pas conformes sur les appareils (à condition que ce soit pris en charge).  
   
 10. Pour chaque groupe de paramètres, vous pouvez également configurer la gravité signalée quand un élément de configuration n’est pas conforme :  
   
-    -   **Aucun** : les appareils qui ne respectent pas cette règle de conformité ne signalent pas la gravité d’un échec pour les rapports Configuration Manager.  
+    -   **Aucun** : les appareils qui ne respectent pas cette règle de conformité ne signalent pas une gravité de niveau échec dans les rapports Configuration Manager.  
   
     -   **Informations** : les appareils qui ne respectent pas cette règle de conformité signalent la gravité d’un échec de niveau **Informations** pour les rapports Configuration Manager.  
   
@@ -61,16 +61,16 @@ Utilisez l’élément de configuration System Center Configuration Manager **Wi
   
     -   **Critique avec événement** : les appareils qui ne respectent pas cette règle de conformité signalent la gravité d’un échec de niveau **Critique** pour les rapports Configuration Manager. Ce niveau de gravité est également enregistré comme événement Windows dans le journal des événements des applications.  
   
-11. Dans la page **Condition d’application de la plateforme** de l’Assistant, passez en revue tous les paramètres qui ne sont pas compatibles avec les plateformes prises en charge que vous avez sélectionnées précédemment. Vous pouvez revenir sur ces paramètres et les supprimer, ou vous pouvez continuer.  
+11. Sur la page **Applicabilité de la plateforme** de l’Assistant, vérifiez tous les paramètres incompatibles avec les plateformes prises en charge que vous avez sélectionnées tout à l’heure. Vous pouvez revenir sur ces paramètres et les supprimer, ou vous pouvez continuer.  
   
     > [!TIP]  
     >  La conformité des paramètres non pris en charge n’est pas évaluée.  
   
 12. Effectuez toutes les étapes de l'Assistant.  
   
-    Vous pouvez afficher le nouvel élément de configuration dans le nœud **Éléments de configuration** de l’espace de travail **Ressources et Conformité**.  
+    Vous pouvez afficher le nouvel élément de configuration dans le nœud **Éléments de configuration** de l’espace de travail **Ressources et conformité** .  
   
-##  <a name="windows-10-configuration-item-settings-reference"></a>Informations de référence sur les paramètres d’élément de configuration Windows 10  
+## <a name="BKMK_Ref"></a> Windows 10 configuration item settings reference  
   
 ### <a name="password"></a>Mot de passe  
   
@@ -80,10 +80,10 @@ Utilisez l’élément de configuration System Center Configuration Manager **Wi
 |**Longueur minimale du mot de passe (caractères)**|Longueur minimale du mot de passe en caractères.|  
 |**Expiration du mot de passe en jours**|Nombre de jours avant de devoir modifier le mot de passe.|  
 |**Nombre de mots de passe mémorisés**|Empêche la réutilisation des mots de passe précédents.|  
-|**Nombre d’échecs de tentative de connexion avant la réinitialisation du périphérique**|Réinitialise le périphérique si la connexion échoue ce nombre de fois.|  
-|**Durée d’inactivité avant le verrouillage de l’appareil**|Indique le nombre de minutes pendant lequel le périphérique doit être inactif avant d’être automatiquement bloqué.|  
+|**Nombre d’échecs de tentative de connexion avant la réinitialisation du périphérique**|Réinitialise l’appareil si la connexion échoue ce nombre de fois.|  
+|**Durée d’inactivité avant le verrouillage de l’appareil**|Indique la durée en minutes pendant laquelle l’appareil doit être inactif pour être automatiquement verrouillé.|  
 |**Complexité du mot de passe**|Choisissez si vous pouvez spécifier un code confidentiel tel que « 1234 » ou si vous devez fournir un mot de passe fort.|
-|**Nombre de jeux de caractères complexes requis dans le mot de passe**|Si vous avez sélectionné un mot de passe **Fort**, utilisez ce paramètre pour configurer le nombre de jeux de caractères complexes requis. Pour un mot de passe fort, ce paramètre doit avoir au moins la valeur **3**, ce qui signifie qu’il doit comporter à la fois des chiffres et des lettres. Sélectionnez **4** si vous souhaitez exiger un mot de passe qui contienne des caractères spéciaux comme **(% $**.<br>(Windows 10 uniquement)  |
+|**Nombre de jeux de caractères complexes requis dans le mot de passe**|Si vous avez sélectionné un mot de passe **Fort**, utilisez ce paramètre pour configurer le nombre de jeux de caractères complexes requis. Pour un mot de passe fort, ce paramètre doit avoir au moins la valeur **3, ce qui signifie qu’il doit comporter à la fois des lettres et des chiffres. Sélectionnez **4** si vous souhaitez exiger un mot de passe qui contienne des caractères spéciaux comme **(% $**.<br>(Windows 10 uniquement)  |
   
 ###  <a name="device"></a>Appareil  
   
@@ -133,4 +133,4 @@ La Protection des informations Windows (anciennement, Enterprise Data Protection
 Pour plus d’informations sur la Protection des informations Windows avec Configuration Manager, consultez [Protéger vos données d’entreprise à l’aide de la Protection des informations Windows (WIP)](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
   
 ## <a name="see-also"></a>Voir aussi  
- [Éléments de configuration pour les appareils gérés avec le client System Center Configuration Manager](../../compliance/deploy-use/configuration-items-for-devices-managed-with-the-client.md)
+ [Éléments de configuration pour les appareils gérés avec le client System Center Configuration Manager](../../compliance/deploy-use/create-configuration-items.md)

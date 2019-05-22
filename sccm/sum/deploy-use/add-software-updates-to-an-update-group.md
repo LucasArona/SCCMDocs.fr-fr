@@ -2,21 +2,21 @@
 title: 'Ajouter des mises à jour à un groupe de mises à jour '
 titleSuffix: Configuration Manager
 description: Ajoutez manuellement ou automatiquement des mises à jour logicielles à un groupe de mises à jour logicielles dans votre environnement.
-author: aczechowski
 ms.date: 03/18/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: a0767664-fd60-46a8-9da5-86cc431ce53c
 manager: dougeby
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0657877c22aa8ce2382408821d5b61f5fded151d
-ms.sourcegitcommit: d71e558db2da124357b840332e2da671b3810507
+ms.openlocfilehash: b207d0c210aa25489d67a5a551bf795e86c1582b
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58268989"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500251"
 ---
 # <a name="add-software-updates-to-an-update-group"></a>Ajouter des mises à jour logicielles à un groupe de mises à jour  
 
@@ -49,7 +49,7 @@ ms.locfileid: "58268989"
 3.  Sélectionnez les mises à jour logicielles que vous souhaitez ajouter au nouveau groupe de mises à jour logicielles.  
 
     > [!NOTE]  
-    >  Sur le **toutes les mises à jour logicielles** nœud, Configuration Manager affiche toutes les mises à jour, à l’exception de celles figurant dans le **mises à niveau** classification et **Office 365 Client** produit classification.  
+    >  Sur le nœud **Toutes les mises à jour de logiciels**, Configuration Manager affiche toutes les mises à jour, à l’exception de celles de la classification **Mises à niveau** et de la classification de produits **Client Office 365**.  
 
 4.  Dans l'onglet **Accueil** , dans le groupe **Mise à jour** , cliquez sur **Modifier l'adhésion**.  
 

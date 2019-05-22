@@ -2,8 +2,8 @@
 title: Déployer des mises à jour logicielles
 titleSuffix: Configuration Manager
 description: Découvrez comment déployer manuellement ou automatiquement des mises à jour logicielles dans la console Configuration Manager.
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.date: 11/27/2018
 ms.topic: conceptual
@@ -11,18 +11,18 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 04536d51-3bf7-45e5-b4af-36ceed10583d
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cabcb57a429e0fb14732cead98902ca5b43957af
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: d01e01bf8318e5d4016420044a5f2f49c9b6965c
+ms.sourcegitcommit: 53f2380ac67025fb4a69fc1651edad15d98e0cdd
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56156761"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65673370"
 ---
 # <a name="deploy-software-updates"></a>Déployer des mises à jour logicielles  
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
-La phase de déploiement de mises à jour logicielles consiste à déployer les mises à jour logicielles. Quelle que soit la façon dont vous déployez des mises à jour logicielles, le site :
+La phase de déploiement des mises à jour de logiciels consiste à déployer des mises à jour de logiciels. Quelle que soit la façon dont vous déployez des mises à jour logicielles, le site :
 - Ajoute les mises à jour à un groupe de mises à jour logicielles.
 - Distribue le contenu de la mise à jour aux points de distribution.
 - Déploie le groupe de mise à jour sur les clients.  
@@ -114,7 +114,8 @@ Pour plus d’informations et pour obtenir des étapes détaillées, consultez [
 
 ## <a name="bkmk_phased"></a> Déployer les mises à jour logicielles par phases
 
-<!--1358146--> À compter de la version 1810, créez des déploiement par phases pour les mises à jour logicielles. Ils permettent d’orchestrer un lancement coordonné et séquencé de logiciels en fonction de groupes et de critères personnalisables.
+<!--1358146-->
+À compter de la version 1810, créez des déploiement par phases pour les mises à jour de logiciels. Ils permettent d’orchestrer un lancement coordonné et séquencé de logiciels en fonction de groupes et de critères personnalisables.
 
 Pour plus d’informations, voir [Créer des déploiements par phases](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json).
 

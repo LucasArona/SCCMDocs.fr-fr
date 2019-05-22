@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
 ms.assetid: 3b9c4027-a98b-406b-935c-ccabcfe713df
-author: aczechowski
+author: mestew
+ms.author: mstewart
 manager: dougeby
-ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 411811c4047cd781d0edcd5cc345ff82acc80f91
-ms.sourcegitcommit: 0a23cde6112cbb5987f433bffcf6f223b994ba72
+ms.openlocfilehash: 976a6b149175b817ea7039faf1f909a73f2b514d
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56667441"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500520"
 ---
 #  <a name="using-configuration-manager-software-updates-to-deliver-definition-updates"></a>Utilisation des mises à jour logicielles Configuration Manager pour remettre des mises à jour de définitions
 
@@ -52,7 +52,7 @@ ms.locfileid: "56667441"
 7. Sur la page **Paramètres de déploiement** de l’Assistant, sélectionnez **Seulement les messages d’erreur** dans la liste **Niveau de détail**, puis cliquez sur **Suivant**.
 
    > [!NOTE]
-   >  En sélectionnant **uniquement les messages d’erreur** réduira le nombre de messages d’état retournés par le déploiement de définition. Cette configuration permet de réduire les traitements du processeur sur les serveurs Configuration Manager.
+   >  **Seulement les messages d’erreur** réduit le nombre de messages d’état retournés par le déploiement des définitions. Cette configuration permet de réduire les traitements du processeur sur les serveurs Configuration Manager.
 
 8. Dans la liste **Filtres de propriétés** , sélectionnez la case à cocher **Classification des mises à jour** .
 

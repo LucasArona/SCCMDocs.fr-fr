@@ -5,18 +5,18 @@ description: Utilisez Windows Update for Business pour tenir à jour les apparei
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 03/28/2019
+ms.date: 04/25/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2929782880971b53be3b6013188f65d50d691c05
-ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
+ms.openlocfilehash: 36ab933876b96c0eebe87ba07932757147e334c0
+ms.sourcegitcommit: 9af73f5c1b93f6ccaea3e6a096f75a5fecd65c2f
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58523756"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64669123"
 ---
 # <a name="integration-with-windows-update-for-business-in-windows-10"></a>Intégration avec Windows Update for Business dans Windows 10
 
@@ -25,8 +25,8 @@ ms.locfileid: "58523756"
 Windows Update for Business (WUfB) vous permet de garantir la mise à jour des appareils Windows 10 de votre organisation avec les mécanismes de sécurité et les fonctionnalités Windows les plus récents quand ces appareils se connectent directement au service Windows Update (WU). Configuration Manager peut faire la distinction entre les ordinateurs Windows 10 qui utilisent WUfB et WSUS pour obtenir les mises à jour logicielles.  
 
 >[!WARNING]
-> Si vous utilisez cogestion pour vos appareils et que vous avez déplacé la [stratégies Windows Update](/sccm/comanage/workloads#windows-update-policies) à Intune, vos appareils obtiendra leurs [des stratégies de mise à jour de Windows pour les entreprises à partir d’Intune](https://docs.microsoft.com/intune/windows-update-for-business-configure).
-> - Si le client Configuration Manager est toujours installé sur l’appareil cogéré paramètres pour les mises à jour cumulatives et mises à jour de fonctionnalité sont gérés par Intune. Toutefois, par des tiers mise à jour corrective, si activé dans [ **paramètres Client**](/sccm/core/clients/deploy/about-client-settings#enable-third-party-software-updates), est toujours géré par Configuration Manager.  
+> Si vous utilisez la cogestion pour vos appareils et que vous avez déplacé les [stratégies Windows Update](/sccm/comanage/workloads#windows-update-policies) dans Intune, vos appareils recevront leurs [stratégies Windows Update pour Entreprise d’Intune](https://docs.microsoft.com/intune/windows-update-for-business-configure).
+> - Si le client Configuration Manager est toujours installé sur l’appareil cogéré, les paramètres Mises à jour cumulatives et Mises à jour des fonctionnalités sont gérés par Intune. Toutefois, les mises à jour correctives tierces, si elles sont activées dans [**Paramètres du client**](/sccm/core/clients/deploy/about-client-settings#enable-third-party-software-updates), sont toujours gérées par Configuration Manager.  
 
  Certaines fonctionnalités de Configuration Manager ne sont plus disponibles quand les clients Configuration Manager sont configurés pour recevoir des mises à jour de Windows Update, notamment WUfB ou Windows Insiders :  
 
@@ -44,7 +44,7 @@ Windows Update for Business (WUfB) vous permet de garantir la mise à jour des a
 
 -   Configuration Manager ne pourra pas déployer les mises à jour Microsoft, telles qu’Office, Internet Explorer et Visual Studio, sur les clients qui sont connectés à WUfB pour recevoir des mises à jour.  
 
--   Configuration Manager peut néanmoins déployer les mises à jour tierces publiées dans WSUS et gérées par le biais de Configuration Manager vers les clients qui sont connectés à WUfB pour recevoir des mises à jour. Si vous ne souhaitez pas 3e partie mises à jour pour être installé sur les clients connectés à WUfB, désactivez le paramètre nommé client [activer les mises à jour logicielles sur les clients](/sccm/core/clients/deploy/about-client-settings#software-updates).
+-   Configuration Manager peut néanmoins déployer les mises à jour tierces publiées dans WSUS et gérées par le biais de Configuration Manager vers les clients qui sont connectés à WUfB pour recevoir des mises à jour. Si vous ne souhaitez pas que des mises à jour tierces soient installées sur les clients qui se connectent à Windows Update pour Entreprise, désactivez le paramètre client nommé [Activer les mises à jour de logiciels sur les clients](/sccm/core/clients/deploy/about-client-settings#software-updates).
 
 -   Le déploiement de client complet Configuration Manager qui utilise l’infrastructure de mises à jour logicielles ne fonctionnera pas pour les clients qui sont connectés à WUfB pour recevoir des mises à jour.  
 
