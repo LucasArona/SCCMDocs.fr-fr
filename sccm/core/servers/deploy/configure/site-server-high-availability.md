@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9775bd47e91876a7651bb58fee50b2111f3b7ef1
-ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
+ms.openlocfilehash: 5738be3bd84d7698e7b67128e3aff178d2460e52
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65083525"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66176913"
 ---
 # <a name="site-server-high-availability-in-configuration-manager"></a>Haute disponibilité du serveur de site dans Configuration Manager
 
@@ -26,10 +26,10 @@ ms.locfileid: "65083525"
 
 Il était auparavant possible d’ajouter de la redondance à la plupart des rôles de Configuration Manager en en créant plusieurs instances dans l’environnement, sauf pour le serveur de site proprement dit. Depuis la version 1806 de Configuration Manager, la haute disponibilité du rôle serveur de site est une solution basée sur Configuration Manager permettant d’installer un serveur de site supplémentaire en mode  *passif*. La version 1810 ajoute la prise en charge des hiérarchies : ainsi, les sites d’administration centrale et les sites principaux enfants peuvent également comporter un serveur de site supplémentaire en mode passif. Le serveur de site en mode passif peut être local ou dans le cloud Azure.
 
-Cette fonctionnalité offre les avantages suivants : 
-- redondance et haute disponibilité pour le rôle serveur de site ;  
+Cette fonctionnalité offre les avantages suivants : 
+- redondance et haute disponibilité pour le rôle serveur de site ;  
 - modification facilitée du matériel ou du système d’exploitation du serveur de site ;  
-- déplacement simplifié du serveur de site sur Azure IaaS.  
+- déplacement simplifié du serveur de site sur Azure IaaS.  
 
 Le serveur de site en mode passif vient s’ajouter à votre serveur de site existant qui se trouve en mode *Actif*. Un serveur de site en mode passif est disponible pour une utilisation immédiate, si nécessaire. Vous pouvez inclure ce serveur de site supplémentaire dans votre conception globale pour rendre le service Configuration Manager [hautement disponible](/sccm/core/servers/deploy/configure/high-availability-options).  
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3260fb68d9ce334061fc39fe8d40cd68d109655e
-ms.sourcegitcommit: 99dfe4fb9e9cfd20c44380ae442b3a5b895a0d9b
+ms.openlocfilehash: 2b53de9695fc2f2586ef162362394536ac911a06
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65214720"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66176795"
 ---
 # <a name="how-to-deploy-clients-to-windows-computers-in-configuration-manager"></a>Guide pratique pour déployer des clients sur des ordinateurs Windows dans Configuration Manager
 
@@ -518,6 +518,8 @@ Pour attribuer le point de gestion Internet après avoir installé le client, ut
 
 #### <a name="configure-clients-for-internet-based-client-management-after-client-installation-by-using-a-script"></a>Configurer les clients en vue d’une gestion via Internet après leur installation au moyen d’un script  
 
+##### <a name="vbscript"></a>VBScript
+
 1.  Ouvrez un éditeur de texte, tel que le Bloc-notes.  
 
 2.  Copiez l’exemple VBScript suivant et insérez-le dans le fichier. Remplacez *mp.contoso.com* par le nom de domaine complet Internet de votre point de gestion Internet.  
@@ -556,6 +558,28 @@ Pour attribuer le point de gestion Internet après avoir installé le client, ut
 
 Vous devrez peut-être redémarrer le client pour que les modifications prennent effet.  
 
+##### <a name="powershell"></a>PowerShell
+
+1. Ouvrez un éditeur en ligne PowerShell tel que PowerShell ISE ou Visual Studio Code, ou n’importe quel éditeur de texte tel que Notepad.
+
+2. Copiez et insérez les lignes de code suivantes dans l’éditeur. Remplacez « mp.contoso.com » par le nom de domaine complet Internet de votre point de gestion Internet.
+
+    ``` PowerShell
+    
+    $newInternetBasedManagementPointFQDN = 'mp.contoso.com'
+    $client = New-Object -ComObject Microsoft.SMS.Client
+    $client.SetInternetManagementPointFQDN($newInternetBasedManagementPointFQDN)
+    Restart-Service CcmExec
+    $client.GetInternetManagementPointFQDN()
+    
+    ```
+
+    > [!NOTE]  
+    >  La dernière ligne ne sert qu’à vérifier la nouvelle valeur MP Internet.
+    >
+    >  Pour supprimer un point de gestion Internet spécifié, supprimez la valeur de nom de domaine complet (FQDN) du serveur placée entre guillemets. Cette ligne se présente ainsi : `$newInternetBasedManagementPointFQDN = ''`
+
+3. Exécutez ce script avec des droits élevés.
 
 
 ##  <a name="BKMK_Provision"></a> Provisionner les propriétés d’installation du client pour les installations des clients basées sur une stratégie de groupe et sur des mises à jour logicielles

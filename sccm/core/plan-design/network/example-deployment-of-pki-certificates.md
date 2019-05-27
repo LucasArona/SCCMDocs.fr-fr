@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d686baa95cc29a2e4923c0572a0d056beeff9f5b
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: e33c634cd2d0153f635675530e3d876ebb6c4e87
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499226"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66176966"
 ---
 # <a name="step-by-step-example-deployment-of-the-pki-certificates-for-system-center-configuration-manager-windows-server-2008-certification-authority"></a>Exemple détaillé de déploiement des certificats PKI pour System Center Configuration Manager : Autorité de certification Windows Server 2008
 
@@ -157,7 +157,7 @@ Cet exemple de déploiement pas à pas utilise une autorité de certification Wi
 
     -   Si le système de site accepte uniquement les connexions clientes à partir de l’intranet et que le nom de domaine complet intranet du serveur de système de site est **server1.internal.contoso.com**, entrez **server1.internal.contoso.com**, puis choisissez **Ajouter**.  
 
-    -   Si le système de site accepte uniquement les connexions client à partir de l'Intranet et d'Internet, et le nom de domaine complet Intranet du serveur de système de site est **server1.internal.contoso.com** , et le nom de domaine complet Internet du serveur de système de site est **server.contoso.com**:  
+    -   Si le système de site accepte uniquement les connexions client à partir de l'Intranet et d'Internet, et le nom de domaine complet Intranet du serveur de système de site est **server1.internal.contoso.com**, et le nom de domaine complet Internet du serveur de système de site est **server.contoso.com** :  
 
         1.  Entrez **server1.internal.contoso.com**, puis choisissez **Ajouter**.  
 

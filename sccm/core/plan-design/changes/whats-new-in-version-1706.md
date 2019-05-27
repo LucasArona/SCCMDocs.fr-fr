@@ -12,12 +12,12 @@ ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 93862e95a3bae13582c2aa70daf2db22f9d621d8
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: cc88e70360599391c84e54e41e73b53ef3b70678
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65495467"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66177043"
 ---
 # <a name="what39s-new-in-version-1706-of-system-center-configuration-manager"></a>Nouveautés de la version 1706 de System Center Configuration Manager
 
@@ -94,7 +94,7 @@ Grâce à l’intégration améliorée, les opérations suivantes sont possibles
 
   Pour cela, une [application web serveur Azure](/azure/azure/app-service/app-service-authentication-overview#service-to-service-authentication) fournit les détails de l’abonnement et de la configuration, ce qui vous évite de les entrer chaque fois que vous configurez un nouveau service ou composant Configuration Manager avec Azure. Pour plus d’informations, consultez [Assistant Services Azure](/sccm/core/servers/deploy/configure/azure-services-wizard).
 
--   Utilisez Azure AD pour authentifier les clients sur Internet et leur permettre d’accéder à vos sites Configuration Manager. Azure AD élimine le besoin de configurer et d’utiliser des certificats d’authentification client. Vous devez pour cela utiliser le rôle de système de site Passerelle de gestion cloud. Pour plus d’informations, consultez [Installer et attribuer des clients Configuration Manager à partir d’Internet à l’aide de l’authentification Azure AD](/sccm/core/clients/deploy/deploy-clients-cmg-azure).
+-   Utiliser Azure AD pour authentifier les clients sur Internet pour l’accès à vos sites Configuration Manager. Azure AD élimine le besoin de configurer et d’utiliser des certificats d’authentification client. Vous devez pour cela utiliser le rôle de système de site Passerelle de gestion cloud. Pour plus d’informations, consultez [Installer et attribuer des clients Configuration Manager à partir d’Internet à l’aide de l’authentification Azure AD](/sccm/core/clients/deploy/deploy-clients-cmg-azure).
 
 -   Installez et gérez le client Configuration Manager sur les ordinateurs qui se trouvent sur Internet. Vous devez pour cela utiliser le rôle de système de site Passerelle de gestion cloud. Pour plus d’informations, consultez [Installer et attribuer des clients Configuration Manager à partir d’Internet à l’aide de l’authentification Azure AD](/sccm/core/clients/deploy/deploy-clients-cmg-azure).
 

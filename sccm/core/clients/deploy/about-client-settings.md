@@ -2,7 +2,7 @@
 title: Paramètres du client
 titleSuffix: Configuration Manager
 description: Découvrir les paramètres par défaut et personnalisés pour contrôler les comportements du client
-ms.date: 05/01/2019
+ms.date: 05/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cfb3e50d2f438995db1d28229365caf48f1f6646
-ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
+ms.openlocfilehash: 3271c0fbd8673e33d7a7bf6a9c6da4b0ce978377
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65083284"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66176788"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>À propos des paramètres client dans Configuration Manager
 
@@ -644,8 +644,10 @@ Affectez la valeur **Oui** aux paramètres supplémentaires de ce groupe pour af
     - **Nom de l’onglet**
     - **URL du contenu**
 
->[!NOTE]
-> Certaines fonctionnalités de site web peuvent ne pas fonctionner quand vous l’utilisez comme onglet personnalisé dans le Centre logiciel. Veillez à tester les résultats avant de le déployer sur des clients. <!--519659-->
+    >[!Important]  
+    > Certaines fonctionnalités de site web peuvent ne pas fonctionner quand vous l’utilisez comme onglet personnalisé dans le Centre logiciel. Veillez à tester les résultats avant de le déployer sur des clients. <!--519659-->
+    >
+    > Ne spécifiez que des adresses de site web intranet ou de confiance lorsque vous ajoutez un onglet personnalisé.<!--SCCMDocs issue 1575-->
 
 Par exemple, si votre organisation n’utilise pas de stratégies de conformité et que vous souhaitez masquer l’onglet Conformité de l’appareil dans le Centre logiciel, définissez l’onglet **Activer l’onglet Conformité de l’appareil** sur **Non**.
 

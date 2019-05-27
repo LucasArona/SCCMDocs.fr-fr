@@ -2,7 +2,7 @@
 title: Coexistence de la gestion des données de référence tierce
 titleSuffix: Configuration Manager
 description: Découvrez des informations sur l’utilisation d’un MDM de tiers avec Configuration Manager
-ms.date: 04/26/2019
+ms.date: 05/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,18 +11,18 @@ ms.assetid: ed4dc65e-e5d5-4f75-88ac-f4849ec8fc10
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6abf4c81d03d5887294c85337b403a6fb17dca98
-ms.sourcegitcommit: 23852dda81bb8496dd10c0a8ec4f740a8e15efc3
+ms.openlocfilehash: 5fbb2d4a902c21ac2fa2186bba70f58d66e50c48
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64873368"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66176859"
 ---
 # <a name="third-party-mdm-coexistence-with-configuration-manager"></a>Coexistence d’un service MDM de tiers avec Configuration Manager
 
 Quand vous gérez des appareils Windows 10 en parallèle avec Configuration Manager et Microsoft Intune, cette fonctionnalité est appelée [cogestion](/sccm/comanage/overview). Quand vous gérez des appareils avec Configuration Manager et que vous vous inscrivez auprès d’un service MDM de tiers, cette fonctionnalité est appelée *coexistence*. Le fait d’avoir deux autorités de gestion pour un même appareil peut s’avérer délicat si la gestion n’est pas correctement orchestrée entre les deux. Avec la cogestion, Configuration Manager et Intune équilibrent les [charges de travail](/sccm/comanage/workloads) pour garantir qu’il n’y a pas de conflits. Cette interaction n’existe pas avec les services de tiers : il existe donc des limitations avec les fonctionnalités de gestion dans le cas de la coexistence.
 
-Le client Configuration Manager peut coexister avec un service MDM de tiers sur un appareil qui est joint à Azure Active Directory. L’appareil peut être de l’un des types suivants :
+Le client Configuration Manager peut coexister avec un service MDM de tiers sur un appareil qui exécute Windows 10 version 1709 ou ultérieure et qui est joint à Azure Active Directory. L’appareil peut être de l’un des types suivants :
 
 - [Joint à Azure AD](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan) uniquement. (Ce type est parfois désigné comme « joint à un domaine cloud »)  
 
