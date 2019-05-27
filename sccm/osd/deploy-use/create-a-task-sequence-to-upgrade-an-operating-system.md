@@ -2,7 +2,7 @@
 title: Créer une séquence de tâches de mise à niveau du système d’exploitation
 titleSuffix: Configuration Manager
 description: Utiliser une séquence de tâches automatiquement mise à niveau à partir de Windows 7 ou ultérieur vers Windows 10
-ms.date: 07/30/2018
+ms.date: 05/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc20a7e9be271bde8a5cd6464e2cebdf1ee9bad9
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: b1015573d62bdbbd317b9f787071e7725e5d4362
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56138600"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66176124"
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-os-in-configuration-manager"></a>Créer une séquence de tâches pour mettre à niveau un système d’exploitation dans Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Dans Configuration Manager, utilisez des séquences de tâches pour automatiquement mettre à niveau un système d’exploitation sur un ordinateur de destination. Cette mise à niveau peut être effectuée à partir de Windows 7 ou une version ultérieure vers Windows 10, ou à partir de Windows Server 2012 ou une version ultérieure vers Windows Server 2016. Créez une séquence de tâches qui référence le package de mise à niveau du système d’exploitation et tout autre contenu à installer, comme des applications ou des mises à jour logicielles. La séquence de tâches de mise à niveau d’un système d’exploitation fait partie intégrante du scénario [Effectuer une mise à niveau de Windows vers la dernière version](upgrade-windows-to-the-latest-version.md).  
 
@@ -58,22 +58,22 @@ Pour mettre à niveau le système d’exploitation sur des clients, créez une s
 
 4.  Dans la page **Informations sur la séquence de tâches**, spécifiez les paramètres suivants et cliquez sur **Suivant** :  
 
-    -   **Nom de la séquence de tâches** : spécifiez un nom qui identifie la séquence de tâches.  
+    -   **Nom de la séquence de tâches**: spécifiez un nom qui identifie la séquence de tâches.  
 
-    -   **Description** : si vous le souhaitez, ajoutez une description.  
+    -   **Description** : si vous le souhaitez, ajoutez une description.  
 
 5.  Dans la page **Mettre à niveau le système d’exploitation Windows**, spécifiez les paramètres suivants et cliquez sur **Suivant** :  
 
     -   **Package de mise à niveau** : spécifiez le package de mise à niveau qui contient les fichiers sources de mise à niveau du système d’exploitation. Vérifiez que vous avez sélectionné le bon package de mise à niveau en examinant les informations contenues dans le volet **Propriétés**. Pour plus d’informations, consultez [Gérer les packages de mise à niveau de système d’exploitation](/sccm/osd/get-started/manage-operating-system-upgrade-packages).  
 
-    -   **Index d’édition** : si plusieurs index d’édition de système d’exploitation sont disponibles dans le package, sélectionnez celui que vous souhaitez. Par défaut, l’Assistant sélectionne le premier index.  
+    -   **Index d’édition** : si plusieurs index d’édition de système d’exploitation sont disponibles dans le package, sélectionnez l’index d’édition souhaité. Par défaut, l’Assistant sélectionne le premier index.  
 
-    -   **Clé du produit** : spécifiez la clé de produit Windows du système d’exploitation à installer. Spécifiez des clés de licence en volume codées ou des clés de produit standard. Si vous utilisez une clé de produit standard, séparez chaque groupe de cinq caractères par un tiret (-). Par exemple : *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*. Quand la mise à niveau concerne une édition de licence en volume, la clé de produit n’est pas toujours requise.  
+    -   **Clé de produit** : spécifiez la clé de produit Windows du système d’exploitation à installer. Spécifiez des clés de licence en volume codées ou des clés de produit standard. Si vous utilisez une clé de produit standard, séparez chaque groupe de cinq caractères par un tiret (-). Par exemple : *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*. Quand la mise à niveau concerne une édition de licence en volume, la clé de produit n’est pas toujours requise.  
 
         > [!Note]  
         > Cette clé de produit peut être une clé d’activation multiple (MAK) ou une clé de licence en volume générique (GVLK). La clé GVLK est aussi connue sous le nom de clé d’installation de client de service de gestion de clés (KMS). Pour plus d’informations, consultez [Planifier l’activation en volume](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client). Pour obtenir la liste des clés d’installation de client KMS, consultez [l’Annexe A](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys) du guide d’activation de Windows Server. 
 
-    -   **Ignorer les messages de compatibilité révocables** : sélectionnez ce paramètre si vous procédez à une mise à niveau vers Windows Server 2016. Si vous ne sélectionnez pas ce paramètre, l’exécution de la séquence de tâches échoue, car le programme d’installation de Windows attend que l’utilisateur clique sur **Confirmer** dans la boîte de dialogue de compatibilité d’une application Windows.   
+    -   **Ignore any dismissable compatibility messages** (Ignorer les messages de compatibilité révocables) : sélectionnez ce paramètre si vous effectuez la mise à niveau vers Windows Server 2016. Si vous ne sélectionnez pas ce paramètre, l’exécution de la séquence de tâches échoue, car le programme d’installation de Windows attend que l’utilisateur clique sur **Confirmer** dans la boîte de dialogue de compatibilité d’une application Windows.   
 
 7.  Dans la page **Inclure les mises à jour**, spécifiez s’il faut installer toutes les mises à jour logicielles, seulement celles qui sont obligatoires ou aucune. Cliquez ensuite sur **Suivant**. Si vous spécifiez l’installation des mises à jour logicielles, Configuration Manager installe uniquement les mises à jour ciblant les regroupements dont l’ordinateur de destination est membre.  
 
@@ -93,7 +93,8 @@ Pour mettre à niveau le système d’exploitation sur des clients, créez une s
 
 
 ## <a name="configure-pre-cache-content"></a>Configurer la mise en cache préalable du contenu
-<!--1021244--> La fonctionnalité de mise en cache préalable pour les déploiements disponibles de séquences de tâches permet aux clients de télécharger le contenu de package de mise à niveau de système d’exploitation approprié avant l’installation de la séquence de tâches par l’utilisateur.  
+<!--1021244-->
+La fonctionnalité de mise en cache préalable pour les déploiements disponibles de séquences de tâches permet aux clients de télécharger le contenu de package de mise à niveau de système d’exploitation approprié avant l’installation de la séquence de tâches par l’utilisateur.  
 
 > [!Note]  
 > Par défaut, Configuration Manager n’active pas cette fonctionnalité facultative. Vous devez activer cette fonctionnalité avant de l’utiliser. Pour plus d’informations, consultez [Activer les fonctionnalités facultatives des mises à jour](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
@@ -144,17 +145,17 @@ La mise en cache préalable du contenu vous permet de laisser le client téléch
 
 À partir de la version 1802, le modèle de séquence de tâches par défaut pour la mise à niveau sur place de Windows 10 comprend des groupes supplémentaires, avec des actions recommandées à ajouter avant le processus de mise à niveau. Ces actions du groupe **Préparer la mise à niveau** sont communes à de nombreux clients qui parviennent à mettre à niveau des appareils vers Windows 10. Pour les sites sur les versions antérieures à 1802, ajoutez manuellement ces actions à votre séquence de tâches dans le groupe **Préparer la mise à niveau**.  
 
-- **Vérifications de la batterie** : Ajoutez des étapes dans ce groupe pour vérifier si l'ordinateur utilise la batterie ou l'alimentation secteur. Cette action doit être effectuée par un utilitaire ou un script personnalisé.  
+- **Vérification de la batterie** : ajoutez des étapes dans ce groupe pour contrôler si l’ordinateur est sur batterie ou sur secteur. Cette action doit être effectuée par un utilitaire ou un script personnalisé. Par exemple : à l’aide de WbemTest, connectez-vous l’espace de noms `root\cimv2`. Puis exécutez la requête suivante : `Select Batterystatus From Win32_Battery where batterystatus != 2`. Si elle renvoie des résultats, l’appareil fonctionne sur batterie. Sinon, l’appareil est branché sur secteur.  
 
-- **Vérifications de la connexion réseau/câblée** : ajoutez des étapes dans ce groupe pour vérifier si l’ordinateur est connecté à un réseau et s’il n’utilise pas de connexion sans fil. Cette action doit être effectuée par un utilitaire ou un script personnalisé.  
+- **Vérification de la connexion réseau/câblée** : ajoutez des étapes dans ce groupe pour contrôler si l’ordinateur est connecté à un réseau et n’utilise pas de connexion sans fil. Cette action doit être effectuée par un utilitaire ou un script personnalisé.  
 
-- **Supprimer les applications incompatibles** : Ajoutez des étapes dans ce groupe pour supprimer les applications incompatibles avec cette version de Windows 10. Il existe différentes façons de désinstaller une application selon les cas.  
+- **Supprimer les applications incompatibles** : ajoutez des étapes dans ce groupe pour supprimer toutes les applications incompatibles avec cette version de Windows 10. Il existe différentes façons de désinstaller une application selon les cas.  
 
     - Si l’application utilise Windows Installer, copiez la ligne de commande **Programme de désinstallation** de l’onglet **Programmes** dans les propriétés de type de déploiement de Windows Installer de l’application. Ensuite, ajoutez dans ce groupe une étape **Exécuter la ligne de commande** comportant la ligne de commande du programme de désinstallation. Par exemple : </br>`msiexec /x {150031D8-1234-4BA8-9F52-D6E5190D1CBA} /q`</br>  
 
-- **Supprimer les pilotes incompatibles** : Ajoutez des étapes dans ce groupe pour supprimer les pilotes incompatibles avec cette version de Windows 10.  
+- **Supprimer les pilotes incompatibles** : ajoutez des étapes dans ce groupe pour supprimer tous les pilotes incompatibles avec cette version de Windows 10.  
 
-- **Supprimer/suspendre la sécurité tierce** : Ajoutez des étapes dans ce groupe pour supprimer ou suspendre les programmes de sécurité tiers, comme les antivirus.  
+- **Supprimer/suspendre la sécurité tierce** : ajoutez des étapes dans ce groupe pour supprimer ou suspendre des programmes de sécurité tiers, par exemple, des antivirus.  
 
    - Si vous utilisez un programme de chiffrement de disque tiers, indiquez son pilote de chiffrement à l’installation de Windows avec [l’option de ligne de commande](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#23) `/ReflectDrivers`. Ajoutez une étape [Définir une variable de séquence de tâches](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) à la séquence de tâches dans ce groupe. Affectez la valeur **OSDSetupAdditionalUpgradeOptions** à la variable de séquence de tâches. Définissez la valeur `/ReflectDrivers` avec le chemin du pilote. Cette [variable de séquence de tâches](/sccm/osd/understand/task-sequence-variables#OSDSetupAdditionalUpgradeOptions) ajoute la ligne de commande d’installation de Windows utilisée par la séquence de tâches. Contactez votre éditeur de logiciels pour obtenir de l’aide sur ce processus.  
 
@@ -168,7 +169,7 @@ Exécutez l’étape [Télécharger le contenu du package](/sccm/osd/understand/
 -   Pour télécharger dynamiquement un package de pilotes applicable, utilisez deux étapes **Télécharger le contenu du package** avec des conditions pour détecter le type de matériel approprié pour chaque package de pilotes. Configurez chaque étape **Télécharger le contenu du package** pour utiliser la même variable. Utilisez ensuite cette variable comme valeur **Contenu intermédiaire** dans la section des pilotes sur l’étape **Mettre à niveau le système d’exploitation**.  
 
     > [!NOTE]  
-    > Quand il y a plusieurs packages, Configuration Manager ajoute un suffixe numérique au nom de la variable. Par exemple, si vous spécifiez la variable personnalisée `%mycontent%`, le client stocke tout le contenu référencé à cet emplacement. Quand vous faites référence à la variable dans une étape ultérieure, comme **Mettre à niveau le système d’exploitation**, utilisez la variable avec un suffixe numérique. Dans cet exemple, utilisez `%mycontent01%` ou `%mycontent02%`, où le numéro correspond à l’ordre dans lequel l’étape **Télécharger le contenu du package** répertorie ce contenu spécifique.  
+    > Configuration Manager ajoute un suffixe numérique au nom de cette variable. Par exemple, si vous spécifiez la variable personnalisée `%mycontent%`, le client stocke tout le contenu référencé à cet emplacement. Quand vous faites référence à la variable dans une étape ultérieure, comme **Mettre à niveau le système d’exploitation**, utilisez la variable avec un suffixe numérique. Dans cet exemple, utilisez `%mycontent01%` ou `%mycontent02%`, où le numéro correspond à l’ordre dans lequel l’étape **Télécharger le contenu du package** répertorie ce contenu spécifique.  
 
 
 
@@ -181,13 +182,13 @@ Une fois la séquence de tâches créée, ajoutez des étapes supplémentaires d
 
 À partir de la version 1802, le modèle de séquence de tâches par défaut pour la mise à niveau sur place de Windows 10 comprend des groupes supplémentaires, avec des actions recommandées à ajouter après le processus de mise à niveau. Ces actions du groupe **Post-traitement** sont communes à de nombreux clients qui parviennent à mettre à niveau des appareils vers Windows 10. Pour les sites sur les versions antérieures à 1802, ajoutez manuellement ces actions à votre séquence de tâches dans le groupe **Post-traitement**.  
 
-- **Appliquer des pilotes basés sur l'installation** : Ajoutez des étapes dans ce groupe pour installer des pilotes basés sur l'installation (.exe) à partir de packages.  
+- **Appliquer les pilotes basés sur le programme d’installation** : ajoutez des étapes dans ce groupe pour installer des pilotes basés sur le programme d’installation (.exe) à partir de packages.  
 
-- **Installer/activer une sécurité tierce** : Ajoutez des étapes dans ce groupe pour installer ou activer des programmes de sécurité tiers, comme des antivirus.  
+- **Installer/activer la sécurité tierce** : ajoutez des étapes dans ce groupe pour installer ou activer des programmes de sécurité tiers, par exemple, des antivirus.  
 
-- **Définir les applications Windows par défaut et les associations** : Ajoutez des étapes dans ce groupe pour définir les applications Windows par défaut et les associations de fichiers. Tout d’abord, préparez un ordinateur de référence avec les associations d’applications de votre choix. Ensuite, exécutez la commande suivante pour exporter : </br>`dism /online /Export-DefaultAppAssociations:"%UserProfile%\Desktop\DefaultAppAssociations.xml"`</br>Ajoutez le fichier XML à un package. Ensuite, ajoutez une étape [Exécuter la ligne de commande](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) dans ce groupe. Indiquez le package contenant le fichier XML, puis spécifiez la ligne de commande suivante : </br>`dism /online /Import-DefaultAppAssociations:DefaultAppAssocations.xml`</br> Pour plus d’informations, consultez la page [Exporter ou importer des associations d’applications par défaut](/windows-hardware/manufacture/desktop/export-or-import-default-application-associations).  
+- **Définir les associations et applications Windows par défaut** : ajoutez des étapes dans ce groupe pour définir des associations de fichiers et des applications Windows par défaut. Tout d’abord, préparez un ordinateur de référence avec les associations d’applications de votre choix. Ensuite, exécutez la commande suivante pour exporter : </br>`dism /online /Export-DefaultAppAssociations:"%UserProfile%\Desktop\DefaultAppAssociations.xml"`</br>Ajoutez le fichier XML à un package. Ensuite, ajoutez une étape [Exécuter la ligne de commande](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) dans ce groupe. Indiquez le package contenant le fichier XML, puis spécifiez la ligne de commande suivante : </br>`dism /online /Import-DefaultAppAssociations:DefaultAppAssocations.xml`</br> Pour plus d’informations, consultez la page [Exporter ou importer des associations d’applications par défaut](/windows-hardware/manufacture/desktop/export-or-import-default-application-associations).  
 
-- **Appliquer les personnalisations** : Ajoutez des étapes dans ce groupe pour appliquer les personnalisations du menu Démarrer, comme l'organisation de groupes de programmes. Pour plus d’informations, consultez la section [Personnaliser l’écran de démarrage](/windows-hardware/manufacture/desktop/customize-the-start-screen).  
+- **Appliquez les personnalisations** : ajoutez des étapes dans ce groupe pour appliquer des personnalisations du menu Démarrer, par exemple, l’organisation des groupes de programmes. Pour plus d’informations, consultez la section [Personnaliser l’écran de démarrage](/windows-hardware/manufacture/desktop/customize-the-start-screen).  
 
 
 
@@ -218,7 +219,7 @@ En cas de problème pendant le processus de mise à niveau après le redémarrag
 
     - Pour plus d’informations sur **_SMSTSLogPath** et sur d’autres variables utiles, consultez [Variables de séquence de tâches](/sccm/osd/understand/task-sequence-variables).  
 
-- **Exécuter des outils de diagnostic** : pour exécuter d’autres outils de diagnostic, ajoutez des étapes dans ce groupe. Automatisez ces outils pour collecter des informations supplémentaires à partir du système aussitôt après un échec.  
+- **Exécuter les outils de diagnostic** : pour exécuter d’autres outils de diagnostic, ajoutez des étapes dans ce groupe. Automatisez ces outils pour collecter des informations supplémentaires à partir du système aussitôt après un échec.  
 
     - Un exemple est l’outil Windows [SetupDiag](https://docs.microsoft.com/windows/deployment/upgrade/setupdiag). Il s’agit d’un outil de diagnostic autonome qui vous permet d’obtenir des informations détaillées sur la raison de l’échec d’une mise à niveau Windows 10.  
 
@@ -233,7 +234,7 @@ En cas de problème pendant le processus de mise à niveau après le redémarrag
 
 - Consultez la documentation Windows pour [Résoudre les erreurs de mise à niveau de Windows 10](https://docs.microsoft.com/windows/deployment/upgrade/resolve-windows-10-upgrade-errors). Cet article comporte également des informations détaillées sur le processus de mise à niveau.  
 
-- À l’étape **Vérifier la préparation** par défaut, activez **Garantir un espace disque libre minimal (Mo)**. Choisissez une valeur au moins égale à **16384** (16 Go) pour un package de mise à niveau d’un système d'exploitation 32 bits, ou à **20480** (20 Go) pour 64 bits.  
+- À l’étape **Vérifier la préparation** par défaut, activez **Garantir un espace disque libre minimal (Mo)** . Choisissez une valeur au moins égale à **16384** (16 Go) pour un package de mise à niveau d’un système d'exploitation 32 bits, ou à **20480** (20 Go) pour 64 bits.  
 
 - Utilisez la [variable de séquence de tâches](/sccm/osd/understand/task-sequence-variables#SMSTSDownloadRetryCount) **SMSTSDownloadRetryCount** pour essayer à nouveau de télécharger la stratégie. Actuellement, le client retente deux fois par défaut ; cette variable est définie sur deux (2). Si vos clients ne sont pas connectés à un réseau intranet, les tentatives supplémentaires les aideront à récupérer la stratégie. Cette variable n’a aucun effet secondaire, en dehors du fait qu’elle retarde l’échec si elle ne parvient pas à télécharger la stratégie.<!--501016--> Augmentez également la variable **SMSTSDownloadRetryDelay** (valeur par défaut : 15 secondes).  
 

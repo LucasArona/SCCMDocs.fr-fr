@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e5651f381f2c4a101c82d6f1f7730ffc4ae99a20
-ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
+ms.openlocfilehash: 40bfd1c8a541fbb1f108741ef2d4fa00b11088d7
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65083538"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66176114"
 ---
 # <a name="manage-os-images-with-configuration-manager"></a>Gérer les images de système d’exploitation avec Configuration Manager
 
@@ -76,6 +76,8 @@ Avant de pouvoir utiliser une image de système d’exploitation, vous devez l�
     -   **Commentaire** : brève description facultative.  
 
 5.  Effectuez toutes les étapes de l'Assistant.  
+
+Pour connaître l’applet de commande PowerShell équivalente à cet Assistant de console, consultez [New-CMOperatingSystemImage](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmoperatingsystemimage?view=sccm-ps).
 
 
 Ensuite, distribuez l’image de système d’exploitation sur les points de distribution.  
