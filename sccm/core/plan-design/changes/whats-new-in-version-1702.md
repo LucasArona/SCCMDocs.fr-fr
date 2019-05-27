@@ -7,17 +7,17 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 409e26e1-7716-4f1d-a0ee-34feabf20792
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2cc827b782f6776978c1a2361f1ed8d1659f23a3
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 55e29269bab2ed1a75f00848a59f3345d0a8c071
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56128464"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65495148"
 ---
 # <a name="what39s-new-in-version-1702-of-system-center-configuration-manager"></a>Nouveautés de la version 1702 de System Center Configuration Manager
 
@@ -202,13 +202,13 @@ Cette version intègre les améliorations suivantes :
 ### <a name="improvements-to-the-auto-apply-driver-task-sequence"></a>Améliorations apportées à la séquence de tâches Appliquer automatiquement les pilotes
 De nouvelles variables de séquence de tâches sont désormais disponibles pour configurer le délai d’expiration dans la séquence de tâches Appliquer automatiquement les pilotes lorsque vous effectuez des demandes de catalogue HTTP. Les variables et valeurs par défaut (en secondes) suivantes sont disponibles :
    - SMSTSDriverRequestResolveTimeOut  
-     Par défaut : 60
+     Valeur par défaut : 60
    - SMSTSDriverRequestConnectTimeOut  
-     Par défaut : 60
+     Valeur par défaut : 60
    - SMSTSDriverRequestSendTimeOut  
-     Par défaut : 60
+     Valeur par défaut : 60
    - SMSTSDriverRequestReceiveTimeOut  
-     Par défaut : 480
+     Valeur par défaut : 480
 
 ### <a name="windows-10-adk-tracked-by-build-version"></a>Le kit de déploiement et d’évaluation Windows 10 (ADK) est suivi par le numéro de version
 Le kit de déploiement et d’évaluation Windows 10 est désormais suivi par le numéro de version pour garantir une meilleure prise en charge lors de la personnalisation d’images de démarrage Windows 10. Par exemple, si le site utilise la version 1607 du Windows ADK pour Windows 10, seules les images de démarrage dont la version est 10.0.14393 pourront être personnalisées dans la console. Pour plus d’informations sur la personnalisation des versions de WinPE, consultez [Personnaliser les images de démarrage](/sccm/osd/get-started/customize-boot-images).

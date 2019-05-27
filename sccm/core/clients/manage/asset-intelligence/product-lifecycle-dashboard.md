@@ -2,21 +2,21 @@
 title: Tableau de bord Cycle de vie du produit
 titleSuffix: Configuration Manager
 description: Affichez la stratégie de cycle de vie Microsoft avec le tableau de bord Cycle de vie des produits dans Configuration Manager.
-ms.date: 11/27/2018
+ms.date: 05/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 8b5b144a-0e5f-4fcc-87b2-33b9bcdb5655
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 716c5218eafaf6297292fdd852589b7327e2ecaa
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: b8876f00ecb26aabd84f863ee1fcef4f2aac283a
+ms.sourcegitcommit: 53f2380ac67025fb4a69fc1651edad15d98e0cdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56120025"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65673398"
 ---
 # <a name="manage-microsoft-lifecycle-policy-with-configuration-manager"></a>Gérer la stratégie de cycle de vie Microsoft avec Configuration Manager
 
@@ -26,7 +26,7 @@ ms.locfileid: "56120025"
 
 Pour plus d’informations, consultez [Stratégie de cycle de vie Microsoft](https://support.microsoft.com/lifecycle).
 
-Depuis la version 1810, le tableau de bord comprend des informations pour System Center 2012 Configuration Manager et les versions ultérieures<!--1358702-->.  
+À compter de la version 1810, le tableau de bord comprend des informations pour System Center 2012 Configuration Manager et ultérieur.<!--1358702-->  
 
 
 
@@ -35,6 +35,8 @@ Depuis la version 1810, le tableau de bord comprend des informations pour Syste
  Pour afficher les données dans le tableau de bord de cycle de vie des produits, les composants suivants sont nécessaires :  
 
 - Internet Explorer 9 ou version ultérieure doit être installé sur l’ordinateur qui exécute la console Configuration Manager.  
+
+- Un rôle de point de connexion de service doit être installé et configuré. Pour obtenir les mises à jour des données sur ce tableau de bord, le point de connexion de service doit être en ligne ou synchronisé régulièrement s’il est hors connexion. Pour plus d’informations, consultez [À propos du point de connexion de service](/sccm/core/servers/deploy/configure/about-the-service-connection-point).
 
 - Un point de Reporting Services est nécessaire pour la fonctionnalité de lien hypertexte dans le tableau de bord. Le tableau de bord est lié à des rapports SQL Server Reporting Services (SSRS). Pour plus d’informations, consultez [Rapports dans Configuration Manager](/sccm/core/servers/manage/reporting).  
 
@@ -67,7 +69,8 @@ Modifiez l’affichage en sélectionnant l’une des options suivantes dans la l
 - **Client Windows** : affiche les versions du système d’exploitation de client Windows  
 - **Windows Server** : affiche les versions du système d’exploitation de serveur Windows  
 - **Base de données** : affiche les versions de SQL Server  
-- **Configuration Manager** : depuis la version 1810, affiche les versions de Configuration Manager  
+- **Configuration Manager** : depuis la version 1810, affiche les versions de Configuration Manager 
+- **Microsoft Office** : À compter de la version 1902, afficher les informations pour les versions installées d’Office 2003 à Office 2016 <!--3556026-->
 
 Le tableau de bord comporte les vignettes suivantes :  
 

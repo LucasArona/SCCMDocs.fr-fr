@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: bb0a87a6-fd65-440b-90a5-2fef35622c9d
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6c0705df8fafea253fde06ed605521aad2d6ffbd
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: d8d681dbd9996fb7eddbc2b37cf6af6a32401560
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56131708"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65497607"
 ---
 # <a name="checklist-for-installing-update-1806-for-configuration-manager"></a>Liste de contrôle pour l’installation de la mise à jour 1806 de Configuration Manager
 
@@ -140,7 +140,8 @@ Pour plus d’informations, consultez  [Mettre à niveau les clients](/sccm/cor
 Pour définir une période au cours de laquelle les mises à jour d’un serveur de site peuvent être installées, utilisez les fenêtres de service. Elles vous permettent de contrôler le moment où les sites de votre hiérarchie installent la mise à jour. Pour plus d’informations, consultez  [Fenêtres de maintenance pour les serveurs de site](/sccm/core/servers/manage/service-windows).
 
 #### <a name="review-supported-extensions"></a>Vérifier les extensions prises en charge
-<!--SCCMdocs#587--> Si vous étendez Configuration Manager avec d’autres produits provenant de Microsoft ou de partenaires Microsoft, vérifiez que ces produits prennent en charge la version 1806. Demandez cette information au fournisseur du produit. Par exemple, consultez les [notes de publication](/sccm/mdt/release-notes) de Microsoft Deployment Toolkit.
+<!--SCCMdocs#587-->
+Si vous étendez Configuration Manager avec d’autres produits provenant de Microsoft ou de partenaires Microsoft, vérifiez que ces produits prennent en charge la version 1806. Demandez cette information au fournisseur du produit. Par exemple, consultez les [notes de publication](/sccm/mdt/release-notes) de Microsoft Deployment Toolkit.
 
 #### <a name="run-the-setup-prerequisite-checker"></a>Exécuter l’outil de vérification des prérequis d’installation   
 Quand la mise à jour est répertoriée dans la console comme **Disponible**, vous pouvez exécuter indépendamment l’outil de vérification des prérequis avant d’installer la mise à jour. (Quand vous installez la mise à jour sur le site, l’outil de vérification des prérequis s’exécute à nouveau.)

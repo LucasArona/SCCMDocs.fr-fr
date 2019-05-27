@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99df201cb3525a124b42d5d599d4a74708258bad
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.openlocfilehash: a513eb15f9a8c841aa5896ee5d416bd7863d0cb9
+ms.sourcegitcommit: ab9f2a7fb7ea3a0c65808fce2975ab25a670281f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59673715"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65612799"
 ---
 # <a name="ports-used-in-configuration-manager"></a>Ports utilisés dans Configuration Manager
 
@@ -718,7 +718,7 @@ Après l'installation, vous pouvez modifier le port. Il n’est pas nécessaire 
 #### <a name="bkmk_note4"></a> Note 4 : Trivial FTP (TFTP) Daemon
 Le service système Trivial FTP (TFTP) Daemon ne nécessite pas de nom d’utilisateur ou de mot de passe, et fait partie intégrante des services de déploiement Windows (WDS). Le service Trivial FTP met en œuvre la prise en charge du protocole TFTP qui est défini par les normes RFC suivantes :  
 
-- RFC 350 : TFTP  
+- RFC 1350 : TFTP  
 
 - RFC 2347 : Extension d’option  
 
@@ -730,7 +730,7 @@ Le protocole TFTP est conçu pour prendre en charge les environnements de démar
 
 Le point de distribution compatible PXE et le client présent dans Windows PE sélectionnent des ports à numéro élevé alloués dynamiquement pour les transferts TFTP. Ces ports sont définis par Microsoft entre 49152 et 65535. Pour plus d’informations, consultez [Vue d’ensemble des services et exigences de ports réseau pour le système Windows Server](https://support.microsoft.com/help/832017/service-overview-and-network-port-requirements-for-windows).
 
-Toutefois, lors du démarrage PXE, la carte réseau de l’appareil sélectionne le port à numéro élevé alloué dynamiquement qu’elle utilise durant le transfert TFTP. La carte réseau de l’appareil n’est pas liée aux ports à numéro élevé qui sont alloués dynamiquement et définis par Microsoft. Elle est uniquement liée aux ports définis par la RFC 350. Ce port est compris dans la plage allant de 0 à 65535. Pour plus d’informations sur les ports à numéro élevé et alloués dynamiquement qui sont utilisés par la carte réseau, contactez le fabricant de l’appareil.
+Toutefois, lors du démarrage PXE, la carte réseau de l’appareil sélectionne le port à numéro élevé alloué dynamiquement qu’elle utilise durant le transfert TFTP. La carte réseau de l’appareil n’est pas liée aux ports à numéro élevé qui sont alloués dynamiquement et définis par Microsoft. Elle est uniquement liée aux ports définis par la RFC 1350. Ce port est compris dans la plage allant de 0 à 65535. Pour plus d’informations sur les ports à numéro élevé et alloués dynamiquement qui sont utilisés par la carte réseau, contactez le fabricant de l’appareil.
 
 
 #### <a name="bkmk_note5"></a> Note 5 : Communication entre le serveur de site et les systèmes de site

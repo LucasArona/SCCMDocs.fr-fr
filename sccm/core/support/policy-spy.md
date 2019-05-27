@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 1012ec24-27d9-4193-8236-918d283c7448
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 740dda5c41c28e1648eb24e75fe24a2e22784f3b
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 297aa9f8756b0c7214381e5e688f26cc21645fc4
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56129101"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500856"
 ---
 # <a name="policy-spy"></a>Policy Spy
 
@@ -127,7 +127,7 @@ Le volet des informations du client affiche une liste de propriétés de l’ord
 
 
 
-## <a name="details-pane"></a>Volet de détails
+## <a name="details-pane"></a>Volet Détails
 Le volet de détails affiche des informations détaillées sur la sélection actuelle. Si aucune sélection n’est active, il affiche des informations sur Policy Spy, notamment la version. Sinon, il affiche une représentation MOF (Manage Object Format) de l’élément sélectionné.
 
 Policy Spy utilise sa propre routine de génération du format MOF pour créer un affichage HTML plus convivial que le format MOF en texte brut généré par WMI. Ce comportement permet à Policy Spy d’ajouter les fonctionnalités suivantes pour rendre le format MOF plus lisible :  

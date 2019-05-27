@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 08e0382d-de05-4a76-ba5c-7223173f7066
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3a96f9292256227da6a216a913c7a0be1be5c60d
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 33c10c82207d079dc5abd53c53673627888df955
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56156710"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499738"
 ---
 # <a name="configure-asset-intelligence-in-system-center-configuration-manager"></a>Configurer Asset Intelligence dans System Center Configuration Manager
 
@@ -153,7 +153,7 @@ Outre le téléchargement des nouvelles informations du catalogue Asset Intellig
  Une déclaration de licence générale peut également être importée vers le catalogue Asset Intelligence en utilisant un fichier d'importation de licence de format .csv (délimité par des virgules) créé manuellement.  
 
 > [!NOTE]  
->  Seuls les champs **Nom**, **Éditeur**, **Version**et **Quantité effective** sont requis, mais ils doivent tous être entrés sur la première ligne du fichier d'importation de licence. Tous les champs de date doivent également être affichés dans le format suivant : Jour/mois/année, par exemple, 04/08/2008.  
+>  Seuls les champs **Nom**, **Éditeur**, **Version**et **Quantité effective** sont requis, mais ils doivent tous être entrés sur la première ligne du fichier d'importation de licence. Tous les champs de date doivent être affichés dans le format suivant : Jour/mois/année, par exemple 04/08/2008.  
 
 Asset Intelligence fait correspondre les produits que vous spécifiez dans la déclaration de licence générale en utilisant le nom du produit et la version du produit, mais pas le nom de l'éditeur. Vous devez utiliser un nom de produit dans la déclaration de licence générale qui correspond exactement au nom de produit stocké dans la base de données du site. Asset Intelligence utilise le nombre **Quantité effective** donné dans la déclaration de licence générale et le compare au nombre de produits installés trouvés dans l’inventaire Configuration Manager.  
 

@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 1b931c9d-ffae-4d8e-baa7-c330a152674f
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4d759ada36184ac8a6d1ac59c94c96cdaf234d56
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 2c9f8b65180c4255c5c279d75f012db766163fd6
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56139372"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500757"
 ---
 # <a name="accessibility-features-in-support-center"></a>Fonctionnalités d’accessibilité dans le Centre d’aide et de support
 
@@ -62,7 +62,7 @@ Vous pouvez également utiliser un clavier pour effectuer les tâches courantes 
 |Fermer tous les fichiers journaux<br>(sous l’onglet **Journaux** du Centre d’aide et de support et dans la fenêtre **Visionneuse du journal**)|**Ctrl** + **W** |
 |Rechercher dans les fichiers journaux| - **Ctrl** + **F** : ouvre la boîte de dialogue **Rechercher**, dans laquelle vous pouvez entrer la chaîne de recherche<br> - **F3** : permet de rechercher la correspondance suivante<br> - **Maj** + **F3** : permet de rechercher la correspondance précédente|
 |Rechercher un code d'erreur<br>(sous l’onglet **Journaux** et dans la fenêtre **Visionneuse du journal**)|**Ctrl** + **L** |
-|Copier à partir d'un fichier journal| - **Ctrl** + **C** : Copie le texte du fichier journal<br> - **Ctrl** + **Maj** + **C** : Copie l'entrée du journal sans mise en forme|
+|Copier à partir d'un fichier journal| - **Ctrl** + **C** : Copie le texte du fichier journal<br> - **Ctrl** + **Maj** + **C** : Copie l’entrée du journal sans mise en forme|
 |Filtre rapide sur le texte du fichier journal<br>(sous l’onglet **Journaux** et dans la fenêtre **Visionneuse du journal**)|**Ctrl** + **Maj** + **C** |
 |Annoter un fichier journal<br>(sous l’onglet **Journaux** et dans la fenêtre **Visionneuse du journal**)|**Ctrl** + **Maj** + **N** <sup>[Remarque 1](#bkmk_note1)</sup>|
 |Ouvrir l'aide|**F1**|

@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ffe97408d5de71c9ea67b07649d7b92ad77f0a57
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: a41f144909ba946d3c3bc2f00a1573cad2c9b850
+ms.sourcegitcommit: f531d0a622f220739710b2fe6644ea58d024064a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56143699"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65933324"
 ---
 # <a name="capabilities-in-technical-preview-1612-for-system-center-configuration-manager"></a>Fonctionnalités de la version d’évaluation technique 1612 pour System Center Configuration Manager
 
@@ -318,4 +318,4 @@ Après avoir apporté ces modifications à la configuration, vous pouvez créer 
 
 ## <a name="change-to-configuring-multi-factor-authentication-for-device-enrollment"></a>Modification de la configuration de l’authentification multifacteur pour l’inscription d’appareils
 
-Maintenant que vous pouvez configurer l’authentification multifacteur pour l’inscription d’appareils dans le portail Azure, cette option a été supprimée de la console Configuration Manager. Vous trouverez d’autres informations sur la configuration de l’authentification multifacteur pour l’inscription [dans cette rubrique Microsoft Intune](https://docs.microsoft.com/en-us/intune/deploy-use/multi-factor-authentication-azure-active-directory).
+Maintenant que vous pouvez configurer l’authentification multifacteur pour l’inscription d’appareils dans le portail Azure, cette option a été supprimée de la console Configuration Manager. Vous trouverez d’autres informations sur la configuration de l’authentification multifacteur pour l’inscription [dans cette rubrique Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/multi-factor-authentication-azure-active-directory).

@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 828c31d1-3d70-4412-b1a8-c92e7e504d39
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0da207f92ea2c11266831a0c03f5b846654e83a4
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 34072fe18bc2d0d751938ff536f6d4ba8e4c378b
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56128998"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500945"
 ---
 # <a name="unattended-site-recovery-for-configuration-manager"></a>Récupération de site sans assistance pour Configuration Manager   
 
@@ -44,7 +44,7 @@ ms.locfileid: "56128998"
 
     -   **Obligatoire :** Oui
     -   **Valeurs :** RecoverCCAR
-    -   **Détails :** Récupère un site d'administration centrale
+    -   **Détails :** Récupère un site d’administration centrale.
 
 
 -   **Nom de clé :** CDLatest
@@ -104,7 +104,7 @@ ms.locfileid: "56128998"
 
     -   **Obligatoire :** Peut-être
     -   **Valeurs :** &lt;PathToSiteDatabaseBackupSet\>
-    -   **Détails :** Spécifie le chemin d'accès au jeu de sauvegarde de la base de données du site. La clé **BackupLocation** est requise lorsque vous configurez une valeur de **1** ou **4** pour la clé **ServerRecoveryOptions** , et une valeur de **10** pour la clé **DatabaseRecoveryOptions** .
+    -   **Détails :** Spécifie le chemin du jeu de sauvegarde de la base de données du site. La clé **BackupLocation** est requise lorsque vous configurez une valeur de **1** ou **4** pour la clé **ServerRecoveryOptions** , et une valeur de **10** pour la clé **DatabaseRecoveryOptions** .
 
 
 **Options**
@@ -178,11 +178,11 @@ ms.locfileid: "56128998"
   -   **Valeurs :** 0 ou 1  
        0 = ne pas joindre  
        1 = joindre
-  -   **Détails :** Spécifie si vous souhaitez vous joindre au programme d'amélioration de l'expérience utilisateur.
+  -   **Détails :** Spécifie si vous souhaitez vous joindre au programme d’amélioration de l’expérience utilisateur.
 
 **SQLConfigOptions**
 
--   **Nom de clé :** SQLServerName 
+-   **Nom de clé :** SQLServerName
 
     -   **Obligatoire :** Oui
     -   **Valeurs :** *&lt;SQLServerName\>*
@@ -192,8 +192,8 @@ ms.locfileid: "56128998"
 -   **Nom de clé :** DatabaseName
 
     -   **Obligatoire :** Oui
-    -   **Valeurs :** *&lt;SiteDatabaseName\>* ou *&lt;InstanceName\>*\\*&lt;SiteDatabaseName\>*
-    -   **Détails :** Nom de la base de données SQL Server à créer ou utiliser pour installer la base de données du site d'administration centrale. Spécifiez le nom de base de données qui était utilisé avant la défaillance.
+    -   **Valeurs :** *&lt;SiteDatabaseName\>* ou *&lt;InstanceName\>* \\ *&lt;SiteDatabaseName\>*
+    -   **Détails :** Nom de la base de données SQL Server à créer ou utiliser pour installer la base de données du site d’administration centrale. Spécifiez le nom de base de données qui était utilisé avant la défaillance.
 
         > [!IMPORTANT]  
         >  Si vous n’utilisez pas l’instance par défaut, vous devez spécifier le nom d’instance et le nom de base de données de site.
@@ -213,7 +213,7 @@ ms.locfileid: "56128998"
 
     -   **Obligatoire :** Oui
     -   **Valeurs :** RecoverPrimarySite
-    -   **Détails :** Récupère un site principal
+    -   **Détails :** Récupère un site principal.
 
 
 -   **Nom de clé :** CDLatest
@@ -263,7 +263,7 @@ ms.locfileid: "56128998"
 
     -   **Obligatoire :** Peut-être
     -   **Valeurs :** &lt;PathToSiteDatabaseBackupSet\>
-    -   **Détails :** Spécifie le chemin d'accès au jeu de sauvegarde de la base de données du site. La clé **BackupLocation** est requise lorsque vous configurez une valeur de **1** ou **4** pour la clé **ServerRecoveryOptions** , et une valeur de **10** pour la clé **DatabaseRecoveryOptions** .
+    -   **Détails :** Spécifie le chemin du jeu de sauvegarde de la base de données du site. La clé **BackupLocation** est requise lorsque vous configurez une valeur de **1** ou **4** pour la clé **ServerRecoveryOptions** , et une valeur de **10** pour la clé **DatabaseRecoveryOptions** .
 
 **Options**
 
@@ -339,12 +339,12 @@ ms.locfileid: "56128998"
     -   **Valeurs :** 0 ou 1    
          0 = ne pas joindre  
          1 = joindre
-    -   **Détails :** Spécifie si vous souhaitez vous joindre au programme d'amélioration de l'expérience utilisateur.
+    -   **Détails :** Spécifie si vous souhaitez vous joindre au programme d’amélioration de l’expérience utilisateur.
 
 
 **SQLConfigOptions**
 
--   **Nom de clé :** SQLServerName 
+-   **Nom de clé :** SQLServerName
 
     -   **Obligatoire :** Oui
     -   **Valeurs :** *&lt;SQLServerName\>*
@@ -354,8 +354,8 @@ ms.locfileid: "56128998"
 -   **Nom de clé :** DatabaseName
 
     -   **Obligatoire :** Oui
-    -   **Valeurs :** *&lt;SiteDatabaseName\>* ou *&lt;InstanceName\>*\\*&lt;SiteDatabaseName\>*
-    -   **Détails :** Nom de la base de données SQL Server à créer ou utiliser pour installer la base de données du site d'administration centrale. Spécifiez le nom de base de données qui était utilisé avant la défaillance.
+    -   **Valeurs :** *&lt;SiteDatabaseName\>* ou *&lt;InstanceName\>* \\ *&lt;SiteDatabaseName\>*
+    -   **Détails :** Nom de la base de données SQL Server à créer ou utiliser pour installer la base de données du site d’administration centrale. Spécifiez le nom de base de données qui était utilisé avant la défaillance.
 
         > [!IMPORTANT]    
         >  Si vous n’utilisez pas l’instance par défaut, vous devez spécifier le nom d’instance et le nom de base de données de site.
@@ -378,11 +378,11 @@ ms.locfileid: "56128998"
 
     -   **Obligatoire :** Non
     -   **Valeurs :** &lt;*Intervalle*>
-    -   **Détails :** Spécifie l'intervalle (en minutes) avant une nouvelle tentative de connexion au site d'administration centrale après un échec de connexion. Par exemple, en cas d’échec de la connexion au site d’administration centrale, le site principal attend le nombre de minutes que vous avez spécifié pour CASRetryInterval et réessaie d’établir une connexion.
+    -   **Détails :** Spécifie l’intervalle (en minutes) avant une nouvelle tentative de connexion au site d’administration centrale après un échec de connexion. Par exemple, en cas d’échec de la connexion au site d’administration centrale, le site principal attend le nombre de minutes que vous avez spécifié pour CASRetryInterval et réessaie d’établir une connexion.
 
 
 -   **Nom de clé :** WaitForCASTimeout
 
     -   **Obligatoire :** Non
     -   **Valeurs :** &lt;*Délai d’expiration*>
-    -   **Détails :** Spécifie la valeur de délai d'attente maximal (en minutes) pour qu'un site principal se connecte au site d'administration centrale. Par exemple, si un site principal ne parvient pas à se connecter à un site d'administration centrale, le site principal essaie de nouveau d'établir une connexion selon la valeur de CASRetryInterval jusqu'à ce que le délai WaitForCASTimeout soit atteint. Vous pouvez spécifier une valeur de 0 à 100.
+    -   **Détails :** Spécifie la valeur de délai d’attente maximal (en minutes) pour qu’un site principal se connecte au site d’administration centrale. Par exemple, si un site principal ne parvient pas à se connecter à un site d'administration centrale, le site principal essaie de nouveau d'établir une connexion selon la valeur de CASRetryInterval jusqu'à ce que le délai WaitForCASTimeout soit atteint. Vous pouvez spécifier une valeur de 0 à 100.

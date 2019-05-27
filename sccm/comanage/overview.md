@@ -5,32 +5,34 @@ description: Découvrez comment gérer simultanément des appareils Windows 10 
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 01/14/2019
+ms.date: 04/26/2019
 ms.topic: overview
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c88bf98e035499c271de8acf9d8fa222e5058447
-ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
+ms.openlocfilehash: 1e0ae5c392acd03509f70c19f551731065bc4be2
+ms.sourcegitcommit: 23852dda81bb8496dd10c0a8ec4f740a8e15efc3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "56754916"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64873275"
 ---
 # <a name="what-is-co-management"></a>Qu’est-ce que la cogestion ?
 
 <!-- 1350871 -->
-La cogestion est l’une des principales façons de joindre votre déploiement de Configuration Manager existant au cloud Microsoft 365. Elle vous permet de déverrouiller des fonctionnalités cloud supplémentaires telles que l’accès conditionnel. 
+La cogestion est l’une des principales façons de joindre votre déploiement de Configuration Manager existant au cloud Microsoft 365. Elle vous permet de déverrouiller des fonctionnalités cloud supplémentaires telles que l’accès conditionnel.
 
-La cogestion vous permet de gérer simultanément des appareils Windows 10 à l’aide de Configuration Manager et Microsoft Intune. Elle vous permet d’attacher via le cloud votre investissement existant dans Configuration Manager en ajoutant de nouvelles fonctionnalités. À l’aide de la cogestion, vous avez la possibilité d’utiliser la solution de technologie qui convient le mieux à votre organisation. 
+La cogestion vous permet de gérer simultanément des appareils Windows 10 à l’aide de Configuration Manager et Microsoft Intune. Elle vous permet d’attacher via le cloud votre investissement existant dans Configuration Manager en ajoutant de nouvelles fonctionnalités. À l’aide de la cogestion, vous avez la possibilité d’utiliser la solution de technologie qui convient le mieux à votre organisation.
 
 Quand un appareil Windows 10 dispose du client Configuration Manager et qu’il est inscrit à Intune, vous bénéficiez des avantages des deux services. Vous contrôlez les charges de travail, le cas échéant, pour lesquelles vous utilisez Intune à la place de Configuration Manager comme autorité. Configuration Manager continue de gérer toutes les autres charges de travail, notamment celles que vous ne basculez pas vers Intune, ainsi que toutes les autres fonctionnalités de Configuration Manager que la cogestion ne prend pas en charge.
 
-Vous êtes également en mesure de piloter une charge de travail avec un ensemble distinct d’appareils. Le pilotage vous permet de tester la fonctionnalité Intune avec un sous-ensemble d’appareils avant de passer à un groupe plus important. 
+Vous êtes également en mesure de piloter une charge de travail avec un ensemble distinct d’appareils. Le pilotage vous permet de tester la fonctionnalité Intune avec un sous-ensemble d’appareils avant de passer à un groupe plus important.
 
 ![Diagramme de présentation de la cogestion](media/co-management-overview.png)
 
+> [!Note]  
+> Quand vous gérez des appareils Windows 10 en parallèle avec Configuration Manager et Microsoft Intune, cette configuration est appelée *cogestion*. Quand vous gérez des appareils avec Configuration Manager et que vous vous inscrivez auprès d’un service MDM de tiers, cette configuration est appelée *coexistence*. Le fait d’avoir deux autorités de gestion pour un même appareil peut s’avérer délicat si la gestion n’est pas correctement orchestrée entre les deux. Avec la cogestion, Configuration Manager et Intune équilibrent les [charges de travail](#workloads) pour garantir qu’il n’y a pas de conflits. Cette interaction n’existe pas avec les services de tiers : il existe donc des limitations avec les fonctionnalités de gestion dans le cas de la coexistence. Pour plus d’informations, consultez [Coexistence d’un service MDM de tiers avec Configuration Manager](/sccm/comanage/coexistence).
 
 
 ## <a name="paths-to-co-management"></a>Chemins vers la cogestion
@@ -45,7 +47,7 @@ Pour plus d’informations sur les chemins, consultez [Chemins vers la cogestion
 
 
 
-## <a name="benefits"></a>Avantages 
+## <a name="benefits"></a>Avantages
 
 Quand vous inscrivez les clients Configuration Manager existants dans la cogestion, vous bénéficiez de la valeur immédiate suivante :  
 
@@ -63,7 +65,7 @@ Quand vous inscrivez les clients Configuration Manager existants dans la cogesti
 
 Pour plus d’informations sur cette valeur immédiate de la cogestion, consultez la série de démarrages rapides pour [Connexion au cloud à l’aide de la cogestion](/sccm/comanage/quickstarts).
 
-La cogestion vous permet également d’orchestrer avec Intune pour plusieurs charges de travail. Pour plus d’informations, consultez la section [Charges de travail](#workloads). 
+La cogestion vous permet également d’orchestrer avec Intune pour plusieurs charges de travail. Pour plus d’informations, consultez la section [Charges de travail](#workloads).
 
 
 
@@ -80,7 +82,7 @@ La cogestion présente les prérequis ci-dessous dans les domaines suivants :
 
 ### <a name="licensing"></a>Licences
 
-- Azure AD Premium 
+- Azure AD Premium
 - Licence EMS ou Intune pour tous les utilisateurs  
 
     > [!Note]  
@@ -116,7 +118,7 @@ L’activation de la cogestion elle-même ne nécessite pas l’intégration de 
 
 > [!Note]  
 > Si vous avez un environnement MDM hybride (Intune intégré à Configuration Manager), vous ne pouvez pas activer la cogestion. Toutefois, vous pouvez commencer la migration d’utilisateurs vers Intune autonome, puis activer leurs appareils Windows 10 associés pour la cogestion. Pour plus d’informations sur la migration vers Intune autonome, consultez [Démarrer la migration de MDM hybride vers Intune autonome](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa).  
-> 
+>
 > Si vous utilisez une [autorité mixte](/sccm/mdm/deploy-use/migrate-mixed-authority), effectuez d’abord la migration vers Intune autonome. Ensuite, définissez l’autorité MDM sur Intune avant de configurer la cogestion.<!--SCCMDocs issue #797-->
 
 
@@ -129,21 +131,21 @@ Mettez à niveau vos appareils vers Windows 10, version 1709 ou ultérieure. Po
 
 
 ### <a name="permissions-and-roles"></a>Rôles et autorisations
-<!--SCCMDocs issue #667-->
 
+<!--SCCMDocs issue #667-->
 | Action | Rôle nécessaire |
 |----|----|
 | Configurer une passerelle de gestion cloud dans Configuration Manager | **Gestionnaire d’abonnements** Azure |
 | Créer des applications Azure AD à partir de Configuration Manager | **Administrateur général** Azure AD |
 | Importer des applications Azure dans Configuration Manager | **Administrateur complet** Configuration Manager<br>Aucun autre rôle Azure n’est nécessaire |
-| Activer la cogestion dans Configuration Manager | Utilisateur Azure AD<br>**Administrateur complet** Configuration Manager avec des droits sur **toutes** les étendues.<!--SCCMDoc issue 626--> | 
+| Activer la cogestion dans Configuration Manager | Utilisateur Azure AD<br>**Administrateur complet** Configuration Manager avec des droits sur **toutes** les étendues.<!--SCCMDoc issue 626--> |
 
 Pour plus d’informations sur les rôles Azure, consultez [Présentation des différents rôles](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles).
 
 Pour plus d’informations sur les rôles Configuration Manager, consultez [Principes de base de l’administration basée sur des rôles](/sccm/core/understand/fundamentals-of-role-based-administration).
 
 
-## <a name="workloads"></a>Charges de travail 
+## <a name="workloads"></a>Charges de travail
 
 Vous n’êtes pas obligé de basculer les charges de travail, ou vous pouvez le faire individuellement quand vous êtes prêt. Configuration Manager continue de gérer toutes les autres charges de travail, notamment celles que vous ne basculez pas vers Intune, ainsi que toutes les autres fonctionnalités de Configuration Manager que la cogestion ne prend pas en charge.
 
@@ -182,4 +184,3 @@ Pour plus d’informations, consultez [Guide pratique pour superviser la cogesti
 - [En savoir plus sur la valeur immédiate et la prise en main de la cogestion](/sccm/comanage/quickstarts)  
 
 - [Tutoriel : Activer la cogestion pour les clients Configuration Manager existants](/sccm/comanage/tutorial-co-manage-clients)  
-

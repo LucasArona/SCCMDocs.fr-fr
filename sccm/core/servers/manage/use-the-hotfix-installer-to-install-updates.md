@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: f3058277-c597-4dac-86d1-41b6f7e62b36
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 67d2fc976b08e438c6f19a7fecca03761bb099f6
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 1ca292a5266c19bc4e2b1fbc69dd0c3fe869a58e
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56124728"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500917"
 ---
 # <a name="use-the-hotfix-installer-to-install-updates-for-system-center-configuration-manager"></a>Utiliser le programme d’installation de correctif logiciel pour installer les mises à jour de System Center Configuration Manager
 
@@ -86,7 +86,7 @@ L’Assistant crée également des déploiements que vous pouvez utiliser pour i
  Lors de son exécution, le groupe de mises à jour extrait un fichier ayant le même nom que le sien dans un dossier temporaire sur l'ordinateur, puis il exécute Updatesetup.exe. Updatesetup.exe démarre l’Assistant Mise à jour logicielle pour Configuration Manager&lt;version du produit\> &lt;Numéro d’article de la Base de connaissances\>.  
 
  En fonction de l’étendue de la mise à jour, l’Assistant crée une série de dossiers situés sous le dossier d’installation de System Center Configuration Manager sur le serveur de site. La structure de dossiers se présente de la façon suivante :   
- **\\\\&lt;Nom_serveur\>\SMS_&lt;Code_site\>\Hotfix\\&lt;Numéro_article_Base_connaissances\>\\&lt;Type_MàJ\>\\&lt;plateforme\>**.  
+ **\\\\&lt;Nom_serveur\>\SMS_&lt;Code_site\>\Hotfix\\&lt;Numéro_article_Base_connaissances\>\\&lt;Type_MàJ\>\\&lt;plateforme\>** .  
 
  Le tableau suivant fournit des détails sur les dossiers figurant dans la structure de dossiers :  
 

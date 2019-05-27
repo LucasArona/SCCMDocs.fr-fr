@@ -1,5 +1,5 @@
 ---
-title: Configuration d’une découverte
+title: Configurer la découverte
 titleSuffix: Configuration Manager
 description: Configurez des méthodes de découverte pour trouver des ressources à gérer à partir de votre réseau, d’Active Directory et d’Azure Active Directory.
 ms.date: 08/30/2018
@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 49505eb1-d44d-4121-8712-e0f3d8b15bf5
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6524fb7715c9bc3040996a16b4204464e0505123
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 38b2355159e3ce0472a5a5ceb0ff0a5f2275358d
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56139185"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499539"
 ---
 # <a name="configure-discovery-methods-for-configuration-manager"></a>Configurer les méthodes de découverte de Configuration Manager
 
@@ -37,7 +37,7 @@ Configurez des méthodes de découverte pour trouver des ressources à gérer à
 
 2.  Sélectionnez la méthode de découverte pour le site sur lequel vous voulez activer la découverte.  
 
-3.  Dans le groupe **Propriétés** de l’onglet **Accueil** du ruban, sélectionnez **Propriétés**. Ensuite, dans l’onglet **Général**, sélectionnez l’option **Activer la &lt;méthode de découverte\>**.  
+3.  Dans le groupe **Propriétés** de l’onglet **Accueil** du ruban, sélectionnez **Propriétés**. Ensuite, dans l’onglet **Général**, sélectionnez l’option **Activer la &lt;méthode de découverte\>** .  
 
      Si cette option est déjà activée, vous pouvez désactiver la méthode de découverte en décochant la case.  
 

@@ -2,7 +2,7 @@
 title: À propos de la mise à niveau, de la mise à jour et de l’installation
 titleSuffix: Configuration Manager
 description: Découvrez la différence entre les termes Installation, Mise à jour et Mise à niveau, lors de la gestion de l’infrastructure Configuration Manager.
-ms.date: 1/11/2017
+ms.date: 04/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: df4daee11a72100debb93270fc6e51ab1a5e2622
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 53803d154a871739c5dd8cf7eaff4eebf92fd651
+ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56140042"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65083416"
 ---
 # <a name="about-upgrade-update-and-install-for-site-and-hierarchy-infrastructure"></a>À propos de la mise à niveau, de la mise à jour et de l’installation pour l’infrastructure de site et de hiérarchie
 
@@ -34,11 +34,11 @@ Pour plus d’informations, consultez [Mettre à niveau vers System Center Confi
 
 
 ## <a name="update"></a>Mise à jour
-La *mise à jour* est utilisée pour l’installation de mises à jour dans la console pour System Center Configuration Manager et pour les mises à jour hors bande qui sont des mises à jour qui ne peuvent pas être fournies à partir de la console Configuration Manager. Les mises à jour dans la console peuvent modifier la version de votre site Current Branch (ou site Technical Preview) afin qu’il exécute une version ultérieure. Par exemple, si votre site exécute la version 1606, vous pouvez installer une mise à jour pour la version 1610. Les mises à jour peuvent également installer des correctifs pour un problème connu, sans modifier la version des sites.      
+La *mise à jour* est utilisée pour l’installation de mises à jour dans la console pour System Center Configuration Manager et pour les mises à jour hors bande qui sont des mises à jour qui ne peuvent pas être fournies à partir de la console Configuration Manager. Les mises à jour dans la console peuvent modifier la version de votre site Current Branch (ou site Technical Preview) afin qu’il exécute une version ultérieure. Par exemple, si votre site exécute la version 1806, vous pouvez installer une mise à jour pour la version 1810. Les mises à jour peuvent également installer des correctifs pour un problème connu, sans modifier la version des sites.      
 
 En règle générale, les mises à jour ajoutent des correctifs de sécurité, apportent une amélioration de la qualité et de nouvelles fonctionnalités à votre déploiement existant. Si vous utilisez la branche Technical Preview, une mise à jour peut installer une version plus récente de Technical Preview.
 -   Vous choisissez quand installer la mise à jour dans la console, en commençant par le site de niveau supérieur dans votre hiérarchie.
-- Vous pouvez installer toute mise à jour disponible à partir de la console. Par exemple, si votre site exécute la version 1602 et que les versions 1606 et 1610 sont proposées, envisagez d’installer la version 1610, car chaque version inclut les fonctionnalités qui ont été mises à disposition dans les versions précédentes.
+- Vous pouvez installer toute mise à jour disponible à partir de la console. Par exemple, si votre site exécute la version 1802, et que les versions 1806 et 1810 sont proposées, envisagez d’installer la version 1810, car chaque version inclut les fonctionnalités qui ont été mises à disposition dans les versions précédentes.
 - Une fois l’installation d’une nouvelle mise à jour terminée sur votre site de niveau supérieur, les sites principaux enfants démarrent automatiquement le processus de mise à jour. Toutefois, vous pouvez définir des [fenêtres de maintenance](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkservicewindowa-service-windows-for-site-servers) pour contrôler la planification des mises à jour.
 - Les sites secondaires n’installent pas automatiquement les mises à jour. Vous devez démarrer manuellement la mise à jour à partir de la console Configuration Manager.
 

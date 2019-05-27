@@ -2,27 +2,27 @@
 title: Outils de Configuration Manager
 titleSuffix: Configuration Manager
 description: Découvrez les outils qui vont vous aider à gérer et dépanner votre infrastructure Configuration Manager.
-ms.date: 07/30/2018
+ms.date: 04/17/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 395403dc-6997-4415-93fd-6b1eeb6ba31a
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1479524f08f17aa59f6e7dc771253a4fb6720189
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: b3324189cdf482684cc0738c51fbf336a65ee221
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56131130"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500715"
 ---
 # <a name="configuration-manager-tools"></a>Outils de Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
-Les outils de Configuration Manager comprennent des [outils basés sur le client](#client-tools) et des [outils basés sur le serveur](#server-tools). Utilisez-les pour vous aider à gérer et dépanner votre infrastructure Configuration Manager. 
+Les outils de Configuration Manager comprennent des [outils basés sur le client](#client-tools) et des [outils basés sur le serveur](#server-tools). Utilisez-les pour vous aider à gérer et dépanner votre infrastructure Configuration Manager.
 
 À compter de Configuration Manager version 1806, ces outils sont dans le dossier `CD.Latest\SMSSETUP\Tools` du serveur de site. Aucune installation supplémentaire n’est nécessaire.<!--1357145--> Utilisez ces versions des outils avec Configuration Manager version 1806 et ultérieure.
 
@@ -67,16 +67,17 @@ Tous les systèmes d’exploitation Windows listés comme clients pris en charge
 - [Run Meter Summarization Tool](/sccm/core/support/run-meter-summ) : exécutez la tâche de totalisation du contrôle et analysez les données de mesure de la lumière
 
 > [!Note]  
-> Le dossier ServerTools inclut également les fichiers suivants 
+> Le dossier ServerTools inclut également les fichiers suivants :
+>
 > - AdminUI.WqlQueryEngine.dll
 > - Microsoft.ConfigurationManagement.ManagementProvider.dll
-> - Microsoft.Diagnostics.Tracing.EventSource.dll. 
+> - Microsoft.Diagnostics.Tracing.EventSource.dll
 >
 > Plusieurs outils de serveur nécessitent ces bibliothèques. Vous ne pouvez pas les utiliser directement.  
 
 
 
-## <a name="other-tools"></a>Autres outils
+## <a name="other-tools-and-toolkits"></a>Autres outils et kits de ressources
 
 - [Outil de nettoyage de la bibliothèque de contenu](/sccm/core/plan-design/hierarchy/content-library-cleanup-tool) : utilisez l’exécutable **ContentLibraryCleanup.exe** dans `CD.Latest\SMSSETUP\TOOLS\ContentLibraryCleanup` pour supprimer le contenu orphelin d’un point de distribution.  
 
@@ -85,3 +86,13 @@ Tous les systèmes d’exploitation Windows listés comme clients pris en charge
 - [Outil de réinitialisation des mises à jour](/sccm/core/servers/manage/update-reset-tool) : utilisez l’exécutable **CMUpdateReset.exe** dans `CD.Latest\SMSSETUP\TOOLS\CMUpdateReset` pour résoudre les problèmes liés au téléchargement ou à la réplication des mises à jour dans la console.  
 
 - [Outil de connexion de service](/sccm/core/servers/manage/use-the-service-connection-tool) : utilisez l’exécutable **ServiceConnectionTool.exe** dans `CD.Latest\SMSSETUP\TOOLS\ServiceConnectionTool` pour garder votre site à jour lorsque votre point de connexion de service est hors connexion.  
+
+- [Centre d’aide et de support](/sccm/core/support/support-center) : Collectez des informations à partir de clients pour faciliter l’analyse lors de la résolution de problèmes.
+
+- [Microsoft Deployment Toolkit (MDT)](/sccm/mdt/) : Une collection d’outils, de processus et de conseils pour l’automatisation des déploiements de système d’exploitation sur bureau et serveur.
+
+- [Éditeur de mise à jour Systems Center (SCUP)](/sccm/sum/tools/updates-publisher) : Un outil autonome pour gérer et importer des mises à jour logicielles personnalisées.
+
+- [Extensions SCAP (Security Content Automation Protocol)](/sccm/compliance/plan-design/scap/about-scap) : Analysez et évaluez la conformité de votre environnement avec les lignes de base NIST.
+
+- [Package Conversion Manager](/sccm/apps/pcm/package-conversion-manager) : Convertissez des packages hérités en applications.

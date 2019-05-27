@@ -6,16 +6,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 1f703376-5f2c-4fd2-8209-7028c931ddc7
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 67c82a884a5d3df3b1e61e1f9f2c109ff2b7fef6
-ms.sourcegitcommit: af8693048e6706ffda72572374f56e0bc7dfce2c
+ms.openlocfilehash: 92c51158412b8bc9737c4851fc43dc2a7776488b
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57737339"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65501254"
 ---
 # <a name="use-the-setup-wizard-to-install-configuration-manager-sites"></a>Utilisez l’Assistant Installation pour installer des sites Configuration Manager.
 
@@ -335,7 +335,7 @@ Utilisez la console Configuration Manager pour installer un site secondaire.
 
         - **Nom de domaine complet de SQL Server** : Vérifiez le nom de domaine complet de l’ordinateur exécutant SQL Server. Vous devez utiliser un serveur local exécutant SQL Server pour héberger la base de données de site secondaire, et vous ne pouvez pas modifier ce paramètre.  
 
-        - **Instance SQL Server** : Spécifiez l'instance SQL Server à utiliser en tant que base de données du site secondaire. Laissez cette option vide pour utiliser l'instance par défaut.  
+        - **Instance SQL Server** : Spécifiez l’instance SQL Server à utiliser en tant que base de données du site secondaire. Laissez cette option vide pour utiliser l'instance par défaut.  
 
         - **Nom de base de données de site ConfigMgr** : Spécifiez le nom à utiliser pour la base de données de site secondaire.  
 
@@ -371,7 +371,7 @@ Utilisez la console Configuration Manager pour installer un site secondaire.
 
     - **Réserve d’espace libre sur le lecteur (Mo)** : La valeur que vous configurez pour ce paramètre détermine la quantité d’espace libre sur un lecteur avant que Configuration Manager choisisse un autre lecteur et poursuive le processus de copie sur ce lecteur. Les fichiers de contenu peuvent s'étendre sur plusieurs lecteurs.  
 
-    - **Emplacements du contenu** : Spécifiez les emplacements de contenu pour le partage de bibliothèque et de package de contenu. Configuration Manager copie le contenu à l’emplacement de contenu principal jusqu’à ce que la quantité d’espace libre atteigne la valeur spécifiée pour **Réserve d’espace sur le lecteur (Mo)**.  
+    - **Emplacements du contenu** : Spécifiez les emplacements de contenu pour la bibliothèque de contenu et le partage de package. Configuration Manager copie le contenu à l’emplacement de contenu principal jusqu’à ce que la quantité d’espace libre atteigne la valeur spécifiée pour **Réserve d’espace sur le lecteur (Mo)** .  
 
     Par défaut, les emplacements du contenu sont définis sur **Automatique**. L’emplacement de contenu principal est défini sur le lecteur de disque disposant le plus d’espace lors de l’installation. L’emplacement secondaire, quant à lui, est attribué au deuxième lecteur de disque disposant le plus d’espace. Quand le lecteur principal et le lecteur secondaire atteignent la réserve d’espace libre sur le lecteur, Configuration Manager sélectionne un autre lecteur disponible ayant le plus d’espace disque libre et poursuit le processus de copie.  
 

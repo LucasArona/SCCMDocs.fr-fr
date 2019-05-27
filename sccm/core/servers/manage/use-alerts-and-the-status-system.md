@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 7341cc6e-9e08-41e4-bcc6-6c1ff12e85ca
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 70e19304d63c9660a685b37db19219ba38981b18
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 52c501c30d2eb4ecea3d7830d0f0c3bb61262137
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56133450"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65497228"
 ---
 # <a name="use-alerts-and-the-status-system-for-system-center-configuration-manager"></a>Utiliser des alertes et le système d’état pour System Center Configuration Manager
 
@@ -211,7 +211,7 @@ Configurez des alertes et utilisez le système d’état intégré pour rester i
 
 |Tâche de gestion|Détails|  
     |---------------------|-------------|  
-    |**Configurer**|Ouvre la boîte de dialogue *Propriétés de* **&lt;nom de l’alerte\>** où vous pouvez modifier le nom, la gravité et les seuils de l’alerte sélectionnée. Si vous modifiez la gravité de l’alerte, cette configuration affecte la façon dont les alertes sont affichées dans la console Configuration Manager.|  
+    |**Configurer**|Ouvre la boîte de dialogue *Propriétés de*  **&lt;nom de l’alerte\>** où vous pouvez modifier le nom, la gravité et les seuils de l’alerte sélectionnée. Si vous modifiez la gravité de l’alerte, cette configuration affecte la façon dont les alertes sont affichées dans la console Configuration Manager.|  
     |**Modifier les commentaires**|Entrez un commentaire pour les alertes sélectionnées. Ces commentaires s’affichent avec l’alerte dans la console Configuration Manager.|  
     |**Reporter**|Suspend la surveillance de l’alerte jusqu’à la date spécifiée. À ce moment-là, l’état de l’alerte est mis à jour.<br /><br /> Vous pouvez reporter une alerte uniquement quand celle-ci est active.|  
     |**Créer un abonnement**|Ouvre la boîte de dialogue **Nouvel abonnement** où vous pouvez créer un abonnement par courrier électronique à l’alerte sélectionnée.|  
@@ -229,7 +229,7 @@ Configurez des alertes et utilisez le système d’état intégré pour rester i
     > [!NOTE]  
     >  Vous ne pouvez pas configurer d'alertes pour les regroupements d'utilisateurs.  
 
-3.  Sous l'onglet **Alertes** de la boîte de dialogue **Propriétés de** *&lt;Nom du regroupement*\>, cliquez sur **Ajouter**.  
+3.  Sous l'onglet **Alertes** de la boîte de dialogue **Propriétés de**  *&lt;Nom du regroupement*\>, cliquez sur **Ajouter**.  
 
     > [!NOTE]  
     >  L'onglet **Alertes** n'est visible que si le rôle de sécurité auquel vous êtes associé dispose d'autorisations pour les alertes.  
@@ -244,7 +244,7 @@ Configurez des alertes et utilisez le système d’état intégré pour rester i
 
     -   **Déclencher l'alerte** : spécifiez le pourcentage seuil pour l'alerte.  
 
-6.  Cliquez sur **OK** pour fermer la boîte de dialogue **Propriétés de** *&lt;Nom du regroupement*\>.  
+6.  Cliquez sur **OK** pour fermer la boîte de dialogue **Propriétés de**  *&lt;Nom du regroupement*\>.  
 
 ##### <a name="to-configure-email-notification-for-alerts"></a>Pour configurer une notification par courrier électronique pour les alertes  
 
@@ -256,11 +256,11 @@ Configurez des alertes et utilisez le système d’état intégré pour rester i
 
     -   **Activer les notifications par e-mail pour les alertes** : Cochez cette case pour permettre à Configuration Manager d’utiliser un serveur SMTP pour envoyer des alertes par e-mail.  
 
-    -   **Nom de domaine complet ou adresse IP du serveur SMTP pour envoyer des alertes par e-mail** : entrez le nom de domaine complet (FQDN) ou l'adresse IP et le port SMTP du serveur de messagerie à utiliser pour ces alertes.  
+    -   **Nom de domaine complet ou adresse IP du serveur SMTP pour envoyer des alertes par e-mail** : entrez le nom de domaine complet (FQDN) ou l’adresse IP et le port SMTP du serveur de messagerie à utiliser pour ces alertes.  
 
     -   **Compte de connexion au serveur SMTP** : Spécifiez la méthode d’authentification que Configuration Manager doit utiliser pour se connecter au serveur de messagerie.  
 
-    -   **Adresse de l’expéditeur pour les alertes par e-mail** : spécifiez l'adresse électronique émettrice des alertes électroniques.  
+    -   **Adresse de l’expéditeur pour les alertes par e-mail** : spécifiez l’adresse e-mail émettrice des alertes.  
 
     -   **Tester le serveur SMTP** : Envoie un e-mail de test à l’adresse électronique spécifiée dans **Adresse de l’expéditeur pour les alertes par e-mail**.  
 
@@ -274,11 +274,11 @@ Configurez des alertes et utilisez le système d’état intégré pour rester i
 
 3.  Dans la boîte de dialogue **Nouvel abonnement** , spécifiez les éléments suivants :  
 
-    -   **Nom** : entrez le nom de l'abonnement par courrier électronique. Vous pouvez entrer jusqu'à 255 caractères.  
+    -   **Nom** : entrez le nom de l’abonnement e-mail. Vous pouvez entrer jusqu'à 255 caractères.  
 
-    -   **Adresse e-mail** : entrez les adresses de messagerie de destination de l'alerte. Vous pouvez séparer plusieurs adresses de messagerie par un point-virgule.  
+    -   **Adresse e-mail** : entrez les adresses e-mail de destination de l’alerte. Vous pouvez séparer plusieurs adresses de messagerie par un point-virgule.  
 
-    -   **Langue de l’e-mail** : Dans la liste, spécifiez la langue du courrier électronique.  
+    -   **Langue de l’e-mail** : Dans la liste, spécifiez la langue de l’e-mail.  
 
 4.  Cliquez sur **OK** pour fermer la boîte de dialogue **Nouvel abonnement** et créer l'abonnement par courrier électronique.  
 
@@ -288,15 +288,15 @@ Configurez des alertes et utilisez le système d’état intégré pour rester i
 ###  <a name="BKMK_MonitorAlerts"></a> Surveiller les alertes  
  Vous pouvez consulter les alertes dans le nœud **Alertes** de l'espace de travail **Surveillance** . Les alertes présentent l'un des états d'alerte suivants :  
 
-- **Jamais déclenché** : la condition de l'alerte n'a pas été remplie.  
+- **Jamais déclenché** : la condition de l’alerte n’a pas été remplie.  
 
-- **Actif** : la condition de l'alerte est remplie.  
+- **Actif** : la condition de l’alerte est remplie.  
 
-- **Annulé** : la condition d'une alerte active n'est plus remplie. Cet état indique que la condition qui a entraîné l'alerte est maintenant résolue.  
+- **Annulé** : la condition d’une alerte active n’est plus remplie. Cet état indique que la condition qui a entraîné l'alerte est maintenant résolue.  
 
 - **Reporté à plus tard** : un utilisateur administratif a configuré Configuration Manager pour évaluer l’état de l’alerte ultérieurement.  
 
-- **Disabled** : l'alerte a été désactivée par un utilisateur administratif. Lorsqu'une alerte présente cet état, Configuration Manager ne la met pas à jour même si l'état de l'alerte change.  
+- **Disabled** : l’alerte a été désactivée par un utilisateur administratif. Lorsqu'une alerte présente cet état, Configuration Manager ne la met pas à jour même si l'état de l'alerte change.  
 
   Vous pouvez effectuer l'une des actions suivantes lorsque Configuration Manager génère une alerte :  
 

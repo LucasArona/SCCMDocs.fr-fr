@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8e79ec4b19ad45c49438ef273bcaf031754cf7e7
-ms.sourcegitcommit: f3dd8405018fe1043434386be15c16752c1a4a3c
+ms.openlocfilehash: 40cb1a96771181b395ec2f628e0f0c3c2efe29b7
+ms.sourcegitcommit: 53f2380ac67025fb4a69fc1651edad15d98e0cdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57558131"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65673312"
 ---
 # <a name="how-to-create-collections-in-configuration-manager"></a>Comment créer des regroupements dans Configuration Manager
 
@@ -115,7 +115,7 @@ vous créez un regroupement qui comporte une seule règle d’inclusion de regro
 
     - **Planifier une mise à jour complète sur ce regroupement** : Planifiez une évaluation complète régulière de l’appartenance au regroupement.  
 
-        À partir de la version 1810, les changements suivants apportés au comportement d’évaluation de regroupement peuvent améliorer les performances de site :<!--3607726-->  
+        À compter de la version 1810, les changements suivants apportés au comportement d’évaluation des regroupements peuvent améliorer les performances du site :<!--3607726-->  
 
         - Auparavant, lorsque vous configuriez une planification sur un regroupement basé sur une requête, le site continuait à évaluer la requête que le paramètre de regroupement **Planifier une mise à jour complète sur ce regroupement** soit activé ou pas. Pour désactiver entièrement la planification, vous deviez modifier la planification sur **Aucun**. 
 
@@ -171,7 +171,7 @@ Dans la boîte de dialogue **Propriétés de la règle de requête** , définiss
 
 - **Classe de ressource** : sélectionnez le type de ressource à rechercher et à ajouter au regroupement. Sélectionnez dans les valeurs **Ressource système** pour rechercher des données d'inventaire renvoyées par les ordinateurs clients ou **Ordinateur inconnu** pour sélectionner dans les valeurs renvoyées par les ordinateurs inconnus.  
 
-- **Modifier l’instruction de la requête** : Ouvre la boîte de dialogue **Propriétés de l’instruction de requête** dans laquelle vous pouvez créer une requête à utiliser comme règle pour le regroupement. Pour plus d’informations sur les requêtes, consultez [Informations techniques de référence sur les requêtes](/sccm/core/servers/manage/queries-technical-reference).  
+- **Modifier l’instruction de la requête** : Ouvre la boîte de dialogue **Propriétés de l’instruction de requête** dans laquelle vous pouvez créer une requête à utiliser comme règle pour le regroupement. Pour plus d’informations sur les requêtes, consultez [Présentation des requêtes](/sccm/core/servers/manage/introduction-to-queries).  
 
 
 ### <a name="bkmk-category"></a> Règle de catégorie d’appareil
@@ -218,3 +218,10 @@ Pour plus d’informations sur l’exportation de regroupements, consultez [Comm
 
 5. Terminez l'Assistant pour importer le regroupement. Le nouveau regroupement figure dans le nœud **Regroupements d’utilisateurs** ou **Regroupements de périphériques** de l’espace de travail **Ressources et Conformité** . Actualisez ou rechargez la console Configuration Manager pour afficher les membres du regroupement récemment importé.  
 
+## <a name="bkmk_powershell"></a> Utilisation de PowerShell
+
+PowerShell peut être utilisé pour créer et importer des regroupements.  Pour plus d'informations, voir :
+
+* [New-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmcollection)
+* [Set-CMCollection](https://docs.microsoft.com/powershell/module/ConfigurationManager/Set-CMCollection)
+* [Import-CMCollection](https://docs.microsoft.com/powershell/module/ConfigurationManager/Import-CMCollection)

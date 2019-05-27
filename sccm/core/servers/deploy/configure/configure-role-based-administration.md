@@ -6,16 +6,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 57413dd3-b2f8-4a5f-b27f-8464d357caff
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 554e67e171fe5b800d231d257105531dcd633baf
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 73583d4dea93cefcbe9dd9615671606112cc8860
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56131572"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65498945"
 ---
 # <a name="configure-role-based-administration-for-configuration-manager"></a>Configurer l’administration basée sur des rôles pour Configuration Manager   
 
@@ -151,7 +151,7 @@ Dans Configuration Manager, l’administration basée sur des rôles combine des
     > [!NOTE]  
     >  Pour l'administration basée sur la console, seuls les utilisateurs du domaine ou les groupes de sécurité peuvent devenir des utilisateurs administratifs.  
 
-5.  Dans **Associated security roles (Rôles de sécurité associés)**, choisissez **Ajouter** pour ouvrir la liste des rôles de sécurité disponibles, activez la case à cocher d’un ou de plusieurs rôles de sécurité, puis choisissez **OK**.  
+5.  Dans **Associated security roles (Rôles de sécurité associés)** , choisissez **Ajouter** pour ouvrir la liste des rôles de sécurité disponibles, activez la case à cocher d’un ou de plusieurs rôles de sécurité, puis choisissez **OK**.  
 
 6.  Sélectionnez l’une des deux options suivantes pour définir le comportement de l’objet sécurisable pour le nouvel utilisateur :  
 
@@ -175,9 +175,9 @@ Dans Configuration Manager, l’administration basée sur des rôles combine des
 
 -   **Toutes les instances des objets liés aux rôles de sécurité assignés** : Cette option associe l’utilisateur administratif avec l’étendue **Tous** et les regroupements **Tous les systèmes** et **Tous les utilisateurs et groupes d’utilisateurs**. Les rôles de sécurité attribués à l'utilisateur définissent l'accès aux objets.  
 
--   **Uniquement les instances d’objets assignées aux étendues de sécurité et regroupements spécifiés** : cette option associe l'utilisateur administratif aux mêmes étendues de sécurité et regroupements qui sont associés au compte que vous utilisez pour configurer l'utilisateur administratif. Cette option prend en charge l'ajout ou la suppression de rôles de sécurité et de regroupements pour personnaliser l'étendue administrative de l'utilisateur administratif.  
+-   **Uniquement les instances d’objets assignées aux étendues de sécurité et regroupements spécifiés** : cette option associe l’utilisateur administratif aux mêmes étendues de sécurité et regroupements qui sont associés au compte que vous utilisez pour configurer l’utilisateur administratif. Cette option prend en charge l'ajout ou la suppression de rôles de sécurité et de regroupements pour personnaliser l'étendue administrative de l'utilisateur administratif.  
 
--   **Associer des rôles de sécurité assignés à des étendues de sécurité et des regroupements spécifiques** : cette option vous permet de créer des associations spécifiques entre des rôles de sécurité individuels et des étendues de sécurité et des regroupements spécifiques pour l'utilisateur.  
+-   **Associer des rôles de sécurité assignés à des étendues de sécurité et des regroupements spécifiques** : cette option vous permet de créer pour l’utilisateur des associations entre des rôles de sécurité et des regroupements et étendues de sécurité.  
 
     > [!NOTE]  
     >  Cette option est disponible uniquement lorsque vous modifiez les propriétés d'un utilisateur administratif.  

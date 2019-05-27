@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 1392797b-76cb-46b4-a3e4-8f349ccaa078
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db5e58d82f12ceaac5ad0da66a0836f1d3d913d6
-ms.sourcegitcommit: 8803a64692f3edc0422b58f6c3037a8796374cc8
+ms.openlocfilehash: d719f35ced60d868cd527dc82769595457d69228
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "57881807"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499410"
 ---
 # <a name="site-and-site-system-prerequisites-for-configuration-manager"></a>Prérequis des sites et systèmes de site pour Configuration Manager
 
@@ -516,7 +516,8 @@ La configuration IIS par défaut est nécessaire.
 
 -   Pour plus d’informations, consultez [Planifier les mises à jour logicielles](/sccm/sum/plan-design/plan-for-software-updates).  
 
-
+> [!NOTE]  
+> Lorsque vous utilisez un point de mise à jour logicielle sur un serveur autre que le serveur de site, vous devez installer la console d’administration WSUS sur le serveur de site.   
 
 ##  <a name="bkmk_2012SMPpreq"></a> Point de migration d'état  
 <!--SCCMDocs issue 645-->

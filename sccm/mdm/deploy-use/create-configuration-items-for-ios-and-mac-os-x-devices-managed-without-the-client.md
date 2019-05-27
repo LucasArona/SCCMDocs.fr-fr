@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 690aefeac875e3c3f39d5801bdb33d69ccecb45e
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 1d511df5dc4b6e29a86d4eabacec9037ee204ecc
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56135818"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66176737"
 ---
 # <a name="how-to-create-configuration-items-for-ios-and-mac-os-x-devices-managed-with-intune"></a>Comment créer des éléments de configuration pour les appareils iOS et Mac OS X gérés via Microsoft Intune
 Utilisez l’élément de configuration System Center Configuration Manager **iOS et Mac OS X** pour gérer les paramètres des appareils iOS et Mac OS X qui sont inscrits dans Microsoft Intune ou gérés localement par Configuration Manager.  
@@ -92,7 +92,7 @@ Utilisez l’élément de configuration System Center Configuration Manager **iO
 |**Assistant vocal lors du verrouillage**|Autorise l'utilisation d'une application d'assistance vocale comme Siri lorsque l'appareil est verrouillé.|  
 |**Capture d'écran**|Permet de prendre une capture d'écran de l'affichage de l'appareil.|  
 |**Client chat vidéo**|Autorise l’utilisation des applications de conversation vidéo comme Facetime.|  
-|**Jeux multijoueur**|Permet de jouer avec d'autres joueurs sur Internet.|  
+|**Jeux multijoueur**|Vous permet de jouer avec d’autres joueurs sur internet.|  
 |**Logiciel de portefeuille personnel lors du verrouillage**|Autorise l'utilisation d'un logiciel de portefeuille personnel comme Passbook.|  
 |**Envoi des données de diagnostic**|Autorisez l'envoi des journaux d'application.|  
 |**Notifications Sécurité et maintenance**|Autorisez l’utilisateur à accéder à l’affichage des notifications sans déverrouiller l’appareil.|
@@ -116,8 +116,8 @@ Utilisez l’élément de configuration System Center Configuration Manager **iO
 |**Claviers prédictifs** (supervisés uniquement)|Autorisez l’utilisation de claviers prédictifs suggérant des mots à l’utilisateur.|
 |**Vérification orthographique au clavier** (supervisée uniquement)|Autorisez la vérification orthographique sur l’appareil.|
 |**Modification des paramètres de notification** (supervisée uniquement)|Autorisez l’utilisateur à modifier les paramètres de notification sur l’appareil.|
-|**Retourner les résultats d’Internet dans la recherche Spotlight** (supervisé uniquement)|Autorisez la recherche Spotlight à se connecter à Internet pour fournir davantage de résultats.|
-|**Utiliser Siri pour interroger le contenu généré par l’utilisateur à partir d’Internet** (supervisé uniquement)|Autorisez Siri à accéder à des sites Web pour répondre aux questions.|
+|**Retourner des résultats à partir d’internet dans la recherche Spotlight** (mode supervisé uniquement)|Permettent la recherche Spotlight à se connecter à internet pour fournir des résultats.|
+|**Utiliser Siri pour interroger le contenu généré par l’utilisateur à partir d’internet** (mode supervisé uniquement)|Autorisez Siri à accéder à des sites Web pour répondre aux questions.|
 
   
 ###  <a name="store"></a>Magasin  
@@ -138,7 +138,7 @@ Utilisez l’élément de configuration System Center Configuration Manager **iO
   
 |Nom du paramètre|Détails|  
 |------------------|-------------|  
-|**Navigateur par défaut**|L'utilisateur peut modifier le navigateur Internet par défaut.|  
+|**Navigateur par défaut**|Utilisateur peut modifier le navigateur internet par défaut.|  
 |**Remplissage automatique**|L'utilisateur peut modifier les paramètres de saisie semi-automatique dans le navigateur.|  
 |**Active scripting**|Le navigateur peut exécuter des scripts, tels que les scripts ActiveX.|  
 |**Bloqueur de fenêtres publicitaires**|Active ou désactive le bloqueur de fenêtres publicitaires du navigateur.|  

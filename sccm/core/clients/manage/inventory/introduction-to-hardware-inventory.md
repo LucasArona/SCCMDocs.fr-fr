@@ -2,21 +2,21 @@
 title: 'Inventaire matériel '
 titleSuffix: Configuration Manager
 description: Obtenez une présentation de l’inventaire matériel dans System Center Configuration Manager.
-ms.date: 02/22/2017
+ms.date: 05/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
 ms.assetid: 3969952e-9d05-49c9-82a2-e7e90ccef511
-author: aczechowski
+author: mestew
+ms.author: mstewart
 manager: dougeby
-ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 65060281c020615c9411f98c250222f2386002bd
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 212bafed34022f6f6620e21e87fee2870a8f869e
+ms.sourcegitcommit: 53f2380ac67025fb4a69fc1651edad15d98e0cdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56156438"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65673358"
 ---
 # <a name="introduction-to-hardware-inventory-in-system-center-configuration-manager"></a>Présentation de l’inventaire matériel dans System Center Configuration Manager
 
@@ -25,10 +25,11 @@ ms.locfileid: "56156438"
 Utilisez l’inventaire matériel dans System Center Configuration Manager pour recueillir des informations sur la configuration matérielle des appareils clients de votre organisation. Pour recueillir l'inventaire matériel, le paramètre **Activer l'inventaire matériel sur les clients** doit être activé dans les paramètres client.  
 
  Une fois l’inventaire matériel activé et un cycle d’inventaire matériel exécuté par le client, ce dernier envoie les informations à un point de gestion sur le site du client. Le point de gestion transfère ensuite les informations d’inventaire au serveur de site Configuration Manager, qui les stocke dans la base de données du site. L'inventaire matériel s'exécute sur les clients en fonction de la planification que vous spécifiez dans les paramètres du client.  
+## <a name="view-hardware-inventory"></a>Afficher l’inventaire matériel 
 
  Vous pouvez utiliser plusieurs méthodes pour afficher les données d’inventaire matériel que Configuration Manager recueille. Ces référentiels sont notamment les suivants :  
 
-- [Créer des requêtes qui retournent des appareils basés sur une configuration matérielle spécifique](../../../../core/servers/manage/queries-technical-reference.md).  
+- [Créer des requêtes qui retournent des appareils basés sur une configuration matérielle spécifique](../../../../core/servers/manage/introduction-to-queries.md).  
 
 - [Créer des regroupements basés sur des requêtes qui reposent sur une configuration matérielle spécifique](../../../../core/clients/manage/collections/introduction-to-collections.md). Les appartenances à un regroupement basé sur une requête sont mises à jour automatiquement selon un calendrier. Vous pouvez utiliser des regroupements pour plusieurs tâches, notamment le déploiement de logiciel. .  
 
@@ -46,8 +47,10 @@ Utilisez l’inventaire matériel dans System Center Configuration Manager pour 
 ## <a name="extending-configuration-manager-hardware-inventory"></a>Extension de l’inventaire matériel Configuration Manager  
  En plus de l’inventaire matériel intégré dans Configuration Manager, vous pouvez également utiliser une des méthodes suivantes pour étendre l’inventaire matériel en vue de collecter des informations supplémentaires :  
 
-- Vous pouvez activer, désactiver, ajouter et supprimer des classes d’inventaire pour l’inventaire matériel à partir de la console Configuration Manager.|  
+- Vous pouvez activer, désactiver, ajouter et supprimer des classes d’inventaire pour l’inventaire matériel à partir de la console Configuration Manager.  
 - Utilisez des fichiers NOIDMIF pour collecter des informations sur les appareils clients qui ne peuvent pas être inventoriés par Configuration Manager. Par exemple, vous pouvez souhaiter recueillir des informations numéros de périphérique actif qui existe uniquement en tant qu'étiquette sur le périphérique. Inventaire NOIDMIF est automatiquement associé à l'appareil client collectées à partir de.  
-- Utilisez des fichiers IDMIF pour collecter des informations sur les ressources qui ne sont associées à aucun client Configuration Manager ; par exemple, les projecteurs, les photocopieurs et les imprimantes réseau.  
+- Utilisez des fichiers IDMIF pour collecter des informations sur les ressources qui ne sont associées à aucun client Configuration Manager ; par exemple, les projecteurs, les photocopieurs et les imprimantes réseau. 
 
-  Pour plus d’informations sur l’utilisation de ces méthodes pour étendre l’inventaire matériel de Configuration Manager, consultez [Guide pratique pour configurer l’inventaire matériel dans System Center Configuration Manager](../../../../core/clients/manage/inventory/configure-hardware-inventory.md).  
+
+## <a name="next-steps"></a>Étapes suivantes
+Pour plus d’informations sur l’utilisation de ces méthodes pour étendre l’inventaire matériel de Configuration Manager, consultez [Guide pratique pour configurer l’inventaire matériel dans System Center Configuration Manager](../../../../core/clients/manage/inventory/configure-hardware-inventory.md).  

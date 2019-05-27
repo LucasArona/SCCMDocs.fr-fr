@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 19539f4d-1667-4b4c-99a1-9995f12cf5f7
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8a55ec24a70e6059bb638d1d7ddfc7651574055
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 8506996f7b769003c937de69a9c7f659341c4294
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56134365"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65501025"
 ---
 #  <a name="recover-a-configuration-manager-site"></a>Récupération d'un site Configuration Manager
 
@@ -73,7 +73,7 @@ Sélectionnez ensuite l’option **Récupérer un site** . Vous disposez des opt
 #### <a name="recover-the-site-server-using-an-existing-backup"></a>Récupérer le serveur de site à l’aide d’une sauvegarde existante
 Utilisez cette option quand vous disposez d’une sauvegarde de Configuration Manager du serveur de site antérieure à la défaillance du site. Le site crée cette sauvegarde dans le cadre de la tâche de maintenance de **sauvegarde du serveur de site**. Le site est réinstallé et les paramètres du site sont configurés en fonction du site qui a été sauvegardé.  
 
-#### <a name="reinstall-the-site-server"></a>Réinstaller le serveur de site.
+#### <a name="reinstall-the-site-server"></a>Réinstaller le serveur de site
 Utilisez cette option si vous ne possédez pas de sauvegarde du serveur de site. Le serveur de site est réinstallé et vous devez spécifier les paramètres du site, comme vous le feriez lors d’une installation initiale.  
 
 -   Utilisez les mêmes code de site et nom de base de données de site que ceux que vous avez utilisés lors de l’installation initiale du site défaillant.  
@@ -114,7 +114,7 @@ Utilisez cette option quand vous avez déjà récupéré la base de données de 
 
 - Dans une hiérarchie, lors de la récupération d’une base de données de site principale, le processus de récupération récupère à partir du site d’administration centrale toute modification apportée à la base de données de site après la dernière sauvegarde. Lors de la restauration du site d’administration centrale, le processus de récupération récupère ces modifications à partir d’un site principal de référence. Quand vous récupérez la base de données de site pour un site principal autonome, vous perdez les modifications effectuées au niveau du site après la dernière sauvegarde.   
 
-#### <a name="skip-database-recovery"></a>Ignorer la récupération de base de données.
+#### <a name="skip-database-recovery"></a>Ignorer la récupération de base de données
 Utilisez cette option quand aucune perte de données ne s’est produite sur le serveur de base de données de site Configuration Manager. Cette option est valide uniquement lorsque la base de données de site se trouve sur un ordinateur différent du serveur de site que vous récupérez.  
 
 
@@ -133,7 +133,7 @@ Le processus de réinitialisation de site ou de données globales remplace les d
 - Les données copiées à partir du site XYZ sont insérées dans la base de données de site du site ABC.
 
 #### <a name="example-scenario-1-the-primary-site-reinitializes-the-global-data-from-the-central-administration-site"></a>Exemple de scénario 1 : Le site principal réinitialise les données globales à partir du site d’administration centrale  
-Le processus de récupération supprime les données globales existantes pour le site principal dans la base de données du site principal et remplace les données par les données globales copiées à partir du site d'administration centrale.
+Le processus de récupération supprime les données globales existantes pour le site principal dans la base de données du site principal et remplace les données par les données globales copiées à partir du site d’administration centrale.
 
 #### <a name="example-scenario-2-the-central-administration-site-reinitializes-the-site-data-from-a-primary-site"></a>Exemple de scénario 2 : Le site d’administration centrale réinitialise les données du site à partir d’un site principal 
 Le processus de récupération supprime les données de site existantes pour ce site principal dans la base de données du site d’administration centrale. Il remplace les données par les données de site copiées à partir du site principal. Les données de site d’autres sites principaux ne sont pas affectées.
@@ -154,19 +154,19 @@ Suite à la restauration d’une base de données de site à partir d’une sauv
 
      - **Données globales** : Le site d’administration centrale réinitialise les données globales à partir du site principal de référence, si vous le spécifiez. Ensuite, tous les autres sites principaux réinitialisent les données globales à partir du site d'administration centrale. Si vous ne spécifiez pas de site de référence, tous les sites principaux réinitialisent les données globales à partir du site d’administration centrale. Il s’agit des données qui ont été restaurées à partir de la sauvegarde.  
 
-     - **Données de site** : Le site d'administration centrale réinitialise les données du site à partir de chaque site principal.  
+     - **Données de site** : Le site d’administration centrale réinitialise les données du site à partir de chaque site principal.  
 
 #### <a name="recovered-site-is-a-primary-site"></a>Le site récupéré est un site principal
 - Sauvegarde de base de données pendant la période de rétention du suivi des modifications  
 
-     - **Données globales** : Les modifications apportées aux données globales après la sauvegarde sont répliquées à partir du site d'administration centrale.  
+     - **Données globales** : Les modifications apportées aux données globales après la sauvegarde sont répliquées à partir du site d’administration centrale.  
 
-     - **Données de site** : Le site d'administration centrale réinitialise les données du site à partir du site principal. Les modifications après la sauvegarde sont perdues. Les clients regénèrent la plupart des données quand ils envoient des informations au site principal.  
+     - **Données de site** : Le site d’administration centrale réinitialise les données du site à partir du site principal. Les modifications après la sauvegarde sont perdues. Les clients regénèrent la plupart des données quand ils envoient des informations au site principal.  
 
 - Sauvegarde de base de données antérieure à la période de rétention du suivi des modifications  
-     - **Données globales** : Le site principal réinitialise les données globales à partir du site d'administration centrale.  
+     - **Données globales** : Le site principal réinitialise les données globales à partir du site d’administration centrale.  
 
-     - **Données de site** : Le site d'administration centrale réinitialise les données du site à partir du site principal. Les modifications après la sauvegarde sont perdues. Les clients regénèrent la plupart des données quand ils envoient des informations au site principal.  
+     - **Données de site** : Le site d’administration centrale réinitialise les données du site à partir du site principal. Les modifications après la sauvegarde sont perdues. Les clients regénèrent la plupart des données quand ils envoient des informations au site principal.  
 
 
 

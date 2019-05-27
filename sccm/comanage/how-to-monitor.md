@@ -2,7 +2,7 @@
 title: Surveiller la cogestion
 titleSuffix: Configuration Manager
 description: Utilisez le tableau de bord de cogestion pour consulter les informations sur les appareils cogérés.
-ms.date: 01/14/2019
+ms.date: 04/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7c731692bc2277cc5ce97e079387b392ca09ff3e
-ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
+ms.openlocfilehash: f10e71bbf3099bad4d367f068c4a5f9e098f97eb
+ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "56754928"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65083276"
 ---
 # <a name="how-to-monitor-co-management-in-configuration-manager"></a>Comment superviser la cogestion dans Configuration Manager
 
@@ -172,6 +172,7 @@ Pour plus d’informations, consultez [Valeurs d’erreur d’inscription MDM](h
 
 Deux stratégies sont créées dans le nœud **Déploiements** de l’espace de travail **Analyse**. Une stratégie est destinée au groupe pilote et l’autre à la production. Ces stratégies signalent uniquement le nombre d’appareils auxquels Configuration Manager a appliqué la stratégie. Elles ne prennent pas en considération le nombre d’appareils inscrits dans Intune, ce qui est obligatoire pour pouvoir cogérer des appareils.  
 
+La stratégie de production (CoMgmtSettingsProd) est destinée au regroupement **Tous les systèmes**. Elle a une condition d’applicabilité qui vérifie le type et la version du système d’exploitation. Si le client est un système d’exploitation serveur ou n’est pas Windows 10, la stratégie ne s’applique pas et aucune action n’est effectuée.
 
 
 ## <a name="wmi-device-data"></a>Données de l’appareil WMI

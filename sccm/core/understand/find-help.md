@@ -2,7 +2,7 @@
 title: Trouver de l’aide
 titleSuffix: Configuration Manager
 description: Trouvez des ressources pour obtenir plus d’informations sur Configuration Manager.
-ms.date: 07/30/2018
+ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9440a4873b6011ed4a7394c335531afc72ac5d97
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.openlocfilehash: e767d46c81e3942efb44d9d94ba7f66ecd1f5281
+ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59802544"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65083117"
 ---
 # <a name="find-help-for-using-configuration-manager"></a>Trouver de l’aide pour utiliser Configuration Manager
 
@@ -112,7 +112,7 @@ Quand vous **envoyez un sourire** ou que vous **envoyez un smiley mécontent**, 
 
 1. Cliquez sur **Enregistrer** en bas de la fenêtre **Fournir des commentaires**. 
 2. Enregistrez le fichier .zip. Si l’ordinateur local n’a pas accès à Internet, copiez le fichier dans un ordinateur connecté à Internet. 
-3. Si nécessaire, copiez UploadOfflineFeedback.exe qui se trouve dans `cd.latest\SMSSETUP\Tools\UploadOfflineFeedback\UploadOfflineFeedback.exe`
+3. Si nécessaire, copiez le dossier UploadOfflineFeedback qui se trouve dans `cd.latest\SMSSETUP\Tools\UploadOfflineFeedback\`
     - Pour plus d’informations sur le dossier cd.latest, consultez [Dossier CD.Latest](../servers/manage/the-cd.latest-folder.md).
 
 4. Sur un ordinateur connecté à Internet, ouvrez une invite de commandes. 

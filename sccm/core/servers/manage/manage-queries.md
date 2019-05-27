@@ -2,21 +2,21 @@
 title: Gérer les requêtes
 titleSuffix: Configuration Manager
 description: Découvrez comment gérer vos requêtes. Inclut un tableau contenant des informations de référence détaillées.
-ms.date: 10/06/2016
+ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: e562e2a0-8df8-4952-952f-e8c38461c612
-author: aczechowski
+author: mestew
+ms.author: mstewart
 manager: dougeby
-ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 87b92bb857f6a39a99e3aee1e4bc862904bcc4ef
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 5394cd86e1f137bd7cf76549b117cb53f242f8f1
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56126910"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65497304"
 ---
 # <a name="how-to-manage-queries-in-system-center-configuration-manager"></a>Guide pratique pour gérer les requêtes dans System Center Configuration Manager
 
@@ -38,5 +38,5 @@ Aidez-vous des informations contenues dans cette rubrique pour gérer les requê
 |**Exporterer**|Ouvre l’ **Assistant Exportation d’objets** qui permet d’exporter la requête vers un fichier MOF (Managed Object Format) qui peut ensuite être importé sur un autre site.|Aucune information supplémentaire.|  
 |**Déplacer**|Ouvre la boîte de dialogue **Déplacer les éléments sélectionnés** où vous pouvez transférer la requête sélectionnée vers un dossier que vous avez créé précédemment sous le nœud **Requêtes** .|Aucune information supplémentaire.|  
 
-## <a name="see-also"></a>Voir aussi  
- [Opérations et maintenance pour les requêtes dans System Center Configuration Manager](../../../core/servers/manage/operations-and-maintenance-for-queries.md)
+## <a name="next-steps"></a>Étapes suivantes 
+ [Créer des requêtes dans System Center Configuration Manager](../../../core/servers/manage/create-queries.md)

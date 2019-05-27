@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 3fab4d67-8d2a-45ce-8b06-471280102cf6
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d7a9fcf06630c76fc3e1123fa56861c4de224521
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: dcc3a43f1cc2393a66fe50ef74e864afeb27704c
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56129372"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65501050"
 ---
 # <a name="monitor-hierarchy-and-replication-infrastructure-in-system-center-configuration-manager"></a>Surveiller l’infrastructure de la hiérarchie et de la réplication dans System Center Configuration Manager
 
@@ -106,9 +106,9 @@ Utilisez le nœud **Hiérarchie de site** pour surveiller l'intégrité de chaqu
 
  Les options suivantes modifient le diagramme hiérarchique :  
 
--   **Groupes** : vous pouvez configurer le nombre de sites principaux et de sites secondaires qui déclenchent un changement de l'affichage du diagramme hiérarchique, celui-ci combinant les sites dans un seul objet. Lorsque des sites sont combinés dans un seul objet, vous voyez le nombre total de sites et un cumul de niveau élevé des messages d'état et de l'état du site. Les configurations de groupe n'affectent pas la vue géographique.  
+-   **Groupes** : vous pouvez configurer le nombre de sites principaux et de sites secondaires qui déclenchent un changement dans l’affichage du diagramme hiérarchique, celui-ci combinant les sites dans un même objet. Lorsque des sites sont combinés dans un seul objet, vous voyez le nombre total de sites et un cumul de niveau élevé des messages d'état et de l'état du site. Les configurations de groupe n'affectent pas la vue géographique.  
 
--   **Sites favoris** : Vous pouvez spécifier des sites individuels comme sites favoris. Une icône en forme d'étoile identifie un site favori dans le diagramme hiérarchique. Les sites favoris ne sont pas combinés à d'autres sites lorsque vous avez utilisé des groupes et ils sont toujours affichés individuellement.  
+-   **Sites favoris** : vous pouvez spécifier des sites comme sites favoris. Une icône en forme d'étoile identifie un site favori dans le diagramme hiérarchique. Les sites favoris ne sont pas combinés à d'autres sites lorsque vous avez utilisé des groupes et ils sont toujours affichés individuellement.  
 
 #### <a name="geographical-view"></a>Vue géographique  
  La vue géographique affiche l'emplacement de chaque site sur une carte géographique. Seuls les sites que vous configurez avec un emplacement sont affichés. Lorsque vous sélectionnez un site dans cette vue, les liens de réplication vers des sites parents ou enfants sont affichés. Contrairement à l'affichage du diagramme hiérarchique, vous ne pouvez pas afficher les détails du lien de réplication ou du message d'état de site dans cette vue.  

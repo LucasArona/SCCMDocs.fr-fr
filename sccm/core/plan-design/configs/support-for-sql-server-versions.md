@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5f2d2b10419cec019cc3c0791c7a7aadc016c15b
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: fdfb536607ce20cd9727882ad92c3ed963c69241
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56133797"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499472"
 ---
 # <a name="supported-sql-server-versions-for-configuration-manager"></a>Versions SQL Server prises en charge pour Configuration Manager
 
@@ -85,7 +85,8 @@ Vous pouvez utiliser cette version de SQL Server, avec au minimum la [version de
   <!--SMS.498506-->
 
 ### <a name="sql-server-2016-sp2-standard-enterprise"></a>SQL Server 2016 SP2 : Standard, Entreprise  
-<!--514985--> Vous pouvez utiliser cette version de SQL Server sans version de mise à jour cumulative minimale pour les sites suivants :  
+<!--514985-->
+Vous pouvez utiliser cette version de SQL Server sans version de mise à jour cumulative minimale pour les sites suivants :  
 
 -   Un site d’administration centrale  
 -   Un serveur de site principal  
@@ -145,7 +146,8 @@ Vous pouvez utiliser cette version de SQL Server sans version de mise à jour cu
 
 ### <a name="sql-server-2017-express"></a>SQL Server 2017 Express   
 Vous pouvez utiliser cette version de SQL Server, avec au minimum la [version de mise à jour cumulative 2](https://support.microsoft.com/help/4052574), en commençant par [Configuration Manager version 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710) pour les sites suivants :
--   Un site secondaire <!--SMS.498506-->
+-   Un site secondaire
+<!--SMS.498506-->
 
 ### <a name="sql-server-2016-express-sp2"></a>SQL Server 2016 Express SP2  
 Vous pouvez utiliser cette version de SQL Server sans version de mise à jour cumulative minimale pour les sites suivants :

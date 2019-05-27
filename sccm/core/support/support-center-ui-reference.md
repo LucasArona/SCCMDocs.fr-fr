@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 41cdebfe-b595-40aa-a385-32e0746255ed
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 970d2fbf69a7c4c91a55cadf5d420988b2207ca2
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 7858497f1ff49e5068da066cc481ca5fd38f825f
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56131096"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500721"
 ---
 # <a name="support-center-user-interface-reference"></a>Référence de l’interface utilisateur du Centre d’aide et de support
 
@@ -235,7 +235,7 @@ Les éléments suivants de ce menu demandent une action du client associée au c
 
   - **Analyse de la source des mises à jour logicielles** : démarre une tâche qui analyse les emplacements source des mises à jour.  
 
-  - **Mise à jour de la liste de sources de Windows Installer** : démarre une tâche qui met à jour l'emplacement source pour les installations de Windows Installer (MSI).  
+  - **Mise à jour de la liste de sources de Windows Installer** : démarre une tâche qui met à jour l’emplacement source pour les installations de Windows Installer (MSI).  
 
 #### <a name="content-view"></a>Affichage du contenu
 Consultez les applications, les packages et les mises à jour chargés sur le client. Quand vous sélectionnez une application, un package ou une mise à jour, vous pouvez afficher des détails sur ce contenu. Pour certaines applications, vous pouvez également effectuer les actions suivantes :  
@@ -271,8 +271,8 @@ Sélectionnez **Analyse** pour afficher la progression des déploiements des mis
 Pour chaque événement, cette vue montre les propriétés suivantes :  
 
  - **Heure** : heure à laquelle le client a déclenché l’événement  
- - **Type de rubrique** : le type du message d'état  
- - **ID de rubrique** : ID du message d'état, utilisé pour le mappage à des événements des fichiers journaux  
+ - **Type de rubrique** : type du message d’état  
+ - **ID de rubrique** : ID du message d’état, utilisé pour le mappage à des événements de fichiers journaux  
  - **Type d’ID de rubrique** : sous-type du message d’état  
  - **ID d’état** : résultat de l’action que vous surveillez  
  - **Détails** et **Données d’événement** : informations supplémentaires sur les messages d’état affichés dans cette vue. Les détails d'état peuvent parfois être vides.  
@@ -303,9 +303,9 @@ Les éléments suivants de ce menu demandent une action du client associée à l
 
  - **Cycle d’inventaire logiciel** : déclenche la tâche du client utilisée pour collecter les données d’inventaire logiciel  
 
- - **Cycle du rapport de contrôle de logiciel** : déclenche la tâche du client utilisée pour générer un rapport de contrôle de logiciel et l'envoyer au point de gestion. Suivez la progression de cette tâche dans **SWMTRReportGen.log**.
+ - **Cycle du rapport de contrôle de logiciel** : déclenche la tâche client utilisée pour générer un rapport de contrôle de logiciel et l’envoyer au point de gestion. Suivez la progression de cette tâche dans **SWMTRReportGen.log**.
 
- - **Envoyer les messages d’état non envoyés de la file d’attente** : déclenche la tâche du client qui permet de vider la file d'attente de messages d'état.
+ - **Envoyer les messages d’état non envoyés de la file d’attente** : déclenche la tâche client qui permet de vider la file d’attente de messages d’état.
 
  - **Avancé**  
      - **Cycle d’inventaire matériel (resynchronisation complète)**  

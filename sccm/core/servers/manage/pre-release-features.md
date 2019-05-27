@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 6bce416b-761d-4b23-bd33-5b7c30edb10d
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e31e56948d30b95c6de4d9640985c4387bbe7058
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 666cb86e4acbb46956f768655637d3185fc5df71
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56124964"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65497172"
 ---
 # <a name="pre-release-features-in-configuration-manager"></a>Fonctionnalités en préversion dans Configuration Manager
 
@@ -81,7 +81,7 @@ Quand vous activez une fonctionnalité en préversion, le Gestionnaire de hiéra
 | [Applications clientes pour les appareils cogérés](/sccm/comanage/workloads#client-apps) <!--1357892--> | Version 1806 | ![Pas encore](media/red_x.png) |
 | [Extensions SCAP](/sccm/compliance/plan-design/scap/about-scap) <!--3607889--> | Version 1806 | ![Pas encore](media/red_x.png) |
 | [Package Conversion Manager](/sccm/apps/pcm/package-conversion-manager) <!--1357861--> | Version 1806 | Version 1810 |
-| [Prise en charge de Cisco AnyConnect 4.0.07x et version supérieure pour iOS](/sccm/mdm/deploy-use/create-vpn-profiles)<!--1357393--> | Version 1802 | Version 1802 <br>avec mise à jour 4163547 |
+| [Prise en charge de Cisco AnyConnect 4.0.07x et version supérieure pour iOS](/sccm/mdm/deploy-use/create-vpn-profiles) <!--1357393--> | Version 1802 | Version 1802 <br>avec mise à jour 4163547 |
 | [Déploiements par phases](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence) <!--1356837--> | Version 1802 | Version 1806 |
 | [Exécuter l’étape de la séquence de tâches](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#add-child-task-sequences-to-a-task-sequence) <!--1261338--> |  Version 1710 | Version 1802 |
 | [Windows Defender Exploit Guard](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) <!--1355468--> | Version 1710 | Version 1802 |
@@ -92,7 +92,7 @@ Quand vous activez une fonctionnalité en préversion, le Gestionnaire de hiéra
 | [Mise en cache préalable du contenu de la séquence de tâches](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content) <!--1021244--> | Version 1702 | Version 1710 |
 | [Vérifier si des fichiers exécutables sont en cours d’exécution avant d’installer une application](/sccm/apps/deploy-use/deploy-applications#how-to-check-for-running-executable-files-before-installing-an-application) <!--1284624--> | Version 1702 | Version 1706 |
 | [Point de service de l’entrepôt de données](/sccm/core/servers/manage/data-warehouse) <!--1277922--> | Version 1702 | Version 1706 |
-| [Cache de pair pour la distribution de contenu aux clients](/sccm/core/plan-design/hierarchy/client-peer-cache) <!--1101436--> | Version 1610 | Version 1710 |
+| [Cache d’homologue pour la distribution de contenu aux clients](/sccm/core/plan-design/hierarchy/client-peer-cache) <!--1101436--> | Version 1610 | Version 1710 |
 | [Passerelle de gestion cloud](/sccm/core/clients/manage/plan-cloud-management-gateway) <!--1101764--> | Version 1610 | Version 1802 |
 | [Connecteur Azure Log Analytics](/sccm/core/clients/manage/sync-data-log-analytics) <!--1236739--> | Version 1606 | Version 1802 |
 | [Maintenance d’un regroupement prenant en charge les clusters (maintenance d’un groupe de serveurs)](/sccm/core/get-started/capabilities-in-technical-preview-1605#BKMK_ServerGroups) <!--1081776--> | Version 1602 | ![Pas encore](media/red_x.png) |

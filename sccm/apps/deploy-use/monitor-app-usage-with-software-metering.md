@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c10dcc07ba2f67b004da462dbde17fb2200ec7a1
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 652c10cfcb4d53b32409dd5af83e7d55f2676463
+ms.sourcegitcommit: f531d0a622f220739710b2fe6644ea58d024064a
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65496803"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65933486"
 ---
 # <a name="software-metering-in-system-center-configuration-manager"></a>Contrôle de logiciel dans System Center Configuration Manager
 
@@ -163,7 +163,7 @@ Le contrôle de logiciel ne présente aucune dépendance externe, seulement des 
 
   La Woodgrove Bank a déployé Microsoft Office 2010 comme suite de production standard. Toutefois, pour prendre en charge une application héritée, certains ordinateurs doivent continuer à exécuter Microsoft Office Word 2003. Le service informatique souhaite réduire les coûts de support et de licences en supprimant ces copies de Word 2003 si l’application héritée n’est plus utilisée. Le support technique souhaite également identifier les personnes qui utilisent l’application héritée.
 
-  Responsable des systèmes informatiques de la Woodgrove Bank, John utilise le contrôle de logiciel dans Configuration Manager pour atteindre ces objectifs métier. Il effectue les opérations suivantes :
+  Responsable des systèmes informatiques de la Woodgrove Bank, John utilise le contrôle de logiciel dans Configuration Manager pour atteindre ces objectifs métier. Cette étape effectue les actions suivantes :
 
 - John vérifie la configuration requise pour le contrôle de logiciel et confirme que le point de Reporting Services est installé et opérationnel.
 - John configure les paramètres client par défaut pour le contrôle de logiciel :<br>Il active le contrôle de logiciel et, par défaut, planifie le regroupement de données à raison d’une collecte tous les sept jours.<br>Il configure l’inventaire logiciel pour inventorier les fichiers portant l’extension .exe en paramétrant le paramètre client d’inventaire logiciel **Inventorier ces types de fichiers**.<br>Il ajoute une nouvelle règle de contrôle des logiciels, nommée **woodgrove.exe**, afin de surveiller l’application héritée.

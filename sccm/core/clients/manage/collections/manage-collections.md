@@ -2,7 +2,7 @@
 title: Gérer des regroupements
 titleSuffix: Configuration Manager
 description: Découvrez comment effectuer les principales tâches de gestion des regroupements dans Configuration Manager.
-ms.date: 08/17/2018
+ms.date: 04/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 93a502e9c77e05eedba1c2989cbae69e4080832f
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 1a6b087b19a27bcb7cbc2fa2022d828aea58800b
+ms.sourcegitcommit: 53f2380ac67025fb4a69fc1651edad15d98e0cdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56133729"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65673322"
 ---
 # <a name="how-to-manage-collections-in-configuration-manager"></a>Comment gérer des regroupements dans Configuration Manager
 
@@ -25,7 +25,7 @@ ms.locfileid: "56133729"
 Aidez-vous des informations générales de cet article pour effectuer les tâches de gestion des regroupements dans Configuration Manager.  
 
 > [!NOTE]  
->  Pour plus d'informations sur la création de regroupements Configuration Manager, voir [Comment créer des regroupements](/sccm/core/clients/manage/collections/create-collections).  
+>  Pour plus d'informations sur la création de regroupements Configuration Manager, voir [Comment créer des regroupements](/sccm/core/clients/manage/collections/create-collections).
 
 
 
@@ -70,7 +70,7 @@ Aidez-vous des informations générales de cet article pour effectuer les tâche
 
 
 #### <a name="add-resources"></a>Ajouter des ressources
- Ouvre la boîte de dialogue **Ajouter des ressources au regroupement**. Recherche de nouvelles ressources à ajouter au regroupement sélectionné. L'icône du regroupement sélectionné affiche un symbole de sablier pendant l'exécution de la mise à jour.
+ Ouvre la boîte de dialogue **Ajouter des ressources au regroupement**. Recherche de nouvelles ressources à ajouter au regroupement sélectionné. L’icône du regroupement sélectionné affiche un symbole de sablier pendant que la mise à jour est en cours.
 
 
 #### <a name="client-notification"></a>Notification du client
@@ -112,7 +112,7 @@ Aidez-vous des informations générales de cet article pour effectuer les tâche
 
  - **Base de référence de configuration** : Ouvre la boîte de dialogue **Déployer des bases de référence de configuration**. Configurer le déploiement d’une ou de plusieurs bases de référence de configuration vers le regroupement sélectionné. Pour plus d’informations, consultez [Guide pratique pour déployer des bases de référence de configuration](/sccm/compliance/deploy-use/deploy-configuration-baselines).  
 
- - **Séquence de tâches** : Ouvre l’**Assistant Déploiement logiciel**. Sélectionner et configurer un déploiement de séquence de tâches vers le regroupement sélectionné. Pour plus d’informations, consultez [Gérer les séquences de tâches pour automatiser des tâches](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS).  
+ - **Séquence de tâches** : Ouvre l’**Assistant Déploiement logiciel**. Sélectionner et configurer un déploiement de séquence de tâches vers le regroupement sélectionné. Pour plus d’informations, consultez [Gérer les séquences de tâches pour automatiser des tâches](/sccm/osd/deploy-use/deploy-a-task-sequence).  
 
  - **Mise à jour de logiciel** : Ouvre l’**Assistant Déploiement de mises à jour de logiciel**. Configurer le déploiement des mises à jour logicielles vers les ressources du regroupement sélectionné. Pour plus d’informations, consultez [Gérer les mises à jour logicielles](/sccm/sum/understand/software-updates-introduction).  
 
@@ -127,7 +127,6 @@ Aidez-vous des informations générales de cet article pour effectuer les tâche
 
 #### <a name="properties"></a>Propriétés
  Pour plus d'informations, consultez [Paramètre du regroupement](#BKMK_CollProp).  
-
 
 
 ## <a name="bkmk_user"></a>Comment gérer des regroupements d’utilisateurs  
@@ -152,10 +151,9 @@ Aidez-vous des informations générales de cet article pour effectuer les tâche
  - **Déployer**  
      - **Application**  
      - **Programme**  
-     - **Base de référence de configuration**   
+     - **Base de référence de configuration**
  - **Déplacer**  
  - **Propriétés**
-
 
 
 ##  <a name="BKMK_CollProp"></a> Propriétés d’un regroupement  
@@ -188,3 +186,32 @@ Aidez-vous des informations générales de cet article pour effectuer les tâche
 
 #### <a name="alerts"></a>Alertes 
  Configurer le moment où des alertes sont générées pour l'état du client et Endpoint Protection. Pour plus d'informations, consultez [Comment configurer l’état du client](/sccm/core/clients/deploy/configure-client-status) et [Comment surveiller Endpoint Protection](/sccm/protect/deploy-use/monitor-endpoint-protection).  
+## <a name="bkmk_powershell"></a> Utilisation de PowerShell
+
+PowerShell peut être utilisé pour gérer les regroupements.  Pour plus d'informations, voir :
+
+* [Get-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollection)
+* [Set-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmcollection)
+* [New-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmcollection)
+* [Copy-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/copy-cmcollection)
+* [Remove-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmcollection)
+* [Import-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/import-cmcollection)
+* [Export-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/export-cmcollection)
+* [Get-CMCollectionMember](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollectionmember)
+* [Get-CMCollectionSetting](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollectionsetting)
+* [Invoke-CMCollectionUpdate](https://docs.microsoft.com/powershell/module/configurationmanager/invoke-cmcollectionupdate)
+* [Add-CMCollectionMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/add-cmcollectionmembershiprule)
+* [Set-CMCollectionPowerManagement](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmcollectionpowermanagement)
+* [Get-CMCollectionMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollectionmembershiprule)
+* [Remove-CMCollectionMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmcollectionmembershiprule)
+* [Get-CMCollectionDirectMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollectiondirectmembershiprule)
+* [Get-CMCollectionQueryMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollectionquerymembershiprule)
+* [Get-CMCollectionIncludeMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollectionincludemembershiprule)
+* [Add-CMCollectionToAdministrativeUser](https://docs.microsoft.com/powershell/module/configurationmanager/add-cmcollectiontoadministrativeuser)
+* [Remove-CMCollectionQueryMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmcollectionquerymembershiprule)
+* [Remove-CMCollectionDirectMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmcollectiondirectmembershiprule)
+* [Get-CMCollectionExcludeMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollectionexcludemembershiprule)
+* [Add-CMCollectionToDistributionPointGroup](https://docs.microsoft.com/powershell/module/configurationmanager/add-cmcollectiontodistributionpointgroup)
+* [Remove-CMCollectionIncludeMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmcollectionincludemembershiprule)
+* [Remove-CMCollectionExcludeMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmcollectionexcludemembershiprule)
+* [Remove-CMCollectionFromAdministrativeUser](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmcollectionfromadministrativeuser)

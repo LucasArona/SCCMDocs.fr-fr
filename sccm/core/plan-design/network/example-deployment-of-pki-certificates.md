@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 3417ff88-7177-4a0d-8967-ab21fe7eba17
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 060b1f71519227673dd2b8b67b5def026e96f493
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: d686baa95cc29a2e4923c0572a0d056beeff9f5b
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56131895"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499226"
 ---
 # <a name="step-by-step-example-deployment-of-the-pki-certificates-for-system-center-configuration-manager-windows-server-2008-certification-authority"></a>Exemple détaillé de déploiement des certificats PKI pour System Center Configuration Manager : Autorité de certification Windows Server 2008
 
@@ -72,7 +72,7 @@ Cet exemple de déploiement pas à pas utilise une autorité de certification Wi
 |Certificat requis|Description du certificat|  
 |-----------------------------|-----------------------------|  
 |Certificat de serveur Web pour les systèmes de site qui exécutent IIS|Ce certificat permet de chiffrer les données et d'authentifier le serveur auprès des clients. Il doit être installé indépendamment de System Center Configuration Manager sur des serveurs de systèmes de site qui exécutent IIS (Internet Information Services) et qui sont configurés dans System Center Configuration Manager pour utiliser HTTPS.<br /><br /> Pour plus d’informations sur les étapes permettant de configurer et d’installer ce certificat, consultez [Déployer le certificat de serveur web pour les systèmes de site qui exécutent IIS](#BKMK_webserver2008_cm2012) dans cette rubrique.|  
-|Certificat de service pour la connexion des clients aux points de distribution cloud|Pour plus d’informations sur les étapes permettant de configurer et d’installer ce certificat, consultez [Déployer le certificat de service pour les points de distribution cloud](#BKMK_clouddp2008_cm2012) dans cette rubrique.<br /><br /> **Important :** Ce certificat est utilisé conjointement avec le certificat de gestion de Windows Azure. Pour plus d’informations sur le certificat de gestion, consultez [Guide pratique pour créer un certificat de gestion](http://go.microsoft.com/fwlink/p/?LinkId=220281) et [Guide pratique pour ajouter un certificat de gestion à un abonnement Windows Azure](http://go.microsoft.com/fwlink/?LinkId=241722) dans la section Plateforme Windows Azure de MSDN Library.|  
+|Certificat de service pour la connexion des clients aux points de distribution cloud|Pour plus d’informations sur les étapes permettant de configurer et d’installer ce certificat, consultez [Déployer le certificat de service pour les points de distribution cloud](#BKMK_clouddp2008_cm2012) dans cette rubrique.<br /><br /> **Important :** Ce certificat est utilisé conjointement au certificat de gestion de Microsoft Azure. Pour plus d’informations sur le certificat de gestion, consultez [Guide pratique pour créer un certificat de gestion](http://go.microsoft.com/fwlink/p/?LinkId=220281) et [Guide pratique pour ajouter un certificat de gestion à un abonnement Windows Azure](http://go.microsoft.com/fwlink/?LinkId=241722) dans la section Plateforme Windows Azure de MSDN Library.|  
 |Certificat client pour les ordinateurs Windows|Ce certificat est utilisé pour authentifier les ordinateurs clients System Center Configuration Manager auprès des systèmes de site qui sont configurés pour utiliser HTTPS. Sur les points de gestion et les points de migration d’état, il permet de surveiller leur état de fonctionnement quand ils sont configurés pour utiliser HTTPS. Il doit être installé indépendamment de System Center Configuration Manager sur les ordinateurs.<br /><br /> Pour plus d’informations sur les étapes permettant de configurer et d’installer ce certificat, consultez [Déployer le certificat client pour les ordinateurs Windows](#BKMK_client2008_cm2012) dans cette rubrique.|  
 |Certificat client pour les points de distribution|Ce certificat a deux objectifs :<br /><br /> Ce certificat est utilisé pour authentifier le point de distribution auprès d'un point de gestion HTTPS avant que le point de distribution n'envoie des messages d'état.<br /><br /> Lorsque l'option du point de distribution **Activer la prise en charge PXE pour les clients** est sélectionnée, le certificat est envoyé aux ordinateurs qui effectuent un démarrage PXE afin qu'ils puissent se connecter à un point de gestion HTTPS pendant le déploiement du système d'exploitation.<br /><br /> Pour plus d’informations sur les étapes permettant de configurer et d’installer ce certificat, consultez [Déployer le certificat client pour les points de distribution](#BKMK_clientdistributionpoint2008_cm2012) dans cette rubrique.|  
 |Certificat d'inscription pour les appareils mobiles|Ce certificat est utilisé pour authentifier les clients d’appareils mobiles System Center Configuration Manager auprès des systèmes de site qui sont configurés pour utiliser HTTPS. Il doit être installé dans le cadre de l’inscription d’appareil mobile dans System Center Configuration Manager. Ensuite, vous choisissez le modèle de certificat configuré comme paramètre de client d’appareil mobile.<br /><br /> Pour plus d’informations sur les étapes permettant de configurer ce certificat, consultez [Déployer le certificat d’inscription pour les appareils mobiles](#BKMK_mobiledevices2008_cm2012) dans cette rubrique.|  
@@ -139,7 +139,7 @@ Cet exemple de déploiement pas à pas utilise une autorité de certification Wi
 
 6.  Dans la boîte de dialogue **Ajouter ou supprimer des composants logiciels enfichables**, choisissez **OK**.  
 
-7.  Dans la console, développez **Certificats (ordinateur local)**, puis choisissez **Personnel**.  
+7.  Dans la console, développez **Certificats (ordinateur local)** , puis choisissez **Personnel**.  
 
 8.  Cliquez avec le bouton droit sur **Certificats**, choisissez **Toutes les tâches**, puis **Demander un nouveau certificat**.  
 
@@ -170,14 +170,14 @@ Cet exemple de déploiement pas à pas utilise une autorité de certification Wi
 
 15. Dans la page **Résultats de l’installation des certificats**, attendez que le certificat soit installé, puis choisissez **Terminer**.  
 
-16. Fermez la fenêtre **Certificats (ordinateur local)**.  
+16. Fermez la fenêtre **Certificats (ordinateur local)** .  
 
 ###  <a name="BKMK_webserver42008"></a> Configurer IIS en vue d’utiliser le certificat de serveur web  
  Cette procédure lie le certificat installé au **Site Web par défaut**IIS.  
 
 ##### <a name="to-set-up-iis-to-use-the-web-server-certificate"></a>Pour configurer IIS en vue d’utiliser le certificat de serveur web  
 
-1. Sur le serveur membre sur lequel IIS est installé, choisissez **Démarrer**, **Programmes**, **Outils d’administration**, puis **Gestionnaire des services Internet (IIS)**.  
+1. Sur le serveur membre sur lequel IIS est installé, choisissez **Démarrer**, **Programmes**, **Outils d’administration**, puis **Gestionnaire des services Internet (IIS)** .  
 
 2. Développez **Sites**, cliquez avec le bouton droit sur **Site Web par défaut**, puis choisissez **Modifier les liaisons**.  
 
@@ -190,7 +190,7 @@ Cet exemple de déploiement pas à pas utilise une autorité de certification Wi
 
 5. Choisissez **OK** dans la boîte de dialogue **Modifier la liaison de site**, puis **Fermer**.  
 
-6. Fermez le **Gestionnaire des services Internet (IIS)**.  
+6. Fermez le **Gestionnaire des services Internet (IIS)** .  
 
    Le serveur membre est désormais configuré avec un certificat de serveur web System Center Configuration Manager.  
 
@@ -270,7 +270,7 @@ Les procédures de ce déploiement de certificat sont les suivantes :
 
 6.  Dans la boîte de dialogue **Ajouter ou supprimer des composants logiciels enfichables**, choisissez **OK**.  
 
-7.  Dans la console, développez **Certificats (ordinateur local)**, puis choisissez **Personnel**.  
+7.  Dans la console, développez **Certificats (ordinateur local)** , puis choisissez **Personnel**.  
 
 8.  Cliquez avec le bouton droit sur **Certificats**, choisissez **Toutes les tâches**, puis **Demander un nouveau certificat**.  
 
@@ -293,14 +293,14 @@ Les procédures de ce déploiement de certificat sont les suivantes :
 
 16. Dans la page **Résultats de l’installation des certificats**, attendez que le certificat soit installé, puis choisissez **Terminer**.  
 
-17. Fermez la fenêtre **Certificats (ordinateur local)**.  
+17. Fermez la fenêtre **Certificats (ordinateur local)** .  
 
 ###  <a name="BKMK_clouddpexporting2008"></a> Exporter le certificat de serveur web personnalisé pour les points de distribution cloud  
  Cette procédure permet d'exporter le certificat de serveur Web personnalisé dans un fichier, afin qu'il puisse être importé lorsque vous créez le point de distribution cloud.  
 
 ##### <a name="to-export-the-custom-web-server-certificate-for-cloud-based-distribution-points"></a>Pour exporter le certificat de serveur Web personnalisé pour les points de distribution cloud  
 
-1. Dans la console **Certificats (ordinateur local)**, cliquez avec le bouton droit sur le certificat que vous venez d’installer, choisissez **Toutes les tâches**, puis **Exporter**.  
+1. Dans la console **Certificats (ordinateur local)** , cliquez avec le bouton droit sur le certificat que vous venez d’installer, choisissez **Toutes les tâches**, puis **Exporter**.  
 
 2. Dans l’Assistant Exportation de certificats, choisissez **Suivant**.  
 
@@ -317,7 +317,7 @@ Les procédures de ce déploiement de certificat sont les suivantes :
 
 7. Pour fermer l’Assistant, choisissez **Terminer** dans la page **Assistant Exportation de certificat**, puis **OK** dans la boîte de dialogue de confirmation.  
 
-8. Fermez la fenêtre **Certificats (ordinateur local)**.  
+8. Fermez la fenêtre **Certificats (ordinateur local)** .  
 
 9. Stockez le fichier de façon sécurisée et vérifiez que vous pouvez y accéder à partir de la console System Center Configuration Manager.  
 
@@ -406,11 +406,11 @@ Les procédures de ce déploiement de certificat sont les suivantes :
 
 8. Dans la boîte de dialogue **Ajouter ou supprimer des composants logiciels enfichables**, choisissez **OK**.  
 
-9. Dans la console, développez **Certificats (ordinateur local)**, **Personnel**, puis choisissez **Certificats**.  
+9. Dans la console, développez **Certificats (ordinateur local)** , **Personnel**, puis choisissez **Certificats**.  
 
 10. Dans le volet des résultats, vérifiez qu’un certificat indique **Authentification du client** dans la colonne **Rôle prévu** et que **Certificat client ConfigMgr** figure dans la colonne **Modèle de certificat**.  
 
-11. Fermez la fenêtre **Certificats (ordinateur local)**.  
+11. Fermez la fenêtre **Certificats (ordinateur local)** .  
 
 12. Répétez les étapes 1 à 11 pour le serveur membre afin de vérifier que le serveur qui sera configuré comme point de gestion dispose également d’un certificat client.  
 
@@ -485,7 +485,7 @@ Les procédures de ce déploiement de certificat sont les suivantes :
 
 5.  Dans la boîte de dialogue **Ajouter ou supprimer des composants logiciels enfichables**, choisissez **OK**.  
 
-6.  Dans la console, développez **Certificats (ordinateur local)**, puis choisissez **Personnel**.  
+6.  Dans la console, développez **Certificats (ordinateur local)** , puis choisissez **Personnel**.  
 
 7.  Cliquez avec le bouton droit sur **Certificats**, choisissez **Toutes les tâches**, puis **Demander un nouveau certificat**.  
 
@@ -499,14 +499,14 @@ Les procédures de ce déploiement de certificat sont les suivantes :
 
 12. Dans le volet des résultats, vérifiez qu’un certificat indique **Authentification du client** dans la colonne **Rôle prévu** et que **Certificat de point de distribution client ConfigMgr** figure dans la colonne **Modèle de certificat**.  
 
-13. Ne fermez pas la fenêtre **Certificats (ordinateur local)**.  
+13. Ne fermez pas la fenêtre **Certificats (ordinateur local)** .  
 
 ###  <a name="BKMK_exportclientdistributionpoint22008"></a> Exporter le certificat client pour les points de distribution  
  Cette procédure permet d’exporter le certificat Authentification de station de travail personnalisé vers un fichier afin qu’il puisse être importé dans les propriétés du point de distribution.  
 
 ##### <a name="to-export-the-client-certificate-for-distribution-points"></a>Pour exporter le certificat du client pour les points de distribution  
 
-1. Dans la console **Certificats (ordinateur local)**, cliquez avec le bouton droit sur le certificat que vous venez d’installer, choisissez **Toutes les tâches**, puis **Exporter**.  
+1. Dans la console **Certificats (ordinateur local)** , cliquez avec le bouton droit sur le certificat que vous venez d’installer, choisissez **Toutes les tâches**, puis **Exporter**.  
 
 2. Dans l’Assistant Exportation de certificats, choisissez **Suivant**.  
 
@@ -523,7 +523,7 @@ Les procédures de ce déploiement de certificat sont les suivantes :
 
 7. Pour fermer l’Assistant, choisissez **Terminer** dans la page **Assistant Exportation de certificat**, puis **OK** dans la boîte de dialogue de confirmation.  
 
-8. Fermez la fenêtre **Certificats (ordinateur local)**.  
+8. Fermez la fenêtre **Certificats (ordinateur local)** .  
 
 9. Stockez le fichier de façon sécurisée et vérifiez que vous pouvez y accéder à partir de la console System Center Configuration Manager.  
 
@@ -553,7 +553,7 @@ Les procédures de ce déploiement de certificat sont les suivantes :
 
 5. Dans la boîte de dialogue **Propriétés du nouveau modèle**, sous l’onglet **Général**, entrez un nom de modèle (par exemple, **Certificat d’inscription d’appareil mobile ConfigMgr**) pour générer les certificats d’inscription pour les appareils mobiles devant être gérés par System Center Configuration Manager.  
 
-6. Choisissez l’onglet **Nom de l’objet**, vérifiez que l’option **Construire à partir de ces informations Active Directory** est sélectionnée, sélectionnez **Nom commun** pour **Format du nom de l’objet :**, puis effacez **Nom d’utilisateur principal (UPN)** dans **Inclure cette information dans le nom de substitution du sujet**.  
+6. Choisissez l’onglet **Nom de l’objet**, vérifiez que l’option **Construire à partir de ces informations Active Directory** est sélectionnée, sélectionnez **Nom commun** pour **Format du nom de l’objet :** , puis effacez **Nom d’utilisateur principal (UPN)** dans **Inclure cette information dans le nom de substitution du sujet**.  
 
 7. Choisissez l’onglet **Sécurité**, le groupe de sécurité avec des utilisateurs qui ont des appareils mobiles à inscrire, puis l’autorisation supplémentaire **Inscription**. Ne désactivez pas l'option **Lecture**.  
 
@@ -648,7 +648,7 @@ Les procédures de ce déploiement de certificat sont les suivantes :
 
 6. Dans la boîte de dialogue **Ajouter ou supprimer des composants logiciels enfichables**, choisissez **OK**.  
 
-7. Dans la console, développez **Certificats (ordinateur local)**, puis choisissez **Personnel**.  
+7. Dans la console, développez **Certificats (ordinateur local)** , puis choisissez **Personnel**.  
 
 8. Cliquez avec le bouton droit sur **Certificats**, choisissez **Toutes les tâches**, puis **Demander un nouveau certificat**.  
 
@@ -660,7 +660,7 @@ Les procédures de ce déploiement de certificat sont les suivantes :
 
 12. Dans la page **Résultats de l’installation des certificats**, attendez que le certificat soit installé, puis choisissez **Terminer**.  
 
-13. Fermez la fenêtre **Certificats (ordinateur local)**.  
+13. Fermez la fenêtre **Certificats (ordinateur local)** .  
 
     Le certificat de configuration AMT de votre autorité de certification interne est maintenant installé et peut être sélectionné dans les propriétés du point de service hors bande.  
 
@@ -714,7 +714,7 @@ Les procédures de ce déploiement de certificat sont les suivantes :
 
 3. Dans la boîte de dialogue **Propriétés du nouveau modèle**, sous l’onglet **Général**, entrez un nom de modèle (par exemple, **Certificat d’authentification client AMT 802.1X ConfigMgr**) pour générer les certificats clients à utiliser pour la gestion hors bande sur les ordinateurs AMT.  
 
-4. Choisissez l’onglet **Nom de l’objet**, **Construire à partir de ces informations Active Directory**, puis **Nom commun** pour **Format du nom de l’objet**. Effacez **Nom DNS** pour l’autre nom de l’objet, puis choisissez **Nom d’utilisateur principal (UPN)**.  
+4. Choisissez l’onglet **Nom de l’objet**, **Construire à partir de ces informations Active Directory**, puis **Nom commun** pour **Format du nom de l’objet**. Effacez **Nom DNS** pour l’autre nom de l’objet, puis choisissez **Nom d’utilisateur principal (UPN)** .  
 
 5. Sous l’onglet **Sécurité**, supprimez l’autorisation **Inscription** des groupes de sécurité **Administrateurs du domaine** et **Administrateurs de l’entreprise**.  
 
@@ -722,7 +722,7 @@ Les procédures de ce déploiement de certificat sont les suivantes :
 
 7. Sélectionnez ces autorisations **Autoriser** applicables à ce groupe de sécurité : **Lecture** et **Inscription**.  
 
-8. Choisissez **OK**, puis fermez la console de gestion **Modèles de certificats**, **certtmpl - [Modèles de certificats]**.  
+8. Choisissez **OK**, puis fermez la console de gestion **Modèles de certificats**, **certtmpl - [Modèles de certificats]** .  
 
 9. Dans la console de gestion **Autorité de certification**, cliquez avec le bouton droit sur **Modèles de certificats**, choisissez **Nouveau**, puis **Modèle de certificat à délivrer**.  
 
@@ -759,7 +759,7 @@ Ce déploiement de certificat a une procédure unique pour créer et émettre le
 
 5. Dans la boîte de dialogue **Propriétés du nouveau modèle**, sous l’onglet **Général**, entrez un nom de modèle (par exemple, **Certificat client Mac ConfigMgr**) pour générer le certificat client Mac.  
 
-6. Choisissez l’onglet **Nom de l’objet**, vérifiez que l’option **Construire à partir de ces informations Active Directory** est sélectionnée, choisissez **Nom commun** pour **Format du nom de l’objet :**, puis effacez **Nom d’utilisateur principal (UPN)** dans **Inclure cette information dans le nom de substitution du sujet**.  
+6. Choisissez l’onglet **Nom de l’objet**, vérifiez que l’option **Construire à partir de ces informations Active Directory** est sélectionnée, choisissez **Nom commun** pour **Format du nom de l’objet :** , puis effacez **Nom d’utilisateur principal (UPN)** dans **Inclure cette information dans le nom de substitution du sujet**.  
 
 7. Sous l’onglet **Sécurité**, supprimez l’autorisation **Inscription** des groupes de sécurité **Administrateurs du domaine** et **Administrateurs de l’entreprise**.  
 

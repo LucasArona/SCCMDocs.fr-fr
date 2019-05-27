@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 100fdd8e9032b1d16ae79b3cd52ffba3b3609446
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: af9d8c16033a22c828f014dfd4bad771851c08de
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56140158"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499336"
 ---
 # <a name="supported-os-versions-for-clients-and-devices-for-configuration-manager"></a>Versions de système d’exploitation prises en charge par Configuration Manager pour les clients et les appareils
 
@@ -72,7 +72,7 @@ ms.locfileid: "56140158"
 -   **Windows Server 2008 avec SP2** (x86, x64) : Standard, Enterprise, Datacenter <sup>[Note 1](#bkmk_note1)</sup>    
 
 
-#### <a name="server-core"></a>Minimale
+#### <a name="server-core"></a>Server Core
 Les versions suivantes font spécifiquement référence à l’installation Server Core du système d’exploitation. <sup>[Remarque 3](#bkmk_note3)</sup>  
 
 Les versions du Canal semi-annuel Windows Server sont des installations Server Core ; par exemple, Windows Server version 1809. En tant que client Configuration Manager, elles bénéficient de la même prise en charge que la version du Canal semi-annuel Windows 10 associée. Pour plus d’informations, voir [Prise en charge de Windows 10](/sccm/core/plan-design/configs/support-for-windows-10).
@@ -97,7 +97,7 @@ Les versions du Canal semi-annuel Windows Server sont des installations Server C
  Pour prendre en charge [l’installation Push du client](/sccm/core/clients/deploy/plan/client-installation-methods#client-push-installation), ajoutez le service Serveur de fichiers du rôle serveur Services de fichiers et de stockage. Pour plus d’informations sur l’installation des fonctionnalités Windows sur Server Core, voir [Installer des rôles, des services de rôle et des fonctionnalités avec les cmdlets Windows PowerShell](https://docs.microsoft.com/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#BKMK_installwps).  
 
 #### <a name="bkmk_note3"></a> Remarque 3
- La nouvelle application Centre logiciel n’est prise en charge sur aucune version de Windows Server Core.<!--SCCMDocs issue 683-->
+ La nouvelle application Centre logiciel n’est prise en charge par aucune version de Windows Server Core.<!--SCCMDocs issue 683-->
 
 
 
@@ -126,7 +126,7 @@ Les versions du Canal semi-annuel Windows Server sont des installations Server C
 -   **Windows 10 Entreprise** (x86, x64)  
 
 -   **Windows 10 IoT Entreprise** (x86, x64)  
-    Cette version inclut le canal de maintenance à long terme (LTSC). Pour plus d'informations, consultez [Présentation de Windows 10 IoT Enterprise](https://docs.microsoft.com/windows/iot-core/windows-iot-enterprise).<!--SCCMDocs issue 560-->  
+    Cette version inclut le canal de maintenance à long terme (LTSC). Pour plus d’informations, consultez [Présentation de Windows 10 IoT Enterprise](https://docs.microsoft.com/windows/iot-core/windows-iot-enterprise).<!--SCCMDocs issue 560-->  
 
 -   **Windows Embedded 8.1 Industry** (x86, x64)    
 
@@ -342,7 +342,7 @@ Les versions suivantes sont prises en charge à l’aide du fichier .tar indiqu�
 - **Windows 10 Entreprise** (x86, x64)  
 
 - **Windows 10 IoT Entreprise** (x86, x64)  
-    Cette version inclut le canal de maintenance à long terme (LTSC). Pour plus d'informations, consultez [Présentation de Windows 10 IoT Enterprise](https://docs.microsoft.com/windows/iot-core/windows-iot-enterprise).<!--SCCMDocs issue 560-->  
+    Cette version inclut le canal de maintenance à long terme (LTSC). Pour plus d’informations, consultez [Présentation de Windows 10 IoT Enterprise](https://docs.microsoft.com/windows/iot-core/windows-iot-enterprise).<!--SCCMDocs issue 560-->  
 
 - **Windows 10 Mobile**  
 

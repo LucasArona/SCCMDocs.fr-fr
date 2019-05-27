@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 68dc6acd-5848-47a4-b4c1-ffa40e47890b
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7b395cc8a19a3aab86f3ad40302673d41afe4885
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 7cc2e1783843f600f88b78e0db0cc6b8b8db0f55
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56123363"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500979"
 ---
 # <a name="reference-for-maintenance-tasks-for-system-center-configuration-manager"></a>Référence des tâches de maintenance pour System Center Configuration Manager
 
@@ -38,13 +38,13 @@ Cette rubrique répertorie les détails de chaque tâche de maintenance de site 
 
 **Remettre à zéro l’indicateur d’installation** : Cette tâche permet de supprimer l’indicateur installé pour les clients qui n’envoient pas d’enregistrement de découverte par pulsations d’inventaire au cours de la période de **Redécouverte client**. L’indicateur installé empêche l’installation push automatique du client sur un ordinateur pouvant disposer d’un client Configuration Manager actif.  
 
--   Site d'administration centrale : Non disponible    
+-   Site d’administration centrale : Non disponible    
 -   **Site principal** : Non activé    
 -   Site secondaire : Non disponible  
 
-**Supprimer les anciennes données de demande d’application** : Cette tâche permet de supprimer de la base de données les anciennes demandes d'application. Pour plus d’informations sur les demandes d’application, consultez [Créer et déployer une application avec System Center Configuration Manager](/sccm/apps/get-started/create-and-deploy-an-application).  
+**Supprimer les anciennes données de demande d’application** : Cette tâche permet de supprimer de la base de données les anciennes requêtes d’application. Pour plus d’informations sur les demandes d’application, consultez [Créer et déployer une application avec System Center Configuration Manager](/sccm/apps/get-started/create-and-deploy-an-application).  
 
--   Site d'administration centrale : Non disponible
+-   Site d’administration centrale : Non disponible
 -   **Site principal** : Permis    
 -   Site secondaire : Non disponible  
 
@@ -71,39 +71,39 @@ Cette rubrique répertorie les détails de chaque tâche de maintenance de site 
 - Site secondaire - Non disponible
 
 
-**Supprimer les fichiers collectés anciens** : Cette tâche permet de supprimer de la base de données d'anciennes informations sur les fichiers collectés. Cette tâche supprime également les fichiers collectés à partir de la structure de dossier du serveur de site sur le site sélectionné. Par défaut, les cinq copies les plus récentes des fichiers collectés sont stockées sur le serveur de site dans le répertoire **Inboxes\sinv.box\FileCol**. Pour plus d’informations, consultez [Présentation de l’inventaire logiciel dans System Center Configuration Manager](/sccm/core/clients/manage/inventory/introduction-to-software-inventory).  
+**Supprimer les fichiers collectés anciens** : Cette tâche permet de supprimer de la base de données d’anciennes informations sur les fichiers collectés. Cette tâche supprime également les fichiers collectés à partir de la structure de dossier du serveur de site sur le site sélectionné. Par défaut, les cinq copies les plus récentes des fichiers collectés sont stockées sur le serveur de site dans le répertoire **Inboxes\sinv.box\FileCol**. Pour plus d’informations, consultez [Présentation de l’inventaire logiciel dans System Center Configuration Manager](/sccm/core/clients/manage/inventory/introduction-to-software-inventory).  
 
--   Site d'administration centrale : Non disponible    
+-   Site d’administration centrale : Non disponible    
 -   **Site principal** : Permis    
 -   Site secondaire : Non disponible  
 
-**Supprimer les données d’associations d’ordinateurs anciennes** : Cette tâche permet de supprimer de la base de données d'anciennes données d'associations d'ordinateur du déploiement de système d'exploitation. Ces informations sont utilisées dans le cadre de l'exécution de restaurations de l'état utilisateur. Pour plus d’informations sur les associations d’ordinateurs, consultez [Gérer l’état utilisateur dans System Center Configuration Manager](../../../osd/get-started/manage-user-state.md).  
+**Supprimer les données d’associations d’ordinateurs anciennes** : Cette tâche permet de supprimer de la base de données d’anciennes données d’associations d’ordinateur du déploiement de système d’exploitation. Ces informations sont utilisées dans le cadre de l'exécution de restaurations de l'état utilisateur. Pour plus d’informations sur les associations d’ordinateurs, consultez [Gérer l’état utilisateur dans System Center Configuration Manager](../../../osd/get-started/manage-user-state.md).  
 
--   Site d'administration centrale : Non disponible    
+-   Site d’administration centrale : Non disponible    
 -   **Site principal** : Permis    
 -   Site secondaire : Non disponible  
 
-**Supprimer les anciennes données de détection de suppression** : Cette tâche permet de supprimer de la base de données d'anciennes données ayant été créées par Extraction Views. Par défaut, Extraction Views est désactivé. Vous pouvez uniquement l’activer à l’aide du SDK Configuration Manager. Sauf si Extraction Views est activé, il n'y a pas de données à supprimer pour cette tâche.  
+**Supprimer les anciennes données de détection de suppression** : Cette tâche permet de supprimer de la base de données d’anciennes données ayant été créées par Extraction Views. Par défaut, Extraction Views est désactivé. Vous pouvez uniquement l’activer à l’aide du SDK Configuration Manager. Sauf si Extraction Views est activé, il n'y a pas de données à supprimer pour cette tâche.  
 
 -   **Site d’administration centrale** : Permis    
 -   **Site principal** : Permis    
 -   Site secondaire : Non disponible  
 
-**Supprimer l’ancien enregistrement de réinitialisation d’appareil** : Cette tâche permet de supprimer de la base de données d'anciennes données d'actions de réinitialisation d'appareils mobiles. Pour plus d’informations sur la réinitialisation des appareils mobiles, consultez [Protéger les données à l’aide de la réinitialisation à distance, du verrouillage à distance ou de la réinitialisation du code d’accès en utilisant System Center Configuration Manager](/sccm/mdm/deploy-use/wipe-lock-reset-devices).  
+**Supprimer l’ancien enregistrement de réinitialisation d’appareil** : Cette tâche permet de supprimer de la base de données d’anciennes données d’actions de réinitialisation d’appareils mobiles. Pour plus d’informations sur la réinitialisation des appareils mobiles, consultez [Protéger les données à l’aide de la réinitialisation à distance, du verrouillage à distance ou de la réinitialisation du code d’accès en utilisant System Center Configuration Manager](/sccm/mdm/deploy-use/wipe-lock-reset-devices).  
 
--   Site d'administration centrale : Non disponible    
+-   Site d’administration centrale : Non disponible    
 -   **Site principal** : Permis    
 -   Site secondaire : Non disponible  
 
-**Supprimer les anciens appareils gérés par le connecteur Exchange Server** : Cette tâche permet de supprimer d'anciennes données d'appareils mobiles gérés par le connecteur Exchange Server. Ces données sont supprimées en fonction de l’intervalle configuré pour l’option **Ignorer les appareils mobiles inactifs depuis plus de (jours)** sous l’onglet **Découverte** des propriétés du connecteur Exchange Server. Pour plus d’informations, consultez [Gérer les appareils mobiles avec System Center Configuration Manager et Exchange](../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).  
+**Supprimer les anciens appareils gérés par le connecteur Exchange Server** : Cette tâche permet de supprimer d’anciennes données d’appareils mobiles gérés par le connecteur Exchange Server. Ces données sont supprimées en fonction de l’intervalle configuré pour l’option **Ignorer les appareils mobiles inactifs depuis plus de (jours)** sous l’onglet **Découverte** des propriétés du connecteur Exchange Server. Pour plus d’informations, consultez [Gérer les appareils mobiles avec System Center Configuration Manager et Exchange](../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).  
 
--   Site d'administration centrale : Non disponible   
+-   Site d’administration centrale : Non disponible   
 -   **Site principal** : Permis    
 -   Site secondaire : Non disponible  
 
-**Supprimer les données de découverte anciennes** : Cette tâche permet de supprimer de la base de données d'anciennes données de découverte. Ces données peuvent inclure les enregistrements résultant des méthodes de découverte par pulsations, de découverte réseau et de découverte Active Directory Domain Services (Système, Utilisateur et Groupe). Cette tâche supprime également les anciens appareils marqués comme étant désactivés. Lorsque cette tâche s’exécute sur un site, les données associées à celui-ci sont supprimées, et ces modifications sont répliquées vers d’autres sites. Pour plus d'informations sur la découverte, voir [Exécuter la découverte pour System Center Configuration Manager](../../../core/servers/deploy/configure/run-discovery.md).  
+**Supprimer les données de découverte anciennes** : Cette tâche permet de supprimer de la base de données d’anciennes données de découverte. Ces données peuvent inclure les enregistrements résultant des méthodes de découverte par pulsations, de découverte réseau et de découverte Active Directory Domain Services (Système, Utilisateur et Groupe). Cette tâche supprime également les anciens appareils marqués comme étant désactivés. Lorsque cette tâche s’exécute sur un site, les données associées à celui-ci sont supprimées, et ces modifications sont répliquées vers d’autres sites. Pour plus d'informations sur la découverte, voir [Exécuter la découverte pour System Center Configuration Manager](../../../core/servers/deploy/configure/run-discovery.md).  
 
--   Site d'administration centrale : Non disponible    
+-   Site d’administration centrale : Non disponible    
 -   **Site principal** : Permis    
 -   Site secondaire : Non disponible  
 
@@ -113,9 +113,9 @@ Cette rubrique répertorie les détails de chaque tâche de maintenance de site 
 -   **Site principal** : Permis    
 -   Site secondaire : Non disponible  
 
-**Supprimer les anciennes données de l’historique de l’état d’intégrité Endpoint Protection** : Cette tâche permet de supprimer de la base de données d'anciennes informations d'état d'Endpoint Protection. Pour plus d’informations sur les informations d’état Endpoint Protection, consultez [Comment surveiller Endpoint Protection dans System Center Configuration Manager](../../../protect/deploy-use/monitor-endpoint-protection.md).  
+**Supprimer les anciennes données de l’historique de l’état d’intégrité Endpoint Protection** : Cette tâche permet de supprimer de la base de données d’anciennes informations d’état d’Endpoint Protection. Pour plus d’informations sur les informations d’état Endpoint Protection, consultez [Comment surveiller Endpoint Protection dans System Center Configuration Manager](../../../protect/deploy-use/monitor-endpoint-protection.md).  
 
--   Site d'administration centrale : Non disponible    
+-   Site d’administration centrale : Non disponible    
 -   **Site principal** : Permis    
 -   Site secondaire : Non disponible  
 
@@ -123,17 +123,17 @@ Cette rubrique répertorie les détails de chaque tâche de maintenance de site 
 
 Cette tâche s’applique aux appareils qui sont inscrits à l’aide de Microsoft Intune (hybride) ou de la gestion des appareils mobiles locale de Configuration Manager. Pour plus d’informations, voir [Systèmes d’exploitation pris en charge pour les clients et les appareils](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices#bkmk_OnpremOS).
 
--   Site d'administration centrale : Non disponible    
+-   Site d’administration centrale : Non disponible    
 -   **Site principal** : Non activé    
 -   Site secondaire : Non disponible  
 
-**Supprimer les historiques d’inventaire anciens** : Cette tâche permet de supprimer des données d'inventaire ayant été stockées dans la base de données pendant une durée plus longue que celle spécifiée. Pour plus d’informations sur l’historique d’inventaire, consultez [Comment utiliser l’Explorateur de ressources pour afficher l’inventaire matériel dans System Center Configuration Manager](../../../core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md).  
+**Supprimer les historiques d’inventaire anciens** : Cette tâche permet de supprimer des données d’inventaire ayant été stockées dans la base de données pendant une durée plus longue que celle spécifiée. Pour plus d’informations sur l’historique d’inventaire, consultez [Comment utiliser l’Explorateur de ressources pour afficher l’inventaire matériel dans System Center Configuration Manager](../../../core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md).  
 
--   Site d'administration centrale : Non disponible    
+-   Site d’administration centrale : Non disponible    
 -   **Site principal** : Permis    
 -   Site secondaire : Non disponible  
 
-**Supprimer les anciennes données de journal** : Cette tâche permet de supprimer d'anciennes données de journal utilisées pour le dépannage de la base de données. Ces données ne sont pas liées à des opérations de composants Configuration Manager.  
+**Supprimer les anciennes données de journal** : Cette tâche permet de supprimer d’anciennes données de journal utilisées pour le dépannage de la base de données. Ces données ne sont pas liées à des opérations de composants Configuration Manager.  
 
 > [!IMPORTANT]  
 > Par défaut, cette tâche s'exécute quotidiennement sur chaque site. Au niveau du site d'administration centrale et des sites principaux, la tâche supprime les données datant de plus de 30 jours. Quand vous utilisez SQL Server Express sur un site secondaire, veillez à ce que cette tâche soit exécutée chaque jour et à ce qu’elle supprime bien les données inactives depuis sept jours.  
@@ -144,7 +144,7 @@ Cette tâche s’applique aux appareils qui sont inscrits à l’aide de Microso
 
 **Supprimer l’historique d’anciennes tâches de notification** : Cette tâche permet de supprimer de la base de données de site des informations sur des tâches de notification client lorsqu’elles n’ont pas été mises à jour pendant une durée spécifiée. Pour plus d’informations sur la notification client, consultez [Tâches de déploiement du client pour System Center Configuration Manager](../../../core/clients/manage/monitor-clients.md).  
 
--   Site d'administration centrale : Non disponible    
+-   Site d’administration centrale : Non disponible    
 -   **Site principal** : Permis    
 -   Site secondaire : Non disponible  
 
@@ -166,39 +166,39 @@ Cette tâche s’applique aux appareils qui sont inscrits à l’aide de Microso
 -   **Site principal** : Permis    
 -   **Site secondaire** : Permis  
 
-**Supprimer les données de contrôle de logiciel anciennes** : Cette tâche permet de supprimer de la base de données d'anciennes données du contrôle de logiciel ayant été stockées plus longtemps que la durée spécifiée. Pour plus d’informations, consultez [Contrôle de logiciel dans System Center Configuration Manager](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md).  
+**Supprimer les données de contrôle de logiciel anciennes** : Cette tâche permet de supprimer de la base de données d’anciennes données du contrôle de logiciel ayant été stockées plus longtemps que la durée spécifiée. Pour plus d’informations, consultez [Contrôle de logiciel dans System Center Configuration Manager](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md).  
 
--   Site d'administration centrale : Non disponible    
+-   Site d’administration centrale : Non disponible    
 -   **Site principal** : Permis    
 -   Site secondaire : Non disponible  
 
-**Supprimer les données de synthèse de contrôle de logiciel anciennes** : Cette tâche permet de supprimer de la base de données d'anciennes données de résumé du contrôle de logiciel ayant été stockées plus longtemps que la durée spécifiée. Pour plus d’informations, consultez [Contrôle de logiciel dans System Center Configuration Manager](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md).  
+**Supprimer les données de synthèse de contrôle de logiciel anciennes** : Cette tâche permet de supprimer de la base de données d’anciennes données de résumé du contrôle de logiciel ayant été stockées plus longtemps que la durée spécifiée. Pour plus d’informations, consultez [Contrôle de logiciel dans System Center Configuration Manager](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md).  
 
--   Site d'administration centrale : Non disponible    
+-   Site d’administration centrale : Non disponible    
 -   **Site principal** : Permis    
 -   Site secondaire : Non disponible  
 
-**Supprimer les messages d’état anciens** : Cette tâche permet de supprimer de la base de données d'anciennes données de message d'état en fonction de la configuration des règles de filtre d'état. Pour plus d’informations, consultez la section « Surveiller l’état du système de Configuration Manager » dans la rubrique [Utiliser des alertes et le système d’état pour System Center Configuration Manager](../../../core/servers/manage/use-alerts-and-the-status-system.md).  
+**Supprimer les messages d’état anciens** : Cette tâche permet de supprimer de la base de données d’anciennes données de message d’état en fonction de la configuration des règles de filtre d’état. Pour plus d’informations, consultez la section « Surveiller l’état du système de Configuration Manager » dans la rubrique [Utiliser des alertes et le système d’état pour System Center Configuration Manager](../../../core/servers/manage/use-alerts-and-the-status-system.md).  
 
 -   **Site d’administration centrale** : Permis    
 -   **Site principal** : Permis    
 -   Site secondaire : Non disponible  
 
-**Supprimer les anciennes données de menace** : Cette tâche permet de supprimer de la base de données d'anciennes données de menace d'Endpoint Protection ayant été stockées plus longtemps que la durée spécifiée. Pour plus d’informations sur Endpoint Protection, consultez [Endpoint Protection dans System Center Configuration Manager](../../../protect/deploy-use/endpoint-protection.md).  
+**Supprimer les anciennes données de menace** : Cette tâche permet de supprimer de la base de données d’anciennes données de menace d’Endpoint Protection ayant été stockées plus longtemps que la durée spécifiée. Pour plus d’informations sur Endpoint Protection, consultez [Endpoint Protection dans System Center Configuration Manager](../../../protect/deploy-use/endpoint-protection.md).  
 
--   Site d'administration centrale : Non disponible    
+-   Site d’administration centrale : Non disponible    
 -   **Site principal** : Permis    
 -   Site secondaire : Non disponible  
 
 **Supprimer les anciens ordinateurs inconnus** : Cette tâche permet de supprimer de la base de données de site des informations sur des ordinateurs inconnus lorsqu’elles n’ont pas été mises à jour pendant une durée spécifiée. Pour plus d’informations, consultez [Préparer les déploiements d’ordinateurs inconnus dans System Center Configuration Manager](../../../osd/get-started/prepare-for-unknown-computer-deployments.md).  
 
--   Site d'administration centrale : Non disponible    
+-   Site d’administration centrale : Non disponible    
 -   **Site principal** : Permis    
 -   Site secondaire : Non disponible  
 
-**Supprimer les anciennes données d’affinité entre appareil et utilisateur** : Cette tâche permet de supprimer de la base de données d'anciennes données d'affinité entre appareil et utilisateur. Pour plus d’informations, consultez [Lier des utilisateurs et des appareils avec l’affinité entre utilisateur et appareil dans System Center Configuration Manager](../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md).  
+**Supprimer les anciennes données d’affinité entre appareil et utilisateur** : Cette tâche permet de supprimer de la base de données d’anciennes données d’affinité entre appareil et utilisateur. Pour plus d’informations, consultez [Lier des utilisateurs et des appareils avec l’affinité entre utilisateur et appareil dans System Center Configuration Manager](../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md).  
 
--   Site d'administration centrale : Non disponible    
+-   Site d’administration centrale : Non disponible    
 -   **Site principal** : Permis    
 -   Site secondaire : Non disponible  
 
@@ -214,7 +214,7 @@ Cette tâche ne fonctionne que sur les ressources qui des clients Configuration 
 > [!IMPORTANT]  
 > Quand elle est activée, configurez cette tâche pour qu’elle s’exécute à un intervalle plus important que celui planifié pour la **Découverte par pulsations d’inventaire**. Les clients actifs peuvent ainsi envoyer un enregistrement de type Découverte par pulsations d’inventaire pour marquer leur enregistrement de client comme actif, de sorte que cette tâche ne les supprime pas.  
 
--   Site d'administration centrale : Non disponible    
+-   Site d’administration centrale : Non disponible    
 -   **Site principal** : Non activé    
 -   Site secondaire : Non disponible  
 
@@ -229,7 +229,7 @@ Cette tâche ne fonctionne que sur les ressources qui des clients Configuration 
 > [!IMPORTANT]  
 > Quand elle est activée, configurez cette tâche pour qu’elle s’exécute à un intervalle plus important que celui planifié pour la Découverte par pulsations d’inventaire. Cela permet au client d'envoyer un enregistrement de découverte par pulsations d'inventaire qui définit l'état obsolète correctement.  
 
--   Site d'administration centrale : Non disponible    
+-   Site d’administration centrale : Non disponible    
 -   **Site principal** : Non activé    
 -   Site secondaire : Non disponible  
 
@@ -244,15 +244,15 @@ Cette tâche ne fonctionne que sur les ressources qui des clients Configuration 
 -   **Site principal** : Permis    
 -   Site secondaire : Non disponible
 
-**Supprimer les révisions d’application inutilisées** : Cette tâche permet de supprimer les révisions d'application qui ne sont plus référencées. Pour plus d’informations, consultez [Comment modifier et remplacer des applications dans System Center Configuration Manager](../../../apps/deploy-use/revise-and-supersede-applications.md).  
+**Supprimer les révisions d’application inutilisées** : Cette tâche permet de supprimer les révisions d’application qui ne sont plus référencées. Pour plus d’informations, consultez [Comment modifier et remplacer des applications dans System Center Configuration Manager](../../../apps/deploy-use/revise-and-supersede-applications.md).  
 
--   Site d'administration centrale : Non disponible    
+-   Site d’administration centrale : Non disponible    
 -   **Site principal** : Permis    
 -   Site secondaire : Non disponible  
 
 **Évaluer les membres du regroupement** : L’évaluation de l’appartenance au regroupement est configurée en tant que composant de site. Pour plus d'informations sur les composants de site, voir [Site components for System Center Configuration Manager](../../../core/servers/deploy/configure/site-components.md).  
 
--   Site d'administration centrale : Non disponible    
+-   Site d’administration centrale : Non disponible    
 -   **Site principal** : Permis    
 -   Site secondaire : Non disponible  
 
@@ -272,23 +272,23 @@ Pour des performances optimales, les index de base de données Configuration Man
 
 **Résumer les données du logiciel installé** : Cette tâche permet de synthétiser les données de logiciels installés de plusieurs enregistrements en un seul enregistrement général. La synthèse des données permet de compresser la quantité de données stockées dans la base de données Configuration Manager. Pour plus d’informations, consultez [Présentation de l’inventaire logiciel dans System Center Configuration Manager](../../clients/manage/inventory/introduction-to-software-inventory.md).  
 
--   Site d'administration centrale : Non disponible    
+-   Site d’administration centrale : Non disponible    
 -   **Site principal** : Permis    
 -   Site secondaire : Non disponible  
 
-**Résumer les données d’utilisation de fichier de contrôle de logiciel** : Cette tâche permet de synthétiser les données de plusieurs enregistrements pour l'utilisation de fichier de contrôle logiciel en un seul enregistrement général. La synthèse des données permet de compresser la quantité de données stockées dans la base de données Configuration Manager.
+**Résumer les données d’utilisation de fichier de contrôle de logiciel** : Cette tâche permet de synthétiser les données de plusieurs enregistrements pour l’utilisation de fichier de contrôle logiciel en un seul enregistrement général. La synthèse des données permet de compresser la quantité de données stockées dans la base de données Configuration Manager.
 
 Vous pouvez utiliser cette tâche avec la tâche **Résumer les données d’utilisation mensuelle de contrôle de logiciel** pour synthétiser les données de contrôle de logiciel et pour préserver de l’espace disque dans la base de données Configuration Manager. Pour plus d’informations, consultez [Contrôle de logiciel dans System Center Configuration Manager](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md).  
 
--   Site d'administration centrale : Non disponible    
+-   Site d’administration centrale : Non disponible    
 -   **Site principal** : Permis    
 -   Site secondaire : Non disponible  
 
-**Résumer les données d’utilisation mensuelle de contrôle de logiciel** : Cette tâche permet de synthétiser les données de plusieurs enregistrements pour l'utilisation mensuelle du contrôle de logiciel en un seul enregistrement général. La synthèse des données permet de compresser la quantité de données stockées dans la base de données Configuration Manager.
+**Résumer les données d’utilisation mensuelle de contrôle de logiciel** : Cette tâche permet de synthétiser les données de plusieurs enregistrements pour l’utilisation mensuelle du contrôle de logiciel en un seul enregistrement général. La synthèse des données permet de compresser la quantité de données stockées dans la base de données Configuration Manager.
 
 Vous pouvez utiliser cette tâche avec la tâche **Résumer les données d’utilisation de fichier de contrôle de logiciel** pour synthétiser les données de contrôle de logiciel et pour préserver de l’espace dans la base de données Configuration Manager. Pour plus d’informations, consultez [Contrôle de logiciel dans System Center Configuration Manager](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md).  
 
--   Site d'administration centrale : Non disponible    
+-   Site d’administration centrale : Non disponible    
 -   **Site principal** : Permis    
 -   Site secondaire : Non disponible  
 
@@ -296,12 +296,12 @@ Vous pouvez utiliser cette tâche avec la tâche **Résumer les données d’uti
 
 Ces mappages sont stockés dans une table à des fins de référence rapide. Quand l’appartenance à un regroupement change, ces mappages stockés sont mis à jour afin de refléter ces modifications. Toutefois, il est possible que ces mappages soient désynchronisés. Par exemple, si le site ne parvient pas à traiter correctement un fichier de notification, il se peut que cette modification ne soit pas reflétée dans une modification des mappages. Cette tâche actualise ce mappage en fonction de l’appartenance au regroupement actuel.  
 
--   Site d'administration centrale : Non disponible    
+-   Site d’administration centrale : Non disponible    
 -   **Site principal** : Permis    
 -   Site secondaire : Non disponible  
 
-**Mettre à jour les tables du catalogue d’applications** : Cette tâche permet de synchroniser le cache de base de données du site Web du catalogue d'applications avec les dernières informations sur les applications. Lorsque vous modifiez la configuration de cette tâche de maintenance, la configuration s'applique à tous les sites principaux de la hiérarchie.  
+**Mettre à jour les tables du catalogue d’applications** : Cette tâche permet de synchroniser le cache de base de données du site web du catalogue d’applications avec les dernières informations sur les applications. Lorsque vous modifiez la configuration de cette tâche de maintenance, la configuration s'applique à tous les sites principaux de la hiérarchie.  
 
--   Site d'administration centrale : Non disponible    
+-   Site d’administration centrale : Non disponible    
 -   **Site principal** : Permis    
 -   Site secondaire : Non disponible  

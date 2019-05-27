@@ -10,12 +10,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e61eb676d7ec61a2e72cd911389e019c9f0cbd7a
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.openlocfilehash: 5959cb6af3fb7c433d02b21a8a8f8d99b991d8a6
+ms.sourcegitcommit: ab9f2a7fb7ea3a0c65808fce2975ab25a670281f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59802374"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65612563"
 ---
 <!-- 
 - Feature 1357546
@@ -88,6 +88,7 @@ Articles concernant une mise à jour importante et récente.
 Procédures pas à pas d’aide à la résolution des problèmes liés aux composants et fonctionnalités de Configuration Manager.
 
 - [Résolution des problèmes de démarrage PXE](https://support.microsoft.com/help/4468612)
+- [Comprendre et dépanner les mises à jour et la maintenance dans Configuration Manager](https://support.microsoft.com/help/4490424)
 - [Résolution des problèmes de synchronisation des mises à jour logicielles](https://support.microsoft.com/help/10059)
 - [Présentation et résolution des problèmes de distribution de contenu](https://support.microsoft.com/help/4482728)
 - [Présentation et résolution des problèmes d’intégration de Microsoft Store pour Entreprises](https://support.microsoft.com/help/4010214)
@@ -96,14 +97,13 @@ Procédures pas à pas d’aide à la résolution des problèmes liés aux compo
 
 ## <a name="new-and-updated-support-articles"></a>Articles de support nouveaux et mis à jour
 
-Articles de support nouveaux ou mis à jour en mars 2019.
+Articles de support nouveaux ou mis à jour entre le 7 avril et le 13 mai 2019.
 
 - [Base de connaissances 4488598 : Mise à jour de Rollup 2 pour Current Branch de System Center Configuration Manager, version 1810](https://support.microsoft.com/help/4488598)
 - [Base de connaissances 4494015 : Une séquence de tâches OSD ne se poursuit pas une fois l’installation de Windows ou d’une mise à niveau sur place terminée](https://support.microsoft.com/help/4494015)
 - [Base de connaissances 4495265 : WINHTTP_CALLBACK_STATUS_FLAG_CERT_CN_INVALID lorsque vous utilisez une passerelle de gestion cloud comme un point de distribution cloud avec un certificat tiers](https://support.microsoft.com/help/4495265)
-- [Base de connaissances 4494799 : Les anciennes versions de Windows ne démarrent pas après l’étape « Configurer Windows et Configuration Manager » si BitLocker préconfiguré est utilisé avec Windows 10 version 1511](https://support.microsoft.com/help/4494799)
-- [Base de connaissances 4494362 : « Impossible d’envoyer la mise à jour sur le composant PolicyTargetEvalNotify_iud » est enregistré à plusieurs reprises dans le journal Smsdbmon.log une fois que vous êtes passé à Configuration Manager version 1810](https://support.microsoft.com/help/4494362)
-- [Base de connaissances 4494361 : La jonction d’un site d’administration centrale à un site principal autonome échoue si l’authentification à deux facteurs est activée](https://support.microsoft.com/help/4494361)
-- [Base de connaissances 4493667 : OSDResults n’affiche pas les applications installées par une séquence de tâches UDI dans Configuration Manager](https://support.microsoft.com/help/4493667)
+- [KB 4498259 : Les données d’Upgrade Readiness sont téléchargées en continu dans Configuration Manager](https://support.microsoft.com/help/4498259)
+- [KB 4040243 : Comment activer TLS 1.2 pour Configuration Manager](https://support.microsoft.com/help/4040243)
+- [Base de connaissances 4490644 : Le guide complet de la maintenance de Microsoft WSUS et de Configuration Manager SUP](https://support.microsoft.com/help/4490644)
 
 Pour vous abonner à une notification Atom ou RSS qui vous informe de la disponibilité de nouveaux articles de support Configuration Manager, consultez [Mises à jour du contenu de support](https://support.microsoft.com/help/4089498/) et sélectionnez **System Center Configuration Manager**.  

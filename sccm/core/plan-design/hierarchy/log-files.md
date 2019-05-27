@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f14953b7c2008f6d0e9e5715a8096126e56b0b7e
-ms.sourcegitcommit: 8803a64692f3edc0422b58f6c3037a8796374cc8
+ms.openlocfilehash: 5994eb6ab241e35bd0b4c4ecceb9fe6c4ef35a00
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "57881960"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66176035"
 ---
 # <a name="log-files-in-configuration-manager"></a>Fichiers journaux de Configuration Manager
 
@@ -115,7 +115,7 @@ Dans Configuration Manager, les composants des clients et des serveurs de site e
     -   [Serveur WSUS](#BKMK_WSUSLog)  
 
 ##  <a name="BKMK_AboutLogs"></a> À propos des fichiers journaux de Configuration Manager  
- La plupart des processus dans Configuration Manager consignent des informations sur les opérations dans un fichier journal dédié à ce processus. Ces fichiers journaux sont identifiés par des extensions de fichier **.log** ou **.lo_**. Configuration Manager écrit dans un fichier .log jusqu’à ce que ce journal atteigne sa taille maximale. Une fois le journal plein, le fichier .log est copié vers un fichier portant le même nom mais avec l’extension .lo_, et le processus ou le composant continue à écrire dans le fichier .log. Quand le fichier .log atteint à nouveau sa taille maximale, le fichier .lo_ est remplacé et le processus se répète. Certains composants établissent un historique du fichier journal en ajoutant une date et une heure au nom du fichier journal, et en conservant l’extension .log. Le client pour Linux et UNIX constitue une exception à la taille maximale et à l’utilisation du fichier .lo_. Pour plus d’informations sur la façon dont le client pour Linux et UNIX utilise les fichiers journaux, consultez [Gérer des fichiers journaux dans le client pour Linux et UNIX](#BKMK_ManageLinuxLogs) dans cet article.  
+ La plupart des processus dans Configuration Manager consignent des informations sur les opérations dans un fichier journal dédié à ce processus. Ces fichiers journaux sont identifiés par des extensions de fichier **.log** ou **.lo_** . Configuration Manager écrit dans un fichier .log jusqu’à ce que ce journal atteigne sa taille maximale. Une fois le journal plein, le fichier .log est copié vers un fichier portant le même nom mais avec l’extension .lo_, et le processus ou le composant continue à écrire dans le fichier .log. Quand le fichier .log atteint à nouveau sa taille maximale, le fichier .lo_ est remplacé et le processus se répète. Certains composants établissent un historique du fichier journal en ajoutant une date et une heure au nom du fichier journal, et en conservant l’extension .log. Le client pour Linux et UNIX constitue une exception à la taille maximale et à l’utilisation du fichier .lo_. Pour plus d’informations sur la façon dont le client pour Linux et UNIX utilise les fichiers journaux, consultez [Gérer des fichiers journaux dans le client pour Linux et UNIX](#BKMK_ManageLinuxLogs) dans cet article.  
 
  Pour afficher les journaux, utilisez la visionneuse du journal Configuration Manager, CMTrace, qui se trouve dans le dossier \\\SMSSetup\\Tools du média source de Configuration Manager. Il est ajouté à toutes les images de démarrage ajoutées à la Bibliothèque de logiciels. Depuis la version 1806, l’outil d’affichage des journaux CMTrace est automatiquement installé avec le client Configuration Manager.<!--1357971--> Pour plus d’informations, consultez [CMTrace](/sccm/core/support/cmtrace). 
 
@@ -416,7 +416,7 @@ Le fichier journal SMS_DM.log sur le serveur de système de site enregistre auss
 |Nom du fichier journal|Description|Ordinateur sur lequel se trouve le fichier journal|  
 |--------------|-----------------|----------------------------|  
 |objreplmgr.log|Enregistre les détails concernant la réplication des fichiers de notification de mises à jour logicielles, entre un site parent et des sites enfants.|Serveur de site|  
-|PatchDownloader.log|Enregistre des détails concernant le processus de téléchargement des mises à jour logicielles vers la destination de téléchargement, sur le serveur de site.|Ordinateur qui héberge la console Configuration Manager à partir de laquelle les téléchargements sont lancés|  
+|PatchDownloader.log|Enregistre des détails concernant le processus de téléchargement des mises à jour logicielles vers la destination de téléchargement, sur le serveur de site.|Lorsque vous téléchargez des mises à jour manuellement, ce fichier se trouve dans votre répertoire `%temp%` sur l’ordinateur sur lequel vous utilisez la console. Pour les règles de déploiement automatique, si le client Configuration Manager est installé sur le serveur de site, ce fichier se trouve sur le serveur de site dans `%windir%\CCM\Logs`.|  
 |ruleengine.log|Enregistre des détails concernant les règles de déploiement automatique pour l'identification, le téléchargement de contenu et la création de groupe et de déploiement de mises à jour logicielles.|Serveur de site| 
 |SMS_ISVUPDATES_SYNCAGENT.log| Fichier journal pour la synchronisation des mises à jour de logiciels tiers à compter de Configuration Manager version 1806.| Point de mise à jour logicielle de plus haut niveau dans la hiérarchie Configuration Manager.| 
 |SUPSetup.log|Enregistre des détails concernant l'installation du point de mise à jour logicielle. Lorsque l'installation d'un point de mise à jour logicielle se termine, la mention **Installation was successful** est consignée dans ce fichier journal.|Serveur de système de site|  
@@ -494,9 +494,9 @@ Le fichier journal SMS_DM.log sur le serveur de système de site enregistre auss
 
  En plus des fichiers journaux de Configuration Manager, consultez les journaux des applications Windows dans l’Observateur d’événements sur le serveur exécutant le service d’inscription d’appareils réseau et sur le serveur hébergeant le point d’enregistrement de certificat. Par exemple, recherchez des messages de la source **NetworkDeviceEnrollmentService** . Vous pouvez également utiliser les fichiers journaux suivants :  
 
--   Fichiers journaux IIS pour le service d’inscription d’appareils réseau : **&lt;chemin\>\inetpub\logs\LogFiles\W3SVC1**  
+-   Fichiers journaux IIS pour le service d’inscription d’appareils réseau : **%SYSTEMDRIVE%\inetpub\logs\LogFiles\W3SVC1**  
 
--   Fichiers journaux IIS pour le point d’inscription du certificat : **&lt;chemin\>\inetpub\logs\LogFiles\W3SVC1**  
+-   Fichiers journaux IIS pour le point d’inscription du certificat : **%SYSTEMDRIVE%\inetpub\logs\LogFiles\W3SVC1**  
 
 -   Fichier journal de la stratégie d'inscription de périphérique réseau : **mscep.log**  
 
@@ -782,7 +782,7 @@ Le tableau suivant répertorie les fichiers journaux qui contiennent des informa
 |Nom du fichier journal|Description|Ordinateur sur lequel se trouve le fichier journal|  
 |--------------|-----------------|----------------------------|  
 |Ccmperf.log|Enregistre les activités liées à la maintenance et la capture de données relatives aux compteurs de performances du client.|Client|  
-|PatchDownloader.log|Enregistre des détails concernant le processus de téléchargement des mises à jour logicielles vers la destination de téléchargement, sur le serveur de site.|Ordinateur qui héberge la console Configuration Manager à partir de laquelle les téléchargements sont lancés|  
+|PatchDownloader.log|Enregistre des détails concernant le processus de téléchargement des mises à jour logicielles vers la destination de téléchargement, sur le serveur de site.|Lors du téléchargement manuel de mises à jour, il sera situé dans le répertoire %temp% de l’utilisateur exécutant la console sur la machine sur laquelle vous exécutez la console. Pour les règles de déploiement automatique, il sera situé sur le serveur de site dans %windir%\CCM\Logs si le client ConfigMgr est installé sur le serveur de site.|  
 |PolicyEvaluator.log|Enregistre des détails concernant l'évaluation des stratégies sur les ordinateurs clients, dont les stratégies de mises à jour logicielles.|Client|  
 |RebootCoordinator.log|Enregistre des détails concernant la coordination des redémarrages du système sur des ordinateurs clients après l'installation de mises à jour logicielles.|Client|  
 |ScanAgent.log|Enregistre des détails concernant les demandes d'analyse pour les mises à jour logicielles, l'emplacement de WSUS et des actions connexes.|Client|  

@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: a79f83be-884c-48e6-94d6-ed0a68c22e2f
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8621f759a2e79090c6cd6dac5f2f3749147cabed
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: f2312cb68940f5d0eb3d0dd33d192d07b6801d8e
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56133348"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65501040"
 ---
 # <a name="management-insights-in-configuration-manager"></a>Insights de gestion dans Configuration Manager
 
@@ -65,7 +65,8 @@ Les règles des insights de gestion réévaluent leur mise en application selon 
 
 Le fichier journal pour les règles des insights de gestion est **SMS_DataEngine.log** sur le serveur de site.
 
-<!--1357930--> Depuis la version 1806, certaines règles vous permettent de prendre des mesures. Sélectionnez une règle, sélectionnez **Plus de détails**, puis sélectionnez **Entreprendre une action** si cette option est disponible. 
+<!--1357930-->
+Depuis la version 1806, certaines règles vous permettent de prendre des mesures. Sélectionnez une règle, sélectionnez **Plus de détails**, puis sélectionnez **Entreprendre une action** si cette option est disponible. 
 
 En fonction de la règle, cette action présente l’un des comportements suivants :  
 
@@ -96,7 +97,7 @@ Le tableau de bord comprend les vignettes suivantes :
 
 - **Tous les insights** : Tableau des insights comprenant la priorité et l’état. Utilisez le champ **Filtre** situé en haut du tableau pour rechercher des chaînes dans les colonnes disponibles. Le tableau de bord trie les colonnes du tableau dans l’ordre suivant :
     - État : Action nécessaire, Terminé, Inconnu  
-    - Prioritaire : Critique, Recommandé, Facultatif  
+    - Priorité : Critique, Recommandé, Facultatif  
     - Dernière modification : les dates les plus anciennes se trouvent en haut de la liste   
 
 ![Capture d’écran du tableau de bord Insights de gestion](media/1357979-management-insights-dashboard.png)
@@ -144,7 +145,8 @@ Insights qui permettent de simplifier la gestion par le nettoyage et la reconfig
 
 
 ### <a name="proactive-maintenance"></a>Maintenance proactive
-<!--1352184--> Depuis la version 1806, les règles de ce groupe mettent en évidence les éventuels problèmes de configuration que vous pouvez éviter en effectuant la maintenance des objets Configuration Manager.    
+<!--1352184-->
+Depuis la version 1806, les règles de ce groupe mettent en évidence les éventuels problèmes de configuration que vous pouvez éviter en effectuant la maintenance des objets Configuration Manager.    
 
 - **Groupes de limites sans système de site attribué** : Sans systèmes de site attribué, les groupes de limites ne peuvent être utilisés que pour l’attribution de site. Pour plus d’informations, consultez [Configurer des groupes de limites](/sccm/core/servers/deploy/configure/boundary-groups).  
 
@@ -158,7 +160,7 @@ Insights qui permettent de simplifier la gestion par le nettoyage et la reconfig
 
 - **Éléments de configuration inutilisés** : Éléments de configuration qui ne font pas partie d’une base de référence de configuration et datent de plus de 30 jours. Pour plus d’informations, consultez [Créer des bases de référence de configuration](/sccm/compliance/deploy-use/create-configuration-baselines).  
 
-- **Mettre à niveau les sources de cache de pair avec la dernière version du client Configuration Manager** : Identifier les clients qui servent de source de cache d’homologue mais qui n’ont pas été mis à niveau depuis une version cliente antérieure à 1806. Les clients antérieurs à 1806 ne peuvent pas être utilisés en tant que source de cache d’homologue pour les clients qui exécutent la version 1806 ou une version ultérieure. Sélectionnez **Entreprendre une action** pour ouvrir une vue d’appareil qui affiche la liste des clients.<!--1358008-->  
+- **Mettre à niveau les sources de cache de pair avec la dernière version du client Configuration Manager** : Identifier les clients qui servent de source de cache d’homologue mais qui n’ont pas été mis à niveau depuis une version cliente antérieure à 1806. Les clients antérieurs à 1806 ne peuvent pas être utilisés en tant que source de cache d’homologue pour les clients qui exécutent la version 1806 ou une version ultérieure. Sélectionnez **Prendre des mesures** pour ouvrir une vue d’appareil qui affiche la liste des clients.<!--1358008-->  
 
 
 ### <a name="security"></a>Sécurité

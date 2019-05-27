@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: dba904ae-7c44-46db-ae63-999b9821cb46
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2fb57705079072e6a656464f5b7252b2ce05ad9d
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 36db15b340a4122d44e60ee5a2a3eec101c16556
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56123244"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499389"
 ---
 # <a name="cng-certificates-overview"></a>Vue d’ensemble des certificats CNG
 <!-- 1356191 --> 
@@ -32,7 +32,7 @@ Vous pouvez utiliser l’[interface de programmation d’applications de chiffre
 - Kit SDK de messagerie du client (avec la dernière mise à jour) et proxy ISV   
 - Configuration de la passerelle de gestion cloud  
 
-À compter de la version 1802, utilisez des certificats CNG pour les rôles serveur HTTPS suivants : <!-- 1357314 -->   
+À partir de la version 1802, utilisez des certificats CNG pour les rôles serveur HTTPS suivants : <!-- 1357314 -->   
 - Point de gestion
 - Point de distribution
 - Point de mise à jour logicielle
@@ -40,7 +40,7 @@ Vous pouvez utiliser l’[interface de programmation d’applications de chiffre
 
 À partir de la version 1806, utilisez des certificats CNG pour les rôles serveur HTTPS suivants :
 
-- Point d’enregistrement de certificat, notamment le serveur NDES avec le module de stratégie Configuration Manager <!--1357314-->
+- Point d’enregistrement de certificat, y compris le serveur NDES avec le module de stratégie Configuration Manager <!--1357314-->
 
 > [!NOTE]
 > CNG offre une compatibilité descendante avec Crypto API (CAPI). Les certificats CAPI continuent à être pris en charge même lorsque la prise en charge CNG est activée sur le client.

@@ -2,27 +2,28 @@
 title: Centre d’aide et de support
 titleSuffix: Configuration Manager
 description: Résoudre les problèmes des clients Configuration Manager avec le Centre d’aide et de support.
-ms.date: 03/06/2019
+ms.date: 05/10/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: c631197d-7daa-4faa-9e22-980cd6d604c2
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 367c293794eea86ef8b7b7fb0e331ce0602b325e
-ms.sourcegitcommit: 544f335cfd1bfd0a1d4973439780e9f5e9ee8bed
+ms.openlocfilehash: 9246ea46787b1db466b8aca5d8a602617c80e26a
+ms.sourcegitcommit: ab9f2a7fb7ea3a0c65808fce2975ab25a670281f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562038"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65612515"
 ---
 # <a name="support-center-for-configuration-manager"></a>Centre d’aide et de support pour Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
-<!--1357489--> À compter de la version 1810, utilisez le Centre d’aide et de support pour la résolution des problèmes clients, l’affichage des journaux en temps réel ou la capture de l’état d’un ordinateur client Configuration Manager pour l’analyser ultérieurement. Le Centre d’aide et de support est un outil unique permettant de consolider de nombreux outils administrateur de résolution des problèmes. 
+<!--1357489-->
+À compter de la version 1810, utilisez le Centre d’aide et de support pour la résolution des problèmes clients, l’affichage des journaux en temps réel ou la capture de l’état d’un ordinateur client Configuration Manager pour l’analyser ultérieurement. Le Centre d’aide et de support est un outil unique permettant de consolider de nombreux outils administrateur de résolution des problèmes. 
 
 
 
@@ -46,7 +47,7 @@ Le Centre d’aide et de support inclut la visionneuse du Centre d’aide et de 
 
 ### <a name="support-center-log-file-viewer"></a>Visionneuse des fichiers journaux du Centre d’aide et de support
 
-Le Centre d’aide et de support inclut une visionneuse de journal moderne. Cet outil remplace CMTrace. OneTrace fournit une interface personnalisable avec prise en charge des fenêtres ancrables et des onglets. Il a une couche de présentation rapide et peut charger des fichiers journaux volumineux en quelques secondes.
+Le Centre d’aide et de support inclut une visionneuse de journal moderne. Cet outil remplace CMTrace et fournit une interface personnalisable avec prise en charge des fenêtres ancrables et des onglets. Il a une couche de présentation rapide et peut charger des fichiers journaux volumineux en quelques secondes.
 
 
 ### <a name="powershell-cmdlets"></a>Applets de commande PowerShell
@@ -79,7 +80,8 @@ Une fois que vous l’avez installé, recherchez les éléments suivants dans le
 ## <a name="known-issues"></a>Problèmes connus 
 
 #### <a name="you-cant-install-the-latest-version-if-an-older-version-is-already-installed"></a>Il n’est pas possible d’installer la dernière version si une version antérieure est déjà installée
-<!--SCCMDocs-pr issue #3090--> Si vous disposez déjà d’une version antérieure du Centre de support, le programme d’installation de la version 1810 échoue. Ce problème est dû à la façon dont sont gérées la version d’origine et la dernière version des fichiers. Pour contourner ce problème, désinstallez d’abord l’ancienne version du Centre de support. Ensuite, installez la dernière version de Configuration Manager version 1810.
+<!--SCCMDocs-pr issue #3090-->
+Si vous disposez déjà d’une version antérieure du Centre de support, le programme d’installation de la version 1810 échoue. Ce problème est dû à la façon dont sont gérées la version d’origine et la dernière version des fichiers. Pour contourner ce problème, désinstallez d’abord l’ancienne version du Centre de support. Ensuite, installez la dernière version de Configuration Manager version 1810.
 
 #### <a name="remote-connections-must-include-computer-name-or-domain-as-part-of-the-user-name"></a>Les connexions à distance doivent inclure le nom de l’ordinateur ou du domaine dans le nom de l’utilisateur.
 Si vous vous connectez à un client distant à partir du Centre d’aide et de support, vous devez fournir le nom de la machine ou du domaine du compte d’utilisateur lors de l’établissement de la connexion. Si vous utilisez un nom d’ordinateur ou de domaine abrégé (tel que `.\administrator`), la connexion est établie, mais le Centre d’aide et de support ne collecte pas les données du client. 
@@ -93,7 +95,8 @@ Lors d’une connexion à des clients distants à l’aide de l’applet de comm
 où `<connection_name>` est le nom de la connexion à distance.
 
 #### <a name="application-deployment-evaluation-cycle-request-isnt-sent-correctly-to-remote-machines"></a>La demande de cycle d’évaluation de déploiement d’application n’est pas transmise correctement aux ordinateurs à distance
-<!--2849356--> Dans le Centre d’aide et de support, si vous sélectionnez **Évaluation du déploiement d’application** dans l’action **Appeler le déclencheur** de l’onglet **Contenu**, cette action démarre une tâche qui évalue les applications déployées. Si vous êtes connecté à un client local, elle évalue les déploiements d’application machine et utilisateur. Toutefois, si vous êtes connecté à un client à distance, elle évalue uniquement les déploiements d’application machine.
+<!--2849356-->
+Dans le Centre d’aide et de support, si vous sélectionnez **Évaluation du déploiement d’application** dans l’action **Appeler le déclencheur** de l’onglet **Contenu**, cette action démarre une tâche qui évalue les applications déployées. Si vous êtes connecté à un client local, elle évalue les déploiements d’application machine et utilisateur. Toutefois, si vous êtes connecté à un client à distance, elle évalue uniquement les déploiements d’application machine.
 
 
 ## <a name="next-steps"></a>Étapes suivantes

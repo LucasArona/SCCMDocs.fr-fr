@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: e8159bd9-5c2b-4d25-82f9-78fcfd732ba9
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a0febe68b659f1f9444b1a1471a4a8053374daaa
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: b200594c4769fb4528c3adc7b846b2345ffeda39
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56127998"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499871"
 ---
 # <a name="how-to-use-asset-intelligence-in-system-center-configuration-manager"></a>Guide pratique pour utiliser Asset Intelligence dans System Center Configuration Manager
 
@@ -30,12 +30,12 @@ Cette rubrique contient des informations destinées à vous aider à gérer les 
 ###  <a name="BKMK_AssetIntelligenceHomePage"></a> Page d’accueil d’Asset Intelligence  
  La page d'accueil d' **Asset Intelligence** contient un tableau de bord récapitulant les informations du catalogue Asset Intelligence. Sur la page d'accueil, vous pouvez visualiser des informations sur la synchronisation du catalogue et l'état des logiciels inventoriés. La page d'accueil d' **Asset Intelligence** comporte les sections suivantes :  
 
-- **Synchronisation de catalogue** : indique si Asset Intelligence est activé, l'état du point de synchronisation Asset Intelligence, la planification de la synchronisation, si la déclaration de licence du client est importée, la date/heure de la dernière mise à jour de l'état et de la prochaine mise à jour planifiée et le nombre de modifications effectuées après l'installation du système de site du point de synchronisation Asset Intelligence.  
+- **Synchronisation de catalogue** : indique si Asset Intelligence est activé, l’état du point de synchronisation Asset Intelligence, la planification de la synchronisation, si la déclaration de licence du client est importée, la date/heure de la dernière mise à jour de l’état et de la prochaine mise à jour planifiée, et le nombre de modifications effectuées après l’installation du système de site du point de synchronisation Asset Intelligence.  
 
   > [!NOTE]  
   >  La section de synchronisation du catalogue Asset Intelligence de la page d'accueil **Asset Intelligence** s'affiche uniquement si un rôle de système de site du point de synchronisation Asset Intelligence a été installé.  
 
-- **État des logiciels inventoriés** : indique le nombre et le pourcentage de logiciels, de catégories de logiciels et de familles de logiciels identifiés par Microsoft, identifiés par un utilisateur administratif, en attente d'identification en ligne ou non identifiés et non en attente. Les informations affichées dans un tableau indiquent le nombre pour chacun des éléments, tandis que les informations affichées dans le graphique indiquent le pourcentage de chacun des éléments.  
+- **État des logiciels inventoriés** : indique le nombre et le pourcentage de logiciels, de catégories de logiciels et de familles de logiciels identifiés par Microsoft, identifiés par un utilisateur administratif, en attente d’identification en ligne, ou non identifiés et non en attente. Les informations affichées dans un tableau indiquent le nombre pour chacun des éléments, tandis que les informations affichées dans le graphique indiquent le pourcentage de chacun des éléments.  
 
   Utilisez la procédure suivante pour afficher les informations Asset Intelligence sur la page d'accueil **Asset Intelligence** .  
 
@@ -193,13 +193,13 @@ Cette rubrique contient des informations destinées à vous aider à gérer les 
 
    2. **État de validation** : indique l’état de validation, tel que **Défini par l’utilisateur**, de la configuration matérielle requise. Vous ne pouvez pas modifier ce paramètre.  
 
-   3. **Vitesse min. du processeur (MHz)** : spécifie la vitesse minimale (en mégahertz (MHz)) du processeur nécessaire au logiciel.  
+   3. **Vitesse min. du processeur (MHz)** : spécifie la vitesse minimale du processeur (en mégahertz (MHz)) nécessaire au logiciel.  
 
    4. **Mémoire RAM minimum (Ko)** : spécifie la quantité de mémoire RAM minimale en kilo-octets (Ko) nécessaire au logiciel.  
 
-   5. **Espace disque minimum (Ko)** : spécifie l'espace disque libre minimal en Ko nécessaire au logiciel.  
+   5. **Espace disque minimum (Ko)** : spécifie l’espace disque libre minimal en Ko nécessaire au logiciel.  
 
-   6. **Taille minimale du disque (Ko)** : spécifie la taille de disque libre minimal en Ko nécessaire au logiciel.  
+   6. **Taille minimale du disque (Ko)** : spécifie la taille minimale en Ko du disque dur nécessaire au logiciel.  
 
       Cliquez sur **Suivant**.  
 
@@ -231,9 +231,9 @@ Cette rubrique contient des informations destinées à vous aider à gérer les 
 
    -   **Fournisseur** : spécifie le nom du fournisseur qui a développé le logiciel inventorié.  
 
-   -   **Catégorie** : spécifie la catégorie affectée au titre de logiciel inventorié.  
+   -   **Catégorie** : spécifie la catégorie affectée au logiciel inventorié.  
 
-   -   **Famille** : spécifie la famille affectée au titre de logiciel inventorié.  
+   -   **Famille** : spécifie la famille affectée au logiciel inventorié.  
 
 6. Cliquez sur **OK** pour enregistrer les modifications.  
 
@@ -321,14 +321,14 @@ Cette rubrique contient des informations destinées à vous aider à gérer les 
 
 5. Passez en revue les informations suivantes :  
 
-   -   **Valeur locale** : Spécifie les informations de catégorisation de logiciels dans le catalogue Asset Intelligence qui entrent en conflit avec les détails de catégorisation System Center Online récents.  
+   -   **Valeur locale** : spécifie les informations de catégorisation de logiciels dans le catalogue Asset Intelligence qui sont en conflit avec les détails de catégorisation les plus récents de System Center Online.  
 
-   -   **Valeur téléchargée** : Spécifie les nouvelles informations de catégorisation de logiciels System Center Online pour les informations de catégorisation de logiciels en conflit dans le catalogue Asset Intelligence.  
+   -   **Valeur téléchargée** : spécifie les nouvelles informations de catégorisation de logiciels System Center Online pour les informations de catégorisation de logiciels en conflit dans le catalogue Asset Intelligence.  
 
 6. Sélectionnez l'un des paramètres suivants pour résoudre le conflit de détails du logiciel :  
 
-   - **Ne changez pas la valeur des informations de catalogue modifiées localement** : Résout le conflit de détails de logiciel en conservant les informations de catégorisation de logiciels du catalogue Asset Intelligence. Lorsque vous sélectionnez ce paramètre, l'état du logiciel passe de **Peut être mis à jour** à **Défini par l'utilisateur**.  
+   - **Ne changez pas la valeur des informations de catalogue modifiées localement** : résout le conflit des détails des logiciels en retenant les informations de catégorisation des logiciels du catalogue Asset Intelligence. Lorsque vous sélectionnez ce paramètre, l'état du logiciel passe de **Peut être mis à jour** à **Défini par l'utilisateur**.  
 
-   - **Remplacez la valeur des informations de catalogue modifiées localement par la valeur System Center Online téléchargée** : Résout le conflit de détails de logiciel en remplaçant les informations de catégorisation de logiciels du catalogue Asset Intelligence existant par les nouvelles informations obtenues depuis System Center Online. Lorsque vous sélectionnez ce paramètre, l'état du logiciel passe de **Peut être mis à jour** à **Validé**.  
+   - **Remplacez la valeur des informations de catalogue modifiées localement par la valeur System Center Online téléchargée** : résout le conflit des détails des logiciels en remplaçant les informations de catégorisation des logiciels existantes du catalogue Asset Intelligence par les nouvelles informations obtenues depuis System Center Online. Lorsque vous sélectionnez ce paramètre, l'état du logiciel passe de **Peut être mis à jour** à **Validé**.  
 
      Cliquez sur **OK** pour enregistrer la résolution du conflit.  

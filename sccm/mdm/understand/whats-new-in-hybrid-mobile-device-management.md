@@ -2,7 +2,7 @@
 title: Nouveautés de la gestion MDM hybride
 titleSuffix: Configuration Manager
 description: Découvrez les nouvelles fonctionnalités de gestion des appareils mobiles disponibles pour les déploiements hybrides avec Configuration Manager et Intune.
-ms.date: 05/20/2019
+ms.date: 05/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 73fe5e23cd23c874e56b0d71cb6988d815bcbc5c
-ms.sourcegitcommit: d1df13fc95a1f1540177c294555d9be26161b9cb
+ms.openlocfilehash: fc41388c1586fc73ce93127dd0e6492f587d18be
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65974100"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66176674"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Nouveautés de la gestion hybride des appareils mobiles avec Configuration Manager et Microsoft Intune
 
@@ -50,6 +50,21 @@ Chaque section de cet article répertorie les fonctionnalités hybrides sous tro
 ## <a name="may-2019"></a>Mai 2019
 
 ### <a name="new-in-microsoft-intune"></a>Nouveautés de Microsoft Intune
+
+#### <a name="android-enterprise-app-management"></a>Gestion des applications Android entreprise
+
+<!-- 4459905 -->
+
+Pour le rendre plus facile à configurer et utiliser la gestion d’entreprise Android, Intune ajoute automatiquement les quatre suivantes Android Enterprise courantes liées applications à la console d’administration Intune :
+
+- [Microsoft Intune](https://play.google.com/store/apps/details?id=com.microsoft.intune): Utilisé pour les scénarios d’entreprise Android entièrement gérés
+- [Microsoft Authenticator](https://play.google.com/store/apps/details?id=com.azure.authenticator): Si vous utilisez la vérification de deux facteurs, cette application vous permet de vous connecter à vos comptes
+- [Portail d’entreprise Intune](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal): Utilisé pour les stratégies de Protection d’application (application) et des scénarios de profil de travail Android Enterprise
+- [Écran d’accueil de Managed](https://play.google.com/store/apps/details?id=com.microsoft.launcher.enterprise): Utilisé pour les scénarios de borne/dédié Android Enterprise
+
+Auparavant, lors de l’installation vous deviez rechercher manuellement et d’approuver ces applications dans le [store Google Play géré](https://play.google.com/store/apps). Cette modification supprime ces étapes manuelles précédemment pour le rendre plus facile et plus rapide que vous pouvez utiliser la gestion d’entreprise Android.
+
+Lorsque vous vous connectez tout d’abord leur locataire Intune à Google Play géré, vous voyez ces quatre applications automatiquement ajoutées à la liste des applications Intune. Pour plus d’informations, consultez [activer inscription Android for Work](/sccm/mdm/deploy-use/enroll-hybrid-android#enable-android-for-work-enrollment). Si vous êtes déjà connecté votre client ou que vous utilisez déjà Android Enterprise, vous n’avez rien à faire. Ces quatre applications s’affichent automatiquement dans les sept jours après la mise à jour le service de mai 2019.
 
 #### <a name="intune-policies-update-authentication-method-and-company-portal-app-installation"></a>Stratégies de mise à jour la méthode d’authentification et d’installation de l’application portail d’entreprise
 
@@ -735,7 +750,23 @@ Avec Azure Active Directory (Azure AD), vous pouvez maintenant restreindre l’a
 
 ## <a name="notices"></a>Remarques
 
-### <a name="plan-for-change-intune-supports-macos-1012-and-higher-in-december"></a>Modification planifiée : Intune prend en charge macOS 10.12 et versions ultérieures en décembre 
+### <a name="update-your-android-company-portal-app-to-the-latest-version"></a>Mettre à jour votre application de portail d’entreprise Android vers la dernière version
+
+<!-- 4536963 -->
+
+Intune publie régulièrement des mises à jour de l’application portail d’entreprise Android. En novembre 2018, nous avons publié une mise à jour du portail d’entreprise qui inclut un commutateur principal pour vous préparer à la modification de Google à partir de leur plateforme de notification existant à Google Firebase Cloud Messaging (FCM). Lorsque Google retire de leur plateforme de notification existant et passe à FCM, les utilisateurs doivent mettre à jour leur application portail d’entreprise au moins la version de novembre 2018 pour continuer à communiquer avec le Store Play Google.
+
+#### <a name="how-does-this-change-affect-me"></a>Quel est l’impact de ce changement ?
+
+Nos données indiquent que sont les clients qui disposent d’appareils avec une version de portail d’entreprise antérieure à 5.0.4269.0. Si cette version (ou version ultérieure) du portail d’entreprise application n’est pas installée, les actions de l’appareil initiées par un administrateur peut ne pas fonctionnent comme prévu. Ces actions incluent la réinitialisation, réinitialisation de mot de passe, installations d’application requis et disponible et l’inscription de certificats.
+
+#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Que faire pour se préparer à ce changement ?
+
+Demandez aux utilisateurs d’appareils Android qui n’ont pas de mise à jour la version du portail d’entreprise pour mettre à jour via Google Play. Informez le support technique au cas où un utilisateur n’a pas conservé automatique-mise à jour de l’application portail d’entreprise. Pour plus d’informations sur la plateforme FCM et la modification de Google, consultez [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/).
+
+
+### <a name="plan-for-change-intune-supports-macos-1012-and-higher-in-december"></a>Modification planifiée : Intune prend en charge macOS 10.12 et versions ultérieures en décembre
+
 <!--2970975-->  
 
 Apple vient de publier macOS 10.14. Par conséquent, à compter de décembre 2018, Intune prendra en charge macOS 10.12 et versions ultérieures. 

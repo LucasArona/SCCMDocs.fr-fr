@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 2aca914f-641e-4bc8-98d4-bbf0a2a5276f
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1e794ff161f193f76fc899ab35acb1d29afdf606
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: cbe2608058f7364ba2b78a7ed31a01dbec5ef65f
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56120332"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499181"
 ---
 # <a name="prepare-windows-servers-to-support-configuration-manager"></a>Préparation de serveurs Windows pour prendre en charge Configuration Manager
 
@@ -47,7 +47,7 @@ Les fonctionnalités Windows suivantes sont nécessaires sur certains serveurs d
 
     Comme Microsoft .NET Framework 4.0 et les versions ultérieures n’offrent pas de compatibilité descendante pour remplacer les versions 3.5 et antérieures, si différentes versions sont requises, vous devez prévoir d’activer chaque version sur le même ordinateur.  
 
-- **Service de transfert intelligent en arrière-plan (BITS)** : Les points de gestion requièrent le service BITS (et les options sélectionnées automatiquement) pour prendre en charge la communication avec des appareils gérés.  
+- **Service de transfert intelligent en arrière-plan (BITS)** : Les points de gestion nécessitent le service BITS (et les options sélectionnées automatiquement) pour prendre en charge la communication avec les appareils gérés.  
 
 - **BranchCache** : Vous pouvez configurer les points de distribution avec BranchCache pour prendre en charge les clients qui utilisent cette fonctionnalité.  
 

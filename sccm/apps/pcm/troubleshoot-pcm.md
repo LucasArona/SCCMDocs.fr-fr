@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e586990d049119c3cb00a61c56a1b84763104309
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 6e253d731c5c5cefa6bc13b04f40ab18855af4b8
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56137896"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66176887"
 ---
 # <a name="troubleshoot-package-conversion-manager"></a>Dépanner Package Conversion Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 <!--1357861-->
 
@@ -38,18 +38,18 @@ Si le fournisseur SMS ne fonctionne pas correctement, la console Configuration M
 
 ## <a name="package-readiness"></a>Préparation du package
 
-Avant de convertir un package en application, le package doit être analysé à l’aide de la fonction  **Analyser** de Package Conversion Manager. Après l’analyse, ajoutez la colonne **Préparation** au nœud **Packages** de la console Configuration Manager. La liste des packages affiche un des états de préparation suivants pour le package analysé :
+Avant de convertir un package en application, le package doit être analysé à l'aide de la fonction **Analyser** de Package Conversion Manager. Après l’analyse, ajoutez la colonne **Préparation** au nœud **Packages** de la console Configuration Manager. La liste des packages affiche un des états de préparation suivants pour le package analysé :
 
- - **Automatique** : Le package peut être directement converti à l’aide de la fonction **Convertir**.      
+ - **Automatique** : le package peut être directement converti à l’aide de la fonction **Convertir**.      
 
     > [!NOTE]  
     > Une conversion automatique ne convertit pas les requêtes WQL en spécifications de l'application. Utilisez le processus **Corriger et convertir** pour convertir ces requêtes.  
 
- - **Manuel** : Le package nécessite quelques ajouts ou modifications avant de pouvoir être converti à l’aide de la fonction **Corriger et convertir**.  
+ - **Manuel** : le package nécessite quelques ajouts ou modifications avant de pouvoir être converti à l’aide de la fonction **Corriger et convertir**.  
 
- - **Non applicable** : Le package ne peut pas être converti. Corrigez les éventuels problèmes liés au package ou continuez à le déployer en tant que package.  
+ - **Non Applicable** : le package ne peut pas être converti. Corrigez les éventuels problèmes liés au package ou continuez à le déployer en tant que package.  
 
- - **Erreur** : Le package contient des erreurs. Corrigez manuellement ces erreurs avant l’analyser et de convertir ce package.  
+ - **Erreur** : le package contient des erreurs. Corrigez manuellement ces erreurs avant l’analyser et de convertir ce package.  
 
 Le volet des détails du nœud **Packages** dans la console Configuration Manager affiche les éventuels problèmes de préparation. Sélectionnez un package, puis sélectionnez l’onglet **Résumé** dans le volet des détails.
 

@@ -4,18 +4,18 @@ description: Utilisez cet article pour répondre aux questions fréquemment pos�
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 09/10/2018
+ms.date: 05/02/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 4c1a128d-22fb-49f1-8e0b-36513a8dc117
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4cbb9b37c951c490c1f2245f089fa22707f4c220
-ms.sourcegitcommit: f3dd8405018fe1043434386be15c16752c1a4a3c
+ms.openlocfilehash: 71c30e6770d667426a0aabbf03043d6fb44ecced
+ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57558001"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65083181"
 ---
 # <a name="frequently-asked-questions-about-the-cloud-management-gateway"></a>Questions fréquentes (FAQ) sur la passerelle de gestion cloud
 
@@ -40,7 +40,8 @@ Si votre organisation utilise ExpressRoute, une bonne pratique de sécurité con
 
 ### <a name="do-i-need-to-maintain-the-azure-virtual-machines"></a>Ai-je besoin d’assurer la maintenance des machines virtuelles Azure ?
 
-Aucune maintenance n’est nécessaire. La conception de la passerelle de gestion cloud utilise Azure PaaS (Platform as a Service). Configuration Manager utilise l’abonnement que vous fournissez pour créer les machines virtuelles, le stockage et le réseau nécessaires. Azure sécurise et met à jour les machines virtuelles. Ces machines virtuelles ne font pas partie de votre environnement local, comme c’est le cas avec IaaS (Infrastructure as a Service). La passerelle de gestion cloud est un service PaaS qui étend votre environnement Configuration Manager dans le cloud. 
+Aucune maintenance n’est nécessaire. La conception de la passerelle de gestion cloud utilise Azure PaaS (Platform as a Service). Configuration Manager utilise l’abonnement que vous fournissez pour créer les machines virtuelles, le stockage et le réseau nécessaires. Azure sécurise et met à jour les machines virtuelles. Ces machines virtuelles ne font pas partie de votre environnement local, comme c’est le cas avec IaaS (Infrastructure as a Service). La passerelle de gestion cloud est un service PaaS qui étend votre environnement Configuration Manager dans le cloud. Pour plus d’informations, consultez [Sécurisation des déploiements PaaS](/azure/security/security-paas-deployments).
+
 
 ### <a name="how-can-i-ensure-service-continuity-during-service-updates"></a>Comment puis-je assurer la continuité de service pendant les mises à jour du service ?
 
@@ -53,7 +54,8 @@ Si vous avez déjà déployé la [gestion du client basée sur Internet ](/sccm/
 
 
 ### <a name="do-the-user-accounts-have-to-be-in-the-same-azure-subscription-as-the-subscription-that-hosts-the-cmg-cloud-service"></a>Les comptes d’utilisateurs doivent-ils être dans le même abonnement Azure que celui qui héberge le service cloud de passerelle de gestion cloud ?
-<!--SCCMDocs-pr issue #2873--> Si votre environnement a plusieurs abonnements, vous pouvez déployer la passerelle de gestion cloud dans n’importe quel abonnement pouvant héberger des services cloud Azure. 
+<!--SCCMDocs-pr issue #2873-->
+Si votre environnement a plusieurs abonnements, vous pouvez déployer la passerelle de gestion cloud dans n’importe quel abonnement pouvant héberger des services cloud Azure. 
 
 Cette question est courante dans les scénarios suivants :  
 

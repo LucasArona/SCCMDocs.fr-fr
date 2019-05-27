@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 8db92d67-5d9c-4e9c-80d0-ae6fa0dd4817
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 70612d3f60802892aa99bbc4fc006b9385cb8756
-ms.sourcegitcommit: af8693048e6706ffda72572374f56e0bc7dfce2c
+ms.openlocfilehash: b4f69d686a48af3c6e710c6aff592d71de1dbff1
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57737317"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65496987"
 ---
 # <a name="the-cdlatest-folder-for-configuration-manager"></a>Dossier CD.Latest pour Configuration Manager
 
@@ -62,7 +62,8 @@ Si vous souhaitez installer un nouveau site principal enfant sous un site d’ad
 Lorsque vous développez un site principal autonome en installant un nouveau site d’administration centrale, utilisez le programme d’installation et les fichiers sources figurant dans le dossier CD.Latest du site principal. Ce processus utilise les fichiers sources d’installation correspondant à la version du site principal. Pour plus d’informations, consultez [Étendre un site principal autonome](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites#bkmk_expand).
 
 ### <a name="install-a-secondary-site"></a>Installer un site secondaire
-<!-- SCCMDocs-pr issue #3164 --> Si vous souhaitez installer un nouveau site secondaire sous un site principal ayant installé une ou plusieurs mises à jour dans la console, utilisez les fichiers sources figurant dans le dossier CD.Latest du site principal. 
+<!-- SCCMDocs-pr issue #3164 -->
+Si vous souhaitez installer un nouveau site secondaire sous un site principal ayant installé une ou plusieurs mises à jour dans la console, utilisez les fichiers sources figurant dans le dossier CD.Latest du site principal. 
 
 Pour plus d’informations, voir [Installer un site secondaire](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites#bkmk_secondary). 
 

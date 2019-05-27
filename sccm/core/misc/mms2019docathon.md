@@ -1,6 +1,6 @@
 ---
 title: Docathon MMS 2019
-ms.date: 04/18/2019
+ms.date: 05/06/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: ffd912f5776f38f9a5af6fd0b628127d0100c926
-ms.sourcegitcommit: 14d27fa21dea8bbb48a410d01def651c31567bd6
+ms.openlocfilehash: 76970a024e54067aaa6a3059bb95a6c134a2e999
+ms.sourcegitcommit: 99dfe4fb9e9cfd20c44380ae442b3a5b895a0d9b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346662"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65214711"
 ---
 # <a name="mms-2019-docathon"></a>Docathon MMS 2019
 
@@ -97,7 +97,7 @@ Commencez à penser et à planifier votre objectif pour cet événement. Que vou
 
 ## <a name="contest-summary"></a>Résumé du concours
 
-Le concours se déroule sur toute la semaine du 6 au 9 mai. Toute personne inscrite au MMS 2019 peut y participer. Les prix seront décernés le jeudi 9 mai, après la [session de questions et réponses à l’équipe produit ConfigMgr](https://sched.co/N6ge). Vous devez être présent au MMS 2019 pour prétendre à un prix, mais n’avez besoin afin d’assister à cette session. Pour récupérer un prix si vous n’assistez pas à la session, contactez Aaron avant son départ le vendredi matin.
+Le concours se déroule sur toute la semaine du 6 au 9 mai. Toute personne inscrite au MMS 2019 peut y participer. Envoyez vos inscriptions pour le jeudi 9 mai 2019 à 15h00 (heure du Centre). Les prix seront décernés le jeudi 9 mai, après la [session de questions et réponses à l’équipe produit ConfigMgr](https://sched.co/N6ge). Vous devez être présent au MMS 2019 pour prétendre à un prix, mais n’avez besoin afin d’assister à cette session. Pour récupérer un prix si vous n’assistez pas à la session, contactez Aaron avant son départ le vendredi matin.
 
 > [!Important]  
 > Vous devez ajouter le hashtag **#MMS2019Docathon** dans toutes vos contributions pour qu’elles soient prises en compte.
@@ -206,7 +206,7 @@ RÈGLES OFFICIELLES du concours de l’événement Microsoft Cloud + AI Develope
         - Le plus de lignes modifiées
         - Le plus d’articles traités
 
-    Les gagnants seront sélectionnés après 17h00 (heure du centre) le jeudi 9 mai 2019.
+    Les gagnants seront sélectionnés après 15h00 (heure du Centre) le jeudi 9 mai 2019.
 
     Les gagnants en seront informés lors de l’événement et doivent réclamer leur prix avant la clôture de l’événement.
 

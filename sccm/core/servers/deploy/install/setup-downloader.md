@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: bda87fc5-2e4c-4992-98a4-01770365038c
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: abfad38e0c02ff6c0af8d4c9c47bdeed7598e513
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 23fbe5ecb6b69f9832ca34659cd35f5ad25b29b9
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56129746"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65501331"
 ---
 # <a name="setup-downloader-for-system-center-configuration-manager"></a>Téléchargeur d’installation pour System Center Configuration Manager
 
@@ -64,9 +64,9 @@ Vous avez deux options pour exécuter le téléchargeur d’installation :
 
     -   **/LANG** : Utilisez cette option pour télécharger uniquement les fichiers de langues dans le dossier de téléchargement.  
 
-    -   **/NOUI** : Utilisez cette option pour démarrer le téléchargeur d'installation sans afficher l'interface utilisateur. Quand vous utilisez cette option, vous devez spécifier le **chemin de téléchargement** dans le cadre de la commande, à l’invite de commandes.  
+    -   **/NOUI** : Utilisez cette option pour démarrer le téléchargeur d’installation sans afficher l’interface utilisateur. Quand vous utilisez cette option, vous devez spécifier le **chemin de téléchargement** dans le cadre de la commande, à l’invite de commandes.  
 
-    -   **&lt;Chemin de téléchargement\>** : Vous pouvez spécifier le chemin d'accès au dossier de téléchargement pour démarrer la vérification ou le processus de téléchargement automatiquement. Vous devez spécifier le chemin de téléchargement quand vous utilisez l’option **/NOUI**. Si vous ne spécifiez pas un chemin de téléchargement, vous devez le faire à l’ouverture du téléchargeur d’installation. Le téléchargeur d’installation crée le dossier si celui-ci n’existe pas.  
+    -   **&lt;Chemin de téléchargement\>** : Vous pouvez spécifier le chemin du dossier de téléchargement pour démarrer automatiquement la vérification ou le téléchargement. Vous devez spécifier le chemin de téléchargement quand vous utilisez l’option **/NOUI**. Si vous ne spécifiez pas un chemin de téléchargement, vous devez le faire à l’ouverture du téléchargeur d’installation. Le téléchargeur d’installation crée le dossier si celui-ci n’existe pas.  
 
     Exemples de commandes :
 

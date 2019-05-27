@@ -2,7 +2,7 @@
 title: Déployer des clients sur Windows
 titleSuffix: Configuration Manager
 description: Apprenez à déployer le client Configuration Manager sur des ordinateurs Windows.
-ms.date: 07/30/2018
+ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 639521ecf0084b40bf61ac3d635ab4f5e55d1321
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 3260fb68d9ce334061fc39fe8d40cd68d109655e
+ms.sourcegitcommit: 99dfe4fb9e9cfd20c44380ae442b3a5b895a0d9b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56123843"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65214720"
 ---
 # <a name="how-to-deploy-clients-to-windows-computers-in-configuration-manager"></a>Guide pratique pour déployer des clients sur des ordinateurs Windows dans Configuration Manager
 
@@ -38,7 +38,7 @@ Il existe trois façons principales d’utiliser l’installation Push du client
 
 - Démarrez une installation Push du client en exécutant l’Assistant Installation Push du client pour un regroupement ou une ressource spécifique dans un regroupement.  
 
-- Utilisez l’Assistant Installation Push du client pour installer le client Configuration Manager selon les résultats d’une [requête](/sccm/core/servers/manage/queries-technical-reference). Pour que l’installation réussisse, l’un des éléments retournés par la requête doit correspondre à l’attribut **ResourceID** de la classe **Ressource système**.   
+- Utilisez l’Assistant Installation Push du client pour installer le client Configuration Manager selon les résultats d’une [requête](/sccm/core/servers/manage/introduction-to-queries). Pour que l’installation réussisse, l’un des éléments retournés par la requête doit correspondre à l’attribut **ResourceID** de la classe **Ressource système**.   
 
 Si le serveur de site ne parvient pas à contacter l’ordinateur client ou à démarrer le processus d’installation, il tente à nouveau l’installation de façon automatique toutes les heures. Le serveur renouvelle les tentatives pendant sept jours, au maximum.  
 
@@ -60,7 +60,7 @@ Les fichiers journaux du client fournissent des informations plus détaillées p
 
 4.  Sous l’onglet **Général** de la fenêtre Propriétés de l’installation push du client, sélectionnez **Activer l’installation Push du client automatique à l’échelle du site**.   
 
-5. À compter de la version 1806, quand vous mettez à jour le site, il permet une vérification Kerberos pour l’installation Push du client. L’option permettant d’**Autoriser le recours à NTLM en secours pour la connexion** est activée par défaut, ce qui est cohérent avec le comportement précédent. Si le site ne peut pas authentifier le client à l’aide de Kerberos, il retente la connexion à l’aide de NTLM. La configuration recommandée pour améliorer la sécurité consiste à désactiver ce paramètre, qui exige Kerberos sans NTLM.<!--1358204-->  
+5. À compter de la version 1806, quand vous mettez à jour le site, il permet une vérification Kerberos pour l’installation Push du client. L’option permettant d’**Autoriser le recours à NTLM en secours pour la connexion** est activée par défaut, ce qui est cohérent avec le comportement précédent. Si le site ne peut pas authentifier le client à l’aide de Kerberos, il retente la connexion à l’aide de NTLM. La configuration recommandée pour améliorer la sécurité consiste à désactiver ce paramètre, qui exige Kerberos sans bascule de secours sur NTLM.<!--1358204-->  
 
     > [!Note]  
     > Quand vous utilisez l’installation Push du client pour installer le client Configuration Manager, le serveur de site crée une connexion à distance au client. À compter de la version 1806, le site peut exiger l’authentification mutuelle Kerberos en interdisant le recours à NTLM en secours avant d’établir la connexion. Cette amélioration permet de sécuriser la communication entre le serveur et le client.  
@@ -310,7 +310,7 @@ Pour créer un package et un programme Configuration Manager que vous pouvez dé
 
 4.  Dans la page **Fichiers sources**, sélectionnez **Toujours obtenir les fichiers depuis le dossier source**.  
 
-5.  Dans la page **Dossier source**, sélectionnez **Chemin d’accès réseau (nom UNC)**. Entrez ensuite le chemin réseau du serveur et le partage contenant les fichiers d’installation du client.  
+5.  Dans la page **Dossier source**, sélectionnez **Chemin d’accès réseau (nom UNC)** . Entrez ensuite le chemin réseau du serveur et le partage contenant les fichiers d’installation du client.  
 
     > [!NOTE]  
     >  L’ordinateur sur lequel le déploiement de Configuration Manager est effectué doit avoir accès au dossier réseau spécifié. Sinon, l’installation du client échoue.  

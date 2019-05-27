@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: ed931751-18f2-4230-a09e-a0a329fbfa1c
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 59376c5b9846e32cc8b63666956424a11211f1c0
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 679f62bb38bab06c074c97e92ff7d3adcae80f1b
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56130790"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65501441"
 ---
 # <a name="about-discovery-methods-for-system-center-configuration-manager"></a>À propos des méthodes de découverte pour System Center Configuration Manager
 
@@ -111,7 +111,7 @@ Vous pouvez configurer les étendues de découverte suivantes, qui contrôlent l
 
 -   **Emplacement** : Utilisez un emplacement si vous souhaitez rechercher un ou plusieurs conteneurs Active Directory. Cette option d’étendue prend en charge une recherche récursive des conteneurs Active Directory spécifiés. Ce processus recherche également dans chaque conteneur enfant sous le conteneur que vous spécifiez. Il continue jusqu’à ne plus trouver de conteneur enfant.  
 
--   **Groupes** : Utilisez les groupes si vous souhaitez rechercher un ou plusieurs groupes Active Directory spécifiques. Vous pouvez configurer **Domaine Active Directory** de manière à utiliser le domaine et la forêt par défaut ou limiter la recherche à un contrôleur de domaine individuel. En outre, vous pouvez spécifier un ou plusieurs groupes à rechercher. Si vous ne spécifiez pas au moins un groupe, tous les groupes trouvés à l'emplacement **Domaine Active Directory** spécifié sont recherchés.  
+-   **Groupes** : Utilisez les groupes si vous souhaitez rechercher un ou plusieurs groupes Active Directory. Vous pouvez configurer **Domaine Active Directory** de manière à utiliser le domaine et la forêt par défaut ou limiter la recherche à un contrôleur de domaine individuel. En outre, vous pouvez spécifier un ou plusieurs groupes à rechercher. Si vous ne spécifiez pas au moins un groupe, tous les groupes trouvés à l'emplacement **Domaine Active Directory** spécifié sont recherchés.  
 
 > [!CAUTION]  
 >  Quand vous configurez une étendue de découverte, choisissez uniquement les groupes que vous devez découvrir. En effet, la découverte de groupes Active Directory tente de découvrir chaque membre de chaque groupe dans l’étendue de découverte. La découverte de grands groupes peut demander l'utilisation extensive de bande passante et de ressources Active Directory.  
@@ -267,7 +267,7 @@ Pour plus d’informations sur la configuration de cette méthode de découverte
 Utilisez cette méthode pour découvrir la topologie de votre réseau et les appareils de votre réseau qui ont une adresse IP. La découverte du réseau cherche sur votre réseau des ressources sur lesquelles IP est activé en interrogeant les entités suivantes : 
 - Serveurs qui exécutent une implémentation Microsoft de DHCP
 - Caches ARP (Address Resolution Protocol) dans les routeurs réseau
-- périphériques SNMP
+- Périphériques SNMP
 - Domaines Active Directory  
 
 Pour utiliser la découverte du réseau, vous devez spécifier le *niveau* de découverte à exécuter. Vous configurez également un ou plusieurs mécanismes de découverte qui permettent à la découverte du réseau d'interroger des segments ou périphériques réseau. Vous pouvez également configurer des paramètres qui permettent de contrôler des actions de découverte sur le réseau. Enfin, vous définissez un ou plusieurs calendriers d'exécution de la découverte du réseau.  

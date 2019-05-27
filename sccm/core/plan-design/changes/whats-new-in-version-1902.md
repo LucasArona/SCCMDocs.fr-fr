@@ -2,21 +2,21 @@
 title: Nouveautés de la version 1902
 titleSuffix: Configuration Manager
 description: Obtenez des informations détaillées sur les changements et les nouvelles fonctionnalités introduits dans la version 1902 de l’édition Current Branch de Configuration Manager.
-ms.date: 04/17/2019
+ms.date: 05/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fbc38cdb72a2c8f595eed88e0b4b5b5e29374597
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.openlocfilehash: 0c88cdc52442463bb3788c80c45d6c074dd900f5
+ms.sourcegitcommit: 53f2380ac67025fb4a69fc1651edad15d98e0cdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59673647"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65673422"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Nouveautés de la version 1902 de l’édition Current Branch de Configuration Manager
 
@@ -173,9 +173,9 @@ Pour plus d’informations, consultez [Guide pratique pour administrer à distan
 
 ### <a name="specify-a-custom-port-for-peer-wakeup"></a>Spécifier un port personnalisé pour mettre en éveil le pair
 <!--3605925-->
-Vous pouvez désormais spécifier un numéro de port personnalisé pour le proxy de sortie de veille. Dans le groupe **Gestion de l’alimentation** des paramètres du client, configurez le paramètre **Numéro de port Wake On LAN (UDP)**.  
+***[Mise à jour]*** Vous pouvez désormais spécifier un numéro de port personnalisé pour le proxy de sortie de veille. Dans le groupe **Gestion de l’alimentation** des paramètres du client, configurez le paramètre **Numéro de port Wake On LAN (UDP)** .  
 
-<!-- For more information, see [How to configure Wake on LAN](/sccm/core/clients/deploy/configure-wake-on-lan). -->
+Pour plus d’informations, consultez [Guide pratique pour configurer Wake On LAN](/sccm/core/clients/deploy/configure-wake-on-lan).
 
 
 
@@ -218,17 +218,30 @@ Vous voyez maintenant une barre de progression plus détaillée pendant une séq
 Cette fonctionnalité fonctionne avec n’importe quelle version prise en charge de Windows 10 et uniquement avec la séquence de tâches de mise à niveau sur place. 
 
 
-### <a name="improvements-to-task-sequence-media-creation"></a>Améliorations apportées à la création d’un média de séquence de tâches 
+### <a name="improvements-to-task-sequence-media-creation"></a>Améliorations apportées à la création d’un média de séquence de tâches
+
 <!--3556027, fka 1359388-->
-Cette version inclut plusieurs améliorations pour vous aider à mieux créer et gérer le média de séquence de tâches. <!-- For more information, see [Create task sequence media](/sccm/osd/deploy-use/create-task-sequence-media). -->
+***[Mise à jour]*** Cette version inclut plusieurs améliorations pour vous aider à mieux créer et gérer le média de séquence de tâches. Pour plus d’informations, consultez les articles suivants concernant les différents types de médias :
+
+- [Créer un média autonome](/sccm/osd/deploy-use/create-stand-alone-media)
+- [Créer un média préparé](/sccm/osd/deploy-use/create-prestaged-media)
+- [Créer un média de démarrage](/sccm/osd/deploy-use/create-bootable-media)
+- [Créer un média de capture](/sccm/osd/deploy-use/create-capture-media)
 
 #### <a name="specify-temporary-storage"></a>Spécifier le stockage temporaire
-Quand vous créez un média de séquence de tâches, personnalisez l’emplacement utilisé par le site pour le stockage temporaire des données. Ce processus peut nécessiter une quantité importante d’espace disque temporaire. Ce changement vous permet de choisir où stocker ces fichiers temporaires de manière plus flexible. 
+
+Quand vous créez un média de séquence de tâches, personnalisez l’emplacement utilisé par le site pour le stockage temporaire des données. Ce processus peut nécessiter une quantité importante d’espace disque temporaire. Ce changement vous permet de choisir où stocker ces fichiers temporaires de manière plus flexible.
 
 Dans l’**Assistant Création d’un média de séquence de tâches**, spécifiez un emplacement pour le **Dossier intermédiaire**. Par défaut, cet emplacement est semblable au suivant : `%UserProfile%\AppData\Local\Temp`.
 
 #### <a name="add-a-label-to-the-media"></a>Ajouter une étiquette au média
+
 Vous pouvez maintenant ajouter une étiquette au média de séquence de tâches. Cette étiquette vous permet de mieux identifier le média une fois celui-ci créé. Dans l’**Assistant Création d’un média de séquence de tâches**, spécifiez l’**Étiquette du média**.
+
+#### <a name="include-autoruninf-file-on-media"></a>Inclure le fichier autorun.inf sur le média
+
+<!-- 4090666 -->
+Quand vous créez un média de séquence de tâches, Configuration Manager n’ajoute pas de fichier autorun.inf. Ce fichier est généralement bloqué par les produits anti-programme malveillant. Vous pouvez toutefois inclure le fichier si votre scénario l’impose.
 
 
 ### <a name="import-a-single-index-of-an-os-image"></a>Importer un index unique d’une image de système d’exploitation
@@ -254,8 +267,9 @@ Lorsque vous créez une planification pour mettre à jour une image de système 
 
 
 ### <a name="improvements-to-run-powershell-script-task-sequence-step"></a>Améliorations apportées à l’étape de séquence de tâches Exécuter le script PowerShell
+
 <!--3556028, fka 1359389-->
-L’étape de séquence de tâches **Exécuter le script PowerShell** inclut désormais les améliorations suivantes :  
+***[Mise à jour]*** L’étape de séquence de tâches **Exécuter le script PowerShell** inclut désormais les améliorations suivantes :  
 
 - Vous pouvez maintenant entrer directement le code Windows PowerShell à cette étape. Ce changement vous permet d’exécuter des commandes PowerShell durant une séquence de tâches sans devoir au préalable créer et distribuer un package avec le script.
 
@@ -271,17 +285,18 @@ L’étape de séquence de tâches **Exécuter le script PowerShell** inclut dé
 
 - Pour inclure les paramètres de script dans le journal de séquence de tâches, définissez la variable de séquence de tâches **OSDLogPowerShellParameters** sur **TRUE**. Par défaut, les paramètres ne sont pas dans le journal.  
 
-- Autres améliorations offrant des fonctionnalités similaires à l’étape [Exécuter la ligne de commande](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine). Par exemple, spécifiez d’autres informations d’identification d’un utilisateur ou un délai d’expiration. 
+- Autres améliorations offrant des fonctionnalités similaires à l’étape [Exécuter la ligne de commande](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine). Par exemple, spécifiez d’autres informations d’identification d’un utilisateur ou un délai d’expiration.
 
 > [!Important]  
 > Pour tirer pleinement parti de cette nouvelle fonctionnalité Configuration Manager, commencez par mettre à jour les clients avec la dernière version. Bien que les nouvelles fonctionnalités apparaissent dans la console Configuration Manager quand vous mettez à jour le site et la console, le scénario complet n’est pas fonctionnel tant que la version des clients n’est pas également la plus récente.
 
-<!-- For more information, see [Run PowerShell Script](/sccm/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript). -->
+Pour plus d’informations, consultez [Exécuter le script PowerShell](/sccm/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript).
 
 
 ### <a name="other-improvements-to-os-deployment"></a>Autres améliorations apportées au déploiement du système d’exploitation
+
 <!--3633146,3641475,3654172,3734270-->
-Cette version comprend les améliorations suivantes du déploiement de système d’exploitation :
+***[Mise à jour]*** Cette version comprend les améliorations suivantes pour le déploiement du système d’exploitation :
 
 - Il existe une nouvelle action **Affichage** par défaut sur les séquences de tâches. <!--3633146-->  
 
@@ -296,20 +311,13 @@ Cette version comprend les améliorations suivantes du déploiement de système 
 ## <a name="bkmk_userxp"></a> Centre logiciel
 
 ### <a name="replace-toast-notifications-with-dialog-window"></a>Remplacer les notifications toast par une fenêtre de dialogue
+
 <!--3555947-->
-Parfois, les utilisateurs ne voient pas la notification toast Windows relative à un redémarrage ou à un déploiement obligatoire. Ils ne voient pas non plus l’expérience qui permet de répéter le rappel. Ce comportement peut entraîner une mauvaise expérience utilisateur quand le client atteint une échéance.
+***[Mise à jour]*** Parfois, les utilisateurs ne voient pas la notification toast Windows relative à un redémarrage ou à un déploiement nécessaire. Ils ne voient pas non plus l’expérience qui permet de répéter le rappel. Ce comportement peut entraîner une mauvaise expérience utilisateur quand le client atteint une échéance.
 
-Maintenant, quand des déploiements nécessitent un redémarrage ou quand des changements logiciels sont nécessaires, vous pouvez utiliser une fenêtre de dialogue plus intrusive. 
+Maintenant, quand des déploiements nécessitent un redémarrage ou quand des changements logiciels sont nécessaires, vous pouvez utiliser une fenêtre de dialogue plus intrusive.
 
-#### <a name="software-changes-are-required"></a>Des changements logiciels sont nécessaires
-Dans la page **Expérience utilisateur** de l’Assistant Déploiement logiciel, sélectionnez l’option de notification utilisateur **Afficher dans le Centre logiciel et afficher toutes les notifications**. Sélectionnez ensuite l’option suivante : **Quand des changements logiciels sont nécessaires, présenter une fenêtre de dialogue à l’utilisateur au lieu d’une notification toast**.  
-
-<!-- For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex) -->
-
-#### <a name="restart-required"></a>Redémarrage nécessaire
-Dans le groupe **Redémarrage de l’ordinateur** des paramètres du client, activez l’option suivante : **Quand un déploiement nécessite un redémarrage, présenter une fenêtre de dialogue à l’utilisateur au lieu d’une notification toast**.  
-
-<!-- For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#computer-restart). -->
+Pour plus d’informations, consultez [Planifier le Centre logiciel](/sccm/apps/plan-design/plan-for-software-center#bkmk_impact).
 
 
 ### <a name="configure-user-device-affinity-in-software-center"></a>Configurer l’affinité entre utilisateur et appareil dans le Centre logiciel
@@ -345,7 +353,7 @@ Spécifiez ces paramètres dans le groupe **Centre logiciel** des paramètres du
 <!--3734525-->
 ***[Mis à jour]*** Ajustez la priorité avec laquelle les clients installent une mise à jour de fonctionnalité via [Maintenance de Windows 10](/sccm/osd/deploy-use/manage-windows-as-a-service). Par défaut, les clients installent désormais les mises à jour de fonctionnalité avec une priorité de traitement plus élevée. 
 
-Utilisez les paramètres du client pour configurer cette option. Dans le groupe **Mises à jour logicielles**, configurez le paramètre suivant : **Spécifier la priorité du thread pour les mises à jour des fonctionnalités**. 
+Utilisez les paramètres du client pour configurer cette option. Dans le groupe **Mises à jour logicielles**, configurez le paramètre suivant : **Spécifier la priorité du thread pour les mises à jour des fonctionnalités**.
 
 Pour plus d’informations, consultez [À propos des paramètres client](/sccm/core/clients/deploy/about-client-settings#software-updates). 
 
@@ -384,9 +392,9 @@ Pour plus d’informations, consultez [Gérer les mises à jour d’Office 365](
 
 ### <a name="office-products-on-lifecycle-dashboard"></a>Produits Office sur le tableau de bord Cycle de vie
 <!--3556026-->
-Le tableau de bord Cycle de vie du produit inclut maintenant des informations pour les versions installées d’Office 2003 à Office 2016. Les données s’affichent quand le site a exécuté la tâche de synthèse du cycle de vie, ce qui se produit toutes les 24 heures.
+***[Mise à jour]*** Le tableau de bord Cycle de vie du produit inclut maintenant des informations pour les versions installées d’Office 2003 à Office 2016. Les données s’affichent quand le site a exécuté la tâche de synthèse du cycle de vie, ce qui se produit toutes les 24 heures.
 
-<!-- For more information, see [Use the Product Lifecycle dashboard](/sccm/core/clients/manage/asset-intelligence/product-lifecycle-dashboard). -->
+Pour plus d’informations, consultez [Utiliser le tableau de bord de cycle de vie des produits](/sccm/core/clients/manage/asset-intelligence/product-lifecycle-dashboard).
 
 
 
@@ -398,18 +406,18 @@ Le tableau de bord Cycle de vie du produit inclut maintenant des informations po
 
 ### <a name="dedicated-monitoring-for-phased-deployments"></a>Supervision dédiée pour les déploiements par phases
 <!--3555949-->
-Les déploiements par phases ont désormais leur propre nœud de supervision dédiée. Ce nœud facilite l’identification des déploiements par phases que vous avez créés, puis l’accès à la vue de supervision des déploiements par phases. Dans la console Configuration Manager, accédez à l’espace de travail **Supervision**, puis sélectionnez le nœud **Déploiements par phases**. Il montre la liste des déploiements par phases.
+***[Mise à jour]*** Les déploiements par phases ont désormais leur propre nœud de supervision dédiée. Ce nœud facilite l’identification des déploiements par phases que vous avez créés, puis l’accès à la vue de supervision des déploiements par phases. Dans la console Configuration Manager, accédez à l’espace de travail **Supervision**, puis sélectionnez le nœud **Déploiements par phases**. Il montre la liste des déploiements par phases.
 
-<!-- For more information, see [Phased deployment monitoring view](/sccm/osd/deploy-use/manage-monitor-phased-deployments#bkmk_monitor). -->
+Pour plus d’informations, consultez [Supervision des déploiements par phases](/sccm/osd/deploy-use/manage-monitor-phased-deployments#bkmk_monitor). 
 
 
 ### <a name="improvement-to-phased-deployment-success-criteria"></a>Amélioration des critères de réussite du déploiement par phases
 <!--3555946-->
-Spécifiez des critères supplémentaires pour la réussite d’une phase d’un déploiement par phases. Au lieu d’être juste un pourcentage, ce critère peut maintenant être aussi le nombre d’appareils déployés. Cette option est utile si la taille de la collection est variable et que vous avez un nombre spécifique d’appareils dont afficher la réussite avant de passer à la phase suivante. 
+***[Mise à jour]*** Spécifiez des critères supplémentaires pour la réussite d’une phase d’un déploiement par phases. Au lieu d’être juste un pourcentage, ce critère peut maintenant être aussi le nombre d’appareils déployés. Cette option est utile si la taille de la collection est variable et que vous avez un nombre spécifique d’appareils dont afficher la réussite avant de passer à la phase suivante. 
 
-Créez un déploiement par phases pour une séquence de tâches, une mise à jour logicielle ou une application. Puis, dans la page Paramètres de l’Assistant, sélectionnez l’option suivante comme critères de réussite de la première phase : **Nombre d’appareils déployés**. 
+Créez un déploiement par phases pour une séquence de tâches, une mise à jour logicielle ou une application. Puis, dans la page Paramètres de l’Assistant, sélectionnez l’option suivante comme critères de réussite de la première phase : **Nombre d’appareils déployés**.
 
-<!-- For more information, see [Create phased deployments](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence). -->
+Pour plus d’informations, voir [Créer des déploiements par phases](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence).
 
 
 

@@ -2,27 +2,28 @@
 title: Entrepôt de données
 titleSuffix: Configuration Manager
 description: Base de données et point de service de l’entrepôt de données pour Configuration Manager
-ms.date: 11/27/2018
+ms.date: 05/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: aaf43e69-68b4-469a-ad58-9b66deb29057
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4630504cbbf4b00fbfa12b666e26b93fcda09ae5
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 02990fa09e18a9e46914ff622ed20f4cbb958f33
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56130171"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65501141"
 ---
 #  <a name="the-data-warehouse-service-point-for-configuration-manager"></a>Point de service de l’entrepôt de données pour Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
-<!--1277922--> Utilisez le point de service de l’entrepôt de données pour stocker des données d’historique à long terme et créer des rapports sur celles-ci pour votre déploiement de Configuration Manager.
+<!--1277922-->
+Utilisez le point de service de l’entrepôt de données pour stocker des données d’historique à long terme et créer des rapports sur celles-ci pour votre déploiement de Configuration Manager.
 
 > [!Note]  
 > Par défaut, Configuration Manager n’active pas cette fonctionnalité facultative. Vous devez activer cette fonctionnalité avant de l’utiliser. Pour plus d’informations, consultez [Activer les fonctionnalités facultatives des mises à jour](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
@@ -84,7 +85,7 @@ Chaque hiérarchie prend en charge une seule instance de ce rôle, sur n’impor
 
 Pour installer le rôle, vous pouvez utiliser deux assistants : **l’Assistant Ajout des rôles de système de site** ou **l’Assistant Création d’un serveur de système de site**. Pour plus d’informations, consultez la section [Installer des rôles de système de site](/sccm/core/servers/deploy/configure/install-site-system-roles). Dans la page **Sélection du rôle système** de l’Assistant, sélectionnez **Point de service de l’entrepôt de données**. 
 
-Quand vous installez le rôle, Configuration Manager crée la base de données de l’entrepôt de données pour vous sur l’instance de SQL Server que vous spécifiez. Si vous spécifiez le nom de la base de données existante, Configuration Manager ne crée pas de base de données. Il utilise celle que vous spécifiez. Ce processus est le même que lorsque vous [déplacez la base de données de l’entrepôt de données vers un nouveau serveur SQL](#move-the-data-warehouse-database).
+Quand vous installez le rôle, Configuration Manager crée la base de données de l’entrepôt de données pour vous sur l’instance de SQL Server que vous spécifiez. Si vous spécifiez le nom de la base de données existante, Configuration Manager ne crée pas de base de données. Il utilise celle que vous spécifiez. Ce processus est le même que lorsque vous [déplacez la base de données de l’entrepôt de données vers un nouveau serveur SQL](#move-the-database).
 
 
 ### <a name="configure-properties"></a>Configurer les propriétés
@@ -240,7 +241,7 @@ Effectuez les étapes suivantes pour configurer les certificats :
 
     3. Dans le **Gestionnaire de configuration SQL Server**, sous **Services SQL Server**, redémarrez le **Service SQL Server**. Si SQL Reporting Services est également installé sur le serveur qui héberge la base de données de l’entrepôt de données, redémarrez également **Reporting Services**.  
 
-    4. Ouvrez la console Microsoft Management Console (MMC), puis ajoutez le composant logiciel enfichable **Certificats**. Sélectionnez le **compte d’ordinateur** de l’ordinateur local. Développez le dossier **Personnel**, puis sélectionnez **Certificats**. Exportez **Certificat d’identification SQL Server de l’entrepôt de données** sous forme de fichier **Binaire encodé DER X.509 (.cer)**.  
+    4. Ouvrez la console Microsoft Management Console (MMC), puis ajoutez le composant logiciel enfichable **Certificats**. Sélectionnez le **compte d’ordinateur** de l’ordinateur local. Développez le dossier **Personnel**, puis sélectionnez **Certificats**. Exportez **Certificat d’identification SQL Server de l’entrepôt de données** sous forme de fichier **Binaire encodé DER X.509 (.cer)** .  
 
 2. Sur l’ordinateur qui héberge SQL Server Reporting Services, ouvrez la console MMC, puis ajoutez le composant logiciel enfichable **Certificats**. Sélectionnez **Compte de l’ordinateur**. Sous le dossier **Autorités de certification racine reconnues**, importez le **certificat d’identification SQL Server de l’entrepôt de données**.  
 

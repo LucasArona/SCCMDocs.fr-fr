@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: be3b70d91155b379881332ddb7c8d405d0d92e84
-ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
+ms.openlocfilehash: 9775bd47e91876a7651bb58fee50b2111f3b7ef1
+ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58523858"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65083525"
 ---
 # <a name="site-server-high-availability-in-configuration-manager"></a>Haute disponibilité du serveur de site dans Configuration Manager
 
@@ -70,7 +70,7 @@ Microsoft Core Services Engineering and Operations a utilisé cette fonctionnali
 
     - Le serveur SQL Server qui héberge la base de données de site peut utiliser une instance par défaut, une instance nommée, un [cluster SQL Server](/sccm/core/servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database) ou un [groupe de disponibilité AlwaysOn SQL Server](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database).  
 
-    - Les deux serveurs de site exigent des rôles de sécurité **sysadmin** et **securityadmin** sur l’instance SQL Server qui héberge la base de données de site. Normalement, le serveur de site d’origine possède déjà ces rôles ; ajoutez-les au nouveau serveur de site. Par exemple, le script SQL suivant ajoute ces rôles au nouveau serveur de site **VM2** dans le domaine Contoso :  
+    - Les deux serveurs de site exigent un rôle de sécurité **sysadmin** sur l’instance SQL Server qui héberge la base de données de site. Normalement, le serveur de site d’origine possède déjà ces rôles ; ajoutez-les au nouveau serveur de site. Par exemple, le script SQL suivant ajoute ces rôles au nouveau serveur de site **VM2** dans le domaine Contoso :  
 
         ```SQL
         USE [master]
@@ -78,9 +78,7 @@ Microsoft Core Services Engineering and Operations a utilisé cette fonctionnali
         CREATE LOGIN [contoso\vm2$] FROM WINDOWS WITH DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[us_english]
         GO
         ALTER SERVER ROLE [sysadmin] ADD MEMBER [contoso\vm2$]
-        GO
-        ALTER SERVER ROLE [securityadmin] ADD MEMBER [contoso\vm2$]
-        GO        
+        GO       
         ```
     - Les deux serveurs de site ont besoin d’accéder à la base de données de site sur l’instance SQL Server. Normalement, le serveur de site d’origine possède déjà cet accès ; ajoutez-le au nouveau serveur de site. Par exemple, le script SQL suivant ajoute une connexion à la base de données **CM_ABC** au nouveau serveur de site **VM2** dans le domaine Contoso :  
 

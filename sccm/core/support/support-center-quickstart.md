@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 5cb41e2b-4c79-4da9-a432-ff869c0870f8
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 026c6e5646983f815572974d5aaa67746178c03b
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: f63193f9d4c9c754a56186f7a36cb9fabaf95725
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56156455"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500728"
 ---
 # <a name="support-center-quickstart-guide"></a>Guide de démarrage rapide du Centre d’aide et de support
 
@@ -36,7 +36,7 @@ Créez un fichier de *groupe de résolution des problèmes* (.zip) qui capture l
 
 
 
-## <a name="step-1-create-a-data-bundle-on-a-local-client"></a>Étape 1 : créer un groupe de données sur un client local
+## <a name="step-1-create-a-data-bundle-on-a-local-client"></a>Étape 1 : Créer un bundle de données sur un client local
 
 1.  Installez le Centre d’aide et de support sur le client Configuration Manager.  
 
@@ -48,7 +48,7 @@ Créez un fichier de *groupe de résolution des problèmes* (.zip) qui capture l
 
 
 
-## <a name="step-2-view-the-data-bundle-using-support-center-viewer"></a>Étape 2 : afficher le groupe de données à l’aide de la visionneuse du Centre d’aide et de support
+## <a name="step-2-view-the-data-bundle-using-support-center-viewer"></a>Étape 2 : afficher le groupe de données à l’aide de la visionneuse du Centre d’aide et de support
 
 1.  Démarrez la **visionneuse du Centre d'aide et de support**. Cette action peut se produire sur n’importe quel ordinateur où vous installez le Centre d’aide et de support.  
 

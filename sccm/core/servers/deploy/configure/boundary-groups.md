@@ -2,21 +2,21 @@
 title: Configurer des groupes de limites
 titleSuffix: Configuration Manager
 description: Aider les clients à trouver des systèmes de site à l’aide de groupes de limites pour organiser de façon logique des emplacements réseau associés appelés limites
-ms.date: 11/27/2018
+ms.date: 05/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 5db2926f-f03e-49c7-b44b-e89b1a5a6779
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a1062cd5983c3eb0d1353b6387b7d9ee507df3b4
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 011f2cb69ec2de6070bc4f2266dbf73a0e1e7843
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56132637"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65498919"
 ---
 # <a name="configure-boundary-groups-for-configuration-manager"></a>Configurer des groupes de limites pour Configuration Manager
 
@@ -41,7 +41,7 @@ Les clients utilisent un groupe de limites pour les applications suivantes :
     - Points de gestion préférés  
 
         > [!Note]  
-        > Si vous utilisez des points de gestion préférés, activez cette option pour la hiérarchie et non pas à partir de la configuration du groupe de limites. Pour plus d’informations, consultez [Activer l’utilisation des points de gestion préférés](#to-enable-use-of-preferred-management-points).  
+        > Si vous utilisez des points de gestion préférés, activez cette option pour la hiérarchie et non pas à partir de la configuration du groupe de limites. Pour plus d’informations, consultez [Activer l’utilisation des points de gestion préférés](/sccm/core/servers/deploy/configure/boundary-group-procedures#bkmk_proc-prefer).  
 
 
 
@@ -84,7 +84,7 @@ Quand un client ne peut pas trouver de système de site disponible, il commence 
 
 ### <a name="the-default-site-boundary-group"></a>Le groupe de limites de site par défaut
 
-Vous pouvez créer vos propres groupes de limites, en sachant que chaque site présente un groupe de limites de site par défaut créé par Configuration Manager. Ce groupe est nommé **Default-Site-Boundary-Group&lt;sitecode>**. Par exemple, le groupe du site ABC s’appellerait **Default-Site-Boundary-Group&lt;ABC>**.
+Vous pouvez créer vos propres groupes de limites, en sachant que chaque site présente un groupe de limites de site par défaut créé par Configuration Manager. Ce groupe est nommé **Default-Site-Boundary-Group&lt;sitecode>** . Par exemple, le groupe du site ABC s’appellerait **Default-Site-Boundary-Group&lt;ABC>** .
 
 Pour chaque groupe de limites que vous créez, Configuration Manager crée automatiquement un lien implicite vers chacun des groupes de limites de site par défaut de la hiérarchie.  
 
@@ -185,13 +185,15 @@ Le fichier journal de séquence de tâches **smsts.log** indique la priorité de
 
 ### <a name="bkmk_bgoptions"></a> Options de groupe de limites pour les téléchargements à partir de pairs
 
-<!--1356193--> Depuis la version 1806, les groupes de limites intègrent les paramètres supplémentaires suivants qui offrent davantage de contrôle sur la distribution du contenu dans l’environnement :  
+<!--1356193-->
+Depuis la version 1806, les groupes de limites intègrent les paramètres supplémentaires suivants qui offrent davantage de contrôle sur la distribution du contenu dans l’environnement :  
 
 - [Autoriser les téléchargements à partir de pairs dans ce groupe de limites](#bkmk_bgoptions1)  
 
 - [Durant les téléchargements à partir de pairs, utiliser uniquement des pairs situés dans le même sous-réseau](#bkmk_bgoptions2)  
 
-<!--1358749--> La version 1810 comporte les options supplémentaires suivantes :  
+<!--1358749-->
+La version 1810 comporte les options supplémentaires suivantes :  
 
 - [Préférer les points de distribution aux pairs au sein du même sous-réseau](#bkmk_bgoptions3)  
 
@@ -280,7 +282,8 @@ Pour plus d’informations, consultez [Basculer manuellement les clients vers un
 
 
 ## <a name="management-points"></a>Points de gestion
-<!-- 1324594 --> Depuis la version 1802, configurez des relations de secours pour les points de gestion entre les groupes de limites. Ce comportement offre un meilleur contrôle des points de gestion que les clients utilisent. L’onglet **Relations** des propriétés du groupe de limites comporte une colonne pour le point de gestion. Lors de l’ajout d’un nouveau groupe de limites de secours, le temps de secours du point de gestion est actuellement toujours égal à zéro (0). Ce comportement est identique pour le **Comportement par défaut** dans le groupe de limites de site par défaut.
+<!-- 1324594 -->
+Depuis la version 1802, configurez des relations de secours pour les points de gestion entre les groupes de limites. Ce comportement offre un meilleur contrôle des points de gestion que les clients utilisent. L’onglet **Relations** des propriétés du groupe de limites comporte une colonne pour le point de gestion. Lors de l’ajout d’un nouveau groupe de limites de secours, le temps de secours du point de gestion est actuellement toujours égal à zéro (0). Ce comportement est identique pour le **Comportement par défaut** dans le groupe de limites de site par défaut.
 
 Auparavant, un problème se produisait souvent pour les points de gestion protégés présents dans un réseau sécurisé. Les clients du réseau d’entreprise principal recevaient une stratégie comprenant ce point de gestion protégé, même s’ils ne pouvaient pas communiquer avec lui à travers un pare-feu. Pour résoudre ce problème, utilisez l’option **Jamais d’action de secours** pour que les clients n’utilisent en secours que les points de gestion avec lesquels ils peuvent communiquer.
 
@@ -402,7 +405,7 @@ Vous ne configurez plus des points de distribution individuels pour qu’ils soi
 
 ### <a name="new-default-boundary-group-at-each-site"></a>Nouveau groupe de limites par défaut sur chaque site
 
-Chaque site principal possède un nouveau groupe de limites par défaut nommé **Groupe-limites-site-défaut&lt;code_site>**. Quand un client n’est pas à un emplacement réseau affecté à un groupe de limites, il utilise les systèmes de site associés au groupe par défaut à partir de son site affecté. Envisagez d’utiliser ce groupe de limites en remplacement de la notion d’emplacement de secours pour le contenu.     
+Chaque site principal possède un nouveau groupe de limites par défaut nommé **Groupe-limites-site-défaut&lt;code_site>** . Quand un client n’est pas à un emplacement réseau affecté à un groupe de limites, il utilise les systèmes de site associés au groupe par défaut à partir de son site affecté. Envisagez d’utiliser ce groupe de limites en remplacement de la notion d’emplacement de secours pour le contenu.     
 
 #### <a name="allow-fallback-source-locations-for-content-is-removed"></a>**Autoriser l'emplacement source de secours pour le contenu** est supprimé
 Vous ne configurez plus explicitement un point de distribution à utiliser pour le secours. Les options de configuration de ce paramètre sont supprimées de la console.

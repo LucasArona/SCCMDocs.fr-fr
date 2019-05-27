@@ -2,21 +2,21 @@
 title: Notes de publication
 titleSuffix: Configuration Manager
 description: Découvrez plus en détail les problèmes urgents qui ne sont pas encore résolus dans le produit ni traités dans un article de la base de connaissances Support Microsoft.
-ms.date: 03/27/2019
+ms.date: 04/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a168e12000f11ca2bb6af8b1988f508910ab7263
-ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
+ms.openlocfilehash: 861d1d12c0df4b2f606a3f36983805fddd83711f
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58523960"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65497690"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Notes de publication de Configuration Manager
 
@@ -145,6 +145,9 @@ Changez la valeur de Registre suivante en `0` et redémarrez le **service Micros
 ## <a name="mobile-device-management"></a>Gestion des appareils mobiles  
 
 ### <a name="validation-for-ios-app-link-sometimes-fails-on-valid-link"></a>La validation de liens d’application iOS valides échoue parfois
+
+*S’applique à : Configuration Manager version 1810 et antérieures*
+
 <!-- LSI 106004348 -->
 Lors de la création d’une application de type **Package d’application pour iOS provenant de l’App Store**, il y a des URL valides pour **l’Emplacement** que le validateur n’accepte pas. Plus précisément, l’App Store iOS ne réclame pas de valeur dans la section du nom d’application de l’URL. Par exemple, les deux liens suivants sont valides et pointent vers la même application, mais **l’Assistant Créer une application** n’accepte que le premier :
 - `https://itunes.apple.com/us/app/app-name/id123456789?mt=8`

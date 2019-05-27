@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: f7832d83-9ae2-4530-8a77-790e0845e12f
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7fb6a87f965db0a329a4f64918b0efcd5732ea0b
-ms.sourcegitcommit: d71e558db2da124357b840332e2da671b3810507
+ms.openlocfilehash: aff3393dca29d558c62c0a508b8cbf6c98f9fbfa
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58269129"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65501218"
 ---
 # <a name="back-up-a-configuration-manager-site"></a>Sauvegarde d'un site Configuration Manager
 
@@ -167,7 +167,7 @@ La bibliothèque de contenu dans Configuration Manager est l’emplacement où s
 
 -   La bibliothèque de contenu doit être restaurée avant que vous puissiez redistribuer le contenu vers des points de distribution. Quand vous démarrez la redistribution du contenu, Configuration Manager copie les fichiers de la bibliothèque de contenu du serveur de site vers les points de distribution. Pour plus d’informations, consultez [Bibliothèque de contenu](/sccm/core/plan-design/hierarchy/the-content-library).  
 
--   Les fichiers source d'un package doivent être restaurés avant que vous puissiez mettre à jour le contenu sur des points de distribution. Quand vous démarrez une mise à jour de contenu, Configuration Manager copie les fichiers nouveaux ou modifiés de la source du package vers la bibliothèque de contenu. Il copie ensuite les fichiers vers les points de distribution associés. Exécutez la requête SQL Server suivante sur la base de données du site afin de rechercher l’emplacement source du package pour l’ensemble des packages et applications : `SELECT * FROM v_Package`. Vous pouvez identifier le site source du package en examinant les trois premiers caractères de l'ID de package. Par exemple, si l'ID de package est CEN00001, le code de site pour le site source est CEN. Lorsque vous restaurez les fichiers sources du package, ceux-ci doivent être restaurés vers le même emplacement que celui dans lequel ils se trouvaient avant la défaillance.  
+-   Les fichiers source d’un package doivent être restaurés avant que vous puissiez mettre à jour le contenu sur des points de distribution. Quand vous démarrez une mise à jour de contenu, Configuration Manager copie les fichiers nouveaux ou modifiés de la source du package vers la bibliothèque de contenu. Il copie ensuite les fichiers vers les points de distribution associés. Exécutez la requête SQL Server suivante sur la base de données du site afin de rechercher l’emplacement source du package pour l’ensemble des packages et applications : `SELECT * FROM v_Package`. Vous pouvez identifier le site source du package en examinant les trois premiers caractères de l'ID de package. Par exemple, si l'ID de package est CEN00001, le code de site pour le site source est CEN. Lorsque vous restaurez les fichiers sources du package, ceux-ci doivent être restaurés vers le même emplacement que celui dans lequel ils se trouvaient avant la défaillance.  
 
 Vérifiez que vous incluez à la fois la bibliothèque de contenu et les fichiers sources de package dans la sauvegarde du système de fichiers du serveur de site.  
 

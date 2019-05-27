@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0815a974f3b1f29f664a2948eed33de24c6ecff3
-ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
+ms.openlocfilehash: bbc042975840e5b4e840928f01257785f4859dd4
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "56754887"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66176829"
 ---
 # <a name="upgrade-windows-10-for-co-management"></a>Mettre à niveau Windows 10 pour la cogestion
 
@@ -52,7 +52,7 @@ Voici quelques astuces que nous avons relevées en aidant des milliers de client
 
 ## <a name="case-studies"></a>Études de cas
 
-Microsoft IT a déployé Windows 10 pour 96 000 utilisateurs distribués chez Microsoft. Le déploiement comprenait à la fois les utilisateurs distants et les utilisateurs sur le réseau d’entreprise. Le déploiement a duré neuf semaines. Pour plus d’informations sur cette expérience, consultez [Déploiement de Windows 10 chez Microsoft avec une mise à niveau sur place](https://www.microsoft.com/download/details.aspx?id=50377).  
+Microsoft IT a déployé Windows 10 pour 96 000 utilisateurs distribués chez Microsoft. Le déploiement comprenait à la fois les utilisateurs distants et les utilisateurs sur le réseau d’entreprise. Le déploiement a duré neuf semaines. Pour plus d’informations sur cette expérience, consultez [Déploiement de Windows 10 chez Microsoft avec une mise à niveau sur place](https://www.microsoft.com/itshowcase/deploying-windows-10-at-microsoft-as-an-in-place-upgrade).  
 
 Un important éditeur de logiciels européen utilise un groupe d’utilisateurs précoces. Après les premiers tests et pilotages des groupes, environ 2 000 employés reçoivent la première mise à jour, les mises à niveau et les logiciels. Ce groupe comprend le personnel informatique et les volontaires qui ont choisi d’adhérer. Ce niveau d’engagement avec ses utilisateurs lui donne une plus grande confiance lors des tests et plus de crédibilité quand les déploiements en masse commencent.
 

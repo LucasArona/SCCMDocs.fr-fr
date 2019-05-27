@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
 ms.assetid: 375912f5-436d-4315-bdbe-d77afee6c9f3
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fc4958e83c73da91aa31fb8ac0e1b84375218ac9
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: c55b7b5bc4effdb1bf1f13dbe0248aa56ad2abe1
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56128202"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499969"
 ---
 # <a name="how-to-use-resource-explorer-to-view-hardware-inventory-in-configuration-manager"></a>Guide pratique pour utiliser l’Explorateur de ressources pour afficher l’inventaire matériel dans Configuration Manager
 
@@ -58,7 +58,8 @@ L’Explorateur de ressources contient les sections suivantes relatives à l’i
 
 
 ## <a name="bkmk_bigint"></a> Utilisation de valeurs entières longues
-<!--1357880--> Dans Configuration Manager versions 1802 et antérieures, l’inventaire matériel a une limite pour les entiers supérieurs à 4 294 967 296 (2^32). Cette limite peut être atteinte pour les attributs, tels que les tailles de disque dur en octets. Le point de gestion ne traite pas les valeurs entières supérieures à cette limite. Par conséquent, aucune valeur n’est stockée dans la base de données. 
+<!--1357880-->
+Dans Configuration Manager versions 1802 et antérieures, l’inventaire matériel a une limite pour les entiers supérieurs à 4 294 967 296 (2^32). Cette limite peut être atteinte pour les attributs, tels que les tailles de disque dur en octets. Le point de gestion ne traite pas les valeurs entières supérieures à cette limite. Par conséquent, aucune valeur n’est stockée dans la base de données. 
 
 À compter de la version 1806, la limite est augmentée à 18 446 744 073 709 551 616 (2^64). 
 

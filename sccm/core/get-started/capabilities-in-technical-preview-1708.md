@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 160425f461e0191a792185d1eb8ef9bfdec08b1c
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 01253487d7fb90aaa24dae6a55b9110e516ab4ad
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56130154"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66176009"
 ---
 # <a name="capabilities-in-technical-preview-1708-for-system-center-configuration-manager"></a>Fonctionnalités de la version d’évaluation technique 1708 pour System Center Configuration Manager
 
@@ -74,14 +74,16 @@ L’Assistant indique les paramètres obligatoires ainsi que les paramètres fac
 Lorsque le script s’exécute, il utilise les valeurs de paramètre que vous avez définies. Si vous n’avez pas configuré de paramètre obligatoire, l’utilisateur final sera invité à fournir ce paramètre lors de l’exécution du script.
 
 ## <a name="management-insights"></a>Management insights
-<!-- 1353967 --> Vous pouvez désormais obtenir des informations sur l’état actuel de votre environnement en fonction de l’analyse des données de la base de données du site. Ces informations vous aident à mieux comprendre votre environnement et à prendre des mesures en fonction de ces renseignements. Passez en revue les informations de gestion dans la console Configuration Manager en sélectionnant **Administration** > **Management Insights** > **All Insights**. Dans cette version, les informations suivantes sont disponibles :
+<!-- 1353967 -->
+Vous pouvez désormais obtenir des informations sur l’état actuel de votre environnement en fonction de l’analyse des données de la base de données du site. Ces informations vous aident à mieux comprendre votre environnement et à prendre des mesures en fonction de ces renseignements. Passez en revue les informations de gestion dans la console Configuration Manager en sélectionnant **Administration** > **Management Insights** > **All Insights**. Dans cette version, les informations suivantes sont disponibles :
 
 - **Applications sans déploiements** : répertorie les applications de votre environnement qui n’ont pas de déploiements actifs. Cette option facilite la recherche et la suppression des applications inutilisées pour simplifier la liste des applications affichées dans la console.
 - **Regroupements vides** : répertorie les regroupements de votre environnement qui n’ont aucun membre. Vous pouvez supprimer ces collections pour simplifier la liste des collections affichées lors du déploiement des objets, par exemple.
 
 
 ## <a name="restart-computers-from-the-configuration-manager-console"></a>Redémarrer les ordinateurs à partir de la console Configuration Manager   
-<!-- 1356283 --> À compter de cette version, vous pouvez utiliser la console Configuration Manager pour identifier les appareils clients qui nécessitent un redémarrage, puis utiliser une action de notification de client pour les redémarrer.
+<!-- 1356283 -->
+À compter de cette version, vous pouvez utiliser la console Configuration Manager pour identifier les périphériques clients qui nécessitent un redémarrage, puis utiliser une action de notification de client pour les redémarrer.
 
 Pour identifier les périphériques en attente d’un redémarrage, sélectionnez **Ressources et Conformité** > **Périphériques** puis choisissez une collection de périphériques pouvant nécessiter un redémarrage. Après avoir sélectionné une collection, vous pouvez afficher l’état de chaque périphérique dans le volet des détails d’une nouvelle colonne nommée **Redémarrage en attente**. Chaque périphérique affiche la valeur **Yes** ou **No**.
 
@@ -100,15 +102,16 @@ Essayez d’effectuer les tâches suivantes, puis envoyez-nous vos **Commentaire
 
 
 ## <a name="software-center-customization"></a>Personnalisation du Centre logiciel
-<!-- 1351224 --> Vous pouvez ajouter des éléments de personnalisation d’entreprise et spécifier la visibilité des onglets du Centre logiciel. Vous pouvez ajouter votre nom de société Centre logiciel spécifique, définir un modèle de couleurs de configuration Centre logiciel, un logo de société et les onglets visibles pour les périphériques clients.
+<!-- 1351224 -->
+Vous pouvez ajouter des éléments de personnalisation d’entreprise et spécifier la visibilité des onglets du Centre logiciel. Vous pouvez ajouter votre nom de société Centre logiciel spécifique, définir un modèle de couleurs de configuration Centre logiciel, un logo de société et les onglets visibles pour les périphériques clients.
 
 ### <a name="customize-software-center"></a>Personnaliser le Centre logiciel
 
 Pour modifier le Centre logiciel :
 
-1. Dans la console **Configuration Manager**, choisissez  **Administration** > **Paramètres client**. Cliquez sur l’instance de paramètre de client souhaitée.
-2. Sur l’onglet  **Accueil** , dans le groupe  **Propriétés** , choisissez  **Propriétés**.
-3. Dans la boîte de dialogue  **Paramètres par défaut** , choisissez  **Centre logiciel**.
+1. Dans la console **Configuration Manager**, cliquez sur **Administration** > **Paramètres client**. Cliquez sur l’instance de paramètre de client souhaitée.
+2. Sous l’onglet **Accueil**, dans le groupe **Propriétés**, choisissez **Propriétés**.
+3. Dans la boîte de dialogue **Paramètres par défaut**, choisissez **Centre logiciel**.
 4. Sélectionnez **Oui** pour **sélectionner de nouveaux paramètres afin de spécifier les informations de l’entreprise** et permettre la modification des paramètres de personnalisation du Centre logiciel.
 5. Spécifiez le **nom de votre entreprise**.
 6. Sélectionnez votre **modèle de couleurs pour le Centre logiciel**.

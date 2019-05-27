@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
 ms.assetid: 1026d616-2a20-4fb2-8604-d331763937f8
-author: aczechowski
+author: mestew
+ms.author: mstewart
 manager: dougeby
-ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f378bb3bda5341e99eb06303d5fb5a8e13c8ac88
-ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
+ms.openlocfilehash: 18de1d67ecc1dfa6d9c5fb87355c4fed04e2c4c4
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58524062"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66176745"
 ---
 # <a name="hardware-inventory-for-linux-and-unix-in-configuration-manager"></a>Inventaire matériel pour Linux et UNIX dans Configuration Manager
 
@@ -39,7 +39,7 @@ L’inventaire matériel pour les serveurs Linux et UNIX utilise un serveur CIM 
 
 À partir de la mise à jour cumulative 1, le client pour Linux et UNIX utilise l’**omiserver** version 1.0.6 open source de l’**Open Group**. (Avant la mise à jour cumulative 1, le client utilisait **nanowbem** comme serveur CIM).  
 
-Le serveur CIM est installé dans le cadre de l’installation du client pour Linux et UNIX. Le client pour Linux et UNIX communique directement avec le serveur CIM. Il n’utilise pas l’interface WS-MAN du serveur CIM. Le port WS-MAN sur le serveur CIM est désactivé lors de l’installation du client. Microsoft a développé le serveur CIM désormais disponible en tant qu’open source par l’intermédiaire du projet OMI (Open Management infrastructure). Pour plus d’informations sur le projet OMI, consultez le site web [The Open Group](https://go.microsoft.com/fwlink/p/?LinkId=262317) .  
+Le serveur CIM est installé dans le cadre de l’installation du client pour Linux et UNIX. Le client pour Linux et UNIX communique directement avec le serveur CIM. Il n’utilise pas l’interface WS-MAN du serveur CIM. Le port WS-MAN sur le serveur CIM est désactivé lors de l’installation du client. Microsoft a développé le serveur CIM désormais disponible en tant qu’open source par l’intermédiaire du projet OMI (Open Management infrastructure). Pour plus d’informations sur le projet OMI, consultez le site web [The Open Group](https://www.opengroup.org/) .  
 
 L’inventaire matériel sur les serveurs Linux et UNIX fonctionne en mappant les classes et les propriétés WMI Win32 existantes aux classes et propriétés équivalentes des serveurs Linux et UNIX. Ce mappage un-à-un des classes et des propriétés permet d’intégrer l’inventaire matériel Linux et UNIX à Configuration Manager. Les données d’inventaire des serveurs Linux et UNIX sont affichées avec l’inventaire des ordinateurs Windows dans la console et les rapports Configuration Manager. Vous bénéficiez ainsi d’une expérience de gestion cohérente et hétérogène.  
 

@@ -2,21 +2,21 @@
 title: CMTrace
 titleSuffix: Configuration Manager
 description: Découvrez comment utiliser l’outil CMTrace pour afficher les fichiers journaux pour Configuration Manager.
-ms.date: 07/30/2018
+ms.date: 05/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 6a4a3290-5228-4871-918a-554aa1c20834
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 87552016d1cd17e79abf01a9de9109195d3d2a70
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 988e834de78bac64be43600ca73d0d51ff29bf4b
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56125302"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65496772"
 ---
 # <a name="cmtrace"></a>CMTrace
 
@@ -115,8 +115,8 @@ Les actions suivantes sont disponibles dans le menu **Tools** :
 - [Filter](#filter)
 - [Error Lookup](#error-lookup)
 - [Pause](#pause)
-- [Show/Hide Details](#show-hide-details)
-- [Show/Hide Info Pane](#show-hide-info-pane)
+- [Show/Hide Details](#show/hide-details)
+- [Show/Hide Info Pane](#show/hide-info-pane)
 
 #### <a name="find"></a>Trouver
 Recherchez une chaîne de texte spécifiée dans le fichier journal ouvert.  
@@ -141,7 +141,8 @@ Entrez une chaîne que CMTrace recherche dans le texte de chaque entrée de jour
 #### <a name="filter"></a>Filtre
 Affichez ou masquez des lignes du journal en fonction des critères spécifiés. Appliquez des filtres à l’une des quatre colonnes qu’elles soient visibles ou non. Ces paramètres s’appliquent à chaque fichier journal ouvert. 
 
-Exemples : <!--SCCMDocs issue #603-->
+Exemples :
+<!--SCCMDocs issue #603-->
 - Filtrez **smsts.log** sur le texte d’entrée contenant « the action » ou « the group ». 
 - Filtrez **InventoryAgent.log** avec le texte d’entrée qui contient « destination ».
 
@@ -203,7 +204,7 @@ Affichez ou masquez le volet d’informations avec l’option **Show/Hide Info P
 Quand vous ouvrez un fichier journal pour la première fois, CMTrace remplace le volet d’informations par une barre de progression. Cette barre de progression indique la quantité de contenu du fichier existant qui est chargée. Quand la progression atteint 100 pour cent, CMTrace supprime la barre de progression et la remplace par le volet d’informations. Lorsque vous chargez des fichiers volumineux, ce comportement vous fournit une indication de la durée possible du chargement.
 
 
-### <a name="status-bar"></a>Barre d'état
+### <a name="status-bar"></a>Barre d’état
 
 Pour les fichiers journaux au format Configuration Manager et CCM, la barre d’état affiche le temps écoulé pour les entrées de journal sélectionnées. Si vous sélectionnez une seule entrée, l’outil affiche le temps écoulé entre la première entrée de journal et l’entrée sélectionnée. Si vous sélectionnez plusieurs entrées, il calcule le temps écoulé entre l’entrée sélectionnée la plus haute et l’entrée sélectionnée la plus basse. CMTrace met en forme ces informations comme suit :
 
@@ -230,7 +231,8 @@ CMTrace prend en charge la fonctionnalité glisser-déplacer de base. Faites gli
 ## <a name="other-tips"></a>Autres conseils
 
 ### <a name="last-directory-registry-key"></a>Clé de Registre Last Directory
-<!--511280--> Par défaut, CMTrace enregistre le dernier emplacement de journal que vous avez ouvert. Ce comportement est utile sur le serveur de site, car l’emplacement par défaut correspond chaque fois au chemin des journaux. 
+<!--511280-->
+Par défaut, CMTrace enregistre le dernier emplacement de journal que vous avez ouvert. Ce comportement est utile sur le serveur de site, car l’emplacement par défaut correspond chaque fois au chemin des journaux. 
 
 La première fois que vous le lancez sur un client, l’emplacement par défaut correspond au répertoire de travail actuel. Cet emplacement peut être le chemin où vous avez enregistré CMTrace ou un chemin comme `%userprofile%\Desktop`. 
 

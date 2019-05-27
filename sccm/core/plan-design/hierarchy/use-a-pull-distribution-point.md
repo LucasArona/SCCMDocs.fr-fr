@@ -2,7 +2,7 @@
 title: Point de distribution d'extraction
 titleSuffix: Configuration Manager
 description: Découvrez plus d’informations sur les configurations et les limites de l’utilisation d’un point de distribution d’extraction avec Configuration Manager.
-ms.date: 07/30/2018
+ms.date: 05/06/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a5336db0bd16d4845650bae775f2eff895e617fb
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 488fa5251711c8d9c7702e2b240a6f10602d447f
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56142270"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499278"
 ---
 # <a name="use-a-pull-distribution-point-with-configuration-manager"></a>Utiliser un point de distribution d’extraction avec Configuration Manager
 
@@ -40,7 +40,7 @@ Les points de distribution d’extraction prennent en charge les mêmes configur
 - Gérer individuellement ou en tant que membre d’un groupe de points de distribution  
 
 > [!IMPORTANT]  
-> Bien qu’un point de distribution d’extraction prenne en charge les communications via les protocoles HTTP et HTTPS, lorsque vous utilisez la console Configuration Manager, vous pouvez spécifier uniquement des points de distribution sources configurés pour le protocole HTTP. Le Kit de développement logiciel (SDK) Configuration Manager permet de spécifier un point de distribution source configuré pour le protocole HTTPS.  
+> Même si un point de distribution d’extraction prend en charge les communications via les protocoles HTTP et HTTPS, lorsque vous utilisez la console Configuration Manager, vous pouvez spécifier uniquement des points de distribution sources configurés pour le protocole HTTP. Le Kit de développement logiciel (SDK) Configuration Manager permet de spécifier un point de distribution source configuré pour le protocole HTTPS.  
 
 Configurez un point de distribution d’extraction quand vous installez le point de distribution. Après avoir créé un point de distribution, configurez-le en tant que point de distribution d’extraction en modifiant les propriétés du rôle. Pour plus d’informations sur l’activation d’un point de distribution comme point de distribution d’extraction, consultez [Point de distribution d’extraction](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#pull-distribution-point).  
 
@@ -102,7 +102,7 @@ Quand vous utilisez un point de distribution d’extraction, passez en revue et 
 
 -   Les points de distribution d’extraction n’utilisent pas les paramètres de l’onglet **Général** des **Propriétés du composant de distribution de logiciels** de chaque site. Ces paramètres incluent **Distribution simultanée** et **Nouvelle tentative de multidiffusion**.  
 
--   Pour transférer du contenu depuis un point de distribution source dans une forêt distante, installez le client Configuration Manager sur le point de distribution d’extraction. Configurez également un compte d’accès réseau qui peut accéder au point de distribution source. À compter de la version 1806, si vous activez l’option de site pour **Utiliser les certificats générés par Configuration Manager pour les systèmes de site HTTP**, vous n’avez pas besoin d’un compte d’accès réseau.<!--1358228-->  
+-   Pour transférer du contenu depuis un point de distribution source dans une forêt distante, installez le client Configuration Manager sur le point de distribution d’extraction. Configurez également un compte d’accès réseau qui peut accéder au point de distribution source. À compter de la version 1806, si vous activez l’option de site pour **Utiliser les certificats générés par Configuration Manager pour les systèmes de site HTTP**, vous n’avez pas besoin d’un compte d’accès réseau.<!--1358228-->  
 
 -   Si le point de distribution d’extraction est également un client Configuration Manager, la version du client doit correspondre à celle du site Configuration Manager qui installe le point de distribution d’extraction. Le point de distribution d’extraction utilise le composant CCMFramework qui est commun au point de distribution d’extraction et au client Configuration Manager.  
 
@@ -154,7 +154,7 @@ Quand vous configurez le point de distribution d’extraction, spécifiez un ou 
 
 -   Une fois le point de distribution d’extraction installé, il utilise principalement le service **CCMExec** pour fonctionner.  
 
--   Quand le point de distribution d’extraction transfère du contenu, il utilise le **Service de transfert intelligent en arrière-plan** (BITS) intégré dans Windows. Un point de distribution d’extraction ne nécessite pas l’installation de l’extension BITS pour le serveur IIS.<!--sms.503672 -Clarified BITS use-->
+-   Quand le point de distribution d’extraction transfère du contenu, il utilise le **Service de transfert intelligent en arrière-plan** (BITS) intégré dans Windows. Un point de distribution d’extraction ne nécessite pas l’installation de l’extension BITS pour le serveur IIS.<!--sms.503672 -Clarified BITS use-->
 
 -  Pour obtenir des détails sur le fonctionnement, consultez les fichiers journaux suivants sur le point de distribution d’extraction :  
     - **DataTransferService.log**
