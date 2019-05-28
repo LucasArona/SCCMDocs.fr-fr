@@ -706,6 +706,8 @@
               href: clients/manage/cmg/monitor-clients-cloud-management-gateway.md
         - name: Planifier la gestion des clients basés sur Internet
           href: clients/manage/plan-internet-based-client-management.md
+        - name: Workflow de l’authentification Azure AD
+          href: clients/manage/azure-ccmsetup.md
     - name: Regroupements
       items:
         - name: Présentation des regroupements
