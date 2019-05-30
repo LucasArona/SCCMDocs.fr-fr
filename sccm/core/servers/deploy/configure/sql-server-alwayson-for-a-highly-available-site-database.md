@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 08f5e0d9986c59d9a2a37c26f3ed9e245ac62f41
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 6f70373f1fea7928e801c0ccdbbe75cf96e54d20
+ms.sourcegitcommit: f531d0a622f220739710b2fe6644ea58d024064a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56120042"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65933532"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Se préparer à l’utilisation de groupes de disponibilité SQL Server Always On avec Configuration Manager
 
@@ -61,7 +61,7 @@ Le compte d’ordinateur du serveur de site doit faire partie du groupe **Admini
 ### <a name="sql-server"></a>SQL Server
 
 #### <a name="version"></a>Version  
-Chaque réplica du groupe de disponibilité doit exécuter une version de SQL Server prise en charge par votre version de Configuration Manager. S’ils sont pris en charge par SQL Server, les différents nœuds d’un groupe de disponibilité peuvent exécuter des versions différentes de SQL Server. Pour plus d’informations, voir [Versions de SQL Server prises en charge pour Configuration Manager](/sccm/core/plan-design/configs/support-for-sql-server-versions).<!--SCCMDocs issue 656-->
+Chaque réplica du groupe de disponibilité doit exécuter une version de SQL Server prise en charge par votre version de Configuration Manager. S’ils sont pris en charge par SQL Server, les différents nœuds d’un groupe de disponibilité peuvent exécuter des versions différentes de SQL Server. Pour plus d’informations, consultez [Versions de SQL Server prises en charge pour Configuration Manager](/sccm/core/plan-design/configs/support-for-sql-server-versions).<!--SCCMDocs issue 656-->
 
 #### <a name="edition"></a>Édition  
 Utilisez une édition *Entreprise* de SQL Server.
@@ -88,7 +88,7 @@ Chaque instance de SQL Server peut s’exécuter sous un compte d’utilisateur 
 - Vous pouvez utiliser un réplica avec validation asynchrone pour récupérer votre réplica synchrone. Pour plus d’informations, voir [Options de récupération d’une base de données de site](/sccm/core/servers/manage/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption).  
 
     > [!Warning]  
-    > Configuration Manager ne prend pas en charge le *basculement* pour utiliser le réplica avec validation asynchrone comme base de données de site. Pour plus d’informations, voir [Basculement et modes de basculement (groupes de disponibilité Always On)](https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups?view=sql-server-2014).  
+    > Configuration Manager ne prend pas en charge le *basculement* pour utiliser le réplica avec validation asynchrone comme base de données de site. Pour plus d’informations, voir [Basculement et modes de basculement (groupes de disponibilité Always On)](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups?view=sql-server-2014).  
 
 Configuration Manager ne valide pas l’état du réplica avec validation asynchrone pour vérifier qu’il est à jour. Le fait d’utiliser un réplica avec validation asynchrone comme base de données de site risque de compromettre l’intégrité du site et des données. Par conception, un tel réplica est susceptible d’être désynchronisé. Pour plus d’informations, voir [Vue d’ensemble des groupes de disponibilité Always On SQL Server](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server).
 
@@ -247,7 +247,8 @@ Les limitations suivantes s’appliquent à tous les scénarios.
 - **MultiSubnetFailover** : L’utilisation d’un groupe de disponibilité avec Configuration Manager n’est pas prise en charge dans une configuration de sous-réseaux multiples. Il n’est pas non plus possible d’utiliser la chaîne de connexion du mot clé [MultiSubnetFailover](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover).  
 
 #### <a name="sql-servers-that-host-additional-availability-groups"></a>Serveurs SQL Server qui hébergent des groupes de disponibilité supplémentaires
-<!--SCCMDocs issue 649-->Si le serveur SQL Server héberge un ou plusieurs groupes de disponibilité en plus du groupe utilisé pour Configuration Manager, il a besoin de paramètres spécifiques lors de l’exécution du programme d’installation de Configuration Manager. Ces paramètres sont également nécessaires pour installer une mise à jour de Configuration Manager. Chacun des réplicas des différents groupes de disponibilité doit disposer des configurations suivantes :
+<!--SCCMDocs issue 649-->
+Si le serveur SQL Server héberge un ou plusieurs groupes de disponibilité en plus du groupe utilisé pour Configuration Manager, il a besoin de paramètres spécifiques lors de l’exécution du programme d’installation de Configuration Manager. Ces paramètres sont également nécessaires pour installer une mise à jour de Configuration Manager. Chacun des réplicas des différents groupes de disponibilité doit disposer des configurations suivantes :
 
 - basculement manuel ;  
 - autoriser toutes les connexions en lecture seule.  
@@ -268,7 +269,8 @@ Lorsque le programme d’installation de Configuration Manager est exécuté pou
 Ces erreurs peuvent être ignorées sans problème.
 
 #### <a name="site-expansion"></a>Expansion de site
-<!--SCCMDocs issue 568-->Si vous configurez la base de données de site de façon à ce qu’un site principal autonome utilise SQL Always On, vous ne pouvez pas étendre le site afin d’inclure un site d’administration centrale. Ce processus échoue. Pour étendre le site, supprimez temporairement du groupe de disponibilité la base de données du site principal.
+<!--SCCMDocs issue 568-->
+Si vous configurez la base de données de site de façon à ce qu’un site principal autonome utilise SQL Always On, vous ne pouvez pas étendre le site afin d’inclure un site d’administration centrale. Ce processus échoue. Pour étendre le site, supprimez temporairement du groupe de disponibilité la base de données du site principal.
 
 
 
@@ -287,9 +289,9 @@ Définissez le mode de récupération de la base de données de site sur **Compl
 
 ## <a name="changes-for-site-recovery"></a>Modifications pour la récupération de site
 
-Si au moins un nœud du groupe de disponibilité est encore fonctionnel, utilisez l’option de récupération de site **Ignorer la récupération de base de données (Utilisez cette option si la base de données de site n’a pas été affectée)**.
+Si au moins un nœud du groupe de disponibilité est encore fonctionnel, utilisez l’option de récupération de site **Ignorer la récupération de base de données (Utilisez cette option si la base de données de site n’a pas été affectée)** .
 
-En cas de perte de tous les nœuds d’un groupe de disponibilité, commencez par recréer le groupe de disponibilité pour pouvoir récupérer le site. Configuration Manager ne peut ni reconstruire ni restaurer le nœud de disponibilité. Recréez le groupe, restaurez la sauvegarde et reconfigurez SQL. Ensuite, utilisez l’option de récupération de site pour **Ignorer la récupération de base de données (Utilisez cette option si la base de données de site n’a pas été affectée)**.
+En cas de perte de tous les nœuds d’un groupe de disponibilité, commencez par recréer le groupe de disponibilité pour pouvoir récupérer le site. Configuration Manager ne peut ni reconstruire ni restaurer le nœud de disponibilité. Recréez le groupe, restaurez la sauvegarde et reconfigurez SQL. Ensuite, utilisez l’option de récupération de site pour **Ignorer la récupération de base de données (Utilisez cette option si la base de données de site n’a pas été affectée)** .
 
 Pour plus d’informations, consultez [Sauvegarde et récupération](/sccm/core/servers/manage/backup-and-recovery).
 

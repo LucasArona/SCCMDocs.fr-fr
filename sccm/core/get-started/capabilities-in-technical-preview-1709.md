@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ab5802ea43884ac23d434edd39569159ca48480a
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 6aa1c324a3ff24feb14c6b867728a76252a8c19d
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56138430"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66176023"
 ---
 # <a name="capabilities-in-technical-preview-1709-for-system-center-configuration-manager"></a>Fonctionnalités de Technical Preview 1709 pour System Center Configuration Manager
 
@@ -44,7 +44,8 @@ Cet article présente les fonctionnalités qui sont disponibles dans la version�
 **Vous trouverez ci-dessous les nouvelles fonctionnalités propres à cette version.**  
 
 ## <a name="improved-vpn-profile-experience-in-configuration-manager-console"></a>Expérience de profil VPN améliorée dans la console Configuration Manager
-<!-- 1313282 --> Avec cette version, nous avons mis à jour l’Assistant Création d’un profil VPN et les pages de propriétés pour afficher uniquement les paramètres propres à la plateforme sélectionnée. Plus précisément :
+<!-- 1313282 -->
+Avec cette version, nous avons mis à jour l’Assistant Création d’un profil VPN et les pages de propriétés pour afficher uniquement les paramètres appropriés à la plateforme sélectionnée. Plus précisément :
 
 - Chaque plateforme a son propre flux de travail, ce qui signifie que les nouveaux profils VPN ne contiennent que les paramètres pris en charge par la plateforme.
 - Les pages **Plateformes prises en charge** apparaissent désormais après la page **Général**.  Maintenant, vous choisissez la plateforme avant de définir les valeurs de propriété.
@@ -78,7 +79,8 @@ Créez un profil VPN en suivant la procédure habituelle. Remarquez que les opti
 Lorsque vous sélectionnez différentes plateformes, notez que seuls les paramètres correspondant à la plateforme sélectionnée s’affichent.
 
 ## <a name="co-management-for-windows-10-devices"></a>Cogestion pour les appareils Windows 10    
-<!-- 1350871 --> Nombreux sont les clients qui souhaitent gérer les appareils Windows 10 comme les appareils mobiles, en recourant à une solution cloud plus simple et moins chère. Toutefois, le passage de la gestion classique à la gestion moderne peut s’avérer difficile. À partir de Windows 10 version 1607 (également appelée Mise à jour anniversaire), vous pouvez joindre à la fois un appareil Windows 10 à Active Directory (AD) localement et à Azure AD basé sur le cloud (Azure AD hybride). La cogestion tire parti de cette amélioration et vous permet de gérer simultanément plusieurs appareils Windows 10 à l’aide de Configuration Manager et d’Intune. C’est une solution qui établit une passerelle entre la gestion classique et la gestion moderne tout en vous donnant la possibilité d’opérer cette transition selon une approche en plusieurs phases. 
+<!-- 1350871 -->
+Nombreux sont les clients qui souhaitent gérer les appareils Windows 10 comme les appareils mobiles, en recourant à une solution cloud plus simple et moins chère. Toutefois, le passage de la gestion classique à la gestion moderne peut s’avérer difficile. À partir de Windows 10 version 1607 (également appelée Mise à jour anniversaire), vous pouvez joindre à la fois un appareil Windows 10 à Active Directory (AD) localement et à Azure AD basé sur le cloud (Azure AD hybride). La cogestion tire parti de cette amélioration et vous permet de gérer simultanément plusieurs appareils Windows 10 à l’aide de Configuration Manager et d’Intune. C’est une solution qui établit une passerelle entre la gestion classique et la gestion moderne tout en vous donnant la possibilité d’opérer cette transition selon une approche en plusieurs phases. 
 
 ### <a name="prerequisites"></a>Prérequis
 Les prérequis suivants doivent être mis en place avant de pouvoir activer la cogestion. Il existe des prérequis généraux et des prérequis distincts pour les clients Configuration Manager existants et les appareils qui ne sont pas clients.
@@ -109,10 +111,10 @@ Les prérequis généraux pour activer la cogestion sont les suivants :
 Après l’activation de la cogestion, Configuration Manager continue de gérer toutes les charges de travail. Lorsque vous pensez être prêt, vous pouvez laisser Intune gérer les charges de travail disponibles. Dans cette version, Intune peut assurer la gestion des charges de travail suivantes.   
 
 #### <a name="compliance-policies"></a>Stratégies de conformité
-Les stratégies de conformité définissent les règles et les paramètres auxquels doit se conformer un appareil pour être considéré conforme par les stratégies d’accès conditionnel. Vous pouvez également utiliser des stratégies de conformité pour surveiller et corriger les problèmes de conformité avec les appareils indépendamment de l'accès conditionnel. Pour plus d’informations, consultez [Stratégies de conformité des appareils](https://docs.microsoft.com/en-us/sccm/mdm/deploy-use/device-compliance-policies).  
+Les stratégies de conformité définissent les règles et les paramètres auxquels doit se conformer un appareil pour être considéré conforme par les stratégies d’accès conditionnel. Vous pouvez également utiliser des stratégies de conformité pour surveiller et corriger les problèmes de conformité avec les appareils indépendamment de l'accès conditionnel. Pour plus d’informations, consultez [Stratégies de conformité des appareils](https://docs.microsoft.com/sccm/mdm/deploy-use/device-compliance-policies).  
 
 #### <a name="windows-update-for-business-policies"></a>Stratégies Windows Update pour Entreprise
-Les stratégies Windows Update pour Entreprise vous permettent de configurer des stratégies de report pour les mises à jour de fonctionnalités Windows 10 ou les mises à jour qualité pour les appareils Windows 10 gérés directement par Windows Update pour Entreprise. Pour plus d’informations, consultez [Configurer les stratégies de report Windows Update pour Entreprise](https://docs.microsoft.com/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10#configure-windows-update-for-business-deferral-policies).  
+Les stratégies Windows Update pour Entreprise vous permettent de configurer des stratégies de report pour les mises à jour de fonctionnalités Windows 10 ou les mises à jour qualité pour les appareils Windows 10 gérés directement par Windows Update pour Entreprise. Pour plus d’informations, consultez [Configurer les stratégies de report Windows Update pour Entreprise](https://docs.microsoft.com/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10#configure-windows-update-for-business-deferral-policies).  
 
 ### <a name="remote-actions-available-in-intune-on-azure-for-co-managed-devices"></a>Actions à distance disponibles dans Intune sur Azure pour les appareils gérés conjointement
 Quand un appareil Windows 10 est activé pour la cogestion, les actions à distance suivantes sont disponibles sur Azure à partir d’Intune :  
@@ -177,7 +179,7 @@ ccmsetup.msi CCMSETUPCMD="/mp:https:/&#47;contoso.cloudapp.net/CCM_Proxy_MutualA
 > [!Tip]
 >Pour trouver les paramètres de ligne de commande pour votre site, effectuez les étapes suivantes :     
 > 1. Dans la console Configuration Manager, accédez à **Administration** > **Vue d’ensemble** > **Services cloud** > **Cogestion**.  
-> 2. Sous l’onglet Accueil, dans le groupe Gérer, choisissez  **Configurer la cogestion** pour ouvrir l’Assistant Intégration de la cogestion.    
+> 2. Sous l’onglet Accueil, dans le groupe Gérer, choisissez **Configurer la cogestion** pour ouvrir l’Assistant Intégration de la cogestion.    
 > 3. Dans la page Abonnement, cliquez sur **Se connecter** et connectez-vous à votre locataire Intune, puis cliquez sur **Suivant**.    
 > 4. Dans la page Activation, cliquez sur **Copier** dans la section **Appareils inscrits dans Intune** pour copier la ligne de commande dans le Presse-papiers et l’enregistrer ensuite pour vous en servir ultérieurement dans la procédure de création de l’application.  
 > 5. Cliquez sur **Annuler** pour quitter l’Assistant.
@@ -186,21 +188,21 @@ ccmsetup.msi CCMSETUPCMD="/mp:https:/&#47;contoso.cloudapp.net/CCM_Proxy_MutualA
 Pour les nouveaux appareils Windows 10, vous pouvez utiliser le service Autopilot pour configurer le mode OOBE (Out Of Box Experience) qui inclut la jonction de l’appareil à AD et à Azure AD, ainsi que son inscription dans Intune. Ensuite, créez une application dans Intune pour déployer le client Configuration Manager.  
 1. Activez AutoPilot pour les nouveaux appareils Windows 10. Pour plus d’informations, consultez [Présentation de Windows AutoPilot](https://docs.microsoft.com/windows/deployment/windows-10-auto-pilot).  
 2. Configurez l’inscription automatique dans Azure AD pour que vos appareils soient inscrits automatiquement dans Intune. Pour plus d’informations, consultez  [Inscrire des appareils Windows pour Microsoft Intune](https://docs.microsoft.com/intune/windows-enroll).
-3. Créez une application dans Intune avec le package du client Configuration Manager et déployez l’application sur les appareils Windows 10 que vous souhaitez gérer conjointement. Utilisez la [ligne de commande pour installer un client Configuration Manager](#command-line-to-install-configuration-manager-client) lorsque vous suivez les étapes permettant d’[installer des clients à partir d’Internet avec Azure AD](https://docs.microsoft.com/en-us/sccm/core/clients/deploy/deploy-clients-cmg-azure).   
+3. Créez une application dans Intune avec le package du client Configuration Manager et déployez l’application sur les appareils Windows 10 que vous souhaitez gérer conjointement. Utilisez la [ligne de commande pour installer un client Configuration Manager](#command-line-to-install-configuration-manager-client) lorsque vous suivez les étapes permettant d’[installer des clients à partir d’Internet avec Azure AD](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-cmg-azure).   
 
 #### <a name="windows-10-devices-not-enrolled-in-intune-or-a-configuration-manager-client"></a>Appareils Windows 10 non inscrits à Intune ou non-clients Configuration Manager
 Pour les appareils Windows 10 qui ne sont pas inscrits à Intune ou qui n’ont pas le client Configuration Manager, vous pouvez utiliser l’inscription automatique pour les inscrire dans Intune. Ensuite, créez une application dans Intune pour déployer le client Configuration Manager.
 1. Configurez l’inscription automatique dans Azure AD pour que vos appareils soient inscrits automatiquement à Intune. Pour plus d’informations, consultez  [Inscrire des appareils Windows pour Microsoft Intune](https://docs.microsoft.com/intune/windows-enroll).  
-2. Créez une application dans Intune avec le package du client Configuration Manager et déployez l’application sur les appareils Windows 10 que vous souhaitez gérer conjointement. Utilisez la [ligne de commande pour installer un client Configuration Manager](#command-line-to-install-configuration-manager-client) lorsque vous suivez les étapes permettant d’[installer des clients à partir d’Internet avec Azure AD](https://docs.microsoft.com/en-us/sccm/core/clients/deploy/deploy-clients-cmg-azure).
+2. Créez une application dans Intune avec le package du client Configuration Manager et déployez l’application sur les appareils Windows 10 que vous souhaitez gérer conjointement. Utilisez la [ligne de commande pour installer un client Configuration Manager](#command-line-to-install-configuration-manager-client) lorsque vous suivez les étapes permettant d’[installer des clients à partir d’Internet avec Azure AD](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-cmg-azure).
 
 #### <a name="windows-10-devices-enrolled-in-intune"></a>Appareils Windows 10 inscrits à Intune
-Pour les appareils Windows 10 qui sont déjà inscrits à Intune, créez une application dans Intune pour déployer le client Configuration Manager. Utilisez la [ligne de commande pour installer un client Configuration Manager](#command-line-to-install-configuration-manager-client) lorsque vous suivez les étapes permettant d’[installer des clients à partir d’Internet avec Azure AD](https://docs.microsoft.com/en-us/sccm/core/clients/deploy/deploy-clients-cmg-azure).  
+Pour les appareils Windows 10 qui sont déjà inscrits à Intune, créez une application dans Intune pour déployer le client Configuration Manager. Utilisez la [ligne de commande pour installer un client Configuration Manager](#command-line-to-install-configuration-manager-client) lorsque vous suivez les étapes permettant d’[installer des clients à partir d’Internet avec Azure AD](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-cmg-azure).  
 
 ### <a name="switch-configuration-manager-workloads-to-intune"></a>Basculer les charges de travail de Configuration Manager sur Intune
 Dans la section précédente, vous avez préparé les appareils Windows 10 pour la cogestion. Ces appareils sont désormais joints à AD et à Azure AD, ils sont inscrits dans Intune et ont le client Configuration Manager. Vous avez probablement encore des appareils Windows 10 joints à AD et qui ont le client Configuration Manager, mais qui ne sont pas joints à Azure AD ni inscrits à Intune. La procédure suivante présente les étapes permettant d’activer la cogestion et de préparer le reste de vos appareils Windows 10 (les clients Configuration Manager sans inscription à Intune) pour la cogestion ; elle vous sert également à lancer le basculement de charges de travail spécifiques de Configuration Manager vers Intune.
 
 1. Dans la console Configuration Manager, accédez à **Administration** > **Vue d’ensemble** > **Services cloud** > **Cogestion**.    
-2. Sous l’onglet Accueil, dans le groupe Gérer, choisissez  **Configurer la cogestion** pour ouvrir l’Assistant Intégration de la cogestion.    
+2. Sous l’onglet Accueil, dans le groupe Gérer, choisissez **Configurer la cogestion** pour ouvrir l’Assistant Intégration de la cogestion.    
 3. Dans la page Abonnement, cliquez sur **Se connecter** et connectez-vous à votre locataire Intune, puis cliquez sur **Suivant**.   
 4. Dans la page Préparation, configurez les paramètres suivants et cliquez sur **Suivant** :
     - **Groupe pilote** : le groupe pilote contient un ou plusieurs regroupements que vous sélectionnez. Utilisez ce groupe dans le cadre de votre déploiement progressif de la cogestion. Vous pouvez commencer par un regroupement test peu volumineux, puis ajouter d’autres regroupements à ce groupe pilote au fur et à mesure que vous déployez la cogestion pour d’autres utilisateurs et appareils. À tout moment, vous pouvez modifier les regroupements dans le groupe pilote à partir des propriétés de cogestion.

@@ -1,7 +1,7 @@
 ---
 title: Classement automatiquement des appareils dans des regroupements
 titleSuffix: Configuration Manager
-description: Classez automatiquement des appareils dans des regroupements avec System Center Configuration Manager.
+description: Classez automatiquement des appareils dans des regroupements.
 ms.date: 04/23/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -11,14 +11,14 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9c45e6b5328d0fc9f0734dec09961e2c3e5e4c0f
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: e0a70d55eb63a51ca980db1fb7089a9490a2803c
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56139974"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66176719"
 ---
-# <a name="automatically-categorize-devices-into-collections-with-system-center-configuration-manager"></a>Classer automatiquement des appareils dans des regroupements avec System Center Configuration Manager
+# <a name="automatically-categorize-devices-into-collections"></a>Classement automatiquement des appareils dans des regroupements
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 

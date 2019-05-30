@@ -2,7 +2,7 @@
 title: Planifier le fournisseur SMS
 titleSuffix: Configuration Manager
 description: Découvrez-en plus sur le rôle de système de site du fournisseur SMS dans Configuration Manager.
-ms.date: 03/12/2019
+ms.date: 05/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6ff872817805c85665bde7219ca26de0bf8d78ef
-ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
+ms.openlocfilehash: 31818bf0b639db4172e090a68a704380208781ca
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58197110"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66176980"
 ---
 # <a name="plan-for-the-sms-provider"></a>Planifier le fournisseur SMS 
 
@@ -259,9 +259,14 @@ L’installation du kit Windows ADK peut nécessiter jusqu’à 650 Mo d’espac
 
 À partir de la version 1810, le fournisseur SMS fournit un accès d’interopérabilité d’API en lecture seule, appelé **service d’administration**, à WMI sur HTTPS. Cette API REST peut être utilisée à la place d’un service web personnalisé pour accéder à des informations à partir du site.
 
-L’URL du **service d’administration** est au format `https://<servername>/AdminService/wmi/<ClassName>`, où `<servername>` est le serveur où est installé le fournisseur SMS et `<ClassName>` un nom de classe WMI Configuration Manager valide.
+L’URL du **service d’administration** est au format `https://<servername>/AdminService/wmi/<ClassName>`, où `<servername>` est le serveur où est installé le fournisseur SMS et `<ClassName>` un nom de classe WMI Configuration Manager valide. Dans la version 1810, ce nom de classe n’inclut pas de préfixe `SMS_`. Dans les versions 1902 et ultérieures, ce nom de classe est le même que celui de la classe WMI. 
 
-Par exemple, `https://servername/AdminService/wmi/SMS_Site`
+Par exemple :
+- 1810 : `https://servername/AdminService/wmi/Site`
+- 1902 et ultérieur : `https://servername/AdminService/wmi/SMS_Site`
+
+> [!Note]  
+> Les noms de classe de service d’administration sont sensibles à la casse. Veillez à utiliser la casse appropriée, par exemple SMS_Site.
 
 Effectuer des appels directs à ce service avec l’applet de commande Windows PowerShell [Invoke-RestMethod](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-restmethod).
 

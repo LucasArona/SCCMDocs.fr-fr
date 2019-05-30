@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c65c85c6ec340fe595efa3bfd403e3c8d1d6a017
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: aa7d623cdd27258a265cd1b1ad22edeb78fe4da8
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56134671"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66177004"
 ---
 # <a name="configuring-reporting-in-system-center-configuration-manager"></a>Configuration des rapports dans System Center Configuration Manager
 
@@ -119,7 +119,7 @@ Avant de créer, modifier et exécuter des rapports dans la console System Cente
 
     -   **Nom du dossier** : Spécifiez le nom de dossier qui est créé et utilisé pour héberger les rapports Configuration Manager dans Reporting Services.  
 
-    -   **Instance du serveur Reporting Services** : Sélectionnez dans la liste l'instance de SQL Server pour Reporting Services. Lorsqu'une seule instance est trouvée, par défaut, elle est répertoriée et sélectionnée. Lorsqu'aucune instance n'est trouvée, vérifiez que SQL Server Reporting Services est installé et configuré, et que le service SQL Server Reporting Services est démarré sur le système de site.  
+    -   **Instance du serveur Reporting Services** : Sélectionnez dans la liste l’instance de SQL Server pour Reporting Services. Lorsqu'une seule instance est trouvée, par défaut, elle est répertoriée et sélectionnée. Lorsqu'aucune instance n'est trouvée, vérifiez que SQL Server Reporting Services est installé et configuré, et que le service SQL Server Reporting Services est démarré sur le système de site.  
 
         > [!IMPORTANT]  
         >  Configuration Manager établit une connexion dans le contexte de l’utilisateur actif avec Windows Management Instrumentation (WMI) sur le système de site sélectionné pour récupérer l’instance de SQL Server pour Reporting Services. L'utilisateur actuel doit disposer d'un accès **Lecture** à WMI sur le système de site, sans quoi, les instances de Reporting Services ne peuvent pas être récupérées.  
@@ -225,7 +225,7 @@ Avant de créer, modifier et exécuter des rapports dans la console System Cente
 
     5.  Dans la boîte de dialogue **Ajouter ou supprimer des composants logiciels enfichables** , cliquez sur **OK**.  
 
-    6.  Dans la console, développez **Certificats (ordinateur local)**, développez **Personnes autorisées**et sélectionnez **Certificats**.  
+    6.  Dans la console, développez **Certificats (ordinateur local)** , développez **Personnes autorisées**et sélectionnez **Certificats**.  
 
     7.  Cliquez avec le bouton droit sur le certificat portant le nom convivial &lt;*nom de domaine complet du serveur de site*>, cliquez sur **Toutes les tâches**, puis sélectionnez **Exporter**.  
 
@@ -278,7 +278,7 @@ Avant de créer, modifier et exécuter des rapports dans la console System Cente
 6.  Cliquez sur **OK** pour enregistrer les modifications et quitter la boîte de dialogue.  
 
 ## <a name="upgrading-sql-server"></a>Mise à niveau de SQL Server  
- Après la mise à niveau de SQL Server et de l’instance SQL Server Reporting Services utilisée comme source de données pour un point de Reporting Services, des erreurs peuvent se produire au moment où vous exécutez ou modifiez des rapports à partir de la console Configuration Manager. Pour que la génération de rapports fonctionne correctement à partir de la console Configuration Manager, vous devez supprimer le rôle de système de site du point de Reporting Services du site, puis le réinstaller. Toutefois, après la mise à niveau, vous pouvez continuer à exécuter et à modifier des rapports à partir d'un navigateur Internet.  
+ Après la mise à niveau de SQL Server et de l’instance SQL Server Reporting Services utilisée comme source de données pour un point de Reporting Services, des erreurs peuvent se produire au moment où vous exécutez ou modifiez des rapports à partir de la console Configuration Manager. Pour que la génération de rapports fonctionne correctement à partir de la console Configuration Manager, vous devez supprimer le rôle de système de site du point de Reporting Services du site, puis le réinstaller. Toutefois, après la mise à niveau, vous pouvez continuer à exécuter et à modifier des rapports à partir d’un navigateur Internet.  
 
 ##  <a name="BKMK_ConfigureReportOptions"></a> Configurer les options de rapport  
  Utilisez les options de rapport d’un site Configuration Manager pour sélectionner le point de Reporting Services par défaut à utiliser pour gérer vos rapports. Même si vous pouvez posséder plusieurs points de Reporting Services sur un site, seul le serveur de rapports par défaut sélectionné dans les options de rapport est utilisé pour gérer les rapports. Pour configurer les options de rapport de votre un site, procédez comme suit.  

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8b62ca813b11a6c49366c80623e7c4462e2e4897
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: aa92ed294196d44aaafcf4e873c706e135928c90
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56133899"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66176648"
 ---
 # <a name="how-to-manage-clients-in-system-center-configuration-manager"></a>Guide pratique pour gérer les clients dans System Center Configuration Manager
 
@@ -224,8 +224,8 @@ Le client Configuration Manager télécharge le contenu pour les logiciels néce
 
 Si le client tente de télécharger du contenu pour un programme ou une application dont la taille est supérieure à celle du cache, le déploiement échoue en raison de la taille insuffisante du cache. Le client génère un message d’état 10050 signalant que la taille du cache est insuffisante. Si vous augmentez ultérieurement la taille du cache, le résultat est :  
 
--   Pour un programme requis : le client ne retente pas automatiquement de télécharger le contenu. Redéployez le package et le programme sur le client.  
--   Pour une application requise : Le client tente automatiquement de télécharger le contenu quand il télécharge sa stratégie client.  
+-   Pour un programme obligatoire : le client ne retente pas automatiquement de télécharger le contenu. Redéployez le package et le programme sur le client.  
+-   Pour une application obligatoire : Le client tente automatiquement de télécharger le contenu quand il télécharge sa stratégie client.  
 
 Si le client tente de télécharger un package dont la taille est inférieure à celle du cache, mais que le cache est plein, tous les déploiements demandés continuent leurs tentatives, jusqu’à ce que l’espace du cache soit disponible, jusqu’à expiration du délai de téléchargement ou jusqu’à ce que la limite du nombre de nouvelles tentatives soit atteinte. Si la taille du cache augmente ultérieurement, Configuration Manager effectue une nouvelle tentative de téléchargement du package à l’intervalle suivant. Le client tente de télécharger le contenu toutes les 4 heures jusqu'à ce qu'il atteigne 18 tentatives.  
 
@@ -304,10 +304,13 @@ Ajustez la taille du cache du client sans avoir à réinstaller le client en con
 
 1.  Ouvrez une invite de commandes Windows et accédez à l'emplacement du fichier CCMSetup.exe.  
 
-2.  Entrez **Ccmsetup.exe /uninstall**, puis appuyez sur **Entrée**.  
+2.  Tapez **CCMSetup.exe /uninstall**, puis appuyez sur **Entrée**.  
 
 > [!NOTE]  
->  Le processus de désinstallation n’affiche pas de résultats à l’écran. Pour vérifier que la désinstallation du client s’est déroulée correctement, examinez le fichier journal **CCMSetup.log** dans le dossier *%windir%\ ccmsetup* de l’ordinateur client.  
+>  Le processus de désinstallation n’affiche pas de résultats à l’écran. Pour vérifier que la désinstallation du client s’est déroulée correctement, examinez le fichier journal **CCMSetup.log** dans le dossier *%windir%\ccmsetup\logs* de l’ordinateur client.  
+
+> [!TIP]
+> Si vous devez attendre que le processus de désinstallation se termine pour pouvoir effectuer une autre opération, exécutez `Wait-Process CCMSetup` dans PowerShell. Cette commande peut suspendre un script jusqu’à la fin du processus CCMSetup.
 
 ##  <a name="BKMK_ConflictingRecords"></a> Gérer les enregistrements en conflit pour les clients Configuration Manager  
  Configuration Manager utilise l’identificateur de matériel pour tenter d’identifier les éventuels clients dupliqués et vous signale les enregistrements en conflit. Par exemple, si vous réinstallez un ordinateur, il est possible que l’identificateur de matériel soit le même, mais que le GUID utilisé par Configuration Manager soit différent.  
@@ -425,6 +428,6 @@ Vous pouvez lancer une récupération de stratégie en utilisant :
 
     -   Accédez au fichier via l'Explorateur Windows et double-cliquez sur le fichier de script.  
 
-    -   Ouvrez une invite de commandes et tapez **cscript &lt;chemin\nom_fichier.vbs>**.  
+    -   Ouvrez une invite de commandes et tapez **cscript &lt;chemin\nom_fichier.vbs>** .  
 
-5.  Cliquez sur **OK** dans la boîte de dialogue **Environnement d’exécution de scripts WSH (Windows Script Host)**.  
+5.  Cliquez sur **OK** dans la boîte de dialogue **Environnement d’exécution de scripts WSH (Windows Script Host)** .  

@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28e0326cf370d000052eb3bc675e70377d7954c5
-ms.sourcegitcommit: 234f97fde834f94b75f90850378521cf0c5a2343
+ms.openlocfilehash: 7eb322550c6d11426240736d3d0c6b9ff2c9764f
+ms.sourcegitcommit: abfc9e1b3945637fa93ca8d3a11519493a5d5391
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2019
-ms.locfileid: "64945088"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66264554"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>Tutoriel : Déployer Windows 10 sur le pilote
 
@@ -140,6 +140,10 @@ Utilisez cette procédure pour vous connecter à l’Analytique de bureau et le 
 6. Sélectionnez un espace de travail nouveau ou existant, puis **définir comme espace de travail Analytique de bureau**.  Puis sélectionnez **continuer** dans le **confirmer et accorder l’accès** boîte de dialogue.  
 
 7. Dans le nouvel onglet de navigateur, choisissez un compte à utiliser pour vous connecter. Sélectionnez l’option **donner son consentement au nom de votre organisation** et sélectionnez **Accept**.  
+
+
+    > [!Note]  
+    > Ce consentement consiste à affecter l’application MALogAnalyticsReader le rôle de lecture du journal Analytique à l’espace de travail. Ce rôle d’application est requise par l’Analytique de bureau. Pour plus d’informations, consultez [rôle d’application MALogAnalyticsReader](/sccm/desktop-analytics/troubleshooting#bkmk_MALogAnalyticsReader).  
 
 8. Revenez à la page à **configurer votre espace de travail**, sélectionnez **suivant**.  
 
@@ -315,7 +319,7 @@ Utilisez cette procédure pour déployer Windows 10 dans Configuration Manager d
 
 Ensuite, distribuez le package de mise à niveau du système d’exploitation sur les points de distribution.  
 
-1. Dans la liste, sélectionnez le package de mise à niveau du système d’exploitation. Sur le **accueil** onglet du ruban, dans le **déploiement** groupe, sélectionnez **distribuer du contenu**. L'Assistant Distribuer du contenu s'ouvre.  
+1. Dans la liste, sélectionnez le package de mise à niveau du système d’exploitation. Sous l’onglet **Accueil** du ruban, sélectionnez **Distribuer du contenu** dans le groupe **Déploiement** L'Assistant Distribuer du contenu s'ouvre.  
 
 2. Sur le **général** , vérifiez que le contenu répertorié correspond au contenu que vous voulez distribuer, puis sélectionnez **suivant**.  
 

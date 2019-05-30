@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9cf206bfb0774ee1d45c70e2a0c890a2f157ad65
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 9c3058eed3cd7fe4430824d5a55f155694a2ed44
+ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56127182"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66177021"
 ---
 # <a name="learn-how-clients-find-site-resources-and-services-for-system-center-configuration-manager"></a>Comprendre comment les clients recherchent des services et des ressources de site pour System Center Configuration Manager
 
@@ -196,7 +196,7 @@ Pour publier un point de gestion sur Configuration Manager, spécifiez les valeu
     > [!NOTE]  
     >  Le port de l’enregistrement SRV doit correspondre au port de communication utilisé par le point de gestion. Par défaut, le port **80** est utilisé pour les communications HTTP et le port **443** pour les communications HTTPS.  
 
--   **Cible** : Entrez le nom de domaine complet de l'intranet qui est spécifié pour le système de site configuré avec le rôle de site de point de gestion.  
+-   **Cible** : Entrez le nom de domaine complet de l’intranet qui est spécifié pour le système de site configuré avec le rôle de site de point de gestion.  
 
 Si vous utilisez le DNS Windows Server, vous pouvez utiliser la procédure suivante pour entrer cet enregistrement DNS pour les points de gestion intranet. Si vous utilisez une autre implémentation de DNS, utilisez les informations de cette section sur les valeurs de champ et consultez la documentation de ce DNS pour adapter cette procédure.  
 
@@ -224,7 +224,7 @@ Si vous utilisez le DNS Windows Server, vous pouvez utiliser la procédure suiva
 
 3.  Vérifiez qu'il existe un enregistrement d'hôte (A ou AAAA) pour le nom de domaine complet d'intranet du système de site. Si cet enregistrement n'existe pas, créez-le.  
 
-4.  À l’aide de l’option **New Other Records (Autres nouveaux enregistrements)**, cliquez sur **Emplacement du service (SRV)** dans la boîte de dialogue **Type d’enregistrement de ressource**, cliquez sur **Créer un enregistrement**, entrez les informations suivantes, puis choisissez **Terminé** :  
+4.  À l’aide de l’option **New Other Records (Autres nouveaux enregistrements)** , cliquez sur **Emplacement du service (SRV)** dans la boîte de dialogue **Type d’enregistrement de ressource**, cliquez sur **Créer un enregistrement**, entrez les informations suivantes, puis choisissez **Terminé** :  
 
     -   **Domaine** : Si nécessaire, entrez le suffixe DNS du point de gestion, par exemple **contoso.com**.  
     -   **Service** : Saisissez **_mssms_mp**_&lt;sitecode\>, où &lt;sitecode\> est le code de site du point de gestion.  
@@ -236,7 +236,7 @@ Si vous utilisez le DNS Windows Server, vous pouvez utiliser la procédure suiva
         > [!NOTE]  
         >  Le port de l’enregistrement SRV doit correspondre au port de communication utilisé par le point de gestion. Par défaut, le port **80** est utilisé pour les communications HTTP et le port **443** pour les communications HTTPS.  
 
-    -   **Hôte offrant ce service** : Entrez le nom de domaine complet de l'intranet qui est spécifié pour le système de site configuré avec le rôle de site de point de gestion.  
+    -   **Hôte offrant ce service** : Entrez le nom de domaine complet de l’intranet qui est spécifié pour le système de site configuré avec le rôle de site de point de gestion.  
 
 Répétez ces étapes pour chaque point de gestion de l'intranet que vous souhaitez publier dans DNS.  
 

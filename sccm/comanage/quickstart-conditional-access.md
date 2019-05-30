@@ -2,7 +2,7 @@
 title: Accès conditionnel avec la cogestion
 titleSuffix: Configuration Manager
 description: Contrôler l’accès utilisateur aux ressources de l’organisation en fonction des règles de conformité d’Intune
-ms.date: 01/14/2019
+ms.date: 05/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d5e5c7d6075697431f8c537366dc16164fedd1f
-ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
+ms.openlocfilehash: a48dd82b1f4c79953ce88c5e156abe47b891ac14
+ms.sourcegitcommit: d1df13fc95a1f1540177c294555d9be26161b9cb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "56754848"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65973948"
 ---
 # <a name="conditional-access-with-co-management"></a>Accès conditionnel avec la cogestion
 
@@ -34,7 +34,7 @@ Avec la cogestion, Intune évalue chaque appareil de votre réseau pour détermi
 
     - Pour les appareils cogérés, Configuration Manager procède aussi à une évaluation basée sur la configuration. Par exemple, les mises à jour obligatoires ou la conformité des applications. Intune combine cette évaluation avec sa propre évaluation.  
 
-2. Intune détecte les incidents de sécurité actifs sur un appareil. Il utilise la sécurité intelligente de [Windows Defender Advanced Threat Protection](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/get-started) et d’autres [fournisseurs de défense contre les menaces mobiles](https://www.lookout.com/about/partners/microsoft). Ces partenaires effectuent une analyse comportementale continue sur les appareils. Cette analyse détecte les incidents actifs, puis transmet ces informations à Intune pour une évaluation de la conformité en temps réel.  
+2. Intune détecte les incidents de sécurité actifs sur un appareil. Il utilise la sécurité intelligente de [Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/get-started) (anciennement Windows Defender ATP) et d’autres [fournisseurs de défense contre les menaces mobiles](https://www.lookout.com/about/partners/microsoft). Ces partenaires effectuent une analyse comportementale continue sur les appareils. Cette analyse détecte les incidents actifs, puis transmet ces informations à Intune pour une évaluation de la conformité en temps réel.  
 
     - Cette évaluation est basée sur les incidents et les post-violations de la sécurité  
 
@@ -63,7 +63,7 @@ Avec la cogestion, Intune peut endosser les responsabilités de Configuration Ma
 
 L’accès conditionnel est également un élément essentiel du développement de l’architecture de votre [réseau de confiance zéro](https://cloudblogs.microsoft.com/microsoftsecure/2018/06/14/building-zero-trust-networks-with-microsoft-365/). Avec l’accès conditionnel, les contrôles d’accès des appareils conformes couvrent les fondations du réseau de confiance zéro. Cette fonctionnalité joue un grand rôle dans la façon dont vous allez sécuriser votre organisation dans le futur.
 
-Pour plus d’informations, consultez le billet de blog [Enhancing conditional access with machine-risk data from Windows Defender Advanced Threat Protection](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Enhancing-conditional-access-with-machine-risk-data-from-Windows/ba-p/250559).
+Pour plus d’informations, consultez le billet de blog [Enhancing conditional access with machine-risk data from Microsoft Defender Advanced Threat Protection](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Enhancing-conditional-access-with-machine-risk-data-from-Windows/ba-p/250559).
 
 
 
@@ -71,7 +71,7 @@ Pour plus d’informations, consultez le billet de blog [Enhancing conditional a
 
 La société de services de conseil informatique Wipro utilise l’accès conditionnel pour protéger et gérer les appareils utilisés par ses 91 000 employés. Dans une récente étude de cas, le vice-président du service informatique de Wipro a noté :
 
-> *L’utilisation de l’accès conditionnel est un énorme succès pour Wipro. À présent, tous nos employés ont un accès mobile aux informations à la demande.*
+> *L’utilisation de l’accès conditionnel est un énorme succès pour Wipro. À présent, tous nos employés ont un accès mobile aux informations à la demande.* 
 > *Nous avons amélioré notre posture de sécurité et la productivité de nos employés. À présent 91 000 employés bénéficient d’un accès hautement sécurisé à plus de 100 applications sur tous les appareils, où qu’ils soient.*
 
 <!-- waiting for the case study to be public
@@ -80,7 +80,7 @@ For more information, see [Wipro drives mobile productivity with Microsoft cloud
 
 Autres exemples : 
 
-- Nestlé utilise l’accès conditionnel basé sur les applications pour plus de 150 000 employés  
+- Nestlé, qui utilise l’accès conditionnel basé sur les applications pour plus de 150 000 employés  
 
 - La société de logiciels d’automatisation Cadence peut maintenant garantir que « seuls les appareils gérés ont accès aux applications Office 365 comme Teams et à l’intranet de l’entreprise. » Elle offre aussi à leur personnel « un accès plus sûr aux autres applications cloud, comme Workday et Salesforce. » Pour plus d’informations sur l’expérience de Cadence avec Intune, consultez [Cadence increases the pace of business with mobile collaboration tools in Microsoft 365](https://customers.microsoft.com/story/cadence-partner-professional-services-microsoft-365).
 
@@ -99,7 +99,7 @@ Dans plus de 63 % des violations de données, les attaquants ont accès au rés
 
 Dans la mesure où l’accès conditionnel est un composant phare d’Enterprise Mobility + Security (EMS), aucune installation ou architecture locale n’est requise. Avec Intune et Azure Active Directory (Azure AD), vous pouvez rapidement configurer l’accès conditionnel dans le cloud. Si vous utilisez Configuration Manager, vous pouvez facilement étendre votre environnement au cloud avec la cogestion et commencer à l’utiliser dès maintenant.
 
-Pour plus d’informations sur l’intégration d’ATP, consultez ce billet de blog [Windows Defender ATP device risk score exposes new cyberattack, drives Conditional access to protect networks](https://cloudblogs.microsoft.com/microsoftsecure/2018/11/28/windows-defender-atp-device-risk-score-exposes-new-cyberattack-drives-conditional-access-to-protect-networks/). Il décrit en détail comment un groupe de hackers de haut vol utilisait des outils encore jamais vus. Le cloud Microsoft les a détectés et les a arrêtés parce que les utilisateurs ciblés avaient un accès conditionnel. Leur intrusion a activé la stratégie d’accès conditionnel basée sur les risques de l’appareil. Même si l’attaquant avait déjà établi une brèche dans le réseau, les ordinateurs exploités ont été automatiquement coupés des services de l’organisation et des données gérées par Azure AD.
+Pour plus d’informations sur l’intégration d’ATP, consultez le billet de blog [Microsoft Defender ATP device risk score exposes new cyberattack, drives Conditional access to protect networks](https://cloudblogs.microsoft.com/microsoftsecure/2018/11/28/windows-defender-atp-device-risk-score-exposes-new-cyberattack-drives-conditional-access-to-protect-networks/). Il décrit en détail comment un groupe de hackers de haut vol utilisait des outils encore jamais vus. Le cloud Microsoft les a détectés et les a arrêtés parce que les utilisateurs ciblés avaient un accès conditionnel. Leur intrusion a activé la stratégie d’accès conditionnel basée sur les risques de l’appareil. Même si l’attaquant avait déjà établi une brèche dans le réseau, les ordinateurs exploités ont été automatiquement coupés des services de l’organisation et des données gérées par Azure AD.
 
 
 

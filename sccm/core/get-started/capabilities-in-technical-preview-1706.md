@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 251a614aebce244edddfe362a5f7119ca9dd0c87
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 11ad5a0bef004b778ba431c9a2da30f51eafc443
+ms.sourcegitcommit: f531d0a622f220739710b2fe6644ea58d024064a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56132504"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65933301"
 ---
 # <a name="capabilities-in-technical-preview-1706-for-system-center-configuration-manager"></a>Fonctionnalités de la version d’évaluation technique 1706 pour System Center Configuration Manager
 
@@ -54,7 +54,8 @@ Cet article présente les fonctionnalités qui sont disponibles dans la version 
 -->
 
 ## <a name="improved-boundary-groups-for-software-update-points"></a>Améliorations des groupes de limites pour les points de mise à jour logicielle
-<!-- 1324591 --> Cette version inclut des améliorations pour le fonctionnement des points de mise à jour logicielle avec des groupes de limites. Voici qui résume le nouveau comportement de secours :
+<!-- 1324591 -->
+Cette version inclut des améliorations pour le fonctionnement des points de mise à jour logicielle avec des groupes de limites. Voici qui résume le nouveau comportement de secours :
 - L’action de secours pour les points de mise à jour logicielle utilise désormais un temps configurable pour le repli sur les groupes de limites voisins, avec une durée minimale de 120 minutes.
 
 - Indépendamment de la configuration de secours, un client essaie d’atteindre le dernier point de mise à jour logicielle qu'il a utilisé pendant 120 minutes. Après l’échec de communication avec ce serveur pendant 120 minutes, le client vérifie ensuite son pool de points de mise à jour logicielle disponibles, afin d’en trouver un nouveau.
@@ -76,7 +77,8 @@ Pour plus d’informations, consultez la section [Points de mise à jour logicie
 
 
 ## <a name="site-server-role-high-availability"></a>Rôle serveur site haute disponibilité
-<!-- 1128774 --> La haute disponibilité pour le rôle serveur de site est une solution basée sur Configuration Manager pour installer un serveur de site principal supplémentaire en mode *Passif*. Le serveur de site en mode passif vient s’ajouter à votre serveur de site principal existant qui se trouve en mode *Actif*. Un serveur de site en mode passif est disponible pour une utilisation immédiate, si nécessaire.
+<!-- 1128774 -->
+La haute disponibilité pour le rôle de serveur de site est une solution basée sur Configuration Manager pour installer un serveur de site principal supplémentaire en mode *Passif*. Le serveur de site en mode passif vient s’ajouter à votre serveur de site principal existant qui se trouve en mode *Actif*. Un serveur de site en mode passif est disponible pour une utilisation immédiate, si nécessaire.
 
 Un serveur de site principal en mode passif :
 -   Utilise la même base de données de site en tant que serveur de site actif.
@@ -184,7 +186,8 @@ Essayez d’effectuer les tâches suivantes, puis envoyez-nous vos **Commentaire
 
 
 ## <a name="include-trust-for-specific-files-and-folders-in-a-device-guard-policy"></a>Inclure la confiance pour des fichiers et dossiers spécifiques dans une stratégie de protection des appareils
-<!-- 1324676 --> Dans cette version, nous avons ajouté des fonctionnalités supplémentaires à la gestion des stratégies [Device Guard](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager).
+<!-- 1324676 -->
+Dans cette version, nous avons ajouté des fonctionnalités supplémentaires à la gestion des stratégies [Device Guard](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)
 
 Vous pouvez éventuellement ajouter l’approbation pour des fichiers spécifiques pour les dossiers dans une stratégie Device Guard. Cela vous permet de :
 
@@ -200,7 +203,8 @@ Vous pouvez éventuellement ajouter l’approbation pour des fichiers spécifiqu
 
 
 ## <a name="hide-task-sequence-progress"></a>Masquer la progression de la séquence de tâches
-<!-- 1354291 --> Dans cette version, vous pouvez contrôler le moment auquel la progression de la séquence de tâches s’affiche auprès des utilisateurs finaux à l’aide d’une nouvelle variable. Dans votre séquence de tâches, suivez l’étape **Définir une variable de séquence de tâches** pour définir la valeur de la variable **TSDisableProgressUI** pour masquer ou afficher la progression de la séquence de tâches. Vous pouvez suivre l’étape Définir une variable de séquence de tâches plusieurs fois dans une séquence de tâches pour modifier la valeur de la variable. Cela vous permet de masquer ou afficher la progression des séquences de tâches dans les différentes sections de la séquence de tâches.
+<!-- 1354291 -->
+Dans cette version, vous pouvez contrôler le moment auquel la progression de la séquence de tâches s’affiche pour les utilisateurs finaux à l’aide d’une nouvelle variable. Dans votre séquence de tâches, suivez l’étape **Définir une variable de séquence de tâches** pour définir la valeur de la variable **TSDisableProgressUI** pour masquer ou afficher la progression de la séquence de tâches. Vous pouvez suivre l’étape Définir une variable de séquence de tâches plusieurs fois dans une séquence de tâches pour modifier la valeur de la variable. Cela vous permet de masquer ou afficher la progression des séquences de tâches dans les différentes sections de la séquence de tâches.
 
 #### <a name="to-hide-task-sequence-progress"></a>Pour afficher la progression de la séquence de tâches
 Dans l’éditeur de séquences de tâches, suivez l’étape [Définir une variable de séquence de tâches](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) pour définir la valeur de la variable **TSDisableProgressUI** sur **True** pour masquer la progression de la séquence de tâches.
@@ -209,7 +213,8 @@ Dans l’éditeur de séquences de tâches, suivez l’étape [Définir une vari
 Dans l’éditeur de séquences de tâches, suivez l’étape [Définir une variable de séquence de tâches](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) pour définir la valeur de la variable **TSDisableProgressUI** sur **False** pour afficher la progression de la séquence de tâches.
 
 ## <a name="specify-a-different-content-location-for-install-content-and-uninstall-content"></a>Spécifier un autre emplacement de contenu pour installer et désinstaller le contenu
-<!-- 1097546 --> Aujourd’hui, dans Configuration Manager, vous spécifiez l’emplacement d’installation qui contient les fichiers d’installation pour une application. Lorsque vous spécifiez un emplacement d’installation, ce dernier est également utilisé comme emplacement de désinstallation pour le contenu de l’application.
+<!-- 1097546 -->
+Aujourd’hui, dans Configuration Manager, vous spécifiez l’emplacement d’installation qui contient les fichiers d’installation pour une application. Lorsque vous spécifiez un emplacement d’installation, ce dernier est également utilisé comme emplacement de désinstallation pour le contenu de l’application.
 Sur la base de vos retours, lorsque vous souhaitez désinstaller une application déployée, et que le contenu de l’application ne se trouve pas sur l’ordinateur client, le client va à nouveau télécharger tous les fichiers de configuration d’application à nouveau avant que l’application soit désinstallée.
 Pour résoudre ce problème, vous pouvez maintenant spécifier à la fois un emplacement de contenu d’installation et éventuellement un emplacement de contenu de désinstallation. En outre, vous pouvez choisir ne pas spécifier d’emplacement de contenu de désinstallation.
 
@@ -226,7 +231,8 @@ Pour résoudre ce problème, vous pouvez maintenant spécifier à la fois un emp
 
 
 ## <a name="accessibility-improvements"></a>Améliorations d’accessibilité  
-<!--1253000 --> Cette préversion apporte plusieurs améliorations aux [fonctionnalités d’accessibilité](/sccm/core/understand/accessibility-features) dans la console Configuration Manager. À savoir :     
+<!--1253000 -->
+Cette version préliminaire apporte plusieurs améliorations aux [fonctionnalités d’accessibilité](/sccm/core/understand/accessibility-features) dans la console Configuration Manager. À savoir :     
 
 **Nouveaux raccourcis clavier pour vous déplacer dans la console :**
 -   CTRL + M - Définit le focus sur le volet principal (central).
@@ -246,7 +252,8 @@ Pour résoudre ce problème, vous pouvez maintenant spécifier à la fois un emp
 
 
 ## <a name="changes-to-the-azure-services-wizard-to-support-upgrade-readiness"></a>Modifications apportées à l’assistant de services Azure pour prendre en charge Upgrade Readiness
-<!-- 1353331 --> À partir de cette version, utilisez l’assistant de services Azure pour configurer une connexion de Configuration Manager vers [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics). L’utilisation de l’assistant simplifie la configuration du connecteur à l’aide d’un assistant commun pour les services Azure associés.   
+<!-- 1353331 -->
+À partir de cette version, utilisez l’assistant de services Azure pour configurer une connexion de Configuration Manager vers [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics). L’utilisation de l’assistant simplifie la configuration du connecteur à l’aide d’un assistant commun pour les services Azure associés.   
 
 Bien que la méthode pour configurer la connexion a changé, les conditions préalables requises pour la connexion et l’utilisation d’Upgrade Readiness restent inchangées.   
 
@@ -384,7 +391,8 @@ Après avoir exécuté un script sur les appareils clients, utilisez cette proc�
 3. Dans la liste **Résultats du script**, vous pouvez voir les résultats pour chaque script que vous avez exécuté sur des appareils clients. Un code de sortie de script de **0** indique généralement que le script a été exécuté avec succès.
 
 ## <a name="pxe-network-boot-support-for-ipv6"></a>Prise en charge du démarrage réseau PXE pour IPv6
-<!-- 1269793 --> Vous pouvez maintenant activer la prise en charge du démarrage réseau PXE pour IPv6 afin de démarrer un déploiement de système d’exploitation de séquence de tâches. Lorsque vous utilisez ce paramètre, les points de distribution compatibles PXE prendront en charge à la fois IPv4 et IPv6. Cette option ne nécessite pas de WDS arrête WDS s’il est présent.
+<!-- 1269793 -->
+Vous pouvez maintenant activer la prise en charge du démarrage réseau PXE pour IPv6 afin de démarrer un déploiement de système d’exploitation de séquence de tâches. Lorsque vous utilisez ce paramètre, les points de distribution compatibles PXE prendront en charge à la fois IPv4 et IPv6. Cette option ne nécessite pas de WDS arrête WDS s’il est présent.
 
 #### <a name="to-enable-pxe-boot-support-for-ipv6"></a>Pour activer la prise en charge du démarrage PXE pour IPv6
 Utilisez la procédure suivante pour activer l’option de prise en charge IPv6 pour PXE.
@@ -393,7 +401,8 @@ Utilisez la procédure suivante pour activer l’option de prise en charge IPv6 
 2. Dans l’onglet **PXE**, sélectionnez **Prise en charge d’IPv6** pour activer la prise en charge d’IPv6 pour PXE.
 
 ## <a name="manage-microsoft-surface-driver-updates"></a>Gérer les mises à jour du pilote Microsoft Surface
-<!-- 1098490 --> Vous pouvez maintenant utiliser Configuration Manager pour gérer les mises à jour du pilote Microsoft Surface.
+<!-- 1098490 -->
+Vous pouvez maintenant utiliser Configuration Manager pour gérer les mises à jour du pilote Microsoft Surface.
 
 ### <a name="prerequisites"></a>Prérequis
 Tous les points de mise à jour logicielle doivent exécuter Windows Server 2016.
@@ -405,7 +414,8 @@ Essayez d’effectuer les tâches suivantes, puis envoyez-nous vos **Commentaire
 3. [Déployer des pilotes Microsoft Surface synchronisés](/sccm/sum/deploy-use/deploy-software-updates)
 
 ## <a name="configure-windows-update-for-business-deferral-policies"></a>Configuration de Windows Update pour les stratégies d’entreprise de report d’entreprise
-<!-- 1290890 --> Vous pouvez maintenant configurer des stratégies de report pour les appareils avec Mises à jour des fonctionnalités Windows 10 ou Mises à jour de qualité de Windows 10 et gérés directement par Windows Update pour Entreprise. Vous pouvez gérer les stratégies de report du nouveau nœud **Stratégies Windows Update for Business** sous **Bibliothèque de logiciels** > **Maintenance de Windows 10**.
+<!-- 1290890 -->
+Vous pouvez maintenant configurer des stratégies de report pour les appareils Windows 10 avec mises à jour de fonctionnalités ou de qualité gérés directement par Windows Update for Business. Vous pouvez gérer les stratégies de report du nouveau nœud **Stratégies Windows Update for Business** sous **Bibliothèque de logiciels** > **Maintenance de Windows 10**.
 
 ### <a name="prerequisites"></a>Prérequis
 Les appareils Windows 10 gérés par Windows Update for Business doivent avoir une connectivité Internet.
@@ -443,7 +453,8 @@ Les appareils Windows 10 gérés par Windows Update for Business doivent avoir u
 
 
 ## <a name="support-for-entrust-certification-authorities"></a>Prise en charge des autorités de certification Entrust
-<!-- 1350740 --> Configuration Manager prend désormais en charge les autorités de certification Entrust. Cela permet la remise de certificats PFX pour les appareils inscrits dans Microsoft Intune.
+<!-- 1350740 -->
+Configuration Manager prend désormais en charge les autorités de certification Entrust ; Cela permet la remise de certificats PFX pour les appareils inscrits dans Microsoft Intune.
 
 Vous pouvez configurer Entrust en tant qu’autorité de certification lors de l’ajout d’un rôle de point d’enregistrement de certificat dans Configuration Manager. Lorsque vous ajoutez un nouveau profil de certificat qui émet des certificats PFX, vous pouvez sélectionner une autorité de certification Microsoft ou Entrust.
 
@@ -453,7 +464,7 @@ Vous pouvez configurer Entrust en tant qu’autorité de certification lors de l
 ## <a name="cisco-ipsec-support-for-ios-vpn-profiles"></a>Prise en charge de Cisco (IPsec) pour les profils VPN iOS
 <!-- 1321367 -->
 
-Vous pouvez créer un profil VPN iOS avec Cisco (IPsec) comme type de connexion. Pour plus d’informations, consultez [Créer des profils VPN](https://docs.microsoft.com/en-us/sccm/mdm/deploy-use/create-vpn-profiles#create-vpn-profiles).
+Vous pouvez créer un profil VPN iOS avec Cisco (IPsec) comme type de connexion. Pour plus d’informations, consultez [Créer des profils VPN](https://docs.microsoft.com/sccm/mdm/deploy-use/create-vpn-profiles#create-vpn-profiles).
 
 
 ## <a name="new-windows-configuration-item-settings"></a>Nouveaux paramètres d’élément de configuration Windows
@@ -533,7 +544,8 @@ Consultez [Créer et déployer une stratégie de conformité d’appareil](https
 Consultez [Protéger les applications à l’aide des stratégies de protection des applications de Configuration Manager](https://docs.microsoft.com/sccm/mdm/deploy-use/protect-apps-using-mam-policies) pour essayer de nouveaux paramètres de stratégie de protection d’application.
 
 ## <a name="android-and-ios-enrollment-restrictions"></a>Restrictions de l’inscription Android et iOS
-<!-- 1290826 --> À partir de cette version, les administrateurs peuvent spécifier que les utilisateurs ne peuvent pas inscrire des appareils Android ou iOS personnels dans leur environnement hybride. Cela vous permet de limiter les appareils inscrits aux appareils prédéclarés, appareils d’entreprise ou appareils iOS inscrits avec le programme d’inscription des appareils.
+<!-- 1290826 -->
+À partir de cette version, les administrateurs peuvent spécifier que les utilisateurs ne peuvent pas inscrire des appareils Android ou iOS personnels dans leur environnement hybride. Cela vous permet de limiter les appareils inscrits aux appareils prédéclarés, appareils d’entreprise ou appareils iOS inscrits avec le programme d’inscription des appareils.
 
 ### <a name="try-it-out"></a>Faîtes un essai
 1. Dans la console Configuration Manager, dans l’espace de travail **Administration** , accédez à **Services cloud** > **Abonnement Microsoft Intune**.
@@ -563,7 +575,8 @@ Le paramètre DisallowCrossProfileCopyPaste réglé sur true empêche le comport
 4. Sélectionnez la valeur **Autoriser le partage de données entre les profils personnels et professionnels**, puis terminez l’assistant.
 
 ## <a name="device-health-attestation-assessment-for-compliance-policies-for-conditional-access"></a>Évaluation de l’attestation de l’intégrité des appareils pour les stratégies de conformité pour l’accès conditionnel
-<!-- 1097546 --> À partir de cette version, vous pouvez utiliser l’état d’attestation d’intégrité de l’appareil en tant que règle de stratégie de conformité pour l’accès conditionnel aux ressources d’entreprise.
+<!-- 1097546 -->
+Depuis cette version, vous pouvez utiliser l’état d’attestation d’intégrité de l’appareil en tant que règle de stratégie de conformité pour l’accès conditionnel aux ressources d’entreprise.
 
 ### <a name="try-it-out"></a>Faîtes un essai
 Sélectionnez une règle d’attestation d’intégrité de l’appareil dans le cadre d’une évaluation de stratégie de conformité.

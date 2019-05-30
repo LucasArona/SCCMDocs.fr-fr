@@ -2365,8 +2365,10 @@
     - name: Classe WMI du serveur SMS_DistributionPointInfo
       href: core/servers/configure/sms_distributionpointinfo-server-wmi-class.md
       items:
-        - name: Méthode GetChainedPullDPs dans la classe SMSDistributionPointInfo
+        - name: Méthode GetChainedPullDPs
           href: core/servers/configure/getchainedpulldps-method-in-class-smsdistributionpointinfo.md
+        - name: Méthode SetDPMaintenanceMode
+          href: core/servers/configure/setdpmaintenancemode-method-in-class-sms-distributionpointinfo.md
     - name: Classe WMI du serveur SMS_DistributionStatus
       href: core/servers/configure/sms_distributionstatus-server-wmi-class.md
     - name: Classe WMI du serveur SMS_LastPXEAdvertisement
