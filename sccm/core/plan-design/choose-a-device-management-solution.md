@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2b396ad5955227494511355f6efdb88ecd901110
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: c1aec1447207d20393b0b8454851755ec85f5020
+ms.sourcegitcommit: abfc9e1b3945637fa93ca8d3a11519493a5d5391
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56120829"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66264359"
 ---
 # <a name="choose-a-device-management-solution-for-configuration-manager"></a>Choisir une solution de gestion d’appareils pour Configuration Manager
 
@@ -26,7 +26,7 @@ Configuration Manager propose différentes solutions pour la gestion des PC, des
 
 
 > [!Important]  
-> Depuis le 14 août 2018, la gestion hybride des appareils mobiles est une [fonctionnalité déconseillée](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). Pour plus d’informations, voir [Présentation de la gestion MDM hybride](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->  
+> Depuis le 14 août 2018, la gestion hybride des appareils mobiles est une [fonctionnalité déconseillée](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). Pour plus d’informations, consultez [Qu’est-ce que la gestion hybride des appareils mobiles ?](/sccm/mdm/understand/hybrid-mobile-device-management)<!--Intune feature 2683117-->  
 <!-- SCCMDocs issue 1197 -->
 
 
@@ -36,7 +36,7 @@ Configuration Manager propose différentes solutions pour la gestion des PC, des
 Cet article décrit les quatre solutions de gestion d’appareils suivantes : 
 - [Client de Configuration Manager](#bkmk_sccm)
 - [Gestion des appareils mobiles (MDM) locale avec Configuration Manager](#bkmk_opmdm)
-- [Cogestion avec Microsoft Intune](#bkmk_intune)
+- [Cogestion avec Microsoft Intune](#bkmk_comanage)
 - [Microsoft Exchange](#bkmk_opmdm)
 
 Vous pouvez utiliser ces solutions de gestion des appareils par elles-mêmes ou les combiner entre elles. Par exemple, vous pouvez utiliser l’approche de la gestion basée sur le client pour gérer les ordinateurs et les serveurs de votre organisation, et utiliser la cogestion pour gérer les ordinateurs portables basés sur Internet. En combinant les méthodes de cette façon, vous pouvez couvrir tous vos besoins en matière de gestion d’appareils.  
