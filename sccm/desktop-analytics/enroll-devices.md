@@ -2,7 +2,7 @@
 title: Inscrire des appareils dans Desktop Analytique
 titleSuffix: Configuration Manager
 description: Découvrez comment inscrire des appareils dans Analytique de bureau.
-ms.date: 04/05/2019
+ms.date: 04/22/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c5d5e6665b0ddd2e7726af4b8ac8929d5019fedf
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: 8d056d533a83290b638958ff78275ddec1409ec5
+ms.sourcegitcommit: 65e9b30e2b53ab9db679a7b1d50634a73c0028db
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245877"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66429849"
 ---
 # <a name="how-to-enroll-devices-in-desktop-analytics"></a>Comment inscrire des appareils dans Desktop Analytique
 
@@ -81,7 +81,7 @@ Pour une expérience optimale, installez les mises à jour suivantes, selon la v
 > Lorsque vous installez ces mises à jour, attendez les comportements suivants :
 > 
 > - Les appareils que vous inscrivez pour l’Analytique de bureau afficheront dans le service en moins d’une heure  
-> - Appareils signalent rapidement l’état des mises à jour de fonctionnalité et de qualité pour Windows et Office  
+> - Appareils signalent rapidement l’état des mises à jour qualité et de fonctionnalité de Windows  
 >
 > Sans ces mises à jour, ces processus peuvent prendre plus de 48 heures pour un appareil signaler à l’Analytique de bureau.  
 
@@ -127,7 +127,7 @@ Pour modifier ces paramètres, utilisez la procédure suivante :
 
 2. Sur le **données de Diagnostic** page, apportez les modifications nécessaires pour les paramètres suivants :  
 
-    - **ID commercial**: vous n’avez pas besoin de modifier ou de modifier cette valeur. Pour plus d’informations sur la résolution des problèmes avec l’ID commercial, consultez [configuration d’ID Commercial](/sccm/desktop-analytics/troubleshooting#commercial-id-configuration).  
+    - **ID commercial**: cette valeur doit remplir automatiquement avec l’ID de. votre organisation Si elle ne, assurez-vous que votre serveur proxy est configuré à la liste verte tous requis [points de terminaison](/sccm/desktop-analytics/enable-data-sharing#endpoints) avant de continuer. Vous pouvez également récupérer votre ID Commercial à partir de la **Services connectés** volet dans le [portail d’Analytique de bureau](https://aka.ms/m365aprod).   
 
     - **Niveau de données de diagnostic de Windows 10**: Pour plus d’informations, consultez [des niveaux de données de Diagnostic](/sccm/desktop-analytics/enable-data-sharing#diagnostic-data-levels).  
 
@@ -135,7 +135,7 @@ Pour modifier ces paramètres, utilisez la procédure suivante :
 
     Lorsque vous apportez des modifications à cette page, le **fonctionnalités disponibles** page affiche un aperçu de la fonctionnalité de bureau Analytique avec les paramètres de données de diagnostic sélectionné.  
 
-3. Sur le **Microsoft 365 Analytique connexion** page, apportez les modifications nécessaires pour les paramètres suivants :
+3. Sur le **connexion de bureau Analytique** page, apportez les modifications nécessaires pour les paramètres suivants :
 
     - **Nom complet** : Le portail d’Analytique de bureau affiche cette connexion de Configuration Manager à l’aide de ce nom.  
 
@@ -143,9 +143,10 @@ Pour modifier ces paramètres, utilisez la procédure suivante :
 
     - **Appareils du regroupement cible utilisent un proxy authentifié par l’utilisateur pour les communications sortantes**: Par défaut, cette valeur est **non**. Si nécessaire dans votre environnement, la valeur est **Oui**. Pour plus d’informations, consultez [l’authentification du serveur Proxy](/sccm/desktop-analytics/enable-data-sharing#proxy-server-authentication).  
 
-    - **Sélectionner des regroupements spécifiques pour se synchroniser avec le bureau Analytique**: Sélectionnez **ajouter** pour inclure des collections supplémentaires. Ces collections sont disponibles dans le portail d’Analytique de bureau pour le regroupement des plans de déploiement. Veillez à inclure les collections d’exclusion de pilote et de pilote.  
+    - **Sélectionner des regroupements spécifiques pour se synchroniser avec le bureau Analytique**: Sélectionnez **ajouter** pour inclure des collections supplémentaires à partir de votre **regroupement cible** hiérarchie. Ces collections sont disponibles dans le portail d’Analytique de bureau pour le regroupement des plans de déploiement. Veillez à inclure les collections d’exclusion de pilote et de pilote.  <!-- 4097528 -->
 
-        Ces collections continuent à synchroniser en tant que leurs changements d’appartenance. Par exemple, votre plan de déploiement utilise une collection avec une règle d’adhésion de Windows 7. Comme ces appareils mise à niveau vers Windows 10 et Configuration Manager évalue l’appartenance au regroupement, ces appareils déposent hors de la collecte et le plan de déploiement.  
+        > [!Important] 
+        > Ces collections continuent à synchroniser en tant que leurs changements d’appartenance. Par exemple, votre plan de déploiement utilise une collection avec une règle d’adhésion de Windows 7. Comme ces appareils mise à niveau vers Windows 10 et Configuration Manager évalue l’appartenance au regroupement, ces appareils déposent hors de la collecte et le plan de déploiement.  
 
 
 ### <a name="windows-settings"></a>Paramètres de Windows
@@ -167,7 +168,7 @@ Afficher ces paramètres dans l’éditeur de stratégie de groupe à l’emplac
 
 ### <a name="device-name"></a>Nom de l’appareil
 
-À compter de Windows 10, version 1803, le nom de l’appareil n’est plus collecté par défaut. Collecte le nom de l’appareil avec les données de diagnostic nécessite un distinct participer. Sans le nom de l’appareil, il est plus difficile pour vous permet d’identifier quels appareils nécessitent une attention particulière lors de l’évaluation d’une mise à niveau vers une nouvelle version de Windows ou Office.
+À compter de Windows 10, version 1803, le nom de l’appareil n’est plus collecté par défaut. Collecte le nom de l’appareil avec les données de diagnostic nécessite un distinct participer. Sans le nom de l’appareil, il est plus difficile pour vous permet d’identifier quels appareils nécessitent une attention particulière lors de l’évaluation d’une mise à niveau vers une nouvelle version de Windows.
 
 Si vous n’envoyez pas le nom du périphérique, il apparaît dans l’Analytique de bureau comme « Inconnu ».
 
