@@ -2,7 +2,7 @@
 title: Connecter le Gestionnaire de configuration
 titleSuffix: Configuration Manager
 description: Guide pratique pour la connexion de Configuration Manager avec l’Analytique de bureau.
-ms.date: 04/05/2019
+ms.date: 04/25/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 11979d35829660633dd77059562dcf519e0af05b
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: 905ea779082387996858727ef8c50f1835b3d61c
+ms.sourcegitcommit: 65753c51fbf596f233fc75a5462ea4a44005c70b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62206140"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66463025"
 ---
 # <a name="how-to-connect-configuration-manager-with-desktop-analytics"></a>Comment connecter Configuration Manager avec l’Analytique de bureau
 
@@ -55,25 +55,35 @@ Utilisez cette procédure pour connecter Configuration Manager à l’Analytique
   
    Sélectionnez **Suivant**.  
 
-3. Sur le **application** page, sélectionnez l’option appropriée **environnement Azure**. Puis sélectionnez **importation** pour l’application web. Configurez les paramètres suivants dans le **importer des applications** fenêtre :  
+3. Sur le **application** page, sélectionnez l’option appropriée **environnement Azure**. Puis sélectionnez **Parcourir** pour l’application web.  
 
-    - **Nom du locataire Azure AD**: Ce nom est la façon dont il est nommé dans Configuration Manager  
+4. Si vous avez une application existante que vous souhaitez réutiliser pour ce service, choisissez-le dans la liste, puis sélectionnez **OK**.  
 
-    - **ID de locataire Azure AD**: Le **ID de répertoire** vous avez copié à partir d’Azure AD  
+5. Dans la plupart des cas, vous pouvez créer une application pour la connexion de bureau Analytique avec cet Assistant. Sélectionnez **créer**.<!-- 3572123 -->  
 
-    - **ID de client** : Le **ID d’Application** vous avez copié à partir de l’application Azure AD  
+    > [!Tip]  
+    > Si vous ne pouvez pas créer l’application à partir de cet Assistant, vous pouvez créer manuellement l’application dans Azure AD et ensuite importer dans Configuration Manager. Pour plus d’informations, consultez [application de créer et d’importation pour le Gestionnaire de Configuration](/sccm/desktop-analytics/troubleshooting#create-and-import-app-for-configuration-manager).  
 
-    - **Clé secrète**: La clé **valeur** vous avez copié à partir de l’application Azure AD  
+6. Configurez les paramètres suivants dans le **créer une Application serveur** fenêtre :  
 
-    - **Expiration de la clé secrète** : La même date d’expiration de la clé  
+    - **Nom de l'application** : Un nom convivial pour l’application dans Azure AD.
 
-    - **URI ID d’application** : Ce paramètre doit remplir automatiquement avec la valeur suivante : `https://cmmicrosvc.manage.microsoft.com/`  
-  
-   Sélectionnez **Vérifiez**, puis sélectionnez **OK** pour fermer la fenêtre Importer des applications. Sélectionnez **suivant** sur la page application de l’Assistant Services Azure.  
+    - **URL de la page d'accueil** : cette valeur n’est pas utilisée par Configuration Manager, mais elle est exigée par Azure AD. Par défaut, cette valeur est `https://ConfigMgrService`.  
 
-4. Sur le **données de Diagnostic** page, configurez les paramètres suivants :  
+    - **URI ID d’application** : cette valeur doit être unique dans votre locataire Azure AD. Il est dans le jeton d’accès utilisé par le client Configuration Manager pour demander l’accès au service. Par défaut, cette valeur est `https://ConfigMgrService`.  
 
-    - **ID commercial**: cette valeur doit remplir automatiquement avec l’ID de. votre organisation Si elle ne, assurez-vous que votre serveur proxy est configuré à la liste verte tous requis [points de terminaison](/sccm/desktop-analytics/enable-data-sharing#endpoints) avant de continuer. Vous pouvez également récupérer votre ID Commercial à partir de la **Services connectés** volet dans le [portail d’Analytique de bureau](https://aka.ms/m365aprod).  
+    - **Période de validité de la clé secrète** : choisissez **1 an** ou **2 ans** dans la liste déroulante. Un an est la valeur par défaut.  
+
+    Sélectionnez **connectez-vous** . Après vous être authentifié correctement auprès d’Azure, la page affiche le **Nom du locataire Azure AD** pour référence.
+        
+    > [!Note]  
+    > Effectuez cette étape en tant qu’un **administrateur d’entreprise**. Ces informations d’identification ne sont pas enregistrées par Configuration Manager. Ce rôle ne nécessite pas d’autorisations dans Configuration Manager et ne doit pas obligatoirement être le même compte que celui qui exécute l’Assistant Services Azure.  
+
+    Sélectionnez **OK** pour créer l’application web dans Azure AD et fermer la boîte de dialogue Créer une application serveur. Dans la boîte de dialogue application serveur, sélectionnez **OK**. Puis sélectionnez **suivant** sur la page application de l’Assistant Services Azure.  
+
+7. Sur le **données de Diagnostic** page, configurez les paramètres suivants :  
+
+    - **ID commercial**: cette valeur doit remplir automatiquement avec l’ID de. votre organisation Si elle ne, assurez-vous que votre serveur proxy est configuré pour autoriser toutes les [points de terminaison](/sccm/desktop-analytics/enable-data-sharing#endpoints) avant de continuer. Vous pouvez également récupérer votre ID Commercial à partir de la **Services connectés** volet dans le [portail d’Analytique de bureau](https://aka.ms/m365aprod).  
 
     - **Niveau de données de diagnostic de Windows 10**: sélectionnez au moins **avancé (limité)**  
 
@@ -86,7 +96,7 @@ Utilisez cette procédure pour connecter Configuration Manager à l’Analytique
 
     ![Exemple de page de fonctionnalités disponibles dans l’Assistant Services Azure](media/available-functionality.png)
 
-5. Sur le **Collections** page, configurez les paramètres suivants :  
+8. Sur le **Collections** page, configurez les paramètres suivants :  
 
     - **Nom complet** : Le portail d’Analytique de bureau affiche cette connexion de Configuration Manager à l’aide de ce nom. Il permet de faire la distinction entre des hiérarchies différentes. Par exemple, *laboratoire de test* ou *production*.  
 
@@ -94,14 +104,13 @@ Utilisez cette procédure pour connecter Configuration Manager à l’Analytique
 
     - **Appareils du regroupement cible utilisent un proxy authentifié par l’utilisateur pour les communications sortantes**: Par défaut, cette valeur est **non**. Si nécessaire dans votre environnement, la valeur est **Oui**.  
 
-    - **Sélectionner des regroupements spécifiques pour se synchroniser avec le bureau Analytique**: Sélectionnez **ajouter** pour inclure des collections supplémentaires. Ces collections sont disponibles dans le portail d’Analytique de bureau pour le regroupement des plans de déploiement. Veillez à inclure les collections d’exclusion de pilote et de pilote.  
-
-        Ces collections continuent à synchroniser en tant que leurs changements d’appartenance. Par exemple, votre plan de déploiement utilise une collection avec une règle d’adhésion de Windows 7. Comme ces appareils mise à niveau vers Windows 10 et Configuration Manager évalue l’appartenance au regroupement, ces appareils déposent hors de la collecte et le plan de déploiement.  
+    - **Sélectionner des regroupements spécifiques pour se synchroniser avec le bureau Analytique**: Sélectionnez **ajouter** pour inclure des collections supplémentaires à partir de votre **regroupement cible** hiérarchie. Ces collections sont disponibles dans le portail d’Analytique de bureau pour le regroupement des plans de déploiement. Veillez à inclure les collections d’exclusion de pilote et de pilote.  <!-- 4097528 -->  
 
         > [!Important]  
-        > Veillez à limiter ces collections supplémentaires sur le regroupement cible. Sur les propriétés de ces regroupements supplémentaires, le **limitation au regroupement** doit être la même collection que l’Analytique de Desktop **regroupement cible**.<!-- 4097528 -->  
+        > Ces collections continuent à synchroniser en tant que leurs changements d’appartenance. Par exemple, votre plan de déploiement utilise une collection avec une règle d’adhésion de Windows 7. Comme ces appareils mise à niveau vers Windows 10 et Configuration Manager évalue l’appartenance au regroupement, ces appareils déposent hors de la collecte et le plan de déploiement.  
 
-6. Effectuez toutes les étapes de l'Assistant.  
+
+9. Effectuez toutes les étapes de l'Assistant.  
 
 Configuration Manager crée une stratégie de paramètres pour configurer les appareils du regroupement cible. Cette stratégie inclut les paramètres de données de diagnostic pour permettre aux appareils d’envoyer des données à Microsoft. Par défaut, les clients de mettre à jour stratégie toutes les heures. Après avoir reçu les nouveaux paramètres, il peut être plus de plusieurs heures avant que les données sont disponibles dans l’Analytique de bureau.
 
@@ -109,11 +118,11 @@ Configuration Manager crée une stratégie de paramètres pour configurer les ap
 
 ## <a name="bkmk_monitor"></a> Surveiller l’intégrité de la connexion
 
-Surveiller la configuration de vos appareils pour l’Analytique de bureau. Dans la console Configuration Manager, accédez à la **bibliothèque de logiciels** espace de travail, développez le **Microsoft 365 Servicing** nœud, puis sélectionnez le **intégrité de la connexion** tableau de bord.  
+Surveiller la configuration de vos appareils pour l’Analytique de bureau. Dans la console Configuration Manager, accédez à la **bibliothèque de logiciels** espace de travail, développez le **Desktop Analytique maintenance** nœud, puis sélectionnez le **intégrité de la connexion** tableau de bord.  
 
 Pour plus d’informations, consultez [surveiller l’intégrité de la connexion](/sccm/desktop-analytics/troubleshooting#monitor-connection-health).
 
-Configuration Manager synchronise les plans de déploiement de bureau Analytique dans les 15 minutes de la création de la connexion. Dans la console Configuration Manager, accédez à la **bibliothèque de logiciels** espace de travail, développez le **Microsoft 365 Servicing** nœud, puis sélectionnez le **Plans de déploiement** nœud.
+Configuration Manager synchronise vos collections dans les 60 minutes de la création de la connexion. Dans le portail d’Analytique de bureau, accédez à **pilote Global**et consultez vos regroupements de périphériques de Configuration Manager.
 
 
 

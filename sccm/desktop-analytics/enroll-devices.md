@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8d056d533a83290b638958ff78275ddec1409ec5
-ms.sourcegitcommit: 65e9b30e2b53ab9db679a7b1d50634a73c0028db
+ms.openlocfilehash: bfe3094f63440d26a64d8d82cc44007141dd60df
+ms.sourcegitcommit: 65753c51fbf596f233fc75a5462ea4a44005c70b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66429849"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66463012"
 ---
 # <a name="how-to-enroll-devices-in-desktop-analytics"></a>Comment inscrire des appareils dans Desktop Analytique
 
@@ -127,7 +127,7 @@ Pour modifier ces paramètres, utilisez la procédure suivante :
 
 2. Sur le **données de Diagnostic** page, apportez les modifications nécessaires pour les paramètres suivants :  
 
-    - **ID commercial**: cette valeur doit remplir automatiquement avec l’ID de. votre organisation Si elle ne, assurez-vous que votre serveur proxy est configuré à la liste verte tous requis [points de terminaison](/sccm/desktop-analytics/enable-data-sharing#endpoints) avant de continuer. Vous pouvez également récupérer votre ID Commercial à partir de la **Services connectés** volet dans le [portail d’Analytique de bureau](https://aka.ms/m365aprod).   
+    - **ID commercial**: cette valeur doit remplir automatiquement avec l’ID de. votre organisation Si elle ne, assurez-vous que votre serveur proxy est configuré pour autoriser toutes les [points de terminaison](/sccm/desktop-analytics/enable-data-sharing#endpoints) avant de continuer. Vous pouvez également récupérer votre ID Commercial à partir de la **Services connectés** volet dans le [portail d’Analytique de bureau](https://aka.ms/m365aprod).   
 
     - **Niveau de données de diagnostic de Windows 10**: Pour plus d’informations, consultez [des niveaux de données de Diagnostic](/sccm/desktop-analytics/enable-data-sharing#diagnostic-data-levels).  
 
