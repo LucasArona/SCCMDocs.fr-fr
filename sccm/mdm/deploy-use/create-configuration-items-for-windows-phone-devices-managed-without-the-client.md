@@ -10,17 +10,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 29b46cc49930d47439dc5e60b72e4bf5017829b9
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: 0a05fc1c07df8b95ad9305d199bf5abbb3eff3a1
+ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275670"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66716182"
 ---
 # <a name="how-to-create-configuration-items-for-windows-phone-devices-managed-without-the-system-center-configuration-manager-client"></a>Comment créer des éléments de configuration pour des appareils Windows Phone gérés sans le client System Center Configuration Manager
+
 Utilisez l’élément de configuration System Center Configuration Manager **Windows Phone** pour gérer les paramètres des appareils Windows Phone qui sont inscrits dans Microsoft Intune ou gérés localement par Configuration Manager.  
   
-### <a name="to-create-a-windows-phone-configuration-item"></a>Pour créer un élément de configuration Windows Phone  
+## <a name="create-a-windows-phone-configuration-item"></a>Créer un élément de configuration Windows Phone  
   
 1. Dans la console Configuration Manager, cliquez sur **Ressources et conformité**.  
   
@@ -36,7 +37,7 @@ Utilisez l’élément de configuration System Center Configuration Manager **Wi
   
 7. Dans la page **Plateformes prises en charge** de l’Assistant, sélectionnez les plateformes Windows Phone spécifiques chargées d’évaluer l’élément de configuration.  
   
-8. Dans la page **Paramètres de périphérique** de l’Assistant, sélectionnez le groupe de paramètres à configurer. Consultez [Informations de référence sur les paramètres d’élément de configuration Windows Phone](#BKMK_Setref) dans cette rubrique pour plus d’informations, puis cliquez sur **Suivant**.  
+8. Dans la page **Paramètres de périphérique** de l’Assistant, sélectionnez le groupe de paramètres à configurer. Consultez [Informations de référence sur les paramètres d’élément de configuration Windows Phone](#windows-phone-configuration-item-settings-reference) dans cette rubrique pour plus d’informations, puis cliquez sur **Suivant**.  
   
    > [!TIP]  
    >  Si le paramètre souhaité n’est pas répertorié, cochez la case **Configurer d’autres paramètres qui ne se trouvent pas dans les groupes de paramètres par défaut**.  

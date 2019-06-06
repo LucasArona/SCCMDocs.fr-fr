@@ -11,19 +11,19 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a696059076c64d8341f5fbfa3dd5ab68fd2b34ff
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: 170ae3c327e61bd9bebfb22eb7ac8be513323a3f
+ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275687"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66716189"
 ---
 # <a name="how-to-create-configuration-items-for-windows-81-and-windows-10-devices-managed-without-the-system-center-configuration-manager-client"></a>Comment créer des éléments de configuration pour des appareils Windows 8.1 et Windows 10 gérés sans le client System Center Configuration Manager
 
 
  Utilisez l’élément de configuration System Center Configuration Manager **Windows 8.1 et Windows 10** pour gérer les paramètres des appareils Windows 8.1 et Windows 10 qui sont inscrits dans Microsoft Intune ou gérés localement par Configuration Manager.  
 
-### <a name="to-create-a-windows-81-and-windows-10-configuration-item"></a>Pour créer un élément de configuration Windows 8.1 et Windows 10  
+## <a name="create-a-windows-81-and-windows-10-configuration-item"></a>Créer un élément de configuration Windows 8.1 et Windows 10  
 
 1. Dans la console Configuration Manager, cliquez sur **Ressources et conformité**.  
 
@@ -39,7 +39,7 @@ ms.locfileid: "62275687"
 
 7. Dans la page **Plateformes prises en charge** de l’Assistant, sélectionnez les plateformes Windows spécifiques chargées d’évaluer l’élément de configuration.  
 
-8. Dans la page **Paramètres de périphérique** de l’Assistant, sélectionnez le groupe de paramètres à configurer. Consultez [Informations de référence sur les paramètres d’élément de configuration Windows 8.1 et Windows 10](#BKMK_Setref) dans cette rubrique pour plus d’informations, puis cliquez sur **Suivant**.  
+8. Dans la page **Paramètres de périphérique** de l’Assistant, sélectionnez le groupe de paramètres à configurer. Consultez [Informations de référence sur les paramètres d’élément de configuration Windows 8.1 et Windows 10](#windows-81-and-windows-10-configuration-item-settings-reference) dans cette rubrique pour plus d’informations, puis cliquez sur **Suivant**.  
 
    > [!TIP]  
    >  Si le paramètre souhaité n’est pas répertorié, cochez la case **Configurer d’autres paramètres qui ne se trouvent pas dans les groupes de paramètres par défaut**.  
@@ -326,7 +326,7 @@ Dans la page **Liste des applications autorisées et bloquées**, spécifiez les
 |-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Liste des applications bloquées** |                                                                                                                                                                                                                                 Sélectionnez cette option si vous souhaitez spécifier une liste d’applications que les utilisateurs ne sont pas autorisés à installer.                                                                                                                                                                                                                                 |
 | **Liste des applications autorisées** |                                                                                                                                                                                                             Sélectionnez cette option si vous souhaitez spécifier une liste d'applications que les utilisateurs sont autorisés à installer. L’installation de toutes les autres applications est bloquée.                                                                                                                                                                                                             |
-|        **Ajouter**        | Ajoute une application à la liste sélectionnée. Spécifiez le nom de votre choix, éventuellement l’éditeur de l’application, ainsi que l’URL de l’application dans la boutique d’applications.<br /><br /> Pour spécifier l’URL, dans le Windows Store, recherchez l’application à utiliser.<br /><br /> Ouvrez la page de l'application, puis copiez l'URL dans le Presse-papiers. Vous pouvez maintenant utiliser cette URL dans la liste des applications autorisées ou bloquées.<br /><br /> **Exemple :** Recherchez dans le store le **Skype** application. L’URL que vous utilisez est **<http://www.windowsphone.com/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51>**. |
+|        **Ajouter**        | Ajoute une application à la liste sélectionnée. Spécifiez le nom de votre choix, éventuellement l’éditeur de l’application, ainsi que l’URL de l’application dans la boutique d’applications.<br /><br /> Pour spécifier l’URL, dans le Windows Store, recherchez l’application à utiliser.<br /><br /> Ouvrez la page de l'application, puis copiez l'URL dans le Presse-papiers. Vous pouvez maintenant utiliser cette URL dans la liste des applications autorisées ou bloquées.<br /><br /> **Exemple :** Recherchez dans le store le **Skype** application. L’URL que vous utilisez est **<http://www.windowsphone.com/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51>** . |
 |       **Éditer**        |                                                                                                                                                                                                                                                 Vous permet de modifier le nom, l'éditeur et l'URL de l'application sélectionnée.                                                                                                                                                                                                                                                 |
 |      **Supprimer**       |                                                                                                                                                                                                                                                             Supprime l'application sélectionnée dans la liste.                                                                                                                                                                                                                                                             |
 |      **Importerer**       |                                                                                                                                                                                                          Importe une liste d'applications que vous avez spécifiée dans un fichier de valeurs séparées par des virgules. Utilisez le format Nom de l'application, Éditeur, URL de l'application dans le fichier.                                                                                                                                                                                                          |
@@ -343,7 +343,7 @@ Dans la page **Liste des applications autorisées et bloquées**, spécifiez les
 |                         **Azure Operational Insights**                         |      Azure Operational Insights, qui fait partie de la suite Microsoft Operations Manager, collecte, stocke et analyse les données des fichiers journaux provenant des appareils Windows 10 Collaboration.<br>Pour vous connecter à Azure Operational Insights, vous devez spécifier un ID d’espace de travail et une Clé d’espace de travail.       |
 |                        **Projection sans fil Miracast**                        |                   Activez cette option si vous voulez permettre à l’appareil Windows 10 Collaboration d’utiliser des appareils compatibles Miracast pour la projection.<br>Si vous activez cette option, dans **Choisir un canal Miracast**, sélectionnez le canal Miracast utilisé projeter du contenu.                    |
 |              **Informations sur la réunion affichées sur l’écran d’accueil**               | Si vous activez cette option, vous pouvez choisir les informations qui sont affichées sur la vignette **Réunions** de l’écran **Bienvenue**. Vous pouvez :<br><br>- **Afficher uniquement l’organisateur et l’heure**<br>- **Afficher l’organisateur, l’heure et l’objet (objet masqué pour les réunions privées)** |
-|                      **URL de l’image d’arrière-plan de l’écran de verrouillage**                       |                            Utilisez ce paramètre pour afficher un arrière-plan personnalisé sur l’écran **Bienvenue** des appareils Windows 10 Collaboration à partir de l’URL que vous spécifiez.<br>L’image doit être au format PNG et l’URL doit commencer par **https://**.                             |
+|                      **URL de l’image d’arrière-plan de l’écran de verrouillage**                       |                            Utilisez ce paramètre pour afficher un arrière-plan personnalisé sur l’écran **Bienvenue** des appareils Windows 10 Collaboration à partir de l’URL que vous spécifiez.<br>L’image doit être au format PNG et l’URL doit commencer par **https://** .                             |
 
 ### <a name="windows-information-protection"></a>Protection des informations Windows  
 

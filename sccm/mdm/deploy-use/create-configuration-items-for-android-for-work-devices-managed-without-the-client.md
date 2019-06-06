@@ -1,7 +1,7 @@
 ---
 title: Comment créer des éléments de configuration pour les appareils Android for Work gérés via Microsoft Intune
 titleSuffix: Configuration Manager
-ms.date: 2017-07-31
+ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -9,18 +9,18 @@ ms.assetid: ab6784fd-8c57-4be9-858f-50fe39f2ff5f
 author: aczechowski
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 15e0c2ad91e512551e55d507d6a84bde3e46396f
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: 1ebae22b8536c67fc5c912009b836185be3b17b6
+ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287141"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66716244"
 ---
 # <a name="how-to-create-configuration-items-for-android-for-work-devices-managed-with-intune"></a>Comment créer des éléments de configuration pour les appareils Android for Work gérés via Microsoft Intune
 
  Utilisez l’élément de configuration **Android for Work** de System Center Configuration Manager pour gérer les paramètres des appareils Android for Work qui sont inscrits dans Microsoft Intune ou gérés localement par Configuration Manager.  
 
-### <a name="to-create-an-android-for-work-configuration-item"></a>Pour créer un élément de configuration Android for Work  
+## <a name="create-an-android-for-work-configuration-item"></a>Créer une Android pour l’élément de configuration de travail  
 
 1. Dans la console Configuration Manager, cliquez sur **Ressources et conformité**.  
 

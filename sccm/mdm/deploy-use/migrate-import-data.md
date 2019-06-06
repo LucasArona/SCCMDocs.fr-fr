@@ -11,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: b552391d-abc0-48a2-a429-93605a13a66a
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 46b5034cb95193a07421fe79a445dac0f5b28503
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: 0e7c9fde7298d4733c2f3abd9555edb989d7cb66
+ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232317"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66716208"
 ---
 # <a name="import-configuration-manager-data-to-microsoft-intune"></a>Importer des données Configuration Manager dans Microsoft Intune 
 
@@ -145,7 +145,7 @@ Vous pouvez remplacer le nom du groupe Active Directory détecte que l’importa
 #### <a name="find-the-collections-that-cant-be-imported"></a>Rechercher les collections qui ne peut pas être importées.
 Vous pouvez obtenir la liste de toutes les collections qui ne peuvent pas être importées afin de les ajouter à votre fichier .csv de mappage de collection. 
 
-1. Exécutez l’outil Data Importer et sélectionnez les objets à importer. Utilisez les procédures dans [Phase 1 : Détecter des objets Configuration Manager et collecter des données](#phase-1:-discover-configuration-manager-objects-and-collect-data) et [Phase 2 : Résoudre les problèmes et sélectionner les objets à importer](#phase-2:-resolve-issues-and-select-the-objects-to-import) pour découvrir et choisir les objets. Puis, sur la page **Résumé**, choisissez **Exporter les détails** pour créer un fichier .csv contenant les détails de tous les éléments sélectionnés pour l’importation, notamment les objets qui ne peuvent pas être importés et les déploiements.  
+1. Exécutez l’outil Data Importer et sélectionnez les objets à importer. Utilisez les procédures dans [Phase 1 : Détecter des objets Configuration Manager et collecter des données](#phase-1-discover-configuration-manager-objects-and-collect-data) et [Phase 2 : Résoudre les problèmes et sélectionner les objets à importer](#phase-2-resolve-issues-and-select-the-objects-to-import) pour découvrir et choisir les objets. Puis, sur la page **Résumé**, choisissez **Exporter les détails** pour créer un fichier .csv contenant les détails de tous les éléments sélectionnés pour l’importation, notamment les objets qui ne peuvent pas être importés et les déploiements.  
 
 2. Ouvrez le fichier .csv dans Microsoft Excel et filtrez les données sur le **Déploiement** pour la colonne **Type** et **Non** pour la colonne **Importable**. La colonne du nom de la collection répertorie toutes les collections qui doivent être ajoutées à un fichier de mappage de collection afin que ces déploiements puissent être importés.  
 

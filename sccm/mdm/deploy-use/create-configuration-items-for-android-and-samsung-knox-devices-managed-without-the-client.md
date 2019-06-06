@@ -11,18 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 47d2ee0cf82e9739d8e6364098be6c3033ce1ea2
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: 0409e71e09297d23251235aa6093886319c80ae6
+ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62218192"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66716266"
 ---
 # <a name="how-to-create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-system-center-configuration-manager-client"></a>Comment créer des éléments de configuration pour des appareils Android et Samsung KNOX gérés sans le client System Center Configuration Manager
 
 Utilisez l’élément de configuration **Android et Samsung KNOX** de System Center Configuration Manager pour gérer les paramètres des appareils Android et Samsung KNOX qui sont inscrits dans Microsoft Intune ou gérés localement par Configuration Manager.  
 
-#### <a name="to-create-an-android-and-samsung-knox-configuration-item"></a>Pour créer un élément de configuration Android et Samsung KNOX  
+## <a name="create-an-android-and-samsung-knox-configuration-item"></a>Créer un élément de configuration Android et Samsung KNOX  
 
 1. Dans la console Configuration Manager, choisissez **Ressources et Conformité**.  
 
@@ -38,7 +38,7 @@ Utilisez l’élément de configuration **Android et Samsung KNOX** de System Ce
 
 7. Dans la page **Plateformes prises en charge** de l’Assistant, sélectionnez les plateformes Android ou Samsung KNOX spécifiques chargées d’évaluer l’élément de configuration.  
 
-8. Dans la page **Paramètres de l’appareil** de l’Assistant, sélectionnez le groupe de paramètres à configurer. Consultez [Informations de référence sur les paramètres d’élément de configuration Android et Samsung KNOX](#BKMK_setref) dans cette rubrique pour plus d’informations, puis cliquez sur **Suivant**.  
+8. Dans la page **Paramètres de l’appareil** de l’Assistant, sélectionnez le groupe de paramètres à configurer. Consultez [Informations de référence sur les paramètres d’élément de configuration Android et Samsung KNOX](#android-and-samsung-knox-configuration-item-settings-reference) dans cette rubrique pour plus d’informations, puis cliquez sur **Suivant**.  
 
     > [!TIP]  
     >  Si le paramètre souhaité n’est pas répertorié, cochez la case **Configurer d’autres paramètres qui ne se trouvent pas dans les groupes de paramètres par défaut**.  
@@ -169,7 +169,7 @@ Dans la page **Applications conformes et non conformes (Android)** , spécifiez 
 |----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Liste des applications non conformes** |                                                                                                                                                                                                                                                                               Spécifie une liste d’applications qui sont signalées comme non conformes si elles sont installées par les utilisateurs.                                                                                                                                                                                                                                                                               |
 |  **Liste des applications conformes**   |                                                                                                                                                                                                                                                              Spécifie la liste des applications que les utilisateurs sont autorisés à installer. Toutes les autres applications installées sont signalées comme non conformes.                                                                                                                                                                                                                                                               |
-|          **Ajouter**           | Ajoute une application à la liste sélectionnée. Spécifiez le nom de votre choix, éventuellement l’éditeur de l’application, ainsi que l’URL de l’application dans la boutique d’applications.<br /><br /> Pour spécifier l’URL, dans la [section Applications de Google Play](https://play.google.com/store/apps), recherchez l’application à utiliser.<br /><br /> Ouvrez la page de l'application, puis copiez l'URL dans le Presse-papiers. Vous pouvez maintenant utiliser cette URL dans la liste des applications conformes ou non conformes.<br /><br /> **Exemple :** Recherchez dans Google Play **Microsoft Office Mobile**. L’URL que vous utilisez est **<https://play.google.com/store/apps/details?id=com.microsoft.office.officehub>**. |
+|          **Ajouter**           | Ajoute une application à la liste sélectionnée. Spécifiez le nom de votre choix, éventuellement l’éditeur de l’application, ainsi que l’URL de l’application dans la boutique d’applications.<br /><br /> Pour spécifier l’URL, dans la [section Applications de Google Play](https://play.google.com/store/apps), recherchez l’application à utiliser.<br /><br /> Ouvrez la page de l'application, puis copiez l'URL dans le Presse-papiers. Vous pouvez maintenant utiliser cette URL dans la liste des applications conformes ou non conformes.<br /><br /> **Exemple :** Recherchez dans Google Play **Microsoft Office Mobile**. L’URL que vous utilisez est **<https://play.google.com/store/apps/details?id=com.microsoft.office.officehub>** . |
 |          **Éditer**          |                                                                                                                                                                                                                                                                                          Vous permet de modifier le nom, l’éditeur et l’URL de l’application sélectionnée.                                                                                                                                                                                                                                                                                          |
 |         **Supprimer**         |                                                                                                                                                                                                                                                                                                      Supprime l'application sélectionnée dans la liste.                                                                                                                                                                                                                                                                                                      |
 |         **Importerer**         |                                                                                                                                                                                                                                                 Importe une liste d’applications que vous avez spécifiée dans un fichier de valeurs séparées par des virgules. Utilisez le format Nom de l’application, Éditeur, URL de l’application dans le fichier.                                                                                                                                                                                                                                                 |
