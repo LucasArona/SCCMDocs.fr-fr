@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c27e2d4bb90240ad2cfee5e0c470d7a6b8a76653
-ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
-ms.translationtype: MTE75
+ms.openlocfilehash: 7550987d9b9679085ad5b546274d0c503b9e28ac
+ms.sourcegitcommit: 3f43fa8462bf39b2c18b90a11a384d199c2822d8
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65083340"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403398"
 ---
 # <a name="deploy-applications-with-configuration-manager"></a>Déployer les applications avec Configuration Manager
 
@@ -309,6 +309,7 @@ Si vous avez déployé des applications comme étant accessibles aux utilisateur
 
 ## <a name="next-steps"></a>Étapes suivantes
 
- - [Surveiller les applications](/sccm/apps/deploy-use/monitor-applications-from-the-console)
- - [Tâches de gestion pour les applications](/sccm/apps/deploy-use/management-tasks-applications)
- - [Guide de l’utilisateur sur le Centre logiciel](/sccm/core/understand/software-center)
+- [Surveiller les applications](/sccm/apps/deploy-use/monitor-applications-from-the-console)
+- [Résoudre les problèmes liés aux déploiements d’applications](/sccm/apps/deploy-use/troubleshoot-application-deployment)
+- [Tâches de gestion pour les applications](/sccm/apps/deploy-use/management-tasks-applications)
+- [Guide de l’utilisateur sur le Centre logiciel](/sccm/core/understand/software-center)

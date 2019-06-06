@@ -2,7 +2,7 @@
 title: Gérer les images de système d’exploitation
 titleSuffix: Configuration Manager
 description: Découvrez les méthodes permettant de gérer les images de système d’exploitation stockées dans les fichiers image Windows (WIM).
-ms.date: 11/27/2018
+ms.date: 05/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -11,20 +11,23 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 40bfd1c8a541fbb1f108741ef2d4fa00b11088d7
-ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.openlocfilehash: 35670ea78c2883d232040da30898f753c88e39b1
+ms.sourcegitcommit: 18a94eb78043cb565b05cd0e9469b939b29cccf0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66176114"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66355105"
 ---
 # <a name="manage-os-images-with-configuration-manager"></a>Gérer les images de système d’exploitation avec Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
-Dans Configuration Manager, les images de système d’exploitation sont stockées dans des fichiers image Windows (WIM). Ces images sont une collection compressée de fichiers de référence et de dossiers, qui est utilisée pour installer et configurer un nouveau système d’exploitation sur un ordinateur. De nombreux scénarios de déploiement de système d’exploitation nécessitent une image de système d’exploitation. 
+Dans Configuration Manager, les images de système d’exploitation sont stockées dans des fichiers image Windows (WIM). Ces images sont une collection compressée de fichiers de référence et de dossiers, qui est utilisée pour installer et configurer un nouveau système d’exploitation sur un ordinateur. De nombreux scénarios de déploiement de système d’exploitation nécessitent une image de système d’exploitation.
 
-Vous pouvez utiliser une [image de système d’exploitation par défaut](#default-image) ou créer une image de système d’exploitation à partir d’un [ordinateur de référence](#bkmk_capture) que vous configurez. Lorsque vous créez l’ordinateur de référence, vous ajoutez des fichiers de système d’exploitation, des pilotes, des fichiers de prise en charge, des mises à jour logicielles, des outils et des applications au système d’exploitation. Ensuite, vous le capturez pour créer le fichier image. 
+
+## <a name="os-image-types"></a>Types d’image de système d’exploitation
+
+Vous pouvez utiliser une [image de système d’exploitation par défaut](#default-image) ou créer une image de système d’exploitation à partir d’un [ordinateur de référence](#bkmk_capture) que vous configurez. Lorsque vous créez l’ordinateur de référence, vous ajoutez des fichiers de système d’exploitation, des pilotes, des fichiers de prise en charge, des mises à jour logicielles, des outils et des applications au système d’exploitation. Ensuite, vous le capturez pour créer le fichier image.
 
 ### <a name="default-image"></a>Image par défaut
 
@@ -56,62 +59,66 @@ Pour créer une image de système d’exploitation personnalisée, créez un ord
 - Vous devez créer une nouvelle image quand des mises à jour d’applications et d’outils sont nécessaires.  
 
 
+## <a name="BKMK_AddOSImages"></a> Ajouter une image de système d’exploitation  
 
-##  <a name="BKMK_AddOSImages"></a> Ajouter une image de système d’exploitation  
+Avant de pouvoir utiliser une image de système d’exploitation, vous devez l’ajouter à votre site Configuration Manager.
 
-Avant de pouvoir utiliser une image de système d’exploitation, vous devez l’ajouter à votre site Configuration Manager. 
+1. Dans la console Configuration Manager, accédez à l’espace de travail **Bibliothèque de logiciels**, développez **Systèmes d’exploitation**, puis sélectionnez le nœud **Images du système d’exploitation**.  
 
-1.  Dans la console Configuration Manager, accédez à l’espace de travail **Bibliothèque de logiciels**, développez **Systèmes d’exploitation**, puis sélectionnez le nœud **Images du système d’exploitation**.  
+2. Sous l’onglet **Accueil** du ruban, dans le groupe **Créer**, sélectionnez **Ajouter une image du système d’exploitation**. Cette action démarre l’Assistant Ajout d’une image de système d’exploitation.  
 
-2.  Sous l’onglet **Accueil** du ruban, dans le groupe **Créer**, sélectionnez **Ajouter une image du système d’exploitation**. Cette action démarre l’Assistant Ajout d’une image de système d’exploitation.  
+3. Dans la page **Source de données**, spécifiez les informations suivantes :
 
-3.  Dans la page **Source de données**, spécifiez le **chemin** réseau du fichier image du système d’exploitation. Par exemple, `\\server\share\path\image.wim`.  
+    - **Chemin** réseau du fichier image du système d’exploitation. Par exemple, `\\server\share\path\image.wim`.
 
-4.  Dans la page **Général**, spécifiez les informations suivantes. Ces informations sont utiles à des fins d’identification lorsque vous avez plusieurs images de système d’exploitation.  
+    - **Extrayez un index d’images spécifique à partir du fichier WIM spécifié**, puis sélectionnez un index d’images dans la liste.<!--3719699--> À compter de la version 1902, cette option importe automatiquement un index unique, et non pas tous les index d’images du fichier. L’utilisation de cette option génère un fichier d’image plus petit et permet une maintenance hors connexion plus rapide. Elle prend également en charge le processus permettant d’[optimiser la maintenance des images](#bkmk_resetbase) afin d’obtenir un fichier image plus petit après l’application de mises à jour logicielles.  
 
-    -   **Nom** : nom unique de l’image. Par défaut, le nom est tiré de celui du fichier WIM.  
+        > [!Note]  
+        > Configuration Manager ne modifie pas le fichier d’image source. Il crée un nouveau fichier d’image dans le même répertoire source.
+        >
+        > Ce processus d’extraction peut échouer pour les fichiers image extrêmement volumineux, par exemple de plus de 60 Go. L’erreur DISM est `Not enough storage is available to process this command.`. La ligne de commande qu’utilise Configuration Manager se trouve dans les fichiers smsprov.log et dism.log. Exécutez manuellement la même commande, puis importez l’image.<!-- SCCMDocs-pr issue 3502 -->  
 
-    -   **Version** : identificateur de version facultatif. Il n’est pas nécessaire que cette propriété corresponde à la version du système d’exploitation de l’image. Il s’agit souvent de la version du package de votre organisation.   
+4. Dans la page **Général**, spécifiez les informations suivantes. Ces informations sont utiles à des fins d’identification lorsque vous avez plusieurs images de système d’exploitation.  
 
-    -   **Commentaire** : brève description facultative.  
+    - **Nom** : nom unique de l’image. Par défaut, le nom est tiré de celui du fichier WIM.  
 
-5.  Effectuez toutes les étapes de l'Assistant.  
+    - **Version** : identificateur de version facultatif. Il n’est pas nécessaire que cette propriété corresponde à la version du système d’exploitation de l’image. Il s’agit souvent de la version du package de votre organisation.  
+
+    - **Commentaire** : brève description facultative.  
+
+5. Effectuez toutes les étapes de l'Assistant.  
 
 Pour connaître l’applet de commande PowerShell équivalente à cet Assistant de console, consultez [New-CMOperatingSystemImage](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmoperatingsystemimage?view=sccm-ps).
-
 
 Ensuite, distribuez l’image de système d’exploitation sur les points de distribution.  
 
 
-
-##  <a name="BKMK_DistributeBootImages"></a> Distribuer du contenu vers les points de distribution  
+## <a name="BKMK_DistributeBootImages"></a> Distribuer du contenu vers les points de distribution  
 
 Distribuez les images de système d’exploitation vers les points de distribution comme vous le feriez pour tout autre contenu. Avant de déployer la séquence de tâches, distribuez l’image de système d’exploitation vers au moins un point de distribution. Pour plus d’informations, consultez [Distribuer du contenu](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_distribute).  
-
 
 
 [!INCLUDE [Apply software updates to an image](includes/wim-apply-updates.md)]
 
 
+## <a name="BKMK_OSImageMulticast"></a> Préparer l’image de système d’exploitation pour les déploiements en multidiffusion  
 
-##  <a name="BKMK_OSImageMulticast"></a> Préparer l’image de système d’exploitation pour les déploiements en multidiffusion  
+Utilisez des déploiements en multidiffusion pour permettre à plusieurs ordinateurs de télécharger simultanément une image de système d’exploitation. L’image est multidiffusée aux clients par le point de distribution. De cette façon, vous évitez la situation dans laquelle chaque client télécharge une copie de l’image à partir du point de distribution via sa propre connexion. Si vous choisissez la méthode de déploiement de système d’exploitation [Utiliser la multidiffusion pour déployer Windows sur le réseau](/sccm/osd/deploy-use/use-multicast-to-deploy-windows-over-the-network), configurez l’image du système d’exploitation de manière à prendre en charge la multidiffusion. Ensuite, distribuez l’image vers un point de distribution configuré pour la multidiffusion.
 
-Utilisez des déploiements en multidiffusion pour permettre à plusieurs ordinateurs de télécharger simultanément une image de système d’exploitation. L’image est multidiffusée aux clients par le point de distribution. De cette façon, vous évitez la situation dans laquelle chaque client télécharge une copie de l’image à partir du point de distribution via sa propre connexion. Si vous choisissez la méthode de déploiement de système d’exploitation [Utiliser la multidiffusion pour déployer Windows sur le réseau](/sccm/osd/deploy-use/use-multicast-to-deploy-windows-over-the-network), configurez l’image du système d’exploitation de manière à prendre en charge la multidiffusion. Ensuite, distribuez l’image vers un point de distribution configuré pour la multidiffusion. 
+1. Dans la console Configuration Manager, accédez à l’espace de travail **Bibliothèque de logiciels**, développez **Systèmes d’exploitation**, puis sélectionnez le nœud **Images du système d’exploitation**.  
 
-1.  Dans la console Configuration Manager, accédez à l’espace de travail **Bibliothèque de logiciels**, développez **Systèmes d’exploitation**, puis sélectionnez le nœud **Images du système d’exploitation**.  
+2. Sélectionnez l’image du système d’exploitation que vous souhaitez distribuer vers le point de distribution configuré pour la multidiffusion.  
 
-2.  Sélectionnez l’image du système d’exploitation que vous souhaitez distribuer vers le point de distribution configuré pour la multidiffusion.  
+3. Dans le groupe **Propriétés** de l’onglet **Accueil** du ruban, sélectionnez **Propriétés**.  
 
-3.  Dans le groupe **Propriétés** de l’onglet **Accueil** du ruban, sélectionnez **Propriétés**.  
+4. Passez à l’onglet **Paramètres de distribution**, puis configurez les options suivantes :  
 
-4.  Passez à l’onglet **Paramètres de distribution**, puis configurez les options suivantes :  
+    - **Autoriser ce package à être transféré par multidiffusion (WinPE uniquement)**  : sélectionnez cette option pour permettre à Configuration Manager de déployer simultanément plusieurs images de système d’exploitation à l’aide de la multidiffusion.  
 
-    -   **Autoriser ce package à être transféré par multidiffusion (WinPE uniquement)**  : sélectionnez cette option pour permettre à Configuration Manager de déployer simultanément plusieurs images de système d’exploitation à l’aide de la multidiffusion.  
+    - **Chiffrer les packages de multidiffusion** : spécifiez si le site doit chiffrer l’image avant de l’envoyer au point de distribution. Si l’image contient des informations sensibles, utilisez cette option. Si l’image n’est pas chiffrée, son contenu s’affiche sous forme de texte en clair sur le réseau. Dans ce cas, un utilisateur non autorisé peut intercepter et voir le contenu de l’image.  
 
-    -   **Chiffrer les packages de multidiffusion** : spécifiez si le site doit chiffrer l’image avant de l’envoyer au point de distribution. Si l’image contient des informations sensibles, utilisez cette option. Si l’image n’est pas chiffrée, son contenu s’affiche sous forme de texte en clair sur le réseau. Dans ce cas, un utilisateur non autorisé peut intercepter et voir le contenu de l’image.  
+    - **Transférer ce package uniquement par multidiffusion** : spécifiez si vous souhaitez que le point de distribution déploie l’image uniquement pendant une session de multidiffusion.  
 
-    -   **Transférer ce package uniquement par multidiffusion** : spécifiez si vous souhaitez que le point de distribution déploie l’image uniquement pendant une session de multidiffusion.  
+         Si vous sélectionnez **Transférer ce package uniquement par multidiffusion**, vous devez également spécifier **Télécharger le contenu localement si nécessaire, en exécutant la séquence de tâches** comme option de déploiement pour l’image du système d’exploitation. Pour plus d'informations, voir [Déployer une séquence de tâches](/sccm/osd/deploy-use/deploy-a-task-sequence).  
 
-         Si vous sélectionnez **Transférer ce package uniquement par multidiffusion**, vous devez également spécifier **Télécharger le contenu localement si nécessaire, en exécutant la séquence de tâches** comme option de déploiement pour l’image du système d’exploitation. Pour plus d'informations, voir [Déployer une séquence de tâches](/sccm/osd/deploy-use/deploy-a-task-sequence).   
-
-5.  Sélectionnez **OK** pour enregistrer les paramètres et fermer les propriétés de l’image.  
+5. Sélectionnez **OK** pour enregistrer les paramètres et fermer les propriétés de l’image.  

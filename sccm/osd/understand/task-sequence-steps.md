@@ -2,7 +2,7 @@
 title: Étapes de séquence de tâches
 titleSuffix: Configuration Manager
 description: Découvrez les différentes étapes que vous pouvez ajouter à une séquence de tâches Configuration Manager.
-ms.date: 05/03/2019
+ms.date: 05/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0003b80362dadc1105450d2ba526620c1fabf560
-ms.sourcegitcommit: ab9f2a7fb7ea3a0c65808fce2975ab25a670281f
+ms.openlocfilehash: 2d257d9fd328b04b35ff4c4d29b8a8bbd82ae565
+ms.sourcegitcommit: 18a94eb78043cb565b05cd0e9469b939b29cccf0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65613068"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66355067"
 ---
 # <a name="task-sequence-steps"></a>Étapes de séquence de tâches
 
@@ -1563,7 +1563,7 @@ L'exemple suivant contient des paramètres valides :
 
 `-MyParameter1 MyValue1 -MyParameter2 MyValue2`  
 
-L'exemple suivant contient des paramètres non valides. Les deux premiers éléments sont des paramètres de ligne de commande Windows PowerShell (**-NoLogo** et **-ExecutionPolicy Unrestricted**). Le script n’utilise pas ces paramètres.  
+L'exemple suivant contient des paramètres non valides. Les deux premiers éléments sont des paramètres de ligne de commande Windows PowerShell ( **-NoLogo** et **-ExecutionPolicy Unrestricted**). Le script n’utilise pas ces paramètres.  
 
 `-NoLogo -ExecutionPolicy Unrestricted -File MyScript.ps1 -MyParameter1 MyValue1 -MyParameter2 MyValue2`
 
@@ -1814,7 +1814,7 @@ Cette étape effectue les actions suivantes :
 
 2. Activez ou désactivez le compte d’administrateur local en fonction de l’option sélectionnée dans l’étape **Appliquer les paramètres Windows**.  
 
-3. Installez le client Configuration Manager en utilisant le package précédemment téléchargé et les propriétés d’installation spécifiées dans cette étape. Le client est installé en « mode de provisionnement ». Ce mode empêche le client de traiter les demandes de nouvelles stratégies avant la fin de la séquence de tâches.  
+3. Installez le client Configuration Manager en utilisant le package précédemment téléchargé et les propriétés d’installation spécifiées dans cette étape. Le client est installé en « mode de provisionnement ». Ce mode empêche le client de traiter les demandes de nouvelles stratégies avant la fin de la séquence de tâches. Pour plus d’informations, consultez [Mode de provisionnement](/sccm/osd/understand/provisioning-mode).  
 
 4. Attendez que le client soit entièrement opérationnel.  
 
@@ -1906,7 +1906,7 @@ Spécifiez le nombre de minutes avant que Configuration Manager considère que c
 Effectuer l’analyse de compatibilité de l’installation de Windows sans démarrer le processus de mise à niveau. Ce paramètre correspond à l’option de ligne de commande de l’installation de Windows `/Compat ScanOnly`. Déployez le package de mise à niveau du système d’exploitation entier avec cette option.
 
 <!--SCCMDocs-pr issue 2812-->
-À compter de la version 1806, lorsque vous activez cette option, cette étape ne place pas le client Configuration Manager en mode de provisionnement. L’installation de Windows s’exécute en mode silencieux en arrière-plan, et le client continue à fonctionner normalement.
+À compter de la version 1806, lorsque vous activez cette option, cette étape ne place pas le client Configuration Manager en mode de provisionnement. L’installation de Windows s’exécute en mode silencieux en arrière-plan, et le client continue à fonctionner normalement. Pour plus d’informations, consultez [Mode de provisionnement](/sccm/osd/understand/provisioning-mode).
 
 Le programme d’installation renvoie un code de sortie suite à l’analyse. Le tableau suivant indique certains des codes de sortie les plus courants :  
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e796996f870fcdd8428f3a16b08eee56d249cfa6
-ms.sourcegitcommit: 53f2380ac67025fb4a69fc1651edad15d98e0cdd
+ms.openlocfilehash: c54eb02fe3de3246a7c8ed15e7589fcd4d9b1c9b
+ms.sourcegitcommit: abfc9e1b3945637fa93ca8d3a11519493a5d5391
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65673390"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66264431"
 ---
 # <a name="create-applications-in-configuration-manager"></a>Créer des applications dans Configuration Manager
 
@@ -338,6 +338,9 @@ Passez à la section suivante sur l’utilisation d’un script personnalisé co
 
 Configuration Manager vérifie les résultats du script. Il lit les valeurs écrites par le script dans le flux de sortie standard (STDOUT), le flux d’erreurs standard (STDERR) et le code de sortie. Si le script quitte avec une valeur non nulle, il échoue et l’état de la détection d’application est *Inconnu*. Si le code de sortie est égal à zéro et que STDOUT contient des données, l’état de la détection d’application est *installé*.
 
+> [!TIP]
+> Quand vous écrivez un script de détection, si vous retournez un code de sortie null mais que vous ne retournez pas de sortie (données dans STDOUT), l’application n’est pas détectée comme étant installée. Pour plus d’informations, consultez les exemples suivants.
+
 Utilisez les tableaux suivants pour vérifier si une application est installée à partir de la sortie d’un script :  
 
 **Code de sortie nul :**  
@@ -349,7 +352,6 @@ Utilisez les tableaux suivants pour vérifier si une application est installée 
 |N'est pas vide|Vide|Opération réussie|Installé|
 |N'est pas vide|N'est pas vide|Opération réussie|Installé|
 
-
 **Code de sortie non nul :**  
 
 |STDOUT|STDERR|Résultat du script|État de détection de l'application|
@@ -359,34 +361,62 @@ Utilisez les tableaux suivants pour vérifier si une application est installée 
 |N'est pas vide|Vide|Échec|Inconnu.|
 |N'est pas vide|N'est pas vide|Échec|Inconnu.|
 
+**Exemples**
 
-**Exemples VBScript**
-
-Utilisez les exemples VBScript suivants pour écrire vos propres scripts de détection d’application :  
+Utilisez les exemples PowerShell/VBScript suivants pour écrire vos propres scripts de détection d’application :  
 
 Exemple 1 : Le script retourne un code de sortie qui n’est pas égal à zéro. Ce code indique que le script n’a pas pu s’exécuter correctement. Dans ce cas, l'état de la détection d'application est inconnu.  
+
+``` PowerShell
+Exit 1
+```
+
 ``` VBScript
 WScript.Quit(1)
 ```
 
 Exemple 2 : Le script retourne un code de sortie égal à zéro, mais la valeur de STDERR n’est pas vide. Ce résultat indique que le script n’a pas pu s’exécuter correctement. Dans ce cas, l'état de la détection d'application est inconnu.  
+
+``` PowerShell
+Write-Error "Script failed"
+Exit 0
+```
+
 ``` VBScript
 WScript.StdErr.Write "Script failed"
 WScript.Quit(0)
 ```
 
 Exemple 3 : Le script retourne un code de sortie égal à zéro, ce qui indique la réussite d’exécution. Toutefois, la valeur de STDOUT est vide, ce qui indique que l’application n’est pas installée.  
+
+``` PowerShell
+Exit 0
+```
+
 ``` VBScript
 WScript.Quit(0)
 ```
 
 Exemple 4 : Le script retourne un code de sortie égal à zéro, ce qui indique la réussite d’exécution. La valeur de STDOUT n’est pas vide, ce qui indique que l’application est installée.  
+
+``` PowerShell
+Write-Host "The application is installed"
+Exit 0
+```
+
 ``` VBScript
 WScript.StdOut.Write "The application is installed"
 WScript.Quit(0)
 ```
 
 Exemple 5 : Le script retourne un code de sortie égal à zéro, ce qui indique la réussite d’exécution. Les valeurs de STDOUT et STDERR ne sont pas vides, ce qui indique que l’application est installée.  
+
+``` PowerShell
+Write-Host "The application is installed"
+Write-Error "Completed"
+Exit 0
+```
+
 ``` VBScript
 WScript.StdOut.Write "The application is installed"
 WScript.StdErr.Write "Completed"
@@ -551,7 +581,7 @@ Spécifiez les codes de retour pour contrôler les comportements une fois que le
 
 
 #### <a name="example-non-zero-success"></a>Exemple : réussite avec valeur de retour non nulle
-Vous déployez une application qui retourne le code de sortie `1` quand elle s’installe correctement. Par défaut, Configuration Manager détecte ce code de retour non nul comme étant un échec. Spécifiez la Valeur du code de retour `1`, puis sélectionnez le Type de code **Réussite (pas de redémarrage)**. Configuration Manager interprète désormais ce code de retour comme étant une réussite pour ce type de déploiement.
+Vous déployez une application qui retourne le code de sortie `1` quand elle s’installe correctement. Par défaut, Configuration Manager détecte ce code de retour non nul comme étant un échec. Spécifiez la Valeur du code de retour `1`, puis sélectionnez le Type de code **Réussite (pas de redémarrage)** . Configuration Manager interprète désormais ce code de retour comme étant une réussite pour ce type de déploiement.
 
 
 #### <a name="default-return-codes"></a>Codes de retour par défaut

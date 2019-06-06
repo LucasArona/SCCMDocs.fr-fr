@@ -2,7 +2,7 @@
 title: Approuver les applications
 titleSuffix: Configuration Manager
 description: Découvrez les paramètres et les comportements d’approbation d’applications dans Configuration Manager.
-ms.date: 12/14/2018
+ms.date: 05/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -11,19 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f78ec291701d15c0907aa780b4bed23b712995c7
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: d1352669db30ad2fad1d7287998227ce1556274d
+ms.sourcegitcommit: 3f43fa8462bf39b2c18b90a11a384d199c2822d8
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56135219"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403383"
 ---
 # <a name="approve-applications-in-configuration-manager"></a>Approuver des applications dans Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
-Au moment de [déployer une application](/sccm/apps/deploy-use/deploy-applications) dans Configuration Manager, vous pouvez exiger une approbation avant l’installation. Une fois que les utilisateurs ont demandé l’application dans le Centre logiciel, vous examinez la demande dans la console Configuration Manager. Vous pouvez l’approuver ou la refuser. 
-
+Au moment de [déployer une application](/sccm/apps/deploy-use/deploy-applications) dans Configuration Manager, vous pouvez exiger une approbation avant l’installation. Une fois que les utilisateurs ont demandé l’application dans le Centre logiciel, vous examinez la demande dans la console Configuration Manager. Vous pouvez l’approuver ou la refuser.
 
 
 ## <a name="bkmk_approval"></a> Paramètres d’approbation
@@ -31,6 +30,7 @@ Au moment de [déployer une application](/sccm/apps/deploy-use/deploy-applicatio
 Le comportement d’approbation d’applications dépend de votre version de Configuration Manager. La page **Paramètres de déploiement** du déploiement d’application présente l’un des paramètres d’approbation suivants :  
 
 #### <a name="require-administrator-approval-if-users-request-this-application"></a>Exiger l’approbation de l’administrateur si des utilisateurs demandent cette application
+
 *S’applique aux versions 1710 et antérieures*
 
 L’administrateur approuve les demandes des utilisateurs pour une application avant qu’ils puissent l’installer. Cette option est grisée quand l’objet du déploiement est **Obligatoire** ou que vous déployez l’application sur un regroupement d’appareils.  
@@ -39,21 +39,21 @@ Les demandes d'approbation d'application sont affichées dans le nœud **Demande
 
 Après avoir approuvé l’installation d’une application, vous pouvez **Refuser** la demande dans la console Configuration Manager. Cette action n’entraîne pas la désinstallation de l’application de tous les appareils par le client. Elle empêche les utilisateurs d’installer de nouvelles copies de l’application à partir du Centre logiciel.  
 
-
 #### <a name="an-administrator-must-approve-a-request-for-this-application-on-the-device"></a>Un administrateur doit approuver la demande de cette application sur l’appareil
+
 *S’applique aux versions 1802 et ultérieures<sup>[Remarque 1](#bkmk_note1)</sup>*
 
 <a name="bkmk_note1"></a>
 
 > [!Note]  
-> **Remarque 1** : Par défaut, Configuration Manager n’active pas cette fonctionnalité facultative. Vous devez activer cette fonctionnalité avant de l’utiliser. Pour plus d’informations, consultez [Activer les fonctionnalités facultatives des mises à jour](/sccm/core/servers/manage/install-in-console-updates#bkmk_options). 
-> 
+> **Remarque 1** : Par défaut, Configuration Manager n’active pas cette fonctionnalité facultative. Vous devez activer cette fonctionnalité avant de l’utiliser. Pour plus d’informations, consultez [Activer les fonctionnalités facultatives des mises à jour](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).
+>
 > Si vous n’activez pas cette fonctionnalité, c’est l’expérience antérieure qui prévaut.  
 
 L’administrateur approuve les demandes des utilisateurs pour une application avant qu’ils puissent l’installer sur l’appareil demandé. Si l’administrateur approuve la demande, l’utilisateur ne pourra installer l’application que sur cet appareil. Il devra soumettre une autre demande pour installer l’application sur un autre appareil. Cette option est grisée quand l’objet du déploiement est **Obligatoire** ou que vous déployez l’application sur un regroupement d’appareils. <!--1357015-->  
 
 > [!Note]  
-> Pour tirer parti des nouvelles fonctionnalités de Configuration Manager, commencez par mettre à jour les clients vers la dernière version. Bien que les nouvelles fonctionnalités s’affichent dans la console Configuration Manager quand vous mettez à jour le site et la console, le scénario complet n’est pas fonctionnel tant que la version cliente n’est pas également la plus récente.<!--SCCMDocs issue 646-->  
+> Pour tirer parti des nouvelles fonctionnalités de Configuration Manager, commencez par mettre à jour les clients vers la dernière version. Bien que les nouvelles fonctionnalités apparaissent dans la console Configuration Manager quand vous mettez à jour le site et la console, le scénario complet n’est pas fonctionnel tant que la version des clients n’est pas également la plus récente.<!--SCCMDocs issue 646-->  
 
 Affichez **Demandes d’approbation** sous **Gestion des applications** dans l’espace de travail **Bibliothèque de logiciels** de la console de Configuration Manager. Il y a maintenant une colonne **Appareil** dans la liste de chaque demande. À chaque action effectuée sur la demande, la boîte de dialogue Demande d’application comprend également le nom de l’appareil utilisé par l’utilisateur pour envoyer la demande.  
 
@@ -62,23 +62,28 @@ Si une demande ne reçoit pas d’approbation dans les 30 jours, elle est suppr
 Après avoir approuvé l’installation d’une application, vous pouvez **Refuser** la demande dans la console Configuration Manager. Cette action n’entraîne pas la désinstallation de l’application de tous les appareils par le client. Elle empêche les utilisateurs d’installer de nouvelles copies de l’application à partir du Centre logiciel.  
 
 > [!Important]  
-> Depuis la version 1806, *le comportement est différent* quand vous révoquez une approbation pour une application qui a été approuvée et installée. Maintenant, quand vous **refusez** la demande visant l’application, le client désinstalle l’application sur l’appareil de l’utilisateur.<!--1357891-->  
+> Depuis la version 1806, *le comportement est différent* quand vous révoquez une approbation pour une application qui a été approuvée et installée. Maintenant, quand vous **refusez** la demande visant l’application, le client désinstalle l’application de l’appareil de l’utilisateur.<!--1357891-->  
 
+Automatisez le processus d’approbation à l’aide de l’applet de commande PowerShell [Approve-CMApprovalRequest](https://docs.microsoft.com/powershell/module/configurationmanager/approve-cmapprovalrequest?view=sccm-ps). À compter de la version 1902, cette applet de commande inclut le paramètre **InstallActionBehavior**. Utilisez ce paramètre pour indiquer si vous souhaitez installer l’application immédiatement ou pendant les heures non ouvrées.<!-- SCCMDocs-pr issue #3418 -->
 
 
 ## <a name="bkmk_email-approve"></a> Notifications par e-mail
+
 <!--1321550-->
 
 Depuis la version 1810, configurez les notifications par e-mail pour les demandes d’approbation d’applications. Quand un utilisateur demande une application, vous recevez un e-mail. Cliquez sur les liens de l’e-mail pour approuver ou refuser la demande, sans avoir besoin d’utiliser la console Configuration Manager.
 
-Vous pouvez définir les adresses e-mail des utilisateurs qui peuvent approuver ou refuser la demande lors de la création d’un déploiement pour l’application. Pour changer par la suite la liste des adresses e-mail, accédez à l’espace de travail **Supervision**, développez **Alertes**, puis sélectionnez le nœud **Abonnements**. Sélectionnez **Propriétés** dans l’un des abonnements **Approuver l’application par e-mail** associés au déploiement de votre application. 
+Vous pouvez définir les adresses e-mail des utilisateurs qui peuvent approuver ou refuser la demande lors de la création d’un déploiement pour l’application. Pour changer par la suite la liste des adresses e-mail, accédez à l’espace de travail **Supervision**, développez **Alertes**, puis sélectionnez le nœud **Abonnements**. Sélectionnez **Propriétés** dans l’un des abonnements **Approuver l’application par e-mail** associés au déploiement de votre application.
 
-Si plusieurs alertes existent, vous pouvez déterminer quelle alerte va avec quel déploiement. Ouvrez les propriétés de l’alerte et affichez la liste **Alertes sélectionnées** sous l’onglet Général. Le déploiement est activé comme alerte pour cet abonnement. 
+Si plusieurs alertes existent, vous pouvez déterminer quelle alerte va avec quel déploiement. Ouvrez les propriétés de l’alerte et affichez la liste **Alertes sélectionnées** sous l’onglet Général. Le déploiement est activé comme alerte pour cet abonnement.
+
+Les utilisateurs peuvent ajouter un commentaire à la demande à partir du Centre logiciel. Ce commentaire s’affiche sur la requête d’application dans la console Configuration Manager. À compter de la version 1902, ce commentaire s’affiche aussi dans l’e-mail. Le fait d’inclure ce commentaire dans l’e-mail permet aux approbateurs de prendre une décision plus éclairée sur l’approbation ou le refus de la requête.<!--3594063-->
 
 
 ### <a name="prerequisites"></a>Prérequis
 
 #### <a name="to-send-email-notifications-and-take-action-on-internal-network"></a>Pour envoyer des notifications par e-mail et effectuer une action sur le réseau interne
+
 Avec ces prérequis, les destinataires reçoivent un e-mail avec une notification de la demande. S’ils se trouvent sur le réseau interne, ils peuvent aussi approuver ou refuser la demande à partir de l’e-mail.
 
 - Activez la [fonctionnalité facultative](/sccm/core/servers/manage/install-in-console-updates#bkmk_options) **Approuver les demandes d’application pour les utilisateurs appareil par appareil**.  
@@ -94,8 +99,8 @@ Avec ces prérequis, les destinataires reçoivent un e-mail avec une notificatio
 
     - Liez manuellement un certificat basé sur une infrastructure à clé publique (PKI) dans IIS au port 443 du serveur qui héberge le rôle Fournisseur SMS  
 
-
 #### <a name="to-take-action-from-internet"></a>Pour effectuer une action depuis Internet
+
 Avec ces autres prérequis facultatifs, les destinataires peuvent approuver ou refuser la demande de n’importe où pourvu qu’ils disposent d’un accès Internet.
 
 - Activez le service d’administration Fournisseur SMS via la passerelle de gestion cloud. Dans la console Configuration Manager, accédez à l’espace de travail **Administration**, développez **Configuration du site**, puis sélectionnez le nœud **Serveurs et rôles de système de site**. Sélectionnez le serveur associé au rôle Fournisseur SMS. Dans le volet d’informations, sélectionnez le rôle **Fournisseur SMS** et **Propriétés** dans le ruban de l’onglet Rôle du site. Sélectionnez l’option **Autoriser le trafic de la passerelle de gestion cloud Configuration Manager pour le service d’administration**.  
@@ -126,7 +131,7 @@ Avec ces autres prérequis facultatifs, les destinataires peuvent approuver ou r
 
             1. Dans le volet Modifier le manifeste, recherchez la propriété **oauth2AllowImplicitFlow**.  
 
-            2. Modifiez sa valeur en indiquant **true**. Par exemple, la ligne entière doit se présenter comme ceci : `"oauth2AllowImplicitFlow": true,`   
+            2. Modifiez sa valeur en indiquant **true**. Par exemple, la ligne entière doit se présenter comme ceci : `"oauth2AllowImplicitFlow": true,`  
 
             3. Sélectionnez **Enregistrer**.  
 
@@ -150,7 +155,6 @@ Avec ces autres prérequis facultatifs, les destinataires peuvent approuver ou r
 Examinez le fichier **NotiCtrl.log** sur le serveur de site pour des besoins de dépannage.
 
 
-## <a name="maintenance"></a>Maintenance 
+## <a name="maintenance"></a>Maintenance
 
 Configuration Manager stocke des informations sur la demande d’approbation d’application dans la base de données du site. Les demandes annulées ou refusées sont supprimées de l’historique du site après 30 jours. Vous pouvez configurer ce comportement de suppression à l’aide de la [tâche de maintenance de site](/sccm/core/servers/manage/maintenance-tasks) **Supprimer les anciennes données de demande d’application**. Le site ne supprime jamais les demandes d’application approuvées ou en attente.
-

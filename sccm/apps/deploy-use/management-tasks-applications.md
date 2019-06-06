@@ -11,16 +11,16 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d6f66eedd60c759395126363db9e672c45993d48
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 368fd0b4d86b1ee263bbe47619a4387db614b167
+ms.sourcegitcommit: abfc9e1b3945637fa93ca8d3a11519493a5d5391
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56123962"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66264401"
 ---
 # <a name="management-tasks-for-system-center-configuration-manager-applications"></a>Tâches de gestion pour les applications System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Aidez-vous des informations contenues dans cet article pour gérer les applications et les types de déploiement System Center Configuration Manager.  
 
@@ -47,6 +47,7 @@ Pour obtenir de l’aide sur la création d’applications et de types de déplo
 |**Déployer**|Ouvre l' **Assistant Déploiement logiciel** où vous pouvez déployer l'application sélectionnée sur un ensemble d'ordinateurs dans votre hiérarchie.<br /><br /> Consultez [Déployer des applications](../../apps/deploy-use/deploy-applications.md).|  
 |**Distribuer du contenu**|Ouvre l' **Assistant Distribuer du contenu** où vous pouvez copier le contenu de l'application sélectionnée sur les points de distribution dans votre hiérarchie.<br /><br /> Consultez [Gérer le contenu et l’infrastructure de contenu](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).|  
 |**Voir les relations**|Affiche un graphique montrant les relations entre les applications sélectionnées et d’autres applications. Choisissez parmi :<br><br><ul><li>**Dépendance** : affiche les applications dépendantes de l’application sélectionnée, ainsi que les applications dont dépend l’application sélectionnée.</li><li>**Remplacement** : affiche les applications remplacées par l’application sélectionnée, ainsi que les applications qui remplacent l’application sélectionnée.</li><li>**Conditions globales** : affiche les conditions globales référencées par cette application.</li></ol><br /> Consultez [Modifier et remplacer des applications](../../apps/deploy-use/revise-and-supersede-applications.md) et [Créer des conditions globales](../../apps/deploy-use/create-global-conditions.md).|  
+|**Copier des applications**|Copiez, ou dupliquez, des applications Configuration Manager pour en créer une nouvelle. Cette action est utile pour tester certains éléments ou quand vous devez créer une application similaire. Le site crée une application, avec **-copy** ajouté au nom. Alors que le site copie la plupart des métadonnées dans la nouvelle application, il ne copie aucun déploiement.|
 
 ##  <a name="manage-deployment-types"></a>Gérer les types de déploiement  
  Dans l’espace de travail **Bibliothèque de logiciels**, développez **Gestion des applications**, choisissez **Applications**, puis l’application avec le type de déploiement que vous voulez gérer. Dans le volet Détails, choisissez l’onglet **Types de déploiement**, le type de déploiement que vous voulez gérer, puis une tâche de gestion.  

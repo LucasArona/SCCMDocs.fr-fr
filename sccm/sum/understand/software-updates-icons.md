@@ -11,12 +11,12 @@ ms.assetid: 63c5ef72-5715-4d86-85a2-71beba469fab
 author: mestew
 ms.author: mstewart
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9dbb2b7fadf13a49c25e2eb9bb6fcc608d3869f6
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 7f096f9ff9baaff2411289c27282ab53eb697b0b
+ms.sourcegitcommit: 18a94eb78043cb565b05cd0e9469b939b29cccf0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65495852"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354981"
 ---
 # <a name="icons-used-for-software-updates-in-system-center-configuration-manager"></a>Icônes utilisées pour les mises à jour logicielles dans System Center Configuration Manager
 
@@ -54,11 +54,11 @@ Les mises à jour logicielles synchronisées sont affichées dans la console Con
 
  **Description :**  
 
- Les mises à jour logicielles remplacées ont été remplacées par des versions plus récentes de la mise à jour logicielle. En règle générale, une mise à jour logicielle qui en remplace une autre effectue une ou plusieurs des opérations suivantes :  
+ Les mises à jour logicielles remplacées ont été remplacées par des versions plus récentes de la mise à jour logicielle. En général, une mise à jour logicielle qui en remplace une autre effectue une ou plusieurs des opérations suivantes :  
 
 - Elle optimise, améliore ou s’ajoute au correctif fourni par une ou plusieurs mises à jour logicielles précédemment publiées.  
 
-- Elle améliore l’efficacité de son package de fichiers de mise à jour logicielle, que les clients installent si la mise à jour logicielle est approuvée pour l’installation. Par exemple, la mise à jour logicielle remplacée peut contenir des fichiers qui ne sont plus pertinents pour le correctif ou pour les systèmes d’exploitation récemment pris en charge par la nouvelle mise à jour logicielle. Ces fichiers ne sont donc pas inclus dans le package de fichiers de la mise à jour logicielle de remplacement.  
+- Elle améliore l’efficacité de son package de fichiers de mise à jour logicielle, que les clients installent si la mise à jour logicielle est approuvée pour l’installation. Par exemple, la mise à jour logicielle remplacée peut contenir des fichiers qui ne sont plus pertinents pour le correctif ou pour les systèmes d’exploitation désormais pris en charge par la nouvelle mise à jour logicielle. Ces fichiers ne sont donc pas inclus dans le package de fichiers de la mise à jour logicielle de remplacement.  
 
 - Met à jour les versions les plus récentes d'un produit, c'est-à-dire, ne s'applique plus aux anciennes versions ou configurations d'un produit. Les mises à jour logicielles peuvent également remplacer d’autres mises à jour logicielles si des modifications ont été apportées pour étendre la prise en charge des langues. Par exemple, une révision récente d’une mise à jour de produit pour Microsoft Office peut supprimer la prise en charge d’un système d’exploitation antérieur, mais ajouter une prise en charge de langues supplémentaires dans la version de mise à jour logicielle initiale.  
 
@@ -88,11 +88,11 @@ Les mises à jour logicielles synchronisées sont affichées dans la console Con
 
  **Description :**  
 
- Les mises à jour logicielles de métadonnées uniquement sont disponibles dans la console Configuration Manager pour la création de rapports. Vous ne pouvez pas déployer ni télécharger des mises à jour logicielles de métadonnées uniquement, car aucun fichier de mise à jour logicielle n’est associé avec les métadonnées des mises à jour logicielles.  
+ Les mises à jour logicielles de métadonnées uniquement sont disponibles dans la console Configuration Manager pour la création de rapports. Vous ne pouvez pas déployer ni télécharger des mises à jour logicielles de métadonnées uniquement, car aucun fichier de mise à jour logicielle n’est associé aux métadonnées des mises à jour logicielles.  
 
  **Problèmes liés au fonctionnement :**  
 
- Les mises à jour logicielles de métadonnées uniquement sont disponibles pour la création de rapports, mais ne sont pas destinées au déploiement de mises à jour logicielles.  
+ Les mises à jour logicielles de métadonnées uniquement sont disponibles à des fins de création de rapports, mais elles ne sont pas destinées au déploiement de mises à jour logicielles.  
 
 ## <a name="icons-for-software-update-groups"></a>Icônes des groupes de mises à jour logicielles  
  Les groupes de mises à jour logicielles sont représentés par une des icônes suivantes.  
@@ -124,3 +124,8 @@ Les mises à jour logicielles synchronisées sont affichées dans la console Con
  **Problèmes liés au fonctionnement :**  
 
  Si le contenu d’une mise à jour logicielle est manquant, les clients ne peuvent pas installer la mise à jour logicielle tant que ce contenu n’est pas disponible sur un point de distribution. Vous pouvez redistribuer le contenu aux points de distribution à l’aide de l’action **Redistribuer** . Quand le contenu d’une mise à jour logicielle est manquant dans un déploiement créé sur un site parent, vous devez répliquer ou redistribuer la mise à jour logicielle sur le site enfant. Pour plus d’informations sur la redistribution de contenu, consultez [Gérer le contenu que vous avez distribué](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_manage).  
+
+
+## <a name="next-steps"></a>Étapes suivantes 
+
+[Planifier les mises à jour logicielles](/sccm/sum/plan-design/plan-for-software-updates)

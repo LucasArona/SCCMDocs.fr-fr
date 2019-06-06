@@ -2,7 +2,7 @@
 title: Utiliser PXE pour le déploiement de système d’exploitation sur le réseau
 titleSuffix: Configuration Manager
 description: Utilisez des déploiements de système d’exploitation lancés par PXE pour actualiser le système d’exploitation d’un ordinateur ou installer une nouvelle version de Windows sur un nouvel ordinateur.
-ms.date: 05/03/2019
+ms.date: 05/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 278472b580c5e1e483d273626420225898073246
-ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
+ms.openlocfilehash: 71fab49dc6ba5d949aeaf48145e1f7d0446c0f91
+ms.sourcegitcommit: 18a94eb78043cb565b05cd0e9469b939b29cccf0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65083408"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66355019"
 ---
 # <a name="use-pxe-to-deploy-windows-over-the-network-with-configuration-manager"></a>Utiliser PXE pour déployer Windows sur le réseau avec Configuration Manager
 
@@ -47,7 +47,12 @@ Pour déployer des systèmes d’exploitation sur des clients Configuration Mana
 > [!Note]  
 > Dans la version 1810 et les précédentes, il n’est pas possible d’utiliser le répondeur PXE sans les Services de déploiement Windows sur des serveurs qui exécutent également un serveur DHCP.
 >
-> À compter de la version 1902, un répondeur PXE activé sur un point de distribution sans les Services de déploiement Windows peut se trouver sur le même serveur que le service DHCP. <!--3734270-->  
+> À compter de la version 1902, un répondeur PXE activé sur un point de distribution sans les Services de déploiement Windows peut se trouver sur le même serveur que le service DHCP.<!--3734270, SCCMDocs-pr #3416--> Ajoutez les paramètres suivants pour prendre en charge cette configuration :  
+>
+> - Définissez la valeur DWord **DoNotListenOnDhcpPort** sur `1` dans la clé de Registre suivante : `HKLM\Software\Microsoft\SMS\DP`.
+> - Définissez l’option DHCP 60 sur `PXEClient`.  
+> - Redémarrez les services SCCMPXE et DHCP sur le serveur.  
+
 
 ## <a name="prepare-a-pxe-enabled-boot-image"></a>Préparer une image de démarrage compatible PXE
 
