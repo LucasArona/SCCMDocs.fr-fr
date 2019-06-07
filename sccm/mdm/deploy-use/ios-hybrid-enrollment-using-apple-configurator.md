@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 04b67b324927f4918ff5c0835896cb0d63a9e48c
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: b07fc7bf1c4a226456506d0131c3d6bad14b1766
+ms.sourcegitcommit: a6a6507e01d819217208cfcea483ce9a2744583d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62256045"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66748227"
 ---
 # <a name="ios-hybrid-enrollment-using-apple-configurator-with-configuration-manager"></a>Inscription d’appareils iOS à l’aide d’Apple Configurator pour les déploiements hybrides avec Configuration Manager
 
@@ -86,7 +86,7 @@ Pour plus d’informations, consultez [Prédéclarer des appareils avec des num�
 
     ```
 
-5.  Enregistrez l’URL du profil modifié. Vous allez l’utiliser pour ajouter l’URL du profil d’inscription dans Apple Configurator dans la [section suivante](#step-4-prepare-the-device-with-apple-configurator).  
+5.  Enregistrez l’URL du profil modifié. Vous allez l’utiliser pour ajouter l’URL du profil d’inscription dans Apple Configurator dans la [section suivante](#prepare-the-device-with-apple-configurator).  
 
 > [!NOTE]
 > L’URL du profil d’inscription est valide pendant deux semaines après son exportation. Après deux semaines, vous devez exporter une nouvelle URL pour inscrire des appareils iOS.
@@ -104,7 +104,7 @@ Pour préparer des appareils iOS pour l’inscription, connectez chaque appareil
 
 3. Dans le volet Préférences, sélectionnez **Serveurs**, puis cliquez sur le symbole « + » situé sous le volet gauche pour lancer l’Assistant Serveur MDM. Cliquez sur **Suivant**.  
 
-4. Entrez le **nom** et l’**URL d’inscription** enregistrés [précédemment](#step-3-export-the-profile-to-deploy-to-ios-devices). Cliquez sur **Suivant**.  
+4. Entrez le **nom** et l’**URL d’inscription** enregistrés [précédemment](#export-the-profile-to-deploy-to-ios-devices). Cliquez sur **Suivant**.  
 
    > [!NOTE]
    > Si vous recevez un avertissement à propos des exigences de profil de confiance pour Apple TV, vous pouvez annuler en toute sécurité l’option **Profil de confiance** en cliquant sur le « X » gris. Vous pouvez également ignorer tout avertissement relatif au certificat d’ancrage (ou certificat racine).

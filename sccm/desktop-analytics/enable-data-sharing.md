@@ -2,7 +2,7 @@
 title: Activer le partage de données
 titleSuffix: Configuration Manager
 description: Guide de référence pour le partage des données de diagnostic avec Analytique de bureau.
-ms.date: 04/22/2019
+ms.date: 06/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3a30dc89882146c892f5eeec1aacfc31efbfd038
-ms.sourcegitcommit: 65753c51fbf596f233fc75a5462ea4a44005c70b
+ms.openlocfilehash: dbe161fd744343927f0b373775182eccfd58c1b6
+ms.sourcegitcommit: a6a6507e01d819217208cfcea483ce9a2744583d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/03/2019
-ms.locfileid: "66463061"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66748242"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>Activer le partage de bureau Analytique des données
 
@@ -56,6 +56,9 @@ Les articles suivants sont également des ressources utiles pour mieux comprendr
 
 Pour activer le partage de données, configurez votre serveur proxy pour autoriser les points de terminaison suivants :
 
+> [!Important]  
+> Pour la confidentialité et l’intégrité des données, Windows recherche un certificat SSL de Microsoft lors de la communication avec les points de terminaison de données de diagnostic. Inspection et l’interception SSL ne sont pas possibles. Pour utiliser l’Analytique de bureau, excluez ces points de terminaison de l’inspection SSL.<!-- BUG 4647542 -->
+
 | Point de terminaison  | Fonction  |
 |-----------|-----------|
 | `https://v10c.events.data.microsoft.com` | Expérience de l’utilisateur connecté et le point de terminaison de composant de diagnostic. Utilisé par les appareils exécutant Windows 10, version 1703 ou version ultérieure, avec le cumulative 2018-09 mettre à jour ou version ultérieure. |
@@ -77,12 +80,6 @@ Pour activer le partage de données, configurez votre serveur proxy pour autoris
 | `https://office.pipe.aria.microsoft.com` | Pour les futures fonctionnalités <!-- Used by Office clients to send diagnostic data events from universal/modern Office apps, and Win32 Office 16 versions later than 16.0.8702. It's used to collect usage and reliability signals events for Desktop Analytics. --> |
 | `https://graph.windows.net` | Permet de récupérer automatiquement les paramètres tels que CommercialId lors de l’attachement de votre hiérarchie pour l’Analytique de bureau (sur le rôle de serveur de Configuration Manager uniquement). |
 | `https://fef.msua06.manage.microsoft.com` | Utilisé pour les appartenances aux collections de périphérique de synchronisation, des plans de déploiement et état de préparation d’appareil avec Analytique de bureau (sur le rôle de serveur de Configuration Manager uniquement). |
-
-
-### <a name="ssl-inspection"></a>Inspection SSL
-
-Pour la confidentialité et l’intégrité des données, Windows recherche un certificat SSL de Microsoft lors de la communication avec les points de terminaison de données de diagnostic. Inspection et l’interception SSL ne sont pas possibles. Pour utiliser l’Analytique de bureau, exclure les points de terminaison ci-dessus à partir de l’inspection SSL.
-
 
 
 ## <a name="proxy-server-authentication"></a>Authentification du serveur proxy

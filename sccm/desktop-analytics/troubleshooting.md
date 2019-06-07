@@ -2,7 +2,7 @@
 title: Dépannage des postes de travail Analytique
 titleSuffix: Configuration Manager
 description: Détails techniques pour vous aider à résoudre les problèmes avec l’Analytique de bureau.
-ms.date: 05/31/2019
+ms.date: 06/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: edb871cf9a12862f19109fe885bfb3a0e626f445
-ms.sourcegitcommit: 65753c51fbf596f233fc75a5462ea4a44005c70b
+ms.openlocfilehash: a1f54a2794b3a938366553c635e560ebe1adb320
+ms.sourcegitcommit: a6a6507e01d819217208cfcea483ce9a2744583d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/03/2019
-ms.locfileid: "66463067"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66748126"
 ---
 # <a name="troubleshooting-desktop-analytics"></a>Dépannage des postes de travail Analytique
 
@@ -562,6 +562,20 @@ Si vous ne peut pas créer cette application Azure AD à partir de l’Assistant
    Sélectionnez **Vérifiez**, puis sélectionnez **OK** pour fermer la fenêtre Importer des applications. Sélectionnez **suivant** sur la page application de l’Assistant Services Azure.  
 
 Pour continuer le reste de l’Assistant sur le **données de Diagnostic** page, consultez [se connecter au service](/sccm/desktop-analytics/connect-configmgr#bkmk_connect).
+
+#### <a name="troubleshoot-app-in-configuration-manager"></a>Résoudre les problèmes d’application dans Configuration Manager
+
+Si vous rencontrez des problèmes de création ou importation de l’application, la première vérification **SMSAdminUI.log** sur l’erreur concernée. Puis vérifiez les configurations suivantes :
+
+- Vous avez correctement inscrit le client au service d’Analytique de bureau. Pour plus d’informations, consultez [comment configurer le bureau Analytique](/sccm/desktop-analytics/set-up).
+
+- Tous les requis de points de terminaison sont accessibles. Pour plus d’informations, consultez [points de terminaison](/sccm/desktop-analytics/enable-data-sharing#endpoints).
+
+- Assurez-vous que l’utilisateur qui se connecte dispose des autorisations appropriées. Pour plus d’informations, consultez [Prérequis](/sccm/desktop-analytics/overview#prerequisites).
+
+- Assurez-vous que l’utilisateur peut se connecter à Azure en général. Cette action détermine s’il existe toute général Azure AD problèmes d’authentification.
+
+- Vérifiez les messages d’état pour le **SMS_SERVICE_CONNECTOR** composant concernant le *travail d’Analytique de bureau*.
 
 
 ### <a name="bkmk_MALogAnalyticsReader"></a> Rôle d’application MALogAnalyticsReader

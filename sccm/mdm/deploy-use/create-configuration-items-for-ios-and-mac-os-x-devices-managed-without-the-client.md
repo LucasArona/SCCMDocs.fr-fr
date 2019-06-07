@@ -11,17 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1d511df5dc4b6e29a86d4eabacec9037ee204ecc
-ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.openlocfilehash: cadeb04e52e584cf260e84ee4bdd4ea6a07de23f
+ms.sourcegitcommit: a6a6507e01d819217208cfcea483ce9a2744583d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66176737"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66748310"
 ---
 # <a name="how-to-create-configuration-items-for-ios-and-mac-os-x-devices-managed-with-intune"></a>Comment créer des éléments de configuration pour les appareils iOS et Mac OS X gérés via Microsoft Intune
+
 Utilisez l’élément de configuration System Center Configuration Manager **iOS et Mac OS X** pour gérer les paramètres des appareils iOS et Mac OS X qui sont inscrits dans Microsoft Intune ou gérés localement par Configuration Manager.  
   
-### <a name="to-create-an-ios-and-mac-os-x-configuration-item"></a>Pour créer un élément de configuration iOS et Mac OS X  
+## <a name="create-an-ios-and-mac-os-x-configuration-item"></a>Créer un iOS et l’élément de configuration Mac OS X  
   
 1. Dans la console Configuration Manager, cliquez sur **Ressources et conformité**.  
   
@@ -37,7 +38,7 @@ Utilisez l’élément de configuration System Center Configuration Manager **iO
   
 7. Dans la page **Plateformes prises en charge** de l’Assistant, sélectionnez les plateformes iOS ou Mac OS X spécifiques chargées d’évaluer l’élément de configuration.  
   
-8. Dans la page **Paramètres de périphérique** de l’Assistant, sélectionnez le groupe de paramètres à configurer. Consultez [Informations de référence sur les paramètres d’élément de configuration iOS et Mac OS X](#BKMK_Setref) dans cette rubrique pour plus d’informations, puis cliquez sur **Suivant**.  
+8. Dans la page **Paramètres de périphérique** de l’Assistant, sélectionnez le groupe de paramètres à configurer. Consultez [Informations de référence sur les paramètres d’élément de configuration iOS et Mac OS X](#ios-and-mac-os-x-configuration-item-settings-reference) dans cette rubrique pour plus d’informations, puis cliquez sur **Suivant**.  
   
    > [!TIP]  
    >  Si le paramètre souhaité n’est pas répertorié, cochez la case **Configurer d’autres paramètres qui ne se trouvent pas dans les groupes de paramètres par défaut**.  
@@ -239,7 +240,7 @@ Utilisez l’élément de configuration System Center Configuration Manager **iO
   
         Ouvrez la page de l'application, puis copiez l'URL dans le Presse-papiers. Vous pouvez maintenant utiliser cette URL dans la liste des applications conformes ou non conformes.  
   
-        **Exemple :** Recherchez dans le store le **Microsoft Word pour iPad** application. L’URL que vous utilisez est **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**.  
+        **Exemple :** Recherchez dans le store le **Microsoft Word pour iPad** application. L’URL que vous utilisez est **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8** .  
   
    -   **Modifier** - Vous permet de modifier le nom, l’éditeur et l’URL de l’application sélectionnée.  
   
@@ -276,7 +277,7 @@ Utilisez l’élément de configuration System Center Configuration Manager **iO
      >  Pour rechercher l’ID d’offre groupée d’une application, effectuez les étapes suivantes sur un ordinateur Mac où l’application est installée :  
      > 
      > 1. Ouvrez le dossier dans lequel l’application est installée (par exemple, **/Applications**)  
-     >    2.  Sélectionnez l’offre groupée _<Nom de l’application\>_**.app** et choisissez **Afficher le contenu du package**.  
+     >    2.  Sélectionnez l’offre groupée _<Nom de l’application\>_ **.app** et choisissez **Afficher le contenu du package**.  
      >    3.  Ouvrez le fichier **Info.plist**  
      >    4.  Vérifiez la valeur associée à la clé **CFBundleIdentifier**  
      > 
@@ -359,7 +360,7 @@ Utilisez l’élément de configuration System Center Configuration Manager **iO
   
      - Copiez l'URL de la page et utilisez-la en tant qu'URL pour spécifier l'application que vous souhaitez exécuter en mode kiosque.  
   
-     - **Exemple :** Recherchez **Microsoft Word pour iPad**. L’URL que vous utilisez est **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**.  
+     - **Exemple :** Recherchez **Microsoft Word pour iPad**. L’URL que vous utilisez est **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8** .  
   
    - **Tactile** - Active ou désactive l’écran tactile sur l’appareil.  
   
