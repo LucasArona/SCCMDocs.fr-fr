@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f9ef05ac5a931addb5dd5a8dc7d1b04bd4d50e1c
-ms.sourcegitcommit: 417e3834a42b415a8e129327dd3c15cc0c7ec5a2
+ms.openlocfilehash: 07e69561580a22128cf9a5b7b97f33e10cbb0456
+ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65443116"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66716031"
 ---
 # <a name="capabilities-in-technical-preview-1805-for-system-center-configuration-manager"></a>Fonctionnalités de la version Technical Preview 1805 de System Center Configuration Manager
 
@@ -175,7 +175,7 @@ Pour plus d’informations sur la fonctionnalité LEDBAT de Windows, consultez l
 
 
 ### <a name="try-it-out"></a>Essayez !
- Essayez d’effectuer les tâches. Envoyez-nous ensuite des [commentaires](#bkmk_feedback) pour nous indiquer comment cela a fonctionné.
+ Essayez d’effectuer les tâches. Envoyez-nous ensuite des [commentaires](capabilities-in-technical-preview-1804.md#bkmk_feedback) pour nous indiquer comment cela a fonctionné.
 
 1. Dans la console de Configuration Manager, accédez à l’espace de travail **Administration**. Sélectionnez le nœud **Points de distribution**. Sélectionnez le point de distribution cible, puis cliquez sur **Propriétés** dans le ruban.  
 

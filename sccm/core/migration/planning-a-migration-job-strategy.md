@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c66ef90812e8b5ccf47063fb335c17aaeca4fa64
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 3f6b445bb2e84cb7c3f35d81c66038686f2b9833
+ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56122217"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66715983"
 ---
 # <a name="plan-a-migration-job-strategy-in-system-center-configuration-manager"></a>Planifier une stratégie pour les tâches de migration dans System Center Configuration Manager
 
@@ -29,18 +29,6 @@ Utilisez des tâches de migration pour configurer les données spécifiques que 
  Avant de migrer des clients entre hiérarchies, vérifiez que les objets que les clients utilisent ont été migrés et que ces objets sont disponibles dans la hiérarchie de destination. Par exemple, quand vous migrez depuis une hiérarchie source Configuration Manager 2007 SP2, vous pouvez recevoir une publication pour du contenu déployé sur un regroupement personnalisé qui a un client. Dans ce cas, nous vous recommandons de migrer le regroupement, la publication et le contenu associé avant de migrer le client. Ces données ne peut pas être associées au client dans la hiérarchie de destination si le contenu, le regroupement et la publication ne sont pas migrés avant la migration du client. Si un client n'est pas associé aux données liées à une publication et à un contenu exécutés précédemment, le contenu peut être proposé au client pour l'installation dans la hiérarchie de destination, ce qui peut être inutile. Si le client est migré après la migration des données, il est associé à ce contenu et à cette publication, et sauf si la publication est récurrente, le contenu n'est plus proposé pour la publication migrée.  
 
  Pour certains objets, la migration des données de la hiérarchie source vers la hiérarchie de destination ne suffit pas. Par exemple, pour pouvoir migrer les mises à jour logicielles des clients vers votre hiérarchie de destination, vous devez déployer un point de mise à jour logicielle actif, configurer le catalogue des produits et synchroniser le point de mise à jour logicielle avec WSUS (Windows Server Update Services) dans la hiérarchie de destination.  
-
- Utilisez les sections suivantes pour planifier vos tâches de migration.  
-
--   [Types de tâche de migration](#Types_of_Migration)  
-
--   [Planification générale de toutes les tâches de migration](#About_Migration_Jobs)  
-
--   [Planification des tâches de migration de regroupements](#About_Collection_Migration)  
-
--   [Planification des tâches de migration d’objets](#About_Object_Migration)  
-
--   [Planification des tâches de migration d’objets déjà migrés](#About_Object_Migrations)  
 
 ##  <a name="Types_of_Migration"></a> Types de tâches de migration  
  Configuration Manager prend en charge les types de tâche de migration suivants. Chaque type de tâche est conçu pour vous aider à définir les objets que vous pouvez inclure dans cette tâche.  

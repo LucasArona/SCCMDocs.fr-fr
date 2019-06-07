@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5adc8809edc0a069269dfce71f302452a0e01b45
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 376d35ae0eaca282b9634e2c3eeb50b9c814f270
+ms.sourcegitcommit: a6a6507e01d819217208cfcea483ce9a2744583d
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56124027"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66748013"
 ---
 # <a name="learn-more-about-powershell-script-security"></a>En savoir plus sur la sécurité des scripts PowerShell
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Il est de la responsabilité de l’administrateur de valider l’utilisation des paramètres PowerShell et PowerShell proposés dans son environnement. Les ressources fournies dans ce document visent à sensibiliser les administrateurs à la puissance de PowerShell, mais aussi aux risques potentiels associés. Elles donnent des indications sur la façon de limiter ces risques potentiels et d’utiliser les scripts en toute sécurité.
 
@@ -29,7 +29,7 @@ Intégrée à l’exécution de scripts, une fonctionnalité permet d’examiner
 
 ## <a name="recommendations"></a>Recommandations
 - Prenez-connaissance des bonnes pratiques de sécurité PowerShell en utilisant les différents liens présentés ci-dessous en référence.
-- **Signez vos scripts** : Une autre méthode pour sécuriser les scripts consiste à les faire examiner minutieusement, puis signer, avant de les importer pour les utiliser.
+- **Signez vos scripts** : pour sécuriser les scripts dans la durée, une autre méthode consiste à les examiner minutieusement et à les signer avant de les importer pour les utiliser.
 - Évitez de stocker les secrets (tels que les mots de passe) dans les scripts PowerShell et apprenez à mieux les gérer.
 
 
@@ -49,8 +49,6 @@ Ces différents liens ont été choisis comme point de départ pour permettre au
 
 [Protecting Against Malicious Code Injection](https://blogs.msdn.microsoft.com/powershell/2006/11/22/protecting-against-malicious-code-injection/)
 
-[Informations sur la sécurité dans PowerShell Gallery](https://blogs.msdn.microsoft.com/powershell/2015/08/06/powershell-gallery-new-security-scan/)
-
 [PowerShell The Blue Team, évoque la journalisation de blocs de script en profondeur, la journalisation d’événements protégée, l’interface d’analyse anti-programme malveillant, les API de génération de code sécurisé](https://blogs.msdn.microsoft.com/powershell/2015/06/09/powershell-the-blue-team/)
 
 [Pour Windows 10, il existe une API pour une interface d’analyse anti-programme malveillant](https://cloudblogs.microsoft.com/microsoftsecure/2015/06/09/windows-10-to-offer-application-developers-new-malware-defenses/?source=mmpc)
@@ -60,12 +58,12 @@ Passer les paramètres est un moyen de bénéficier d’une certaine souplesse a
 
 - Autorisez uniquement l’utilisation de paramètres prédéfinis.
 - Utilisez la fonctionnalité d’expression régulière pour valider les paramètres autorisés.
-    - Exemple : Si seulement une certaine plage de valeurs est autorisée, utilisez une expression régulière pour vérifier uniquement les caractères ou les valeurs qui figurent dans la plage.
+    - Exemple : si seulement une certaine plage de valeurs est autorisée, utilisez une expression régulière pour rechercher uniquement les caractères ou les valeurs qui figurent dans la plage.
     - La validation des paramètres peut contribuer à dissuader les utilisateurs d’essayer d’utiliser certains caractères qui peuvent être des caractères d’échappement, comme les guillemets. Sachant qu’il existe plusieurs types de guillemets, il est souvent plus facile d’utiliser des expressions régulières pour valider les caractères que vous avez décidé d’autoriser que d’essayer de définir toutes les entrées non autorisées.
 - Tirez parti du module PowerShell [« InjectionHunter »](https://www.powershellgallery.com/packages/InjectionHunter/1.0.0) dans PowerShell Gallery.
     - Sachant qu’il peut renvoyer des faux positifs, examinez l’intention des éléments signalés comme étant suspects pour déterminer s’il s’agit de problèmes réels. 
 - Microsoft Visual Studio intègre un analyseur de script qui peut vous aider à vérifier la syntaxe PowerShell.
-- Cette vidéo est intitulée : « DEF CON 25 - Lee Holmes - Get $pwnd : Attacking Battle Hardened Windows Server » offre une vue d’ensemble des différents types de problèmes contre lesquels vous pouvez vous protéger (en particulier la passage de 12:20 à 17:50) :     <iframe width="560" height="315" src="https://www.youtube.com/embed/ahxMOAAani8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+- Cette vidéo intitulée : « DEF CON 25 - Lee Holmes - Get $pwnd: Attacking Battle Hardened Windows Server » offre une vue d’ensemble des différents types de problèmes contre lesquels vous pouvez vous protéger (en particulier la passage de 12:20 à 17:50) :     <iframe width="560" height="315" src="https://www.youtube.com/embed/ahxMOAAani8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## <a name="environment-recommendations"></a>Recommendations concernant l’environnement
 Recommandations générales pour les administrateurs de PowerShell.

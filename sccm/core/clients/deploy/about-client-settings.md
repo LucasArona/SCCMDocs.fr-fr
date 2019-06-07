@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3271c0fbd8673e33d7a7bf6a9c6da4b0ce978377
-ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.openlocfilehash: a9610024219107e81c4440a1e96780aaf300e20f
+ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66176788"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66715731"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>À propos des paramètres client dans Configuration Manager
 
@@ -295,7 +295,7 @@ Si les clients doivent installer des mises à jour logicielles requises à l’�
 
 Si vous souhaitez accorder aux utilisateurs plus de temps pour installer les déploiements de mises à jour logicielles ou d’applications obligatoires au-delà de l’échéance, définissez cette option sur **Oui**. Cette période de grâce est destinée au scénario dans lequel un ordinateur est hors tension pendant une durée prolongée et l’utilisateur doit installer de nombreux déploiements d’applications ou de mises à jour. Par exemple, ce paramètre est utile si un utilisateur rentre de congés et qu’il doit patienter longtemps pendant que le client installe les déploiements d’applications en retard.
 
-Définissez une période de grâce comprise entre une et 120 heures. Utilisez ce paramètre conjointement avec la propriété de déploiement **Différer la mise en œuvre de ce déploiement selon les préférences de l’utilisateur**. Pour plus d’informations, consultez [Déployer des applications](/sccm/apps/deploy-use/deploy-applications).
+Définissez une période de grâce comprise entre une et 120 heures. Utilisez ce paramètre conjointement avec la propriété de déploiement **Différer la mise en œuvre de ce déploiement selon les préférences de l’utilisateur**. Pour plus d’informations, consultez [Déployer des applications](/sccm/apps/deploy-use/deploy-applications#delay-enforcement-with-a-grace-period).
 
 
 ## <a name="computer-restart"></a>Redémarrage de l’ordinateur

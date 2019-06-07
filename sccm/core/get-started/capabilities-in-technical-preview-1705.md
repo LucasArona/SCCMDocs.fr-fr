@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 44ffc6aa554e30ef96dbe09409ee5360d0ed236d
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 33055f0962ef1220d41a2c8ee463cb2380ff60db
+ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56129848"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66715957"
 ---
 # <a name="capabilities-in-technical-preview-1705-for-system-center-configuration-manager"></a>Fonctionnalités de la version Technical Preview 1705 de System Center Configuration Manager
 
@@ -135,10 +135,6 @@ Avant d’utiliser un réplica asynchrone pour récupérer la base de données d
 Pour arrêter le site, vous pouvez utiliser [l’outil de maintenance hiérarchique](/sccm/core/servers/manage/hierarchy-maintenance-tool-preinst.exe) pour arrêter les services principaux sur le serveur de site. Utilisez la ligne de commande : **Preinst.exe /stopsite**   
 
 L’arrêt du site est équivalent à l’arrêt du service Gestionnaire de composants de site (sitecomp) suivi du service SMS_Executive sur le serveur de site.
-
-> [!TIP]  
-> Si vous utilisez un réplica passif principal (disponible à partir de cette version Technical Preview en tant que [Rôle serveur site haute disponibilité](#site-server-role-high-availability)), vous n’avez pas besoin d’arrêter le réplica passif. Seul le site principal actif doit être arrêté.
-
 
 
 ## <a name="improved-user-notifications-for-office-365-updates"></a>Amélioration des notifications à l’utilisateur pour les mises à jour d’Office 365
