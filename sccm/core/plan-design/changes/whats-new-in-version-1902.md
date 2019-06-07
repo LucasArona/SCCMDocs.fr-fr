@@ -2,7 +2,7 @@
 title: Nouveautés de la version 1902
 titleSuffix: Configuration Manager
 description: Obtenez des informations détaillées sur les changements et les nouvelles fonctionnalités introduits dans la version 1902 de l’édition Current Branch de Configuration Manager.
-ms.date: 05/13/2019
+ms.date: 05/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0c88cdc52442463bb3788c80c45d6c074dd900f5
-ms.sourcegitcommit: 53f2380ac67025fb4a69fc1651edad15d98e0cdd
+ms.openlocfilehash: 6b2468dc5f4cf7a9e1a715b3ec8e8a1d912a12b0
+ms.sourcegitcommit: 18a94eb78043cb565b05cd0e9469b939b29cccf0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65673422"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354876"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Nouveautés de la version 1902 de l’édition Current Branch de Configuration Manager
 
@@ -74,12 +74,14 @@ La fonctionnalité des insights de gestion comportent les nouvelles règles suiv
 
 
 ### <a name="improvement-to-enhanced-http"></a>Amélioration apportée à HTTP avancé
+
 <!--3798957-->
-Vous pouvez maintenant activer HTTP avancé par site principal ou pour le site d’administration centrale. 
 
-Dans les propriétés du site d'administration centrale, sélectionnez l’option **Utiliser les certificats générés par Configuration Manager pour les systèmes de site HTTP**. Ce paramètre s’applique uniquement aux rôles de système de site dans le site d’administration centrale. Il ne s’agit pas d’un paramètre global pour la hiérarchie. 
+***[Mis à jour]*** Vous pouvez désormais activer le protocole HTTP amélioré par site principal ou pour le site d’administration centrale.
 
-<!-- For more information, see [enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http). -->
+Dans les propriétés du site d'administration centrale, sélectionnez l’option **Utiliser les certificats générés par Configuration Manager pour les systèmes de site HTTP**. Ce paramètre s’applique uniquement aux rôles de système de site dans le site d’administration centrale. Il ne s’agit pas d’un paramètre global pour la hiérarchie.
+
+Pour plus d’informations, consultez [HTTP amélioré](/sccm/core/plan-design/hierarchy/enhanced-http).
 
 
 ### <a name="improvement-to-setup-prerequisites"></a>Amélioration apportée aux prérequis de l’installation
@@ -136,33 +138,38 @@ Vous pouvez maintenant **Modifier** ou **Copier** un script PowerShell existant 
 
 ## <a name="bkmk_content"></a> Gestion de contenu
 
-### <a name="distribution-point-maintenance-mode"></a>Mode maintenance des points de distribution 
-<!--3555754-->
-Vous pouvez désormais définir un point de distribution en mode maintenance. Activez le mode maintenance lors de l’installation de mises à jour logicielles ou de modifications matérielles apportées au serveur.
+### <a name="distribution-point-maintenance-mode"></a>Mode maintenance des points de distribution
 
-Pendant que le point de distribution est en mode maintenance, il a les comportements suivants : 
+<!--3555754-->
+
+***[Mis à jour]*** Vous pouvez désormais définir un point de distribution en mode maintenance. Activez le mode maintenance lors de l’installation de mises à jour logicielles ou de modifications matérielles apportées au serveur.
+
+Pendant que le point de distribution est en mode maintenance, il a les comportements suivants :
 
 - Le site ne lui distribue aucun contenu.  
 
-- Les points de gestion ne retournent pas l’emplacement de ce point de distribution aux clients. 
+- Les points de gestion ne retournent pas l’emplacement de ce point de distribution aux clients.
 
-- Quand vous mettez à jour le site, un point de distribution en mode maintenance se met néanmoins à jour. 
+- Quand vous mettez à jour le site, un point de distribution en mode maintenance se met néanmoins à jour.
 
 - Les propriétés du point de distribution sont en lecture seule. Par exemple, vous ne pouvez pas changer le certificat ou ajouter des groupes de limites.  
 
-- Les tâches planifiées, comme la validation de contenu, s’exécutent néanmoins toujours selon la même planification. 
+- Les tâches planifiées, comme la validation de contenu, s’exécutent néanmoins toujours selon la même planification.
 
-<!-- For more information, see [Maintenance mode](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_maint) -->
+Pour plus d’informations sur cette fonctionnalité, consultez [mode Maintenance](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_maint).
+
+Pour plus d’informations sur l’automatisation de ce processus avec le kit de développement logiciel (SDK) de Configuration Manager, consultez [Méthode SetDPMaintenanceMode dans la classe SMS_DistributionPointInfo](/sccm/develop/reference/core/servers/configure/setdpmaintenancemode-method-in-class-sms-distributionpointinfo).
 
 
 
 ## <a name="bkmk_client"></a> Gestion des clients
 
 ### <a name="client-provisioning-mode-timeout"></a>Délai d’expiration du mode de provisionnement de client
-<!--3197824-->
-La séquence de tâches définit un horodatage quand elle place le client en mode de provisionnement. Un client en mode de provisionnement vérifie toutes les 60 minutes la durée de temps écoulée depuis l’horodatage. S’il a été en mode de provisionnement pendant plus de 48 heures, le client quitte automatiquement le mode de provisionnement et redémarre son processus. 
 
-<!-- For more information, see ... -->
+<!--3197824-->
+***[Mis à jour]*** La séquence de tâches définit un horodatage quand elle place le client en mode d’approvisionnement. Un client en mode de provisionnement vérifie toutes les 60 minutes la durée de temps écoulée depuis l’horodatage. S’il a été en mode de provisionnement pendant plus de 48 heures, le client quitte automatiquement le mode de provisionnement et redémarre son processus.
+
+Pour plus d’informations, consultez [Mode d’approvisionnement](/sccm/osd/understand/provisioning-mode).
 
 ### <a name="view-first-screen-only-during-remote-control"></a>Afficher le premier écran uniquement pendant le contrôle à distance
 <!--3231732-->
@@ -191,10 +198,11 @@ Pour plus d’informations, consultez [Guide pratique pour configurer Wake On LA
 ## <a name="bkmk_app"></a> Gestion des applications
 
 ### <a name="improvements-to-application-approvals-via-email"></a>Améliorations des approbations d’applications par e-mail
-<!--3594063-->
-Dans cette version, la fonctionnalité a été améliorée afin de recevoir des notifications par e-mail pour les requêtes d’application. Les utilisateurs peuvent toujours ajouter un commentaire à la requête depuis le Centre logiciel. Ce commentaire s’affiche sur la requête d’application dans la console Configuration Manager. Désormais, ce commentaire s’affiche aussi dans l’e-mail. Le fait d’inclure ce commentaire dans l’e-mail permet aux approbateurs de prendre une décision plus éclairée sur l’approbation ou le refus de la requête.
 
-<!-- For more information, see [Email notifications](/sccm/apps/deploy-use/app-approval#bkmk_email-approve). -->
+<!--3594063-->
+***[Mis à jour]*** Dans cette version, la fonctionnalité a été améliorée afin de recevoir des notifications par e-mail pour des requêtes d’application. Les utilisateurs peuvent toujours ajouter un commentaire à la requête depuis le Centre logiciel. Ce commentaire s’affiche sur la requête d’application dans la console Configuration Manager. Désormais, ce commentaire s’affiche aussi dans l’e-mail. Le fait d’inclure ce commentaire dans l’e-mail permet aux approbateurs de prendre une décision plus éclairée sur l’approbation ou le refus de la requête.
+
+Pour plus d’informations, consultez [Notifications par e-mail](/sccm/apps/deploy-use/app-approval#bkmk_email-approve).
 
 
 ### <a name="improvements-to-package-conversion-manager"></a>Améliorations apportées à Package Conversion Manager
@@ -245,25 +253,27 @@ Quand vous créez un média de séquence de tâches, Configuration Manager n’a
 
 
 ### <a name="import-a-single-index-of-an-os-image"></a>Importer un index unique d’une image de système d’exploitation
+
 <!--3719699-->
-Lors de l’importation d’un fichier image (WIM) de Windows dans Configuration Manager, vous pouvez désormais spécifier d’importer automatiquement un seul index au lieu de tous les index de l’image dans le fichier. Cette option offre les avantages suivants :
+***[Mis à jour]*** Lors de l’importation d’un fichier image Windows (WIM) dans Configuration Manager, vous pouvez désormais spécifier d’importer automatiquement un seul index au lieu de tous les index de l’image dans le fichier. Cette option offre les avantages suivants :
 
 - Fichier d’image plus petit  
 - Maintenance hors connexion plus rapide  
-- Optimiser la maintenance des images, pour obtenir un fichier d’image plus petit après la maintenance hors connexion 
+- Optimiser la maintenance des images, pour obtenir un fichier d’image plus petit après la maintenance hors connexion
 
 Lorsque vous importez une image de système d’exploitation, sélectionnez l’option **Extraire un index d’images spécifique à partir du fichier WIM spécifié**. Ensuite, sélectionnez l’index d’image dans la liste.  
 
-<!-- For more information, see [Add an OS image](/sccm/osd/get-started/manage-operating-system-images#BKMK_AddOSImages). -->
+Pour plus d’informations, consultez [Ajouter une image du système d’exploitation](/sccm/osd/get-started/manage-operating-system-images#BKMK_AddOSImages).
 
 
 ### <a name="optimized-image-servicing"></a>Maintenance optimisée des images
+
 <!--3555951-->
-Quand vous appliquez des mises à jour logicielles à une image de système d’exploitation, une nouvelle option permet d’optimiser la sortie en supprimant les mises à jour remplacées. L’optimisation de la maintenance hors connexion s’applique seulement à des images avec un seul index. 
+***[Mis à jour]*** Quand vous appliquez des mises à jour de logiciel à une image du système d’exploitation, une nouvelle option permet d’optimiser la sortie en supprimant les mises à jour remplacées. L’optimisation de la maintenance hors connexion s’applique seulement à des images avec un seul index.
 
-Lorsque vous créez une planification pour mettre à jour une image de système d’exploitation, sélectionnez l’option **Supprimer les mises à jour remplacées après la mise à jour de l’image**. 
+Lorsque vous créez une planification pour mettre à jour une image de système d’exploitation, sélectionnez l’option **Supprimer les mises à jour remplacées après la mise à jour de l’image**.
 
-<!-- For more information, see [Apply software updates to an image](/sccm/osd/get-started/manage-operating-system-images#BKMK_OSImagesApplyUpdates).  -->
+Pour plus d’informations, consultez [Appliquer les mises à jour logicielles à une image du système d’exploitation](/sccm/osd/get-started/manage-operating-system-images#bkmk_resetbase).
 
 
 ### <a name="improvements-to-run-powershell-script-task-sequence-step"></a>Améliorations apportées à l’étape de séquence de tâches Exécuter le script PowerShell
@@ -304,7 +314,7 @@ Pour plus d’informations, consultez [Exécuter le script PowerShell](/sccm/osd
 
 - Quand vous définissez la variable de séquence de tâches **OSDDoNotLogCommand** sur true, la ligne de commande de l’étape Exécuter la ligne de commande est également masquée dans le fichier journal. Avant, seul le nom du programme de l’étape Installer le package était masqué dans le fichier smsts.log.<!--3654172-->  
 
-- Quand vous activez un répondeur PXE sur un point de distribution sans service de déploiement Windows, il peut désormais se trouver sur le même serveur que le service DHCP. <!--3734270-->  <!-- For more information, see ... -->
+- Quand vous activez un répondeur PXE sur un point de distribution sans service de déploiement Windows, il peut désormais se trouver sur le même serveur que le service DHCP. <!--3734270--> Pour plus d’informations, consultez [Configurer au moins un point de distribution pour accéder aux requêtes PXE](/sccm/osd/deploy-use/use-pxe-to-deploy-windows-over-the-network#BKMK_Configure).
 
 
 

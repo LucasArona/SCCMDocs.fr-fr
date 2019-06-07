@@ -10,12 +10,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 69c5f446c465655adb1e9fee1b891a3152af47e9
-ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
+ms.openlocfilehash: 9368bedd80171077767ead54763abede2381c909
+ms.sourcegitcommit: bfb8a17f60dcb9905e739045a5141ae45613fa2c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58197093"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66198456"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>Certificats pour la passerelle de gestion cloud
 
@@ -59,7 +59,7 @@ Les certificats pour la passerelle de gestion cloud prennent en charge les confi
 
 Vous fournissez ce certificat lors de la création de la passerelle de gestion cloud dans la console Configuration Manager.
 
-La passerelle de gestion cloud crée un service HTTPS auquel les clients Internet se connectent. Le serveur nécessite un certificat d’authentification serveur pour créer le canal sécurisé. Faites l’acquisition d’un certificat à cet effet auprès d’un fournisseur public ou émettez-le à partir de votre infrastructure à clé publique. Pour plus d’informations, consultez [Certificat racine approuvé de passerelle de gestion cloud pour les clients](#cmg-trusted-root-certificate-to-clients).
+La passerelle de gestion cloud crée un service HTTPS auquel les clients Internet se connectent. Le serveur nécessite un certificat d’authentification serveur pour créer le canal sécurisé. Faites l’acquisition d’un certificat à cet effet auprès d’un fournisseur public ou émettez-le à partir de votre infrastructure à clé publique. Pour plus d’informations, consultez [Certificat racine approuvé de passerelle de gestion cloud pour les clients](#bkmk_cmgroot).
 
  > [!TIP]
  > Ce certificat nécessite un nom global unique pour identifier le service dans Azure. Avant de demander un certificat, vérifiez que le nom de domaine Azure souhaité est unique. Par exemple, *GraniteFalls.CloudApp.Net*. Connectez-vous au [portail Microsoft Azure](https://portal.azure.com). Sélectionnez **Créer une ressource**, choisissez la catégorie **Calcul**, puis sélectionnez **Service cloud**. Dans le champ **Nom DNS**, tapez le préfixe souhaité, par exemple *GraniteFalls*. L’interface indique si le nom de domaine est disponible ou déjà utilisé par un autre service. Ne créez pas le service dans le portail ; utilisez ce processus seulement pour vérifier la disponibilité du nom. 
@@ -193,9 +193,9 @@ Après avoir émis un certificat d’authentification client pour un ordinateur,
 
     c. Sélectionnez le certificat suivant plus haut dans la chaîne, puis sélectionnez **Afficher le certificat**.  
 
-6.  Dans cette boîte de dialogue Nouveau certificat, accédez à l’onglet **Détails**. Sélectionnez **Copier dans un fichier...**.  
+6.  Dans cette boîte de dialogue Nouveau certificat, accédez à l’onglet **Détails**. Sélectionnez **Copier dans un fichier...** .  
 
-7.  Effectuez l’Assistant Exportation de certificat en utilisant le format de certificat par défaut, **X.509 binaire encodé DER (.cer)**. Notez le nom et l’emplacement du certificat exporté.  
+7.  Effectuez l’Assistant Exportation de certificat en utilisant le format de certificat par défaut, **X.509 binaire encodé DER (.cer)** . Notez le nom et l’emplacement du certificat exporté.  
 
 8. Exportez tous les certificats dans le chemin de certification du certificat d’authentification client d’origine. Notez quels certificats exportés sont des autorités de certification intermédiaires, et lesquels sont des autorités de certification racines de confiance.  
 

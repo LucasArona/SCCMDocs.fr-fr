@@ -10,12 +10,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17a99fff7b6486d6de26e2d4c153244a5665391a
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 253710602ca4c46e3ed0d929fb62edea6c3efeb3
+ms.sourcegitcommit: 18a94eb78043cb565b05cd0e9469b939b29cccf0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56136641"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354832"
 ---
 # <a name="cryptographic-controls-technical-reference"></a>Informations techniques de référence sur les contrôles de chiffrement
 
@@ -222,9 +222,9 @@ System Center Configuration Manager utilise la signature et le chiffrement pour 
 
  La réplication de base de données dans Configuration Manager utilise Service Broker SQL Server pour transférer des données entre les sites à l’aide des mécanismes suivants :  
 
-- Connexion SQL Server à SQL Server : cette connexion utilise des informations d'identification Windows pour l'authentification serveur et des certificats auto-signés 1 024 bits pour signer et chiffrer les données à l'aide de la norme AES (Advanced Encryption Standard). Si les certificats PKI avec la possibilité d'authentification serveur sont disponibles, ils seront utilisés. Le certificat doit se trouver dans le magasin Personnel pour le magasin de certificats Ordinateur.  
+- Connexion SQL Server à SQL Server : Elle utilise des informations d'identification Windows pour l'authentification serveur et des certificats auto-signés avec 1 024 bits pour signer et chiffrer les données à l'aide de la norme AES (Advanced Encryption Standard). Si les certificats PKI avec la possibilité d'authentification serveur sont disponibles, ils seront utilisés. Le certificat doit se trouver dans le magasin Personnel pour le magasin de certificats Ordinateur.  
 
-- SQL Service Broker : il utilise des certificats auto-signés avec 2 048 bits pour l'authentification et pour signer et chiffrer les données à l'aide de la norme AES (Advanced Encryption Standard). Le certificat doit se trouver dans la base de données principale SQL Server.  
+- SQL Service Broker : Il utilise des certificats auto-signés avec 2 048 bits pour l’authentification et pour signer et chiffrer les données à l’aide de la norme AES (Advanced Encryption Standard). Le certificat doit se trouver dans la base de données principale SQL Server.  
 
   La réplication basée sur des fichiers utilise le protocole SMB (Server Message Block) et l'algorithme SHA-256 pour signer les données qui ne sont pas chiffrées mais elle ne contient aucune donnée sensible. Si vous souhaitez chiffrer ces données, vous pouvez utiliser IPsec. Vous devez effectuer ce chiffrement indépendamment de Configuration Manager.  
 
@@ -267,7 +267,7 @@ Pour améliorer la sécurité de vos clients et serveurs Configuration Manager, 
 
 -   Activer TLS 1.2
 
-    Pour activer TLS 1.2 pour Configuration Manager, consultez l’article de la Base de connaissances suivant : [Guide pratique pour activer TLS 1.2 pour Configuration Manager](https://support.microsoft.com/en-us/help/4040243/how-to-enable-tls-1-2-for-configuration-manager).
+    Pour activer TLS 1.2 pour Configuration Manager, consultez [Comment activer TLS 1.2 pour Configuration Manager](enable-tls-1-2.md).
 -   Désactiver SSL 3.0, TLS 1.0 et TLS 1.1 
 -   Réorganiser les suites de chiffrement en rapport avec TLS 
 

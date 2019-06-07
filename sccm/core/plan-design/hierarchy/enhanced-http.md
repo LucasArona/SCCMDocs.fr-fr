@@ -2,7 +2,7 @@
 title: HTTP amélioré
 titleSuffix: Configuration Manager
 description: Utilisez une méthode d’authentification moderne pour sécuriser les communications clientes sans avoir besoin de certificats PKI.
-ms.date: 10/29/2018
+ms.date: 05/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2b8d9c3480c86b282c9780395980625f86ee82e6
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 25824b616bb833a715727033504776767b5aa958
+ms.sourcegitcommit: 18a94eb78043cb565b05cd0e9469b939b29cccf0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56156921"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354807"
 ---
 # <a name="enhanced-http"></a>HTTP amélioré
 
@@ -27,8 +27,7 @@ ms.locfileid: "56156921"
 > [!Tip]  
 > Cette fonctionnalité a été introduite dans la version 1806 comme [fonctionnalité en préversion](/sccm/core/servers/manage/pre-release-features). À compter de la version 1810, cette fonctionnalité n’est plus en préversion.  
 
-
-Microsoft conseille d’utiliser la communication HTTPS pour tous les chemins de communication Configuration Manager, mais c’est difficile pour certains clients en raison du temps de traitement lié à la gestion des certificats PKI. L’intégration à Azure Active Directory (Azure AD) permet d’éviter une partie de ces exigences de certificat. 
+Microsoft conseille d’utiliser la communication HTTPS pour tous les chemins de communication Configuration Manager, mais c’est difficile pour certains clients en raison du temps de traitement lié à la gestion des certificats PKI. L’intégration à Azure Active Directory (Azure AD) permet d’éviter une partie de ces exigences de certificat.
 
 La version 1806 de Configuration Manager contient des améliorations concernant la façon dont les clients communiquent avec les systèmes de site. Ces améliorations avaient deux principaux objectifs :  
 
@@ -36,8 +35,11 @@ La version 1806 de Configuration Manager contient des améliorations concernant 
 
 - Permettre aux clients d’accéder de manière sécurisée au contenu des points de distribution sans avoir besoin d’un compte d’accès réseau, d’un certificat PKI client ou d’une authentification Windows.  
 
+Toutes les autres communications clientes se font via le protocole HTTP. L’amélioration du protocole HTTP n’est pas identique à l’activation de HTTPS pour la communication cliente ou un système de site.<!-- SCCMDocs issue #1212 -->
+
 > [!Note]  
-> L’utilisation de certificats PKI reste possible pour les clients qui ont les exigences suivantes :   
+> L’utilisation de certificats PKI reste possible pour les clients qui ont les exigences suivantes :  
+>
 > - Utilisation du protocole HTTPS pour toutes les communications clientes  
 > - Contrôle avancé de l’infrastructure de signature  
 
@@ -46,28 +48,40 @@ La version 1806 de Configuration Manager contient des améliorations concernant 
 
 Les scénarios suivants bénéficient de ces améliorations :  
 
-
 ### <a name="bkmk_scenario1"></a> Scénario 1 : Client vers point de gestion
-<!--1356889-->
 
-Les [appareils joints à Azure AD](https://docs.microsoft.com/azure/active-directory/device-management-introduction#azure-ad-joined-devices) peuvent communiquer avec un point de gestion configuré pour HTTP. Le serveur de site génère un certificat pour le point de gestion afin de lui permettre de communiquer via un canal sécurisé.   
+<!--1356889-->
+Les [appareils joints à Azure AD](https://docs.microsoft.com/azure/active-directory/device-management-introduction#azure-ad-joined-devices) peuvent communiquer avec un point de gestion configuré pour HTTP. Le serveur de site génère un certificat pour le point de gestion afin de lui permettre de communiquer via un canal sécurisé.
 
 > [!Note]  
 > Ce comportement est différent de celui observé dans Configuration Manager Current Branch version 1802, où l’utilisation d’un point de gestion HTTPS est nécessaire pour que les appareils joints à Azure AD puissent communiquer par le biais d’une passerelle de gestion cloud. Pour plus d’informations, consultez [Activer le point de gestion pour HTTPS](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_mphttps).  
 
-
 ### <a name="bkmk_scenario2"></a> Scénario 2 : Client vers point de distribution
-<!--1358228-->
 
+<!--1358228-->
 Un groupe de travail ou un client joint à Azure AD peut s’authentifier et télécharger du contenu via un canal sécurisé à partir d’un point de distribution configuré pour HTTP. Ces types d’appareils peuvent également s’authentifier et télécharger du contenu à partir d’un point de distribution configuré pour HTTPS sans avoir besoin d’un certificat PKI sur le client. L’ajout d’un certificat d’authentification client à un groupe de travail ou à un client joint à Azure AD est un processus compliqué.
 
 Ce comportement inclut des scénarios de déploiement de système d’exploitation avec une séquence de tâches exécutée à partir d’un support de démarrage, d’un environnement PXE (Preboot Execution Environment) ou du Centre logiciel. Pour plus d’informations, consultez [Compte d’accès réseau](/sccm/core/plan-design/hierarchy/accounts#network-access-account).<!--1358278-->
 
+### <a name="bkmk_scenario3"></a> Scénario 3 : Identité d’appareil Azure AD
 
-### <a name="bkmk_scenario3"></a> Scénario 3 : Identité d’appareil Azure AD 
 <!--1358460-->
-
 Un appareil joint à Azure AD ou un [appareil Azure AD hybride](https://docs.microsoft.com/azure/active-directory/device-management-introduction#hybrid-azure-ad-joined-devices) peut communiquer de manière sécurisée avec son site attribué, sans qu’un utilisateur Azure AD soit connecté. L’identité d’appareil cloud est désormais suffisante pour s’authentifier auprès du point de gestion et de la passerelle de gestion cloud dans les scénarios orientés appareil. (Un jeton d’utilisateur est toujours requis dans les scénarios orientés utilisateur.)  
+
+
+## <a name="features"></a>Fonctionnalités
+
+Les fonctionnalités suivantes de Configuration Manager prennent en charge ou exigent un protocole HTTP amélioré :
+
+- [Passerelle de gestion cloud](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway)
+- [Déploiement du système d’exploitation sans compte d’accès réseau](/sccm/osd/plan-design/planning-considerations-for-automating-tasks#enhanced-http)
+- [Activer la cogestion pour de nouveaux périphériques Windows 10 basés sur internet](/sccm/comanage/tutorial-co-manage-new-devices)
+- [Approbations d’application par e-mail](/sccm/apps/deploy-use/app-approval#bkmk_email-approve)
+- [Service d'administration](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service)
+- [Afficher les consoles récemment connectées](/sccm/core/servers/manage/admin-console#bkmk_viewconnected)
+
+> [!Note]  
+> Le point de mise à jour logicielle et les scénarios associés ont toujours pris en charge le trafic HTTP sécurisé avec les clients, ainsi que la passerelle de gestion cloud. Il utilise un mécanisme avec le point de gestion différent de l’authentification basée sur certificat ou jeton.<!-- SCCMDocs issue #1148 -->
 
 
 ## <a name="prerequisites"></a>Prérequis  
@@ -80,8 +94,7 @@ Un appareil joint à Azure AD ou un [appareil Azure AD hybride](https://docs.mic
 
     - Si vous avez déjà effectué cette intégration pour votre site, mettez à jour l’application Azure AD. Dans la console Configuration Manager, accédez à l’espace de travail **Administration**, développez **Services cloud**, puis sélectionnez **Locataires Azure Active Directory**. Sélectionnez le locataire Azure AD, sélectionnez l’application web dans le volet **Applications**, puis sélectionnez **Mettre à jour les paramètres d’application** dans le ruban.  
 
-- *Pour [Scénario 3](#bkmk_scenario3) uniquement* : Un client exécutant Windows 10 version 1803 ou ultérieure et joint à Azure AD. 
-
+- *Pour [Scénario 3](#bkmk_scenario3) uniquement* : Un client exécutant Windows 10 version 1803 ou ultérieure et joint à Azure AD. Le client nécessite cette configuration pour l’authentification des appareils Azure AD.<!-- SCCMDocs issue 1126 -->
 
 
 ## <a name="configure-the-site"></a>Configurer le site
@@ -93,13 +106,16 @@ Un appareil joint à Azure AD ou un [appareil Azure AD hybride](https://docs.mic
 > [!Tip]
 > Un délai maximal de 30 minutes est nécessaire pour que le point de gestion reçoive puis configure le nouveau certificat du site.
 
+<!--3798957-->
+À partir de la version 1902, vous pouvez également activer le protocole HTTP avancé pour le site d’administration centrale. Utilisez le même processus, puis ouvrez les propriétés du site d’administration centrale. Cette action autorise HTTP avancé uniquement pour les rôles du fournisseur SMS sur le site d’administration centrale. Il ne s’agit pas d’un paramètre global qui s’applique à tous les sites de la hiérarchie.
+
 Vous pouvez voir ces certificats dans la console Configuration Manager. Accédez à l’espace de travail **Administration**, développez **Sécurité**, puis sélectionnez le nœud **Certificats**. Recherchez le certificat racine **Émission de SMS**, ainsi que les certificats de rôle serveur de site émis par ce certificat racine.
 
 Pour plus d’informations sur la façon dont le client communique avec le point de gestion et le point de distribution dans cette configuration, consultez [Communications depuis les clients vers les systèmes de site et les services](/sccm/core/plan-design/hierarchy/communications-between-endpoints#Planning_Client_to_Site_System).
 
 
-
 ## <a name="see-also"></a>Voir aussi
+
 - [Planifier la sécurité](/sccm/core/plan-design/security/plan-for-security)  
 
 - [Sécurité et confidentialité pour les clients Configuration Manager](/sccm/core/clients/deploy/plan/security-and-privacy-for-clients)  
@@ -107,4 +123,3 @@ Pour plus d’informations sur la façon dont le client communique avec le point
 - [Configurer la sécurité](/sccm/core/plan-design/security/configure-security)  
 
 - [Communications entre points de terminaison](/sccm/core/plan-design/hierarchy/communications-between-endpoints)  
-

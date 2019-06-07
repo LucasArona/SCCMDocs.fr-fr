@@ -1,7 +1,7 @@
 ---
 title: Assistant Installation
 titleSuffix: Configuration Manager
-ms.date: 03/07/2019
+ms.date: 05/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 92c51158412b8bc9737c4851fc43dc2a7776488b
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: e69dbd246e9989494db95cfe5996862c7772822b
+ms.sourcegitcommit: bfb8a17f60dcb9905e739045a5141ae45613fa2c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65501254"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66198494"
 ---
 # <a name="use-the-setup-wizard-to-install-configuration-manager-sites"></a>Utilisez l’Assistant Installation pour installer des sites Configuration Manager.
 
@@ -117,6 +117,13 @@ Si vous installez un site d’administration centrale dans le cadre d’un scén
     - **Nom du site** : Chaque site doit posséder un nom convivial pour faciliter son identification.  
 
     - **Dossier d’installation** : chemin de l’installation de Configuration Manager. Vous ne pouvez pas modifier cet emplacement après l’installation du site. Ce chemin ne doit pas contenir de caractères Unicode, ni d’espaces en fin de chaîne.  
+
+        > [!NOTE]  
+        > Vous pouvez choisir d’utiliser le dossier d’installation par défaut. Si vous utilisez la partition du système d’exploitation par défaut dans un environnement de production, vous pouvez rencontrer les problèmes suivants à l’avenir :  
+        >
+        > - Si Configuration Manager utilise l’espace disque libre supplémentaire sur la partition du système d’exploitation, Windows ou Configuration Manager fonctionnera correctement. Si vous installez Configuration Manager sur une partition distincte, sa consommation de disque n’impactera pas le système d’exploitation.
+        > - Les performances de configuration Manager sont meilleures avec un disque rapide. Certaines conceptions de serveur n’optimisent pas le disque du système d’exploitation pour la vitesse.
+        > - Vous pouvez de servir, restaurer ou réinstaller le système d’exploitation sans affecter votre installation de Configuration Manager.  
 
 11. Dans la page **Installation de site**, utilisez l’option suivante correspondant à votre scénario :  
 

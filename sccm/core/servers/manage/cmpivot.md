@@ -2,7 +2,7 @@
 title: CMPivot pour les données en temps réel
 titleSuffix: Configuration Manager
 description: Découvrez comment utiliser CMPivot dans Configuration Manager pour interroger les clients en temps réel.
-ms.date: 04/04/2019
+ms.date: 05/24/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dd914030afb8490b11666fc953d846e03090b834
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.openlocfilehash: 975768c5bfaf239c1f8cd342c988e06dac5d1269
+ms.sourcegitcommit: abfc9e1b3945637fa93ca8d3a11519493a5d5391
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59802646"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66264565"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>CMPivot pour les données en temps réel dans Configuration Manager
 
@@ -86,7 +86,7 @@ Les composants suivants sont obligatoires pour l’utilisation de CMPivot :
 
      - Cliquez sur l’une des **Entités** pour l’ajouter à la chaîne de requête.  
 
-     - Les liens concernant les **opérateurs de table**, les **fonctions d’agrégation** et les **fonctions scalaires** ouvrent une documentation de référence de langage dans le navigateur web. CMPivot utilise le même langage de requête que [Azure Log Analytics](https://docs.microsoft.com/azure/kusto/query/).  
+     - Les liens concernant les **opérateurs de table**, les **fonctions d’agrégation** et les **fonctions scalaires** ouvrent une documentation de référence de langage dans le navigateur web. CMPivot utilise le [langage de requête Kusto (KQL)](https://docs.microsoft.com/azure/kusto/query/).  
 
 3. Gardez la fenêtre CMPivot ouverte pour voir les résultats des clients. Quand vous fermez la fenêtre CMPivot, la session s’achève.  
 
@@ -121,7 +121,7 @@ La fenêtre CMPivot contient les éléments suivants :
 
 5. Le volet de requête est l’emplacement où vous créez ou tapez une requête à exécuter sur les clients du regroupement.  
 
-    - CMPivot utilise un sous-ensemble du même langage de requête qu’[Azure Log Analytics](https://docs.microsoft.com/azure/kusto/query/).  
+    - CMPivot utilise un sous-ensemble du [langage de requête Kusto (KQL)](https://docs.microsoft.com/azure/kusto/query/).  
 
     - Coupez, copiez ou collez du contenu dans le volet de requête.  
 
@@ -202,7 +202,7 @@ Quand les résultats apparaissent, cliquez avec le bouton droit sur la colonne *
 
 `Service | summarize dcount( Device ) by Name`
 
-Dans la ligne du service **Explorateur**, cliquez sur le numéro contenant un lien hypertexte dans la colonne **dcount_**. 
+Dans la ligne du service **Explorateur**, cliquez sur le numéro contenant un lien hypertexte dans la colonne **dcount_** . 
 
 `Service | where (Name == 'Browser') | summarize count() by Device`
 
@@ -276,7 +276,7 @@ CMPivot prend en charge les fonctions scalaires suivantes :
 
 ### <a name="bkmk_cmpivot-charts"></a> Visualisations de rendu
 
-CMPivot intègre désormais une prise en charge de base pour l’[opérateur render](https://docs.microsoft.com/azure/kusto/query/renderoperator) de Log Analytics. Cette prise en charge englobe les types suivants :  
+CMPivot intègre désormais un support de base pour l’[opérateur de rendu](https://docs.microsoft.com/azure/kusto/query/renderoperator) KQL. Cette prise en charge englobe les types suivants :  
 - **barchart** : la première colonne est l’axe X et peut être de type texte, DateHeure ou numérique. Les deuxièmes colonnes doivent être de type numeric et s’affichent sous forme de bande horizontale.  
 - **columnchart** : semblable au type barchart, mais avec des bandes verticales et non horizontales.  
 - **piechart** : la première colonne correspond à l’axe des couleurs, la deuxième est de type numérique.  
@@ -472,11 +472,11 @@ Une requête expire après une heure. Par exemple, un regroupement contient 500�
  - Scripts.log
  - StateMessage.log
 
-Pour plus d’informations, consultez [Fichiers journaux](/sccm/core/plan-design/hierarchy/log-files) et [Résolution des problèmes liés à CMPivot](/sccm/core/servers/manage/cmpivot-tsg.md).
+Pour plus d’informations, consultez [Fichiers journaux](/sccm/core/plan-design/hierarchy/log-files) et [Résolution des problèmes liés à CMPivot](/sccm/core/servers/manage/cmpivot-tsg).
 
 ## <a name="next-steps"></a>Étapes suivantes
  
-[Résolution des problèmes liés à CMPivot](/sccm/core/servers/manage/cmpivot-tsg.md)
+[Résolution des problèmes liés à CMPivot](/sccm/core/servers/manage/cmpivot-tsg)
 
 [Créer et exécuter des scripts PowerShell](/sccm/apps/deploy-use/create-deploy-scripts)
 
