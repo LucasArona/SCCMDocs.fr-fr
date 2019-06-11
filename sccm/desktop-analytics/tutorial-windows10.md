@@ -2,7 +2,7 @@
 title: 'Didacticiel : déployer Windows 10'
 titleSuffix: Configuration Manager
 description: Un didacticiel sur l’utilisation d’Analytique de bureau et de Configuration Manager pour déployer Windows 10 sur un groupe pilote.
-ms.date: 04/25/2019
+ms.date: 06/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: tutorial
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7eb322550c6d11426240736d3d0c6b9ff2c9764f
-ms.sourcegitcommit: abfc9e1b3945637fa93ca8d3a11519493a5d5391
+ms.openlocfilehash: 09259b62eba5a6cbd84b487f83f0fb26d7cbb7c1
+ms.sourcegitcommit: 725e1bf7d3250c2b7b7be9da01135517428be7a1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66264554"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821956"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>Tutoriel : Déployer Windows 10 sur le pilote
 
@@ -48,7 +48,7 @@ Avant de commencer ce didacticiel, assurez-vous que vous disposez des prérequis
 
     Pour plus d’informations, consultez [conditions préalables de bureau Analytique](/sccm/desktop-analytics/overview#prerequisites).
 
-- Configuration Manager, version 1810 avec correctif cumulatif 2 (4488598) ou version ultérieure, avec **administrateur complet** rôle  
+- Configuration Manager, version 1902 avec correctif cumulatif (4500571) ou version ultérieure, avec **administrateur complet** rôle  
 
 - Support d’installation de la dernière version de Windows 10
 
@@ -58,7 +58,7 @@ Avant de commencer ce didacticiel, assurez-vous que vous disposez des prérequis
 
     - La dernière mise à jour de qualité cumulative de Windows 10  
 
-    - Client Configuration Manager versions 1810 avec correctif cumulatif 2 (4488598) ou version ultérieure  
+    - Client Configuration Manager versions 1902 avec mise à jour cumulative (4500571) ou version ultérieure  
 
 - Approbation d’entreprise pour configurer le niveau de données de diagnostic Windows à **avancé (limité)** sur les appareils de pilotes  
 
@@ -77,8 +77,6 @@ Avant de commencer ce didacticiel, assurez-vous que vous disposez des prérequis
     - `https://eaus2watcab02.blob.core.windows.net`  
     - `https://weus2watcab01.blob.core.windows.net`  
     - `https://weus2watcab02.blob.core.windows.net`  
-    - `https://www.msftncsi.com`  
-    - `https://www.msftconnecttest.com`  
     - `https://kmwatsonc.events.data.microsoft.com`  
     - `https://oca.telemetry.microsoft.com`  
     - `https://login.live.com`  
@@ -157,9 +155,9 @@ Utilisez cette procédure pour mettre à jour de Configuration Manager, connecte
 
 ### <a name="update-configuration-manager"></a>Mise à jour Configuration Manager
 
-Installer le Gestionnaire de Configuration de version 1810 correctif cumulatif 2 (4488598) pour prendre en charge l’intégration avec l’Analytique de bureau. Pour plus d’informations sur cette mise à jour, consultez [correctif cumulatif pour Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4488598).
+Installez le correctif cumulatif de Configuration Manager version 1902 (4500571) pour prendre en charge l’intégration avec l’Analytique de bureau. Pour plus d’informations sur cette mise à jour, consultez [correctif cumulatif pour Configuration Manager current branch, version 1902](https://support.microsoft.com/help/4500571).
 
-1. Mettez à jour le site avec le correctif cumulatif de la version 1810. Pour plus d’informations, consultez [Installer des mises à jour dans la console](/sccm/core/servers/manage/install-in-console-updates).  
+1. Mettre à jour le site avec le correctif cumulatif pour version 1902. Pour plus d’informations, consultez [Installer des mises à jour dans la console](/sccm/core/servers/manage/install-in-console-updates).  
 
 2. Mettre à jour des clients. Pour simplifier ce processus, envisagez d’utiliser la mise à niveau automatique des clients. Pour plus d’informations, consultez [Mettre à niveau les clients](/sccm/core/clients/manage/upgrade/upgrade-clients#automatic-client-upgrade).  
 
@@ -244,7 +242,7 @@ Utilisez cette procédure pour créer un plan de déploiement dans l’Analytiqu
 
     - **Nom** : Planifier un nom unique pour le déploiement, par exemple `Windows 10 pilot`  
 
-    - **Produits et versions**: Sélectionnez le **Windows** produit et la dernière version recommandée disponible. Par exemple, **Windows 10, version 1809 (recommandé)**.  
+    - **Produits et versions**: Sélectionnez le **Windows** produit et la dernière version recommandée disponible. Par exemple, **Windows 10, version 1809 (recommandé)** .  
 
     - **Groupes d’appareils**: Sélectionnez un ou plusieurs groupes à partir de l’onglet de Configuration Manager, puis **définir en tant que groupes cibles**. Ces groupes sont des collections synchronisées à partir de Configuration Manager.  
 

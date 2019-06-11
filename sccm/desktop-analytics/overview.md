@@ -2,7 +2,7 @@
 title: Analyses du bureau
 titleSuffix: Configuration Manager
 description: Une vue d’ensemble du service Analytique de bureau intégré à Configuration Manager.
-ms.date: 06/04/2019
+ms.date: 06/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: overview
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bdeffb3b2d478e4984ef721655b78aee5c47c36f
-ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
+ms.openlocfilehash: 8dfa24f92ced6c69f90844e46dccf1df0e93f7a7
+ms.sourcegitcommit: 725e1bf7d3250c2b7b7be9da01135517428be7a1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66716226"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821982"
 ---
 # <a name="what-is-desktop-analytics"></a>Nouveautés d’Analytique de bureau ?
 
@@ -80,7 +80,7 @@ Pour utiliser l’Analytique de bureau, assurez-vous que votre environnement rem
 
         - [**Propriétaire**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner), ou [ **contributeur** ](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor) et [ **administrateur des accès utilisateur** ](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator) autorisations sur le abonnement pour créer un espace de travail dans un groupe de ressources.  
 
-- Configuration Manager, version 1810 avec correctif cumulatif 2 (4488598) ou version ultérieure. Pour plus d’informations, consultez [mise à jour Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
+- Configuration Manager, version 1902 avec mise à jour cumulative (4500571) ou version ultérieure. Pour plus d’informations, consultez [mise à jour Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
 
     - **Administrateur complet** rôle dans le Gestionnaire de Configuration  
 
@@ -88,7 +88,7 @@ Pour utiliser l’Analytique de bureau, assurez-vous que votre environnement rem
 
     - Installez les dernières mises à jour. Pour plus d’informations, consultez [mettre à jour des appareils](/sccm/desktop-analytics/enroll-devices#update-devices).  
 
-    - Appareils doivent également disposer du client Configuration Manager, version 1810 avec correctif cumulatif 2 (4488598) ou version ultérieure. Pour plus d’informations, consultez [mise à jour Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
+    - Appareils doivent également disposer du client Configuration Manager, version 1902 avec mise à jour cumulative (4500571) ou version ultérieure. Pour plus d’informations, consultez [mise à jour Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
 
     > [!Note]  
     > Analytique de postes de travail ne prend pas en charge les mises à niveau vers Windows 10 canal maintenance à long terme (LTSC). Pour plus d’informations, consultez [Windows comme une vue d’ensemble du service](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel).

@@ -2,7 +2,7 @@
 title: Connecter le Gestionnaire de configuration
 titleSuffix: Configuration Manager
 description: Guide pratique pour la connexion de Configuration Manager avec l’Analytique de bureau.
-ms.date: 04/25/2019
+ms.date: 06/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 905ea779082387996858727ef8c50f1835b3d61c
-ms.sourcegitcommit: 65753c51fbf596f233fc75a5462ea4a44005c70b
+ms.openlocfilehash: 38391c5d922a33696dc10d761847e40c01e151cc
+ms.sourcegitcommit: 725e1bf7d3250c2b7b7be9da01135517428be7a1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/03/2019
-ms.locfileid: "66463025"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822014"
 ---
 # <a name="how-to-connect-configuration-manager-with-desktop-analytics"></a>Comment connecter Configuration Manager avec l’Analytique de bureau
 
@@ -29,11 +29,11 @@ Analytique de bureau est étroitement intégré avec Configuration Manager. Tout
 
 ## <a name="bkmk_hotfix"></a> Mettre à jour le site
 
-Tout d’abord, assurez-vous que votre site Configuration Manager est en cours d’exécution au moins la version 1810. Pour plus d’informations, consultez [Installer des mises à jour dans la console](/sccm/core/servers/manage/install-in-console-updates).
+Tout d’abord, assurez-vous que votre site Configuration Manager est en cours d’exécution au moins la version 1902. Pour plus d’informations, consultez [Installer des mises à jour dans la console](/sccm/core/servers/manage/install-in-console-updates).
 
-Vous devez également installer la version 1810 correctif cumulatif 2 (4488598) pour prendre en charge l’intégration avec l’Analytique de bureau. Pour plus d’informations sur cette mise à jour, consultez [correctif cumulatif 2 pour Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4488598).
+Vous devez également installer la version 1902 correctif cumulatif (4500571) pour prendre en charge l’intégration avec l’Analytique de bureau. Pour plus d’informations sur cette mise à jour, consultez [correctif cumulatif pour Configuration Manager current branch, version 1902](https://support.microsoft.com/help/4500571).
 
-1. Mettez à jour le site avec le correctif cumulatif de la version 1810. Pour plus d’informations, consultez [Installer des mises à jour dans la console](/sccm/core/servers/manage/install-in-console-updates).  
+1. Mettre à jour le site avec le correctif cumulatif pour version 1902. Pour plus d’informations, consultez [Installer des mises à jour dans la console](/sccm/core/servers/manage/install-in-console-updates).  
 
 2. Mettre à jour des clients. Pour simplifier ce processus, envisagez d’utiliser la mise à niveau automatique des clients. Pour plus d’informations, consultez [Mettre à niveau les clients](/sccm/core/clients/manage/upgrade/upgrade-clients#automatic-client-upgrade).  
 
@@ -83,7 +83,7 @@ Utilisez cette procédure pour connecter Configuration Manager à l’Analytique
 
 7. Sur le **données de Diagnostic** page, configurez les paramètres suivants :  
 
-    - **ID commercial**: cette valeur doit remplir automatiquement avec l’ID de. votre organisation Si elle ne, assurez-vous que votre serveur proxy est configuré pour autoriser toutes les [points de terminaison](/sccm/desktop-analytics/enable-data-sharing#endpoints) avant de continuer. Vous pouvez également récupérer votre ID Commercial à partir de la **Services connectés** volet dans le [portail d’Analytique de bureau](https://aka.ms/m365aprod).  
+    - **ID commercial**: cette valeur doit remplir automatiquement avec l’ID de. votre organisation Si elle ne, assurez-vous que votre serveur proxy est configuré pour autoriser toutes les [points de terminaison](/sccm/desktop-analytics/enable-data-sharing#endpoints) avant de continuer. Vous pouvez également récupérer votre ID Commercial manuellement à partir de la [portail d’Analytique de bureau](/sccm/desktop-analytics/troubleshooting#bkmk_ViewCommercialID).  
 
     - **Niveau de données de diagnostic de Windows 10**: sélectionnez au moins **avancé (limité)**  
 

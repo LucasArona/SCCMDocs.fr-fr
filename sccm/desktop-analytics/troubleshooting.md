@@ -2,7 +2,7 @@
 title: Dépannage des postes de travail Analytique
 titleSuffix: Configuration Manager
 description: Détails techniques pour vous aider à résoudre les problèmes avec l’Analytique de bureau.
-ms.date: 06/05/2019
+ms.date: 06/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a1f54a2794b3a938366553c635e560ebe1adb320
-ms.sourcegitcommit: a6a6507e01d819217208cfcea483ce9a2744583d
+ms.openlocfilehash: 32e3d1185ff1f93a988074cdbc8dd7a14a4dcba8
+ms.sourcegitcommit: 725e1bf7d3250c2b7b7be9da01135517428be7a1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66748126"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822096"
 ---
 # <a name="troubleshooting-desktop-analytics"></a>Dépannage des postes de travail Analytique
 
@@ -95,7 +95,7 @@ Sélectionnez le nom de catégorie à supprimer, ou ajoutez-le à partir du grap
 
 L’appareil a les attributs suivants :
 
-- Un gestionnaire de Configuration client 1810 ou version ultérieure  
+- Un gestionnaire de Configuration client 1902 ou version ultérieure  
 - Aucune erreur de configuration  
 - Postes de travail Analytique reçu des données de diagnostics complètes à partir de cet appareil au cours des 28 derniers jours  
 - Analytique de postes de travail a un inventaire complet de configuration de l’appareil et les applications installées  
@@ -118,7 +118,7 @@ Assurez-vous que l’appareil est en mesure de communiquer avec le service. Pour
 
 #### <a name="missing-prerequisites"></a>Composants requis manquants
 
-Le client Configuration Manager n’est pas au moins la version 1810 (5.0.8740).
+Le client Configuration Manager n’est pas au moins la version 1902 (5.0.8790).
 
 Mettre à jour le client vers la dernière version. Envisagez d’activer la mise à niveau automatique du client pour le site Configuration Manager. Pour plus d’informations, consultez [Mettre à niveau les clients](/sccm/core/clients/manage/upgrade/upgrade-clients#automatic-client-upgrade).  
 
@@ -339,7 +339,7 @@ Vérifiez les autorisations sur cette clé de Registre. Assurez-vous que le comp
 
 Il existe un ID différent pour l’appareil. Cette clé de Registre est utilisée par la stratégie de groupe. Il est prioritaire sur l’ID fourni par le Gestionnaire de Configuration.  
 
-Pour afficher l’ID commercial dans le portail d’Analytique de bureau, utilisez la procédure suivante :
+<a name="bkmk_ViewCommercialID"></a> Pour afficher l’ID commercial dans le portail d’Analytique de bureau, utilisez la procédure suivante :
 
 1. Accédez au portail d’Analytique de bureau, puis sélectionnez **services connectés** dans le groupe de paramètres globaux.  
 
@@ -348,7 +348,7 @@ Pour afficher l’ID commercial dans le portail d’Analytique de bureau, utilis
 ![Capture d’écran de l’ID commercial dans le portail d’Analytique de bureau](media/commercial-id.png)
 
 > [!Important]  
-> Uniquement **Get nouvelle clé d’ID** lorsque vous ne pouvez pas utiliser l’objet actuel. Si vous régénérez l’ID commercial, déployez le nouvel ID sur vos appareils. Ce processus peut provoquer une perte de données de diagnostic pendant la transition.  
+> Uniquement **Get nouvelle clé d’ID** lorsque vous ne pouvez pas utiliser l’objet actuel. Si vous régénérez l’ID commercial, [réinscrire vos appareils avec le nouvel Id](/sccm/desktop-analytics/enroll-devices#device-enrollment). Ce processus peut provoquer une perte de données de diagnostic pendant la transition.  
 
 #### <a name="windows-commercial-data-opt-in"></a>Windows données commerciales participer
 
@@ -604,14 +604,18 @@ Le portail affiche une notification qu’il ajoute l’attribution de rôle.
 ## <a name="data-latency"></a>Latence des données
 
 <!-- 3846531 -->
-Données dans le portail d’Analytique de bureau sont actualisées quotidiennement. Cette actualisation inclut les modifications de périphérique collectées à partir de données de diagnostic et les modifications que vous apportez à la configuration. Par exemple, lorsque vous modifiez d’une ressource **décision de mettre à niveau**, cela peut entraîner des modifications à l’état de préparation des appareils avec cette ressource installée.
+Lorsque vous configurez tout d’abord Analytique de bureau, les rapports dans Configuration Manager et le portail d’Analytique de bureau peut ne pas affichent les données complètes tout de suite. Il peut prendre 2 à 3 jours pour les périphériques actifs envoyer des données de diagnostic à l’Analytique de bureau, le service pour traiter les données et ensuite synchroniser avec votre site Configuration Manager.
 
-- **Modifications de l’administrateur** sont généralement traités par le service d’Analytique de bureau dans les neuf heures. Par exemple, si vous apportez des modifications à 11 h 00 UTC, le portail doit refléter ces modifications avant l’heure UTC de 08:00 AM le lendemain.
+Lors de la synchronisation des regroupements de périphériques à partir de votre hiérarchie Configuration Manager pour l’Analytique de bureau, il peut prendre jusqu'à 10 minutes pour les collections d’apparaître dans le portail d’Analytique de bureau.  De même, lorsque vous créez un plan de déploiement dans l’Analytique de bureau, il peut prendre jusqu'à 10 minutes pour les nouveaux regroupements associés au plan de déploiement apparaissent dans votre hiérarchie Configuration Manager.  Les sites principaux créent les collections, et le site d’administration centrale se synchronise avec Analytique de bureau.
 
-- **Modifications de l’appareil** détecté par UTC minuit en heure locale sont généralement incluses dans l’actualisation quotidienne. Il est généralement 23 heures supplémentaires de la latence associée au traitement des changements de périphérique par rapport aux modifications de l’administrateur.
+Dans le portail d’Analytique de bureau, il existe deux types de données : **Données d’administration** et **données de diagnostic**:
 
-Si vous ne voyez pas les modifications mises à jour dans ces périodes, attendez un autre de 24 heures pour la prochaine actualisation quotidienne. Si vous voyez des délais plus longs, consultez le tableau de bord service health. Si le service signale comme étant saine, contactez le support Microsoft.
+- **Données d’administration** fait référence à toute modification apportée à votre configuration de l’espace de travail.  Par exemple, lorsque vous modifiez d’une ressource **décision de mettre à niveau** ou **Importance** vous modifiez les données d’administration.  Ces modifications ont souvent un effet de composition, car ils peuvent modifier l’état de préparation d’un appareil à l’élément multimédia en question installé.
 
-Lorsque vous configurez tout d’abord Analytique de bureau, les graphiques dans Configuration Manager et le portail d’Analytique de bureau ne peuvent pas montrent complète des données. Il peut prendre 2 à 3 jours pour les périphériques actifs envoyer des données de diagnostic à l’Analytique de bureau, le service pour traiter les données et ensuite synchroniser avec votre site Configuration Manager.
+- **Données de diagnostic** fait référence aux métadonnées système chargées à partir d’appareils clients à Microsoft.  Il s’agit de données qui alimente l’Analytique de bureau et comprend des attributs tels que l’inventaire des appareils et de sécurité et de fonctionnalité mettre à jour d’état.
 
-Dans une hiérarchie Configuration Manager, il peut prendre 10 minutes pour les nouvelles collections à afficher pour les plans de déploiement. Les sites principaux créent les collections, et le site d’administration centrale se synchronise avec Analytique de bureau.<!-- 3896921 -->
+Par défaut, toutes les données dans l’Analytique de bureau portail est automatiquement actualisées quotidiennement. Cette actualisation inclut des modifications dans les données de diagnostic, ainsi que les modifications que vous apportez à la configuration (données d’administration) et est généralement visible dans votre portail d’Analytique de bureau en 08 h 00 UTC chaque jour.
+
+Lorsque vous apportez des modifications aux données de l’administrateur, vous avez la possibilité de déclencher une actualisation à la demande des données administrateur dans votre espace de travail en ouvrant le menu volant devise de données et en cliquant sur « Appliquer les modifications ».  Ce processus prend généralement entre 15 à 60 minutes, selon la taille de votre espace de travail et l’étendue des modifications nécessitant des processus.  Notez que la demande de données d’une à la demande d’actualisation ne provoque pas dans toutes les modifications de données de diagnostic.  Pour en savoir plus sur la demande d’une actualisation à la demande, consultez notre page FAQ.
+
+Si vous ne voyez pas les modifications mises à jour dans les délais indiqués ci-dessus, attendez 24 heures pour la prochaine actualisation quotidienne. Si vous voyez des délais plus longs, consultez le tableau de bord service health. Si le service signale comme étant saine, contactez le support Microsoft.<!-- 3896921 -->

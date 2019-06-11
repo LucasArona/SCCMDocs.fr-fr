@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dbe161fd744343927f0b373775182eccfd58c1b6
-ms.sourcegitcommit: a6a6507e01d819217208cfcea483ce9a2744583d
+ms.openlocfilehash: 7292fdd3cc370af314cef95a4b782616e315a0cb
+ms.sourcegitcommit: 725e1bf7d3250c2b7b7be9da01135517428be7a1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66748242"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821983"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>Activer le partage de bureau Analytique des données
 
@@ -70,8 +70,6 @@ Pour activer le partage de données, configurez votre serveur proxy pour autoris
 | `https://watson.telemetry.microsoft.com` | Erreur Windows Reporting (WER). Requis pour surveiller l’intégrité du déploiement dans Windows 10, version 1803 ou une version antérieure. |
 | `https://umwatsonc.events.data.microsoft.com` | Erreur Windows Reporting (WER). Obligatoire pour les rapports d’intégrité des appareils dans Windows 10, version 1809 ou version ultérieure. |
 | `https://ceuswatcab01.blob.core.windows.net`<br> `https://ceuswatcab02.blob.core.windows.net`<br> `https://eaus2watcab01.blob.core.windows.net`<br> `https://eaus2watcab02.blob.core.windows.net`<br> `https://weus2watcab01.blob.core.windows.net`<br> `https://weus2watcab02.blob.core.windows.net` | Erreur Windows Reporting (WER). Requis pour surveiller l’intégrité du déploiement dans Windows 10, version 1809 ou version ultérieure. |
-| `https://www.msftncsi.com` | Erreur Windows Reporting (WER). Obligatoire pour l’intégrité de l’appareil vérifier la connectivité. |
-| `https://www.msftconnecttest.com` | Erreur Windows Reporting (WER). Obligatoire pour l’intégrité de l’appareil vérifier la connectivité. |
 | `https://kmwatsonc.events.data.microsoft.com` | Analyse des incidents en ligne. Obligatoire pour les rapports d’intégrité des appareils dans Windows 10, version 1809 ou version ultérieure. |
 | `https://oca.telemetry.microsoft.com`  | Analyse des incidents en ligne (OCA). Requis pour surveiller l’intégrité du déploiement dans Windows 10, version 1803 ou une version antérieure. |
 | `https://login.live.com` | Requis pour fournir une identité d’appareil plus fiable pour l’Analytique de bureau. <br> <br>Pour désactiver l’accès de compte Microsoft de l’utilisateur final, utilisez les paramètres de stratégie au lieu de bloquer ce point de terminaison. Pour plus d’informations, consultez [compte Microsoft dans l’entreprise](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication). |
