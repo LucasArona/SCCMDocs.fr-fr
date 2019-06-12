@@ -2,7 +2,7 @@
 title: Déployer des applications
 titleSuffix: Configuration Manager
 description: Créer ou simuler le déploiement d’une application sur un regroupement d’appareils ou d’utilisateurs
-ms.date: 05/01/2019
+ms.date: 06/04/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7550987d9b9679085ad5b546274d0c503b9e28ac
-ms.sourcegitcommit: 3f43fa8462bf39b2c18b90a11a384d199c2822d8
-ms.translationtype: HT
+ms.openlocfilehash: 5760b36ddb29c39d6887afb61445f1353f46bbec
+ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66403398"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66715679"
 ---
 # <a name="deploy-applications-with-configuration-manager"></a>Déployer les applications avec Configuration Manager
 
@@ -161,6 +161,12 @@ Vous pouvez accorder plus de temps aux utilisateurs pour installer les applicati
 
 Après l’échéance, le client installe l’application au cours de la première fenêtre non ouvrée, que l’utilisateur a configurée, dans la limite de cette période de grâce. Toutefois, l’utilisateur peut toujours ouvrir le Centre logiciel et installer l’application à tout moment. Une fois que la période de grâce a expiré, le comportement de mise en œuvre redevient normal pour les déploiements en retard.
 
+![Diagramme de la chronologie de la période de grâce](media/grace-period.svg)
+
+<!-- SCCMDocs issue #1599 -->
+
+> [!Note]  
+> La plupart du temps, cette fonctionnalité s’applique à un scénario où l’appareil est hors tension alors que l’utilisateur est absent du bureau. Techniquement, la période de grâce commence lorsque le client obtient la stratégie après l’échéance du déploiement. Le même comportement se produit si vous arrêtez le service client Configuration Manager (CcmExec), puis le redémarrez après l’échéance du déploiement.
 
 ### <a name="bkmk_deploy-ux"></a> Paramètres de **l’expérience utilisateur** du déploiement
 

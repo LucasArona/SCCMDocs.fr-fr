@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3e0b8e6a522e367e17d6c13fad3896a6606d3e5c
-ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.openlocfilehash: 4a8f1ca1484df0480a7923a8d3de64c1670aec6d
+ms.sourcegitcommit: a6a6507e01d819217208cfcea483ce9a2744583d
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66176071"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66748201"
 ---
 # <a name="troubleshooting-windows-defender-or-endpoint-protection-client"></a>Résolution des problèmes du client Windows Defender ou Endpoint Protection
 
@@ -48,7 +48,7 @@ Si vous rencontrez des problèmes avec Windows Defender ou Endpoint Protection, 
 
   **Cause**  
 
-  Les causes les plus courantes des problèmes de mise à jour sont des problèmes de connectivité Internet. Cependant, si vous savez que vous êtes connecté à Internet dans la mesure où vous pouvez accéder à d’autres sites web, le problème peut être dû à des conflits avec vos paramètres de Windows Internet Explorer.  
+  Les causes les plus courantes des problèmes de mise à jour sont des problèmes de connectivité Internet. Cependant, si vous savez que vous êtes connecté à Internet dans la mesure où vous pouvez accéder à d’autres sites Web, le problème peut être dû à des conflits avec vos paramètres de Windows Internet Explorer.  
 
 > [!IMPORTANT]  
 >  Vous devez quitter Internet Explorer pour effectuer ces étapes. Par conséquent, imprimez-les, notez-les ou copiez-les dans un autre fichier, puis ajoutez cette rubrique à vos favoris pour y accéder ultérieurement.  
@@ -112,7 +112,7 @@ Si vous rencontrez des problèmes avec Windows Defender ou Endpoint Protection, 
 
     1.  Cliquez sur **Démarrer** et recherchez  **cmd**, puis cliquez sur **OK**.  
 
-    2.  Tapez **cd %windir%**, puis appuyez sur **Entrée**.  
+    2.  Tapez **cd %windir%** , puis appuyez sur **Entrée**.  
 
     3.  Tapez **ren SoftwareDistribution SDTemp**, puis appuyez sur **Entrée**.  
 
@@ -149,16 +149,12 @@ Si vous rencontrez des problèmes avec Windows Defender ou Endpoint Protection, 
 
 ### <a name="step-6-manually-install-the-virus-and-spyware-definition-updates"></a>Étape 6 : Installer manuellement les mises à jour des définitions de virus et de logiciels espions  
 
--   Si vous exécutez un système d’exploitation Windows 32 bits, téléchargez les dernières mises à jour manuellement à l’adresse [http://go.microsoft.com/fwlink/?LinkID=87342](http://go.microsoft.com/fwlink/?LinkID=87342) (http://go.microsoft.com/fwlink/?LinkID=87342).  
-
--   Si vous exécutez un système d’exploitation Windows 64 bits, téléchargez les dernières mises à jour manuellement à l’adresse [http://go.microsoft.com/fwlink/?LinkID=87341](http://go.microsoft.com/fwlink/?LinkID=87341) (http://go.microsoft.com/fwlink/?LinkID=87341).  
-
--   Cliquez sur **Exécuter**. Les dernières mises à jour sont installés manuellement sur votre ordinateur.  
+-   [Téléchargez manuellement les dernières mises à jour](https://www.microsoft.com/wdsi/definitions/).  
 
 
 ### <a name="step-7-contact-support"></a>Étape 7 : Contacter le support technique  
 
--   Si les étapes ne résolvent pas le problème, contactez le support technique. Pour plus d’informations, consultez le [Support technique](https://support.microsoft.com/contactus/) (.  
+-   Si les étapes ne résolvent pas le problème, contactez le support technique. Pour plus d’informations, consultez le [Support technique](https://support.microsoft.com/contactus/).  
 
 ##  <a name="starting-windows-defender-or-endpoint-protection-service"></a>Démarrage du service Windows Defender ou Endpoint Protection  
  **Symptôme**  
@@ -196,9 +192,7 @@ Si vous rencontrez des problèmes avec Windows Defender ou Endpoint Protection, 
 >  Certaines applications de sécurité Internet ne se désinstallent pas complètement. Vous devrez peut-être télécharger et exécuter un utilitaire de nettoyage approprié afin de supprimer complètement l'application de sécurité précédente.  
 
 > [!CAUTION]  
->  Lorsque vous supprimez les programmes de sécurité Internet, votre ordinateur n'est plus protégé. Si vous rencontrez des problèmes pour installer   
->       Endpoint Protection après avoir supprimé des programmes de sécurité Internet existants, contactez le support de Windows Defender ou  
->       Endpoint Protection en envoyant un dossier en ligne (pour plus d’informations, consultez [Guide pratique pour envoyer un dossier en ligne](http://www.microsoft.com/en-ph/security_essentials/Support/8c9074b6-1558-4d14-bc39-d294ced11096.aspx)).  
+> Lorsque vous supprimez les programmes de sécurité, votre ordinateur n'est plus protégé. Si vous rencontrez des problèmes d’installation de Windows Defender après la suppression de programmes de sécurité existants, contactez le [support Microsoft](https://support.microsoft.com/supportforbusiness/productselection) pour **Windows Defender** dans la famille de produits **Sécurité**.  
 
 ### <a name="step-4-uninstallreinstall-endpoint-protection"></a>Étape 4 : Désinstaller/réinstaller Endpoint Protection  
 

@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3e8ebea21b735e6b93d73bf6ff5eb842243ef42d
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: fd2e95a82ab01c760ea14158f164e930a77db894
+ms.sourcegitcommit: a6a6507e01d819217208cfcea483ce9a2744583d
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56121860"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66748146"
 ---
 # <a name="how-to-use-task-sequence-variables-in-configuration-manager"></a>Guide pratique pour utiliser des variables de séquence de tâches dans Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
  Le moteur de séquence de tâches dans la fonctionnalité de déploiement de système d’exploitation de Configuration Manager utilise de nombreuses variables pour contrôler ses comportements. Utilisez ces variables pour : 
  - fixer des conditions sur les étapes ;  
@@ -54,7 +54,7 @@ ms.locfileid: "56121860"
 
  Les variables d’action de séquence de tâches spécifient les paramètres de configuration utilisés par une seule étape de séquence de tâches. Par défaut, l’étape initialise ses paramètres avant son exécution. Ces paramètres sont disponibles uniquement pendant l’exécution de l’étape de séquence de tâches associée. La séquence de tâches ajoute la valeur de la variable d’action à l’environnement avant d’exécuter l’étape. Ensuite, elle supprime la valeur de l’environnement une fois l’étape exécutée.
 
- Supposons par exemple que vous ajoutez l’étape **Exécuter la ligne de commande** à une séquence de tâches. Cette étape comporte une propriété **Démarrer dans**. La séquence de tâches stocke une valeur par défaut pour cette propriété comme variable **WorkingDirectory**. Elle initialise cette valeur avant d’exécuter l’étape **Exécuter la ligne de commande**. Pendant que cette étape est en cours d’exécution, elle accède à la valeur de propriété **Démarrer dans** à partir de la valeur **WorkingDirectory**. Une fois l’étape terminée, la séquence de tâches supprime la valeur de la variable **WorkingDirectory** de l’environnement. Si la séquence de tâches comporte une autre étape **Exécuter la ligne de commande**, elle initialise une nouvelle variable **WorkingDirectory**. À ce stade, elle donne à la variable la valeur de départ de l’étape en cours. Pour plus d’informations, voir [WorkingDirectory](using-task-sequence-variables.md#WorkingDirectory).  
+ Supposons par exemple que vous ajoutez l’étape **Exécuter la ligne de commande** à une séquence de tâches. Cette étape comporte une propriété **Démarrer dans**. La séquence de tâches stocke une valeur par défaut pour cette propriété comme variable **WorkingDirectory**. Elle initialise cette valeur avant d’exécuter l’étape **Exécuter la ligne de commande**. Pendant que cette étape est en cours d’exécution, elle accède à la valeur de propriété **Démarrer dans** à partir de la valeur **WorkingDirectory**. Une fois l’étape terminée, la séquence de tâches supprime la valeur de la variable **WorkingDirectory** de l’environnement. Si la séquence de tâches comporte une autre étape **Exécuter la ligne de commande**, elle initialise une nouvelle variable **WorkingDirectory**. À ce stade, elle donne à la variable la valeur de départ de l’étape en cours. Pour plus d’informations, voir [WorkingDirectory](/sccm/osd/understand/task-sequence-variables#WorkingDirectory).  
 
  La valeur *par défaut* d’une variable d’action est présente pendant l’exécution de l’étape. Si vous définissez une *nouvelle* valeur, elle est accessible à plusieurs étapes de la séquence de tâches. Si vous remplacez une valeur par défaut, la nouvelle valeur reste dans l’environnement. Elle écrase la valeur par défaut pour les autres étapes de la séquence de tâches. Supposons par exemple que vous ajoutez une étape **Définir une variable de séquence de tâches** au tout début de la séquence de tâches. Elle donne à la variable **WorkingDirectory** la valeur `C:\`. Toutes les étapes **Exécuter la ligne de commande** de la séquence de tâches utilisent la nouvelle valeur de répertoire de départ.  
 
@@ -226,11 +226,11 @@ ms.locfileid: "56121860"
 
  3. Dans la boîte de dialogue **Variable de séquence de tâches**, spécifiez les paramètres suivants :  
 
-    - **Variable** : Le nom de la variable. Par exemple, `_SMSTSInWinPE`.  
+    - **Variable** : nom de la variable. Par exemple, `_SMSTSInWinPE`.  
 
-    - **Condition** : La condition permettant d’évaluer la valeur de la variable. Par exemple, **equals**.  
+    - **Condition** : condition permettant d’évaluer la valeur de la variable. Par exemple, **equals**.  
 
-    - **Valeur** : La valeur de la variable à vérifier. Par exemple, `false`.  
+    - **Valeur** : valeur de la variable à vérifier. Par exemple, `false`.  
 
 
  Les trois exemples ci-dessus forment une condition commune pour tester si la séquence de tâches s’exécute à partir d’une image de démarrage dans Windows PE : 

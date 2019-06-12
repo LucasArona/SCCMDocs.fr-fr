@@ -11,12 +11,12 @@ manager: dougeby
 author: mestew
 ms.author: mstewart
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 90304156778f4f41b2ac35a2840a4a7e7bb4dc32
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: b78d4212201a8ed1a08b7fecdb376cbdfdac7636
+ms.sourcegitcommit: a6a6507e01d819217208cfcea483ce9a2744583d
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499781"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66748216"
 ---
 #  <a name="BKMK_ManageSUSettings"></a> Gérer les paramètres des mises à jour logicielles  
 
@@ -69,7 +69,11 @@ Dans les propriétés de mise à jour logicielle, vous pouvez consulter des info
 ####  <a name="BKMK_SoftwareUpdateDetails"></a> Détails des mises à jour logicielles  
 Sous l'onglet **Détails de la mise à jour** , vous pouvez consulter les informations récapitulatives suivantes relatives à la mise à jour logicielle sélectionnée :  
 
-- **ID du bulletin**: indique l’ID du bulletin associé aux mises à jour logicielles de sécurité. Vous trouverez des détails sur le bulletin de sécurité en effectuant une recherche sur l'ID du bulletin sur la page Web [Recherche des bulletins de sécurité de Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=58313) .  
+- **ID du bulletin**: indique l’ID du bulletin associé aux mises à jour logicielles de sécurité. Vous trouverez des détails sur le bulletin de sécurité en effectuant une recherche sur l'ID du bulletin sur la page Web [Centre de réponse aux problèmes de sécurité Microsoft (MSRC)](https://portal.msrc.microsoft.com/) .  
+
+> [!NOTE]
+> La manière dont Microsoft documente les mises à jour de sécurité évolue. Le modèle précédent utilisait des pages Web de bulletin de sécurité et incluait les numéros d’identification du bulletin de sécurité (par exemple, MS16-XXX) comme point de pivot. Ce type de documentation des mises à jour de sécurité, y compris les numéros d’identification du bulletin, va être mis hors service et remplacé par le Guide de mise à jour de la sécurité. Au lieu des ID de bulletin, le nouveau guide s’appuie sur les numéros d’identification de vulnérabilité et les numéros d’identification des articles de la Base de connaissances. Pour plus d’informations, consultez les [FAQ sur le guide de mise à jour de la sécurité](https://www.microsoft.com/msrc/faqs-security-update-guide).
+
 
 - **Article ID**: indique l’ID de l’article pour la mise à jour logicielle. L'article référencé fournit des informations détaillées sur la mise à jour logicielle et le problème qu'elle corrige ou améliore.  
 
@@ -94,7 +98,7 @@ Sous l'onglet **Informations de contenu** , consultez les informations suivantes
 
 -   **Chemin source**: indique le chemin des fichiers sources de la mise à jour logicielle.  
 
--   **Taille (Mo)**: indique la taille des fichiers sources de la mise à jour logicielle.  
+-   **Taille (Mo)** : indique la taille des fichiers sources de la mise à jour logicielle.  
 
 ####  <a name="BKMK_CustomBundleInformation"></a> Informations sur le groupement personnalisé  
 Dans l'onglet **Informations sur le groupement personnalisé** , consultez les informations sur le groupement personnalisé pour la mise à jour logicielle. Lorsque la mise à jour logicielle sélectionnée contient des mises à jour logicielles regroupées situées dans le fichier de mise à jour logicielle, celles-ci sont affichées dans la section **Informations sur le groupement** . Cet onglet n'affiche pas les mises à jour logicielles groupées qui apparaissent sous l'onglet **Informations de contenu** , notamment les fichiers de mise à jour des différentes langues.  
@@ -134,6 +138,6 @@ Par défaut, la liste de révocation de certificats n’est pas contrôlée pend
 Si vous l’utilisez, la vérification de la liste de révocation de certificats doit être activée sur les consoles Configuration Manager qui traitent les mises à jour logicielles.  
 
 #### <a name="to-enable-crl-checking"></a>Pour activer la vérification de la liste de révocation de certificats  
-Sur l’ordinateur effectuant la vérification de la liste de révocation de certificats, à partir du DVD du produit, exécutez la commande suivante à partir d’une invite de commandes : **\SMSSETUP\BIN\X64\\**<*langue*>**\UpdDwnldCfg.exe/checkrevocation**.  
+Sur l’ordinateur effectuant la vérification de la liste de révocation de certificats, à partir du DVD du produit, exécutez la commande suivante à partir d’une invite de commandes : **\SMSSETUP\BIN\X64\\** <*langue*> **\UpdDwnldCfg.exe/checkrevocation**.  
 
 Par exemple, pour l’anglais (US), exécutez **\SMSSETUP\BIN\X64\00000409\UpdDwnldCfg.exe /checkrevocation**  

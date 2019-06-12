@@ -2,7 +2,7 @@
 title: Plans de déploiement dans l’Analytique de bureau
 titleSuffix: Configuration Manager
 description: En savoir plus sur les plans de déploiement dans l’Analytique de bureau.
-ms.date: 05/14/2019
+ms.date: 06/10/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b44684f897e7aad4365c39e58c9bfd486bde7cbb
-ms.sourcegitcommit: 53f2380ac67025fb4a69fc1651edad15d98e0cdd
+ms.openlocfilehash: 88c78cef4717cc3a51a53b7fd5aba0cbefa93a8e
+ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65673292"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834928"
 ---
 # <a name="about-deployment-plans-in-desktop-analytics"></a>À propos des plans de déploiement dans l’Analytique de bureau
 
@@ -48,7 +48,7 @@ Dans le cadre de votre plan de déploiement, vous effectuez les actions suivante
 
 - Décider comment résoudre les problèmes avec les applications basées sur les recommandations d’Analytique de bureau  
 
-Analytique bureau actualise les données de plan de déploiement de tous les jours. Les modifications que vous apportez peuvent ne pas apparaîtront pendant 24 heures. Ces modifications incluent l’affectation d’importance à une application, ou en choisissant un appareil à inclure dans un projet pilote.  
+Par défaut, Analytique de bureau actualise quotidiennement les données de plan de déploiement. Toute modification apportée au sein d’un plan de déploiement, telles que l’affectation d’importance à une application ou en choisissant un appareil à inclure dans un programme pilote, prend jusqu'à 24 heures à traiter. Pour accélérer ce processus, demander une actualisation des données de la demande. Pour plus d’informations, consultez [Desktop Analytique FAQ](/sccm/desktop-analytics/faq#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal).  
 
 Après avoir connecté le bureau Analytique à Configuration Manager, sélectionnez vos collections dans les plans de déploiement. Puis cette intégration vous permet de déployer Windows sur un regroupement basé sur les données d’Analytique de bureau.
 

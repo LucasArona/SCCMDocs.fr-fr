@@ -2,7 +2,7 @@
 title: Forum aux questions sur les postes de travail Analytique
 titleSuffix: Configuration Manager
 description: Forum aux questions pour l’Analytique de bureau.
-ms.date: 04/26/2019
+ms.date: 06/10/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4596923f9a6a42ad98dc17257b22925ad0bc5eed
-ms.sourcegitcommit: 9af73f5c1b93f6ccaea3e6a096f75a5fecd65c2f
+ms.openlocfilehash: 1187688813c2d7a3308ed5ed53e29cb90640dda8
+ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2019
-ms.locfileid: "64562446"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834840"
 ---
 # <a name="desktop-analytics-faq"></a>Analytique bureau Forum aux questions
 
@@ -39,6 +39,13 @@ Oui. Pour plus d’informations, consultez [convertir du BIOS en UEFI pendant un
 ### <a name="can-i-use-desktop-analytics-with-windows-10-ltsc"></a>Puis-je utiliser Desktop Analytique avec Windows 10 LTSC ?
 
 Vous pouvez utiliser l’Analytique de bureau afin de faciliter la mise à jour des appareils à partir de Windows 10 Long-Term Servicing canal (LTSC) pour Windows 10 canal semi-annuel, Analytique de bureau ne prend en charge les mises à jour de Windows 10 LTSC. Ce canal de Windows 10 n’est pas destiné à une large utilisation et ne reçoit pas les mises à jour de fonctionnalité, il n’est pas une cible pris en charge avec l’Analytique de bureau. Pour plus d’informations, consultez [Windows comme une vue d’ensemble du service](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel).
+
+### <a name="can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal"></a>Puis-je réduire la quantité de temps que nécessaire pour les données sont à actualiser dans Mon portail Desktop Analytique ?
+
+Il existe deux types de données dans le portail d’Analytique de bureau : Données d’administration et les données de diagnostic. Pour actualiser l’administrateur des données sur demande, ouvrez le menu volant devise de données et sélectionnez **appliquer les modifications**. Cette action déclenche immédiatement une actualisation à usage unique de toutes les modifications d’administrateur dans vos espaces de travail. Les modifications se propageront et sont généralement disponibles dans les 15 à 60 minutes. La synchronisation dépend de la taille de votre espace de travail et l’étendue des modifications en attente. Vous pouvez demander une actualisation des données de la demande jusqu'à six fois pendant une période de 24 heures. 
+
+Toutes les données est mis à jour automatiquement une fois par jour, même si vous ne demandez pas une actualisation des données de la demande. Il n’existe aucun moyen pour déclencher une actualisation à la demande de données de diagnostic. Pour plus d’informations sur les différents types de données d’Analytique de bureau, consultez [latence des données](/sccm/desktop-analytics/troubleshooting#data-latency).
+
 
 ## <a name="privacy"></a>Confidentialité
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b1015573d62bdbbd317b9f787071e7725e5d4362
-ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.openlocfilehash: c7932609d9a52968a3c610fd9c5a00326cced8d5
+ms.sourcegitcommit: 9c02c00c4061ab17beb3bc1cc895b533f3b55bc4
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66176124"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66501717"
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-os-in-configuration-manager"></a>Créer une séquence de tâches pour mettre à niveau un système d’exploitation dans Configuration Manager
 
@@ -147,7 +147,7 @@ La mise en cache préalable du contenu vous permet de laisser le client téléch
 
 - **Vérification de la batterie** : ajoutez des étapes dans ce groupe pour contrôler si l’ordinateur est sur batterie ou sur secteur. Cette action doit être effectuée par un utilitaire ou un script personnalisé. Par exemple : à l’aide de WbemTest, connectez-vous l’espace de noms `root\cimv2`. Puis exécutez la requête suivante : `Select Batterystatus From Win32_Battery where batterystatus != 2`. Si elle renvoie des résultats, l’appareil fonctionne sur batterie. Sinon, l’appareil est branché sur secteur.  
 
-- **Vérification de la connexion réseau/câblée** : ajoutez des étapes dans ce groupe pour contrôler si l’ordinateur est connecté à un réseau et n’utilise pas de connexion sans fil. Cette action doit être effectuée par un utilitaire ou un script personnalisé.  
+- **Vérification de la connexion réseau/câblée** : ajoutez des étapes dans ce groupe pour contrôler si l’ordinateur est connecté à un réseau et n’utilise pas de connexion sans fil. Cette action doit être effectuée par un utilitaire ou un script personnalisé.  Par exemple : à l’aide de WbemTest, connectez-vous l’espace de noms `root\cimv2`. Puis exécutez la requête suivante : `Select * From Win32_NetworkAdapter Where NetConnectionStatus = 2 and PhysicalAdapter = 'True' and NetConnectionID = 'Wi-Fi'`. Si elle renvoie des résultats, l’appareil fonctionne en Wi-Fi. Sinon, l’appareil est connecté au réseau à l’aide d’un câble.
 
 - **Supprimer les applications incompatibles** : ajoutez des étapes dans ce groupe pour supprimer toutes les applications incompatibles avec cette version de Windows 10. Il existe différentes façons de désinstaller une application selon les cas.  
 

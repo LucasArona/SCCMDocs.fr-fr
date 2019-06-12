@@ -2,7 +2,7 @@
 title: 'Didacticiel : déployer Windows 10'
 titleSuffix: Configuration Manager
 description: Un didacticiel sur l’utilisation d’Analytique de bureau et de Configuration Manager pour déployer Windows 10 sur un groupe pilote.
-ms.date: 06/07/2019
+ms.date: 06/10/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: tutorial
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 09259b62eba5a6cbd84b487f83f0fb26d7cbb7c1
-ms.sourcegitcommit: 725e1bf7d3250c2b7b7be9da01135517428be7a1
+ms.openlocfilehash: ba11906bb8febcd2c2c5ab9295d391680763e0cf
+ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821956"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834787"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>Tutoriel : Déployer Windows 10 sur le pilote
 
@@ -256,7 +256,7 @@ Utilisez cette procédure pour créer un plan de déploiement dans l’Analytiqu
 
     - **Date de fin**: Choisissez la date à laquelle Windows doit être entièrement déployé à tous les appareils ciblés.  
 
-5. Sélectionnez **créer**. Le nouveau plan s’affiche dans la liste des plans de déploiement lors de son traitement. Le traitement peut prendre jusqu'à 48 heures avant de procéder à l’étape suivante.  
+5. Sélectionnez **créer**. Le nouveau plan s’affiche dans la liste des plans de déploiement lors de son traitement. Pour accélérer le traitement, demander une actualisation des données de la demande. Pour plus d’informations, consultez [Desktop Analytique FAQ](/sccm/desktop-analytics/faq#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal).
 
 6. Ouvrez le plan de déploiement en sélectionnant son nom.  
 
