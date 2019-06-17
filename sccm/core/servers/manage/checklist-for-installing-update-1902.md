@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 801a4819e4bfc9c0f18b87915ea0969b0aa60dc3
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: ceb7f7156c505e73db3fba0d02d60ec044958846
+ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65497872"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66716127"
 ---
 # <a name="checklist-for-installing-update-1902-for-configuration-manager"></a>Liste de contrôle pour l’installation de la mise à jour 1902 de Configuration Manager
 
@@ -130,7 +130,7 @@ Si une tâche de maintenance de base de données du site s’exécute pendant l�
 Pour plus d’informations, consultez  [Tâches de maintenance](/sccm/core/servers/manage/maintenance-tasks)  et [Référence des tâches de maintenance](/sccm/core/servers/manage/reference-for-maintenance-tasks).
 
 #### <a name="temporarily-stop-any-antivirus-software"></a>Arrêter temporairement tout logiciel antivirus 
-Avant de mettre à jour un site, arrêtez les logiciels antivirus sur les serveurs Configuration Manager. <!--SMS.503481--> 
+Avant de mettre à jour un site, arrêtez les logiciels antivirus sur les serveurs Configuration Manager. Le logiciel antivirus peut verrouiller certains fichiers qui doivent être mis à jour, ce qui entraîne l’échec de notre mise à jour. <!--SMS.503481--> 
 
 #### <a name="create-a-backup-of-the-site-database"></a>Créer une sauvegarde de la base de données du site 
 Avant de mettre à jour un site, sauvegardez la base de données du site sur le site d’administration centrale et les sites principaux. Cette opération garantit l’accès à une sauvegarde réussie en cas de reprise d’activité après sinistre.

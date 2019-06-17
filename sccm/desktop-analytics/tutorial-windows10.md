@@ -2,7 +2,7 @@
 title: 'Didacticiel : déployer Windows 10'
 titleSuffix: Configuration Manager
 description: Un didacticiel sur l’utilisation d’Analytique de bureau et de Configuration Manager pour déployer Windows 10 sur un groupe pilote.
-ms.date: 06/10/2019
+ms.date: 06/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: tutorial
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba11906bb8febcd2c2c5ab9295d391680763e0cf
-ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
+ms.openlocfilehash: d8b73deb60cf88f0bdf428bb87250ce115a1084b
+ms.sourcegitcommit: d47d2f03482e48d343e2139a341e61022331e6c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66834787"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67145813"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>Tutoriel : Déployer Windows 10 sur le pilote
 
@@ -94,7 +94,7 @@ Avant de commencer ce didacticiel, assurez-vous que vous disposez des prérequis
 
 Utilisez cette procédure pour vous connecter à l’Analytique de bureau et le configurer dans votre abonnement. Cette procédure est un processus unique pour configurer Desktop Analytique pour votre organisation.  
 
-1. Ouvrez le portail d’Analytique de bureau dans Gestion des appareils Microsoft 365 en tant qu’utilisateur avec **administrateur général** autorisations. Sélectionnez **Démarrer**.  
+1. Ouvrez le [portail d’Analytique de Desktop](https://aka.ms/desktopanalytics) dans Gestion des appareils Microsoft 365 en tant qu’utilisateur avec **administrateur général** autorisations. Sélectionnez **Démarrer**.  
 
 2. Sur le **accepter le contrat de service** page, passez en revue le contrat de service, puis sélectionnez **Accept**.  
 
@@ -232,7 +232,7 @@ Configuration Manager synchronise vos collections dans les 60 minutes de la cré
 
 Utilisez cette procédure pour créer un plan de déploiement dans l’Analytique de bureau.
 
-1. Ouvrez le [portail d’Analytique de bureau](https://aka.ms/m365aprod). Utilisez les informations d’identification qui disposent au moins **contributeurs de l’espace de travail** autorisations.  
+1. Ouvrez le [portail d’Analytique de bureau](https://aka.ms/desktopanalytics). Utilisez les informations d’identification qui disposent au moins **contributeurs de l’espace de travail** autorisations.  
 
 2. Sélectionnez **Plans de déploiement** dans le groupe de gestion.  
 
@@ -266,7 +266,7 @@ Utilisez cette procédure pour créer un plan de déploiement dans l’Analytiqu
 
     2. Sélectionnez chaque application, puis **modifier**. Vous pouvez sélectionner plusieurs applications à modifier en même temps.  
 
-    3. Choisissez un niveau d’importance dans le **Importance** liste. Si vous souhaitez Analytique de bureau pour valider l’application pendant la phase pilote, sélectionnez **critique** ou **Important**. Il ne valide pas les applications marquées en tant que **pas Important**. Prendre en compte la [risque de compatibilité](/sccm/desktop-analytics/compat-risk) et d’autres informations de plan lors de l’affectation de niveaux d’importance.  
+    3. Choisissez un niveau d’importance dans le **Importance** liste. Si vous souhaitez Analytique de bureau pour valider l’application pendant la phase pilote, sélectionnez **critique** ou **Important**. Il ne valide pas les applications marquées en tant que **pas Important**. Évaluer son [compatibilité](/sccm/desktop-analytics/compat-assessment) et d’autres informations de plan lors de l’affectation de niveaux d’importance.  
 
         Lorsque vous affectez des niveaux d’importance, vous pouvez également choisir la décision de mise à niveau.  
 

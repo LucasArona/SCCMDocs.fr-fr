@@ -2,7 +2,7 @@
 title: Serveurs de système de site pris en charge
 titleSuffix: Configuration Manager
 description: Déterminez les versions de Windows que vous pouvez utiliser pour héberger un site ou un rôle de système de site Configuration Manager.
-ms.date: 04/16/2019
+ms.date: 05/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3e505562ac8a0d34f1b58bd0b6210b4630a6c825
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 871f007bd1ee0e38635e03a6b17a9125758553af
+ms.sourcegitcommit: 65e9b30e2b53ab9db679a7b1d50634a73c0028db
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499328"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66429814"
 ---
 # <a name="supported-operating-systems-for-configuration-manager-site-system-servers"></a>Systèmes d’exploitation pris en charge pour les serveurs de système Configuration Manager
 
@@ -213,6 +213,8 @@ Ce système d’exploitation n’est pas pris en charge pour les serveurs de sit
 
     -   Les points de distribution sur ce système d’exploitation ne prennent pas en charge le démarrage réseau des ordinateurs clients en mode EFI. Les ordinateurs clients avec un démarrage BIOS ou EFI en mode hérité sont pris en charge.  
 
+> [!Warning]  
+> Windows Server 2008 ne prend pas en charge TLS 1.2. Si vous activez ce protocole dans votre environnement, les ordinateurs sous Windows Server 2008 ne communiqueront plus avec le site. Pour plus d’informations, consultez [Comment activer TLS 1.2 pour Configuration Manager](/sccm/core/plan-design/security/enable-tls-1-2).  
 
 
 ## <a name="bkmk_client"></a> Versions du SE client

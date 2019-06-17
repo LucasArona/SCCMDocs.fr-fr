@@ -2,7 +2,7 @@
 title: Connecter le Gestionnaire de configuration
 titleSuffix: Configuration Manager
 description: Guide pratique pour la connexion de Configuration Manager avec l’Analytique de bureau.
-ms.date: 06/07/2019
+ms.date: 06/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bdfed49a68963dc0d46a38810f0ac9dc8041d3fc
-ms.sourcegitcommit: e3c1eb0b75d79c05a750d49354c851d15d5e26a3
+ms.openlocfilehash: 7925bf44c78b6f8d51797145b5ae463ac3498eea
+ms.sourcegitcommit: af207075c4a8bc59242a41d3192a4057452a0e55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67038782"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67141051"
 ---
 # <a name="how-to-connect-configuration-manager-with-desktop-analytics"></a>Comment connecter Configuration Manager avec l’Analytique de bureau
 
@@ -44,6 +44,9 @@ Vous devez également installer la version 1902 correctif cumulatif (4500571) po
 Utilisez cette procédure pour connecter Configuration Manager à l’Analytique de bureau et configurer les paramètres de l’appareil. Cette procédure est un processus unique pour attacher votre hiérarchie vers le service cloud.  
 
 1. Dans la console Configuration Manager, accédez à l’espace de travail **Administration**, développez **Services cloud**, puis sélectionnez le nœud **Services Azure**. Sélectionnez **configurer les Services Azure** dans le ruban.  
+
+    > [!Tip]  
+    > Dans la console Configuration Manager, accédez à la **bibliothèque de logiciels** espace de travail, puis sélectionnez le **Desktop Analytique maintenance** nœud. Dans le *nouveau pour bureau Analytique ?* , sélectionnez le deuxième lien vers *connecter Configuration Manager pour le service d’Analytique de bureau*.  
 
 2. Sur le **Azure Services** page de l’Assistant Services Azure, configurez les paramètres suivants :  
 

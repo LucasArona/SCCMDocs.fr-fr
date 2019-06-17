@@ -12,12 +12,12 @@ ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fa96b497ce942430c5a8391eefd41e939c634ae3
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: be84e7bfae54cf3099b588cce35b01a424c45b8f
+ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56143671"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66715999"
 ---
 # <a name="capabilities-in-technical-preview-1601-for-system-center-configuration-manager"></a>Fonctionnalités de la version d’évaluation technique 1601 pour System Center Configuration Manager
 
@@ -93,7 +93,7 @@ Dans la version Technical Preview 1601, nous avons ajouté la prise en charge d
 
 -   **Accès conditionnel avec le service d’attestation d’intégrité** Vous pouvez maintenant limiter l’accès aux services de messagerie et Office 365 en fonction de l’intégrité des appareils, qui est signalée par le service d’attestation d’intégrité.  En outre, les appareils gérés par Intune sont inclus dans les rapports d’intégrité des appareils.  
 
-    Une nouvelle règle de conformité a été ajoutée à la console Configuration Manager pour vous permettre de spécifier si l’accès doit être autorisé ou refusé aux appareils en fonction de leur état d’intégrité.  Pour créer cette règle, ouvrez l’**Assistant Création de stratégies de conformité** et ajoutez une nouvelle règle.  Sélectionnez comme condition **Signalé comme ne posant aucun problème d’intégrité par le service HAS (Health Attestation Service)** pour la condition et affectez la valeur **True**.  Cette opération permet de garantir que seuls les appareils qui sont signalés comme étant en état d’intégrité auront accès aux ressources de votre entreprise. Pour plus d’informations sur le service d’attestation d’intégrité et sur la façon dont l’intégrité des appareils est signalée dans Intune, consultez [Attestation d’intégrité de l’appareil](#bkmk_devicehealth).  
+    Une nouvelle règle de conformité a été ajoutée à la console Configuration Manager pour vous permettre de spécifier si l’accès doit être autorisé ou refusé aux appareils en fonction de leur état d’intégrité.  Pour créer cette règle, ouvrez l’**Assistant Création de stratégies de conformité** et ajoutez une nouvelle règle.  Sélectionnez comme condition **Signalé comme ne posant aucun problème d’intégrité par le service HAS (Health Attestation Service)** pour la condition et affectez la valeur **True**.  Cette opération permet de garantir que seuls les appareils qui sont signalés comme étant en état d’intégrité auront accès aux ressources de votre entreprise. Pour plus d’informations sur le service d’attestation d’intégrité et sur la façon dont l’intégrité des appareils est signalée dans Intune, consultez [Attestation d’intégrité de l’appareil](/sccm/core/get-started/capabilities-in-technical-preview-1512#bkmk_devicehealth).  
 
 -   **Nouveaux paramètres de stratégie de conformité :** les nouveaux paramètres de stratégie de conformité vous aident à améliorer la sécurité et la protection sur les appareils utilisés pour accéder aux services de messagerie d’entreprise et SharePoint :  
 

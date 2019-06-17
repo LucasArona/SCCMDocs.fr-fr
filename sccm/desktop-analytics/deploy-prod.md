@@ -2,7 +2,7 @@
 title: Comment déployer en production
 titleSuffix: Configuration Manager
 description: Guide pratique pour le déploiement sur un groupe de production d’Analytique de bureau.
-ms.date: 04/22/2019
+ms.date: 06/14/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 20067da8eccf9896bcd948f8efa2becd2b35a707
-ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
+ms.openlocfilehash: e93b08766da4abc37ca3663de5fe2919f1953833
+ms.sourcegitcommit: d47d2f03482e48d343e2139a341e61022331e6c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65083475"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67146060"
 ---
 # <a name="how-to-deploy-to-production-with-desktop-analytics"></a>Comment déployer en production avec Analytique de bureau
 
@@ -76,23 +76,15 @@ Il peut également y avoir des ressources dans le **Attention nécessitée** ou 
 Passez en revue toutes les applications. Une fois qu’un appareil donné a une décision de mise à niveau positive pour tous les éléments multimédias, son état passe ensuite à « prêt pour la production. » Afficher le nombre actuel sur la page principale pour le plan de déploiement en sélectionnant la troisième étape de déploiement, **déployer**.
 
 
-
 ## <a name="bkmk_deploy"></a> Déployer sur des appareils qui sont prêts
 
 Configuration Manager utilise les données d’Analytique de bureau pour créer un regroupement pour le déploiement de production. Ne déployez pas la séquence de tâches à l’aide d’un déploiement classique. Utilisez la procédure suivante pour créer un déploiement intégré de bureau Analytique :
 
-1. Dans la console Configuration Manager, accédez à la **bibliothèque de logiciels**, développez **Desktop Analytique maintenance**, puis sélectionnez le **Plans de déploiement** nœud.  
+Si vous avez suivi le processus recommandé pour [déployer sur des appareils pilotes](/sccm/desktop-analytics/deploy-pilot#deploy-to-pilot-devices), le déploiement par phases de Configuration Manager est prêt. Lorsque vous marquez des actifs *prêt*, Analytique de bureau synchronise automatiquement ces appareils à Configuration Manager. Ces appareils sont ensuite ajoutés à la collection de production. Lorsque le déploiement par phases se déplace à la deuxième phase, ces appareils de production reçoivent le déploiement de mise à niveau.
 
-2. Sélectionnez votre plan de déploiement, puis **détails du Plan de déploiement** dans le ruban.  
+Si vous avez configuré le déploiement par phases pour **commencer manuellement le deuxième déploiement phase**, vous devez déplacer manuellement vers la phase suivante. Pour plus d’informations, consultez [Gérer et effectuer le monitoring des déploiements par phases](/sccm/osd/deploy-use/manage-monitor-phased-deployments#bkmk_move).
 
-3. Dans le **état de la Production** vignette, sélectionnez **séquence de tâches** dans la liste déroulante.  
-
-    > [!Note]  
-    > N’utilisez pas le **Application** option. Il est réservé pour les futures fonctionnalités.
-
-    Sélectionnez **déployer**. Cette action lance l’Assistant Déploiement de logiciel pour le type d’objet sélectionné.
-
-Pour plus d'informations, voir [Déployer une séquence de tâches](/sccm/osd/deploy-use/deploy-a-task-sequence).
+Si vous avez créé un déploiement unique intégrée au bureau Analytique à la collection pilote, vous devez répéter ce processus à déployer sur le regroupement de production.
 
 
 ### <a name="address-deployment-alerts"></a>Résoudre les alertes de déploiement
@@ -106,7 +98,6 @@ Comme avec le déploiement pilote, Analytique de bureau vous conseille de tout p
 - Nécessite une attention - problèmes (triés par type de problème)
 
 ![Statut de déploiement de production de capture d’écran de bureau Analytique](media/prod-deployment-status.png)
-
 
 
 ## <a name="bkmk_monitor"></a> Surveiller l’intégrité des appareils mis à jour

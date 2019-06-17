@@ -4,8 +4,8 @@
       href: overview.md
     - name: Didacticiels
       items:
-        - name: Office 365 Pilote
-          href: tutorial-office-365.md
+        - name: Pilote Windows 10
+          href: tutorial-windows10.md
     - name: Concepts
       items:
         - name: Plans de déploiement
@@ -38,7 +38,13 @@
       items:
         - name: Activer le partage de données
           href: enable-data-sharing.md
-        - name: Résolution des problèmes
-          href: troubleshooting.md
         - name: Confidentialité
           href: privacy.md
+        - name: Dépannage
+          href: troubleshooting.md
+        - name: Surveiller l’intégrité de la connexion
+          href: monitor-connection-health.md
+        - name: Forum aux questions
+          href: faq.md
+        - name: Compte fermé
+          href: account-close.md

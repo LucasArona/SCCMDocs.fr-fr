@@ -1,8 +1,8 @@
 ---
-title: 'Surveiller les clients '
+title: Surveiller les clients
 titleSuffix: Configuration Manager
-description: Obtenez des instructions détaillées sur la façon de surveiller les clients dans System Center Configuration Manager.
-ms.date: 04/23/2017
+description: Obtenir des instructions détaillées sur la façon de surveiller les clients dans Configuration Manager
+ms.date: 05/31/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,70 +11,83 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 91eb65d8a0cf1255b846b5d15b9994fb2191df78
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 55fd698ac5213a3b11b207d0625d953f687e319f
+ms.sourcegitcommit: 65753c51fbf596f233fc75a5462ea4a44005c70b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56137151"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66463035"
 ---
-# <a name="how-to-monitor-clients-in-system-center-configuration-manager"></a>Guide pratique pour surveiller des clients dans System Center Configuration Manager
+# <a name="how-to-monitor-clients-in-configuration-manager"></a>Comment surveiller des clients dans Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
+Après avoir installé le client Configuration Manager sur les appareils Windows de votre site, surveillez leur intégrité et leur activité dans la console Configuration Manager.  
 
- Une fois l’application cliente System Center Configuration Manager installée sur les ordinateurs et appareils Windows de votre site, vous pouvez surveiller leur intégrité et leur activité dans la console Configuration Manager.  
 
-##  <a name="bkmk_about"></a> À propos du statut du client  
- Configuration Manager présente les types d’informations suivants sous forme d’état du client :  
+## <a name="bkmk_about"></a> À propos du statut du client
 
--   **État en ligne du client** : à compter de la version 1602 de Configuration Manager, cet état indique si l’ordinateur est en ligne ou non. Un ordinateur est considéré comme étant en ligne s’il est connecté au point de gestion qui lui est affecté.  Pour indiquer que le client est en ligne, il envoie des messages de type ping au point de gestion. Si le point de gestion n’a pas reçu de message après environ 5 minutes, le client est considéré comme étant hors connexion.  
+Configuration Manager présente les types d’informations suivants sous forme d’état du client :  
 
--   **Activité du client** : cet état indique si le client a été activement en contact avec Configuration Manager au cours des 7 derniers jours. Si le client n’a pas demandé de mise à jour de la stratégie, a envoyé un message de pulsation, ou a envoyé un inventaire matériel dans les 7 jours, il est considéré comme inactif.  
+- **État de connexion du client** : Le site considère qu’un appareil est **en ligne** s’il est connecté au point de gestion qui lui est affecté. Pour indiquer que le client est en ligne, il envoie des messages de type ping au point de gestion. Si le point de gestion n’a pas reçu de message après cinq minutes, le site considère que le client est **hors connexion**.  
 
--   **Intégrité du client** : cet état indique la réussite de l’évaluation périodique de l’exécution du client Configuration Manager sur l’ordinateur.  L’évaluation vérifie l’ordinateur et peut corriger certains problèmes détectés. Pour plus d’informations, consultez [Vérifications et corrections effectuées par la fonction d’intégrité du client](#BKMK_ClientHealth).  
+- **Activité des clients** : Le site considère que le client est **actif** si ce dernier a communiqué avec Configuration Manager au cours des sept derniers jours. Le site considère que le client est **inactif** si ce dernier n’a pas effectué les actions suivantes au cours des sept derniers jours :  
 
-     Sur les ordinateurs qui exécutent Windows 7, l'intégrité du client s'exécute en tant que tâche planifiée. Sur les systèmes d'exploitation ultérieurs, l'intégrité du client s'exécute automatiquement pendant la fenêtre de maintenance de Windows.  
+    - Demandé la mise à jour d’une stratégie  
+    - Envoyé un message de pulsation  
+    - Envoyé un inventaire matériel  
 
-     Vous pouvez configurer la mise à jour de manière à ne pas l'exécuter sur des ordinateurs spécifiques, par exemple, sur un serveur essentiel pour l'entreprise. En outre, si vous souhaitez évaluer d’autres éléments, vous pouvez utiliser les paramètres de compatibilité de Configuration Manager pour fournir une solution complète de surveillance de l’intégrité, de l’activité et de la conformité globales des ordinateurs de votre organisation. Pour plus d’informations sur les paramètres de compatibilité, consultez [Planifier et configurer les paramètres de compatibilité dans System Center Configuration Manager](../../../compliance/plan-design/plan-for-and-configure-compliance-settings.md).  
+- **Intégrité du client** : État de l’évaluation périodique de l’exécution du client Configuration Manager sur l’appareil. L’évaluation vérifie l’appareil et peut corriger certains problèmes détectés. Pour plus d’informations, consultez [Vérifications d’intégrité du client](#BKMK_ClientHealth).  
 
-##  <a name="bkmk_indStatus"></a> Surveiller le statut de clients individuels  
+     Sur les appareils qui exécutent Windows 7, l'intégrité du client s'exécute en tant que tâche planifiée. Sur les versions de système d'exploitation ultérieures, l'intégrité du client s'exécute automatiquement pendant la fenêtre de maintenance de Windows.  
 
-1.  Dans la console Configuration Manager, cliquez sur **Ressources et Conformité** > **Appareils** ou choisissez un regroupement sous **Regroupements d’appareils**.  
+     Vous pouvez configurer la mise à jour de manière à ne pas l'exécuter sur des appareils spécifiques, par exemple, sur un serveur essentiel pour l'entreprise. Si vous souhaitez évaluer d’autres éléments, utilisez les paramètres de compatibilité de Configuration Manager pour surveiller les configurations supplémentaires. Pour plus d’informations sur les paramètres de compatibilité, consultez [Planifier et configurer les paramètres de compatibilité](/sccm/compliance/plan-design/plan-for-and-configure-compliance-settings).  
 
-     À compter de la version 1602 de Configuration Manager, les icônes au début de chaque ligne indiquent le statut de connexion de l’appareil :  
+- **Hors service** : Le site a marqué l’enregistrement d’appareil en vue d’une suppression. Ce comportement peut survenir lorsqu’une nouvelle inscription d’un même appareil est affectée au même site ou à un autre site primaire dans une hiérarchie. Le site supprime ces appareils la prochaine fois qu’il exécute la tâche de maintenance de site **Supprimer les données de découverte anciennes**.<!-- SCCMDocs issue #1418 -->  
+
+- **Obsolète** : Le site a découvert un nouvel enregistrement d’appareil avec le même ID de matériel, et il marque donc l’ancien enregistrement comme étant obsolète. Les rapports ne comptabilisent pas plusieurs fois les enregistrements obsolètes d’un même appareil. Vous pouvez toujours cibler des stratégies pour les appareils obsolètes. Si le site n’obtient aucune pulsation pour un enregistrement obsolète après 90 jours d’inactivité, il supprime l’appareil obsolète lorsqu’il exécute la tâche de maintenance de site **Supprimer les données obsolètes de découverte des clients**.
+
+
+## <a name="bkmk_indStatus"></a> Surveiller des clients individuels
+
+1. Dans la console de Configuration Manager, accédez à l’espace de travail **Actifs et conformité**. Sélectionnez le nœud **Appareils** ou choisissez un regroupement sous **Regroupements d’appareils**.  
+
+    Les icônes au début de chaque ligne indiquent le statut de connexion de l’appareil :  
 
     |||  
     |-|-|  
-    |![icône de statut de connexion des clients](../../../core/clients/manage/media/online-status-icon.png)|L’appareil est en ligne.|  
-    |![icône de statut déconnecté des clients](../../../core/clients/manage/media/offline-status-icon.png)|L’appareil est hors connexion.|  
-    |![icône de statut inconnu des clients](../../../core/clients/manage/media/unknown-status-icon.png)|Le statut de connexion est inconnu.|  
-    |![client non installé](../../../core/clients/manage/media/client-not-installed.png)|Le client n’est pas installé sur l’appareil.|  
+    |![icône de statut de connexion des clients](../../../core/clients/manage/media/online-status-icon.png)|L’appareil est en ligne|  
+    |![icône de statut déconnecté des clients](../../../core/clients/manage/media/offline-status-icon.png)|L’appareil est hors connexion|  
+    |![icône de statut inconnu des clients](../../../core/clients/manage/media/unknown-status-icon.png)|Le statut de connexion est inconnu|  
+    |![client non installé](../../../core/clients/manage/media/client-not-installed.png)|Le client n’est pas installé sur l’appareil|  
 
-2.  Pour obtenir un statut de connexion plus détaillé, ajoutez les informations de statut de connexion du client à l’affichage du périphérique, en double-cliquant sur l’en-tête de colonne et en cliquant sur les champs de statut de connexion que vous souhaitez ajouter. Les colonnes que vous pouvez ajouter sont les suivantes :  
+2. Pour obtenir un statut de connexion plus détaillé, ajoutez les informations de statut de connexion du client à l’affichage de l’appareil. Cliquez avec le bouton droit sur l’en-tête de colonne et sélectionnez les champs de statut de connexion que vous voulez ajouter :
 
-    -   **Statut de connexion de l’appareil** indique si le client est actuellement en ligne ou hors connexion. (Il s’agit des mêmes informations que celles fournies par les icônes).  
+    - **Statut de connexion de l’appareil** : indique si le client est actuellement en ligne ou hors connexion. (Ce statut affiche les mêmes informations que celles fournies par les icônes).  
 
-    -   **Heure de la dernière connexion** indique à quel moment le statut de connexion du client est passé en ligne.  
+    - **Heure de la dernière connexion** : indique à quel moment le statut de connexion du client est passé en ligne  
 
-    -   **Heure de la dernière déconnexion** indique à quel moment le statut est passé hors connexion.  
+    - **Heure de la dernière déconnexion** indique à quel moment le statut est passé hors connexion  
 
-3.  Cliquez sur un client individuel dans le volet Liste pour voir plus d’informations sur le statut dans le volet Détails, dont des informations sur l’activité du client et l’intégrité du client.  
+3. Sélectionnez un client individuel dans le volet Liste pour voir plus d’informations sur le statut dans le volet Détails, dont des informations sur l’activité du client et l’intégrité du client.  
 
-##  <a name="bkmk_allStatus"></a> Surveiller le statut de tous les clients  
 
-1. Dans la console Configuration Manager, cliquez sur **Surveillance** > **État du client**. Dans cette page de la console, vous pouvez consulter les statistiques générales relatives à l’activité du client et à l’intégrité du client sur le site.  Vous pouvez également modifier l’étendue des informations en choisissant un autre regroupement.  
+## <a name="bkmk_allStatus"></a> Surveiller le statut de tous les clients
 
-2. Pour explorer en détail les statistiques renvoyées, cliquez sur le nom des informations communiquées (par exemple, **Clients actifs ayant réussi la vérification ou sans résultats**) et passez en revue les informations sur les différents clients.  
+1. Dans la console Configuration Manager, accédez à l’espace de travail **Supervision**, puis sélectionnez le nœud **État du client**. Consultez les statistiques générales relatives à l’activité du client et à l’intégrité du client sur le site. Modifiez l’étendue des informations en choisissant un autre regroupement.  
 
-3. Cliquez sur **Activité des clients** pour afficher des graphiques illustrant l’activité des clients sur votre site Configuration Manager.  
+2. Pour explorer en détail les statistiques renvoyées, cliquez sur le nom des informations communiquées. Par exemple, **Clients actifs ayant réussi la vérification ou sans résultats**. Puis passez en revue les informations sur les différents clients.  
 
-4. Cliquez sur **Intégrité du client** pour afficher des graphiques illustrant l’état de vérification de l’intégrité des clients de votre site Configuration Manager.  
+3. Sélectionnez **Activité des clients** pour afficher des graphiques montrant l’activité des clients sur votre site Configuration Manager.  
 
-   Vous pouvez configurer des alertes pour vous avertir lorsque les résultats de l'intégrité des clients ou l'activité des clients passent au-dessous d'un pourcentage de clients spécifié dans un enregistrement ou lorsque la mise à jour échoue sur un pourcentage de clients spécifié. Pour plus d’informations sur la configuration de l’état du client, consultez [Comment configurer l’état du client dans System Center Configuration Manager](../../../core/clients/deploy/configure-client-status.md).  
+4. Sélectionnez **Intégrité du client** pour afficher des graphiques montrant l’état de vérification de l’intégrité des clients de votre site Configuration Manager.  
 
-##  <a name="BKMK_ClientHealth"></a> Vérifications et corrections effectuées par la fonction d'intégrité du client  
- Les vérifications et corrections suivantes peuvent être effectuées par la fonction d'intégrité du client.  
+    Configurez des alertes pour être averti lorsque les résultats de la l’intégrité du client ou de l’activité du client passe sous un pourcentage spécifié. Le site peut également vous alerter en cas d’échec d’une mise à jour pour un pourcentage donné de clients. Pour plus d’informations, consultez [Guide pratique pour configurer l’état du client](/sccm/core/clients/deploy/configure-client-status).  
+
+
+## <a name="BKMK_ClientHealth"></a> Vérification de l’intégrité du client
+
+L’intégrité du client effectue les vérifications et corrections suivantes :  
 
 |Intégrité du client|Action corrective|Informations complémentaires|  
 |------------------|------------------------|----------------------|  
@@ -85,7 +98,6 @@ ms.locfileid: "56137151"
 |Test du récepteur d'événements WMI.|Redémarrer le service client|Vérifier si le récepteur d’événements WMI lié à Configuration Manager est perdu|  
 |Vérifier l'existence du service WMI (Windows Management Instrumentation)|Aucune correction|Aucune information supplémentaire|  
 |Vérifier que le client a été installé correctement|Réinstaller le client|Aucune information supplémentaire|  
-|Test de lecture/d'écriture de l'espace de stockage WMI|Réinitialiser le référentiel WMI et réinstaller le client Configuration Manager|La correction de cette intégrité du client est effectuée uniquement sur les ordinateurs qui exécutent Windows Server 2003, Windows XP (64 bits) ou des versions antérieures.|  
 |Vérifier que le type de démarrage du service anti-programme malveillant est automatique|Réinitialiser le type de démarrage du service sur automatique|Aucune information supplémentaire|  
 |Vérifier que le service anti-programme malveillant est en cours d'exécution|Démarrer le service anti-programme malveillant|Aucune information supplémentaire|  
 |Vérifier que le type de démarrage du service Windows Update est automatique ou manuel|Réinitialiser le type de démarrage du service sur automatique|Aucune information supplémentaire|  
@@ -99,13 +111,21 @@ ms.locfileid: "56137151"
 |Vérifier que le type de démarrage du service de transfert intelligent en arrière-plan est automatique ou manuel|Réinitialiser le type de démarrage du service sur automatique|Aucune information supplémentaire|  
 |Vérifier que le type de démarrage du service d'inspection du réseau est manuel|Réinitialiser le type de démarrage du service sur manuel, s'il est installé|Aucune information supplémentaire|  
 |Vérifier que le type de démarrage du service WMI (Windows Management Instrumentation) est automatique|Réinitialiser le type de démarrage du service sur automatique|Aucune information supplémentaire|  
-|Vérifier que le type de démarrage du service Windows Update sur les ordinateurs Windows 8 est automatique ou manuel|Réinitialiser le type de démarrage du service sur manuel|Aucune information supplémentaire|  
+|Vérifier que le type de démarrage du service Windows Update sur les appareils Windows 8 est automatique ou manuel|Réinitialiser le type de démarrage du service sur manuel|Aucune information supplémentaire|  
 |Vérifier l'existence du service client (hôte d'Agent SMS)|Aucune correction|Aucune information supplémentaire|  
 |Vérifier que le type de démarrage du service de contrôle à distance de Configuration Manager est automatique ou manuel|Réinitialiser le type de démarrage du service sur automatique|Aucune information supplémentaire|  
 |Vérifier que le service de contrôle à distance de Configuration Manager est en cours d'exécution|Démarrer le service de contrôle à distance|Aucune information supplémentaire|  
-|Vérifier l'intégrité du fournisseur WMI du client|Redémarrer le service WMI (Windows Management Instrumentation)|La correction de cette intégrité du client est effectuée uniquement sur les ordinateurs qui exécutent Windows Server 2003, Windows XP (64 bits) ou des versions antérieures.|  
 |Vérifier que le service de proxy de mise en éveil (proxy de mise en éveil ConfigMgr) est en cours d'exécution|Démarrer le service de proxy de mise en éveil ConfigMgr|Cette vérification du client est effectuée uniquement si le paramètre client **Gestion de l’alimentation** : **Autoriser le proxy de mise en éveil** est défini sur **Oui** sur les systèmes d’exploitation client pris en charge.|  
 |Vérifier que le type de démarrage du service de proxy de mise en éveil (proxy de mise en éveil ConfigMgr) est automatique|Réinitialiser le type de démarrage du service de proxy de mise en éveil ConfigMgr sur automatique|Cette vérification du client est effectuée uniquement si le paramètre client **Gestion de l’alimentation** : **Autoriser le proxy de mise en éveil** est défini sur **Oui** sur les systèmes d’exploitation client pris en charge.|  
 
+
+<!-- 
+5/31/2019 ACz: need to confirm if these checks are still applicable
+|WMI repository read and write test|Reset the WMI repository and reinstall the Configuration Manager client|Remediation of this client check is only performed on devices that run Windows Server 2003, Windows XP (64-bit) or earlier versions.|  
+|Verify that the client WMI provider is healthy|Restart the Windows Management Instrumentation service|Remediation of this client check is only performed on devices that run Windows Server 2003, Windows XP (64-bit) or earlier.|  
+ -->
+
+
 ## <a name="client-deployment-log-files"></a>Fichiers journaux de déploiement du client
-Pour plus d’informations sur les fichiers journaux utilisés par les opérations de déploiement et de gestion du client, consultez [Fichiers journaux dans System Center Configuration Manager](/sccm/core/plan-design/hierarchy/log-files#BKMK_ClientLogs).
+
+Pour plus d’informations sur les fichiers journaux utilisés par les opérations de déploiement et de gestion du client, consultez [Fichiers journaux](/sccm/core/plan-design/hierarchy/log-files#BKMK_ClientLogs).
