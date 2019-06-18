@@ -10,14 +10,13 @@ ms.assetid: 637fbd8e-b8ea-4c7e-95ee-a60a323c496e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e18e2e43e9bb768f81233fb2d2deda0ae05c1961
-ms.sourcegitcommit: d47d2f03482e48d343e2139a341e61022331e6c2
+ms.openlocfilehash: 5ee3d2c35424820658f91628b5f6e23be41498b2
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67145834"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67159143"
 ---
 # <a name="how-to-deploy-to-pilot-with-desktop-analytics"></a>Le déploiement pilote avec Analytique de bureau
 
@@ -58,12 +57,9 @@ Vous pouvez également rendre les décisions de l’échelle du système sur les
     - Tous les appareils de l’informatique
     - PDG office
 - Dans le **pilote Global** paramètres, vous incluez le **tous les équipements** collections. Vous excluez le **PDG office** collection.
-- Vous créez un plan de déploiement, puis sélectionnez le **tout Windows 10 clients** collection.
-- Votre **piloter les appareils inclus** liste contient les ensembles d’appareils suivants :
-    - Tous les appareils dans votre liste d’inclusion de pilote global : **Tous les appareils de l’informatique**
-    - Collections qui font également partie du groupe cible de plan de déploiement : **Tous les clients Windows 10**
-- Exclut les postes de travail Analytique à partir de la **supplémentaires recommandés appareils** répertorier tous les périphériques de votre pilote global *exclusion* liste : **PDG office**
-- Uniquement les deux premiers regroupements sont considérés comme faisant partie de l’implémentation pilote. Une fois que les mises à niveau réussites à ces groupes et les ressources sont *prêt*, Analytique de bureau synchronise les appareils dans le **PDG office** collection à la collection de production Configuration Manager.
+- Vous créez un plan de déploiement, puis sélectionnez **tout Windows 10 clients** collection en tant que votre **groupe cible**.
+- Le **piloter les appareils inclus** liste contient le sous-ensemble d’appareils sur votre **groupe cible**: **Tous les clients Windows 10** qui se trouvent également dans le pilote Global *inclusion* liste : **Tous les appareils de l’informatique**  
+- Le **des appareils supplémentaires recommandé** listes contient un ensemble d’appareils à partir de votre **groupe cible** qui fournissent une couverture maximale et redondance pour vos ressources importantes.  Exclut les postes de travail Analytique à partir de cette liste tous les périphériques de votre pilote global *exclusion* liste : **PDG office**
 
 
 ## <a name="address-issues"></a>Résoudre les problèmes
@@ -117,12 +113,9 @@ Configuration Manager utilise les données d’Analytique de bureau pour créer 
     > [!Note]  
     > Utilisez le paramètre par défaut à **commencer automatiquement cette phase après une période de report (en jours)** . Les critères suivants doivent être remplies pour la deuxième phase démarrer :
     >
-    > 1. Appareils de pilote doivent mettre à niveau et envoyer back révisée des données de diagnostic.
     > 1. La première phase atteint le **pourcentage de réussite du déploiement** critères de réussite. Vous configurez ce paramètre sur le déploiement par phases.
     > 1. Vous devez passer en revue et prendre des décisions de mise à niveau dans Analytique de bureau pour marquer des ressources importantes et critiques comme *prêt*. Pour plus d’informations, consultez [passez en revue les ressources dont ont besoin d’une décision de mise à niveau](/sccm/desktop-analytics/deploy-prod#bkmk_review).
     > 1. Synchronise les postes de travail Analytique aux regroupements Configuration Manager tous les appareils de production qui répondent à la *prêt* critères.
-    >
-    > Lorsque le Gestionnaire de Configuration par phases déploiement déplace automatiquement à la phase suivante, elle s’applique uniquement aux appareils qui synchronise les Analytique de bureau dans la collection de production.
 
 > [!Important]  
 > Ces collections continuent à synchroniser en tant que leurs changements d’appartenance. Par exemple, si vous identifiez un problème avec un élément multimédia et marquez comme **impossible**, les appareils avec cette ressource ne répondent pas à la *prêt* critères. Ces appareils sont supprimés de la collection de déploiement de production.
@@ -138,7 +131,7 @@ Ouvrez le plan de déploiement. Le **décisions de mise à niveau de préparatio
 
 - **Mise à niveau complète de la décision**: Un des états suivants :
     - Appareils avec des ressources dignes d’intérêt sont **prêt** ou **prêt avec mise à jour**
-    - L’état de l’appareil est **bloqué**, **appareil de remplacement** ou **Reinstall appareil**
+    - L’état de l’appareil est **bloqué**, [ **appareil de remplacement** ](/sccm/desktop-analytics/about-deployment-plans#plan-assets) ou **Reinstall appareil**
 
 - **Ne pas été revues**: Appareils avec des ressources dignes d’intérêt **ne pas été revues** ou **révision en cours**
 

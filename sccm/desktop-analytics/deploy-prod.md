@@ -10,14 +10,13 @@ ms.assetid: 637fbd8e-b8ea-4c7e-95ee-a60a323c496e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e93b08766da4abc37ca3663de5fe2919f1953833
-ms.sourcegitcommit: d47d2f03482e48d343e2139a341e61022331e6c2
+ms.openlocfilehash: d1a71558c6b87c79c6d4667746e081c6db85ce18
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67146060"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67159159"
 ---
 # <a name="how-to-deploy-to-production-with-desktop-analytics"></a>Comment déployer en production avec Analytique de bureau
 

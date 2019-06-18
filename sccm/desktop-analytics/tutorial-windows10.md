@@ -10,14 +10,13 @@ ms.assetid: 3e82cd96-0ce0-474a-a597-d65fceadc95a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d8b73deb60cf88f0bdf428bb87250ce115a1084b
-ms.sourcegitcommit: d47d2f03482e48d343e2139a341e61022331e6c2
+ms.openlocfilehash: 102890f9e4b96328f117779ba63e9c72bf8f5d15
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67145813"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67158954"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>Tutoriel : Déployer Windows 10 sur le pilote
 

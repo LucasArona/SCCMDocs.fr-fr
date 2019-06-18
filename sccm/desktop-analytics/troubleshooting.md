@@ -10,14 +10,13 @@ ms.assetid: 63e08f3f-9558-4ed7-9bf3-3a185ddaac5c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: acaefcf2c505786dcc65fa7c74063765ca2fe0cf
-ms.sourcegitcommit: e3c1eb0b75d79c05a750d49354c851d15d5e26a3
+ms.openlocfilehash: 305c31c2a40e51b84a0a5da671db1c3f6dad6f2e
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67038644"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67158999"
 ---
 # <a name="troubleshoot-desktop-analytics"></a>Résoudre les problèmes de postes de travail Analytique
 
@@ -52,29 +51,7 @@ Pour plus d’informations, consultez [surveiller l’intégrité de la connexio
 
 ## <a name="log-files"></a>Fichiers journaux
 
-Utilisez les fichiers journaux suivants pour vous aider à résoudre les problèmes d’Analytique de bureau intégré à Configuration Manager.
-
-
-### <a name="service-connection-point"></a>point de connexion de service
-
-Les fichiers journaux suivants sont sur le point de connexion de service dans le répertoire suivant : `C:\Program Files\Configuration Manager\Logs\M365A`:
-
-| Journal | Description |
-|---------|---------|
-| **M365ADeploymentPlanWorker.log** | Informations sur la synchronisation de plan de déploiement de bureau Analytique cloud service pour le Gestionnaire de Configuration local |
-| **M365ADeviceHealthWorker.log** | Informations sur l’intégrité de l’appareil télécharger à partir du Gestionnaire de Configuration à Microsoft cloud |
-| **M365AUploadWorker.log** | Plus d’informations sur la collecte et l’appareil charger à partir de Configuration Manager à Microsoft cloud |
-| **SmsAdminUI.log** | Plus d’informations sur l’activité de la console Configuration Manager, telles que la configuration des services cloud Azure  |
-
-
-### <a name="configuration-manager-client"></a>Client de Configuration Manager
-
-Les fichiers journaux suivants sont sur le client Configuration Manager dans le répertoire suivant : `C:\Windows\CCM\logs`:
-
-| Journal | Description |
-|---------|---------|
-| **M365AHandler.log** | Informations sur la stratégie de paramètres de bureau Analytique |
-
+Pour plus d’informations, consultez [fichiers journaux pour le bureau Analytique](/sccm/core/plan-design/hierarchy/log-files#desktop-analytics)
 
 ### <a name="enable-verbose-logging"></a>Activer la journalisation documentée
 

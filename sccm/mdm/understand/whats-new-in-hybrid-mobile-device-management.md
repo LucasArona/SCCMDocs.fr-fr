@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b6a4cfbc7e9db5f4402278b73c2ca7ea1d869953
-ms.sourcegitcommit: 18a94eb78043cb565b05cd0e9469b939b29cccf0
-ms.translationtype: MT
+ms.openlocfilehash: c0b8d24e536348ed853762cb5aa620e76495e064
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66355028"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67159434"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Nouveautés de la gestion hybride des appareils mobiles avec Configuration Manager et Microsoft Intune
 
@@ -201,7 +201,7 @@ La nouvelle [page d’état du client](https://docs.microsoft.com/intune/tenant-
 #### <a name="new-help-and-support-experience-in-company-portal-for-windows-10"></a>Nouvelle aide et prise en charge de l’expérience dans le portail d’entreprise pour Windows 10
 
 <!--1488939-->  
-La nouvelle page de Support et d’aide du portail entreprise permet aux utilisateurs de résoudre les problèmes et demander de l’aide pour les problèmes d’application et des accès. À partir de la nouvelle page, ils peuvent envoyer par courrier électronique à l’erreur et les détails du journal de diagnostic et d’informations du support technique de leur organisation. Ils y trouverez également une section de FAQ avec des liens vers la documentation Intune. Pour plus d’informations et des captures d’écran, consultez [obtenir de l’aide et de prendre en charge dans le portail d’entreprise pour Windows 10](https://docs.microsoft.com/intune-user-help/help-and-support-windows-cpapp).
+La nouvelle page de Support et d’aide du portail entreprise permet aux utilisateurs de résoudre les problèmes et demander de l’aide pour les problèmes d’application et des accès. À partir de la nouvelle page, ils peuvent envoyer par courrier électronique à l’erreur et les détails du journal de diagnostic et d’informations du support technique de leur organisation. Ils y trouverez également une section de FAQ avec des liens vers la documentation Intune. Pour plus d’informations et des captures d’écran, consultez [obtenir de l’aide et de prendre en charge dans le portail d’entreprise pour Windows 10](https://docs.microsoft.com/intune-user-help/help-support-windows-cpapp).
 
 #### <a name="some-bitlocker-settings-support-windows-10-pro-edition"></a>Certains paramètres de BitLocker prend en charge Windows 10 Édition professionnelle
 
@@ -376,7 +376,7 @@ La vue **Installée** de la page **Applications** vous permet de voir les détai
 #### <a name="more-opportunities-to-sync-in-the-company-portal-app-for-windows"></a>Améliorations apportées à la synchronisation dans l’application Portail d’entreprise pour Windows
 
 <!--2683177-->  
-L’application de portail d’entreprise pour Windows vous permet désormais de lancer une synchronisation directement à partir de la barre des tâches Windows et le menu Démarrer. Cette fonctionnalité est particulièrement utile si vous avez seulement besoin de synchroniser des appareils et d’accéder aux ressources d’entreprise. Pour accéder à la nouvelle fonctionnalité, cliquez avec le bouton droit sur l’icône Portail d’entreprise qui est épinglée à la barre des tâches ou au menu Démarrer. Dans les options de menu, sélectionnez **Synchroniser cet appareil**. (Ce menu est également appelé liste de raccourcis.) Le Portail d’entreprise s’ouvre à la page **Paramètres** et lance la synchronisation. Pour connaître la procédure mise à jour, consultez [Synchroniser votre appareil Windows manuellement](https://docs.microsoft.com/intune/intune-user-help/sync-your-device-manually-windows#sync-from-device-taskbar-or-start-menu).
+L’application de portail d’entreprise pour Windows vous permet désormais de lancer une synchronisation directement à partir de la barre des tâches Windows et le menu Démarrer. Cette fonctionnalité est particulièrement utile si vous avez seulement besoin de synchroniser des appareils et d’accéder aux ressources d’entreprise. Pour accéder à la nouvelle fonctionnalité, cliquez avec le bouton droit sur l’icône Portail d’entreprise qui est épinglée à la barre des tâches ou au menu Démarrer. Dans les options de menu, sélectionnez **Synchroniser cet appareil**. (Ce menu est également appelé liste de raccourcis.) Le Portail d’entreprise s’ouvre à la page **Paramètres** et lance la synchronisation. Pour connaître la procédure mise à jour, consultez [Synchroniser votre appareil Windows manuellement](https://docs.microsoft.com/intune-user-help/sync-your-device-manually-windows#sync-from-device-taskbar-or-start-menu).
 
 
 

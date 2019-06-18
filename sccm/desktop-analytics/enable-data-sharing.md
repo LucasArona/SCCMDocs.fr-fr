@@ -2,7 +2,7 @@
 title: Activer le partage de données
 titleSuffix: Configuration Manager
 description: Guide de référence pour le partage des données de diagnostic avec Analytique de bureau.
-ms.date: 06/05/2019
+ms.date: 06/17/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,14 +10,13 @@ ms.assetid: be680198-4cea-4378-a686-d52f382ba483
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7292fdd3cc370af314cef95a4b782616e315a0cb
-ms.sourcegitcommit: 725e1bf7d3250c2b7b7be9da01135517428be7a1
+ms.openlocfilehash: 3eff032113b92055b32cb81c6cae9363c368a421
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821983"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67159105"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>Activer le partage de bureau Analytique des données
 
@@ -61,6 +60,7 @@ Pour activer le partage de données, configurez votre serveur proxy pour autoris
 
 | Point de terminaison  | Fonction  |
 |-----------|-----------|
+| `https://aka.ms` | Utilisé pour localiser le service |
 | `https://v10c.events.data.microsoft.com` | Expérience de l’utilisateur connecté et le point de terminaison de composant de diagnostic. Utilisé par les appareils exécutant Windows 10, version 1703 ou version ultérieure, avec le cumulative 2018-09 mettre à jour ou version ultérieure. |
 | `https://v10.events.data.microsoft.com` | Expérience de l’utilisateur connecté et le point de terminaison de composant de diagnostic. Utilisé par les appareils exécutant Windows 10, version 1803 ou ultérieure, _sans_ le 2018-09 mise à jour cumulative installée. |
 | `https://v10.vortex-win.data.microsoft.com` | Expérience de l’utilisateur connecté et le point de terminaison de composant de diagnostic. Utilisé par les appareils exécutant Windows 10, version 1709 ou une version antérieure. |
