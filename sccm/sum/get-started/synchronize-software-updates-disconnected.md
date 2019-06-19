@@ -65,7 +65,7 @@ ms.locfileid: "65493984"
 
 2.  Tapez ce qui suit pour exporter les métadonnées des mises à jour logicielles vers un fichier de package :  
 
-     **wsusutil.exe export***nompackage**fichierjournal*  
+     **wsusutil.exe export** *nompackage* *fichierjournal*  
 
      Par exemple :  
 
@@ -93,7 +93,7 @@ ms.locfileid: "65493984"
 
 2.  Tapez la commande suivante :  
 
-     **wsusutil.exe import** *nompackage**fichierjournal*  
+     **wsusutil.exe import** *nompackage* *fichierjournal*  
 
      Par exemple :  
 

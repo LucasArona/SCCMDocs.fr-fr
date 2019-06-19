@@ -48,7 +48,7 @@ Pour effectuer cette procédure, le compte que vous utilisez doit être :
    - **Sera membre de votre groupe de disponibilité :**  
      Si vous utilisez ce serveur en tant que membre réplica principal initial du groupe de disponibilité, il est inutile de restaurer une copie de la base de données de site sur ce serveur ou sur un autre serveur du groupe. La base de données sera déjà en place sur le réplica principal, et SQL Server répliquera la base de données sur les réplicas secondaires à une étape ultérieure.  
 
-     -    **Ne sera pas membre du groupe de disponibilité :**   
+     -    **Ne sera pas membre du groupe de disponibilité :**    
      Restaurez une copie de la base de données de site sur le serveur qui hébergera le réplica principal du groupe.
 
    Pour plus d’informations sur la façon de procéder, consultez la page [Créer une sauvegarde complète de base de données](/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server) et [Restaurer une sauvegarde de base de données à l’aide de SSMS](/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms) dans la documentation de SQL Server.
