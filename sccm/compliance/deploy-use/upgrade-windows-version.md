@@ -2,7 +2,7 @@
 title: Mettre à niveau des appareils Windows vers une version différente
 titleSuffix: Configuration Manager
 description: Mettez automatiquement à niveau les appareils qui exécutent Windows 10 Desktop ou Windows 10 Mobile vers une autre édition avec Configuration Manager.
-ms.date: 01/26/2018
+ms.date: 06/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3cda70e7a5f1b2cf7dec079a7e933af48f0bf8ad
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 87105e2f9fa090c171b35ed4cb8a6523c624eca4
+ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56128396"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834850"
 ---
 # <a name="upgrade-windows-devices-with-the-edition-upgrade-policy-in-system-center-configuration-manager"></a>Mettre à niveau des appareils Windows avec la stratégie de mise à niveau d’édition dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 
 La **stratégie de mise à niveau d’édition** vous permet de mettre automatiquement à niveau les appareils qui exécutent une des versions suivantes de Windows 10 vers une autre édition :
@@ -39,9 +39,9 @@ Les appareils doivent être inscrit dans Microsoft Intune ou exécuter le logici
 ## <a name="before-you-start"></a>Avant de commencer  
  Avant de commencer à mettre à niveau des appareils vers la dernière version, passez en revue les prérequis suivants :  
 
--   Pour les éditions Bureau de Windows 10 : Une clé de produit valide pour installer la nouvelle version de Windows sur tous les périphériques que vous ciblez avec la stratégie. Cette clé de produit peut être une clé d’activation multiple (MAK) ou une clé de licence en volume générique (GVLK). La clé GVLK est aussi connue sous le nom de clé d’installation de client de service de gestion de clés (KMS). Pour plus d’informations, consultez [Planifier l’activation en volume](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client). Pour obtenir la liste des clés d’installation de client KMS, consultez [l’Annexe A](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys) du guide d’activation de Windows Server. <!--496871-->  
+-   Pour les éditions Desktop de Windows 10 : une clé de produit valide pour installer la nouvelle version de Windows sur tous les appareils que vous ciblez avec la stratégie. Cette clé de produit peut être une clé d’activation multiple (MAK) ou une clé de licence en volume générique (GVLK). La clé GVLK est aussi connue sous le nom de clé d’installation de client de service de gestion de clés (KMS). Pour plus d’informations, consultez [Planifier l’activation en volume](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client). Pour obtenir la liste des clés d’installation de client KMS, consultez [l’Annexe A](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys) du guide d’activation de Windows Server. <!--496871-->  
 
--   Concernant Windows 10 Mobile : Un fichier de licence XML du Centre VLSC (Microsoft Volume Licensing Service Center). Ce fichier contient les informations de licence de la nouvelle version de Windows sur tous les appareils que vous ciblez avec la stratégie.
+-   Pour Windows 10 Mobile : un fichier de licence XML du Centre de gestion des licences en volume (VLSC). Ce fichier contient les informations de licence de la nouvelle version de Windows sur tous les appareils que vous ciblez avec la stratégie.
 
 - Pour gérer ce type de stratégie, vous devez avoir le rôle de sécurité **Administrateur complet** de Configuration Manager.
 
@@ -91,8 +91,8 @@ Surveillez ce déploiement à partir du nœud **Déploiements** de l’espace de
 
 Ces erreurs ne signifient pas que le déploiement a échoué. Vérifiez que la mise à niveau a réussi sur le PC ciblé.
 
-Une fois que le client a évalué la stratégie ciblée, il est redémarré dans les deux heures pour appliquer la mise à niveau. Assurez-vous d’informer les utilisateurs sur lesquels vous déployez la stratégie ou planifiez l’exécution de la stratégie en dehors des heures de travail des utilisateurs.
+Le client applique la mise à niveau dans un délai de deux heures après avoir évalué la stratégie ciblée. [Si un redémarrage est requis](https://docs.microsoft.com/windows/deployment/upgrade/windows-10-edition-upgrades), il sera effectué à ce moment-là. Assurez-vous d’informer les utilisateurs sur lesquels vous déployez la stratégie ou planifiez l’exécution de la stratégie en dehors des heures de travail des utilisateurs.
 
-Si l’erreur suivante s’affiche dans **DcmWmiProvider.log** sur le client, vérifiez que vous utilisez la clé appropriée pour votre scénario d’activation. Pour plus d'informations, consultez la section [Avant de commencer](#before-you-start). Si vous utilisez un service de gestion de clés pour l’activation, vérifiez que vous utilisez une [clé d’installation du client KMS](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys).  <!-- 496871 -->   
+Si l’erreur suivante s’affiche dans **DcmWmiProvider.log** sur le client, vérifiez que vous utilisez une clé adaptée à votre scénario d’activation. Pour plus d'informations, consultez la section [Avant de commencer](#before-you-start). Si vous avez recours à un service de gestion de clés pour l’activation, veillez à utiliser une [clé d’installation du client KMS](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys).  <!-- 496871 -->   
 
 `Failed to execute CheckApplicabilityMethod with error = 0x80041001 OsEditionUpgradeProvider`

@@ -2,7 +2,7 @@
 title: Créer des applications
 titleSuffix: Configuration Manager
 description: Créez des applications avec des types de déploiement, des méthodes de détection et des spécifications pour installer les logiciels.
-ms.date: 05/08/2019
+ms.date: 06/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c54eb02fe3de3246a7c8ed15e7589fcd4d9b1c9b
-ms.sourcegitcommit: abfc9e1b3945637fa93ca8d3a11519493a5d5391
+ms.openlocfilehash: 6302ca8e1f01f51bef09df2175c4525effd89a7e
+ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66264431"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834816"
 ---
 # <a name="create-applications-in-configuration-manager"></a>Créer des applications dans Configuration Manager
 
@@ -312,9 +312,25 @@ Cette procédure configure une méthode de détection qui indique la présence d
 
 4.  Cliquez sur **OK** pour fermer la boîte de dialogue **Règle de détection**.  
 
-Quand vous créez plusieurs méthodes de détection pour un type de déploiement, créez une logique plus complexe en regroupant les clauses. 
+Quand vous créez plusieurs méthodes de détection pour un même type de déploiement, vous pouvez regrouper les clauses pour obtenir une logique plus complexe.  
 
-Passez à la section suivante sur l’utilisation d’un script personnalisé comme méthode de détection. Ou passez directement aux options [Expérience utilisateur](#bkmk_dt-ux) pour le type de déploiement.
+#### <a name="group-detection-clauses-optional"></a>Regrouper des clauses de détection *(facultatif)*
+
+1.  Créez au moins trois clauses de méthode de détection sur un type de déploiement.  
+
+2.  Sélectionnez au moins deux clauses consécutives, puis cliquez sur **Regrouper**. Des parenthèses sont ajoutées aux colonnes associées, indiquant le début et la fin du groupe.  
+
+    Exemple : 
+
+    | Connecteur  |  ( | Clause           |  ) ;  | 
+    |------------|----|------------------|-----| 
+    |            |    | MSI Product Code |     | 
+    | — ou \emdash         | (  | file1.text exists|     | 
+    | And        |    | file2.txt exists | ) ;   | 
+
+3.  Pour supprimer le groupe, sélectionnez les clauses regroupées, puis cliquez sur **Dissocier**.  
+
+Cliquez sur *Continuer* pour passer à la section suivante, à savoir utiliser un script personnalisé comme méthode de détection. Vous pouvez également cliquer sur *Ignorer* pour accéder aux options [Expérience utilisateur](#bkmk_dt-ux) du type de déploiement.
 
 
 #### <a name="bkmk_detect-script"></a> Utiliser un script personnalisé pour vérifier la présence d’un type de déploiement  

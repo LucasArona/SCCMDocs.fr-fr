@@ -2,7 +2,7 @@
 title: Étapes de séquence de tâches
 titleSuffix: Configuration Manager
 description: Découvrez les différentes étapes que vous pouvez ajouter à une séquence de tâches Configuration Manager.
-ms.date: 05/28/2019
+ms.date: 06/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d257d9fd328b04b35ff4c4d29b8a8bbd82ae565
-ms.sourcegitcommit: 18a94eb78043cb565b05cd0e9469b939b29cccf0
-ms.translationtype: MTE75
+ms.openlocfilehash: 6229c0fe0702eac61b482c31195fd35fe3c5792f
+ms.sourcegitcommit: c43996b3cf083d919ff1ccc3d510af664aec4ed4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66355067"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67046998"
 ---
 # <a name="task-sequence-steps"></a>Étapes de séquence de tâches
 
@@ -1525,6 +1525,9 @@ Utilisez les variables de séquence de tâches suivantes avec cette étape :
 - [OSDLogPowerShellParameters](/sccm/osd/understand/task-sequence-variables#OSDLogPowerShellParameters) (à compter de la version 1902)<!--3556028-->  
 
 Dans l’Éditeur de séquence de tâches, sélectionnez successivement **Ajouter**, **Général** et **Exécuter le script PowerShell** pour ajouter cette étape.
+
+> [!Note]  
+> Utilisez des scripts PowerShell signés au format Unicode. Le format ANSI (format par défaut) ne fonctionne pas à cette étape.
 
 ### <a name="properties"></a>Propriétés  
 
