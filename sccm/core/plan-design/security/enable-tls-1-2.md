@@ -11,12 +11,12 @@ ms.assetid: 31de47c9-891b-4de7-8d5e-fbbc1bff7c60
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0ddd2a5cb74dfc9de48299b00fddeb8f849ce9e3
-ms.sourcegitcommit: a6a6507e01d819217208cfcea483ce9a2744583d
+ms.openlocfilehash: a3d97ee2e68f9f4606ad46c8566467fad459ffa9
+ms.sourcegitcommit: 725e1bf7d3250c2b7b7be9da01135517428be7a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66748160"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822077"
 ---
 # <a name="how-to-enable-tls-12"></a>Comment activer TLS 1.2
 

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d4bb3cfa86275562ad46c4fdc988719a493f42bf
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 8c6a6e8a346c53d1f2bc8abdc2c2f2d0b9fafb64
+ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499057"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834877"
 ---
 # <a name="define-network-locations-as-boundaries-for-system-center-configuration-manager"></a>Définir des emplacements réseau comme limites pour System Center Configuration Manager
 
@@ -50,9 +50,10 @@ Chaque limite est utilisable par tous les sites de votre hiérarchie. Après avo
         >  Vous pouvez spécifier le **Réseau** et le **Masque de sous-réseau** pour que l' **ID de sous-réseau** soit automatiquement spécifié. Lorsque vous enregistrez la limite, seule la valeur d'ID de sous-réseau est enregistrée.  
 
     -   Si vous sélectionnez **Site Active Directory**, vous devez spécifier ou **Parcourir** vers un site Active Directory dans la forêt locale du serveur de site.  
+        
+        - Lorsque vous spécifiez un site Active Directory pour une limite, la limite inclut chaque sous-réseau IP membre de ce site Active Directory. Si la configuration du site Active Directory est modifiée dans Active Directory, les emplacements réseau inclus dans cette limite sont également modifiés.  
 
-        > [!IMPORTANT]  
-        >  Lorsque vous spécifiez un site Active Directory pour une limite, la limite inclut chaque sous-réseau IP membre de ce site Active Directory. Si la configuration du site Active Directory est modifiée dans Active Directory, les emplacements réseau inclus dans cette limite sont également modifiés.  
+        - Les limites de site Active Directory ne fonctionnent pas pour les clients Azure AD purs. S’ils se déplacent en local, ils ne se trouvent dans aucune limite s’ils sont définis seulement pour utiliser des sites AD.
 
     -   Si vous sélectionnez **Préfixe IPv6**, vous devez spécifier un **Préfixe** au format de préfixe IPv6.  
 

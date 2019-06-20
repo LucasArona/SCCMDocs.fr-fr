@@ -1,6 +1,6 @@
 ---
 title: Documentation dans la console
-ms.date: 05/15/2019
+ms.date: 06/10/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -10,12 +10,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 81ebb0f12c7ef048d46eea2c13586b77b1fae326
-ms.sourcegitcommit: cab3dba5ebfe90f28cedee03c1840c9a395160cc
+ms.openlocfilehash: 0af894becf4aa74beb250cc4672e6ba2cb0108af
+ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65839046"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834796"
 ---
 <!-- 
 - Feature 1357546
@@ -26,7 +26,7 @@ ms.locfileid: "65839046"
 
 # <a name="configuration-manager-documentation"></a>Documentation sur Configuration Manager
 
-*Dernière mise à jour : 15/05/2019*
+*Dernière mise à jour : 10/06/2019*
 
 Ce contenu peut vous aider dans l’apprentissage et la prise en charge de Configuration Manager.
 
@@ -54,20 +54,20 @@ Liste d’articles importants compilée.
 
 ## <a name="trending"></a>Tendances
 
-Articles les plus populaires entre le 1er avril et le 30 avril 2019.
+Articles les plus consultés entre le 1er mai et le 31 mai 2019.
 
 | Nombre de vues des pages | Titre |
 |------------|-------|
-| 21698 | [Fichiers journaux pour la résolution des problèmes](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/log-files) |
-| 21409 | [Nouveautés de la version 1902](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1902) |
-| 11870 | [Ports utilisés pour les connexions](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/ports) |
-| 10980 | [Déployer des clients sur Windows](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-to-windows-computers) |
-| 9937 | [Prise en charge pour Windows 10](https://docs.microsoft.com/sccm/core/plan-design/configs/support-for-windows-10) |
-| 9101 | [Installer la console](https://docs.microsoft.com/sccm/core/servers/deploy/install/install-consoles) |
-| 9003 | [Mises à jour et maintenance](https://docs.microsoft.com/sccm/core/servers/manage/updates) |
-| 8383 | [Nouveautés de la version 1810](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1810) |
-| 8237 | [Liste de contrôle pour la version 1902](https://docs.microsoft.com/sccm/core/servers/manage/checklist-for-installing-update-1902) |
-| 8140 | [Gérer les mises à jour Office 365 ProPlus](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates) |
+| 21370 | [Fichiers journaux pour la résolution des problèmes](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/log-files) |
+| 17017 | [Nouveautés de la version 1902](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1902) |
+| 12122 | [Ports utilisés pour les connexions](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/ports) |
+| 11906 | [Gérer les mises à jour Office 365 ProPlus](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates) |
+| 11463 | [Déployer des clients sur Windows](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-to-windows-computers) |
+| 10421 | [Prise en charge pour Windows 10](https://docs.microsoft.com/sccm/core/plan-design/configs/support-for-windows-10) |
+| 9138 | [Liste de contrôle pour la version 1902](https://docs.microsoft.com/sccm/core/servers/manage/checklist-for-installing-update-1902) |
+| 8944 | [Installer la console](https://docs.microsoft.com/sccm/core/servers/deploy/install/install-consoles) |
+| 8508 | [Propriétés et paramètres d’installation du client](https://docs.microsoft.com/sccm/core/clients/deploy/about-client-installation-properties) |
+| 8399 | [Mises à jour et maintenance](https://docs.microsoft.com/sccm/core/servers/manage/updates) |
 
 ## <a name="recently-updated"></a>Mise à jour récente
 
@@ -75,16 +75,16 @@ Articles concernant une mise à jour importante et récente.
 
 | Dernière révision | Titre |
 |---------------|-------|
-| 2/05/2019 | [Configurer l'éveil par appel réseau](https://docs.microsoft.com/sccm/core/clients/deploy/configure-wake-on-lan) |
-| 30/04/2019 | [Surveiller la cogestion](https://docs.microsoft.com/sccm/comanage/how-to-monitor) |
-| 30/04/2019 | [Affichages SQL Server](https://docs.microsoft.com/sccm/develop/core/understand/sqlviews/sql-server-views-configuration-manager) |
-| 29/04/2019 | [Technical Preview 1904](https://docs.microsoft.com/sccm/core/get-started/2019/technical-preview-1904) |
-| 26/04/2019 | [Coexistence de la gestion des données de référence tierce](https://docs.microsoft.com/sccm/comanage/coexistence) |
-| 23/04/2019 | [Nouveautés de la version 1902](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1902) |
-| 20/04/2019 | [Installer la console](https://docs.microsoft.com/sccm/core/servers/deploy/install/install-consoles) |
-| 11/04/2019 | [Profils OneDrive Entreprise](https://docs.microsoft.com/sccm/compliance/deploy-use/onedrive-profile) |
-| 4/04/2019 | [Résolution des problèmes liés à CMPivot](https://docs.microsoft.com/sccm/core/servers/manage/cmpivot-tsg) |
-| 3/04/2019 | [Interface IProgressUI](https://docs.microsoft.com/sccm/develop/reference/core/clients/client-classes/iprogressui-interface) |
+| 31/05/2019 | [Comment activer TLS 1.2](https://docs.microsoft.com/sccm/core/plan-design/security/enable-tls-1-2) |
+| 29/05/2019 | [Mode de provisionnement](https://docs.microsoft.com/sccm/osd/understand/provisioning-mode) |
+| 29/05/2019 | [Résoudre les problèmes liés aux déploiements d’applications](https://docs.microsoft.com/sccm/apps/deploy-use/troubleshoot-application-deployment) |
+| 29/05/2019 | [Approve-CMApprovalRequest](https://docs.microsoft.com/powershell/module/configurationmanager/approve-cmapprovalrequest) |
+| 29/05/2019 | [Importer et exporter des applications](https://docs.microsoft.com/sccm/apps/deploy-use/import-export-applications) |
+| 28/05/2019 | [Nouveautés de la version 1902](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1902) |
+| 28/05/2019 | [HTTP amélioré](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/enhanced-http) |
+| 24/05/2019 | [Workflow de l’authentification Azure AD](https://docs.microsoft.com/sccm/core/clients/manage/azure-ccmsetup) |
+| 24/05/2019 | [Méthode SetDPMaintenanceMode](https://docs.microsoft.com/sccm/develop/reference/core/servers/configure/setdpmaintenancemode-method-in-class-sms-distributionpointinfo) |
+| 21/05/2019 | [Fonctionnalités dépréciées](https://docs.microsoft.com/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures) |
 
 ## <a name="troubleshooting-articles"></a>Articles sur la résolution des problèmes
 
@@ -100,13 +100,10 @@ Procédures pas à pas d’aide à la résolution des problèmes liés aux compo
 
 ## <a name="new-and-updated-support-articles"></a>Articles de support nouveaux et mis à jour
 
-Articles de support nouveaux ou mis à jour entre le 7 avril et le 13 mai 2019.
+Articles de support nouveaux ou mis à jour entre le 14 mai et le 10 juin 2019.
 
-- [Base de connaissances 4488598 : Mise à jour de Rollup 2 pour Current Branch de System Center Configuration Manager, version 1810](https://support.microsoft.com/help/4488598)
-- [Base de connaissances 4494015 : Une séquence de tâches OSD ne se poursuit pas une fois l’installation de Windows ou d’une mise à niveau sur place terminée](https://support.microsoft.com/help/4494015)
-- [Base de connaissances 4495265 : WINHTTP_CALLBACK_STATUS_FLAG_CERT_CN_INVALID lorsque vous utilisez une passerelle de gestion cloud comme un point de distribution cloud avec un certificat tiers](https://support.microsoft.com/help/4495265)
-- [KB 4498259 : Les données d’Upgrade Readiness sont téléchargées en continu dans Configuration Manager](https://support.microsoft.com/help/4498259)
-- [KB 4040243 : Comment activer TLS 1.2 pour Configuration Manager](https://support.microsoft.com/help/4040243)
-- [Base de connaissances 4490644 : Le guide complet de la maintenance de Microsoft WSUS et de Configuration Manager SUP](https://support.microsoft.com/help/4490644)
+- [KB 4503442 : Erreur 403 quand des clients Configuration Manager essaient de communiquer avec la passerelle de gestion cloud](https://support.microsoft.com/help/4503442)
+- [KB 4503578 : La création de rapports cesse de fonctionner après le déplacement d’un point Reporting Services ou l’activation de TLS 1.2 dans Configuration Manager](https://support.microsoft.com/help/4503578)
+- [KB 4505440 : Dépannage de la gestion des mises à jour logicielles dans Configuration Manager](https://support.microsoft.com/help/4505440)
 
 Pour vous abonner à une notification Atom ou RSS qui vous informe de la disponibilité de nouveaux articles de support Configuration Manager, consultez [Mises à jour du contenu de support](https://support.microsoft.com/help/4089498/) et sélectionnez **System Center Configuration Manager**.  

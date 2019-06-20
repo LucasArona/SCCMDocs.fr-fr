@@ -2,7 +2,7 @@
 title: Mises à jour et maintenance
 titleSuffix: Configuration Manager
 description: Découvrez la méthode de service dans la console, appelée « Mises à jour et maintenance », qui facilite la localisation et l’installation des mises à jour recommandées.
-ms.date: 03/27/2019
+ms.date: 06/06/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b6ebe46963001a4ccc5932afa14ec7eb206dc1c4
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: bb875529224655fb56aeea5636bf92c7ddaf8b2c
+ms.sourcegitcommit: 725e1bf7d3250c2b7b7be9da01135517428be7a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65496868"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822054"
 ---
 # <a name="updates-and-servicing-for-configuration-manager"></a>Mises à jour et maintenance pour Configuration Manager
 
@@ -28,10 +28,10 @@ Configuration Manager utilise une méthode de service dans la console appelée *
 > Les termes *mise à niveau*, *mise à jour* et *installation* sont utilisés pour décrire trois concepts distincts dans Configuration Manager. Pour plus d’informations sur l’utilisation de chaque terme, consultez [À propos de la mise à niveau, de la mise à jour et de l’installation](/sccm/core/understand/upgrade-update-install).  
 
 
-
 ##  <a name="bkmk_Baselines"></a> Versions de base et de mise à jour  
 
-La dernière version de base est à utiliser quand il s’agit d’installer un nouveau site dans une nouvelle hiérarchie. 
+La dernière version de base est à utiliser quand il s’agit d’installer un nouveau site dans une nouvelle hiérarchie.
+
 - Utilisez également une version de base de référence pour effectuer la mise à niveau à partir de System Center 2012 Configuration Manager.  
 
 - Après la mise à niveau vers la version Current Branch de Configuration Manager, n’utilisez pas les versions de base de référence pour rester à jour. À la place, utilisez uniquement les [mises à jour dans la console](/sccm/core/servers/manage/install-in-console-updates) pour effectuer une mise à jour vers la version la plus récente.  
@@ -40,24 +40,24 @@ La dernière version de base est à utiliser quand il s’agit d’installer un 
 
 Après avoir installé une version de base, d’autres versions de Configuration Manager sont disponibles sous forme de mises à jour dans la console. Les mises à jour dans la console mettent à jour votre infrastructure vers la dernière version de Configuration Manager.  
 
--   L’installation des mises à jour dans la console visent à mettre à jour la version de votre site de niveau supérieur.  
+- L’installation des mises à jour dans la console visent à mettre à jour la version de votre site de niveau supérieur.  
 
--   Les mises à jour que vous installez sur le site d’administration centrale s’installent automatiquement sur les sites principaux enfants. Contrôlez cette synchronisation à l’aide d’une fenêtre de maintenance sur le site principal.  
+- Les mises à jour que vous installez sur le site d’administration centrale s’installent automatiquement sur les sites principaux enfants. Contrôlez cette synchronisation à l’aide d’une fenêtre de maintenance sur le site principal.  
 
--   Mettez à jour manuellement les sites secondaires vers une nouvelle version de mise à jour à partir de la console.  
+- Mettez à jour manuellement les sites secondaires vers une nouvelle version de mise à jour à partir de la console.  
 
 Quand vous installez une mise à jour, elle stocke les fichiers d’installation de cette version sur le serveur de site dans un dossier nommé **CD.Latest**. Pour plus d’informations sur ces fichiers, consultez [Dossier CD.Latest](/sccm/core/servers/manage/the-cd.latest-folder).  
 
--   Utilisez les fichiers du dossier CD.Latest durant la récupération de site. De même, quand votre hiérarchie n’exécute plus de version de base de référence, utilisez ces fichiers pour installer des sites supplémentaires.  
+- Utilisez les fichiers du dossier CD.Latest durant la récupération de site. De même, quand votre hiérarchie n’exécute plus de version de base de référence, utilisez ces fichiers pour installer des sites supplémentaires.  
 
--   Vous ne pouvez pas vous servir des fichiers d’installation du dossier CD.Latest pour installer le premier site d’une nouvelle hiérarchie, ni pour mettre à niveau un site à partir de System Center 2012 Configuration Manager.  
-
+- Vous ne pouvez pas vous servir des fichiers d’installation du dossier CD.Latest pour installer le premier site d’une nouvelle hiérarchie, ni pour mettre à niveau un site à partir de System Center 2012 Configuration Manager.  
 
 ### <a name="version-details"></a>Détails de la version
 
 Certaines mises à jour de Configuration Manager sont disponibles à la fois comme version de mise à jour dans la console pour l’infrastructure existante et comme nouvelle version de base.  
 
 #### <a name="supported-versions"></a>Versions prises en charge
+
 Les versions prises en charge suivantes de Configuration Manager sont disponibles sous forme de base de référence, de mise à jour ou les deux à la fois :  
 
 | Version | Date de disponibilité | [Date de fin de support](/sccm/core/servers/manage/current-branch-versions-supported) | De base | Mise à jour dans la console |  
@@ -68,17 +68,19 @@ Les versions prises en charge suivantes de Configuration Manager sont disponible
 | [1802](/sccm/core/plan-design/changes/whats-new-in-version-1802)<br /><br /> 5.00.8634.1000 | 22 mars 2018 | 22 septembre 2019 | Oui<sup>[Remarque 1](#bkmk_note1)</sup> | Oui |
 | [1710](/sccm/core/plan-design/changes/whats-new-in-version-1710)<br /><br /> 5.00.8577.1000 | 20 novembre 2017 | Mai 20, 2019 | Non | Oui |
 
-<a name="bkmk_note1"></a> 
+<a name="bkmk_note1"></a>
 
 > [!Note]  
-> <sup>**Remarque 1 :**</sup> le support de la base de référence est disponible dans les versions suivantes du [centre MVLS](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (Microsoft Volume Licensing Service) :
+> <sup>**Remarque 1 :** </sup> le support de la base de référence est disponible dans les versions suivantes du [centre MVLS](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (Microsoft Volume Licensing Service) :
+>
 > - System Center Config Mgr (Current Branch)
 > - System Center 2016 Datacenter
 > - System Center 2016 Standard  
-> 
+>
 > Par exemple, recherchez `System Center Config Mgr (current branch)` dans le Centre MVLS. Recherchez le support de la base de référence dans la liste des fichiers, puis téléchargez-le pour cette version.  
 
 #### <a name="historical-versions"></a>Versions historiques
+
 Le tableau suivant liste les versions historiques de l’édition Current Branch de Configuration Manager qui ne sont plus prises en charge :
 
 | Version | Date de disponibilité | Date de fin du support | De base | Mise à jour dans la console |  
@@ -92,16 +94,16 @@ Le tableau suivant liste les versions historiques de l’édition Current Branch
 | 1511 <br /><br /> 5.00.8325.1000 | 8 décembre 2015 | 8 décembre 2016 | Oui | Non |  
 
 #### <a name="how-to-check-the-version"></a>Comment vérifier la version
+
 Pour vérifier la version de votre site Configuration Manager, en haut à gauche de la console, accédez à **À propos de System Center Configuration Manager**. Cette boîte de dialogue affiche les versions du site et de la console.  
 
- > [!Note]  
- > À compter de la version 1802, la version de la console est légèrement différente de la version du site. La version mineure de la console correspond maintenant à la version publiée de Configuration Manager. Par exemple, dans Configuration Manager version 1802, la version initiale du site est 5.0.8634.1000, et la version initiale de la console est 5.**1802**.1082.1700. Les numéros de build (1082) et de révision (1700) peuvent changer avec les correctifs logiciels futurs sur la version 1802.
+> [!Note]  
+> À compter de la version 1802, la version de la console est légèrement différente de la version du site. La version mineure de la console correspond maintenant à la version publiée de Configuration Manager. Par exemple, dans Configuration Manager version 1802, la version initiale du site est 5.0.8634.1000, et la version initiale de la console est 5.**1802**.1082.1700. Les numéros de build (1082) et de révision (1700) peuvent changer avec les correctifs logiciels futurs sur la version 1802.
 
 
+## <a name="bkmk_inconsole"></a> Mises à jour et maintenance dans la console  
 
-##  <a name="bkmk_inconsole"></a> Mises à jour et maintenance dans la console  
-
-Quand vous utilisez une installation Current Branch de System Center Configuration Manager prête pour la production, la plupart des mises à jour sont disponibles via le canal **Mises à jour et maintenance**. Cette méthode identifie, télécharge et met à disposition les mises à jour qui s’appliquent à la version et à la configuration actuelles de votre infrastructure. Elle inclut uniquement les mises à jour que Microsoft recommande à tous les clients.   
+Quand vous utilisez une installation Current Branch de System Center Configuration Manager prête pour la production, la plupart des mises à jour sont disponibles via le canal **Mises à jour et maintenance**. Cette méthode identifie, télécharge et met à disposition les mises à jour qui s’appliquent à la version et à la configuration actuelles de votre infrastructure. Elle inclut uniquement les mises à jour que Microsoft recommande à tous les clients.
 
 Ces mises à jour comportent :  
 
@@ -111,7 +113,10 @@ Ces mises à jour comportent :
 
 - Les correctifs logiciels pour votre version de Configuration Manager que tous les clients doivent installer
 
-Les mises à jour dans la console offrent une stabilité accrue et résolvent les problèmes courants. Elles remplacent les types de mise à jour déjà rencontrés pour les versions de produit précédentes, par exemple les Service Packs, les mises à jour cumulatives, les correctifs logiciels applicables à tous les clients et l’extension pour Microsoft Intune. 
+    > [!Note]  
+    > À compter de la version 1902, les correctifs logiciels dans la console ont maintenant des relations de remplacement. Pour plus d’informations, consultez [Remplacement pour les correctifs logiciels dans la console](#bkmk_supersede).
+
+Les mises à jour dans la console offrent une stabilité accrue et résolvent les problèmes courants. Elles remplacent les types de mise à jour déjà rencontrés pour les versions de produit précédentes, par exemple les Service Packs, les mises à jour cumulatives, les correctifs logiciels applicables à tous les clients et l’extension pour Microsoft Intune.
 
 Les mises à jour dans la console peuvent s’appliquer à un ou plusieurs des systèmes suivants :  
 
@@ -150,32 +155,47 @@ Quand vous installez une mise à jour dans la console, le processus suivant se p
 > [!NOTE]  
 > Les branches Current Branch, Long-Term Servicing Branch et Technical Preview de Configuration Manager sont des versions distinctes. Les mises à jour qui s’appliquent à une branche ne sont pas disponibles en tant que mises à jour dans la console pour les autres branches. Pour plus d’informations sur les branches disponibles, consultez [Quelle branche de Configuration Manager dois-je utiliser ?](/sccm/core/understand/which-branch-should-i-use)
 
+### <a name="bkmk_supersede"></a> Remplacement pour les correctifs logiciels dans la console
+
+<!-- 3229613 -->
+À compter de la version 1902, les correctifs logiciels dans la console ont maintenant des relations de remplacement. Quand Microsoft publie un nouveau correctif logiciel de Configuration Manager, la console n’affiche pas les correctifs logiciels qui sont remplacés par ce nouveau correctif. Ce nouveau comportement vous aide à mieux déterminer les correctifs logiciels à installer.
+
+### <a name="supersedence-example"></a>Exemple de remplacement
+
+Trois correctifs logiciels sont disponibles : Correctif-A, Correctif-B et Correctif-C. Correctif-A est remplacé par Correctif-B, et Correctif-B est remplacé par Correctif-C.
+
+|Correctif-A|Correctif-B|Correctif-C|Vue dans la console|
+|--------|--------|--------|---------------|
+|Non installé|Non installé|Non installé|Montrer les trois correctifs|
+|Installé|Installé|Non installé|Correctif-B apparaît comme étant installé<br/>Correctif-C apparaît comme étant prêt à être installé|
+|Non installé|Non installé|Installé|Correctif-C apparaît comme étant installé|
 
 
-##  <a name="bkmk_outofband"></a> Correctifs logiciels hors bande  
+## <a name="bkmk_outofband"></a> Correctifs logiciels hors bande  
 
 Certains correctifs logiciels sont publiés avec une disponibilité limitée pour résoudre des problèmes spécifiques. D’autres correctifs logiciels s’appliquent à tous les clients mais ne peuvent pas être installés via la méthode dans la console. Ces correctifs logiciels sont fournis hors bande et ne sont pas détectés à partir du service cloud Microsoft.  
 
-En règle générale, quand vous cherchez à corriger ou à résoudre un problème lié à votre déploiement de Configuration Manager, vous pouvez en savoir plus sur les correctifs logiciels hors bande par l’intermédiaire des services de support technique Microsoft, via un article de la Base de connaissances du Support Microsoft ou à partir du [blog de l’équipe Configuration Manager](https://techcommunity.microsoft.com/t5/Configuration-Manager-Blog/bg-p/ConfigurationManagerBlog). 
+En règle générale, quand vous cherchez à corriger ou à résoudre un problème lié à votre déploiement de Configuration Manager, vous pouvez en savoir plus sur les correctifs logiciels hors bande par l’intermédiaire des services de support technique Microsoft, via un article de la Base de connaissances du Support Microsoft ou à partir du [blog de l’équipe Configuration Manager](https://techcommunity.microsoft.com/t5/Configuration-Manager-Blog/bg-p/ConfigurationManagerBlog).
 
 Installez ces correctifs logiciels manuellement, à l’aide de l’une des deux méthodes suivantes :  
 
 #### <a name="update-registration-tool"></a>Outil Inscription de la mise à jour
+
 Cet outil permet d’importer manuellement le correctif logiciel dans votre console Configuration Manager. Installez ensuite la mise à jour de la même façon que les mises à jour dans la console découvertes automatiquement.  
 
 Cette méthode est utilisée pour les correctifs logiciels qui emploient la structure de nom de fichier suivante :  
-  `<Product>-<product version>-<KB article ID>-ConfigMgr.Update.exe`    
+    `<Product>-<product version>-<KB article ID>-ConfigMgr.Update.exe`
 
 Pour plus d’informations, consultez [Importer des correctifs logiciels avec l’outil Inscription de la mise à jour](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes).  
 
 #### <a name="hotfix-installer"></a>Programme d’installation de correctif logiciel
+
 Cet outil permet d’installer manuellement un correctif logiciel qui ne peut pas être installé via la méthode dans la console.  
 
-Cette méthode est utilisée pour les correctifs qui emploient la structure de nom de fichier suivante :   
-   `<Product>-<product version>-<KB article ID>-<platform>-<language>.exe`  
+Cette méthode est utilisée pour les correctifs qui emploient la structure de nom de fichier suivante :  
+    `<Product>-<product version>-<KB article ID>-<platform>-<language>.exe`  
 
 Pour plus d’informations, consultez [Utiliser le programme d’installation de correctif logiciel pour installer des mises à jour](/sccm/core/servers/manage/use-the-hotfix-installer-to-install-updates).  
-
 
 
 ## <a name="next-steps"></a>Étapes suivantes
@@ -189,6 +209,5 @@ Les articles suivants peuvent vous aider à comprendre comment rechercher et ins
 - [Importer des correctifs logiciels avec l’outil Inscription de la mise à jour](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes)  
 
 - [Utiliser le programme d’installation de correctif logiciel pour installer des mises à jour](/sccm/core/servers/manage/use-the-hotfix-installer-to-install-updates)  
-
 
 Pour plus d’informations sur la branche Technical Preview, consultez [Technical Preview](/sccm/core/get-started/technical-preview).

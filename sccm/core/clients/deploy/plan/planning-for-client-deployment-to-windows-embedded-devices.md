@@ -2,7 +2,7 @@
 title: Planification du déploiement de clients sur des appareils Windows Embedded
 titleSuffix: Configuration Manager
 description: Planifiez le déploiement de clients sur des appareils Windows Embedded dans System Center Configuration Manager.
-ms.date: 04/23/2017
+ms.date: 06/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1ba85b6d1e545f467816b3e8dddeec04ae4192a4
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 1fd221ecb62a74e9ff3a56815fbdeacdd27ca026
+ms.sourcegitcommit: e3c1eb0b75d79c05a750d49354c851d15d5e26a3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56123683"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67038330"
 ---
 # <a name="planning-for-client-deployment-to-windows-embedded-devices-in-system-center-configuration-manager"></a>Planification du déploiement de clients sur des appareils Windows Embedded dans System Center Configuration Manager
 
@@ -76,11 +76,14 @@ ms.locfileid: "56123683"
 >   -   CCMINSTALLDIR\ServiceData  
 >   -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\StateSystem  
 > 
-> **Pour les appareils qui utilisent des filtres d’écriture basés sur des fichiers et des filtres d’écriture unifiés uniquement :** Quand les clients d’un groupe de travail utilisent des certificats à des fins d'authentification auprès de points de gestion, vous devez également exclure la clé privée pour que les clients puissent continuer à communiquer avec les points de gestion. Sur ces appareils, configurez les exceptions suivantes :  
+> **Pour les appareils qui utilisent des filtres d’écriture basés sur des fichiers et des filtres d’écriture unifiés uniquement :** Quand les clients d’un groupe de travail utilisent des certificats à des fins d’authentification auprès de points de gestion, vous devez également exclure la clé privée pour que les clients puissent continuer à communiquer avec le point de gestion. Sur ces appareils, configurez les exceptions suivantes :  
 > 
 > - c:\Windows\System32\Microsoft\Protect  
 >   -   c:\ProgramData\Microsoft\Crypto  
 >   -   HKEY_LOCAL_MACHINE\Software\Microsoft\SystemCertificates\SMS\Certificates  
+
+> [!NOTE]
+> Aucune exception autre que celles présentées dans l’encadré **Important** ci-dessus n’est nécessaire au client Configuration Manager. L’ajout d’autres exceptions liées à Configuration Manager ou à WMI (WBEM) peut entraîner des échecs de Configuration Manager, notamment des appareils qui restent bloqués en mode maintenance ou des appareils soumis à des redémarrages en boucle. Les exceptions non nécessaires incluent le répertoire des clients Configuration Manager, le répertoire CCMcache, le répertoire CCMSetup, le répertoire du cache de séquence de tâches, le répertoire WBEM et les clés de Registre liées à Configuration Manager.
 
  Pour obtenir un exemple de scénario de déploiement et de gestion d’appareils Windows Embedded avec des filtres d’écriture activés dans Configuration Manager, consultez [Exemple de scénario de déploiement et de gestion de clients System Center Configuration Manager sur des appareils Windows Embedded](../../../../core/clients/deploy/example-scenario-for-deploying-and-managing-clients-on-windows-embedded-devices.md).  
 

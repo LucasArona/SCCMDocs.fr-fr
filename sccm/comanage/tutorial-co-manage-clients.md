@@ -2,21 +2,21 @@
 title: Tutoriel &#58; Activer la cogestion pour les clients Configuration Manager existants
 titleSuffix: Configuration Manager
 description: Configurez la cogestion avec Microsoft Intune si vous gérez déjà des appareils Windows 10 avec Configuration Manager.
-ms.date: 03/08/2019
+ms.date: 06/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: tutorial
 ms.assetid: 140c522f-d09a-40b6-a4b0-e0d14742834a
-author: brenduns
-ms.author: brenduns
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af526f531ed81de105aea9d6c5d7f2ea81e8f104
-ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
+ms.openlocfilehash: 8b19f54d60ed0594be4a51b5abcef69304a27ece
+ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "57737289"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834761"
 ---
 # <a name="tutorial-enable-co-management-for-existing-configuration-manager-clients"></a>Tutoriel : Activer la cogestion pour les clients Configuration Manager existants
 Avec la cogestion, vous pouvez conserver vos processus établis d’utilisation de Configuration Manager pour gérer des PC dans votre organisation, tout en investissant dans le cloud en recourant à Intune pour la sécurité et l’approvisionnement moderne.  
@@ -98,14 +98,13 @@ Pour configurer Azure AD Connect, vous avez besoin d’informations d’identifi
 4. Sur la page **Vue d’ensemble**, sélectionnez **Suivant**.
 5. Sur la page **Se connecter à Azure AD**, entrez des informations d’identification d’administrateur général pour votre locataire Azure AD.
 6. Sur la page **Options de l’appareil**, sélectionnez **Configurer la jonction Azure AD Hybride**, puis **Suivant**.
-7. Sur la page **SCP**, pour chaque forêt locale sur laquelle vous souhaitez qu’Azure AD Connect configure le point de connexion de service (SCP), suivez les étapes ci-dessous, puis sélectionnez **Suivant** :  
+7. Sur la page **Systèmes d’exploitation des appareils**, sélectionnez les systèmes d’exploitation utilisés par les appareils de votre environnement Active Directory, puis **Suivant**.  
+
+   Vous pouvez sélectionner l’option permettant de prendre en charge les appareils Windows joints à un domaine de bas niveau. Cependant, n’oubliez pas que la cogestion des appareils n’est prise en charge que pour Windows 10.
+8. Sur la page **SCP**, pour chaque forêt locale sur laquelle vous souhaitez qu’Azure AD Connect configure le point de connexion de service (SCP), suivez les étapes ci-dessous, puis sélectionnez **Suivant** :  
    1. Sélectionnez la forêt.  
    2. Sélectionnez le service d’authentification.  Si vous disposez d’un domaine fédéré, sélectionnez le serveur AD FS, sauf si votre organisation comporte exclusivement des clients Windows 10 et que vous avez configuré la synchronisation ordinateur/appareil ou que votre organisation utilise [l’authentification unique transparente](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso).  
    3. Cliquez sur **Ajouter** pour entrer les informations d’identification d’administrateur d’entreprise.  
-8. Sur la page **Systèmes d’exploitation des appareils**, sélectionnez les systèmes d’exploitation utilisés par les appareils de votre environnement Active Directory, puis **Suivant**.  
-
-   Vous pouvez sélectionner l’option permettant de prendre en charge les appareils Windows joints à un domaine de bas niveau. Cependant, n’oubliez pas que la cogestion des appareils n’est prise en charge que pour Windows 10.
-
 9. Si vous disposez d’un domaine managé, ignorez cette étape.  
 
    Sur la page **Configuration de la fédération**, entrez les informations d’identification de votre administrateur AD FS, puis sélectionnez **Suivant**.
@@ -131,7 +130,7 @@ Configurons maintenant l’inscription automatique des appareils auprès d’Int
 
 L’inscription automatique permet également aux utilisateurs d’inscrire leurs appareils Windows 10 à Intune. Elle se produit lorsqu’ils ajoutent leur compte professionnel à leurs appareils personnels, ou quand un appareil d’entreprise est joint à Azure Active Directory.  
 
-1. Connectez-vous au [Portail Azure](https://portal.azure.com/) et sélectionnez **Azure Active Directory** > **Mobilité (MDM et MAM)** > **Microsoft Intune**.  
+1. Connectez-vous au [Portail Azure](https://portal.azure.com/) et sélectionnez **Azure Active Directory** > **Mobilité (MDM et MAM)**  > **Microsoft Intune**.  
 
 2. Configurez **Portée des utilisateurs MDM**. Spécifiez l’une des valeurs suivantes pour indiquer quels appareils des utilisateurs sont gérés par Microsoft Intune et accepter les valeurs d’URL par défaut.  
 
@@ -144,7 +143,7 @@ L’inscription automatique permet également aux utilisateurs d’inscrire leur
 
 3. Sélectionnez **Enregistrer** pour terminer la configuration de l’inscription automatique.  
 
-4. Revenez à **Mobilité (MDM et MAM)**, puis sélectionnez **Inscription à Microsoft Intune**.  
+4. Revenez à **Mobilité (MDM et MAM)** , puis sélectionnez **Inscription à Microsoft Intune**.  
 
 5. Pour Portée des utilisateurs MDM, sélectionnez **Tous**, puis **Enregistrer**.  
 
@@ -193,7 +192,7 @@ Maintenant qu’Azure AD Hybride est configuré, que les configurations du clien
 
 4. Sur la page Activation, sélectionnez l’une des options suivantes dans la liste déroulante *Inscription automatique dans Intune* :  
 
-   - **Pilote**  - *(recommandé)* Membres du regroupement qui seront automatiquement inscrits dans Intune et pourront alors être cogérés. Spécifiez le regroupement pilote sur la page *Gestion intermédiaire* de cet Assistant. Cette option permet de tester la cogestion sur un sous-ensemble de clients. Vous pourrez ensuite déployer la cogestion auprès de clients supplémentaires suivant une approche progressive.  
+   - **Pilote**  -  *(recommandé)* Membres du regroupement qui seront automatiquement inscrits dans Intune et pourront alors être cogérés. Spécifiez le regroupement pilote sur la page *Gestion intermédiaire* de cet Assistant. Cette option permet de tester la cogestion sur un sous-ensemble de clients. Vous pourrez ensuite déployer la cogestion auprès de clients supplémentaires suivant une approche progressive.  
 
    - **Tous** – Cogestion activée pour tous les clients.  
 

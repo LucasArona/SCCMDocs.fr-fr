@@ -2,7 +2,7 @@
 title: Mettre à niveau l’infrastructure locale
 titleSuffix: Configuration Manager
 description: Découvrez comment mettre à niveau l’infrastructure, telles que SQL Server et le système d’exploitation des systèmes de site.
-ms.date: 11/27/2018
+ms.date: 06/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ac4f22b6da6f0ed3c743848efc5477577376116b
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: a361ff057d6448169088f383ac8373673a97294d
+ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65500932"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834965"
 ---
 # <a name="upgrade-on-premises-infrastructure-that-supports-configuration-manager"></a>Mettre à niveau l’infrastructure locale qui prend en charge Configuration Manager
 
@@ -103,7 +103,7 @@ Après avoir mis à niveau le serveur de site ou une instance du fournisseur SMS
 
 1. Sur les serveurs applicables, ouvrez la console MMC (Microsoft Management Console) et ajoutez le composant logiciel enfichable pour le **Contrôle WMI**, puis sélectionnez **Ordinateur local**.  
 
-2. Dans la console MMC, ouvrez les **Propriétés** du **Contrôle WMI (local)**, puis sélectionnez l’onglet **Sécurité**.  
+2. Dans la console MMC, ouvrez les **Propriétés** du **Contrôle WMI (local)** , puis sélectionnez l’onglet **Sécurité**.  
 
 3. Développez l’arborescence sous la racine, sélectionnez le nœud **SMS**, puis choisissez **Sécurité**.  Vérifiez que le groupe **Administrateurs SMS** dispose des autorisations suivantes :  
 
@@ -211,6 +211,8 @@ Configuration Manager prend en charge la mise à niveau sur place de SQL Server
 
 - SQL Server 2014  
 
+Ceci inclut la mise à niveau de SQL Server Express vers une version plus récente de SQL Server Express sur des sites secondaires.
+
 Quand vous mettez à niveau la version de SQL Server qui héberge la base de données de site, vous devez mettre à niveau la version de SQL Server qui est utilisée sur les sites dans l’ordre suivant :
 
 1. Mettez d’abord à niveau SQL Server sur le site administration centrale.  
@@ -219,7 +221,7 @@ Quand vous mettez à niveau la version de SQL Server qui héberge la base de do
 
 3. Mettez à niveau les sites principaux parents en dernier. Ces sites incluent les sites principaux enfants qui dépendent d'un site d'administration centrale et les sites principaux autonomes qui constituent les sites de plus haut niveau d'une hiérarchie.  
 
-
+ 
 ### <a name="sql-server-cardinality-estimation-level"></a>Niveau d’estimation de cardinalité SQL Server   
 
 Quand vous mettez à niveau une base de données de site à partir d’une version antérieure de SQL Server, la base de données conserve son niveau d’estimation de cardinalité SQL existant, s’il est au minimum autorisé pour cette instance de SQL Server. En mettant à niveau SQL Server avec une base de données à un niveau de compatibilité inférieur que celui autorisé automatiquement, vous définissez la base de données sur le niveau de compatibilité le plus bas autorisé par SQL Server.

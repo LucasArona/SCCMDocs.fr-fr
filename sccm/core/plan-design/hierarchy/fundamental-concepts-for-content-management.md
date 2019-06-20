@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5ffed5e06cca06c5976ac81eecfaca53032bdbc2
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: abb8e846598a9ae0d69eb1b134911ec83006b966
+ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56140076"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834903"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Principes de base de la gestion de contenu dans Configuration Manager
 
@@ -39,7 +39,7 @@ Utilisé par les clients pour se connecter à un point de distribution et accéd
 
 Ce compte est également utilisé par les points de distribution d’extraction pour télécharger du contenu à partir d’un point de distribution source dans une forêt distante.  
 
-Depuis la version 1806, certains scénarios ne nécessitent plus l’utilisation d’un compte d’accès réseau. Vous pouvez autoriser le site à utiliser l’HTTP amélioré avec l’authentification Azure Active Directory.<!--1358228--> 
+Depuis la version 1806, certains scénarios ne nécessitent plus l’utilisation d’un compte d’accès réseau. Vous pouvez autoriser le site à utiliser le protocole HTTP amélioré avec l’authentification Azure Active Directory.<!--1358228--> 
 
 Pour plus d’informations, consultez [Compte d’accès réseau](/sccm/core/plan-design/hierarchy/accounts#network-access-account).
 
@@ -88,14 +88,16 @@ Pour plus d’informations, consultez [Prise en charge de Windows BranchCache](
 
 
 ## <a name="delivery-optimization"></a>Optimisation de la distribution
-<!-- 1324696 --> Les groupes de limites Configuration Manager permettent de définir et de réguler la distribution de contenu sur le réseau de l’entreprise et dans les agences. [L’Optimisation de la distribution de Windows](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) est une technologie cloud pair à pair de partage de contenu entre appareils Windows 10. À compter de la version 1802, configurez-la de façon à ce qu’elle utilise vos groupes de limites pour partager du contenu entre homologues. Les paramètres client appliquent l’identificateur de groupe de limites comme identificateur du groupe Optimisation de la distribution sur le client. Lorsque le client communique avec le service de cloud d’Optimisation de la distribution, il utilise cet identificateur pour localiser les pairs possédant le contenu souhaité. Pour plus d’informations, consultez les paramètres client de l’[optimisation de la distribution](/sccm/core/clients/deploy/about-client-settings#delivery-optimization).
+<!-- 1324696 -->
+Les groupes de limites Configuration Manager permettent de définir et de réguler la distribution de contenu sur le réseau de l’entreprise et dans les agences. [L’Optimisation de la distribution de Windows](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) est une technologie cloud pair à pair de partage de contenu entre appareils Windows 10. À compter de la version 1802, configurez-la de façon à ce qu’elle utilise vos groupes de limites pour partager du contenu entre homologues. Les paramètres client appliquent l’identificateur de groupe de limites comme identificateur du groupe Optimisation de la distribution sur le client. Lorsque le client communique avec le service de cloud d’Optimisation de la distribution, il utilise cet identificateur pour localiser les pairs possédant le contenu souhaité. Pour plus d’informations, consultez les paramètres client de l’[optimisation de la distribution](/sccm/core/clients/deploy/about-client-settings#delivery-optimization).
 
 L’optimisation de la distribution est la technologie recommandée pour [optimiser la distribution de la mise à jour Windows 10](/sccm/sum/deploy-use/optimize-windows-10-update-delivery) des fichiers d’installation rapide pour les mises à jour de qualité de Windows 10.
 
 
 
 ## <a name="windows-ledbat"></a>Windows LEDBAT
-<!--1358112-->La fonctionnalité LEDBAT (Low Extra Delay Background Transport) de Windows est une fonctionnalité de contrôle de la congestion réseau qui permet de gérer les transferts réseau d’arrière-plan. Pour les points de distribution qui s’exécutent sur des versions prises en charge de Windows Server, activez une option permettant d’ajuster le trafic réseau. Les clients utilisent alors la bande passante réseau seulement quand elle est disponible. 
+<!--1358112-->
+La fonctionnalité LEDBAT (Low Extra Delay Background Transport) de Windows est une fonctionnalité de contrôle de la congestion réseau de Windows Server qui permet de gérer les transferts réseau d’arrière-plan. Pour les points de distribution qui s’exécutent sur des versions prises en charge de Windows Server, activez une option permettant d’ajuster le trafic réseau. Les clients utilisent alors la bande passante réseau seulement quand elle est disponible. 
 
 Pour plus d’informations sur la fonctionnalité LEDBAT de Windows, consultez le billet de blog [New transport advancements](https://blogs.technet.microsoft.com/networking/2016/07/18/announcing-new-transport-advancements-in-the-anniversary-update-for-windows-10-and-windows-server-2016/).
 
@@ -108,7 +110,7 @@ Le cache d’homologue client vous permet de gérer le déploiement de contenu s
 
 Déployez d’abord les paramètres clients pour activer le cache de pair sur un regroupement. Les membres de ce regroupement se comportent ensuite comme une source de contenu de pair pour les autres clients du même groupe de limites.
 
-À compter de la version 1806, les sources de cache de pair client peuvent diviser le contenu en plusieurs parties. Ces parties diminuent le transfert de réseau afin de réduire l’utilisation du réseau WAN. Le point de gestion fournit un suivi plus détaillé des parties du contenu. Il essaie de supprimer les téléchargements multiples du même contenu par groupe de limites.<!--1357346-->
+À compter de la version 1806, les sources de cache de pair client peuvent diviser le contenu en plusieurs parties. Ces parties diminuent le transfert de réseau afin de réduire l’utilisation du réseau WAN. Le point de gestion fournit un suivi plus détaillé des parties du contenu. Il essaie de supprimer plusieurs téléchargements du même contenu par groupe de limites.<!--1357346-->
 
 Pour plus d’informations, consultez [Cache d’homologue pour les clients Configuration Manager](/sccm/core/plan-design/hierarchy/client-peer-cache).
 
@@ -134,13 +136,15 @@ Pour plus d’informations, consultez [Mise en cache d’homologue Windows PE](/
 
     -   Nécessite des points de distribution accessibles via Internet pour accepter HTTPS.  
 
-    -   Peut utiliser un point de distribution cloud.  
+    -   Peut utiliser un point de distribution cloud ou une passerelle de gestion cloud.  
+    
+        *   À compter de la version 1806, une passerelle de gestion cloud peut également distribuer du contenu aux clients. Cette fonctionnalité réduit le nombre de certificats nécessaires, ainsi que les coûts associés aux machines virtuelles Azure. Pour plus d’informations, consultez [Modifier une passerelle de gestion cloud](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway).
 
 -   **Groupe de travail**:  
 
     -   Exige des points de distribution qu’ils acceptent le protocole HTTPS.  
 
-    -   Peut utiliser un point de distribution cloud.  
+    -   Peut utiliser un point de distribution cloud ou une passerelle de gestion cloud.  
 
 
 
@@ -187,7 +191,7 @@ Les points de distribution standard prennent en charge diverses configurations e
 
 - **BranchCache**, le **cache d’homologue** et l’**optimisation de la distribution** sont des technologies pair à pair permettant de réduire la bande passante réseau utilisée quand vous déployez du contenu.  
 
-- Il existe différentes configurations pour les déploiements de système d’exploitation, comme **[PXE](/sccm/osd/get-started/prepare-site-system-roles-for-operating-system-deployments#BKMK_PXEDistributionPoint)** et la **[multidiffusion](/sccm/osd/get-started/prepare-site-system-roles-for-operating-system-deployments#BKMK_DPMulticast)**.  
+- Il existe différentes configurations pour les déploiements de système d’exploitation, comme **[PXE](/sccm/osd/get-started/prepare-site-system-roles-for-operating-system-deployments#BKMK_PXEDistributionPoint)** et la **[multidiffusion](/sccm/osd/get-started/prepare-site-system-roles-for-operating-system-deployments#BKMK_DPMulticast)** .  
 
 - Options pour les **appareils mobiles**   
   

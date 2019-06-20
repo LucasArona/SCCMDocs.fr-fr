@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fdfb536607ce20cd9727882ad92c3ed963c69241
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 367ab11340ef36b0caaf23e84f26bdda921ee158
+ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499472"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834752"
 ---
 # <a name="supported-sql-server-versions-for-configuration-manager"></a>Versions SQL Server prises en charge pour Configuration Manager
 
@@ -227,7 +227,8 @@ Vous pouvez utiliser cette version de SQL Server sans version de mise à jour cu
 ### <a name="sql-server-clr-integration"></a>Intégration du CLR SQL Server  
   La base de données du site nécessite que le CLR (Common Language Runtime) SQL Server soit activé. Cette option est activée automatiquement lors de l’installation de Configuration Manager. Pour plus d’informations sur le CLR, consultez [Présentation de l’intégration de CLR dans SQL Server](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration).  
 
-
+### <a name="sql-server-service-broker-ssb"></a>SQL Server Service Broker (SSB)
+ SQL Server Service Broker est nécessaire à la fois pour la réplication intersite et pour un seul site principal. 
 
 ##  <a name="bkmk_optional"></a> Configurations facultatives pour SQL Server  
  Les configurations suivantes sont facultatives pour chaque base de données utilisant une installation complète de SQL Server.  

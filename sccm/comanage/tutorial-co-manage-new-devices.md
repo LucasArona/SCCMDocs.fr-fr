@@ -3,8 +3,8 @@ title: Tutoriel&#58; Activer la cogestion pour les nouveaux appareils Windows 10
 titleSuffix: Configuration Manager
 description: Configurez la cogestion pour les appareils Windows 10 pour Configuration Manager et Intune.
 keywords: ''
-author: brenduns
-ms.author: brenduns
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ms.date: 03/08/2019
 ms.topic: tutorial
@@ -12,12 +12,12 @@ ms.prod: configuration-manager
 ms.service: ''
 ms.technology: ''
 ms.assetid: ''
-ms.openlocfilehash: 61400d382a539efa495af99795e32fc1f2a517ab
-ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
+ms.openlocfilehash: 3c02a9c05e2c7d24654684f122edcd3eb5a84e06
+ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "57737353"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834859"
 ---
 # <a name="tutorial-enable-co-management-for-new-internet-based-devices"></a>Tutoriel : Activer la cogestion pour les nouveaux appareils basés sur Internet
 Avec la cogestion, vous pouvez conserver vos processus établis d’utilisation de Configuration Manager pour gérer des PC dans votre organisation, tout en investissant dans le cloud en recourant à Intune pour la sécurité et l’approvisionnement moderne. 
@@ -165,7 +165,7 @@ Exportez le *certificat d’authentification serveur de la passerelle de gestion
 
 3. Dans l’Assistant Exportation de certificat, sélectionnez **Suivant**, **Oui, exporter la clé privée**, puis **Suivant**.  
 
-4. Dans la page Format de fichier d'exportation, sélectionnez **Échange d'informations personnelles - PKCS #12 (.PFX)**, sélectionnez **Suivant** et fournissez un mot de passe. Pour le nom de fichier, spécifiez un nom tel que **C:\ConfigMgrCloudMGServer**. Vous devrez référencer ce fichier lors de la création de la passerelle CMG dans Azure.  
+4. Dans la page Format de fichier d'exportation, sélectionnez **Échange d'informations personnelles - PKCS #12 (.PFX)** , sélectionnez **Suivant** et fournissez un mot de passe. Pour le nom de fichier, spécifiez un nom tel que **C:\ConfigMgrCloudMGServer**. Vous devrez référencer ce fichier lors de la création de la passerelle CMG dans Azure.  
 
 5. Sélectionnez **Suivant**, puis confirmez les paramètres suivants avant de sélectionner **Terminer** pour terminer l’exportation :  
 
@@ -357,7 +357,7 @@ Une fois les configurations, les rôles de système de site et les paramètres A
 
 4. Sur la page *Activation*, sélectionnez l’une des options suivantes dans la liste déroulante *Inscription automatique dans Intune* :  
 
-   - **Pilote**  - *(recommandé)* Membres du regroupement qui seront automatiquement inscrits dans Intune et pourront alors être cogérés. Spécifiez le regroupement pilote sur la page *Gestion intermédiaire* de cet Assistant. Cette option permet de tester la cogestion sur un sous-ensemble de clients. Vous pourrez ensuite déployer la cogestion auprès de clients supplémentaires suivant une approche progressive.  
+   - **Pilote**  -  *(recommandé)* Membres du regroupement qui seront automatiquement inscrits dans Intune et pourront alors être cogérés. Spécifiez le regroupement pilote sur la page *Gestion intermédiaire* de cet Assistant. Cette option permet de tester la cogestion sur un sous-ensemble de clients. Vous pourrez ensuite déployer la cogestion auprès de clients supplémentaires suivant une approche progressive.  
 
    - **Tous** – Cogestion activée pour tous les clients.  
 
@@ -392,7 +392,7 @@ Ensuite, quand un appareil Windows 10 précédemment non géré s’inscrit aupr
 Par exemple, *C:\Program Files\Microsoft Configuration Manager\bin\i386\ccmsetup.msi*   
 
 4. Sélectionnez **Informations sur l’application**, puis spécifiez les détails suivants :
-   - **Description** : Client de Configuration Manager  
+   - **Description** : Client Configuration Manager  
 
    - **Éditeur** : Microsoft  
 
