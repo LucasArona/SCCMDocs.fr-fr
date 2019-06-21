@@ -11,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 57184274-5fea-4d79-a2b4-22e08ed26daf
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b1c456277b87c3472e1bae8ed9ed65277d647038
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 098091c0ed9fa5948e7bc36cf601342bc847be75
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65500176"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67159472"
 ---
 # <a name="manually-deploy-software-updates"></a>Déployer manuellement des mises à jour logicielles  
 
@@ -246,7 +246,7 @@ Après avoir identifié les mises à jour logicielles que vous souhaitez déploy
 
 14. Cliquez sur **Suivant** pour déployer la mise à jour logicielle.  
 
-    Une fois l’Assistant terminé, Configuration Manager télécharge les mises à jour logicielles dans la bibliothèque de contenu sur le serveur de site. Il distribue ensuite le contenu aux points de distribution configurés et déploie le groupe de mises à jour logicielles sur les clients du regroupement cible. Pour plus d’informations sur le processus de déploiement, consultez [Software update deployment process](/sum/understand/software-updates-introduction#BKMK_DeploymentProcess).  
+    Une fois l’Assistant terminé, Configuration Manager télécharge les mises à jour logicielles dans la bibliothèque de contenu sur le serveur de site. Il distribue ensuite le contenu aux points de distribution configurés et déploie le groupe de mises à jour logicielles sur les clients du regroupement cible. Pour plus d’informations sur le processus de déploiement, consultez [Software update deployment process](/sccm/sum/understand/software-updates-introduction#BKMK_DeploymentProcess).  
 
 
 

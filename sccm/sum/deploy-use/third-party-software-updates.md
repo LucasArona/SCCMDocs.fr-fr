@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 04963f6c565a9cb83655416dd706d5dd9055a29b
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 3279ba7cd78ca6fc10ddb8662ac816679d01d7cf
+ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499912"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67194682"
 ---
 # <a name="enable-third-party-updates"></a>Activer les mises à jour tierces 
 
@@ -90,7 +90,7 @@ Si vous avez besoin de configurer manuellement le certificat, par exemple pour u
 
 
 ## <a name="enable-third-party-updates-on-the-clients"></a>Activer les mises à jour tierces sur les clients
-Activez les mises à jour tierces sur les clients dans les paramètres client. Les paramètres définissent la stratégie de l’agent Windows Update pour [Autoriser les mises à jour signées provenant d’un emplacement intranet du service de mise à jour Microsoft](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/4-configure-group-policy-settings-for-automatic-updates#BKMK_comp3). Ce paramètre client installe aussi le certificat de signature WSUS dans la banque Éditeurs approuvés du client. La journalisation de la gestion de certificats peut être consultée dans le fichier `updatesdeployment.log` des clients.  Exécutez ces étapes pour chaque paramètre client personnalisé que vous voulez utiliser pour les mises à jour tierces. Pour plus d’informations, consultez l’article [À propos des paramètres client](/sccm/core/clients/deploy/about-client-settings#Enable-third-party-software-updates).
+Activez les mises à jour tierces sur les clients dans les paramètres client. Les paramètres définissent la stratégie de l’agent Windows Update pour [Autoriser les mises à jour signées provenant d’un emplacement intranet du service de mise à jour Microsoft](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/4-configure-group-policy-settings-for-automatic-updates#allow-signed-updates-from-an-intranet-microsoft-update-service-location). Ce paramètre client installe aussi le certificat de signature WSUS dans la banque Éditeurs approuvés du client. La journalisation de la gestion de certificats peut être consultée dans le fichier `updatesdeployment.log` des clients.  Exécutez ces étapes pour chaque paramètre client personnalisé que vous voulez utiliser pour les mises à jour tierces. Pour plus d’informations, consultez l’article [À propos des paramètres client](/sccm/core/clients/deploy/about-client-settings#enable-third-party-software-updates).
 
 1. Dans la console Configuration Manager, accédez à l’espace de travail **Administration**, puis sélectionnez le nœud **Paramètres du client**.
 2. Sélectionnez un paramètre client personnalisé existant ou créez-en un. 

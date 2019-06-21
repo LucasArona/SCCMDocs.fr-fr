@@ -12,12 +12,12 @@ manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4edec748950b4601c4f5889f180f74c158171b33
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: b2d72e0134bdc4f7033ff37c54bed4898fce6832
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56136811"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286211"
 ---
 # <a name="capabilities-in-technical-preview-1701-for-system-center-configuration-manager"></a>Fonctionnalités de Technical Preview 1701 System Center Configuration Manager
 
@@ -62,10 +62,10 @@ Les points suivants décrivent le comportement des points de mise à jour logici
   Lorsqu’un client bascule vers le comportement de secours, il utilise les configurations du groupe de limites relatives au comportement de secours, afin de créer un pool de points de mise à jour logicielle disponibles. Cette liste comprend tous les points de mise à jour logicielle des clients provenant du *groupe de limites actuel*, des *groupes de limites voisins* et du *groupe de limites de site par défaut*.
 
 - **Configurer le groupe de limites de site par défaut :**  
-  Ajoutez un point de mise à jour logicielle au *groupe-limites-site-par-défaut&lt;codesite>*. Vous permettez ainsi aux clients qui ne sont pas membres d’un autre groupe de limites de basculer vers le comportement de secours pour rechercher un point de mise à jour logicielle.
+  Ajoutez un point de mise à jour logicielle au *groupe-limites-site-par-défaut&lt;codesite>* . Vous permettez ainsi aux clients qui ne sont pas membres d’un autre groupe de limites de basculer vers le comportement de secours pour rechercher un point de mise à jour logicielle.
 
 
-Pour gérer les points de mise à jour logicielle pour les groupes de limites, utilisez les [procédures de la documentation relative à la version Current Branch](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#procedures-for-boundary-groups). Toutefois, n’oubliez pas qu’il n’est pas encore possible de configurer des durées de secours pour les points de mise à jour logicielle.
+Pour gérer les points de mise à jour logicielle pour les groupes de limites, utilisez les [procédures de la documentation relative à la version Current Branch](/sccm/core/servers/deploy/configure/boundary-group-procedures). Toutefois, n’oubliez pas qu’il n’est pas encore possible de configurer des durées de secours pour les points de mise à jour logicielle.
 
 
 ## <a name="hardware-inventory-collects-uefi-information"></a>L’inventaire matériel collecte des informations UEFI
@@ -97,7 +97,7 @@ Pour plus d’informations sur l’utilisation des points de distribution cloud,
 
 ### <a name="try-it-out"></a>Faites un essai
 
-- **Activer le service local d’attestation d’intégrité de l’appareil pour un point de gestion**<br>  Dans la console Configuration Manager, naviguez jusqu’au point de gestion, ouvrez **Propriétés du composant du point de gestion**, puis cliquez sur l’onglet **Options avancées**. Cliquez sur **Ajouter**, puis indiquez l’URL locale (par exemple, https://10.10.10.10)) pour les **URL du service local d’attestation d’intégrité de l’appareil**.
+- **Activer le service local d’attestation d’intégrité de l’appareil pour un point de gestion**<br>  Dans la console Configuration Manager, naviguez jusqu’au point de gestion, ouvrez **Propriétés du composant du point de gestion**, puis cliquez sur l’onglet **Options avancées**. Cliquez sur **Ajouter**, puis indiquez l’URL locale (par exemple, https://10.10.10.10) ) pour les **URL du service local d’attestation d’intégrité de l’appareil**.
 - **Activer la création de rapports à partir du service local d’attestation d’intégrité des points de gestion pour l’agent client**<br>Dans la console Configuration Manager, choisissez **Administration** > **Paramètres client**, puis double-cliquez, ou créez de nouveaux **Paramètres de périphérique personnalisés**. Sélectionnez **Agent ordinateur**, puis définissez **Utiliser le service d’attestation d’intégrité local** sur **Oui**. Si l’option **Activer la communication avec le service d’attestation d’intégrité** est définie sur **Oui** et l’option **Utiliser le service d’attestation d’intégrité local** est définie sur **Non**, le point de gestion utilise le service cloud d’attestation d’intégrité de l’appareil.
 
 ## <a name="use-the-oms-connector-for-microsoft-azure-government-cloud"></a>Utiliser le connecteur OMS pour Microsoft Azure Government Cloud
@@ -116,7 +116,7 @@ Pour cela, vous modifiez un fichier de configuration pour qu’il pointe vers Az
      &lt;value>&lt;/value>   
      &lt;/setting>
 
-   - **Après modification :**     
+   - **Après modification :**      
      &lt;setting name="FairFaxArmResourceId" serializeAs="String"> &lt;value><https://management.usgovcloudapi.net/&lt;/value>>  
      &lt;/setting>
 

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 88cc03de66847143336425dbc4b730703d15378c
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 1802c4f21939026f6775daecd9fe011d23ae7a38
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65493786"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67159518"
 ---
 # <a name="manage-software-updates-in-updates-publisher"></a>Gérer les mises à jour logicielles dans l’éditeur de mise à jour
 
@@ -44,7 +44,7 @@ La nouvelle copie que vous créez affiche l’état **Non expirée** mais conser
 ## <a name="edit-updates-and-bundles"></a>Modifier des mises à jour et des offres groupées
 Vous pouvez sélectionner et modifier des mises à jour et des offres groupées figurant dans votre référentiel.
 
-Dans l **’espace de travail Mises à jour**, sélectionnez une mise à jour ou une offre groupée, puis choisissez **Modifier** dans l’onglet **Accueil** pour ouvrir l’Assistant de modification. Les mises à jour et les offres groupées disposent d’assistants étroitement liés mais distincts qui présentent les mêmes options que les Assistants [Création d’une mise à jour](/sccm/sum/tools/create-updates-with-updates-publisher#the-create-update-wizard) ou [Création d’une offre groupée](/sccm/sum/tools/create-updates-with-updates-publisher#the-create-bundle-wizard).
+Dans l **’espace de travail Mises à jour**, sélectionnez une mise à jour ou une offre groupée, puis choisissez **Modifier** dans l’onglet **Accueil** pour ouvrir l’Assistant de modification. Les mises à jour et les offres groupées disposent d’assistants étroitement liés mais distincts qui présentent les mêmes options que les Assistants [Création d’une mise à jour](/sccm/sum/tools/create-updates-with-updates-publisher#use-the-create-update-wizard) ou [Création d’une offre groupée](/sccm/sum/tools/create-updates-with-updates-publisher#use-the-create-bundle-wizard).
 
 Lors de la modification, vous pouvez modifier les détails disponibles concernant la mise à jour ou l’offre groupée afin de l’utiliser dans votre environnement. Par exemple, vous pouvez modifier les règles de mise en application, de priorité ou la langue. Vous pouvez également modifier le produit et le fournisseur pour déplacer la mise à jour ou l’offre groupée vers un dossier personnalisé et regrouper les mises à jour pour votre usage personnel.
 
@@ -73,7 +73,7 @@ Lorsque vous affectez des mises à jour à une publication :
 
     -   Utilisez l’option **Affecter une mise à jour logicielle à une nouvelle publication** si vous ne disposez d’aucune publication appropriée. Elle créera une nouvelle publication portant le nom que vous spécifiez.
 
-Après avoir affecté des mises à jour à une publication, vous pouvez utiliser l **’espace de travail Publications** pour [publier](/sccm/sum/tools/updates-publisher-publications#publish-pubilcations) ou [exporter](/sccm/sum/tools/updates-publisher-publications#export-a-pubilcation) la publication en tant que groupe.
+Après avoir affecté des mises à jour à une publication, vous pouvez utiliser l **’espace de travail Publications** pour [publier](/sccm/sum/tools/updates-publisher-publications#publish-publications) ou [exporter](/sccm/sum/tools/updates-publisher-publications#export-a-publication) la publication en tant que groupe.
 
 ## <a name="publish-updates-and-bundles-from-the-updates-workspace"></a>Publier des mises à jour et des offres groupées à partir de l’espace de travail Mises à jour
 Lorsque vous publiez des mises à jour et des offres groupées, l’éditeur de mise à jour ajoute des informations sur ces mises à jour et offres (métadonnées) et éventuellement les fichiers binaires des mises à jour (tout le contenu) à un serveur de mise à jour pour le déploiement sur des appareils.
@@ -82,7 +82,7 @@ Avant de pouvoir publier une mise à jour, vous devez configurer l’option [Ser
 
 Il existe deux façons de publier des mises à jour et des offres groupées :
 -   Directement depuis l'espace de travail Mises à jour. (Consultez la procédure suivante *pour publier des mises à jour et des offres groupées*.)
--   En tant que [publication](/sccm/sum/tools/updates-publisher-publications#publish-pubilcations) depuis l’espace de travail Publications.  
+-   En tant que [publication](/sccm/sum/tools/updates-publisher-publications#publish-publications) depuis l’espace de travail Publications.  
 
 > [!NOTE]   
 > Le serveur de mise à jour peut uniquement publier des mises à jour d’une taille maximale de 375 mégaoctets (Mo).
@@ -99,7 +99,7 @@ Il existe deux façons de publier des mises à jour et des offres groupées :
 Si la publication échoue, vous recevez un lien vers le fichier UpdatesPublisher.log apparaît qui peut fournir plus d’informations.
 
 ## <a name="export-updates"></a>Exporter des mises à jour
-Vous pouvez exporter des mises à jour et des offres groupées depuis le référentiel de l’éditeur de mise à jour afin de créer un catalogue personnalisé de mises à jour. Vous pouvez ensuite [ajouter](/sccm/sum/tools/updates-publisher-catalogs#add-software-update-catalogs) puis [importer](/sccm/sum/tools/updates-publisher-catalogs#mport-updates) ce catalogue vers une autre instance de l’éditeur de mise à jour. (Vous pouvez également [exporter des mises à jour sous la forme d’une publication](/sccm/sum/tools/updates-publisher-publications##export-a-publication).)
+Vous pouvez exporter des mises à jour et des offres groupées depuis le référentiel de l’éditeur de mise à jour afin de créer un catalogue personnalisé de mises à jour. Vous pouvez ensuite [ajouter](/sccm/sum/tools/updates-publisher-catalogs#add-software-update-catalogs) puis [importer](/sccm/sum/tools/updates-publisher-catalogs#import-updates) ce catalogue vers une autre instance de l’éditeur de mise à jour. (Vous pouvez également [exporter des mises à jour sous la forme d’une publication](/sccm/sum/tools/updates-publisher-publications##export-a-publication).)
 
 Pour exporter directement des mises à jour, accédez à l **’espace de travail Mises à jour** > **Toutes les mises à jour logicielles** et sélectionnez une ou plusieurs mises à jour et offres groupées. Vous ne pouvez pas exporter un fournisseur ou un dossier de produit, mais vous pouvez sélectionner un dossier puis les mises à jour de ce dossier pour l’exportation.
 
@@ -114,7 +114,7 @@ Accédez à l **’espace de travail Mises à jour** > **Toutes les mises à jou
 
 -   Si votre sélection contient uniquement des mises à jour ou des offres groupées qui n’ont pas été publiées ou qui ont expiré, vous êtes invité à confirmer la suppression.
 
--   Si votre sélection contient une mise à jour ou une offre groupée qui a été publiée mais n’a pas encore expiré, vous recevez un avertissement. Vous devez [faire expirer](/sccm/sum/tools/updates-publisher-pubilcations#expire-or-reactivate-updates-and-bundles) ces mises à jour puis publier cette modification avant de supprimer les mises à jour du référentiel.  
+-   Si votre sélection contient une mise à jour ou une offre groupée qui a été publiée mais n’a pas encore expiré, vous recevez un avertissement. Vous devez [faire expirer](/sccm/sum/tools/updates-publisher-publications#expire-or-reactivate-updates-and-bundles) ces mises à jour puis publier cette modification avant de supprimer les mises à jour du référentiel.  
 
 Si vous supprimez une mise à jour ou une offre groupée d’un fournisseur puis importez de nouveau ce catalogue, cette mise à jour est restaurée dans votre référentiel.
 

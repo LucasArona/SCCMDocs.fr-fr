@@ -11,18 +11,19 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9b3ba4c5179069e5443beaf1b7f733c797cfd680
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 0f833269540e10647c20353ad208a54d9eb53af9
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56156523"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286459"
 ---
 #  <a name="sync-data-from-configuration-manager-to-azure-log-analytics"></a>Synchroniser les données de Configuration Manager vers Azure Log Analytics
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
-<!--1258052--> Utilisez **l’Assistant des services Azure** pour configurer une connexion de Configuration Manager vers le service cloud Azure Log Analytics. Cette connexion synchronise les données de regroupement d’appareils avec Log Analytics. 
+<!--1258052-->
+Utilisez **l’Assistant des services Azure** pour configurer une connexion de Configuration Manager vers le service cloud Azure Log Analytics. Cette connexion synchronise les données de regroupement d’appareils avec Log Analytics. 
 
 > [!Note]  
 > Par défaut, Configuration Manager n’active pas cette fonctionnalité facultative. Vous devez activer cette fonctionnalité avant de l’utiliser. Pour plus d’informations, consultez [Activer les fonctionnalités facultatives des mises à jour](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
@@ -35,7 +36,7 @@ ms.locfileid: "56156523"
 ## <a name="prerequisites-for-the-log-analytics-connector"></a>Prérequis pour le connecteur Log Analytics
 
 > [!Note]  
-> Cet article fait référence au *Connecteur Log Analytics*, précédemment appelé *Connecteur OMS*. Il n’existe aucune différence fonctionnelle. Pour plus d’informations, consultez [Gestion Azure - Surveillance](https://docs.microsoft.com/azure/monitoring/#operations-management-suite).  
+> Cet article fait référence au *Connecteur Log Analytics*, précédemment appelé *Connecteur OMS*. Il n’existe aucune différence fonctionnelle. Pour plus d’informations, consultez [Gestion Azure - Surveillance](https://docs.microsoft.com/azure/azure-monitor/terminology#log-analytics).  
 
 - Avant d’installer le connecteur Log Analytics dans Configuration Manager, accordez des autorisations à Configuration Manager. Accordez un *accès Contributeur* au *groupe de ressources* Azure qui contient votre espace de travail Log Analytics. Pour plus d’informations, consultez [Accorder à Configuration Manager les autorisations d’accès à Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#grant-configuration-manager-with-permissions-to-log-analytics).  
 
@@ -52,7 +53,7 @@ ms.locfileid: "56156523"
 Utilisez **l’Assistant des services Azure** pour configurer une connexion de Configuration Manager vers le service cloud Azure Log Analytics. Pour plus d’informations sur ce processus, consultez [Configurer des services Azure](https://docs.microsoft.com/sccm/core/servers/deploy/configure/azure-services-wizard). Sélectionnez l’option dans l’Assistant pour le **connecteur OMS**. 
 
 > [!Note]  
-> Cet article fait référence au *Connecteur Log Analytics*, précédemment appelé *Connecteur OMS*. Il n’existe aucune différence fonctionnelle. Pour plus d’informations, consultez [Gestion Azure - Surveillance](https://docs.microsoft.com/azure/monitoring/#operations-management-suite).  
+> Cet article fait référence au *Connecteur Log Analytics*, précédemment appelé *Connecteur OMS*. Il n’existe aucune différence fonctionnelle. Pour plus d’informations, consultez [Gestion Azure - Surveillance](https://docs.microsoft.com/azure/azure-monitor/terminology#log-analytics).  
 
 Si vous avez suivi toutes les autres procédures avec succès, les informations sur l’écran **Configuration de la connexion** s’affichent automatiquement après l’importation de l’application web. Les informations pour les paramètres de connexion devraient s’afficher pour votre **Abonnement Azure**, votre **Groupe de ressources Azure** et votre **Espace de travail Operations Management Suite**.
 

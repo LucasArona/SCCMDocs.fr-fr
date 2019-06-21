@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: abb8e846598a9ae0d69eb1b134911ec83006b966
-ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
+ms.openlocfilehash: bf0b57ad1753d797b163b0016517cdad09459013
+ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66834903"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67251625"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Principes de base de la gestion de contenu dans Configuration Manager
 
@@ -234,7 +234,7 @@ Les clients qui ne trouvent pas de contenu à partir d’un point de distributio
 
 Les concepts de points de distribution préférés ne sont plus utilisés, et les paramètres d’**autorisation des emplacements sources de secours pour le contenu** ne sont plus disponibles ou appliqués.
 
-Pour plus d’informations, consultez [Groupes de limites](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups).
+Pour plus d’informations, consultez [Groupes de limites](/sccm/core/servers/deploy/configure/boundary-groups).
 
 
 
@@ -254,7 +254,7 @@ Pour plus d’informations, consultez [Gérer la bande passante réseau](/sccm/c
 
 Les vitesses de connexion réseau qui définissent un point de distribution comme **Rapide** ou **Lent** ne sont plus utilisées. Au lieu de cela, chaque système de site associé à un groupe de limites est traité de la même façon.
 
-Pour plus d’informations, consultez [Groupes de limites](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups).
+Pour plus d’informations, consultez [Groupes de limites](/sccm/core/servers/deploy/configure/boundary-groups).
 
 
 
@@ -267,7 +267,7 @@ Pour plus d’informations, consultez [Groupes de limites](/sccm/core/servers/de
 
 -   Même si cette option force Configuration Manager à distribuer automatiquement le contenu aux points de distribution préférés de ce client, le client peut obtenir ce contenu auprès d’autres points de distribution avant que ses points de distribution préférés reçoivent le déploiement. Quand ce comportement se produit, le contenu est alors disponible sur ce point de distribution pour le prochain client qui cherche ce déploiement.  
 
-Pour plus d’informations, consultez [Groupes de limites](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups).
+Pour plus d’informations, consultez [Groupes de limites](/sccm/core/servers/deploy/configure/boundary-groups).
 
 
 

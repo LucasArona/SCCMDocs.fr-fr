@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 03368d543b539b018ba581277cb0ba7e6e8cb251
-ms.sourcegitcommit: f531d0a622f220739710b2fe6644ea58d024064a
+ms.openlocfilehash: deb27df76bb3ed6fc9c6338f302fcc612443cee9
+ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65933499"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67251915"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Nouveautés de la version 1806 de l’édition Current Branch de Configuration Manager
 
@@ -217,7 +217,7 @@ Pour plus d’informations, consultez [Modifier une passerelle de gestion cloud]
 
 #### <a name="trusted-root-certificate-isnt-required-with-azure-ad"></a>Les certificat racines approuvés ne sont plus nécessaires avec Azure AD
 <!--503899-->
-Lorsque vous créez une passerelle de gestion cloud, il n’est plus nécessaire de fournir un [certificat racine approuvé](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#cmg-trusted-root-certificate-to-clients) dans la page Paramètres. Ce certificat n’est pas nécessaire lorsque vous utilisez Azure Active Directory (Azure AD) pour l’authentification client, mais il était auparavant nécessaire dans l’Assistant. Si vous utilisez des certificats d’authentification client PKI, vous devez continuer d’ajouter un certificat racine approuvé pour la passerelle de gestion cloud.
+Lorsque vous créez une passerelle de gestion cloud, il n’est plus nécessaire de fournir un [certificat racine approuvé](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_cmgroot) dans la page Paramètres. Ce certificat n’est pas nécessaire lorsque vous utilisez Azure Active Directory (Azure AD) pour l’authentification client, mais il était auparavant nécessaire dans l’Assistant. Si vous utilisez des certificats d’authentification client PKI, vous devez continuer d’ajouter un certificat racine approuvé pour la passerelle de gestion cloud.
 
 
 
@@ -545,7 +545,7 @@ Les domaines suivants de l’espace de travail **Analyse** prennent désormais e
 
 Cliquez avec le bouton droit sur le bien, puis sélectionnez **Copier**. Cette action permet de copier les biens sélectionnés sous forme d’une liste de valeurs délimitées par des virgules, qui inclut tous les détails. Le raccourci clavier **CTRL** + **C** fonctionne également dans ces affichages. 
 
-Pour plus d’informations, consultez [Améliorations apportées à la console dans la version 1806](/sccm/core/servers/manage/admin-console#console-improvements-in-version-1806).
+Pour plus d’informations, consultez [Améliorations apportées à la console dans la version 1806](/sccm/core/servers/manage/admin-console#copy-details-in-monitoring-views).
 
 
 ### <a name="improvements-to-the-surface-dashboard"></a>Améliorations apportées au tableau de bord Surface
@@ -567,7 +567,7 @@ Pour plus d’informations, consultez [Tableau de bord Surface](/sccm/core/clien
 <!--1358202-->
 Désormais, par défaut, le nœud **Appareils** de l’espace de travail **Ressources et Conformité** affiche une colonne indiquant l’**Utilisateur connecté**. Elle s’affiche également pour toutes les listes d’appareils spécifiques à un regroupement. Cette valeur est synchronisée avec [l’état du client](/sccm/core/clients/manage/monitor-clients#bkmk_indStatus). Quand l’utilisateur se déconnecte, le client efface cette valeur. Si aucun utilisateur n’est connecté, la valeur est vide. 
 
-Pour plus d’informations, consultez [Améliorations apportées à la console dans la version 1806](/sccm/core/servers/manage/admin-console#console-improvements-in-version-1806).
+Pour plus d’informations, consultez [Améliorations apportées à la console dans la version 1806](/sccm/core/servers/manage/admin-console#view-users-for-a-device).
 
 
 ### <a name="submit-feedback-from-the-configuration-manager-console"></a>Envoyer des commentaires à partir de la console Configuration Manager  
@@ -575,7 +575,7 @@ Pour plus d’informations, consultez [Améliorations apportées à la console d
 
 Envoyer un sourire ! Vous pouvez maintenant communiquer directement avec l’équipe Configuration Manager sur vos expériences. L’envoi de commentaires est facile à partir de la console Configuration Manager. Nous voulons recevoir tous vos commentaires : les éloges, les problèmes et les suggestions. Dans la console Configuration Manager, cliquez sur le bouton en forme de sourire dans l’angle supérieur droit au-dessus du ruban. Ces commentaires sont envoyés directement à l’équipe produit Microsoft pour Configuration Manager. Bien que l’utilisation du concentrateur de commentaires de Windows 10 soit toujours prise en charge, nous vous encourageons à utiliser la fonction de commentaires dans la console.  
 
-Pour plus d’informations, consultez [Améliorations apportées à la console dans la version 1806](/sccm/core/servers/manage/admin-console#console-improvements-in-version-1806) et [Commentaires sur le produit](/sccm/core/understand/find-help#BKMK_1806Feedback).
+Pour plus d’informations, consultez [Améliorations apportées à la console dans la version 1806](/sccm/core/servers/manage/admin-console#send-feedback) et [Commentaires sur le produit](/sccm/core/understand/find-help#BKMK_1806Feedback).
 
 
 
@@ -609,7 +609,7 @@ Quand vous êtes prêt à installer cette version, consultez les pages [Installe
 >
 >  Informations supplémentaires :    
 >   - [Installation de nouveaux sites](/sccm/core/servers/deploy/install/installing-sites)  
->   - [Versions de base et de mise à jour](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
+>   - [Versions de base et de mise à jour](/sccm/core/servers/manage/updates#bkmk_Baselines)
 
 Pour plus d’informations sur les problèmes importants et connus, consultez les [Notes de publication](/sccm/core/servers/deploy/install/release-notes).
 

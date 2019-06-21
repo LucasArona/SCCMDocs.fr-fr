@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d3ac15d0039377d4635e531052abcec72503b1c4
-ms.sourcegitcommit: d1df13fc95a1f1540177c294555d9be26161b9cb
+ms.openlocfilehash: 67c7c84850d22d7f73a745c61b0c1cb577088f83
+ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65974186"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67251678"
 ---
 # <a name="support-for-windows-10-in-configuration-manager"></a>Prise en charge de Windows 10 dans Configuration Manager  
 
@@ -30,7 +30,7 @@ Découvrez les versions de Windows 10 prises en charge par Configuration Manager
 > [!Tip]
 > Les builds client de Windows Server sont prises en charge de la même façon que la version associée de Windows 10. Par exemple, Windows Server 2016 correspond à la même version de build que Windows 10 LTSB 2016, et Windows Server version 1803 correspond à la même version de build que Windows 10 version 1803.
 >
-> Pour plus d’informations sur l’utilisation de Windows Server comme un système de site, consultez [Systèmes d’exploitation pris en charge pour les serveurs de système Configuration Manager](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers#the-server-core-installation-of-windows-server-version-1803).
+> Pour plus d’informations sur l’utilisation de Windows Server comme un système de site, consultez [Systèmes d’exploitation pris en charge pour les serveurs de système Configuration Manager](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers#bkmk_core).
 
 
 

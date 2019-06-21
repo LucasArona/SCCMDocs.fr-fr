@@ -12,12 +12,12 @@ ms.prod: configuration-manager
 ms.service: ''
 ms.technology: ''
 ms.assetid: ''
-ms.openlocfilehash: 3c02a9c05e2c7d24654684f122edcd3eb5a84e06
-ms.sourcegitcommit: 0bd336e11c9a7f2de05656496a1bc747c5630452
+ms.openlocfilehash: 94513445c8d1849f0304b304b7dd8672c1e50978
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66834859"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67158304"
 ---
 # <a name="tutorial-enable-co-management-for-new-internet-based-devices"></a>Tutoriel : Activer la cogestion pour les nouveaux appareils basés sur Internet
 Avec la cogestion, vous pouvez conserver vos processus établis d’utilisation de Configuration Manager pour gérer des PC dans votre organisation, tout en investissant dans le cloud en recourant à Intune pour la sécurité et l’approvisionnement moderne. 
@@ -450,5 +450,5 @@ Après avoir terminé les étapes de configuration de ce tutoriel, notamment la 
 
 ## <a name="next-steps"></a>Étapes suivantes
 - Passer en revue l’état des appareils cogérés avec le [Tableau de bord de cogestion](https://docs.microsoft.com/sccm/core/clients/manage/co-management-dashboard)
-- Utiliser [Windows Autopilot]() pour configurer de nouveaux appareils
+- Utiliser [Windows Autopilot](/sccm/comanage/quickstart-autopilot) pour configurer de nouveaux appareils
 - Utiliser [l’accès conditionnel](https://docs.microsoft.com/sccm/comanage/quickstart-conditional-access) et les règles de conformité Intune pour gérer l’accès utilisateur aux ressources de l’entreprise

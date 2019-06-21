@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 666cb86e4acbb46956f768655637d3185fc5df71
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: ab1c8e462e22206177e4907df3c5549ec9ba1692
+ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65497172"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67194211"
 ---
 # <a name="pre-release-features-in-configuration-manager"></a>Fonctionnalités en préversion dans Configuration Manager
 
@@ -83,14 +83,14 @@ Quand vous activez une fonctionnalité en préversion, le Gestionnaire de hiéra
 | [Package Conversion Manager](/sccm/apps/pcm/package-conversion-manager) <!--1357861--> | Version 1806 | Version 1810 |
 | [Prise en charge de Cisco AnyConnect 4.0.07x et version supérieure pour iOS](/sccm/mdm/deploy-use/create-vpn-profiles) <!--1357393--> | Version 1802 | Version 1802 <br>avec mise à jour 4163547 |
 | [Déploiements par phases](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence) <!--1356837--> | Version 1802 | Version 1806 |
-| [Exécuter l’étape de la séquence de tâches](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#add-child-task-sequences-to-a-task-sequence) <!--1261338--> |  Version 1710 | Version 1802 |
+| [Exécuter l’étape de la séquence de tâches](/sccm/osd/understand/task-sequence-steps#child-task-sequence) <!--1261338--> |  Version 1710 | Version 1802 |
 | [Windows Defender Exploit Guard](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) <!--1355468--> | Version 1710 | Version 1802 |
 | [Évaluation de l’attestation de l’intégrité des appareils pour les stratégies de conformité pour l’accès conditionnel](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) <!--1235616--> | Version 1710 | Version 1802 |
 | [Créer et exécuter des scripts PowerShell](/sccm/apps/deploy-use/create-deploy-scripts) <!--1236459--> | Version 1706 | Version 1802 |
 | [Gérer les mises à jour du pilote Microsoft Surface](/sccm/sum/get-started/configure-classifications-and-products) <!--1098490--> | Version 1706 | Version 1710 |
 | [Gestion Device Guard](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager) <!--1355092 (1319346)--> | Version 1702 | ![Pas encore](media/red_x.png) |
 | [Mise en cache préalable du contenu de la séquence de tâches](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content) <!--1021244--> | Version 1702 | Version 1710 |
-| [Vérifier si des fichiers exécutables sont en cours d’exécution avant d’installer une application](/sccm/apps/deploy-use/deploy-applications#how-to-check-for-running-executable-files-before-installing-an-application) <!--1284624--> | Version 1702 | Version 1706 |
+| [Vérifier si des fichiers exécutables sont en cours d’exécution avant d’installer une application](/sccm/apps/deploy-use/deploy-applications#bkmk_exe-check) <!--1284624--> | Version 1702 | Version 1706 |
 | [Point de service de l’entrepôt de données](/sccm/core/servers/manage/data-warehouse) <!--1277922--> | Version 1702 | Version 1706 |
 | [Cache d’homologue pour la distribution de contenu aux clients](/sccm/core/plan-design/hierarchy/client-peer-cache) <!--1101436--> | Version 1610 | Version 1710 |
 | [Passerelle de gestion cloud](/sccm/core/clients/manage/plan-cloud-management-gateway) <!--1101764--> | Version 1610 | Version 1802 |

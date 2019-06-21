@@ -11,14 +11,14 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 102890f9e4b96328f117779ba63e9c72bf8f5d15
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: 9f49955fed92061fb856a5ff49203f1fa6c9d186
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67158954"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285627"
 ---
-# <a name="tutorial-deploy-windows-10-to-pilot"></a>Tutoriel : Déployer Windows 10 sur le pilote
+# <a name="tutorial-deploy-windows-10-to-pilot"></a>Tutoriel : Déployer Windows 10 vers le pilote
 
 > [!Note]  
 > Ces informations est lié à un service en version préliminaire qui peut être substantiellement modifié avant sa commercialisation. Microsoft exclut toute garantie, expresse ou implicite, concernant les informations fournies ici.  
@@ -221,6 +221,9 @@ Installez le correctif cumulatif de Configuration Manager version 1902 (4500571)
 8. Effectuez toutes les étapes de l'Assistant.  
 
 Configuration Manager crée une stratégie de paramètres pour configurer les appareils du regroupement cible. Cette stratégie inclut les paramètres de données de diagnostic pour permettre aux appareils d’envoyer des données à Microsoft. Par défaut, les clients de mettre à jour stratégie toutes les heures. Après avoir reçu les nouveaux paramètres, il peut être plus de plusieurs heures avant que les données sont disponibles dans l’Analytique de bureau.
+
+> [!Note]  
+> Pour plus d’informations sur ces paramètres, consultez [les paramètres Windows](/sccm/desktop-analytics/enroll-devices#windows-settings).  
 
 Surveiller la configuration de vos appareils pour l’Analytique de bureau. Dans la console Configuration Manager, accédez à la **bibliothèque de logiciels** espace de travail, développez le **Desktop Analytique maintenance** nœud, puis sélectionnez le **intégrité de la connexion** tableau de bord.  
 

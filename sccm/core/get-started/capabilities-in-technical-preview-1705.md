@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 33055f0962ef1220d41a2c8ee463cb2380ff60db
-ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
+ms.openlocfilehash: 5396ec603cab4b16e0d0c7e538618d1e757ab62f
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66715957"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286181"
 ---
 # <a name="capabilities-in-technical-preview-1705-for-system-center-configuration-manager"></a>Fonctionnalités de la version Technical Preview 1705 de System Center Configuration Manager
 
@@ -118,7 +118,7 @@ Avec cette version, les problèmes liés à la façon dont la console Configurat
 ## <a name="improvements-for-sql-server-always-on-availability-groups"></a>Améliorations pour les groupes de disponibilité Always On SQL Server  
 Avec cette version, vous pouvez maintenant utiliser les réplicas avec validation asynchrone dans les groupes de disponibilité Always On SQL Server que vous utilisez avec Configuration Manager.  Cela signifie que vous pouvez ajouter des réplicas supplémentaires à vos groupes de disponibilité à utiliser en tant que sauvegardes hors site (à distance) puis de les utiliser dans un scénario de récupération d’urgence.  
 
-- Configuration Manager prend en charge l’utilisation du réplica avec validation asynchrone pour récupérer votre réplica synchrone.  Consultez les [options de récupération de base de données de site](/sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption) dans la rubrique Sauvegarde et récupération pour plus d’informations sur la façon d’y parvenir.
+- Configuration Manager prend en charge l’utilisation du réplica avec validation asynchrone pour récupérer votre réplica synchrone.  Consultez les [options de récupération de base de données de site](/sccm/core/servers/manage/recover-sites#site-database-recovery-options) dans la rubrique Sauvegarde et récupération pour plus d’informations sur la façon d’y parvenir.
 
 - Cette version ne prend pas en charge le basculement pour utiliser le réplica avec validation asynchrone en tant que base de données de votre site.
   > [!CAUTION]  
@@ -130,7 +130,7 @@ Avec cette version, vous pouvez maintenant utiliser les réplicas avec validatio
 Pour ajouter un réplica asynchrone à un [groupe de disponibilité que vous utilisez avec Configuration Manager](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database), vous n’avez pas besoin d’exécuter les scripts de configuration requis pour configurer un réplica synchrone. (en effet, il n’existe aucune prise en charge pour l’utilisation de ce réplica asynchrone en tant que base de données de site.) Consultez [la documentation de SQL Server](https://msdn.microsoft.com/library/hh213247(v=sql.120).aspx(d=robot)) pour plus d’informations sur l’ajout de réplicas secondaires aux groupes de disponibilité.
 
 ### <a name="use-the-asynchronous-replica-to-recover-your-site"></a>Utiliser le réplica asynchrone pour récupérer votre site
-Avant d’utiliser un réplica asynchrone pour récupérer la base de données de votre site, vous devez arrêter le site principal actif pour empêcher les écritures supplémentaires sur la base de données de site. Après avoir arrêté le site, vous pouvez utiliser un réplica asynchrone au lieu d’utiliser une [base de données récupérée manuellement](/sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption).
+Avant d’utiliser un réplica asynchrone pour récupérer la base de données de votre site, vous devez arrêter le site principal actif pour empêcher les écritures supplémentaires sur la base de données de site. Après avoir arrêté le site, vous pouvez utiliser un réplica asynchrone au lieu d’utiliser une [base de données récupérée manuellement](/sccm/core/servers/manage/recover-sites#use-a-site-database-that-has-been-manually-recovered).
 
 Pour arrêter le site, vous pouvez utiliser [l’outil de maintenance hiérarchique](/sccm/core/servers/manage/hierarchy-maintenance-tool-preinst.exe) pour arrêter les services principaux sur le serveur de site. Utilisez la ligne de commande : **Preinst.exe /stopsite**   
 
@@ -245,7 +245,7 @@ Cela connecte votre site Configuration Manager à Azure AD et est requis pour to
 ### <a name="install-the-cm-client-from-the-internet"></a>Installation du client CM à partir d’Internet
 
 Avant de commencer, assurez-vous que les fichiers sources d’installation client sont stockés localement sur l’appareil sur lequel vous souhaitez installer le client.
-Ensuite, suivez les instructions de [Comment déployer des clients sur des ordinateurs Windows dans System Center Configuration Manager](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#a-namebkmkmanuala-how-to-install-clients-manually) en utilisant la ligne de commande d’installation suivante (remplacez les valeurs dans l’exemple par vos propres valeurs) :
+Ensuite, suivez les instructions de [Comment déployer des clients sur des ordinateurs Windows dans System Center Configuration Manager](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Manual) en utilisant la ligne de commande d’installation suivante (remplacez les valeurs dans l’exemple par vos propres valeurs) :
 
 **ccmsetup.exe /NoCrlCheck /Source:C:\CLIENT  CCMHOSTNAME=SCCMPROXYCONTOSO.CLOUDAPP.NET/CCM_Proxy_ServerAuth/72457598037527932 SMSSiteCode=HEC AADTENANTID=780433B5-E05E-4B7D-BFD1-E8013911E543 AADTENANTNAME=contoso  AADCLIENTAPPID=<GUID> AADRESOURCEURI=<https://contososerver>**
 
@@ -255,7 +255,7 @@ Ensuite, suivez les instructions de [Comment déployer des clients sur des ordin
 - **SMSMP** : nom de votre point de gestion de recherche : il peut s’agir de votre intranet.
 - **SMSSiteCode** : code de site de votre site Configuration Manager.
 - **AADTENANTID**, **AADTENANTNAME** : ID et nom du client Azure AD que vous avez lié à Configuration Manager. Vous pouvez les trouver en exécutant dsregcmd.exe /status à partir d’une invite de commandes sur un appareil à Azure AD.
-- **AADCLIENTAPPID** : ID d’application cliente Azure AD. Pour vous aider à le trouver, consultez [Utiliser le portail pour créer une application Azure Active Directory et un principal de service pouvant accéder aux ressources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal#get-application-id-and-authentication-key).
+- **AADCLIENTAPPID** : ID d’application cliente Azure AD. Pour vous aider à le trouver, consultez [Utiliser le portail pour créer une application Azure Active Directory et un principal de service pouvant accéder aux ressources](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in).
 - **AADResourceUri** : URI de l’identificateur de l’application de serveur Azure AD intégré.
 
 ## <a name="use-azure-services-wizard-to-configure-a-connection-to-oms"></a>Utiliser l’assistant de services Azure pour configurer une connexion à OMS
@@ -266,11 +266,11 @@ Ensuite, suivez les instructions de [Comment déployer des clients sur des ordin
 -   Configuration Manager se connecte à OMS pour des fonctionnalités comme [Log Analytics](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite) ou [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics).
 
 ### <a name="prerequisites-for-the-oms-connector"></a>Conditions préalables pour le connecteur OMS
-Les conditions préalables requises pour configurer une connexion à OMS sont identiques à celles [documentées pour la version de Current Branch 1702](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite#prerequisites). Ces informations sont répétées ici :  
+Les conditions préalables requises pour configurer une connexion à OMS sont identiques à celles [documentées pour la version de Current Branch 1702](/sccm/core/clients/manage/sync-data-log-analytics#prerequisites-for-the-log-analytics-connector). Ces informations sont répétées ici :  
 
 -   Accorder l’autorisation Configuration Manager à OMS.
 
--   Le connecteur OMS doit être installé sur l’ordinateur qui héberge un [point de connexion de service](/sccm/core/servers/deploy/configure/about-the-service-connection-point) se trouvant en [mode en ligne](/sccm/core/servers/deploy/configure/about-the-service-connection-point#a-namebkmkmodesa-modes-of-operation).
+-   Le connecteur OMS doit être installé sur l’ordinateur qui héberge un [point de connexion de service](/sccm/core/servers/deploy/configure/about-the-service-connection-point) se trouvant en [mode en ligne](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_modes).
 
 -   Vous devez installer un Microsoft Monitoring Agent pour OMS sur le point de connexion de service ainsi que le connecteur OMS. L’agent et le connecteur OMS doivent être configurés pour utiliser le même **espace de travail OMS**. Pour installer l’agent, consultez [Télécharger et installer l’agent](/azure/log-analytics/log-analytics-sccm#download-and-install-the-agent) dans la documentation OMS.
 -   Après avoir installé le connecteur et l’agent, vous devez configurer OMS pour utiliser les données Configuration Manager. Pour ce faire, dans le portail OMS, [importez des regroupements Configuration Manager](/azure/log-analytics/log-analytics-sccm#import-collections).

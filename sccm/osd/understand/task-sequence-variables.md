@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f903fad2bb0654cd445eeedaca6ddf902bff725
-ms.sourcegitcommit: 99dfe4fb9e9cfd20c44380ae442b3a5b895a0d9b
+ms.openlocfilehash: 3e1ad62c8b8b0f780670e7baf7ebf11de7f6b483
+ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65214979"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67194587"
 ---
 # <a name="task-sequence-variables"></a>Variables de séquence de tâches
 
@@ -505,7 +505,7 @@ Au lieu de générer une clé de démarrage aléatoire pour l’option de gestio
 
 Spécifie un nom de compte Windows qui dispose d'autorisations pour stocker l'image capturée sur un partage réseau ([OSDCaptureDestination](#OSDCaptureDestination)). Spécifiez également [OSDCaptureAccountPassword](#OSDCaptureAccountPassword).
 
-Pour plus d’informations sur le compte de capture de l’image du système d’exploitation, consultez [Comptes](/sccm/core/plan-design/hierarchy/accounts#capture-operating-system-image-account).
+Pour plus d’informations sur le compte de capture de l’image du système d’exploitation, consultez [Comptes](/sccm/core/plan-design/hierarchy/accounts#capture-os-image-account).
 
 ### <a name="OSDCaptureAccountPassword"></a> OSDCaptureAccountPassword
 
@@ -697,7 +697,7 @@ Pour plus d’informations, consultez [Options de ligne de commande Windows 10 D
 
 Spécifie le compte utilisateur du domaine utilisé pour ajouter l'ordinateur de destination au domaine. Cette variable est requise lors de la jonction à un domaine.
 
-Pour plus d'informations sur le compte de jonction de domaine de la séquence de tâches, consultez [Comptes](/sccm/core/plan-design/hierarchy/accounts#task-sequence-editor-domain-joining-account).
+Pour plus d'informations sur le compte de jonction de domaine de la séquence de tâches, consultez [Comptes](/sccm/core/plan-design/hierarchy/accounts#task-sequence-domain-join-account).
 
 ### <a name="OSDJoinDomainName"></a> OSDJoinDomainName
 
@@ -1246,7 +1246,7 @@ Pour plus d’informations, consultez [À propos des propriétés et des paramè
 
 Spécifie le compte utilisateur utilisé pour se connecter au partage réseau dans [SMSConnectNetworkFolderPath](#SMSConnectNetworkFolderPath). Spécifiez le mot de passe du compte avec la valeur [SMSConnectNetworkFolderPassword](#SMSConnectNetworkFolderPassword).
 
-Pour plus d'informations sur le compte de connexion à un dossier réseau de la séquence de tâches, consultez [Comptes](/sccm/core/plan-design/hierarchy/accounts#task-sequence-editor-network-folder-connection-account).
+Pour plus d'informations sur le compte de connexion à un dossier réseau de la séquence de tâches, consultez [Comptes](/sccm/core/plan-design/hierarchy/accounts#task-sequence-network-folder-connection-account).
 
 ### <a name="SMSConnectNetworkFolderDriveLetter"></a> SMSConnectNetworkFolderDriveLetter
 

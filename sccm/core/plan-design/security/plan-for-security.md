@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c5e6aca35dcadf145c0b93f0c984767099eb8960
-ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
+ms.openlocfilehash: ca1c06a5778bf168b216474f65d79e5c4c636e61
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65083557"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67159299"
 ---
 # <a name="plan-for-security-in-configuration-manager"></a>Planifier la sécurité dans Configuration Manager
 
@@ -307,7 +307,7 @@ En raison du grand nombre d’options et de choix de configuration dans Configur
 
 1.  Sur le serveur de site, ouvrez le fichier suivant dans un éditeur de texte : `<Configuration Manager install directory>\bin\mobileclient.tcf`  
 
-2.  Recherchez l’entrée **SMSPublicRootKey=**. Copiez la clé depuis cette ligne et fermez le fichier sans effectuer aucune modification.  
+2.  Recherchez l’entrée **SMSPublicRootKey=** . Copiez la clé depuis cette ligne et fermez le fichier sans effectuer aucune modification.  
 
 3.  Créez un fichier texte, puis collez dans ce nouveau fichier les informations de clé que vous avez copiées à partir du fichier mobileclient.tcf.  
 
@@ -323,7 +323,7 @@ En raison du grand nombre d’options et de choix de configuration dans Configur
 
 1.  Sur le serveur de site, ouvrez le fichier suivant dans un éditeur de texte : `<Configuration Manager install directory>\bin\mobileclient.tcf`  
 
-2.  Recherchez l’entrée **SMSPublicRootKey=**. Copiez la clé depuis cette ligne et fermez le fichier sans effectuer aucune modification.  
+2.  Recherchez l’entrée **SMSPublicRootKey=** . Copiez la clé depuis cette ligne et fermez le fichier sans effectuer aucune modification.  
 
 3.  Installez le client avec une méthode d’installation qui accepte les propriétés client.msi. Spécifiez la propriété client.msi suivante : `SMSPublicRootKey=<key>`, où `<key>` est la chaîne que vous avez copiée depuis mobileclient.tcf.  
 
@@ -441,7 +441,7 @@ Pour plus d’informations, consultez [Planifier le fournisseur SMS](/sccm/core/
 
 - [Communications entre points de terminaison](/sccm/core/plan-design/hierarchy/communications-between-endpoints)  
 
-- [Informations techniques de référence sur les contrôles de chiffrement](/sccm/core/plan-design/security/cryptographic-controls-tehnical-reference)  
+- [Informations techniques de référence sur les contrôles de chiffrement](/sccm/core/plan-design/security/cryptographic-controls-technical-reference)  
 
 - [Configuration requise des certificats PKI](/sccm/core/plan-design/network/pki-certificate-requirements)  
 

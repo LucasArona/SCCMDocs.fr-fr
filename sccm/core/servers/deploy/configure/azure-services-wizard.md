@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 94e632638018d213d46b34e87f8b5398cb49c59e
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: d6d7acf1d5c73c59f2ce1e6d2b7f3f7354e21979
+ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499082"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67251878"
 ---
 # <a name="configure-azure-services-for-use-with-configuration-manager"></a>Configurer les services Azure à utiliser avec Configuration Manager
 
@@ -41,7 +41,7 @@ Configurez les services Azure suivants à l’aide de cet Assistant :
 -   **Connecteur Log Analytics** : [connectez-vous à Azure Log Analytics](/sccm/core/clients/manage/sync-data-log-analytics). Synchronisez les données de regroupement avec Log Analytics.  
 
     > [!Note]  
-    > Cet article fait référence au *Connecteur Log Analytics*, précédemment appelé *Connecteur OMS*. Il n’existe aucune différence fonctionnelle. Pour plus d’informations, consultez [Gestion Azure - Surveillance](https://docs.microsoft.com/azure/monitoring/#operations-management-suite).  
+    > Cet article fait référence au *Connecteur Log Analytics*, précédemment appelé *Connecteur OMS*. Il n’existe aucune différence fonctionnelle. Pour plus d’informations, consultez [Gestion Azure - Surveillance](/azure/azure-monitor/terminology#log-analytics).  
 
 -   **Connecteur Upgrade Readiness** : connectez-vous à [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics) dans Windows Analytics. Consultez les données de compatibilité de mise à niveau des clients.  
 
@@ -86,7 +86,7 @@ Pour plus d’informations sur les autorisations d’application nécessaires et
 Pour plus d’informations sur les applications Azure, commencez par les articles suivants :
 - [Authentification et autorisation dans Azure App Service](/azure/app-service/app-service-authentication-overview)
 - [Vue d’ensemble des applications web](/azure/app-service-web/app-service-web-overview)
-- [Concepts de base de l’inscription d’une application dans Azure AD](/azure/active-directory/develop/active-directory-authentication-scenarios#basics-of-registering-an-application-in-azure-ad)  
+- [Concepts de base de l’inscription d’une application dans Azure AD](/azure/active-directory/develop/authentication-scenarios#authentication-basics-in-microsoft-identity-platform)  
 - [Inscrire une application auprès de votre locataire Azure Active Directory](/azure/active-directory/active-directory-app-registration)
 
 
@@ -267,7 +267,7 @@ Le diagramme suivant est un flux de données conceptuel pour l’interaction ent
 
 3.  Le site stocke des données sur les objets utilisateur. Pour plus d’informations, consultez [Découverte d’utilisateurs Azure AD](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc).  
 
-4.  Le client Configuration Manager demande le jeton d’utilisateur Azure AD. Le client génère la revendication à l’aide de l’ID de l’application cliente Azure AD et de l’application serveur comme audience. Pour plus d’informations, consultez [Revendications des jetons de sécurité Azure AD](/azure/active-directory/develop/active-directory-authentication-scenarios#claims-in-azure-ad-security-tokens).  
+4.  Le client Configuration Manager demande le jeton d’utilisateur Azure AD. Le client génère la revendication à l’aide de l’ID de l’application cliente Azure AD et de l’application serveur comme audience. Pour plus d’informations, consultez [Revendications des jetons de sécurité Azure AD](/azure/active-directory/develop/authentication-scenarios#claims-in-microsoft-identity-platform-security-tokens).  
 
 5.  Le client s’authentifie auprès du site en présentant le jeton Azure AD à la passerelle de gestion cloud et/ou au point de gestion HTTPS local.  
 

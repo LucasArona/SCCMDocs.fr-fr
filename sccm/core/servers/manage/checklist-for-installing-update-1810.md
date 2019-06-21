@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c57042e6ea4db7b244b8617bbef99633d9026d1b
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 59cb31a0d57af21331f48c6a6ba415439fa97239
+ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65501129"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67252177"
 ---
 # <a name="checklist-for-installing-update-1810-for-configuration-manager"></a>Liste de contrôle pour l’installation de la mise à jour 1810 de Configuration Manager
 
@@ -34,7 +34,7 @@ Pour obtenir la mise à jour de la version 1810, vous devez utiliser un point d
 
     -   Un autre problème courant de téléchargement se produit lorsque les paramètres du serveur proxy empêchent les téléchargements à partir de http://silverlight.dlservice.microsoft.com, http://download.microsoft.com, et/ou http://go.microsoft.com.
 
-Pour plus d’informations sur l’installation des mises à jour, consultez [Mises à jour et maintenance dans la console](/sccm/core/servers/manage/updates#a-namebkmkinconsolea-in-console-updates-and-servicing).
+Pour plus d’informations sur l’installation des mises à jour, consultez [Mises à jour et maintenance dans la console](/sccm/core/servers/manage/updates#bkmk_inconsole).
 
 Pour plus d’informations sur les versions actuelles de l’édition Current Branch, consultez [Versions de base et de mise à jour](/sccm/core/servers/manage/updates#bkmk_Baselines).
 
@@ -92,7 +92,7 @@ La version de Windows ADK (Kit de déploiement et d’évaluation Windows) pour 
 Si vous mettez à jour le site avant de mettre à jour Windows ADK, consultez [Mettre à jour les points de distribution avec l’image de démarrage](/sccm/osd/get-started/manage-boot-images#update-distribution-points-with-the-boot-image).
 
 #### <a name="review-sql-server-native-client-version"></a>Vérification de la version SQL Server Native Client
-Une version minimale de SQL Server 2012 Native Client prenant en charge TLS 1.2 doit être installée. Pour plus d'informations, consultez la [Liste des vérifications de la configuration requise](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-native-client).
+Une version minimale de SQL Server 2012 Native Client prenant en charge TLS 1.2 doit être installée. Pour plus d'informations, consultez la [Liste des vérifications de la configuration requise](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client).
 
 #### <a name="review-the-site-and-hierarchy-status-for-unresolved-issues"></a>Examiner l’état du site et de la hiérarchie pour rechercher les problèmes non résolus 
 Une mise à niveau de site peut échouer en raison de l’existence de problèmes opérationnels. Avant de mettre un site à jour, résolvez tous les problèmes opérationnels sur les systèmes suivants :  
@@ -160,7 +160,7 @@ Pour plus d’informations, consultez la section **Pour exécuter l’Outil de v
 > Quand l’outil de vérification des prérequis s’exécute, le processus met à jour certains fichiers sources de produit utilisés pour les tâches de maintenance du site. Par conséquent, après l’exécution de l’outil de vérification des prérequis, mais avant l’installation de la mise à jour, si vous devez effectuer une tâche de maintenance de site, exécutez  **Setupwfe.exe**  (programme d’installation de Configuration Manager) à partir du dossier CD.Latest sur le serveur de site.
 
 #### <a name="update-sites"></a>Mettre à jour les sites   
-Vous êtes désormais prêt à démarrer l’installation de la mise à jour pour votre hiérarchie. Pour plus d’informations sur l’installation de la mise à jour, consultez [Installer des mises à jour dans la console](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkinstalla-install-in-console-updates).
+Vous êtes désormais prêt à démarrer l’installation de la mise à jour pour votre hiérarchie. Pour plus d’informations sur l’installation de la mise à jour, consultez [Installer des mises à jour dans la console](/sccm/core/servers/manage/install-in-console-updates#bkmk_install).
 
 Vous pouvez installer la mise à jour en dehors des heures d’ouverture normales. Déterminez à quel moment le processus aura le moins d’impact sur les opérations d’entreprise. L’installation de la mise à jour et ses actions entraînent la réinstallation des composants du site et des rôles de système de site.
 

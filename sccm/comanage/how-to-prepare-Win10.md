@@ -11,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 31779b3588617816df4309461ed7715b20b0abd4
-ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
+ms.openlocfilehash: 5600743af8acc0da121454aef2d90167c3ded5fa
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "57558029"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286623"
 ---
 # <a name="how-to-prepare-internet-based-devices-for-co-management"></a>Guide pratique pour préparer des appareils basés sur Internet pour la cogestion
 
@@ -41,7 +41,7 @@ Pour configurer vos appareils afin qu’ils s’inscrivent automatiquement à In
 
 2. Exécutez le rapport **Informations d’appareil Windows AutoPilot**, puis affichez les résultats.  
 
-3. Dans la visionneuse de rapports, sélectionnez l’icône **Exporter**, puis choisissez l’option **CSV (délimité par des virgules)**.  
+3. Dans la visionneuse de rapports, sélectionnez l’icône **Exporter**, puis choisissez l’option **CSV (délimité par des virgules)** .  
 
 4. Après avoir enregistré le fichier, chargez les données dans Microsoft Store pour Entreprises et Éducation.  
 
@@ -88,7 +88,7 @@ La ligne de commande suivante est un exemple : `CCMSETUPCMD="CCMHOSTNAME=contos
 - Si vous utilisez votre propre certificat SSL PKI et que votre liste de révocation de certificats n’est pas publiée sur Internet, le paramètre suivant est nécessaire :  
     - /noCRLCheck  
     
-     Pour plus d’informations, consultez [Planification des listes de révocation de certificats](/sccm/core/plan-design/security/plan-for-security#-plan-for-the-site-server-signing-certificate-self-signed).  
+     Pour plus d’informations, consultez [Planification des listes de révocation de certificats](/sccm/core/plan-design/security/plan-for-security#BKMK_PlanningForCRLs).  
 
 À partir de la version 1810, le site publie des informations Azure AD supplémentaires sur la passerelle de gestion cloud (CMG). Un client joint à un Azure AD obtient ces informations à partir de la passerelle CMG pendant le processus ccmsetup, à l’aide du même locataire que celui auquel il est joint. Ce comportement simplifie davantage l’inscription d’appareils à la cogestion dans un environnement avec plusieurs locataires Azure AD. Maintenant les deux seules propriétés ccmsetup requises sont **CCMHOSTNAME** et **SMSSiteCode**.<!--3607731-->
 

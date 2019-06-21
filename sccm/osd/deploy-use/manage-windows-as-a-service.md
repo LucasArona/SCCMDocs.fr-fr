@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2380c1a543f223c4e9cdf905c8b3782c91f6387b
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 5cf48e73e2d273fcff6b6b99cf0eaa06cababa16
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65494811"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67159485"
 ---
 # <a name="manage-windows-as-a-service-using-system-center-configuration-manager"></a>Gérer Windows as a Service (WaaS) à l’aide de System Center Configuration Manager
 
@@ -288,4 +288,4 @@ Pour modifier les propriétés d’un plan de maintenance, appliquez la procédu
     >  Vous pouvez consulter les récentes alertes de mises à jour logicielles à partir du nœud **Mises à jour logicielles** dans l'espace de travail **Bibliothèque de logiciels** .  
 
 **Pour plus d’informations :** <br/>
-[Notions de base de Configuration Manager as a service et Windows as a service](/sccm/core/understand/configuration-manager-and-windows-as-service.md)
+[Notions de base de Configuration Manager as a service et Windows as a service](/sccm/core/understand/configuration-manager-and-windows-as-service)

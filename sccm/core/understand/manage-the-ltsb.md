@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 34e0ae19fc7bb3680a148fd5e4ac52feb294963f
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 08ab6cebbe44ecad8b8ce15691dd83217ada3ce9
+ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56121309"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67194125"
 ---
 # <a name="manage-the-long-term-servicing-branch-of-configuration-manager"></a>Gérer Long-Term Servicing Branch dans Configuration Manager
 
@@ -47,7 +47,7 @@ Quand vous exécutez LTSB et que vous développez un site principal autonome en 
 
 Bien que vous n’exécutiez pas le programme d’installation pour le développement de site à partir du dossier CD.Latest, vous continuez d’utiliser ce dossier pour la récupération de site et pour installer un nouveau site principal enfant si votre premier site LTSB était un site d’administration centrale.
 
-Pour plus d’informations sur le développement d’un site, consultez [Développement d'un site principal autonome](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites#expand-a-stand-alone-primary-site). Pour plus d’informations sur le dossier CD.Latest, consultez [Dossier CD.Latest](/sccm/core/servers/manage/the-cd.latest-folder).
+Pour plus d’informations sur le développement d’un site, consultez [Développement d'un site principal autonome](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites#bkmk_expand). Pour plus d’informations sur le dossier CD.Latest, consultez [Dossier CD.Latest](/sccm/core/servers/manage/the-cd.latest-folder).
 
 
 ## <a name="recovery"></a>Récupération

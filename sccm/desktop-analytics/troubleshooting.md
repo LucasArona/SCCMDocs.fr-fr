@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 305c31c2a40e51b84a0a5da671db1c3f6dad6f2e
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: c6a64a007462c8619e05b3002611bb72581b6f92
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67158999"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285713"
 ---
 # <a name="troubleshoot-desktop-analytics"></a>Résoudre les problèmes de postes de travail Analytique
 
@@ -82,7 +82,7 @@ Si vous devez configurer ces applications après l’installation terminée, acc
 
 ### <a name="create-and-import-app-for-configuration-manager"></a>Créer et importer des applications pour Configuration Manager
 
-Si vous ne peut pas créer cette application Azure AD à partir de l’Assistant Configurer les Services Azure dans Configuration Manager, procédez comme suit pour créer et importer l’application pour le Gestionnaire de Configuration manuellement.
+Après avoir effectué la [initiale d’intégration](/sccm/desktop-analytics/set-up#initial-onboarding) sur le portail d’Analytique de bureau, procédez comme suit pour créer et importer l’application pour le Gestionnaire de Configuration si vous ne pouvez pas créer cette application Azure AD à partir de la boîte de dialogue Configurer les Services d’Azure manuellement Assistant.
 
 #### <a name="create-app-in-azure-ad"></a>Créer l’application dans Azure AD
 

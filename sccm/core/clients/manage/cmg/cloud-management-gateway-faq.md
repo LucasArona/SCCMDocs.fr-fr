@@ -4,18 +4,18 @@ description: Utilisez cet article pour répondre aux questions fréquemment pos�
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 05/02/2019
+ms.date: 06/19/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 4c1a128d-22fb-49f1-8e0b-36513a8dc117
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 71c30e6770d667426a0aabbf03043d6fb44ecced
-ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
+ms.openlocfilehash: 6a7b4350cbd220393318eb6c8b5eae2a5bee05fc
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65083181"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286797"
 ---
 # <a name="frequently-asked-questions-about-the-cloud-management-gateway"></a>Questions fréquentes (FAQ) sur la passerelle de gestion cloud
 
@@ -33,10 +33,9 @@ Pour des informations plus détaillées, consultez [Certificats pour la passerel
 
 ### <a name="do-i-need-azure-expressroute"></a>Ai-je besoin d’Azure ExpressRoute ?
 
-[Azure ExpressRoute](/azure/expressroute/expressroute-introduction) vous permet d’étendre votre réseau local dans Microsoft Cloud. ExpressRoute, ou d’autres connexions de réseau virtuel du même type, ne sont pas nécessaires pour la passerelle de gestion cloud Configuration Manager. La conception de la passerelle de gestion cloud permet aux clients Internet de communiquer via le service Azure avec des systèmes de site locaux sans aucune configuration réseau supplémentaire. Pour plus d’informations, consultez [Planifier la passerelle de gestion cloud](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway).
+Non. [Azure ExpressRoute](/azure/expressroute/expressroute-introduction) vous permet d’étendre votre réseau local dans Microsoft Cloud. ExpressRoute, ou d’autres connexions de réseau virtuel du même type, ne sont pas nécessaires pour la passerelle de gestion cloud Configuration Manager. La conception de la passerelle de gestion cloud permet aux clients Internet de communiquer via le service Azure avec des systèmes de site locaux sans aucune configuration réseau supplémentaire. Pour plus d’informations, consultez [Planifier la passerelle de gestion cloud](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway).
 
-Si votre organisation utilise ExpressRoute, une bonne pratique de sécurité consiste à isoler l’abonnement Azure pour la passerelle de gestion cloud. Cette configuration garantit que le service de passerelle de gestion cloud n’est pas connecté par inadvertance de cette manière. Pour plus d’informations, consultez [Sécurité et confidentialité de la passerelle de gestion cloud](/sccm/core/clients/manage/cmg/security-and-privacy-for-cloud-management-gateway).
-
+<!-- SCCMDocs#1659 -->
 
 ### <a name="do-i-need-to-maintain-the-azure-virtual-machines"></a>Ai-je besoin d’assurer la maintenance des machines virtuelles Azure ?
 

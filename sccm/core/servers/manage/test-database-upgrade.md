@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db33a822c762922a04cbfe695435950023384f93
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: c25e2d2aac1c1763df4282e92114257ee34065ac
+ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65501010"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67194118"
 ---
 # <a name="test-the-database-upgrade-when-installing-an-update"></a>Tester la mise à niveau d’une base de données avant d’installer une mise à jour
 
@@ -30,9 +30,9 @@ Le test d’une mise à niveau n’est plus requis depuis les modifications appo
 Les modifications concernent la façon dont les mises à jour s’installent, notamment la logique qui annule automatiquement une mise à jour ayant échoué sans avoir à exécuter une récupération de site. Ces modifications permettent d’utiliser la console pour gérer les installations de mises à jour et incluent une option pour [relancer l’installation d’une mise à jour ayant échoué](/sccm/core/servers/manage/install-in-console-updates#bkmk_retry).
 
 > [!TIP]
-> Lorsque vous effectuez une mise à niveau avec System Center Configuration Manager à partir d’un produit plus ancien, par exemple System Center 2012 Configuration Manager, [le test des mises à niveau de la base de données reste une étape recommandée](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager#a-namebkmktesta-test-the-site-database-upgrade).
+> Lorsque vous effectuez une mise à niveau avec System Center Configuration Manager à partir d’un produit plus ancien, par exemple System Center 2012 Configuration Manager, [le test des mises à niveau de la base de données reste une étape recommandée](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager#bkmk_test).
 
-Si vous souhaitez néanmoins tester la mise à niveau d’une base de données de site lorsque vous installez une mise à jour dans la console, les informations suivantes vous fournissent [des conseils sur l’installation d’une mise à jour dans la console](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkinstalla-install-in-console-updates).
+Si vous souhaitez néanmoins tester la mise à niveau d’une base de données de site lorsque vous installez une mise à jour dans la console, les informations suivantes vous fournissent [des conseils sur l’installation d’une mise à jour dans la console](/sccm/core/servers/manage/install-in-console-updates#bkmk_install).
 
 ## <a name="prepare-to-run-a-test-database-upgrade"></a>Préparer le test d’une mise à niveau de base de données  
 Avant d’installer une nouvelle mise à jour dans votre hiérarchie, telle que la mise à jour 1702, vous pouvez tester la mise à niveau de votre base de données de site.

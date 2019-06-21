@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aff3393dca29d558c62c0a508b8cbf6c98f9fbfa
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 243e38273488f72e3e5e693270b10d6865c3a422
+ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65501218"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67252244"
 ---
 # <a name="back-up-a-configuration-manager-site"></a>Sauvegarde d'un site Configuration Manager
 
@@ -60,7 +60,7 @@ Il est possible d'automatiser la sauvegarde des sites Configuration Manager en p
 -   sauvegarde des dossiers et fichiers spécifiques ;
 -   sauvegarde le [dossier CD.Latest](/sccm/core/servers/manage/the-cd.latest-folder)   
 
-Planifiez l’exécution de la tâche de sauvegarde du site par défaut au moins tous les cinq jours. En effet, Configuration Manager utilise une période de cinq jours comme *Période de rétention du suivi des modifications SQL Server*. Pour plus d’informations, consultez [Période de rétention du suivi des modifications SQL Server](/sccm/protect/understand/recover-sites#bkmk_SQLretention).
+Planifiez l’exécution de la tâche de sauvegarde du site par défaut au moins tous les cinq jours. En effet, Configuration Manager utilise une période de cinq jours comme *Période de rétention du suivi des modifications SQL Server*. Pour plus d’informations, consultez [Période de rétention du suivi des modifications SQL Server](/sccm/core/servers/manage/recover-sites#sql-server-change-tracking-retention-period).
 
 Pour simplifier le processus de sauvegarde, vous pouvez créer un fichier **AfterBackup.bat**. Ce script exécute automatiquement des actions postérieures à la sauvegarde, une fois la tâche de sauvegarde correctement effectuée. Utilisez le fichier AfterBackup.bat pour archiver l’instantané de sauvegarde dans un emplacement sécurisé. Vous pouvez également utiliser le fichier AfterBackup.bat pour copier des fichiers vers votre dossier de sauvegarde, ou pour démarrer d’autres tâches de sauvegarde.  
 

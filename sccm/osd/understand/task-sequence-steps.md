@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6229c0fe0702eac61b482c31195fd35fe3c5792f
-ms.sourcegitcommit: c43996b3cf083d919ff1ccc3d510af664aec4ed4
-ms.translationtype: HT
+ms.openlocfilehash: 2d510ab884e471a6fc4803826c9c19e21b614273
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67046998"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285596"
 ---
 # <a name="task-sequence-steps"></a>Étapes de séquence de tâches
 
@@ -171,7 +171,7 @@ Sélectionnez cette option pour que l'ordinateur de destination fasse partie du 
 
 #### <a name="account"></a>Compte
 
-Sélectionnez **Définir** afin de spécifier un compte bénéficiant des autorisations nécessaires pour joindre l’ordinateur au domaine. Dans la boîte de dialogue **Compte d'utilisateur Windows**, entrez le nom d'utilisateur au format suivant : `Domain\User`. Pour plus d’informations, consultez [Compte de jonction de domaine](/sccm/core/plan-design/hierarchy/accounts#task-sequence-editor-domain-joining-account).
+Sélectionnez **Définir** afin de spécifier un compte bénéficiant des autorisations nécessaires pour joindre l’ordinateur au domaine. Dans la boîte de dialogue **Compte d'utilisateur Windows**, entrez le nom d'utilisateur au format suivant : `Domain\User`. Pour plus d’informations, consultez [Compte de jonction de domaine](/sccm/core/plan-design/hierarchy/accounts#task-sequence-domain-join-account).
 
 #### <a name="adapter-settings"></a>Paramètres de carte réseau
 
@@ -462,7 +462,7 @@ Configuration Manager capture chaque volume (lecteur) sur l’ordinateur de réf
 
 Le système d’exploitation installé sur l’ordinateur de référence doit être une version de Windows prise en charge par Configuration Manager. Utilisez l’outil SysPrep pour préparer le système d’exploitation de l’ordinateur de référence. Le volume du système d'exploitation installé et le volume de démarrage doivent correspondre.  
 
-Spécifiez un compte disposant d’autorisations d’écriture sur le partage réseau sélectionné. Pour plus d’informations sur le compte de capture de l’image du système d’exploitation, consultez [Comptes](/sccm/core/plan-design/hierarchy/accounts#capture-operating-system-image-account).
+Spécifiez un compte disposant d’autorisations d’écriture sur le partage réseau sélectionné. Pour plus d’informations sur le compte de capture de l’image du système d’exploitation, consultez [Comptes](/sccm/core/plan-design/hierarchy/accounts#capture-os-image-account).
 
 Cette étape de séquence de tâches s'exécute uniquement dans Windows PE. Elle ne s’exécute dans le système d’exploitation complet.
 
@@ -680,7 +680,7 @@ Sélectionnez la lettre de lecteur local à affecter pour cette connexion.
 
 #### <a name="account"></a>Compte
 
-Sélectionnez **Définir** afin de spécifier le compte d’utilisateur disposant des autorisations nécessaires pour se connecter à ce dossier réseau. Pour plus d'informations sur le compte de connexion à un dossier réseau de la séquence de tâches, consultez [Comptes](/sccm/core/plan-design/hierarchy/accounts#task-sequence-editor-network-folder-connection-account).
+Sélectionnez **Définir** afin de spécifier le compte d’utilisateur disposant des autorisations nécessaires pour se connecter à ce dossier réseau. Pour plus d'informations sur le compte de connexion à un dossier réseau de la séquence de tâches, consultez [Comptes](/sccm/core/plan-design/hierarchy/accounts#task-sequence-network-folder-connection-account).
 
 
 
@@ -731,6 +731,9 @@ Cette étape fonctionne bien dans une séquence de tâches pour mettre à niveau
 > Quand vous déployez une séquence de tâches contenant cette étape, ne sélectionnez pas **Télécharger tout le contenu localement avant de démarrer la séquence de tâches** ou **Accéder au contenu directement depuis le point de distribution** pour les **Options de déploiement** dans la page **Points de distribution** de l’Assistant Déploiement logiciel.  
 
 Cette étape s’exécute dans le système d’exploitation complet ou Windows PE. La possibilité d’enregistrer le package dans le cache du client Configuration Manager n’est pas prise en charge dans Windows PE.
+
+> [!NOTE]  
+> Le **télécharger le contenu du Package** tâche n’est pas prise en charge pour une utilisation avec un média autonome. Pour plus d’informations, consultez [non pris en charge des actions pour le média autonome](/sccm/osd/deploy-use/create-stand-alone-media#unsupported-actions-for-stand-alone-media).  
 
 Dans l’Éditeur de séquence de tâches, sélectionnez successivement **Ajouter**, **Logiciel** et **Télécharger le contenu du package** pour ajouter cette étape.
 
@@ -1158,7 +1161,7 @@ Facultatif : entrez ou accédez à une unité d'organisation du domaine spécifi
 
 #### <a name="enter-the-account-which-has-permission-to-join-the-domain"></a>Entrez le compte autorisé à joindre le domaine
 
-Sélectionnez **Définir** afin d’entrer le nom d’utilisateur et le mot de passe d’un compte disposant des autorisations nécessaires pour joindre le domaine. Entrez le compte au format : `Domain\account`. Pour plus d'informations sur le compte de jonction de domaine de la séquence de tâches, consultez [Comptes](/sccm/core/plan-design/hierarchy/accounts#task-sequence-editor-domain-joining-account).  
+Sélectionnez **Définir** afin d’entrer le nom d’utilisateur et le mot de passe d’un compte disposant des autorisations nécessaires pour joindre le domaine. Entrez le compte au format : `Domain\account`. Pour plus d'informations sur le compte de jonction de domaine de la séquence de tâches, consultez [Comptes](/sccm/core/plan-design/hierarchy/accounts#task-sequence-domain-join-account).  
 
 
 

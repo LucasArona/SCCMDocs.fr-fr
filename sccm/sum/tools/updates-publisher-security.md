@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 045a1daef8da0863ed7957ce4c9d3d48cfacca64
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 535feb67e700acd5b799c696aa366343581e70fd
+ms.sourcegitcommit: d47d2f03482e48d343e2139a341e61022331e6c2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65496195"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67145739"
 ---
 # <a name="manage-certificates-and-security-for-updates-publisher"></a>Gérer les certificats et la sécurité pour l’éditeur de mise à jour
 
@@ -77,7 +77,7 @@ Voici un exemple montrant comment configurer le certificat de signature sur les 
    -   Pour les certificats émis par une autorité de certification (CA) : ajoutez le certificat au magasin de certificats **Éditeurs approuvés**.
 
    > [!NOTE]
-   > WUA vérifie également si le paramètre **Autoriser le contenu signé de la stratégie de groupe d'emplacement des services de mise à jour Microsoft sur l'intranet** est activé sur l'ordinateur local. Ce paramètre de stratégie doit être activé pour que WUA analyse les mises à jour qui ont été créées et publiées à l'aide de l'éditeur de mises à jour. Pour plus d’informations sur l’activation du paramètre Stratégie de groupe, consultez le [Guide pratique pour configurer la stratégie de groupe sur les ordinateurs clients](<https://technet.microsoft.com/library/bb530967.aspx(d=robot>).
+   > WUA vérifie également si le paramètre **Autoriser le contenu signé de la stratégie de groupe d'emplacement des services de mise à jour Microsoft sur l'intranet** est activé sur l'ordinateur local. Ce paramètre de stratégie doit être activé pour que WUA analyse les mises à jour qui ont été créées et publiées à l'aide de l'éditeur de mises à jour. Pour plus d’informations sur l’activation du paramètre Stratégie de groupe, consultez le [Guide pratique pour configurer la stratégie de groupe sur les ordinateurs clients](https://docs.microsoft.com/en-us/previous-versions/bb530967(v=technet.10)).
 
 
 

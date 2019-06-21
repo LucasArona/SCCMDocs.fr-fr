@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a41f144909ba946d3c3bc2f00a1573cad2c9b850
-ms.sourcegitcommit: f531d0a622f220739710b2fe6644ea58d024064a
+ms.openlocfilehash: c15b387ec9f2048a923eb220b6c8e3e1fdccded8
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65933324"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286296"
 ---
 # <a name="capabilities-in-technical-preview-1612-for-system-center-configuration-manager"></a>Fonctionnalités de la version d’évaluation technique 1612 pour System Center Configuration Manager
 
@@ -93,7 +93,7 @@ Page **Général** : Les informations générales suivantes sont requises :
 
 Page **Paramètres de synchronisation** :   
 - **Paramètres des données :**
-  - **Replication groups to synchronize** (Groupes de réplication à synchroniser) : sélectionnez les groupes de données que vous souhaitez synchroniser. Pour plus d’informations sur les différents types de groupes de données, consultez [Réplication de la base de données](/sccm/core/servers/manage/data-transfers-between-sites#a-namebkmkdbrepa-database-replication) et **Vues distribuées** dans [Transfert de données entre sites dans System Center Configuration Manager](/sccm/core/servers/manage/data-transfers-between-sites).
+  - **Replication groups to synchronize** (Groupes de réplication à synchroniser) : sélectionnez les groupes de données que vous souhaitez synchroniser. Pour plus d’informations sur les différents types de groupes de données, consultez [Réplication de la base de données](/sccm/core/servers/manage/data-transfers-between-sites#bkmk_dbrep) et **Vues distribuées** dans [Transfert de données entre sites dans System Center Configuration Manager](/sccm/core/servers/manage/data-transfers-between-sites).
   - **Tables included to synchronize** (Tables incluses à synchroniser) : spécifiez le nom de chaque table supplémentaire que vous souhaitez synchroniser. Séparez plusieurs tables à l’aide d’une virgule. Ces tables seront synchronisées à partir de la base de données de site en plus des groupes de réplication que vous sélectionnez.
   - **Tables excluded to synchronize** (Tables exclues à synchroniser) : spécifiez le nom des tables individuelles à partir des groupes de réplication que vous synchronisez. Les tables que vous spécifiez seront exclues. Séparez plusieurs tables à l’aide d’une virgule.
 - **Paramètres de synchronisation :**
@@ -310,7 +310,7 @@ Il existe plusieurs conditions requises pour activer la création de la stratég
 
 - Le processus d’intégration d’Azure Active Directory doit être terminé et le client doit être initialement connecté au réseau d’entreprise pour obtenir les informations de connexion.
 - Les clients doivent être à la fois liés au domaine (inscrits dans Active Directory) et liés au domaine cloud (inscrits dans Azure AD).
-- Vous devez exécuter la [découverte d’utilisateurs Active Directory](/sccm/core/servers/deploy/configure/about-discovery-methods#active-directory-user-discovery#active-directory-user-discovery).
+- Vous devez exécuter la [découverte d’utilisateurs Active Directory](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser).
 - Vous devez modifier le client Configuration Manager pour autoriser les demandes de stratégie utilisateur sur Internet et déployer la modification sur le client. Étant donné que cette modification sur le client a lieu *sur l’appareil client*, elle peut être déployée via la passerelle de gestion cloud même si vous n’avez pas effectué les modifications de configuration nécessaires pour la stratégie utilisateur.
 - Votre point de gestion doit être configuré pour utiliser HTTPS pour sécuriser le jeton sur le réseau et .NET 4.5 doit être installé.
 

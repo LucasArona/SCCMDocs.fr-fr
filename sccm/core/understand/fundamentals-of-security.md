@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a1fbe25f492cd9b4ae36939d5aa5e78cee6be0bb
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: a6c6f931271d8cc8f69e3c65de8c4932f5ab5c95
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56119855"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67159264"
 ---
 # <a name="fundamentals-of-security-for-configuration-manager"></a>Notions de base de la sécurité pour Configuration Manager
 
@@ -127,4 +127,4 @@ Les autorisations d'accès aux objets de la base de données de site constituent
 
 - [Communications entre points de terminaison](/sccm/core/plan-design/hierarchy/communications-between-endpoints)  
 
-- [Informations techniques de référence sur les contrôles de chiffrement](/sccm/core/plan-design/security/cryptographic-controls-tehnical-reference)  
+- [Informations techniques de référence sur les contrôles de chiffrement](/sccm/core/plan-design/security/cryptographic-controls-technical-reference)  

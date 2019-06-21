@@ -12,12 +12,12 @@ manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 416f26f3e424eccdfa024d7a87c07fc5aa39c8fc
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: ac91fa1e9c4f4a8610ab3a0815ea6437eb29862c
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56140998"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67158210"
 ---
 # <a name="capabilities-in-technical-preview-1607-for-system-center-configuration-manager"></a>Fonctionnalités de la version d’évaluation technique 1607 pour System Center Configuration Manager
 
@@ -58,7 +58,7 @@ Une marque personnalisée pour le Centre logiciel est appliquée selon les règl
 
 2. Si le rôle de serveur site de point du site web du catalogue des applications est installé, le Centre logiciel affiche le nom d’organisation et la couleur spécifiés dans les propriétés du rôle de serveur de site du point du site web du catalogue des applications. Pour plus d’informations, consultez [Options de configuration pour le point du site web du catalogue des applications](../../core/servers/deploy/configure/configuration-options-for-site-system-roles.md#BKMK_ApplicationCatalog_Website).
 
-3. Si un abonnement Microsoft Intune est configuré et connecté à l’environnement Configuration Manager, le Centre logiciel affiche le nom d’organisation, la couleur et le logo de la société spécifiés dans les propriétés de l’abonnement Intune. Pour plus d’informations, consultez [Configuration de l’abonnement Microsoft Intune](/mdm/deploy-use/configure-intune-subscription).
+3. Si un abonnement Microsoft Intune est configuré et connecté à l’environnement Configuration Manager, le Centre logiciel affiche le nom d’organisation, la couleur et le logo de la société spécifiés dans les propriétés de l’abonnement Intune. Pour plus d’informations, consultez [Configuration de l’abonnement Microsoft Intune](/sccm/mdm/deploy-use/configure-intune-subscription).
 
 ## <a name="use-the-same-network-adapter-for-multiple-pxe-initiated-deployments"></a>Utiliser la même carte réseau pour plusieurs déploiements établis par PXE
 Dans la version d’évaluation technique 1607, quand vous utilisez une carte Ethernet pour mettre en image plusieurs appareils (par exemple, une carte Ethernet USB que vous utilisez sur plusieurs appareils), vous pouvez activer un nouveau paramètre qui vous permet d’entrer des identificateurs de matériel pour les cartes Ethernet. Configuration Manager ignore les identificateurs de matériel dans la liste lors de l’installation PXE et pour l’inscription des clients.

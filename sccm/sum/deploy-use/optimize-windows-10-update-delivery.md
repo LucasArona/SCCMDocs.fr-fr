@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 667dfda7f03c5c39f8a0a2e4ffc2ba38bddf5a0e
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 6d037baba858b3aacc3724e99a66819197b1dd89
+ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65500139"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67194511"
 ---
 # <a name="optimize-windows-10-update-delivery-with-configuration-manager"></a>Optimiser la distribution de Windows Update pour Windows 10 avec Configuration Manager
 
@@ -52,12 +52,12 @@ Les sections suivantes apportent des informations complémentaires sur ces techn
 
 ### <a name="windows-delivery-optimization"></a>Optimisation de la distribution de Windows
 
-[L’Optimisation de la distribution](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) est la principale technologie de téléchargement et la principale méthode de distribution pair à pair intégrée à Windows 10. Les clients Windows 10 peuvent récupérer du contenu à partir d’autres appareils qui se trouvent sur leur réseau local et téléchargent les mêmes mises à jour. Avec les [options Windows disponibles pour l’Optimisation de la distribution](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#delivery-optimization-options), vous pouvez configurer les clients dans des groupes. Ce regroupement permet à votre organisation d’identifier les appareils qui sont potentiellement les meilleurs candidats pour répondre aux demandes pair à pair. L’Optimisation de la distribution réduit considérablement la bande passante globale servant à tenir les appareils à jour tout en accélérant le téléchargement.
+[L’Optimisation de la distribution](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) est la principale technologie de téléchargement et la principale méthode de distribution pair à pair intégrée à Windows 10. Les clients Windows 10 peuvent récupérer du contenu à partir d’autres appareils qui se trouvent sur leur réseau local et téléchargent les mêmes mises à jour. Avec les [options Windows disponibles pour l’Optimisation de la distribution](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#delivery-optimization-options), vous pouvez configurer les clients dans des groupes. Ce regroupement permet à votre organisation d’identifier les appareils qui sont potentiellement les meilleurs candidats pour répondre aux demandes pair à pair. L’Optimisation de la distribution réduit considérablement la bande passante globale servant à tenir les appareils à jour tout en accélérant le téléchargement.
 
 > [!NOTE]  
 > L’Optimisation de la distribution est une solution cloud gérée. L’accès à Internet est requis pour utiliser les fonctionnalités pair à pair de ce service.  
 
-Pour optimiser les résultats, vous devrez peut-être définir le [mode de téléchargement](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#download-mode) de l’Optimisation de la distribution sur **Groupe (2)** et définir des *ID de groupe*. En mode groupé, le peering peut traverser les sous-réseaux internes entre les appareils qui appartiennent au même groupe, y compris dans des bureaux distants. Utilisez [l’option ID de groupe](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#select-the-source-of-group-ids) pour créer votre propre groupe personnalisé, indépendamment des domaines et des sites AD DS. Le mode de téléchargement groupé est l’option recommandée pour la plupart des organisations qui recherchent la meilleure optimisation de la bande passante avec l’Optimisation de la distribution.
+Pour optimiser les résultats, vous devrez peut-être définir le [mode de téléchargement](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#download-mode) de l’Optimisation de la distribution sur **Groupe (2)** et définir des *ID de groupe*. En mode groupé, le peering peut traverser les sous-réseaux internes entre les appareils qui appartiennent au même groupe, y compris dans des bureaux distants. Utilisez [l’option ID de groupe](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#select-the-source-of-group-ids) pour créer votre propre groupe personnalisé, indépendamment des domaines et des sites AD DS. Le mode de téléchargement groupé est l’option recommandée pour la plupart des organisations qui recherchent la meilleure optimisation de la bande passante avec l’Optimisation de la distribution.
 
 Il est difficile de configurer manuellement ces ID de groupe en cas d’itinérance des clients entre différents réseaux. La version 1802 de Configuration Manager a introduit une nouvelle fonctionnalité qui simplifie la gestion de ce processus en [intégrant les groupes de limites avec l’Optimisation de la distribution](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#delivery-optimization). Lorsqu’un client est activé, il communique avec son point de gestion pour recevoir des stratégies et fournit des informations sur son groupe de limites et son réseau. Configuration Manager crée un ID unique pour chaque groupe de limites. Le site utilise les informations d’emplacement du client pour configurer automatiquement son ID de groupe d’Optimisation de la distribution avec l’ID de limites de Configuration Manager. En cas d’itinérance du client vers un autre groupe de limites, il communique avec son point de gestion et est automatiquement reconfiguré avec un nouvel ID de groupe de limites. Grâce à cette intégration, l’Optimisation de la distribution peut utiliser les informations sur le groupe de limites de Configuration Manager pour trouver un pair permettant de télécharger les mises à jour.
 
@@ -150,7 +150,7 @@ Les modifications ne sont effectives que pour les nouvelles mises à jour synchr
 
 
 #### <a name="is-there-any-way-to-see-how-much-content-is-downloaded-from-peers-using-delivery-optimization"></a>Existe-t-il un moyen de connaître la quantité de contenu téléchargé auprès de pairs à l’aide de l’Optimisation de la distribution ?
-La version 1703 de Windows 10 (et les versions ultérieures) comporte deux nouvelles cmdlets PowerShell, **Get-DeliveryOptimizationPerfSnap** et **Get-DeliveryOptimizationStatus**. Elles donnent plus d’informations sur l’Optimisation de la distribution et l’utilisation du cache. Pour plus d’informations, voir [Cmdlets Windows PowerShell permettant d’analyser l’utilisation](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#windows-powershell-cmdlets-for-analyzing-usage).
+La version 1703 de Windows 10 (et les versions ultérieures) comporte deux nouvelles cmdlets PowerShell, **Get-DeliveryOptimizationPerfSnap** et **Get-DeliveryOptimizationStatus**. Elles donnent plus d’informations sur l’Optimisation de la distribution et l’utilisation du cache. Pour plus d’informations, consultez [met à jour de l’optimisation de livraison pour Windows 10](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#the-cloud-service-doesnt-see-other-peers-on-the-network)
 
 
 #### <a name="how-do-clients-communicate-with-delivery-optimization-over-the-network"></a>Comment les clients communiquent-ils avec l’Optimisation de la distribution sur le réseau ?

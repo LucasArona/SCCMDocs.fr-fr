@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 818abdeb24d4c050bb8517bffda9ece0b012852c
-ms.sourcegitcommit: abfc9e1b3945637fa93ca8d3a11519493a5d5391
+ms.openlocfilehash: e1957dc89e808920daf7e4f40e0d3774afe8b5c5
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66264411"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286557"
 ---
 # <a name="packages-and-programs-in-system-center-configuration-manager"></a>Packages et programmes dans System Center Configuration Manager
 
@@ -287,7 +287,7 @@ Les packages peuvent utiliser certaines nouvelles fonctionnalités de Configurat
 |----------|----------------------|  
 |**Créer un fichier de contenu préparé**|Ouvre l’**Assistant Création du fichier de contenu préparé** qui vous permet de créer un fichier qui contient le contenu du package qui peut être importé manuellement vers un autre site. Ceci est utile dans les cas où vous disposez d'une faible bande passante du réseau entre le serveur de site et le point de distribution.|  
 |**Créer un programme**|Ouvre l’**Assistant Création d’un programme** qui vous permet de créer un programme pour ce package.|  
-|**Exporterer**|Ouvre l’**Assistant Exportation de package** qui vous permet d’exporter le package sélectionné et son contenu vers un fichier.<br /><br /> Pour plus d’informations sur l’importation des packages et des programmes, consultez [Créer des packages et des programmes](/sccm/apps/deploy-use/packages-and-programs#create-packages-and-programs) dans cette rubrique.|  
+|**Exporterer**|Ouvre l’**Assistant Exportation de package** qui vous permet d’exporter le package sélectionné et son contenu vers un fichier.<br /><br /> Pour plus d’informations sur l’importation des packages et des programmes, consultez [Créer des packages et des programmes](/sccm/apps/deploy-use/packages-and-programs#create-a-package-and-program) dans cette rubrique.|  
 |**Déployer**|Ouvre l’**Assistant Déploiement logiciel** qui vous permet de déployer le package et le programme sélectionnés sur un regroupement. Pour plus d’informations, consultez [Déployer des packages et des programmes](/sccm/apps/deploy-use/packages-and-programs#deploy-packages-and-programs) dans cette rubrique.|  
 |**Distribuer du contenu**|Ouvre l’**Assistant Distribuer du contenu** qui vous permet d’envoyer le contenu qui est associé au package et au programme vers les points de distribution ou groupes de points de distribution sélectionnés.|  
 |**Mise à jour des points de distribution**|Met les points de distributions à jour avec le contenu le plus récent pour le package et le programme sélectionnés.|  

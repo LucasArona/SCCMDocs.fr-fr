@@ -12,12 +12,12 @@ ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 18cfb826c3ed495439fde63b62e52e6fc07067b4
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 43a976e04358a176852d72301335b14cf484ed3c
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65496037"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67158809"
 ---
 # <a name="what39s-new-in-version-1602-of-system-center-configuration-manager"></a>Nouveautés dans la version 1602 de System Center Configuration Manager
 
@@ -30,7 +30,7 @@ La mise à jour 1602 pour System Center Configuration Manager est disponible se
 > [!TIP]  
 >  Informations supplémentaires :  
 >   
->   -   [Installation de nouveaux sites](/sccm/core/servers/deploy/install) (à l’aide d’une version de référence telle que 1511)  
+>   -   [Installation de nouveaux sites](/sccm/core/servers/deploy/install/prepare-to-install-sites) (à l’aide d’une version de référence telle que 1511)  
 >   -   [Installation de mises à jour sur les sites](/sccm/core/servers/manage/updates) (telles que la mise à jour 1602)  
 
  Les sections suivantes fournissent des détails sur les modifications et les nouvelles fonctionnalités introduites dans la version 1602 de Configuration Manager.  

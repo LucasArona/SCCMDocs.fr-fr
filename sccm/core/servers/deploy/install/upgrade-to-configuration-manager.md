@@ -10,12 +10,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c36a52b5f3bc32cc5e8c725d1a12de6ce467c310
-ms.sourcegitcommit: a6a6507e01d819217208cfcea483ce9a2744583d
+ms.openlocfilehash: 86e41e932995abc47b6229ce3405f810d75b992b
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66748294"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67159296"
 ---
 # <a name="upgrade-to-configuration-manager"></a>Mettre à niveau vers Configuration Manager
 
@@ -132,7 +132,7 @@ Configuration Manager ne peut pas mettre à niveau un site principal ayant un r�
 
 Pour plus d’informations, consultez les articles suivants :  
 
-- System Center 2012 Configuration Manager : [Configurer des réplicas de base de données pour les points de gestion](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/hh846234\(v=technet.10\))  
+- System Center 2012 Configuration Manager : [Configurer des réplicas de base de données pour les points de gestion](/sccm/core/servers/deploy/configure/database-replicas-for-management-points#BKMK_DBReplica_Config)  
 
 - Configuration Manager, branche actuelle : [Réplicas de base de données pour les points de gestion](/sccm/core/servers/deploy/configure/database-replicas-for-management-points)  
 
@@ -154,7 +154,7 @@ Avant de désactiver une tâche, il convient d'enregistrer sa planification pour
 
 Pour plus d'informations sur les tâches de maintenance de site, consultez les articles suivants :  
 
-- System Center 2012 Configuration Manager : [Planification des opérations de site](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg712686\(v=technet.10\))  
+- System Center 2012 Configuration Manager : [Planification des opérations de site](/sccm/core/plan-design/hierarchy/plan-for-the-site-database)  
 
 - Configuration Manager, branche actuelle : [Référence des tâches de maintenance](/sccm/core/servers/manage/reference-for-maintenance-tasks)  
 

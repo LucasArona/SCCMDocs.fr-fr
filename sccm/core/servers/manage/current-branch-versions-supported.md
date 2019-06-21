@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f14d245ef6bed5749ace29adae6e20d18574905
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: f524096334d50a3a01ebf79436c32fdf732ca088
+ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65497447"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67252059"
 ---
 # <a name="support-for-configuration-manager-current-branch-versions"></a>Prise en charge des versions Current Branch de Configuration Manager
 
@@ -43,4 +43,4 @@ Figure 1. Exemple de la superposition du cycle de publication pour la prise en 
 
 Pour obtenir la liste des versions Current Branch, consultez [Détails de la version](/sccm/core/servers/manage/updates#version-details).
 
-Pour plus d’informations sur les numéros de version, ainsi que sur la disponibilité sous forme de mise à jour dans la console ou en tant que base de référence, consultez [Versions de base et de mise à jour](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions).
+Pour plus d’informations sur les numéros de version, ainsi que sur la disponibilité sous forme de mise à jour dans la console ou en tant que base de référence, consultez [Versions de base et de mise à jour](/sccm/core/servers/manage/updates#bkmk_Baselines).

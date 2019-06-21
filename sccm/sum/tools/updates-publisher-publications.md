@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 636d9ef3ba7768c73b00de4f50c22629548e7921
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: a56fea517c12e0d6f8e476b28c2af65a04c2593b
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65493956"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67158905"
 ---
 # <a name="manage-publications-in-updates-publisher"></a>Gérer des publications dans l’éditeur de mises à jour
 
@@ -76,7 +76,7 @@ Avant de pouvoir publier une mise à jour, vous devez configurer l’option [Ser
    Si la publication échoue, vous recevez un lien vers le fichier UpdatesPublisher.log apparaît qui peut fournir plus d’informations.
 
 ## <a name="export-a-publication"></a>Exporter une publication
-Vous pouvez exporter une publication à partir du référentiel de l’éditeur de mise à jour. Cette opération exporte les mises à jour et les offres groupées affectées à cette publication et crée un catalogue de mises à jour. Vous pouvez ensuite [ajouter](/sccm/sum/tools/updates-publisher-catalogs#add-software-update-catalogs) puis [importer](/sccm/sum/tools/updates-publisher-catalogs#mport-updates) ce catalogue vers une autre instance de l’éditeur de mise à jour. Vous pouvez également [exporter les mises à jour](/sccm/sum/tools/manage-updates-with-updates-publisher#export-updates) qui ne font pas partie d’une publication.
+Vous pouvez exporter une publication à partir du référentiel de l’éditeur de mise à jour. Cette opération exporte les mises à jour et les offres groupées affectées à cette publication et crée un catalogue de mises à jour. Vous pouvez ensuite [ajouter](/sccm/sum/tools/updates-publisher-catalogs#add-software-update-catalogs) puis [importer](/sccm/sum/tools/updates-publisher-catalogs#import-updates) ce catalogue vers une autre instance de l’éditeur de mise à jour. Vous pouvez également [exporter les mises à jour](/sccm/sum/tools/manage-updates-with-updates-publisher#export-updates) qui ne font pas partie d’une publication.
 
 Pour exporter une publication, accédez à l **’espace de travail Publications** et sélectionnez la publication contenant les mises à jour que vous souhaitez exporter. Vous ne pouvez sélectionner qu’une publication à la fois.
 

@@ -11,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b099a645-6434-498f-a408-1d438e394396
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a8961e86ff5184463dd156e2394150968046fb8
-ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
+ms.openlocfilehash: 618dd44a32e624a67f03bb18ea01169dd80daeb7
+ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58523790"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67194663"
 ---
 # <a name="install-and-configure-a-software-update-point"></a>Installer et configurer un point de mise à jour logicielle  
 
@@ -147,7 +147,7 @@ ms.locfileid: "58523790"
 >  La page **Langues** de l’Assistant est uniquement disponible quand vous installez le point de mise à jour logicielle sur le site d’administration centrale. Vous pouvez configurer les langues du fichier de mise à jour logicielle sur les sites enfants à partir de l'onglet **Langues** dans les propriétés du composant du point de mise à jour logicielle.  
 
 ## <a name="third-party-updates"></a>Mises à jour tierces
-À compter de la version 1802 de Configuration Manager, vous pouvez activer les mises à jour tierces pour les clients Configuration Manager. Quand vous activez les mises à jour de logiciels tiers dans les propriétés du composant de point de mise à jour logicielle, le point de mise à jour logicielle télécharge le certificat de signature utilisé par WSUS pour les mises à jour tierces. Cette option n’est pas disponible pendant l’installation du point de mise à jour logicielle et doit être configurée après l’installation. Pour activer les paramètres client des mises à jour tierces, consultez l’article [À propos des paramètres client](/sccm/core/clients/deploy/about-client-settings#Enable-third-party-software-updates).
+À compter de la version 1802 de Configuration Manager, vous pouvez activer les mises à jour tierces pour les clients Configuration Manager. Quand vous activez les mises à jour de logiciels tiers dans les propriétés du composant de point de mise à jour logicielle, le point de mise à jour logicielle télécharge le certificat de signature utilisé par WSUS pour les mises à jour tierces. Cette option n’est pas disponible pendant l’installation du point de mise à jour logicielle et doit être configurée après l’installation. Pour activer les paramètres client des mises à jour tierces, consultez l’article [À propos des paramètres client](/sccm/core/clients/deploy/about-client-settings#enable-third-party-software-updates).
 
 ## <a name="next-steps"></a>Étapes suivantes
 Vous avez installé le point de mise à jour logicielle en commençant par le site de premier niveau dans la hiérarchie Configuration Manager. Répétez les procédures décrites dans cet article pour installer le point de mise à jour logicielle sur chaque site enfant.

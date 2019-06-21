@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 600b786bbb2f718868c5d08c722621682582f4e1
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 726df4e6ddbfc34194fd25951d6dbafd1e9008ad
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65500642"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67159541"
 ---
 # <a name="create-certificate-profiles"></a>Créer des profils de certificat
 
@@ -25,7 +25,7 @@ ms.locfileid: "65500642"
 
 Utilisez des profils de certificat dans Configuration Manager (SCCM) pour configurer les appareils gérés avec les certificats nécessaires pour accéder aux ressources d’entreprise. Avant de créer des profils de certificat, configurez l’infrastructure de certificats, comme décrit dans [Configurer l’infrastructure de certificats pour System Center Configuration Manager](certificate-infrastructure.md).  
 
-Cette rubrique explique comment créer des profils de certificat racine approuvé et des profils de certificat SCEP. Si vous souhaitez créer des profils de certificat PFX, consultez [Créer des profils de certificat PFX](../../protect/deploy-use/create-pfx-certificate-profiles.md).
+Cette rubrique explique comment créer des profils de certificat racine approuvé et des profils de certificat SCEP. Si vous souhaitez créer des profils de certificat PFX, consultez [Créer des profils de certificat PFX](/sccm/mdm/deploy-use/create-pfx-certificate-profiles).
 
 Pour créer un profil de certificat :
 
@@ -56,11 +56,11 @@ Sur la page **Général** de l'Assistant Création d'un profil de certificat, sp
 
 -   **Certificat d’Autorité de certification approuvé**: sélectionnez ce type de profil de certificat si vous souhaitez déployer un certificat d’autorité de certification racine ou intermédiaire approuvé pour former une chaîne d’approbation des certificats quand l’utilisateur ou l’appareil doit authentifier un autre appareil. Par exemple, l'appareil peut être un serveur RADIUS (Remote Authentication Dial-In User Service) ou un serveur VPN (réseau privé virtuel). Vous devez également configurer un profil de certificat d'Autorité de certification approuvé pour pouvoir créer un profil de certificat SCEP. Dans ce cas, le certificat d'Autorité de certification approuvé doit être le certificat racine approuvé pour l'Autorité de certification qui émet le certificat à l'utilisateur ou à l'appareil.  
 
--   **Paramètres du protocole SCEP (Simple Certificate Enrollment Protocol)**: sélectionnez ce type de profil de certificat pour demander un certificat pour un appareil ou un utilisateur à l’aide du protocole SCEP et du service de rôle du service d’inscription d’appareils réseau.
+-   **Paramètres du protocole SCEP (Simple Certificate Enrollment Protocol)** : sélectionnez ce type de profil de certificat pour demander un certificat pour un appareil ou un utilisateur à l’aide du protocole SCEP et du service de rôle du service d’inscription d’appareils réseau.
 
--   **Échange d’informations personnelles - Paramètres PKCS #12 (PFX) - Importation** : sélectionnez cette option pour importer un certificat PFX. Pour en savoir plus sur la création de certificats PFX, consultez [Importer des profils de certificat PFX](/sccm/mdm/deploy-use/import-pfx-certificate-profiles.md).
+-   **Échange d’informations personnelles - Paramètres PKCS #12 (PFX) - Importation** : sélectionnez cette option pour importer un certificat PFX. Pour en savoir plus sur la création de certificats PFX, consultez [Importer des profils de certificat PFX](/sccm/mdm/deploy-use/import-pfx-certificate-profiles).
 
--   **Échange d’informations personnelles - Paramètres PKCS #12 (PFX) - Créer** : sélectionnez cette option pour traiter les certificats PFX en utilisant une autorité de certification. Pour en savoir plus sur la création de certificats PFX, consultez [Créer des profils de certificat PFX](/sccm/mdm/deploy-use/create-pfx-certificate-profiles.md).
+-   **Échange d’informations personnelles - Paramètres PKCS #12 (PFX) - Créer** : sélectionnez cette option pour traiter les certificats PFX en utilisant une autorité de certification. Pour en savoir plus sur la création de certificats PFX, consultez [Créer des profils de certificat PFX](/sccm/mdm/deploy-use/create-pfx-certificate-profiles).
 
 
 ## <a name="configure-a-trusted-ca-certificate"></a>Configurer un certificat d’autorité de certification approuvé  
@@ -97,9 +97,9 @@ Sur la page **Général** de l'Assistant Création d'un profil de certificat, sp
 
    -  **Tentatives**: spécifiez le nombre de fois où l’appareil doit renvoyer automatiquement la demande de certificat au serveur exécutant le service d’inscription de périphériques réseau. Ce paramètre prend en charge le scénario où un gestionnaire de l'autorité de certification doit approuver une demande de certificat avant d'être accepté. Ce paramètre est généralement utilisé pour des environnements haute sécurité ou si vous avez une autorité de certification émettrice autonome plutôt qu'une autorité de certification d'entreprise. Vous pouvez également utiliser ce paramètre à des fins de test pour vérifier les options de demande de certificat avant que l'Autorité de certification émettrice traite la demande de certificat. Utilisez ce paramètre conjointement avec le paramètre **Délai de nouvelle tentative (en minutes)** .  
 
-   -   **Délai de nouvelle tentative (en minutes)**: spécifiez l’intervalle, en minutes, entre deux tentatives d’inscription, quand vous utilisez l’approbation du gestionnaire de l’Autorité de certification avant que l’Autorité de certification émettrice traite la demande de certificat. Si vous utilisez l'approbation du gestionnaire à des fins de test, la spécification d'une valeur faible évitera d'attendre trop longtemps une nouvelle tentative de demande de certificat par l'appareil après l'approbation de la demande. Toutefois, si vous utilisez l'approbation du gestionnaire sur un réseau de production, vous voudrez spécifier une valeur élevée pour donner suffisamment de temps à l'administrateur de l'Autorité de certification pour vérifier et approuver ou refuser les approbations en attente.  
+   -   **Délai de nouvelle tentative (en minutes)** : spécifiez l’intervalle, en minutes, entre deux tentatives d’inscription, quand vous utilisez l’approbation du gestionnaire de l’Autorité de certification avant que l’Autorité de certification émettrice traite la demande de certificat. Si vous utilisez l'approbation du gestionnaire à des fins de test, la spécification d'une valeur faible évitera d'attendre trop longtemps une nouvelle tentative de demande de certificat par l'appareil après l'approbation de la demande. Toutefois, si vous utilisez l'approbation du gestionnaire sur un réseau de production, vous voudrez spécifier une valeur élevée pour donner suffisamment de temps à l'administrateur de l'Autorité de certification pour vérifier et approuver ou refuser les approbations en attente.  
 
-   -   **Seuil de renouvellement (%)**: spécifiez le pourcentage de durée de vie restante du certificat avant que l’appareil ne demande le renouvellement du certificat.  
+   -   **Seuil de renouvellement (%)** : spécifiez le pourcentage de durée de vie restante du certificat avant que l’appareil ne demande le renouvellement du certificat.  
 
    -   **Fournisseur de stockage de clés**: spécifiez l’emplacement de stockage de la clé du certificat. Choisissez l'une des valeurs suivantes :  
 
@@ -131,7 +131,7 @@ Sur la page **Général** de l'Assistant Création d'un profil de certificat, sp
 
    -   Si vous tapez le nom du modèle de certificat, assurez-vous que le nom correspond exactement à l'un des modèles de certificat figurant dans le Registre du serveur exécutant le service d'inscription d'appareils réseau. Assurez-vous que vous spécifiez le nom du modèle de certificat et non le nom d'affichage du modèle de certificat.  
 
-   Pour rechercher les noms des modèles de certificats, accédez à la clé suivante : HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP. Les modèles de certificat s'affichent sous la forme des valeurs **EncryptionTemplate**, **GeneralPurposeTemplate**et **SignatureTemplate**. Par défaut, la valeur des trois modèles de certificat est **IPSECIntermediateOffline**, laquelle correspond au nom d'affichage du modèle **IPSec (requête hors connexion)**.  
+   Pour rechercher les noms des modèles de certificats, accédez à la clé suivante : HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP. Les modèles de certificat s'affichent sous la forme des valeurs **EncryptionTemplate**, **GeneralPurposeTemplate**et **SignatureTemplate**. Par défaut, la valeur des trois modèles de certificat est **IPSECIntermediateOffline**, laquelle correspond au nom d'affichage du modèle **IPSec (requête hors connexion)** .  
 
    > [!WARNING]  
    > 
@@ -166,7 +166,7 @@ Sur la page **Général** de l'Assistant Création d'un profil de certificat, sp
    Le modèle de certificat que vous avez sélectionné doit être configuré avec une ou les deux options d'utilisation de la clé ci-dessus. Sinon, le message **Key usage in CSR and challenge do not match** est présent dans le fichier journal de point d'enregistrement de certificat, **Crp.log**.  
 
 
-- **Taille de la clé (bits)**: sélectionnez la taille de la clé en bits.  
+- **Taille de la clé (bits)** : sélectionnez la taille de la clé en bits.  
 
 - **Utilisation de la clé étendue** : cliquez sur **Sélectionner** pour ajouter des valeurs pour le rôle prévu du certificat. Dans la plupart des cas, le certificat demande une **Authentification client** afin que l'utilisateur ou l'appareil puisse être authentifié sur un serveur. Toutefois, vous pouvez ajouter d'autres utilisations de la clé en fonction de vos besoins.  
 

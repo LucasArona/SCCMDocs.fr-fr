@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 871f007bd1ee0e38635e03a6b17a9125758553af
-ms.sourcegitcommit: 65e9b30e2b53ab9db679a7b1d50634a73c0028db
+ms.openlocfilehash: 0a83b55726903369677d3daf04f7c879b3660c06
+ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66429814"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67251669"
 ---
 # <a name="supported-operating-systems-for-configuration-manager-site-system-servers"></a>Systèmes d’exploitation pris en charge pour les serveurs de système Configuration Manager
 
@@ -181,7 +181,7 @@ Cette version du système d’exploitation est prise en charge pour les rôles s
 
 *S’applique à Windows Server 2008 R2 avec Service Pack 1 : Standard, Entreprise et Datacenter*
 
-Windows Server 2008 R2 bénéficie désormais du support étendu au lieu du support standard, comme indiqué dans la [Politique de support Microsoft](https://support.microsoft.com/lifecycle). Pour plus d’informations sur la prise en charge à venir de ces systèmes d’exploitation utilisés comme serveurs de système de site avec Configuration Manager, consultez [Systèmes d’exploitation serveur dépréciés](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems).  
+Windows Server 2008 R2 bénéficie désormais du support étendu au lieu du support standard, comme indiqué dans la [Politique de support Microsoft](https://support.microsoft.com/lifecycle). Pour plus d’informations sur la prise en charge à venir de ces systèmes d’exploitation utilisés comme serveurs de système de site avec Configuration Manager, consultez [Systèmes d’exploitation serveur dépréciés](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#server-os).  
 
 > [!Important]  
 > La date de fin du support étendu pour Windows Server 2008 R2 est le 14 janvier 2020. Après cette date, Configuration Manager ne prendra plus en charge ce système d’exploitation comme rôle de système de site. 
@@ -199,7 +199,7 @@ Ce système d’exploitation n’est pas pris en charge pour les serveurs de sit
 
 *S’applique à Windows Server 2008 avec Service Pack 2 (x86, x64) : Standard, Entreprise et Datacenter*
 
-Windows Server 2008 avec Service Pack 2 (SP2) bénéficie désormais du support étendu au lieu du support standard, comme indiqué dans la [Politique de support Microsoft](https://support.microsoft.com/lifecycle). Pour plus d’informations sur la prise en charge à venir de ces systèmes d’exploitation utilisés comme serveurs de système de site avec Configuration Manager, consultez [Systèmes d’exploitation serveur dépréciés](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems).  
+Windows Server 2008 avec Service Pack 2 (SP2) bénéficie désormais du support étendu au lieu du support standard, comme indiqué dans la [Politique de support Microsoft](https://support.microsoft.com/lifecycle). Pour plus d’informations sur la prise en charge à venir de ces systèmes d’exploitation utilisés comme serveurs de système de site avec Configuration Manager, consultez [Systèmes d’exploitation serveur dépréciés](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#server-os).  
 
 > [!Important]  
 > La date de fin du support étendu pour Windows Server 2008 R2 est le 14 janvier 2020. Après cette date, Configuration Manager ne prendra plus en charge ce système d’exploitation comme rôle de système de site. 

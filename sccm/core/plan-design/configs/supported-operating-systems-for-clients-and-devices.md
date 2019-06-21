@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af9d8c16033a22c828f014dfd4bad771851c08de
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: c6b47c99199458c902f1f56ccc3d5007dfd126eb
+ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499336"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67251549"
 ---
 # <a name="supported-os-versions-for-clients-and-devices-for-configuration-manager"></a>Versions de système d’exploitation prises en charge par Configuration Manager pour les clients et les appareils
 
@@ -94,7 +94,7 @@ Les versions du Canal semi-annuel Windows Server sont des installations Server C
  Configuration Manager teste et prend en charge les éditions de Windows Server Datacenter, mais n’est pas officiellement certifié pour Windows Server. Les correctifs Configuration Manager ne sont pas pris en charge pour résoudre les problèmes spécifiques de l’édition Windows Server Datacenter. Pour plus d’informations sur le programme de certification Windows Server, voir [Catalogue Windows Server](https://www.windowsservercatalog.com/). 
 
 #### <a name="bkmk_note2"></a> Remarque 2
- Pour prendre en charge [l’installation Push du client](/sccm/core/clients/deploy/plan/client-installation-methods#client-push-installation), ajoutez le service Serveur de fichiers du rôle serveur Services de fichiers et de stockage. Pour plus d’informations sur l’installation des fonctionnalités Windows sur Server Core, voir [Installer des rôles, des services de rôle et des fonctionnalités avec les cmdlets Windows PowerShell](https://docs.microsoft.com/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#BKMK_installwps).  
+ Pour prendre en charge [l’installation Push du client](/sccm/core/clients/deploy/plan/client-installation-methods#client-push-installation), ajoutez le service Serveur de fichiers du rôle serveur Services de fichiers et de stockage. Pour plus d’informations sur l’installation des fonctionnalités Windows sur Server Core, voir [Installer des rôles, des services de rôle et des fonctionnalités avec les cmdlets Windows PowerShell](https://docs.microsoft.com/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#install-roles-role-services-and-features-by-using-windows-powershell-cmdlets).  
 
 #### <a name="bkmk_note3"></a> Remarque 3
  La nouvelle application Centre logiciel n’est prise en charge par aucune version de Windows Server Core.<!--SCCMDocs issue 683-->

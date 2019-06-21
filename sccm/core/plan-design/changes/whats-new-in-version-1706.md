@@ -12,12 +12,12 @@ ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cc88e70360599391c84e54e41e73b53ef3b70678
-ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.openlocfilehash: 5b9dcd7465265021d52e44d72c77172d4323144e
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66177043"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285771"
 ---
 # <a name="what39s-new-in-version-1706-of-system-center-configuration-manager"></a>Nouveautés de la version 1706 de System Center Configuration Manager
 
@@ -30,7 +30,7 @@ La mise à jour 1706 de la version Current Branch de System Center Configuratio
 >  Informations supplémentaires :    
 >   - [Installation de nouveaux sites](https://technet.microsoft.com/library/mt590197.aspx)  
 >   - [Installation de mises à jour sur les sites](https://technet.microsoft.com/library/mt607046.aspx)  
->   - [Versions de base et de mise à jour](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
+>   - [Versions de base et de mise à jour](/sccm/core/servers/manage/updates#bkmk_Baselines)  
 
 Les sections suivantes fournissent des détails sur les nouvelles fonctionnalités et les changements introduits dans la version 1706 de Configuration Manager.  
 
@@ -59,7 +59,7 @@ Des améliorations supplémentaires ont été apportées aux fonctionnalités d�
 ### <a name="improvements--for-sql-server-always-on-availability-groups"></a>Améliorations pour les groupes de disponibilité Always On SQL Server
 <!-- 1352094 -->
 Avec cette version, vous pouvez maintenant utiliser les réplicas avec validation asynchrone dans les groupes de disponibilité Always On SQL Server que vous utilisez avec Configuration Manager. Cela signifie que vous pouvez ajouter des réplicas supplémentaires à vos groupes de disponibilité à utiliser en tant que sauvegardes hors site (à distance) puis de les utiliser dans un scénario de récupération d’urgence.  
-  -   Configuration Manager prend en charge l’utilisation du réplica avec validation asynchrone pour récupérer votre réplica synchrone. Consultez les [options de récupération de base de données de site](/sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption) dans la rubrique Sauvegarde et récupération pour plus d’informations sur la façon d’y parvenir.
+  -   Configuration Manager prend en charge l’utilisation du réplica avec validation asynchrone pour récupérer votre réplica synchrone. Consultez les [options de récupération de base de données de site](/sccm/core/servers/manage/recover-sites#site-database-recovery-options) dans la rubrique Sauvegarde et récupération pour plus d’informations sur la façon d’y parvenir.
   -   Cette version ne prend pas en charge le basculement pour utiliser le réplica avec validation asynchrone en tant que base de données de votre site.
 Pour plus d’informations, consultez [Se préparer à l’utilisation de groupes de disponibilité SQL Server Always On](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database).
 
@@ -92,7 +92,7 @@ Grâce à l’intégration améliorée, les opérations suivantes sont possibles
       - **Microsoft Store pour Entreprises** Connectez-vous au Microsoft Store pour Entreprises et obtenez des applications pour votre organisation que vous pouvez déployer avec Configuration Manager.
 
 
-  Pour cela, une [application web serveur Azure](/azure/azure/app-service/app-service-authentication-overview#service-to-service-authentication) fournit les détails de l’abonnement et de la configuration, ce qui vous évite de les entrer chaque fois que vous configurez un nouveau service ou composant Configuration Manager avec Azure. Pour plus d’informations, consultez [Assistant Services Azure](/sccm/core/servers/deploy/configure/azure-services-wizard).
+  Pour cela, une [application web serveur Azure](/azure/app-service/app-service-authentication-overview) fournit les détails de l’abonnement et de la configuration, ce qui vous évite de les entrer chaque fois que vous configurez un nouveau service ou composant Configuration Manager avec Azure. Pour plus d’informations, consultez [Assistant Services Azure](/sccm/core/servers/deploy/configure/azure-services-wizard).
 
 -   Utiliser Azure AD pour authentifier les clients sur Internet pour l’accès à vos sites Configuration Manager. Azure AD élimine le besoin de configurer et d’utiliser des certificats d’authentification client. Vous devez pour cela utiliser le rôle de système de site Passerelle de gestion cloud. Pour plus d’informations, consultez [Installer et attribuer des clients Configuration Manager à partir d’Internet à l’aide de l’authentification Azure AD](/sccm/core/clients/deploy/deploy-clients-cmg-azure).
 
@@ -102,7 +102,7 @@ Grâce à l’intégration améliorée, les opérations suivantes sont possibles
 
 ### <a name="peer-cache-improvements"></a>Améliorations du cache d’homologue
 <!-- 1252345 -->
-Le cache d’homologue n’utilise plus le compte d’accès réseau pour authentifier les demandes de téléchargement à partir d’homologues. Cela pose problème quand les clients ont besoin de ce compte. Il est en effet exigé par les clients qui démarrent dans WinPE et qui accèdent ensuite au contenu à partir d’une source de cache d’homologue. Pour plus d’informations, consultez [Exigences et considérations relatives au cache d’homologue](/sccm/core/plan-design/hierarchy/client-peer-cache#requirements-and-considerations-for-peer-cache).
+Le cache d’homologue n’utilise plus le compte d’accès réseau pour authentifier les demandes de téléchargement à partir d’homologues. Cela pose problème quand les clients ont besoin de ce compte. Il est en effet exigé par les clients qui démarrent dans WinPE et qui accèdent ensuite au contenu à partir d’une source de cache d’homologue. Pour plus d’informations, consultez [Exigences et considérations relatives au cache d’homologue](/sccm/core/plan-design/hierarchy/client-peer-cache#requirements).
 
 
 <!-- ## Migration  -->

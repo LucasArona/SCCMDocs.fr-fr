@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6aa1c324a3ff24feb14c6b867728a76252a8c19d
-ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.openlocfilehash: 13db7793b0d5a5b4f0845af21f976089205fdc7d
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66176023"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286162"
 ---
 # <a name="capabilities-in-technical-preview-1709-for-system-center-configuration-manager"></a>Fonctionnalités de Technical Preview 1709 pour System Center Configuration Manager
 
@@ -118,7 +118,7 @@ Les stratégies Windows Update pour Entreprise vous permettent de configurer des
 
 ### <a name="remote-actions-available-in-intune-on-azure-for-co-managed-devices"></a>Actions à distance disponibles dans Intune sur Azure pour les appareils gérés conjointement
 Quand un appareil Windows 10 est activé pour la cogestion, les actions à distance suivantes sont disponibles sur Azure à partir d’Intune :  
-- [Réinitialisation aux paramètres d’usine](https://docs.microsoft.com/intune/devices-wipe#factory-reset)
+- [Réinitialisation aux paramètres d’usine](https://docs.microsoft.com/intune/devices-wipe#wipe)
 - [Réinitialisation sélective](https://docs.microsoft.com/intune/apps-selective-wipe)
 - [Suppression d’appareils](https://docs.microsoft.com/intune/devices-wipe#delete-devices-from-the-azure-active-directory-portal)
 - [Redémarrage d’un appareil](https://docs.microsoft.com/intune/device-restart)

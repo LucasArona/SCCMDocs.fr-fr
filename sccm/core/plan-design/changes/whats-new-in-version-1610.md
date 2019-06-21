@@ -12,12 +12,12 @@ ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 04e4f24cee033f46ea69080a423b9ca6e2d4c9d5
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 75737d3f640a9ba0a27277f36791227fbdd08a5a
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65495145"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285825"
 ---
 # <a name="what39s-new-in-version-1610-of-system-center-configuration-manager"></a>Nouveautés dans la version 1610 de System Center Configuration Manager
 
@@ -31,13 +31,13 @@ La mise à jour 1610 de la version Current Branch de System Center Configuratio
 >  Informations supplémentaires :    
 >  -   [Installation de nouveaux sites](https://technet.microsoft.com/library/mt590197.aspx)  
 >  -   [Installation de mises à jour sur les sites](https://technet.microsoft.com/library/mt607046.aspx)  
->  -   [Versions de base et de mise à jour](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
+>  -   [Versions de base et de mise à jour](/sccm/core/servers/manage/updates#bkmk_Baselines)
 
 Les sections suivantes fournissent des détails sur les modifications et les nouvelles fonctionnalités introduites dans la version 1610 de Configuration Manager.  
 
 
 ## <a name="in-console-monitoring-of-update-installation-status"></a>Surveillance de l’état d’installation des mises à jour dans la console  
-À partir de la version 1610, quand vous installez un pack de mises à jour et surveillez l’installation dans la console, une nouvelle phase est disponible : **Après l’installation**. Cette phase inclut l’état des tâches comme le redémarrage des services principaux et le lancement de la surveillance de la réplication. (Cette phase n’est pas disponible dans la console tant que votre site n’est pas mis à jour vers la version 1610.) Pour plus d’informations sur l’état d’installation des mises à jour, consultez [Installer des mises à jour dans la console](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkinstalla-install-in-console-updates).
+À partir de la version 1610, quand vous installez un pack de mises à jour et surveillez l’installation dans la console, une nouvelle phase est disponible : **Après l’installation**. Cette phase inclut l’état des tâches comme le redémarrage des services principaux et le lancement de la surveillance de la réplication. (Cette phase n’est pas disponible dans la console tant que votre site n’est pas mis à jour vers la version 1610.) Pour plus d’informations sur l’état d’installation des mises à jour, consultez [Installer des mises à jour dans la console](/sccm/core/servers/manage/install-in-console-updates#bkmk_install).
 
 
 ## <a name="exclude-clients-from-automatic-upgrade"></a>Exclure des clients de la mise à niveau automatique
@@ -50,7 +50,7 @@ Ces améliorations remplacent des concepts et des comportements que vous connais
 
 Quand vous effectuez la mise à jour vers la version 1610, cette dernière convertit les configurations de votre groupe de limites actuel pour les adapter au nouveau modèle, afin que ces modifications ne perturbent pas les configurations de distribution de contenu existantes.
 
-Pour plus d’informations, consultez [Groupes de limites](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#a-namebkmkboundarygroupsa-boundary-groups).
+Pour plus d’informations, consultez [Groupes de limites](/sccm/core/servers/deploy/configure/boundary-groups).
 
 
 ## <a name="peer-cache-for-content-distribution-to-clients"></a>Cache d’homologue pour la distribution de contenu aux clients
@@ -123,9 +123,9 @@ Une marque personnalisée pour le Centre logiciel est appliquée selon les règl
 
 - Si le rôle de serveur de site du point du site web du catalogue des applications n’est pas installé, le Centre logiciel affiche le nom d’organisation spécifié dans le paramètre client de l’**Agent ordinateur** **Nom d’organisation affiché dans le Centre logiciel**. Pour obtenir des instructions, consultez [Guide pratique pour configurer les paramètres client](../../clients/deploy/configure-client-settings.md).
 
-- Si le rôle de serveur site de point du site web du catalogue des applications est installé, le Centre logiciel affiche le nom d’organisation et la couleur spécifiés dans les propriétés du rôle de serveur de site du point du site web du catalogue des applications. Pour plus d’informations, consultez [Options de configuration pour le point du site web du catalogue des applications](/sccm/core/servers/deploy/configure/configuration-options-for-site-system-roles#Application-Catalog-website-point).
+- Si le rôle de serveur site de point du site web du catalogue des applications est installé, le Centre logiciel affiche le nom d’organisation et la couleur spécifiés dans les propriétés du rôle de serveur de site du point du site web du catalogue des applications. Pour plus d’informations, consultez [Options de configuration pour le point du site web du catalogue des applications](/sccm/core/servers/deploy/configure/configuration-options-for-site-system-roles#BKMK_ApplicationCatalog_Website).
 
-- Si un abonnement Microsoft Intune est configuré et connecté à l’environnement Configuration Manager, le Centre logiciel affiche le nom d’organisation, la couleur et le logo de l’entreprise spécifiés dans les propriétés de l’abonnement Intune. Pour plus d’informations, consultez [Configuration de l’abonnement Microsoft Intune](/sccm/mdm/deploy-use/setup-hybrid-mdm#step-3-configure-intune-subscription).
+- Si un abonnement Microsoft Intune est configuré et connecté à l’environnement Configuration Manager, le Centre logiciel affiche le nom d’organisation, la couleur et le logo de l’entreprise spécifiés dans les propriétés de l’abonnement Intune. Pour plus d’informations, consultez [Configuration de l’abonnement Microsoft Intune](/sccm/mdm/deploy-use/configure-intune-subscription).
 
 
 ## <a name="enforcement-grace-period-for-required-application-and-software-update-deployments"></a>Période de grâce d’application pour les déploiements de mises à jour logicielles et d’applications obligatoires
@@ -140,7 +140,7 @@ Si vous configurez une période de grâce de mise en œuvre et cochez la case, u
 
 
 ## <a name="improved-functionality-in-dialog-boxes-about-required-software"></a>Fonctionnalités améliorées dans les boîtes de dialogue concernant les logiciels exigés
-Quand un utilisateur reçoit des logiciels requis, dans le paramètre **Répéter et me le rappeler :**, il peut choisir parmi les valeurs suivantes de la liste déroulante : 
+Quand un utilisateur reçoit des logiciels requis, dans le paramètre **Répéter et me le rappeler :** , il peut choisir parmi les valeurs suivantes de la liste déroulante : 
 - **Ultérieurement**. Indique que les notifications sont planifiées selon les paramètres de notification configurés dans les paramètres de l’agent du client.
 - **Heure fixe**. Indique que la notification sera programmée pour s’afficher de nouveau après l’heure sélectionnée (par exemple, dans les 30 minutes).
 
@@ -173,7 +173,7 @@ Vous pouvez désormais filtrer sur la taille du contenu des mises à jour logici
 - [Configuration Manager et maintenance Windows simplifiée sur des systèmes d’exploitation de bas niveau](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/)
 - [Déployer automatiquement des mises à jour logicielles](/sccm/sum/deploy-use/automatically-deploy-software-updates)
 
-Pour configurer le champ **Taille du contenu (Ko)**, effectuez l’une des opérations suivantes :
+Pour configurer le champ **Taille du contenu (Ko)** , effectuez l’une des opérations suivantes :
 - Quand vous créez une règle de déploiement automatique, dans l’Assistant Création d’une règle de déploiement automatique, accédez à la page **Mises à jour logicielles**.
 - Dans les propriétés d’une règle de déploiement automatique existante, accédez à l’onglet **Mises à jour logicielles**.
 
@@ -202,7 +202,7 @@ Vous pouvez désormais obtenir un aperçu rapide de la conformité globale des a
 
 
 ## <a name="lookout-integration-for-hybrid-implementations-to-protect-ios-and-android-devices"></a>Intégration de Lookout pour les implémentations hybrides afin de protéger les appareils iOS et Android
-Microsoft intègre la solution Mobile Threat Protection de Lookout pour protéger les appareils mobiles iOS et Android en détectant les programmes malveillants, les applications présentant des risques, et bien plus encore, sur les appareils. La solution de Lookout vous permet de déterminer le niveau de menace, qui est configurable. Vous pouvez créer une règle de stratégie de conformité dans System Configuration Manager pour déterminer la conformité des appareils en fonction de l’évaluation des risques par Lookout. À l’aide de stratégies d’accès conditionnel, vous pouvez autoriser ou bloquer l’accès aux ressources d’entreprise en fonction de l’état de conformité de l’appareil. Pour en savoir plus sur l’intégration et son fonctionnement, consultez [Gérer l’accès en fonction de l’appareil, du réseau et du risque encouru au niveau de l’application](/sccm/protect/deploy-use/manage-access-based-on-device-network-app-risk).
+Microsoft intègre la solution Mobile Threat Protection de Lookout pour protéger les appareils mobiles iOS et Android en détectant les programmes malveillants, les applications présentant des risques, et bien plus encore, sur les appareils. La solution de Lookout vous permet de déterminer le niveau de menace, qui est configurable. Vous pouvez créer une règle de stratégie de conformité dans System Configuration Manager pour déterminer la conformité des appareils en fonction de l’évaluation des risques par Lookout. À l’aide de stratégies d’accès conditionnel, vous pouvez autoriser ou bloquer l’accès aux ressources d’entreprise en fonction de l’état de conformité de l’appareil. Pour en savoir plus sur l’intégration et son fonctionnement, consultez [Gérer l’accès en fonction de l’appareil, du réseau et du risque encouru au niveau de l’application](/sccm/mdm/deploy-use/mobile-threat-defense).
 
 Les utilisateurs finaux d’appareils iOS non conformes sont invités à s’inscrire. Ils doivent installer l’application Lookout for Work sur leurs appareils, l’activer et corriger les menaces signalées dans l’application pour avoir accès aux données de la société. Découvrez comment [Configurer et déployer les applications Lookout for Work](/sccm/protect/deploy-use/configure-and-deploy-lookout-for-work-apps).
 

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d8d681dbd9996fb7eddbc2b37cf6af6a32401560
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 8923b380d5ee8de881e4921e9a7d5a7a680c25b0
+ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65497607"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67252114"
 ---
 # <a name="checklist-for-installing-update-1806-for-configuration-manager"></a>Liste de contrôle pour l’installation de la mise à jour 1806 de Configuration Manager
 
@@ -34,7 +34,7 @@ Pour obtenir la mise à jour de la version 1806, vous devez utiliser un point d
 
     -   Un autre problème courant de téléchargement se produit quand les paramètres du serveur proxy empêchent les téléchargements à partir de http://silverlight.dlservice.microsoft.com et http://download.microsoft.com.
 
-Pour plus d’informations sur l’installation des mises à jour, consultez [Mises à jour et maintenance dans la console](/sccm/core/servers/manage/updates#a-namebkmkinconsolea-in-console-updates-and-servicing).
+Pour plus d’informations sur l’installation des mises à jour, consultez [Mises à jour et maintenance dans la console](/sccm/core/servers/manage/updates#bkmk_inconsole).
 
 Pour plus d’informations sur les versions actuelles de l’édition Current Branch, consultez [Versions de base et de mise à jour](/sccm/core/servers/manage/updates#bkmk_Baselines).
 
@@ -154,7 +154,7 @@ Pour plus d’informations, consultez la section **Pour exécuter l’Outil de v
 > Quand l’outil de vérification des prérequis s’exécute, le processus met à jour certains fichiers sources de produit utilisés pour les tâches de maintenance du site. Par conséquent, après l’exécution de l’outil de vérification des prérequis, mais avant l’installation de la mise à jour, si vous devez effectuer une tâche de maintenance de site, exécutez  **Setupwfe.exe**  (programme d’installation de Configuration Manager) à partir du dossier CD.Latest sur le serveur de site.
 
 #### <a name="update-sites"></a>Mettre à jour les sites   
-Vous êtes désormais prêt à démarrer l’installation de la mise à jour pour votre hiérarchie. Pour plus d’informations sur l’installation de la mise à jour, consultez [Installer des mises à jour dans la console](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkinstalla-install-in-console-updates).
+Vous êtes désormais prêt à démarrer l’installation de la mise à jour pour votre hiérarchie. Pour plus d’informations sur l’installation de la mise à jour, consultez [Installer des mises à jour dans la console](/sccm/core/servers/manage/install-in-console-updates#bkmk_install).
 
 Vous pouvez installer la mise à jour en dehors des heures d’ouverture normales. Déterminez à quel moment le processus aura le moins d’impact sur les opérations d’entreprise. L’installation de la mise à jour et ses actions entraînent la réinstallation des composants du site et des rôles de système de site.
 

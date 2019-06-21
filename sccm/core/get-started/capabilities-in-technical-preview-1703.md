@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d6d427571db52f19e9d1e45648bdf2cc66b6c6d9
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 9bdca6ded291ca6e32194c61ce24b33b690489cb
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56141270"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286245"
 ---
 # <a name="capabilities-in-technical-preview-1703-for-system-center-configuration-manager"></a>Fonctionnalités de la version Technical Preview 1703 de System Center Configuration Manager
 
@@ -63,7 +63,7 @@ Utilisez le format d’URL suivant pour ouvrir le Centre logiciel à une applica
 3.  Dans l’affichage **Applications**, cliquez avec le bouton droit sur l’un des en-têtes de colonne. Ensuite, dans la liste, sélectionnez **ID unique de l’élément de configuration**. L’ID unique de chaque application s’affiche alors dans la liste.
 4.  Notez l’**ID unique de CI** de l’application vers laquelle vous souhaitez pointer, par exemple : **ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f/2**
 5.  Ensuite, supprimez le texte situé après le GUID de l’application (dans ce cas, **/2**). Il vous reste alors l’identificateur de l’application.
-6.  Enfin, pour terminer la création du lien, faites-le précéder de **Softwarecenter:SoftwareID=**. À l’aide de l’exemple ci-dessus, le lien final ressemble à ceci : **Softwarecenter:SoftwareId= ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f**.
+6.  Enfin, pour terminer la création du lien, faites-le précéder de **Softwarecenter:SoftwareID=** . À l’aide de l’exemple ci-dessus, le lien final ressemble à ceci : **Softwarecenter:SoftwareId= ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f**.
 
 Les utilisateurs finaux peuvent utiliser ce lien pour ouvrir directement le Centre logiciel à l’application spécifiée.
 
@@ -83,13 +83,13 @@ L’Assistant **Configuration des services Azure** est une nouveauté de la vers
 
 Dans la version Technical Preview 1703, cet Assistant permet uniquement de configurer le Windows Store pour Entreprises.  Pour configurer d’autres services cloud, effectuez les flux de travail propres à chacun d’eux.
 
--   Utilisez les informations contenues dans cette rubrique d’aperçu pour remplacer les étapes de configuration de la section [Configurer la synchronisation avec le Windows Store pour Entreprises](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#set-up-windows-store-for-business-synchronization) de la rubrique Current Branch [Gérer les applications à partir du Windows Store pour Entreprises avec System Center Configuration Manager](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business).
+-   Utilisez les informations contenues dans cette rubrique d’aperçu pour remplacer les étapes de configuration de la section [Configurer la synchronisation avec le Windows Store pour Entreprises](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#bkmk_setup) de la rubrique Current Branch [Gérer les applications à partir du Windows Store pour Entreprises avec System Center Configuration Manager](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business).
 
 -   Pour plus d’informations sur les applications web, consultez [Authentification et autorisation dans Azure App Service](https://docs.microsoft.com/azure/app-service/app-service-authentication-overview) et [Vue d’ensemble des applications web](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview).
 
 ### <a name="prerequisites-and-planning"></a>Prérequis et planification
 Quand vous configurez une connexion entre Configuration Manager et le Windows Store pour Entreprises, vous devez fournir un dossier où le contenu d’application synchronisé à partir du Windows Store sera conservé. Pour vous assurer que ce dossier est sécurisé et que son contenu peut être déployé sur des appareils, vérifiez que les autorisations suivantes sont en place :
--   L’ordinateur sur lequel vous installez le rôle de système de site de point de connexion de service (le site de niveau supérieur dans la hiérarchie) doit disposer d’autorisations en lecture et en écriture sur le dossier que vous avez spécifié lors de l’utilisation du compte **Computer$**.  
+-   L’ordinateur sur lequel vous installez le rôle de système de site de point de connexion de service (le site de niveau supérieur dans la hiérarchie) doit disposer d’autorisations en lecture et en écriture sur le dossier que vous avez spécifié lors de l’utilisation du compte **Computer$** .  
 
 -   L’auteur de l’application doit avoir des autorisations en lecture sur le dossier spécifié.  
 

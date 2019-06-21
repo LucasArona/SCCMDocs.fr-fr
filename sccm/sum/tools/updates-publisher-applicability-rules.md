@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b4b289daa6f0f76c1d8e71879050bdfb6f5de679
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 649c0a134f7ebc77c214801d30720f75b80d34ee
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65496488"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67159455"
 ---
 # <a name="manage-applicability-rules-in-updates-publisher"></a>Gérer les règles de mise en application dans l’éditeur de mise à jour
 
@@ -48,7 +48,7 @@ Vous pouvez créer des règles à deux emplacements dans l’éditeur de mise à
 -   Vous pouvez également créer des règles lorsque vous créez ou modifiez une mise à jour. Les règles que vous créez de cette façon ne sont pas enregistrées pour une utilisation ultérieure.
 
 ## <a name="create-applicability-rule"></a>Créer une règle de mise en application
-Les informations suivantes sont similaires à la création de règles depuis l[’Assistant Création d’une mise à jour](/sccm/sum/tools/create-updates-with-updates-publisher#the-create-update-wizard). Mais contrairement à l’Assistant, vous avez la possibilité d’enregistrer vos ensembles de règles pour une utilisation ultérieure.
+Les informations suivantes sont similaires à la création de règles depuis l[’Assistant Création d’une mise à jour](/sccm/sum/tools/create-updates-with-updates-publisher#use-the-create-update-wizard). Mais contrairement à l’Assistant, vous avez la possibilité d’enregistrer vos ensembles de règles pour une utilisation ultérieure.
 
 1. Dans l **’espace de travail Règles**, choisissez **Créer** pour ouvrir l’**Assistant Création d’une règle**.
 
@@ -82,7 +82,7 @@ L’Assistant **Modification d’une règle** affiche les règles actuelles de l
 
 Après avoir effectué vos modifications, choisissez **OK** pour enregistrer les modifications et fermer l’Assistant.
 
-Pour plus d’informations sur l’utilisation de l’Assistant de règles, consultez l **’étape 7**, la page de mise en application, de l[’Assistant Création d’une mise à jour](/sccm/sum/tools/create-updates-with-updates-publisher#the-create-update-wizard).
+Pour plus d’informations sur l’utilisation de l’Assistant de règles, consultez l **’étape 7**, la page de mise en application, de l[’Assistant Création d’une mise à jour](/sccm/sum/tools/create-updates-with-updates-publisher#use-the-create-update-wizard).
 
 ## <a name="delete-applicability-rules"></a>Supprimer des règles de mise en application
 Pour supprimer une règle de mise en application enregistrée, dans l **’espace de travail Règles**, sélectionnez la règle ou l’ensemble de règles dans la liste **Mes règles enregistrées**, puis choisissez **Supprimer** dans le ruban. Cette opération supprime la règle ou l’ensemble de règles enregistrés de l’éditeur de mise à jour.

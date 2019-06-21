@@ -11,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 63eb7fa579d002b4cae48ed0a43a2246350e2633
-ms.sourcegitcommit: f531d0a622f220739710b2fe6644ea58d024064a
+ms.openlocfilehash: fbbaf7322b0103b9958b4d7b2c66c018d12d20a4
+ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65933315"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67194619"
 ---
 # <a name="manage-office-365-proplus-with-configuration-manager"></a>Gérer Office 365 ProPlus avec Configuration Manager
 
@@ -114,7 +114,7 @@ Procédez comme suit pour déployer les mises à jour d’Office 365 avec le Ge
 >
 > Si Office 365 ProPlus a été installé récemment et, selon la façon dont il a été installé, il est possible que le canal de mise à jour n’ait pas encore été défini. Dans ce cas, les mises à jour déployées seront détectées comme non applicables. Il existe une [tâche Mises à jour automatiques planifiée](https://docs.microsoft.com/deployoffice/overview-of-the-update-process-for-office-365-proplus) créée lors de l’installation d’Office 365 ProPlus. Dans ce cas, cette tâche doit s’exécuter au moins une fois pour le canal de mise à jour soit défini et les mises à jour détectées comme applicables.
 >
-> Si Office 365 ProPlus a été récemment installé et que les mises à jour déployées ne sont pas détectées, à des fins de test, vous pouvez démarrer la tâche Mises à jour automatiques Office manuellement, puis démarrer le [Cycle d’évaluation du déploiement des mises à jour logicielles](https://docs.microsoft.com/sccm/sum/understand/software-updates-introduction#scan-for-software-updates-compliance-process) sur le client. Pour obtenir des instructions sur la façon d’exécuter cette séquence de tâches, consultez [Mise à jour d’Office 365 ProPlus dans une séquence de tâches](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates#updating-office-365-ProPlus-in-a-task-sequence).
+> Si Office 365 ProPlus a été récemment installé et que les mises à jour déployées ne sont pas détectées, à des fins de test, vous pouvez démarrer la tâche Mises à jour automatiques Office manuellement, puis démarrer le [Cycle d’évaluation du déploiement des mises à jour logicielles](https://docs.microsoft.com/sccm/sum/understand/software-updates-introduction#scan-for-software-updates-compliance-process) sur le client. Pour obtenir des instructions sur la façon d’exécuter cette séquence de tâches, consultez [Mise à jour d’Office 365 ProPlus dans une séquence de tâches](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates#updating-office-365-proplus-in-a-task-sequence).
 
 ## <a name="restart-behavior-and-client-notifications-for-office-365-updates"></a>Comportement de redémarrage et notifications des clients pour les mises à jour d’Office 365
 Quand vous déployez une mise à jour sur un client Office 365, le comportement de redémarrage et les notifications des clients diffèrent en fonction de la version de Configuration Manager. Le tableau suivant fournit des informations sur l’expérience utilisateur quand le client reçoit une mise à jour d’Office 365 :

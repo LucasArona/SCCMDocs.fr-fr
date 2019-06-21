@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 488fa5251711c8d9c7702e2b240a6f10602d447f
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: f3e759ef44170c460118d3629d8a7b9648ed8528
+ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499278"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67251650"
 ---
 # <a name="use-a-pull-distribution-point-with-configuration-manager"></a>Utiliser un point de distribution d’extraction avec Configuration Manager
 
@@ -42,7 +42,7 @@ Les points de distribution d’extraction prennent en charge les mêmes configur
 > [!IMPORTANT]  
 > Même si un point de distribution d’extraction prend en charge les communications via les protocoles HTTP et HTTPS, lorsque vous utilisez la console Configuration Manager, vous pouvez spécifier uniquement des points de distribution sources configurés pour le protocole HTTP. Le Kit de développement logiciel (SDK) Configuration Manager permet de spécifier un point de distribution source configuré pour le protocole HTTPS.  
 
-Configurez un point de distribution d’extraction quand vous installez le point de distribution. Après avoir créé un point de distribution, configurez-le en tant que point de distribution d’extraction en modifiant les propriétés du rôle. Pour plus d’informations sur l’activation d’un point de distribution comme point de distribution d’extraction, consultez [Point de distribution d’extraction](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#pull-distribution-point).  
+Configurez un point de distribution d’extraction quand vous installez le point de distribution. Après avoir créé un point de distribution, configurez-le en tant que point de distribution d’extraction en modifiant les propriétés du rôle. Pour plus d’informations sur l’activation d’un point de distribution comme point de distribution d’extraction, consultez [Point de distribution d’extraction](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pull).  
 
 Supprimez la configuration comme point de distribution d’extraction en modifiant les propriétés du point de distribution. Quand vous supprimez la configuration d’un point de distribution comme point de distribution d’extraction, il revient à un fonctionnement normal. Le serveur de site gère les transferts de contenu futurs vers le point de distribution.  
 

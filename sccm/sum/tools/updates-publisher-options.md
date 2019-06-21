@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7a26aaa2d4e409e899763cedebd32ebf64c93ffa
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 2d576057c1ca7940a8d09bcfa305b80b178a6006
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65496377"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67159526"
 ---
 # <a name="configure-options-for-updates-publisher"></a>Configurer les options pour l’éditeur de mise à jour
 
@@ -40,7 +40,7 @@ Les options sont réparties comme suit :
 -   Journalisation
 
 ## <a name="update-server"></a>Serveur de mise à jour
-Vous devez configurer l’éditeur de mise à jour pour fonctionner avec un serveur de mise à jour comme Windows Server Update Services (WSUS) avant de pouvoir [publier des mises à jour](/sccm/sum/tools/manage-updates-with-updates-publisher#publish-updates-and-bundles). Cela inclut la spécification du serveur, les méthodes pour se connecter à ce serveur lorsqu’il est distant de la console, et un certificat à utiliser pour signer numériquement les mises à jour que vous publiez.
+Vous devez configurer l’éditeur de mise à jour pour fonctionner avec un serveur de mise à jour comme Windows Server Update Services (WSUS) avant de pouvoir [publier des mises à jour](/sccm/sum/tools/manage-updates-with-updates-publisher#publish-updates-and-bundles-from-the-updates-workspace). Cela inclut la spécification du serveur, les méthodes pour se connecter à ce serveur lorsqu’il est distant de la console, et un certificat à utiliser pour signer numériquement les mises à jour que vous publiez.
 
 - **Configurez un serveur de mise à jour**. Lorsque vous configurez un serveur de mise à jour, sélectionnez le serveur WSUS de niveau supérieur (serveur de mise à jour) dans votre hiérarchie Configuration Manager afin que tous les sites enfants aient accès aux mises à jour que vous publiez.
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0bb478eb875e97d8e3088e50daab8538113b40c5
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: a0d2bc4c8ae366a5e60e9a7a3100b5a5059c341a
+ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56139583"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67193948"
 ---
 # <a name="which-branch-of-configuration-manager-should-i-use"></a>Quelle branche de Configuration Manager dois-je utiliser ?
 
@@ -40,7 +40,7 @@ Pour plus d’informations sur la Software Assurance et les options de licence, 
 
 Microsoft prévoit de publier des mises à jour de System Center Configuration Manager Current Branch plusieurs fois par an. Pour les versions de Configuration Manager publiées avant la version 1710, la prise en charge dure 12 mois. À compter de la version 1710, chaque version de mise à jour reste prise en charge pendant 18 mois suivant sa date de disponibilité générale (GA). Un support technique est assuré pendant toute la période de prise en charge. Toutefois, notre structure de prise en charge est dynamique et évolue en deux phases de maintenance distinctes qui dépendent de la disponibilité de la dernière version Current Branch. (Pour plus d’informations, consultez la rubrique intitulée [Prise en charge des versions Current Branch de System Center Configuration Manager](https://docs.microsoft.com/sccm/core/servers/manage/current-branch-versions-supported). Les mises à jour vers des versions plus récentes sont proposées sous forme de mises à jour dans la console.
 
-Pour installer Current Branch en tant que nouveau site, utilisez le [support de la base de référence](/sccm/core/servers/manage/updates#baseline-and-update-versions). Utilisez également le support de la base de référence pour mettre à niveau System Center 2012 Configuration Manager avec Service Pack 2, ou System Center 2012 R2 Configuration Manager avec Service Pack 1. L’accès à ce support dépend de la manière dont votre organisation a acquis la licence de System Center Configuration Manager. 
+Pour installer Current Branch en tant que nouveau site, utilisez le [support de la base de référence](/sccm/core/servers/manage/updates#bkmk_Baselines). Utilisez également le support de la base de référence pour mettre à niveau System Center 2012 Configuration Manager avec Service Pack 2, ou System Center 2012 R2 Configuration Manager avec Service Pack 1. L’accès à ce support dépend de la manière dont votre organisation a acquis la licence de System Center Configuration Manager. 
 
 Vous pouvez également utiliser le support de la base de référence pour installer un nouveau site en tant qu’édition d’évaluation de Current Branch. L’édition d’évaluation ne nécessite aucune licence. Vous pouvez utiliser l’édition d’évaluation pendant 180 jours. Elle prend en charge la mise à niveau vers une édition sous licence de Current Branch. Pour installer uniquement une édition d’évaluation, accédez au site [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection).
 
@@ -76,9 +76,9 @@ Pour plus d’informations, consultez [Prise en charge des versions Current Bran
 ##  <a name="long-term-servicing-branch"></a>Long-Term Servicing Branch 
 Il s’agit d’une branche sous licence à utiliser en production pour les clients Configuration Manager qui utilisent Current Branch et ont autorisé Configuration Manager SA (Software Assurance) ou des droits d’abonnement équivalents à expirer après le 1er octobre 2016. Pour plus d’informations sur la Software Assurance et les options de licence, consultez [Licences et branches pour System Center Configuration Manager](learn-more-editions.md), ainsi que [Questions fréquentes (FAQ) sur les branches et la gestion des licences de Configuration Manager](/sccm/core/understand/product-and-licensing-faq).
 
-La branche LTSB est basée sur la version 1606. Cette branche ne reçoit pas les mises à jour dans la console, qui fournissent de nouvelles fonctionnalités ou mettent à jour des fonctionnalités existantes. Toutefois, des correctifs de sécurité critiques sont fournis. Pour installer la branche LTSB, vous devez utiliser le [support de la base de référence](/sccm/core/servers/manage/updates#baseline-and-update-versions) de la version 1606 fourni avec System Center 2016. Les versions de base de référence ultérieures ne prennent pas en charge l’installation de LTSB.
+La branche LTSB est basée sur la version 1606. Cette branche ne reçoit pas les mises à jour dans la console, qui fournissent de nouvelles fonctionnalités ou mettent à jour des fonctionnalités existantes. Toutefois, des correctifs de sécurité critiques sont fournis. Pour installer la branche LTSB, vous devez utiliser le [support de la base de référence](/sccm/core/servers/manage/updates#bkmk_Baselines) de la version 1606 fourni avec System Center 2016. Les versions de base de référence ultérieures ne prennent pas en charge l’installation de LTSB.
 
-Pour installer la branche LTSB en tant que nouveau site ou en tant que mise à niveau d’un site Configuration Manager 2012 pris en charge, utilisez le [support de la base de référence](/sccm/core/servers/manage/updates#baseline-and-update-versions) de la version 1606 fourni avec System Center 2016. Vous pouvez utiliser le support de la base de référence pour installer un nouveau site qui exécute la version 1606 de Current Branch, ou un nouveau site qui exécute Long-Term Servicing Branch.
+Pour installer la branche LTSB en tant que nouveau site ou en tant que mise à niveau d’un site Configuration Manager 2012 pris en charge, utilisez le [support de la base de référence](/sccm/core/servers/manage/updates#bkmk_Baselines) de la version 1606 fourni avec System Center 2016. Vous pouvez utiliser le support de la base de référence pour installer un nouveau site qui exécute la version 1606 de Current Branch, ou un nouveau site qui exécute Long-Term Servicing Branch.
 
 > [!TIP]  
 > Pour en savoir plus sur System Center 2016, consultez la [documentation de System Center 2016](https://docs.microsoft.com/system-center/index). Cette documentation indique également comment obtenir System Center 2016, qui requiert un contrat de licence Microsoft ou des droits similaires.  
@@ -117,7 +117,7 @@ La branche LTSB est basée sur la version 1606 de Current Branch et présente l
   Pour effectuer la conversion, vous devez disposer d’un contrat Software Assurance actif avec Microsoft. Pour plus d’informations, suivez les liens ci-dessous :
   - [Mettre à niveau Long-Term Servicing Branch vers Current Branch](convert-to-current-branch.md)
   - [Licences et branches pour System Center Configuration Manager](learn-more-editions.md)
-  - [Versions de base et de mise à jour](/sccm/core/servers/manage/updates#baseline-and-update-versions) 
+  - [Versions de base et de mise à jour](/sccm/core/servers/manage/updates#bkmk_Baselines) 
 - Il n’existe aucune option permettant de convertir LTSB en branche Technical Preview. Les branches Technical Preview sont des installations distinctes qui ne nécessitent pas de licence.
 -   Vous ne pouvez pas mettre à niveau une édition d’évaluation de Current Branch vers une installation LTSB.
 
@@ -126,7 +126,7 @@ La branche LTSB est basée sur la version 1606 de Current Branch et présente l
 ## <a name="technical-preview-branch"></a>Branche Technical Preview
 La branche Technical Preview est destinée à un environnement lab. Découvrez et testez les dernières fonctionnalités développées pour Configuration Manager. Il n’est pas pris en charge dans un environnement de production et ne nécessite pas de contrat de licence Software Assurance.
 
-Pour installer un nouveau site qui exécute la branche Technical Preview, utilisez le dernier [support de la base de référence pour la branche Technical Preview](/sccm/core/get-started/technical-preview#install-and-update-the-technical-preview). Une fois que vous avez installé la branche Technical Preview, de nouvelles versions sont disponibles chaque mois sous forme de mises à jour dans la console.
+Pour installer un nouveau site qui exécute la branche Technical Preview, utilisez le dernier [support de la base de référence pour la branche Technical Preview](/sccm/core/get-started/technical-preview#bkmk_install). Une fois que vous avez installé la branche Technical Preview, de nouvelles versions sont disponibles chaque mois sous forme de mises à jour dans la console.
 
 
 ### <a name="features-of-the-technical-preview-branch"></a>Fonctionnalités de la branche Technical Preview
@@ -137,7 +137,7 @@ Pour installer un nouveau site qui exécute la branche Technical Preview, utilis
 
 
 ### <a name="limitations"></a>Limitations
--  [La prise en charge est limitée](/sccm/core/get-started/technical-preview#requirements-and-limitatins-for-the-techincal-preview), avec seulement un site principal et jusqu’à 10 clients.  
+-  [La prise en charge est limitée](/sccm/core/get-started/technical-preview#bkmk_reqs), avec seulement un site principal et jusqu’à 10 clients.  
 -  Elle ne peut pas être mise à niveau vers une branche Current Branch ou LTSB.
 -  Elle ne prend pas en charge les comportements suivants :
    - Utilisation de la migration pour importer ou exporter des données vers une autre installation de Configuration Manager

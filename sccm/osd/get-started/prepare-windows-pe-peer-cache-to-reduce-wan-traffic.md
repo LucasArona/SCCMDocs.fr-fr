@@ -2,7 +2,7 @@
 title: Préparer la mise en cache d’homologue Windows PE pour réduire le trafic WAN
 titleSuffix: Configuration Manager
 description: Le cache d’homologue Windows PE vise à obtenir le contenu d’un homologue local et à réduire le trafic WAN en l’absence de point de distribution local.
-ms.date: 10/06/2016
+ms.date: 06/18/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bedaeed065121e18089cb6b1847397ba5cfdb35a
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 80dffb04d7f6ef097ad5b629690e704d1c9a263f
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56128753"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286582"
 ---
 # <a name="prepare-windows-pe-peer-cache-to-reduce-wan-traffic-in-system-center-configuration-manager"></a>Préparer le cache d’homologue Windows PE pour réduire le trafic WAN dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Quand vous déployez un nouveau système d’exploitation dans System Center Configuration Manager, les ordinateurs qui exécutent la séquence de tâches peuvent utiliser le cache d’homologue Windows PE pour obtenir du contenu à partir d’un homologue local (source de cache d’homologue) au lieu de le télécharger à partir d’un point de distribution. Cela permet de réduire le trafic du réseau étendu dans les scénarios de succursale où il n'existe aucun point de distribution local.  
 
@@ -64,9 +64,11 @@ Pour savoir comment gérer le cache d’homologue, consultez les sections suivan
 
 -   Le client Configuration Manager doit pouvoir communiquer via les ports suivants sur votre réseau :  
 
-    -   Port pour la diffusion réseau initiale, pour rechercher une source de mise en cache d’homologue. Par défaut, il s’agit du port 8004.  
+    -   Port pour la diffusion réseau initiale, pour rechercher une source de mise en cache d’homologue. Par défaut, il s’agit de port UDP 8004.  
 
-    -   Port pour le téléchargement de contenu à partir d’une source de mise en cache d’homologue (HTTP et HTTPS). Par défaut, il s’agit du port 8003.  
+    -   Port pour le téléchargement de contenu à partir d’une source de mise en cache d’homologue (HTTP et HTTPS). Par défaut, il s’agit de TCP, port 8003.  
+    
+        Pour plus d’informations, consultez [Ports utilisés pour les connexions](/sccm/core/plan-design/hierarchy/ports#BKMK_PortsClient-ClientWakeUp).  
 
         > [!TIP]  
         >  Les clients utilisent le protocole HTTPS pour télécharger le contenu quand il est disponible. Toutefois, le même numéro de port est utilisé pour HTTP ou HTTPS.  
@@ -114,7 +116,7 @@ Pour savoir comment gérer le cache d’homologue, consultez les sections suivan
 
 - **SMSTSPeerDownload**  
 
-   Valeur :  TRUE  
+   Valeur :  TRUE  
 
    Cela permet au client d'utiliser la mise en cache d'homologue Windows PE.  
 
@@ -126,7 +128,7 @@ Pour savoir comment gérer le cache d’homologue, consultez les sections suivan
 
 - **SMSTSPreserveContent**  
 
-   Valeur : TRUE  
+   Valeur : TRUE  
 
    Le contenu est ainsi marqué dans la séquence de tâches de façon à être conservé dans le cache du client Configuration Manager après le déploiement. Cette variable se distingue de SMSTSPersisContent, qui conserve uniquement le contenu pendant la durée de la séquence de tâches et utilise le cache de la séquence de tâches, et non le cache du client Configuration Manager.  
 

@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d817bf27302b0a894eb834c747fb3bbcb0ad3fa
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 950e3d60d0737d9135eb5f47bbc02a07f2a5e65e
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56141185"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67158332"
 ---
 # <a name="capabilities-in-technical-preview-1702-for-system-center-configuration-manager"></a>Fonctionnalités de Technical Preview 1702 pour System Center Configuration Manager
 
@@ -77,7 +77,7 @@ Pour utiliser Azure AD avec Configuration Manager, vous avez besoin des élémen
 -   Un site Configuration Manager qui s’exécute sur une machine virtuelle Azure jointe à votre domaine Azure AD.
 -   Des clients Configuration Manager qui s’exécutent dans le même environnement Azure AD.
 
-Pour configurer les services de domaine Azure Active Directory, consultez [Prise en main des services de domaine Azure AD](https://docs.microsoft.com/azure/active-directory-domain-services/active-directory-ds-getting-started).
+Pour configurer les services de domaine Azure Active Directory, consultez [Prise en main des services de domaine Azure AD](https://docs.microsoft.com/azure/active-directory-domain-services/create-instance).
 
 ### <a name="discover-resources"></a>Découvrir les ressources
 Après avoir configuré Configuration Manager pour qu’il s’exécute dans Azure AD, vous pouvez appliquer les méthodes de découverte Active Directory suivantes pour rechercher des ressources dans Azure AD :  
@@ -266,7 +266,8 @@ Nous avons ajouté de nouveaux paramètres, que vous pouvez utiliser dans les é
 - **Claviers prédictifs** (mode supervisé uniquement)
 - **Correction automatique** (mode supervisé uniquement)
 - **Vérification orthographique au clavier** (mode supervisé uniquement)
-- **Raccourcis clavier** (mode supervisé uniquement) <!--- - **Enterprise app trust settings modification** --->
+- **Raccourcis clavier** (mode supervisé uniquement)
+  <!--- - **Enterprise app trust settings modification** --->
 - **Installation d’applications à l’aide d’Apple Configurator et iTunes uniquement** (mode supervisé uniquement)
 - **Téléchargements d’application automatiques** (mode supervisé uniquement)
 - **Modifier les paramètres de l’application Localiser mes amis** (mode supervisé uniquement)

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a513eb15f9a8c841aa5896ee5d416bd7863d0cb9
-ms.sourcegitcommit: ab9f2a7fb7ea3a0c65808fce2975ab25a670281f
+ms.openlocfilehash: 9d697427fe9cfa774cc7baca6563d6c1cc285c8b
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65612799"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67159395"
 ---
 # <a name="ports-used-in-configuration-manager"></a>Ports utilisés dans Configuration Manager
 
@@ -130,7 +130,7 @@ En plus des ports qui sont répertoriés dans ce tableau, le proxy de mise en é
 |Diffusion de mise en cache d’homologue Windows PE|8004|--|  
 |Téléchargement de mise en cache d’homologue Windows PE|--|8003|  
 
-Pour plus d’informations, consultez [Mise en cache d’homologue Windows PE](/sccm/osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md#-requirements-for-a-client-to-use-a--windows-pe-peer-cache-source).
+Pour plus d’informations, consultez [Mise en cache d’homologue Windows PE](/sccm/osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic#BKMK_PeerCacheRequirements).
 
 
 ###  <a name="BKMK_PortsClient-PolicyModule"></a> Client -- > Module de stratégie SCEP (protocole d’inscription de certificats simple) de Configuration Manager   
