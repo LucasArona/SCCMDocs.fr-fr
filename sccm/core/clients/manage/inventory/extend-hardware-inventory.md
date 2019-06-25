@@ -28,14 +28,14 @@ Le fichier Configuration.mof permet de définir les classes de données qui doiv
 
  Le fichier Configuration.mof définit également et inscrit les fournisseurs WMI d'accéder aux informations de périphérique durant l'inventaire matériel. L'enregistrement des fournisseurs définit le type de fournisseur à utiliser et les classes prises en charge par le fournisseur.  
 
- Quand les clients Configuration Manager demandent une stratégie, le fichier Configuration.mof est attaché au corps de la stratégie. Ce fichier est ensuite téléchargé et compilé par les clients. Lorsque vous ajoutez, modifiez ou supprimez des classes de données à partir du fichier Configuration.mof, les clients compilent automatiquement ces modifications sont apportées aux classes de données liées au stock. Aucune autre action n’est requise pour inventorier les classes de données nouvelles ou modifiées sur les clients Configuration Manager. Ce fichier se trouve dans **<emplacement_installation_CM\>\Inboxes\clifiles.src\hinv\\\** sur les serveurs de site principal.  
+ Quand les clients Configuration Manager demandent une stratégie, le fichier Configuration.mof est attaché au corps de la stratégie. Ce fichier est ensuite téléchargé et compilé par les clients. Lorsque vous ajoutez, modifiez ou supprimez des classes de données à partir du fichier Configuration.mof, les clients compilent automatiquement ces modifications sont apportées aux classes de données liées au stock. Aucune autre action n’est requise pour inventorier les classes de données nouvelles ou modifiées sur les clients Configuration Manager. Ce fichier se trouve dans **<emplacement_installation_CM\>\Inboxes\clifiles.src\hinv\\** sur les serveurs de site principal.  
 
  Dans Configuration Manager, le fichier sms_def.mof n’a plus besoin d’être modifié comme c’était le cas dans Configuration Manager 2007. Au lieu de cela, vous pouvez activer et désactiver des classes WMI, et ajouter de nouvelles classes que l’inventaire matériel collectera, à l’aide des paramètres client. Configuration Manager permet d’étendre l’inventaire matériel à l’aide des méthodes ci-dessous.  
 
 > [!NOTE]  
 >  Si vous avez changé manuellement le fichier Configuration.mof pour ajouter des classes d’inventaire personnalisées, ces changements sont remplacés quand vous effectuez la mise à jour vers la version 1602. Pour continuer à utiliser des classes personnalisées après la mise à jour, vous devez les ajouter à la section « Added extensions » du fichier Configuration.mof après la mise à jour vers 1602.  
 > En revanche, vous ne devez rien modifier au-dessus de cette section, car la modification de ces sections est réservée à Configuration Manager. Une sauvegarde de votre fichier Configuration.mof personnalisé se trouve dans :  
-> **<répertoire_installation_CM\>\data\hinvarchive\\**.  
+> **<répertoire_installation_CM\>\data\hinvarchive\\** .  
 
 |Méthode|Informations complémentaires|  
 |------------|----------------------|  
@@ -159,12 +159,12 @@ Vous pouvez importer uniquement des classes d'inventaire lorsque vous modifiez l
 > [!IMPORTANT]  
 >  Quand vous créez un fichier NOIDMIF, il doit être enregistré dans un format codé ANSI. Les fichiers NOIDMIF enregistrés au format encodé UTF-8 ne peuvent pas être lus par Configuration Manager.  
 
- Après avoir créé un fichier NOIDMIF, stockez-le dans le dossier _%Windir%_**\System32\CCM\Inventory\Noidmifs** sur chaque client. Configuration Manager collecte les informations des fichiers NODMIF de ce dossier lors du prochain cycle d’inventaire matériel planifié.  
+ Après avoir créé un fichier NOIDMIF, stockez-le dans le dossier _%Windir%_ **\System32\CCM\Inventory\Noidmifs** sur chaque client. Configuration Manager collecte les informations des fichiers NODMIF de ce dossier lors du prochain cycle d’inventaire matériel planifié.  
 
 ###  <a name="BKMK_IDMIF"></a> Pour créer des fichiers IDMIF  
  Les fichiers IDMIF permettent d’ajouter à la base de données Configuration Manager des informations sur les ressources qui ne pourraient normalement pas être inventoriées par Configuration Manager et qui ne sont associées à aucun appareil client particulier. Par exemple, vous pouvez utiliser des fichiers IDMIF pour collecter des informations sur les projecteurs, lecteurs DVD, photocopieurs ou autres équipements qui ne disposent pas d’un client Configuration Manager. Pour plus d’informations sur la création de fichiers IDMIF, consultez la documentation du Kit de développement logiciel (SDK) Configuration Manager.  
 
- Après avoir créé un fichier IDMIF, stockez-le dans le dossier _%Windir%_**\CCM\Inventory\Idmifs** sur les ordinateurs clients. Configuration Manager collecte les informations de ce fichier lors du prochain cycle d’inventaire matériel planifié. Vous devez déclarer de nouvelles classes pour les informations contenues dans le fichier en les ajoutant ou en les important.  
+ Après avoir créé un fichier IDMIF, stockez-le dans le dossier _%Windir%_ **\CCM\Inventory\Idmifs** sur les ordinateurs clients. Configuration Manager collecte les informations de ce fichier lors du prochain cycle d’inventaire matériel planifié. Vous devez déclarer de nouvelles classes pour les informations contenues dans le fichier en les ajoutant ou en les important.  
 
 > [!NOTE]
 > Les fichiers MIF peuvent contenir de grandes quantités de données et le regroupement de ces données pourrait affecter négativement les performances de votre site. Activez la collecte de fichiers MIF uniquement quand cela est nécessaire et configurez l’option **Taille maximale du fichier MIF personnalisé (Ko)** dans les paramètres d’inventaire matériel. Pour plus d’informations, consultez [Présentation de l’inventaire matériel dans System Center Configuration Manager](introduction-to-hardware-inventory.md).
