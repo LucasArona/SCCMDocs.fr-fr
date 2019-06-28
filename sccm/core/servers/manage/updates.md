@@ -12,10 +12,10 @@ ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: bb875529224655fb56aeea5636bf92c7ddaf8b2c
-ms.sourcegitcommit: 725e1bf7d3250c2b7b7be9da01135517428be7a1
+ms.sourcegitcommit: 9d186b8b9ff652d5ea8a5d352f3f793f11db66f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/10/2019
+ms.lasthandoff: 06/26/2019
 ms.locfileid: "66822054"
 ---
 # <a name="updates-and-servicing-for-configuration-manager"></a>Mises à jour et maintenance pour Configuration Manager
