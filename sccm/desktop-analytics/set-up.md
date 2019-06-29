@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c7c899f56829d63cebc29518cbeb7497b6a203cd
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: 6658f0b7a65027715975e6075e5c18a430d38405
+ms.sourcegitcommit: d8cfd0edf2579e2b08a0ca8a0a7b8f53d1e4196f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67158915"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463735"
 ---
 # <a name="how-to-set-up-desktop-analytics"></a>Comment configurer le bureau Analytique
 
@@ -40,24 +40,20 @@ Utilisez cette procédure pour vous connecter à l’Analytique de bureau et le 
 
 4. Sur le **donner aux utilisateurs accès** page :
 
-    - **Voulez-vous vraiment Analytique de bureau pour gérer les rôles d’annuaire pour vos utilisateurs**: Analytique de postes de travail affecte automatiquement la **propriétaires de l’espace de travail** et **contributeurs de l’espace de travail** regroupe à la **Desktop Analytique Administrator** rôle. Si ces groupes sont déjà un **administrateur général**, il n’existe aucune modification.  
+    - **Autoriser l’Analytique de bureau gérer les rôles d’annuaire en votre nom**: Analytique de postes de travail affecte automatiquement la **propriétaires de l’espace de travail** le **Desktop Analytique Administrator** rôle. Si ces groupes sont déjà un **administrateur général**, il n’existe aucune modification.
 
-        Si vous ne sélectionnez pas cette option, bureau Analytique ajoute toujours les utilisateurs en tant que membres des groupes de sécurité de deux. Un **administrateur général** doit affecter manuellement la **Desktop Analytique Administrator** rôle pour les utilisateurs.  
+        Si vous ne sélectionnez pas cette option, bureau Analytique ajoute toujours les utilisateurs en tant que membres du groupe de sécurité. Un **administrateur général** doit affecter manuellement la **Desktop Analytique Administrator** rôle pour les utilisateurs.   
 
         Pour plus d’informations sur l’attribution d’autorisations de rôle d’administrateur dans Azure Active Directory et les autorisations affectées aux **les administrateurs de bureau Analytique**, consultez [autorisations du rôle administrateur dans Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles).  
 
-    - Postes de travail Analytique préconfigure les deux groupes de sécurité dans Azure Active Directory :  
+    - Postes de travail Analytique préconfigure les **propriétaires de l’espace de travail** groupe de sécurité dans Azure Active Directory pour créer et gérer des espaces de travail et les plans de déploiement. 
 
-        - **Propriétaires de l’espace de travail**: Un groupe de sécurité pour créer et gérer des espaces de travail. Ces comptes ont besoin d’un accès propriétaire à l’abonnement Azure.  
-
-        - **Contributeurs de l’espace de travail**: Un groupe de sécurité pour créer et gérer des plans de déploiement dans cet espace de travail. Ils ne doivent tout accès Azure supplémentaires.  
-
-        Pour ajouter un utilisateur au groupe, tapez son nom ou l’adresse électronique dans le **Entrez le nom ou adresse de messagerie** section du groupe approprié. Lorsque vous avez terminé, sélectionnez **suivant**.
+        Pour ajouter un utilisateur au groupe, tapez son nom ou l’adresse électronique dans le **Entrez le nom ou adresse de messagerie** section. Lorsque vous avez terminé, sélectionnez **suivant**.
 
 5. Sur la page pour **configurer votre espace de travail**:  
 
     > [!Note]  
-    > Effectuez cette étape en tant qu’un **propriétaire de l’espace de travail** ou **contributeur**. Pour plus d’informations, consultez [conditions préalables](/sccm/desktop-analytics/overview#prerequisites).  
+    > Pour effectuer cette étape, l’utilisateur doit avoir **propriétaire de l’espace de travail** autorisations et un accès supplémentaire à l’abonnement Azure et le groupe de ressources. Pour plus d’informations, consultez [conditions préalables](/sccm/desktop-analytics/overview#prerequisites).  
 
     - Pour utiliser un espace de travail pour l’Analytique de bureau, sélectionnez-le, puis passez à l’étape suivante.  
 

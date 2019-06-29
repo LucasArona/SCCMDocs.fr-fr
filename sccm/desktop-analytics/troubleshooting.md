@@ -2,7 +2,7 @@
 title: Résoudre les problèmes de postes de travail Analytique
 titleSuffix: Configuration Manager
 description: Détails techniques pour vous aider à résoudre les problèmes avec l’Analytique de bureau.
-ms.date: 06/11/2019
+ms.date: 06/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c6a64a007462c8619e05b3002611bb72581b6f92
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: 271803e42ba20d8d0340754b3167210414423014
+ms.sourcegitcommit: d8cfd0edf2579e2b08a0ca8a0a7b8f53d1e4196f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67285713"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463808"
 ---
 # <a name="troubleshoot-desktop-analytics"></a>Résoudre les problèmes de postes de travail Analytique
 
@@ -56,7 +56,7 @@ Pour plus d’informations, consultez [fichiers journaux pour le bureau Analytiq
 ### <a name="enable-verbose-logging"></a>Activer la journalisation documentée
 
 1. Sur le point de connexion, accédez à la clé de Registre suivante : `HKLM\Software\Microsoft\SMS\Tracing\SMS_SERVICE_CONNECTOR`  
-2. Définir le **LogLevel** valeur `0`  
+2. Définir le **LoggingLevel** valeur `0`  
 3. (Facultatif) Exécutez la commande SQL suivante sur la base de données de site :  
 
     ```SQL
@@ -86,42 +86,43 @@ Après avoir effectué la [initiale d’intégration](/sccm/desktop-analytics/se
 
 #### <a name="create-app-in-azure-ad"></a>Créer l’application dans Azure AD
 
-1. Ouvrez le [portail Azure](http://portal.azure.com) en tant qu’utilisateur avec des autorisations d’administrateur d’entreprise, accédez à **Azure Active Directory**, puis sélectionnez **inscriptions**. Puis sélectionnez **nouvelle inscription d’application**.  
+1. Ouvrir le [portail Azure](http://portal.azure.com) en tant qu’utilisateur avec *administrateur général* autorisations, accédez à **Azure Active Directory**, puis sélectionnez **inscriptions**. Puis sélectionnez **nouvelle inscription**.  
 
 2. Dans le **créer** panel, configurez les paramètres suivants :  
 
     - **Nom**: un nom unique qui identifie l’application, par exemple : `Desktop-Analytics-Connection`  
 
-    - **Type d’application**: **Application Web / API**  
+    - **Prise en charge des types de comptes**: **Comptes dans ce répertoire d’organisation (Contoso)**
 
-    - **URL d’authentification**: cette valeur n’est pas utilisée par Configuration Manager, mais requis par Azure AD. Entrez une URL valide et unique, par exemple : `https://configmgrapp`  
+    - **(Facultatif) des URI de redirection**: **Web**  
+
+    <!--     - **Sign-on URL**: this value isn't used by Configuration Manager, but required by Azure AD. Enter a unique and valid URL, for example: `https://configmgrapp`   -->
   
-   Sélectionnez **créer**.  
+    Sélectionnez **inscrire**.  
 
-3. Sélectionnez l’application et notez le **ID d’Application**. Cette valeur est un GUID qui est utilisé pour configurer la connexion de Configuration Manager.  
+3. Sélectionnez l’application, notez le **ID d’Application (client)** et **ID de répertoire (locataire)** . Les valeurs sont des GUID utilisés pour configurer la connexion de Configuration Manager.  
 
-4. Sélectionnez **paramètres** dans l’application, puis sélectionnez **clés**. Dans le **les mots de passe** section, entrez un **description de la clé**, spécifiez un délai d’expiration **durée**, puis sélectionnez **enregistrer**. Copie le **valeur** de la clé, qui est utilisée pour configurer la connexion de Configuration Manager.
+4. Dans le **gérer** menu, sélectionnez **certificats et clés secrètes**. Sélectionnez **nouvelle clé secrète client**. Entrez un **Description**, spécifiez une durée d’expiration, puis sélectionnez **ajouter**. Copie le **valeur** de la clé, qui est utilisée pour configurer la connexion de Configuration Manager.
 
     > [!Important]  
     > Il s’agit de la seule possibilité pour copier la valeur de clé. Si vous ne le copiez maintenant, vous devez créer une autre clé.  
     >
     > Enregistrez la valeur de clé dans un emplacement sécurisé.  
 
-5. Sur l’application **paramètres** panneau, sélectionnez **autorisations requises**.  
+5. Dans le **gérer** menu, sélectionnez **autorisations d’API**.  
 
-    1. Sur le **autorisations requises** panneau, sélectionnez **ajouter**.  
+    1. Sur le **autorisations d’API** panneau, sélectionnez **ajouter une autorisation**.  
 
-    2. Dans le **ajouter un accès API** Panneau de configuration, **sélectionner une API**.  
+    2. Dans le **autorisations d’API demande** panneau, basculez vers **mon organisation utilise des API**.  
 
-    3. Recherchez le **Microservice de Configuration Manager** API. Sélectionnez-le, puis choisissez **sélectionnez**.  
+    3. Recherchez et sélectionnez le **Configuration Manager Microservice** API.  
 
-    4. Sur le **activer l’accès** du panneau, sélectionnez à la fois des autorisations de l’application : **Écrire des données de Collection CM** et **lire les données de Collection CM**. Puis choisissez **sélectionnez**.  
+    4. Sélectionnez le **autorisations d’Application** groupe. Développez **CmCollectionData**et sélectionnez à la fois des autorisations suivantes : **Écrire des données de Collection CM** et **lire les données de Collection CM**.  
 
-    5. Sur le **ajouter un accès API** panneau, sélectionnez **fait**.  
+    5. Sélectionnez **ajouter des autorisations**.  
 
-6. Sur le **autorisations requises** page, sélectionnez **accorder des autorisations**. Sélectionnez **Oui**.  
+6. Sur le **autorisations d’API** panneau, sélectionnez **accorder le consentement de l’administrateur...** . Sélectionnez **Oui**.  
 
-7. Copiez l’ID de locataire Azure AD. Cette valeur est un GUID qui est utilisé pour configurer la connexion de Configuration Manager. Sélectionnez **Azure Active Directory** dans le menu principal, puis sélectionnez **propriétés**. Copie le **ID de répertoire** valeur.  
 
 #### <a name="import-app-in-configuration-manager"></a>Application d’importation dans Configuration Manager
 
@@ -182,7 +183,7 @@ S’il existe un problème avec ce processus pendant l’installation, utilisez 
 
 3. Dans le **ajouter des autorisations** panel, configurez les paramètres suivants :  
 
-    - **Rôle**: **Lecture du journal Analytique**  
+    - **Rôle**: **Reader**  
 
     - **Attribuer l’accès à**: **Azure AD utilisateur, groupe ou application**  
 

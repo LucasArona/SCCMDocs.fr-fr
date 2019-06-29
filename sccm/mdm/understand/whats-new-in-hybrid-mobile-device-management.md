@@ -2,7 +2,7 @@
 title: Nouveautés de la gestion MDM hybride
 titleSuffix: Configuration Manager
 description: Découvrez les nouvelles fonctionnalités de gestion des appareils mobiles disponibles pour les déploiements hybrides avec Configuration Manager et Intune.
-ms.date: 05/28/2019
+ms.date: 06/24/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da4798b958e0fd66e53024a2a104a67b3c1b93ea
-ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
+ms.openlocfilehash: c269e5f90588634e51f1d3f1e31767b11a038503
+ms.sourcegitcommit: d8cfd0edf2579e2b08a0ca8a0a7b8f53d1e4196f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67194603"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463776"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Nouveautés de la gestion hybride des appareils mobiles avec Configuration Manager et Microsoft Intune
 
@@ -45,6 +45,14 @@ Chaque section de cet article répertorie les fonctionnalités hybrides sous tro
 |**Nouveautés de Microsoft Intune** | En règle générale, toutes les fonctionnalités listées dans cette catégorie fonctionnent avec chacune des versions de Configuration Manager. Sont notamment comprises les versions de System Center 2012 R2 Configuration Manager, dans la mesure où ces fonctionnalités ont seulement besoin du service Intune, sans aucune fonctionnalité supplémentaire dans Configuration Manager.|
 |**Nouveautés de Configuration Manager Technical Preview**| Toutes les fonctionnalités répertoriées dans cette catégorie fonctionnent uniquement avec la branche Technical Preview spécifiée. Pour tester ces fonctionnalités, vous devez installer la version Technical Preview spécifiée dans la description de la fonctionnalité. Pour plus d’informations, consultez [Technical Preview pour Configuration Manager](/sccm/core/get-started/technical-preview).|
 |**Nouveautés de Configuration Manager (Current Branch)**| Toutes les fonctionnalités répertoriées dans cette catégorie fonctionnent uniquement avec la version spécifiée de Configuration Manager (Current Branch). Si vous utilisez une version antérieure de Configuration Manager pour votre déploiement hybride, effectuez la mise à niveau vers la version de Configuration Manager (Current Branch) spécifiée dans la description de la fonctionnalité. Pour plus d’informations, consultez [Mettre à niveau vers Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager).|
+
+## <a name="june-2019"></a>Juin 2019
+
+### <a name="new-in-microsoft-intune"></a>Nouveautés de Microsoft Intune
+
+### <a name="view-all-installed-apps-from-new-company-portal-web-page"></a>Afficher tous les applications à partir de la nouvelle page de portail d’entreprise 
+<!-- 4224326-->
+Le site Web portail d’entreprise du nouveau **applications installées** page répertorie toutes les applications gérées (obligatoire et disponibles) qui sont installées sur le périphérique d’un utilisateur. En plus du type d’affectation, les utilisateurs peuvent voir de l’application serveur de publication, date de publication et état actuel de l’installation. Si vous n’avez pas effectué toutes les applications obligatoire ou disponible pour vos utilisateurs, ils ne voient un message expliquant qu’aucune entreprise applications ont été installées. Pour afficher la nouvelle vue, accédez à la [site Web portail d’entreprise](https://portal.manage.microsoft.com) et cliquez sur **applications installées**.  
 
 
 ## <a name="may-2019"></a>Mai 2019
