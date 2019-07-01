@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c118c50eccf7fdb443a54f630d2d5698836d44f2
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 36304b836dbedcb411310d5f0dd8d0f0a8fd91f1
+ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56135498"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67194464"
 ---
 # <a name="upgrade-windows-to-the-latest-version-with-system-center-configuration-manager"></a>Mettre à niveau Windows vers la dernière version avec System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Cet article fournit les étapes dans Configuration Manager pour mettre à niveau le système d’exploitation sur un ordinateur. Vous pouvez choisir parmi différentes méthodes de déploiement, telles qu’un média autonome ou le Centre logiciel. Le scénario de mise à niveau sur place présente les caractéristiques suivantes :  
 
@@ -37,7 +37,7 @@ Cet article fournit les étapes dans Configuration Manager pour mettre à niveau
 
 
 > [!Note]  
-> À partir de la version 1802, la séquence de tâches de mise à niveau sur place de Windows 10 prend en charge le déploiement sur des clients avec accès Internet par le biais de la [passerelle de gestion cloud](/sccm/core/clients/manage/plan-cloud-management-gateway). Cette capacité permet aux utilisateurs distants de passer plus facilement à Windows 10, sans avoir à se connecter à l’intranet. Pour plus d’informations, consultez [Déployer la mise à niveau sur place de Windows 10 à l’aide de la passerelle de gestion cloud](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#deploy-windows-10-in-place-upgrade-via-cmg). <!-- 1357149 -->
+> À partir de la version 1802, la séquence de tâches de mise à niveau sur place de Windows 10 prend en charge le déploiement sur des clients avec accès Internet par le biais de la [passerelle de gestion cloud](/sccm/core/clients/manage/plan-cloud-management-gateway). Cette capacité permet aux utilisateurs distants de passer plus facilement à Windows 10, sans avoir à se connecter à l’intranet. Pour plus d’informations, consultez [Déployer la mise à niveau sur place de Windows 10 à l’aide de la passerelle de gestion cloud](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#deploy). <!-- 1357149 -->
 
 
 

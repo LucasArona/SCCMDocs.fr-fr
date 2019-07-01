@@ -2,7 +2,7 @@
 title: Créer et exécuter des scripts
 titleSuffix: Configuration Manager
 description: Créez et exécutez des scripts Powershell sur les appareils clients.
-ms.date: 03/13/2019
+ms.date: 06/20/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cc22c66cfa4cf4e628dce7bf3cb268464610c933
-ms.sourcegitcommit: bfb8a17f60dcb9905e739045a5141ae45613fa2c
+ms.openlocfilehash: 7dc4351cf092437d81f0f30ed6b450ed1cb1efe2
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66198438"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286530"
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Créer et exécuter des scripts PowerShell à partir de la console Configuration Manager
 
@@ -76,7 +76,7 @@ La fonctionnalité Exécuter les scripts utilise les concepts d’*auteur de scr
 
 ### <a name="scripts-roles-control"></a>Contrôle des rôles des scripts
 
-Par défaut, les utilisateurs ne peuvent pas approuver un script qu'ils ont créé. Étant donné que les scripts sont puissants et flexibles, et qu’ils peuvent potentiellement être déployés sur de nombreux appareils, vous pouvez séparer les rôles entre la personne qui crée le script et celle qui l’approuve. Ces rôles procurent un niveau supplémentaire de sécurité par rapport à l’exécution d’un script sans supervision. Vous avez la possibilité de désactiver l’approbation secondaire pour faciliter le test.
+Par défaut, les utilisateurs ne peuvent pas approuver un script qu'ils ont créés. Étant donné que les scripts sont puissants et flexibles, et qu’ils peuvent potentiellement être déployés sur de nombreux appareils, vous pouvez séparer les rôles entre la personne qui crée le script et celle qui l’approuve. Ces rôles procurent un niveau supplémentaire de sécurité par rapport à l’exécution d’un script sans supervision. Vous avez la possibilité de désactiver l’approbation secondaire pour faciliter le test.
 
 ### <a name="approve-or-deny-a-script"></a>Approuver ou refuser un script
 
@@ -172,7 +172,7 @@ Les trois rôles de sécurité utilisés pour exécuter des scripts ne sont pas 
 5. Effectuez toutes les étapes de l'Assistant. Le nouveau script s’affiche dans la liste **Script** avec l’état **En attente d’approbation**. Avant de pouvoir exécuter ce script sur les appareils clients, vous devez l’approuver. 
 
 > [!IMPORTANT]
-> Évitez de créer un script pour une réinitialisation de l’appareil ou un redémarrage de l’agent Configuration Manager lors de l’utilisation de la fonctionnalité Exécuter les scripts. Cela peut entraîner un état de redémarrage continu. Si nécessaire, il existe des améliorations apportées à la fonctionnalité de notification au client qui permettent de redémarrer les appareils, à compter de Configuration Manager version 1710. La [colonne en attente de redémarrage](/sccm/core/clients/manage/manage-clients#Restart-clients) peut aider à identifier les appareils qui nécessitent un redémarrage. 
+> Évitez de créer un script pour une réinitialisation de l’appareil ou un redémarrage de l’agent Configuration Manager lors de l’utilisation de la fonctionnalité Exécuter les scripts. Cela peut entraîner un état de redémarrage continu. Si nécessaire, il existe des améliorations apportées à la fonctionnalité de notification au client qui permettent de redémarrer les appareils, à compter de Configuration Manager version 1710. La [colonne en attente de redémarrage](/sccm/core/clients/manage/manage-clients#restart-clients) peut aider à identifier les appareils qui nécessitent un redémarrage. 
 > <!--SMS503978  -->
 
 ## <a name="script-parameters"></a>Paramètres de script
@@ -240,6 +240,29 @@ Ce script utilise WMI pour interroger l’ordinateur sur sa version du système 
 ``` powershell
 Write-Output (Get-WmiObject -Class Win32_operatingSystem).Caption
 ```
+
+## <a name="bkmk_psedit"></a> Modifier ou copier des scripts PowerShell
+<!--3705507-->
+*(Fonctionnalité introduite avec la version 1902)*  
+Vous pouvez **Modifier** ou **Copier** un script PowerShell existant utilisé avec la fonctionnalité **Exécuter les scripts**. Désormais, au lieu de recréer un script que vous devez changer, modifiez-le directement. Les deux actions utilisent la même expérience d’Assistant que lors de la création d’un script. Quand vous modifiez ou copiez un script, Configuration Manager ne conserve pas l’état d’approbation.
+
+> [!Tip]  
+> Ne modifiez pas un script qui est en cours d’exécution sur des clients. Ils ne terminent pas l’exécution du script d’origine, et vous pouvez ne pas obtenir les résultats escomptés à partir de ces clients.  
+
+### <a name="edit-a-script"></a>Modifier un script
+
+1. Accédez à la **Scripts** nœud sous la **bibliothèque de logiciels** espace de travail.
+1. Sélectionnez le script à modifier, puis cliquez sur **modifier** dans le ruban. 
+1. Modifier ou réimporter votre script dans le **détails du Script** page.
+1. Cliquez sur **suivant** pour afficher le **Résumé** puis **fermer** lorsque vous avez fini modification.
+
+### <a name="copy-a-script"></a>Copiez un script
+
+1. Accédez à la **Scripts** nœud sous la **bibliothèque de logiciels** espace de travail.
+1. Sélectionnez le script à copier, puis cliquez sur **copie** dans le ruban.
+1. Renommer le script dans le **nom du Script** champ et apportez les modifications supplémentaires, vous devrez peut-être.
+1. Cliquez sur **suivant** pour afficher le **Résumé** puis **fermer** lorsque vous avez fini modification.
+
 
 ## <a name="run-a-script"></a>Exécuter un script
 

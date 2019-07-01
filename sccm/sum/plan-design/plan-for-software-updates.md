@@ -5,18 +5,18 @@ description: Il est essentiel de planifier l’infrastructure du point de mise �
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 03/21/2019
+ms.date: 06/19/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a4100bca2f1cd1f770c2e739ec229dc020d5d8d8
-ms.sourcegitcommit: 5f17355f954b9d9e10325c0e9854a9d582dec777
+ms.openlocfilehash: 7404e97cd1ef9c68f80904b5ba26373605c7c751
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329581"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285445"
 ---
 # <a name="plan-for-software-updates-in-configuration-manager"></a>Planifier les mises à jour logicielles dans Configuration Manager
 
@@ -52,7 +52,7 @@ Le nombre de clients pris en charge dépend de la version de Windows Server Upda
     - Augmenter la longueur de file d’attente WsusPool à 2000
     - Multiplier par quatre la limite de mémoire privée WsusPool, ou lui affecter la valeur 0 (illimitée). Par exemple, si la limite par défaut est 1 843 200 Ko, l’augmenter à 7 372 800. Pour plus d’informations, consultez ce [billet de blog de l’équipe de support Configuration Manager](https://blogs.technet.microsoft.com/configurationmgr/2015/03/23/configmgr-2012-support-tip-wsus-sync-fails-with-http-503-errors/).  
 
-    Pour plus d’informations sur la configuration matérielle requise pour le point de mise à jour logicielle, consultez [Matériel recommandé pour les systèmes de site](/sccm/core/plan-design/configs/recommended-hardware#a-namebkmkscalesiesystemsa-site-systems).  
+    Pour plus d’informations sur la configuration matérielle requise pour le point de mise à jour logicielle, consultez [Matériel recommandé pour les systèmes de site](/sccm/core/plan-design/configs/recommended-hardware#bkmk_ScaleSieSystems).  
 
 
 ### <a name="bkmk_sum-capacity-obj"></a> Planification de la capacité pour les objets des mises à jour logicielles  
@@ -151,7 +151,9 @@ Pour rechercher la signification d’un code d’erreur, convertissez le code d�
 Basculez les clients Configuration Manager vers un autre point de mise à jour logicielle quand ils rencontrent des problèmes avec le point de mise à jour logicielle actif. Ce changement se produit uniquement quand un client reçoit plusieurs points de mise à jour logicielle à partir d’un point de gestion.
 
 > [!IMPORTANT]    
-> Quand vous basculez des appareils pour utiliser un nouveau serveur, les appareils utilisent une action de secours pour rechercher ce serveur. Avant de procéder à ce changement, passez en revue vos configurations de groupe de limites pour vérifier que vos points de mise à jour logicielle sont dans les groupes de limites appropriés. Pour plus d’informations, consultez [Points de mise à jour logicielle](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points).  
+> Quand vous basculez des appareils pour utiliser un nouveau serveur, les appareils utilisent une action de secours pour rechercher ce serveur. Les clients basculent vers le nouveau point de mise à jour logicielle lors de leur prochain cycle d’analyse de mises à jour logicielles.<!-- SCCMDocs#1537 -->
+>
+> Avant de procéder à ce changement, passez en revue vos configurations de groupe de limites pour vérifier que vos points de mise à jour logicielle sont dans les groupes de limites appropriés. Pour plus d’informations, consultez [Points de mise à jour logicielle](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points).  
 >
 > Le basculement vers un nouveau point de mise à jour logicielle génère du trafic réseau supplémentaire. La quantité de trafic varie selon vos paramètres de configuration WSUS, par exemple, les classifications et produits synchronisés ou l’utilisation d’une base de données WSUS partagée. Si vous envisagez de basculer plusieurs appareils, faites-le pendant les fenêtres de maintenance. Vous réduisez ainsi l’impact sur votre réseau quand les clients analysent avec le nouveau point de mise à jour logicielle.  
 
@@ -260,7 +262,7 @@ Cette section contient des informations sur les actions à exécuter pour planif
 
 Installez le rôle de système de site du point de mise à jour logicielle sur un système de site qui répond aux conditions minimales requises pour WSUS et aux configurations prises en charge des systèmes de site Configuration Manager.  
 
--   Pour plus d’informations sur les conditions minimales requises pour le rôle serveur WSUS dans Windows Server, consultez les détails de la [vérification des considérations et de la configuration requise](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/plan/plan-your-wsus-deployment#BKMK_1.1).  
+-   Pour plus d’informations sur les conditions minimales requises pour le rôle serveur WSUS dans Windows Server, consultez les détails de la [vérification des considérations et de la configuration requise](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/plan/plan-your-wsus-deployment#11-review-considerations-and-system-requirements).  
 
 -   Pour plus d’informations sur les configurations prises en charge pour les systèmes de site Configuration Manager, consultez [Prérequis des sites et systèmes de site](/sccm/core/plan-design/configs/site-and-site-system-prerequisites).  
 
@@ -315,44 +317,10 @@ La connexion à Microsoft Update est toujours configurée pour utiliser le port 
 
 
 #### <a name="restrict-access-to-specific-domains"></a>Restreindre l’accès à des domaines spécifiques  
-Si votre organisation n’autorise pas l’ouverture des ports et des protocoles à toutes les adresses sur le pare-feu situé entre le point de mise à jour logicielle actif et Internet, restreignez l’accès aux domaines suivants de sorte que WSUS et les mises à jour automatiques puissent communiquer avec Microsoft Update :  
 
--   `http://windowsupdate.microsoft.com`  
+Si votre organisation limite la communication réseau avec internet à l’aide d’un appareil de pare-feu ou proxy, vous devez autoriser le point de mise à jour logicielle actif accéder aux points de terminaison internet. Puis WSUS et mises à jour automatiques puissent communiquer avec le service de cloud de Microsoft Update.
 
--   `http://*.windowsupdate.microsoft.com`  
-
--   `https://*.windowsupdate.microsoft.com`  
-
--   `http://*.update.microsoft.com`  
-
--   `https://*.update.microsoft.com`  
-
--   `http://*.windowsupdate.com`  
-
--   `http://download.windowsupdate.com`  
-
--   `http://download.microsoft.com`  
-
--   `http://*.download.windowsupdate.com`  
-
--   `http://test.stats.update.microsoft.com`  
-
--   `http://ntservicepack.microsoft.com`  
-
-Vous devrez peut-être ajouter les adresses ci-après au pare-feu qui se trouve entre les deux systèmes de site dans les cas suivants : 
-- Si les sites enfants ont un point de mise à jour logicielle 
-- S’il existe un point de mise à jour logicielle actif distant basé sur Internet sur un site
-
-  **Point de mise à jour logicielle sur le site enfant**  
-
-- `http://<FQDN for software update point on child site>`  
-
-- `https://<FQDN for software update point on child site>`  
-
-- `http://<FQDN for software update point on parent site>`  
-
-- `https://<FQDN for software update point on parent site>`  
-
+Pour plus d’informations, consultez [exigences d’accès Internet](/sccm/core/plan-design/network/internet-endpoints#bkmk_sum).
 
 
 ##  <a name="BKMK_SyncSettings"></a> Planifier des paramètres de synchronisation  
