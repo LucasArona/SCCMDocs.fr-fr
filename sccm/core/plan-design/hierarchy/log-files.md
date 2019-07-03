@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5994eb6ab241e35bd0b4c4ecceb9fe6c4ef35a00
-ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.openlocfilehash: fc52acadacf8ea8e97d23820d521b831bcc31892
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66176035"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67158794"
 ---
 # <a name="log-files-in-configuration-manager"></a>Fichiers journaux de Configuration Manager
 
@@ -178,6 +178,7 @@ Le tableau suivant répertorie les fichiers journaux qui se trouvent sur le clie
 |InventoryAgent.log|Enregistre les activités de l'inventaire matériel et logiciel et les actions de découverte par pulsations effectuées sur le client.|  
 |LocationCache.log|Enregistre l’activité d’utilisation de l’emplacement du cache et de maintenance pour le client.|  
 |LocationServices.log|Enregistre l'activité du client pour la localisation des points de gestion, des points de mise à jour logicielle et des points de distribution.|  
+|M365AHandler.log|Informations sur la stratégie de paramètres d’Analyses du bureau|
 |MaintenanceCoordinator.log|Enregistre l’activité des tâches de maintenance générale pour le client.|  
 |Mifprovider.log|Enregistre l’activité du fournisseur WMI pour les fichiers .MIF (Management Information Format).|  
 |mtrmgr.log|Surveille tous les processus de contrôle des logiciels.|  
@@ -580,6 +581,23 @@ Le tableau suivant répertorie les fichiers journaux qui contiennent des informa
 |SMSdpmon.log|Enregistre les détails concernant les tâches planifiées de surveillance de l’intégrité du point de distribution configurées sur un point de distribution.|Rôle de système de site|  
 |smsdpprov.log|Enregistre des détails concernant l'extraction des fichiers compressés reçus à partir d'un site principal. Ce journal est généré par le fournisseur WMI du point de distribution distant.|Ordinateur de point de distribution n’est pas au même emplacement que le serveur de site|  
 |smsdpusage.log|Enregistre des détails concernant smsdpusage.exe qui s’exécute et collecte les données pour le rapport de synthèse de l’utilisation du point de distribution.|Rôle de système de site|  
+
+
+### <a name="desktop-analytics"></a>Analyses du bureau
+
+Utilisez les fichiers journaux suivants pour vous aider à résoudre les problèmes avec Analyses du bureau intégré à Configuration Manager.
+
+Les fichiers journaux sur le point de connexion de service sont dans le répertoire suivant : `%ProgramFiles%\Configuration Manager\Logs\M365A`.
+Les fichiers journaux sur le client Configuration Manager sont dans le répertoire suivant : `%WinDir%\CCM\logs`.
+
+| Journal | Description |Ordinateur sur lequel se trouve le fichier journal|
+|---------|---------|---------|
+| M365ADeploymentPlanWorker.log | Informations sur la synchronisation du plan de déploiement du service cloud d’Analyses du bureau vers l’outil Configuration Manager local |point de connexion de service|
+| M365ADeviceHealthWorker.log | Informations sur le chargement de l’intégrité de l’appareil de Configuration Manager vers le cloud Microsoft |point de connexion de service|
+| M365AHandler.log | Informations sur la stratégie de paramètres d’Analyses du bureau |Client|
+| M365AUploadWorker.log | Informations sur le regroupement et chargement d’appareils de Configuration Manager vers le cloud Microsoft |point de connexion de service|
+| SmsAdminUI.log | Informations sur l’activité de la console Configuration Manager, par exemple, la configuration des services cloud Azure  |point de connexion de service|
+
 
 ###  <a name="BKMK_DiscoveryLog"></a> Découverte  
 Le tableau suivant répertorie les fichiers journaux qui contiennent des informations liées à la détection.  

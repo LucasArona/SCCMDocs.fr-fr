@@ -11,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 4c90befe-9c4e-4c27-a947-625887e15052
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9477db29a93cd8d4a8a7c9b48be8be563bbe25a6
-ms.sourcegitcommit: abfc9e1b3945637fa93ca8d3a11519493a5d5391
+ms.openlocfilehash: 5fb11ac9ffbacfc37b69cb91d34a6885f44abe08
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66264503"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286647"
 ---
 # <a name="co-management-workloads"></a>Charges de travail de cogestion
 
@@ -118,9 +118,11 @@ Pour plus d’informations sur la fonctionnalité Intune, consultez [Assigner de
 
 <!--1357892-->
 
-À compter de Configuration Manager version 1806, utilisez Intune pour gérer les applications clientes sur les appareils Windows 10 cogérés. Une fois cette charge de travail transférée, toutes les applications disponibles déployées à partir d’Intune seront accessibles sur le Portail d’entreprise. Les applications déployées à partir de Configuration Manager sont disponibles dans le centre logiciel.
+À compter de Configuration Manager version 1806, utilisez Intune pour gérer les applications clientes et les scripts PowerShell sur les appareils Windows 10 cogérés. Une fois cette charge de travail transférée, toutes les applications disponibles déployées à partir d’Intune seront accessibles sur le Portail d’entreprise. Les applications déployées à partir de Configuration Manager sont disponibles dans le centre logiciel.
+
 
 Pour plus d’informations sur la fonctionnalité Intune, consultez [Qu’est-ce que la gestion des applications Microsoft Intune ?](https://docs.microsoft.com/intune/app-management).
+
 
 > [!Note]  
 > La charge de travail des applications clientes est une fonctionnalité en préversion. Pour l’activer, consultez [Fonctionnalités de préversion](/sccm/core/servers/manage/pre-release-features).  

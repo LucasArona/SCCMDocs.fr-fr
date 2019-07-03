@@ -2,7 +2,7 @@
 title: Utiliser des limites et groupes de limites
 titleSuffix: Configuration Manager
 description: Utilisez les limites et les groupes de limites pour définir les emplacements réseau et les systèmes de site accessibles pour les appareils que vous gérez.
-ms.date: 3/27/2017
+ms.date: 06/18/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,52 +11,60 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c747301f6a076902227a2044e4f116207ed811ff
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: d160c6ab64c5ad097bf5986882b65171b0df4651
+ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499195"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67194157"
 ---
-# <a name="define-site-boundaries-and-boundary-groups-for-system-center-configuration-manager"></a>Définir des limites de site et les groupes de limites pour System Center Configuration Manager
+# <a name="define-site-boundaries-and-boundary-groups"></a>Définir les limites de site et les groupes de limites
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
-Les limites pour System Center Configuration Manager définissent les emplacements réseau sur votre intranet pouvant contenir des appareils que vous souhaitez gérer. Les groupes de limites sont des groupes logiques de limites que vous configurez.
+Les *Limites* dans Configuration Manager définissent les emplacements réseau sur votre Intranet. Ces emplacements incluent les appareils que vous souhaitez gérer. Les *groupes de limites* sont des groupes logiques de limites que vous configurez.
 
- Une hiérarchie peut inclure n’importe quel nombre de groupes de limites, et chaque groupe de limites peut contenir n’importe quelle combinaison des types de limites suivants :  
+Une hiérarchie peut inclure n’importe quel nombre de groupes de limites. Chaque groupe de limites peut contenir n’importe quelle combinaison de types de limites suivants :  
 
--   Sous-réseau IP  
--   Nom de site Active Directory  
--   Préfixe IPv6  
--   Plage d'adresses IP  
+- Sous-réseau IP  
+- Nom de site Active Directory  
+- Préfixe IPv6  
+- Plage d'adresses IP  
 
 Les clients intranet évaluent leur emplacement réseau actuel, puis utilisent ces informations pour identifier les groupes de limites auxquels ils appartiennent.  
 
- Les clients utilisent des groupes de limites pour :  
--   **Trouver un site attribué :** Les groupes de limites permettent aux clients de trouver un site principal pour l’attribution du client (attribution automatique de site).  
--   **Trouver des rôles de système de site spécifiques disponibles :** Quand vous associez un groupe de limites à certains rôles de système de site, le groupe de limites fournit aux clients la liste des systèmes de site à utiliser pour l’emplacement du contenu et en tant que points de gestion préférés.  
+Les clients utilisent des groupes de limites pour :  
 
-Les clients Internet ou les clients configurés en tant que clients Internet uniquement n’utilisent pas les informations sur les limites. Ces clients ne peuvent pas utiliser l’attribution automatique de site. Ils peuvent toujours télécharger le contenu de n’importe quel point de distribution sur leur site attribué quand le point de distribution est configuré pour autoriser les connexions clientes depuis Internet.  
+- **Trouver un site attribué :** Les groupes de limites permettent aux clients de trouver un site principal pour l’attribution du client. Ce comportement est également appelé *attribution automatique de site*.  
 
-**Pour bien démarrer :**
-- Tout d’abord, [définissez les emplacements réseau en tant que limites](/sccm/core/servers/deploy/configure/boundaries).
-- Puis, poursuivez en [configurant des groupes de limites](/sccm/core/servers/deploy/configure/boundary-groups) pour associer les clients dans ces limites aux serveurs de système de site qu’ils peuvent utiliser.
+- **Trouver des rôles de système de site spécifiques disponibles :** Associer un groupe de limites à certains rôles de système de site. Le site fournit ensuite aux clients cette liste de systèmes de site dans le groupe de limites. Les clients utilisent ces systèmes de site pour des actions telles que la recherche de contenu un d’un point de gestion situé à proximité.  
+
+Les clients Internet ou les clients configurés en tant que clients Internet uniquement n’utilisent pas les informations sur les limites. Ces clients ne peuvent pas utiliser une attribution automatique du site. Ils peuvent télécharger le contenu d’un point de distribution basé sur internet à partir de leur site attribué ou d’un point de distribution basé sur le cloud.  
+
+À partir de la version 1902, vous pouvez associer une passerelle de gestion cloud (CMG) avec un groupe de limites. Pour plus d’informations, consultez [Conception de la hiérarchie de la passerelle de gestion cloud](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#hierarchy-design).<!--3640932-->
 
 
+## <a name="BKMK_BoundaryBestPractices"></a> Recommandations
 
-##  <a name="BKMK_BoundaryBestPractices"></a> Meilleures pratiques en matière de limites et de groupes de limites  
+### <a name="use-a-mix-of-the-fewest-boundaries-that-meet-your-needs"></a>Utilisez une combinaison du plus petit nombre de limites qui répondent à vos besoins
 
-- **Utilisez une combinaison du plus petit nombre de limites qui répondent à vos besoins :**  
-  Dans le passé, nous vous avons conseillé d’utiliser certains types de limites plus que d’autres. Compte-tenu des modifications apportées pour améliorer les performances, nous vous conseillons dorénavant d’utiliser le ou les types de votre choix qui fonctionnent dans votre environnement et qui vous permettent d’utiliser le plus petit nombre de limites possible pour simplifier vos tâches de gestion.      
+Utilisez le ou les types de limites choisis qui fonctionnent dans votre environnement. Pour simplifier vos tâches de gestion, utilisez les types de limites qui vous permettent d’utiliser le plus petit nombre de limites possible.
 
-- **Éviter le chevauchement des limites pour l’attribution automatique de site :**  
-   Chaque groupe de limites prend en charge les configurations d’attribution de site et d’emplacement du contenu, mais il est recommandé de créer un ensemble de groupes de limites à utiliser uniquement pour l’attribution de site. Cela signifie que vous devez vérifier qu’aucune limite d’un groupe de limites n’est membre d’un autre groupe de limites ayant une attribution de site différente. La raison est la suivante :  
+### <a name="avoid-overlapping-boundaries-for-automatic-site-assignment"></a>Éviter le chevauchement des limites pour l’attribution automatique de site
 
-  - Une limite peut être incluse dans plusieurs groupes de limites.  
+Même si chaque groupe de limites prend à la fois en charge la référence d’attribution de site et de système de site, créez un ensemble de groupes de limites à utiliser uniquement pour l’attribution de site. Vérifiez qu’aucune limite d’un groupe de limites n’est membre d’un autre groupe de limites ayant une attribution de site différente.
 
-  - Chaque groupe de limites peut être associé à un site principal différent pour l’attribution de site.  
+- Une limite unique peut être incluse dans plusieurs groupes de limites.  
 
-  - Un client sur une limite qui est membre de deux groupes de limites ayant des attributions de site différentes sélectionne au hasard un site auquel se joindre, site qui n’est pas nécessairement le site que vous avez prévu à cet effet.  Cette configuration est appelée chevauchement des limites.  
+- Chaque groupe de limites peut être associé à un site principal différent pour l’attribution de site.  
 
-    Le chevauchement des limites n’est pas un problème pour l’emplacement du contenu. Il s’agit souvent d’une configuration souhaitée qui fournit aux clients des ressources ou emplacements de contenu supplémentaires qu’ils peuvent utiliser.  
+- Pour une limite qui est membre de deux groupes de limites différents avec des attributions de site différentes, les clients sélectionnent au hasard un site à joindre. Ce comportement peut ne pas concerner le site dont vous souhaitez que le client le joigne. Cette configuration est appelée *chevauchement des limites*.  
+
+    Le chevauchement de limites n’est pas un problème pour l'emplacement du contenu. Cette configuration peut être utile, car eIle fournit aux clients des ressources supplémentaires ou des emplacements de contenu qu’ils peuvent utiliser.  
+
+
+## <a name="next-steps"></a>Étapes suivantes
+
+- [Définissez les emplacements réseau en tant que limites](/sccm/core/servers/deploy/configure/boundaries)
+
+- [Configurer des groupes de limites](/sccm/core/servers/deploy/configure/boundary-groups)

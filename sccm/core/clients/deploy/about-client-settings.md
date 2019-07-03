@@ -2,7 +2,7 @@
 title: Paramètres du client
 titleSuffix: Configuration Manager
 description: Découvrir les paramètres par défaut et personnalisés pour contrôler les comportements du client
-ms.date: 05/21/2019
+ms.date: 06/18/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a9610024219107e81c4440a1e96780aaf300e20f
-ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
+ms.openlocfilehash: 157cc09f08cf16056dc3424ddc377fbd95b0fe6e
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66715731"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286847"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>À propos des paramètres client dans Configuration Manager
 
@@ -59,7 +59,8 @@ Spécifiez le taux de transfert maximal que les clients peuvent utiliser en deho
 
 ### <a name="configure-branchcache"></a>Configurer BranchCache
 
-Configurez l’ordinateur client pour [Windows BranchCache](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#branchcache). Pour autoriser la mise en cache BranchCache sur le client, définissez **Activer BranchCache** sur **Oui**.
+Configurez l’ordinateur client pour [Windows BranchCache](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#bkmk_branchcache
+). Pour autoriser la mise en cache BranchCache sur le client, définissez **Activer BranchCache** sur **Oui**.
 
 - **Activer BranchCache** : Active BranchCache sur les ordinateurs clients.
 
@@ -78,11 +79,11 @@ Si choisissez **Oui**, spécifiez :
 
 Active le [cache d’homologue](/sccm/core/plan-design/hierarchy/client-peer-cache) pour les clients Configuration Manager. Choisissez **Oui**, puis spécifiez le port par lequel le client communique avec l’ordinateur homologue.
 
-- **Port pour la diffusion réseau initiale** (par défaut : 8004) : Configuration Manager utilise ce port dans Windows PE ou dans le système d’exploitation Windows complet. Le moteur de séquence de tâches dans Windows PE envoie la diffusion pour obtenir les emplacements du contenu avant de démarrer la séquence de tâches.<!--SCCMDocs issue 910-->
+- **Port pour la diffusion réseau initiale** (par défaut UDP 8004) : Configuration Manager utilise ce port dans Windows PE ou dans le système d’exploitation Windows complet. Le moteur de séquence de tâches dans Windows PE envoie la diffusion pour obtenir les emplacements du contenu avant de démarrer la séquence de tâches.<!--SCCMDocs issue 910-->
 
-- **Port pour le téléchargement de contenu à partir d’un pair** (par défaut : 8003) : Configuration Manager configure automatiquement les règles de Pare-feu Windows pour autoriser ce trafic. Si vous utilisez un autre pare-feu, vous devez configurer manuellement des règles pour autoriser ce trafic.
+- **Port pour le téléchargement de contenu à partir d’un pair** (par défaut TCP 8003) : Configuration Manager configure automatiquement les règles de Pare-feu Windows pour autoriser ce trafic. Si vous utilisez un autre pare-feu, vous devez configurer manuellement des règles pour autoriser ce trafic.  
 
-
+    Pour plus d’informations, consultez [Ports utilisés pour des connexions](/sccm/core/plan-design/hierarchy/ports#BKMK_PortsClient-ClientWakeUp).  
 
 ## <a name="client-policy"></a>Stratégie du client  
 
@@ -95,7 +96,7 @@ Spécifie la fréquence à laquelle les clients Configuration Manager suivants t
 - Ordinateurs Mac  
 - Ordinateurs qui exécutent Linux ou UNIX  
 
-Cette valeur est de 60 minutes par défaut. La réduction de cette valeur a pour effet que les clients interrogent le site plus fréquemment. Avec un grand nombre de clients, ce comportement peut avoir un impact négatif sur les performances du site. L’[aide sur la taille et l’échelle](/sccm/core/plan-design/configs/size-and-scale-numbers) est basée sur la valeur par défaut. L’augmentation de cette valeur a pour effet que les clients interrogent le site moins fréquemment. Toute modification apportée aux stratégies des clients, notamment les nouveaux déploiements, rend le téléchargement et le traitement plus longs pour les clients.<!-- SCCMDocs issue 823 -->
+Cette valeur est de 60 minutes par défaut. La réduction de cette valeur a pour effet que les clients interrogent le site plus fréquemment. Avec de nombreux clients, ce comportement peut avoir un impact négatif sur les performances du site. L’[aide sur la taille et l’échelle](/sccm/core/plan-design/configs/size-and-scale-numbers) est basée sur la valeur par défaut. L’augmentation de cette valeur a pour effet que les clients interrogent le site moins fréquemment. Toute modification apportée aux stratégies des clients, notamment les nouveaux déploiements, rend le téléchargement et le traitement plus longs pour les clients.<!-- SCCMDocs issue 823 -->
 
 ### <a name="enable-user-policy-on-clients"></a>Activer la stratégie utilisateur sur les clients
 
@@ -162,7 +163,7 @@ Choisissez **Oui** si vous souhaitez déployer des éléments de configuration d
 
 ### <a name="user-notifications-for-required-deployments"></a>Notifications à l’utilisateur pour les déploiements obligatoires
 
-Pour plus d’informations sur les trois paramètres suivants, consultez [Notifications à l’utilisateur pour les déploiements obligatoires](/sccm/apps/deploy-use/deploy-applications#user-notifications-for-required-deployments) :
+Pour plus d’informations sur les trois paramètres suivants, consultez [Notifications à l’utilisateur pour les déploiements obligatoires](/sccm/apps/deploy-use/deploy-applications#bkmk_notify) :
 
 - **Échéance du déploiement supérieure à 24 heures, effectuer un rappel à l’utilisateur toutes les (heures)**
 - **Échéance du déploiement inférieure à 24 heures, effectuer un rappel à l’utilisateur toutes les (heures)**
@@ -205,7 +206,7 @@ Pour plus d’informations sur ce paramètre, consultez [Certificats pour Micros
 
 ### <a name="organization-name-displayed-in-software-center"></a>Nom d'organisation affiché dans le Centre logiciel
 
-Tapez le nom que les utilisateurs voient dans le Centre logiciel. Ces informations personnalisées aident les utilisateurs à identifier cette application comme une source approuvée. Pour plus d’informations sur la priorité de ce paramètre, consultez [Personnalisation du Centre logiciel](/sccm/apps/plan-design/plan-for-and-configure-application-management#branding-software-center).  
+Tapez le nom que les utilisateurs voient dans le Centre logiciel. Ces informations personnalisées aident les utilisateurs à identifier cette application comme une source approuvée. Pour plus d’informations sur la priorité de ce paramètre, consultez [Personnalisation du Centre logiciel](/sccm/apps/plan-design/plan-for-software-center#branding-software-center).  
 
 ### <a name="use-new-software-center"></a>Utiliser le nouveau Centre logiciel
 
@@ -384,7 +385,7 @@ Entrez l’intervalle d’interrogation (en minutes) de la stratégie par les ap
 
 Pour activer l’inscription basée sur l’utilisateur des appareils hérités, définissez cette option sur **Oui**, puis configurez le paramètre suivant :
 
-- **Profil d’inscription** : Sélectionnez **Définir un profil** pour créer ou sélectionner un profil d’inscription. Pour plus d’informations, consultez [Configurer les paramètres client pour l’inscription](/sccm/core/clients/deploy/deploy-clients-to-macs#configure-client-settings-for-enrollment).
+- **Profil d’inscription** : Sélectionnez **Définir un profil** pour créer ou sélectionner un profil d’inscription. Pour plus d’informations, consultez [Configurer les paramètres client pour l’inscription](/sccm/core/clients/deploy/deploy-clients-to-macs#configure-client-settings).
 
 ### <a name="allow-users-to-enroll-modern-devices"></a>Autoriser les utilisateurs à inscrire des appareils récents
 
@@ -865,8 +866,8 @@ Spécifiez le nombre de jours durant lesquels le client mesure le seuil de l’a
 Choisissez **Oui** pour créer une affinité automatique entre appareil et utilisateur en fonction des informations d’utilisation recueillies par Configuration Manager.  
 
 ### <a name="allow-user-to-define-their-primary-devices"></a>Autoriser les utilisateurs à définir leurs appareils principaux
-
-Quand ce paramètre est défini sur **Oui**, les utilisateurs peuvent identifier leurs propres appareils principaux dans le Centre logiciel.
+<!--3485366-->
+Quand ce paramètre est défini sur **Oui**, les utilisateurs peuvent identifier leurs propres appareils principaux dans le Centre logiciel. Pour plus d’informations, consultez le [Guide de l’utilisateur du Centre logiciel.](/sccm/core/understand/software-center#work-information)
 
 
 

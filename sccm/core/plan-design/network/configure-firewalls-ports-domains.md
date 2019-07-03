@@ -1,8 +1,8 @@
 ---
-title: Pare-feu et domaines
+title: Infrastructure réseau
 titleSuffix: Configuration Manager
-description: Configurez les pare-feu, les ports et les domaines pour préparer votre infrastructure pour les communications System Center Configuration Manager.
-ms.date: 2/6/2017
+description: Configurez les pare-feu, les ports et les domaines pour préparer votre infrastructure à Configuration Manager.
+ms.date: 06/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,22 +11,44 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b1bec1e86d6b9144b6448bd098c471300a799947
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 60a24e06d650b0e25007fb8490eb0c7d8c1996a1
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499256"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285609"
 ---
-# <a name="set-up-firewalls-ports-and-domains-for-system-center-configuration-manager"></a>Configurer les pare-feu, les ports et les domaines pour System Center Configuration Manager
+# <a name="network-infrastructure-considerations-for-configuration-manager"></a>Considérations sur l’infrastructure réseau pour Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
-Pour préparer votre réseau à prendre en charge System Center Configuration Manager, prévoyez de configurer l’infrastructure, notamment les pare-feu, pour autoriser les communications Configuration Manager.  
+Pour préparer votre réseau à prendre en charge Configuration Manager, vous devrez peut-être configurer des composants d’infrastructure. Par exemple, ouvrez les ports du pare-feu pour transmettre les communications utilisées par Configuration Manager.  
 
-|Considération|Détails|  
-|-------------------|-------------|  
-|**Ports et protocoles** utilisés par les différentes fonctionnalités de Configuration Manager. Certains ports sont exigés, tandis que d’autres **domaines et services** sont personnalisables.|La plupart des communications Configuration Manager utilisent des ports courants, comme le port 80 pour HTTP ou le port 443 pour HTTPS. Toutefois, [certains rôles de système de site prennent en charge l’utilisation de sites web personnalisés](/sccm/core/plan-design/network/websites-for-site-system-servers) et de ports personnalisés.<br /><br /> **Avant de déployer Configuration Manager**, identifiez les ports que vous souhaitez utiliser et configurez les pare-feu de manière appropriée.<br /><br /> **Si vous avez besoin de modifier un port** après avoir installé Configuration Manager, n’oubliez pas de mettre à jour les pare-feu sur les appareils et sur le réseau, et également de modifier la configuration du port dans Configuration Manager.<br /><br /> Pour plus d’informations, consultez : </br>- [Guide pratique pour configurer les ports de communication des clients](../../../core/clients/deploy/configure-client-communication-ports.md) </br>- [Ports utilisés dans Configuration Manager](../../../core/plan-design/hierarchy/ports.md) </br>- [Conditions requises pour l’accès Internet pour le point de connexion de service](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_urls)|  
-|**Domaines et services** que les serveurs et clients de site sont susceptibles d’utiliser.|Certaines fonctionnalités de Configuration Manager peuvent nécessiter que les clients et les serveurs de site accèdent à des services et domaines spécifiques sur Internet, comme Windowsudpate.microsoft.com ou le service Microsoft Intune.<br /><br /> Si vous souhaitez utiliser Microsoft Intune pour gérer des appareils mobiles, vous devez également configurer l’accès aux [ports et domaines exigés par Intune](https://docs.microsoft.com/intune/get-started/network-infrastructure-requirements-for-microsoft-intune).|  
-|**Serveurs proxy** pour les serveurs de système de site et les communications client. Vous pouvez spécifier des serveurs proxy distincts pour les différents clients et serveurs du système de site.|Étant donné que ces configurations sont effectuées lors de l’installation d’un rôle de système de site ou d’un client, il vous suffit de connaître les configurations de serveur proxy pour référence ultérieure lorsque vous configurerez des rôles de système de site et des clients.<br /><br /> Si vous ne savez pas si votre déploiement nécessite l’utilisation de serveurs proxy, consultez [Prise en charge des serveurs proxy dans System Center Configuration Manager](../../../core/plan-design/network/proxy-server-support.md) pour en savoir plus sur les rôles de système de site et les actions de client susceptibles d’utiliser un serveur proxy.|   
-|  
+## <a name="ports-and-protocols"></a>Ports et protocoles
+
+Différentes fonctionnalités de Configuration Manager utilisent des ports réseau différents. Certains ports sont requis et vous pouvez en personnaliser certains.
+
+La plupart des communications Configuration Manager utilisent des ports courants, comme le port 80 pour HTTP ou le port 443 pour HTTPS. Certains rôles de système de site prennent en charge l’utilisation de sites web et de ports personnalisés. Pour en savoir plus, consultez la page [Sites web pour les serveurs de système de site](/sccm/core/plan-design/network/websites-for-site-system-servers).
+
+Avant de déployer Configuration Manager, identifiez les ports que vous prévoyez d’utiliser et configurez les pare-feu en fonction de vos besoins.
+
+Après avoir installé Configuration Manager, si vous avez besoin de modifier un port, n’oubliez pas de mettre à jour les pare-feu sur les appareils et sur le réseau. Modifiez également la configuration du port dans Configuration Manager.
+
+Pour plus d’informations, consultez les articles suivants :
+
+- [Guide pratique pour configurer les ports de communication des clients](/sccm/core/clients/deploy/configure-client-communication-ports)
+- [Ports utilisés dans Configuration Manager](/sccm/core/plan-design/hierarchy/ports)
+
+
+## <a name="internet-access-requirements"></a>Conditions requises pour l’accès Internet
+
+Certaines fonctionnalités de Configuration Manager reposent sur la connectivité Internet pour être complètes. Si votre organisation restreint la communication réseau avec Internet à l’aide d’un appareil pare-feu ou proxy, veillez à autoriser les points de terminaison nécessaires.
+
+Pour plus d’informations, consultez [Conditions requises pour l’accès à Internet](/sccm/core/plan-design/network/internet-endpoints)
+
+
+## <a name="proxy-servers"></a>Serveurs proxy
+
+Vous pouvez spécifier des serveurs proxy distincts pour les différents clients et serveurs du système de site. Effectuez ces configurations lorsque vous installez un client ou un rôle de système de site, ou modifiez-les ultérieurement si nécessaire.
+
+Pour plus d’informations, consultez [Prise en charge des serveurs proxy](/sccm/core/plan-design/network/proxy-server-support).

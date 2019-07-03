@@ -2,7 +2,7 @@
 title: point de connexion de service
 titleSuffix: Configuration Manager
 description: Découvrez ce rôle système de site Configuration Manager, puis comprenez et planifiez sa plage d’utilisations.
-ms.date: 08/01/2018
+ms.date: 06/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f1173a8bec0ab05c3519d04430adddab129389b
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: af65085590d8b02d6b3a020668566a334de42f13
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499121"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285565"
 ---
 # <a name="about-the-service-connection-point-in-configuration-manager"></a>À propos du point de connexion de service dans Configuration Manager
 
@@ -79,51 +79,13 @@ Pour utiliser le Gestionnaire de service de Configuration Manager, dans la conso
 
 - Le gestionnaire de distribution sur le serveur de site utilise le compte d’installation du système de site pour transférer les mises à jour à partir du point de connexion de service.
 
-##  <a name="bkmk_urls"></a> Conditions requises pour l’accès Internet  
-Pour activer le fonctionnement, l’ordinateur qui héberge le point de connexion de service et les éventuels pare-feu entre cet ordinateur et Internet doivent transmettre les communications via le port sortant **TCP 443** pour HTTPS et le port sortant **TCP 80** pour HTTP aux emplacements Internet suivants. Le point de connexion de service prend également en charge l’utilisation d’un proxy web (avec ou sans authentification) pour utiliser ces emplacements. Si vous devez configurer un compte de proxy web, consultez la page [Prise en charge du serveur proxy](/sccm/core/plan-design/network/proxy-server-support).
 
-> [!TIP]  
-> Le point de connexion de service utilise le service Microsoft Intune lorsqu’il se connecte à go.microsoft.com ou manage.Microsoft.com. Un problème est connu sur le connecteur Intune qui rencontre une défaillance de connectivité si le certificat racine Baltimore CyberTrust n’est pas installé, a expiré ou est endommagé sur le point de connexion de service. Pour plus d’informations, consultez la page [Le point de connexion de service ne télécharge pas les mises à jour](https://support.microsoft.com/help/3187516).  
+## <a name="bkmk_urls"></a> Conditions requises pour l’accès Internet  
 
-#### <a name="updates-and-servicing"></a>Mises à jour et maintenance
+Si votre organisation limite la communication réseau avec Internet à l’aide d’un appareil de pare-feu ou proxy, vous devez autoriser le point de connexion de service à accéder aux points de terminaison Internet.
 
-- `*.akamaiedge.net`  
+Pour plus d’informations, consultez [Conditions requises pour l’accès à Internet](/sccm/core/plan-design/network/internet-endpoints#bkmk_scp).
 
-- `*.akamaitechnologies.com`  
-
-- `*.manage.microsoft.com`  
-
-- `go.microsoft.com`  
-
-- `blob.core.windows.net`  
-
-- `download.microsoft.com`  
-
-- `download.windowsupdate.com`  
-
-- `sccmconnected-a01.cloudapp.net`  
-
-- `configmgrbits.azureedge.net`  
-
-#### <a name="microsoft-intune"></a>Microsoft Intune
-
-- `*manage.microsoft.com`  
-
-- `https://bspmts.mp.microsoft.com/V`  
-
-- `https://login.microsoftonline.com/{TenantID}`  
-
-#### <a name="windows-10-servicing"></a>Maintenance de Windows 10
-
-- `download.microsoft.com`  
-
-- `https://go.microsoft.com/fwlink/?LinkID=619849`  
-
-- `dl.delivery.mp.microsoft.com`  
-
-#### <a name="azure-services"></a>Services Azure
-
-- `management.azure.com`  
 
 ## <a name="install-the-service-connection-point"></a>Installer le point de connexion de service
 Quand vous exécutez le **programme d’installation** pour installer le site de plus haut niveau d’une hiérarchie, vous avez la possibilité d’installer le point de connexion de service.

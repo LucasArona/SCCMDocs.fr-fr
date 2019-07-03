@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 84e7b2692dae8b924cfa418508433755de4da328
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: e668baafac94dfc7da5008c37556c017c5e01c9d
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56128362"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286105"
 ---
 # <a name="capabilities-in-technical-preview-1710-for-system-center-configuration-manager"></a>Fonctionnalités de Technical Preview 1710 pour System Center Configuration Manager
 
@@ -32,7 +32,7 @@ Cet article présente les fonctionnalités qui sont disponibles dans la version�
     Workaround details.
 -->
 **Problèmes connus dans cette version d’évaluation technique :**
-- **Prise en charge de Windows 10, version 1709 (également appelée Fall Creators Update)**.  À partir de cette version de Windows, Windows Media inclut plusieurs éditions. Quand vous configurez une séquence de tâches pour utiliser un package de mise à niveau de système d’exploitation ou une image de système d’exploitation, veillez à sélectionner une [édition prise en charge par Configuration Manager](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client).
+- **Prise en charge de Windows 10, version 1709 (également appelée Fall Creators Update)** .  À partir de cette version de Windows, Windows Media inclut plusieurs éditions. Quand vous configurez une séquence de tâches pour utiliser un package de mise à niveau de système d’exploitation ou une image de système d’exploitation, veillez à sélectionner une [édition prise en charge par Configuration Manager](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client).
 - **La mise à jour vers une nouvelle préversion échoue s’il existe un serveur de site en mode passif**. Si vous exécutez une préversion qui a un [serveur de site principal en mode passif](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability), vous devez désinstaller ce dernier pour pouvoir correctement mettre à jour votre site de préversion vers cette nouvelle préversion. Vous pouvez réinstaller le serveur de site en mode passif une fois votre site mis à jour.
 
   Pour désinstaller le serveur de site en mode passif :
@@ -70,9 +70,9 @@ Pour tester l’utilisation de la fonctionnalité Exécuter les scripts, consult
 ## <a name="limit-windows-10-enhanced-telemetry-to-only-send-data-relevant-to-windows-analytics-device-health"></a>Limiter la télémétrie avancée dans Windows 10 pour envoyer uniquement les données pertinentes à Windows Analytics Device Health
 <!-- 1356148 -->
 
-Avec cette version, vous pouvez désormais définir la collecte de données de télémétrie dans Windows 10 sur le niveau **Avancé (limité)**. Ce paramètre vous permet d’obtenir un insight actionnable sur les périphériques de votre environnement sans que ces derniers aient à envoyer toutes les données au niveau de télémétrie **Avancé** avec Windows 10 version 1709 ou ultérieure.
+Avec cette version, vous pouvez désormais définir la collecte de données de télémétrie dans Windows 10 sur le niveau **Avancé (limité)** . Ce paramètre vous permet d’obtenir un insight actionnable sur les périphériques de votre environnement sans que ces derniers aient à envoyer toutes les données au niveau de télémétrie **Avancé** avec Windows 10 version 1709 ou ultérieure.
 
-Le niveau de télémétrie Avancé (limité) inclut les mesures du niveau de base, ainsi qu’un sous-ensemble de données collectées au niveau **Avancé** et pertinentes pour Windows Analytics. Pour plus d’informations sur les niveaux de télémétrie, consultez [Niveaux de télémétrie](https://docs.microsoft.com/windows/configuration/configure-windows-telemetry-in-your-organization#telemetry-levels).
+Le niveau de télémétrie Avancé (limité) inclut les mesures du niveau de base, ainsi qu’un sous-ensemble de données collectées au niveau **Avancé** et pertinentes pour Windows Analytics. Pour plus d’informations sur les niveaux de télémétrie, consultez [Niveaux de télémétrie](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#use-group-policy-to-set-the-diagnostic-data-level).
 
 ### <a name="try-it-out"></a>Essayez !
 Pour configurer la collecte de données de télémétrie dans Windows 10 sur les clients, consultez [Guide pratique pour configurer les paramètres client](/sccm/core/clients/deploy/configure-client-settings). Ouvrez la fenêtre **Services cloud** et définissez le niveau de télémétrie dans Windows 10 sur **Avancé**.
@@ -88,7 +88,8 @@ Ajoutez une icône pour votre application dans le Centre logiciel. Pour ce faire
 
 
 ## <a name="check-compliance-from-software-center-for-co-managed-devices"></a>Vérifier auprès du Centre logiciel la conformité des périphériques cogérés
-<!-- 1356374 --> Dans cette version, les utilisateurs peuvent utiliser le Centre logiciel pour vérifier la conformité de leurs appareils Windows 10 cogérés, même quand l’accès conditionnel est géré par Intune. Pour plus d’informations, consultez [Cogestion pour les appareils Windows 10](./capabilities-in-technical-preview-1709.md#co-management-for-windows-10-devices).
+<!-- 1356374 -->
+Dans cette version, les utilisateurs peuvent utiliser le Centre logiciel pour vérifier la conformité de leurs appareils Windows 10 cogérés, même quand l’accès conditionnel est géré par Intune. Pour plus d’informations, consultez [Cogestion pour les appareils Windows 10](./capabilities-in-technical-preview-1709.md#co-management-for-windows-10-devices).
 
 
 ## <a name="support-for-exploit-guard"></a>Prise en charge d’Exploit Guard
@@ -105,7 +106,7 @@ Pour plus d’informations sur Exploit Guard ainsi que sur ses règles et compos
 ### <a name="prerequisites"></a>Prérequis
 Les appareils gérés doivent exécuter Windows 10 Fall Creators Update version 1709 ou ultérieure et respecter les conditions suivantes, selon les composants et les règles configurés :
 
-|Composant Exploit Guard |Configuration requise supplémentaire|
+|Composant Exploit Guard |Prérequis supplémentaires|
 |------------------------|------------------------|
 | Règles de réduction de la surface d’attaque  | La[protection en temps réel de Windows Defender AV]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) doit être activée sur les appareils.  |
 | Accès contrôlé aux dossiers  | La[protection en temps réel de Windows Defender AV]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) doit être activée sur les appareils.   |
@@ -127,7 +128,8 @@ Les appareils gérés doivent exécuter Windows 10 Fall Creators Update version 
 Après avoir créé des stratégies Exploit Guard, utilisez l’assistant de déploiement de stratégies Exploit Guard pour les déployer. Pour ce faire, ouvrez la console Configuration Manager, accédez à **Ressources et Conformité** > **Endpoint Protection**, puis cliquez sur **Déployer la stratégie Exploit Guard**.
 
 ## <a name="limited-support-for-cng-certificates"></a>Prise en charge limitée des certificats CNG
-<!-- 1356191 --> À compter de cette version, vous pouvez maintenant utiliser les modèles de certificat [Cryptography API : Next Generation (CNG)](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx) pour les scénarios suivants :
+<!-- 1356191 -->
+À compter de cette version, vous pouvez maintenant utiliser [Cryptography API : Next Generation (CNG)](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx) pour les scénarios suivants :
 
 - L’inscription du client et la communication avec un point de gestion HTTPS.   
 - La distribution de logiciels et le déploiement d’applications avec un point de distribution HTTPS.   

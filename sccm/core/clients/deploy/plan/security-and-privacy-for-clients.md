@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9671ccad42fc9135193cf41e058b472b52a412e1
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 70ad1d37b1194374110f0c48469b677f0615ead2
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56142304"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286842"
 ---
 # <a name="security-and-privacy-for-configuration-manager-clients"></a>Sécurité et confidentialité pour les clients Configuration Manager
 
@@ -80,7 +80,7 @@ Pour plus d’informations, consultez [Déterminer si des clients doivent être 
 
 Parmi toutes les méthodes d’installation des clients, l’installation Push du client est la moins sécurisée en raison des nombreuses dépendances qu’elle possède. Ces dépendances incluent les autorisations d’administrateur local, le partage Admin$ et des exceptions de pare-feu. Le nombre et le type de ces dépendances augmentent votre surface d’attaque.  
 
-À compter de la version 1806, quand vous utilisez l’installation Push du client, le site peut exiger l’authentification mutuelle Kerberos en interdisant le recours à NTLM en secours avant d’établir la connexion. Cette amélioration permet de sécuriser la communication entre le serveur et le client. Pour plus d’informations, consultez [Guide pratique pour installer des clients à l’aide d’une installation Push du client](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientPush).<!--1358204-->  
+À compter de la version 1806, quand vous utilisez l’installation Push du client, le site peut exiger l’authentification mutuelle Kerberos en interdisant le recours à NTLM en secours avant d’établir la connexion. Cette amélioration permet de sécuriser la communication entre le serveur et le client. Pour plus d’informations, consultez [Comment installer des clients selon la méthode d’installation Push du client](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientPush).<!--1358204-->  
 
 Pour plus d’informations sur les différentes méthodes d’installation de clients, consultez [Méthodes d’installation du client](/sccm/core/clients/deploy/plan/client-installation-methods).  
 
@@ -227,7 +227,7 @@ Empêchez les attaques par élévation de privilèges en verrouillant l’appare
 
 #### <a name="restrict-the-users-who-can-enroll-their-mobile-devices"></a>Limiter les utilisateurs pouvant inscrire leurs appareils mobiles  
 
-permet d'éviter l'élévation de privilèges en limitant les utilisateurs qui peuvent inscrire leurs appareils mobiles. Utilisez un paramètre client personnalisé plutôt que les paramètres clients par défaut, pour que seuls les utilisateurs autorisés puissent inscrire leurs appareils mobiles.  
+Aidez à éviter l'élévation de privilèges en limitant les utilisateurs qui peuvent inscrire leurs appareils mobiles. Utilisez un paramètre client personnalisé plutôt que les paramètres clients par défaut, pour que seuls les utilisateurs autorisés puissent inscrire leurs appareils mobiles.  
 
 
 #### <a name="user-device-affinity-guidance-for-mobile-devices"></a>Conseils en matière d’affinité entre utilisateur et appareil pour les appareils mobiles  
@@ -257,7 +257,7 @@ Une relation d’affinité entre utilisateur et appareil est créée lors de l�
 Si le serveur Exchange Server est sur site, utilisez IPsec. Exchange hébergé sécurise automatiquement la connexion à l’aide de SSL.  
 
 
-#### <a name="use-the-principle-of-least-privileges-for-the-connector"></a>utiliser le principe des privilèges minimum pour le connecteur  
+#### <a name="use-the-principle-of-least-privileges-for-the-connector"></a>Utilisez le principe des privilèges minimum pour le connecteur  
 
 Pour obtenir la liste des applets de commande minimales qu’exige le connecteur Exchange Server, consultez [Gérer les appareils mobiles avec Configuration Manager et Exchange](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync).  
 
@@ -275,7 +275,7 @@ Avant d’installer ou d’inscrire le client sur un ordinateur Mac, Configurati
 
 Pour garantir la pérennité des activités, surveillez et effectuez le suivi de la période de validité des certificats que vous utilisez pour les ordinateurs Mac. Configuration Manager ne prend pas en charge le renouvellement automatique de ce certificat et ne vous avertit pas que le certificat est sur le point d’expirer. La période de validité standard est d’un an.  
 
-Pour plus d’informations sur le renouvellement du certificat, consultez [Renouvellement manuel du certificat client Mac](/sccm/core/clients/deploy/deploy-clients-to-macs#renewing-the-mac-client-certificate).  
+Pour plus d’informations sur le renouvellement du certificat, consultez [Renouvellement manuel du certificat client Mac](/sccm/core/clients/deploy/deploy-clients-to-macs#renew-the-mac-client-certificate).  
 
 
 #### <a name="configure-the-trusted-root-certificate-for-ssl-only"></a>Configurer le certificat racine approuvé pour SSL uniquement  

@@ -7,17 +7,17 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: df2e57b9-6445-4067-98e7-ace85d4e6aa6
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dfc10695dc238e7020fd9d1b777ce62d80324beb
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 401565308ac78e1d6db047eca7cda63715474764
+ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56133484"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67158879"
 ---
 # <a name="what39s-new-in-version-1606-of-system-center-configuration-manager"></a>Nouveautés dans la version 1606 de System Center Configuration Manager
 
@@ -27,7 +27,7 @@ La mise à jour 1606 pour System Center Configuration Manager est disponible so
 > [!TIP]  
 >  Informations supplémentaires :  
 >   
->  -   [Installation de nouveaux sites](/sccm/core/servers/deploy/install) (à l’aide d’une version de référence telle que 1511)  
+>  -   [Installation de nouveaux sites](/sccm/core/servers/deploy/install/prepare-to-install-sites) (à l’aide d’une version de référence telle que 1511)  
 >  -   [Installation de mises à jour sur les sites](/sccm/core/servers/manage/updates) (telles que la mise à jour 1602 ou 1606)  
 
  Les sections suivantes fournissent des informations détaillées sur les modifications et les nouvelles fonctionnalités introduites dans la version 1606 de Configuration Manager.  
@@ -199,11 +199,11 @@ Configuration Manager peuvent vous aider à gérer le verrou d’activation de d
 Pour plus d’informations, consultez [Gérer le verrou d’activation iOS avec System Center Configuration Manager](../../../mdm/deploy-use/manage-ios-activation-lock.md).
 
 
-### <a name="windows-defender-advanced-threat-protection"></a>Windows Defender - Protection avancée contre les menaces
+### <a name="microsoft-defender-advanced-threat-protection"></a>Microsoft Defender Advanced Threat Protection
 
-Endpoint Protection facilite la gestion et la surveillance du service Windows Defender - Protection avancée contre les menaces. Ce nouveau service aide les entreprises à détecter, analyser et contrer les attaques avancées ciblant leurs réseaux. Les stratégies Configuration Manager facilitent l’intégration et la surveillance des ordinateurs gérés qui exécutent Windows 10 version 1607 (build 14328) ou ultérieure.
+La protection des points de terminaison facilite la gestion et la surveillance du service Microsoft Defender Advanced Threat Protection (ATP). Ce nouveau service aide les entreprises à détecter, analyser et contrer les attaques avancées ciblant leurs réseaux. Les stratégies Configuration Manager facilitent l’intégration et la surveillance des ordinateurs gérés qui exécutent Windows 10 version 1607 (build 14328) ou ultérieure.
 
-Pour plus d’informations, consultez [Windows Defender - Protection avancée contre les menaces](../../../protect/deploy-use/windows-defender-advanced-threat-protection.md).
+Pour plus d’informations, consultez [Microsoft Defender Advanced Threat Protection](../../../protect/deploy-use/windows-defender-advanced-threat-protection.md).
 
 ### <a name="device-categories"></a>Catégories d’appareils
 Vous pouvez créer des catégories d’appareils pour classer automatiquement les appareils dans des regroupements d’appareils quand vous utilisez Configuration Manager avec Microsoft Intune. Les utilisateurs doivent ensuite choisir une catégorie d’appareils quand ils inscrivent un appareil dans Intune. Vous pouvez aussi modifier la catégorie d’un appareil à partir de la console Configuration Manager.

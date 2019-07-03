@@ -11,18 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e9f43311ea3d36132d8cf77c0c576ad3f0e2cd93
-ms.sourcegitcommit: f3dd8405018fe1043434386be15c16752c1a4a3c
+ms.openlocfilehash: 01fa13c907b451a3539ca8169c3a04ebbaa1b92c
+ms.sourcegitcommit: d47d2f03482e48d343e2139a341e61022331e6c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57558097"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67145775"
 ---
 # <a name="frequently-asked-questions-for-configuration-manager-branches-and-licensing"></a>Foire aux questions sur les branches et la gestion des licences de Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch), System Center Configuration Manager (Long-Term Servicing Branch)*
 
-Cette FAQ répond à des questions courantes sur la gestion des licences des versions Configuration Manager Current Branch et Long-Term Servicing Branch (LTSB), disponibles par le biais des programmes de gestion des licences en volume Microsoft. Cet article n’a qu’une fonction informative. Il ne remplace ni n’annule aucune documentation sur la gestion des licences de System Center Configuration Manager. Pour plus d’informations, consultez la gestion des licences des produits [System Center 2016](https://www.microsoft.com/en-us/licensing/product-licensing/system-center-2016.aspx)<!-- this link doesn't work without some language code --> et les [Conditions des produits](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53). Les Conditions des Produits décrivent les conditions d’utilisation de tous les produits Microsoft dans la gestion des licences en volume.
+Cette FAQ répond à des questions courantes sur la gestion des licences des versions Configuration Manager Current Branch et Long-Term Servicing Branch (LTSB), disponibles par le biais des programmes de gestion des licences en volume Microsoft. Cet article n’a qu’une fonction informative. Il ne remplace ni n’annule aucune documentation sur la gestion des licences de System Center Configuration Manager. Pour plus d’informations, consultez la gestion des licences des produits [System Center 2016](https://www.microsoft.com/en-us/licensing/product-licensing/system-center-2016.aspx)<!-- this link doesn't work without some language code --> et les [Termes des produits](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53). Les Conditions des Produits décrivent les conditions d’utilisation de tous les produits Microsoft dans la gestion des licences en volume.
 
 Pour plus d’informations sur les fonctionnalités de Configuration Manager, consultez la [page produit](https://www.microsoft.com/cloud-platform/system-center-configuration-manager).
 
@@ -44,7 +44,7 @@ LTSB est un build prêt pour la production de Configuration Manager, conçu pour
 
 - **Software Assurance (SA)** : les clients doivent avoir une SA active dans leurs licences Configuration Manager, ou des droits d’abonnement équivalents, pour pouvoir installer et utiliser l’option Current Branch de Configuration Manager.    
 
-    - Même si la SA est facultative pour certains produits Microsoft, le seul moyen d’obtenir les droits d’utilisation de Configuration Manager Current Branch est de passer par la SA *ou des droits d’abonnement équivalents*. Pour plus d’informations, consultez les [questions fréquentes (FAQ) sur la Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/FAQ-Software-Assurance.aspx).<!--this link doesn't work without some language code-->
+    - Même si la SA est facultative pour certains produits Microsoft, le seul moyen d’obtenir les droits d’utilisation de Configuration Manager Current Branch est de passer par la SA *ou des droits d’abonnement équivalents*. Pour plus d’informations, consultez les [FAQ sur Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/FAQ-Software-Assurance.aspx).<!--this link doesn't work without some language code-->
 
 - **Microsoft License and Software Assurance (L&SA)** : les clients qui achètent de nouvelles licences Configuration Manager doivent acquérir une L&SA (Licence et SA).   
 
@@ -52,7 +52,7 @@ LTSB est un build prêt pour la production de Configuration Manager, conçu pour
 
     - Si votre SA expire alors que vous avez toujours une licence Configuration Manager, vous ne pourrez plus utiliser Current Branch. Pour plus d’informations, consultez la question [Si ma SA expire et que j’avais une L&SA, que se passe-t-il ?](#bkmk_sa-expires)
 
-Pour plus d’informations sur les offres de licences, consultez [Comment acheter](https://www.microsoft.com/en-us/licensing/licensing-programs) <!--this link doesn't work without some language code--> et [Termes du contrat de licence du produit](http://www.microsoftvolumelicensing.com/ProductResults.aspx?doc=Product%20Terms,OST&fid=64).  
+Pour plus d’informations sur les offres de licences, consultez [Comment acheter](https://www.microsoft.com/Licensing/licensing-programs/licensing-programs)<!--this link doesn't work without some language code--> et [Termes du contrat de licence du produit](http://www.microsoftvolumelicensing.com/ProductResults.aspx?doc=Product%20Terms,OST&fid=64).  
 
 
 ### <a name="bkmk_equiv-sub"></a> J’ai rencontré le terme « abonnement équivalent », de quels programmes est-il question ?   

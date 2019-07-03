@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bd2336ecef4af05d253c413f0402d5a83414df97
-ms.sourcegitcommit: e3c1eb0b75d79c05a750d49354c851d15d5e26a3
+ms.openlocfilehash: 2041f51714cbed7a9c9a1a3ad14bbb2d8c697ae4
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67038707"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285967"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Version Technical Preview de Configuration Manager
 
@@ -36,7 +36,7 @@ Pour plus d’informations sur les nouveautés de la *version Current Branch* de
 ## <a name="bkmk_reqs"></a> Configuration requise et limitations  
 
 > [!IMPORTANT]  
-> La préversion technique est concédée sous licence exclusivement pour une utilisation dans un environnement lab. Microsoft peut ne pas fournir de services de support technique, et certaines fonctionnalités peuvent ne pas être disponibles dans la préversion du logiciel. De plus, la préversion du logiciel peut utiliser des standards de sécurité, de confidentialité, d’accessibilité, de disponibilité et de fiabilité réduites ou différentes par rapport aux logiciels fournis dans le commerce.  
+> La préversion technique est concédée sous licence exclusivement pour une utilisation dans un environnement lab. Microsoft peut ne pas fournir de services de support technique, et certaines fonctionnalités peuvent ne pas être disponibles dans les préversions techniques. De plus, la préversion du logiciel technique peut utiliser des standards de sécurité, de confidentialité, d’accessibilité, de disponibilité et de fiabilité réduites ou différentes par rapport aux logiciels fournis dans le commerce.  
 
 Pour la plupart des prérequis du produit, utilisez les informations contenues dans les [configurations prises en charge](/sccm/core/plan-design/configs/supported-configurations). Les exceptions suivantes s’appliquent à la branche Technical Preview :  
 

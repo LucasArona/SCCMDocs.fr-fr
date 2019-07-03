@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 82ddc015a9d5df29b54e13efe6382934c713ac4b
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 1ab522e7618ff2c64e910a9098d7adc36f43512b
+ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65501387"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67252299"
 ---
 # <a name="where-to-get-installation-media-for-system-center-configuration-manager"></a>Où trouver le support d’installation pour System Center Configuration Manager
 
@@ -26,4 +26,4 @@ Si vous disposez de licences en volume pour System Center Configuration Manager 
 
 Si vous souhaitez acheter des licences en volume pour System Center Configuration Manager, contactez votre revendeur Microsoft ou consultez la page [How to purchase through Volume Licensing]( https://www.microsoft.com/Licensing/how-to-buy/how-to-buy.aspx) (Procédure d’achat via des licences en volume). Vous pouvez également télécharger le support nécessaire pour installer une version d’évaluation de System Center Configuration Manager à partir du site web [Centre d’évaluation TechNet]( https://www.microsoft.com/en-us/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection).
 
-Pour en savoir plus sur le support de base pour Configuration Manager, consultez [Versions de base et de mise à jour](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions).
+Pour en savoir plus sur le support de base pour Configuration Manager, consultez [Versions de base et de mise à jour](/sccm/core/servers/manage/updates#bkmk_Baselines).

@@ -12,12 +12,12 @@ ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 55c690f503af7d5f5e110d408b1b29cb742eb6f9
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 4d458209c7e50ada6f308cd1b723cd8e9d630ee4
+ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65501154"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67252215"
 ---
 # <a name="checklist-for-installing-update-1706-for-system-center-configuration-manager"></a>Liste de contrôle de l’installation de la mise à jour 1706 pour System Center Configuration Manager
 
@@ -35,7 +35,7 @@ Pour obtenir la mise à jour de la version 1706, vous devez utiliser un rôle de
 
     -   Un autre problème courant de téléchargement se produit quand les paramètres du serveur proxy empêchent les téléchargements à partir de <http://silverlight.dlservice.microsoft.com> et <http://download.microsoft.com>.
 
-Pour plus d’informations sur l’installation des mises à jour, consultez [Mises à jour et maintenance dans la console](/sccm/core/servers/manage/updates#a-namebkmkinconsolea-in-console-updates-and-servicing).
+Pour plus d’informations sur l’installation des mises à jour, consultez [Mises à jour et maintenance dans la console](/sccm/core/servers/manage/updates#bkmk_inconsole).
 
 Pour plus d’informations sur les versions de Current Branch, consultez [Versions de base et de mise à jour](/sccm/core/servers/manage/updates#bkmk_Baselines) dans [Mises à jour pour System Center Configuration Manager](/sccm/core/servers/manage/updates).
 
@@ -51,7 +51,7 @@ Vous pouvez installer la mise à jour 1706 sur le site de niveau supérieur de v
 **Rôles de système de site :**  
 Quand un serveur de site installe la mise à jour, les rôles de système de site installés sur l’ordinateur serveur de site et sur des ordinateurs distants sont automatiquement mis à jour. Avant d’installer la mise à jour, vérifiez que chaque serveur de système de site remplit les prérequis pour les opérations avec la nouvelle version de mise à jour.
 
-**Consoles Configuration Manager :**   
+**Consoles Configuration Manager :**    
 La première fois que vous utilisez une console Configuration Manager à l’issue de la mise à jour, vous êtes invité à mettre à jour cette console. Pour cela, vous devez exécuter le programme d’installation de Configuration Manager sur l’ordinateur hébergeant la console, puis choisir l’option de mise à jour de la console. Nous vous recommandons de ne pas retarder l’installation de la mise à jour sur la console.
 
 > [!IMPORTANT]  
@@ -63,17 +63,17 @@ La première fois que vous utilisez une console Configuration Manager à l’iss
 
 ## <a name="checklist"></a>Liste de contrôle
 
-**Vérifiez que tous les sites exécutent une version de System Center Configuration Manager qui prend en charge la mise à jour vers 1706 :**   
+**Vérifiez que tous les sites exécutent une version de System Center Configuration Manager qui prend en charge la mise à jour vers 1706 :**    
 Chaque serveur de site de la hiérarchie doit exécuter la même version de System Center Configuration Manager pour que vous puissiez lancer l’installation de la mise à jour 1706. Pour passer à la version 1706, vous devez utiliser la version 1606, 1610 ou 1702.
 
-**Vérifiez l’état de votre contrat Software Assurance ou des droits d’abonnement équivalents :**   
+**Vérifiez l’état de votre contrat Software Assurance ou des droits d’abonnement équivalents :**    
 Vous devez disposer d’un contrat Software Assurance (SA) actif pour installer la mise à jour 1706. Quand vous installez cette mise à jour, l’onglet **Licences** propose l’option vous permettant de confirmer la **date d’expiration de Software Assurance**.
 
 Il s’agit d’une valeur facultative que vous pouvez spécifier pour des raisons pratiques et qui vous servira de rappel concernant la date d’expiration de votre licence. Cette date est visible lorsque vous installez des mises à jour ultérieures. Vous avez peut-être déjà spécifié cette valeur pendant la configuration ou l’installation d’une mise à jour, ou en utilisant l’onglet **Licences** de **Paramètres de hiérarchie**, sur la console de Configuration Manager.
 
 Pour plus d’informations, consultez [Licences et branches pour System Center Configuration Manager](/sccm/core/understand/learn-more-editions).
 
-**Examinez les versions de Microsoft .NET installées sur les serveurs de système de site :**  Lorsqu’un site installe cette mise à jour, Configuration Manager installe automatiquement le .NET Framework 4.5.2 sur chaque ordinateur hébergeant un des rôles de système de site suivants (si le .NET Framework 4.5 ou ultérieur n’est pas déjà installé) :
+**Examinez les versions de Microsoft .NET installées sur les serveurs de système de site :**   Lorsqu’un site installe cette mise à jour, Configuration Manager installe automatiquement le .NET Framework 4.5.2 sur chaque ordinateur hébergeant un des rôles de système de site suivants (si le .NET Framework 4.5 ou ultérieur n’est pas déjà installé) :
 
 -   Point proxy d'inscription
 -   Point d'inscription
@@ -88,33 +88,33 @@ Pour plus d’informations, consultez  [Prérequis des sites et systèmes de si
 
 Si vous mettez à jour le site avant de mettre à jour Windows ADK, consultez [Mettre à jour les points de distribution avec l’image de démarrage](/sccm/osd/get-started/manage-boot-images#update-distribution-points-with-the-boot-image) pour découvrir les améliorations apportées à ce processus dans Configuration Manager version 1706.
 
-**Examinez l’état des sites et de la hiérarchie et vérifiez qu’il ne reste aucun problème non résolu :**  Avant de mettre à jour un site, résolvez tous les problèmes de fonctionnement du serveur de site, du serveur de base de données du site et des rôles de système de site installés sur les ordinateurs distants. Une mise à niveau de site peut échouer en raison de l’existence de problèmes opérationnels.
+**Examinez l’état des sites et de la hiérarchie et vérifiez qu’il ne reste aucun problème non résolu :**   Avant de mettre à jour un site, résolvez tous les problèmes de fonctionnement du serveur de site, du serveur de base de données du site et des rôles de système de site installés sur les ordinateurs distants. Une mise à niveau de site peut échouer en raison de l’existence de problèmes opérationnels.
 
 Pour plus d’informations, consultez la page  [Utiliser les alertes et le système d’état pour System Center Configuration Manager](/sccm/core/servers/manage/use-alerts-and-the-status-system).
 
-**Examinez la réplication des fichiers et données entre sites :**   
+**Examinez la réplication des fichiers et données entre sites :**    
 vérifiez que la réplication des fichiers et bases de données entre les sites est opérationnelle et active. Des retards ou backlogs dans ces domaines peuvent perturber ou empêcher la mise à jour.
 Pour la réplication de la base de données, vous pouvez utiliser l’Analyseur de lien de réplication pour faciliter la résolution des problèmes avant de commencer la mise à jour.
 
 Pour plus d’informations, consultez [À propos de l’analyseur de lien de réplication](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure#BKMK_RLA)  dans la rubrique  [Surveiller l’infrastructure de la hiérarchie et de la réplication dans System Center Configuration Manager](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure) .
 
-**Installez toutes les mises à jour critiques applicables aux systèmes d’exploitation des ordinateurs hébergeant le site, le serveur de base de données de site et les rôles de système de site distants :**  Avant d’installer une mise à jour pour Configuration Manager, installez les mises à jour critiques pour chaque système de site applicable. Si vous installez une mise à jour qui nécessite un redémarrage, redémarrez les ordinateurs concernés avant d'entreprendre la mise à jour.
+**Installez toutes les mises à jour critiques applicables aux systèmes d’exploitation des ordinateurs hébergeant le site, le serveur de base de données de site et les rôles de système de site distants :**   Avant d’installer une mise à jour pour Configuration Manager, installez les mises à jour critiques pour chaque système de site applicable. Si vous installez une mise à jour qui nécessite un redémarrage, redémarrez les ordinateurs concernés avant d'entreprendre la mise à jour.
 
-**Désactivez les réplicas de base de données pour les points de gestion au niveau des sites principaux :**   
+**Désactivez les réplicas de base de données pour les points de gestion au niveau des sites principaux :**    
 Configuration Manager ne peut pas réussir la mise à jour d’un site principal ayant un réplica de base de données activé pour les points de gestion. Désactivez la réplication de base de données avant d’installer une mise à jour pour Configuration Manager.
 
 Pour plus d’informations, consultez [Réplicas de base de données pour les points de gestion de System Center Configuration Manager](/sccm/core/servers/deploy/configure/database-replicas-for-management-points).
 
-**Définissez un basculement manuel pour les groupes de disponibilité SQL Server AlwaysOn :**   
+**Définissez un basculement manuel pour les groupes de disponibilité SQL Server AlwaysOn :**    
 Si vous utilisez un groupe de disponibilité, vérifiez qu’il est défini sur le basculement manuel avant de commencer l’installation de la mise à jour. Une fois le site mis à jour, vous pouvez restaurer le basculement automatique. Pour plus d’informations, consultez  [Se préparer à l’utilisation de groupes de disponibilité SQL Server Always On avec Configuration Manager](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database).
 
-**Reconfigurez les points de mise à jour logicielle qui utilisent l’équilibrage de la charge réseau (NLB) :**   
+**Reconfigurez les points de mise à jour logicielle qui utilisent l’équilibrage de la charge réseau (NLB) :**    
 Configuration Manager ne peut pas mettre à jour un site qui utilise un cluster d’équilibrage de la charge réseau (NLB) pour héberger des points de mise à jour logicielle.
 
 Si vous utilisez des clusters NLB pour les points de mise à jour logicielle, utilisez Windows PowerShell pour supprimer le cluster NLB.
 Pour plus d’informations, consultez  [Planifier les mises à jour logicielles dans Configuration Manager](/sccm/sum/plan-design/plan-for-software-updates).
 
-**Désactivez toutes les tâches de maintenance de site sur chaque site pendant la durée de l’installation de la mise à jour sur ce site :**   
+**Désactivez toutes les tâches de maintenance de site sur chaque site pendant la durée de l’installation de la mise à jour sur ce site :**    
 Avant d’installer la mise à jour, désactivez toutes les tâches de maintenance de site qui peuvent s’exécuter pendant le processus de mise à jour. Cela inclut, sans toutefois s'y limiter, les tâches suivantes :
 
 -   Serveur de site de sauvegarde
@@ -127,23 +127,23 @@ Pour plus d’informations, consultez  [Tâches de maintenance pour System Cent
 
 **Arrêtez temporairement tous les logiciels antivirus sur les serveurs System Center Configuration Manager :** Avant de mettre à jour un site, assurez-vous que vous avez arrêté les logiciels antivirus sur les serveurs Configuration Manager. <!--SMS.503481--> 
 
-**Créez une sauvegarde de la base de données du site au niveau du site d’administration centrale et des sites principaux :**  Avant de mettre à jour un site, sauvegardez la base de données de site pour être certain de disposer d’une sauvegarde utilisable dans le cadre d’une récupération d’urgence.
+**Créez une sauvegarde de la base de données du site au niveau du site d’administration centrale et des sites principaux :**   Avant de mettre à jour un site, sauvegardez la base de données de site pour être certain de disposer d’une sauvegarde utilisable dans le cadre d’une récupération d’urgence.
 
 Pour plus d’informations, consultez  [Sauvegarde d’un site Configuration Manager](/sccm/protect/understand/backup-and-recovery).
 
-**Planifiez un test du client :**   
+**Planifiez un test du client :**    
 Quand vous installez une mise à jour qui affecte le client, vous pouvez la tester en mode préproduction avant de procéder au déploiement et à la mise à niveau de votre client actif.
 
 Pour tirer parti de cette option, vous devez configurer votre site pour qu’il prenne en charge les mises à niveau automatiques pour la préproduction avant de commencer l’installation de la mise à jour.
 
 Pour plus d’informations, consultez  [Mettre à niveau les clients dans System Center Configuration Manager](/sccm/core/clients/manage/upgrade/upgrade-clients)  et [Comment tester les mises à niveau du client dans un regroupement de préproduction dans System Center Configuration Manager](/sccm/core/clients/manage/upgrade/test-client-upgrades).
 
-**Planifiez l’utilisation des fenêtres de service pour contrôler le moment auquel les serveurs de site installent les mises à jour :**   
+**Planifiez l’utilisation des fenêtres de service pour contrôler le moment auquel les serveurs de site installent les mises à jour :**    
 Utilisez les fenêtres de service pour définir une période au cours de laquelle les mises à jour à un serveur de site peuvent être installées.
 
 Cela peut vous aider à contrôler le moment où les sites au sein de votre hiérarchie installent la mise à jour. Pour plus d’informations, consultez  [Fenêtres de maintenance pour les serveurs de site](/sccm/core/servers/manage/service-windows).
 
-**Exécutez l’outil de vérification des prérequis du programme d’installation :**   
+**Exécutez l’outil de vérification des prérequis du programme d’installation :**    
 Quand la mise à jour est répertoriée dans la console comme **Disponible**, vous pouvez exécuter indépendamment l’outil de vérification des prérequis avant d’installer la mise à jour. (Quand vous installez la mise à jour sur le site, l’outil de vérification des prérequis s’exécute à nouveau.)
 
 Pour exécuter une vérification des prérequis à partir de la console, accédez à **Administration > Vue d’ensemble > Services cloud > Mises à jour et maintenance**. Ensuite, cliquez avec le bouton droit sur **Package de mise à jour 1706 de Configuration Manager**, puis choisissez **Exécuter la vérification des prérequis**.
@@ -153,8 +153,8 @@ Pour plus d’informations sur le démarrage et la surveillance de la vérificat
 > [!IMPORTANT]  
 > Quand l’outil de vérification des prérequis s’exécute indépendamment ou dans le cadre de l’installation d’une mise à jour, le processus met à jour certains fichiers sources du produit qui sont utilisés pour les tâches de maintenance de site. Par conséquent, après l’exécution de l’outil de vérification des prérequis, mais avant l’installation de la mise à jour, si vous devez effectuer une tâche de maintenance de site, exécutez  **Setupwfe.exe**  (programme d’installation de Configuration Manager) à partir du dossier CD.Latest sur le serveur de site.
 
-**Mettez à jour les sites :**   
-Vous êtes maintenant prêt à commencer l’installation de la mise à jour pour votre hiérarchie. Pour plus d’informations sur l’installation de la mise à jour, consultez [Installer des mises à jour dans la console](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkinstalla-install-in-console-updates).
+**Mettez à jour les sites :**    
+Vous êtes maintenant prêt à commencer l’installation de la mise à jour pour votre hiérarchie. Pour plus d’informations sur l’installation de la mise à jour, consultez [Installer des mises à jour dans la console](/sccm/core/servers/manage/install-in-console-updates#bkmk_install).
 
 Nous vous recommandons de planifier l’installation de la mise à jour en dehors des heures de bureau normales pour chaque site, quand le processus d’installation de la mise à jour et ses actions pour réinstaller les composants du site et les rôles de système de site auront le moins d’effet sur les opérations de votre entreprise.
 

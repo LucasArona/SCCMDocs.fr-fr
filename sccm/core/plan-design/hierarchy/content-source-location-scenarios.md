@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dd80955f65b9c18ca0e2ed74e47caecb0e826049
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 61565ee1d6c98a5ab3a3391d6444aed3f082ae64
+ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56129168"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67251734"
 ---
 # <a name="content-source-location-scenarios-in-system-center-configuration-manager"></a>Scénarios d’emplacement source du contenu dans System Center Configuration Manager
 
@@ -28,7 +28,7 @@ Dans les versions de System Center Configuration Manager antérieures à 1610, 
 > [!IMPORTANT]  
 > **Si vos sites exécutent la version 1511, 1602 ou 1606**, les informations contenues dans cette rubrique s’appliquent à votre infrastructure. Consultez également [Groupes de limites pour les versions 1511, 1602 et 1606](/sccm/core/servers/deploy/configure/boundary-groups-for-1511-1602-and-1606) pour des informations spécifiques des groupes de limites avec ces versions de Configuration Manager.
 >
-> **Si vos sites exécutent la version 1610 ou ultérieure**, utilisez les informations contenues dans [Définir des limites de site et des groupes de limites pour System Center Configuration Manager](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups) pour comprendre comment vos clients trouvent des points de distribution avec du contenu disponible.
+> **Si vos sites exécutent la version 1610 ou ultérieure**, utilisez les informations contenues dans [Définir des limites de site et des groupes de limites pour System Center Configuration Manager](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups) pour comprendre comment vos clients trouvent des points de distribution avec du contenu disponible.
 
 
 

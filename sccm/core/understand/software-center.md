@@ -5,18 +5,18 @@ description: En savoir plus sur les fonctionnalités du Centre logiciel
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 02/20/2019
+ms.date: 06/18/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.assetid: 9e68de6e-2b33-442b-b674-a382728d9529
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eacd1d1be2564b718423b9d0db8d24b60aac1adb
-ms.sourcegitcommit: 369db96ee84299b5ab6d74b177e6366b3017fc54
+ms.openlocfilehash: c32f3f24f083537396c64c8f8426f8b6e6d6ee7a
+ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56589915"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67252024"
 ---
 # <a name="software-center-user-guide"></a>Guide de l’utilisateur du Centre logiciel
 
@@ -53,7 +53,8 @@ Cliquez sur l’onglet **Applications** pour rechercher et installer les applica
 
 
 ### <a name="install-multiple-applications"></a>Installer plusieurs applications 
-<!-- 1357126 --> Installez plusieurs applications à la fois au lieu d’attendre la fin de l’une pour lancer la suivante. Les applications ne répondent pas toutes aux critères suivants :
+<!-- 1357126 -->
+Installez plusieurs applications à la fois au lieu d’attendre la fin de l’une pour lancer la suivante. Les applications ne répondent pas toutes aux critères suivants :
 - L’application est visible par vous
 - L’application n’est pas encore en cours de téléchargement ou installée
 - Votre administrateur informatique ne demande pas d’approbation pour installer l’application
@@ -118,9 +119,13 @@ Cliquez sur l’onglet **Options** pour afficher les paramètres supplémentaire
 
 Indiquer vos heures de travail habituelles. Votre administrateur informatique peut planifier des installations de logiciels en dehors des heures de travail. Réservez au moins quatre heures par jour pour les tâches de maintenance système. Votre administrateur informatique peut toujours installer les applications et les mises à jour logicielles critiques pendant les heures de travail.
 
-- Cliquez sur les listes déroulantes pour sélectionner la plage horaire la plus large pendant laquelle vous êtes susceptible d’utiliser l’ordinateur. Par défaut, ces valeurs vont de **5 h 00** à **22 h 00**
+   - Cliquez sur les listes déroulantes pour sélectionner la plage horaire la plus large pendant laquelle vous êtes susceptible d’utiliser l’ordinateur. Par défaut, ces valeurs vont de **5 h 00** à **22 h 00**
 
-- Cochez la case à côté des jours de la semaine pendant lesquels vous utilisez généralement cet ordinateur. Le Centre logiciel sélectionne uniquement les jours de semaine par défaut.  
+   - Cochez la case à côté des jours de la semaine pendant lesquels vous utilisez généralement cet ordinateur. Le Centre logiciel sélectionne uniquement les jours de semaine par défaut.  
+
+Spécifiez si vous utilisez régulièrement cet ordinateur pour travailler. Votre administrateur peut installer automatiquement des applications ou mettre des applications supplémentaires à la disposition des ordinateurs principaux. <!--3485366-->
+
+   - Sélectionnez **J’utilise régulièrement cet ordinateur pour travailler** si l’ordinateur que vous utilisez est un ordinateur principal.
 
 
 ### <a name="power-management"></a>Gestion de l'alimentation
