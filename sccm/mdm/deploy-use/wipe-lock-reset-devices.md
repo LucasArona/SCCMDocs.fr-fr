@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ebc2b995c763aa54e1d47ee38ab2d250554f5a29
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 0a50dd4df66292837cd7a3667a0790c04ebddb9a
+ms.sourcegitcommit: 4981a796e7886befb7bdeeb346dba32be82aefd6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56136022"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67516024"
 ---
 # <a name="protect-data-with-remote-wipe-lock-or-passcode-reset-by-using-configuration-manager"></a>Protéger les données à l’aide de la réinitialisation à distance, du verrouillage ou de la réinitialisation du code d’accès en utilisant Configuration Manager
 
@@ -33,7 +33,7 @@ Configuration Manager propose des fonctionnalités de réinitialisation sélecti
 - Une réinitialisation du code d’accès de l’appareil  
 
 > [!Important]  
-> Depuis le 14 août 2018, la gestion hybride des appareils mobiles est une [fonctionnalité déconseillée](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). Pour plus d’informations, voir [Présentation de la gestion MDM hybride](/sccm/mdm/understand/hybrid-mobile-device-management).<!--Intune feature 2683117-->  
+> Depuis le 14 août 2018, la gestion hybride des appareils mobiles est une [fonctionnalité déconseillée](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). Pour plus d’informations, consultez [Qu’est-ce que la gestion hybride des appareils mobiles ?](/sccm/mdm/understand/hybrid-mobile-device-management)<!--Intune feature 2683117-->  
 
 
 
@@ -152,7 +152,7 @@ Les paramètres suivants sont aussi supprimés des appareils Windows 10 Mobile 
 
 Windows 8.1 et Windows RT 8.1 prennent en charge la réinitialisation sélective du contenu EFS (Encrypting File System). Les éléments suivants s'appliquent à une réinitialisation sélective du contenu EFS :  
 
-- Seules les applications et les données protégées par EFS utilisant le même domaine Internet que le compte Intune sont réinitialisées de manière sélective. Pour plus d'informations, consultez la page relative à la [réinitialisation sélective de Windows pour la gestion des données d'appareil](http://technet.microsoft.com/library/dn486874.aspx).  
+- Seules les applications et les données protégées par EFS utilisant le même domaine Internet que le compte Intune sont réinitialisées de manière sélective. Pour plus d'informations, consultez la page relative à la [réinitialisation sélective de Windows pour la gestion des données d'appareil](https://technet.microsoft.com/library/dn486874.aspx).  
 
 - Si des modifications sont apportées au domaine associé à EFS, 48 heures peuvent être nécessaires avant que les applications et les données qui utilisent le nouveau domaine soient réinitialisées de manière sélective.  
 
@@ -252,4 +252,4 @@ Si un utilisateur perd son appareil, vous pouvez verrouiller ce dernier à dista
 
 ## <a name="see-also"></a>Voir aussi  
 
-[Réinitialisation sélective de Windows pour la gestion des données d’appareil](http://technet.microsoft.com/library/dn486874.aspx)   
+[Réinitialisation sélective de Windows pour la gestion des données d’appareil](https://technet.microsoft.com/library/dn486874.aspx)   

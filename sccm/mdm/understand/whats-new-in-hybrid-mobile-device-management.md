@@ -2,7 +2,7 @@
 title: Nouveautés de la gestion MDM hybride
 titleSuffix: Configuration Manager
 description: Découvrez les nouvelles fonctionnalités de gestion des appareils mobiles disponibles pour les déploiements hybrides avec Configuration Manager et Intune.
-ms.date: 06/24/2019
+ms.date: 07/01/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c269e5f90588634e51f1d3f1e31767b11a038503
-ms.sourcegitcommit: d8cfd0edf2579e2b08a0ca8a0a7b8f53d1e4196f
+ms.openlocfilehash: 2dd14e7beaef6fe636ea220de557a866e547a602
+ms.sourcegitcommit: 4981a796e7886befb7bdeeb346dba32be82aefd6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67463776"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67516231"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Nouveautés de la gestion hybride des appareils mobiles avec Configuration Manager et Microsoft Intune
 
@@ -50,9 +50,23 @@ Chaque section de cet article répertorie les fonctionnalités hybrides sous tro
 
 ### <a name="new-in-microsoft-intune"></a>Nouveautés de Microsoft Intune
 
-### <a name="view-all-installed-apps-from-new-company-portal-web-page"></a>Afficher tous les applications à partir de la nouvelle page de portail d’entreprise 
+#### <a name="new-view-lets-users-see-all-managed-apps-installed-on-device"></a>Nouvelle vue permet aux utilisateurs de voir toutes les applications gérées installées sur l’appareil
+
+<!-- 2352913 -->
+Le portail d’entreprise pour Windows répertorie maintenant toutes les applications gérées (obligatoire et disponibles) sont installées sur le périphérique d’un utilisateur. Les utilisateurs peuvent également voir tentée et en attente d’installations d’applications, ainsi que leur état actuel. Si vous n’avez pas apporté des applications obligatoire ou disponible pour vos utilisateurs, ils ne voient un message expliquant qu’aucune entreprise applications ont été installées.
+
+Pour afficher la nouvelle vue, dans le volet de navigation du portail d’entreprise et sélectionnez **applications** > **applications installées**. Puis trier ou filtrer la liste par un des attributs suivants :
+
+- Nom
+- Tapez
+- Éditeur
+- Dernière mise à jour
+- État de l’installation
+
+#### <a name="view-all-installed-apps-from-new-company-portal-web-page"></a>Afficher tous les applications à partir de la nouvelle page de portail d’entreprise
+
 <!-- 4224326-->
-Le site Web portail d’entreprise du nouveau **applications installées** page répertorie toutes les applications gérées (obligatoire et disponibles) qui sont installées sur le périphérique d’un utilisateur. En plus du type d’affectation, les utilisateurs peuvent voir de l’application serveur de publication, date de publication et état actuel de l’installation. Si vous n’avez pas effectué toutes les applications obligatoire ou disponible pour vos utilisateurs, ils ne voient un message expliquant qu’aucune entreprise applications ont été installées. Pour afficher la nouvelle vue, accédez à la [site Web portail d’entreprise](https://portal.manage.microsoft.com) et cliquez sur **applications installées**.  
+Le site Web portail d’entreprise du nouveau **applications installées** page répertorie toutes les applications gérées (obligatoire et disponibles) qui sont installées sur le périphérique d’un utilisateur. En plus du type d’affectation, les utilisateurs peuvent voir de l’application serveur de publication, date de publication et état actuel de l’installation. Si vous n’avez pas effectué toutes les applications obligatoire ou disponible pour vos utilisateurs, ils ne voient un message expliquant qu’aucune entreprise applications ont été installées. Pour afficher la nouvelle vue, accédez à la [site Web portail d’entreprise](https://portal.manage.microsoft.com) et sélectionnez **applications installées**.  
 
 
 ## <a name="may-2019"></a>Mai 2019
@@ -119,9 +133,6 @@ La page d’accueil de l’application portail d’entreprise pour les appareils
 
 <!-- 2751523 -->
 Les appareils Windows inscrits dans Intune à l’aide [l’inscription en bloc de Windows](https://docs.microsoft.com/intune/windows-bulk-enroll) (packages d’approvisionnement) seront en mesure d’utiliser l’application portail d’entreprise pour installer des applications disponibles. Pour plus d’informations sur l’application portail d’entreprise, consultez [ajouter manuellement le portail d’entreprise Windows 10](https://docs.microsoft.com/intune/store-apps-company-portal-app) et [comment configurer l’application portail d’entreprise Microsoft Intune](https://docs.microsoft.com/intune/company-portal-app).
-
-> [!Note]  
-> Cette fonctionnalité n’est pas encore entièrement déployée à tous les clients. Si vous ne pouvez pas utiliser le portail d’entreprise sur les appareils en bloc inscrits, vous devrez patienter jusqu'à ce que cette modification se déploie sur votre compte.
 
 #### <a name="app-icons-are-displayed-with-an-automatically-generated-background"></a>Icônes d’application sont affichés avec un arrière-plan généré automatiquement
 

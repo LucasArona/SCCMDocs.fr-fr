@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e6055efad94952a7dcd7714cdfb5730289d8dafc
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: b9d5ef21702421a776c7fbe692f6aa99672efcce
+ms.sourcegitcommit: 4981a796e7886befb7bdeeb346dba32be82aefd6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56136141"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67516075"
 ---
 # <a name="troubleshoot-lookout-integration-with-intune"></a>Résoudre les problèmes liés à l’intégration de Lookout à Intune
 
@@ -54,7 +54,7 @@ Cela peut arriver dans l’un des scénarios suivants :
 
 Si un appareil est **en attente**, cela signifie que l’utilisateur final n’a pas ouvert l’application Lookout for Work et qu’il n’a pas appuyé sur le bouton **Activate** (Activer). Pour plus d’informations sur l’activation de l’appareil à l’aide de l’application Lookout for Work, consultez la rubrique suivante :
 
-[Vous êtes invité à installer Lookout for Work sur votre appareil Android](http://docs.microsoft.com/intune/enduser/you-are-prompted-to-install-lookout-for-work-android)
+[Vous êtes invité à installer Lookout for Work sur votre appareil Android](https://docs.microsoft.com/intune/enduser/you-are-prompted-to-install-lookout-for-work-android)
 
 ### <a name="in-the-lookout-mtp-console-a-device-is-showing-as-active-but-does-not-have-a-device-id"></a>Dans la console Lookout MTP, un appareil apparaît comme étant actif, mais il n’est associé à aucun ID d’appareil.
 Cela signifie que le propriétaire de cet appareil ne figure pas dans le groupe d’inscriptions spécifié dans la console Lookout MTP.   Un appareil peut être dans cet état si son propriétaire a été supprimé du groupe d’inscriptions ou si le groupe d’inscriptions auquel appartient l’utilisateur a été supprimé.
@@ -79,6 +79,6 @@ Vous pouvez également accéder au module **Devices** (Appareils) de la console 
 Tant que le nouvel utilisateur figure dans l’un des groupes d’inscription spécifiés dans la console Lookout MTP, l’appareil s’affiche quand Azure AD associe l’appareil au nouvel utilisateur.
 
 ## <a name="compliance-remediation-workflows"></a>Flux de travail de mise à jour de la conformité
-[Vous êtes invité à installer Lookout for Work sur votre appareil Android]( http://docs.microsoft.com/intune/enduser/you-are-prompted-to-install-lookout-for-work-android)
+[Vous êtes invité à installer Lookout for Work sur votre appareil Android]( https://docs.microsoft.com/intune/enduser/you-are-prompted-to-install-lookout-for-work-android)
 
-[Vous devez résoudre une menace détectée par Lookout for Work sur votre appareil Android](http://docs.microsoft.com/intune/enduser/you-need-to-resolve-a-threat-found-by-lookout-for-work-android)
+[Vous devez résoudre une menace détectée par Lookout for Work sur votre appareil Android](https://docs.microsoft.com/intune/enduser/you-need-to-resolve-a-threat-found-by-lookout-for-work-android)
