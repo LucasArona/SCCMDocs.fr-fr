@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 271803e42ba20d8d0340754b3167210414423014
-ms.sourcegitcommit: d8cfd0edf2579e2b08a0ca8a0a7b8f53d1e4196f
+ms.openlocfilehash: 246ee2c314df3d942d40d16ac9953580fed32803
+ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67463808"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67551248"
 ---
 # <a name="troubleshoot-desktop-analytics"></a>Résoudre les problèmes de postes de travail Analytique
 
@@ -57,14 +57,6 @@ Pour plus d’informations, consultez [fichiers journaux pour le bureau Analytiq
 
 1. Sur le point de connexion, accédez à la clé de Registre suivante : `HKLM\Software\Microsoft\SMS\Tracing\SMS_SERVICE_CONNECTOR`  
 2. Définir le **LoggingLevel** valeur `0`  
-3. (Facultatif) Exécutez la commande SQL suivante sur la base de données de site :  
-
-    ```SQL
-    DELETE FROM M365AProperties WHERE Name = 'M365ATenantUpdateInfo_LastUpdateTime'
-    ```
-
-4. Redémarrez le **SMS_EXECUTIVE** service sur le serveur de site
-
 
 
 ## <a name="bkmk_AzureADApps"></a> Applications Azure AD

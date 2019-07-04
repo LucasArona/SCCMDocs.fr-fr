@@ -2,7 +2,7 @@
 title: Gérer l’accès aux services Office 365
 titleSuffix: Configuration Manager
 description: Découvrez comment configurer l’accès conditionnel aux services Office 365 pour les PC gérés par System Center Configuration Manager.
-ms.date: 03/21/2019
+ms.date: 07/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 434801b170ed5efcbbafa046a3ac1e94a615ed3d
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: 2583a53a366b338a3ff0096fb4f9ca2f9bdde94b
+ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62256017"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67551477"
 ---
 # <a name="manage-access-to-office-365-services-for-pcs-managed-by-system-center-configuration-manager"></a>Gérer l’accès aux services Office 365 pour les PC gérés par System Center Configuration Manager
 
@@ -99,8 +99,8 @@ Pour plus d’informations sur la configuration de l’accès conditionnel pour 
     - **Exiger l’activation de l’intégrité du code sur l’appareil**
     - **Exiger l’activation du logiciel anti-programme malveillant sur l’appareil**  
 
-    >[!Tip]  
-    > Les critères d’accès conditionnel pour l’attestation d’intégrité de l’appareil ont été ajoutés à la version 1710, sous la forme d’une [fonctionnalité en préversion](/sccm/core/servers/manage/pre-release-features). À compter de la version 1802, cette fonctionnalité n’est plus en préversion.<!--1235616-->  
+    > [!Important]  
+    > Les critères d’accès conditionnel pour l’attestation d’intégrité de périphérique est déconseillée et sera supprimée dans une version ultérieure. Pour plus d’informations, consultez [fonctionnalités supprimées et déconseillées](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).<!--1235616-->  
 
     > [!Note]  
     > Par défaut, Configuration Manager n’active pas cette fonctionnalité facultative. Vous devez activer cette fonctionnalité avant de l’utiliser. Pour plus d’informations, consultez [Activer les fonctionnalités facultatives des mises à jour](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  

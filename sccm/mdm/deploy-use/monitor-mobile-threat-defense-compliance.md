@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cc5b38894155df35812d14397fb0d3aaea79c585
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: 9b77fabc6ea4f5823777e932011313c5e2de1acf
+ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62228403"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67551314"
 ---
 # <a name="monitor-mobile-threat-defense-compliance"></a>**Surveiller la conformité de la protection contre les menaces mobiles**
 
@@ -35,7 +35,7 @@ Vous pouvez afficher un résumé de l’état de conformité avec différents ni
 - Le nombre d’appareils déclarés non conformes par plate-forme
 - Les erreurs liées à l’état de conformité de l’appareil
 
-![](http://i.imgur.com/bmPsiWk.png)
+![Tableau de bord Protection contre les menaces](device-threat-protection-dashboard.png)
 
 ## <a name="to-monitor-the-individual-compliance-status"></a>Pour surveiller l’état de conformité individuel
 

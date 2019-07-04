@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f84b4b775c2baa59a5281a79f8154c0a6d0820f6
-ms.sourcegitcommit: 5feeb99605be5c4c39896bcee239cc274d89b3e8
+ms.openlocfilehash: feef839af1f51c4cbb291f4ed5bc6336da6409b3
+ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58508528"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286877"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-system-center-configuration-manager"></a>À propos des propriétés et des paramètres d’installation du client dans System Center Configuration Manager
 
@@ -114,10 +114,10 @@ Ce paramètre peut spécifier l’URL d’une passerelle de gestion cloud. Utili
 - Exécutez la commande suivante : `(Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}).MP`
 - Ajoutez le préfixe « https:// » à utiliser avec le paramètre **/mp**.
 
-Exemple pour l’utilisation de l’URL de la passerelle de gestion cloud : `ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72057598037248100`
+Exemple pour l’utilisation de l’URL de la passerelle de gestion cloud : `ccmsetup.exe /mp: https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72057598037248100`
 
  > [!Important]
- > Si elle est spécifiée, l’URL de la passerelle de gestion cloud pour le paramètre **/mp** doit commencer par **https://**.
+ > Si elle est spécifiée, l’URL de la passerelle de gestion cloud pour le paramètre **/mp** doit commencer par **https://** .
 
 
 ### <a name="retryltminutes"></a>/retry:&lt;Minutes\>
@@ -206,7 +206,7 @@ Spécifie le nom d’un fichier texte qui répertorie les propriétés d’insta
 
 Exemple : `CCMSetup.exe /config:&lt;Configuration File Name.txt\>`  
 
-Pour fournir le format de fichier correct, utilisez le fichier mobileclienttemplate.tcf qui se trouve dans le répertoire &lt;Configuration Manager\>\\bin\\&lt;plateforme\> sur le serveur de site . Ce fichier contient également des commentaires sur les sections et leur utilisation. Spécifiez les propriétés d'installation du client dans la section [Client Install], à la suite du texte ci-après : **Install=INSTALL=ALL**.  
+Pour fournir le format de fichier correct, utilisez le fichier mobileclienttemplate.tcf qui se trouve dans le répertoire &lt;Configuration Manager\>\\bin\\&lt;plateforme\> sur le serveur de site . Ce fichier contient également des commentaires sur les sections et leur utilisation. Spécifiez les propriétés d'installation du client dans la section [Client Install] à la suite du texte ci-après : **Install=INSTALL=ALL**.  
 
 Exemple d’entrée de section [Client Install] : `Install=INSTALL=ALL SMSSITECODE=ABC SMSCACHESIZE=100`  
 
@@ -253,7 +253,7 @@ Exemple : `CCMSetup.exe /ExcludeFeatures:ClientUI` n’installe pas le Centre lo
 
 Spécifie des propriétés et des paramètres de ligne de commande qui sont transmis à ccmsetup.exe après son installation par ccmsetup.msi. Placez les autres propriétés entre guillemets. Utilisez cette propriété lors de l’amorçage du client Configuration Manager à l’aide de la méthode d’installation d’Intune MDM. 
 
-Exemple : `ccmsetup.msi CCMSETUPCMD="/mp:https://mp.contoso.com CCMHOSTNAME=mp.contoso.com"`
+Exemple : `ccmsetup.msi CCMSETUPCMD="/mp: https://mp.contoso.com CCMHOSTNAME=mp.contoso.com"`
 
  > [!Tip]
  > Microsoft Intune limite la ligne de commande à 1 024 caractères. 
@@ -266,7 +266,7 @@ Exemple : `ccmsetup.msi CCMSETUPCMD="/mp:https://mp.contoso.com CCMHOSTNAME=mp.
 
 ### <a name="aadclientappid"></a>AADCLIENTAPPID
 
-Spécifie l’identificateur d’application cliente Azure Active Directory (Azure AD). L’application cliente est créée ou importée quand vous [configurez des services Azure](/sccm/core/servers/deploy/configure/azure-services-wizard) pour la gestion cloud. Un administrateur Azure peut obtenir la valeur de cette propriété auprès du portail Azure. Pour plus d’informations, consultez [Obtenir l’ID de l’application](/azure/azure-resource-manager/resource-group-create-service-principal-portal#get-application-id-and-authentication-key). Pour la propriété **AADCLIENTAPPID**, cet ID d’application concerne le type d’application « Native ».
+Spécifie l’identificateur d’application cliente Azure Active Directory (Azure AD). L’application cliente est créée ou importée quand vous [configurez des services Azure](/sccm/core/servers/deploy/configure/azure-services-wizard) pour la gestion cloud. Un administrateur Azure peut obtenir la valeur de cette propriété auprès du portail Azure. Pour plus d’informations, consultez [Obtenir l’ID de l’application](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in). Pour la propriété **AADCLIENTAPPID**, cet ID d’application concerne le type d’application « Native ».
 
 Exemple : `ccmsetup.exe AADCLIENTAPPID=aa28e7f1-b88a-43cd-a2e3-f88b257c863b`
 
@@ -288,7 +288,7 @@ Spécifie l’identificateur du locataire Azure AD. Ce client est lié à Config
 - Dans la section État de l’appareil, recherchez la valeur de **TenantId**. Par exemple, `TenantId : 607b7853-6f6f-4d5d-b3d4-811c33fdd49a`
 
   > [!Note]
-  > Un administrateur Azure peut également obtenir cette valeur dans le portail Azure. Pour plus d’informations, consultez [Obtenir l’ID de locataire](/azure/azure-resource-manager/resource-group-create-service-principal-portal#get-tenant-id).
+  > Un administrateur Azure peut également obtenir cette valeur dans le portail Azure. Pour plus d’informations, consultez [Obtenir l’ID de locataire](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in).
 
 Exemple : `ccmsetup.exe AADTENANTID=607b7853-6f6f-4d5d-b3d4-811c33fdd49a`
 
@@ -345,7 +345,7 @@ Exemple : **CCMSetup.exe  CCMALLOWSILENTREBOOT**
 
  Spécifie les critères de sélection des certificats si le client a plusieurs certificats pour la communication HTTPS. Ce certificat est un certificat valide incluant les fonctionnalités d’authentification du client.  
 
- Vous pouvez rechercher une correspondance exacte (utilisez **Subject:**) ou une correspondance partielle (utilisez **SubjectStr:)** dans le nom d’objet ou l’autre nom de l’objet. Exemples :  
+ Vous pouvez rechercher une correspondance exacte (utilisez **Subject:** ) ou une correspondance partielle (utilisez **SubjectStr:)** dans le nom d’objet ou l’autre nom de l’objet. Exemples :  
 
  `CCMCERTSEL="Subject:computer1.contoso.com"` recherche un certificat avec une correspondance exacte au nom d’ordinateur « computer1,contoso.com » dans le nom d’objet ou l’autre nom de l’objet.  
 
@@ -416,7 +416,7 @@ Cette propriété peut spécifier l’adresse d’une passerelle de gestion clou
 Exemple : `ccmsetup.exe CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72057598037248100`
 
  > [!Important]
- > Quand vous spécifiez l’adresse d’une passerelle de gestion cloud pour la propriété **CCMHOSTNAME**, n’ajoutez *pas* un préfixe comme **https://**. Ce préfixe est utilisé seulement avec l’URL **/mp** d’une passerelle de gestion cloud.
+ > Quand vous spécifiez l’adresse d’une passerelle de gestion cloud pour la propriété **CCMHOSTNAME**, n’ajoutez *pas* un préfixe comme **https://** . Ce préfixe est utilisé seulement avec l’URL **/mp** d’une passerelle de gestion cloud.
 
 
 
@@ -539,19 +539,19 @@ Ce paramètre est ignoré lorsque vous mettez à niveau un client existant.
 
 Propriétés :  
 
--   PERCENTDISKSPACE: Indique la taille du dossier sous forme de pourcentage de l'espace disque total. Si vous indiquez cette propriété, vous devez également indiquer la propriété SMSCACHESIZE comme valeur de pourcentage à utiliser.  
+-   PERCENTDISKSPACE : indique la taille du dossier sous forme de pourcentage de l'espace disque total. Si vous indiquez cette propriété, vous devez également indiquer la propriété SMSCACHESIZE comme valeur de pourcentage à utiliser.  
 
--   PERCENTFREEDISKSPACE: Indique la taille du dossier sous forme de pourcentage de l'espace disque disponible. Si vous indiquez cette propriété, vous devez également indiquer la propriété SMSCACHESIZE comme valeur de pourcentage à utiliser. Par exemple, si le disque dispose de 10 Mo libres et que SMSCACHESIZE indique 50, cela signifie que la taille du dossier est définie sur 5 Mo. Vous ne pouvez pas utiliser cette propriété avec la propriété PERCENTDISKSPACE.  
+-   PERCENTFREEDISKSPACE : indique la taille du dossier sous forme de pourcentage de l'espace disque disponible. Si vous indiquez cette propriété, vous devez également indiquer la propriété SMSCACHESIZE comme valeur de pourcentage à utiliser. Par exemple, si le disque dispose de 10 Mo libres et que SMSCACHESIZE indique 50, cela signifie que la taille du dossier est définie sur 5 Mo. Vous ne pouvez pas utiliser cette propriété avec la propriété PERCENTDISKSPACE.  
 
--   MAXDRIVE: Indique que le dossier doit être installé sur le disque le plus volumineux disponible. Cette valeur est ignorée si un chemin a été spécifié avec la propriété SMSCACHEDIR.  
+-   MAXDRIVE : indique que le dossier doit être installé sur le disque le plus volumineux disponible. Cette valeur est ignorée si un chemin a été spécifié avec la propriété SMSCACHEDIR.  
 
--   MAXDRIVESPACE: Indique que le dossier doit être installé sur le lecteur de disque possédant l'espace disponible le plus important. Cette valeur est ignorée si un chemin a été spécifié avec la propriété SMSCACHEDIR.  
+-   MAXDRIVESPACE : indique que le dossier doit être installé sur le lecteur de disque possédant l'espace disponible le plus important. Cette valeur est ignorée si un chemin a été spécifié avec la propriété SMSCACHEDIR.  
 
--   NTFSONLY: Indique que le dossier peut être installé uniquement sur des lecteurs de disque NTFS. Cette valeur est ignorée si un chemin a été spécifié avec la propriété SMSCACHEDIR.  
+-   NTFSONLY : Indique que le dossier peut être installé uniquement sur des lecteurs de disque NTFS. Cette valeur est ignorée si un chemin a été spécifié avec la propriété SMSCACHEDIR.  
 
--   COMPRESS: Spécifie que le dossier doit être conservé sous forme compressée.  
+-   COMPRESS : Spécifie que le dossier doit être conservé sous forme compressée.  
 
--   FAILIFNOSPACE: Indique que le logiciel client doit être supprimé si l'espace est insuffisant pour installer le dossier.  
+-   FAILIFNOSPACE : indique que le logiciel client doit être supprimé si l'espace est insuffisant pour installer le dossier.  
 
 Exemple : `CCMSetup.exe SMSCACHEFLAGS=NTFSONLY;COMPRESS`  
 
@@ -577,15 +577,15 @@ Exemple : `CCMSetup.exe SMSCACHESIZE=100`
 
 Indique l’emplacement et l’ordre dans lesquels le programme d’installation de Configuration Manager vérifie les paramètres de configuration. La propriété est une chaîne d’un ou plusieurs caractères, chacun définissant une source de configuration spécifique. Utilisez les caractères R, P, M et U seuls ou en combinaison :  
 
-- R: vérification des paramètres de configuration dans le Registre.  
+- R : vérification des paramètres de configuration dans le Registre.  
 
   Pour plus d’informations, consultez [Informations sur le stockage des propriétés d’installation du client dans le Registre](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Provision).  
 
-- P: vérification des paramètres de configuration dans les propriétés d'installation fournies à l'invite de commandes.  
+- P : vérification des paramètres de configuration dans les propriétés d'installation fournies à l'invite de commandes.  
 
-- M: Vérification des paramètres existants à l’occasion de la mise à niveau d’un ancien client avec le logiciel client Configuration Manager.  
+- M : Vérification des paramètres existants à l’occasion de la mise à niveau d’un ancien client avec le logiciel client Configuration Manager.  
 
-- U: mise à niveau du client installé vers une version plus récente (et utilisation du code de site attribué).  
+- U : mise à niveau du client installé vers une version plus récente (et utilisation du code de site attribué).  
 
   Par défaut, l’installation du client utilise `PU` pour vérifier d’abord les propriétés d’installation, puis les paramètres existants.  
 
@@ -599,9 +599,9 @@ Indique l’emplacement et l’ordre dans lesquels le programme d’installation
 
  Vous pouvez configurer deux modes différents pour cette propriété :  
 
--   NOWINS: Cette valeur est le paramètre le plus sûr pour cette propriété et empêche les clients de rechercher un point de gestion dans WINS. Lorsque vous utilisez ce paramètre, les clients doivent disposer d'une autre méthode de localisation d'un point de gestion sur l'Intranet, telle que les services de domaine Active Directory ou en utilisant la publication DNS.  
+-   NOWINS : Cette valeur est le paramètre le plus sûr pour cette propriété et empêche les clients de rechercher un point de gestion dans WINS. Lorsque vous utilisez ce paramètre, les clients doivent disposer d'une autre méthode de localisation d'un point de gestion sur l'Intranet, telle que les services de domaine Active Directory ou en utilisant la publication DNS.  
 
--   WINSSECURE (par défaut) : Dans ce mode, un client qui utilise la communication HTTP peut utiliser WINS pour trouver un point de gestion. Toutefois, le client doit disposer d'une copie de la clé racine approuvée avant de pouvoir se connecter correctement au point de gestion. Pour plus d’informations, voir [Planification de la clé racine approuvée](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK).  
+-   WINSSECURE (par défaut) : dans ce mode, un client qui utilise la communication HTTP peut utiliser WINS pour trouver un point de gestion. Toutefois, le client doit disposer d'une copie de la clé racine approuvée avant de pouvoir se connecter correctement au point de gestion. Pour plus d’informations, voir [Planification de la clé racine approuvée](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK).  
 
 
  Exemple : `CCMSetup.exe SMSDIRECTORYLOOKUP=NOWINS`  

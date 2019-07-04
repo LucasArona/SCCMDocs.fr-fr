@@ -11,18 +11,19 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b655b21b2d630d91d0e1a143e800d613882ca573
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 90c5c57d1717363d83fa921d68caced8cf9e8da1
+ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56135032"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67251715"
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>Cache de pair pour les clients Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
-<!--1101436--> Utilisez le cache de pair pour gérer le déploiement de contenu sur les clients à des emplacements distants. Le cache d’homologue est une solution Configuration Manager intégrée qui permet aux clients de partager du contenu avec d’autres clients directement à partir de leur cache local.   
+<!--1101436-->
+Utilisez le cache de pair pour gérer le déploiement de contenu sur les clients à des emplacements distants. Le cache d’homologue est une solution Configuration Manager intégrée qui permet aux clients de partager du contenu avec d’autres clients directement à partir de leur cache local.   
 
 > [!Note]  
 > Par défaut, Configuration Manager n’active pas cette fonctionnalité facultative. Vous devez activer cette fonctionnalité avant de l’utiliser. Pour plus d’informations, consultez [Activer les fonctionnalités facultatives des mises à jour](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
@@ -39,7 +40,7 @@ Définitions :
 
 Utilisez des paramètres clients pour permettre à des clients d’être des sources de cache de pair. Vous n’avez pas besoin d’activer des clients de cache de pair. Quand vous autorisez des clients à être des sources de cache de pair, le point de gestion les inclut dans la liste des sources d’emplacement de contenu.<!--510397--> Pour plus d’informations sur ce processus, consultez [Opérations](#operations).  
 
-Une source de cache de pair doit être membre du groupe de limites actuel du client de cache de pair. Le point de gestion n’inclut pas les sources de cache de pair d’un groupe de limites voisin dans la liste des sources de contenu qu’il fournit au client. Il inclut seulement les points de distribution d’un groupe de limites voisin. Pour plus d’informations sur les groupes de limites actifs et voisins, consultez [Groupes de limites](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups##a-namebkmkboundarygroupsa-boundary-groups).<!--SCCMDocs issue 685-->  
+Une source de cache de pair doit être membre du groupe de limites actuel du client de cache de pair. Le point de gestion n’inclut pas les sources de cache de pair d’un groupe de limites voisin dans la liste des sources de contenu qu’il fournit au client. Il inclut seulement les points de distribution d’un groupe de limites voisin. Pour plus d’informations sur les groupes de limites actuels et voisins, consultez [Groupes de limites](/sccm/core/servers/deploy/configure/boundary-groups).<!--SCCMDocs issue 685-->  
 
 Le client Configuration Manager utilise le cache de pair pour délivrer aux clients chaque type de contenu du cache. Ce contenu comprend des fichiers Office 365 et des fichiers d’installation de la version Express.<!--SMS.500850-->  
 
@@ -60,7 +61,7 @@ Pour activer le cache de pair, déployez les [paramètres clients](#bkmk_setting
 
  -  Comme à chaque fois, le client qui demande le contenu sélectionne une source dans la liste fournie. Le client essaie ensuite d’obtenir le contenu.  
 
-À compter de la version 1806, les groupes de limites intègrent des paramètres supplémentaires qui offrent davantage de contrôle sur la distribution du contenu dans l’environnement. Pour plus d’informations, consultez [Options de groupe de limites pour les téléchargements à partir de pairs](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions).<!--1356193-->
+À compter de la version 1806, les groupes de limites intègrent des paramètres supplémentaires qui offrent davantage de contrôle sur la distribution du contenu dans l’environnement. Pour plus d’informations, voir [Options de groupe de limites pour les téléchargements de pairs](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions).<!--1356193-->
 
 > [!NOTE]  
 > Si le client a recours à un groupe de limites voisin pour le contenu, le point de gestion n’ajoute pas les emplacements sources de cache de pair du groupe de limites voisin à la liste des emplacements de sources de contenu potentielles.  
@@ -106,7 +107,7 @@ Quand la source de cache de pair rejette une demande de contenu, le client du ca
     > [!Important]  
     > À compter de la version 1806, Configuration Manager détermine plus efficacement si une source de cache de pair s’est déplacée vers un autre emplacement. Ce comportement garantit que le point de gestion la propose comme source de contenu aux clients dans le nouvel emplacement, et non dans l’ancien. Si vous utilisez la fonctionnalité de cache de pair avec des sources de cache de pair itinérantes, après avoir mis à jour le site vers la version 1806, vous devez également mettre à jour toutes les sources de cache de pair vers la dernière version du client. Le point de gestion n’inclut pas ces sources de cache de pair dans la liste des emplacements de contenu tant qu’elles n’ont pas été mises à jour vers la version 1806 (minimum).<!--SCCMDocs issue 850-->  
 
-- Avant de tenter de télécharger du contenu, le point de gestion vérifie d’abord que la source de cache de pair est en ligne.<!--sms.498675--> Cette vérification est faite via le « canal rapide » pour la notification des clients, qui utilise le port TCP 10123.<!--511673-->  
+- Avant de tenter de télécharger du contenu, le point de gestion vérifie d’abord que la source de cache de pair est en ligne.<!--sms.498675--> Cette vérification est faite via le « canal rapide » pour la notification des clients, qui utilise le port TCP 10123.<!--511673-->  
 
 > [!Note]  
 > Pour tirer parti des nouvelles fonctionnalités de Configuration Manager, commencez par mettre à jour les clients vers la dernière version. Bien que les nouvelles fonctionnalités apparaissent dans la console Configuration Manager quand vous mettez à jour le site et la console, le scénario complet n’est pas fonctionnel tant que la version des clients n’est pas également la plus récente.  
@@ -124,7 +125,8 @@ Sur les clients autorisés à utiliser le cache de pair et qui utilisent le pare
 
 
 ## <a name="bkmk_parts"></a> Prise en charge du téléchargement partiel
-<!--1357346--> À compter de la version 1806, les sources de cache de pair des clients peuvent diviser le contenu en plusieurs parties. Ces parties diminuent le transfert de réseau afin de réduire l’utilisation du réseau WAN. Le point de gestion fournit un suivi plus détaillé des parties du contenu. Il essaie de supprimer plusieurs téléchargements du même contenu par groupe de limites. 
+<!--1357346-->
+À compter de la version 1806, les sources de cache de pair des clients peuvent diviser le contenu en plusieurs parties. Ces parties diminuent le transfert de réseau afin de réduire l’utilisation du réseau WAN. Le point de gestion fournit un suivi plus détaillé des parties du contenu. Il essaie de supprimer plusieurs téléchargements du même contenu par groupe de limites. 
 
 
 ### <a name="example-scenario"></a>Exemple de scénario
@@ -173,7 +175,8 @@ Pour les voir gérer le téléchargement du contenu en parties, examinez le fich
 
 
 ## <a name="guidance-for-cache-management"></a>Conseils pour la gestion du cache
-<!--510645--> Le cache de pair s’appuie sur le cache du client Configuration Manager pour partager du contenu. Considérez les points suivants pour gérer le cache client dans votre environnement :  
+<!--510645-->
+Le cache de pair s’appuie sur le cache du client Configuration Manager pour partager du contenu. Considérez les points suivants pour gérer le cache client dans votre environnement :  
 
 - Le cache du client Configuration Manager n’est pas semblable à la bibliothèque de contenu sur un point de distribution. Alors que vous gérez le contenu que vous distribuez à un point de distribution, le client Configuration Manager gère quant à lui automatiquement le contenu dans son cache. Des paramètres et des méthodes existent pour vous permettre de contrôler le contenu qui se trouve dans le cache d’une source de cache de pair. Pour plus d’informations, consultez [Configurer le cache du client pour les clients Configuration Manager](/sccm/core/clients/manage/manage-clients#BKMK_ClientCache).  
 
@@ -201,17 +204,17 @@ Utilisez également les rapports pour voir l’utilisation des caches de pair. D
 1.  **Rejet du contenu de la source de cache d’homologue** : Fréquence à laquelle les sources de cache de pair d’un groupe de limites rejettent une demande de contenu.  
 
     > [!Note]  
-    > **Problème connu**<!--486652--> : Quand vous explorez les détails des résultats comme *MaxCPULoad* ou *MaxDiskIO*, il se peut que vous receviez une erreur qui indique que le rapport ou les détails sont introuvables. Pour contourner ce problème, utilisez les deux autres rapports qui montrent directement les résultats.  
+    > **Problème connu**<!--486652-->: Quand vous explorez les détails des résultats comme *MaxCPULoad* ou *MaxDiskIO*, il se peut que vous receviez une erreur qui indique que le rapport ou les détails sont introuvables. Pour contourner ce problème, utilisez les deux autres rapports qui montrent directement les résultats.  
 
 2. **Rejet conditionnel du contenu de la source de cache d’homologue** : Affichage des détails du rejet pour un groupe de limites ou un type de rejet donné. 
 
     > [!Note]  
-    > **Problème connu**<!--486652--> : Vous ne pouvez pas choisir parmi les paramètres disponibles ; à la place, vous devez les entrer manuellement. Entrez les valeurs pour *Nom de groupe de limites* et *Type de rejet* telles qu’elles apparaissent dans le rapport **Rejet du contenu par une source de cache de pair**. Par exemple, pour *Type de rejet*, vous pouvez entrer *MaxCPULoad* ou *MaxDiskIO*.  
+    > **Problème connu**<!--486652-->: Vous ne pouvez pas choisir parmi les paramètres disponibles ; à la place, vous devez les entrer manuellement. Entrez les valeurs pour *Nom de groupe de limites* et *Type de rejet* telles qu’elles apparaissent dans le rapport **Rejet du contenu par une source de cache de pair**. Par exemple, pour *Type de rejet*, vous pouvez entrer *MaxCPULoad* ou *MaxDiskIO*.  
 
 3. **Détails du rejet du contenu de la source de cache d’homologue** : Affichage du contenu demandé par le client au moment du rejet.  
 
     > [!Note]  
-    > **Problème connu**<!--486652--> : Vous ne pouvez pas choisir parmi les paramètres disponibles ; à la place, vous devez les entrer manuellement. Entrez la valeur pour *Type de rejet* telle qu’elle apparaît dans le rapport **Rejet du contenu par une source de cache d’homologue**. Entrez ensuite *l’ID de ressource* pour la source de contenu sur laquelle vous voulez plus d’informations. 
+    > **Problème connu**<!--486652-->: Vous ne pouvez pas choisir parmi les paramètres disponibles ; à la place, vous devez les entrer manuellement. Entrez la valeur pour *Type de rejet* telle qu’elle apparaît dans le rapport **Rejet du contenu par une source de cache d’homologue**. Entrez ensuite *l’ID de ressource* pour la source de contenu sur laquelle vous voulez plus d’informations. 
     > 
     > Pour trouver l’ID de ressource de la source de contenu :  
     > 
