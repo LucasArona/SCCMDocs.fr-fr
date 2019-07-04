@@ -2,7 +2,7 @@
 title: Activer le partage de données
 titleSuffix: Configuration Manager
 description: Guide de référence pour le partage des données de diagnostic avec Analytique de bureau.
-ms.date: 06/17/2019
+ms.date: 07/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 94e7456472c17d61ce42ffaf2109a3254bde1280
-ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
-ms.translationtype: HT
+ms.openlocfilehash: c5ba70b39330fd21077f5b7997e8aa92a1c57f42
+ms.sourcegitcommit: 3a3f40f3d39cbecfb9219a64c0185ea4b2ef9671
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67551274"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67561996"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>Activer le partage de bureau Analytique des données
 
@@ -33,6 +33,12 @@ Pour inscrire des appareils pour l’Analytique de bureau, dont ils ont besoin d
 Lorsque vous intégrez Configuration Manager avec l’Analytique de bureau, vous également l’utiliser pour gérer le niveau de données de diagnostic sur les appareils. Pour une expérience optimale, utilisez le Gestionnaire de Configuration.
 
 Les fonctionnalités de base du bureau Analytique fonctionnent à la **base** au niveau de données de diagnostic. Vous n’obtiendrez pas l’utilisation ou l’intégrité des données pour vos appareils mis à jour sans activer le **avancé (limité)** niveau. Microsoft recommande d’activer la **avancé (limité)** au niveau de données de diagnostic. Pour plus d’informations, consultez [Windows 10 amélioré des événements de données de diagnostic et les champs utilisés par Windows Analytique](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)).
+
+> [!Important]   
+> Microsoft a un fort engagement à fournir les outils et ressources qui vous permettre de contrôler votre vie privée. Par conséquent, Microsoft ne collecte pas les données suivantes à partir d’appareils situés dans les pays européens (EEE et Suisse) :
+>
+> - Données de diagnostic de Windows à partir d’appareils de Windows 8.1
+> - Données d’utilisation de l’application pour Windows 7
 
 Pour plus d’informations, consultez [confidentialité d’Analytique de bureau](/sccm/desktop-analytics/privacy).
 

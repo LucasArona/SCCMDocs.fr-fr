@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fb16dd6e802c58f042b7eee8ae782e7118dabf1c
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: 098c83678585984bbe3dbeddf167e24116afd86b
+ms.sourcegitcommit: 3a3f40f3d39cbecfb9219a64c0185ea4b2ef9671
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67159179"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67562021"
 ---
 # <a name="how-to-connect-configuration-manager-with-desktop-analytics"></a>Comment connecter Configuration Manager avec l’Analytique de bureau
 
@@ -61,7 +61,7 @@ Utilisez cette procédure pour connecter Configuration Manager à l’Analytique
 
 4. Si vous avez une application existante que vous souhaitez réutiliser pour ce service, choisissez-le dans la liste, puis sélectionnez **OK**.  
 
-5. Dans la plupart des cas, vous pouvez créer une application pour la connexion de bureau Analytique avec cet Assistant. Sélectionnez **créer**.<!-- 3572123 -->  
+5. Dans la plupart des cas, vous pouvez créer une application pour la connexion de bureau Analytique avec cet Assistant. Sélectionnez **Créer**.<!-- 3572123 -->  
 
     > [!Tip]  
     > Si vous ne pouvez pas créer l’application à partir de cet Assistant, vous pouvez créer manuellement l’application dans Azure AD et ensuite importer dans Configuration Manager. Pour plus d’informations, consultez [application de créer et d’importation pour le Gestionnaire de Configuration](/sccm/desktop-analytics/troubleshooting#create-and-import-app-for-configuration-manager).  
@@ -107,6 +107,16 @@ Utilisez cette procédure pour connecter Configuration Manager à l’Analytique
     - **Appareils du regroupement cible utilisent un proxy authentifié par l’utilisateur pour les communications sortantes**: Par défaut, cette valeur est **non**. Si nécessaire dans votre environnement, la valeur est **Oui**.  
 
     - **Sélectionner des regroupements spécifiques pour se synchroniser avec le bureau Analytique**: Sélectionnez **ajouter** pour inclure des collections supplémentaires à partir de votre **regroupement cible** hiérarchie. Ces collections sont disponibles dans le portail d’Analytique de bureau pour le regroupement des plans de déploiement. Veillez à inclure les collections d’exclusion de pilote et de pilote.  <!-- 4097528 -->  
+
+        > [!Tip]  
+        > La fenêtre Sélectionner des regroupements affiche uniquement les regroupements qui sont limités par le **regroupement cible**.
+        >
+        > Dans l’exemple suivant, vous sélectionnez sitesUn comme votre collection cible. Lorsque vous ajoutez des collections supplémentaires, vous verrez sitesUn, CollectionB et CollectionC. Vous ne pouvez pas ajouter CollectionD.
+        >
+        > - SitesUn : limité par le **tous les systèmes** collection
+        >     - CollectionB : limité par sitesUn
+        >         - CollectionC : limité par CollectionB
+        > - CollectionD : limité par **tous les systèmes** collection
 
         > [!Important]  
         > Ces collections continuent à synchroniser en tant que leurs changements d’appartenance. Par exemple, votre plan de déploiement utilise une collection avec une règle d’adhésion de Windows 7. Comme ces appareils mise à niveau vers Windows 10 et Configuration Manager évalue l’appartenance au regroupement, ces appareils déposent hors de la collecte et le plan de déploiement.  

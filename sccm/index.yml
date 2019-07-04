@@ -3,12 +3,12 @@ title: System Center Configuration Manager
 summary: Documentation officielle du produit Configuration Manager
 metadata:
   ms.topic: hub-page
-  ms.openlocfilehash: 5839951dd659da3f88598def010330a50b1b4cf9
-  ms.sourcegitcommit: 65c8b29797bc0173f97b1b1144492d093a30ebb7
+  ms.openlocfilehash: fdea6b136b93cc3afe62a9fd16efa365d9467b16
+  ms.sourcegitcommit: 3a3f40f3d39cbecfb9219a64c0185ea4b2ef9671
   ms.translationtype: HT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 06/24/2019
-  ms.locfileid: "67344718"
+  ms.lasthandoff: 07/04/2019
+  ms.locfileid: "67562060"
 highlightedContent:
   items:
   - title: Nouveautés
@@ -195,26 +195,29 @@ additionalContent:
   - title: Autre contenu
     items:
     - title: Développer
-      summary: >
-        [PowerShell](https://docs.microsoft.com/powershell/sccm/overview?view=sccm-ps) <br/>
-
-        [Concepts de kit de développement logiciel (SDK)](https://docs.microsoft.com/sccm/develop/core/misc/system-center-configuration-manager-sdk) <br/>
-
-        [Référence de kit de développement logiciel (SDK)](https://docs.microsoft.com/sccm/develop/reference/configuration-manager-reference) <br/>
-
-        [Affichages SQL](https://docs.microsoft.com/sccm/develop/core/understand/sqlviews/create-custom-reports-using-sql-server-views)
+      links:
+      - url: https://docs.microsoft.com/powershell/sccm/overview?view=sccm-ps
+        text: PowerShell
+      - url: https://docs.microsoft.com/sccm/develop/core/misc/system-center-configuration-manager-sdk
+        text: Concepts SDK
+      - url: https://docs.microsoft.com/sccm/develop/reference/configuration-manager-reference
+        text: Référence SDK
+      - url: https://docs.microsoft.com/sccm/develop/core/understand/sqlviews/create-custom-reports-using-sql-server-views
+        text: Modes SQL
     - title: Outils
-      summary: >
-        [Centre d’aide et de support](https://docs.microsoft.com/sccm/core/support/support-center) <br/>
-
-        [MDT](https://docs.microsoft.com/sccm/mdt/) <br/>
-
-        [Package Conversion Manager](https://docs.microsoft.com/sccm/apps/pcm/package-conversion-manager) <br/>
-
-        [Plus >](https://docs.microsoft.com/sccm/core/support/tools)
+      links:
+      - url: https://docs.microsoft.com/sccm/core/support/support-center
+        text: Centre d’aide et de support
+      - url: https://docs.microsoft.com/sccm/mdt/
+        text: MDT
+      - url: https://docs.microsoft.com/sccm/apps/pcm/package-conversion-manager
+        text: Package Conversion Manager
+      - url: https://docs.microsoft.com/sccm/core/support/tools
+        text: Voir plus >
     - title: Autres sites communautaires
-      summary: >
-        [ConfigMgr sur Reddit](https://www.reddit.com/r/sccm) <br/>
-
-        [Groupe de professionnels de ConfigMgr sur Facebook](https://www.facebook.com/groups/ConfigMgr2012) <br/>
+      links:
+      - url: https://www.reddit.com/r/sccm
+        text: ConfigMgr sur Reddit
+      - url: https://www.facebook.com/groups/ConfigMgr2012
+        text: Groupe de professionnels de ConfigMgr sur Facebook
   footer: Un problème sur notre site ? [Faites-le-nous savoir ](https://docs.microsoft.com/sccm/core/understand/use-docs#bkmk_docfeedback)!
