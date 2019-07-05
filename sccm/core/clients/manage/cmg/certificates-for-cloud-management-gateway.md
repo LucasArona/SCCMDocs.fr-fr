@@ -10,12 +10,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9167ece07e751302fb221a7b0fe2757386346b5f
-ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
+ms.openlocfilehash: a64a9ee6808354caaee9eadca0ad18e851a3eb71
+ms.sourcegitcommit: 8e9e7c42a5572797e05936fab0cf84fc27c40862
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67194483"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398864"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>Certificats pour la passerelle de gestion cloud
 
@@ -88,10 +88,8 @@ Les clients doivent approuver le certificat d’authentification serveur de la p
 
 - Utiliser un certificat émis par une autorité de certification d’entreprise depuis votre infrastructure à clé publique. La plupart des implémentations d’infrastructure à clé publique d’entreprise ajoutent les autorités de certification racine de confiance aux clients Windows. Par exemple, dans le cas d’une utilisation des services de certificats Active Directory avec la stratégie de groupe. Si vous émettez le certificat d’authentification serveur de passerelle de gestion cloud depuis une autorité de certification que vos clients n’approuvent pas automatiquement, ajoutez le certificat racine approuvé de l’autorité de certification aux clients Internet.  
 
-    - Vous pouvez également utiliser des profils de certificat Configuration Manager pour provisionner des certificats sur les clients. Pour plus d’informations, consultez [Présentation des profils de certificat](/sccm/protect/deploy-use/introduction-to-certificate-profiles).  
-
-> [!Note]  
-> À compter de la version 1806, quand vous créez une passerelle de gestion cloud, vous n’êtes plus obligé de fournir un certificat racine approuvé dans la page Paramètres. Ce certificat n’est pas nécessaire lorsque vous utilisez Azure Active Directory (Azure AD) pour l’authentification client, mais il était auparavant nécessaire dans l’Assistant. Si vous utilisez des certificats d’authentification client PKI, vous devez continuer d’ajouter un certificat racine approuvé pour la passerelle de gestion cloud.<!--SCCMDocs-pr issue #2872-->  
+    - Vous pouvez également utiliser des profils de certificat Configuration Manager pour provisionner des certificats sur les clients. Pour plus d’informations, consultez [Présentation des profils de certificat](/sccm/protect/deploy-use/introduction-to-certificate-profiles).
+    - Si vous envisagez d’[installer le client Configuration Manager à partir d’Intune](/sccm/comanage/how-to-prepare-win10#install-the-configuration-manager-client), vous pouvez également utiliser des profils de certificat Intune pour provisionner des certificats sur les clients. Pour plus d’informations, consultez [Configurer un profil de certificat](https://docs.microsoft.com/intune/certificates-configure).
 
 ### <a name="bkmk_serverauthpublic"></a> Certificat d’authentification serveur émis par le fournisseur public
 
@@ -146,6 +144,9 @@ Le point de connexion de la passerelle de gestion cloud nécessite ce certificat
 Vous fournissez ce certificat lors de la création de la passerelle de gestion cloud dans la console Configuration Manager.
 
 La passerelle de gestion cloud doit approuver les certificats d’authentification clients. Pour effectuer cette approbation, fournissez la chaîne de certificats racines approuvés. Vous pouvez spécifier deux autorités de certification racines de confiance et quatre autorités de certification (subordonnées) intermédiaires. Veillez à ajouter tous les certificats dans la chaîne d’approbation. Par exemple, si le certificat d’authentification client est émis par une autorité de certification intermédiaire, ajoutez les certificats d’autorité de certification intermédiaire et racine.
+
+> [!Note]  
+> À compter de la version 1806, quand vous créez une passerelle de gestion cloud, vous n’êtes plus obligé de fournir un certificat racine approuvé dans la page Paramètres. Ce certificat n’est pas nécessaire lorsque vous utilisez Azure Active Directory (Azure AD) pour l’authentification client, mais il était auparavant nécessaire dans l’Assistant. Si vous utilisez des certificats d’authentification client PKI, vous devez continuer d’ajouter un certificat racine approuvé pour la passerelle de gestion cloud.<!--SCCMDocs-pr issue #2872 SCCMDocs issue #1319-->
 
 #### <a name="export-the-client-certificates-trusted-root"></a>Exporter la racine de confiance du certificat client
 

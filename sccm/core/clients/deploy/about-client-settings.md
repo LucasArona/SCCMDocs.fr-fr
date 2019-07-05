@@ -2,7 +2,7 @@
 title: Paramètres du client
 titleSuffix: Configuration Manager
 description: Découvrir les paramètres par défaut et personnalisés pour contrôler les comportements du client
-ms.date: 06/18/2019
+ms.date: 06/20/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 157cc09f08cf16056dc3424ddc377fbd95b0fe6e
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: 0c6bffc94abecb5f700fbb7236c923f26f3a0de0
+ms.sourcegitcommit: 949db4d2af7f605ee40610e45ae9d917b1045772
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67286847"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67314422"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>À propos des paramètres client dans Configuration Manager
 
@@ -652,6 +652,17 @@ Affectez la valeur **Oui** aux paramètres supplémentaires de ce groupe pour af
 
 Par exemple, si votre organisation n’utilise pas de stratégies de conformité et que vous souhaitez masquer l’onglet Conformité de l’appareil dans le Centre logiciel, définissez l’onglet **Activer l’onglet Conformité de l’appareil** sur **Non**.
 
+### <a name="bkmk_swctr_defaults"></a> Configurer des vues par défaut dans le Centre logiciel
+<!--3612112-->
+*(Nouveauté de la version 1902)*
+
+- Pour **Filtre par défaut de l’application**, choisissez **Toutes** pour voir toutes les applications, ou **Obligatoires** pour afficher uniquement les applications obligatoires.  
+
+    - Le Centre logiciel utilise toujours votre paramètre par défaut. Les utilisateurs peuvent changer ce filtre, mais le Centre logiciel ne conserve pas leurs préférences.  
+
+ - Pour **Vue par défaut de l’application**, choisissez **Mode Mosaïque** ou **Mode Liste**. 
+
+    - Si un utilisateur change cette configuration, le Centre logiciel conserve les préférences de l’utilisateur. 
 
 
 ## <a name="software-deployment"></a>Déploiement logiciel  

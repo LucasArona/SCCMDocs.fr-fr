@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 03610ad219a8ae89de63b87499d4ee9c628a271d
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: 66b89dd0f077e776cc0abe5f24062e017de5acc1
+ms.sourcegitcommit: 949db4d2af7f605ee40610e45ae9d917b1045772
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67285655"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67314430"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Nouveautés de la version 1902 de l’édition Current Branch de Configuration Manager
 
@@ -342,7 +342,7 @@ Pour plus d’informations, consultez [Lier des utilisateurs et des appareils av
 
 ### <a name="configure-default-views-in-software-center"></a>Configurer des vues par défaut dans le Centre logiciel
 <!--3612112-->
-Cette version de Configuration Manager améliore la façon dont vous pouvez personnaliser le Centre logiciel :
+***[Mise à jour du 20/06]*** Cette version de Configuration Manager améliore la façon dont vous pouvez personnaliser le Centre logiciel :
  
 - Définir la disposition par défaut des applications, sous forme de vignettes ou de liste  
 
@@ -354,7 +354,7 @@ Cette version de Configuration Manager améliore la façon dont vous pouvez pers
 
 Spécifiez ces paramètres dans le groupe **Centre logiciel** des paramètres du client.
 
-<!-- For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#software-center). -->
+Pour plus d’informations, consultez [À propos des paramètres client](/sccm/core/clients/deploy/about-client-settings#bkmk_swctr_defaults).
 
 
 
