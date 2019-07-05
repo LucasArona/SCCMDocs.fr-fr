@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f350f10db18c1de599337afac54596d2dfd988ea
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 1f5518346f0085293a2a9b5422c7aef375076d0c
+ms.sourcegitcommit: 4981a796e7886befb7bdeeb346dba32be82aefd6
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65494406"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67516154"
 ---
 # <a name="how-to-monitor-certificate-profiles-in-system-center-configuration-manager"></a>Comment surveiller des profils de certificat dans System Center Configuration Manager
 
@@ -58,7 +58,7 @@ Pour surveiller la compatibilité des certificats SCEP, n’utilisez pas la cons
    |    0x00000004     |                                                                                                          L'inscription doit être différée.                                                                                                           |
    |    0x00000010     |                                                                                                               Une erreur s'est produite.                                                                                                                |
    |    0x00000020     |                                                                                                        L'état de l'inscription est inconnu.                                                                                                        |
-   |    0x00000040     | Les informations d'état ont été ignorées. Cela peut se produire si une autorité de certification HYPERLINK "<http://msdn.microsoft.com/windows/ms721572>" \l "_security_certification_authority_gly" n’est pas valide ou n’a pas été sélectionnée pour la surveillance. |
+   |    0x00000040     | Les informations d'état ont été ignorées. Cela peut se produire si une autorité de certification HYPERLINK "<https://msdn.microsoft.com/windows/ms721572>" \l "_security_certification_authority_gly" n’est pas valide ou n’a pas été sélectionnée pour la surveillance. |
    |    0x00000100     |                                                                                                           L'inscription a été refusée.                                                                                                           |
 
 ##  <a name="view-compliance-results-by-using-reports"></a>Afficher les résultats de compatibilité à l’aide de rapports

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d510ab884e471a6fc4803826c9c19e21b614273
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: e862fe4907d5e480fd8a19c28d890987f73240fa
+ms.sourcegitcommit: d8cfd0edf2579e2b08a0ca8a0a7b8f53d1e4196f
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67285596"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463788"
 ---
 # <a name="task-sequence-steps"></a>Étapes de séquence de tâches
 
@@ -1774,7 +1774,7 @@ La séquence de tâches définit la variable sur cette valeur. Définissez cette
 
 Utilisez cette étape pour effectuer la transition de Windows PE vers le nouveau système d’exploitation. Cette étape de séquence de tâches est obligatoire dans tout déploiement de système d'exploitation, elle installe le client Configuration Manager dans le nouveau système d’exploitation et prépare la poursuite de l’exécution de la séquence de tâches dans le nouveau système d’exploitation.  
 
-Cette étape est exécutée uniquement sous Windows PE. Elle ne s’exécute dans le système d’exploitation complet.  
+Cette étape est responsable du passage de la séquence de tâches à partir de Windows PE pour le système d’exploitation complet. L’étape s’exécute dans Windows PE et le système d’exploitation complet en raison de cette transition. Toutefois, étant donné que la transition démarre dans Windows PE, il peut être ajouté uniquement pendant la phase de Windows PE de la séquence de tâches.  
 
 Utilisez les variables de séquence de tâches suivantes avec cette étape :  
 

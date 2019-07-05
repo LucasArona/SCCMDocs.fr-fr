@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8bd4b938690ebc3c370e3ae7a5e9152b9330430
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: 4598b89429ec3a9bd3bed31f57a6b681f88063cf
+ms.sourcegitcommit: 4981a796e7886befb7bdeeb346dba32be82aefd6
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67286508"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67515810"
 ---
 # <a name="deploy-app-v-virtual-applications-with-system-center-configuration-manager"></a>Déployer des applications virtuelles App-V avec System Center Configuration Manager
 
@@ -148,7 +148,7 @@ Pour que vous puissiez utiliser cette fonctionnalité avec Configuration Manager
 Pour plus d'informations sur la composition de suite dynamique App-V, consultez la documentation d'App-V.  
 
 ##  <a name="converting-app-v-46-applications-to-app-v-5-applications"></a>Conversion d’applications App-V 4.6 en applications App-V 5  
-Le format de package d'application a changé entre App-V 4.6 et App-V 5. Les applications qui ont été séquencées à l'aide d'App-V 4.6 ne sont plus prises en charge. Toutefois, App-V 5 dispose d’un outil de conversion de package que vous pouvez utiliser pour convertir des applications. Pour plus d'informations, voir la [documentation d'App-V 5](http://technet.microsoft.com/library/jj713472.aspx).  
+Le format de package d'application a changé entre App-V 4.6 et App-V 5. Les applications qui ont été séquencées à l'aide d'App-V 4.6 ne sont plus prises en charge. Toutefois, App-V 5 dispose d’un outil de conversion de package que vous pouvez utiliser pour convertir des applications. Pour plus d'informations, voir la [documentation d'App-V 5](https://technet.microsoft.com/library/jj713472.aspx).  
 
 Suivez la procédure ci-dessous pour convertir des applications App-V 4.6 en applications App-V 5 :  
 
@@ -179,7 +179,7 @@ Le fichier de configuration de déploiement comporte des paramètres qui s’app
 
 Si vous souhaitez déployer des applications virtuelles App-V 5 avec Configuration Manager, les trois fichiers doivent être présents dans le même dossier lorsque vous créez le type de déploiement App-V 5. Si le dossier contient plusieurs fichiers, Configuration Manager utilise le fichier le plus récent.  
 
-Pour plus d'informations, voir la [documentation d'App-V 5](http://technet.microsoft.com/library/jj713466.aspx).  
+Pour plus d'informations, voir la [documentation d'App-V 5](https://technet.microsoft.com/library/jj713466.aspx).  
 
 ##  <a name="app-v-local-interaction"></a>Interaction locale App-V  
 Dans certains scénarios de déploiement d’application, des applications sont installées localement sur les ordinateurs clients, tandis que d’autres sont déployées sous forme d’applications virtuelles sur ces mêmes ordinateurs clients. Par défaut, les applications qui ont été installées localement ne peuvent pas voir les applications virtualisées ni communiquer directement avec elles. Il s’agit du comportement souhaité de l’isolation des applications fournie par App-V. L’interaction locale est une fonctionnalité du client App-V que vous pouvez activer pour chaque application, pour que les applications installées localement et exécutées sur un ordinateur client puissent voir les applications virtualisées et communiquer avec elles. Configuration Manager et App-V prennent intégralement en charge l’interaction locale.  
@@ -187,7 +187,7 @@ Dans certains scénarios de déploiement d’application, des applications sont 
 Pour plus d’informations sur la fonctionnalité d’interaction locale d’App-V, consultez la documentation d’App-V.  
 
 ##  <a name="app-v-5-shared-content-store"></a>Magasin de contenu partagé App-V 5  
-Configuration Manager prend en charge la fonctionnalité Magasin de contenu partagé App-V 5. Pour plus d'informations, consultez [Planification du déploiement d'App-V 5.0 Sequencer et Client](http://technet.microsoft.com/library/jj713431.aspx).  
+Configuration Manager prend en charge la fonctionnalité Magasin de contenu partagé App-V 5. Pour plus d'informations, consultez [Planification du déploiement d'App-V 5.0 Sequencer et Client](https://technet.microsoft.com/library/jj713431.aspx).  
 
 ##  <a name="monitoring-virtual-applications"></a>Surveillance des applications virtuelles  
 

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 975768c5bfaf239c1f8cd342c988e06dac5d1269
-ms.sourcegitcommit: abfc9e1b3945637fa93ca8d3a11519493a5d5391
+ms.openlocfilehash: 3626514d4cd7f2d26e3c198931eb6fad49123dd2
+ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66264565"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67551307"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>CMPivot pour les données en temps réel dans Configuration Manager
 
@@ -124,7 +124,7 @@ La fenêtre CMPivot contient les éléments suivants :
     - CMPivot utilise un sous-ensemble du [langage de requête Kusto (KQL)](https://docs.microsoft.com/azure/kusto/query/).  
 
     - Coupez, copiez ou collez du contenu dans le volet de requête.  
-
+    <!-- markdownlint-disable MD038 -->
     - Par défaut, ce volet utilise IntelliSense. Par exemple, si vous commencez à taper `D`, IntelliSense suggère toutes les entités qui commencent par cette lettre. Sélectionnez une option, puis appuyez sur la touche Tab pour l’insérer. Tapez le caractère correspondant à une barre verticale, suivi d’un espace `| `, pour qu’IntelliSense suggère tous les opérateurs de table. Insérez `summarize`, puis tapez un espace, pour qu’IntelliSense suggère toutes les fonctions d’agrégation. Pour plus d’informations sur ces opérateurs et ces fonctions, cliquez dans CMPivot sur l’onglet **Accueil**.  
 
     - Le volet de requête offre également les possibilités suivantes :  

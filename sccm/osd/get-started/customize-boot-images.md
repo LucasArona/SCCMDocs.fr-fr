@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f794e24bd2626e11ce0f3c1664ad0e63eafbbe37
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 08156819af349af0f052cf2b58e8b4a44ef7b74b
+ms.sourcegitcommit: 4981a796e7886befb7bdeeb346dba32be82aefd6
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56134144"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67516200"
 ---
 # <a name="customize-boot-images-with-system-center-configuration-manager"></a>Personnaliser les images de démarrage avec System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Chaque version de Configuration Manager prend en charge une version spécifique du Kit de déploiement et d’évaluation Windows (Windows ADK). Vous pouvez utiliser, ou personnaliser, les images de démarrage depuis la console Configuration Manager quand elles sont basées sur une version Windows PE depuis la version prise en charge de Windows ADK. Vous devez déployer les autres images de démarrage à l'aide d'une autre méthode, telle que l'outil de ligne de commande Gestion et maintenance des images de déploiement (DISM) qui fait partie de Windows AIK et Windows ADK.  
 
@@ -44,17 +44,17 @@ Chaque version de Configuration Manager prend en charge une version spécifique 
 
   Les procédures de cette rubrique expliquent comment ajouter les composants facultatifs requis par Configuration Manager à l’image de démarrage en utilisant les packages Windows PE suivants :  
 
-- **WinPE-WMI** : ajoute la prise en charge de Windows Management Instrumentation (WMI).  
+- **WinPE-WMI**: Ajoute la prise en charge de Windows Management Instrumentation (WMI).  
 
-- **WinPE-Scripting** : ajoute la prise en charge de Windows Script Host (WSH).  
+- **WinPE-Scripting**: ajoute la prise en charge de Windows Script Host (WSH).  
 
-- **WinPE-WDS-Tools** : installe les outils Services de déploiement Windows.  
+- **WinPE-WDS-Tools**: installe les outils Windows Deployment Services.  
 
   D'autres packages Windows PE peuvent être ajoutés. Les ressources suivantes fournissent plus d'informations sur les composants facultatifs que vous pouvez ajouter à l'image de démarrage.  
 
 - Pour Windows PE 5, consultez [WinPE : Ajouter des packages (informations de référence sur les composants facultatifs)](https://msdn.microsoft.com/library/windows/hardware/dn938382\(v=vs.85\).aspx)  
 
-- Pour Windows PE 3.1, consultez la rubrique [Ajouter un package à une image Windows PE](http://technet.microsoft.com/library/dd799312\(v=WS.10\).aspx) dans la bibliothèque de documentation TechNet Windows 7.  
+- Pour Windows PE 3.1, consultez la rubrique [Ajouter un package à une image Windows PE](https://technet.microsoft.com/library/dd799312\(v=WS.10\).aspx) dans la bibliothèque de documentation TechNet Windows 7.  
 
 > [!NOTE]
 >Lors du démarrage de WinPE à partir d’une image de démarrage personnalisée qui inclut des outils que vous avez ajoutés, vous pouvez ouvrir une invite de commandes à partir de WinPE et taper le nom de fichier de l’outil pour l’exécuter. L’emplacement de ces outils est automatiquement ajouté à la variable de chemin d’accès. L’invite de commandes ne peut être ajoutée que si le paramètre **Activer la prise en charge des commandes (test uniquement)** est sélectionné sous l’onglet **Personnalisation** des propriétés d’image de démarrage.
@@ -77,12 +77,12 @@ Chaque version de Configuration Manager prend en charge une version spécifique 
     Où C:\WinPEWAIK est le dossier qui contient l'image de démarrage et C:\WinPEMount est le dossier monté.  
 
    > [!NOTE]
-   >  Pour plus d'informations sur DISM, consultez la rubrique [Informations techniques de référence sur l’outil Gestion et maintenance des images de déploiement](http://technet.microsoft.com/library/hh824821.aspx) dans la bibliothèque de documentation TechNet Windows 8.1 et Windows 8.
+   >  Pour plus d'informations sur DISM, consultez la rubrique [Informations techniques de référence sur l’outil Gestion et maintenance des images de déploiement](https://technet.microsoft.com/library/hh824821.aspx) dans la bibliothèque de documentation TechNet Windows 8.1 et Windows 8.
 
 5. Une fois que vous avez monté l'image de démarrage, utilisez DISM pour ajouter des composants facultatifs à l'image de démarrage. Dans Windows PE 5, les composants facultatifs 64 bits sont situés dans <*chemin_installation*>\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs.  
 
    > [!NOTE]
-   >  Cette procédure utilise l'emplacement suivant pour les composants facultatifs : C:\Program Files (x86)\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs. Le chemin d'accès que vous utilisez peut être différent selon les options de version et d'installation que vous choisissez pour le kit Windows ADK.  
+   >  Cette procédure utilise l'emplacement suivant pour les composants facultatifs : C:\Program Files (x86)\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs. Le chemin d'accès que vous utilisez peut être différent selon les options de version et d'installation que vous choisissez pour le kit Windows ADK.  
 
     Tapez la commande suivante pour installer les composants facultatifs :  
 
@@ -113,7 +113,7 @@ Chaque version de Configuration Manager prend en charge une version spécifique 
     **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Program Files (x86)\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\en-us\WinPE-WDS-Tools_en-us.cab"**  
 
    > [!TIP]
-   >  Pour plus d'informations sur les composants facultatifs que vous pouvez ajouter à l'image de démarrage, consultez la rubrique [Informations de référence sur les composants facultatifs Windows PE](http://technet.microsoft.com/library/hh824926.aspx) dans la bibliothèque de documentation TechNet Windows 8.1 et Windows 8.  
+   >  Pour plus d'informations sur les composants facultatifs que vous pouvez ajouter à l'image de démarrage, consultez la rubrique [Informations de référence sur les composants facultatifs Windows PE](https://technet.microsoft.com/library/hh824926.aspx) dans la bibliothèque de documentation TechNet Windows 8.1 et Windows 8.  
 
 6. Utilisez DISM pour ajouter des pilotes spécifiques à l'image de démarrage, si nécessaire. Tapez la commande suivante pour ajouter des pilotes à l'image de démarrage :  
 
@@ -137,7 +137,7 @@ Chaque version de Configuration Manager prend en charge une version spécifique 
 
    4. Sur la page **Source de données** , spécifiez les options suivantes et cliquez sur **Suivant**.  
 
-      - Dans la zone **Chemin d'accès** , indiquez le chemin d'accès au fichier de l'image de démarrage mis à jour. Le chemin d'accès spécifié doit être un chemin d'accès réseau valide au format UNC. Par exemple : **\\\\<**<em>nom_serveur</em>**>\\<**<em>partage WinPEWAIK</em>**>\winpe.wim**.  
+      - Dans la zone **Chemin d'accès** , indiquez le chemin d'accès au fichier de l'image de démarrage mis à jour. Le chemin d'accès spécifié doit être un chemin d'accès réseau valide au format UNC. Par exemple : **\\\\<** <em>nom_serveur</em> **>\\<** <em>partage WinPEWAIK</em> **>\winpe.wim**.  
 
       - Sélectionnez l'image de démarrage dans la liste déroulante **Image de démarrage** . Si le fichier WIM contient plusieurs images de démarrage, chaque image est répertoriée.  
 
@@ -161,9 +161,9 @@ Chaque version de Configuration Manager prend en charge une version spécifique 
 
    4. À partir d'une invite de commande, tapez **wbemtest** pour ouvrir le testeur WMI.  
 
-   5. Tapez **\\\\<**<em>ordinateur_fournisseur_SMS</em>**>\root\sms\site_<**<em>code_site</em>**>** dans **Espace de noms**, puis cliquez sur **Connexion**.  
+   5. Tapez **\\\\<** <em>ordinateur_fournisseur_SMS</em> **>\root\sms\site_<** <em>code_site</em> **>** dans **Espace de noms**, puis cliquez sur **Connexion**.  
 
-   6. Cliquez sur **Ouvrir une instance**, tapez **sms_bootimagepackage.packageID="<packageID\>"**, puis cliquez sur **OK**. Pour packageID, entrez la valeur que vous avez identifiée à l'étape 3.  
+   6. Cliquez sur **Ouvrir une instance**, tapez **sms_bootimagepackage.packageID="<packageID\>"** , puis cliquez sur **OK**. Pour packageID, entrez la valeur que vous avez identifiée à l'étape 3.  
 
    7. Cliquez sur **Actualiser l'objet**, puis cliquez sur **EnableLabShell** dans le volet **Propriétés** .  
 
@@ -199,12 +199,12 @@ Chaque version de Configuration Manager prend en charge une version spécifique 
     Où C:\WinPEWAIK est le dossier qui contient l'image de démarrage et C:\WinPEMount est le dossier monté.  
 
    > [!NOTE]
-   >  Pour plus d’informations sur DISM, consultez la rubrique [Informations techniques de référence sur l’outil Gestion et maintenance des images de déploiement](http://technet.microsoft.com/library/dd744256\(v=ws.10\).aspx) dans la bibliothèque de documentation TechNet Windows 7.  
+   >  Pour plus d’informations sur DISM, consultez la rubrique [Informations techniques de référence sur l’outil Gestion et maintenance des images de déploiement](https://technet.microsoft.com/library/dd744256\(v=ws.10\).aspx) dans la bibliothèque de documentation TechNet Windows 7.  
 
 5. Une fois que vous avez monté l'image de démarrage, utilisez DISM pour ajouter des composants facultatifs à l'image de démarrage. Dans Windows PE 3.1, par exemple, les composants facultatifs sont situés dans <*chemin_installation*>\Windows AIK\Tools\PETools\amd64\WinPE_FPs\\.  
 
    > [!NOTE]
-   >  Cette procédure utilise l'emplacement suivant pour les composants facultatifs : C:\Program Files\Windows AIK\Tools\PETools\amd64\WinPE_FPs. Le chemin d'accès que vous utilisez peut être différent selon les options de version et d'installation que vous choisissez pour le kit Windows AIK.  
+   >  Cette procédure utilise l’emplacement suivant pour les composants facultatifs : C:\Program Files\Windows AIK\Tools\PETools\amd64\WinPE_FPs. Le chemin d'accès que vous utilisez peut être différent selon les options de version et d'installation que vous choisissez pour le kit Windows AIK.  
 
     Tapez la commande suivante pour installer les composants facultatifs :  
 
@@ -229,7 +229,7 @@ Chaque version de Configuration Manager prend en charge une version spécifique 
     **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Program Files\Windows AIK\Tools\PETools\amd64\WinPE_FPs\en-us\winpe-wds-tools_en-us.cab"**  
 
    > [!TIP]
-   >  Pour plus d’informations sur les différents packages que vous pouvez ajouter à l’image de démarrage, consultez la rubrique [Ajouter un package à une image Windows PE](http://technet.microsoft.com/library/dd799312\(v=WS.10\).aspx) dans la bibliothèque de documentation TechNet Windows 7.  
+   >  Pour plus d’informations sur les différents packages que vous pouvez ajouter à l’image de démarrage, consultez la rubrique [Ajouter un package à une image Windows PE](https://technet.microsoft.com/library/dd799312\(v=WS.10\).aspx) dans la bibliothèque de documentation TechNet Windows 7.  
 
 6. Utilisez DISM pour ajouter des pilotes spécifiques à l'image de démarrage, si nécessaire. Tapez la commande suivante pour ajouter des pilotes à l'image de démarrage, si nécessaire :  
 
@@ -253,7 +253,7 @@ Chaque version de Configuration Manager prend en charge une version spécifique 
 
    4. Sur la page **Source de données** , spécifiez les options suivantes et cliquez sur **Suivant**.  
 
-      - Dans la zone **Chemin d'accès** , indiquez le chemin d'accès au fichier de l'image de démarrage mis à jour. Le chemin d'accès spécifié doit être un chemin d'accès réseau valide au format UNC. Par exemple : **\\\\<**<em>nom_serveur</em>**>\\<**<em>partage WinPEWAIK</em>**>\winpe.wim**.  
+      - Dans la zone **Chemin d'accès** , indiquez le chemin d'accès au fichier de l'image de démarrage mis à jour. Le chemin d'accès spécifié doit être un chemin d'accès réseau valide au format UNC. Par exemple : **\\\\<** <em>nom_serveur</em> **>\\<** <em>partage WinPEWAIK</em> **>\winpe.wim**.  
 
       - Sélectionnez l'image de démarrage dans la liste déroulante **Image de démarrage** . Si le fichier WIM contient plusieurs images de démarrage, chaque image est répertoriée.  
 
@@ -277,9 +277,9 @@ Chaque version de Configuration Manager prend en charge une version spécifique 
 
    4. À partir d'une invite de commande, tapez **wbemtest** pour ouvrir le testeur WMI.  
 
-   5. Tapez **\\\\<**<em>ordinateur_fournisseur_SMS</em>**>\root\sms\site_<**<em>code_site</em>**>** dans **Espace de noms**, puis cliquez sur **Connexion**.  
+   5. Tapez **\\\\<** <em>ordinateur_fournisseur_SMS</em> **>\root\sms\site_<** <em>code_site</em> **>** dans **Espace de noms**, puis cliquez sur **Connexion**.  
 
-   6. Cliquez sur **Ouvrir une instance**, tapez **sms_bootimagepackage.packageID="<packageID\>"**, puis cliquez sur **OK**. Pour packageID, entrez la valeur que vous avez identifiée à l'étape 3.  
+   6. Cliquez sur **Ouvrir une instance**, tapez **sms_bootimagepackage.packageID="<packageID\>"** , puis cliquez sur **OK**. Pour packageID, entrez la valeur que vous avez identifiée à l'étape 3.  
 
    7. Cliquez sur **Actualiser l'objet**, puis cliquez sur **EnableLabShell** dans le volet **Propriétés** .  
 

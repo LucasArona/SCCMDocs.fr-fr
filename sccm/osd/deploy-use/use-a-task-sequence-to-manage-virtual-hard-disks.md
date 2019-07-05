@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e998710be94a9c4063a156d25bc98b4f2f7c4a35
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 413c2a40e6745cfaa94a99aa2147eacb8ea90f9e
+ms.sourcegitcommit: 4981a796e7886befb7bdeeb346dba32be82aefd6
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56135726"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67516183"
 ---
 # <a name="use-a-task-sequence-to-manage-virtual-hard-disks-in-system-center-configuration-manager"></a>Utiliser une séquence de tâches pour gérer des disques durs virtuels dans System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 
    > [!NOTE] 
@@ -45,7 +45,7 @@ Dans System Center Configuration Manager, vous pouvez gérer des disques durs vi
 
     -   Windows Server 2012 R2  
 
--   La fonction de virtualisation doit être activée dans le BIOS et Hyper-V doit être installé sur l'ordinateur à partir duquel vous exécutez la console Configuration Manager pour gérer les disques durs virtuels. Comme meilleures pratiques, installez également les outils de gestion Hyper-V pour vous aider à tester et résoudre les problèmes liés à vos disques durs virtuels. Par exemple, pour surveiller le fichier smsts.log et suivre la progression de la séquence de tâches dans Hyper-V, les outils de gestion Hyper-V doivent être installés. Pour plus d'informations sur la configuration requise pour Hyper-V, voir [Conditions préalables à l'installation d'Hyper-V](http://technet.microsoft.com/library/cc731898.aspx).  
+-   La fonction de virtualisation doit être activée dans le BIOS et Hyper-V doit être installé sur l'ordinateur à partir duquel vous exécutez la console Configuration Manager pour gérer les disques durs virtuels. Comme meilleures pratiques, installez également les outils de gestion Hyper-V pour vous aider à tester et résoudre les problèmes liés à vos disques durs virtuels. Par exemple, pour surveiller le fichier smsts.log et suivre la progression de la séquence de tâches dans Hyper-V, les outils de gestion Hyper-V doivent être installés. Pour plus d'informations sur la configuration requise pour Hyper-V, voir [Conditions préalables à l'installation d'Hyper-V](https://technet.microsoft.com/library/cc731898.aspx).  
 
     > [!IMPORTANT]  
     >  Le processus de création d'un disque dur virtuel consomme du temps de processeur et de la mémoire. Par conséquent, il est recommandé de gérer les disques durs virtuels à partir d'une console Configuration Manager qui ne soit pas installée sur le serveur de site.  
@@ -65,7 +65,7 @@ Dans System Center Configuration Manager, vous pouvez gérer des disques durs vi
  Pour créer un disque dur virtuel, vous devez créer une séquence de tâches qui contient les étapes de création du disque dur virtuel, puis utiliser la séquence de tâches dans l'Assistant Création d'un disque dur virtuel pour créer le disque dur virtuel. Les sections suivantes fournissent les étapes nécessaires pour créer le disque dur virtuel.  
 
 ###  <a name="BKMK_CreateTS"></a> Créer une séquence de tâches pour le disque dur virtuel  
- Vous devez créer une séquence de tâches contenant les étapes de création du disque dur virtuel. L'option **Installer un package d'images existant sur un disque dur virtuel** de l'Assistant Création d'une séquence de tâches, vous permet de créer les étapes nécessaires à la création du disque dur virtuel. Par exemple, l'Assistant ajoute les étapes requises suivantes : Redémarrer dans Windows PE, Formater et partitionner le disque, Appliquer le système d'exploitation et Arrêter l'ordinateur. Vous ne pouvez pas créer le disque dur virtuel dans le système d'exploitation complet. De plus, Configuration Manager doit attendre l'arrêt de la machine virtuelle pour pouvoir terminer le package. Par défaut, l'Assistant attend 5 minutes avant d'arrêter la machine virtuelle. Après avoir créé la séquence de tâches, vous pouvez ajouter des étapes supplémentaires si nécessaire.  
+ Vous devez créer une séquence de tâches contenant les étapes de création du disque dur virtuel. L'option **Installer un package d'images existant sur un disque dur virtuel** de l'Assistant Création d'une séquence de tâches, vous permet de créer les étapes nécessaires à la création du disque dur virtuel. Par exemple, l’Assistant ajoute les étapes obligatoires suivantes : Redémarrer dans Windows PE, Formater et partitionner le disque, Appliquer le système d’exploitation et Arrêter l’ordinateur. Vous ne pouvez pas créer le disque dur virtuel dans le système d'exploitation complet. De plus, Configuration Manager doit attendre l'arrêt de la machine virtuelle pour pouvoir terminer le package. Par défaut, l'Assistant attend 5 minutes avant d'arrêter la machine virtuelle. Après avoir créé la séquence de tâches, vous pouvez ajouter des étapes supplémentaires si nécessaire.  
 
 > [!IMPORTANT]  
 >  La procédure suivante permet de créer la séquence de tâches à l'aide de l'option **Installer un package d'images existant sur un disque dur virtuel** qui inclut automatiquement les étapes nécessaires à la création correcte du disque dur virtuel. Si vous choisissez d'utiliser une séquence de tâches existante ou d'en créer une manuellement, assurez-vous d'ajouter l'étape Arrêter l'ordinateur à la fin de la séquence. Sans cette étape, la machine virtuelle temporaire n'est pas supprimée, et le processus de création du disque dur virtuel ne se termine pas. Toutefois, l'Assistant se termine et signale une réussite.  
@@ -84,40 +84,40 @@ Dans System Center Configuration Manager, vous pouvez gérer des disques durs vi
 
 5.  Sur la page **Informations sur la séquence de tâches** , spécifiez les paramètres suivants et cliquez sur **Suivant**.  
 
-    -   **Nom de la séquence de tâches** : spécifiez un nom qui identifie la séquence de tâches.  
+    -   **Nom de la séquence de tâches**: spécifiez un nom qui identifie la séquence de tâches.  
 
-    -   **Description** : Spécifiez une description de la séquence de tâches.  
+    -   **Description**: spécifiez une description de la séquence de tâches.  
 
-    -   **Image de démarrage** : spécifiez l'image de démarrage qui installe le système d'exploitation sur l'ordinateur de destination. Pour plus d’informations, consultez [Gérer les images de démarrage](../get-started/manage-boot-images.md).  
+    -   **Images de démarrage**: spécifiez l'image de démarrage qui installe le système d'exploitation sur l'ordinateur de destination. Pour plus d’informations, consultez [Gérer les images de démarrage](../get-started/manage-boot-images.md).  
 
 6.  Sur la page **Installer Windows** , spécifiez les paramètres suivants et cliquez sur **Suivant**.  
 
-    -   **Package d’images** : spécifiez le package qui contient l'image du système d'exploitation à installer.  
+    -   **Package d’images :** spécifiez le package qui contient l’image du système d’exploitation à installer.  
 
-    -   **Image** : si le package d'images du système d'exploitation comporte plusieurs images, spécifiez l'index de l'image du système d'exploitation à installer.  
+    -   **Image**: si le package d’images du système d’exploitation comporte plusieurs images, spécifiez l’index de l’image du système d’exploitation à installer.  
 
-    -   **Clé du produit** : spécifiez la clé de produit pour le système d'exploitation Windows à installer. Vous pouvez spécifier des clés de licence en volume codées et des clés de produit standard. Si vous utilisez une clé de produit non codée, chaque groupe de 5 caractères doit être séparé par un tiret (-). Par exemple : *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*  
+    -   **Clé du produit**: spécifiez la clé de produit pour le système d’exploitation Windows à installer. Vous pouvez spécifier des clés de licence en volume codées et des clés de produit standard. Si vous utilisez une clé de produit non codée, chaque groupe de 5 caractères doit être séparé par un tiret (-). Par exemple : *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*  
 
-    -   **Mode de licence serveur** : Indiquez que la licence serveur est **Par poste**, **Par serveur** ou qu’aucune licence n’est spécifiée. Si la licence serveur est **Par serveur**, spécifiez également le nombre maximal de connexions au serveur.  
+    -   **Mode de licence serveur :** spécifiez que la licence serveur est **Par siège**, **Par serveur**ou qu’aucune licence n’est spécifiée. Si la licence serveur est **Par serveur**, spécifiez également le nombre maximal de connexions au serveur.  
 
     -   Spécifiez comment gérer le compte administrateur qui est utilisé lors du déploiement de l'image du système d'exploitation.  
 
-        -   **Générer de façon aléatoire le mot de passe de l’administrateur local et désactiver le compte sur toutes les plates-formes prises en charge (recommandé)** : utilisez ce paramètre pour permettre à l'Assistant de créer aléatoirement un mot de passe pour le compte administrateur local et désactiver le compte lorsque l'image du système d'exploitation est déployée.  
+        -   **Générer de façon aléatoire le mot de passe de l’administrateur local et désactiver le compte sur toutes les plates-formes prises en charge (recommandé)** : utilisez ce paramètre pour permettre à l’Assistant de créer aléatoirement un mot de passe pour le compte administrateur local et désactiver le compte quand l’image du système d’exploitation est déployée.  
 
-        -   **Activer le compte et spécifier le mot de passe de l’administrateur local** : ce paramètre permet d'utiliser un mot de passe spécifique pour le compte d'administrateur local sur tous les ordinateurs où l'image du système d'exploitation est déployée.  
+        -   **Activer le compte et spécifier le mot de passe de l’administrateur local**: ce paramètre permet d’utiliser un mot de passe spécifique pour le compte d’administrateur local sur tous les ordinateurs où l’image du système d’exploitation est déployée.  
 
 7.  Sur la page **Configurer le réseau** , spécifiez les paramètres suivants et cliquez sur **Suivant**.  
 
-    -   **Rejoindre un groupe de travail** : indiquez si vous souhaitez ajouter l'ordinateur de destination à un groupe de travail.  
+    -   **Joindre un groupe de travail**: indiquez si vous souhaitez ajouter l'ordinateur de destination à un groupe de travail.  
 
-    -   **Joindre un domaine** : indiquez si vous souhaitez ajouter l'ordinateur de destination à un domaine. Dans **Domaine**, spécifiez le nom du domaine.  
+    -   **Joindre un domaine**: indiquez si vous souhaitez ajouter l'ordinateur de destination à un domaine. Dans **Domaine**, spécifiez le nom du domaine.  
 
         > [!IMPORTANT]  
         >  Vous pouvez rechercher des domaines dans la forêt locale, mais vous devez spécifier le nom de domaine d'une forêt distante.  
 
          Vous pouvez également spécifier une unité d'organisation (UO). Il s'agit d'un paramètre facultatif qui spécifie le nom unique LDAP X.500 de l'UO dans laquelle vous créez le compte d'ordinateur s'il n'existe pas déjà.  
 
-    -   **Compte** : spécifiez le nom d'utilisateur et le mot de passe du compte qui dispose des autorisations pour joindre le domaine spécifié. Par exemple : *domaine\utilisateur* ou *%variable%*.  
+    -   **Compte**: spécifiez le nom d’utilisateur et le mot de passe du compte qui dispose des autorisations pour joindre le domaine spécifié. Par exemple : *domaine\utilisateur* ou *%variable%* .  
 
 8.  Sur la page **Installer Configuration Manager**, spécifiez le package client Configuration Manager à installer sur l'ordinateur de destination, puis cliquez sur **Suivant**.  
 
@@ -142,20 +142,20 @@ Dans System Center Configuration Manager, vous pouvez gérer des disques durs vi
 3. Dans l'onglet **Accueil** , dans le groupe **Créer** , cliquez sur **Créer un disque dur virtuel** pour démarrer l'Assistant Nouveau disque dur virtuel.  
 
    > [!NOTE]  
-   >  Pour activer l'option **Créer un disque dur virtuel** , Hyper-V doit être installé sur l'ordinateur exécutant la console Configuration Manager à partir de laquelle vous gérez les disques durs virtuels. Pour plus d'informations sur la configuration requise pour Hyper-V, voir [Conditions préalables à l'installation d'Hyper-V](http://technet.microsoft.com/library/cc731898.aspx).  
+   >  Pour activer l'option **Créer un disque dur virtuel** , Hyper-V doit être installé sur l'ordinateur exécutant la console Configuration Manager à partir de laquelle vous gérez les disques durs virtuels. Pour plus d'informations sur la configuration requise pour Hyper-V, voir [Conditions préalables à l'installation d'Hyper-V](https://technet.microsoft.com/library/cc731898.aspx).  
 
    > [!TIP]  
    >  Pour organiser vos disques durs virtuels, créez un dossier ou sélectionnez-en un dans le nœud **Disques durs virtuels** , puis cliquez sur **Créer un disque dur virtuel** dans le dossier.  
 
 4. Sur la page **Général** , spécifiez les paramètres suivants et cliquez sur **Suivant**.  
 
-   -   **Nom** : spécifiez un nom unique pour le disque dur virtuel.  
+   -   **Nom**: spécifiez un nom unique pour le disque dur virtuel.  
 
-   -   **Version** : spécifiez un numéro de version pour le disque dur virtuel. Ce paramètre est facultatif.  
+   -   **Version**: spécifiez un numéro de version pour le disque dur virtuel. Ce paramètre est facultatif.  
 
-   -   **Commentaire** : spécifiez la description du disque dur virtuel.  
+   -   **Commentaire**: spécifiez la description du disque dur virtuel.  
 
-   -   **Chemin d’accès** : spécifiez le chemin d'accès et le nom de fichier utilisés par l'Assistant lors de la création du fichier de disque dur virtuel.  
+   -   **Chemin d’accès :** spécifiez le chemin et le nom de fichier utilisés par l’Assistant lors de la création du fichier de disque dur virtuel.  
 
         Vous devez entrer un chemin d'accès réseau valide au format UNC. Par exemple : **\\\nom_serveur\\<nom_partage\>\\<nom_fichier\>.vhd**.  
 
@@ -171,10 +171,10 @@ Dans System Center Configuration Manager, vous pouvez gérer des disques durs vi
 8. Vérifiez les paramètres, puis cliquez sur **Suivant**. L'Assistant crée le disque dur virtuel.  
 
    > [!TIP]
-   >  Le temps requis pour compléter le processus de création du disque dur virtuel peut varier. Pendant que l'Assistant effectue ce processus, vous pouvez surveiller les fichiers journaux suivants pour suivre la progression. Par défaut, les fichiers journaux sont situés sur l'ordinateur qui exécute la console Configuration Manager dans %*ProgramFiles(x86)*%\Microsoft Configuration Manager\AdminConsole\AdminUILog.  
+   >  Le temps requis pour compléter le processus de création du disque dur virtuel peut varier. Pendant que l'Assistant effectue ce processus, vous pouvez surveiller les fichiers journaux suivants pour suivre la progression. Par défaut, les fichiers journaux sont situés sur l'ordinateur qui exécute la console Configuration Manager dans %*ProgramFiles(x86)* %\Microsoft Configuration Manager\AdminConsole\AdminUILog.  
    > 
-   > - **CreateTSMedia.log** : l'Assistant écrit les informations dans ce fichier journal lors de la création du média de séquence de tâches. Consultez ce fichier journal pour suivre la progression de l'Assistant lors de la création du média autonome.  
-   >   -   **DeployToVHD.log** : l'Assistant écrit les informations dans ce fichier journal lors du processus de création du disque dur virtuel. Consultez ce fichier journal pour suivre la progression de l'Assistant sur toutes les étapes après la création du média autonome.  
+   > - **CreateTSMedia.log**: l’Assistant écrit les informations dans ce fichier journal lors de la création du média de séquence de tâches. Consultez ce fichier journal pour suivre la progression de l'Assistant lors de la création du média autonome.  
+   >   -   **DeployToVHD.log**: l’Assistant écrit les informations dans ce fichier journal lors du processus de création du disque dur virtuel. Consultez ce fichier journal pour suivre la progression de l'Assistant sur toutes les étapes après la création du média autonome.  
    > 
    >   Au démarrage de l'installation du système d'exploitation, vous pouvez ouvrir le Gestionnaire Hyper-V (si vous avez installé les outils de gestion Hyper-V sur l'ordinateur) et vous connecter à la machine virtuelle temporaire créé par l'Assistant pour suivre l'exécution de la séquence. À partir de la machine virtuelle, vous pouvez surveiller le fichier smsts.log pour suivre la progression de la séquence de tâches. En cas de problèmes avec de finalisation d'une étape de la séquence de tâches, vous pouvez utiliser ce fichier journal pour résoudre le problème. Le fichier smsts.log se trouve dans x: \windows\temp\smstslog\smsts.log avant le formatage du disque dur et dans c:\\_SMSTaskSequence\Logs\Smstslog\ après le formatage du disque dur. Une fois les étapes de séquence de tâches terminées, la machine virtuelle est arrêtée après 5 minutes (par défaut), puis supprimée.  
 
@@ -203,11 +203,11 @@ Dans System Center Configuration Manager, vous pouvez gérer des disques durs vi
 
 5. Sur la page **Informations sur la séquence de tâches** , spécifiez les paramètres suivants et cliquez sur **Suivant**.  
 
-   -   **Nom de la séquence de tâches** : spécifiez un nom qui identifie la séquence de tâches.  
+   -   **Nom de la séquence de tâches**: spécifiez un nom qui identifie la séquence de tâches.  
 
-   -   **Description** : Spécifiez une description de la séquence de tâches.  
+   -   **Description**: spécifiez une description de la séquence de tâches.  
 
-   -   **Image de démarrage** : spécifiez l'image de démarrage qui installe le système d'exploitation sur l'ordinateur de destination. Pour plus d’informations, consultez [Gérer les images de démarrage](../get-started/manage-boot-images.md).  
+   -   **Images de démarrage**: spécifiez l'image de démarrage qui installe le système d'exploitation sur l'ordinateur de destination. Pour plus d'informations, voir [Gérer les images de démarrage](../get-started/manage-boot-images.md).  
 
 6. Effectuez toutes les étapes de l'Assistant.  
 
@@ -239,17 +239,17 @@ Dans System Center Configuration Manager, vous pouvez gérer des disques durs vi
 3. Dans l'onglet **Accueil** , dans le groupe **Disque dur virtuel** , cliquez sur **Modifier un disque dur virtuel** pour démarrer l'Assistant Modifier un disque dur virtuel.  
 
    > [!NOTE]  
-   >  Pour activer l'option **Modifier un disque dur virtuel** , Hyper-V doit être installé sur l'ordinateur exécutant la console Configuration Manager à partir de laquelle vous gérez les disques durs virtuels. Pour plus d'informations sur la configuration requise pour Hyper-V, voir [Conditions préalables à l'installation d'Hyper-V](http://technet.microsoft.com/library/cc731898.aspx).  
+   >  Pour activer l'option **Modifier un disque dur virtuel** , Hyper-V doit être installé sur l'ordinateur exécutant la console Configuration Manager à partir de laquelle vous gérez les disques durs virtuels. Pour plus d'informations sur la configuration requise pour Hyper-V, voir [Conditions préalables à l'installation d'Hyper-V](https://technet.microsoft.com/library/cc731898.aspx).  
 
 4. Sur la page **Général** , confirmez les paramètres suivants, puis cliquez sur **Suivant**.  
 
-   -   **Nom** : spécifie le nom unique du disque dur virtuel.  
+   -   **Nom**: spécifie le nom unique du disque dur virtuel.  
 
-   -   **Version** : spécifie le numéro de version pour le disque dur virtuel. Ce paramètre est facultatif.  
+   -   **Version**: spécifie le numéro de version du disque dur virtuel. Ce paramètre est facultatif.  
 
-   -   **Commentaire** : spécifie la description du disque dur virtuel.  
+   -   **Commentaire**: spécifie la description du disque dur virtuel.  
 
-   -   **Chemin d’accès** : spécifie le chemin d'accès et le nom du fichier dans lequel se trouve le fichier de disque dur virtuel. Vous ne pouvez pas modifier ce paramètre.  
+   -   **Chemin d’accès**: spécifie le chemin et le nom du fichier dans lequel se trouve le fichier de disque dur virtuel. Vous ne pouvez pas modifier ce paramètre.  
 
        > [!WARNING]  
        >  Configuration Manager doit disposer de l'autorisation d'accès **Écriture** vers le chemin spécifié pour créer le disque dur virtuel. Lorsque Configuration Manager ne parvient pas à accéder au chemin, l'erreur associée est consignée dans le fichier distmgr.log sur le serveur de site.  
@@ -263,10 +263,10 @@ Dans System Center Configuration Manager, vous pouvez gérer des disques durs vi
 8. Vérifiez les paramètres, puis cliquez sur **Suivant**. L'Assistant crée le disque dur virtuel modifié.  
 
    > [!TIP]
-   >  Le temps requis pour effectuer le processus de modification du disque dur virtuel peut varier. Pendant que l'Assistant effectue ce processus, vous pouvez surveiller les fichiers journaux suivants pour suivre la progression. Par défaut, les fichiers journaux sont situés sur l'ordinateur qui exécute la console Configuration Manager dans %*ProgramFiles(x86)*%\Microsoft Configuration Manager\AdminConsole\AdminUILog.  
+   >  Le temps requis pour effectuer le processus de modification du disque dur virtuel peut varier. Pendant que l'Assistant effectue ce processus, vous pouvez surveiller les fichiers journaux suivants pour suivre la progression. Par défaut, les fichiers journaux sont situés sur l'ordinateur qui exécute la console Configuration Manager dans %*ProgramFiles(x86)* %\Microsoft Configuration Manager\AdminConsole\AdminUILog.  
    > 
-   > - **CreateTSMedia.log** : l'Assistant écrit les informations dans ce fichier journal lors de la création du média de séquence de tâches. Consultez ce fichier journal pour suivre la progression de l'Assistant lors de la création du média autonome.  
-   >   -   **DeployToVHD.log** : l'Assistant écrit les informations dans ce fichier journal lors du processus de modification du disque dur virtuel. Consultez ce fichier journal pour suivre la progression de l'Assistant sur toutes les étapes après la création du média autonome.  
+   > - **CreateTSMedia.log**: l’Assistant écrit les informations dans ce fichier journal lors de la création du média de séquence de tâches. Consultez ce fichier journal pour suivre la progression de l'Assistant lors de la création du média autonome.  
+   >   -   **DeployToVHD.log**: l’Assistant écrit les informations dans ce fichier journal lors du processus de modification du disque dur virtuel. Consultez ce fichier journal pour suivre la progression de l'Assistant sur toutes les étapes après la création du média autonome.  
    > 
    >   Vous pouvez aussi ouvrir le Gestionnaire Hyper-V (si vous avez installé les outils de gestion Hyper-V sur l'ordinateur) et vous connecter à la machine virtuelle temporaire créée par l'Assistant pour suivre l'exécution de la séquence. À partir de la machine virtuelle, vous pouvez surveiller le fichier smsts.log pour suivre la progression de la séquence de tâches. En cas de problèmes avec de finalisation d'une étape de la séquence de tâches, vous pouvez utiliser ce fichier journal pour résoudre le problème. Le fichier smsts.log se trouve dans x: \windows\temp\smstslog\smsts.log avant le formatage du disque dur et dans c:\\_SMSTaskSequence\Logs\Smstslog\ après le formatage du disque dur. Une fois les étapes de séquence de tâches terminées, la machine virtuelle est arrêtée après 5 minutes (par défaut), puis supprimée.  
 
@@ -296,9 +296,9 @@ Dans System Center Configuration Manager, vous pouvez gérer des disques durs vi
 
 6.  Sur la page **Définir le calendrier** , spécifiez les paramètres suivants, puis cliquez sur **Suivant**.  
 
-    1.  **Planification** : définissez le calendrier d'application des mises à jour logicielles au disque dur virtuel.  
+    1.  **Calendrier**: définissez le calendrier d’application des mises à jour logicielles au disque dur virtuel.  
 
-    2.  **Continuer en cas d’erreur** : sélectionnez cette option pour continuer à appliquer les mises à jour logicielles à l'image même si une erreur survient.  
+    2.  **Continuer en cas d’erreur**: sélectionnez cette option pour continuer à appliquer les mises à jour logicielles à l’image même si une erreur survient.  
 
 7.  Vérifiez les informations figurant sur la page **Résumé** , puis cliquez sur **Suivant**.  
 
@@ -322,10 +322,10 @@ Dans System Center Configuration Manager, vous pouvez gérer des disques durs vi
 
 4.  Sur la page **Général** , configurez les paramètres suivants, puis cliquez sur **Suivant**.  
 
-    -   **Nom du serveur VMM** : spécifiez le nom de domaine complet de l'ordinateur sur lequel est installé le serveur de gestion VMM. L'Assistant se connecte au serveur de gestion VMM pour télécharger les partages de bibliothèque pour le serveur.  
+    -   **Nom du serveur VMM :** spécifiez le nom de domaine complet de l’ordinateur sur lequel est installé le serveur de gestion VMM. L'Assistant se connecte au serveur de gestion VMM pour télécharger les partages de bibliothèque pour le serveur.  
 
-    -   **Partage de bibliothèque VMM** : spécifiez le partage de bibliothèque VMM dans la liste déroulante.  
+    -   **Partage de bibliothèque VMM**: spécifiez le partage de bibliothèque VMM dans la liste déroulante.  
 
-    -   **Utiliser un transfert non chiffré** : sélectionnez ce paramètre pour transférer le fichier de disque dur virtuel sur le serveur de gestion VMM sans utiliser de chiffrement.  
+    -   **Utilisez un transfert non chiffré**: sélectionnez ce paramètre pour transférer le fichier de disque dur virtuel sur le serveur de gestion VMM sans utiliser de chiffrement.  
 
 5.  Sur la page Synthèse, vérifiez les paramètres, puis terminez l'Assistant. Le temps de téléchargement du disque dur virtuel peut varier en fonction de la taille du fichier VHD et de la bande passante réseau vers le serveur de gestion VMM.  

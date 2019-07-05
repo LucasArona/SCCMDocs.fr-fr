@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9c3058eed3cd7fe4430824d5a55f155694a2ed44
-ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.openlocfilehash: eddce66fe58ca44ece7e9c2f15a5f602ad7a78d7
+ms.sourcegitcommit: 4981a796e7886befb7bdeeb346dba32be82aefd6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66177021"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67516095"
 ---
 # <a name="learn-how-clients-find-site-resources-and-services-for-system-center-configuration-manager"></a>Comprendre comment les clients recherchent des services et des ressources de site pour System Center Configuration Manager
 
@@ -132,12 +132,12 @@ Une fois la communication établie avec un point de gestion, le client continue 
 Le client sélectionne de manière aléatoire un nouveau point de gestion à utiliser.  
 
 ##  <a name="bkmk_ad"></a> Active Directory  
-Les clients qui appartiennent à un domaine peuvent utiliser les services AD DS pour l'emplacement du service. Pour ce faire, les sites doivent [publier des données dans Active Directory](http://technet.microsoft.com/library/hh696543.aspx).  
+Les clients qui appartiennent à un domaine peuvent utiliser les services AD DS pour l'emplacement du service. Pour ce faire, les sites doivent [publier des données dans Active Directory](https://technet.microsoft.com/library/hh696543.aspx).  
 
 Un client peut utiliser AD DS comme emplacement du service quand l’une des conditions suivantes est remplie :  
 
 -   Le [schéma Active Directory est étendu](https://technet.microsoft.com/library/mt345589.aspx) ou a été étendu pour System Center 2012 Configuration Manager.  
--   La [forêt Active Directory est configurée pour la publication](http://technet.microsoft.com/library/hh696542.aspx), de même que les sites Configuration Manager.  
+-   La [forêt Active Directory est configurée pour la publication](https://technet.microsoft.com/library/hh696542.aspx), de même que les sites Configuration Manager.  
 -   L'ordinateur client est membre d'un domaine Active Directory et peut accéder à un serveur de catalogue global.  
 
 Si un client ne peut pas trouver de point de gestion à utiliser comme emplacement du service dans AD DS, il tente d’utiliser DNS.  
@@ -149,7 +149,7 @@ Envisagez d'utiliser DNS pour l'emplacement du service quand l'une des condition
 -   Le schéma AD DS n’est pas étendu pour prendre en charge Configuration Manager.
 -   Les clients sur intranet se trouvent dans une forêt qui n’est pas activée pour la publication Configuration Manager.  
 -   Des clients se trouvent sur des ordinateurs de groupes de travail et ne sont pas configurés pour la gestion des clients uniquement accessibles sur Internet. (Un client de groupe de travail configuré pour Internet communique uniquement avec des points de gestion accessibles sur Internet et n’utilise pas DNS comme emplacement du service.)  
--   Vous pouvez [configurer les clients pour rechercher les points de gestion dans les services DNS](http://technet.microsoft.com/library/gg682055).  
+-   Vous pouvez [configurer les clients pour rechercher les points de gestion dans les services DNS](https://technet.microsoft.com/library/gg682055).  
 
 Quand un site publie des enregistrements d'emplacement de service pour les points de gestion dans DNS :  
 
