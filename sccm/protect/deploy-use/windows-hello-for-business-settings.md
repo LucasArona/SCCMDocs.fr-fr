@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 94cbbb7616588fa88bae9ae71f5b5f53dd4a4d63
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 9346e95e3fa66e9f24d1bfc3711917c3d2146e5e
+ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65500364"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67551353"
 ---
 # <a name="windows-hello-for-business-settings-in-configuration-manager"></a>Paramètres Windows Hello Entreprise dans Configuration Manager
 
@@ -90,9 +90,9 @@ Il est possible que certaines configurations ne requièrent pas de configuration
 1.  Connectez-vous à un contrôleur de domaine ou à des stations de travail de gestion en tant qu’administrateur de domaine, ou avec des informations d’identification équivalentes.
 2.  Ouvrez **Utilisateurs et ordinateurs Active Directory**.
 3.  Dans le volet de navigation, cliquez avec le bouton droit sur votre nom de domaine, puis cliquez sur **Propriétés**.
-4.  Sous l’onglet **Sécurité** de la boîte de dialogue **Propriétés** *<domain name>*, cliquez sur **Avancé**. Si l’onglet **Sécurité** n’apparaît pas, activez les **Fonctionnalités avancées** du menu **Affichage** dans **Utilisateurs et ordinateurs Active Directory**.
+4.  Dans l’onglet **Sécurité** de la boîte de dialogue *\<nom de domaine>* **Propriétés**, cliquez sur **Avancé**. Si l’onglet **Sécurité** n’apparaît pas, activez les **Fonctionnalités avancées** du menu **Affichage** dans **Utilisateurs et ordinateurs Active Directory**.
 5.  Cliquez sur **Ajouter**.
-6.  Dans la boîte de dialogue **Saisie des autorisations pour** *<domain name>*, cliquez sur **Sélectionner un principal**.
+6.  Dans la boîte de dialogue **Saisie des autorisations pour** *\<nom de domaie>* , cliquez sur **Sélectionner un principal**.
 7.  Dans la boîte de dialogue **Sélectionner un utilisateur, un ordinateur, un compte de service ou un groupe**, tapez **Administrateurs de clé** dans la zone de texte **Entrer le nom de l’objet à sélectionner**. Cliquez sur **OK**.
 8.  Dans la liste **S’applique à**, sélectionnez **Objets utilisateur descendants**.
 9.  Faites défiler jusqu’au bas de la page et cliquez sur **Effacer tout**.

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db5c6d0d06328ae73921a80b090dffd1fb711d8b
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 4e876041d67263b0b5db2acdfdef0ffa1ff318ef
+ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65500559"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67551417"
 ---
 # <a name="deploy-profiles-in-system-center-configuration-manager"></a>Déployer des profils dans System Center Configuration Manager
 
@@ -57,7 +57,7 @@ Les profils doivent être déployés dans un ou plusieurs regroupements avant de
 
     -   -   **Délai aléatoire (heure)**  : (uniquement pour les profils de certificat contenant des paramètres de protocole d’inscription de certificats simple) spécifie un délai pour éviter un traitement excessif sur le service d’inscription de périphérique réseau. La valeur par défaut est **64** heures.  
 
-    -   **Spécifier le calendrier d’évaluation de la compatibilité pour ce profil <type>**  : spécifie le calendrier par rapport auquel le profil déployé est évalué sur les ordinateurs clients. Il peut s'agir d'un calendrier simple ou d'un calendrier personnalisé.  
+    -   **Spécifier le calendrier d’évaluation de la compatibilité pour ce \<type>profil** : spécifie le calendrier par rapport auquel le profil déployé est évalué sur les ordinateurs clients. Il peut s'agir d'un calendrier simple ou d'un calendrier personnalisé.  
 
         > [!NOTE]  
         >  Lorsque l'utilisateur ouvre une session, le profil est évalué par les ordinateurs clients.  
