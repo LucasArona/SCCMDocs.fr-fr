@@ -2,7 +2,7 @@
 title: Workflow de l’authentification Azure AD
 titleSuffix: Configuration Manager
 description: Détails du processus d’installation client Configuration Manager sur un appareil Windows 10 avec l’authentification Azure Active Directory
-ms.date: 05/24/2019
+ms.date: 07/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ ms.assetid: 9aaf466a-3f40-4468-b3cd-f0010f21f05a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c422e5134ca798c1a5422cd518d550ed4c188e9a
-ms.sourcegitcommit: bfb8a17f60dcb9905e739045a5141ae45613fa2c
+ms.openlocfilehash: 8bb386aea70253fa033f59ab85732e0b99987c16
+ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66213800"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67550959"
 ---
 # <a name="azure-ad-authentication-workflow"></a>Workflow de l’authentification Azure AD
 
@@ -91,7 +91,7 @@ MessageID: 3087bd34-b82c-4950-b972-e82bb0fb8385 RequestURI: https://MP.MYCORP.CO
 Les entrées suivantes sont enregistrées dans **CCM_STS.log** :
 
 ```
-Validated AAD token. TokenType: Device TenantId: XXXXe388-XXXX-485c-XXXX-e8e4eb41XXXX UserId: 00000000-0000-0000-0000-000000000000 DeviceId: 0aebad80-77d2-4f0a-9639-676ee4764bb7 OnPrem_UserSid:  OnPrem_DeviceSid:
+Validated AAD token. TokenType: Device TenantId: XXXXe388-XXXX-485c-XXXX-e8e4eb41XXXX UserId: 00000000-0000-0000-0000-000000000000 DeviceId: 0XXXXX80-77XX-4XXa-X63X-67XXXXX64bb7 OnPrem_UserSid:  OnPrem_DeviceSid:
 
 Return token to client, token type: UDA, hierarchyId: XXXX4f9c-XXXX-46a5-XXXX-7612c324XXXX, userId: 00000000-0000-0000-0000-000000000000, deviceId: GUID:XXXXaee9-cXXc-4ccd-XXXX-f1417d81XXX
 ```
@@ -127,3 +127,85 @@ Le périphérique télécharge le contenu du client et démarre l’installation
 - Certificat de jonction d’espace de travail introuvable : le client est inscrit auprès d’Azure AD, mais pas joint à Azure AD
 
 L’utilisation de /NoCRLCheck convient uniquement pour l’amorçage ccmsetup. Les clients peuvent être entièrement fonctionnels si vous publiez la liste de révocation de certificats sur internet. Pour résoudre ce problème, vous pouvez désactiver la vérification de la liste de révocation de certificats sur la configuration de la communication du site client. Sinon, une fois les paramètres de sécurité actualisés par le service de localisation, les clients cessent de communiquer avec le serveur.
+
+
+## <a name="client-registration"></a>Inscription du client
+
+![Diagramme de flux de travail des inscriptions Azure AD](media/azure-ad-registration-workflow.png)  
+
+### <a name="1-configuration-manager-client-request-registration"></a>1. Le client Gestionnaire de configuration exige une inscription
+
+Les entrées suivantes sont enregistrées dans **ClientIDManagerStartup.log** :
+
+```
+[RegTask] - Client is not registered. Sending registration request for GUID:1XXXXXEF-5XX8-4XX3-XEDX-XXXFBFF78XXX ...        
+Registering client using AAD auth.  
+```
+
+### <a name="2-configuration-manager-request-azure-ad-token-to-register-client"></a>2. Configuration Manager exige que le jeton Azure AD inscrive le client
+
+Les entrées suivantes sont enregistrées dans **ADALOperationProvider.log** :
+```
+Getting AAD (user) token with: ClientId = f1f9b14e-XXXX-4f17-XXXX-2593f6eee91e, ResourceUrl = https://ConfigMgrService, AccountId = X49FC29A-ECE3-XXX-A3C1-XXXXXXF035A6E
+Retrieved AAD token for AAD user '00000000-0000-0000-0000-000000000000' 
+
+```
+
+#### <a name="21-configuration-manager-client-is-registered"></a>2.1 Le client Gestionnaire de configuration est inscrit  
+
+Les entrées suivantes sont enregistrées dans **ClientIDManagerStartup.log** :
+
+```
+[RegTask] - Client is registered. Server assigned ClientID is GUID:1XXXXXEF-5XX8-4XX3-XEDX-XXXFBFF78XXX. Approval status 3  
+```
+
+> [!NOTE]  
+> Lors de l’inscription du client, la validation de certificat s’exécute toujours. Ce processus se produit même si vous utilisez la méthode d’authentification Azure AD pour inscrire le client.
+
+
+### <a name="3-configuration-manager-client-token-request"></a>3. Requête de jeton client Gestionnaire de configuration
+
+Une fois que le site inscrit le client, le client demande un jeton CCM. Le jeton CCM est chiffré pour le compte système local (S-1-5-18) et mis en cache pendant huit heures. Au bout de huit heures, le jeton expire et le client demande le renouvellement du jeton.
+
+Les entrées suivantes sont enregistrées dans **ClientIDManagerStartup.log** :
+
+```
+Getting CCM Token from STS server 'MP.MYCORP.COM'   
+Getting CCM Token from https://MP.MYCORP.COM/CCM_STS
+...
+Cached encrypted token for 'S-1-5-18'. Will expire at 'XX/XX/XX XX:XX:XX'   
+```
+
+#### <a name="31-cmg-gets-request"></a>3.1 La passerelle de gestion cloud obtient la requête
+
+Les entrées suivantes sont enregistrées dans **IIS.log** :
+
+```
+RD0003FF74XX2 10.0.0.4 GET /CCM_STS - 443 - HTTP/1.1 python-requests/2.20.0 - - 13.95.234.44 404 0 2 1477 154 15
+```
+
+#### <a name="32-cmg-forwards-request-to-cmg-connection-point"></a>3.2 La passerelle de gestion cloud transfère la requête au point de connexion de la passerelle de gestion cloud
+
+Les entrées suivantes sont enregistrées dans **CMGService.log** :
+
+```
+RequestUri: /CCM_PROXY_SERVERAUTH/XXXXXX037938216/CCM_STS  RequestCount: 769  RequestSize: 1081595 Bytes  ResponseCount: 769     ResponseSize: 36143 Bytes  AverageElapsedTime: 3945 ms
+```
+
+#### <a name="33-cmg-connection-point-transforms-cmg-client-request-to-management-point-client-request"></a>3.3 Le point de connexion de la passerelle de gestion cloud transforme la requête du client de la passerelle de gestion cloud en requête de client de point de gestion
+
+Les entrées suivantes sont enregistrées dans **SMS_CLOUD_PROXYCONNECTOR.log** :
+
+```
+MessageID: 3087bd34-b82c-4950-b972-e82bb0fb8385 RequestURI: https://MP.MYCORP.COM/CCM_STS EndpointName: CCM_STS ResponseHeader: HTTP/1.1 200 OK ~~ ResponseBodySize: 0 ElapsedTime: 2 ms
+```
+
+#### <a name="34-management-point-verifies-user-token-in-site-database"></a>3.4 Le point de gestion vérifie le jeton d’utilisateur dans la base de données du site
+
+Les entrées suivantes sont enregistrées dans **CCM_STS.log** :
+
+```
+Validated AAD token. TokenType: Device TenantId: XXXXe388-XXXX-485c-XXXX-e8e4eb41XXXX UserId: 00000000-0000-0000-0000-000000000000 DeviceId: 0XXXXX80-77XX-4XXa-X63X-67XXXXX64bb7 OnPrem_UserSid:  OnPrem_DeviceSid:
+
+Return token to client, token type: UDA, hierarchyId: XXXX4f9c-XXXX-46a5-XXXX-7612c324XXXX, userId: 00000000-0000-0000-0000-000000000000, deviceId: GUID:XXXXaee9-cXXc-4ccd-XXXX-f1417d81XXX
+```

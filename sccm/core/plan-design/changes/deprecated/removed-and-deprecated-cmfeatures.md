@@ -2,7 +2,7 @@
 title: Fonctionnalités dépréciées
 titleSuffix: Configuration Manager
 description: Découvrez les fonctionnalités que Configuration Manager ne prend plus en charge.
-ms.date: 05/21/2019
+ms.date: 07/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4cfa662a3743865317b6c2f469ca0a34cd71f327
-ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.openlocfilehash: 28ba232fa94ee100c20da31f2eddc5a7341f6ac6
+ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66177049"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67551146"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Fonctionnalités supprimées et dépréciées pour Configuration Manager
 
@@ -32,6 +32,7 @@ Ces informations sont susceptibles de changer dans les futures versions. Les fon
 
 |Fonctionnalité|Désapprobation annoncée|Prise en charge&nbsp;supprimée|  
 |-----------|---|--------------|  
+| Évaluation de l’attestation de l’intégrité des appareils pour les stratégies de conformité pour l’accès conditionnel <!--1235616 aka 3608202--> Pour plus d’informations, consultez [Gérer l’accès aux services Office 365 des PC gérés par Configuration Manager](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm#step-1-configure-compliance-policy).| 3 Juillet 2019 | Première version publiée après le 1er novembre 2019 |
 | Le catalogue de l’application, comprenant les deux systèmes de site : le point de site web et le point de service web du catalogue des applications. Pour plus d’informations, consultez [Supprimer le catalogue d’applications](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_remove-appcat). | 21 mai 2019 | Première version publiée après le 1er novembre 2019|
 |L’implémentation du partage de contenu à partir d’Azure a évolué. Utilisez une passerelle de gestion cloud de gestion compatible avec le contenu. Vous ne pourrez pas créer de point de distribution cloud traditionnel à l’avenir.|Février 2019|Première version publiée après le 1er novembre 2019|
 |Déploiement de services classiques sur Azure pour la passerelle de gestion cloud et le point de distribution cloud. Pour plus d’informations, consultez [Planifier la passerelle de gestion cloud](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager).|Novembre 2018|Première version publiée après le 1er juillet 2019|

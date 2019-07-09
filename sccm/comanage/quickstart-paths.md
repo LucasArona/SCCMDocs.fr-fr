@@ -2,7 +2,7 @@
 title: Chemins vers la cogestion
 titleSuffix: Configuration Manager
 description: Comprenez les prérequis des deux méthodes principales dont vous disposez pour configurer la cogestion.
-ms.date: 01/14/2019
+ms.date: 06/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 803f05dd14da8d280f08f2bcf3608865f384d273
-ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
+ms.openlocfilehash: 4c34cf73133086f08cb390f39ab4fe715dfcefd2
+ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "56754844"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67550667"
 ---
 # <a name="paths-to-co-management"></a>Chemins vers la cogestion
 
@@ -35,7 +35,10 @@ Le choix de ce chemin peut vous permettre d’inscrire rapidement vos appareils 
 
 Voici ce que vous devez faire pour le configurer :
 - Azure AD hybride
-    - Active Directory Federation Services (ADFS) avec authentification pass-through (PTA)
+    - Une des [options d’identité hybride Azure AD](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-user-signin) suivantes :  
+       - [Synchronisation de hachage de mot de passe](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-user-signin#password-hash-synchronization) avec [Authentification unique fluide (SSO)](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso)
+       - [Authentification directe](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-pta) avec [Authentification unique fluide (SSO)](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso)
+       - [Authentification unique fédérée (avec Services de fédération Active Directory (AD FS))](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-user-signin#federation-that-uses-a-new-or-existing-farm-with-ad-fs-in-windows-server-2012-r2)
     - Azure AD Connect
     - Licence Azure AD Premium
     - Configurer la jonction Azure AD hybride (choisissez une option) :

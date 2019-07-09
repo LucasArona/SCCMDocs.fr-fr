@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c15b387ec9f2048a923eb220b6c8e3e1fdccded8
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: b3560284733ccad6a9a3676a46f755106596ad03
+ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67286296"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67551201"
 ---
 # <a name="capabilities-in-technical-preview-1612-for-system-center-configuration-manager"></a>Fonctionnalités de la version d’évaluation technique 1612 pour System Center Configuration Manager
 
@@ -186,7 +186,7 @@ Pour exécuter l’outil :
 2. Entrez ensuite une ligne de commande qui inclut les commutateurs de ligne de commande obligatoires ainsi que les commutateurs facultatifs que vous souhaitez utiliser.
 
 **Problème connu** : lorsque l’outil s’exécute, une erreur de ce type peut être renvoyée si un package ou un déploiement, quel qu’il soit, a échoué ou est en cours :
--  *System.InvalidOperationException: This content library cannot be cleaned up right now because package <packageID> is not fully installed.*
+-  *System.InvalidOperationException: Cette bibliothèque de contenu ne peut pas être nettoyée tout de suite car le package \<packageID> n’est pas entièrement installé.*
 
 **Solution de contournement :** aucune. L’outil ne peut pas identifier de façon fiable les fichiers orphelins lorsque du contenu est en cours de déploiement ou n’a pas pu être déployé. Par conséquent, l’outil ne vous autorisera pas à nettoyer le contenu tant que ce problème ne sera pas résolu.
 
@@ -202,7 +202,7 @@ Les commutateurs de ligne de commande suivants peuvent être utilisés dans n’
 | **/dp &lt;nom de domaine complet du point de distribution>**  | **Obligatoire** </br> Spécifiez le nom de domaine complet du point de distribution que vous souhaitez nettoyer. </br></br> Exemple :  ***ContentLibraryCleanup.exe /dp server1.contoso.com***|
 | **/ps &lt;nom de domaine complet du site principal>**       | **Facultatif** lors du nettoyage du contenu à partir d’un point de distribution sur un site principal.</br>**Obligatoire** lors du nettoyage du contenu à partir d’un point de distribution sur un site secondaire. </br></br> Spécifiez le nom de domaine complet du site principal auquel le point de distribution appartient, ou du site principal parent quand le point de distribution est sur un site secondaire. </br></br> Exemple : ***ContentLibraryCleanup.exe /dp server1.contoso.com /ps siteserver1.contoso.com*** |
 | **/sc &lt;code du site principal>**  | **Facultatif** lors du nettoyage du contenu à partir d’un point de distribution sur un site principal.</br>**Obligatoire** lors du nettoyage du contenu à partir d’un point de distribution sur un site secondaire. </br></br> Spécifiez le code du site principal auquel le point de distribution appartient, ou du site principal parent quand le point de distribution est sur un site secondaire.</br></br> Exemple : ***ContentLibraryCleanup.exe /dp server1.contoso.com /sc ABC*** |
-| **/log <log file directory>**       |**Facultatif** </br> Spécifiez un répertoire dans lequel placer les fichiers journaux. Il peut s’agir d’un lecteur local ou d’un emplacement sur un partage réseau.</br></br> Quand ce commutateur n’est pas utilisé, les fichiers journaux sont automatiquement placés dans le dossier temporaire users.</br></br> Exemple de lecteur local : ***ContentLibraryCleanup.exe /dp server1.contoso.com /log C:\Users\Administrator\Desktop*** </br></br>Exemple de partage réseau : ***ContentLibraryCleanup.exe /dp server1.contoso.com /log \\&lt;share>\&lt;folder>***|
+| **/ log \<répertoire du fichier journal>**       |**Facultatif** </br> Spécifiez un répertoire dans lequel placer les fichiers journaux. Il peut s’agir d’un lecteur local ou d’un emplacement sur un partage réseau.</br></br> Quand ce commutateur n’est pas utilisé, les fichiers journaux sont automatiquement placés dans le dossier temporaire users.</br></br> Exemple de lecteur local : ***ContentLibraryCleanup.exe /dp server1.contoso.com /log C:\Users\Administrator\Desktop*** </br></br>Exemple de partage réseau : ***ContentLibraryCleanup.exe /dp server1.contoso.com /log \\&lt;share>\&lt;folder>***|
 
 
 ## <a name="improvements-for-in-console-search"></a>Améliorations apportées à la recherche dans la console

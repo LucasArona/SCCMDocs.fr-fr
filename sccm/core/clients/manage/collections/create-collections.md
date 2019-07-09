@@ -11,35 +11,34 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 40cb1a96771181b395ec2f628e0f0c3c2efe29b7
-ms.sourcegitcommit: 53f2380ac67025fb4a69fc1651edad15d98e0cdd
+ms.openlocfilehash: ed08a9abb746681eb8e89d471e19990ced313788
+ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65673312"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67550909"
 ---
 # <a name="how-to-create-collections-in-configuration-manager"></a>Comment créer des regroupements dans Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
-Les regroupements sont des groupes d’utilisateurs ou d’appareils. Utilisez les regroupements pour effectuer des tâches comme la gestion d’applications, le déploiement de paramètres de compatibilité ou l’installation de mises à jour logicielles. Vous pouvez également utiliser des regroupements pour gérer des groupes de paramètres client ou les utiliser avec l’administration basée sur les rôles pour définir les ressources auxquelles un utilisateur administratif peut accéder. Configuration Manager contient plusieurs regroupements intégrés. Pour plus d’informations, consultez [Présentation des regroupements](/sccm/core/clients/manage/collections/introduction-to-collections).  
+Les regroupements sont des groupes d’utilisateurs ou d’appareils. Utilisez les regroupements pour effectuer des tâches comme la gestion d’applications, le déploiement de paramètres de compatibilité ou l’installation de mises à jour de logiciel. Vous pouvez également utiliser des regroupements pour gérer des groupes de paramètres client ou les utiliser avec l’administration basée sur les rôles pour définir les ressources auxquelles un utilisateur administratif peut accéder. Configuration Manager contient plusieurs regroupements intégrés. Pour plus d’informations, consultez [Présentation des regroupements](/sccm/core/clients/manage/collections/introduction-to-collections).  
 
 > [!NOTE]  
 > Un regroupement peut contenir des utilisateurs ou des appareils, mais pas les deux.  
 
 
-Utilisez cet article pour créer des regroupements dans Configuration Manager. Vous pouvez aussi importer des regroupements créés sur ce site ou sur un autre site Configuration Manager. Pour plus d'informations sur l’exportation et l’importation de regroupements, consultez [Comment gérer des regroupements](/sccm/core/clients/manage/collections/manage-collections).  
-
+Les informations de cet article peuvent aider à créer des regroupements dans Configuration Manager. Vous pouvez aussi importer des regroupements créés sur le site Configuration Manager actuel ou sur un autre site. Pour plus d'informations sur l’exportation et l’importation de regroupements, consultez [Comment gérer des regroupements](/sccm/core/clients/manage/collections/manage-collections).  
 
 
 ## <a name="collection-rules"></a>Règles de regroupement
 
-Il existe différentes règles que vous pouvez utiliser pour configurer les membres d’un regroupement dans Configuration Manager.  
+Il existe différents types de règles que vous pouvez utiliser pour configurer les membres d’un regroupement dans Configuration Manager.  
 
 
 ### <a name="direct-rule"></a>Règle directe
 
-Utilisez les règles directes pour choisir les utilisateurs ou les ordinateurs à ajouter à un regroupement. Cette appartenance ne change pas, à moins qu’une ressource soit supprimée de Configuration Manager. Configuration Manager doit avoir découvert les ressources ou vous devez les avoir importées pour pouvoir les ajouter à un regroupement à règle directe. Les regroupements avec règle directe ont une surcharge administrative plus élevée que celle des regroupements avec règle de requête, car ils nécessitent des modifications manuelles.
+Utilisez les règles directes pour choisir les utilisateurs ou les ordinateurs à ajouter à un regroupement. L’appartenance ne change pas, à moins qu’une ressource soit supprimée de Configuration Manager. Configuration Manager doit avoir découvert les ressources ou vous devez les avoir importées pour pouvoir les ajouter à un regroupement à règle directe. Les regroupements avec règle directe ont une surcharge administrative plus élevée que celle des regroupements avec règle de requête, car elles nécessitent des modifications manuelles.
 
 
 ### <a name="query-rule"></a>Règle de requête
@@ -65,12 +64,12 @@ Vous pouvez ajouter plusieurs règles d’inclusion de regroupement à un regrou
 
 ### <a name="exclude-collection-rule"></a>Règle Exclure des regroupements
 
-La règle Exclure des regroupements permet d’exclure les membres d’un autre regroupement d’un regroupement Configuration Manager. Si le regroupement exclu change, Configuration Manager met à jour l’appartenance du regroupement actuel d’après un planning.
+Exclure les règles de regroupement permet d’exclure les membres d’un regroupement d’une autre collection du Gestionnaire de configuration. Si le regroupement exclu change, Configuration Manager met à jour l’appartenance du regroupement actuel d’après un planning.
 
 Vous pouvez ajouter plusieurs règles d’exclusion de regroupement à un regroupement. Si un regroupement inclut des règles d’inclusion et d’exclusion de regroupement et qu’il existe un conflit, la règle d’exclusion de regroupement est prioritaire.
 
 #### <a name="example"></a>Exemple
-vous créez un regroupement qui comporte une seule règle d’inclusion de regroupement et une seule règle d’exclusion de regroupement. La règle d’inclusion concerne un regroupement d’ordinateurs de bureau Dell. La règle d’exclusion concerne un regroupement d’ordinateurs qui possèdent moins de 4 Go de RAM. Le nouveau regroupement contient les ordinateurs de bureau Dell qui ont au moins 4 Go de RAM.
+vous créez un regroupement qui comporte une seule règle d’inclusion de regroupement et une seule règle d’exclusion de regroupement. La règle d’inclusion concerne un regroupement d’ordinateurs de bureau Dell. Le regroupement d’exclusion concerne un regroupement d’ordinateurs qui possèdent moins de 4 Go de RAM. Le nouveau regroupement contient les ordinateurs de bureau Dell qui ont au moins 4 Go de RAM.
 
 
 
@@ -78,20 +77,20 @@ vous créez un regroupement qui comporte une seule règle d’inclusion de regro
 
 1. Dans la console de Configuration Manager, accédez à l’espace de travail **Actifs et conformité**.  
 
-    - Pour créer un *regroupement d’appareils*, sélectionnez le nœud **Regroupements d’appareils**. Puis, sur l’onglet **Accueil** du ruban, dans le groupe **Créer**, choisissez **Créer un regroupement d’appareils**.  
+    - Pour créer un *regroupement d’appareils*, sélectionnez le nœud **Regroupements d’appareils**. Puis, sur l’onglet **Accueil** du ruban, dans le groupe **Créer**, sélectionnez **Créer un regroupement d’appareils**.  
 
-    - Pour créer un *regroupement d’utilisateurs*, sélectionnez le nœud **Regroupements d’utilisateurs**. Puis, sur l’onglet **Accueil** du ruban, dans le groupe **Créer**, choisissez **Créer un regroupement d’utilisateurs**.  
+    - Pour créer un *regroupement d’utilisateurs*, sélectionnez le nœud **Regroupements d’utilisateurs**. Puis, sur l’onglet **Accueil** du ruban, dans le groupe **Créer**, sélectionnez **Créer un regroupement d’utilisateurs**.  
 
-2. Dans la page **Général** de l’Assistant, fournissez un **Nom** et un **Commentaire**. Dans la section **Limitation au regroupement**, choisissez **Parcourir** pour sélectionner un regroupement de limitation. Le regroupement que vous créez contiendra uniquement les membres de la limitation au regroupement.  
+2. Dans la page **Général** de l’Assistant, fournissez un **Nom** et un **Commentaire**. Dans la section **Limitation au regroupement**, sélectionnez **Parcourir** puis, sélectionnez une limitation au regroupement. Le regroupement que vous créez contiendra uniquement les membres de la limitation au regroupement.  
 
-4. Sur la page **Règles d’adhésion**, dans la liste **Ajouter une règle**, sélectionnez le type de règle d’adhésion à utiliser pour le regroupement. Vous pouvez configurer plusieurs règles pour chaque regroupement. La configuration varie pour chaque règle. Pour plus d’informations sur la configuration de chaque règle, consultez les sections suivantes :  
+4. Dans la page **Règles d’adhésion**, dans la liste **Ajouter une règle**, sélectionnez le type de règle d’adhésion à utiliser pour le regroupement. Vous pouvez configurer plusieurs règles pour chaque regroupement. La configuration varie pour chaque règle. Pour plus d’informations sur la configuration de chaque règle, consultez les sections suivantes de cet article :  
     - [Règle directe](#bkmk-direct)
     - [Règle de requête](#bkmk-query)
     - [Règle de catégorie d’appareil](#bkmk-category)
     - [Règle Inclure des regroupements](#bkmk-include)
     - [Règle Exclure des regroupements](#bkmk-exclude)
 
-5. De plus, dans la page **Règles d’adhésion**, passez en revue les paramètres suivants :
+5. De plus, dans la page **Règles d’adhésion**, passez en revue les paramètres suivants.
 
     - **Utiliser des mises à jour incrémentielles pour ce regroupement** : Sélectionnez cette option pour rechercher et mettre à jour régulièrement les ressources nouvelles ou modifiées uniquement depuis l’évaluation de regroupement précédente. Ce processus est indépendant d’une évaluation de regroupement complète. Par défaut, les mises à jour incrémentielles ont lieu toutes les 5 minutes.  
 
@@ -115,18 +114,18 @@ vous créez un regroupement qui comporte une seule règle d’inclusion de regro
 
     - **Planifier une mise à jour complète sur ce regroupement** : Planifiez une évaluation complète régulière de l’appartenance au regroupement.  
 
-        À compter de la version 1810, les changements suivants apportés au comportement d’évaluation des regroupements peuvent améliorer les performances du site :<!--3607726-->  
+        À compter de la version 1810, ces modifications apportées au comportement d’évaluation des regroupements peuvent améliorer les performances du site :<!--3607726-->  
 
-        - Auparavant, lorsque vous configuriez une planification sur un regroupement basé sur une requête, le site continuait à évaluer la requête que le paramètre de regroupement **Planifier une mise à jour complète sur ce regroupement** soit activé ou pas. Pour désactiver entièrement la planification, vous deviez modifier la planification sur **Aucun**. 
+        - Auparavant, lorsque vous configuriez une planification sur un regroupement basé sur une requête, le site continuait à évaluer la requête que le paramètre de regroupement **Planifier une mise à jour complète sur ce regroupement** soit activé ou pas. Pour désactiver entièrement la planification, vous deviez modifier la planification sur **Aucun**.
 
             Désormais, le site efface la planification lorsque vous désactivez ce paramètre. Pour spécifier une planification pour l’évaluation du regroupement, activez l’option **Planifier une mise à jour complète sur ce regroupement**.  
 
-            Lorsque vous mettez à jour votre site, pour n’importe quel regroupement existant sur lequel vous avez spécifié une planification, le site active l’option **Planifier une mise à jour complète sur ce regroupement**. Bien que cette configuration n’était peut-être pas votre intention, c’était le comportement réel. Pour empêcher que le site évalue un regroupement en fonction d’une planification, désactivez cette option.  
+            Lorsque vous mettez à jour votre site, pour n’importe quel regroupement existant sur lequel vous avez spécifié une planification, le site active l’option **Planifier une mise à jour complète sur ce regroupement**. Bien que cette configuration peut ne pas correspondre à votre intention, il s’agit du comportement réel de la planification avant de mettre à jour le site. Pour empêcher que le site évalue un regroupement en fonction d’une planification, désactivez cette option.  
 
         - Vous ne pouvez pas désactiver l’évaluation de regroupements intégrés, comme **Tous les systèmes**, mais vous pouvez maintenant configurer la planification. Ce comportement vous permet de personnaliser cette action sur une heure qui répond à vos besoins. 
 
-            > [!Tip]  
-            > Modifiez uniquement **l’heure** de la planification personnalisée sur les regroupements intégrés. Ne modifiez pas le **modèle de périodicité**. Les itérations futures appliqueront peut-être un modèle de périodicité spécifique.  
+            > [!TIP]  
+            > Sur les regroupements intégrés, modifiez uniquement l’**Heure** de la planification personnalisée. Ne modifiez pas le **modèle de périodicité**. Les itérations futures appliqueront peut-être un modèle de périodicité spécifique.  
 
 6. Terminez l'Assistant pour créer le regroupement. Le nouveau regroupement figure dans le nœud **Regroupements de périphériques** de l'espace de travail **Ressources et conformité**.  
 
@@ -136,15 +135,15 @@ vous créez un regroupement qui comporte une seule règle d’inclusion de regro
         
 ### <a name="bkmk-direct"></a> Configuration d’une règle directe  
 
-1. Sur la page **Rechercher des ressources** de l' **Assistant Création d'une règle d'adhésion directe**, spécifiez les informations suivantes :  
+1. Dans la page **Rechercher des ressources** de l'**Assistant Créer une règle d'adhésion directe**, spécifiez les informations suivantes.  
 
-    - **Classe de ressource** : sélectionnez le type de ressource à rechercher et à ajouter au regroupement. Par exemple, 
-        - **Ressource système** : Recherche des données d’inventaire retournées à partir des ordinateurs clients
-        - **Ordinateur inconnu** : Effectuer une sélection à partir des valeurs retournées par des ordinateurs inconnus
-        - **Ressource utilisateur** : Recherche des informations utilisateur collectées par Configuration Manager
-        - **Ressource groupe d’utilisateurs** : Recherche des informations de groupe d’utilisateurs collectées par Configuration Manager
+    - **Classe de ressource** : sélectionnez le type de ressource à rechercher et à ajouter au regroupement. Par exemple :
+        - **Ressource système** : Recherchez des données d’inventaire retournées à partir des ordinateurs clients.
+        - **Ordinateur inconnu** : Effectuez une sélection à partir des valeurs retournées par des ordinateurs inconnus.
+        - **Ressource utilisateur** : Recherchez des informations utilisateur collectées par Configuration Manager.
+        - **Ressource groupe d’utilisateurs** : Recherchez des informations de groupe d’utilisateurs collectées par Configuration Manager.
 
-    - **Nom d’attribut** : sélectionnez l’attribut associé à la classe de ressource sélectionnée à rechercher. Par exemple,  
+    - **Nom d’attribut** : sélectionnez l’attribut associé à la classe de ressource sélectionnée à rechercher. Par exemple :  
 
         - Si vous souhaitez sélectionner des ordinateurs par leur nom NetBIOS, sélectionnez **Ressource système** dans la liste **Classe de ressource** et **NetBIOS nom** dans la liste **Nom d’attribut**.  
 
@@ -154,33 +153,33 @@ vous créez un regroupement qui comporte une seule règle d’inclusion de regro
 
     - **Exclure les ressources sur lesquelles le client Configuration Manager n’est pas installé** : Ces ressources ne s’afficheront dans les résultats de la recherche.  
 
-    - **Valeur** : Entrez une valeur pour rechercher le nom d’attribut sélectionné. Utilisez le caractère de pourcentage `%` comme caractère générique. Par exemple,  
-        - Pour rechercher les ordinateurs dont le nom NetBIOS commence par « M », entrez `M%` dans ce champ.  
-        - Pour rechercher des utilisateurs dans l’unité d’organisation Contoso, entrez `Contoso` dans ce champ.
+    - **Valeur** : Entrez une valeur pour rechercher le nom d’attribut sélectionné. Utilisez le caractère de pourcentage (%) comme caractère générique. Par exemple :  
+        - Pour rechercher les ordinateurs dont le nom NetBIOS commence par « M », entrez **M%** dans ce champ.  
+        - Pour rechercher des utilisateurs dans l’unité d’organisation Contoso, entrez **Contoso** dans ce champ.
 
-2. Dans la page **Sélectionner les ressources**, sélectionnez les ressources à ajouter au regroupement dans la liste **Ressources**, puis choisissez **Suivant**.  
+2. Dans la page **Sélectionner les ressources**, sélectionnez les ressources à ajouter au regroupement dans la liste **Ressources**, puis sélectionnez **Suivant**.  
 
 
 ### <a name="bkmk-query"></a> Configuration d’une règle de requête  
 
-Dans la boîte de dialogue **Propriétés de la règle de requête** , définissez les options suivantes :  
+Dans la boîte de dialogue **Propriétés de la règle de requête**, définissez les informations suivantes.  
 
 - **Nom** : Spécifiez un nom unique pour la requête.  
 
 - **Importer la déclaration de requête** : Ouvre la boîte de dialogue **Parcourir la requête**. Sélectionnez une [requête Configuration Manager](/sccm/core/servers/manage/create-queries) à utiliser comme règle de requête pour le regroupement.   
 
-- **Classe de ressource** : sélectionnez le type de ressource à rechercher et à ajouter au regroupement. Sélectionnez dans les valeurs **Ressource système** pour rechercher des données d'inventaire renvoyées par les ordinateurs clients ou **Ordinateur inconnu** pour sélectionner dans les valeurs renvoyées par les ordinateurs inconnus.  
+- **Classe de ressource** : sélectionnez le type de ressource à rechercher et à ajouter au regroupement. Sélectionnez une valeur dans **Ressource système** pour rechercher des données d'inventaire renvoyées par les ordinateurs clients ou dans **Ordinateur inconnu** pour sélectionner les valeurs renvoyées par des ordinateurs inconnus.  
 
-- **Modifier l’instruction de la requête** : Ouvre la boîte de dialogue **Propriétés de l’instruction de requête** dans laquelle vous pouvez créer une requête à utiliser comme règle pour le regroupement. Pour plus d’informations sur les requêtes, consultez [Présentation des requêtes](/sccm/core/servers/manage/introduction-to-queries).  
+- **Modifier l’instruction de la requête** : Ouvre la boîte de dialogue **Propriétés de l’instruction de requête** dans laquelle vous pouvez écrire une requête à utiliser comme règle pour le regroupement. Pour plus d’informations sur les requêtes, consultez [Présentation des requêtes](/sccm/core/servers/manage/introduction-to-queries).  
 
 
 ### <a name="bkmk-category"></a> Règle de catégorie d’appareil
 
-Les actions suivantes sont disponibles dans la fenêtre **Sélectionner des catégories d’appareils** :
+Les actions suivantes sont disponibles dans la fenêtre **Sélectionner des catégories d’appareils**.
 
-- **Créer** : Spécifiez un nom pour créer une nouvelle catégorie
-- **Renommer** : Renommer la catégorie sélectionnée
-- **Supprimer** : Sélectionnez une ou plusieurs catégories et utilisez cette action pour les supprimer de la liste
+- **Créer** : Spécifiez un nom pour créer une nouvelle catégorie.
+- **Renommer** : Renommez la catégorie sélectionnée.
+- **Supprimer** : Sélectionnez une ou plusieurs catégories et utilisez cette action pour les supprimer de la liste.
 
 Pour plus d’informations, consultez [Classement automatiquement des appareils dans des regroupements](/sccm/core/clients/manage/collections/automatically-categorize-devices-into-collections).<!-- SCCMDocs issue 552 -->
 
@@ -192,35 +191,35 @@ Dans la boîte de dialogue **Sélectionner des regroupements**, sélectionnez le
 
 ### <a name="bkmk-exclude"></a> Configuration d’une règle d’exclusion de regroupements  
 
-Dans la boîte de dialogue **Sélectionner des regroupements**, sélectionnez les regroupements à inclure dans le nouveau regroupement, puis choisissez **OK**.  
+Dans la boîte de dialogue **Sélectionner des regroupements**, sélectionnez les regroupements à inclure dans le nouveau regroupement, puis sélectionnez **OK**.  
 
 
 
 ## <a name="bkmk_import"></a> Importation d’un regroupement  
 
-Lorsque vous exportez un regroupement à partir d’un site, Configuration Manager l’enregistre en tant que fichier au format MOF (format d’objet managé). Utilisez cette procédure pour importer ce fichier dans votre base de données de site. Vous devez disposer d’autorisations **Créer** sur la classe de regroupements. 
+Lorsque vous exportez un regroupement à partir d’un site, Configuration Manager l’enregistre en tant que fichier au format MOF. Utilisez cette procédure pour importer ce fichier dans votre base de données de site. Pour terminer cette procédure, vous devez **Créer** des autorisations d'accès sur la classe de regroupements.
 
-> [!Important]  
+> [!IMPORTANT]  
 > - Assurez-vous que le fichier contient uniquement des données de regroupement, qu’il provient d’une source de confiance et qu’il n’a pas été falsifié.  
 > 
-> - Assurez-vous que le fichier a été exporté à partir d’un site exécutant la même version de Configuration Manager.  
+> - Assurez-vous que le fichier a été exporté à partir d’un site exécutant la même version de Configuration Manager que celle que vous utilisez.  
 
 Pour plus d’informations sur l’exportation de regroupements, consultez [Comment gérer des regroupements](/sccm/core/clients/manage/collections/manage-collections).
 
 
 1. Dans la console de Configuration Manager, accédez à l’espace de travail **Actifs et conformité**. Sélectionnez le nœud **Regroupements d’utilisateurs** ou **Regroupements d’appareils**.  
 
-2. Dans l’onglet **Accueil** du ruban, dans le groupe **Créer**, choisissez **Importer des regroupements**.  
+2. Dans l’onglet **Accueil** du ruban, dans le groupe **Créer**, sélectionnez **Importer des regroupements**.  
 
-3. Dans la page **Général** de l’**Assistant Importation de regroupements**, choisissez **Suivant**.  
+3. Dans la page **Général** de l’**Assistant Importation de regroupements**, sélectionnez **Suivant**.  
 
-4. Sur la page **Nom du fichier MOF**, choisissez **Parcourir**. Accédez au fichier MOF qui contient les informations de regroupement à importer.  
+4. Dans la page **Nom du fichier MOF**, sélectionnez **Parcourir**. Accédez au fichier MOF qui contient les informations de regroupement à importer.  
 
 5. Terminez l'Assistant pour importer le regroupement. Le nouveau regroupement figure dans le nœud **Regroupements d’utilisateurs** ou **Regroupements de périphériques** de l’espace de travail **Ressources et Conformité** . Actualisez ou rechargez la console Configuration Manager pour afficher les membres du regroupement récemment importé.  
 
 ## <a name="bkmk_powershell"></a> Utilisation de PowerShell
 
-PowerShell peut être utilisé pour créer et importer des regroupements.  Pour plus d'informations, voir :
+Vous pouvez utiliser PowerShell pour créer et importer des regroupements. Pour plus d'informations, voir :
 
 * [New-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmcollection)
 * [Set-CMCollection](https://docs.microsoft.com/powershell/module/ConfigurationManager/Set-CMCollection)

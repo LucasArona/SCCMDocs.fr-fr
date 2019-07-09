@@ -11,45 +11,45 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 212bafed34022f6f6620e21e87fee2870a8f869e
-ms.sourcegitcommit: 53f2380ac67025fb4a69fc1651edad15d98e0cdd
+ms.openlocfilehash: ebe3414ad8db1a76761954579a7668179ee1fd74
+ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65673358"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67550721"
 ---
 # <a name="introduction-to-hardware-inventory-in-system-center-configuration-manager"></a>Présentation de l’inventaire matériel dans System Center Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
-Utilisez l’inventaire matériel dans System Center Configuration Manager pour recueillir des informations sur la configuration matérielle des appareils clients de votre organisation. Pour recueillir l'inventaire matériel, le paramètre **Activer l'inventaire matériel sur les clients** doit être activé dans les paramètres client.  
+Utilisez l’inventaire matériel dans System Center Configuration Manager pour recueillir des informations sur la configuration matérielle des appareils clients de votre organisation. Pour collecter un inventaire matériel, vous devez sélectionner le paramètre **Activer un inventaire matériel sur les clients** dans les paramètres du client.  
 
- Une fois l’inventaire matériel activé et un cycle d’inventaire matériel exécuté par le client, ce dernier envoie les informations à un point de gestion sur le site du client. Le point de gestion transfère ensuite les informations d’inventaire au serveur de site Configuration Manager, qui les stocke dans la base de données du site. L'inventaire matériel s'exécute sur les clients en fonction de la planification que vous spécifiez dans les paramètres du client.  
+ Une fois l’inventaire matériel activé et un cycle d’inventaire matériel exécuté par le client, ce dernier envoie les informations à un point de gestion sur le site du client. Le point de gestion transfère ensuite les informations d'inventaire au serveur de site Configuration Manager, qui les stocke dans la base de données du site. L'inventaire matériel s'exécute sur les clients en fonction de la planification que vous spécifiez dans les paramètres du client.  
 ## <a name="view-hardware-inventory"></a>Afficher l’inventaire matériel 
 
- Vous pouvez utiliser plusieurs méthodes pour afficher les données d’inventaire matériel que Configuration Manager recueille. Ces référentiels sont notamment les suivants :  
+ Vous pouvez utiliser plusieurs méthodes pour afficher les données d’inventaire matériel que Configuration Manager recueille, y compris ces méthodes :  
 
 - [Créer des requêtes qui retournent des appareils basés sur une configuration matérielle spécifique](../../../../core/servers/manage/introduction-to-queries.md).  
 
-- [Créer des regroupements basés sur des requêtes qui reposent sur une configuration matérielle spécifique](../../../../core/clients/manage/collections/introduction-to-collections.md). Les appartenances à un regroupement basé sur une requête sont mises à jour automatiquement selon un calendrier. Vous pouvez utiliser des regroupements pour plusieurs tâches, notamment le déploiement de logiciel. .  
+- [Créer des regroupements basés sur des requêtes qui reposent sur une configuration matérielle spécifique](../../../../core/clients/manage/collections/introduction-to-collections.md). Les appartenances à un regroupement basé sur une requête sont mises à jour automatiquement selon un calendrier. Vous pouvez utiliser des regroupements pour plusieurs tâches, notamment le déploiement de logiciels.
 
-- [Exécuter des rapports qui affichent des détails spécifiques sur les configurations matérielles de votre organisation](../../../../core/servers/manage/reporting.md).   
+- [Exécuter des rapports qui affichent des détails spécifiques sur les configurations matérielles de votre organisation](../../../../core/servers/manage/reporting.md).
 
-- [Utilisez l’Explorateur de ressources](../../../../core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md) pour afficher des informations détaillées sur l’inventaire matériel collecté à partir d’appareils clients.   
+- [Utiliser l’Explorateur de ressources](../../../../core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md) pour afficher des informations détaillées sur l’inventaire matériel collecté à partir d’appareils clients.
 
-  Lorsque l'inventaire matériel s'exécute sur un appareil client, les premières données d'inventaire renvoyées par le client sont toujours un inventaire complet. Les informations d'inventaire suivantes contiennent uniquement des informations d'inventaire différentielles. Le serveur de site traite les informations d'inventaire différentielles selon l'ordre dans lequel il les reçoit. S’il manque des informations différentielles pour un client, le serveur de site rejette les informations différentielles supplémentaires et indique au client d’exécuter un cycle d’inventaire complet.  
+Lorsque l'inventaire matériel s'exécute sur un appareil client, les premières données d'inventaire renvoyées par le client sont toujours un inventaire complet. Les données d'inventaire suivantes contiennent uniquement des informations d'inventaire différentiel. Le serveur de site traite les informations d’inventaire différentiel selon l’ordre dans lequel il les reçoit. S’il manque des informations différentielles pour un client, le serveur de site rejette les informations différentielles supplémentaires et indique au client d’exécuter un cycle d’inventaire complet.  
 
-  Configuration Manager assure une prise en charge limitée des ordinateurs à double démarrage. Configuration Manager peut détecter les ordinateurs à double démarrage, mais retourne uniquement les informations d’inventaire du système d’exploitation qui était actif au moment de l’inventaire.  
+ Configuration Manager assure une prise en charge limitée des ordinateurs à double démarrage. Configuration Manager peut découvrir les ordinateurs à double démarrage, mais retourne uniquement les informations d’inventaire du système d’exploitation actif au moment de l’exécution du cycle d’inventaire.  
 
 > [!NOTE]  
 >  Pour plus d’informations sur l’utilisation de l’inventaire matériel avec des clients qui exécutent Linux et UNIX, consultez [Inventaire matériel pour Linux et UNIX dans System Center Configuration Manager](../../../../core/clients/manage/inventory/hardware-inventory-for-linux-and-unix.md).  
 
 ## <a name="extending-configuration-manager-hardware-inventory"></a>Extension de l’inventaire matériel Configuration Manager  
- En plus de l’inventaire matériel intégré dans Configuration Manager, vous pouvez également utiliser une des méthodes suivantes pour étendre l’inventaire matériel en vue de collecter des informations supplémentaires :  
+ En plus de l’inventaire matériel intégré dans Configuration Manager, vous pouvez également utiliser une des méthodes suivantes pour étendre l’inventaire matériel en vue de collecter plus d’informations :  
 
-- Vous pouvez activer, désactiver, ajouter et supprimer des classes d’inventaire pour l’inventaire matériel à partir de la console Configuration Manager.  
+- Activez, désactivez, ajoutez et supprimez des classes d’inventaire pour l’inventaire matériel à partir de la console Configuration Manager.  
 - Utilisez des fichiers NOIDMIF pour collecter des informations sur les appareils clients qui ne peuvent pas être inventoriés par Configuration Manager. Par exemple, vous pouvez souhaiter recueillir des informations numéros de périphérique actif qui existe uniquement en tant qu'étiquette sur le périphérique. Inventaire NOIDMIF est automatiquement associé à l'appareil client collectées à partir de.  
-- Utilisez des fichiers IDMIF pour collecter des informations sur les ressources qui ne sont associées à aucun client Configuration Manager ; par exemple, les projecteurs, les photocopieurs et les imprimantes réseau. 
+- Utilisez des fichiers IDMIF pour collecter des informations sur des ressources qui ne sont pas associées à un client Gestionnaire de configuration ; par exemple, les projecteurs, les photocopieurs et les imprimantes réseau.
 
 
 ## <a name="next-steps"></a>Étapes suivantes

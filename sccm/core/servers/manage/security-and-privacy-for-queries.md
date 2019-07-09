@@ -11,28 +11,28 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43dcbe3abc200ecf32a83888e7b9712efd21584e
-ms.sourcegitcommit: 99dfe4fb9e9cfd20c44380ae442b3a5b895a0d9b
+ms.openlocfilehash: 0315124b44af4359528b590bf0a6b325bfd14eb1
+ms.sourcegitcommit: 3a3f40f3d39cbecfb9219a64c0185ea4b2ef9671
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65214757"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67561983"
 ---
 # <a name="security-and-privacy-for-queries-in-system-center-configuration-manager"></a>Sécurité et confidentialité pour les requêtes dans System Center Configuration Manager
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
-Dans System Center Configuration Manager, les requêtes vous permettent de récupérer des informations à partir de la base de données du site selon les critères que vous spécifiez. Configuration Manager collecte les informations de base de données de site pendant le fonctionnement standard. Par exemple, en utilisant les informations qui ont été collectées à partir de découverte ou d'inventaire, vous pouvez configurer une requête pour identifier les périphériques qui répondent aux critères spécifiés.  
+Dans System Center Configuration Manager, les requêtes vous permettent de récupérer des informations à partir de la base de données du site selon les critères que vous spécifiez. Configuration Manager collecte les informations de base de données du site pendant l’opération standard. Par exemple, en utilisant les informations collectées pendant la détection ou l'inventaire, vous pouvez configurer une requête pour identifier les périphériques qui répondent aux critères spécifiés.  
 
- Pour plus d’informations sur les requêtes, consultez [Présentation des requêtes dans System Center Configuration Manager](../../../core/servers/manage/introduction-to-queries.md). Pour plus d’informations sur les bonnes pratiques en matière de sécurité et les informations de confidentialité pour les opérations Configuration Manager qui collectent les informations que vous pouvez récupérer à l’aide de requêtes, consultez [Sécurité et confidentialité pour System Center Configuration Manager](../../../core/plan-design/security/security-and-privacy.md).  
+ Pour plus d’informations sur les requêtes, consultez [Présentation des requêtes dans System Center Configuration Manager](../../../core/servers/manage/introduction-to-queries.md). Pour des informations sur les bonnes pratiques en matière de sécurité et de confidentialité en ce qui concerne les opérations de Configuration Manager qui collectent les données que vous pouvez récupérer à l’aide de requêtes, consultez [Sécurité et confidentialité pour System Center Configuration Manager](../../../core/plan-design/security/security-and-privacy.md).  
 
 ## <a name="security-best-practices-for-queries"></a>Bonnes pratiques de sécurité pour les requêtes
 
- Utilisez les meilleures pratiques de sécurité suivantes pour les requêtes.  
+ Utilisez les meilleures pratiques en matière de sécurité suivantes pour les requêtes.  
 
 |Bonnes pratiques de sécurité|Informations complémentaires|  
 |----------------------------|----------------------|  
-|Lorsque vous exportez ou importez une requête qui est enregistrée dans un emplacement réseau, sécurisez l'emplacement et le canal de réseau.|Veillez à restreindre l'accès au dossier réseau.<br /><br /> Utilisez la signature SMB ou IPsec entre l’emplacement réseau et le serveur de site pour empêcher un intrus de falsifier les données de la requête avant leur importation.|  
+|Lorsque vous exportez ou importez une requête enregistrée dans un emplacement réseau, sécurisez l'emplacement et le canal de réseau.|Veillez à restreindre l'accès au dossier réseau.<br /><br /> Utilisez la signature du protocole SMB (Server Message Block) ou la sécurité du protocole Internet (IPsec) entre l’emplacement réseau et le serveur de site pour empêcher un attaquant de falsifier les données de la requête avant leur importation.|  
 
 ## <a name="next-steps"></a>Étapes suivantes
   

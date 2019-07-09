@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 950e3d60d0737d9135eb5f47bbc02a07f2a5e65e
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: 23fbb29ba4676f6c7282e5337f691f88209e15e6
+ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67158332"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67551232"
 ---
 # <a name="capabilities-in-technical-preview-1702-for-system-center-configuration-manager"></a>Fonctionnalités de Technical Preview 1702 pour System Center Configuration Manager
 
@@ -158,7 +158,7 @@ Après avoir créé la stratégie de conformité, vous pouvez surveiller les ré
 ## <a name="improvements-to-software-center-settings-and-notification-messages-for-high-impact-task-sequences"></a>Améliorations apportées aux paramètres du Centre logiciel et aux messages de notification pour les séquences de tâches à fort impact
 Cette version inclut les améliorations suivantes des paramètres du Centre logiciel et des messages de notification pour les séquences de tâches de déploiement à fort impact :
 
-- Dans les propriétés de la séquence de tâches, vous pouvez maintenant configurer n’importe quelle séquence de tâches, notamment celles non liées au système d’exploitation, comme déploiement à haut risque. Toute séquence de tâches qui remplit certaines conditions est définie automatiquement comme séquence à fort impact. Pour plus d’informations, consultez [Paramètres pour gérer les déploiements à haut risque pour System Center Configuration Manager](http://docs.microsoft.com/sccm/protect/understand/settings-to-manage-high-risk-deployments).
+- Dans les propriétés de la séquence de tâches, vous pouvez maintenant configurer n’importe quelle séquence de tâches, notamment celles non liées au système d’exploitation, comme déploiement à haut risque. Toute séquence de tâches qui remplit certaines conditions est définie automatiquement comme séquence à fort impact. Pour plus d’informations, consultez [Paramètres pour gérer les déploiements à haut risque pour System Center Configuration Manager](https://docs.microsoft.com/sccm/protect/understand/settings-to-manage-high-risk-deployments).
 - Dans les propriétés de la séquence de tâches, vous pouvez choisir d’utiliser le message de notification par défaut ou créer votre propre message de notification personnalisé pour les déploiements à fort impact.
 - Dans les propriétés de la séquence de tâches, vous pouvez configurer les propriétés du Centre logiciel, notamment exiger un redémarrage ou définir la taille de téléchargement de la séquence de tâches et la durée d’exécution estimée.
 - Le message de déploiement à fort impact par défaut pour les mises à niveau sur place signale désormais que vos applications, vos données et vos paramètres sont migrés automatiquement. Auparavant, le message par défaut pour toute installation de système d’exploitation indiquait que tous les paramètres, les données et les applications seraient perdues, ce qui était faux pour une mise à niveau sur place.
@@ -166,7 +166,7 @@ Cette version inclut les améliorations suivantes des paramètres du Centre logi
 ### <a name="set-a-task-sequence-as-a-high-impact-task-sequence"></a>Définir une séquence de tâches comme séquence de tâches à fort impact
 Appliquez la procédure suivante pour définir une séquence de tâches à fort impact.
 > [!NOTE]
-> Toute séquence de tâches qui remplit certaines conditions est définie automatiquement comme séquence à fort impact. Pour plus d’informations, consultez [Paramètres pour gérer les déploiements à haut risque pour System Center Configuration Manager](http://docs.microsoft.com/sccm/protect/understand/settings-to-manage-high-risk-deployments).
+> Toute séquence de tâches qui remplit certaines conditions est définie automatiquement comme séquence à fort impact. Pour plus d’informations, consultez [Paramètres pour gérer les déploiements à haut risque pour System Center Configuration Manager](https://docs.microsoft.com/sccm/protect/understand/settings-to-manage-high-risk-deployments).
 
 1. Dans la console Configuration Manager, accédez à **Bibliothèque de logiciels** > **Systèmes d’exploitation** > **Séquences de tâches**.
 2. Sélectionnez la séquence de tâches à modifier, puis cliquez sur **Propriétés**.
@@ -208,7 +208,7 @@ Appliquez la procédure suivante pour configurer les détails de la séquence de
 
 ## <a name="check-for-running-executable-files-before-installing-an-application"></a>Vérifier si des fichiers exécutables sont en cours d’exécution avant d’installer une application
 
-Dans la boîte de dialogue *<deployment type name>* **Propriétés** d’un type de déploiement, sous l’onglet Comportement à l’installation, vous pouvez désormais spécifier un ou plusieurs fichiers exécutables qui, s’ils sont en cours d’exécution, bloqueront l’installation du type de déploiement. L’utilisateur doit fermer le fichier exécutable en cours d’exécution (ou il peut être fermé automatiquement pour les déploiements dont l’objet est défini sur Obligatoire) pour que le type de déploiement puisse être installé.
+Dans la boîte de dialogue *\<nom du type de déploiement>* **Propriétés** d’un type de déploiement, sur l’onglet Comportement à l'installation, vous pouvez désormais spécifier un ou plusieurs fichiers exécutables qui, s’ils sont exécutés, bloquent l’installation du type de déploiement. L’utilisateur doit fermer le fichier exécutable en cours d’exécution (ou il peut être fermé automatiquement pour les déploiements dont l’objet est défini sur Obligatoire) pour que le type de déploiement puisse être installé.
 
 ### <a name="try-it-out"></a>Essayez.
 

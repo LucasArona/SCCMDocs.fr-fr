@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5396ec603cab4b16e0d0c7e538618d1e757ab62f
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: 50a85f9639cb2f284a431081caea10e71f92b9f3
+ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67286181"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67551122"
 ---
 # <a name="capabilities-in-technical-preview-1705-for-system-center-configuration-manager"></a>Fonctionnalités de la version Technical Preview 1705 de System Center Configuration Manager
 
@@ -247,7 +247,7 @@ Cela connecte votre site Configuration Manager à Azure AD et est requis pour to
 Avant de commencer, assurez-vous que les fichiers sources d’installation client sont stockés localement sur l’appareil sur lequel vous souhaitez installer le client.
 Ensuite, suivez les instructions de [Comment déployer des clients sur des ordinateurs Windows dans System Center Configuration Manager](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Manual) en utilisant la ligne de commande d’installation suivante (remplacez les valeurs dans l’exemple par vos propres valeurs) :
 
-**ccmsetup.exe /NoCrlCheck /Source:C:\CLIENT  CCMHOSTNAME=SCCMPROXYCONTOSO.CLOUDAPP.NET/CCM_Proxy_ServerAuth/72457598037527932 SMSSiteCode=HEC AADTENANTID=780433B5-E05E-4B7D-BFD1-E8013911E543 AADTENANTNAME=contoso  AADCLIENTAPPID=<GUID> AADRESOURCEURI=<https://contososerver>**
+**ccmsetup.exe /NoCrlCheck /Source:C:\CLIENT  CCMHOSTNAME=SCCMPROXYCONTOSO.CLOUDAPP.NET/CCM_Proxy_ServerAuth/72457598037527932 SMSSiteCode=HEC AADTENANTID=780433B5-E05E-4B7D-BFD1-E8013911E543 AADTENANTNAME=contoso  AADCLIENTAPPID=\<GUID> AADRESOURCEURI=<https://contososerver>**
 
 - **/NoCrlCheck** : si votre point de gestion ou votre passerelle de gestion cloud utilise un certificat de serveur non public, le client peut ne pas être en mesure d’atteindre l’emplacement de la liste de révocation de certificats.
 - **/Source** : Dossier local :   emplacement des fichiers d’installation du client.
