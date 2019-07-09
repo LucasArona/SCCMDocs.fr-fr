@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0700644f9548ea588821141a34abc6d249909cdf
-ms.sourcegitcommit: d8cfd0edf2579e2b08a0ca8a0a7b8f53d1e4196f
+ms.openlocfilehash: d564a5161011a1af0a4ec70f9bf7b45d87dd9dcb
+ms.sourcegitcommit: 20bbb870baf624c7809d3972f2d09a8d2df79cda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67463730"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67623143"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>Tutoriel : Déployer Windows 10 vers le pilote
 
@@ -93,7 +93,7 @@ Avant de commencer ce didacticiel, assurez-vous que vous disposez des prérequis
 
 Utilisez cette procédure pour vous connecter à l’Analytique de bureau et le configurer dans votre abonnement. Cette procédure est un processus unique pour configurer Desktop Analytique pour votre organisation.  
 
-1. Ouvrez le [portail d’Analytique de Desktop](https://aka.ms/desktopanalytics) dans Gestion des appareils Microsoft 365 en tant qu’utilisateur avec **administrateur général** autorisations. Sélectionnez **Démarrer**.  
+1. Ouvrez le [portail d’Analytique de Desktop](https://aka.ms/desktopanalytics) dans Gestion des appareils Microsoft 365 en tant qu’utilisateur avec **administrateur général** autorisations. Sélectionnez **Démarrer**.  Si vous êtes invité à un code d’invitation, utilisez : `DesktopAnalyticsRocks!`
 
 2. Sur le **accepter le contrat de service** page, passez en revue le contrat de service, puis sélectionnez **Accept**.  
 
@@ -254,7 +254,7 @@ Utilisez cette procédure pour créer un plan de déploiement dans l’Analytiqu
 
     - **Date de fin**: Choisissez la date à laquelle Windows doit être entièrement déployé à tous les appareils ciblés.  
 
-5. Sélectionnez **créer**. Le nouveau plan s’affiche dans la liste des plans de déploiement lors de son traitement. Pour accélérer le traitement, demander une actualisation des données de la demande. Pour plus d’informations, consultez [Desktop Analytique FAQ](/sccm/desktop-analytics/faq#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal).
+5. Sélectionnez **Créer**. Le nouveau plan s’affiche dans la liste des plans de déploiement lors de son traitement. Pour accélérer le traitement, demander une actualisation des données de la demande. Pour plus d’informations, consultez [Desktop Analytique FAQ](/sccm/desktop-analytics/faq#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal).
 
 6. Ouvrez le plan de déploiement en sélectionnant son nom.  
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5dc3123763430dc35d566b68e3c1c04762d26de5
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: 4b32105304354e9b9d4473451a32f52162f80d02
+ms.sourcegitcommit: 20bbb870baf624c7809d3972f2d09a8d2df79cda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67159056"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67623331"
 ---
 # <a name="health-status-monitoring-in-desktop-analytics"></a>Analyse dans Analytique de bureau de l’état d’intégrité
 
@@ -58,7 +58,7 @@ En bas de la page de détails de l’application, les trois onglets suivants peu
 
 - **Autres versions**: Liste des autres versions de cette application. Pour chaque version, il montre les modifications relatives aux taux de blocage au sein de votre organisation et la moyenne commerciale. Si vous trouvez une version ultérieure de l’application ayant une vitesse inférieure de la panne, la mise à jour de l’application peut aider.  
 
-    Il indique également si la version a un **prêt pour Windows** signal. Pour plus d’informations, consultez [évaluation de la compatibilité](/sccm/desktop-analytics/compat-assessment#risk-assessment-engine).  
+    Il indique également si la version a un **prêt pour Windows** signal. Pour plus d’informations, consultez [évaluation de la compatibilité](compat-assessment.md#driver-risk-assessment).  
 
 - **Principaux problèmes**: Une liste de l’ID d’échec plus fréquente par nombre d’instances. Un ID de l’erreur identifie la trace de pile associée à l’incident. Vous pouvez utiliser cet ID lorsque vous appelez l’éditeur de l’application pour la prise en charge.  
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6658f0b7a65027715975e6075e5c18a430d38405
-ms.sourcegitcommit: d8cfd0edf2579e2b08a0ca8a0a7b8f53d1e4196f
+ms.openlocfilehash: 96cf6f4dcfa878bb1ecafb7187dc6e9b29755509
+ms.sourcegitcommit: 20bbb870baf624c7809d3972f2d09a8d2df79cda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67463735"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67623382"
 ---
 # <a name="how-to-set-up-desktop-analytics"></a>Comment configurer le bureau Analytique
 
@@ -29,7 +29,7 @@ Utilisez cette procédure pour vous connecter à l’Analytique de bureau et le 
 
 ## <a name="initial-onboarding"></a>Intégration initiale
 
-1. Ouvrez le [portail d’Analytique de Desktop](https://aka.ms/desktopanalytics) dans Gestion des appareils Microsoft 365 en tant qu’utilisateur avec le **administrateur général** rôle. Sélectionnez **Démarrer**.  
+1. Ouvrez le [portail d’Analytique de Desktop](https://aka.ms/desktopanalytics) dans Gestion des appareils Microsoft 365 en tant qu’utilisateur avec le **administrateur général** rôle. Sélectionnez **Démarrer**. Si vous êtes invité à un code d’invitation, utilisez : `DesktopAnalyticsRocks!`
 
     > [!Tip]  
     > Pour accéder au portail de l’Analytique de bureau à partir de la console Configuration Manager, accédez à la **bibliothèque de logiciels** espace de travail, sélectionnez le **Desktop Analytique maintenance** nœud, puis sélectionnez **planifier déploiements**.
