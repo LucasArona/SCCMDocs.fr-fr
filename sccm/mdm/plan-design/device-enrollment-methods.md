@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: be1221b3448c8a2818f7fd02b5ff2d14218bbeed
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: eda9de25d3bdb1a1563d8b74e78ddcad259683f6
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286784"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67678727"
 ---
 # <a name="overview-of-device-enrollment-methods"></a>Présentation des méthodes d’inscription des appareils
 
@@ -31,19 +31,19 @@ Le tableau suivant présente les différentes méthodes d’inscription et les f
 
 **Méthodes d’inscription des appareils iOS**
 
-| **Méthode** |  **Réinitialisation** |  **Affinité**    |   **Verrouillage** | **Détails** |
+| **Méthode** | **Réinitialisation** | **Affinité** | **Verrouillage** | **Détails** |
 |:---:|:---:|:---:|:---:|:---:|
-|**[BYOD](#byod)** | Non|    Oui |   Non | [Plus d’informations](../deploy-use/enable-platform-enrollment.md)|
-|**[Gestionnaire d’inscription d’appareil](#dem)**|   Non |Non |Non  | [Plus d’informations](../deploy-use/enroll-devices-with-device-enrollment-manager.md)|
-|**[DEP](#dep)**|   Oui |   Facultatif |  Facultatif|[Plus d’informations](../deploy-use/ios-device-enrollment-program-for-hybrid.md)|
-|**[USB-SA](#usb-sa)**| Oui |   Facultatif |  Non| [Plus d’informations](../deploy-use/ios-hybrid-enrollment-using-apple-configurator.md)|
+|**[BYOD](#byod)** | Non| Oui | Non | [Plus d’informations](../deploy-use/enable-platform-enrollment.md)|
+|**[Gestionnaire d’inscription d’appareil](#dem)**| Non |Non |Non | [Plus d’informations](../deploy-use/enroll-devices-with-device-enrollment-manager.md)|
+|**[DEP](#dep)**| Oui | Facultatif | Facultatif|[Plus d’informations](../deploy-use/ios-device-enrollment-program-for-hybrid.md)|
+|**[USB-SA](#usb-sa)**| Oui | Facultatif | Non| [Plus d’informations](../deploy-use/ios-hybrid-enrollment-using-apple-configurator.md)|
 
 **Méthodes d’inscription des appareils Windows et Android**
 
-| **Méthode** |  **Réinitialisation** |  **Affinité**    |   **Verrouillage** | **Détails**|
+| **Méthode** | **Réinitialisation** | **Affinité** | **Verrouillage** | **Détails**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[BYOD](#byod)** | Non|    Oui |   Non | [Plus d’informations](../deploy-use/enroll-hybrid-windows.md)|
-|**[Gestionnaire d’inscription d’appareil](#dem)**|   Non |Non |Non  |[Plus d’informations](../deploy-use/enroll-devices-with-device-enrollment-manager.md)|
+|**[BYOD](#byod)** | Non| Oui | Non | [Plus d’informations](../deploy-use/enroll-hybrid-windows.md)|
+|**[Gestionnaire d’inscription d’appareil](#dem)**| Non |Non |Non |[Plus d’informations](../deploy-use/enroll-devices-with-device-enrollment-manager.md)|
 
 Pour répondre à une série de questions qui vous aideront à déterminer la méthode appropriée, consultez [Choisir comment inscrire des appareils](/intune/get-started/choose-how-to-enroll-devices1).
 

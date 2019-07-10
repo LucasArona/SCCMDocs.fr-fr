@@ -2,7 +2,7 @@
 title: Connecter le Gestionnaire de configuration
 titleSuffix: Configuration Manager
 description: Guide pratique pour la connexion de Configuration Manager avec l’Analytique de bureau.
-ms.date: 06/13/2019
+ms.date: 07/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 098c83678585984bbe3dbeddf167e24116afd86b
-ms.sourcegitcommit: 3a3f40f3d39cbecfb9219a64c0185ea4b2ef9671
+ms.openlocfilehash: f24161b61c796f9c1605a61656af0eb91f225067
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2019
-ms.locfileid: "67562021"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676062"
 ---
 # <a name="how-to-connect-configuration-manager-with-desktop-analytics"></a>Comment connecter Configuration Manager avec l’Analytique de bureau
 
@@ -79,7 +79,7 @@ Utilisez cette procédure pour connecter Configuration Manager à l’Analytique
     Sélectionnez **connectez-vous** . Après vous être authentifié correctement auprès d’Azure, la page affiche le **Nom du locataire Azure AD** pour référence.
         
     > [!Note]  
-    > Effectuez cette étape en tant qu’un **administrateur d’entreprise**. Ces informations d’identification ne sont pas enregistrées par Configuration Manager. Ce rôle ne nécessite pas d’autorisations dans Configuration Manager et ne doit pas obligatoirement être le même compte que celui qui exécute l’Assistant Services Azure.  
+    > Effectuez cette étape en tant qu’un **administrateur général**. Ces informations d’identification ne sont pas enregistrées par Configuration Manager. Ce rôle ne nécessite pas d’autorisations dans Configuration Manager et ne doit pas obligatoirement être le même compte que celui qui exécute l’Assistant Services Azure.  
 
     Sélectionnez **OK** pour créer l’application web dans Azure AD et fermer la boîte de dialogue Créer une application serveur. Dans la boîte de dialogue application serveur, sélectionnez **OK**. Puis sélectionnez **suivant** sur la page application de l’Assistant Services Azure.  
 

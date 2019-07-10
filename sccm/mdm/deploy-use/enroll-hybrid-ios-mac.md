@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6aef8f927a2c4d3cb3eb7fecc4970cb19cbb83ed
-ms.sourcegitcommit: a6a6507e01d819217208cfcea483ce9a2744583d
+ms.openlocfilehash: 6c6573ce4faf893e30eac070efd963dc7465e20e
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66748258"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67678847"
 ---
 # <a name="set-up-ios-hybrid-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>Configurer la gestion des appareils iOS hybride avec System Center Configuration Manager et Microsoft Intune
 
@@ -73,9 +73,9 @@ Vous pouvez limiter les appareils qui peuvent être inscrits en bloquant les app
 - Appareils inscrits avec un [compte de gestionnaire d’inscription des appareils](enroll-devices-with-device-enrollment-manager.md)
 
 ### <a name="to-enable-enrollment-restrictions"></a>Activer les restrictions d’inscription
-1.  Dans la console Configuration Manager, dans l’espace de travail **Administration** , accédez à **Services cloud** > **Abonnement Microsoft Intune**.
-2.  Sous l’onglet **Accueil** , dans le groupe **Abonnement** , cliquez sur **Configurer des plateformes** > **iOS**.
-3.  Choisissez **Bloquer les appareils personnels** pour limiter l’inscription aux appareils d’entreprise.
+1. Dans la console Configuration Manager, dans l’espace de travail **Administration** , accédez à **Services cloud** > **Abonnement Microsoft Intune**.
+2. Sous l’onglet **Accueil** , dans le groupe **Abonnement** , cliquez sur **Configurer des plateformes** > **iOS**.
+3. Choisissez **Bloquer les appareils personnels** pour limiter l’inscription aux appareils d’entreprise.
 
 > [!div class="button"]
 > [< Étape précédente](create-service-connection-point.md) [Étape suivante >](set-up-additional-management.md)

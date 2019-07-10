@@ -2,7 +2,7 @@
 title: Comment fermer votre compte
 titleSuffix: Configuration Manager
 description: Suppression d’Analytique de bureau à partir de votre compte Azure
-ms.date: 06/11/2019
+ms.date: 07/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 805cb79a1986457f04b11fa5f99b30ec098be99b
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: e2b1c893204366581eacd0f8e953cb2a6fd0d1a4
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67159199"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676169"
 ---
 # <a name="how-to-close-your-account"></a>Comment fermer votre compte
 
@@ -31,7 +31,7 @@ La première étape consiste à contacter le Support Microsoft. Ouvrez une deman
 
 ## <a name="delete-the-solution"></a>Supprimer la solution
 
-1. Se connecter à la [Azure portal](https://portal.azure.com) en tant qu’utilisateur avec le **administrateur d’entreprise** rôle.
+1. Se connecter à la [Azure portal](https://portal.azure.com) en tant qu’utilisateur avec le **administrateur général** rôle.
 
 1. Rechercher dans **toutes les ressources** pour le nom de votre espace de travail Analytique de bureau. Ce nom est ce que vous avez créé lors de l’inscription pour le service.
 
@@ -44,7 +44,7 @@ Les données d’Analytique de bureau soient obsolètes en fonction de votre str
 
 ## <a name="remove-user-and-app-access"></a>Supprimer l’accès utilisateur et l’application
 
-1. Se connecter à la [Azure portal](https://portal.azure.com) en tant qu’utilisateur avec le **administrateur d’entreprise** rôle. Accédez à **Azure Active Directory**.
+1. Se connecter à la [Azure portal](https://portal.azure.com) en tant qu’utilisateur avec le **administrateur général** rôle. Accédez à **Azure Active Directory**.
 
 1. Dans **rôles et administrateurs**, recherchez le **administrateur de bureau Analytique** rôle. Supprimer ses membres.
 

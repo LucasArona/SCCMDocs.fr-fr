@@ -11,19 +11,19 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2980cef8a39f790dbb94ab85fa025eeb04f4f996
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: 8214793cb724f029892de40bc1191cdc25ed0ec5
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286893"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67678648"
 ---
 # <a name="hybrid-mdm-with-configuration-manager-and-microsoft-intune"></a>MDM hybride avec Configuration Manager et Microsoft Intune
 
 *S’applique à : System Center Configuration Manager (Current Branch)*
 
 > [!Important]  
-> Depuis le 14 août 2018, la gestion hybride des appareils mobiles est une [fonctionnalité déconseillée](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). En commençant par la version du service Intune 1902, attendue à la fin de février 2019, les nouveaux clients ne peut pas créer une nouvelle connexion hybride. 
+> Depuis le 14 août 2018, la gestion hybride des appareils mobiles est une [fonctionnalité déconseillée](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). À compter de la version 1902 du service Intune, attendue fin février 2019, les nouveaux clients ne peuvent plus créer de nouvelle connexion hybride. 
 > <!--Intune feature 2683117-->  
 > Depuis son lancement sur Azure il y a plus d’un an, Intune a ajouté des centaines de nouvelles fonctionnalités demandées par les clients et de services de premier plan. Il propose à présent bien plus de fonctionnalités que celles de la gestion des appareils mobiles (MDM) hybride. Intune sur Azure offre une expérience d’administration simplifiée et mieux intégrée pour répondre à vos besoins de mobilité d’entreprise.
 > 
@@ -88,16 +88,14 @@ La gestion MDM hybride gère les fonctionnalités de gestion suivantes sur les a
 
 -   Collecte de l'inventaire logiciel à l'aide de rapports intégrés  
 
-Pour en savoir plus sur les nouvelles fonctionnalités disponibles pour la gestion des appareils mobiles (MDM) hybride, consultez [Nouvelles fonctionnalités pour la gestion des appareils mobiles (MDM) hybride](/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management).
-
 
 
 ## <a name="hybrid-mdm-enrollment"></a>Inscription à la gestion MDM hybride
 
 Les appareils peuvent être gérés à l’aide de la gestion hybride s’ils ont été préalablement inscrits auprès du service. Le processus d’inscription des appareils dépend du type et de la propriété de l’appareil, ainsi que du niveau de gestion souhaité.
 
-- **« Apportez votre propre appareil » (BYOD)**: Les utilisateurs inscrivent leurs téléphones personnels, tablettes ou PC  
+- **« Apportez votre propre appareil » (BYOD)** : Les utilisateurs inscrivent leurs téléphones personnels, tablettes ou PC  
 
-- **Appareil d’entreprise (COD)**: Scénarios de gestion telles que la réinitialisation à distance, les appareils partagés ou affinité utilisateur pour un appareil  
+- **Appareil d’entreprise (COD)** : Scénarios de gestion telles que la réinitialisation à distance, les appareils partagés ou affinité utilisateur pour un appareil  
 
 - Si vous utilisez [Exchange ActiveSync](/sccm/mdm/plan-design/device-enrollment-methods#mobile-device-management-with-exchange-activesync-and-configuration-manager) (localement ou hébergé dans le cloud), vous pouvez choisir la gestion Intune simple sans inscription. Vous pouvez également gérer des PC Windows à l’aide du [logiciel client Intune](/intune/deploy-use/manage-windows-pcs-with-microsoft-intune).
