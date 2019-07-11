@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43a5e1a4bf3283c185d612cc31428a23a4e12061
-ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.openlocfilehash: b0daf2943b0859227d08069be9c9da69165d5d1a
+ms.sourcegitcommit: de3c86077bbf91b793e94e1f60814df18da11bab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67678112"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67726227"
 ---
 # <a name="what-is-desktop-analytics"></a>Nouveautés d’Analytique de bureau ?
 
@@ -94,7 +94,7 @@ Pour utiliser l’Analytique de bureau, assurez-vous que votre environnement rem
     >
     > Analytique de bureau est conçu pour le meilleur scénario de mise à niveau de prise en charge de la place. Si vous avez besoin d’apporter des modifications majeures, comme à partir de l’architecture 32 bits vers 64 bits, utilisez un scénario d’acquisition d’images. Bureau insights Analytique sont toujours utiles dans ces scénarios de déploiement de système d’exploitation classiques, mais vous pouvez ignorer les instructions spécifiques mise à niveau sur place. Pour plus d’informations, consultez [scénarios de déploiement de systèmes d’exploitation d’entreprise avec Configuration Manager](/sccm/osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems).
 
-- Données de diagnostic de Windows. Pour plus d’informations, consultez les articles suivants :  
+- Données de diagnostic de Windows. Pour plus d’informations, consultez les articles suivants :  
 
     - [Niveaux de données de diagnostic](/sccm/desktop-analytics/enable-data-sharing#diagnostic-data-levels)  
 
@@ -103,7 +103,7 @@ Pour utiliser l’Analytique de bureau, assurez-vous que votre environnement rem
 - La connectivité réseau à partir d’appareils vers le cloud public Microsoft. Pour plus d’informations, consultez [comment activer le partage de données](/sccm/desktop-analytics/enable-data-sharing)  
 
 
-### <a name="licensing"></a>Licences
+### <a name="licensing"></a>Gestion des licences
 
 Analytique bureau nécessite les abonnements de licence suivants :
 
@@ -120,4 +120,4 @@ Analytique bureau nécessite les abonnements de licence suivants :
 
 Ce didacticiel fournit des instructions détaillées pour bien démarrer avec Desktop Analytique et de Configuration Manager :  
 
-- [Déployer Windows 10 pour un pilote](/sccm/desktop-analytics/tutorial-windows10)  
+- [Déployer Windows 10 sur le pilote](/sccm/desktop-analytics/tutorial-windows10)  
