@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 01253487d7fb90aaa24dae6a55b9110e516ab4ad
-ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.openlocfilehash: 7e3cb09f6220f7a0fd57960a9b46087a25ee81c5
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66176009"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67677348"
 ---
 # <a name="capabilities-in-technical-preview-1708-for-system-center-configuration-manager"></a>Fonctionnalités de la version d’évaluation technique 1708 pour System Center Configuration Manager
 
@@ -88,17 +88,17 @@ Vous pouvez désormais obtenir des informations sur l’état actuel de votre en
 Pour identifier les périphériques en attente d’un redémarrage, sélectionnez **Ressources et Conformité** > **Périphériques** puis choisissez une collection de périphériques pouvant nécessiter un redémarrage. Après avoir sélectionné une collection, vous pouvez afficher l’état de chaque périphérique dans le volet des détails d’une nouvelle colonne nommée **Redémarrage en attente**. Chaque périphérique affiche la valeur **Yes** ou **No**.
 
 Pour créer la notification invitant le client à redémarrer un périphérique :
-1.  Recherchez le périphérique que vous souhaitez redémarrer dans le nœud Périphériques de la console.
-2.  Cliquez avec le bouton droit sur le périphérique, sélectionnez **Notification du client**, puis **Redémarrer**. Une fenêtre s’ouvre et affiche des informations concernant le redémarrage. Cliquez sur **OK** pour confirmer la demande de redémarrage.
+1. Recherchez le périphérique que vous souhaitez redémarrer dans le nœud Périphériques de la console.
+2. Cliquez avec le bouton droit sur le périphérique, sélectionnez **Notification du client**, puis **Redémarrer**. Une fenêtre s’ouvre et affiche des informations concernant le redémarrage. Cliquez sur **OK** pour confirmer la demande de redémarrage.
 
 Lorsqu’un client reçoit la notification, une fenêtre de notification **Centre logiciel** s’ouvre et pour informer l’utilisateur du redémarrage. Par défaut, le redémarrage se produit après 90 minutes. Vous pouvez modifier le délai de redémarrage en configurant les [paramètres du client](/sccm/core/clients/deploy/configure-client-settings). Les paramètres qui définissent le comportement du redémarrage se trouvent dans l’onglet [Redémarrage de l’ordinateur](/sccm/core/clients/deploy/about-client-settings#computer-restart) des paramètres par défaut.
 
 
 ### <a name="try-it-out"></a>Essayez !
 Essayez d’effectuer les tâches suivantes, puis envoyez-nous vos **Commentaires** à partir de l’onglet **Accueil** du ruban pour nous dire comment cela a fonctionné pour vous :
-1.  Déployez une application ou mettez à jour un périphérique qui obligera ce périphérique à redémarrer pour terminer l’installation.
-2.  Recherchez le périphérique dans le nœud **Ressources et Conformité** > **Périphériques** de la console puis vérifiez que ce périphérique affiche **Oui** dans la colonne **Redémarrage en attente**. Un délai de 20 minutes peut s’écouler avant que l’état Redémarrage en attente apparaisse dans la console.
-3.  Surveillez le périphérique pour confirmer que la notification du Centre logiciel s’affiche et que le périphérique redémarre correctement.
+1. Déployez une application ou mettez à jour un périphérique qui obligera ce périphérique à redémarrer pour terminer l’installation.
+2. Recherchez le périphérique dans le nœud **Ressources et Conformité** > **Périphériques** de la console puis vérifiez que ce périphérique affiche **Oui** dans la colonne **Redémarrage en attente**. Un délai de 20 minutes peut s’écouler avant que l’état Redémarrage en attente apparaisse dans la console.
+3. Surveillez le périphérique pour confirmer que la notification du Centre logiciel s’affiche et que le périphérique redémarre correctement.
 
 
 ## <a name="software-center-customization"></a>Personnalisation du Centre logiciel

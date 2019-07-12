@@ -12,12 +12,12 @@ ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4d458209c7e50ada6f308cd1b723cd8e9d630ee4
-ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
+ms.openlocfilehash: a1be4f6b9009df85fdb0a8286af08d204a696cd0
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67252215"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676457"
 ---
 # <a name="checklist-for-installing-update-1706-for-system-center-configuration-manager"></a>Liste de contrôle de l’installation de la mise à jour 1706 pour System Center Configuration Manager
 
@@ -172,6 +172,6 @@ Vérifiez et effectuez les actions suivantes après la fin de l’installation d
 
 ## <a name="known-issues"></a>Problèmes connus 
 Une fois effectuée la mise à jour vers la version 1706, chaque fois que SMS_Executive démarre, le message d’état avertissement suivant est créé par SMS_CERTIFICATE_MANAGER :
--    Microsoft SQL Server a signalé le message SQL 515, gravité 16 : [23000][515][Microsoft][SQL Server Native Client 11.0][SQL Server] Impossible d’insérer la valeur NULL dans la colonne 'RowVersion', table 'CM_GF1.dbo.AAD_SecretChange_Notify'. Cette colonne n’accepte pas les valeurs NULL. Échec de INSERT.
+-  Microsoft SQL Server a signalé le message SQL 515, gravité 16 : [23000][515][Microsoft][SQL Server Native Client 11.0][SQL Server] Impossible d’insérer la valeur NULL dans la colonne 'RowVersion', table 'CM_GF1.dbo.AAD_SecretChange_Notify'. Cette colonne n’accepte pas les valeurs NULL. Échec de INSERT.
 
 Ce message peut être ignoré.  Il se produit quand aucun service cloud n’a été configuré pour être utilisé avant la mise à jour vers la version 1706. Ce problème sera résolu dans une version à venir.

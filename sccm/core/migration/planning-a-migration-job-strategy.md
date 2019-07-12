@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3f6b445bb2e84cb7c3f35d81c66038686f2b9833
-ms.sourcegitcommit: 7dd42b5a280e64feb69a947dae082fdaf1571272
+ms.openlocfilehash: b7acec3488d016a309fe2f159d81087d28b795f7
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66715983"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67677252"
 ---
 # <a name="plan-a-migration-job-strategy-in-system-center-configuration-manager"></a>Planifier une stratégie pour les tâches de migration dans System Center Configuration Manager
 
@@ -241,7 +241,7 @@ Utilisez des tâches de migration pour configurer les données spécifiques que 
 ### <a name="specify-conflict-resolution-for-migrated-data"></a>Spécifier la résolution des conflits de données migrées  
  Par défaut, les tâches de migration ne remplacent pas les données dans la base de données de destination, sauf si vous configurez la tâche de migration pour qu’elle ignore ou remplace les données déjà migrées vers la base de données de destination.  
 
-##  <a name="About_Collection_Migration "></a> Planifier des tâches de migration de regroupements  
+##  <a name="About_Collection_Migration"></a> Planifier des tâches de migration de regroupements  
  Les tâches de migration de regroupements sont disponibles uniquement quand vous migrez des données à partir d’une hiérarchie source qui exécute une version prise en charge de Configuration Manager 2007. Vous devez spécifier un ou plusieurs regroupements à migrer lorsque vous utilisez la migration basée sur le regroupement. Pour chaque regroupement que vous spécifiez, la tâche de migration sélectionne automatiquement tous les objets associés pour les migrer. Par exemple, si vous sélectionnez un regroupement d'utilisateurs, les membres du regroupement sont identifiés et vous pouvez migrer les déploiements associés au regroupement. Vous pouvez également sélectionner d'autres objets de déploiement à migrer associés à ces membres. Tous ces éléments sélectionnés sont ajoutés à la liste des objets qui peuvent être migrés.  
 
  Quand vous migrez un regroupement, System Center Configuration Manager migre également les paramètres du regroupement, notamment les fenêtres de maintenance et les variables du regroupement. Il ne peut cependant pas migrer les paramètres du regroupement pour l’approvisionnement du client AMT.  

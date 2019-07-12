@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 649c0a134f7ebc77c214801d30720f75b80d34ee
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: 30200c9da2ea37ef0868db680d04fe6aae9fd314
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67159455"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67678084"
 ---
 # <a name="manage-applicability-rules-in-updates-publisher"></a>Gérer les règles de mise en application dans l’éditeur de mise à jour
 
@@ -31,11 +31,13 @@ Vous gérez les règles de mise en application dans l **’espace de travail Rè
 
 Par exemple, voici un ensemble de règles contenant trois règles. La première règle vérifie que le fichier *MyFile* existe, et les deuxième et troisième règles vérifient que la langue du système d’exploitation Windows est l’anglais ou le japonais.
 
-    And  
-      File ‘\[PROGRAM\_FILES\] \\Microsoft\\MyFile’ exists  
-      Or  
-        Windows Language is English   
-        Windows Language is Japanese
+```
+And  
+  File ‘\[PROGRAM\_FILES\] \\Microsoft\\MyFile’ exists  
+  Or  
+    Windows Language is English   
+    Windows Language is Japanese
+```
 
 Toutes les mises à jour requièrent au moins une règle de mise en application. Les mises à jour que vous importez contiennent déjà des règles de mise en application, et lorsque vous créez vos propres mises à jour, vous devez y ajouter une ou plusieurs règles. Vous pouvez modifier et développer les règles de n’importe quelle mise à jour dans l’éditeur de mise à jour.
 

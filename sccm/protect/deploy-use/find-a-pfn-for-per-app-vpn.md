@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7021175062a80dffa48a599266fd257c0967e806
-ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
+ms.openlocfilehash: 3aebbc8d59e0bc14edf23022b02dcb12fdcb93c8
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67551400"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67678776"
 ---
 # <a name="find-a-package-family-name-pfn-for-per-app-vpn"></a>Rechercher un nom de famille de packages (NFP) pour un VPN par application
 
@@ -71,10 +71,10 @@ Voici les informations récupérées pour OneNote :
 
 ## <a name="find-a-pfn-if-the-app-is-not-installed-on-a-computer"></a>Rechercher un NFP si l’application n’est pas installée sur un ordinateur
 
-1.  Accéder à https://www.microsoft.com/en-us/store/apps
-2.  Entrez le nom de l’application dans la barre de recherche. Pour notre exemple, recherchez OneNote.
-3.  Cliquez sur le lien vers l’application. Notez que l’URL à laquelle vous accédez se termine par une série de lettres. Dans notre exemple, l’URL se présente comme suit : `https://www.microsoft.com/en-us/store/apps/onenote/9wzdncrfhvjl`
-4.  Sous un autre onglet, collez l’URL `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/<app id>/applockerdata` en remplaçant `<app id>` par l’ID d’application que vous avez obtenu à l’étape 3 sur https://www.microsoft.com/en-us/store/apps (la série de lettres située à la fin de l’URL). Pour notre exemple OneNote, nous collerions ceci : `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/9wzdncrfhvjl/applockerdata`.
+1. Accéder à https://www.microsoft.com/en-us/store/apps
+2. Entrez le nom de l’application dans la barre de recherche. Pour notre exemple, recherchez OneNote.
+3. Cliquez sur le lien vers l’application. Notez que l’URL à laquelle vous accédez se termine par une série de lettres. Dans notre exemple, l’URL se présente comme suit : `https://www.microsoft.com/en-us/store/apps/onenote/9wzdncrfhvjl`
+4. Sous un autre onglet, collez l’URL `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/<app id>/applockerdata` en remplaçant `<app id>` par l’ID d’application que vous avez obtenu à l’étape 3 sur https://www.microsoft.com/en-us/store/apps (la série de lettres située à la fin de l’URL). Pour notre exemple OneNote, nous collerions ceci : `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/9wzdncrfhvjl/applockerdata`.
 
 Dans Edge, les informations souhaitées s’affichent d’elles-mêmes ; dans Internet Explorer, cliquez sur **Ouvrir** pour afficher les informations. La valeur de NFP figure dans la première ligne. Voici à quoi ressemblent les résultats pour notre exemple :
 

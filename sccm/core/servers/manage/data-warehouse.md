@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 02990fa09e18a9e46914ff622ed20f4cbb958f33
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 7672af696844cfa8afbbe54b1260d8f4c78437a8
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65501141"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676516"
 ---
 #  <a name="the-data-warehouse-service-point-for-configuration-manager"></a>Point de service de l’entrepôt de données pour Configuration Manager
 
@@ -154,7 +154,7 @@ Le rôle de système de site de l’entrepôt de données comprend les rapports 
 
 - **Vue d'ensemble de l'intégrité de l'infrastructure - Historique** : Affiche une vue d’ensemble de l’intégrité de votre infrastructure Configuration Manager.  
 
-- **Liste des programmes malveillants détectés - Historique** :    Affiche les programmes malveillants qui ont été détectés dans l’organisation.  
+- **Liste des programmes malveillants détectés - Historique** : Affiche les programmes malveillants qui ont été détectés dans l’organisation.  
 
 - **Résumé de la distribution de logiciels - Historique** : Synthèse de la distribution de logiciels pour une publication et un ordinateur spécifiques.  
 

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9346e95e3fa66e9f24d1bfc3711917c3d2146e5e
-ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
+ms.openlocfilehash: dcbe2f7b0e7b1d5905e1160d7302498a72116498
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67551353"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67678666"
 ---
 # <a name="windows-hello-for-business-settings-in-configuration-manager"></a>Paramètres Windows Hello Entreprise dans Configuration Manager
 
@@ -72,7 +72,7 @@ Si vous souhaitez utiliser l’ouverture de session par certificat Windows Hello
 
 -   Dans le profil de certificat, sélectionnez un modèle qui recourt à l’utilisation de clé étendue pour l’ouverture de session avec carte à puce.  
 
--   Si vous envisagez de stocker des profils de certificat dans le conteneur de clés Windows Hello Entreprise et que le profil de certificat utilise l’utilisation améliorée de la clé pour **l’ouverture de session avec carte à puce**, vous devez configurer les autorisations suivantes pour enregistrer cette clé et garantir que le certificat est validé correctement.
+- Si vous envisagez de stocker des profils de certificat dans le conteneur de clés Windows Hello Entreprise et que le profil de certificat utilise l’utilisation améliorée de la clé pour **l’ouverture de session avec carte à puce**, vous devez configurer les autorisations suivantes pour enregistrer cette clé et garantir que le certificat est validé correctement.
 Vous devez avoir au préalable créé le groupe **Administrateurs de clé** et ajouté tous les ordinateurs de point de gestion Configuration Manager comme membres de ce groupe.
 
 Il est possible que certaines configurations ne requièrent pas de configuration des autorisations ou qu’elles nécessitent des configurations supplémentaires. Consultez le tableau suivant pour obtenir une aide supplémentaire :
@@ -87,15 +87,15 @@ Il est possible que certaines configurations ne requièrent pas de configuration
 
 ## <a name="to-configure-permissions"></a>Configurer les autorisations
 
-1.  Connectez-vous à un contrôleur de domaine ou à des stations de travail de gestion en tant qu’administrateur de domaine, ou avec des informations d’identification équivalentes.
-2.  Ouvrez **Utilisateurs et ordinateurs Active Directory**.
-3.  Dans le volet de navigation, cliquez avec le bouton droit sur votre nom de domaine, puis cliquez sur **Propriétés**.
-4.  Dans l’onglet **Sécurité** de la boîte de dialogue *\<nom de domaine>* **Propriétés**, cliquez sur **Avancé**. Si l’onglet **Sécurité** n’apparaît pas, activez les **Fonctionnalités avancées** du menu **Affichage** dans **Utilisateurs et ordinateurs Active Directory**.
-5.  Cliquez sur **Ajouter**.
-6.  Dans la boîte de dialogue **Saisie des autorisations pour** *\<nom de domaie>* , cliquez sur **Sélectionner un principal**.
-7.  Dans la boîte de dialogue **Sélectionner un utilisateur, un ordinateur, un compte de service ou un groupe**, tapez **Administrateurs de clé** dans la zone de texte **Entrer le nom de l’objet à sélectionner**. Cliquez sur **OK**.
-8.  Dans la liste **S’applique à**, sélectionnez **Objets utilisateur descendants**.
-9.  Faites défiler jusqu’au bas de la page et cliquez sur **Effacer tout**.
+1. Connectez-vous à un contrôleur de domaine ou à des stations de travail de gestion en tant qu’administrateur de domaine, ou avec des informations d’identification équivalentes.
+2. Ouvrez **Utilisateurs et ordinateurs Active Directory**.
+3. Dans le volet de navigation, cliquez avec le bouton droit sur votre nom de domaine, puis cliquez sur **Propriétés**.
+4. Dans l’onglet **Sécurité** de la boîte de dialogue *\<nom de domaine>* **Propriétés**, cliquez sur **Avancé**. Si l’onglet **Sécurité** n’apparaît pas, activez les **Fonctionnalités avancées** du menu **Affichage** dans **Utilisateurs et ordinateurs Active Directory**.
+5. Cliquez sur **Ajouter**.
+6. Dans la boîte de dialogue **Saisie des autorisations pour** *\<nom de domaie>* , cliquez sur **Sélectionner un principal**.
+7. Dans la boîte de dialogue **Sélectionner un utilisateur, un ordinateur, un compte de service ou un groupe**, tapez **Administrateurs de clé** dans la zone de texte **Entrer le nom de l’objet à sélectionner**. Cliquez sur **OK**.
+8. Dans la liste **S’applique à**, sélectionnez **Objets utilisateur descendants**.
+9. Faites défiler jusqu’au bas de la page et cliquez sur **Effacer tout**.
 10. Dans la section **Propriétés**, sélectionnez **Lire msDS-KeyCredentialLink**.
 11. Cliquez sur **OK** trois fois pour terminer la tâche.
 

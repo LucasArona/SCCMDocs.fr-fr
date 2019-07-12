@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0c6bffc94abecb5f700fbb7236c923f26f3a0de0
-ms.sourcegitcommit: 949db4d2af7f605ee40610e45ae9d917b1045772
+ms.openlocfilehash: 2d329f2d0125a168d776b2855b6fd35e7a223111
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67314422"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67677901"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>À propos des paramètres client dans Configuration Manager
 
@@ -658,11 +658,11 @@ Par exemple, si votre organisation n’utilise pas de stratégies de conformité
 
 - Pour **Filtre par défaut de l’application**, choisissez **Toutes** pour voir toutes les applications, ou **Obligatoires** pour afficher uniquement les applications obligatoires.  
 
-    - Le Centre logiciel utilise toujours votre paramètre par défaut. Les utilisateurs peuvent changer ce filtre, mais le Centre logiciel ne conserve pas leurs préférences.  
+  - Le Centre logiciel utilise toujours votre paramètre par défaut. Les utilisateurs peuvent changer ce filtre, mais le Centre logiciel ne conserve pas leurs préférences.  
 
- - Pour **Vue par défaut de l’application**, choisissez **Mode Mosaïque** ou **Mode Liste**. 
+- Pour **Vue par défaut de l’application**, choisissez **Mode Mosaïque** ou **Mode Liste**. 
 
-    - Si un utilisateur change cette configuration, le Centre logiciel conserve les préférences de l’utilisateur. 
+  - Si un utilisateur change cette configuration, le Centre logiciel conserve les préférences de l’utilisateur. 
 
 
 ## <a name="software-deployment"></a>Déploiement logiciel  

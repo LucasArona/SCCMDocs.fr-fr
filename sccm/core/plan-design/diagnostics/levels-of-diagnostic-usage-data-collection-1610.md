@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 777237ae657a83da3ff22b540914271b798c1016
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 193ad88be6766c085373185145429d8535655e61
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56121071"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67677128"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1610-of-system-center-configuration-manager"></a>Niveaux de collecte des données de diagnostic et d’utilisation pour la version 1610 de System Center Configuration Manager
 
@@ -43,13 +43,13 @@ Depuis la version 1610, vous pouvez changer le niveau de collecte des données 
 
 
 - Informations d’installation :
-    - Build, type d’installation, modules linguistiques, fonctionnalités que vous avez activées  
+  - Build, type d’installation, modules linguistiques, fonctionnalités que vous avez activées  
 
-    - État et erreurs du déploiement du package de mise à jour, progression du téléchargement, et erreurs liées aux prérequis    
+  - État et erreurs du déploiement du package de mise à jour, progression du téléchargement, et erreurs liées aux prérequis    
 
-    - Version du script après mise à niveau
+  - Version du script après mise à niveau
 
-    - Utilisation de l’anneau rapide de mise à jour
+  - Utilisation de l’anneau rapide de mise à jour
 
   - ***[Nouveau]*** Utilisation en préversion, type de support de configuration, type de branche
 
@@ -90,7 +90,7 @@ Depuis la version 1610, vous pouvez changer le niveau de collecte des données 
 - Utilisation de la découverte du réseau (activée ou désactivée)
 - Console d'administration :
 
-     - Statistiques sur les connexions de la console (version, langue, référence (SKU) et architecture du système d’exploitation, mémoire système, nombre de processeurs logiques, ID du site de connexion, versions .NET installées et modules linguistiques de la console)    
+  - Statistiques sur les connexions de la console (version, langue, référence (SKU) et architecture du système d’exploitation, mémoire système, nombre de processeurs logiques, ID du site de connexion, versions .NET installées et modules linguistiques de la console)    
 
 - Version SQL, niveau de Service Pack, édition, ID de classement et jeu de caractères
 

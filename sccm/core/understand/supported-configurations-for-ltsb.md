@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ac26a9b161f869ec3f6410f9f6fb9e5edbc9f8f8
-ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
+ms.openlocfilehash: 5499fae986dcd266e0b2a31d2619aa79146f8981
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67194030"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676021"
 ---
 # <a name="supported-configurations-for-the-long-term-servicing-branch-of-system-center-configuration-manager"></a>Configurations prises en charge pour la branche Long-Term Servicing Branch de System Center Configuration Manager
 
@@ -35,7 +35,7 @@ En outre, les produits et versions de produits non répertoriés dans les rubriq
 **Windows :**
 - Seules les mises à jour de qualité et de sécurité pour Windows sont prises en charge.
 - Aucune prise en charge n’est ajoutée pour les branches CB (Current Branch), CBB (Current Branch For Business) ou LTSB de Windows 10.
--   Aucune prise en charge n’est ajoutée pour les nouvelles versions majeures de Windows Server.
+- Aucune prise en charge n’est ajoutée pour les nouvelles versions majeures de Windows Server.
 
 **SQL Server :**
 - Seules les mises à jour de qualité et de sécurité, ou les mises à niveau mineures comme les Service Packs, sont prises en charge pour SQL Server.

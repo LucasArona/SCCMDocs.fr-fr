@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d6d7acf1d5c73c59f2ce1e6d2b7f3f7354e21979
-ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
+ms.openlocfilehash: 1e6ef01d38b9359bbb82449ad045312e58646475
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67251878"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676696"
 ---
 # <a name="configure-azure-services-for-use-with-configuration-manager"></a>Configurer les services Azure à utiliser avec Configuration Manager
 
@@ -107,11 +107,11 @@ Lors de la configuration du connecteur Upgrade Readiness ou Log Analytics, donne
 
 ## <a name="start-the-azure-services-wizard"></a>Démarrer l’Assistant Services Azure
 
-1.  Dans la console Configuration Manager, accédez à l’espace de travail **Administration**, développez **Services cloud**, puis sélectionnez le nœud **Services Azure**.  
+1. Dans la console Configuration Manager, accédez à l’espace de travail **Administration**, développez **Services cloud**, puis sélectionnez le nœud **Services Azure**.  
 
-2.  Sous l’onglet **Accueil** du ruban, dans le groupe **Services Azure**, sélectionnez **Configurer les services Azure**.  
+2. Sous l’onglet **Accueil** du ruban, dans le groupe **Services Azure**, sélectionnez **Configurer les services Azure**.  
 
-3.  Dans la page **Services Azure** de l’Assistant Services Azure :  
+3. Dans la page **Services Azure** de l’Assistant Services Azure :  
 
     1. Spécifiez un **Nom** pour l’objet dans Configuration Manager.  
 
@@ -180,7 +180,7 @@ Sélectionnez **OK** pour créer l’application web dans Azure AD et fermer la 
 
 
 ### <a name="native-client-app"></a>Application cliente native
-    
+
 Il s’agit d’une application Azure AD de type *Native*, également appelée application cliente dans Configuration Manager.
 
 #### <a name="client-app-dialog"></a>Boîte de dialogue Application cliente
@@ -261,11 +261,11 @@ Le diagramme suivant est un flux de données conceptuel pour l’interaction ent
 
 ![Diagramme de flux de données pour Configuration Manager avec Azure AD et gestion cloud](media/aad-auth.png)
 
-1.  L’administrateur Configuration Manager importe ou crée les applications serveur et clientes dans Azure AD.  
+1. L’administrateur Configuration Manager importe ou crée les applications serveur et clientes dans Azure AD.  
 
-2.  La méthode de découverte d’utilisateurs Azure AD de Configuration Manager s’exécute. Le site utilise le jeton d’application serveur Azure AD pour rechercher des objets utilisateur dans Microsoft Graph.  
+2. La méthode de découverte d’utilisateurs Azure AD de Configuration Manager s’exécute. Le site utilise le jeton d’application serveur Azure AD pour rechercher des objets utilisateur dans Microsoft Graph.  
 
-3.  Le site stocke des données sur les objets utilisateur. Pour plus d’informations, consultez [Découverte d’utilisateurs Azure AD](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc).  
+3. Le site stocke des données sur les objets utilisateur. Pour plus d’informations, consultez [Découverte d’utilisateurs Azure AD](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc).  
 
 4.  Le client Configuration Manager demande le jeton d’utilisateur Azure AD. Le client génère la revendication à l’aide de l’ID de l’application cliente Azure AD et de l’application serveur comme audience. Pour plus d’informations, consultez [Revendications des jetons de sécurité Azure AD](/azure/active-directory/develop/authentication-scenarios#claims-in-microsoft-identity-platform-security-tokens).  
 

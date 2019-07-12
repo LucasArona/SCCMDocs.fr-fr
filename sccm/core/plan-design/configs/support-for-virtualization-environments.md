@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ebf07aa7fba1a017821eb63a57f8c721b4a9860b
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 313f49804bb526d3a1e8d208b8efdc849d674e2e
+ms.sourcegitcommit: 20bbb870baf624c7809d3972f2d09a8d2df79cda
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65499417"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67623363"
 ---
 # <a name="support-for-virtualization-environments-with-configuration-manager"></a>Prise en charge des environnements de virtualisation pour Configuration Manager
 
@@ -39,7 +39,7 @@ Par exemple, vous utilisez Microsoft Hyper-V Server 2012 pour héberger une mach
 - Windows Server 2008 R2  
 
 #### <a name="bkmk_note1"></a>Remarque 1 : Virtualisation imbriquée
-Configuration Manager ne prend pas en charge la [virtualisation imbriquée](https://docs.microsoft.com/windows-server/virtualization/hyper-v/What-s-new-in-Hyper-V-on-Windows#BKMK_nested), qui est une nouvelle fonctionnalité de Windows Server 2016.
+Configuration Manager ne prend pas en charge la [virtualisation imbriquée](/windows-server/virtualization/hyper-v/What-s-new-in-Hyper-V-on-Windows#nested-virtualization-new), qui est une nouvelle fonctionnalité de Windows Server 2016.
 
 
 ### <a name="virtualization-environment-support"></a>Prise en charge de l’environnement de virtualisation

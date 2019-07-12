@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f2312cb68940f5d0eb3d0dd33d192d07b6801d8e
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: ea90ff0b9c163dac79a96494b03252fbd1935b43
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65501040"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676496"
 ---
 # <a name="management-insights-in-configuration-manager"></a>Insights de gestion dans Configuration Manager
 
@@ -146,7 +146,7 @@ Insights qui permettent de simplifier la gestion par le nettoyage et la reconfig
 
 ### <a name="proactive-maintenance"></a>Maintenance proactive
 <!--1352184-->
-Depuis la version 1806, les règles de ce groupe mettent en évidence les éventuels problèmes de configuration que vous pouvez éviter en effectuant la maintenance des objets Configuration Manager.    
+Depuis la version 1806, les règles de ce groupe mettent en évidence les éventuels problèmes de configuration que vous pouvez éviter en effectuant la maintenance des objets Configuration Manager. 
 
 - **Groupes de limites sans système de site attribué** : Sans systèmes de site attribué, les groupes de limites ne peuvent être utilisés que pour l’attribution de site. Pour plus d’informations, consultez [Configurer des groupes de limites](/sccm/core/servers/deploy/configure/boundary-groups).  
 

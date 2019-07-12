@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e862fe4907d5e480fd8a19c28d890987f73240fa
-ms.sourcegitcommit: d8cfd0edf2579e2b08a0ca8a0a7b8f53d1e4196f
+ms.openlocfilehash: f5434e42bfdcdf9bd423035c1d30a3c68974d9dd
+ms.sourcegitcommit: de3c86077bbf91b793e94e1f60814df18da11bab
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67463788"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67726269"
 ---
 # <a name="task-sequence-steps"></a>Étapes de séquence de tâches
 
@@ -719,7 +719,7 @@ Utilisez cette étape pour télécharger un des types de package suivants :
 - Packages de mise à niveau de système d’exploitation  
 - Packages de pilotes  
 - Packages  
-- Images de démarrage  
+- Images de démarrage (dans la version 1810 et versions antérieure)  
 
 Cette étape fonctionne bien dans une séquence de tâches pour mettre à niveau un système d’exploitation dans les scénarios suivants :  
 
@@ -1623,7 +1623,7 @@ Détermine les scripts PowerShell (le cas échéant) que vous autorisez à s’e
 #### <a name="account"></a>Compte
 
 <!-- 3556028 -->
-À compter de la version 1902, spécifiez le compte d’utilisateur Windows utilisé par cette étape pour exécuter le script PowerShell. Ce dernier s’exécute avec les autorisations du compte spécifié. Sélectionnez **Définir** pour spécifier le compte de domaine ou d’utilisateur local. Pour plus d'informations sur le compte Exécuter en tant que de la séquence de tâches, consultez [Comptes](/sccm/core/plan-design/hierarchy/accounts#task-sequence-run-as-account).
+À compter de la version 1902, spécifiez le compte d’utilisateur Windows utilisé par cette étape pour exécuter le script PowerShell. Le compte spécifié doit être un administrateur local sur le système et le script s’exécute avec les autorisations de ce compte. Sélectionnez **Définir** pour spécifier le compte de domaine ou d’utilisateur local. Pour plus d'informations sur le compte Exécuter en tant que de la séquence de tâches, consultez [Comptes](/sccm/core/plan-design/hierarchy/accounts#task-sequence-run-as-account).
 
 > [!IMPORTANT]  
 > Si cette étape spécifie un compte d’utilisateur et s’exécute dans Windows PE, l’action échoue. Vous ne pouvez pas joindre Windows PE à un domaine. Le fichier **smsts.log** enregistre cet échec.  

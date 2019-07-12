@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7858497f1ff49e5068da066cc481ca5fd38f825f
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 42c1fc69d237b6209b49e45e1b185483b1c55163
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65500721"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676330"
 ---
 # <a name="support-center-user-interface-reference"></a>Référence de l’interface utilisateur du Centre d’aide et de support
 
@@ -229,13 +229,13 @@ Les éléments suivants de ce menu demandent une action du client associée au c
 
     - **Faire expirer les demandes de contenu** : met un terme à toutes les demandes d’emplacement de contenu dont la durée d’exécution est trop longue.  
 
-  - **Évaluation du déploiement des applications** : démarre une tâche qui évalue les applications déployées.  
+- **Évaluation du déploiement des applications** : démarre une tâche qui évalue les applications déployées.  
 
-  - **Évaluation du déploiement des mises à jour logicielles** : démarre une tâche qui évalue les mises à jour logicielles déployées.  
+- **Évaluation du déploiement des mises à jour logicielles** : démarre une tâche qui évalue les mises à jour logicielles déployées.  
 
-  - **Analyse de la source des mises à jour logicielles** : démarre une tâche qui analyse les emplacements source des mises à jour.  
+- **Analyse de la source des mises à jour logicielles** : démarre une tâche qui analyse les emplacements source des mises à jour.  
 
-  - **Mise à jour de la liste de sources de Windows Installer** : démarre une tâche qui met à jour l’emplacement source pour les installations de Windows Installer (MSI).  
+- **Mise à jour de la liste de sources de Windows Installer** : démarre une tâche qui met à jour l’emplacement source pour les installations de Windows Installer (MSI).  
 
 #### <a name="content-view"></a>Affichage du contenu
 Consultez les applications, les packages et les mises à jour chargés sur le client. Quand vous sélectionnez une application, un package ou une mise à jour, vous pouvez afficher des détails sur ce contenu. Pour certaines applications, vous pouvez également effectuer les actions suivantes :  

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c82784006e959dc960c0fa3bd80db3cf7705f295
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 4bc8df791ba24a112d8311246a2c3a82b0acd313
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65497416"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676431"
 ---
 # <a name="modify-your-system-center-configuration-manager-infrastructure"></a>Modifier votre infrastructure System Center Configuration Manager
 
@@ -216,7 +216,7 @@ Vous pouvez enregistrer un SPN pour le compte de service SQL Server du serveur d
 
 1.  Dans le menu **Démarrer** , cliquez sur **Exécuter**et entrez **cmd** dans la boîte de dialogue **Exécuter** .  
 
-2.  À l’invite de commandes, entrez la commande suivante : **setspn -L &lt;domaine\compte_de_service_SQL>**.  
+2.  À l’invite de commandes, entrez la commande suivante : **setspn -L &lt;domaine\compte_de_service_SQL>** .  
 
 3.  Examinez le **Nom principal de service** inscrit pour vous assurer qu'un SPN valide a été créé pour SQL Server.  
 
@@ -226,9 +226,9 @@ Vous pouvez enregistrer un SPN pour le compte de service SQL Server du serveur d
 
 2.  Si nécessaire, connectez-vous au domaine du serveur de site.  
 
-3.  Dans le volet de la console, développez le domaine du serveur de site, développez **DC=&lt;nom_serveur_unique\>**, développez **CN=Users**, cliquez avec le bouton droit sur **CN=&lt;utilisateur_compte_de_service\>**, puis cliquez sur **Propriétés**.  
+3.  Dans le volet de la console, développez le domaine du serveur de site, développez **DC=&lt;nom_serveur_unique\>** , développez **CN=Users**, cliquez avec le bouton droit sur **CN=&lt;utilisateur_compte_de_service\>** , puis cliquez sur **Propriétés**.  
 
-4.  Dans la boîte de dialogue **Propriétés CN=&lt;utilisateur_compte_de_service\>**, consultez la valeur de **servicePrincipalName** pour vérifier qu’un SPN valide a été créé et associé à l’ordinateur SQL Server approprié.  
+4.  Dans la boîte de dialogue **Propriétés CN=&lt;utilisateur_compte_de_service\>** , consultez la valeur de **servicePrincipalName** pour vérifier qu’un SPN valide a été créé et associé à l’ordinateur SQL Server approprié.  
 
 #### <a name="to-change-the-sql-server-service-account-from-local-system-to-a-domain-user-account"></a>Pour indiquer un compte d'utilisateur de domaine à la place du système local comme compte du service SQL Server  
 
@@ -236,7 +236,7 @@ Vous pouvez enregistrer un SPN pour le compte de service SQL Server du serveur d
 
 2.  Ouvrez le **Gestionnaire de configuration SQL Server**.  
 
-3.  Cliquez sur **Services SQL Server**, puis double-cliquez sur **SQL Server&lt;NOM_INSTANCE\>**.  
+3.  Cliquez sur **Services SQL Server**, puis double-cliquez sur **SQL Server&lt;NOM_INSTANCE\>** .  
 
 4.  Dans l'onglet **Ouvrir une session** , sélectionnez **Ce compte**et entrez le nom et le mot de passe du compte d'utilisateur de domaine créé à l'étape 1. Vous pouvez également cliquer sur **Parcourir** pour rechercher le compte d'utilisateur dans les services de domaine Active Directory, puis cliquer sur **Appliquer**.  
 

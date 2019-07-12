@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0b57720d800e224d68f92f339e0c3b4964010e05
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: 424710431f9c17642b3a8c6190f8919665f3ac6c
+ms.sourcegitcommit: 20bbb870baf624c7809d3972f2d09a8d2df79cda
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67285947"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67623289"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-system-center-configuration-manager"></a>Fonctionnalités de la version Technical Preview 1806 de System Center Configuration Manager
 
@@ -81,7 +81,7 @@ SCUP continue de prendre en charge les autres catalogues et scénarios. La liste
 
     > [!Tip]  
     > Le point de mise à jour logicielle nécessite HTTPS, car il est nécessaire pour les API WSUS utilisées pour gérer les certificats de signature. HTTPS ne doit pas nécessairement être activé pour les clients non plus. Pour plus d’informations sur l’activation de HTTPS sur WSUS, consultez les articles suivants pour obtenir une assistance :  
-    > - [Sécuriser WSUS avec le protocole SSL](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#bkmk_2.5.ConfigSSL) 
+    > - [Sécuriser WSUS avec le protocole SSL](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) 
     > - [Billet de blog de prise en charge de WSUS](https://blogs.technet.microsoft.com/sus/2011/05/09/how-to-create-an-internet-facing-wsus-server-that-uses-different-internal-and-external-names/)
 
 - Suffisamment d’espace disque sur le point de mise à jour logicielle où se trouve le dossier WSUSContent pour stocker le contenu binaire source des mises à jour de logiciels tiers. La quantité de stockage nécessaire varie en fonction du fournisseur, du type de mise à jour, ainsi que des mises à jour que vous publiez en vue de leur déploiement. Si vous devez déplacer le dossier WSUSContent vers un lecteur qui contient davantage d’espace, consultez ce billet de blog de l’équipe du support WSUS : [How to change the location where WSUS stores updates locally](https://blogs.technet.microsoft.com/sus/2008/05/19/wsus-how-to-change-the-location-where-wsus-stores-updates-locally/).  

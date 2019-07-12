@@ -11,16 +11,16 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 838a1dffd5a84544259d26cc8d58eb843cc57d0f
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 979409f34e4c32ce812f2a84ce062d2312a85d3c
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56141066"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676136"
 ---
 # <a name="create-and-deploy-an-application-with-system-center-configuration-manager"></a>Créer et déployer une application avec System Center Configuration Manager
 
-*S’applique à : System Center Configuration Manager (Current Branch)*
+*S’applique à : System Center Configuration Manager (Current Branch)*
 
 Cette rubrique vous montre de façon concrète comment créer une application avec System Center Configuration Manager. Dans cet exemple, vous créez et vous déployez une application qui contient une application métier pour PC Windows appelée **Contoso.msi**. Cette application doit être installée sur tous les PC exécutant Windows 10 dans votre entreprise. Au fil des étapes, vous allez découvrir de nombreuses façons de gérer efficacement les applications.  
 
@@ -55,9 +55,9 @@ Veillez à prendre connaissance des informations contenues dans la rubrique de [
 
 3. Dans la page **Général** de l’ **Assistant Création d’une application**, choisissez **Détecter automatiquement les informations de cette application à partir des fichiers d’installation**. Ceci permet de préremplir certaines informations dans l’Assistant avec les informations extraites du fichier d’installation .msi. Spécifiez ensuite les informations suivantes :  
 
-   -   **Type** : Choisissez **Windows Installer (fichier \*.msi)**.  
+   -   **Type** : choisissez **Windows Installer (fichier \*.msi)** .  
 
-   -   **Emplacement** : Entrez l’emplacement du fichier d’installation **Contoso.msi** (ou choisissez **Parcourir** pour le sélectionner). Notez que l’emplacement doit être spécifié sous la forme *\\\Serveur\Partage\Fichier* pour permettre à Configuration Manager de trouver les fichiers d’installation.  
+   -   **Emplacement** : entrez l’emplacement du fichier d’installation **Contoso.msi** (ou choisissez **Parcourir** pour le sélectionner). Notez que l’emplacement doit être spécifié sous la forme *\\\Serveur\Partage\Fichier* pour permettre à Configuration Manager de trouver les fichiers d’installation.  
 
    Le résultat doit ressembler à la capture d’écran suivante :  
 
@@ -88,7 +88,7 @@ Maintenant que vous avez créé une application, vous pouvez si nécessaire en a
 
  La boîte de dialogue **Propriétés de l’application <Contoso\>** contient beaucoup d’éléments que vous pouvez configurer pour ajuster le comportement de l’application. Pour plus d’informations sur tous les paramètres configurables, consultez [Créer des applications](../../apps/deploy-use/create-applications.md). Pour cet exemple, vous allez seulement modifier quelques propriétés du type de déploiement de l’application.  
 
- Choisissez l’onglet **Types de déploiement** > Type de déploiement **Application Contoso** > **Modifier**.  
+ Choisissez l’onglet **Types de déploiement** > Type de déploiement **Application Contoso** > **Modifier**. 
 
 Une boîte de dialogue similaire à celle-ci s’affiche :  
 
@@ -103,13 +103,13 @@ Une boîte de dialogue similaire à celle-ci s’affiche :
 
 3.  Dans la boîte de dialogue **Créer une spécification** , indiquez les informations suivantes :  
 
-    -   **Catégorie** : **Appareil**  
+    -   **Catégorie** : **Appareil**  
 
-    -   **Condition** : **Système d'exploitation**  
+    -   **Condition** : **Système d’exploitation**  
 
-    -   **Type de règle** : **Valeur**  
+    -   **Type de règle** : **Valeur**  
 
-    -   **Opérateur** : **L’un des**  
+    -   **Opérateur** : **L’un des**  
 
     -   Dans la liste des systèmes d’exploitation, sélectionnez **Windows 10**.  
 
@@ -186,15 +186,15 @@ Utilisez les informations de la section **Surveiller l’application** ci-dessou
 
 5.  Sélectionnez un des onglets suivants pour en voir davantage sur l’état du déploiement de l’application :  
 
-    -   **Opération réussie** : L’application a bien été installée sur les PC indiqués.  
+    -   **Opération réussie** : l’application a bien été installée sur les PC indiqués.  
 
-    -   **En cours** : L’installation de l’application n’est pas encore terminée.  
+    -   **En cours** : l’installation de l’application n’est pas encore terminée.  
 
-    -   **Erreur** : Une erreur s’est produite lors de l’installation de l’application sur les PC indiqués. Des informations complémentaires sur l’erreur sont aussi affichées.  
+    -   **Erreur** : une erreur s’est produite lors de l’installation de l’application sur les PC indiqués. Des informations complémentaires sur l’erreur sont aussi affichées.  
 
-    -   **Config non satisfaite** : Aucune tentative d’installation de l’application n’a été initiée sur les appareils indiqués, car ils n’étaient pas conformes aux spécifications que vous avez configurées (en l’occurrence, ils n’exécutaient pas Windows 10).  
+    -   **Config non satisfaite** : aucune tentative d’installation de l’application sur les appareils indiqués n’a été faite, car ils n’étaient pas conformes aux spécifications que vous avez configurées (en l’occurrence, ils n’exécutaient pas Windows 10).  
 
-    -   **Inconnu** : Configuration Manager n’a pas pu signaler l’état du déploiement. Faites une nouvelle vérification ultérieurement.  
+    -   **Inconnu** : Configuration Manager n’a pas pu signaler l’état du déploiement. Faites une nouvelle vérification ultérieurement.  
 
 > [!TIP]  
 >  Il existe plusieurs façons de surveiller les déploiements d’applications. Pour plus d’informations, consultez [Surveiller les applications](/sccm/apps/deploy-use/monitor-applications-from-the-console).  

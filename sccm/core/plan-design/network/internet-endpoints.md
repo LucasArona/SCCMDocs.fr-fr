@@ -11,12 +11,12 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9ab7816e017d48b937a634b5031ba80e7dbfa093
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: f5ed06951fab313a4a1453864ffefb963cc4d8e9
+ms.sourcegitcommit: 20bbb870baf624c7809d3972f2d09a8d2df79cda
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67286952"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67623266"
 ---
 # <a name="internet-access-requirements"></a>Conditions requises pour l’accès Internet
 
@@ -120,7 +120,7 @@ Pour la détection d’utilisateurs Azure AD, le **point de connexion de service
 
 - Version 1902 et versions ultérieures : Point de terminaison Microsoft Graph `https://graph.microsoft.com/`
 
-Le système de site du point de connexion de la passerelle de gestion cloud du point de gestion cloud (CMG) prend en charge l’utilisation d’un proxy web. Pour plus d’informations sur la configuration de ce rôle pour un proxy, consultez [Prise en charge d’un serveur proxy](/sccm/core/plan-design/network/proxy-server-support#to-set-up-the-proxy-server-for-a-site-system-server). Le point de connexion CMG a uniquement besoin de se connecter aux points de terminaison de service de la passerelle de gestion cloud. Il n’a pas besoin d’accéder à d’autres points de terminaison Azure.
+Le système de site du point de connexion de la passerelle de gestion cloud du point de gestion cloud (CMG) prend en charge l’utilisation d’un proxy web. Pour plus d’informations sur la configuration de ce rôle pour un proxy, consultez [Prise en charge d’un serveur proxy](proxy-server-support.md#configure-the-proxy-for-a-site-system-server). Le point de connexion CMG a uniquement besoin de se connecter aux points de terminaison de service de la passerelle de gestion cloud. Il n’a pas besoin d’accéder à d’autres points de terminaison Azure.
 
 Pour plus d’informations sur la passerelle de gestion cloud, consultez [Planifier la passerelle de gestion cloud](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway).
 

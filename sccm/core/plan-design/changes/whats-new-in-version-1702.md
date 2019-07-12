@@ -12,12 +12,12 @@ ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 89ba5d63b1a033db49da73cc0df3fa0a41f2b696
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: 31f47fa04275f2be4efa1558e1d816f74b05d369
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67285851"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67677307"
 ---
 # <a name="what39s-new-in-version-1702-of-system-center-configuration-manager"></a>Nouveautés de la version 1702 de System Center Configuration Manager
 
@@ -50,14 +50,14 @@ La version 1702 n’offre plus de prise en charge pour les produits suivants :
 
 ### <a name="improvements-for-in-console-search"></a>Améliorations apportées à la recherche dans la console
 Voici des améliorations apportées à l’utilisation de la recherche dans la console Configuration Manager :
- - **Chemin d’accès de l’objet :**  
+- **Chemin d’accès de l’objet :**  
   De nombreux objets prennent désormais en charge une colonne nommée **Chemin d’accès de l’objet**.  Quand vous effectuez des recherches et incluez cette colonne dans les résultats d’affichage, vous pouvez afficher le chemin d’accès à chaque objet. Par exemple, si vous exécutez une recherche d’applications dans le nœud Applications et également dans les sous-nœuds, la colonne *Chemin d’accès de l’objet* dans le volet des résultats affiche le chemin d’accès à chaque objet retourné.   
 
 - **Conservation du texte recherché :**  
   Quand vous entrez du texte dans la zone de recherche, puis que vous changez la zone dans laquelle effectuer la recherche (d’un sous-nœud au nœud actuel), le texte saisi est désormais conservé et vous n’avez pas à le retaper.
 
 - **Maintien de votre décision d’effectuer des recherches dans les sous-nœuds :**  
- L’option que vous choisissez pour effectuer des recherches dans le *nœud actuel* ou *tous les sous-nœuds* est désormais conservée quand vous changez le nœud dans lequel vous travaillez. Ce nouveau comportement signifie que vous n’avez pas besoin de réinitialiser constamment la décision quand vous parcourez la console. Par défaut, quand vous ouvrez la console, l’option consiste à effectuer des recherches uniquement dans le nœud actuel.
+  L’option que vous choisissez pour effectuer des recherches dans le *nœud actuel* ou *tous les sous-nœuds* est désormais conservée quand vous changez le nœud dans lequel vous travaillez. Ce nouveau comportement signifie que vous n’avez pas besoin de réinitialiser constamment la décision quand vous parcourez la console. Par défaut, quand vous ouvrez la console, l’option consiste à effectuer des recherches uniquement dans le nœud actuel.
 
 
 ### <a name="send-feedback-from-the-configuration-manager-console"></a>Envoyer des commentaires à partir de la console Configuration Manager

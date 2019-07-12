@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec448f0d2752cda2509b6daa0302ff521044bef4
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: e60ce54c5f792f7ea9c7a6c6d05b32c79c1e9b8d
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65493753"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67678794"
 ---
 # <a name="create--software-updates-and-update-bundles-with-updates-publisher"></a>Créer des mises à jour logicielles et des offres groupées de mises à jour avec l’éditeur de mise à jour
 
@@ -47,7 +47,7 @@ Ces deux Assistants ayant un flux de travail similaire, la procédure de créati
 
    -   Spécifiez les arguments de ligne de commande nécessaires pour installer la mise à jour.
 
-       -   Les fichiers du programme d’installation et correctifs Windows (fichiers .MSI et .MSP) définissent automatiquement ces valeurs. Pour ces types de fichiers, les arguments doivent être spécifiés en tant que **\[nom\]=\[valeur\]**. En outre, toutes les options qui commencent par **/** (comme **/qn**) ne sont pas prises en charge pour les mises à jour .MSI ou .MSP.
+       -   Les fichiers du programme d’installation et correctifs Windows (fichiers .MSI et .MSP) définissent automatiquement ces valeurs. Pour ces types de fichiers, les arguments doivent être spécifiés en tant que **\[nom\]=\[valeur\]** . En outre, toutes les options qui commencent par **/** (comme **/qn**) ne sont pas prises en charge pour les mises à jour .MSI ou .MSP.
 
        -   Pour les mises à jour .EXE, tous les arguments sont valides.
 
@@ -61,7 +61,7 @@ Ces deux Assistants ayant un flux de travail similaire, la procédure de créati
 
    - **Description**: une description claire de la mise à jour. Vous pouvez inclure les éléments installés par la mise à jour et indiquer pourquoi ou quand celle-ci doit être utilisée.
 
-     **Classification :** les éléments suivants sont des descriptions communes des différentes classifications.
+   **Classification :** les éléments suivants sont des descriptions communes des différentes classifications.
 
    - **Mise à jour** : mise à jour d'une application ou d'un fichier qui sont déjà installés.
 
@@ -77,30 +77,30 @@ Ces deux Assistants ayant un flux de travail similaire, la procédure de créati
 
    - **Outil** : outil ou fonctionnalité permettant d'effectuer une ou plusieurs tâches.
 
-     -   **Pilote** : mise à jour du logiciel d’un pilote.
+   - **Pilote** : mise à jour du logiciel d’un pilote.
 
    **Fournisseur :** spécifie un fournisseur pour la mise à jour. Vous pouvez utiliser la liste déroulante pour choisir les valeurs des mises à jour figurant dans le référentiel. Lorsque vous spécifiez un fournisseur, l’Assistant crée un dossier portant le nom de ce fournisseur sous **Toutes les mises à jour logicielles** dans l **’espace de travail Mises à jour** si ce dossier n’existe pas déjà. Voici une liste des noms Windows Server Update Services (WSUS) réservés qui ne peuvent pas être entrés pour les mises à jour que vous créez :
-   >*   Microsoft Corporation
-   >*   Microsoft
-   >*   Mise à jour
-   >*   Mise à jour logicielle
-   >*   Outils
-   >*   Outil
-   >*   Critique
-   >*   Mises à jour critiques
-   >*   Sécurité
-   >*   Mises à jour de sécurité
-   >*   Feature Pack
-   >*   Correctif cumulatif
-   >*   Service Pack
-   >*   Pilote
-   >*   Mise à jour du pilote
-   >*   Offre groupée
-   >*   Offre groupée de mises à jour
+   - Microsoft Corporation
+   - Microsoft
+   - Mise à jour
+   - Mise à jour logicielle
+   - Outils
+   - Outil
+   - Critique
+   - Mises à jour critiques
+   - Sécurité
+   - Mises à jour de sécurité
+   - Feature Pack
+   - Correctif cumulatif
+   - Service Pack
+   - Pilote
+   - Mise à jour du pilote
+   - Offre groupée
+   - Offre groupée de mises à jour
 
-**Produit** : spécifie le type de produit pour lequel la mise à jour est destinée. Vous pouvez utiliser la liste déroulante pour choisir les valeurs des mises à jour figurant dans le référentiel. La même liste de noms WSUS réservés qui ne peuvent pas être utilisés pour **Fournisseur**, ne peut pas être utilisée pour **Produit**.
+   **Produit** : spécifie le type de produit pour lequel la mise à jour est destinée. Vous pouvez utiliser la liste déroulante pour choisir les valeurs des mises à jour figurant dans le référentiel. La même liste de noms WSUS réservés qui ne peuvent pas être utilisés pour **Fournisseur**, ne peut pas être utilisée pour **Produit**.
 
- **URL Informations** : spécifie l’URL où vous trouverez plus d’informations sur cette mise à jour. Vous devez utiliser des minuscules pour **https** ou **http** lorsque vous entrez cette URL.
+   **URL Informations** : spécifie l’URL où vous trouverez plus d’informations sur cette mise à jour. Vous devez utiliser des minuscules pour **https** ou **http** lorsque vous entrez cette URL.
 
 4. Sur la page **Informations facultatives**, vous pouvez configurer les détails qui fournissent des informations supplémentaires sur la mise à jour.
 

@@ -12,12 +12,12 @@ ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5b9dcd7465265021d52e44d72c77172d4323144e
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: 050122d6a1b799a30bd2c5a83ab261e92aaafabe
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67285771"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67677216"
 ---
 # <a name="what39s-new-in-version-1706-of-system-center-configuration-manager"></a>Nouveautés de la version 1706 de System Center Configuration Manager
 
@@ -59,8 +59,8 @@ Des améliorations supplémentaires ont été apportées aux fonctionnalités d�
 ### <a name="improvements--for-sql-server-always-on-availability-groups"></a>Améliorations pour les groupes de disponibilité Always On SQL Server
 <!-- 1352094 -->
 Avec cette version, vous pouvez maintenant utiliser les réplicas avec validation asynchrone dans les groupes de disponibilité Always On SQL Server que vous utilisez avec Configuration Manager. Cela signifie que vous pouvez ajouter des réplicas supplémentaires à vos groupes de disponibilité à utiliser en tant que sauvegardes hors site (à distance) puis de les utiliser dans un scénario de récupération d’urgence.  
-  -   Configuration Manager prend en charge l’utilisation du réplica avec validation asynchrone pour récupérer votre réplica synchrone. Consultez les [options de récupération de base de données de site](/sccm/core/servers/manage/recover-sites#site-database-recovery-options) dans la rubrique Sauvegarde et récupération pour plus d’informations sur la façon d’y parvenir.
-  -   Cette version ne prend pas en charge le basculement pour utiliser le réplica avec validation asynchrone en tant que base de données de votre site.
+  - Configuration Manager prend en charge l’utilisation du réplica avec validation asynchrone pour récupérer votre réplica synchrone. Consultez les [options de récupération de base de données de site](/sccm/core/servers/manage/recover-sites#site-database-recovery-options) dans la rubrique Sauvegarde et récupération pour plus d’informations sur la façon d’y parvenir.
+  - Cette version ne prend pas en charge le basculement pour utiliser le réplica avec validation asynchrone en tant que base de données de votre site.
 Pour plus d’informations, consultez [Se préparer à l’utilisation de groupes de disponibilité SQL Server Always On](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database).
 
 ### <a name="update-reset-tool"></a>Outil de réinitialisation des mises à jour
@@ -118,25 +118,25 @@ Le cache d’homologue n’utilise plus le compte d’accès réseau pour authen
 Dans cette version, nous avons ajouté de nouveaux paramètres de configuration pour les appareils Windows 10 inscrits auprès d’Intune ou gérés localement par Configuration Manager. Ces paramètres sont les suivants :
 
 - **Mot de passe**
-    - Chiffrement de l’appareil
+  - Chiffrement de l’appareil
 - **Appareil**
-    - Modification des paramètres de région (Desktop uniquement)
-    - Modification des paramètres d’alimentation et de mise en veille
-    - Modification des paramètres de langue
-    - Modification de l’heure du système
-    - Modification du nom de l’appareil
+  - Modification des paramètres de région (Desktop uniquement)
+  - Modification des paramètres d’alimentation et de mise en veille
+  - Modification des paramètres de langue
+  - Modification de l’heure du système
+  - Modification du nom de l’appareil
 - **Store**
-    - Mettre à jour automatiquement les applications du store
-    - Utiliser uniquement un store privé
-    - Lancement des applications provenant du store
+  - Mettre à jour automatiquement les applications du store
+  - Utiliser uniquement un store privé
+  - Lancement des applications provenant du store
 - **Microsoft Edge**
-    - Bloquer l’accès à about:flags
-    - Remplacement de l’invite SmartScreen
-    - Remplacement de l’invite SmartScreen pour les fichiers
-    - Adresse IP localhost WebRTC
-    - Moteur de recherche par défaut
-    - URL OpenSearch XML
-    - Pages d’accueil (Desktop uniquement)
+  - Bloquer l’accès à about:flags
+  - Remplacement de l’invite SmartScreen
+  - Remplacement de l’invite SmartScreen pour les fichiers
+  - Adresse IP localhost WebRTC
+  - Moteur de recherche par défaut
+  - URL OpenSearch XML
+  - Pages d’accueil (Desktop uniquement)
 
 Pour plus de détails sur tous les paramètres de Windows 10, consultez [Comment créer des éléments de configuration pour des appareils Windows 8.1 et Windows 10 gérés sans le client System Center Configuration Manager](/sccm/mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client).
 

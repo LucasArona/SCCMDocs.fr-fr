@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 709442083cd2d9c935aeb2c5fe6c2ad30a2dddf5
-ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
+ms.openlocfilehash: c82de88250a7faa44747fc897fcfee09bed45823
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65083047"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67678803"
 ---
 # <a name="create-a-task-sequence-to-capture-and-restore-user-state-in-configuration-manager"></a>Créer une séquence de tâches pour capturer et restaurer l’état utilisateur dans Configuration Manager
 
@@ -28,9 +28,9 @@ ms.locfileid: "65083047"
 
 ## <a name="task-sequence-steps"></a>Étapes de séquence de tâches  
 
- Pour capturer et restaurer l’état utilisateur, ajoutez les étapes suivantes à la séquence de tâches :  
+Pour capturer et restaurer l’état utilisateur, ajoutez les étapes suivantes à la séquence de tâches :  
 
- - [Demander le magasin d’état](/sccm/osd/understand/task-sequence-steps#BKMK_RequestStateStore) : si vous stockez l’état utilisateur sur le point de migration d’état, cette étape est nécessaire.  
+- [Demander le magasin d’état](/sccm/osd/understand/task-sequence-steps#BKMK_RequestStateStore) : si vous stockez l’état utilisateur sur le point de migration d’état, cette étape est nécessaire.  
 
 - [Capturer l’état utilisateur](/sccm/osd/understand/task-sequence-steps#BKMK_CaptureUserState) : cette étape capture les données d’état utilisateur. Il stocke ensuite les données sur le point de migration d’état ou sur le disque local à l’aide des liaisons permanentes.  
 

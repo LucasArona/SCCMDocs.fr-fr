@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa92ed294196d44aaafcf4e873c706e135928c90
-ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.openlocfilehash: 8bfcb73f359bd8d1b4438ac28b2395b01217e35d
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66176648"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67677744"
 ---
 # <a name="how-to-manage-clients-in-system-center-configuration-manager"></a>Guide pratique pour gérer les clients dans System Center Configuration Manager
 
@@ -202,8 +202,8 @@ Pour identifier les appareils qui sont en attente de redémarrage, accédez à l
  - **Ajouter ou supprimer une fonctionnalité** : cette valeur vient du fait que le service basé sur les composants Windows a signalé que l’ajout ou la suppression d’une fonctionnalité de Windows nécessitait un redémarrage (HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Reboot Pending)
 
 **Pour créer la notification invitant le client à redémarrer un appareil :**
-1.  Recherchez l’appareil que vous souhaitez redémarrer dans un regroupement dans le nœud **Regroupements d’appareils** de la console.
-2.  Cliquez avec le bouton droit sur l’appareil, sélectionnez **Notification du client** et **Redémarrer**. Une fenêtre s’ouvre et affiche des informations concernant le redémarrage. Cliquez sur **OK** pour confirmer la demande de redémarrage.
+1. Recherchez l’appareil que vous souhaitez redémarrer dans un regroupement dans le nœud **Regroupements d’appareils** de la console.
+2. Cliquez avec le bouton droit sur l’appareil, sélectionnez **Notification du client** et **Redémarrer**. Une fenêtre s’ouvre et affiche des informations concernant le redémarrage. Cliquez sur **OK** pour confirmer la demande de redémarrage.
 
 Lorsqu’un client reçoit la notification, une fenêtre de notification **Centre logiciel** s’ouvre et pour informer l’utilisateur du redémarrage. Par défaut, le redémarrage se produit après 90 minutes. Vous pouvez modifier le délai de redémarrage en configurant les [paramètres du client](/sccm/core/clients/deploy/configure-client-settings). Les paramètres qui définissent le comportement du redémarrage se trouvent dans l’onglet [Redémarrage de l’ordinateur](/sccm/core/clients/deploy/about-client-settings#computer-restart) des paramètres par défaut.
 

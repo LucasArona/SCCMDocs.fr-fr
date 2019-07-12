@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 243e38273488f72e3e5e693270b10d6865c3a422
-ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
+ms.openlocfilehash: bf20d24b8a1322f1d74c42c66f49fd8026ac075e
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67252244"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676623"
 ---
 # <a name="back-up-a-configuration-manager-site"></a>Sauvegarde d'un site Configuration Manager
 
@@ -93,7 +93,7 @@ Les informations sur l’état de la sauvegarde du site sont enregistrées dans 
     -   **Lecteurs locaux sur le serveur de site et SQL Server** : Spécifie que la tâche stocke les fichiers de sauvegarde du site dans le chemin d’accès spécifié sur le lecteur local du serveur de site. La tâche stocke les fichiers de sauvegarde de la base de données du site dans le chemin spécifié sur le lecteur local du serveur de base de données du site. Créez les dossiers locaux avant l’exécution de la tâche de sauvegarde. Le compte d'ordinateur du serveur de site doit disposer des autorisations NTFS en **écriture** sur le dossier créé sur le serveur de site. Le compte d'ordinateur de SQL Server doit disposer des autorisations NTFS en **écriture** sur le dossier créé sur le serveur de base de données de site. Cette option est disponible uniquement quand la base de données du site n’est pas installée sur le serveur de site.  
 
     > [!NOTE]  
-    >   L’option permettant d’accéder à la destination de sauvegarde est uniquement disponible quand vous spécifiez le chemin réseau de la destination de sauvegarde.  
+    > L’option permettant d’accéder à la destination de sauvegarde est uniquement disponible quand vous spécifiez le chemin réseau de la destination de sauvegarde.  
     >  
     > Le nom de dossier ou le nom de partage utilisé pour la destination de sauvegarde ne prend pas en charge l’utilisation des caractères Unicode.  
 

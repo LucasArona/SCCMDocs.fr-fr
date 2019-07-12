@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 25824b616bb833a715727033504776767b5aa958
-ms.sourcegitcommit: 18a94eb78043cb565b05cd0e9469b939b29cccf0
+ms.openlocfilehash: 130cc8511b90da3e95c69f9239e57e2c7ac61d8c
+ms.sourcegitcommit: 20bbb870baf624c7809d3972f2d09a8d2df79cda
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66354807"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67623344"
 ---
 # <a name="enhanced-http"></a>HTTP amélioré
 
@@ -51,7 +51,7 @@ Les scénarios suivants bénéficient de ces améliorations :
 ### <a name="bkmk_scenario1"></a> Scénario 1 : Client vers point de gestion
 
 <!--1356889-->
-Les [appareils joints à Azure AD](https://docs.microsoft.com/azure/active-directory/device-management-introduction#azure-ad-joined-devices) peuvent communiquer avec un point de gestion configuré pour HTTP. Le serveur de site génère un certificat pour le point de gestion afin de lui permettre de communiquer via un canal sécurisé.
+Les [appareils joints à Azure AD](/azure/active-directory/devices/concept-azure-ad-join) peuvent communiquer avec un point de gestion configuré pour HTTP. Le serveur de site génère un certificat pour le point de gestion afin de lui permettre de communiquer via un canal sécurisé.
 
 > [!Note]  
 > Ce comportement est différent de celui observé dans Configuration Manager Current Branch version 1802, où l’utilisation d’un point de gestion HTTPS est nécessaire pour que les appareils joints à Azure AD puissent communiquer par le biais d’une passerelle de gestion cloud. Pour plus d’informations, consultez [Activer le point de gestion pour HTTPS](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_mphttps).  
@@ -66,7 +66,7 @@ Ce comportement inclut des scénarios de déploiement de système d’exploitati
 ### <a name="bkmk_scenario3"></a> Scénario 3 : Identité d’appareil Azure AD
 
 <!--1358460-->
-Un appareil joint à Azure AD ou un [appareil Azure AD hybride](https://docs.microsoft.com/azure/active-directory/device-management-introduction#hybrid-azure-ad-joined-devices) peut communiquer de manière sécurisée avec son site attribué, sans qu’un utilisateur Azure AD soit connecté. L’identité d’appareil cloud est désormais suffisante pour s’authentifier auprès du point de gestion et de la passerelle de gestion cloud dans les scénarios orientés appareil. (Un jeton d’utilisateur est toujours requis dans les scénarios orientés utilisateur.)  
+Un appareil joint à Azure AD ou un [appareil Azure AD hybride](/azure/active-directory/devices/concept-azure-ad-join-hybrid) peut communiquer de manière sécurisée avec son site attribué, sans qu’un utilisateur Azure AD soit connecté. L’identité d’appareil cloud est désormais suffisante pour s’authentifier auprès du point de gestion et de la passerelle de gestion cloud dans les scénarios orientés appareil. (Un jeton d’utilisateur est toujours requis dans les scénarios orientés utilisateur.)  
 
 
 ## <a name="features"></a>Fonctionnalités

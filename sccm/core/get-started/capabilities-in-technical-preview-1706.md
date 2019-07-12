@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bbc26ed19de04fd3000d6c3ca713bb2a705ce8ea
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: 3e7a13e53e4054593310378b5f667fd91c597448
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67286225"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67677447"
 ---
 # <a name="capabilities-in-technical-preview-1706-for-system-center-configuration-manager"></a>Fonctionnalités de la version d’évaluation technique 1706 pour System Center Configuration Manager
 
@@ -28,18 +28,18 @@ Cet article présente les fonctionnalités qui sont disponibles dans la version 
 
 <!--  Known Issues Template   
 **Known Issues in this Technical Preview:**
--   **Issue Name**. Details
+- **Issue Name**. Details
     Workaround details.
 -->
 **Problèmes connus dans cette version d’évaluation technique :**
 
--   **Déplacer le point de distribution** : les options de la console pour déplacer un point de distribution entre sites ne peuvent pas être utilisées avec cette version en raison de la limite technique de la version préliminaire d’un seul site principal.
+- **Déplacer le point de distribution** : les options de la console pour déplacer un point de distribution entre sites ne peuvent pas être utilisées avec cette version en raison de la limite technique de la version préliminaire d’un seul site principal.
 
--   **Paramètres de conformité d’appareil** : vous pouvez rencontrer le comportement opposé lorsque vous utilisez les deux nouveaux paramètres de conformité d’appareil :
-    - **Bloquer le débogage USB sur l’appareil**
-    - **Bloquer les applications provenant de sources inconnues**
+- **Paramètres de conformité d’appareil** : vous pouvez rencontrer le comportement opposé lorsque vous utilisez les deux nouveaux paramètres de conformité d’appareil :
+  - **Bloquer le débogage USB sur l’appareil**
+  - **Bloquer les applications provenant de sources inconnues**
 
-        Par exemple, si l’administrateur définit **Bloquer le débogage USB sur l’appareil** sur **true**, tous les appareils qui n’ont pas activé le débogage USB sont marqués comme non conformes.
+    Par exemple, si l’administrateur définit **Bloquer le débogage USB sur l’appareil** sur **true**, tous les appareils qui n’ont pas activé le débogage USB sont marqués comme non conformes.
 
 **Vous trouverez ci-dessous les nouvelles fonctionnalités propres à cette version.**  
 
@@ -60,18 +60,18 @@ Cette version inclut des améliorations pour le fonctionnement des points de mis
 
 - Indépendamment de la configuration de secours, un client essaie d’atteindre le dernier point de mise à jour logicielle qu'il a utilisé pendant 120 minutes. Après l’échec de communication avec ce serveur pendant 120 minutes, le client vérifie ensuite son pool de points de mise à jour logicielle disponibles, afin d’en trouver un nouveau.
 
-  -   Tous les points de mise à jour logicielle dans le groupe de limites actuel du client sont ajoutés immédiatement au pool du client.
+  - Tous les points de mise à jour logicielle dans le groupe de limites actuel du client sont ajoutés immédiatement au pool du client.
 
-  -   Comme un client tente d’utiliser son serveur d’origine pendant 120 minutes avant d’en rechercher d’un nouveau, aucun des serveurs supplémentaires n’est contacté jusqu'à ce que deux heures s’écoulent.
+  - Comme un client tente d’utiliser son serveur d’origine pendant 120 minutes avant d’en rechercher d’un nouveau, aucun des serveurs supplémentaires n’est contacté jusqu'à ce que deux heures s’écoulent.
 
-  -   Si le repli sur un groupe voisin est configuré pour un minimum de 120 minutes, les points de mise à jour logicielle à partir de ce groupe de limites voisin feront partie du pool de serveurs disponibles du client .
+  - Si le repli sur un groupe voisin est configuré pour un minimum de 120 minutes, les points de mise à jour logicielle à partir de ce groupe de limites voisin feront partie du pool de serveurs disponibles du client .
 
 - Après avoir échoué pendant deux heures à atteindre le serveur d’origine, le client passe à un cycle plus court pour contacter un nouveau point de mise à jour logicielle.
 
   Cela signifie que si un client ne parvient pas à se connecter avec un nouveau serveur, il sélectionne rapidement le serveur suivant à partir de son pool de serveurs disponibles et tente de le contacter.
 
-  -   Ce cycle se poursuit jusqu'à ce que le client se connecte à un point de mise à jour logicielle qu’il peut utiliser.
-  -   Jusqu'à ce que le client trouve un point de mise à jour logicielle, les serveurs supplémentaires sont ajoutés à un pool de serveurs disponibles lorsque le temps de secours pour chaque groupe de limites voisin est atteint.
+  - Ce cycle se poursuit jusqu'à ce que le client se connecte à un point de mise à jour logicielle qu’il peut utiliser.
+  - Jusqu'à ce que le client trouve un point de mise à jour logicielle, les serveurs supplémentaires sont ajoutés à un pool de serveurs disponibles lorsque le temps de secours pour chaque groupe de limites voisin est atteint.
 
 Pour plus d’informations, consultez la section [Points de mise à jour logicielle](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points) dans la rubrique Groupes de limites pour Current Branch.
 
@@ -81,88 +81,88 @@ Pour plus d’informations, consultez la section [Points de mise à jour logicie
 La haute disponibilité pour le rôle de serveur de site est une solution basée sur Configuration Manager pour installer un serveur de site principal supplémentaire en mode *Passif*. Le serveur de site en mode passif vient s’ajouter à votre serveur de site principal existant qui se trouve en mode *Actif*. Un serveur de site en mode passif est disponible pour une utilisation immédiate, si nécessaire.
 
 Un serveur de site principal en mode passif :
--   Utilise la même base de données de site en tant que serveur de site actif.
--   Reçoit une copie de la bibliothèque de contenu des serveurs de site actifs, qui est ensuite synchronisée.
--   N’écrit pas les données dans la base de données du site tant qu’il est en mode passif.
--   Ne prend pas en charge l’installation ou la suppression de rôles de système de site facultatifs tant que le mode passif est activé.
+- Utilise la même base de données de site en tant que serveur de site actif.
+- Reçoit une copie de la bibliothèque de contenu des serveurs de site actifs, qui est ensuite synchronisée.
+- N’écrit pas les données dans la base de données du site tant qu’il est en mode passif.
+- Ne prend pas en charge l’installation ou la suppression de rôles de système de site facultatifs tant que le mode passif est activé.
 
 Pour faire du serveur de site en mode passif le serveur de site en mode actif, vous le promouvez manuellement. Le serveur de site actif devient alors le serveur de site passif. Les rôles de système de site disponibles sur le serveur en mode actif d’origine restent disponibles tant l’ordinateur est accessible. Seul le rôle de serveur de site bascule entre mode passif et mode actif.
 
 Pour installer un serveur de site en mode passif, vous utilisez **l’Assistant Création d’un serveur de système de site** pour configurer un nouveau serveur de site avec le type **Serveur de site principal** et le mode **Passif**. L’assistant exécute ensuite le programme d’installation de Configuration Manager sur le serveur spécifié pour installer le nouveau serveur de site en mode passif. Une fois l’installation terminée, le serveur de site en mode actif assure la synchronisation du serveur de site en mode passif et de sa bibliothèque de contenu avec les modifications ou configurations que vous apportez sur le serveur de site actif.
 
 ### <a name="prerequisites-and-limitations"></a>Conditions préalables et limitations
--   Un serveur de site unique en mode passif est pris en charge sur chaque site principal.
+- Un serveur de site unique en mode passif est pris en charge sur chaque site principal.
 
--   Le serveur de site en mode passif peut être local ou sur le cloud dans Azure.
+- Le serveur de site en mode passif peut être local ou sur le cloud dans Azure.
 
--   Les serveurs de site en mode actif et ceux en mode passif doivent être dans le même domaine.
+- Les serveurs de site en mode actif et ceux en mode passif doivent être dans le même domaine.
 
--   Les serveurs de site en mode actif et ceux en mode passif doivent utiliser la même base de données, qui doit être distante par rapport aux ordinateurs de chaque serveur de site.
+- Les serveurs de site en mode actif et ceux en mode passif doivent utiliser la même base de données, qui doit être distante par rapport aux ordinateurs de chaque serveur de site.
 
-    -   Le serveur SQL qui héberge la base de données peut utiliser une instance par défaut, appelée instance, cluster SQL Server ou groupe de disponibilité AlwaysOn.
+    - Le serveur SQL qui héberge la base de données peut utiliser une instance par défaut, appelée instance, cluster SQL Server ou groupe de disponibilité AlwaysOn.
 
-    -   Le serveur de site en mode passif est configuré pour utiliser la même base de données de site que le serveur de site en mode actif. Toutefois, le serveur de site en mode passif n’utilise pas cette base de données jusqu'à sa promotion en mode actif.
+    - Le serveur de site en mode passif est configuré pour utiliser la même base de données de site que le serveur de site en mode actif. Toutefois, le serveur de site en mode passif n’utilise pas cette base de données jusqu'à sa promotion en mode actif.
 
--   L’ordinateur qui exécutera le serveur de site en mode passif :
+- L’ordinateur qui exécutera le serveur de site en mode passif :
 
-    -   Doit respecter les [conditions requises pour installer un site principal](https://docs.microsoft.com/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#primary-sites-and-the-central-administration-site).
+    - Doit respecter les [conditions requises pour installer un site principal](https://docs.microsoft.com/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#primary-sites-and-the-central-administration-site).
 
-    -   Installe à l’aide de fichiers sources correspondant à la version du serveur de site en mode actif.
+    - Installe à l’aide de fichiers sources correspondant à la version du serveur de site en mode actif.
 
-    -   Ne peut pas avoir un rôle de système de site à partir d’un autre site avant d’installer le site en mode passif.
+    - Ne peut pas avoir un rôle de système de site à partir d’un autre site avant d’installer le site en mode passif.
 
--   Les ordinateurs de serveur de site en mode passif et actif peuvent exécuter différents systèmes d’exploitation ou versions de service pack, tant les deux restent pris en charge par votre version de Configuration Manager.
+- Les ordinateurs de serveur de site en mode passif et actif peuvent exécuter différents systèmes d’exploitation ou versions de service pack, tant les deux restent pris en charge par votre version de Configuration Manager.
 
--   La promotion du serveur de site en mode passif en serveur en mode actif est manuelle. Il n’y a pas de basculement automatique.
+- La promotion du serveur de site en mode passif en serveur en mode actif est manuelle. Il n’y a pas de basculement automatique.
 
--   Les rôles de système de site peuvent être installés uniquement sur le serveur de site qui est en mode actif.
+- Les rôles de système de site peuvent être installés uniquement sur le serveur de site qui est en mode actif.
 
-    -   Un serveur de site en mode actif prend en charge tous les rôles de système de site. Vous ne pouvez pas installer des rôles de système de site sur le serveur lorsqu’il est en mode passif.
+    - Un serveur de site en mode actif prend en charge tous les rôles de système de site. Vous ne pouvez pas installer des rôles de système de site sur le serveur lorsqu’il est en mode passif.
 
-    -   Les rôles de système de site qui utilisent une base de données (comme le point de rapport) doivent avoir cette base de données sur un serveur distant à la fois le serveur de site en mode actif et celui en mode passif.
+    - Les rôles de système de site qui utilisent une base de données (comme le point de rapport) doivent avoir cette base de données sur un serveur distant à la fois le serveur de site en mode actif et celui en mode passif.
 
-    -   SMS_Provider n’installe pas sur le serveur de site en mode passif. Étant donné que vous devez vous connecter à un SMS_Provider pour le site afin de promouvoir manuellement le serveur de site du mode passif au mode actif, nous vous recommandons [l’installation d’au moins une instance supplémentaire du fournisseur](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider) sur un autre ordinateur.
+    - SMS_Provider n’installe pas sur le serveur de site en mode passif. Étant donné que vous devez vous connecter à un SMS_Provider pour le site afin de promouvoir manuellement le serveur de site du mode passif au mode actif, nous vous recommandons [l’installation d’au moins une instance supplémentaire du fournisseur](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider) sur un autre ordinateur.
 
 **Problème connu** :   
 Avec cette version, **l’état** pour que les conditions suivantes s’affichent dans la console en tant que valeurs numériques au lieu de texte lisible :
--   131071 – L’installation du serveur de site a échoué
--   720895 : Échec de désinstallation du rôle de serveur de site
--   851967 : Échec du basculement
+- 131071 – L’installation du serveur de site a échoué
+- 720895 : Échec de désinstallation du rôle de serveur de site
+- 851967 : Échec du basculement
 
 ### <a name="add-a-site-server-in-passive-mode"></a>Ajouter un serveur de site en mode passif
-1.  Dans la console, accédez à **Administration** > **Configuration du site** > **Sites** et sélectionnez [Assistant d’ajout de rôles de système de site](/sccm/core/servers/deploy/configure/install-site-system-roles). Vous pouvez également utiliser **l'Assistant Création de serveur de système de site**.
+1. Dans la console, accédez à **Administration** > **Configuration du site** > **Sites** et sélectionnez [Assistant d’ajout de rôles de système de site](/sccm/core/servers/deploy/configure/install-site-system-roles). Vous pouvez également utiliser **l'Assistant Création de serveur de système de site**.
 
-2.  Sur la page **Général**, spécifiez le serveur qui hébergera le serveur de site en mode passif. Le serveur que vous spécifiez ne peut pas héberger les rôles de système de site avant d’installer un serveur de site en mode passif.
+2. Sur la page **Général**, spécifiez le serveur qui hébergera le serveur de site en mode passif. Le serveur que vous spécifiez ne peut pas héberger les rôles de système de site avant d’installer un serveur de site en mode passif.
 
-3.  Sur la page **Sélection du rôle système**, sélectionnez uniquement **Serveur de site principal en mode passif**.
+3. Sur la page **Sélection du rôle système**, sélectionnez uniquement **Serveur de site principal en mode passif**.
 
-4.  Pour terminer l’assistant, vous devez fournir les informations suivantes qui sont utilisées pour exécuter le programme d’installation et installer le rôle de serveur de site sur le serveur spécifié :
-    -   Choisissez de copier les fichiers d’installation du serveur de site actif vers le nouveau serveur de site en mode passif, ou spécifiez un chemin d’accès à un emplacement qui contient le contenu du dossier **CD.Latest** du serveur de site actif.
+4. Pour terminer l’assistant, vous devez fournir les informations suivantes qui sont utilisées pour exécuter le programme d’installation et installer le rôle de serveur de site sur le serveur spécifié :
+    - Choisissez de copier les fichiers d’installation du serveur de site actif vers le nouveau serveur de site en mode passif, ou spécifiez un chemin d’accès à un emplacement qui contient le contenu du dossier **CD.Latest** du serveur de site actif.
 
-    -   Spécifiez le même serveur de base de données de site et le même nom de base de données que ceux utilisés par le serveur de site en mode actif.
+    - Spécifiez le même serveur de base de données de site et le même nom de base de données que ceux utilisés par le serveur de site en mode actif.
 
-5.  Configuration Manager installe ensuite le serveur de site en mode passif sur le serveur spécifié.
+5. Configuration Manager installe ensuite le serveur de site en mode passif sur le serveur spécifié.
 
 Pour l’état d’installation détaillé, accédez à **Administration** > **Configuration du Site** > **Sites**.
--   L’état du serveur de site en mode passif s’affiche sous la forme **Installation**.
+- L’état du serveur de site en mode passif s’affiche sous la forme **Installation**.
 
--   Sélectionnez le serveur, puis cliquez sur **Afficher l’état** pour ouvrir **État d’installation de serveur de site** pour plus d’informations.
+- Sélectionnez le serveur, puis cliquez sur **Afficher l’état** pour ouvrir **État d’installation de serveur de site** pour plus d’informations.
 
 
 
 ### <a name="promote-the-passive-mode-site-server-to-active-mode"></a>Promouvoir le serveur de site en mode passif au mode actif
 Lorsque vous souhaitez promouvoir le serveur de site en mode passif au mode actif, vous pouvez le faire à partir du volet **Nœuds** dans **Administration** > **Configuration du site** > **Sites**. Tant que vous pouvez accéder à une instance de SMS_Provider, vous pouvez accéder au site pour effectuer cette modification.
-1.  Dans le volet **nœuds** de la console Configuration Manager, sélectionnez le serveur de site en mode passif, puis choisissez **Promouvoir en actif** dans le ruban.
+1. Dans le volet **nœuds** de la console Configuration Manager, sélectionnez le serveur de site en mode passif, puis choisissez **Promouvoir en actif** dans le ruban.
 
-2.  **L’état** simple pour le serveur que vous promouvez s’affiche dans le volet **Nœuds** sous la forme **Promotion**.
+2. **L’état** simple pour le serveur que vous promouvez s’affiche dans le volet **Nœuds** sous la forme **Promotion**.
 
-3.  Une fois la promotion terminée, la colonne **État** affiche **OK** à la fois pour le nouveau serveur de site en mode *Actif* et le nouveau serveur de site en mode *Passif*.
+3. Une fois la promotion terminée, la colonne **État** affiche **OK** à la fois pour le nouveau serveur de site en mode *Actif* et le nouveau serveur de site en mode *Passif*.
 
-4.  Dans **Administration** > **Configuration du site** > **Sites**, le nom du serveur de site principal affiche désormais le nom du nouveau serveur de site en mode *Actif*.
+4. Dans **Administration** > **Configuration du site** > **Sites**, le nom du serveur de site principal affiche désormais le nom du nouveau serveur de site en mode *Actif*.
 Pour l’état détaillé, accédez à **Surveillance** > **État du serveur de site**.
-    -   La colonne **Mode** identifie le serveur *Actif* et le serveur *Passif*.
+    - La colonne **Mode** identifie le serveur *Actif* et le serveur *Passif*.
 
-    -   Lors de la promotion d’un serveur du mode passif au mode actif, sélectionnez le serveur de site que vous promouvez au mode actif, puis choisissez **Afficher l’état** à partir du ruban. Cette opération ouvre la fenêtre **État de promotion du serveur de site** qui affiche des détails supplémentaires sur le processus.
+    - Lors de la promotion d’un serveur du mode passif au mode actif, sélectionnez le serveur de site que vous promouvez au mode actif, puis choisissez **Afficher l’état** à partir du ruban. Cette opération ouvre la fenêtre **État de promotion du serveur de site** qui affiche des détails supplémentaires sur le processus.
 
 Lorsqu’un serveur de site en mode actif bascule sur le mode passif, seul le rôle de système de site est rendu passif. Tous les autres rôles de système de site installés sur cet ordinateur restent actifs et accessibles aux clients.
 
@@ -171,18 +171,18 @@ Lorsqu’un serveur de site en mode actif bascule sur le mode passif, seul le r�
 Lorsque vous avez un site principal en mode passif, surveillez-le quotidiennement pour vous assurer qu’il reste synchronisé avec le serveur de site en mode actif et est prêt à être utilisé. Pour ce faire, accédez à **Surveillance** > **État du serveur de site**. Ici, vous pouvez afficher les serveurs de site en mode actif et ceux en mode passif.
 
 L’onglet **Résumé** :
--   La colonne **Mode** identifie le serveur Actif et le serveur Passif.
--   La colonne **État** indique **OK** lorsque le serveur en mode passif est synchronisé avec le serveur en mode actif.
--   Pour afficher des détails supplémentaires sur l’état de synchronisation du contenu, cliquez sur **Afficher l’état** à partir de l’état de synchronisation du contenu. Cela ouvre l’onglet Bibliothèque de contenu où vous pouvez essayer de résoudre les problèmes de synchronisation du contenu.
+- La colonne **Mode** identifie le serveur Actif et le serveur Passif.
+- La colonne **État** indique **OK** lorsque le serveur en mode passif est synchronisé avec le serveur en mode actif.
+- Pour afficher des détails supplémentaires sur l’état de synchronisation du contenu, cliquez sur **Afficher l’état** à partir de l’état de synchronisation du contenu. Cela ouvre l’onglet Bibliothèque de contenu où vous pouvez essayer de résoudre les problèmes de synchronisation du contenu.
 
 L’onglet **Bibliothèque de contenu** :
--   Affichez **l’état** pour le contenu qui se synchronise du serveur de site actif vers le serveur de site en mode passif.
--   Vous pouvez sélectionner le contenu avec un état **Échec**, puis choisir **Synchroniser les éléments sélectionnés** à partir du ruban. Cette action tente de resynchroniser ce contenu de la source de contenu vers le serveur de site en mode passif. Lors de la récupération, l’état s’affiche sous la forme **En cours**, et si le serveur est synchronisé, l’état est **Succès**.
+- Affichez **l’état** pour le contenu qui se synchronise du serveur de site actif vers le serveur de site en mode passif.
+- Vous pouvez sélectionner le contenu avec un état **Échec**, puis choisir **Synchroniser les éléments sélectionnés** à partir du ruban. Cette action tente de resynchroniser ce contenu de la source de contenu vers le serveur de site en mode passif. Lors de la récupération, l’état s’affiche sous la forme **En cours**, et si le serveur est synchronisé, l’état est **Succès**.
 
 ### <a name="try-it-out"></a>Essayez !
 Essayez d’effectuer les tâches suivantes, puis envoyez-nous vos **Commentaires** à partir de l’onglet **Accueil** du ruban pour nous dire comment cela a fonctionné pour vous :
--   Je peux installer un site principal en mode passif.
--   Je peux utiliser la console pour promouvoir le serveur de site en mode passif pour en faire le serveur de site en mode actif et confirmer le changement d’état pour les deux serveurs de site.
+- Je peux installer un site principal en mode passif.
+- Je peux utiliser la console pour promouvoir le serveur de site en mode passif pour en faire le serveur de site en mode actif et confirmer le changement d’état pour les deux serveurs de site.
 
 
 ## <a name="include-trust-for-specific-files-and-folders-in-a-device-guard-policy"></a>Inclure la confiance pour des fichiers et dossiers spécifiques dans une stratégie de protection des appareils
@@ -191,15 +191,15 @@ Dans cette version, nous avons ajouté des fonctionnalités supplémentaires à 
 
 Vous pouvez éventuellement ajouter l’approbation pour des fichiers spécifiques pour les dossiers dans une stratégie Device Guard. Cela vous permet de :
 
-1.  Résoudre les problèmes avec les comportements des programmes d’installation gérés
-2.  Approuver les applications métier qui ne peuvent pas être déployées avec Configuration Manager
-3.  Approuver des applications qui sont incluses dans une image de déploiement de système d’exploitation.
+1. Résoudre les problèmes avec les comportements des programmes d’installation gérés
+2. Approuver les applications métier qui ne peuvent pas être déployées avec Configuration Manager
+3. Approuver des applications qui sont incluses dans une image de déploiement de système d’exploitation.
 
 ### <a name="try-it-out"></a>Essayez !
 
-1.  Lorsque vous créez une stratégie Device Guard, sous l’onglet Inclusions de l’assistant de création de stratégie Device Guard, cliquez sur **Ajouter**.
-2.  Dans la boîte de dialogue **Ajouter fichier ou dossier approuvé**, spécifiez les informations sur le fichier ou dossier que vous souhaitez approuver. Vous pouvez spécifier un chemin d’accès de dossier ou de fichier local, ou vous connecter à un appareil distant auquel vous êtes autorisé à vous connecter et spécifier un chemin d’accès de fichier ou de dossier sur cet appareil.
-3.  Effectuez toutes les étapes de l'Assistant.
+1. Lorsque vous créez une stratégie Device Guard, sous l’onglet Inclusions de l’assistant de création de stratégie Device Guard, cliquez sur **Ajouter**.
+2. Dans la boîte de dialogue **Ajouter fichier ou dossier approuvé**, spécifiez les informations sur le fichier ou dossier que vous souhaitez approuver. Vous pouvez spécifier un chemin d’accès de dossier ou de fichier local, ou vous connecter à un appareil distant auquel vous êtes autorisé à vous connecter et spécifier un chemin d’accès de fichier ou de dossier sur cet appareil.
+3. Effectuez toutes les étapes de l'Assistant.
 
 
 ## <a name="hide-task-sequence-progress"></a>Masquer la progression de la séquence de tâches
@@ -223,9 +223,9 @@ Pour résoudre ce problème, vous pouvez maintenant spécifier à la fois un emp
 1. Dans les propriétés de type de déploiement d’une application, cliquez sur l’onglet **Contenu**.
 2. Configurez **l’emplacement de contenu d’installation** normalement.
 3. Pour **Désinstaller les paramètres de contenu**, choisissez une des options suivantes :
-    - **Identique au contenu d’installation** : le même emplacement sera utilisé, que vous installiez ou désinstalliez l’application.
-    - **Aucun contenu de désinstallation** : choisissez cette option si vous ne souhaitez pas fournir d’emplacement de contenu de désinstallation de l’application.
-    - **Différent du contenu d’installation** : choisissez cette option si vous souhaitez spécifier un emplacement de contenu de désinstallation différent de l’emplacement du contenu d’installation.
+   - **Identique au contenu d’installation** : le même emplacement sera utilisé, que vous installiez ou désinstalliez l’application.
+   - **Aucun contenu de désinstallation** : choisissez cette option si vous ne souhaitez pas fournir d’emplacement de contenu de désinstallation de l’application.
+   - **Différent du contenu d’installation** : choisissez cette option si vous souhaitez spécifier un emplacement de contenu de désinstallation différent de l’emplacement du contenu d’installation.
 5. Si vous avez sélectionné **Différent du contenu d’installation**, recherchez ou entrez l’emplacement du contenu de l’application qui sera utilisé pour désinstaller l’application.
 6. Cliquez sur **OK** pour fermer la boîte de dialogue des propriétés de type de déploiement.
 
@@ -235,20 +235,20 @@ Pour résoudre ce problème, vous pouvez maintenant spécifier à la fois un emp
 Cette version préliminaire apporte plusieurs améliorations aux [fonctionnalités d’accessibilité](/sccm/core/understand/accessibility-features) dans la console Configuration Manager. À savoir :     
 
 **Nouveaux raccourcis clavier pour vous déplacer dans la console :**
--   CTRL + M - Définit le focus sur le volet principal (central).
--   CTRL + T - Définit le focus sur le nœud supérieur dans le volet de navigation. Si le focus était déjà dans ce volet, le focus est défini sur le dernier nœud que vous avez visité.
--   CTRL + I - Définit le focus sur la barre de navigation, sous le ruban.
--   CTRL + L - Définit le focus sur le champ **Recherche**, lorsqu’il est disponible.
--   CTRL + D - Définit le focus sur le volet de détails, lorsqu’il est disponible.
--   ALT - Fait basculer le focus vers et hors du ruban.
+- CTRL + M - Définit le focus sur le volet principal (central).
+- CTRL + T - Définit le focus sur le nœud supérieur dans le volet de navigation. Si le focus était déjà dans ce volet, le focus est défini sur le dernier nœud que vous avez visité.
+- CTRL + I - Définit le focus sur la barre de navigation, sous le ruban.
+- CTRL + L - Définit le focus sur le champ **Recherche**, lorsqu’il est disponible.
+- CTRL + D - Définit le focus sur le volet de détails, lorsqu’il est disponible.
+- ALT - Fait basculer le focus vers et hors du ruban.
 
 **Améliorations générales :**
--   Amélioration de la navigation dans le volet de navigation lorsque vous saisissez les lettres d’un nom de nœud.
--   La navigation au clavier via la vue principale et le ruban est désormais circulaire.
--   La navigation au clavier dans le volet d’informations est désormais circulaire. Pour revenir à l’objet ou au volet précédent, utilisez Ctrl + D, puis MAJ + TAB.
--   Après l’actualisation d’une vue de l’espace de travail, le focus est défini sur le volet principal de cet espace de travail.
--   Correction d’un problème pour activer les lecteurs d’écran pour annoncer les noms des éléments de liste.
--   Ajout des noms accessibles de plusieurs contrôles sur la page qui active les lecteurs d’écran pour annoncer des informations importantes.
+- Amélioration de la navigation dans le volet de navigation lorsque vous saisissez les lettres d’un nom de nœud.
+- La navigation au clavier via la vue principale et le ruban est désormais circulaire.
+- La navigation au clavier dans le volet d’informations est désormais circulaire. Pour revenir à l’objet ou au volet précédent, utilisez Ctrl + D, puis MAJ + TAB.
+- Après l’actualisation d’une vue de l’espace de travail, le focus est défini sur le volet principal de cet espace de travail.
+- Correction d’un problème pour activer les lecteurs d’écran pour annoncer les noms des éléments de liste.
+- Ajout des noms accessibles de plusieurs contrôles sur la page qui active les lecteurs d’écran pour annoncer des informations importantes.
 
 
 ## <a name="changes-to-the-azure-services-wizard-to-support-upgrade-readiness"></a>Modifications apportées à l’assistant de services Azure pour prendre en charge Upgrade Readiness
@@ -261,10 +261,10 @@ Bien que la méthode pour configurer la connexion a changé, les conditions pré
 La configuration requise pour une [connexion à Upgrade Readiness](/sccm/core/clients/manage/upgrade-readiness#connect-configuration-manager-to-upgrade-readiness) est identique à celle détaillée pour la Current Branch de Configuration Manager. Nous la reprenons ici par commodité :  
 
 **Conditions préalables**
--   Pour ajouter la connexion, votre environnement Configuration Manager doit d’abord configurer un [point de connexion de service](/sccm/core/servers/deploy/configure/about-the-service-connection-point) dans un [mode en ligne](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_modes). Quand vous ajoutez la connexion à votre environnement, Microsoft Monitoring Agent est également installé sur l’ordinateur exécutant ce rôle de système de site.
--   Inscrivez Configuration Manager comme outil de gestion « Application web et/ou API web » et obtenez l’[ID de client résultant de cette inscription](https://azure.microsoft.com/documentation/articles/active-directory-integrating-applications/).
--   Créer une clé de client pour l’outil de gestion inscrit dans Azure Active Directory.
--   Dans le portail de gestion Azure, accordez à l’application web inscrite l’autorisation d’accès à OMS, comme décrit dans [Accorder à Configuration Manager les autorisations d’accès à OMS](https://azure.microsoft.com/documentation/articles/log-analytics-sccm/#provide-configuration-manager-with-permissions-to-oms).
+- Pour ajouter la connexion, votre environnement Configuration Manager doit d’abord configurer un [point de connexion de service](/sccm/core/servers/deploy/configure/about-the-service-connection-point) dans un [mode en ligne](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_modes). Quand vous ajoutez la connexion à votre environnement, Microsoft Monitoring Agent est également installé sur l’ordinateur exécutant ce rôle de système de site.
+- Inscrivez Configuration Manager comme outil de gestion « Application web et/ou API web » et obtenez l’[ID de client résultant de cette inscription](https://azure.microsoft.com/documentation/articles/active-directory-integrating-applications/).
+- Créer une clé de client pour l’outil de gestion inscrit dans Azure Active Directory.
+- Dans le portail de gestion Azure, accordez à l’application web inscrite l’autorisation d’accès à OMS, comme décrit dans [Accorder à Configuration Manager les autorisations d’accès à OMS](https://azure.microsoft.com/documentation/articles/log-analytics-sccm/#provide-configuration-manager-with-permissions-to-oms).
 
 > [!IMPORTANT]       
 > Quand vous configurez l’autorisation d’accès à OMS, choisissez le rôle **Collaborateur** et accordez-lui les autorisations sur le groupe de ressources de l’application inscrite.
@@ -272,19 +272,19 @@ La configuration requise pour une [connexion à Upgrade Readiness](/sccm/core/cl
 Après avoir établi la configuration requise, vous pouvez utiliser l’assistant pour créer la connexion.
 
 ### <a name="use-the-azure-services-wizard-to-configure-upgrade-readiness"></a>Utilisez l’assistant de services Azure pour configurer Upgrade Readiness
-1.  Dans la console, accédez à **Administration** > **Présentation** > **Services cloud** > **Services Azure**, puis choisissez **Configurer les services Azure** à partir de l’onglet **Accueil** du ruban pour démarrer **l’Assistant Services Azure**.
+1. Dans la console, accédez à **Administration** > **Présentation** > **Services cloud** > **Services Azure**, puis choisissez **Configurer les services Azure** à partir de l’onglet **Accueil** du ruban pour démarrer **l’Assistant Services Azure**.
 
-2.  Dans la page **Services Azure**, sélectionnez le **connecteur Upgrade Readiness**, puis cliquez sur **Suivant**.
+2. Dans la page **Services Azure**, sélectionnez le **connecteur Upgrade Readiness**, puis cliquez sur **Suivant**.
 
-3.  Sur la page **Application**, spécifiez votre **environnement Azure** (la version Technical Preview prend en charge uniquement le cloud public). Ensuite, cliquez sur **Importer** pour ouvrir la fenêtre **Importer des applications**.
+3. Sur la page **Application**, spécifiez votre **environnement Azure** (la version Technical Preview prend en charge uniquement le cloud public). Ensuite, cliquez sur **Importer** pour ouvrir la fenêtre **Importer des applications**.
 
-4.  Dans la fenêtre **Importer des applications**, spécifiez les détails pour une application web qui existe déjà dans Azure AD.
-    -   Indiquez un nom convivial pour le nom de client Azure AD. Ensuite, spécifiez l’ID de client, le nom de l’application, l’ID du client, la clé secrète pour l’application web Azure et l’URI d’ID d’application.
-    -   Cliquez sur **Vérifier** et, en cas de réussite, cliquez sur **OK** pour continuer.
+4. Dans la fenêtre **Importer des applications**, spécifiez les détails pour une application web qui existe déjà dans Azure AD.
+    - Indiquez un nom convivial pour le nom de client Azure AD. Ensuite, spécifiez l’ID de client, le nom de l’application, l’ID du client, la clé secrète pour l’application web Azure et l’URI d’ID d’application.
+    - Cliquez sur **Vérifier** et, en cas de réussite, cliquez sur **OK** pour continuer.
 
-5.   Sur la page **Configuration**, spécifiez l’abonnement, le groupe de ressources et l’espace de travail Windows Analytics à utiliser avec cette connexion pour Upgrade Readiness.  
+5.  Sur la page **Configuration**, spécifiez l’abonnement, le groupe de ressources et l’espace de travail Windows Analytics à utiliser avec cette connexion pour Upgrade Readiness.  
 
-6.  Cliquez sur **Suivant** pour accéder à la page **Résumé**, puis terminez l’assistant pour créer la connexion.
+6. Cliquez sur **Suivant** pour accéder à la page **Résumé**, puis terminez l’assistant pour créer la connexion.
 
 
 ## <a name="new-client-settings-for-cloud-services"></a>Nouveaux paramètres client pour les services cloud
@@ -306,9 +306,9 @@ Si vous supprimez la connexion, les appareils ne sont pas désinscrits, mais auc
 ### <a name="try-it-out"></a>Essayez !
 
 1. Configurer la section suivante de paramètres client (figurant dans les services cloud) en utilisant les informations dans [Guide pratique pour configurer les paramètres client](/sccm/core/clients/deploy/configure-client-settings).
-    -   **Inscrire automatiquement les nouveaux appareils joints à un domaine Windows 10 avec Azure Active Directory** : réglez sur**Oui** (valeur par défaut) ou **Non**.
-    -   **Permettre aux clients d’utiliser une passerelle de gestion cloud** : réglez sur **Oui** (valeur par défaut) ou **Non**.
-2.  Déployez les paramètres client sur la collection requise d’appareils.
+   - **Inscrire automatiquement les nouveaux appareils joints à un domaine Windows 10 avec Azure Active Directory** : réglez sur**Oui** (valeur par défaut) ou **Non**.
+   - **Permettre aux clients d’utiliser une passerelle de gestion cloud** : réglez sur **Oui** (valeur par défaut) ou **Non**.
+2. Déployez les paramètres client sur la collection requise d’appareils.
 
 Pour confirmer que l’appareil est joint à Azure AD, exécutez la commande **dsregcmd.exe /status** dans une fenêtre d’invite de commandes. Le champ **AzureAdjoined** dans les résultats affiche **OUI** si l’appareil est joint à Azure AD.
 
@@ -352,11 +352,11 @@ Pour autoriser les utilisateurs à approuver leurs propres scripts :
 2. Dans l'espace de travail **Bibliothèque de logiciels** , cliquez sur **Scripts**.
 3. Dans l'onglet **Accueil** , dans le groupe **Créer** , cliquez sur **Créer un script**.
 4. Sur la page **Script** de l’assistant **Créer un script**, configurez les éléments suivants :
-    - **Nom de script** : entrez un nom pour le script. Vous pouvez créer plusieurs scripts portant le même nom, mais il sera alors difficile de trouver le script dont vous avez besoin dans la console Configuration Manager.
-    - **Langage du script** : actuellement, seuls les scripts **PowerShell** sont pris en charge.
-    - **Importer** : importez un script PowerShell dans la console. Le script s’affiche dans le champ **Script**.
-    - **Effacer**  : supprime le script en cours du champ **Script**.
-    - **Script** : affiche le script actuellement importé. Vous pouvez modifier le script dans ce champ si nécessaire.
+   - **Nom de script** : entrez un nom pour le script. Vous pouvez créer plusieurs scripts portant le même nom, mais il sera alors difficile de trouver le script dont vous avez besoin dans la console Configuration Manager.
+   - **Langage du script** : actuellement, seuls les scripts **PowerShell** sont pris en charge.
+   - **Importer** : importez un script PowerShell dans la console. Le script s’affiche dans le champ **Script**.
+   - **Effacer**  : supprime le script en cours du champ **Script**.
+   - **Script** : affiche le script actuellement importé. Vous pouvez modifier le script dans ce champ si nécessaire.
 5. Effectuez toutes les étapes de l'Assistant. Le nouveau script s’affiche dans la liste **Script** avec l’état **En attente d’approbation**. Avant de pouvoir exécuter ce script sur les appareils clients, vous devez l’approuver.
 
 
@@ -507,28 +507,28 @@ Pour plus d'informations sur les paramètres de compatibilité, consultez [Garan
 
 * **Type de mot de passe requis**. Spécifie si les utilisateurs doivent créer un mot de passe de type alphanumérique ou numérique. Pour les mots de passe alphanumériques, vous spécifiez également le nombre minimal de jeux de caractères que le mot de passe doit avoir. Les quatre jeux de caractères sont : lettres minuscules, lettres majuscules, symboles et chiffres.
 
-    **Pris en charge sur :**
-    * Windows Phone 8+
-    * Windows 8.1+
-    * iOS 6+
+  **Pris en charge sur :**
+  * Windows Phone 8+
+  * Windows 8.1+
+  * iOS 6+
 <br></br>
 * **Bloquer le débogage USB sur l’appareil**. Vous n’avez pas à configurer ce paramètre, car le débogage USB est déjà désactivé pour les appareils Android for Work.
 
-    **Pris en charge sur :**
-    * Android 4.0+
-    * Samsung KNOX Standard 4.0+
+  **Pris en charge sur :**
+  * Android 4.0+
+  * Samsung KNOX Standard 4.0+
 <br></br>
 * **Bloquer les applications provenant de sources inconnues**. Exiger que les appareils interdisent l’installation des applications provenant de sources inconnues. Vous n’avez pas à configurer ce paramètre, car les appareils Android for Work limitent toujours l’installation à partir de sources inconnues.
 
-    **Pris en charge sur :**
-    * Android 4.0+
-    * Samsung KNOX Standard 4.0+
+  **Pris en charge sur :**
+  * Android 4.0+
+  * Samsung KNOX Standard 4.0+
 <br></br>
 * **Exiger l’analyse des menaces sur les applications**. Ce paramètre spécifie que la fonction Vérifier les applications est activée sur l’appareil.
 
-    **Pris en charge sur :**
-    * Android 4.2 à 4.4
-    * Samsung KNOX Standard 4.0+
+  **Pris en charge sur :**
+  * Android 4.2 à 4.4
+  * Samsung KNOX Standard 4.0+
 
 Consultez [Créer et déployer une stratégie de conformité d’appareil](https://docs.microsoft.com/sccm/mdm/deploy-use/create-compliance-policy) pour essayer les nouvelles règles de conformité d’appareil.
 
@@ -558,13 +558,13 @@ Nous avons mis à jour les descriptions de paramètre pour les éléments de con
 |Avant la Technical Preview 1706 | Nouveau nom de l’option | Comportement|
 |-|-|-|
 |Empêcher le partage au-delà des limites| Restrictions du partage par défaut| Travail vers personnel : Par défaut (doit être bloqué sur toutes les versions) <br>Personnel vers travail : Par défaut (autorisé sur 6.x+, bloqué sur 5.x)|
-|Sans restriction|   Les applications dans le profil personnel peuvent traiter les demandes de partage du profil professionnel| Travail vers personnel : Autorisé  <br>Personnel vers travail : Autorisé|
+|Sans restriction| Les applications dans le profil personnel peuvent traiter les demandes de partage du profil professionnel| Travail vers personnel : Autorisé  <br>Personnel vers travail : Autorisé|
 |Les applications dans le profil professionnel peuvent traiter les demandes de partage du profil personnel |Les applications dans le profil professionnel peuvent traiter les demandes de partage du profil personnel |Travail vers personnel : Valeur par défaut<br>Personnel vers travail : Autorisé<br>(Utile uniquement sur 5.x, où personnel vers travail est bloqué)|
 
 Aucune de ces options n’empêche directement le comportement de copier-coller. Nous avons ajouté un paramètre personnalisé au service et à l’application de portail d’entreprise dans la version 1704. Il peut être configuré pour éviter le copier-coller. Vous pouvez le définir via une URI personnalisée.
 
--   OMA-URI:  ./Vendor/MSFT/WorkProfile/DisallowCrossProfileCopyPaste
--   Type de valeur : Booléen
+- OMA-URI:  ./Vendor/MSFT/WorkProfile/DisallowCrossProfileCopyPaste
+- Type de valeur : Booléen
 
 Le paramètre DisallowCrossProfileCopyPaste réglé sur true empêche le comportement de copier-coller entre le profil personnel et le profil de travail Android for Work.
 

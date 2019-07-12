@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf0b57ad1753d797b163b0016517cdad09459013
-ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
+ms.openlocfilehash: 5e4585d21b06bbfaa659fe09693af8cff109a1b6
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67251625"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676812"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Principes de base de la gestion de contenu dans Configuration Manager
 
@@ -152,13 +152,13 @@ Pour plus d’informations, consultez [Mise en cache d’homologue Windows PE](/
 
 Quand un client a besoin de contenu, il envoie au point de gestion une demande quant à l’emplacement du contenu. Le point de gestion retourne une liste d’emplacements sources qui sont valides pour le contenu demandé. Cette liste varie en fonction du scénario spécifique, des technologies utilisées, de conception des sites, des groupes de limites et des paramètres de déploiement. La liste suivante contient tous les emplacements sources de contenu possibles qu’un client peut utiliser, dans l’ordre de priorité où il les utilise :  
 
-1.  Le point de distribution sur le même ordinateur que le client
-2.  Une source de pair dans le même sous-réseau du réseau
-3.  Un point de distribution dans le même sous-réseau du réseau
-4.  Une source de pair dans le même groupe de limites
-5.  Un point de distribution dans le groupe de limites actif
-6.  Un point de distribution dans un groupe de limites voisin configuré pour le secours
-9.  Un point de distribution dans le groupe de limites du site par défaut 
+1. Le point de distribution sur le même ordinateur que le client
+2. Une source de pair dans le même sous-réseau du réseau
+3. Un point de distribution dans le même sous-réseau du réseau
+4. Une source de pair dans le même groupe de limites
+5. Un point de distribution dans le groupe de limites actif
+6. Un point de distribution dans un groupe de limites voisin configuré pour le secours
+9. Un point de distribution dans le groupe de limites du site par défaut 
 10. Le service cloud Windows Update
 11. Un point de distribution accessible sur Internet
 12. Un point de distribution cloud dans Azure

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d16cbc892a3f4c7565a9672ca7c0145396dcaa3d
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.openlocfilehash: b1a18371a7f75935b3d72262b35385f8f4e81923
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59673613"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67677668"
 ---
 # <a name="how-to-remotely-administer-a-windows-client-computer-by-using-system-center-configuration-manager"></a>Comment administrer à distance un ordinateur client Windows à l’aide de System Center Configuration Manager
 
@@ -65,7 +65,7 @@ Vous pouvez démarrer l’observateur de contrôle à distance de trois manière
         - **Tous les écrans** : ajouté dans Configuration Manager 1902. Si l’ordinateur auquel vous vous connectez dispose de plusieurs moniteurs, l’affichage de tous les moniteurs apparaît dans la fenêtre de contrôle à distance. **Tous les écrans** est le seul affichage pour les ordinateurs avec plusieurs moniteurs avant 1902.
         -  **Premier écran** : ajouté dans Configuration Manager 1902. Le *premier écran* se trouve en haut à l’extrême gauche, comme illustré dans les paramètres d’affichage Windows. Vous ne pouvez pas sélectionner un écran spécifique. Quand vous faites basculer la configuration de l’observateur, reconnectez la session à distance. L’observateur enregistre votre préférence pour les prochaines connexions.
         -  **Ajuster à la page** : permet de redimensionner l’affichage de l’ordinateur distant pour l’adapter à la taille de la fenêtre **Contrôle à distance de Configuration Manager**.
-       - **Barre d’état** : permet d’activer ou de désactiver l’affichage de la barre d’état de la fenêtre **Contrôle à distance de Configuration Manager**.  
+        - **Barre d’état** : permet d’activer ou de désactiver l’affichage de la barre d’état de la fenêtre **Contrôle à distance de Configuration Manager**.  
 
        > [!NOTE]  
        >  L’observateur enregistre votre préférence pour les prochaines connexions.
@@ -84,7 +84,7 @@ Vous pouvez démarrer l’observateur de contrôle à distance de trois manière
 
 ## <a name="to-start-the-remote-control-viewer-from-the-windows-command-line"></a>Pour démarrer l'observateur de contrôle à distance à partir de la ligne de commande Windows  
 
--   À l’invite de commandes Windows, tapez _<Dossier d’installation Configuration Manager>\>_**\AdminConsole\Bin\x64\CmRcViewer.exe**  
+-   À l’invite de commandes Windows, tapez _<Dossier d’installation Configuration Manager>\>_ **\AdminConsole\Bin\x64\CmRcViewer.exe**  
 
 CmRcViewer.exe prend en charge les options de ligne de commande suivantes :  
 

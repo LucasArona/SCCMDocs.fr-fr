@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8383b654182ba57b52a53755595413b18d1cd4e7
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 69bec7c52d826d76502e52d0d5ddbc1d0cf9c3ef
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56121707"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67677192"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1606-of-system-center-configuration-manager"></a>Niveaux de collecte des données de diagnostic et d’utilisation pour la version 1606 de System Center Configuration Manager
 
@@ -42,10 +42,10 @@ Les modifications par rapport aux versions précédentes sont indiquées par ***
  À compter de System Center Configuration Manager version 1606, ce niveau inclut les éléments suivants :
 
 
- -   Informations d’installation :
+-   Informations d’installation :
       - Build, type d’installation, modules linguistiques, fonctionnalités que vous avez activées  
 
-      -   État et erreurs du déploiement du package de mise à jour, progression du téléchargement, et erreurs liées aux prérequis  
+      -   État et erreurs du déploiement du package de mise à jour, progression du téléchargement, et erreurs liées aux prérequis 
 
       -  Version du script après mise à niveau
 
@@ -86,7 +86,7 @@ Les modifications par rapport aux versions précédentes sont indiquées par ***
 -  Utilisation de la découverte du réseau (activée ou désactivée)
 -  Console d'administration :
 
-     -  Statistiques sur les connexions de la console (version, langue, SKU et architecture du système d’exploitation, mémoire système, nombre de processeurs logiques, ID du site de connexion, versions .NET installées et modules linguistiques de la console)    
+    -  Statistiques sur les connexions de la console (version, langue, SKU et architecture du système d’exploitation, mémoire système, nombre de processeurs logiques, ID du site de connexion, versions .NET installées et modules linguistiques de la console)    
 
 
 - ***[Nouveau]*** Version SQL, niveau de Service Pack, édition, ID de classement, jeu de caractères

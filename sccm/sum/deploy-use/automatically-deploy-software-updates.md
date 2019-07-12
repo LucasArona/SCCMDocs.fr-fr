@@ -11,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c1b77b4c35cfadd3e0e48ddec99344745f402d66
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 8a7cd2e499ac55f9a1210d4f3309b6e0b6cefe16
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65500248"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67678192"
 ---
 #  <a name="automatically-deploy-software-updates"></a>Déployer automatiquement des mises à jour logicielles  
 
@@ -71,8 +71,8 @@ Approuvez et déployez automatiquement des mises à jour logicielles en utilisan
         > [!IMPORTANT]  
         >  Quand vous déployez des mises à jour de définitions, définissez le niveau de détails sur **Erreur uniquement** pour que le client envoie un message d'état uniquement si une mise à jour de définition échoue. Sinon, le client envoie un grand nombre de messages d’état pouvant avoir un effet sur les performances du serveur de site.  
         
-> [!NOTE]  
-> Le niveau de détail **Erreur uniquement** n’envoie pas les messages d’état d’application nécessaires au suivi des redémarrages en attente.
+        > [!NOTE]  
+        > Le niveau de détail **Erreur uniquement** n’envoie pas les messages d’état d’application nécessaires au suivi des redémarrages en attente.
 
     -   **Paramètre du contrat de licence**: indiquez si les mises à jour logicielles doivent être déployées automatiquement avec un contrat de licence associé. Certaines mises à jour logicielles comprennent un contrat de licence. Quand vous déployez automatiquement des mises à jour logicielles, le contrat de licence ne s’affiche pas et il n’est pas possible de l’accepter. Choisissez de déployer automatiquement toutes les mises à jour logicielles indépendamment d’un contrat de licence associé, ou déployez uniquement les mises à jour qui ne sont associées à aucun contrat de licence.  
 

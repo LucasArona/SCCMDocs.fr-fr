@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b3560284733ccad6a9a3676a46f755106596ad03
-ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
+ms.openlocfilehash: 34fca23c43b34d905e6ecea210c0ba7487feeea2
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67551201"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67677535"
 ---
 # <a name="capabilities-in-technical-preview-1612-for-system-center-configuration-manager"></a>Fonctionnalités de la version d’évaluation technique 1612 pour System Center Configuration Manager
 
@@ -49,11 +49,11 @@ Outre l’installation et la configuration de la base de données de l’entrep�
 
 | Étape         | Détails  |
 |:------:|-----------|  
-| **1**  |  Le serveur de site transfère et stocke les données dans la base de données de site.  |  
-| **2** |   En fonction de sa planification et de sa configuration, le point de service de l’entrepôt de données obtient des données de la base de données de site.  |  
-| **3** |  Le point de service de l’entrepôt de données transfère et stocke une copie des données synchronisées dans la base de données de l’entrepôt de données. |  
-| **A** |  À l’aide de rapports intégrés, une demande de données est effectuée et transmise au point de Reporting Services à l’aide de SQL Server Reporting Services. |  
-| **B** |   La plupart des rapports concernent des informations actuelles et ces demandes sont exécutées sur la base de données de site. |  
+| **1** | Le serveur de site transfère et stocke les données dans la base de données de site.  |  
+| **2** | En fonction de sa planification et de sa configuration, le point de service de l’entrepôt de données obtient des données de la base de données de site.  |  
+| **3** | Le point de service de l’entrepôt de données transfère et stocke une copie des données synchronisées dans la base de données de l’entrepôt de données. |  
+| **A** | À l’aide de rapports intégrés, une demande de données est effectuée et transmise au point de Reporting Services à l’aide de SQL Server Reporting Services. |  
+| **B** | La plupart des rapports concernent des informations actuelles et ces demandes sont exécutées sur la base de données de site. |  
 | **C** | Quand un rapport demande des données d’historique, à l’aide de l’un des rapports avec la *Catégorie* **Entrepôt de données**, la demande est exécutée sur la base de données de l’entrepôt de données.   |  
 
 ### <a name="prerequisites-for-the-data-warehouse-service-point-and-database"></a>Conditions préalables pour le point de service de l’entrepôt de données et la base de données
@@ -106,7 +106,7 @@ Une fois le rôle d’entrepôt de données installé, vérifiez que le compte q
 #### <a name="troubleshoot-installation-and-data-synchronization"></a>Résoudre les problèmes d’installation et de synchronisation des données
 Utilisez les journaux suivants pour examiner les problèmes d’installation du point de service de l’entrepôt de données ou de synchronisation des données :
 - **DWSSMSI.log** et **DWSSSetup.log** : utilisez ces journaux pour examiner les erreurs lors de l’installation du point de service de l’entrepôt de données.
--   **Microsoft.ConfigMgrDataWarehouse.log** : utilisez ce journal pour examiner la synchronisation des données entre la base de données de site et la base de données de l’entrepôt de données.
+- **Microsoft.ConfigMgrDataWarehouse.log** : utilisez ce journal pour examiner la synchronisation des données entre la base de données de site et la base de données de l’entrepôt de données.
 
 ### <a name="reporting"></a>Rapports
 Après avoir installé un rôle de système de site de l’entrepôt de données, les rapports suivants sont disponibles sur votre point de Reporting Services avec la *Catégorie* **Entrepôt de données** :
@@ -142,7 +142,7 @@ Procédez comme suit pour déplacer la base de données de l’entrepôt de donn
 
 Vous pouvez consulter les journaux de Configuration Manager suivants pour vérifier que le rôle de système de site a été correctement réinstallé :  
 - **DWSSMSI.log** et **DWSSSetup.log** : utilisez ces journaux pour examiner les erreurs lors de l’installation du point de service de l’entrepôt de données.
--   **Microsoft.ConfigMgrDataWarehouse.log** : utilisez ce journal pour examiner la synchronisation des données entre la base de données de site et la base de données de l’entrepôt de données.
+- **Microsoft.ConfigMgrDataWarehouse.log** : utilisez ce journal pour examiner la synchronisation des données entre la base de données de site et la base de données de l’entrepôt de données.
 
 
 ## <a name="content-library-cleanup-tool"></a>Outil de nettoyage de la bibliothèque de contenu
@@ -207,23 +207,23 @@ Les commutateurs de ligne de commande suivants peuvent être utilisés dans n’
 
 ## <a name="improvements-for-in-console-search"></a>Améliorations apportées à la recherche dans la console
 En nous basant sur les commentaires du site UserVoice, nous avons ajouté les améliorations suivantes à la recherche dans la console :
- - **Chemin d’accès de l’objet :**  
+- **Chemin d’accès de l’objet :**  
   De nombreux objets prennent désormais en charge une nouvelle colonne nommée **Chemin d’accès de l’objet**.  Quand vous effectuez des recherches et incluez cette colonne dans les résultats d’affichage, vous pouvez afficher le chemin d’accès à chaque objet. Par exemple, si vous exécutez une recherche d’applications dans le nœud Applications et également dans les sous-nœuds, la colonne *Chemin d’accès de l’objet* dans le volet des résultats affiche le chemin d’accès à chaque objet retourné.   
 
 - **Conservation du texte recherché :**  
   Quand vous entrez du texte dans la zone de recherche, puis que vous changez la zone dans laquelle effectuer la recherche (d’un sous-nœud au nœud actuel), le texte saisi est désormais conservé et vous n’avez pas à le retaper.
 
 - **Maintien de votre décision d’effectuer des recherches dans les sous-nœuds :**  
- L’option sélectionnée pour effectuer des recherches dans le *nœud actuel* ou *tous les sous-nœuds* est désormais conservée quand vous changez le nœud dans lequel vous travaillez.   Ce nouveau comportement signifie que vous n’avez pas besoin de réinitialiser constamment la décision quand vous parcourez la console.  Par défaut, quand vous ouvrez la console, l’option consiste à effectuer des recherches uniquement dans le nœud actuel.
+  L’option sélectionnée pour effectuer des recherches dans le *nœud actuel* ou *tous les sous-nœuds* est désormais conservée quand vous changez le nœud dans lequel vous travaillez.   Ce nouveau comportement signifie que vous n’avez pas besoin de réinitialiser constamment la décision quand vous parcourez la console.  Par défaut, quand vous ouvrez la console, l’option consiste à effectuer des recherches uniquement dans le nœud actuel.
 
 ## <a name="prevent-installation-of-an-application-if-a-specified-program-is-running"></a>Empêcher l’installation d’une application si un programme est en cours d’exécution
 Vous pouvez maintenant configurer une liste de fichiers exécutables (portant l’extension .exe) dans les propriétés de type de déploiement qui, s’ils sont exécutés, bloquent l’installation d’une application. Une fois que l’installation est tentée, une boîte de dialogue demande aux utilisateurs de fermer les processus qui bloquent l’installation.
 
 ### <a name="try-it-out"></a>Faîtes un essai
 Pour configurer une liste de fichiers exécutables
-1.  Dans la page de propriétés de tout type de déploiement, cliquez sur l’onglet **Installer Handling** (Gestion du programme d’installation).
-2.  Cliquez sur **Ajouter** pour ajouter un ou plusieurs fichiers exécutables à la liste (par exemple, **Edge.exe**)
-3.  Cliquez sur **OK** pour fermer la boîte de dialogue des propriétés de type de déploiement.
+1. Dans la page de propriétés de tout type de déploiement, cliquez sur l’onglet **Installer Handling** (Gestion du programme d’installation).
+2. Cliquez sur **Ajouter** pour ajouter un ou plusieurs fichiers exécutables à la liste (par exemple, **Edge.exe**)
+3. Cliquez sur **OK** pour fermer la boîte de dialogue des propriétés de type de déploiement.
 
 À présent, quand vous déployez cette application sur un utilisateur ou un appareil et que l’un des fichiers exécutables que vous avez ajoutés est en cours d’exécution, une boîte de dialogue Centre logiciel indique à l’utilisateur final que l’installation a échoué, car une application est en cours d’exécution.
 
@@ -253,16 +253,16 @@ Nous avons ajouté la prise en charge des fichiers d’installation rapide dans 
 
 ### <a name="to-enable-the-download-of-express-installation-files-for-windows-10-updates-on-the-server"></a>Pour activer le téléchargement des fichiers d’installation rapide pour les mises à jour de Windows 10 sur le serveur
 Pour démarrer la synchronisation des métadonnées pour les fichiers d’installation rapide Windows 10, vous devez l’activer dans les propriétés du point de mise à jour logicielle.
-1.  Dans la console Configuration Manager, accédez à **Administration** > **Configuration du site** > **Sites**.
-2.  Sélectionnez le site d’administration centrale ou le site principal autonome.
-3.  Sur l'onglet **Accueil** dans le groupe **Paramètres** , cliquez sur **Configurer les composants de site**, puis cliquez sur **Point de mise à jour logicielle**. Sous l’onglet **Fichiers de mise à jour**, sélectionnez **Télécharger les fichiers complets de toutes les mises à jour approuvées et les fichiers d’installation rapide pour Windows 10**.
+1. Dans la console Configuration Manager, accédez à **Administration** > **Configuration du site** > **Sites**.
+2. Sélectionnez le site d’administration centrale ou le site principal autonome.
+3. Sur l'onglet **Accueil** dans le groupe **Paramètres** , cliquez sur **Configurer les composants de site**, puis cliquez sur **Point de mise à jour logicielle**. Sous l’onglet **Fichiers de mise à jour**, sélectionnez **Télécharger les fichiers complets de toutes les mises à jour approuvées et les fichiers d’installation rapide pour Windows 10**.
 
 ### <a name="to-enable-support-for-clients-to-download-and-install-express-installation-files"></a>Pour activer la prise en charge des clients pour télécharger et installer les fichiers d’installation rapide
 Pour activer la prise en charge des fichiers d’installation rapide sur les clients, vous devez activer les fichiers d’installation rapide sur les clients dans la section Mises à jour logicielles des paramètres du client. Vous créez ainsi un écouteur HTTP qui écoute les demandes de téléchargement des fichiers d’installation rapide sur le port que vous spécifiez. Quand vous déployez les paramètres du client pour activer cette fonctionnalité sur le client, ils tentent de télécharger le delta entre la mise à jour cumulative de Windows 10 du mois en cours et la mise à jour du mois précédent (les clients doivent exécuter une version de Windows 10 qui prend en charge les fichiers d’installation rapide).
-1.  Activez la prise en charge des fichiers d’installation rapide dans les propriétés du composant du point de mise à jour logicielle (procédure précédente).
-2.  Dans la console Configuration Manager, accédez à **Administration** > **Paramètres du client**.
-3.  Sélectionnez les paramètres du client appropriés, puis cliquez sur **Propriétés** sous l’onglet **Accueil**.
-4.  Sélectionnez la page **Mises à jour logicielles** , configurez **Oui** pour le paramètre **Enable installation of Express Updates on clients** (Activer l’installation des mises à jour rapides sur les clients) et configurez le port utilisé par l’écouteur HTTP sur le client pour le paramètre **Port used to download content for Express Updates** (Port utilisé pour télécharger le contenu des mises à jour rapides).
+1. Activez la prise en charge des fichiers d’installation rapide dans les propriétés du composant du point de mise à jour logicielle (procédure précédente).
+2. Dans la console Configuration Manager, accédez à **Administration** > **Paramètres du client**.
+3. Sélectionnez les paramètres du client appropriés, puis cliquez sur **Propriétés** sous l’onglet **Accueil**.
+4. Sélectionnez la page **Mises à jour logicielles** , configurez **Oui** pour le paramètre **Enable installation of Express Updates on clients** (Activer l’installation des mises à jour rapides sur les clients) et configurez le port utilisé par l’écouteur HTTP sur le client pour le paramètre **Port used to download content for Express Updates** (Port utilisé pour télécharger le contenu des mises à jour rapides).
 
 
 ## <a name="odata-endpoint-data-access"></a>Accès aux données de point de terminaison OData

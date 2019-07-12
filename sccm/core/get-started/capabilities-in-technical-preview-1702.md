@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 23fbb29ba4676f6c7282e5337f691f88209e15e6
-ms.sourcegitcommit: f42b9e802331273291ed498ec88f710110fea85a
+ms.openlocfilehash: ee32d282bc04e6c1f97b12dedb8d69ccdcca8915
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67551232"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67677547"
 ---
 # <a name="capabilities-in-technical-preview-1702-for-system-center-configuration-manager"></a>Fonctionnalités de Technical Preview 1702 pour System Center Configuration Manager
 
@@ -72,10 +72,10 @@ L’infrastructure de site, les clients et le domaine des Services de domaine Az
 
 ### <a name="set-up-configuration-manager-to-use-azure-ad"></a>Configurer Configuration Manager pour utiliser Azure AD
 Pour utiliser Azure AD avec Configuration Manager, vous avez besoin des éléments suivants :
--   Un abonnement Azure
--   Azure AD avec les services de domaine
--   Un site Configuration Manager qui s’exécute sur une machine virtuelle Azure jointe à votre domaine Azure AD.
--   Des clients Configuration Manager qui s’exécutent dans le même environnement Azure AD.
+- Un abonnement Azure
+- Azure AD avec les services de domaine
+- Un site Configuration Manager qui s’exécute sur une machine virtuelle Azure jointe à votre domaine Azure AD.
+- Des clients Configuration Manager qui s’exécutent dans le même environnement Azure AD.
 
 Pour configurer les services de domaine Azure Active Directory, consultez [Prise en main des services de domaine Azure AD](https://docs.microsoft.com/azure/active-directory-domain-services/create-instance).
 
@@ -212,9 +212,9 @@ Dans la boîte de dialogue *\<nom du type de déploiement>* **Propriétés** d�
 
 ### <a name="try-it-out"></a>Essayez.
 
-1.  Dans les propriétés d’un type de déploiement Configuration Manager, choisissez l’onglet **Comportement à l’installation**.
-2.  Choisissez **Ajouter** pour ajouter un ou plusieurs noms de fichiers exécutables à vérifier. Vous pouvez également ajouter un nom d’affichage pour que les utilisateurs puissent identifier plus facilement les applications dans la liste.
-3.  Si l’objet du déploiement sera Obligatoire, dans l’Assistant Déploiement logiciel, vous pouvez éventuellement choisir de **Fermer automatiquement les fichiers exécutables en cours d’exécution que vous avez spécifiés sous l’onglet de comportement à l’installation de la boîte de dialogue des propriétés du type de déploiement**.
+1. Dans les propriétés d’un type de déploiement Configuration Manager, choisissez l’onglet **Comportement à l’installation**.
+2. Choisissez **Ajouter** pour ajouter un ou plusieurs noms de fichiers exécutables à vérifier. Vous pouvez également ajouter un nom d’affichage pour que les utilisateurs puissent identifier plus facilement les applications dans la liste.
+3. Si l’objet du déploiement sera Obligatoire, dans l’Assistant Déploiement logiciel, vous pouvez éventuellement choisir de **Fermer automatiquement les fichiers exécutables en cours d’exécution que vous avez spécifiés sous l’onglet de comportement à l’installation de la boîte de dialogue des propriétés du type de déploiement**.
 
 Si l’application a été déployée en tant que **Disponible** et qu’un utilisateur final tente d’installer une application, il est invité à fermer les fichiers exécutables en cours d’exécution que vous avez spécifiés avant de poursuivre l’installation.
 

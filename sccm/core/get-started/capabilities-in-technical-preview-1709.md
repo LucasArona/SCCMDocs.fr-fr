@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 13db7793b0d5a5b4f0845af21f976089205fdc7d
-ms.sourcegitcommit: 3936b869d226cea41fa0090e2cbc92bd530db03a
+ms.openlocfilehash: a88052e0d799b324ddbed6acbdf0b25a97f4d80c
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67286162"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67677355"
 ---
 # <a name="capabilities-in-technical-preview-1709-for-system-center-configuration-manager"></a>Fonctionnalités de Technical Preview 1709 pour System Center Configuration Manager
 
@@ -63,8 +63,8 @@ Pour réduire les problèmes de compatibilité, les profils VPN existants resten
 
 Créez un profil VPN en suivant la procédure habituelle. Remarquez que les options dans la première page de l’Assistant Création d’un profil VPN ont été modifiées.
 
-1.  Accédez à **Ressources et conformité** > **Vue d’ensemble** > **Paramètres de conformité** > **Accès aux ressources de l’entreprise** > **Profils VPN**, puis choisissez **Créer un profil VPN**.
-2.  Entrez un nom dans la page **Général** et choisissez une des options suivantes sous **Spécifiez le type de profil VPN à créer** :
+1. Accédez à **Ressources et conformité** > **Vue d’ensemble** > **Paramètres de conformité** > **Accès aux ressources de l’entreprise** > **Profils VPN**, puis choisissez **Créer un profil VPN**.
+2. Entrez un nom dans la page **Général** et choisissez une des options suivantes sous **Spécifiez le type de profil VPN à créer** :
 
     - Windows 10  
     - Windows 8.1  
@@ -73,8 +73,8 @@ Créez un profil VPN en suivant la procédure habituelle. Remarquez que les opti
     - Android  
     - Android for Work  
 
-3.  Si vous choisissez **Windows 8.1**, vous avez également la possibilité de **Créer un profil** ou d’**Importer à partir d’un fichier**.
-4.  Suivez l’Assistant pour terminer la création du profil.
+3. Si vous choisissez **Windows 8.1**, vous avez également la possibilité de **Créer un profil** ou d’**Importer à partir d’un fichier**.
+4. Suivez l’Assistant pour terminer la création du profil.
 
 Lorsque vous sélectionnez différentes plateformes, notez que seuls les paramètres correspondant à la plateforme sélectionnée s’affichent.
 

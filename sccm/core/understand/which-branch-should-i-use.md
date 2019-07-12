@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a0d2bc4c8ae366a5e60e9a7a3100b5a5059c341a
-ms.sourcegitcommit: 60d45a5df135b84146f6cfea2bac7fd4921d0469
+ms.openlocfilehash: eae027f2f21c8c69e538c5fdfc429f5215bd6436
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67193948"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676153"
 ---
 # <a name="which-branch-of-configuration-manager-should-i-use"></a>Quelle branche de Configuration Manager dois-je utiliser ?
 
@@ -89,7 +89,7 @@ Pour installer la branche LTSB en tant que nouveau site ou en tant que mise à n
 
 
 ### <a name="features-of-the-ltsb"></a>Fonctionnalités de la branche LTSB
--   Elle reçoit des mises à jour dans la console qui fournissent des correctifs de sécurité critiques.
+- Elle reçoit des mises à jour dans la console qui fournissent des correctifs de sécurité critiques.
 - Elle fournit une option d’installation lorsque votre contrat SA ou vos droits équivalents sur Configuration Manager ont expiré.
 - Elle prend en charge la mise à niveau (conversion) vers Current Branch quand vous avez un contrat SA ou des droits équivalents sur Configuration Manager.
 
@@ -101,14 +101,14 @@ La branche LTSB est basée sur la version 1606 de Current Branch et présente l
 - Elle ne reçoit pas de mises à jour pour les nouvelles fonctionnalités.
 - Elle ne prend pas en charge fonctionnalités suivantes : 
    - Ajout d’un abonnement Microsoft Intune, ce qui vous empêche d’utiliser :
-     -  Intune dans une configuration de gestion des appareils mobiles hybride ;
+     - Intune dans une configuration de gestion des appareils mobiles hybride ;
      - Gestion des appareils mobiles locale
-   -    Tableau de bord de maintenance de Windows 10, plans de maintenance ou canal semi-annuel Windows 10
+   - Tableau de bord de maintenance de Windows 10, plans de maintenance ou canal semi-annuel Windows 10
    - Versions futures de Windows 10 LTSB et Windows Server
-   -    Asset Intelligence
-   -    Points de distribution cloud
-   -    Exchange Online en tant que connecteur Exchange
-   -    Fonctionnalités de préversion
+   - Asset Intelligence
+   - Points de distribution cloud
+   - Exchange Online en tant que connecteur Exchange
+   - Fonctionnalités de préversion
 
 
 ### <a name="update-options"></a>Options de mise à jour
@@ -119,7 +119,7 @@ La branche LTSB est basée sur la version 1606 de Current Branch et présente l
   - [Licences et branches pour System Center Configuration Manager](learn-more-editions.md)
   - [Versions de base et de mise à jour](/sccm/core/servers/manage/updates#bkmk_Baselines) 
 - Il n’existe aucune option permettant de convertir LTSB en branche Technical Preview. Les branches Technical Preview sont des installations distinctes qui ne nécessitent pas de licence.
--   Vous ne pouvez pas mettre à niveau une édition d’évaluation de Current Branch vers une installation LTSB.
+- Vous ne pouvez pas mettre à niveau une édition d’évaluation de Current Branch vers une installation LTSB.
 
 
 
@@ -150,8 +150,8 @@ Pour plus d’informations, consultez [Technical Preview pour System Center Conf
 
 
 ### <a name="update-options"></a>Options de mise à jour
--   Vous pouvez installer n’importe quelle mise à jour dans la console pour une nouvelle version de branche Technical Preview.
--   Il n’existe aucune option permettant de convertir une branche Technical Preview en branche Current Branch ou LTSB.
+- Vous pouvez installer n’importe quelle mise à jour dans la console pour une nouvelle version de branche Technical Preview.
+- Il n’existe aucune option permettant de convertir une branche Technical Preview en branche Current Branch ou LTSB.
 
 
 

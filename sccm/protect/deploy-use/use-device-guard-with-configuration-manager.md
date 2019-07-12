@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5b3ac315806edd90e85fe654039d620ec0097d1b
-ms.sourcegitcommit: 18ad7686d194d8cc9136a761b8153a1ead1cdc6b
+ms.openlocfilehash: d7c6fcdf0113dd9fa83d2d303661ad5690362715
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66176667"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67678731"
 ---
 # <a name="device-guard-management-with-configuration-manager"></a>Gestion de Device Guard avec Configuration Manager
 
@@ -38,8 +38,8 @@ Vous pouvez utiliser Configuration Manager pour déployer une stratégie Windows
 
 Vous pouvez configurer l’un des modes suivants :
 
-1.  **Mise en conformité activée** : seuls les exécutables approuvés sont autorisés à s’exécuter.
-2.  **Audit uniquement** : autorisez tous les exécutables à s’exécuter, mais journalisez les exécutables non fiables qui s’exécutent dans le journal local des événements du client.
+1. **Mise en conformité activée** : seuls les exécutables approuvés sont autorisés à s’exécuter.
+2. **Audit uniquement** : autorisez tous les exécutables à s’exécuter, mais journalisez les exécutables non fiables qui s’exécutent dans le journal local des événements du client.
 
 >[!TIP]
 >Dans cette version de Configuration Manager, Device Guard est une fonctionnalité en préversion. Pour l’activer, consultez [Fonctionnalités en version préliminaire dans System Center Configuration Manager](/sccm/core/servers/manage/pre-release-features).
@@ -77,10 +77,10 @@ Avant de configurer ou de déployer des stratégies Windows Defender Application
 - Quel que soit le mode de mise en conformité que vous sélectionnez quand vous déployez une stratégie Windows Defender Application Control, les PC clients ne peuvent pas exécuter des applications HTML avec l’extension .hta.
 
 ## <a name="how-to-create-a-windows-defender-application-control-policy"></a>Comment créer une stratégie Windows Defender Application Control
-1.  Dans la console Configuration Manager, cliquez sur **Ressources et Conformité**.
-2.  Dans l’espace de travail **Ressources et conformité**, développez **Endpoint Protection**, puis cliquez sur **Windows Defender Application Control**.
-3.  Dans l’onglet **Accueil**, dans le groupe **Créer**, cliquez sur **Créer une stratégie Application Control**.
-4.  Dans la page **Général** de **l’Assistant Création d’une stratégie Application Control**, spécifiez les paramètres suivants :
+1. Dans la console Configuration Manager, cliquez sur **Ressources et Conformité**.
+2. Dans l’espace de travail **Ressources et conformité**, développez **Endpoint Protection**, puis cliquez sur **Windows Defender Application Control**.
+3. Dans l’onglet **Accueil**, dans le groupe **Créer**, cliquez sur **Créer une stratégie Application Control**.
+4. Dans la page **Général** de **l’Assistant Création d’une stratégie Application Control**, spécifiez les paramètres suivants :
     - **Nom** : entrez un nom unique pour cette stratégie Windows Defender Application Control. 
     - **Description** : si vous le souhaitez, entrez une description pour faciliter l’identification de la stratégie dans la console Configuration Manager.
     - **Forcer un redémarrage pour que cette stratégie soit appliquée à tous les processus** : une fois que la stratégie est traitée sur un PC client, un redémarrage est planifié sur le client, en fonction des **Paramètres clients** pour **Redémarrage de l’ordinateur**.
@@ -89,22 +89,22 @@ Avant de configurer ou de déployer des stratégies Windows Defender Application
     - **Mode de mise en conformité** : choisissez une des méthodes de mise en conformité suivantes pour Device Guard sur le PC client.
         - **Mise en conformité activée** : seuls les exécutables approuvés sont autorisés à s’exécuter.
         - **Audit uniquement** : autorisez tous les exécutables à s’exécuter, mais journalisez les exécutables non fiables qui s’exécutent dans le journal local des événements du client.
-5.  Sous l’onglet **Inclusions** de **l’Assistant Création d’une stratégie Application Control**, choisissez si vous voulez **Autoriser les logiciels qui sont approuvés par Intelligent Security Graph**.
+5. Sous l’onglet **Inclusions** de **l’Assistant Création d’une stratégie Application Control**, choisissez si vous voulez **Autoriser les logiciels qui sont approuvés par Intelligent Security Graph**.
 6. Cliquez sur **Ajouter** si vous voulez ajouter une approbation pour des fichiers ou des dossiers spécifiques sur les PC. Dans la boîte de dialogue **Ajouter un fichier ou un dossier approuvé**, vous pouvez spécifier un chemin de fichier ou de dossier local auquel faire confiance. Vous pouvez aussi spécifier un chemin de fichier ou de dossier sur un appareil distant auquel vous avez l’autorisation de vous connecter. Quand vous ajoutez une approbation pour des fichiers ou des dossiers spécifiques dans une stratégie Windows Defender Application Control, vous pouvez :
     - Résoudre les problèmes avec les comportements des programmes d’installation gérés
     - Approuver les applications métier qui ne peuvent pas être déployées avec Configuration Manager
     - Approuver des applications qui sont incluses dans une image de déploiement de système d’exploitation. 
-8.  Cliquez sur **Suivant** pour terminer l’Assistant.
+8. Cliquez sur **Suivant** pour terminer l’Assistant.
 
 >[!IMPORTANT]
 >L’inclusion de fichiers ou de dossiers approuvés n’est prise en charge que sur les PC clients équipés de la version 1706 ou d’une version ultérieure du client Gestionnaire de configuration. Si toutes les règles d’inclusion sont comprises dans une stratégie Windows Defender Application Control et que celle-ci est ensuite déployée sur un PC client équipé d’une version antérieure du client Gestionnaire de configuration, elle ne sera pas appliquée. Pour résoudre ce problème, il suffit de mettre à niveau ces anciennes versions de clients. Les stratégies qui ne comprennent aucune règle d’inclusion peuvent toujours être appliquées sur des versions antérieures du client Gestionnaire de configuration.
 
 ## <a name="how-to-deploy-a-windows-defender-application-control-policy"></a>Comment déployer une stratégie Windows Defender Application Control
-1.  Dans la console Configuration Manager, cliquez sur **Ressources et Conformité**.
-2.  Dans l’espace de travail **Ressources et conformité**, développez **Endpoint Protection**, puis cliquez sur **Windows Defender Application Control**.
-3.  Dans la liste des stratégies, sélectionnez celle que vous voulez déployer puis, sous l’onglet **Accueil**, dans le groupe **Déploiement**, cliquez sur **Déployer la stratégie Application Control**.
-4.  Dans la boîte de dialogue **Déployer la stratégie Application Control**, sélectionnez le regroupement sur lequel vous voulez déployer la stratégie. Ensuite, configurez une planification pour définir à quel moment les clients évaluent la stratégie. Enfin, indiquez si le client peut évaluer la stratégie en dehors des fenêtres de maintenance configurées.
-5.  Lorsque vous avez terminé, cliquez sur **OK** pour déployer la stratégie. 
+1. Dans la console Configuration Manager, cliquez sur **Ressources et Conformité**.
+2. Dans l’espace de travail **Ressources et conformité**, développez **Endpoint Protection**, puis cliquez sur **Windows Defender Application Control**.
+3. Dans la liste des stratégies, sélectionnez celle que vous voulez déployer puis, sous l’onglet **Accueil**, dans le groupe **Déploiement**, cliquez sur **Déployer la stratégie Application Control**.
+4. Dans la boîte de dialogue **Déployer la stratégie Application Control**, sélectionnez le regroupement sur lequel vous voulez déployer la stratégie. Ensuite, configurez une planification pour définir à quel moment les clients évaluent la stratégie. Enfin, indiquez si le client peut évaluer la stratégie en dehors des fenêtres de maintenance configurées.
+5. Lorsque vous avez terminé, cliquez sur **OK** pour déployer la stratégie. 
 
 <!--Reworked article to put this inline while working on VSO 1355092
 ### Restarting the device after deploying the policy
@@ -126,8 +126,8 @@ Pour surveiller le traitement d’une stratégie Windows Defender Application Co
 
 Pour vérifier le logiciel bloqué ou audité, consultez les journaux d’événements suivants du client local :
 
-1.  Pour le blocage et l’audit des fichiers exécutables, utilisez **Journaux des applications et des services** > **Microsoft** > **Windows** > **Intégrité du code** > **Opérationnel**.
-2.  Pour le blocage et l’audit du programme d’installation Windows et des fichiers de script, utilisez **Journaux des applications et des services** > **Microsoft** > **Windows** > **AppLocker** > **MSI et Script**.
+1. Pour le blocage et l’audit des fichiers exécutables, utilisez **Journaux des applications et des services** > **Microsoft** > **Windows** > **Intégrité du code** > **Opérationnel**.
+2. Pour le blocage et l’audit du programme d’installation Windows et des fichiers de script, utilisez **Journaux des applications et des services** > **Microsoft** > **Windows** > **AppLocker** > **MSI et Script**.
 
 <!--Reworked article to put this inline while working on VSO 1355092
 ## Automatically let software run if it is trusted by Intelligent Security Graph

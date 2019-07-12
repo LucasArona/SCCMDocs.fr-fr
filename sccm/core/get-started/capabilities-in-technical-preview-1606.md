@@ -12,12 +12,12 @@ manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0bdc575819c68876093b452e1f5662cd94b3c28e
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 4527a67b7a08d7f5b9fd38d2edb223a9de823436
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56127896"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67677634"
 ---
 # <a name="capabilities-in-technical-preview-1606-for-system-center-configuration-manager"></a>Fonctionnalités de la version d’évaluation technique 1606 pour System Center Configuration Manager
 
@@ -28,7 +28,9 @@ Cet article présente les fonctionnalités qui sont disponibles dans la version 
 **Problèmes connus dans cette version d’évaluation technique :**  
 *  Lorsque vous mettez à jour la version d’évaluation technique 1604 vers la version 1605, puis vers la version 1606, la mise à jour peut échouer et une erreur similaire à la suivante est enregistrée dans le fichier **cmupdate.log** :
 
-       ERROR: Failed to execute SQL Server command:  ~ ~-- Create site boundary group ~IF  dbo.fnIsCasOrStandalonePrimary() = 1 ~BEGIN ~   PRINT N'Create site boundary group during upgrade' ~   EXEC dbo.spBuildDefaultBoundaryGroups @UserName = N'SYSTEM' ~END          
+    ```
+    ERROR: Failed to execute SQL Server command:  ~ ~-- Create site boundary group ~IF  dbo.fnIsCasOrStandalonePrimary() = 1 ~BEGIN ~   PRINT N'Create site boundary group during upgrade' ~   EXEC dbo.spBuildDefaultBoundaryGroups @UserName = N'SYSTEM' ~END          
+    ```
 
     Si cela se produit, dans le nœud **Mises à jour et maintenance**, cliquez sur **Rechercher les mises à jour**, puis **réessayez** l’installation de la mise à jour.
     ***
@@ -162,7 +164,7 @@ Le moyen le plus simple pour exporter la racine des certificats clients utilisé
 
 1. Dans la fenêtre Exécuter, tapez **mmc** et appuyez sur Entrée.
 2. Dans le menu Fichier de la console de gestion, cliquez sur **Ajouter/Supprimer un composant logiciel enfichable**.
-3. Dans la boîte de dialogue Ajouter ou supprimer des composants logiciels enfichables, cliquez sur **Certificats**, sur **Ajouter >**, sur **Compte d’ordinateur**, sur **Suivant**, sur **Ordinateur local**, puis sur **Terminer**. Cliquez sur **OK** pour fermer la boîte de dialogue.
+3. Dans la boîte de dialogue Ajouter ou supprimer des composants logiciels enfichables, cliquez sur **Certificats**, sur **Ajouter >** , sur **Compte d’ordinateur**, sur **Suivant**, sur **Ordinateur local**, puis sur **Terminer**. Cliquez sur **OK** pour fermer la boîte de dialogue.
 4. Accédez à **Certificats > Personnel > Certificats**.
 5. Double-cliquez sur le certificat pour l’authentification du client sur l’ordinateur, cliquez sur l’onglet Chemin d’accès de certification et double-cliquez sur l’autorité racine (en haut du chemin d’accès).
 6.  Cliquez sur l’onglet Détails, puis cliquez sur **Copier dans un fichier**.

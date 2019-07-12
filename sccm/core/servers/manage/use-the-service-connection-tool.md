@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 002ed233a679cdee928160490c8e1ee4425c7382
-ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.openlocfilehash: 83838e2642d09c001b638900b6cc4fa23975745e
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65496259"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676368"
 ---
 # <a name="use-the-service-connection-tool-for-system-center-configuration-manager"></a>Utiliser l’outil de connexion de service pour System Center Configuration Manager
 
@@ -101,7 +101,7 @@ Vous pouvez utiliser les paramètres facultatifs suivants pour spécifier un ser
 
 #### <a name="specify-the-type-of-updates-to-download"></a>Spécifier le type de mises à jour à télécharger
 À compter de la version 1706, le comportement par défaut du téléchargement des outils a changé, et l’outil prend en charge des options pour contrôler quels fichiers vous téléchargez.
--   Par défaut, l’outil télécharge seulement la dernière mise à jour disponible qui s’applique à la version de votre site. Il ne télécharge pas les correctifs.
+- Par défaut, l’outil télécharge seulement la dernière mise à jour disponible qui s’applique à la version de votre site. Il ne télécharge pas les correctifs.
 
 Pour changer ce comportement, utilisez un des paramètres suivants pour spécifier quels fichiers sont téléchargés. 
 
@@ -110,9 +110,9 @@ Pour changer ce comportement, utilisez un des paramètres suivants pour spécifi
 >
 > Vous pouvez vérifier la version en recherchant le fichier *SiteVersion*.txt dans le fichier .cab.
 
--   **-downloadall** : cette option télécharge tout, notamment les mises à jour et les correctifs, quelle que soit la version de votre site.
--   **-downloadhotfix** : cette option télécharge tous les correctifs, quelle que soit la version de votre site.
--   **-downloadsiteversion** : cette option télécharge les mises à jour et les correctifs dont la version est supérieure à celle de votre site.
+- **-downloadall** : cette option télécharge tout, notamment les mises à jour et les correctifs, quelle que soit la version de votre site.
+- **-downloadhotfix** : cette option télécharge tous les correctifs, quelle que soit la version de votre site.
+- **-downloadsiteversion** : cette option télécharge les mises à jour et les correctifs dont la version est supérieure à celle de votre site.
 
 Exemple de ligne de commande utilisant *- downloadsiteversion* :
 - **serviceconnectiontool.exe -connect  *-downloadsiteversion* -usagedatasrc D:\USB -updatepackdest D:\USB\UpdatePacks**

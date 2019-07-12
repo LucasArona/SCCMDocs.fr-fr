@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 90c5c57d1717363d83fa921d68caced8cf9e8da1
-ms.sourcegitcommit: 86968fc2f129e404ff8e08f91a05fa17b5c47527
+ms.openlocfilehash: aadb544180d7662f1b60c73db6a35b64f8b7efe7
+ms.sourcegitcommit: f9654cd1a3af6d67de52fedaccceb2e22dafc159
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67251715"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67676829"
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>Cache de pair pour les clients Configuration Manager
 
@@ -55,11 +55,11 @@ Le cache de pair ne remplace pas l’utilisation d’autres solutions, comme Win
 
 Pour activer le cache de pair, déployez les [paramètres clients](#bkmk_settings) sur un regroupement. Les membres de ce regroupement se comportent ensuite comme une source de cache de pair pour les autres clients du même groupe de limites.  
 
- -  Un client qui agit en tant que source de contenu homologue envoie une liste des contenus mis en cache disponibles à son point de gestion.  
+ - Un client qui agit en tant que source de contenu homologue envoie une liste des contenus mis en cache disponibles à son point de gestion.  
 
- -  Un autre client du même groupe de limites effectue une demande d’emplacement du contenu au point de gestion. Le serveur retourne la liste des sources de contenu potentielles. Cette liste inclut chaque source de cache de pair qui a ce contenu et qui est en ligne. Elle inclut également les points de distribution et d’autres emplacements de source de contenu dans ce groupe de limites. Pour plus d’informations, consultez [Priorités des sources de contenu](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#content-source-priority).  
+ - Un autre client du même groupe de limites effectue une demande d’emplacement du contenu au point de gestion. Le serveur retourne la liste des sources de contenu potentielles. Cette liste inclut chaque source de cache de pair qui a ce contenu et qui est en ligne. Elle inclut également les points de distribution et d’autres emplacements de source de contenu dans ce groupe de limites. Pour plus d’informations, consultez [Priorités des sources de contenu](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#content-source-priority).  
 
- -  Comme à chaque fois, le client qui demande le contenu sélectionne une source dans la liste fournie. Le client essaie ensuite d’obtenir le contenu.  
+ - Comme à chaque fois, le client qui demande le contenu sélectionne une source dans la liste fournie. Le client essaie ensuite d’obtenir le contenu.  
 
 À compter de la version 1806, les groupes de limites intègrent des paramètres supplémentaires qui offrent davantage de contrôle sur la distribution du contenu dans l’environnement. Pour plus d’informations, voir [Options de groupe de limites pour les téléchargements de pairs](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions).<!--1356193-->
 
