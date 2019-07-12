@@ -11,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: 6f0201d7-5714-4ba0-b2bf-d1acd0203e9a
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ccc38188729a05329cc240a9f424ccce9fd433b2
-ms.sourcegitcommit: d1df13fc95a1f1540177c294555d9be26161b9cb
+ms.openlocfilehash: 9ca39be68074213e4bb0a3f667ae69d5257f7a3c
+ms.sourcegitcommit: 9670e11316c9ec6e5f78cd70c766bbfdf04ea3f9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65974086"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67818067"
 ---
 # <a name="change-the-mdm-authority-for-specific-users-mixed-mdm-authority"></a>Changer l’autorité MDM pour des utilisateurs spécifiques (autorité MDM mixte)
 
@@ -105,7 +105,7 @@ Dans l’exemple suivant, le regroupement d’utilisateurs hybrides contient tou
 ![Exclure des regroupements](../media/migrate-excludecollections.png)
 
 > [!Note]  
-> Lorsque vous avez le **tous les utilisateurs** regroupement sélectionné pour l’abonnement Intune, vous n’êtes pas autorisé à ajouter une règle pour exclure des regroupements. Créer une nouvelle collection basée sur le **tous les utilisateurs** collection. Vérifiez que la collection contient les utilisateurs que vous attendez. Modifiez ensuite l’abonnement Intune pour utiliser la nouvelle collection. Vous pouvez exclure des regroupements d’utilisateurs du nouveau regroupement pour faire migrer des utilisateurs.  
+>   Lorsque vous avez le **tous les utilisateurs** regroupement sélectionné pour l’abonnement Intune, vous n’êtes pas autorisé à ajouter une règle pour exclure des regroupements. Au lieu de cela, créez une nouvelle collection basée sur le **tous les utilisateurs** collection, vérifiez que la collection contient les utilisateurs attendent, puis modifiez l’abonnement Intune pour utiliser la nouvelle collection. Vous pouvez exclure des regroupements d’utilisateurs du nouveau regroupement pour faire migrer des utilisateurs. Si vous excluez un utilisateur à partir d’une collection, mais incluez un groupe dont l’utilisateur est membre, l’utilisateur n’est pas exclu de la collection.
 
 Pour migrer un groupe d’utilisateurs test vers Intune, créez un regroupement d’utilisateurs contenant les utilisateurs pour effectuer la migration. Puis excluez le regroupement d’utilisateurs à partir de la collection qui est utilisée pour l’abonnement Intune.  
 
@@ -179,13 +179,13 @@ Niveau de journal utilisé pour déterminer le type de journaux qui doivent êtr
 Voici les valeurs possibles pour LoggingLevel :
 
 - ActivityTracing
-- Tout
+- Tous
 - Critique
-- Erreur
-- Informations
+- Error
+- Information
 - Hors tension
-- Verbose
-- Avertissement
+- Détaillé
+- Warning
 
 #### `-Confirm [<SwitchParameter>]`
 
