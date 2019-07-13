@@ -2,7 +2,7 @@
 title: Forum aux questions sur les postes de travail Analytique
 titleSuffix: Configuration Manager
 description: Forum aux questions pour l’Analytique de bureau.
-ms.date: 06/10/2019
+ms.date: 07/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9daf94a21b66fa0137e0a6bf041f10c87c64c34e
-ms.sourcegitcommit: 659976b943226c5124057429ac7444989f98433f
+ms.openlocfilehash: 663490349bcb61f243980c5e1a3fe1f5651d8573
+ms.sourcegitcommit: 448cc0d9094a3c9e23f011c4673cd1e8b956280a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67159093"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860833"
 ---
 # <a name="desktop-analytics-faq"></a>Analytique bureau Forum aux questions
 
@@ -45,7 +45,6 @@ Il existe deux types de données dans le portail d’Analytique de bureau : Don
 
 Toutes les données est mis à jour automatiquement une fois par jour, même si vous ne demandez pas une actualisation des données de la demande. Il n’existe aucun moyen pour déclencher une actualisation à la demande de données de diagnostic. Pour plus d’informations sur les différents types de données d’Analytique de bureau, consultez [latence des données](/sccm/desktop-analytics/troubleshooting#data-latency).
 
-
 ## <a name="privacy"></a>Confidentialité
 
 ### <a name="can-desktop-analytics-be-used-without-a-direct-client-connection-to-the-microsoft-data-management-service"></a>Analytique de bureau peut être utilisé sans une connexion directe du client pour le Service de gestion des données de Microsoft ?
@@ -61,3 +60,9 @@ Pour le Service Gestion des données de Microsoft et l’Analytique stockage Azu
 ### <a name="where-is-my-organizations-data-stored"></a>Où sont stockées les données de mon organisation ?
 
 Données de diagnostic de Windows à partir de vos ordinateurs sont chiffrées, envoyées à et traitées dans les centres de données sécurisé gérés par Microsoft situés aux États-Unis. Notre analyse des données liées au bureau Analytique puis vous est fournie via la solution d’Analytique de bureau dans le portail Azure. Analytique de bureau est pris en charge dans toutes les régions Azure. Sélection d’une région Azure internationale n’empêche pas les données de diagnostic d’être envoyé à et traité dans les centres de données sécurisés de Microsoft dans le fuseau horaire.
+
+## <a name="other"></a>Autre
+
+### <a name="can-i-use-desktop-analytics-for-my-office-365-proplus-upgrades"></a>Puis-je utiliser Desktop Analytique mes mises à niveau vers Office 365 ProPlus ?
+
+Non, Analytique de bureau se concentre sur Windows. Microsoft a développé Analytique de bureau en étroite collaboration avec nombreux clients. Via le programme d’évaluation, les commentaires des clients a été sur la façon dont bureau Analytique amélioré leur capacité à gérer en toute confiance des déploiements de Windows. Ils également nous demandé ils [Office 365 ProPlus readiness ](/sccm/sum/deploy-use/office-365-dashboard#bkmk_o365_readiness) plus étroitement intégrée avec les outils de gestion d’office dans Configuration Manager et Intune. Microsoft continuera à faire des investissements dans ces domaines, tout en restant concentré sur les scénarios de Windows dans Analytique de bureau.

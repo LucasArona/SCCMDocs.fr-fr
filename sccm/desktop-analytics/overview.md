@@ -2,7 +2,7 @@
 title: Analyses du bureau
 titleSuffix: Configuration Manager
 description: Une vue d’ensemble du service Analytique de bureau intégré à Configuration Manager.
-ms.date: 06/07/2019
+ms.date: 07/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: overview
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b0daf2943b0859227d08069be9c9da69165d5d1a
-ms.sourcegitcommit: de3c86077bbf91b793e94e1f60814df18da11bab
+ms.openlocfilehash: 45a8e71a3a8777686547ef4e3e05ef868b459792
+ms.sourcegitcommit: 448cc0d9094a3c9e23f011c4673cd1e8b956280a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67726227"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860870"
 ---
 # <a name="what-is-desktop-analytics"></a>Nouveautés d’Analytique de bureau ?
 
@@ -70,6 +70,9 @@ Pour utiliser l’Analytique de bureau, assurez-vous que votre environnement rem
 ### <a name="technical"></a>Techniques
 
 - Un abonnement Azure actif, avec [administrateur général](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator) autorisations  
+
+    > [!Important]  
+    > Analytique de postes de travail est actuellement disponible en tant qu’un service Office 365 et nécessite un abonnement Office 365 dans votre locataire Azure AD. Cela est peut-être pas une exigence à l’avenir.
 
     - **Propriétaire de l’espace de travail** ou **contributeur** autorisations pour **configurer votre espace de travail**et les rôles suivants :  
 
