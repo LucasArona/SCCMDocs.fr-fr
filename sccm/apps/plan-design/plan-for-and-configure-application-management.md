@@ -43,7 +43,7 @@ Pour plus d’informations, consultez [Prérequis des sites et systèmes de site
 
 ### <a name="certificates-on-code-signed-applications-for-mobile-devices"></a>Certificats des applications dont le code est signé pour les appareils mobiles
 
-Quand vous signez le code des applications à déployer sur des appareils mobiles, n’utilisez pas de certificat généré par un modèle Version 3 (**Windows Server 2008, Enterprise Edition**). Ce modèle de certificat crée un certificat qui est compatible avec les applications Configuration Manager pour appareils mobiles.
+Quand vous signez le code des applications à déployer sur des appareils mobiles, n’utilisez pas de certificat généré par un modèle Version 3 (**Windows Server 2008, Enterprise Edition**). Ce modèle de certificat crée un certificat qui est incompatible avec les applications Configuration Manager pour appareils mobiles.
 
 Si vous utilisez les services de certificat Active Directory pour signer le code des applications pour les applications d’appareils mobiles, n’utilisez pas de modèle de certificat Version 3.
 
